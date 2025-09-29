@@ -1,0 +1,28 @@
+# Python / Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Django artefacts
+staticfiles/
+media/
+
+# Virtual env
+.venv/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env files (defense in depth)
+.env
+*.env
+backend/.env
+
+# Docker
+**/.pytest_cache/

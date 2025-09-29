@@ -1,0 +1,107 @@
+from django.contrib.auth import get_user_model
+from django.utils.http import urlsafe_base64_decode
+from django.utils.encoding import force_str
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.permissions import AllowAny
+from rest_framework_simplejwt.tokens import RefreshToken
+
+from .serializers import RegisterSerializer, LoginSerializer
+from .tokens import activation_token
+from .emails import send_activation_email
+from .tasks import send_activation_email_task
+
+User = get_user_model()
+
+def ok(message: str, data: dict | None = None, code=status.HTTP_200_OK):
+    return Response({"status": "success", "message": message, "data": data or {}}, status=code)
+
+def fail(message: str, errors: dict | None = None, code=status.HTTP_400_BAD_REQUEST):
+    payload = {"status": "error", "message": message}
+    if errors:
+        payload["errors"] = errors
+    return Response(payload, status=code)
+
+class RegisterView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        ser = RegisterSerializer(data=request.data)
+        if not ser.is_valid():
+            return fail("Registration failed.", ser.errors)
+
+        user = ser.save()
+        # Send activation email (Celery if running, otherwise sync)
+        try:
+            send_activation_email_task.delay(user.id)
+        except Exception:
+            send_activation_email(user)
+        return ok("Account created. Please check your email to activate your account.", code=status.HTTP_201_CREATED)
+
+
+class LoginView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        ser = LoginSerializer(data=request.data, context={"request": request})
+        if not ser.is_valid():
+            # If serializer put a 'message' in errors, surface it
+            msg = ser.errors.get("message", ["Login failed."])[0]
+            return fail(msg, errors=ser.errors)
+
+        user = ser.validated_data["user"]
+        refresh = RefreshToken.for_user(user)
+        data = {
+            "access": str(refresh.access_token),
+            "refresh": str(refresh),
+            "user": {"id": user.id, "email": user.email, "first_name": user.first_name, "last_name": user.last_name},
+        }
+        return ok("Login successful.", data)
+
+
+class ActivateAccountView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        uidb64 = request.query_params.get("uid")
+        token = request.query_params.get("token")
+        if not uidb64 or not token:
+            return fail("Activation link is invalid.", code=status.HTTP_400_BAD_REQUEST)
+        try:
+            uid = force_str(urlsafe_base64_decode(uidb64))
+            user = User.objects.get(pk=uid)
+        except Exception:
+            return fail("Activation link is invalid or expired.", code=status.HTTP_400_BAD_REQUEST)
+
+        if user.is_active:
+            return ok("Account already activated.")
+
+        if activation_token.check_token(user, token):
+            user.is_active = True
+            user.save(update_fields=["is_active"])
+            return ok("Account activated successfully.")
+        return fail("Activation token is invalid or expired.", code=status.HTTP_400_BAD_REQUEST)
+
+
+class ResendActivationView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        email = (request.data.get("email") or "").strip().lower()
+        if not email:
+            return fail("Email is required.", code=status.HTTP_400_BAD_REQUEST)
+        try:
+            user = User.objects.get(email__iexact=email)
+        except User.DoesNotExist:
+            # Do not reveal that the email doesn't exist (security best practice)
+            return ok("If the account exists and is not activated, an email has been sent.")
+
+        if user.is_active:
+            return ok("Account is already activated.")
+
+        try:
+            send_activation_email_task.delay(user.id)
+        except Exception:
+            send_activation_email(user)
+        return ok("Activation email resent.")
