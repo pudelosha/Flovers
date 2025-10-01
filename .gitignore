@@ -26,3 +26,15 @@ backend/.env
 
 # Docker
 **/.pytest_cache/
+# --- React Native mobile ---
+mobile/node_modules/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/app/debug.keystore
+mobile/android/app/*.keystore
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/*.xcworkspace/
+mobile/.expo/
+mobile/.expo-shared/
+mobile/.DS_Store
