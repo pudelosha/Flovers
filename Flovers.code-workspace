@@ -33,33 +33,38 @@
         "options": { "cwd": "${workspaceFolder}" }
       },
 
-      { "label": "Mobile: start Metro",
+      {
+        "label": "Mobile: start Metro",
         "type": "shell",
         "command": "npx react-native start --clear-cache",
         "options": { "cwd": "${workspaceFolder:mobile}" },
         "presentation": { "reveal": "always", "panel": "new" },
         "problemMatcher": []
       },
-      { "label": "Mobile: check devices",
+      {
+        "label": "Mobile: check devices",
         "type": "shell",
         "command": "adb",
         "args": ["devices"],
         "options": { "cwd": "${workspaceFolder:mobile}" }
       },
-      { "label": "Mobile: USB reverse",
+      {
+        "label": "Mobile: USB reverse",
         "type": "shell",
         "command": "adb",
         "args": ["reverse", "tcp:8081", "tcp:8081"],
         "options": { "cwd": "${workspaceFolder:mobile}" }
       },
-      { "label": "Mobile: run Android (THIS DEVICE)",
+      {
+        "label": "Mobile: run Android (THIS DEVICE)",
         "type": "shell",
         "command": "npx",
-        "args": ["react-native", "run-android", "--deviceId", "R3CT30SVWFW"],  // <-- replace with your ID
+        "args": ["react-native", "run-android", "--deviceId", "R3CT30SVWFW"],
         "options": { "cwd": "${workspaceFolder:mobile}" },
         "presentation": { "reveal": "always" }
       },
-      { "label": "Mobile: deploy (USB)",
+      {
+        "label": "Mobile: deploy (USB)",
         "type": "shell",
         "command": "echo Deploying to physical device…",
         "dependsOn": [
@@ -69,6 +74,55 @@
         ],
         "dependsOrder": "sequence",
         "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+
+      {
+        "label": "Network: show LAN IPv4",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notmatch '^127\\.|^169\\.254\\.' -and $_.PrefixOrigin -ne 'WellKnown' } | Select-Object InterfaceAlias,IPAddress | Format-Table -Auto"
+        ],
+        "options": { "cwd": "${workspaceFolder}" },
+        "presentation": { "reveal": "always" }
+      },
+      {
+        "label": "Firewall: allow 8000 (Private)",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to add firewall rules.'; exit 1 }; if(-not (Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue)){ New-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -Direction Inbound -Profile Private -Action Allow -Protocol TCP -LocalPort 8000; Write-Host 'Rule created.' } else { Write-Host 'Rule already exists.' }"
+        ],
+        "options": { "cwd": "${workspaceFolder}" },
+        "presentation": { "reveal": "always" }
+      },
+      {
+        "label": "Firewall: show rule 8000",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$rule = Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue; if($rule){ $rule | Get-NetFirewallPortFilter | Format-Table -Auto } else { Write-Host 'Rule not found.' }"
+        ],
+        "options": { "cwd": "${workspaceFolder}" },
+        "presentation": { "reveal": "always" }
+      },
+      {
+        "label": "Firewall: remove rule 8000",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to remove firewall rules.'; exit 1 }; if(Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue){ Remove-NetFirewallRule -DisplayName 'Flovers Dev Port 8000'; Write-Host 'Rule removed.' } else { Write-Host 'Rule not found.' }"
+        ],
+        "options": { "cwd": "${workspaceFolder}" },
+        "presentation": { "reveal": "always" }
       }
     ]
   }
