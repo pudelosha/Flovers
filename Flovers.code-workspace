@@ -1,0 +1,75 @@
+﻿{
+  "folders": [
+    { "path": "backend" },
+    { "path": "mobile" }
+  ],
+  "settings": {},
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Backend: up (Docker)",
+        "type": "shell",
+        "command": "docker compose up -d --build",
+        "options": { "cwd": "${workspaceFolder}" },
+        "group": { "kind": "build", "isDefault": true }
+      },
+      {
+        "label": "Backend: logs",
+        "type": "shell",
+        "command": "docker compose logs -f web",
+        "options": { "cwd": "${workspaceFolder}" }
+      },
+      {
+        "label": "Backend: migrate",
+        "type": "shell",
+        "command": "docker compose exec web python manage.py migrate",
+        "options": { "cwd": "${workspaceFolder}" }
+      },
+      {
+        "label": "Backend: down",
+        "type": "shell",
+        "command": "docker compose down",
+        "options": { "cwd": "${workspaceFolder}" }
+      },
+
+      { "label": "Mobile: start Metro",
+        "type": "shell",
+        "command": "npx react-native start --clear-cache",
+        "options": { "cwd": "${workspaceFolder:mobile}" },
+        "presentation": { "reveal": "always", "panel": "new" },
+        "problemMatcher": []
+      },
+      { "label": "Mobile: check devices",
+        "type": "shell",
+        "command": "adb",
+        "args": ["devices"],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      { "label": "Mobile: USB reverse",
+        "type": "shell",
+        "command": "adb",
+        "args": ["reverse", "tcp:8081", "tcp:8081"],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      { "label": "Mobile: run Android (THIS DEVICE)",
+        "type": "shell",
+        "command": "npx",
+        "args": ["react-native", "run-android", "--deviceId", "R3CT30SVWFW"],  // <-- replace with your ID
+        "options": { "cwd": "${workspaceFolder:mobile}" },
+        "presentation": { "reveal": "always" }
+      },
+      { "label": "Mobile: deploy (USB)",
+        "type": "shell",
+        "command": "echo Deploying to physical device…",
+        "dependsOn": [
+          "Mobile: check devices",
+          "Mobile: USB reverse",
+          "Mobile: run Android (THIS DEVICE)"
+        ],
+        "dependsOrder": "sequence",
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      }
+    ]
+  }
+}
