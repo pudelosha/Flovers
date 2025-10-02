@@ -1,11 +1,25 @@
-﻿import React from "react";
+﻿// App.tsx
+import React from "react";
+import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/auth/AuthContext";
 import RootNavigator from "./src/navigation";
 
+const theme = {
+  ...MD3LightTheme,
+  colors: {
+    ...MD3LightTheme.colors,
+    primary: "#0B7285",
+    secondary: "#66D9E8",
+  },
+  roundness: 20,
+};
+
 export default function App() {
   return (
-    <AuthProvider>
-      <RootNavigator />
-    </AuthProvider>
+    <PaperProvider theme={theme}>
+      <AuthProvider>
+        <RootNavigator />
+      </AuthProvider>
+    </PaperProvider>
   );
 }

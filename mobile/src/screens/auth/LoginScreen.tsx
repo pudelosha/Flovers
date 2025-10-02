@@ -1,88 +1,166 @@
-// LoginScreen.tsx
-// Purpose:
-// - Simple sign-in form (email + password)
-// - Calls auth.login(); on success the navigator switches to the protected stack
-// - Shows helpful error messages on failures
-
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Alert } from "react-native";
+import { View, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
+import { Text, TextInput, Button, Snackbar, Portal } from "react-native-paper";
+import { useSafeAreaInsets } from "react-native-safe-area-context"; // ⬅️ added
 import { useAuth } from "../../auth/useAuth";
 import { ApiError } from "../../api/client";
 
 export default function LoginScreen({ navigation }: any) {
-  // 1) Access the login action from our AuthContext (via custom hook)
   const { login } = useAuth();
+  const insets = useSafeAreaInsets(); // ⬅️ added
 
-  // 2) Local form state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // disables button & shows "Signing in..."
 
-  // 3) Submit handler: tries to log in, handles errors, updates loading state
+  const [focus, setFocus] = useState<"email" | "password" | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  // snackbar (toast) state
+  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({
+    visible: false,
+    msg: "",
+  });
+
   async function onSubmit() {
     setLoading(true);
     try {
-      await login({ email, password }); // if successful, token is stored and nav switches stacks
-    } catch (e) {
-      // Normalize API errors into friendly messages
-      if (e instanceof ApiError) {
-        Alert.alert("Login failed", e.body?.message || e.message);
-      } else {
-        Alert.alert("Login failed", "Check your credentials.");
-      }
+      await login({ email, password });
+    } catch (e: any) {
+      const msg = e instanceof ApiError ? e.body?.message || e.message : "Invalid email or password.";
+      setToast({ visible: true, msg });
     } finally {
       setLoading(false);
     }
   }
 
-  // 4) UI: simple form + link to Register screen
+  // Paper v5: we can override colors per-field
+  const paperTheme = {
+    colors: {
+      // caret & focused outline & focused label
+      primary: "#FFFFFF",
+      // base/idle outline
+      outline: "rgba(255,255,255,0.35)",
+      // label & text color
+      onSurface: "rgba(255,255,255,0.95)",
+      surface: "transparent",
+      background: "transparent",
+    },
+  } as const;
+
   return (
-    <View style={{ padding: 16, gap: 10 }}>
-      <Text style={{ fontSize: 22, fontWeight: "700" }}>Welcome back</Text>
+    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
+      <View style={s.container}>
 
-      {/* Email input (no auto-capitalization, email keyboard) */}
-      <TextInput
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        autoCapitalize="none"
-        keyboardType="email-address"
-        style={s.input}
-      />
+        <Text variant="headlineMedium" style={s.title}>Login</Text>
 
-      {/* Password input (hidden text) */}
-      <TextInput
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-        style={s.input}
-      />
+        {/* Email */}
+        <View style={s.inputBox}>
+          <TextInput
+            mode="outlined"
+            label="Email"
+            value={email}
+            onChangeText={setEmail}
+            onFocus={() => setFocus("email")}
+            onBlur={() => setFocus(focus === "email" ? null : focus)}
+            autoCapitalize="none"
+            keyboardType="email-address"
+            textColor="#fff"
+            selectionColor="#fff"
+            activeOutlineColor="#fff"              // focused border → white
+            outlineColor="rgba(255,255,255,0.35)"  // idle border
+            style={s.input}
+            outlineStyle={s.outline}
+            theme={paperTheme}
+          />
+        </View>
 
-      {/* Submit button: disabled while logging in */}
-      <Button
-        title={loading ? "Signing in..." : "Sign in"}
-        onPress={onSubmit}
-        disabled={loading}
-      />
+        {/* Password */}
+        <View style={s.inputBox}>
+          <TextInput
+            mode="outlined"
+            label="Password"
+            value={password}
+            onChangeText={setPassword}
+            onFocus={() => setFocus("password")}
+            onBlur={() => setFocus(focus === "password" ? null : focus)}
+            secureTextEntry
+            textColor="#fff"
+            selectionColor="#fff"
+            activeOutlineColor="#fff"
+            outlineColor="rgba(255,255,255,0.35)"
+            style={s.input}
+            outlineStyle={s.outline}
+            theme={paperTheme}
+          />
+        </View>
 
-      {/* Link to Register screen */}
-      <Text style={{ marginTop: 16 }}>
-        Need an account?{" "}
-        <Text style={{ color: "blue" }} onPress={() => navigation.navigate("Register")}>
-          Register
+        <Button
+          mode="contained"
+          onPress={onSubmit}
+          loading={loading}
+          disabled={loading}
+          style={s.cta}
+          contentStyle={{ height: 52 }}
+        >
+          Sign in
+        </Button>
+
+        <Button mode="text" textColor="rgba(255,255,255,0.9)" onPress={() => {}}>
+          Forgot password?
+        </Button>
+
+        <Text style={s.footer}>
+          Don&apos;t have an account?{" "}
+          <Text style={s.link} onPress={() => navigation.navigate("Register")}>
+            Sign up
+          </Text>
         </Text>
-      </Text>
-    </View>
+
+        {/* Bottom toast for errors (centered, above nav bar, Sign-in color) */}
+        <Portal>
+          <Snackbar
+            visible={toast.visible}
+            onDismiss={() => setToast({ visible: false, msg: "" })}
+            duration={3000}
+            style={s.snack}
+            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom + 10 }]}
+          >
+            {toast.msg}
+          </Snackbar>
+        </Portal>
+      </View>
+    </KeyboardAvoidingView>
   );
 }
 
-// 5) Minimal styling for inputs (rounded borders, padding)
-const s = {
-  input: {
+const s = StyleSheet.create({
+  container: { gap: 14 },
+  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800" },
+
+  // Give room ABOVE each field so the floating label can sit comfortably
+  inputBox: { marginTop: 10 },
+
+  input: { backgroundColor: "transparent" },
+  outline: {
+    borderRadius: 14,
     borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 8,
-    padding: 10,
+    // light frosted fill so the field stays readable on the blur
+    backgroundColor: "rgba(255,255,255,0.12)",
   },
-};
+
+  cta: { marginTop: 4, borderRadius: 28, backgroundColor: "#0a5161" },
+  footer: { color: "rgba(255,255,255,0.9)", textAlign: "center", marginTop: 6 },
+  link: { color: "#ffffff", textDecorationLine: "underline" },
+
+  // Snackbar styles
+  snackWrapper: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    alignItems: "center", // center horizontally
+  },
+  snack: {
+    backgroundColor: "#0a5161", // match Sign in button
+    borderRadius: 24,
+  },
+});
