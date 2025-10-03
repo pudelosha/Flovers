@@ -1,5 +1,6 @@
 ﻿// App.tsx
 import React from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/auth/AuthContext";
 import RootNavigator from "./src/navigation";
@@ -16,10 +17,12 @@ const theme = {
 
 export default function App() {
   return (
-    <PaperProvider theme={theme}>
-      <AuthProvider>
-        <RootNavigator />
-      </AuthProvider>
-    </PaperProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <PaperProvider theme={theme}>
+        <AuthProvider>
+          <RootNavigator />
+        </AuthProvider>
+      </PaperProvider>
+    </GestureHandlerRootView>
   );
 }
