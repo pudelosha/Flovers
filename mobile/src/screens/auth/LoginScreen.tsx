@@ -16,10 +16,10 @@ import { ApiError } from "../../api/client";
 const INPUT_HEIGHT = 64;
 
 // Custom Animated Floating Label Component
-const AnimatedFloatingLabel = ({ 
-  label, 
-  value, 
-  onChangeText, 
+const AnimatedFloatingLabel = ({
+  label,
+  value,
+  onChangeText,
   onFocus,
   onBlur,
   onSubmitEditing,
@@ -30,10 +30,10 @@ const AnimatedFloatingLabel = ({
   secureTextEntry,
   right,
   inputRef,
-  ...props 
+  ...props
 }: any) => {
   const [isFocused, setIsFocused] = useState(false);
-  const animatedLabel = useRef(new Animated.Value(value ? 1 : 0)).current;
+  const animatedLabel = React.useRef(new Animated.Value(value ? 1 : 0)).current;
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -77,25 +77,25 @@ const AnimatedFloatingLabel = ({
 
   const labelColor = animatedLabel.interpolate({
     inputRange: [0, 1],
-    outputRange: ['rgba(255,255,255,0.6)', '#FFFFFF'], // Changes from placeholder to white
+    outputRange: ["rgba(255,255,255,0.6)", "#FFFFFF"], // Changes from placeholder to white
   });
 
   return (
     <View style={s.inputContainer}>
       {/* Animated floating label */}
-      <Animated.Text 
+      <Animated.Text
         style={[
           s.floatingLabel,
           {
             top: labelTop,
             fontSize: labelFontSize,
             color: labelColor,
-          }
+          },
         ]}
       >
         {label}
       </Animated.Text>
-      
+
       <TextInput
         mode="flat"
         value={value}
@@ -157,7 +157,9 @@ export default function LoginScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>Login</Text>
+        <Text variant="headlineMedium" style={s.title}>
+          Login
+        </Text>
 
         {/* Email with animated floating label */}
         <AnimatedFloatingLabel
@@ -185,34 +187,54 @@ export default function LoginScreen({ navigation }: any) {
           right={
             <TextInput.Icon
               icon={showPwd ? "eye-off" : "eye"}
-              onPress={() => setShowPwd(v => !v)}
+              onPress={() => setShowPwd((v) => !v)}
               forceTextInputFocus={false}
               color="rgba(255,255,255,0.95)"
             />
           }
         />
 
-        {/* Buttons */}
-        <Button 
-          mode="contained" 
-          onPress={onSubmit} 
-          loading={loading} 
+        {/* Primary action */}
+        <Button
+          mode="contained"
+          onPress={onSubmit}
+          loading={loading}
           disabled={loading}
           style={s.button}
         >
           Sign in
         </Button>
 
-        <Button onPress={() => {}} textColor="#FFFFFF">
-          Forgot password?
+        {/* Link buttons (smaller text) */}
+        <Button
+          onPress={() => navigation.navigate("ForgotPassword")}
+          accessibilityRole="link"
+          compact
+          style={s.linkButton}
+        >
+          <Text style={s.linkLabel}>Forgot password?</Text>
         </Button>
 
-        <Text style={s.footer}>
-          Don&apos;t have an account?{" "}
-          <Text style={s.signUp} onPress={() => navigation.navigate("Register")}>
-            Sign Up
+        <Button
+          onPress={() => navigation.navigate("ResendActivation")}
+          accessibilityRole="link"
+          compact
+          style={[s.linkButton, s.linkTight]}
+        >
+          <Text style={s.linkLabel}>Didn&apos;t receive an activation email?</Text>
+        </Button>
+
+        <Button
+          onPress={() => navigation.navigate("Register")}
+          accessibilityRole="link"
+          compact
+          style={[s.linkButton, s.linkTight]}
+        >
+          <Text style={s.linkLabel}>
+            Don&apos;t have an account?{" "}
+            <Text style={[s.linkLabel, s.linkBold]}>Sign Up</Text>
           </Text>
-        </Text>
+        </Button>
 
         <Portal>
           <Snackbar
@@ -231,28 +253,28 @@ export default function LoginScreen({ navigation }: any) {
 }
 
 const s = StyleSheet.create({
-  container: { 
+  container: {
     gap: 14,
     paddingHorizontal: 16,
   },
-  title: { 
-    color: "#fff", 
-    textAlign: "center", 
-    marginBottom: 6, 
+  title: {
+    color: "#fff",
+    textAlign: "center",
+    marginBottom: 6,
     fontWeight: "800",
     marginTop: 20,
   },
 
   // Custom input container
   inputContainer: {
-    position: 'relative',
+    position: "relative",
   },
   // Animated floating label
   floatingLabel: {
-    position: 'absolute',
+    position: "absolute",
     left: 16,
     zIndex: 10,
-    fontWeight: '500',
+    fontWeight: "500",
   },
 
   // FLAT input: rounded, filled background, no underline
@@ -272,14 +294,19 @@ const s = StyleSheet.create({
     marginTop: 8,
   },
 
-  footer: { 
-    color: "rgba(255,255,255,0.9)", 
-    textAlign: "center", 
-    marginTop: 6 
+  // Link buttons (text-mode look, smaller font)
+  linkButton: {
+    alignSelf: "center",
   },
-  signUp: { 
-    color: "#FFFFFF", 
-    fontWeight: "700" 
+  linkTight: {
+    marginTop: -4,
+  },
+  linkLabel: {
+    fontSize: 14, // a bit smaller than default
+    color: "#FFFFFF",
+  },
+  linkBold: {
+    fontWeight: "700",
   },
 
   // toast
