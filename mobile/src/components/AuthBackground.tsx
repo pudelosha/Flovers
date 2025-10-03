@@ -4,12 +4,9 @@ import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const bg = require("../../assets/bg-leaves.jpg");
-// Keep the import handy; it won't render unless showDrops === true
 const drops = require("../../assets/drops.png");
 
-type Props = PropsWithChildren<{
-  showDrops?: boolean; // <- toggle water drops overlay
-}>;
+type Props = PropsWithChildren<{ showDrops?: boolean }>;
 
 export default function AuthBackground({ children, showDrops = false }: Props) {
   const insets = useSafeAreaInsets();
@@ -24,7 +21,6 @@ export default function AuthBackground({ children, showDrops = false }: Props) {
       >
         <View style={s.cardShadow}>
           <View style={s.card}>
-            {/* Frosted blur under everything */}
             <BlurView
               style={StyleSheet.absoluteFill}
               blurType={Platform.OS === "ios" ? "light" : "light"}
@@ -32,21 +28,13 @@ export default function AuthBackground({ children, showDrops = false }: Props) {
               overlayColor="transparent"
               reducedTransparencyFallbackColor="transparent"
             />
-
-            {/* White tint for readability */}
             <View style={s.cardTint} />
-
-            {/* Thin border like the reference */}
             <View pointerEvents="none" style={s.cardBorder} />
-
-            {/* Water drops on the glass (temporarily disabled by default) */}
             {showDrops && (
               <View pointerEvents="none" style={s.dropsWrap}>
                 <Image source={drops} style={s.drops} resizeMode="cover" />
               </View>
             )}
-
-            {/* Actual screen content */}
             <View style={s.content}>{children}</View>
           </View>
         </View>
@@ -58,7 +46,6 @@ export default function AuthBackground({ children, showDrops = false }: Props) {
 const s = StyleSheet.create({
   bg: { flex: 1 },
   container: { flex: 1, paddingHorizontal: 24, justifyContent: "center" },
-
   cardShadow: {
     borderRadius: 28,
     overflow: "hidden",
@@ -68,36 +55,10 @@ const s = StyleSheet.create({
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
   },
-  card: {
-    borderRadius: 28,
-    minHeight: 420,
-    overflow: "hidden",
-  },
-
-  // layers
-  cardTint: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
-    zIndex: 1,
-  },
-  cardBorder: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 28,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-    zIndex: 2,
-  },
-  dropsWrap: {
-    ...StyleSheet.absoluteFillObject,
-    zIndex: 2,
-  },
-  drops: {
-    ...StyleSheet.absoluteFillObject,
-    opacity: 0.5,
-  },
-  content: {
-    padding: 22,
-    gap: 12,
-    zIndex: 3,
-  },
+  card: { borderRadius: 28, minHeight: 420, overflow: "hidden" },
+  cardTint: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(255,255,255,0.20)", zIndex: 1 },
+  cardBorder: { ...StyleSheet.absoluteFillObject, borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.2)", zIndex: 2 },
+  dropsWrap: { ...StyleSheet.absoluteFillObject, zIndex: 2 },
+  drops: { ...StyleSheet.absoluteFillObject, opacity: 0.5 },
+  content: { padding: 22, gap: 12, zIndex: 3 },
 });
