@@ -4,9 +4,14 @@ import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const bg = require("../../assets/bg-leaves.jpg");
+// Keep the import handy; it won't render unless showDrops === true
 const drops = require("../../assets/drops.png");
 
-export default function AuthBackground({ children }: PropsWithChildren) {
+type Props = PropsWithChildren<{
+  showDrops?: boolean; // <- toggle water drops overlay
+}>;
+
+export default function AuthBackground({ children, showDrops = false }: Props) {
   const insets = useSafeAreaInsets();
 
   return (
@@ -23,7 +28,7 @@ export default function AuthBackground({ children }: PropsWithChildren) {
             <BlurView
               style={StyleSheet.absoluteFill}
               blurType={Platform.OS === "ios" ? "light" : "light"}
-              blurAmount={30}
+              blurAmount={20}
               overlayColor="transparent"
               reducedTransparencyFallbackColor="transparent"
             />
@@ -34,10 +39,12 @@ export default function AuthBackground({ children }: PropsWithChildren) {
             {/* Thin border like the reference */}
             <View pointerEvents="none" style={s.cardBorder} />
 
-            {/* Water drops on the glass */}
-            <View pointerEvents="none" style={s.dropsWrap}>
-              <Image source={drops} style={s.drops} resizeMode="cover" />
-            </View>
+            {/* Water drops on the glass (temporarily disabled by default) */}
+            {showDrops && (
+              <View pointerEvents="none" style={s.dropsWrap}>
+                <Image source={drops} style={s.drops} resizeMode="cover" />
+              </View>
+            )}
 
             {/* Actual screen content */}
             <View style={s.content}>{children}</View>
@@ -77,7 +84,7 @@ const s = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.45)",
+    borderColor: "rgba(255,255,255,0.2)",
     zIndex: 2,
   },
   dropsWrap: {
