@@ -1,4 +1,5 @@
 import React from "react";
+import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../auth/useAuth";
@@ -12,7 +13,9 @@ import RegisterScreen from "../screens/auth/RegisterScreen";
 import ForgotPasswordScreen from "../screens/auth/ForgotPasswordScreen";
 import ResendActivationScreen from "../screens/auth/ResendActivationScreen";
 
-import AuthBackground from "../components/AuthBackground";
+import AuthCard from "../components/AuthCard";
+
+const bg = require("../../assets/bg-leaves.jpg");
 
 // --- Types for the auth stack ---
 export type AuthStackParamList = {
@@ -25,31 +28,36 @@ export type AuthStackParamList = {
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 const AppStack = createNativeStackNavigator();
 
-// helper HOC to wrap auth screens in the frosted-glass background
-function withAuthBackground(Component: React.ComponentType<any>) {
+// Wrap a screen with the glass card (no background)
+function withAuthCard(Component: React.ComponentType<any>) {
   return (props: any) => (
-    <AuthBackground>
+    <AuthCard>
       <Component {...props} />
-    </AuthBackground>
+    </AuthCard>
   );
 }
 
 function AuthNavigator() {
   return (
-    <AuthStack.Navigator
-      initialRouteName="Login"
-      screenOptions={{
-        headerShown: false,
-        contentStyle: { backgroundColor: "transparent" },
-        // smooth transitions that look great with blur
-        animation: "fade_from_bottom",
-      }}
-    >
-      <AuthStack.Screen name="Login" component={withAuthBackground(LoginScreen)} />
-      <AuthStack.Screen name="Register" component={withAuthBackground(RegisterScreen)} />
-      <AuthStack.Screen name="ForgotPassword" component={withAuthBackground(ForgotPasswordScreen)} />
-      <AuthStack.Screen name="ResendActivation" component={withAuthBackground(ResendActivationScreen)} />
-    </AuthStack.Navigator>
+    // Render the leaves background ONCE here so it stays static
+    <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
+      <AuthStack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+          headerShown: false,
+          // IMPORTANT: remove cross-screen animation to avoid double frames.
+          // Old screen is removed immediately; AuthCard animates itself on mount.
+          animation: "none",
+          detachPreviousScreen: true,
+          contentStyle: { backgroundColor: "transparent" },
+        }}
+      >
+        <AuthStack.Screen name="Login" component={withAuthCard(LoginScreen)} />
+        <AuthStack.Screen name="Register" component={withAuthCard(RegisterScreen)} />
+        <AuthStack.Screen name="ForgotPassword" component={withAuthCard(ForgotPasswordScreen)} />
+        <AuthStack.Screen name="ResendActivation" component={withAuthCard(ResendActivationScreen)} />
+      </AuthStack.Navigator>
+    </ImageBackground>
   );
 }
 
@@ -58,7 +66,7 @@ function AppNavigator() {
     <AppStack.Navigator
       screenOptions={{
         headerShadowVisible: false,
-        contentStyle: { backgroundColor: "#ffffff" }, // plain background for logged-in area
+        contentStyle: { backgroundColor: "#ffffff" },
         animation: "slide_from_right",
       }}
     >
