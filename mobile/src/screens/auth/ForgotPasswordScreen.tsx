@@ -90,7 +90,7 @@ export default function ForgotPasswordScreen({ navigation }: any) {
 
         <Portal>
           <Snackbar visible={toast.visible} onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000} style={s.snack} wrapperStyle={[s.snackWrapper, { bottom: insets.bottom + 10 }]}>
+            duration={3000} style={s.snack} wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}>
             {toast.msg}
           </Snackbar>
         </Portal>

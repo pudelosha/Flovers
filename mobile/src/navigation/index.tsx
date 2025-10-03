@@ -12,6 +12,8 @@ import LoginScreen from "../screens/auth/LoginScreen";
 import RegisterScreen from "../screens/auth/RegisterScreen";
 import ForgotPasswordScreen from "../screens/auth/ForgotPasswordScreen";
 import ResendActivationScreen from "../screens/auth/ResendActivationScreen";
+import ConfirmEmailScreen from "../screens/auth/ConfirmEmailScreen";
+import ResetPasswordScreen from "../screens/auth/ResetPasswordScreen";
 
 import AuthCard from "../components/AuthCard";
 
@@ -22,7 +24,9 @@ export type AuthStackParamList = {
   Login: undefined;
   Register: undefined;
   ForgotPassword: undefined;
-  ResendActivation: undefined;
+  ResendActivation: { email?: string } | undefined;
+  ConfirmEmail: { token?: string; uid?: string; email?: string; url?: string } | undefined;
+  ResetPassword: { token?: string; uid?: string; email?: string; url?: string } | undefined;
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -39,14 +43,12 @@ function withAuthCard(Component: React.ComponentType<any>) {
 
 function AuthNavigator() {
   return (
-    // Render the leaves background ONCE here so it stays static
+    // leaves background rendered once, static behind frames
     <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
       <AuthStack.Navigator
         initialRouteName="Login"
         screenOptions={{
           headerShown: false,
-          // IMPORTANT: remove cross-screen animation to avoid double frames.
-          // Old screen is removed immediately; AuthCard animates itself on mount.
           animation: "none",
           detachPreviousScreen: true,
           contentStyle: { backgroundColor: "transparent" },
@@ -56,6 +58,7 @@ function AuthNavigator() {
         <AuthStack.Screen name="Register" component={withAuthCard(RegisterScreen)} />
         <AuthStack.Screen name="ForgotPassword" component={withAuthCard(ForgotPasswordScreen)} />
         <AuthStack.Screen name="ResendActivation" component={withAuthCard(ResendActivationScreen)} />
+        <AuthStack.Screen name="ConfirmEmail" component={withAuthCard(ConfirmEmailScreen)} /> {/* NEW */}
       </AuthStack.Navigator>
     </ImageBackground>
   );

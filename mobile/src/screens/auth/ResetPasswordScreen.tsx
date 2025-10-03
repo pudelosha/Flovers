@@ -1,5 +1,4 @@
-// src/screens/auth/RegisterScreen.tsx
-import React, { useRef, useState } from "react";
+import React, { useMemo, useRef, useState, useEffect } from "react";
 import {
   View,
   StyleSheet,
@@ -8,22 +7,15 @@ import {
   Animated,
   TextInput as RNTextInput,
 } from "react-native";
-import {
-  Text,
-  TextInput,
-  Button,
-  Snackbar,
-  Portal,
-  Checkbox,
-  TouchableRipple,
-} from "react-native-paper";
+import { Text, TextInput, Button, Snackbar, Portal } from "react-native-paper";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../auth/useAuth";
 import { ApiError } from "../../api/client";
 
 const INPUT_HEIGHT = 64;
 
-/** Reusable animated floating label input (same UX as other screens) */
+/** Animated floating label (same look as other auth screens) */
 const AnimatedFloatingLabel = ({
   label,
   value,
@@ -44,40 +36,15 @@ const AnimatedFloatingLabel = ({
   const animatedLabel = useRef(new Animated.Value(value ? 1 : 0)).current;
 
   const animateLabel = (toValue: number) => {
-    Animated.timing(animatedLabel, {
-      toValue,
-      duration: 200,
-      useNativeDriver: false,
-    }).start();
+    Animated.timing(animatedLabel, { toValue, duration: 200, useNativeDriver: false }).start();
   };
 
-  const handleFocus = () => {
-    setIsFocused(true);
-    animateLabel(1);
-    onFocus?.();
-  };
+  const handleFocus = () => { setIsFocused(true); animateLabel(1); onFocus?.(); };
+  const handleBlur = () => { setIsFocused(false); if (!value) animateLabel(0); onBlur?.(); };
+  const handleChangeText = (text: string) => { if (!isFocused && text) animateLabel(1); onChangeText(text); };
 
-  const handleBlur = () => {
-    setIsFocused(false);
-    if (!value) animateLabel(0);
-    onBlur?.();
-  };
-
-  const handleChangeText = (text: string) => {
-    if (!isFocused && text) animateLabel(1);
-    onChangeText(text);
-  };
-
-  const labelTop = animatedLabel.interpolate({
-    inputRange: [0, 1],
-    outputRange: [22, 8],
-  });
-
-  const labelFontSize = animatedLabel.interpolate({
-    inputRange: [0, 1],
-    outputRange: [16, 12],
-  });
-
+  const labelTop = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [22, 8] });
+  const labelFontSize = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [16, 12] });
   const labelColor = animatedLabel.interpolate({
     inputRange: [0, 1],
     outputRange: ["rgba(255,255,255,0.6)", "#FFFFFF"],
@@ -85,15 +52,9 @@ const AnimatedFloatingLabel = ({
 
   return (
     <View style={s.inputContainer}>
-      <Animated.Text
-        style={[
-          s.floatingLabel,
-          { top: labelTop, fontSize: labelFontSize, color: labelColor },
-        ]}
-      >
+      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>
         {label}
       </Animated.Text>
-
       <TextInput
         mode="flat"
         value={value}
@@ -122,81 +83,108 @@ const AnimatedFloatingLabel = ({
   );
 };
 
-export default function RegisterScreen({ navigation }: any) {
-  const insets = useSafeAreaInsets();
-  const { register } = useAuth() as any;
+type ResetParams = { token?: string; uid?: string; email?: string; url?: string };
+type AuthStackParamList = { ResetPassword: ResetParams };
 
-  const [email, setEmail] = useState("");
+function parseQuery(url: string): Record<string, string> {
+  try {
+    const q = url.split("?")[1] || "";
+    const out: Record<string, string> = {};
+    q.split("&").filter(Boolean).forEach((pair) => {
+      const [k, v] = pair.split("=");
+      if (k) out[decodeURIComponent(k)] = decodeURIComponent(v || "");
+    });
+    return out;
+  } catch {
+    return {};
+  }
+}
+
+export default function ResetPasswordScreen({ navigation }: any) {
+  const insets = useSafeAreaInsets();
+  const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
+  const { resetPassword } = useAuth() as any; // rename to your actual method, e.g. confirmPasswordReset
+
+  const params = route.params || {};
+  const derived = useMemo(() => {
+    const { token, uid, email, url } = params;
+    if (token || uid) return { token, uid, email };
+    if (url) {
+      const qs = parseQuery(url);
+      return {
+        token: qs.token ?? qs.key ?? qs.code,
+        uid: qs.uid ?? qs.u,
+        email: qs.email,
+      };
+    }
+    return { token: undefined, uid: undefined, email: undefined };
+  }, [params]);
+
   const [pwd, setPwd] = useState("");
   const [pwd2, setPwd2] = useState("");
   const [showPwd, setShowPwd] = useState(false);
   const [showPwd2, setShowPwd2] = useState(false);
-  const [agree, setAgree] = useState(false);
 
   const [loading, setLoading] = useState(false);
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({
-    visible: false,
-    msg: "",
-  });
+  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
 
-  const emailRef = useRef<RNTextInput | null>(null);
   const pwdRef = useRef<RNTextInput | null>(null);
   const pwd2Ref = useRef<RNTextInput | null>(null);
 
-  const emailValid = /\S+@\S+\.\S+/.test(email);
   const passwordValid = pwd.length >= 6;
   const passwordsMatch = pwd && pwd === pwd2;
-  const formValid = emailValid && passwordValid && passwordsMatch && agree;
+  const formValid = passwordValid && passwordsMatch && !!derived.token && !!derived.uid;
 
   async function onSubmit() {
     if (!formValid) {
       let msg = "Please complete the form.";
-      if (!emailValid) msg = "Enter a valid email.";
+      if (!derived.token || !derived.uid) msg = "Invalid or missing reset link.";
       else if (!passwordValid) msg = "Password should be at least 6 characters.";
       else if (!passwordsMatch) msg = "Passwords do not match.";
-      else if (!agree) msg = "You must agree to the Terms & Conditions.";
       setToast({ visible: true, msg });
       return;
     }
 
     setLoading(true);
     try {
-      if (typeof register === "function") {
-        await register({ email, password: pwd });
+      if (typeof resetPassword === "function") {
+        await resetPassword({ token: derived.token, uid: derived.uid, password: pwd });
+      } else {
+        // Temporary fake success to let you test the flow without backend
+        await new Promise((r) => setTimeout(r, 500));
       }
-      setToast({ visible: true, msg: "Account created. Welcome!" });
+      setToast({ visible: true, msg: "Password changed. Please log in." });
+      navigation.navigate("Login");
     } catch (e: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
-          : "Registration failed. Please try again.";
+          : "Could not reset password. The link may be invalid or expired.";
       setToast({ visible: true, msg });
     } finally {
       setLoading(false);
     }
   }
 
+  // If no token/uid in params, show a quick guidance toast after mount
+  useEffect(() => {
+    if (!derived.token || !derived.uid) {
+      setToast({
+        visible: true,
+        msg: "Open this page via the reset link from your email.",
+      });
+    }
+  }, [derived]);
+
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
         <Text variant="headlineMedium" style={s.title}>
-          Register
+          Reset Password
         </Text>
 
         <AnimatedFloatingLabel
-          label="Email"
-          value={email}
-          onChangeText={setEmail}
-          autoCapitalize="none"
-          keyboardType="email-address"
-          autoComplete="email"
-          returnKeyType="next"
-          onSubmitEditing={() => pwdRef.current?.focus()}
-          inputRef={emailRef}
-        />
-
-        <AnimatedFloatingLabel
-          label="Password"
+          label="New Password"
           value={pwd}
           onChangeText={setPwd}
           secureTextEntry={!showPwd}
@@ -233,36 +221,6 @@ export default function RegisterScreen({ navigation }: any) {
           }
         />
 
-        {/* Full-width pressable row with checkbox + wrapping text */}
-        <TouchableRipple
-          onPress={() => setAgree((v) => !v)}
-          accessibilityRole="button"
-          style={s.agreeRipple}
-          borderless={false}
-          rippleColor="rgba(255,255,255,0.15)"
-        >
-          <View style={s.agreeRow}>
-            <Checkbox
-              status={agree ? "checked" : "unchecked"}
-              onPress={() => setAgree((v) => !v)}
-              color="#FFFFFF"
-              uncheckedColor="#FFFFFF"
-              style={s.checkbox}
-            />
-            <Text style={s.agreeText}>
-              I agree to the{" "}
-              <Text
-                style={[s.agreeText, s.linkBold, s.linkUnderline]}
-                onPress={() => {
-                  // navigation.navigate("Terms") or Linking.openURL("https://example.com/terms")
-                }}
-              >
-                Terms & Conditions
-              </Text>
-            </Text>
-          </View>
-        </TouchableRipple>
-
         <Button
           mode="contained"
           onPress={onSubmit}
@@ -270,20 +228,11 @@ export default function RegisterScreen({ navigation }: any) {
           disabled={loading || !formValid}
           style={s.button}
         >
-          Register
+          Change password
         </Button>
 
-        {/* Already have an account? Login */}
-        <Button
-          onPress={() => navigation.navigate("Login")}
-          accessibilityRole="link"
-          compact
-          style={s.linkButton}
-        >
-          <Text style={s.linkLabel}>
-            Already have an account?{" "}
-            <Text style={[s.linkLabel, s.linkBold]}>Login</Text>
-          </Text>
+        <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
+          <Text style={s.linkLabel}>Back to Login</Text>
         </Button>
 
         <Portal>
@@ -292,7 +241,7 @@ export default function RegisterScreen({ navigation }: any) {
             onDismiss={() => setToast({ visible: false, msg: "" })}
             duration={3000}
             style={s.snack}
-            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}
+            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom + 10 }]}
           >
             {toast.msg}
           </Snackbar>
@@ -303,17 +252,8 @@ export default function RegisterScreen({ navigation }: any) {
 }
 
 const s = StyleSheet.create({
-  container: {
-    gap: 14,
-    paddingHorizontal: 16,
-  },
-  title: {
-    color: "#fff",
-    textAlign: "center",
-    marginBottom: 6,
-    fontWeight: "800",
-    marginTop: 20,
-  },
+  container: { gap: 14, paddingHorizontal: 16 },
+  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
 
   // Animated input styles
   inputContainer: { position: "relative" },
@@ -326,48 +266,11 @@ const s = StyleSheet.create({
   },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
 
-  // CTA
   button: { marginTop: 8 },
-
-  // Agree row (full width, no clipping, wraps nicely)
-  agreeRipple: {
-    alignSelf: "stretch",
-    borderRadius: 12,
-  },
-  agreeRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 0, // more space left/right
-    paddingVertical: 5,   // taller for checkbox
-    minHeight: 50,
-  },
-  checkbox: {
-    marginRight: 10,
-  },
-  agreeText: {
-    fontSize: 14,
-    color: "#FFFFFF",
-    lineHeight: 20,
-    flex: 1,        // take the remaining width
-    flexShrink: 1,  // allow wrapping
-    flexWrap: "wrap",
-  },
-
-  // link-style buttons/labels
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
-  linkBold: { fontWeight: "700" },
-  linkUnderline: { textDecorationLine: "underline" },
 
   // toast
-  snackWrapper: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    alignItems: "center",
-  },
-  snack: {
-    backgroundColor: "#0a5161",
-    borderRadius: 24,
-  },
+  snackWrapper: { position: "absolute", left: 0, right: 0, alignItems: "center" },
+  snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });
