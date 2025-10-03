@@ -1,3 +1,4 @@
+// src/navigation/index.tsx
 import React from "react";
 import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -43,7 +44,6 @@ function withAuthCard(Component: React.ComponentType<any>) {
 
 function AuthNavigator() {
   return (
-    // leaves background rendered once, static behind frames
     <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
       <AuthStack.Navigator
         initialRouteName="Login"
@@ -58,7 +58,8 @@ function AuthNavigator() {
         <AuthStack.Screen name="Register" component={withAuthCard(RegisterScreen)} />
         <AuthStack.Screen name="ForgotPassword" component={withAuthCard(ForgotPasswordScreen)} />
         <AuthStack.Screen name="ResendActivation" component={withAuthCard(ResendActivationScreen)} />
-        <AuthStack.Screen name="ConfirmEmail" component={withAuthCard(ConfirmEmailScreen)} /> {/* NEW */}
+        <AuthStack.Screen name="ConfirmEmail" component={withAuthCard(ConfirmEmailScreen)} />
+        <AuthStack.Screen name="ResetPassword" component={withAuthCard(ResetPasswordScreen)} />
       </AuthStack.Navigator>
     </ImageBackground>
   );
