@@ -5,6 +5,12 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
 
+// Use gradient (with safe fallback if the lib isn't installed)
+let LinearGradientView: any = View;
+try {
+  LinearGradientView = require("react-native-linear-gradient").default;
+} catch {}
+
 // Screens
 import HomeScreen from "../screens/app/HomeScreen";
 import PlantsScreen from "../screens/app/PlantsScreen";
@@ -23,6 +29,10 @@ export type AppTabParamList = {
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
+
+// More transparent, higher-contrast horizontal gradient
+const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"]; // left (darker) -> right (lighter)
+const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)"; // used if gradient lib missing
 
 function GlassTabBar({ state, descriptors, navigation }: any) {
   const insets = useSafeAreaInsets();
@@ -43,7 +53,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     }
   };
 
-  // We hide the "Scanner" route from the bar completely.
+  // Hide "Scanner" from the bar completely.
   const visibleRoutes = state.routes.filter((r: any) => r.name !== "Scanner");
 
   // If the active route is "Scanner", no visible tab should appear focused.
@@ -57,15 +67,25 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
           { paddingBottom: Math.max(insets.bottom, 10) },
         ]}
       >
+        {/* Light blur to create the fog effect behind the tint */}
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
-          blurAmount={16}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+          blurAmount={10}
+          reducedTransparencyFallbackColor="rgba(255,255,255,0.12)"
         />
+
+        {/* Semi-transparent horizontal green gradient tint */}
+        <LinearGradientView
+          colors={TAB_GRADIENT_TINT}
+          locations={[0, 1]}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          style={[StyleSheet.absoluteFill, { backgroundColor: TAB_SOLID_FALLBACK }]}
+        />
+
         <View style={s.tabInner}>
-          {visibleRoutes.map((route: any, index: number) => {
-            // Use the original index to check focus unless active screen is Scanner.
+          {visibleRoutes.map((route: any) => {
             const originalIndex = state.routes.findIndex((r: any) => r.key === route.key);
             const isFocused = !activeIsScanner && state.index === originalIndex;
 
@@ -99,7 +119,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
                 <MaterialCommunityIcons
                   name={iconName}
                   size={26}
-                  color={isFocused ? "#0B7285" : "rgba(255,255,255,0.92)"}
+                  color={isFocused ? "#FFFFFF" : "rgba(255,255,255,0.92)"}
                   style={s.icon}
                 />
                 <Text
@@ -125,11 +145,10 @@ export default function AppTabs() {
         sceneStyle: { backgroundColor: "transparent" },
       }}
       tabBar={(props) => <GlassTabBar {...props} />}
-      // Global padding for all tab screens so content never sticks to edges
       sceneContainerStyle={{
         paddingTop: 16,
         paddingHorizontal: 16,
-        paddingBottom: 112, // ensure content clears the bar comfortably
+        paddingBottom: 112,
         backgroundColor: "transparent",
       }}
     >
@@ -138,14 +157,10 @@ export default function AppTabs() {
       <Tab.Screen name="Reminders" component={RemindersScreen} />
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
-      {/* Hidden tab: accessible via nav.navigate("Scanner") but not rendered in the bar */}
       <Tab.Screen
         name="Scanner"
         component={ScannerScreen}
-        options={{
-          // no icon/label; we hide it in the custom tab bar
-          tabBarStyle: { display: "flex" }, // keep bar visible
-        }}
+        options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>
   );
@@ -159,10 +174,8 @@ const s = StyleSheet.create({
     bottom: 0,
     borderRadius: 0,
     overflow: "hidden",
-    // top-only border
     borderTopWidth: 1,
     borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(255,255,255,0.15)",
   },
   tabInner: {
     height: 64,
@@ -183,7 +196,7 @@ const s = StyleSheet.create({
     left: 6,
     right: 6,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.55)",
+    backgroundColor: "rgba(255,255,255,0.12)",
   },
   icon: {
     marginBottom: 2,
@@ -199,7 +212,7 @@ const s = StyleSheet.create({
     textShadowRadius: 0.5,
   },
   labelFocused: {
-    color: "#0B7285",
+    color: "#FFFFFF",
     fontWeight: "700",
   },
   labelUnfocused: {

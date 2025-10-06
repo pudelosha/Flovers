@@ -10,9 +10,13 @@ import {
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-// Header now uses BlurView with same amount as bottom menu (16).
-// Tiles have extra BlurView at 50% of that (8).
+// Try to use react-native-linear-gradient if installed; otherwise fall back to a plain View
+let LinearGradientView: any = View;
+try {
+  LinearGradientView = require("react-native-linear-gradient").default;
+} catch {}
 
 type TaskType = "watering" | "moisture" | "fertilising" | "care";
 
@@ -24,10 +28,10 @@ type Task = {
 };
 
 const accent: Record<TaskType, string> = {
-  watering: "#4dabf7", // blue
-  moisture: "#20c997", // teal
-  fertilising: "#ffd43b", // yellow
-  care: "#e599f7", // purple
+  watering: "#4dabf7",
+  moisture: "#20c997",
+  fertilising: "#ffd43b",
+  care: "#e599f7",
 };
 
 const iconByType: Record<TaskType, string> = {
@@ -37,11 +41,15 @@ const iconByType: Record<TaskType, string> = {
   care: "flower",
 };
 
-const HEADER_BLUR = 16;
-const TILE_BLUR = 8;
+const TILE_BLUR = 8; // 50% of tab/header feel
+
+// Header: semi-transparent horizontal dark-green gradient (header ONLY)
+const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
+const HEADER_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 export default function HomeScreen() {
   const nav = useNavigation();
+  const insets = useSafeAreaInsets();
 
   const tasks: Task[] = useMemo(
     () =>
@@ -64,7 +72,6 @@ export default function HomeScreen() {
 
     return (
       <View style={s.cardWrap}>
-        {/* Blur layer for tiles (50% of bar/header blur) */}
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
@@ -83,45 +90,66 @@ export default function HomeScreen() {
 
           <Text style={s.dueText}>{item.due}</Text>
         </View>
-        {/* subtle colored fog on top for depth */}
         <View
-          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(a, 0.12) }]}
+          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(a, 0.10) }]}
           pointerEvents="none"
         />
       </View>
     );
   };
 
-  // Static header (not inside the list, so it won't hide on scroll)
+  // Header bar ONLY: gradient background; no absolute overlays affecting the page
   const HeaderStatic: React.FC = () => (
-    <View style={s.headerOuter}>
-      <View style={s.headerContainer}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={HEADER_BLUR}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-        />
-        <View style={s.headerTopRow}>
-          <Text style={s.headerTitle}>Home</Text>
-          <Pressable
-            onPress={() => nav.navigate("Scanner" as never)}
-            style={s.scanBtn}
-            android_ripple={{ color: "rgba(0,0,0,0.08)", borderless: true }}
-          >
-            <MaterialCommunityIcons name="qrcode-scan" size={20} color="#0B7285" />
+    <LinearGradientView
+      colors={HEADER_GRADIENT_TINT}
+      locations={[0, 1]}
+      start={{ x: 0, y: 0.5 }}
+      end={{ x: 1, y: 0.5 }}
+      style={[s.headerBar, { paddingTop: insets.top + 10, backgroundColor: HEADER_SOLID_FALLBACK }]}
+    >
+      <View style={s.headerTopRow}>
+        <Text style={s.headerTitle}>Home</Text>
+        <Pressable
+          onPress={() => nav.navigate("Scanner" as never)}
+          style={s.scanBtn}
+          android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+        >
+          <MaterialCommunityIcons name="qrcode-scan" size={20} color="#FFFFFF" />
+        </Pressable>
+      </View>
+
+      <View style={s.separator} />
+
+      {/* Submenu: left/center/right alignment with small right-side icons */}
+      <View style={s.subRow}>
+        <View style={s.subColLeft}>
+          <Pressable style={s.subBtn} hitSlop={8}>
+            <View style={s.subBtnInner}>
+              <Text style={s.subBtnText}>sort</Text>
+              <MaterialCommunityIcons name="sort" size={14} color="#FFFFFF" style={s.subIcon} />
+            </View>
           </Pressable>
         </View>
-        <View style={s.separator} />
-        <View style={s.subRow}>
-          {["sort", "filter", "history"].map((label) => (
-            <Pressable key={label} style={s.subBtn}>
-              <Text style={s.subBtnText}>{label}</Text>
-            </Pressable>
-          ))}
+
+        <View style={s.subColCenter}>
+          <Pressable style={s.subBtn} hitSlop={8}>
+            <View style={s.subBtnInner}>
+              <Text style={s.subBtnText}>filter</Text>
+              <MaterialCommunityIcons name="filter-variant" size={14} color="#FFFFFF" style={s.subIcon} />
+            </View>
+          </Pressable>
+        </View>
+
+        <View style={s.subColRight}>
+          <Pressable style={s.subBtn} hitSlop={8}>
+            <View style={s.subBtnInner}>
+              <Text style={s.subBtnText}>history</Text>
+              <MaterialCommunityIcons name="history" size={14} color="#FFFFFF" style={s.subIcon} />
+            </View>
+          </Pressable>
         </View>
       </View>
-    </View>
+    </LinearGradientView>
   );
 
   return (
@@ -131,8 +159,7 @@ export default function HomeScreen() {
         data={tasks}
         keyExtractor={(t) => t.id}
         renderItem={renderTask}
-        // header is now static; give the list a top spacer to breathe under it
-        ListHeaderComponent={() => <View style={{ height: 14 }} />}
+        ListHeaderComponent={() => <View style={{ height: 5 }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
@@ -161,17 +188,13 @@ const s = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 24,
   },
-  headerOuter: {
-    marginHorizontal: -16, // full width header to match screen padding
-  },
-  headerContainer: {
-    paddingTop: 10,
+
+  // HEADER (only this area gets the gradient)
+  headerBar: {
     paddingBottom: 8,
     paddingHorizontal: 16,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.35)",
-    backgroundColor: "rgba(255,255,255,0.15)",
-    overflow: "hidden",
+    borderColor: "rgba(255,255,255,0.25)",
   },
   headerTopRow: {
     flexDirection: "row",
@@ -191,35 +214,44 @@ const s = StyleSheet.create({
     borderRadius: 18,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.9)",
+    backgroundColor: "rgba(255,255,255,0.12)",
     borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.06)",
+    borderColor: "rgba(255,255,255,0.25)",
   },
   separator: {
     height: StyleSheet.hairlineWidth,
     backgroundColor: "rgba(255,255,255,0.7)",
   },
+
+  // Submenu layout: 3 equal columns (left, center, right)
   subRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 18,
     paddingTop: 8,
   },
-  subBtn: { paddingVertical: 6 },
+  subColLeft: { flex: 1, alignItems: "flex-start" },
+  subColCenter: { flex: 1, alignItems: "center" },
+  subColRight: { flex: 1, alignItems: "flex-end" },
+
+  // Submenu button styling
+  subBtn: { paddingVertical: 6, paddingHorizontal: 2 },
+  subBtnInner: { flexDirection: "row", alignItems: "center" },
   subBtnText: {
-    color: "#D97706",
+    color: "#FFFFFF",
     fontWeight: "700",
     letterSpacing: 0.2,
+    textTransform: "lowercase",
   },
+  subIcon: { marginLeft: 6 },
 
-  // task tiles
+  // TASK TILES
   cardWrap: {
     height: 84,
     borderRadius: 18,
     overflow: "hidden",
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.35)",
-    backgroundColor: "rgba(255,255,255,0.15)",
+    backgroundColor: "rgba(255,255,255,0.15)", // Task tiles colored fog overlay
   },
   cardContent: {
     flex: 1,
