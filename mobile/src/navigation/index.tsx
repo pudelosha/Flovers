@@ -4,8 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../auth/useAuth";
 
-// logged-in area
-import HomeScreen from "../screens/app/HomeScreen";
+// logged-in shell
+import AppTabs from "./AppTabs";
 
 // auth screens (logged-out)
 import LoginScreen from "../screens/auth/LoginScreen";
@@ -19,7 +19,6 @@ import AuthCard from "../components/AuthCard";
 
 const bg = require("../../assets/bg-leaves.jpg");
 
-// --- Types for the auth stack ---
 export type AuthStackParamList = {
   Login: undefined;
   Register: undefined;
@@ -32,25 +31,27 @@ export type AuthStackParamList = {
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 const AppStack = createNativeStackNavigator();
 
-// Deep-linking config (maps flovers:// paths to screens)
+// deep linking stays (for auth)
 const linking = {
   prefixes: ["flovers://"],
   config: {
     screens: {
-      // auth stack
       Login: "login",
       Register: "register",
       ForgotPassword: "forgot-password",
       ResendActivation: "resend-activation",
-      ConfirmEmail: "confirm-email",     // flovers://confirm-email?uid=...&token=...
-      ResetPassword: "reset-password",   // flovers://reset-password?uid=...&token=...
-      // app stack (optional)
+      ConfirmEmail: "confirm-email",
+      ResetPassword: "reset-password",
+      // app tabs (optional mapping)
       Home: "home",
+      Plants: "plants",
+      Reminders: "reminders",
+      Readings: "readings",
+      Profile: "profile",
     },
   },
 };
 
-// Wrap a screen with the glass card (no background)
 function withAuthCard(Component: React.ComponentType<any>) {
   return (props: any) => (
     <AuthCard>
@@ -84,22 +85,16 @@ function AuthNavigator() {
 
 function AppNavigator() {
   return (
-    <AppStack.Navigator
-      screenOptions={{
-        headerShadowVisible: false,
-        contentStyle: { backgroundColor: "#ffffff" },
-        animation: "slide_from_right",
-      }}
-    >
-      <AppStack.Screen name="Home" component={HomeScreen} options={{ title: "Flovers" }} />
-    </AppStack.Navigator>
+    // Static leaves background behind the whole logged-in area
+    <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
+      <AppTabs />
+    </ImageBackground>
   );
 }
 
 export default function RootNavigator() {
   const { loading, token } = useAuth();
   if (loading) return null;
-
   return (
     <NavigationContainer linking={linking}>
       {token ? <AppNavigator /> : <AuthNavigator />}
