@@ -11,6 +11,7 @@ import PlantsScreen from "../screens/app/PlantsScreen";
 import RemindersScreen from "../screens/app/RemindersScreen";
 import ReadingsScreen from "../screens/app/ReadingsScreen";
 import ProfileScreen from "../screens/app/ProfileScreen";
+import ScannerScreen from "../screens/app/ScannerScreen"; // <-- hidden tab
 
 export type AppTabParamList = {
   Home: undefined;
@@ -18,6 +19,7 @@ export type AppTabParamList = {
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;
+  Scanner: undefined; // <-- hidden tab to keep bottom bar visible
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -41,12 +43,18 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     }
   };
 
+  // We hide the "Scanner" route from the bar completely.
+  const visibleRoutes = state.routes.filter((r: any) => r.name !== "Scanner");
+
+  // If the active route is "Scanner", no visible tab should appear focused.
+  const activeIsScanner = state.routes[state.index]?.name === "Scanner";
+
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
       <View
         style={[
           s.tabWrap,
-          { paddingBottom: Math.max(insets.bottom, 10) }, // a hair more padding
+          { paddingBottom: Math.max(insets.bottom, 10) },
         ]}
       >
         <BlurView
@@ -56,8 +64,10 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
           reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
         />
         <View style={s.tabInner}>
-          {state.routes.map((route: any, index: number) => {
-            const isFocused = state.index === index;
+          {visibleRoutes.map((route: any, index: number) => {
+            // Use the original index to check focus unless active screen is Scanner.
+            const originalIndex = state.routes.findIndex((r: any) => r.key === route.key);
+            const isFocused = !activeIsScanner && state.index === originalIndex;
 
             const onPress = () => {
               const event = navigation.emit({
@@ -128,6 +138,15 @@ export default function AppTabs() {
       <Tab.Screen name="Reminders" component={RemindersScreen} />
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+      {/* Hidden tab: accessible via nav.navigate("Scanner") but not rendered in the bar */}
+      <Tab.Screen
+        name="Scanner"
+        component={ScannerScreen}
+        options={{
+          // no icon/label; we hide it in the custom tab bar
+          tabBarStyle: { display: "flex" }, // keep bar visible
+        }}
+      />
     </Tab.Navigator>
   );
 }

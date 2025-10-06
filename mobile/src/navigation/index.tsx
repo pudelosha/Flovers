@@ -29,9 +29,8 @@ export type AuthStackParamList = {
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
-const AppStack = createNativeStackNavigator();
 
-// deep linking stays (for auth)
+// deep linking (auth + tab screens, incl. hidden Scanner for direct links)
 const linking = {
   prefixes: ["flovers://"],
   config: {
@@ -42,12 +41,13 @@ const linking = {
       ResendActivation: "resend-activation",
       ConfirmEmail: "confirm-email",
       ResetPassword: "reset-password",
-      // app tabs (optional mapping)
+      // app tabs
       Home: "home",
       Plants: "plants",
       Reminders: "reminders",
       Readings: "readings",
       Profile: "profile",
+      Scanner: "scanner",
     },
   },
 };
