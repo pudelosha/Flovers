@@ -41,20 +41,64 @@
         "presentation": { "reveal": "always", "panel": "new" },
         "problemMatcher": []
       },
+
       {
         "label": "Mobile: check devices",
         "type": "shell",
-        "command": "adb",
-        "args": ["devices"],
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found. Install Android SDK Platform-Tools or set ANDROID_SDK_ROOT.'; exit 1 }; " +
+          "& $adb version; & $adb devices"
+        ],
         "options": { "cwd": "${workspaceFolder:mobile}" }
       },
       {
-        "label": "Mobile: USB reverse",
+        "label": "Mobile: USB reverse Metro (8081)",
         "type": "shell",
-        "command": "adb",
-        "args": ["reverse", "tcp:8081", "tcp:8081"],
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb reverse tcp:8081 tcp:8081; & $adb reverse --list"
+        ],
         "options": { "cwd": "${workspaceFolder:mobile}" }
       },
+      {
+        "label": "Mobile: USB reverse Backend (8000)",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      {
+        "label": "Mobile: USB reverse 8081+8000",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb reverse tcp:8081 tcp:8081; & $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+
       {
         "label": "Mobile: run Android (THIS DEVICE)",
         "type": "shell",
@@ -69,7 +113,7 @@
         "command": "echo Deploying to physical device…",
         "dependsOn": [
           "Mobile: check devices",
-          "Mobile: USB reverse",
+          "Mobile: USB reverse 8081+8000",
           "Mobile: run Android (THIS DEVICE)"
         ],
         "dependsOrder": "sequence",
@@ -123,6 +167,63 @@
         ],
         "options": { "cwd": "${workspaceFolder}" },
         "presentation": { "reveal": "always" }
+      },
+
+      {
+        "label": "DL: open activate (USB)",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/activate/?uid=TEST&token=TEST'"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      {
+        "label": "DL: open reset-password (USB)",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/reset-password/?uid=TEST&token=TEST'"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      {
+        "label": "DL: confirm-email deep link",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://confirm-email?uid=TEST&token=TEST'"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
+      },
+      {
+        "label": "DL: reset-password deep link",
+        "type": "shell",
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-Command",
+          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+          "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://reset-password?uid=TEST&token=TEST'"
+        ],
+        "options": { "cwd": "${workspaceFolder:mobile}" }
       }
     ]
   }

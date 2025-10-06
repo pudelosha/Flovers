@@ -1,4 +1,3 @@
-// src/navigation/index.tsx
 import React from "react";
 import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -32,6 +31,24 @@ export type AuthStackParamList = {
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 const AppStack = createNativeStackNavigator();
+
+// Deep-linking config (maps flovers:// paths to screens)
+const linking = {
+  prefixes: ["flovers://"],
+  config: {
+    screens: {
+      // auth stack
+      Login: "login",
+      Register: "register",
+      ForgotPassword: "forgot-password",
+      ResendActivation: "resend-activation",
+      ConfirmEmail: "confirm-email",     // flovers://confirm-email?uid=...&token=...
+      ResetPassword: "reset-password",   // flovers://reset-password?uid=...&token=...
+      // app stack (optional)
+      Home: "home",
+    },
+  },
+};
 
 // Wrap a screen with the glass card (no background)
 function withAuthCard(Component: React.ComponentType<any>) {
@@ -84,7 +101,7 @@ export default function RootNavigator() {
   if (loading) return null;
 
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking}>
       {token ? <AppNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );

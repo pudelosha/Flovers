@@ -13,7 +13,7 @@ if env_file.exists():
 # --- Core ---
 SECRET_KEY = env("SECRET_KEY", default="dev-secret")
 DEBUG = env.bool("DEBUG", default=True)
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]  # ok for dev
 
 # --- Apps ---
 INSTALLED_APPS = [
@@ -84,8 +84,7 @@ REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 }
 
-# --- JWT (defaults are fine, tweak if needed) ---
-from rest_framework_simplejwt.settings import api_settings as jwt_defaults  # noqa: E402
+# --- JWT ---
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
@@ -94,7 +93,8 @@ SIMPLE_JWT = {
 # --- I18N / TZ ---
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "Europe/Warsaw"
-USE_I18N = USE_TZ = True
+USE_I18N = True
+USE_TZ = True
 
 # --- Static / Media ---
 STATIC_URL = "/static/"
@@ -118,4 +118,13 @@ CELERY_BROKER_URL = env("CELERY_BROKER_URL", default="redis://redis:6379/0")
 CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND", default="redis://redis:6379/1")
 
 # --- Public base URL (used for email links) ---
-SITE_URL = env("SITE_URL", default="http://localhost:8000")
+SITE_URL = env("SITE_URL", default="http://127.0.0.1:8000")
+
+# --- Deep link config for mobile ---
+DEEP_LINK_SCHEME = env("DEEP_LINK_SCHEME", default="flovers")
+DEEP_LINK_HOST = env("DEEP_LINK_HOST", default="")  # keep empty -> flovers://path
+DEEP_LINK_ENABLED = env.bool("DEEP_LINK_ENABLED", default=True)
+PUBLIC_WEB_BASE = env("PUBLIC_WEB_BASE", default=SITE_URL)  # where /open/* is served
+
+ANDROID_PACKAGE_NAME = "com.flovers"  # <-- set your actual appId
+
