@@ -19,7 +19,7 @@ try {
 } catch {}
 
 type TabKey = "account" | "notifications" | "settings";
-type PromptKey = "email" | "password" | "delete" | null;
+type PromptKey = "email" | "password" | "delete" | "bug" | null;
 
 // Header gradient (same vibe as Home)
 const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -53,6 +53,44 @@ export default function ProfileScreen() {
   const formatHour = (h: number) => `${String(h).padStart(2, "0")}:00`;
   const incHour = (h: number) => (h + 1) % 24;
   const decHour = (h: number) => (h + 23) % 24;
+
+  // --- Settings state ---
+  const [language, setLanguage] = useState<"en"|"pl"|"de"|"fr"|"es"|"it"|"pt"|"zh"|"hi"|"ar">("en");
+  const [langOpen, setLangOpen] = useState(false);
+
+  const [dateFormat, setDateFormat] = useState<string>("DD.MM.YYYY");
+  const [dateOpen, setDateOpen] = useState(false);
+
+  // transparency — 0..1 range; default to 0.12 to match current look
+  const [tileTransparency, setTileTransparency] = useState<number>(0.12);
+
+  // Dropdown options
+  const LANG_OPTIONS = [
+    { code: "en", label: "English", flag: "🇬🇧" },
+    { code: "pl", label: "Polski", flag: "🇵🇱" },
+    { code: "de", label: "Deutsch", flag: "🇩🇪" },
+    { code: "fr", label: "Français", flag: "🇫🇷" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "it", label: "Italiano", flag: "🇮🇹" },
+    { code: "pt", label: "Português", flag: "🇵🇹" },
+    { code: "zh", label: "中文", flag: "🇨🇳" },
+    { code: "hi", label: "हिन्दी", flag: "🇮🇳" },
+    { code: "ar", label: "العربية", flag: "🇸🇦" },
+  ] as const;
+
+  const DATE_OPTIONS = [
+    "DD.MM.YYYY",
+    "YYYY-MM-DD",
+    "MM/DD/YYYY",
+    "DD/MM/YYYY",
+    "ddd, DD MMM YYYY",
+  ];
+
+  // Try to use Slider if available; otherwise show +/- stepper
+  let SliderView: any = View;
+  try {
+    SliderView = require("@react-native-community/slider").default;
+  } catch {}
 
   const tabs = useMemo(
     () => [
@@ -343,8 +381,155 @@ export default function ProfileScreen() {
             </View>
 
             <View style={s.cardInner}>
+
               <Text style={s.cardTitle}>Settings</Text>
-              <Text style={s.placeholderText}>General app preferences will be implemented here.</Text>
+
+              {/* LANGUAGE */}
+              <Text style={[s.sectionTitle, s.sectionTitleFirst]}>Language</Text>
+              <View style={s.dropdown}>
+                <Pressable
+                  style={s.dropdownHeader}
+                  onPress={() => setLangOpen(o => !o)}
+                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                >
+                  <Text style={s.dropdownValue}>
+                    {LANG_OPTIONS.find(l => l.code === language)?.flag}{" "}
+                    {LANG_OPTIONS.find(l => l.code === language)?.label}
+                  </Text>
+                  <MaterialCommunityIcons
+                    name={langOpen ? "chevron-up" : "chevron-down"}
+                    size={20}
+                    color="#FFFFFF"
+                  />
+                </Pressable>
+
+                {langOpen && (
+                  <View style={s.dropdownList}>
+                    {LANG_OPTIONS.map(opt => (
+                      <Pressable
+                        key={opt.code}
+                        style={s.dropdownItem}
+                        onPress={() => { setLanguage(opt.code as any); setLangOpen(false); }}
+                      >
+                        <Text style={s.dropdownItemText}>{opt.flag} {opt.label}</Text>
+                        {language === opt.code && (
+                          <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                        )}
+                      </Pressable>
+                    ))}
+                  </View>
+                )}
+              </View>
+
+              {/* DATE/TIME FORMAT */}
+              <Text style={s.sectionTitle}>Date / Time format</Text>
+              <View style={s.dropdown}>
+                <Pressable
+                  style={s.dropdownHeader}
+                  onPress={() => setDateOpen(o => !o)}
+                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                >
+                  <Text style={s.dropdownValue}>{dateFormat}</Text>
+                  <MaterialCommunityIcons
+                    name={dateOpen ? "chevron-up" : "chevron-down"}
+                    size={20}
+                    color="#FFFFFF"
+                  />
+                </Pressable>
+
+                {dateOpen && (
+                  <View style={s.dropdownList}>
+                    {DATE_OPTIONS.map(fmt => (
+                      <Pressable
+                        key={fmt}
+                        style={s.dropdownItem}
+                        onPress={() => { setDateFormat(fmt); setDateOpen(false); }}
+                      >
+                        <Text style={s.dropdownItemText}>{fmt}</Text>
+                        {dateFormat === fmt && (
+                          <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                        )}
+                      </Pressable>
+                    ))}
+                  </View>
+                )}
+              </View>
+
+              {/* TILE TRANSPARENCY (SUWAK) */}
+              <Text style={s.sectionTitle}>Tiles transparency</Text>
+              {SliderView !== View ? (
+                <View style={s.sliderRow}>
+                  <SliderView
+                    minimumValue={0}
+                    maximumValue={0.6}
+                    step={0.01}
+                    value={tileTransparency}
+                    onValueChange={setTileTransparency}
+                    style={{ flex: 1 }}
+                    minimumTrackTintColor="#FFFFFF"
+                    maximumTrackTintColor="rgba(255,255,255,0.4)"
+                    thumbTintColor="#FFFFFF"
+                  />
+                  <Text style={s.sliderValue}>{Math.round(tileTransparency * 100)}%</Text>
+                </View>
+              ) : (
+                <View style={s.stepperRow}>
+                  <Text style={s.stepperLabel}>Level</Text>
+                  <View style={s.stepper}>
+                    <Pressable
+                      onPress={() => setTileTransparency(v => Math.max(0, +(v - 0.01).toFixed(2)))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="minus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                    <Text style={s.stepTime}>{Math.round(tileTransparency * 100)}%</Text>
+                    <Pressable
+                      onPress={() => setTileTransparency(v => Math.min(0.6, +(v + 0.01).toFixed(2)))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="plus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                  </View>
+                </View>
+              )}
+
+              {/* SAVE (for transparency + dropdowns) */}
+              <Pressable
+                style={s.saveBtn}
+                onPress={() => {/* TODO: persist settings */}}
+              >
+                <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />
+                <Text style={s.saveBtnText}>Save</Text>
+              </Pressable>
+
+              <View style={s.sectionDivider} />
+
+              {/* REPORT A BUG */}
+              <Text style={s.sectionTitle}>Support</Text>
+              <Pressable
+                style={[s.actionBtnFull, s.actionPrimary]}
+                onPress={() => setPrompt("bug")}
+              >
+                <MaterialCommunityIcons name="bug-outline" size={18} color="#FFFFFF" />
+                <Text style={[s.actionBtnFullText, { color: "#FFFFFF" }]}>Report a bug</Text>
+              </Pressable>
+
+              {/* ABOUT THE APP */}
+              <View style={[s.aboutBox]}>
+                <Text style={s.aboutTitle}>About the app</Text>
+                <Text style={s.aboutLine}>Version: <Text style={s.aboutStrong}>1.0.0</Text></Text>
+                <Text style={s.aboutLine}>Release date: <Text style={s.aboutStrong}>07.10.2025</Text></Text>
+                <Text style={s.aboutLine}>Contact: <Text style={s.aboutStrong}>hello@flovers.app</Text></Text>
+              </View>
+
+
+
+
+
+
+
             </View>
           </View>
         )}
@@ -436,6 +621,31 @@ export default function ProfileScreen() {
                   </Pressable>
                   <Pressable style={[s.promptBtn, s.promptDanger]}>
                     <Text style={[s.promptBtnText, s.promptDangerText]}>Delete</Text>
+                  </Pressable>
+                </View>
+              </View>
+            )}
+
+            {prompt === "bug" && (
+              <View style={s.promptInner}>
+                <Text style={s.promptTitle}>Report a bug</Text>
+                <TextInput
+                  style={s.input}
+                  placeholder="Subject"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                />
+                <TextInput
+                  style={[s.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
+                  placeholder="Describe the issue…"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  multiline
+                />
+                <View style={s.promptButtonsRow}>
+                  <Pressable style={s.promptBtn} onPress={() => setPrompt(null)}>
+                    <Text style={s.promptBtnText}>Cancel</Text>
+                  </Pressable>
+                  <Pressable style={[s.promptBtn, s.promptPrimary]}>
+                    <Text style={[s.promptBtnText, s.promptPrimaryText]}>Send</Text>
                   </Pressable>
                 </View>
               </View>
@@ -683,4 +893,54 @@ const s = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "800",
   },
+  // Dropdowns
+  dropdown: { marginBottom: 10 },
+  dropdownHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
+  dropdownList: {
+    marginTop: 6,
+    borderRadius: 12,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  dropdownItem: {
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
+
+  // Slider row
+  sliderRow: { flexDirection: "row", alignItems: "center", gap: 10 },
+  sliderValue: { color: "#FFFFFF", fontWeight: "800", width: 52, textAlign: "right" },
+
+  // About box
+  aboutBox: {
+    marginTop: 10,
+    padding: 14,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    gap: 4,
+  },
+  aboutTitle: { color: "#FFFFFF", fontWeight: "800", marginBottom: 4 },
+  aboutLine: { color: "rgba(255,255,255,0.92)", fontWeight: "600" },
+  aboutStrong: { color: "#FFFFFF", fontWeight: "800" },
 });
