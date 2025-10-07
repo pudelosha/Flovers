@@ -40,6 +40,20 @@ export default function ProfileScreen() {
   const [tab, setTab] = useState<TabKey>("account");
   const [prompt, setPrompt] = useState<PromptKey>(null);
 
+  // --- Notifications state (defaults) ---
+  const [emailDaily, setEmailDaily] = useState(true);
+  const [emailHour, setEmailHour] = useState(12);
+  const [email24h, setEmail24h] = useState(false);
+
+  const [pushDaily, setPushDaily] = useState(true);
+  const [pushHour, setPushHour] = useState(12);
+  const [push24h, setPush24h] = useState(false);
+
+  // hour helpers (service runs hourly → +/-1 hour, wrap 0–23)
+  const formatHour = (h: number) => `${String(h).padStart(2, "0")}:00`;
+  const incHour = (h: number) => (h + 1) % 24;
+  const decHour = (h: number) => (h + 23) % 24;
+
   const tabs = useMemo(
     () => [
       { key: "account" as const, label: "account", icon: "account-circle-outline" },
@@ -98,7 +112,8 @@ export default function ProfileScreen() {
       </LinearGradientView>
 
       {/* CONTENT */}
-      <ScrollView contentContainerStyle={s.content}>
+      <ScrollView contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 80 }]}>
+        {/* ACCOUNT CARD */}
         {tab === "account" && (
           <View style={s.cardWrap}>
             <View style={s.cardGlass}>
@@ -151,6 +166,7 @@ export default function ProfileScreen() {
           </View>
         )}
 
+        {/* NOTIFICATIONS CARD */}
         {tab === "notifications" && (
           <View style={s.cardWrap}>
             <View style={s.cardGlass}>
@@ -165,11 +181,155 @@ export default function ProfileScreen() {
 
             <View style={s.cardInner}>
               <Text style={s.cardTitle}>Notifications</Text>
-              <Text style={s.placeholderText}>Notification settings will live here.</Text>
+
+              {/* EMAIL SECTION */}
+              <Text style={[s.sectionTitle, s.sectionTitleFirst]}>Email</Text>
+
+              <Pressable
+                style={s.toggleRow}
+                onPress={() => setEmailDaily(v => !v)}
+                accessibilityRole="checkbox"
+                accessibilityState={{ checked: emailDaily }}
+              >
+                <MaterialCommunityIcons
+                  name={emailDaily ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+                  size={20}
+                  color="#FFFFFF"
+                  style={s.toggleIcon}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={s.toggleLabel}>Daily summary for today’s due tasks</Text>
+                  <Text style={s.toggleHint}>
+                    One email per day summarizing all tasks due today.
+                  </Text>
+                </View>
+              </Pressable>
+
+              {/* Time stepper (visible only if daily email is on) */}
+              {emailDaily && (
+                <View style={s.stepperRow}>
+                  <Text style={s.stepperLabel}>Send at</Text>
+                  <View style={s.stepper}>
+                    <Pressable
+                      onPress={() => setEmailHour(h => decHour(h))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="minus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                    <Text style={s.stepTime}>{formatHour(emailHour)}</Text>
+                    <Pressable
+                      onPress={() => setEmailHour(h => incHour(h))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="plus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                  </View>
+                </View>
+              )}
+
+              <Pressable
+                style={s.toggleRow}
+                onPress={() => setEmail24h(v => !v)}
+                accessibilityRole="checkbox"
+                accessibilityState={{ checked: email24h }}
+              >
+                <MaterialCommunityIcons
+                  name={email24h ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+                  size={20}
+                  color="#FFFFFF"
+                  style={s.toggleIcon}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={s.toggleLabel}>Send a reminder after 24 hours</Text>
+                  <Text style={s.toggleHint}>
+                    If tasks due today remain incomplete, send a follow-up email tomorrow.
+                  </Text>
+                </View>
+              </Pressable>
+
+              <View style={s.sectionDivider} />
+
+              {/* MOBILE (PUSH/TOASTS) SECTION */}
+              <Text style={s.sectionTitle}>Mobile</Text>
+
+              <Pressable
+                style={s.toggleRow}
+                onPress={() => setPushDaily(v => !v)}
+                accessibilityRole="checkbox"
+                accessibilityState={{ checked: pushDaily }}
+              >
+                <MaterialCommunityIcons
+                  name={pushDaily ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+                  size={20}
+                  color="#FFFFFF"
+                  style={s.toggleIcon}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={s.toggleLabel}>Daily phone notification</Text>
+                  <Text style={s.toggleHint}>
+                    A single system notification summarizing today’s due tasks.
+                  </Text>
+                </View>
+              </Pressable>
+
+              {pushDaily && (
+                <View style={s.stepperRow}>
+                  <Text style={s.stepperLabel}>Notify at</Text>
+                  <View style={s.stepper}>
+                    <Pressable
+                      onPress={() => setPushHour(h => decHour(h))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="minus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                    <Text style={s.stepTime}>{formatHour(pushHour)}</Text>
+                    <Pressable
+                      onPress={() => setPushHour(h => incHour(h))}
+                      style={s.stepBtn}
+                      android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: true }}
+                    >
+                      <MaterialCommunityIcons name="plus" size={16} color="#FFFFFF" />
+                    </Pressable>
+                  </View>
+                </View>
+              )}
+
+              <Pressable
+                style={s.toggleRow}
+                onPress={() => setPush24h(v => !v)}
+                accessibilityRole="checkbox"
+                accessibilityState={{ checked: push24h }}
+              >
+                <MaterialCommunityIcons
+                  name={push24h ? "checkbox-marked-outline" : "checkbox-blank-outline"}
+                  size={20}
+                  color="#FFFFFF"
+                  style={s.toggleIcon}
+                />
+                <View style={{ flex: 1 }}>
+                  <Text style={s.toggleLabel}>24-hour follow-up notification</Text>
+                  <Text style={s.toggleHint}>
+                    If tasks stay pending, send a notification the next day.
+                  </Text>
+                </View>
+              </Pressable>
+
+              {/* SAVE BUTTON (frame bottom) */}
+              <Pressable
+                style={[s.saveBtn]}
+                onPress={() => {/* TODO: wire up save later */}}
+              >
+                <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />
+                <Text style={s.saveBtnText}>Save</Text>
+              </Pressable>
             </View>
           </View>
         )}
 
+        {/* SETTINGS CARD */}
         {tab === "settings" && (
           <View style={s.cardWrap}>
             <View style={s.cardGlass}>
@@ -439,5 +599,88 @@ const s = StyleSheet.create({
     color: "rgba(255,255,255,0.95)",
     paddingHorizontal: 16,
     marginBottom: 10,
+  },
+
+  // --- Notifications styles ---
+  sectionTitleFirst: { marginTop: 0 },
+  sectionTitle: {
+    color: "#FFFFFF",
+    fontSize: 14,
+    fontWeight: "800",
+    marginTop: 6,
+    marginBottom: 8,
+  },
+  sectionDivider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: "rgba(255,255,255,0.25)",
+    marginVertical: 10,
+  },
+
+  toggleRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 10,
+    paddingVertical: 10,
+  },
+  toggleIcon: { marginTop: 2 },
+  toggleLabel: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+  },
+  toggleHint: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "200",
+    marginTop: 2,
+    lineHeight: 18,
+  },
+
+  stepperRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 6,
+  },
+  stepperLabel: { color: "#FFFFFF", fontWeight: "700" },
+  stepper: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  stepBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  stepTime: {
+    minWidth: 64,
+    textAlign: "center",
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 16,
+  },
+
+  // Save button (full-width within the notifications frame)
+  saveBtn: {
+    marginTop: 12,
+    alignSelf: "stretch",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 14,
+    backgroundColor: "rgba(11,114,133,0.9)",
+    borderWidth: 0,
+    borderColor: "rgba(255,255,255,0.25)",
+    justifyContent: "center",
+  },
+  saveBtnText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
   },
 });
