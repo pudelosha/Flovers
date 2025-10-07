@@ -13,7 +13,7 @@ try {
 
 // Screens
 import HomeScreen from "../../features/home/pages/HomeScreen";
-import PlantsScreen from "../../screens/app/PlantsScreen";
+import PlantsScreen from "../../features/plants/pages/PlantsScreen";
 import RemindersScreen from "../../features/reminders/pages/RemindersScreen";
 import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";

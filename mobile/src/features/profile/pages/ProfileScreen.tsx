@@ -4,19 +4,16 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
 
+import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
 
-import { header as h, layout as ly, prompts as pr } from "./../styles/profile.styles";
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "./../constants/profile.constants";
-import type { TabKey, PromptKey, LangCode } from "./../types/profile.types";
+import { header as h, layout as ly, prompts as pr } from "../styles/profile.styles";
+import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
+import type { TabKey, PromptKey, LangCode } from "../types/profile.types";
 
-import AccountCard from "../../../features/profile/components/AccountCard";
-import NotificationsCard from "../../../features/profile/components/NotificationsCard";
-import SettingsCard from "../../../features/profile/components/SettingsCard";
-
-// Try to use react-native-linear-gradient if installed; otherwise fall back to a plain View
-let LinearGradientView: any = View;
-try { LinearGradientView = require("react-native-linear-gradient").default; } catch {}
+import AccountCard from "../components/AccountCard";
+import NotificationsCard from "../components/NotificationsCard";
+import SettingsCard from "../components/SettingsCard";
 
 function formatDate(d?: string | Date | null) {
   if (!d) return "—";
@@ -64,21 +61,14 @@ export default function ProfileScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* HEADER */}
-      <LinearGradientView
-        colors={HEADER_GRADIENT_TINT}
-        locations={[0, 1]}
-        start={{ x: 0, y: 0.5 }}
-        end={{ x: 1, y: 0.5 }}
-        style={[h.headerBar, { paddingTop: insets.top + 10, backgroundColor: HEADER_SOLID_FALLBACK }]}
+      {/* HEADER via shared GlassHeader */}
+      <GlassHeader
+        title="Profile"
+        gradientColors={HEADER_GRADIENT_TINT}
+        fallbackColor={HEADER_SOLID_FALLBACK}
+        topPaddingExtra={10}
       >
-        <View style={h.headerTopRow}>
-          <Text style={h.headerTitle}>Profile</Text>
-          <View style={{ width: 36, height: 36 }} />
-        </View>
-        <View style={h.separator} />
-
-        {/* Submenu */}
+        {/* Submenu exactly like before, now passed as children */}
         <View style={h.subRow}>
           <View style={h.subColLeft}>
             <Pressable style={h.subBtn} onPress={() => setTab("account")} hitSlop={8}>
@@ -105,7 +95,7 @@ export default function ProfileScreen() {
             </Pressable>
           </View>
         </View>
-      </LinearGradientView>
+      </GlassHeader>
 
       {/* CONTENT */}
       <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 80 }]}>
@@ -156,7 +146,10 @@ export default function ProfileScreen() {
                 blurAmount={14}
                 reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
               />
-              <View pointerEvents="none" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any} />
+              <View
+                pointerEvents="none"
+                style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
+              />
             </View>
 
             {prompt === "email" && (

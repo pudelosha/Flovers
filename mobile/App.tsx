@@ -3,7 +3,7 @@ import React from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/app/providers/AuthContext";
-import RootNavigator from "./src/app/navigation/index";
+import RootNavigator from "./src/app/navigation/RootNavigator";
 
 const theme = {
   ...MD3LightTheme,

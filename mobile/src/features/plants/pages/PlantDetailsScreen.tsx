@@ -5,7 +5,7 @@ export default function PlantDetailsScreen() {
   return (
     <View style={s.container}>
       <Text style={s.title}>Plant Details</Text>
-      <Text style={s.text}>Coming soon…</Text>
+      <Text style={s.text}>This page will show detailed info about the plant.</Text>
     </View>
   );
 }
