@@ -16,7 +16,7 @@ import HomeScreen from "../screens/app/HomeScreen";
 import PlantsScreen from "../screens/app/PlantsScreen";
 import RemindersScreen from "../screens/app/RemindersScreen";
 import ReadingsScreen from "../screens/app/ReadingsScreen";
-import ProfileScreen from "../screens/app/ProfileScreen";
+import ProfileScreen from "../screens/app/profile/ProfileScreen";
 import ScannerScreen from "../screens/app/ScannerScreen"; // <-- hidden tab
 
 export type AppTabParamList = {
