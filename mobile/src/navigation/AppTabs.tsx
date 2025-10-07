@@ -17,7 +17,8 @@ import PlantsScreen from "../screens/app/PlantsScreen";
 import RemindersScreen from "../screens/app/RemindersScreen";
 import ReadingsScreen from "../screens/app/ReadingsScreen";
 import ProfileScreen from "../screens/app/profile/ProfileScreen";
-import ScannerScreen from "../screens/app/ScannerScreen"; // <-- hidden tab
+import ScannerScreen from "../screens/app/ScannerScreen"; // hidden tab
+import PlantDetailsScreen from "../screens/app/PlantDetailsScreen"; // hidden tab
 
 export type AppTabParamList = {
   Home: undefined;
@@ -25,14 +26,15 @@ export type AppTabParamList = {
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;
-  Scanner: undefined; // <-- hidden tab to keep bottom bar visible
+  Scanner: undefined;        // hidden
+  PlantDetails: undefined;   // hidden
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
 
-// More transparent, higher-contrast horizontal gradient
-const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"]; // left (darker) -> right (lighter)
-const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)"; // used if gradient lib missing
+// Semi-transparent horizontal gradient
+const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"]; // left -> right
+const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)"; // fallback if gradient lib missing
 
 function GlassTabBar({ state, descriptors, navigation }: any) {
   const insets = useSafeAreaInsets();
@@ -53,11 +55,9 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     }
   };
 
-  // Hide "Scanner" from the bar completely.
-  const visibleRoutes = state.routes.filter((r: any) => r.name !== "Scanner");
-
-  // If the active route is "Scanner", no visible tab should appear focused.
-  const activeIsScanner = state.routes[state.index]?.name === "Scanner";
+  const HIDDEN = new Set(["Scanner", "PlantDetails"]);
+  const visibleRoutes = state.routes.filter((r: any) => !HIDDEN.has(r.name));
+  const activeIsHidden = HIDDEN.has(state.routes[state.index]?.name);
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
@@ -87,7 +87,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
         <View style={s.tabInner}>
           {visibleRoutes.map((route: any) => {
             const originalIndex = state.routes.findIndex((r: any) => r.key === route.key);
-            const isFocused = !activeIsScanner && state.index === originalIndex;
+            const isFocused = !activeIsHidden && state.index === originalIndex;
 
             const onPress = () => {
               const event = navigation.emit({
@@ -157,9 +157,16 @@ export default function AppTabs() {
       <Tab.Screen name="Reminders" component={RemindersScreen} />
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+
+      {/* Hidden routes keep the bottom bar visible without selecting a tab */}
       <Tab.Screen
         name="Scanner"
         component={ScannerScreen}
+        options={{ tabBarStyle: { display: "flex" } }}
+      />
+      <Tab.Screen
+        name="PlantDetails"
+        component={PlantDetailsScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>
