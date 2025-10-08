@@ -17,23 +17,21 @@ import {
   HEADER_SOLID_FALLBACK,
 } from "../../plants/constants/plants.constants";
 
+import { scannerStyles as styles } from "../styles/scanner.styles";
+import { SCANNER_INSTRUCTION } from "../constants/scanner.constants";
+import ScannerOverlay from "../components/ScannerOverlay";
+
 export default function ScannerScreen() {
   const isFocused = useIsFocused();
-
   const { hasPermission, requestPermission, openSettings } = useCameraPermission();
+
   const [active, setActive] = useState(true);
   const [lastScanned, setLastScanned] = useState<string>("");
 
   const device = useCameraDevice("back");
 
-  const instructionText = useMemo(
-    () =>
-      "Point the camera at a QR code you printed and attached to your plant’s pot. " +
-      "When detected, we’ll show the URL here so you can confirm it works.",
-    []
-  );
+  const instructionText = useMemo(() => SCANNER_INSTRUCTION, []);
 
-  // Ask permission at mount if not granted (Android esp.)
   useEffect(() => {
     (async () => {
       if (!hasPermission) {
@@ -42,18 +40,13 @@ export default function ScannerScreen() {
     })();
   }, [hasPermission, requestPermission]);
 
-  // VisionCamera QR-only scanner — just display the value
   const codeScanner = useCodeScanner({
     codeTypes: ["qr"],
     onCodeScanned: (codes) => {
-      const first = codes[0];
-      const value = first?.value ?? "";
+      const value = codes[0]?.value ?? "";
       if (!value) return;
-
-      // Only update if changed to avoid rapid re-renders
       setLastScanned((prev) => (prev === value ? prev : value));
-      // Keep the camera running; we only display the value
-      setActive(true);
+      setActive(true); // keep camera running
     },
   });
 
@@ -68,7 +61,9 @@ export default function ScannerScreen() {
         showSeparator={false}
       />
 
-      {/* Instruction card (frosted) */}
+      <View style={{ height: 5 }} />
+
+      {/* Instruction card */}
       <View style={styles.infoWrap}>
         <View style={styles.infoGlass}>
           <BlurView
@@ -119,47 +114,7 @@ export default function ScannerScreen() {
                   isActive={active && isFocused}
                   codeScanner={codeScanner}
                 />
-
-                {/* Center overlay that shows the last scanned URL/value */}
-                {lastScanned ? (
-                  <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
-                    <View style={styles.overlayCenter}>
-                      <View style={styles.overlayGlass}>
-                        <BlurView
-                          style={StyleSheet.absoluteFill}
-                          blurType="light"
-                          blurAmount={18}
-                          reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-                        />
-                        <View
-                          pointerEvents="none"
-                          style={[
-                            StyleSheet.absoluteFill,
-                            { backgroundColor: "rgba(0,0,0,0.25)" },
-                          ]}
-                        />
-                        <View style={styles.overlayInner}>
-                          <MaterialCommunityIcons
-                            name="qrcode-scan"
-                            size={18}
-                            color="#FFFFFF"
-                            style={{ marginBottom: 8 }}
-                          />
-                          <Text style={styles.overlayTitle}>Scanned value</Text>
-                          <Text style={styles.overlayText} numberOfLines={3}>
-                            {lastScanned}
-                          </Text>
-                          <Pressable
-                            onPress={() => setLastScanned("")}
-                            style={styles.overlayButton}
-                          >
-                            <Text style={styles.overlayButtonText}>Clear</Text>
-                          </Pressable>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
-                ) : null}
+                <ScannerOverlay value={lastScanned} onClear={() => setLastScanned("")} />
               </>
             ) : (
               <View style={styles.placeholder}>
@@ -190,84 +145,7 @@ export default function ScannerScreen() {
         </View>
       </View>
 
-      {/* Spacer */}
       <View style={{ height: 18 }} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  infoWrap: { paddingHorizontal: 16, paddingTop: 16 },
-  infoGlass: {
-    borderRadius: 18,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    minHeight: 100,
-  },
-  infoInner: { padding: 16 },
-  infoTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 6 },
-  infoText: { color: "rgba(255,255,255,0.95)", fontWeight: "200", lineHeight: 18 },
-  exampleRow: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: 10 },
-  exampleUrl: { color: "#FFFFFF", fontWeight: "800", flexShrink: 1 },
-  infoHint: { color: "rgba(255,255,255,0.9)", fontWeight: "200", marginTop: 8 },
-
-  camWrap: { paddingHorizontal: 16, paddingTop: 16 },
-  camGlass: {
-    borderRadius: 18,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    minHeight: 320,
-  },
-  camInner: { flex: 1, overflow: "hidden", borderRadius: 18 },
-  qrCamera: { width: "100%", height: "100%" },
-
-  placeholder: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: 24 },
-  placeholderText: { color: "#FFFFFF", fontWeight: "800" },
-  placeholderHint: { color: "rgba(255,255,255,0.9)", fontWeight: "600", marginTop: 6 },
-
-  // Overlay styles
-  overlayCenter: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 24,
-  },
-  overlayGlass: {
-    borderRadius: 16,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.35)",
-    maxWidth: 520,
-    width: "100%",
-  },
-  overlayInner: {
-    paddingVertical: 16,
-    paddingHorizontal: 14,
-    alignItems: "center",
-  },
-  overlayTitle: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    marginBottom: 6,
-    fontSize: 14,
-  },
-  overlayText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
-    textAlign: "center",
-  },
-  overlayButton: {
-    marginTop: 12,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.5)",
-  },
-  overlayButtonText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
-  },
-});
