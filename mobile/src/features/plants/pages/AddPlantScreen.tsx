@@ -5,11 +5,11 @@ import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/plants.constants";
 import { s } from "../styles/plants.styles";
 
-export default function PlantDetailsScreen() {
+export default function AddPlantScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title="Plant details"
+        title="Add plant"
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}   // no divider under the title
@@ -17,9 +17,9 @@ export default function PlantDetailsScreen() {
       />
 
       <View style={s.wizardPlaceholder}>
-        <Text style={s.wizardTitle}>Plant Details</Text>
+        <Text style={s.wizardTitle}>New plant setup</Text>
         <Text style={s.wizardText}>
-          This page will show detailed info about the plant.
+          Multi-step flow coming soon. This is a placeholder page (not a modal).
         </Text>
       </View>
     </View>

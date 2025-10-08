@@ -1,9 +1,10 @@
+// src/features/home/pages/HomeScreen.tsx
 import React, { useMemo, useState } from "react";
 import { View, Pressable, FlatList, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
+import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
 import type { Task, TaskType } from "../types/home.types";
@@ -39,61 +40,15 @@ export default function HomeScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Header (shared) */}
       <GlassHeader
         title="Home"
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
+        showSeparator={false}
         rightIconName="qrcode-scan"
         onPressRight={() => nav.navigate("Scanner" as never)}
-      >
-        {/* Submenu (3 columns) */}
-        <View style={s.subRow3}>
-          <View style={s.subColLeft}>
-            <Pressable style={s.subBtn} hitSlop={8}>
-              <View style={s.subBtnInner}>
-                <Text style={s.subBtnText}>sort</Text>
-                <MaterialCommunityIcons
-                  name="sort"
-                  size={14}
-                  color="#FFFFFF"
-                  style={s.subIcon}
-                />
-              </View>
-            </Pressable>
-          </View>
+      />
 
-          <View style={s.subColCenter}>
-            <Pressable style={s.subBtn} hitSlop={8}>
-              <View style={s.subBtnInner}>
-                <Text style={s.subBtnText}>filter</Text>
-                <MaterialCommunityIcons
-                  name="filter-variant"
-                  size={14}
-                  color="#FFFFFF"
-                  style={s.subIcon}
-                />
-              </View>
-            </Pressable>
-          </View>
-
-          <View style={s.subColRight}>
-            <Pressable style={s.subBtn} hitSlop={8}>
-              <View style={s.subBtnInner}>
-                <Text style={s.subBtnText}>history</Text>
-                <MaterialCommunityIcons
-                  name="history"
-                  size={14}
-                  color="#FFFFFF"
-                  style={s.subIcon}
-                />
-              </View>
-            </Pressable>
-          </View>
-        </View>
-      </GlassHeader>
-
-      {/* Invisible backdrop to close menu when tapping outside */}
       {menuOpenId && (
         <Pressable
           onPress={() => setMenuOpenId(null)}
@@ -102,10 +57,10 @@ export default function HomeScreen() {
         />
       )}
 
-      <FlatList<Task>
+      <FlatList
         data={tasks}
         keyExtractor={(t) => t.id}
-        renderItem={({ item }) => (
+        renderItem={({ item }: { item: Task }) => (
           <TaskTile
             task={item}
             isMenuOpen={menuOpenId === item.id}
@@ -125,10 +80,20 @@ export default function HomeScreen() {
           />
         )}
         ListHeaderComponent={() => <View style={{ height: 5 }} />}
-        contentContainerStyle={s.listContent}
+        ListFooterComponent={() => <View style={{ height: 140 }} />}  // keeps last tile visible
+        contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
+      />
+
+      <FAB
+        icon="plus"
+        actions={[
+          { key: "sort", label: "sort", icon: "sort", onPress: () => {/* open sort */} },
+          { key: "filter", label: "filter", icon: "filter-variant", onPress: () => {/* open filter */} },
+          { key: "history", label: "history", icon: "history", onPress: () => {/* open history */} },
+        ]}
       />
     </View>
   );

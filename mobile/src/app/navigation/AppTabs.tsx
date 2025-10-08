@@ -19,6 +19,8 @@ import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
+import AddPlantScreen from "../../features/plants/pages/AddPlantScreen"; // adjust path to where you placed it
+
 
 export type AppTabParamList = {
   Home: undefined;
@@ -28,6 +30,7 @@ export type AppTabParamList = {
   Profile: undefined;
   Scanner: undefined;        // hidden
   PlantDetails: undefined;   // hidden
+  AddPlant: undefined;       // hidden
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -167,6 +170,11 @@ export default function AppTabs() {
       <Tab.Screen
         name="PlantDetails"
         component={PlantDetailsScreen}
+        options={{ tabBarStyle: { display: "flex" } }}
+      />
+      <Tab.Screen
+        name="AddPlant"
+        component={AddPlantScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>

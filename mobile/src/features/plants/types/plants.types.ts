@@ -5,5 +5,3 @@ export type Plant = {
   location?: string;
   notes?: string;
 };
-
-export type FormMode = "add" | "edit";
