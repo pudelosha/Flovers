@@ -11,20 +11,45 @@ import type { LangCode } from "../types/profile.types";
 let SliderView: any = View;
 try { SliderView = require("@react-native-community/slider").default; } catch {}
 
+type TempUnit = "C" | "F" | "K";
+type MeasureUnit = "metric" | "imperial";
+
+const TEMP_OPTIONS: { key: TempUnit; label: string }[] = [
+  { key: "C", label: "°C (Celsius)" },
+  { key: "F", label: "°F (Fahrenheit)" },
+  { key: "K", label: "K (Kelvin)" },
+];
+
+const MEASURE_OPTIONS: { key: MeasureUnit; label: string }[] = [
+  { key: "metric", label: "Metric (cm / m)" },
+  { key: "imperial", label: "Imperial (in / ft)" },
+];
+
 export default function SettingsCard({
   language, setLanguage, langOpen, setLangOpen,
   dateFormat, setDateFormat, dateOpen, setDateOpen,
+  temperatureUnit, setTemperatureUnit, tempOpen, setTempOpen,
+  measureUnit, setMeasureUnit, measureOpen, setMeasureOpen,
   tileTransparency, setTileTransparency,
-  onBug, onSave,
+  onSave,
 }: {
   language: LangCode; setLanguage: (c: LangCode) => void;
   langOpen: boolean; setLangOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
   dateFormat: string; setDateFormat: (f: string) => void;
   dateOpen: boolean; setDateOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
+  temperatureUnit: TempUnit; setTemperatureUnit: (u: TempUnit) => void;
+  tempOpen: boolean; setTempOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
+  measureUnit: MeasureUnit; setMeasureUnit: (u: MeasureUnit) => void;
+  measureOpen: boolean; setMeasureOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
   tileTransparency: number; setTileTransparency: (v: number | ((v: number) => number)) => void;
-  onBug: () => void;
   onSave: () => void;
 }) {
+  const currentLang = LANG_OPTIONS.find(l => l.code === language);
+
   return (
     <GlassCard>
       <Text style={card.cardTitle}>Settings</Text>
@@ -33,7 +58,7 @@ export default function SettingsCard({
       <Text style={[controls.sectionTitle, controls.sectionTitleFirst]}>Language</Text>
       <Dropdown
         open={langOpen}
-        valueText={`${LANG_OPTIONS.find(l => l.code === language)?.flag} ${LANG_OPTIONS.find(l => l.code === language)?.label}`}
+        valueText={`${currentLang?.flag ?? ""} ${currentLang?.label ?? ""}`}
         onToggle={() => setLangOpen((o: boolean) => !o)}
         items={LANG_OPTIONS.map(opt => ({
           key: opt.code,
@@ -54,6 +79,34 @@ export default function SettingsCard({
           text: fmt,
           selected: dateFormat === fmt,
           onPress: () => { setDateFormat(fmt); setDateOpen(false); },
+        }))}
+      />
+
+      {/* TEMPERATURE UNITS */}
+      <Text style={controls.sectionTitle}>Temperature units</Text>
+      <Dropdown
+        open={tempOpen}
+        valueText={TEMP_OPTIONS.find(t => t.key === temperatureUnit)?.label ?? "°C (Celsius)"}
+        onToggle={() => setTempOpen((o: boolean) => !o)}
+        items={TEMP_OPTIONS.map(opt => ({
+          key: opt.key,
+          text: opt.label,
+          selected: temperatureUnit === opt.key,
+          onPress: () => { setTemperatureUnit(opt.key); setTempOpen(false); },
+        }))}
+      />
+
+      {/* MEASUREMENT UNITS */}
+      <Text style={controls.sectionTitle}>Measurement units</Text>
+      <Dropdown
+        open={measureOpen}
+        valueText={MEASURE_OPTIONS.find(m => m.key === measureUnit)?.label ?? "Metric (cm / m)"}
+        onToggle={() => setMeasureOpen((o: boolean) => !o)}
+        items={MEASURE_OPTIONS.map(opt => ({
+          key: opt.key,
+          text: opt.label,
+          selected: measureUnit === opt.key,
+          onPress: () => { setMeasureUnit(opt.key); setMeasureOpen(false); },
         }))}
       />
 
@@ -101,22 +154,6 @@ export default function SettingsCard({
         <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />
         <Text style={controls.saveBtnText}>Save</Text>
       </Pressable>
-
-      <View style={controls.sectionDivider} />
-
-      {/* SUPPORT */}
-      <Text style={controls.sectionTitle}>Support</Text>
-      <Pressable style={[controls.actionBtnFull, controls.actionPrimary]} onPress={onBug}>
-        <MaterialCommunityIcons name="bug-outline" size={18} color="#FFFFFF" />
-        <Text style={[controls.actionBtnFullText, { color: "#FFFFFF" }]}>Report a bug</Text>
-      </Pressable>
-
-      <View style={controls.aboutBox}>
-        <Text style={controls.aboutTitle}>About the app</Text>
-        <Text style={controls.aboutLine}>Version: <Text style={controls.aboutStrong}>1.0.0</Text></Text>
-        <Text style={controls.aboutLine}>Release date: <Text style={controls.aboutStrong}>07.10.2025</Text></Text>
-        <Text style={controls.aboutLine}>Contact: <Text style={controls.aboutStrong}>hello@flovers.app</Text></Text>
-      </View>
     </GlassCard>
   );
 }

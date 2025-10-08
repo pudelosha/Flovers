@@ -30,8 +30,9 @@ export const header = StyleSheet.create({
 
 /** Page layout paddings */
 export const layout = StyleSheet.create({
-  content: { paddingHorizontal: 16, paddingTop: 16, paddingBottom: 24, gap: 16 },
+  content: { paddingHorizontal: 16, paddingTop: 21, paddingBottom: 80, gap: 16 },
 });
+
 
 /** Glass card, rows, titles */
 export const card = StyleSheet.create({

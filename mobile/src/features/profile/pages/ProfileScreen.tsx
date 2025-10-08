@@ -1,19 +1,20 @@
-import React, { useMemo, useState } from "react";
+// src/features/profile/pages/ProfileScreen.tsx
+import React, { useState } from "react";
 import { View, Text, ScrollView, TextInput, Pressable } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
 
-import { header as h, layout as ly, prompts as pr } from "../styles/profile.styles";
+import { layout as ly, prompts as pr } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
-import type { TabKey, PromptKey, LangCode } from "../types/profile.types";
+import type { PromptKey, LangCode } from "../types/profile.types";
 
 import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
 import SettingsCard from "../components/SettingsCard";
+import SupportCard from "../components/SupportCard";
 
 function formatDate(d?: string | Date | null) {
   if (!d) return "—";
@@ -28,8 +29,8 @@ export default function ProfileScreen() {
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
 
-  const [tab, setTab] = useState<TabKey>("account");
-  const [prompt, setPrompt] = useState<PromptKey>(null);
+  // PROMPTS
+  const [prompt, setPrompt] = useState<PromptKey | "contact" | null>(null);
 
   // Notifications state
   const [emailDaily, setEmailDaily] = useState(true);
@@ -50,91 +51,62 @@ export default function ProfileScreen() {
   const [dateOpen, setDateOpen] = useState(false);
   const [tileTransparency, setTileTransparency] = useState<number>(0.12);
 
-  const tabs = useMemo(
-    () => [
-      { key: "account" as const, label: "account", icon: "account-circle-outline" },
-      { key: "notifications" as const, label: "notifications", icon: "bell-outline" },
-      { key: "settings" as const, label: "settings", icon: "cog-outline" },
-    ],
-    []
-  );
+  const [temperatureUnit, setTemperatureUnit] = useState<"C" | "F" | "K">("C");
+  const [measureUnit, setMeasureUnit] = useState<"metric" | "imperial">("metric");
+  const [tempOpen, setTempOpen] = useState(false);
+  const [measureOpen, setMeasureOpen] = useState(false);
 
   return (
     <View style={{ flex: 1 }}>
-      {/* HEADER via shared GlassHeader */}
+      {/* HEADER (no submenu, no right icon) */}
       <GlassHeader
         title="Profile"
         gradientColors={HEADER_GRADIENT_TINT}
-        fallbackColor={HEADER_SOLID_FALLBACK}
-        topPaddingExtra={10}
-      >
-        {/* Submenu exactly like before, now passed as children */}
-        <View style={h.subRow}>
-          <View style={h.subColLeft}>
-            <Pressable style={h.subBtn} onPress={() => setTab("account")} hitSlop={8}>
-              <View style={h.subBtnInner}>
-                <Text style={[h.subBtnText, tab === "account" && h.subActive]}>account</Text>
-                <MaterialCommunityIcons name="account-circle-outline" size={14} color="#FFFFFF" style={h.subIcon} />
-              </View>
-            </Pressable>
-          </View>
-          <View style={h.subColCenter}>
-            <Pressable style={h.subBtn} onPress={() => setTab("notifications")} hitSlop={8}>
-              <View style={h.subBtnInner}>
-                <Text style={[h.subBtnText, tab === "notifications" && h.subActive]}>notifications</Text>
-                <MaterialCommunityIcons name="bell-outline" size={14} color="#FFFFFF" style={h.subIcon} />
-              </View>
-            </Pressable>
-          </View>
-          <View style={h.subColRight}>
-            <Pressable style={h.subBtn} onPress={() => setTab("settings")} hitSlop={8}>
-              <View style={h.subBtnInner}>
-                <Text style={[h.subBtnText, tab === "settings" && h.subActive]}>settings</Text>
-                <MaterialCommunityIcons name="cog-outline" size={14} color="#FFFFFF" style={h.subIcon} />
-              </View>
-            </Pressable>
-          </View>
-        </View>
-      </GlassHeader>
+        solidFallback={HEADER_SOLID_FALLBACK}
+        showSeparator={false}
+      />
 
-      {/* CONTENT */}
-      <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 80 }]}>
-        {tab === "account" && (
-          <AccountCard
-            email={user?.email}
-            createdText={formatDate((user as any)?.date_joined)}
-            onPrompt={setPrompt}
-            onLogout={logout}
-          />
-        )}
+      {/* CONTENT: all “subpages” combined */}
+      <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}>
+        <AccountCard
+          email={user?.email}
+          createdText={formatDate((user as any)?.date_joined)}
+          onPrompt={setPrompt}
+          onLogout={logout}
+        />
 
-        {tab === "notifications" && (
-          <NotificationsCard
-            emailDaily={emailDaily} setEmailDaily={setEmailDaily}
-            emailHour={emailHour} setEmailHour={setEmailHour}
-            email24h={email24h} setEmail24h={setEmail24h}
-            pushDaily={pushDaily} setPushDaily={setPushDaily}
-            pushHour={pushHour} setPushHour={setPushHour}
-            push24h={push24h} setPush24h={setPush24h}
-            formatHour={formatHour} incHour={incHour} decHour={decHour}
-            onSave={() => { /* TODO: persist notifications later */ }}
-          />
-        )}
+        <NotificationsCard
+          emailDaily={emailDaily} setEmailDaily={setEmailDaily}
+          emailHour={emailHour} setEmailHour={setEmailHour}
+          email24h={email24h} setEmail24h={setEmail24h}
+          pushDaily={pushDaily} setPushDaily={setPushDaily}
+          pushHour={pushHour} setPushHour={setPushHour}
+          push24h={push24h} setPush24h={setPush24h}
+          formatHour={formatHour} incHour={incHour} decHour={decHour}
+          onSave={() => { /* TODO: persist notifications later */ }}
+        />
 
-        {tab === "settings" && (
-          <SettingsCard
-            language={language} setLanguage={setLanguage}
-            langOpen={langOpen} setLangOpen={setLangOpen}
-            dateFormat={dateFormat} setDateFormat={setDateFormat}
-            dateOpen={dateOpen} setDateOpen={setDateOpen}
-            tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
-            onBug={() => setPrompt("bug")}
-            onSave={() => { /* TODO: persist settings later */ }}
-          />
-        )}
+        <SettingsCard
+          language={language} setLanguage={setLanguage}
+          langOpen={langOpen} setLangOpen={setLangOpen}
+          dateFormat={dateFormat} setDateFormat={setDateFormat}
+          dateOpen={dateOpen} setDateOpen={setDateOpen}
+          // NEW
+          temperatureUnit={temperatureUnit} setTemperatureUnit={setTemperatureUnit}
+          tempOpen={tempOpen} setTempOpen={setTempOpen}
+          measureUnit={measureUnit} setMeasureUnit={setMeasureUnit}
+          measureOpen={measureOpen} setMeasureOpen={setMeasureOpen}
+          tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
+          onSave={() => { /* TODO: persist settings later */ }}
+        />
+
+        <SupportCard
+          onContact={() => setPrompt("contact")}
+          onBug={() => setPrompt("bug")}
+        />
       </ScrollView>
 
-      {/* PROMPTS (layout only) */}
+      {/* PROMPTS / MODALS */}
       {prompt && (
         <>
           <Pressable style={pr.backdrop} onPress={() => setPrompt(null)} />
@@ -210,6 +182,27 @@ export default function ProfileScreen() {
                 <TextInput
                   style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
                   placeholder="Describe the issue…"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  multiline
+                />
+                <View style={pr.promptButtonsRow}>
+                  <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
+                    <Text style={pr.promptBtnText}>Cancel</Text>
+                  </Pressable>
+                  <Pressable style={[pr.promptBtn, pr.promptPrimary]}>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Send</Text>
+                  </Pressable>
+                </View>
+              </View>
+            )}
+
+            {prompt === "contact" && (
+              <View style={pr.promptInner}>
+                <Text style={pr.promptTitle}>Contact us</Text>
+                <TextInput style={pr.input} placeholder="Subject" placeholderTextColor="rgba(255,255,255,0.7)" />
+                <TextInput
+                  style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
+                  placeholder="How can we help?"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   multiline
                 />
