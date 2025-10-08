@@ -42,7 +42,7 @@ export default function RemindersScreen() {
 
   const openList = () => setViewMode("list");
   const openCalendar = () => setViewMode("calendar");
-  const openAddReminder = () => nav.navigate("AddReminder" as never); // to be implemented
+  const openAddReminder = () => nav.navigate("AddReminder" as never);
 
   return (
     <View style={{ flex: 1 }}>
@@ -64,12 +64,12 @@ export default function RemindersScreen() {
         <FlatList
           data={reminders}
           keyExtractor={(r) => r.id}
-          renderItem={({ item }) => (
+          renderItem={({ item }: { item: Reminder }) => (
             <ReminderTile
               reminder={item}
               isMenuOpen={menuOpenId === item.id}
               onToggleMenu={() => onToggleMenu(item.id)}
-              onPressBody={() => nav.navigate("ReminderDetails" as never)} // to be implemented
+              onPressBody={() => nav.navigate("ReminderDetails" as never)}
               onEdit={() => {
                 /* TODO: open edit reminder */
               }}
@@ -78,8 +78,8 @@ export default function RemindersScreen() {
               }}
             />
           )}
-          ListHeaderComponent={() => <View style={{ height: 5 }} />}
-          ListFooterComponent={() => <View style={{ height: 140 }} />}
+          ListHeaderComponent={<View style={{ height: 5 }} />}
+          ListFooterComponent={<View style={{ height: 140 }} />}
           contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
@@ -95,14 +95,14 @@ export default function RemindersScreen() {
         </View>
       )}
 
+      {/* FAB – order + Capital labels, no root `icon` prop */}
       <FAB
-        icon={viewMode === "list" ? "view-list" : "calendar-month"}
         actions={[
-          { key: "list", label: "list", icon: "view-list", onPress: openList },
-          { key: "calendar", label: "calendar", icon: "calendar-month", onPress: openCalendar },
-          { key: "add", label: "add reminder", icon: "plus", onPress: openAddReminder },
-          { key: "sort", label: "sort", icon: "sort", onPress: () => {/* TODO */} },
-          { key: "filter", label: "filter", icon: "filter-variant", onPress: () => {/* TODO */} },
+          { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
+          { key: "list", label: "List", icon: "view-list", onPress: openList },
+          { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
+          { key: "sort", label: "Sort", icon: "sort", onPress: () => { /* TODO */ } },
+          { key: "filter", label: "Filter", icon: "filter-variant", onPress: () => { /* TODO */ } },
         ]}
       />
     </View>

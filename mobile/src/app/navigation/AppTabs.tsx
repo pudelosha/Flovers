@@ -20,7 +20,7 @@ import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
 import AddPlantScreen from "../../features/plants/pages/AddPlantScreen"; // adjust path to where you placed it
-
+import AddReminderScreen from "../../features/reminders/pages/AddReminderScreen";
 
 export type AppTabParamList = {
   Home: undefined;
@@ -31,6 +31,7 @@ export type AppTabParamList = {
   Scanner: undefined;        // hidden
   PlantDetails: undefined;   // hidden
   AddPlant: undefined;       // hidden
+  AddReminder: undefined;
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -175,6 +176,11 @@ export default function AppTabs() {
       <Tab.Screen
         name="AddPlant"
         component={AddPlantScreen}
+        options={{ tabBarStyle: { display: "flex" } }}
+      />
+      <Tab.Screen
+        name="AddReminder"
+        component={AddReminderScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>
