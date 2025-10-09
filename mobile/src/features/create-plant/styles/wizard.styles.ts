@@ -85,7 +85,7 @@ export const wiz = StyleSheet.create({
   prefLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", flex: 1 },
   prefValue: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 3 – create location button + rows + chips + modal */
+  /** Step 3 – actions + lists + chips */
   actionFull: {
     alignSelf: "stretch", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10,
     paddingHorizontal: 14, paddingVertical: 12, borderRadius: 14,
@@ -101,30 +101,65 @@ export const wiz = StyleSheet.create({
   locationName: { color: "#FFFFFF", fontWeight: "800" },
   locationCat: { color: "rgba(255,255,255,0.92)", fontWeight: "700" },
 
-  chipsWrap: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
-  chip: {
-    paddingHorizontal: 12, paddingVertical: 10, borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
-  },
-  chipText: { color: "#FFFFFF", fontWeight: "800" },
-
   // modal
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.6)", zIndex: 20 },
-  promptWrap: { ...StyleSheet.absoluteFillObject, alignItems: "center", justifyContent: "center", zIndex: 21, paddingHorizontal: 24 },
-  promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 18, overflow: "hidden" },
-  promptInner: { width: "100%", maxWidth: 520, borderRadius: 18, overflow: "hidden", position: "relative", backgroundColor: "transparent" },
-  promptTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 18, marginBottom: 12, paddingHorizontal: 16, paddingTop: 16 },
+  promptWrap: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "stretch",        // stretch to full width
+    justifyContent: "flex-start", // so content uses full height
+    zIndex: 21,
+    paddingHorizontal: 0,
+  },
+  promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 0, overflow: "hidden" },
+
+  // FULL SCREEN inner container
+  promptInnerFull: {
+    position: "absolute",
+    left: 0, right: 0, top: 0, bottom: 0,
+  },
+  promptScroll: {
+    paddingHorizontal: 16,
+    paddingTop: 24,
+    paddingBottom: 24,
+  },
+  promptTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 12,
+    paddingHorizontal: 0,
+    paddingTop: 0,
+  },
+
+  // inputs / segments
   inputField: {
-    marginHorizontal: 16, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 10,
+    marginHorizontal: 0, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 10,
     borderRadius: 12, borderWidth: 1, borderColor: "rgba(255,255,255,0.28)", color: "#FFFFFF",
     backgroundColor: "rgba(255,255,255,0.12)",
   },
-  segmentRow: { flexDirection: "row", alignItems: "center", gap: 8, paddingHorizontal: 16, marginBottom: 10 },
+  segmentRow: { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 12 },
   segBtn: {
-    paddingHorizontal: 12, paddingVertical: 8, borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    flex: 1,                                 // FULL WIDTH across row
+    paddingHorizontal: 12, paddingVertical: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    alignItems: "center", justifyContent: "center",
   },
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
   segText: { color: "#FFFFFF", fontWeight: "800" },
-  promptButtonsRow: { flexDirection: "row", justifyContent: "flex-end", gap: 10, paddingHorizontal: 16, paddingBottom: 16, paddingTop: 6 },
+
+  // chips: use full width, wrap naturally
+  chipsWrap: {
+    width: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+  },
+  chip: {
+    paddingHorizontal: 12, paddingVertical: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+  },
 });

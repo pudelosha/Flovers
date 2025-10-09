@@ -66,14 +66,18 @@ export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
 };
 
 // ---------- Step 3 predefined location suggestions ----------
-export const PREDEFINED_LOCATIONS: Record<LocationCategory, string[]> = {
+export const PREDEFINED_LOCATIONS = {
   indoor: [
-    "Living room", "Kitchen", "Dining room", "Bedroom",
-    "Bathroom", "Hallway", "Office", "Kids room",
+    "Living room", "Kitchen", "Dining room", "Bedroom", "Bathroom",
+    "Hallway", "Office", "Kids room",
   ],
   outdoor: [
-    "Balcony", "Terrace", "Backyard", "Front yard",
-    "Patio", "Garden bed", "Greenhouse", "Porch",
+    "Balcony", "Terrace", "Patio", "Garden", "Front yard",
+    "Backyard", "Porch", "Greenhouse",
   ],
-  other: [], // no chips requested here
-};
+  other: [
+    "Staircase", "Garage", "Basement", "Lobby", "Sunroom",
+    "Workshop", "Studio", "Attic",
+  ],
+} as const;
+
