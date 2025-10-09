@@ -1,16 +1,45 @@
 ﻿import React, { useRef } from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
 import { wiz } from "../styles/wizard.styles";
 import { CreatePlantProvider } from "../context/CreatePlantProvider";
-import Step01_SelectPlant from "../steps/Step01_SelectPlant";
+import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
-export default function CreatePlantWizardScreen() {
+import Step01_SelectPlant from "../steps/Step01_SelectPlant";
+import Step02_PlantTraits from "../steps/Step02_PlantTraits";
+
+function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
+  const { state } = useCreatePlantWizard();
 
+  const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: true });
+
+  return (
+    <ScrollView
+      ref={scrollRef}
+      contentContainerStyle={[wiz.pageContent, { paddingBottom: insets.bottom + 120 }]}
+      keyboardShouldPersistTaps="handled"
+    >
+      {state.step === "selectPlant" && <Step01_SelectPlant onScrollToTop={scrollTop} />}
+      {state.step === "traits" && <Step02_PlantTraits />}
+      {/* Temporary placeholders for upcoming steps */}
+      {state.step !== "selectPlant" && state.step !== "traits" && (
+        <View style={wiz.cardWrap}>
+          <View style={wiz.cardGlass} />
+          <View style={wiz.cardInner}>
+            <Text style={wiz.title}>Step “{state.step}”</Text>
+            <Text style={wiz.subtitle}>This step will be implemented next.</Text>
+          </View>
+        </View>
+      )}
+    </ScrollView>
+  );
+}
+
+export default function CreatePlantWizardScreen() {
   return (
     <CreatePlantProvider>
       <View style={{ flex: 1 }}>
@@ -20,19 +49,7 @@ export default function CreatePlantWizardScreen() {
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
         />
-
-        <ScrollView
-          ref={scrollRef}
-          contentContainerStyle={[
-            wiz.pageContent,
-            { paddingBottom: insets.bottom + 120 },
-          ]}
-          keyboardShouldPersistTaps="handled"
-        >
-          <Step01_SelectPlant
-            onScrollToTop={() => scrollRef.current?.scrollTo({ y: 0, animated: true })}
-          />
-        </ScrollView>
+        <WizardBody />
       </View>
     </CreatePlantProvider>
   );

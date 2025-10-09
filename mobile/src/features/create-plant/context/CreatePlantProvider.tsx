@@ -14,6 +14,19 @@ const initial: WizardState = {
   selectedPlant: undefined,
 };
 
+// Step order used by NEXT/PREV
+const ORDER: WizardStep[] = [
+  "selectPlant",
+  "traits",
+  "location",
+  "distance",
+  "potType",
+  "autoTasks",
+  "photo",
+  "name",
+  "summary",
+];
+
 function reducer(state: WizardState, action: Action): WizardState {
   switch (action.type) {
     case "SET_QUERY":
@@ -21,11 +34,15 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_SELECTED_PLANT":
       return { ...state, selectedPlant: action.plant };
     case "NEXT": {
-      // lightweight step machine (only step1 for now)
-      return { ...state, step: "traits" };
+      const idx = ORDER.indexOf(state.step);
+      const next = ORDER[Math.min(idx + 1, ORDER.length - 1)];
+      return { ...state, step: next };
     }
-    case "PREV":
-      return { ...state, step: "selectPlant" };
+    case "PREV": {
+      const idx = ORDER.indexOf(state.step);
+      const prev = ORDER[Math.max(idx - 1, 0)];
+      return { ...state, step: prev };
+    }
     case "GOTO":
       return { ...state, step: action.step };
     default:
