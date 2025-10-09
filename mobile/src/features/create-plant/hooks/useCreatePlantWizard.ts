@@ -1,3 +1,2 @@
-﻿import React from "react";
-import { View } from "react-native";
-export default function StubComponent() { return <View />; }
+// re-export for convenience so imports stay short in steps
+export { useCreatePlantWizard } from "../context/CreatePlantProvider";

@@ -1,45 +1,39 @@
-﻿// src/features/create-plant/pages/CreatePlantWizardScreen.tsx
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+﻿import React, { useRef } from "react";
+import { View, ScrollView } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import GlassHeader from "../../../shared/ui/GlassHeader";
+import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
+import { wiz } from "../styles/wizard.styles";
+import { CreatePlantProvider } from "../context/CreatePlantProvider";
+import Step01_SelectPlant from "../steps/Step01_SelectPlant";
 
 export default function CreatePlantWizardScreen() {
-  return (
-    <View style={{ flex: 1 }}>
-      <GlassHeader
-        title="Create plant"
-        gradientColors={["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"]}
-        solidFallback="rgba(10,51,40,0.70)"
-        showSeparator={false}
-      />
+  const insets = useSafeAreaInsets();
+  const scrollRef = useRef<ScrollView>(null);
 
-      <View style={styles.placeholder}>
-        <Text style={styles.title}>New plant setup</Text>
-        <Text style={styles.text}>
-          Multi-step flow coming soon. This is a placeholder page (not a modal).
-        </Text>
+  return (
+    <CreatePlantProvider>
+      <View style={{ flex: 1 }}>
+        <GlassHeader
+          title="Create plant"
+          gradientColors={HEADER_GRADIENT_TINT}
+          solidFallback={HEADER_SOLID_FALLBACK}
+          showSeparator={false}
+        />
+
+        <ScrollView
+          ref={scrollRef}
+          contentContainerStyle={[
+            wiz.pageContent,
+            { paddingBottom: insets.bottom + 120 },
+          ]}
+          keyboardShouldPersistTaps="handled"
+        >
+          <Step01_SelectPlant
+            onScrollToTop={() => scrollRef.current?.scrollTo({ y: 0, animated: true })}
+          />
+        </ScrollView>
       </View>
-    </View>
+    </CreatePlantProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  placeholder: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 24,
-  },
-  title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 20,
-    marginBottom: 8,
-  },
-  text: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "600",
-    fontSize: 14,
-    textAlign: "center",
-  },
-});
