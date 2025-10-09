@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { View, Pressable, FlatList, Text } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Pressable, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
@@ -39,7 +38,7 @@ export default function PlantsScreen() {
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // --- EDIT MODAL state (dedicated) ---
+  // --- EDIT MODAL state ---
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [fName, setFName] = useState("");
@@ -52,9 +51,10 @@ export default function PlantsScreen() {
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
-  const openAddPage = () => {
+  const openCreatePlantWizard = () => {
     setMenuOpenId(null);
-    nav.navigate("AddPlant" as never);
+    // Make sure this route name matches your navigator registration
+    nav.navigate("CreatePlantWizard" as never);
   };
 
   const openEditModal = (p: Plant) => {
@@ -110,7 +110,7 @@ export default function PlantsScreen() {
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
         onPressRight={() => nav.navigate("Scanner" as never)}
-        showSeparator={false} // <<< remove the divider
+        showSeparator={false}
       />
 
       {/* Tap outside list to close any open tile menu */}
@@ -124,16 +124,16 @@ export default function PlantsScreen() {
             plant={item}
             isMenuOpen={menuOpenId === item.id}
             onPressBody={() => nav.navigate("PlantDetails" as never)}
-            onPressMenu={() =>
-              setMenuOpenId((curr) => (curr === item.id ? null : item.id))
-            }
+            onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
             onEdit={() => openEditModal(item)}
-            onReminders={() => { /* wire later */ }}
+            onReminders={() => {
+              /* wire later */
+            }}
             onDelete={() => askDelete(item)}
           />
         )}
         ListHeaderComponent={() => <View style={{ height: 5 }} />}
-        // Add generous bottom padding so the final card clears the FAB + tab bar
+        // Generous bottom padding so the last card clears the FAB + tab bar
         ListFooterComponent={() => <View style={{ height: 200 }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -144,9 +144,9 @@ export default function PlantsScreen() {
 
       {/* Page FAB */}
       <FAB
-        bottomOffset={92} // keep above the tab bar; tweak if your tab bar height changes
+        bottomOffset={92}
         actions={[
-          { key: "add", icon: "plus", label: "Add plant", onPress: openAddPage },
+          { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
           { key: "sort", icon: "sort", label: "Sort", onPress: () => {/* TODO */} },
           { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => {/* TODO */} },
           { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {/* TODO */} },

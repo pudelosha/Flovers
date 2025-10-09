@@ -19,7 +19,7 @@ import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
-import AddPlantScreen from "../../features/plants/pages/AddPlantScreen"; // adjust path to where you placed it
+import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // adjust path to where you placed it
 import AddReminderScreen from "../../features/reminders/pages/AddReminderScreen";
 
 export type AppTabParamList = {
@@ -30,8 +30,8 @@ export type AppTabParamList = {
   Profile: undefined;
   Scanner: undefined;        // hidden
   PlantDetails: undefined;   // hidden
-  AddPlant: undefined;       // hidden
-  AddReminder: undefined;
+  CreatePlantWizard: undefined; // hidden
+  AddReminder: undefined;       // hidden
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -59,7 +59,12 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     }
   };
 
-  const HIDDEN = new Set(["Scanner", "PlantDetails"]);
+  const HIDDEN = new Set([
+    "Scanner",
+    "PlantDetails",
+    "CreatePlantWizard",
+    "AddReminder",
+  ]);
   const visibleRoutes = state.routes.filter((r: any) => !HIDDEN.has(r.name));
   const activeIsHidden = HIDDEN.has(state.routes[state.index]?.name);
 
@@ -144,10 +149,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 export default function AppTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{
-        headerShown: false,
-        sceneStyle: { backgroundColor: "transparent" },
-      }}
+      screenOptions={{ headerShown: false, sceneStyle: { backgroundColor: "transparent" } }}
       tabBar={(props) => <GlassTabBar {...props} />}
       sceneContainerStyle={{
         paddingTop: 16,
@@ -162,27 +164,15 @@ export default function AppTabs() {
       <Tab.Screen name="Readings" component={ReadingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
 
-      {/* Hidden routes keep the bottom bar visible without selecting a tab */}
+      {/* Hidden routes */}
+      <Tab.Screen name="Scanner" component={ScannerScreen} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="PlantDetails" component={PlantDetailsScreen} options={{ tabBarStyle: { display: "flex" } }} />
       <Tab.Screen
-        name="Scanner"
-        component={ScannerScreen}
+        name="CreatePlantWizard"
+        component={CreatePlantWizardScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
-      <Tab.Screen
-        name="PlantDetails"
-        component={PlantDetailsScreen}
-        options={{ tabBarStyle: { display: "flex" } }}
-      />
-      <Tab.Screen
-        name="AddPlant"
-        component={AddPlantScreen}
-        options={{ tabBarStyle: { display: "flex" } }}
-      />
-      <Tab.Screen
-        name="AddReminder"
-        component={AddReminderScreen}
-        options={{ tabBarStyle: { display: "flex" } }}
-      />
+      <Tab.Screen name="AddReminder" component={AddReminderScreen} options={{ tabBarStyle: { display: "flex" } }} />
     </Tab.Navigator>
   );
 }
