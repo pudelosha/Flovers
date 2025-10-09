@@ -15,10 +15,22 @@ export type SelectedPlant = {
   predefined?: boolean;
 };
 
+export type LocationCategory = "indoor" | "outdoor" | "other";
+
+export type UserLocation = {
+  id: string;
+  name: string;
+  category: LocationCategory;
+};
+
 export type WizardState = {
   step: WizardStep;
   plantQuery: string;
   selectedPlant?: SelectedPlant;
+
+  // Step 3
+  locations: UserLocation[];          // user's personal locations
+  selectedLocationId?: string;        // chosen location for this plant
 };
 
 export type PopularPlant = {

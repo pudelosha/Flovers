@@ -2,18 +2,10 @@
 
 export const wiz = StyleSheet.create({
   /** page spacing */
-  pageContent: {
-    paddingHorizontal: 16,
-    paddingTop: 21,
-  },
+  pageContent: { paddingHorizontal: 16, paddingTop: 21 },
 
   /** glass card */
-  cardWrap: {
-    borderRadius: 18,
-    overflow: "visible",
-    position: "relative",
-    marginBottom: 18,
-  },
+  cardWrap: { borderRadius: 18, overflow: "visible", position: "relative", marginBottom: 18 },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 18,
@@ -33,14 +25,9 @@ export const wiz = StyleSheet.create({
     marginBottom: 8,
     lineHeight: 18,
   },
-  sectionTitle: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    marginTop: 10,
-    marginBottom: 8,
-  },
+  sectionTitle: { color: "#FFFFFF", fontWeight: "800", marginTop: 10, marginBottom: 8 },
 
-  /** Search box */
+  /** Search box (Step 1) */
   inputRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -55,75 +42,89 @@ export const wiz = StyleSheet.create({
   input: { flex: 1, color: "#FFFFFF", fontWeight: "700" },
   suggestBox: {
     position: "absolute",
-    left: 0,
-    right: 0,
-    top: 48,
-    borderRadius: 12,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(0,0,0,0.85)",
-    zIndex: 30,
+    left: 0, right: 0, top: 48,
+    borderRadius: 12, overflow: "hidden",
+    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(0,0,0,0.85)", zIndex: 30,
   },
   suggestItem: {
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 12, paddingVertical: 10,
+    borderBottomWidth: StyleSheet.hairlineWidth, borderColor: "rgba(255,255,255,0.25)",
   },
   suggestName: { color: "#FFFFFF", fontWeight: "800" },
   suggestLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic" },
 
-  /** Popular list row (no tiles) */
+  /** Popular / list row */
   rowItem: { flexDirection: "row", alignItems: "center", gap: 12 },
   thumb: { width: 48, height: 48, borderRadius: 10, backgroundColor: "rgba(255,255,255,0.12)" },
   rowName: { color: "#FFFFFF", fontWeight: "800" },
-  rowLatin: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
-    fontStyle: "italic",
-    marginTop: 2,
-  },
+  rowLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic", marginTop: 2 },
   tagRow: { flexDirection: "row", alignItems: "center", marginTop: 6 },
 
-  /** Footer (Next under search) */
+  /** Footer buttons (Step 1) */
   footerRow: { flexDirection: "row", justifyContent: "flex-end", marginTop: 10 },
   nextBtnWide: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-    borderRadius: 14,
-    backgroundColor: "rgba(11,114,133,0.9)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    flexDirection: "row", alignItems: "center", gap: 8,
+    paddingHorizontal: 18, paddingVertical: 12, borderRadius: 14,
+    backgroundColor: "rgba(11,114,133,0.9)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
   },
   nextBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 2 — hero + description + preferences */
-  hero: { width: "100%", height: 180, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.08)" },
-  desc: {
-    color: "rgba(255,255,255,0.95)",
-    fontWeight: "600",
-    lineHeight: 18,
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  buttonRowDual: { flexDirection: "row", justifyContent: "space-between", marginTop: 8, marginBottom: 6 },
+  /** Step 2 */
+  hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
+  desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
+  buttonRowDual: { flexDirection: "row", justifyContent: "space-between", gap: 10, marginTop: 12 },
   btn: {
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
   },
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.9)" },
   btnText: { color: "#FFFFFF", fontWeight: "800" },
-
-  prefsGrid: { marginTop: 8, gap: 10 },
+  prefsGrid: { marginTop: 8, gap: 8 },
   prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
-  prefLabel: { color: "rgba(255,255,255,0.9)", fontWeight: "700", width: 120 },
-  prefValue: { color: "#FFFFFF", fontWeight: "800", flexShrink: 1 },
+  prefLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", flex: 1 },
+  prefValue: { color: "#FFFFFF", fontWeight: "800" },
+
+  /** Step 3 – create location button + rows + chips + modal */
+  actionFull: {
+    alignSelf: "stretch", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10,
+    paddingHorizontal: 14, paddingVertical: 12, borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+  },
+  actionText: { color: "#FFFFFF", fontWeight: "800" },
+  smallMuted: { color: "rgba(255,255,255,0.92)", fontWeight: "600", marginTop: 6, marginBottom: 8 },
+
+  locationRow: {
+    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
+    paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: "rgba(255,255,255,0.18)",
+  },
+  locationName: { color: "#FFFFFF", fontWeight: "800" },
+  locationCat: { color: "rgba(255,255,255,0.92)", fontWeight: "700" },
+
+  chipsWrap: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  chip: {
+    paddingHorizontal: 12, paddingVertical: 10, borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+  },
+  chipText: { color: "#FFFFFF", fontWeight: "800" },
+
+  // modal
+  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.6)", zIndex: 20 },
+  promptWrap: { ...StyleSheet.absoluteFillObject, alignItems: "center", justifyContent: "center", zIndex: 21, paddingHorizontal: 24 },
+  promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 18, overflow: "hidden" },
+  promptInner: { width: "100%", maxWidth: 520, borderRadius: 18, overflow: "hidden", position: "relative", backgroundColor: "transparent" },
+  promptTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 18, marginBottom: 12, paddingHorizontal: 16, paddingTop: 16 },
+  inputField: {
+    marginHorizontal: 16, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 10,
+    borderRadius: 12, borderWidth: 1, borderColor: "rgba(255,255,255,0.28)", color: "#FFFFFF",
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  segmentRow: { flexDirection: "row", alignItems: "center", gap: 8, paddingHorizontal: 16, marginBottom: 10 },
+  segBtn: {
+    paddingHorizontal: 12, paddingVertical: 8, borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+  },
+  segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
+  segText: { color: "#FFFFFF", fontWeight: "800" },
+  promptButtonsRow: { flexDirection: "row", justifyContent: "flex-end", gap: 10, paddingHorizontal: 16, paddingBottom: 16, paddingTop: 6 },
 });

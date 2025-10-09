@@ -11,17 +11,16 @@ import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
 import Step01_SelectPlant from "../steps/Step01_SelectPlant";
 import Step02_PlantTraits from "../steps/Step02_PlantTraits";
+import Step03_SelectLocation from "../steps/Step03_SelectLocation";
 
 function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
   const { state, actions } = useCreatePlantWizard();
 
-  // Always start fresh when this screen gains focus
   useFocusEffect(
     React.useCallback(() => {
       actions.reset();
-      // scroll to top as we enter
       scrollRef.current?.scrollTo({ y: 0, animated: false });
     }, [actions])
   );
@@ -36,9 +35,9 @@ function WizardBody() {
     >
       {state.step === "selectPlant" && <Step01_SelectPlant onScrollToTop={scrollTop} />}
       {state.step === "traits" && <Step02_PlantTraits />}
+      {state.step === "location" && <Step03_SelectLocation onScrollTop={scrollTop} />}
 
-      {/* Temporary placeholders for next steps to keep navigation safe */}
-      {state.step !== "selectPlant" && state.step !== "traits" && (
+      {!(state.step === "selectPlant" || state.step === "traits" || state.step === "location") && (
         <View style={wiz.cardWrap}>
           <View style={wiz.cardGlass} />
           <View style={wiz.cardInner}>

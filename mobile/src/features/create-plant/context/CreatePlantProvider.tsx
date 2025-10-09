@@ -1,5 +1,11 @@
 ﻿import React, { createContext, useContext, useMemo, useReducer } from "react";
-import type { WizardState, SelectedPlant, WizardStep } from "../types/create-plant.types";
+import type {
+  WizardState,
+  SelectedPlant,
+  WizardStep,
+  UserLocation,
+  LocationCategory,
+} from "../types/create-plant.types";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
@@ -7,25 +13,20 @@ type Action =
   | { type: "NEXT" }
   | { type: "PREV" }
   | { type: "GOTO"; step: WizardStep }
-  | { type: "RESET" };
+  | { type: "RESET" }
+  | { type: "ADD_LOCATION"; loc: UserLocation }
+  | { type: "SELECT_LOCATION"; id: string };
 
 const initial: WizardState = {
   step: "selectPlant",
   plantQuery: "",
   selectedPlant: undefined,
+  locations: [],             // user locations start empty this session
+  selectedLocationId: undefined,
 };
 
-// Step order used by NEXT/PREV
 const ORDER: WizardStep[] = [
-  "selectPlant",
-  "traits",
-  "location",
-  "distance",
-  "potType",
-  "autoTasks",
-  "photo",
-  "name",
-  "summary",
+  "selectPlant","traits","location","distance","potType","autoTasks","photo","name","summary",
 ];
 
 function reducer(state: WizardState, action: Action): WizardState {
@@ -36,18 +37,24 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, selectedPlant: action.plant };
     case "NEXT": {
       const idx = ORDER.indexOf(state.step);
-      const next = ORDER[Math.min(idx + 1, ORDER.length - 1)];
-      return { ...state, step: next };
+      return { ...state, step: ORDER[Math.min(idx + 1, ORDER.length - 1)] };
     }
     case "PREV": {
       const idx = ORDER.indexOf(state.step);
-      const prev = ORDER[Math.max(idx - 1, 0)];
-      return { ...state, step: prev };
+      return { ...state, step: ORDER[Math.max(idx - 1, 0)] };
     }
     case "GOTO":
       return { ...state, step: action.step };
     case "RESET":
       return { ...initial };
+    case "ADD_LOCATION":
+      return {
+        ...state,
+        locations: [...state.locations, action.loc],
+        selectedLocationId: action.loc.id,
+      };
+    case "SELECT_LOCATION":
+      return { ...state, selectedLocationId: action.id };
     default:
       return state;
   }
@@ -62,8 +69,16 @@ const Ctx = createContext<{
     goPrev: () => void;
     goTo: (s: WizardStep) => void;
     reset: () => void;
+
+    // step 3 actions
+    addLocation: (name: string, category: LocationCategory) => void;
+    selectLocation: (id: string) => void;
   };
 } | null>(null);
+
+function id() {
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+}
 
 export function CreatePlantProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initial);
@@ -76,6 +91,10 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
       reset: () => dispatch({ type: "RESET" }),
+
+      addLocation: (name: string, category: LocationCategory) =>
+        dispatch({ type: "ADD_LOCATION", loc: { id: id(), name, category } }),
+      selectLocation: (locId: string) => dispatch({ type: "SELECT_LOCATION", id: locId }),
     }),
     []
   );
