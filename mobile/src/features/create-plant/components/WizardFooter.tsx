@@ -1,39 +1,32 @@
-﻿// src/features/create-plant/components/WizardFooter.tsx
-import React from "react";
+﻿import React from "react";
 import { View, Pressable, Text } from "react-native";
-import { wizard } from "../styles/wizard.styles";
-
-type Props = {
-  onPrev?: () => void;
-  onNext?: () => void;
-  nextLabel?: string;
-  showPrev?: boolean;
-  alignLeft?: boolean;
-  nextDisabled?: boolean;
-};
+import { wiz } from "../styles/wizard.styles";
 
 export default function WizardFooter({
   onPrev,
   onNext,
   nextLabel = "Next",
-  showPrev = false,
-  alignLeft = false,
+  prevLabel = "Previous",
   nextDisabled = false,
-}: Props) {
+}: {
+  onPrev?: () => void;
+  onNext?: () => void;
+  nextLabel?: string;
+  prevLabel?: string;
+  nextDisabled?: boolean;
+}) {
   return (
-    <View style={wizard.footerWrap}>
-      <View style={[wizard.footerRow, alignLeft && { justifyContent: "flex-start" }]}>
-        {showPrev && (
-          <Pressable style={[wizard.btn, { marginRight: 10 }]} onPress={onPrev}>
-            <Text style={wizard.btnText}>Previous</Text>
-          </Pressable>
-        )}
+    <View style={wiz.footerWrap}>
+      <View style={wiz.footerRowFull}>
+        <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={onPrev}>
+          <Text style={wiz.splitBtnText}>{prevLabel}</Text>
+        </Pressable>
         <Pressable
-          style={[wizard.btn, wizard.btnPrimary]}
+          style={[wiz.splitBtn, wiz.splitBtnPrimary, nextDisabled && { opacity: 0.6 }]}
           onPress={onNext}
           disabled={nextDisabled}
         >
-          <Text style={wizard.btnText}>{nextLabel}</Text>
+          <Text style={wiz.splitBtnText}>{nextLabel}</Text>
         </Pressable>
       </View>
     </View>

@@ -70,6 +70,34 @@ export const wiz = StyleSheet.create({
   },
   nextBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
+  /** 🔵 NEW: 50:50 Prev/Next (full width) */
+  footerRowSplit: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 10,
+    marginTop: 12,
+    alignSelf: "stretch",
+  },
+  splitBtn: {
+    flex: 1, // 50:50
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 14,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  splitBtnSecondary: {
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  splitBtnPrimary: {
+    backgroundColor: "rgba(11,114,133,0.9)",
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
+
   /** Step 2 */
   hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
   desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
@@ -99,29 +127,22 @@ export const wiz = StyleSheet.create({
     paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: "rgba(255,255,255,0.18)",
   },
   locationName: { color: "#FFFFFF", fontWeight: "800" },
-  locationCat: { color: "rgba(255,255,255,0.92)", fontWeight: "700" },
+  locationCat: { color: "#FFFFFF", fontWeight: "800", marginBottom: 6 }, // tiny bottom margin + brighter
 
   // modal
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.6)", zIndex: 20 },
   promptWrap: {
     ...StyleSheet.absoluteFillObject,
-    alignItems: "stretch",        // stretch to full width
-    justifyContent: "flex-start", // so content uses full height
+    alignItems: "stretch",
+    justifyContent: "flex-start",
     zIndex: 21,
     paddingHorizontal: 0,
   },
   promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 0, overflow: "hidden" },
 
   // FULL SCREEN inner container
-  promptInnerFull: {
-    position: "absolute",
-    left: 0, right: 0, top: 0, bottom: 0,
-  },
-  promptScroll: {
-    paddingHorizontal: 16,
-    paddingTop: 24,
-    paddingBottom: 24,
-  },
+  promptInnerFull: { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 },
+  promptScroll: { paddingHorizontal: 16, paddingTop: 24, paddingBottom: 24 },
   promptTitle: {
     color: "#FFFFFF",
     fontWeight: "800",
@@ -139,7 +160,7 @@ export const wiz = StyleSheet.create({
   },
   segmentRow: { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 12 },
   segBtn: {
-    flex: 1,                                 // FULL WIDTH across row
+    flex: 1,
     paddingHorizontal: 12, paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
@@ -149,17 +170,13 @@ export const wiz = StyleSheet.create({
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
   segText: { color: "#FFFFFF", fontWeight: "800" },
 
-  // chips: use full width, wrap naturally
-  chipsWrap: {
-    width: "100%",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-  },
+  // chips: full width, wrap + white text
+  chipsWrap: { width: "100%", flexDirection: "row", flexWrap: "wrap", gap: 8 },
   chip: {
     paddingHorizontal: 12, paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
     borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
   },
+  chipText: { color: "#FFFFFF", fontWeight: "800" }, // ensure white text
 });

@@ -49,13 +49,26 @@ export default function Step02_PlantTraits() {
         <Text style={wiz.desc}>{profile.description}</Text>
 
         {/* buttons under description */}
-        <View style={wiz.buttonRowDual}>
-          <Pressable onPress={onPrev} style={wiz.btn}>
+        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
+        {/* Previous (left side, left arrow) */}
+        <Pressable
+            onPress={onPrev}
+            style={[wiz.btn, { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 }]}
+        >
+            <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
             <Text style={wiz.btnText}>Previous</Text>
-          </Pressable>
-          <Pressable onPress={onNext} style={[wiz.btn, wiz.btnPrimary]}>
+        </Pressable>
+
+        {/* Next (right side, right-aligned text + arrow) */}
+        <Pressable
+            onPress={onNext}
+            style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
+        >
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
             <Text style={wiz.btnText}>Next</Text>
-          </Pressable>
+            <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            </View>
+        </Pressable>
         </View>
 
         {/* preferences grid */}

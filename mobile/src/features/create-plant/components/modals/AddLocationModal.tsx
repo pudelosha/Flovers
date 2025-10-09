@@ -60,7 +60,7 @@ export default function AddLocationModal({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop that stops at the tab bar (darker, like Profile) */}
+        {/* Backdrop that stops at the tab bar (same darkness as Profile) */}
         <Pressable
           style={[styles.backdrop, { paddingBottom: bottomInset }]}
           onPress={onClose}
@@ -82,7 +82,7 @@ export default function AddLocationModal({
           <View
             style={[
               StyleSheet.absoluteFill,
-              { backgroundColor: "rgba(0,0,0,0.35)" },
+              { backgroundColor: "rgba(0,0,0,0.6)" }, // darker, matches Profile modals
             ]}
           />
         </View>
@@ -137,7 +137,7 @@ export default function AddLocationModal({
             {/* Quick suggestions – full width sections with 2-column grid chips */}
             <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>Quick suggestions</Text>
 
-            <Text style={wiz.locationCat}>Indoor</Text>
+            <Text style={[wiz.locationCat, { marginBottom: 6 }]}>Indoor</Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map((label) => (
                 <Pressable
@@ -145,12 +145,12 @@ export default function AddLocationModal({
                   style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "indoor")}
                 >
-                  <Text style={wiz.chipText}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
               ))}
             </View>
 
-            <Text style={[wiz.locationCat, { marginTop: 12 }]}>Outdoor</Text>
+            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>Outdoor</Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((label) => (
                 <Pressable
@@ -158,12 +158,12 @@ export default function AddLocationModal({
                   style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "outdoor")}
                 >
-                  <Text style={wiz.chipText}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
               ))}
             </View>
 
-            <Text style={[wiz.locationCat, { marginTop: 12 }]}>Other</Text>
+            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>Other</Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.other.slice(0, 9).map((label) => (
                 <Pressable
@@ -171,7 +171,7 @@ export default function AddLocationModal({
                   style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "other")}
                 >
-                  <Text style={wiz.chipText}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
               ))}
             </View>
@@ -185,7 +185,7 @@ export default function AddLocationModal({
 const styles = StyleSheet.create({
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: "rgba(0,0,0,0.6)", // darker, same as Profile
   },
   contentWrap: {
     ...StyleSheet.absoluteFillObject,

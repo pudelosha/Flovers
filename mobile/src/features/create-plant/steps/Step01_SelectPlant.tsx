@@ -70,15 +70,17 @@ export default function Step01_SelectPlant({
           onSelectSuggestion={onSelectFromSearch}
         />
 
-        {/* Next button under the search (right-aligned) */}
+        {/* Next button under the search (50% width, right-aligned) */}
         <View style={wiz.footerRow}>
           <Pressable
             onPress={onNext}
-            style={wiz.nextBtnWide}
+            style={[wiz.nextBtnWide, { width: "50%", alignSelf: "flex-end", paddingHorizontal: 14 }]}
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
-            <Text style={wiz.nextBtnText}>Next</Text>
-            <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
+              <Text style={wiz.nextBtnText}>Next</Text>
+              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            </View>
           </Pressable>
         </View>
 

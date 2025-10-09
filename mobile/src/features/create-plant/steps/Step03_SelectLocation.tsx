@@ -69,17 +69,27 @@ export default function Step03_SelectLocation({
         </Pressable>
 
         {/* Prev / Next under the button */}
-        <View style={wiz.buttonRowDual}>
-          <Pressable style={wiz.btn} onPress={() => actions.goPrev()}>
+        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
+        {/* Previous (left aligned, left arrow) */}
+        <Pressable
+            style={[wiz.btn, { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 }]}
+            onPress={() => actions.goPrev()}
+        >
+            <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
             <Text style={wiz.btnText}>Previous</Text>
-          </Pressable>
-          <Pressable
-            style={[wiz.btn, wiz.btnPrimary]}
+        </Pressable>
+
+        {/* Next (right aligned text + right arrow) */}
+        <Pressable
+            style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
             onPress={() => actions.goNext()}
             disabled={nextDisabled}
-          >
+        >
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
             <Text style={wiz.btnText}>Next</Text>
-          </Pressable>
+            <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            </View>
+        </Pressable>
         </View>
 
         {/* User-defined locations only */}
