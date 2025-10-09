@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import { View, Text, Pressable, Image, FlatList } from "react-native";
+import { View, Text, Pressable, Image } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
@@ -19,17 +19,15 @@ export default function Step01_SelectPlant({
 
   const onSelectFromSearch = (name: string, latin?: string) => {
     setQuery(name);
-    setShowSuggestions(false);           // hide suggestions after selecting
+    setShowSuggestions(false);
     actions.setSelectedPlant({ name, latin, predefined: true });
   };
 
   const onPickPopular = (name: string, latin?: string) => {
-    // Shortcut: fill the search and keep suggestions closed
     setQuery(name);
-    setShowSuggestions(false);
+    setShowSuggestions(false); // popular is a shortcut, do not open dropdown
     actions.setSelectedPlant({ name, latin, predefined: true });
-    // Jump user to the top so they see the Next button immediately
-    onScrollToTop();
+    onScrollToTop(); // ensure Next is visible
   };
 
   const onNext = () => {
@@ -54,27 +52,25 @@ export default function Step01_SelectPlant({
         />
       </View>
 
-      {/* Body */}
       <View style={wiz.cardInner}>
-        {/* Title + small description (optional step) */}
         <Text style={wiz.title}>Select a plant</Text>
         <Text style={wiz.subtitle}>
           This step is optional. Picking a predefined plant helps us propose watering, moisture and other care actions.
         </Text>
 
-        {/* Search box */}
+        {/* Search */}
         <PlantSearchBox
           value={query}
           onChange={(t) => {
             setQuery(t);
-            setShowSuggestions(!!t.trim()); // open only when typing
+            setShowSuggestions(!!t.trim());
           }}
           showSuggestions={showSuggestions}
           setShowSuggestions={setShowSuggestions}
           onSelectSuggestion={onSelectFromSearch}
         />
 
-        {/* Next button directly beneath the search box (right-aligned, wide) */}
+        {/* Next button under the search (right-aligned) */}
         <View style={wiz.footerRow}>
           <Pressable
             onPress={onNext}
@@ -86,35 +82,32 @@ export default function Step01_SelectPlant({
           </Pressable>
         </View>
 
-        {/* Popular plants (vertical list, no tiles) */}
+        {/* Popular plants — simple mapped rows (no FlatList to avoid nested VirtualizedList warning) */}
         <Text style={wiz.sectionTitle}>Popular plants</Text>
-        <FlatList
-          data={POPULAR_PLANTS}
-          keyExtractor={(p) => p.id}
-          renderItem={({ item }) => (
-            <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item.name, item.latin)}>
-              <Image source={{ uri: item.image }} style={wiz.thumb} />
-              <View style={{ flex: 1 }}>
-                <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
-                <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
-                <View style={wiz.tagRow}>
-                  {item.tags.map((icon) => (
-                    <MaterialCommunityIcons
-                      key={icon}
-                      name={icon}
-                      size={16}
-                      color="rgba(255,255,255,0.95)"
-                      style={{ marginRight: 8 }}
-                    />
-                  ))}
+        <View style={{ paddingTop: 6, paddingBottom: 6 }}>
+          {POPULAR_PLANTS.map((item, idx) => (
+            <View key={item.id} style={{ marginBottom: idx === POPULAR_PLANTS.length - 1 ? 0 : 10 }}>
+              <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item.name, item.latin)}>
+                <Image source={{ uri: item.image }} style={wiz.thumb} />
+                <View style={{ flex: 1 }}>
+                  <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
+                  <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
+                  <View style={wiz.tagRow}>
+                    {item.tags.map((icon) => (
+                      <MaterialCommunityIcons
+                        key={icon}
+                        name={icon}
+                        size={16}
+                        color="rgba(255,255,255,0.95)"
+                        style={{ marginRight: 8 }}
+                      />
+                    ))}
+                  </View>
                 </View>
-              </View>
-            </Pressable>
-          )}
-          ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingTop: 6, paddingBottom: 6 }}
-        />
+              </Pressable>
+            </View>
+          ))}
+        </View>
       </View>
     </View>
   );

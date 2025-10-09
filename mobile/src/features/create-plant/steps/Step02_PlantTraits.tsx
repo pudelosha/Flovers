@@ -37,11 +37,9 @@ export default function Step02_PlantTraits() {
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>
+        {/* Plant name with a bit of spacing below (no subtitle) */}
+        <Text style={[wiz.title, { marginBottom: 6 }]}>
           {selectedName ? `${selectedName}` : "Plant profile"}
-        </Text>
-        <Text style={wiz.subtitle}>
-          Quick overview of care preferences for your selection.
         </Text>
 
         {/* hero image */}

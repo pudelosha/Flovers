@@ -6,7 +6,8 @@ type Action =
   | { type: "SET_SELECTED_PLANT"; plant?: SelectedPlant }
   | { type: "NEXT" }
   | { type: "PREV" }
-  | { type: "GOTO"; step: WizardStep };
+  | { type: "GOTO"; step: WizardStep }
+  | { type: "RESET" };
 
 const initial: WizardState = {
   step: "selectPlant",
@@ -45,6 +46,8 @@ function reducer(state: WizardState, action: Action): WizardState {
     }
     case "GOTO":
       return { ...state, step: action.step };
+    case "RESET":
+      return { ...initial };
     default:
       return state;
   }
@@ -58,6 +61,7 @@ const Ctx = createContext<{
     goNext: () => void;
     goPrev: () => void;
     goTo: (s: WizardStep) => void;
+    reset: () => void;
   };
 } | null>(null);
 
@@ -71,6 +75,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       goNext: () => dispatch({ type: "NEXT" }),
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
+      reset: () => dispatch({ type: "RESET" }),
     }),
     []
   );

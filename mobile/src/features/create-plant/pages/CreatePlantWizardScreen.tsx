@@ -1,6 +1,8 @@
 ﻿import React, { useRef } from "react";
 import { View, ScrollView, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useFocusEffect } from "@react-navigation/native";
+
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/create-plant.constants";
 import { wiz } from "../styles/wizard.styles";
@@ -13,7 +15,16 @@ import Step02_PlantTraits from "../steps/Step02_PlantTraits";
 function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
-  const { state } = useCreatePlantWizard();
+  const { state, actions } = useCreatePlantWizard();
+
+  // Always start fresh when this screen gains focus
+  useFocusEffect(
+    React.useCallback(() => {
+      actions.reset();
+      // scroll to top as we enter
+      scrollRef.current?.scrollTo({ y: 0, animated: false });
+    }, [actions])
+  );
 
   const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: true });
 
@@ -25,7 +36,8 @@ function WizardBody() {
     >
       {state.step === "selectPlant" && <Step01_SelectPlant onScrollToTop={scrollTop} />}
       {state.step === "traits" && <Step02_PlantTraits />}
-      {/* Temporary placeholders for upcoming steps */}
+
+      {/* Temporary placeholders for next steps to keep navigation safe */}
       {state.step !== "selectPlant" && state.step !== "traits" && (
         <View style={wiz.cardWrap}>
           <View style={wiz.cardGlass} />

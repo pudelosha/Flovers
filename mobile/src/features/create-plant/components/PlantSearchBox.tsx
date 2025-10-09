@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { View, TextInput, FlatList, Pressable, Text } from "react-native";
+import { View, TextInput, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
 import { SUGGESTIONS } from "../constants/create-plant.constants";
@@ -19,14 +19,15 @@ export default function PlantSearchBox({
   setShowSuggestions,
   onSelectSuggestion,
 }: Props) {
-  // Filter mock suggestions
-  const data = value.trim().length
-    ? SUGGESTIONS.filter(
-        (s) =>
-          s.name.toLowerCase().includes(value.toLowerCase()) ||
-          s.latin.toLowerCase().includes(value.toLowerCase())
-      )
-    : [];
+  // Filter mock suggestions (small list; render without FlatList to avoid nested VirtualizedList warning)
+  const data =
+    value.trim().length === 0
+      ? []
+      : SUGGESTIONS.filter(
+          (s) =>
+            s.name.toLowerCase().includes(value.toLowerCase()) ||
+            s.latin.toLowerCase().includes(value.toLowerCase())
+        );
 
   return (
     <View style={{ marginTop: 12, marginBottom: 6 }}>
@@ -39,7 +40,6 @@ export default function PlantSearchBox({
           placeholderTextColor="rgba(255,255,255,0.75)"
           style={wiz.input}
           onFocus={() => setShowSuggestions(!!value.trim())}
-          // Close on submit (optional UX nicety)
           onSubmitEditing={() => setShowSuggestions(false)}
         />
         {!!value && (
@@ -55,27 +55,22 @@ export default function PlantSearchBox({
         )}
       </View>
 
-      {/* Suggestions dropdown (black box) */}
+      {/* Suggestions dropdown (no FlatList to avoid nested VirtualizedList warning) */}
       {showSuggestions && data.length > 0 && (
         <View style={wiz.suggestBox}>
-          <FlatList
-            keyboardShouldPersistTaps="handled"
-            data={data}
-            keyExtractor={(i) => i.id}
-            renderItem={({ item }) => (
-              <Pressable
-                style={wiz.suggestItem}
-                onPress={() => {
-                  onSelectSuggestion(item.name, item.latin);
-                  // Important: make sure it disappears after selecting
-                  setShowSuggestions(false);
-                }}
-              >
-                <Text style={wiz.suggestName}>{item.name}</Text>
-                <Text style={wiz.suggestLatin}>{item.latin}</Text>
-              </Pressable>
-            )}
-          />
+          {data.map((item) => (
+            <Pressable
+              key={item.id}
+              style={wiz.suggestItem}
+              onPress={() => {
+                onSelectSuggestion(item.name, item.latin);
+                setShowSuggestions(false);
+              }}
+            >
+              <Text style={wiz.suggestName}>{item.name}</Text>
+              <Text style={wiz.suggestLatin}>{item.latin}</Text>
+            </Pressable>
+          ))}
         </View>
       )}
     </View>
