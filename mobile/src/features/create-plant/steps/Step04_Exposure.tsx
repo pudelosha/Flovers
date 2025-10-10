@@ -1,5 +1,5 @@
 ﻿import React, { useMemo, useState } from "react";
-import { View, Text, Pressable, Modal } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Slider from "@react-native-community/slider";
@@ -7,36 +7,8 @@ import { SegmentedButtons, useTheme } from "react-native-paper";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { LIGHT_LEVELS, ORIENTATIONS } from "../constants/create-plant.constants";
-
-function SegmentedFrame({ children }: { children: React.ReactNode }) {
-  // Single light frame with subtle glare (no double borders)
-  return (
-    <View
-      style={{
-        borderRadius: 12,
-        borderWidth: 1,
-        borderColor: "rgba(255,255,255,0.25)",
-        backgroundColor: "rgba(255,255,255,0.12)",
-        overflow: "hidden",
-      }}
-    >
-      {/* Glare strip */}
-      <View
-        pointerEvents="none"
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          top: 0,
-          height: 18,
-          backgroundColor: "rgba(255,255,255,0.06)",
-        }}
-      />
-      {children}
-    </View>
-  );
-}
+import { ORIENTATIONS } from "../constants/create-plant.constants";
+import MeasureExposureModal from "../components/modals/MeasureExposureModal";
 
 export default function Step04_Exposure({
   measureUnit = "metric" as "metric" | "imperial",
@@ -49,9 +21,7 @@ export default function Step04_Exposure({
     measureUnit === "imperial" ? `${Math.round(cm / 2.54)} in` : `${cm} cm`;
 
   // Map slider index <-> LightLevel
-  const lightOrder: Array<
-    "very-low" | "low" | "medium" | "bright-indirect" | "bright-direct"
-  > = useMemo(
+  const lightOrder: Array<"very-low" | "low" | "medium" | "bright-indirect" | "bright-direct"> = useMemo(
     () => ["very-low", "low", "medium", "bright-indirect", "bright-direct"],
     []
   );
@@ -84,7 +54,7 @@ export default function Step04_Exposure({
           this spot gets and the window direction.
         </Text>
 
-        {/* Light level — slider with Low / High labels (no side padding so it aligns with header) */}
+        {/* Light level — slider with Low / High labels aligned with header */}
         <Text style={wiz.sectionTitle}>Light level</Text>
         <View style={{ marginTop: 2, marginBottom: 6 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -104,9 +74,29 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Window direction — smaller font, edge-to-frame fill */}
+        {/* Window direction — smaller font, equal widths, fill touches frame */}
         <Text style={wiz.sectionTitle}>Window direction</Text>
-        <SegmentedFrame>
+        <View
+          style={{
+            borderRadius: 12,
+            borderWidth: 1,
+            borderColor: "rgba(255,255,255,0.25)",
+            backgroundColor: "rgba(255,255,255,0.12)",
+            overflow: "hidden",
+          }}
+        >
+          {/* glare */}
+          <View
+            pointerEvents="none"
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: 0,
+              height: 18,
+              backgroundColor: "rgba(255,255,255,0.06)",
+            }}
+          />
           <SegmentedButtons
             value={state.orientation}
             onValueChange={(v) => actions.setOrientation(v as any)}
@@ -123,7 +113,7 @@ export default function Step04_Exposure({
               labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
             }))}
             density="small"
-            // Pull segments slightly into the frame so selected fill touches rounded edges
+            // Pull segments slightly so the selected fill meets rounded frame
             style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
             labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
             theme={{
@@ -136,7 +126,7 @@ export default function Step04_Exposure({
               },
             }}
           />
-        </SegmentedFrame>
+        </View>
 
         {/* Measure */}
         <Pressable
@@ -191,29 +181,15 @@ export default function Step04_Exposure({
         </View>
       </View>
 
-      {/* Simple placeholder modal; sensors to be wired later */}
-      <Modal visible={measureOpen} transparent animationType="fade" onRequestClose={() => setMeasureOpen(false)}>
-        <Pressable style={wiz.backdrop} onPress={() => setMeasureOpen(false)} />
-        <View style={wiz.promptWrap}>
-          <View style={wiz.promptGlass} />
-          <View
-            style={[wiz.promptInnerFull, { maxWidth: 520, alignSelf: "center", borderRadius: 18, overflow: "hidden" }]}
-          >
-            <View style={{ padding: 16 }}>
-              <Text style={wiz.promptTitle}>Measure light & direction</Text>
-              <Text style={{ color: "#FFFFFF", fontWeight: "600", marginBottom: 10 }}>
-                This will use your phone’s light sensor and compass to estimate light level and NSWE
-                direction. (Coming soon)
-              </Text>
-              <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: 10 }}>
-                <Pressable style={wiz.btn} onPress={() => setMeasureOpen(false)}>
-                  <Text style={wiz.btnText}>Close</Text>
-                </Pressable>
-              </View>
-            </View>
-          </View>
-        </View>
-      </Modal>
+      {/* NEW: functional modal */}
+      <MeasureExposureModal
+        visible={measureOpen}
+        onClose={() => setMeasureOpen(false)}
+        onApply={({ light, orientation }) => {
+          if (light) actions.setLightLevel(light);
+          if (orientation) actions.setOrientation(orientation);
+        }}
+      />
     </View>
   );
 }
