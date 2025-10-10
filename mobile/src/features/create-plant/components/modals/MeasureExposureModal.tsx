@@ -80,7 +80,7 @@ export default function MeasureExposureModal({
 
   // Live sensors
   const [lux, setLux] = useState<number | null>(null);
-  const [headingDeg, setHeadingDeg] = useState<number | null>(null); // 0..360 (0=N,90=E,...)
+  const [headingDeg, setHeadingDeg] = useState<number | null>(null);
 
   // Cleanups
   const lightCleanupRef = useRef<(() => void) | null>(null);
@@ -103,16 +103,16 @@ export default function MeasureExposureModal({
 
   /** Start sensors: native compass + ambient light */
   const startSensors = useCallback(async () => {
-    // Ambient light (Android)
+    // Light (unchanged)
     try {
-      const lightSub = await Sensors.startLight?.((lx: number | null) => {
+      const sub = await Sensors.startLight?.((lx: number | null) => {
         setLux(typeof lx === "number" ? lx : null);
       });
       lightCleanupRef.current = () => {
         // @ts-ignore
-        lightSub?.remove?.();
+        sub?.remove?.();
         // @ts-ignore
-        lightSub?.unsubscribe?.();
+        sub?.unsubscribe?.();
       };
     } catch (e) {
       console.warn("[MeasureExposure] Light not available:", e);
@@ -120,33 +120,39 @@ export default function MeasureExposureModal({
       lightCleanupRef.current = null;
     }
 
-    // Native tilt-compass (Android). On iOS: no-op for now.
+    // Heading (tilt-invariant via native on Android), JS smoothing on top
     try {
-      const compassSub = await Sensors.startCompassNative?.(
-        (deg) => setHeadingDeg(deg),
-        {
-          hz: 15,
-          smoothing: 0.25,    // native circular EMA
-          // declination: 0     // optional: pass degrees if you want true north
-        }
-      );
+      const sub = await Sensors.startHeading((deg: number) => {
+        setHeadingDeg(prev => {
+          if (prev == null) return Math.round(deg);
+          let d = deg - prev;
+          if (d > 180) d -= 360;
+          if (d < -180) d += 360;
+          let s = prev + 0.25 * d;
+          if (s < 0) s += 360;
+          if (s >= 360) s -= 360;
+          return Math.round(s);
+        });
+      });
       headingCleanupRef.current = () => {
-        // @ts-ignore
-        compassSub?.remove?.();
-        // @ts-ignore
-        compassSub?.unsubscribe?.();
+        try {
+          // @ts-ignore
+          sub?.remove?.();
+          // @ts-ignore
+          sub?.unsubscribe?.();
+        } catch {}
       };
     } catch (e) {
-      console.warn("[MeasureExposure] Native compass not available:", e);
+      console.warn("[MeasureExposure] Heading subscribe failed:", e);
       headingCleanupRef.current = null;
     }
   }, []);
 
   const stopSensors = useCallback(() => {
-    try { lightCleanupRef.current?.(); } catch {}
     try { headingCleanupRef.current?.(); } catch {}
-    lightCleanupRef.current = null;
+    try { lightCleanupRef.current?.(); } catch {}
     headingCleanupRef.current = null;
+    lightCleanupRef.current = null;
   }, []);
 
   /** Appstate + visibility */
@@ -349,7 +355,7 @@ export default function MeasureExposureModal({
                   Light (best in 5s): {lightLabelFinal}
                 </Text>
                 <Text style={{ color: "#FFFFFF", fontWeight: "800", marginTop: 4 }}>
-                  Direction (mean in 5s): {orientationLabelFinal}
+                  Direction (mean in 5s): {finalOrientation ?? "—"}
                 </Text>
               </View>
             </View>

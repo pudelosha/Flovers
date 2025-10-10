@@ -5,7 +5,11 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import com.facebook.react.bridge.*
+import com.facebook.react.bridge.Arguments
+import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
+import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 
 class HeadingModule(private val reactContext: ReactApplicationContext) :
@@ -16,19 +20,11 @@ class HeadingModule(private val reactContext: ReactApplicationContext) :
 
   // State
   private var started = false
-  private var smoothing = 0.25f   // circular EMA factor (extra JS smoothing is added too)
-  private var declination = 0.0f  // degrees to add (mag -> true north correction)
+  private var smoothing = 0.25f   // circular EMA factor
+  private var declination = 0.0f  // magnetic -> true north correction (deg)
   private var lastHeading: Float? = null
 
   override fun getName(): String = "HeadingModule"
-
-  // --- Required by NativeEventEmitter (no-ops) ---
-  @ReactMethod
-  fun addListener(eventName: String?) { /* no-op */ }
-
-  @ReactMethod
-  fun removeListeners(count: Int) { /* no-op */ }
-  // ----------------------------------------------
 
   @ReactMethod
   fun setSmoothing(alpha: Double) {
@@ -53,10 +49,12 @@ class HeadingModule(private val reactContext: ReactApplicationContext) :
     }
     try {
       sensorManager = reactContext.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
       // Prefer Rotation Vector (fused), fallback to Game Rotation Vector
       rotationSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
-        ?: sensorManager?.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR)
-
+      if (rotationSensor == null) {
+        rotationSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR)
+      }
       if (rotationSensor == null) {
         promise.reject("E_NO_SENSOR", "No rotation vector sensor available")
         return
@@ -87,19 +85,20 @@ class HeadingModule(private val reactContext: ReactApplicationContext) :
 
   override fun onSensorChanged(event: SensorEvent) {
     if (!started) return
-    if (event.sensor.type != Sensor.TYPE_ROTATION_VECTOR &&
-        event.sensor.type != Sensor.TYPE_GAME_ROTATION_VECTOR) return
+    val t = event.sensor.type
+    if (t != Sensor.TYPE_ROTATION_VECTOR && t != Sensor.TYPE_GAME_ROTATION_VECTOR) return
 
     // Build rotation matrix from the rotation vector
     val R = FloatArray(9)
     SensorManager.getRotationMatrixFromVector(R, event.values)
 
-    // Remap for a phone laying flat, screen up (X -> X, Y -> Y)
+    // Remap for a phone laying flat, screen up:
+    // We want azimuth based on the device's TOP EDGE direction regardless of pitch/tilt.
     val outR = FloatArray(9)
     SensorManager.remapCoordinateSystem(
       R,
-      SensorManager.AXIS_X,
-      SensorManager.AXIS_Y,
+      SensorManager.AXIS_X, // device X (to the right)
+      SensorManager.AXIS_Y, // device Y (to the top edge)
       outR
     )
 

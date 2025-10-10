@@ -1,66 +1,42 @@
-// services/Sensors.ts
-import { Platform, NativeModules, NativeEventEmitter } from "react-native";
+import { Platform } from "react-native";
 import { LightSensor, LuxEvent } from "../../../native/LightSensorModule";
-
-// Magnetometer from react-native-sensors (already in your project)
-type MagnetometerReading = { x: number; y: number; z: number };
+import { Heading } from "../../../native/HeadingModule";
 
 // Public, shared API
 export type CompassSubscription = { unsubscribe: () => void };
 export type LightSubscription = { remove: () => void };
 
-// --- Native heading module (tilt-compensated via Android Rotation Vector)
-const HeadingNative = (NativeModules as any)?.HeadingModule || null;
-const headingEmitter = HeadingNative ? new NativeEventEmitter() : null;
+type MagnetometerReading = { x: number; y: number; z: number };
 
 export const Sensors = {
-  // ---- Compass (fallback / legacy via react-native-sensors)
-  startCompass: (onReading: (r: MagnetometerReading) => void): CompassSubscription | null => {
+  // ---- Tilt-invariant heading: Android uses HeadingModule; others fallback to magnetometer ----
+  startHeading: async (onDeg: (deg: number) => void): Promise<CompassSubscription | null> => {
+    if (Platform.OS === "android" && Heading.available) {
+      await Heading.start(20);
+      const sub = Heading.events.addListener("headingDidChange", (evt: { heading?: number }) => {
+        if (typeof evt?.heading === "number") onDeg(evt.heading);
+      });
+      return { unsubscribe: () => { try { sub.remove(); Heading.stop(); } catch {} } };
+    }
+
+    // Fallback: compute heading from magnetometer x/y (no tilt compensation)
     try {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const { Magnetometer, SensorTypes, setUpdateIntervalForType } = require("react-native-sensors");
-      setUpdateIntervalForType(SensorTypes.magnetometer, 250);
-      const sub = Magnetometer.subscribe(onReading);
+      const { magnetometer, SensorTypes, setUpdateIntervalForType } = require("react-native-sensors");
+      setUpdateIntervalForType?.(SensorTypes.magnetometer, 200);
+      const sub = magnetometer.subscribe((r: MagnetometerReading) => {
+        // Basic 2D azimuth fallback: atan2(-x, y)
+        let deg = (Math.atan2(-r.x, r.y) * 180) / Math.PI;
+        if (deg < 0) deg += 360;
+        onDeg(Math.round(deg));
+      });
       return { unsubscribe: () => sub?.unsubscribe?.() };
     } catch {
       return null;
     }
   },
 
-  // ---- NEW: Native tilt-compass (Android only) 0..360 (0=N,90=E,180=S,270=W)
-  startCompassNative: async (
-    onHeadingDeg: (deg: number) => void,
-    opts: { hz?: number; smoothing?: number; declination?: number } = {}
-  ): Promise<{ remove: () => void } | null> => {
-    if (Platform.OS !== "android" || !HeadingNative || !headingEmitter) return null;
-
-    if (typeof opts.smoothing === "number") {
-      try { await HeadingNative.setSmoothing(opts.smoothing); } catch {}
-    }
-    if (typeof opts.declination === "number") {
-      try { await HeadingNative.setDeclination(opts.declination); } catch {}
-    }
-
-    const sub = headingEmitter.addListener("headingDidChange", (e: { heading: number }) => {
-      if (typeof e?.heading === "number") onHeadingDeg(e.heading);
-    });
-
-    try {
-      await HeadingNative.start(opts.hz ?? 15); // 15 Hz by default
-    } catch (e) {
-      try { sub.remove(); } catch {}
-      return null;
-    }
-
-    return {
-      remove: () => {
-        try { sub.remove(); } catch {}
-        try { HeadingNative.stop(); } catch {}
-      },
-    };
-  },
-
-  // ---- Light (Android native module, no-op elsewhere)
+  // ---- Light (Android native module, no-op elsewhere) ----
   startLight: async (onLux: (lux: number) => void): Promise<LightSubscription | null> => {
     if (Platform.OS !== "android") return null;
     const available = await LightSensor.isAvailable();
