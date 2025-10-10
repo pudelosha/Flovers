@@ -5,6 +5,8 @@ import type {
   WizardStep,
   UserLocation,
   LocationCategory,
+  LightLevel,
+  Orientation,
 } from "../types/create-plant.types";
 
 type Action =
@@ -15,18 +17,37 @@ type Action =
   | { type: "GOTO"; step: WizardStep }
   | { type: "RESET" }
   | { type: "ADD_LOCATION"; loc: UserLocation }
-  | { type: "SELECT_LOCATION"; id: string };
+  | { type: "SELECT_LOCATION"; id: string }
+  | { type: "SET_LIGHT"; val: WizardState["lightLevel"] }
+  | { type: "SET_ORIENTATION"; val: WizardState["orientation"] }
+  | { type: "SET_DISTANCE_CM"; val: number };
 
 const initial: WizardState = {
   step: "selectPlant",
   plantQuery: "",
   selectedPlant: undefined,
-  locations: [],             // user locations start empty this session
+
+  locations: [],
   selectedLocationId: undefined,
+
+  // Step 4 defaults
+  lightLevel: "bright-indirect",
+  orientation: "E",
+  distanceCm: 20,
 };
 
+// Include "exposure" as step 4
 const ORDER: WizardStep[] = [
-  "selectPlant","traits","location","distance","potType","autoTasks","photo","name","summary",
+  "selectPlant",
+  "traits",
+  "location",
+  "exposure",
+  "distance",
+  "potType",
+  "autoTasks",
+  "photo",
+  "name",
+  "summary",
 ];
 
 function reducer(state: WizardState, action: Action): WizardState {
@@ -48,13 +69,17 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "RESET":
       return { ...initial };
     case "ADD_LOCATION":
-      return {
-        ...state,
-        locations: [...state.locations, action.loc],
-        selectedLocationId: action.loc.id,
-      };
+      return { ...state, locations: [...state.locations, action.loc], selectedLocationId: action.loc.id };
     case "SELECT_LOCATION":
       return { ...state, selectedLocationId: action.id };
+
+    case "SET_LIGHT":
+      return { ...state, lightLevel: action.val };
+    case "SET_ORIENTATION":
+      return { ...state, orientation: action.val };
+    case "SET_DISTANCE_CM":
+      return { ...state, distanceCm: action.val };
+
     default:
       return state;
   }
@@ -70,9 +95,12 @@ const Ctx = createContext<{
     goTo: (s: WizardStep) => void;
     reset: () => void;
 
-    // step 3 actions
     addLocation: (name: string, category: LocationCategory) => void;
     selectLocation: (id: string) => void;
+
+    setLightLevel: (level: LightLevel) => void;
+    setOrientation: (o: Orientation) => void;
+    setDistanceCm: (cm: number) => void;
   };
 } | null>(null);
 
@@ -95,6 +123,11 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       addLocation: (name: string, category: LocationCategory) =>
         dispatch({ type: "ADD_LOCATION", loc: { id: id(), name, category } }),
       selectLocation: (locId: string) => dispatch({ type: "SELECT_LOCATION", id: locId }),
+
+      // Step 4 setters (match reducer keys)
+      setLightLevel: (level: LightLevel) => dispatch({ type: "SET_LIGHT", val: level }),
+      setOrientation: (o: Orientation) => dispatch({ type: "SET_ORIENTATION", val: o }),
+      setDistanceCm: (cm: number) => dispatch({ type: "SET_DISTANCE_CM", val: cm }),
     }),
     []
   );

@@ -2,6 +2,7 @@
   | "selectPlant"
   | "traits"
   | "location"
+  | "exposure"   // 🔵 NEW
   | "distance"
   | "potType"
   | "autoTasks"
@@ -17,6 +18,10 @@ export type SelectedPlant = {
 
 export type LocationCategory = "indoor" | "outdoor" | "other";
 
+/** 🔵 NEW: exposure types */
+export type LightLevel = "bright-direct" | "bright-indirect" | "medium" | "low" | "very-low";
+export type Orientation = "N" | "E" | "S" | "W";
+
 export type UserLocation = {
   id: string;
   name: string;
@@ -29,8 +34,14 @@ export type WizardState = {
   selectedPlant?: SelectedPlant;
 
   // Step 3
-  locations: UserLocation[];          // user's personal locations
-  selectedLocationId?: string;        // chosen location for this plant
+  locations: UserLocation[];
+  selectedLocationId?: string;
+
+  // 🔵 Step 4 – Exposure
+  lightLevel: LightLevel;
+  orientation: Orientation;
+  /** store distance in centimeters internally */
+  distanceCm: number;
 };
 
 export type PopularPlant = {
