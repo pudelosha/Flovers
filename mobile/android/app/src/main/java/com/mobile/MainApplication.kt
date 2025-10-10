@@ -4,26 +4,23 @@ import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
-import com.facebook.react.ReactNativeApplicationEntryPoint.loadReactNative
 import com.facebook.react.ReactNativeHost
-import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
+import com.mobile.sensors.LightSensorPackage  // ← add this import
 
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
       object : DefaultReactNativeHost(this) {
-        override fun getPackages(): List<ReactPackage> =
+        override fun getPackages(): List<com.facebook.react.ReactPackage> =
             PackageList(this).packages.apply {
-              // Packages that cannot be autolinked yet can be added manually here, for example:
-              // add(MyReactNativePackage())
+              // Manually add packages that are not autolinked:
+              add(LightSensorPackage())  // ← add this line
             }
 
         override fun getJSMainModuleName(): String = "index"
-
         override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
-
         override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
         override val isHermesEnabled: Boolean = BuildConfig.IS_HERMES_ENABLED
       }
@@ -33,6 +30,6 @@ class MainApplication : Application(), ReactApplication {
 
   override fun onCreate() {
     super.onCreate()
-    loadReactNative(this)
+    com.facebook.react.ReactNativeApplicationEntryPoint.loadReactNative(this)
   }
 }

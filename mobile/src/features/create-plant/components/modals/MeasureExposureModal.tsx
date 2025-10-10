@@ -4,27 +4,19 @@ import {
   View,
   Pressable,
   Text,
-  Platform,
   AppState,
   AppStateStatus,
   ScrollView,
   StyleSheet,
+  Platform,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-
 import { wiz } from "../../styles/wizard.styles";
 import type { LightLevel, Orientation } from "../../types/create-plant.types";
+import { Sensors } from "../../services/Sensors";
 
-/**
- * Magnetometer via `react-native-sensors` (compass/heading).
- * Ambient light is NOT used at this stage (no external light sensor package).
- * The UI gracefully shows "Not available" for light level; you can still apply
- * orientation from the compass, and set light level on the step screen’s slider.
- */
-
-// Types for magnetometer readings
 type MagnetometerReading = { x: number; y: number; z: number };
 
 function toHeadingDeg(reading: MagnetometerReading | null): number | null {
@@ -44,7 +36,6 @@ function headingToOrientation(deg: number | null): Orientation | null {
   return "W";
 }
 
-// Keep helper for future light integration; currently always returns null
 function luxToLightLevel(lux: number | null): LightLevel | null {
   if (lux == null || Number.isNaN(lux)) return null;
   if (lux >= 10000) return "bright-direct";
@@ -69,61 +60,168 @@ export default function MeasureExposureModal({
   const appState = useRef<AppStateStatus>(AppState.currentState);
 
   const [magReading, setMagReading] = useState<MagnetometerReading | null>(null);
-  const [lux, setLux] = useState<number | null>(null); // stays null for now
+  const [lux, setLux] = useState<number | null>(null);
   const [isMeasuring, setIsMeasuring] = useState(false);
+
+  // Internals for cleanup/fallback
+  const compassCleanupRef = useRef<(() => void) | null>(null);
+  const magFallbackCleanupRef = useRef<(() => void) | null>(null);
+  const fallbackTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const gotCompassValueRef = useRef(false);
 
   const heading = useMemo(() => toHeadingDeg(magReading), [magReading]);
   const orientation = useMemo(() => headingToOrientation(heading), [heading]);
-  const derivedLight = useMemo(() => luxToLightLevel(lux), [lux]); // will be null
+  const derivedLight = useMemo(() => luxToLightLevel(lux), [lux]);
 
-  const startSensors = useCallback(async () => {
-    setIsMeasuring(true);
-    // --- Magnetometer (react-native-sensors) ---
+  const startCompassPrimary = useCallback(() => {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const { Magnetometer, SensorTypes, setUpdateIntervalForType } = require("react-native-sensors");
-      setUpdateIntervalForType(SensorTypes.magnetometer, 250);
-      const sub = Magnetometer.subscribe((r: MagnetometerReading) => setMagReading(r));
-      // @ts-ignore store for cleanup
-      (startSensors as any)._magSub = sub;
-    } catch {
-      setMagReading(null);
+      const sub = Sensors.startCompass?.((r: MagnetometerReading) => {
+        gotCompassValueRef.current = true;
+        setMagReading(r);
+      });
+
+      compassCleanupRef.current = () => {
+        try {
+          // @ts-ignore different facades may expose unsubscribe or remove
+          sub?.unsubscribe?.();
+        } catch {}
+      };
+
+      if (sub) {
+        console.log("[MeasureExposure] Compass (Sensors facade) started");
+      } else {
+        console.warn("[MeasureExposure] Sensors.startCompass returned no subscription");
+      }
+    } catch (e) {
+      console.warn("[MeasureExposure] Sensors.startCompass threw:", e);
+      compassCleanupRef.current = null;
     }
-    // No ambient light subscription here (package removed)
-    setLux(null);
   }, []);
 
-  const stopSensors = useCallback(() => {
+  const startCompassFallback = useCallback(() => {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const { magnetometer, SensorTypes, setUpdateIntervalForType } = require("react-native-sensors");
+      // 4 Hz (~250ms) is fine for heading
+      setUpdateIntervalForType?.(SensorTypes.magnetometer, 250);
+
+      const sub = magnetometer.subscribe((r: { x: number; y: number; z: number }) => {
+        setMagReading({ x: r.x, y: r.y, z: r.z });
+      });
+
+      magFallbackCleanupRef.current = () => {
+        try {
+          sub?.unsubscribe?.();
+        } catch {}
+      };
+
+      console.log("[MeasureExposure] magnetometer fallback started");
+    } catch (e) {
+      console.warn("[MeasureExposure] magnetometer fallback failed:", e);
+      magFallbackCleanupRef.current = null;
+    }
+  }, []);
+
+  const startLight = useCallback(async () => {
+    try {
+      const sub = await Sensors.startLight?.((lx: number | null) => {
+        setLux(typeof lx === "number" ? lx : null);
+      });
+      return () => {
+        try {
+          // @ts-ignore
+          sub?.remove?.();
+          // @ts-ignore
+          sub?.unsubscribe?.();
+        } catch {}
+      };
+    } catch (e) {
+      console.warn("[MeasureExposure] Light not available:", e);
+      setLux(null);
+      return null;
+    }
+  }, []);
+
+  const clearFallbackTimer = () => {
+    if (fallbackTimerRef.current) {
+      clearTimeout(fallbackTimerRef.current);
+      fallbackTimerRef.current = null;
+    }
+  };
+
+  const start = useCallback(async () => {
+    if (isMeasuring) return;
+    setIsMeasuring(true);
+    gotCompassValueRef.current = false;
+
+    // Start primary compass
+    startCompassPrimary();
+
+    // If no compass values arrive in 1.5s, start fallback
+    clearFallbackTimer();
+    fallbackTimerRef.current = setTimeout(() => {
+      if (!gotCompassValueRef.current) {
+        console.warn("[MeasureExposure] No compass values yet, starting magnetometer fallback");
+        startCompassFallback();
+      }
+    }, 1500);
+
+    // Start ambient light (Android)
+    const lightCleanup = await startLight();
+
+    // Stash a combined cleanup
+    // @ts-ignore
+    start._cleanup = () => {
+      clearFallbackTimer();
+      try {
+        compassCleanupRef.current?.();
+        compassCleanupRef.current = null;
+      } catch {}
+
+      try {
+        magFallbackCleanupRef.current?.();
+        magFallbackCleanupRef.current = null;
+      } catch {}
+
+      try {
+        lightCleanup?.();
+      } catch {}
+    };
+  }, [isMeasuring, startCompassPrimary, startCompassFallback, startLight]);
+
+  const stop = useCallback(() => {
     setIsMeasuring(false);
+    clearFallbackTimer();
     try {
       // @ts-ignore
-      (startSensors as any)._magSub?.unsubscribe?.();
+      start._cleanup?.();
     } catch {}
-  }, [startSensors]);
+    // keep last readings visible until modal closes
+  }, [start]);
 
-  // Stop sensors when app goes background; resume on foreground if still visible
+  // Handle foreground/background
   useEffect(() => {
     const sub = AppState.addEventListener("change", (nextState) => {
       if (appState.current.match(/inactive|background/) && nextState === "active") {
-        if (visible && isMeasuring) startSensors();
+        if (visible && isMeasuring) start();
       } else if (nextState.match(/inactive|background/)) {
-        stopSensors();
+        stop();
       }
       appState.current = nextState;
     });
     return () => sub.remove();
-  }, [isMeasuring, startSensors, stopSensors, visible]);
+  }, [isMeasuring, start, stop, visible]);
 
+  // Start/stop on open/close
   useEffect(() => {
     if (!visible) {
-      stopSensors();
+      stop();
       setMagReading(null);
       setLux(null);
       return;
     }
-    // Auto-start measuring on open
-    startSensors();
-    return () => stopSensors();
+    start();
+    return () => stop();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
@@ -133,9 +231,10 @@ export default function MeasureExposureModal({
   };
 
   const lightLabel = useMemo(() => {
-    // Always "Not available" for now (no ambient light integration)
-    return Platform.OS === "ios" ? "Not available on iOS" : "Not available";
-  }, []);
+    if (Platform.OS !== "android") return "Not available";
+    if (lux == null) return "No sensor";
+    return `${Math.round(lux)} lx`;
+  }, [lux]);
 
   const orientationLabel = useMemo(() => {
     if (heading == null) return "Not available";
@@ -150,7 +249,7 @@ export default function MeasureExposureModal({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop that stops at the tab bar (same darkness and layout as AddLocationModal) */}
+        {/* Backdrop that stops at the tab bar (same darkness as Profile) */}
         <Pressable
           style={[styles.backdrop, { paddingBottom: bottomInset }]}
           onPress={onClose}
@@ -182,8 +281,7 @@ export default function MeasureExposureModal({
           >
             <Text style={wiz.promptTitle}>Measure light & direction</Text>
             <Text style={{ color: "#FFFFFF", fontWeight: "600", marginBottom: 10 }}>
-              We’ll use your phone’s compass to estimate window direction. Ambient light
-              is not available on this build; set light level with the slider on the previous screen.
+              Hold the phone flat (screen up) and slowly rotate. Do a gentle figure-8 to calibrate the compass.
             </Text>
 
             {/* Readouts */}
@@ -221,29 +319,28 @@ export default function MeasureExposureModal({
               </View>
             </View>
 
-            {/* Actions – right-aligned, same button visuals as your other modal */}
-            <View style={styles.actionsRow}>
+            {/* Actions */}
+            <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: 10, marginTop: 12 }}>
               <Pressable style={wiz.btn} onPress={onClose}>
                 <Text style={wiz.btnText}>Close</Text>
               </Pressable>
               <Pressable
                 style={[wiz.btn, isMeasuring ? { opacity: 0.9 } : undefined]}
-                onPress={isMeasuring ? stopSensors : startSensors}
+                onPress={isMeasuring ? stop : start}
               >
                 <Text style={wiz.btnText}>{isMeasuring ? "Stop" : "Start"}</Text>
               </Pressable>
               <Pressable
                 style={[wiz.btn, wiz.btnPrimary]}
                 onPress={apply}
-                disabled={!orientation} // light not required here
+                disabled={!orientation && lux == null}
               >
                 <Text style={wiz.btnText}>Apply</Text>
               </Pressable>
             </View>
 
-            {/* Small note */}
             <Text style={{ color: "rgba(255,255,255,0.82)", marginTop: 10 }}>
-              Note: Many devices don’t expose an ambient light sensor to apps. The compass works on most phones.
+              Note: iOS does not expose a public ambient light sensor to apps. Android devices vary by hardware.
             </Text>
           </ScrollView>
         </View>
@@ -255,7 +352,7 @@ export default function MeasureExposureModal({
 const styles = StyleSheet.create({
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)", // darker, same as Profile/AddLocationModal
+    backgroundColor: "rgba(0,0,0,0.6)", // darker, same as Profile
   },
   contentWrap: {
     ...StyleSheet.absoluteFillObject,
@@ -266,11 +363,5 @@ const styles = StyleSheet.create({
   contentInner: {
     paddingHorizontal: 16,
     paddingBottom: 20,
-  },
-  actionsRow: {
-    flexDirection: "row",
-    gap: 10,
-    marginTop: 12,
-    justifyContent: "flex-end",
   },
 });
