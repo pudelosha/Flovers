@@ -23,6 +23,14 @@ class LightSensorModule(reactContext: ReactApplicationContext) :
     lightSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_LIGHT)
   }
 
+  // --- Required by NativeEventEmitter (no-ops) ---
+  @ReactMethod
+  fun addListener(eventName: String?) { /* no-op */ }
+
+  @ReactMethod
+  fun removeListeners(count: Int) { /* no-op */ }
+  // ----------------------------------------------
+
   @ReactMethod
   fun isAvailable(promise: Promise) {
     promise.resolve(lightSensor != null)

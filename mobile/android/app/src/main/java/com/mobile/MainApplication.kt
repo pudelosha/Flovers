@@ -7,7 +7,9 @@ import com.facebook.react.ReactHost
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
-import com.mobile.sensors.LightSensorPackage  // ← add this import
+import com.mobile.sensors.LightSensorPackage
+import com.mobile.heading.HeadingPackage
+
 
 class MainApplication : Application(), ReactApplication {
 
@@ -16,7 +18,8 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<com.facebook.react.ReactPackage> =
             PackageList(this).packages.apply {
               // Manually add packages that are not autolinked:
-              add(LightSensorPackage())  // ← add this line
+              add(LightSensorPackage())
+			  add(HeadingPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"

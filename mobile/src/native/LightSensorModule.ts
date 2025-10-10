@@ -1,6 +1,6 @@
 import { NativeEventEmitter, NativeModules, Platform } from "react-native";
 
-type LuxEvent = { lux: number };
+export type LuxEvent = { lux: number };
 
 type NativeLightModule = {
   isAvailable: () => Promise<boolean>;
@@ -12,6 +12,10 @@ const LINKING_ERROR =
   `LightSensorModule native module not found. Did you rebuild the app?`;
 
 const M = (NativeModules.LightSensorModule ?? null) as NativeLightModule | null;
+
+// We emit via DeviceEventManagerModule from Android native, so do NOT pass a module here.
+// Passing a module without addListener/removeListeners causes the RN warning.
+const emitter = new NativeEventEmitter();
 
 export const LightSensor = {
   isAvailable: async (): Promise<boolean> => {
@@ -30,9 +34,5 @@ export const LightSensor = {
     if (Platform.OS !== "android" || !M) return;
     M.stop();
   },
-  events: new NativeEventEmitter(
-    (NativeModules.LightSensorModule ?? undefined) as any
-  ),
+  events: emitter,
 };
-
-export type { LuxEvent };
