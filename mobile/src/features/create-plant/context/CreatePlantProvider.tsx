@@ -29,7 +29,7 @@ type Action =
   | { type: "SET_DISTANCE_CM"; val: number }
   | { type: "SET_POT_MATERIAL"; val?: PotMaterial }
   | { type: "SET_SOIL_MIX"; val?: SoilMix }
-  // 🔵 Step 6
+  // Step 6
   | { type: "SET_CREATE_AUTO"; val: boolean }
   | { type: "SET_WATER_TASK_ENABLED"; val: boolean }
   | { type: "SET_REPOT_TASK_ENABLED"; val: boolean }
@@ -41,7 +41,10 @@ type Action =
   | { type: "SET_FERTILIZE_INTERVAL"; val: number }
   | { type: "SET_CARE_REQUIRED"; val: boolean }
   | { type: "SET_CARE_INTERVAL"; val: number }
-  | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number };
+  | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number }
+  // Step 7
+  | { type: "SET_PHOTO_URI"; uri?: string }
+  | { type: "CLEAR_PHOTO" };
 
 const initial: WizardState = {
   step: "selectPlant",
@@ -62,37 +65,33 @@ const initial: WizardState = {
 
   // Step 6 defaults
   createAutoTasks: false,
-  // Watering should be true when master is turned on; initialize false until then
   waterTaskEnabled: false,
-  // moisture second, fertilising third, care false by default
+  repotTaskEnabled: false,
   moistureRequired: false,
   fertilizeRequired: false,
   careRequired: false,
-
-  // repotting disabled by default
-  repotTaskEnabled: false,
-
-  // last event answers
   lastWatered: undefined,
   lastRepotted: undefined,
+  moistureIntervalDays: 7,
+  fertilizeIntervalDays: 30,
+  careIntervalDays: 30,
+  repotIntervalMonths: 12,
 
-  // intervals (defaults; may be overridden by plant profile)
-  moistureIntervalDays: 7,   // 1..30
-  fertilizeIntervalDays: 30, // 1..60
-  careIntervalDays: 30,      // 1..60
-  repotIntervalMonths: 12,   // 1..12
+  // Step 7
+  photoUri: undefined,
 };
 
-// Order: Step 6 after Step 5
+// 🔵 ORDER: put "photo" immediately after "autoTasks" so it shows as Step 7.
+// (distance becomes Step 8)
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
   "location",
   "exposure",
-  "potType",     // Step 5
-  "autoTasks",   // Step 6
-  "distance",
-  "photo",
+  "potType",
+  "autoTasks",
+  "photo",     // Step 7
+  "distance",  // Step 8 (still unimplemented on screen)
   "name",
   "summary",
 ];
@@ -136,14 +135,11 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_SOIL_MIX":
       return { ...state, soilMix: action.val };
 
-    // 🔵 Step 6
-    case "SET_CREATE_AUTO": {
-      // when enabling master, default watering ON
-      if (action.val) {
-        return { ...state, createAutoTasks: true, waterTaskEnabled: true };
-      }
-      return { ...state, createAutoTasks: false };
-    }
+    // Step 6
+    case "SET_CREATE_AUTO":
+      return action.val
+        ? { ...state, createAutoTasks: true, waterTaskEnabled: true }
+        : { ...state, createAutoTasks: false };
     case "SET_WATER_TASK_ENABLED":
       return { ...state, waterTaskEnabled: action.val };
     case "SET_REPOT_TASK_ENABLED":
@@ -166,6 +162,12 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, careIntervalDays: Math.max(1, Math.min(60, action.val)) };
     case "SET_REPOT_INTERVAL_MONTHS":
       return { ...state, repotIntervalMonths: Math.max(1, Math.min(12, action.val)) };
+
+    // Step 7
+    case "SET_PHOTO_URI":
+      return { ...state, photoUri: action.uri };
+    case "CLEAR_PHOTO":
+      return { ...state, photoUri: undefined };
 
     default:
       return state;
@@ -206,6 +208,10 @@ const Ctx = createContext<{
     setCareRequired: (v: boolean) => void;
     setCareInterval: (d: number) => void;
     setRepotIntervalMonths: (m: number) => void;
+
+    // Step 7
+    setPhotoUri: (uri?: string) => void;
+    clearPhoto: () => void;
   };
 } | null>(null);
 
@@ -250,6 +256,10 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setCareRequired: (v: boolean) => dispatch({ type: "SET_CARE_REQUIRED", val: v }),
       setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
       setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
+
+      // Step 7
+      setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
+      clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
     }),
     []
   );

@@ -6,9 +6,9 @@ export type WizardStep =
   | "location"
   | "exposure"
   | "potType"
-  | "autoTasks"   // Step 6
+  | "autoTasks"
   | "distance"
-  | "photo"
+  | "photo"      // Step 7
   | "name"
   | "summary";
 
@@ -104,25 +104,23 @@ export type WizardState = {
   potMaterial?: PotMaterial; // omit or "unspecified" = not set
   soilMix?: SoilMix;         // omit or "unspecified" = not set
 
-  // 🔵 Step 6 – Auto tasks
-  createAutoTasks?: boolean;       // master checkbox (predefined plants)
-
-  // per-task checkboxes
+  // Step 6 – Auto tasks
+  createAutoTasks?: boolean;
   waterTaskEnabled?: boolean;
   repotTaskEnabled?: boolean;
-  moistureRequired?: boolean;      // checkbox for moisture task
-  fertilizeRequired?: boolean;     // checkbox for fertilising task
-  careRequired?: boolean;          // checkbox for care task
-
-  // watering/repotting questions
+  moistureRequired?: boolean;
+  fertilizeRequired?: boolean;
+  careRequired?: boolean;
   lastWatered?: LastWatered;
   lastRepotted?: LastRepotted;
+  moistureIntervalDays?: number;   // 1..30
+  fertilizeIntervalDays?: number;  // 1..60
+  careIntervalDays?: number;       // 1..60
+  repotIntervalMonths?: number;    // 1..12
 
-  // slider intervals
-  moistureIntervalDays?: number;    // 1..30
-  fertilizeIntervalDays?: number;   // 1..60
-  careIntervalDays?: number;        // 1..60
-  repotIntervalMonths?: number;     // 1..12
+  // 🔵 Step 7 – Photo
+  /** Local-only photo URI saved to device/app storage; never uploaded to server. */
+  photoUri?: string;
 };
 
 export type PopularPlant = {
@@ -130,7 +128,7 @@ export type PopularPlant = {
   name: string;
   latin: string;
   image: string;
-  tags: string[]; // MDI icon names
+  tags: string[];
 };
 
 export type Suggestion = {
