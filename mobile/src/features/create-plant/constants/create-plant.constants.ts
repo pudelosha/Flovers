@@ -1,4 +1,5 @@
-﻿import type { PopularPlant, Suggestion } from "../types/create-plant.types";
+﻿// constants/create-plant.constants.ts
+import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
 export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -207,4 +208,22 @@ export const SOIL_MIXES: readonly SoilMixOption[] = [
   { key: "bioactive", label: "Bioactive / worm castings", description: "Living soil with compost and microbes; slow-release nutrition." },
   { key: "hydroponic-leca", label: "LECA / semi-hydro", description: "Inert clay balls; water reservoir feeding; great root aeration." },
   { key: "self-mixed", label: "Custom self-mixed", description: "Your own recipe — note the ingredients you use." },
+] as const;
+
+/** 🔵 Step 6 – Auto tasks dropdown options */
+export const LAST_WATERED_OPTIONS = [
+  { key: "today", label: "Today" },
+  { key: "yesterday", label: "Yesterday" },
+  { key: "three-four-days", label: "3–4 days ago" },
+  { key: "one-week", label: "A week ago" },
+  { key: "two-weeks", label: "2 weeks ago" },
+  { key: "unknown", label: "I don’t remember" },
+] as const;
+
+export const LAST_REPOTTED_OPTIONS = [
+  { key: "this-week", label: "This week" },
+  { key: "one-week-ago", label: "1 week ago" },
+  { key: "two-weeks-ago", label: "2 weeks ago" },
+  { key: "one-month-ago", label: "1 month ago" },
+  { key: "unknown", label: "I don’t remember" },
 ] as const;

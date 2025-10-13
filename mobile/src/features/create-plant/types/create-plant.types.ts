@@ -5,9 +5,9 @@ export type WizardStep =
   | "traits"
   | "location"
   | "exposure"
-  | "distance"
   | "potType"
-  | "autoTasks"
+  | "autoTasks"   // Step 6
+  | "distance"
   | "photo"
   | "name"
   | "summary";
@@ -69,6 +69,22 @@ export type UserLocation = {
   category: LocationCategory;
 };
 
+/** 🔵 Auto-task helper types */
+export type LastWatered =
+  | "today"
+  | "yesterday"
+  | "three-four-days"
+  | "one-week"
+  | "two-weeks"
+  | "unknown";
+
+export type LastRepotted =
+  | "this-week"
+  | "one-week-ago"
+  | "two-weeks-ago"
+  | "one-month-ago"
+  | "unknown";
+
 export type WizardState = {
   step: WizardStep;
   plantQuery: string;
@@ -87,6 +103,26 @@ export type WizardState = {
   // Step 5 – Container & Soil (optional)
   potMaterial?: PotMaterial; // omit or "unspecified" = not set
   soilMix?: SoilMix;         // omit or "unspecified" = not set
+
+  // 🔵 Step 6 – Auto tasks
+  createAutoTasks?: boolean;       // master checkbox (predefined plants)
+
+  // per-task checkboxes
+  waterTaskEnabled?: boolean;
+  repotTaskEnabled?: boolean;
+  moistureRequired?: boolean;      // checkbox for moisture task
+  fertilizeRequired?: boolean;     // checkbox for fertilising task
+  careRequired?: boolean;          // checkbox for care task
+
+  // watering/repotting questions
+  lastWatered?: LastWatered;
+  lastRepotted?: LastRepotted;
+
+  // slider intervals
+  moistureIntervalDays?: number;    // 1..30
+  fertilizeIntervalDays?: number;   // 1..60
+  careIntervalDays?: number;        // 1..60
+  repotIntervalMonths?: number;     // 1..12
 };
 
 export type PopularPlant = {

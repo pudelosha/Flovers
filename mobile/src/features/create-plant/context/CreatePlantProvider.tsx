@@ -1,4 +1,5 @@
-﻿import React, { createContext, useContext, useMemo, useReducer } from "react";
+﻿// context/CreatePlantProvider.tsx
+import React, { createContext, useContext, useMemo, useReducer } from "react";
 import type {
   WizardState,
   SelectedPlant,
@@ -9,6 +10,8 @@ import type {
   Orientation,
   PotMaterial,
   SoilMix,
+  LastWatered,
+  LastRepotted,
 } from "../types/create-plant.types";
 
 type Action =
@@ -25,7 +28,20 @@ type Action =
   | { type: "SET_ORIENTATION"; val: WizardState["orientation"] }
   | { type: "SET_DISTANCE_CM"; val: number }
   | { type: "SET_POT_MATERIAL"; val?: PotMaterial }
-  | { type: "SET_SOIL_MIX"; val?: SoilMix };
+  | { type: "SET_SOIL_MIX"; val?: SoilMix }
+  // 🔵 Step 6
+  | { type: "SET_CREATE_AUTO"; val: boolean }
+  | { type: "SET_WATER_TASK_ENABLED"; val: boolean }
+  | { type: "SET_REPOT_TASK_ENABLED"; val: boolean }
+  | { type: "SET_LAST_WATERED"; val?: LastWatered }
+  | { type: "SET_LAST_REPOTTED"; val?: LastRepotted }
+  | { type: "SET_MOISTURE_REQUIRED"; val: boolean }
+  | { type: "SET_MOISTURE_INTERVAL"; val: number }
+  | { type: "SET_FERTILIZE_REQUIRED"; val: boolean }
+  | { type: "SET_FERTILIZE_INTERVAL"; val: number }
+  | { type: "SET_CARE_REQUIRED"; val: boolean }
+  | { type: "SET_CARE_INTERVAL"; val: number }
+  | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number };
 
 const initial: WizardState = {
   step: "selectPlant",
@@ -43,17 +59,39 @@ const initial: WizardState = {
   // Step 5 (optional)
   potMaterial: undefined,
   soilMix: undefined,
+
+  // Step 6 defaults
+  createAutoTasks: false,
+  // Watering should be true when master is turned on; initialize false until then
+  waterTaskEnabled: false,
+  // moisture second, fertilising third, care false by default
+  moistureRequired: false,
+  fertilizeRequired: false,
+  careRequired: false,
+
+  // repotting disabled by default
+  repotTaskEnabled: false,
+
+  // last event answers
+  lastWatered: undefined,
+  lastRepotted: undefined,
+
+  // intervals (defaults; may be overridden by plant profile)
+  moistureIntervalDays: 7,   // 1..30
+  fertilizeIntervalDays: 30, // 1..60
+  careIntervalDays: 30,      // 1..60
+  repotIntervalMonths: 12,   // 1..12
 };
 
-// ⬇️ Put "potType" immediately after "exposure" so it becomes Step 5
+// Order: Step 6 after Step 5
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
   "location",
   "exposure",
-  "potType",     // <-- moved up
+  "potType",     // Step 5
+  "autoTasks",   // Step 6
   "distance",
-  "autoTasks",
   "photo",
   "name",
   "summary",
@@ -98,6 +136,37 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_SOIL_MIX":
       return { ...state, soilMix: action.val };
 
+    // 🔵 Step 6
+    case "SET_CREATE_AUTO": {
+      // when enabling master, default watering ON
+      if (action.val) {
+        return { ...state, createAutoTasks: true, waterTaskEnabled: true };
+      }
+      return { ...state, createAutoTasks: false };
+    }
+    case "SET_WATER_TASK_ENABLED":
+      return { ...state, waterTaskEnabled: action.val };
+    case "SET_REPOT_TASK_ENABLED":
+      return { ...state, repotTaskEnabled: action.val };
+    case "SET_LAST_WATERED":
+      return { ...state, lastWatered: action.val };
+    case "SET_LAST_REPOTTED":
+      return { ...state, lastRepotted: action.val };
+    case "SET_MOISTURE_REQUIRED":
+      return { ...state, moistureRequired: action.val };
+    case "SET_MOISTURE_INTERVAL":
+      return { ...state, moistureIntervalDays: Math.max(1, Math.min(30, action.val)) };
+    case "SET_FERTILIZE_REQUIRED":
+      return { ...state, fertilizeRequired: action.val };
+    case "SET_FERTILIZE_INTERVAL":
+      return { ...state, fertilizeIntervalDays: Math.max(1, Math.min(60, action.val)) };
+    case "SET_CARE_REQUIRED":
+      return { ...state, careRequired: action.val };
+    case "SET_CARE_INTERVAL":
+      return { ...state, careIntervalDays: Math.max(1, Math.min(60, action.val)) };
+    case "SET_REPOT_INTERVAL_MONTHS":
+      return { ...state, repotIntervalMonths: Math.max(1, Math.min(12, action.val)) };
+
     default:
       return state;
   }
@@ -123,6 +192,20 @@ const Ctx = createContext<{
 
     setPotMaterial: (m?: PotMaterial) => void;
     setSoilMix: (m?: SoilMix) => void;
+
+    // Step 6
+    setCreateAutoTasks: (v: boolean) => void;
+    setWaterTaskEnabled: (v: boolean) => void;
+    setRepotTaskEnabled: (v: boolean) => void;
+    setLastWatered: (v?: LastWatered) => void;
+    setLastRepotted: (v?: LastRepotted) => void;
+    setMoistureRequired: (v: boolean) => void;
+    setMoistureInterval: (d: number) => void;
+    setFertilizeRequired: (v: boolean) => void;
+    setFertilizeInterval: (d: number) => void;
+    setCareRequired: (v: boolean) => void;
+    setCareInterval: (d: number) => void;
+    setRepotIntervalMonths: (m: number) => void;
   };
 } | null>(null);
 
@@ -153,6 +236,20 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
 
       setPotMaterial: (m?: PotMaterial) => dispatch({ type: "SET_POT_MATERIAL", val: m }),
       setSoilMix: (m?: SoilMix) => dispatch({ type: "SET_SOIL_MIX", val: m }),
+
+      // Step 6
+      setCreateAutoTasks: (v: boolean) => dispatch({ type: "SET_CREATE_AUTO", val: v }),
+      setWaterTaskEnabled: (v: boolean) => dispatch({ type: "SET_WATER_TASK_ENABLED", val: v }),
+      setRepotTaskEnabled: (v: boolean) => dispatch({ type: "SET_REPOT_TASK_ENABLED", val: v }),
+      setLastWatered: (v?: LastWatered) => dispatch({ type: "SET_LAST_WATERED", val: v }),
+      setLastRepotted: (v?: LastRepotted) => dispatch({ type: "SET_LAST_REPOTTED", val: v }),
+      setMoistureRequired: (v: boolean) => dispatch({ type: "SET_MOISTURE_REQUIRED", val: v }),
+      setMoistureInterval: (d: number) => dispatch({ type: "SET_MOISTURE_INTERVAL", val: d }),
+      setFertilizeRequired: (v: boolean) => dispatch({ type: "SET_FERTILIZE_REQUIRED", val: v }),
+      setFertilizeInterval: (d: number) => dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
+      setCareRequired: (v: boolean) => dispatch({ type: "SET_CARE_REQUIRED", val: v }),
+      setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
+      setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
     }),
     []
   );

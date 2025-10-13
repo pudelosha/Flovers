@@ -1,4 +1,5 @@
-﻿import React, { useRef } from "react";
+﻿// screens/CreatePlantWizardScreen.tsx
+import React, { useRef } from "react";
 import { View, ScrollView, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -14,7 +15,8 @@ import Step01_SelectPlant from "../steps/Step01_SelectPlant";
 import Step02_PlantTraits from "../steps/Step02_PlantTraits";
 import Step03_SelectLocation from "../steps/Step03_SelectLocation";
 import Step04_Exposure from "../steps/Step04_Exposure";
-import Step05_ContainerAndSoil from "../steps/Step05_ContainerAndSoil"; // NEW
+import Step05_ContainerAndSoil from "../steps/Step05_ContainerAndSoil";
+import Step06_AutoTasks from "../steps/Step06_AutoTasks"; // 🔵 NEW
 
 function WizardBody() {
   const insets = useSafeAreaInsets();
@@ -46,13 +48,17 @@ function WizardBody() {
       {/* Step 5 */}
       {state.step === "potType" && <Step05_ContainerAndSoil />}
 
+      {/* 🔵 Step 6 */}
+      {state.step === "autoTasks" && <Step06_AutoTasks />}
+
       {/* Fallback for not-yet-implemented steps */}
       {!(
         state.step === "selectPlant" ||
         state.step === "traits" ||
         state.step === "location" ||
         state.step === "exposure" ||
-        state.step === "potType"
+        state.step === "potType" ||
+        state.step === "autoTasks"
       ) && (
         <View style={wiz.cardWrap}>
           <View style={wiz.cardGlass} />
