@@ -17,7 +17,8 @@ import Step03_SelectLocation from "../steps/Step03_SelectLocation";
 import Step04_Exposure from "../steps/Step04_Exposure";
 import Step05_ContainerAndSoil from "../steps/Step05_ContainerAndSoil";
 import Step06_AutoTasks from "../steps/Step06_AutoTasks";
-import Step07_Photo from "../steps/Step07_Photo"; // 🔵 NEW
+import Step07_Photo from "../steps/Step07_Photo";
+import Step08_NameAndNotes from "../steps/Step08_NameAndNotes"; // 🔵 NEW
 
 function WizardBody() {
   const insets = useSafeAreaInsets();
@@ -52,8 +53,11 @@ function WizardBody() {
       {/* Step 6 */}
       {state.step === "autoTasks" && <Step06_AutoTasks />}
 
-      {/* 🔵 Step 7 */}
+      {/* Step 7 */}
       {state.step === "photo" && <Step07_Photo />}
+
+      {/* 🔵 Step 8 */}
+      {state.step === "name" && <Step08_NameAndNotes />}
 
       {/* Fallback for not-yet-implemented steps */}
       {!(
@@ -63,7 +67,8 @@ function WizardBody() {
         state.step === "exposure" ||
         state.step === "potType" ||
         state.step === "autoTasks" ||
-        state.step === "photo"
+        state.step === "photo" ||
+        state.step === "name"
       ) && (
         <View style={wiz.cardWrap}>
           <View style={wiz.cardGlass} />

@@ -7,9 +7,9 @@ export type WizardStep =
   | "exposure"
   | "potType"
   | "autoTasks"
-  | "distance"
   | "photo"      // Step 7
-  | "name"
+  | "name"       // Step 8
+  | "distance"
   | "summary";
 
 export type SelectedPlant = {
@@ -118,9 +118,14 @@ export type WizardState = {
   careIntervalDays?: number;       // 1..60
   repotIntervalMonths?: number;    // 1..12
 
-  // 🔵 Step 7 – Photo
-  /** Local-only photo URI saved to device/app storage; never uploaded to server. */
+  // Step 7 – Photo (local-only)
   photoUri?: string;
+
+  // 🔵 Step 8 – Name & Notes
+  displayName?: string;
+  notes?: string;
+  /** ISO string "YYYY-MM-DD" (local) */
+  purchaseDateISO?: string;
 };
 
 export type PopularPlant = {

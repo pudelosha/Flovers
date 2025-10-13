@@ -44,7 +44,11 @@ type Action =
   | { type: "SET_REPOT_INTERVAL_MONTHS"; val: number }
   // Step 7
   | { type: "SET_PHOTO_URI"; uri?: string }
-  | { type: "CLEAR_PHOTO" };
+  | { type: "CLEAR_PHOTO" }
+  // Step 8
+  | { type: "SET_DISPLAY_NAME"; val: string }
+  | { type: "SET_NOTES"; val: string }
+  | { type: "SET_PURCHASE_DATE_ISO"; val?: string };
 
 const initial: WizardState = {
   step: "selectPlant",
@@ -79,10 +83,15 @@ const initial: WizardState = {
 
   // Step 7
   photoUri: undefined,
+
+  // Step 8
+  displayName: "",
+  notes: "",
+  purchaseDateISO: undefined,
 };
 
-// 🔵 ORDER: put "photo" immediately after "autoTasks" so it shows as Step 7.
-// (distance becomes Step 8)
+// 🔵 ORDER: keep “photo” as Step 7 and place “name” right after it (Step 8).
+// (distance becomes Step 9, still fine if unimplemented)
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
@@ -91,8 +100,8 @@ const ORDER: WizardStep[] = [
   "potType",
   "autoTasks",
   "photo",     // Step 7
-  "distance",  // Step 8 (still unimplemented on screen)
-  "name",
+  "name",      // Step 8
+  "distance",  // Step 9 (can show fallback)
   "summary",
 ];
 
@@ -169,6 +178,14 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "CLEAR_PHOTO":
       return { ...state, photoUri: undefined };
 
+    // Step 8
+    case "SET_DISPLAY_NAME":
+      return { ...state, displayName: action.val };
+    case "SET_NOTES":
+      return { ...state, notes: action.val };
+    case "SET_PURCHASE_DATE_ISO":
+      return { ...state, purchaseDateISO: action.val };
+
     default:
       return state;
   }
@@ -212,6 +229,11 @@ const Ctx = createContext<{
     // Step 7
     setPhotoUri: (uri?: string) => void;
     clearPhoto: () => void;
+
+    // Step 8
+    setDisplayName: (v: string) => void;
+    setNotes: (v: string) => void;
+    setPurchaseDateISO: (v?: string) => void;
   };
 } | null>(null);
 
@@ -260,6 +282,11 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       // Step 7
       setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
       clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
+
+      // Step 8
+      setDisplayName: (v: string) => dispatch({ type: "SET_DISPLAY_NAME", val: v }),
+      setNotes: (v: string) => dispatch({ type: "SET_NOTES", val: v }),
+      setPurchaseDateISO: (v?: string) => dispatch({ type: "SET_PURCHASE_DATE_ISO", val: v }),
     }),
     []
   );
