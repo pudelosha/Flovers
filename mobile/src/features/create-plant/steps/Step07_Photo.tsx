@@ -1,69 +1,83 @@
 ﻿// steps/Step07_Photo.tsx
 import React from "react";
-import { View, Text, Image, Pressable, Alert } from "react-native";
+import { View, Text, Image, Pressable, Alert, PermissionsAndroid, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
+import {
+  launchCamera,
+  launchImageLibrary,
+  type CameraOptions,
+  type ImageLibraryOptions,
+} from "react-native-image-picker";
 
-// Try to use react-native-image-picker if available.
-// If not installed, we show a friendly message.
-let ImagePicker: any = null;
-try {
-  ImagePicker = require("react-native-image-picker");
-} catch {}
+async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
+  if (Platform.OS !== "android") return true;
+
+  // Android 13+ needs READ_MEDIA_IMAGES; <=12 needs READ_EXTERNAL_STORAGE
+  const perms: string[] = [
+    PermissionsAndroid.PERMISSIONS.CAMERA,
+    (Number(Platform.Version) >= 33
+      ? (PermissionsAndroid.PERMISSIONS as any).READ_MEDIA_IMAGES
+      : PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE),
+  ].filter(Boolean) as string[];
+
+  const results = await PermissionsAndroid.requestMultiple(perms);
+  const allGranted = perms.every(p => results[p] === PermissionsAndroid.RESULTS.GRANTED);
+  return allGranted;
+}
 
 export default function Step07_Photo() {
   const { state, actions } = useCreatePlantWizard();
 
-  const takePhoto = async () => {
-    if (!ImagePicker?.launchCamera) {
-      Alert.alert(
-        "Camera not available",
-        "Camera/photo picker library is not installed in this build. You can add a photo later from the plant details."
-      );
+  const doLaunchCamera = async () => {
+    const ok = await ensureAndroidPermissionCameraAndRead();
+    if (!ok) {
+      Alert.alert("Permission required", "Please grant camera and media permissions to take a photo.");
       return;
     }
-    ImagePicker.launchCamera(
-      { mediaType: "photo", saveToPhotos: false, includeBase64: false },
-      (res: any) => {
-        if (res?.assets?.[0]?.uri) {
-          // Local-only: we store the URI in state; we do not upload to server.
-          actions.setPhotoUri(res.assets[0].uri);
-        } else if (res?.didCancel) {
-          // do nothing
-        } else if (res?.errorCode) {
-          Alert.alert("Camera error", String(res.errorMessage || res.errorCode));
-        }
-      }
-    );
-  };
 
-  const pickFromLibrary = async () => {
-    if (!ImagePicker?.launchImageLibrary) {
-      Alert.alert(
-        "Library not available",
-        "Camera/photo picker library is not installed in this build. You can add a photo later from the plant details."
-      );
+    const opts: CameraOptions = {
+      mediaType: "photo",
+      saveToPhotos: false, // keep it local to app sandbox
+      includeBase64: false,
+      quality: 0.92,
+    };
+    const res = await launchCamera(opts);
+    if (res.didCancel) return;
+    if (res.errorCode) {
+      Alert.alert("Camera error", String(res.errorMessage || res.errorCode));
       return;
     }
-    ImagePicker.launchImageLibrary(
-      { mediaType: "photo", selectionLimit: 1, includeBase64: false },
-      (res: any) => {
-        if (res?.assets?.[0]?.uri) {
-          actions.setPhotoUri(res.assets[0].uri);
-        } else if (res?.didCancel) {
-          // do nothing
-        } else if (res?.errorCode) {
-          Alert.alert("Picker error", String(res.errorMessage || res.errorCode));
-        }
-      }
-    );
+    const uri = res.assets?.[0]?.uri;
+    if (uri) actions.setPhotoUri(uri);
   };
 
-  const removePhoto = () => {
-    actions.clearPhoto();
+  const doLaunchLibrary = async () => {
+    const ok = await ensureAndroidPermissionCameraAndRead();
+    if (!ok) {
+      Alert.alert("Permission required", "Please grant media permission to pick a photo.");
+      return;
+    }
+
+    const opts: ImageLibraryOptions = {
+      mediaType: "photo",
+      selectionLimit: 1,
+      includeBase64: false,
+      quality: 0.92,
+    };
+    const res = await launchImageLibrary(opts);
+    if (res.didCancel) return;
+    if (res.errorCode) {
+      Alert.alert("Picker error", String(res.errorMessage || res.errorCode));
+      return;
+    }
+    const uri = res.assets?.[0]?.uri;
+    if (uri) actions.setPhotoUri(uri);
   };
+
+  const removePhoto = () => actions.clearPhoto();
 
   return (
     <View style={wiz.cardWrap}>
@@ -105,11 +119,7 @@ export default function Step07_Photo() {
           ]}
         >
           {state.photoUri ? (
-            <Image
-              source={{ uri: state.photoUri }}
-              style={{ width: "100%", height: "100%" }}
-              resizeMode="cover"
-            />
+            <Image source={{ uri: state.photoUri }} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
           ) : (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
@@ -122,11 +132,11 @@ export default function Step07_Photo() {
 
         {/* Stacked full-width buttons */}
         <View style={{ gap: 10 }}>
-          <Pressable style={[wiz.actionFull, { backgroundColor: "rgba(11,114,133,0.9)" }]} onPress={takePhoto}>
+          <Pressable style={[wiz.actionFull, { backgroundColor: "rgba(11,114,133,0.9)" }]} onPress={doLaunchCamera}>
             <MaterialCommunityIcons name="camera" size={18} color="#FFFFFF" />
             <Text style={wiz.actionText}>Take a photo</Text>
           </Pressable>
-          <Pressable style={wiz.actionFull} onPress={pickFromLibrary}>
+          <Pressable style={wiz.actionFull} onPress={doLaunchLibrary}>
             <MaterialCommunityIcons name="image-multiple" size={18} color="#FFFFFF" />
             <Text style={wiz.actionText}>Choose from gallery</Text>
           </Pressable>

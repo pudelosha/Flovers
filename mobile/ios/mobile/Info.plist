@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your photo library to choose a plant photo.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We save photos to your library if you ask us to.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We use the camera to scan QR codes attached to your plants.</string>
 	<key>CFBundleDevelopmentRegion</key>
