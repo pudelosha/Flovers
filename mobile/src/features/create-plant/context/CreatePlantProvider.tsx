@@ -7,6 +7,8 @@ import type {
   LocationCategory,
   LightLevel,
   Orientation,
+  PotMaterial,
+  SoilMix,
 } from "../types/create-plant.types";
 
 type Action =
@@ -16,11 +18,14 @@ type Action =
   | { type: "PREV" }
   | { type: "GOTO"; step: WizardStep }
   | { type: "RESET" }
+  | { type: "PATCH"; patch: Partial<WizardState> }
   | { type: "ADD_LOCATION"; loc: UserLocation }
   | { type: "SELECT_LOCATION"; id: string }
   | { type: "SET_LIGHT"; val: WizardState["lightLevel"] }
   | { type: "SET_ORIENTATION"; val: WizardState["orientation"] }
-  | { type: "SET_DISTANCE_CM"; val: number };
+  | { type: "SET_DISTANCE_CM"; val: number }
+  | { type: "SET_POT_MATERIAL"; val?: PotMaterial }
+  | { type: "SET_SOIL_MIX"; val?: SoilMix };
 
 const initial: WizardState = {
   step: "selectPlant",
@@ -34,16 +39,20 @@ const initial: WizardState = {
   lightLevel: "bright-indirect",
   orientation: "E",
   distanceCm: 20,
+
+  // Step 5 (optional)
+  potMaterial: undefined,
+  soilMix: undefined,
 };
 
-// Include "exposure" as step 4
+// ⬇️ Put "potType" immediately after "exposure" so it becomes Step 5
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
   "location",
   "exposure",
+  "potType",     // <-- moved up
   "distance",
-  "potType",
   "autoTasks",
   "photo",
   "name",
@@ -56,6 +65,7 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, plantQuery: action.query };
     case "SET_SELECTED_PLANT":
       return { ...state, selectedPlant: action.plant };
+
     case "NEXT": {
       const idx = ORDER.indexOf(state.step);
       return { ...state, step: ORDER[Math.min(idx + 1, ORDER.length - 1)] };
@@ -68,6 +78,9 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, step: action.step };
     case "RESET":
       return { ...initial };
+    case "PATCH":
+      return { ...state, ...action.patch };
+
     case "ADD_LOCATION":
       return { ...state, locations: [...state.locations, action.loc], selectedLocationId: action.loc.id };
     case "SELECT_LOCATION":
@@ -79,6 +92,11 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, orientation: action.val };
     case "SET_DISTANCE_CM":
       return { ...state, distanceCm: action.val };
+
+    case "SET_POT_MATERIAL":
+      return { ...state, potMaterial: action.val };
+    case "SET_SOIL_MIX":
+      return { ...state, soilMix: action.val };
 
     default:
       return state;
@@ -94,6 +112,7 @@ const Ctx = createContext<{
     goPrev: () => void;
     goTo: (s: WizardStep) => void;
     reset: () => void;
+    patch: (patch: Partial<WizardState>) => void;
 
     addLocation: (name: string, category: LocationCategory) => void;
     selectLocation: (id: string) => void;
@@ -101,6 +120,9 @@ const Ctx = createContext<{
     setLightLevel: (level: LightLevel) => void;
     setOrientation: (o: Orientation) => void;
     setDistanceCm: (cm: number) => void;
+
+    setPotMaterial: (m?: PotMaterial) => void;
+    setSoilMix: (m?: SoilMix) => void;
   };
 } | null>(null);
 
@@ -119,15 +141,18 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),
       reset: () => dispatch({ type: "RESET" }),
+      patch: (patch: Partial<WizardState>) => dispatch({ type: "PATCH", patch }),
 
       addLocation: (name: string, category: LocationCategory) =>
         dispatch({ type: "ADD_LOCATION", loc: { id: id(), name, category } }),
       selectLocation: (locId: string) => dispatch({ type: "SELECT_LOCATION", id: locId }),
 
-      // Step 4 setters (match reducer keys)
       setLightLevel: (level: LightLevel) => dispatch({ type: "SET_LIGHT", val: level }),
       setOrientation: (o: Orientation) => dispatch({ type: "SET_ORIENTATION", val: o }),
       setDistanceCm: (cm: number) => dispatch({ type: "SET_DISTANCE_CM", val: cm }),
+
+      setPotMaterial: (m?: PotMaterial) => dispatch({ type: "SET_POT_MATERIAL", val: m }),
+      setSoilMix: (m?: SoilMix) => dispatch({ type: "SET_SOIL_MIX", val: m }),
     }),
     []
   );

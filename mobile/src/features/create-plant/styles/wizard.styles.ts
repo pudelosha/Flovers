@@ -166,7 +166,7 @@ export const wiz = StyleSheet.create({
     alignItems: "center", justifyContent: "center",
   },
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
-  segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 }, // ↓ slightly smaller to avoid wrapping
+  segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
 
   /** 🔵 NEW: horizontal “chip” scrollers (Step 4) */
   hScroll: { paddingVertical: 2 },
@@ -189,4 +189,39 @@ export const wiz = StyleSheet.create({
     borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
   },
   chipText: { color: "#FFFFFF", fontWeight: "800" },
+
+  /** 🔵 NEW: Select (Step 5) — header matches Profile dropdown look */
+  selectField: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 12,
+    paddingVertical: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    marginBottom: 6, // tighter: list appears right below
+  },
+  selectValue: { color: "#FFFFFF", fontWeight: "800" },
+  selectChevronPad: { paddingLeft: 10 },
+
+  /** 🔵 NEW: Inline dropdown list (mirrors profile.controls.*) */
+  dropdownList: {
+    borderRadius: 12,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    marginBottom: 10,
+  },
+  dropdownListScroll: { maxHeight: 280 }, // prevent ultra-tall lists
+  dropdownItem: {
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
+  dropdownItemDesc: { color: "rgba(255,255,255,0.92)", fontWeight: "600", marginTop: 2, lineHeight: 17 },
 });
