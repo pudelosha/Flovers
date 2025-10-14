@@ -44,7 +44,6 @@ export default function Step01_SelectPlant({
       try {
         setLoadingPopular(true);
         setLoadingSearch(true);
-        // explicitly require auth
         const [popularRes, searchRes] = await Promise.all([
           fetchPopularPlants({ auth: true }),
           fetchPlantSearchIndex({ auth: true }),
@@ -68,16 +67,26 @@ export default function Step01_SelectPlant({
     return () => { mounted = false; };
   }, []);
 
-  const onSelectFromSearch = (name: string, latin?: string) => {
-    setQuery(name);
+  const onSelectFromSearch = (item: Suggestion) => {
+    setQuery(item.name);
     setShowSuggestions(false);
-    actions.setSelectedPlant({ name, latin, predefined: true });
+    actions.setSelectedPlant({
+      id: item.id,             // ← store id
+      name: item.name,
+      latin: item.latin,
+      predefined: true,
+    });
   };
 
   const onPickPopular = (item: PopularPlant) => {
     setQuery(item.name);
     setShowSuggestions(false); // do not open dropdown
-    actions.setSelectedPlant({ name: item.name, latin: item.latin, predefined: true });
+    actions.setSelectedPlant({
+      id: item.id,             // ← store id
+      name: item.name,
+      latin: item.latin,
+      predefined: true,
+    });
     onScrollToTop();
   };
 
@@ -167,7 +176,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {SUN_LABEL_BY_LEVEL[item.sun]}
                         </Text>
                       </View>
@@ -178,7 +187,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {WATER_LABEL_BY_LEVEL[item.water]}
                         </Text>
                       </View>
@@ -189,7 +198,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {DIFFICULTY_LABEL_BY_LEVEL[item.difficulty]}
                         </Text>
                       </View>

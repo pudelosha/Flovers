@@ -12,6 +12,7 @@
   | "summary";
 
 export type SelectedPlant = {
+  id?: string;      // ← NEW: store backend id when user picks a predefined plant
   name?: string;
   latin?: string;
   predefined?: boolean;
@@ -134,18 +135,6 @@ export type WizardState = {
 export type SunRequirement = "low" | "medium" | "high";
 export type WaterRequirement = "low" | "medium" | "high";
 export type DifficultyLevel = "easy" | "medium" | "hard";
-
-/** ✅ Definition row used by services for popular cards (and can back Search too) */
-export type PlantDefinition = {
-  id: string;
-  name: string;
-  latin: string;
-  image: string | null;       // thumbnails OK
-  sun: SunRequirement;
-  water: WaterRequirement;
-  difficulty: DifficultyLevel;
-  popular?: boolean;          // optional; not always needed at endpoint level
-};
 
 export type PopularPlant = {
   id: string;

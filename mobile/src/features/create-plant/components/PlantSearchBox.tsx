@@ -1,18 +1,16 @@
-﻿import React from "react";
+﻿import React, { useMemo } from "react";
 import { View, TextInput, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
-
-type Suggestion = { id: string; name: string; latin: string };
+import type { Suggestion } from "../types/create-plant.types";
 
 type Props = {
   value: string;
   onChange: (t: string) => void;
   showSuggestions: boolean;
   setShowSuggestions: (v: boolean) => void;
-  onSelectSuggestion: (name: string, latin?: string) => void;
-  /** Dataset from API (or fallback). Defaults to [] */
-  suggestions?: Suggestion[];
+  onSelectSuggestion: (s: Suggestion) => void; // ← return full suggestion incl. id
+  suggestions: Suggestion[];                    // ← fed from backend/fallback
 };
 
 export default function PlantSearchBox({
@@ -21,20 +19,17 @@ export default function PlantSearchBox({
   showSuggestions,
   setShowSuggestions,
   onSelectSuggestion,
-  suggestions = [],
+  suggestions,
 }: Props) {
-  const q = value.trim().toLowerCase();
-
-  const data =
-    q.length === 0
-      ? []
-      : suggestions
-          .filter(
-            (s) =>
-              s.name.toLowerCase().includes(q) ||
-              s.latin.toLowerCase().includes(q)
-          )
-          .slice(0, 20);
+  const data = useMemo(() => {
+    const q = value.trim().toLowerCase();
+    if (!q) return [];
+    return suggestions.filter(
+      (s) =>
+        s.name.toLowerCase().includes(q) ||
+        s.latin.toLowerCase().includes(q)
+    ).slice(0, 12); // cap list a bit
+  }, [value, suggestions]);
 
   return (
     <View style={{ marginTop: 12, marginBottom: 6 }}>
@@ -46,7 +41,7 @@ export default function PlantSearchBox({
           placeholder="Search plant"
           placeholderTextColor="rgba(255,255,255,0.75)"
           style={wiz.input}
-          onFocus={() => setShowSuggestions(q.length > 0)}
+          onFocus={() => setShowSuggestions(!!value.trim())}
           onSubmitEditing={() => setShowSuggestions(false)}
         />
         {!!value && (
@@ -57,11 +52,7 @@ export default function PlantSearchBox({
             }}
             hitSlop={8}
           >
-            <MaterialCommunityIcons
-              name="close-circle"
-              size={18}
-              color="rgba(255,255,255,0.9)"
-            />
+            <MaterialCommunityIcons name="close-circle" size={18} color="rgba(255,255,255,0.9)" />
           </Pressable>
         )}
       </View>
@@ -73,7 +64,7 @@ export default function PlantSearchBox({
               key={item.id}
               style={wiz.suggestItem}
               onPress={() => {
-                onSelectSuggestion(item.name, item.latin);
+                onSelectSuggestion(item); // ← pass full item (with id)
                 setShowSuggestions(false);
               }}
             >

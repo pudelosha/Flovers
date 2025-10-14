@@ -7,6 +7,7 @@ import {
   type ApiPlantSuggestion,
 } from "../serializers/plants.serializer";
 import { POPULAR_FALLBACK, SEARCH_INDEX_FALLBACK } from "../fallback/plants.fallback";
+import { serializePlantProfile, type ApiPlantProfile } from "../serializers/plants.serializer";
 
 const ENDPOINTS = {
   popular: "/api/plants/popular/",          // ← include /api prefix
@@ -50,4 +51,14 @@ export async function fetchPlantSearchIndex(
     if (err instanceof ApiError && err.status === 401) throw err;
     return SEARCH_INDEX_FALLBACK.map(serializePlantSuggestion);
   }
+}
+
+export async function fetchPlantProfile(
+  id: string | number,
+  opts: { auth?: boolean } = { auth: true }
+) {
+  const data = await request<ApiPlantProfile>(ENDPOINTS.profile(id), "GET", undefined, {
+    auth: opts.auth ?? true,
+  });
+  return serializePlantProfile(data);
 }
