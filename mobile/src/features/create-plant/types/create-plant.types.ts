@@ -1,6 +1,4 @@
-﻿// types/create-plant.types.ts
-
-export type WizardStep =
+﻿export type WizardStep =
   | "selectPlant"
   | "traits"
   | "location"
@@ -21,11 +19,11 @@ export type SelectedPlant = {
 
 export type LocationCategory = "indoor" | "outdoor" | "other";
 
-/** NEW: exposure types */
+/** exposure types */
 export type LightLevel = "bright-direct" | "bright-indirect" | "medium" | "low" | "very-low";
 export type Orientation = "N" | "E" | "S" | "W";
 
-/** NEW: container & soil types */
+/**  container & soil types */
 export type PotMaterial =
   | "unspecified"
   | "plastic"
@@ -70,7 +68,7 @@ export type UserLocation = {
   category: LocationCategory;
 };
 
-/** 🔵 Auto-task helper types */
+/** Auto-task helper types */
 export type LastWatered =
   | "today"
   | "yesterday"
@@ -132,16 +130,51 @@ export type WizardState = {
   createdPlantId?: string;
 };
 
+// add under other types
+export type SunRequirement = "low" | "medium" | "high";
+export type WaterRequirement = "low" | "medium" | "high";
+export type DifficultyLevel = "easy" | "medium" | "hard";
+
+/** ✅ Definition row used by services for popular cards (and can back Search too) */
+export type PlantDefinition = {
+  id: string;
+  name: string;
+  latin: string;
+  image: string | null;       // thumbnails OK
+  sun: SunRequirement;
+  water: WaterRequirement;
+  difficulty: DifficultyLevel;
+  popular?: boolean;          // optional; not always needed at endpoint level
+};
+
 export type PopularPlant = {
   id: string;
   name: string;
   latin: string;
   image: string;
-  tags: string[];
+  /** NEW — used for the 3 small icons */
+  sun: SunRequirement;
+  water: WaterRequirement;
+  difficulty: DifficultyLevel;
 };
 
 export type Suggestion = {
   id: string;
   name: string;
   latin: string;
+};
+
+export type PlantTrait = {
+  key: string;   // e.g. "sun", "soil", "temp", ...
+  value: string; // human text shown in UI
+};
+
+// Full profile used by Step 2
+export type PlantProfile = {
+  id?: string;          // optional; useful when fetched by id
+  name?: string;        // optional; useful when fetched by name
+  latin?: string;       // optional
+  image: string;        // hero image URL
+  description: string;  // long paragraph
+  traits: PlantTrait[]; // list rendered in Step 2
 };

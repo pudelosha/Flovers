@@ -1,5 +1,10 @@
 ﻿// constants/create-plant.constants.ts
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
+import type {
+  SunRequirement,
+  WaterRequirement,
+  DifficultyLevel,
+} from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
 export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -24,6 +29,42 @@ export const SUGGESTIONS: Suggestion[] = POPULAR_PLANTS.map((p, i) => ({
   name: p.name,
   latin: p.latin,
 }));
+
+// Short text labels used under each popular plant row
+export const SUN_ICON_BY_LEVEL: Record<SunRequirement, string> = {
+  high: "weather-sunny",
+  medium: "white-balance-sunny",
+  low: "weather-partly-cloudy",
+};
+
+export const WATER_ICON_BY_LEVEL: Record<WaterRequirement, string> = {
+  high: "water",
+  medium: "water-outline",
+  low: "water-off",
+};
+
+export const DIFFICULTY_ICON_BY_LEVEL: Record<DifficultyLevel, string> = {
+  easy: "emoticon-happy-outline",
+  medium: "emoticon-neutral-outline",
+  hard: "emoticon-sad-outline",
+};
+
+/* LABELS (you already had these; keep/export them too) */
+export const SUN_LABEL_BY_LEVEL: Record<SunRequirement, string> = {
+  high: "High sun",
+  medium: "Medium sun",
+  low: "Low sun",
+};
+export const WATER_LABEL_BY_LEVEL: Record<WaterRequirement, string> = {
+  high: "High water",
+  medium: "Moderate",
+  low: "Low water",
+};
+export const DIFFICULTY_LABEL_BY_LEVEL: Record<DifficultyLevel, string> = {
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard",
+};
 
 // ---------- Step 2 mock profile ----------
 export const PLANT_PROFILES_MOCK = {

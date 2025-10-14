@@ -19,7 +19,7 @@ import Step05_ContainerAndSoil from "../steps/Step05_ContainerAndSoil";
 import Step06_AutoTasks from "../steps/Step06_AutoTasks";
 import Step07_Photo from "../steps/Step07_Photo";
 import Step08_NameAndNotes from "../steps/Step08_NameAndNotes";
-import Step09_Creating from "../steps/Step09_Creating"; // 🔵 NEW
+import Step09_Creating from "../steps/Step09_Creating";
 
 function WizardBody() {
   const insets = useSafeAreaInsets();

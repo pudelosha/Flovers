@@ -1,11 +1,22 @@
-﻿import React, { useState } from "react";
-import { View, Text, Pressable, Image } from "react-native";
+﻿import React, { useEffect, useState } from "react";
+import { View, Text, Pressable, Image, ActivityIndicator } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import { wiz } from "../styles/wizard.styles";
-import { POPULAR_PLANTS } from "../constants/create-plant.constants";
-import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import PlantSearchBox from "../components/PlantSearchBox";
+import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
+import { fetchPopularPlants } from "../../../api/services/plants.service";
+import type { PopularPlant } from "../types/create-plant.types";
+// add to imports
+import {
+  SUN_ICON_BY_LEVEL,
+  WATER_ICON_BY_LEVEL,
+  DIFFICULTY_ICON_BY_LEVEL,
+  SUN_LABEL_BY_LEVEL,
+  WATER_LABEL_BY_LEVEL,
+  DIFFICULTY_LABEL_BY_LEVEL,
+} from "../constants/create-plant.constants";
 
 export default function Step01_SelectPlant({
   onScrollToTop,
@@ -17,28 +28,60 @@ export default function Step01_SelectPlant({
   const [query, setQuery] = useState(state.plantQuery || "");
   const [showSuggestions, setShowSuggestions] = useState(false);
 
+  const [popular, setPopular] = useState<PopularPlant[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // ---- Load "Popular plants" on mount (from backend) ----
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const items = await fetchPopularPlants();
+        if (mounted) {
+          setPopular(items);
+          setError(null);
+        }
+      } catch (e: any) {
+        if (mounted) setError(e?.message ?? "Failed to load popular plants.");
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const onSelectFromSearch = (name: string, latin?: string) => {
     setQuery(name);
     setShowSuggestions(false);
     actions.setSelectedPlant({ name, latin, predefined: true });
   };
 
-  const onPickPopular = (name: string, latin?: string) => {
-    setQuery(name);
-    setShowSuggestions(false); // popular is a shortcut, do not open dropdown
-    actions.setSelectedPlant({ name, latin, predefined: true });
-    onScrollToTop(); // ensure Next is visible
+  const onPickPopular = (item: PopularPlant) => {
+    setQuery(item.name);
+    setShowSuggestions(false); // do not open dropdown
+    actions.setSelectedPlant({ name: item.name, latin: item.latin, predefined: true });
+    onScrollToTop();
   };
 
+  // 🔵 OPTIONAL STEP BEHAVIOR:
+  // - If a predefined plant was picked -> go to Step 2 ("traits")
+  // - If not selected (empty or free text) -> skip to Step 3 ("location")
   const onNext = () => {
-    if (!query.trim()) return;
     actions.setPlantQuery(query.trim());
-    actions.goNext();
+    const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
+    if (hasPredefined) {
+      actions.goNext(); // Step 2: traits (summary of selected plant)
+    } else {
+      actions.goTo("location"); // skip Step 2
+    }
   };
 
   return (
     <View style={wiz.cardWrap}>
-      {/* Glass background */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -55,7 +98,7 @@ export default function Step01_SelectPlant({
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Select a plant</Text>
         <Text style={wiz.subtitle}>
-          This step is optional. Picking a predefined plant helps us propose watering, moisture and other care actions.
+          Optional step — you can pick a known plant to auto-prefill care, or just continue.
         </Text>
 
         {/* Search */}
@@ -64,13 +107,15 @@ export default function Step01_SelectPlant({
           onChange={(t) => {
             setQuery(t);
             setShowSuggestions(!!t.trim());
+            // Free typing shouldn't mark a "predefined" selection
+            if (!t.trim()) actions.setSelectedPlant(undefined);
           }}
           showSuggestions={showSuggestions}
           setShowSuggestions={setShowSuggestions}
           onSelectSuggestion={onSelectFromSearch}
         />
 
-        {/* Next button under the search (50% width, right-aligned) */}
+        {/* Next button (right, 50% width) */}
         <View style={wiz.footerRow}>
           <Pressable
             onPress={onNext}
@@ -84,32 +129,66 @@ export default function Step01_SelectPlant({
           </Pressable>
         </View>
 
-        {/* Popular plants — simple mapped rows (no FlatList to avoid nested VirtualizedList warning) */}
+        {/* Popular plants (loaded from backend) */}
         <Text style={wiz.sectionTitle}>Popular plants</Text>
-        <View style={{ paddingTop: 6, paddingBottom: 6 }}>
-          {POPULAR_PLANTS.map((item, idx) => (
-            <View key={item.id} style={{ marginBottom: idx === POPULAR_PLANTS.length - 1 ? 0 : 10 }}>
-              <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item.name, item.latin)}>
-                <Image source={{ uri: item.image }} style={wiz.thumb} />
-                <View style={{ flex: 1 }}>
-                  <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
-                  <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
-                  <View style={wiz.tagRow}>
-                    {item.tags.map((icon) => (
-                      <MaterialCommunityIcons
-                        key={icon}
-                        name={icon}
-                        size={16}
-                        color="rgba(255,255,255,0.95)"
-                        style={{ marginRight: 8 }}
-                      />
-                    ))}
+        {loading ? (
+          <View style={{ paddingVertical: 8 }}>
+            <ActivityIndicator />
+          </View>
+        ) : error ? (
+          <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{error}</Text>
+        ) : (
+          <View style={{ paddingTop: 6, paddingBottom: 6 }}>
+            {popular.map((item, idx) => (
+              <View key={item.id} style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}>
+                <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
+                  <Image source={{ uri: item.image }} style={wiz.thumb} />
+                  <View style={{ flex: 1 }}>
+                    <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
+                    <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
+
+                    {/* 3 requirement icons + tiny labels */}
+                    <View style={[wiz.tagRow, { gap: 12 }]}>
+                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+                        <MaterialCommunityIcons
+                          name={SUN_ICON_BY_LEVEL[item.sun]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          {SUN_LABEL_BY_LEVEL[item.sun]}
+                        </Text>
+                      </View>
+
+                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+                        <MaterialCommunityIcons
+                          name={WATER_ICON_BY_LEVEL[item.water]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          {WATER_LABEL_BY_LEVEL[item.water]}
+                        </Text>
+                      </View>
+
+                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+                        <MaterialCommunityIcons
+                          name={DIFFICULTY_ICON_BY_LEVEL[item.difficulty]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          {DIFFICULTY_LABEL_BY_LEVEL[item.difficulty]}
+                        </Text>
+                      </View>
+                    </View>
+
                   </View>
-                </View>
-              </Pressable>
-            </View>
-          ))}
-        </View>
+                </Pressable>
+              </View>
+            ))}
+          </View>
+        )}
       </View>
     </View>
   );
