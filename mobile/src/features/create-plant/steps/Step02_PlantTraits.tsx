@@ -9,6 +9,7 @@ import {
   TRAIT_ICON_BY_KEY,
   TRAIT_LABEL_BY_KEY,
 } from "../constants/create-plant.constants";
+import SafeImage from "../../../shared/ui/SafeImage";
 
 export default function Step02_PlantTraits() {
   const { state, actions } = useCreatePlantWizard();
@@ -19,6 +20,8 @@ export default function Step02_PlantTraits() {
 
   const onPrev = () => actions.goPrev();
   const onNext = () => actions.goNext(); // goes to "location"
+
+  const traits = Array.isArray(profile.traits) ? profile.traits : [];
 
   return (
     <View style={wiz.cardWrap}>

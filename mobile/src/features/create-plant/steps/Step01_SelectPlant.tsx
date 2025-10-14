@@ -8,6 +8,7 @@ import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plants.service";
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
+import SafeImage from "../../../shared/ui/SafeImage";
 
 import {
   SUN_ICON_BY_LEVEL,
@@ -43,18 +44,18 @@ export default function Step01_SelectPlant({
       try {
         setLoadingPopular(true);
         setLoadingSearch(true);
+        // explicitly require auth
         const [popularRes, searchRes] = await Promise.all([
-          fetchPopularPlants(),
-          fetchPlantSearchIndex(),
+          fetchPopularPlants({ auth: true }),
+          fetchPlantSearchIndex({ auth: true }),
         ]);
         if (!mounted) return;
-        setPopular(popularRes as any); // PopularPlant is compatible with PlantDefinition used in service
+        setPopular(popularRes as any);
         setSearchIndex(searchRes);
         setErrorPopular(null);
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        // Services already fall back; if we’re here it’s likely auth/critical
         setErrorPopular(e?.message ?? "Failed to load popular plants.");
         setErrorSearch(e?.message ?? "Failed to load plant list.");
       } finally {
@@ -153,7 +154,7 @@ export default function Step01_SelectPlant({
             {popular.map((item, idx) => (
               <View key={item.id} style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}>
                 <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
-                  <Image source={{ uri: item.image }} style={wiz.thumb} />
+                  <SafeImage uri={item.image} style={wiz.thumb} resizeMode="cover" />
                   <View style={{ flex: 1 }}>
                     <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
                     <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
