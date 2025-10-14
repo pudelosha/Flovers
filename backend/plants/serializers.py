@@ -9,8 +9,10 @@ class PopularPlantSerializer(serializers.ModelSerializer):
         model = Plant
         fields = ["id", "name", "latin", "image", "sun", "water", "difficulty"]
 
-    def get_image(self, obj: Plant) -> str:
-        return obj.image_thumb_url or ""
+    def get_image(self, obj: Plant):
+        # Prefer thumb; fall back to hero; return None if neither
+        url = (obj.image_thumb_url or obj.image_hero_url or "").strip()
+        return url or None
 
 class PlantSuggestionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,5 +27,7 @@ class PlantProfileSerializer(serializers.ModelSerializer):
         model = Plant
         fields = ["id", "name", "latin", "image", "description", "traits"]
 
-    def get_image(self, obj: Plant) -> str:
-        return obj.image_hero_url or ""
+    def get_image(self, obj: Plant):
+        # Prefer hero; fall back to thumb; return None if neither
+        url = (obj.image_hero_url or obj.image_thumb_url or "").strip()
+        return url or None

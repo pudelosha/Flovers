@@ -14,7 +14,7 @@ class PopularPlantsView(APIView):
 
     def get(self, request):
         qs = Plant.objects.filter(popular=True).only(
-            "id","name","latin","image_thumb_url","sun","water","difficulty"
+            "id", "name", "latin", "image_thumb_url", "image_hero_url", "sun", "water", "difficulty"
         )
         data = PopularPlantSerializer(qs, many=True).data
         return Response(data)
@@ -23,7 +23,7 @@ class PlantSearchIndexView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        qs = Plant.objects.all().only("id","name","latin")
+        qs = Plant.objects.all().only("id", "name", "latin")
         data = PlantSuggestionSerializer(qs, many=True).data
         return Response(data)
 

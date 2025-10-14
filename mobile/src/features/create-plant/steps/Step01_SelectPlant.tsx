@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useState } from "react";
-import { View, Text, Pressable, Image, ActivityIndicator } from "react-native";
+import { View, Text, Pressable, ActivityIndicator } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -167,7 +167,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
                           {SUN_LABEL_BY_LEVEL[item.sun]}
                         </Text>
                       </View>
@@ -178,7 +178,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
                           {WATER_LABEL_BY_LEVEL[item.water]}
                         </Text>
                       </View>
@@ -189,7 +189,7 @@ export default function Step01_SelectPlant({
                           size={16}
                           color="rgba(255,255,255,0.95)"
                         />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 10 }}>
                           {DIFFICULTY_LABEL_BY_LEVEL[item.difficulty]}
                         </Text>
                       </View>

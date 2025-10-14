@@ -27,8 +27,8 @@ class Plant(models.Model):
     difficulty = models.CharField(max_length=10, choices=DIFFICULTY_CHOICES)
 
     # fields your working seeder expects
-    image_thumb_url = models.URLField(blank=True, default="")
-    image_hero_url = models.URLField(blank=True, default="")
+    image_thumb_url = models.URLField(blank=True, null=True)  # ← allow nulls, no empty string
+    image_hero_url = models.URLField(blank=True, null=True)   # ← allow nulls, no empty string
     description = models.TextField(blank=True, default="")
     traits = models.JSONField(default=list, blank=True)
 
