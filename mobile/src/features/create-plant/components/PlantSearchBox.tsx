@@ -2,7 +2,8 @@
 import { View, TextInput, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
-import { SUGGESTIONS } from "../constants/create-plant.constants";
+
+type Suggestion = { id: string; name: string; latin: string };
 
 type Props = {
   value: string;
@@ -10,6 +11,8 @@ type Props = {
   showSuggestions: boolean;
   setShowSuggestions: (v: boolean) => void;
   onSelectSuggestion: (name: string, latin?: string) => void;
+  /** Dataset from API (or fallback). Defaults to [] */
+  suggestions?: Suggestion[];
 };
 
 export default function PlantSearchBox({
@@ -18,16 +21,20 @@ export default function PlantSearchBox({
   showSuggestions,
   setShowSuggestions,
   onSelectSuggestion,
+  suggestions = [],
 }: Props) {
-  // Filter mock suggestions (small list; render without FlatList to avoid nested VirtualizedList warning)
+  const q = value.trim().toLowerCase();
+
   const data =
-    value.trim().length === 0
+    q.length === 0
       ? []
-      : SUGGESTIONS.filter(
-          (s) =>
-            s.name.toLowerCase().includes(value.toLowerCase()) ||
-            s.latin.toLowerCase().includes(value.toLowerCase())
-        );
+      : suggestions
+          .filter(
+            (s) =>
+              s.name.toLowerCase().includes(q) ||
+              s.latin.toLowerCase().includes(q)
+          )
+          .slice(0, 20);
 
   return (
     <View style={{ marginTop: 12, marginBottom: 6 }}>
@@ -39,7 +46,7 @@ export default function PlantSearchBox({
           placeholder="Search plant"
           placeholderTextColor="rgba(255,255,255,0.75)"
           style={wiz.input}
-          onFocus={() => setShowSuggestions(!!value.trim())}
+          onFocus={() => setShowSuggestions(q.length > 0)}
           onSubmitEditing={() => setShowSuggestions(false)}
         />
         {!!value && (
@@ -50,12 +57,15 @@ export default function PlantSearchBox({
             }}
             hitSlop={8}
           >
-            <MaterialCommunityIcons name="close-circle" size={18} color="rgba(255,255,255,0.9)" />
+            <MaterialCommunityIcons
+              name="close-circle"
+              size={18}
+              color="rgba(255,255,255,0.9)"
+            />
           </Pressable>
         )}
       </View>
 
-      {/* Suggestions dropdown (no FlatList to avoid nested VirtualizedList warning) */}
       {showSuggestions && data.length > 0 && (
         <View style={wiz.suggestBox}>
           {data.map((item) => (

@@ -6,9 +6,9 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { fetchPopularPlants } from "../../../api/services/plants.service";
-import type { PopularPlant } from "../types/create-plant.types";
-// add to imports
+import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plants.service";
+import type { PopularPlant, Suggestion } from "../types/create-plant.types";
+
 import {
   SUN_ICON_BY_LEVEL,
   WATER_ICON_BY_LEVEL,
@@ -29,29 +29,42 @@ export default function Step01_SelectPlant({
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const [popular, setPopular] = useState<PopularPlant[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [loadingPopular, setLoadingPopular] = useState(true);
+  const [errorPopular, setErrorPopular] = useState<string | null>(null);
 
-  // ---- Load "Popular plants" on mount (from backend) ----
+  const [searchIndex, setSearchIndex] = useState<Suggestion[]>([]);
+  const [loadingSearch, setLoadingSearch] = useState(true);
+  const [errorSearch, setErrorSearch] = useState<string | null>(null);
+
+  // ---- Load both datasets on mount (backend or fallback) ----
   useEffect(() => {
     let mounted = true;
     (async () => {
       try {
-        setLoading(true);
-        const items = await fetchPopularPlants();
-        if (mounted) {
-          setPopular(items);
-          setError(null);
-        }
+        setLoadingPopular(true);
+        setLoadingSearch(true);
+        const [popularRes, searchRes] = await Promise.all([
+          fetchPopularPlants(),
+          fetchPlantSearchIndex(),
+        ]);
+        if (!mounted) return;
+        setPopular(popularRes as any); // PopularPlant is compatible with PlantDefinition used in service
+        setSearchIndex(searchRes);
+        setErrorPopular(null);
+        setErrorSearch(null);
       } catch (e: any) {
-        if (mounted) setError(e?.message ?? "Failed to load popular plants.");
+        if (!mounted) return;
+        // Services already fall back; if we’re here it’s likely auth/critical
+        setErrorPopular(e?.message ?? "Failed to load popular plants.");
+        setErrorSearch(e?.message ?? "Failed to load plant list.");
       } finally {
-        if (mounted) setLoading(false);
+        if (mounted) {
+          setLoadingPopular(false);
+          setLoadingSearch(false);
+        }
       }
     })();
-    return () => {
-      mounted = false;
-    };
+    return () => { mounted = false; };
   }, []);
 
   const onSelectFromSearch = (name: string, latin?: string) => {
@@ -67,14 +80,12 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
-  // 🔵 OPTIONAL STEP BEHAVIOR:
-  // - If a predefined plant was picked -> go to Step 2 ("traits")
-  // - If not selected (empty or free text) -> skip to Step 3 ("location")
+  // Optional step behavior
   const onNext = () => {
     actions.setPlantQuery(query.trim());
     const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
     if (hasPredefined) {
-      actions.goNext(); // Step 2: traits (summary of selected plant)
+      actions.goNext(); // Step 2
     } else {
       actions.goTo("location"); // skip Step 2
     }
@@ -101,21 +112,21 @@ export default function Step01_SelectPlant({
           Optional step — you can pick a known plant to auto-prefill care, or just continue.
         </Text>
 
-        {/* Search */}
+        {/* Search (now fed from backend/fallback) */}
         <PlantSearchBox
           value={query}
           onChange={(t) => {
             setQuery(t);
             setShowSuggestions(!!t.trim());
-            // Free typing shouldn't mark a "predefined" selection
             if (!t.trim()) actions.setSelectedPlant(undefined);
           }}
           showSuggestions={showSuggestions}
           setShowSuggestions={setShowSuggestions}
           onSelectSuggestion={onSelectFromSearch}
+          suggestions={searchIndex}
         />
 
-        {/* Next button (right, 50% width) */}
+        {/* Next button */}
         <View style={wiz.footerRow}>
           <Pressable
             onPress={onNext}
@@ -129,14 +140,14 @@ export default function Step01_SelectPlant({
           </Pressable>
         </View>
 
-        {/* Popular plants (loaded from backend) */}
+        {/* Popular plants */}
         <Text style={wiz.sectionTitle}>Popular plants</Text>
-        {loading ? (
+        {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
             <ActivityIndicator />
           </View>
-        ) : error ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{error}</Text>
+        ) : errorPopular ? (
+          <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{errorPopular}</Text>
         ) : (
           <View style={{ paddingTop: 6, paddingBottom: 6 }}>
             {popular.map((item, idx) => (
@@ -188,6 +199,13 @@ export default function Step01_SelectPlant({
               </View>
             ))}
           </View>
+        )}
+
+        {/* (Optional) show an error about search list */}
+        {errorSearch && (
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>
+            {errorSearch}
+          </Text>
         )}
       </View>
     </View>
