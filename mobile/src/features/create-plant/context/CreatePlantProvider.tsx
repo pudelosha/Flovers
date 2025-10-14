@@ -88,10 +88,12 @@ const initial: WizardState = {
   displayName: "",
   notes: "",
   purchaseDateISO: undefined,
+
+  // Step 9
+  createdPlantId: undefined,
 };
 
-// 🔵 ORDER: keep “photo” as Step 7 and place “name” right after it (Step 8).
-// (distance becomes Step 9, still fine if unimplemented)
+// 🔵 ORDER: Step 9 = "creating", then we can go to "summary" (and keep "distance" after if you want).
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
@@ -99,10 +101,11 @@ const ORDER: WizardStep[] = [
   "exposure",
   "potType",
   "autoTasks",
-  "photo",     // Step 7
-  "name",      // Step 8
-  "distance",  // Step 9 (can show fallback)
-  "summary",
+  "photo",      // 7
+  "name",       // 8
+  "creating",   // 9
+  "summary",    // 10 (target after creation)
+  "distance",   // 11 (still available if you keep it)
 ];
 
 function reducer(state: WizardState, action: Action): WizardState {
@@ -234,6 +237,9 @@ const Ctx = createContext<{
     setDisplayName: (v: string) => void;
     setNotes: (v: string) => void;
     setPurchaseDateISO: (v?: string) => void;
+
+    // Step 9
+    createPlant: () => Promise<string>;
   };
 } | null>(null);
 
@@ -243,6 +249,19 @@ function id() {
 
 export function CreatePlantProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initial);
+
+  // 🔵 Simulated backend create; replace with your API call later.
+  async function createPlant(): Promise<string> {
+    // Build a payload if needed from state
+    // const payload = { ...state };
+    // const resp = await api.createPlant(payload);
+    // const newId = resp.id;
+    const newId = `plant_${Date.now()}`; // mock id
+    // Simulate network delay
+    await new Promise(r => setTimeout(r, 1200));
+    dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
+    return newId;
+  }
 
   const actions = useMemo(
     () => ({
@@ -287,6 +306,9 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setDisplayName: (v: string) => dispatch({ type: "SET_DISPLAY_NAME", val: v }),
       setNotes: (v: string) => dispatch({ type: "SET_NOTES", val: v }),
       setPurchaseDateISO: (v?: string) => dispatch({ type: "SET_PURCHASE_DATE_ISO", val: v }),
+
+      // Step 9
+      createPlant,
     }),
     []
   );

@@ -9,6 +9,7 @@ export type WizardStep =
   | "autoTasks"
   | "photo"      // Step 7
   | "name"       // Step 8
+  | "creating"   // Step 9
   | "distance"
   | "summary";
 
@@ -121,11 +122,14 @@ export type WizardState = {
   // Step 7 – Photo (local-only)
   photoUri?: string;
 
-  // 🔵 Step 8 – Name & Notes
+  // Step 8 – Name & Notes
   displayName?: string;
   notes?: string;
   /** ISO string "YYYY-MM-DD" (local) */
   purchaseDateISO?: string;
+
+  // Step 9 – Creating result
+  createdPlantId?: string;
 };
 
 export type PopularPlant = {

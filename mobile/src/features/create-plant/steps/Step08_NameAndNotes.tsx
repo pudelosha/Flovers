@@ -6,11 +6,9 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
-// Optional datetime picker (graceful fallback if not installed)
+// Optional datetime picker
 let DateTimePicker: any = null;
-try {
-  DateTimePicker = require("@react-native-community/datetimepicker").default;
-} catch {}
+try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
 
 function toISODate(d: Date) {
   const y = d.getFullYear();
@@ -18,13 +16,10 @@ function toISODate(d: Date) {
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
 }
-
 function parseISODate(s: string): Date | null {
-  // Accept strict YYYY-MM-DD
   if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
   const [y, m, d] = s.split("-").map(Number);
   const dt = new Date(y, m - 1, d);
-  // Basic sanity: month rollover & not future
   if (dt.getFullYear() !== y || dt.getMonth() !== m - 1 || dt.getDate() !== d) return null;
   if (dt.getTime() > Date.now()) return null;
   return dt;
@@ -33,12 +28,9 @@ function parseISODate(s: string): Date | null {
 export default function Step08_NameAndNotes() {
   const { state, actions } = useCreatePlantWizard();
   const [showPicker, setShowPicker] = useState(false);
-
-  // Fallback modal state
   const [fallbackOpen, setFallbackOpen] = useState(false);
   const [fallbackDate, setFallbackDate] = useState(state.purchaseDateISO ?? "");
 
-  // Autofill suggestion from selected plant
   const placeholderName = useMemo(() => {
     return state.displayName && state.displayName.length > 0
       ? undefined
@@ -47,44 +39,26 @@ export default function Step08_NameAndNotes() {
 
   const onChangeDateNative = (_: any, date?: Date) => {
     if (Platform.OS === "android") setShowPicker(false);
-    if (date) {
-      actions.setPurchaseDateISO(toISODate(date));
-    }
+    if (date) actions.setPurchaseDateISO(toISODate(date));
   };
-
   const openPurchaseDate = () => {
-    if (DateTimePicker) {
-      setShowPicker(true);
-    } else {
-      // Fallback modal
-      setFallbackDate(state.purchaseDateISO ?? "");
-      setFallbackOpen(true);
-    }
+    if (DateTimePicker) setShowPicker(true);
+    else { setFallbackDate(state.purchaseDateISO ?? ""); setFallbackOpen(true); }
   };
-
   const onFallbackSave = () => {
-    if (!fallbackDate) {
-      actions.setPurchaseDateISO(undefined);
-      setFallbackOpen(false);
-      return;
-    }
+    if (!fallbackDate) { actions.setPurchaseDateISO(undefined); setFallbackOpen(false); return; }
     const dt = parseISODate(fallbackDate.trim());
-    if (!dt) {
-      Alert.alert("Invalid date", "Please enter a valid date in the format YYYY-MM-DD.");
-      return;
-    }
-    actions.setPurchaseDateISO(toISODate(dt));
-    setFallbackOpen(false);
+    if (!dt) { Alert.alert("Invalid date", "Please enter a valid date in the format YYYY-MM-DD."); return; }
+    actions.setPurchaseDateISO(toISODate(dt)); setFallbackOpen(false);
   };
 
   const onCreate = () => {
-    // TODO: integrate backend creation + navigate to plant details screen
-    actions.goNext();
+    // Navigate to Step 9 (creating). The Step 9 page triggers the backend call.
+    actions.goTo("creating");
   };
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass layer */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -92,10 +66,7 @@ export default function Step08_NameAndNotes() {
           blurAmount={10}
           reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -104,7 +75,6 @@ export default function Step08_NameAndNotes() {
           Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age.
         </Text>
 
-        {/* Display name */}
         <Text style={wiz.sectionTitle}>Display name</Text>
         <TextInput
           placeholderTextColor="rgba(255,255,255,0.6)"
@@ -114,7 +84,6 @@ export default function Step08_NameAndNotes() {
           style={wiz.inputField}
         />
 
-        {/* Notes (multiline) */}
         <Text style={wiz.sectionTitle}>Notes</Text>
         <TextInput
           placeholderTextColor="rgba(255,255,255,0.6)"
@@ -125,7 +94,6 @@ export default function Step08_NameAndNotes() {
           multiline
         />
 
-        {/* Purchase date */}
         <Text style={wiz.sectionTitle}>Purchase date (optional)</Text>
         <Pressable style={wiz.selectField} onPress={openPurchaseDate}>
           <Text style={wiz.selectValue}>{state.purchaseDateISO ?? "Not set"}</Text>
@@ -137,11 +105,7 @@ export default function Step08_NameAndNotes() {
         {showPicker && DateTimePicker && (
           <View style={{ marginBottom: 10 }}>
             <DateTimePicker
-              value={
-                state.purchaseDateISO
-                  ? new Date(state.purchaseDateISO + "T00:00:00")
-                  : new Date()
-              }
+              value={state.purchaseDateISO ? new Date(state.purchaseDateISO + "T00:00:00") : new Date()}
               mode="date"
               display={Platform.OS === "ios" ? "inline" : "default"}
               onChange={onChangeDateNative}
@@ -157,19 +121,13 @@ export default function Step08_NameAndNotes() {
           </View>
         )}
 
-        {/* Fallback modal if @react-native-community/datetimepicker is not installed */}
         {fallbackOpen && (
           <>
             <View style={wiz.backdrop} />
             <View style={wiz.promptWrap}>
               <View style={[wiz.promptInnerFull]}>
                 <View style={wiz.cardGlass} />
-                <BlurView
-                  style={wiz.promptGlass as any}
-                  blurType="light"
-                  blurAmount={12}
-                  reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
-                />
+                <BlurView style={wiz.promptGlass as any} blurType="light" blurAmount={12} reducedTransparencyFallbackColor="rgba(255,255,255,0.15)" />
                 <View style={wiz.promptScroll}>
                   <Text style={wiz.promptTitle}>Set purchase date</Text>
                   <TextInput
@@ -193,7 +151,6 @@ export default function Step08_NameAndNotes() {
           </>
         )}
 
-        {/* Prev / Create */}
         <View style={wiz.footerRowSplit}>
           <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={actions.goPrev}>
             <Text style={wiz.splitBtnText}>Previous</Text>
