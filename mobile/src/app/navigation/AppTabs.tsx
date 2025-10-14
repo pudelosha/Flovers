@@ -36,6 +36,15 @@ export type AppTabParamList = {
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
 
+// 🔹 Map hidden child routes to the tab that should appear active
+const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
+  CreatePlantWizard: "Plants",
+  PlantDetails: "Plants",
+  AddReminder: "Reminders",
+  // If you want Scanner presses to keep Plants selected, map it too:
+  // Scanner: "Plants",
+};
+
 // Semi-transparent horizontal gradient
 const TAB_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"]; // left -> right
 const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)"; // fallback if gradient lib missing
@@ -66,7 +75,10 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     "AddReminder",
   ]);
   const visibleRoutes = state.routes.filter((r: any) => !HIDDEN.has(r.name));
-  const activeIsHidden = HIDDEN.has(state.routes[state.index]?.name);
+
+  // 🔹 Determine which tab should appear active, even if current route is hidden
+  const activeRouteName: string | undefined = state.routes[state.index]?.name;
+  const parentTabName: string = (activeRouteName && PARENT_FOR_ROUTE[activeRouteName]) || activeRouteName || "Home";
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
@@ -95,8 +107,9 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 
         <View style={s.tabInner}>
           {visibleRoutes.map((route: any) => {
-            const originalIndex = state.routes.findIndex((r: any) => r.key === route.key);
-            const isFocused = !activeIsHidden && state.index === originalIndex;
+            // ✅ Mark tab focused if it's the parent of the current hidden route,
+            // or if it's the actual active visible route
+            const isFocused = route.name === parentTabName;
 
             const onPress = () => {
               const event = navigation.emit({
