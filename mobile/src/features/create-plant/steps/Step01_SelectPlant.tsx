@@ -2,6 +2,7 @@
 import { View, Text, Pressable, ActivityIndicator } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -24,6 +25,7 @@ export default function Step01_SelectPlant({
 }: {
   onScrollToTop: () => void;
 }) {
+  const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
   const [query, setQuery] = useState(state.plantQuery || "");
@@ -37,7 +39,6 @@ export default function Step01_SelectPlant({
   const [loadingSearch, setLoadingSearch] = useState(true);
   const [errorSearch, setErrorSearch] = useState<string | null>(null);
 
-  // ---- Load both datasets on mount (backend or fallback) ----
   useEffect(() => {
     let mounted = true;
     (async () => {
@@ -64,14 +65,16 @@ export default function Step01_SelectPlant({
         }
       }
     })();
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const onSelectFromSearch = (item: Suggestion) => {
     setQuery(item.name);
     setShowSuggestions(false);
     actions.setSelectedPlant({
-      id: item.id,             // ← store id
+      id: item.id,
       name: item.name,
       latin: item.latin,
       predefined: true,
@@ -80,9 +83,9 @@ export default function Step01_SelectPlant({
 
   const onPickPopular = (item: PopularPlant) => {
     setQuery(item.name);
-    setShowSuggestions(false); // do not open dropdown
+    setShowSuggestions(false);
     actions.setSelectedPlant({
-      id: item.id,             // ← store id
+      id: item.id,
       name: item.name,
       latin: item.latin,
       predefined: true,
@@ -90,7 +93,6 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
-  // Optional step behavior
   const onNext = () => {
     actions.setPlantQuery(query.trim());
     const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
@@ -122,19 +124,45 @@ export default function Step01_SelectPlant({
           Optional step — you can pick a known plant to auto-prefill care, or just continue.
         </Text>
 
-        {/* Search (now fed from backend/fallback) */}
-        <PlantSearchBox
-          value={query}
-          onChange={(t) => {
-            setQuery(t);
-            setShowSuggestions(!!t.trim());
-            if (!t.trim()) actions.setSelectedPlant(undefined);
-          }}
-          showSuggestions={showSuggestions}
-          setShowSuggestions={setShowSuggestions}
-          onSelectSuggestion={onSelectFromSearch}
-          suggestions={searchIndex}
-        />
+        {/* Scan + Search row (compact 48px height) */}
+        <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, marginBottom: 6 }}>
+          {/* Scan Plant button (no text) */}
+          <Pressable
+            onPress={() => navigation.navigate("Scanner")}
+            style={{
+              width: 48,
+              height: 48,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 12,
+              backgroundColor: "rgba(255,255,255,0.16)",
+              borderWidth: 1,
+              borderColor: "rgba(255,255,255,0.25)",
+            }}
+            android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
+            accessibilityRole="button"
+            accessibilityLabel="Scan Plant"
+          >
+            <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
+          </Pressable>
+
+          {/* Search (compact) */}
+          <View style={{ flex: 1 }}>
+            <PlantSearchBox
+              compact
+              value={query}
+              onChange={(t) => {
+                setQuery(t);
+                setShowSuggestions(!!t.trim());
+                if (!t.trim()) actions.setSelectedPlant(undefined);
+              }}
+              showSuggestions={showSuggestions}
+              setShowSuggestions={setShowSuggestions}
+              onSelectSuggestion={onSelectFromSearch}
+              suggestions={searchIndex}
+            />
+          </View>
+        </View>
 
         {/* Next button */}
         <View style={wiz.footerRow}>
@@ -143,7 +171,15 @@ export default function Step01_SelectPlant({
             style={[wiz.nextBtnWide, { width: "50%", alignSelf: "flex-end", paddingHorizontal: 14 }]}
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: 8,
+                width: "100%",
+              }}
+            >
               <Text style={wiz.nextBtnText}>Next</Text>
               <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
             </View>
@@ -165,8 +201,12 @@ export default function Step01_SelectPlant({
                 <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
                   <SafeImage uri={item.image} style={wiz.thumb} resizeMode="cover" />
                   <View style={{ flex: 1 }}>
-                    <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
-                    <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
+                    <Text style={wiz.rowName} numberOfLines={1}>
+                      {item.name}
+                    </Text>
+                    <Text style={wiz.rowLatin} numberOfLines={1}>
+                      {item.latin}
+                    </Text>
 
                     {/* 3 requirement icons + tiny labels */}
                     <View style={[wiz.tagRow, { gap: 12 }]}>
@@ -203,7 +243,6 @@ export default function Step01_SelectPlant({
                         </Text>
                       </View>
                     </View>
-
                   </View>
                 </Pressable>
               </View>
@@ -213,9 +252,7 @@ export default function Step01_SelectPlant({
 
         {/* (Optional) show an error about search list */}
         {errorSearch && (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>
-            {errorSearch}
-          </Text>
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>{errorSearch}</Text>
         )}
       </View>
     </View>
