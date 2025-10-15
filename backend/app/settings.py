@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # local
     "accounts",
     "plants",
+    "locations",
 ]
 
 MIDDLEWARE = [

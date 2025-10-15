@@ -12,7 +12,7 @@
   | "summary";
 
 export type SelectedPlant = {
-  id?: string;      // ← NEW: store backend id when user picks a predefined plant
+  id?: string;      // backend id stored as string in state
   name?: string;
   latin?: string;
   predefined?: boolean;
@@ -24,7 +24,7 @@ export type LocationCategory = "indoor" | "outdoor" | "other";
 export type LightLevel = "bright-direct" | "bright-indirect" | "medium" | "low" | "very-low";
 export type Orientation = "N" | "E" | "S" | "W";
 
-/**  container & soil types */
+/** container & soil types */
 export type PotMaterial =
   | "unspecified"
   | "plastic"
@@ -63,13 +63,24 @@ export type SoilMix =
   | "sand-soil-2-1"
   | "perlite-heavy";
 
+/** Location kept in wizard state. NOTE: id is string in state. */
 export type UserLocation = {
   id: string;
   name: string;
   category: LocationCategory;
 };
 
-/** Auto-task helper types */
+/** Backend shape for locations (what the API returns/accepts) */
+export type ApiLocation = {
+  id: number;
+  name: string;
+  category: LocationCategory;
+};
+export type CreateLocationPayload = {
+  name: string;
+  category: LocationCategory;
+};
+
 export type LastWatered =
   | "today"
   | "yesterday"
@@ -92,7 +103,8 @@ export type WizardState = {
 
   // Step 3
   locations: UserLocation[];
-  selectedLocationId?: string;
+  /** string id if selected; null = explicitly none selected */
+  selectedLocationId: string | null;
 
   // Step 4 – Exposure
   lightLevel: LightLevel;
@@ -137,18 +149,17 @@ export type WaterRequirement = "low" | "medium" | "high";
 export type DifficultyLevel = "easy" | "medium" | "hard";
 
 export type PopularPlant = {
-  id: string;
+  id: string;             // state uses string ids; serialize API ids to string
   name: string;
   latin: string;
   image: string;
-  /** NEW — used for the 3 small icons */
   sun: SunRequirement;
   water: WaterRequirement;
   difficulty: DifficultyLevel;
 };
 
 export type Suggestion = {
-  id: string;
+  id: string;             // serialize API numeric id to string for state
   name: string;
   latin: string;
 };
@@ -158,7 +169,6 @@ export type PlantTrait = {
   value: string; // human text shown in UI
 };
 
-// Full profile used by Step 2
 export type PlantProfile = {
   id?: string;          // optional; useful when fetched by id
   name?: string;        // optional; useful when fetched by name

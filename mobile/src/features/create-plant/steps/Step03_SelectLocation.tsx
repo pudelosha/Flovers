@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
@@ -7,6 +7,7 @@ import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { LocationCategory } from "../types/create-plant.types";
 import AddLocationModal from "../components/modals/AddLocationModal";
+import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
 
 export default function Step03_SelectLocation({
   onScrollTop,
@@ -15,6 +16,57 @@ export default function Step03_SelectLocation({
 }) {
   const { state, actions } = useCreatePlantWizard();
   const [modalOpen, setModalOpen] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  // Keep a ref of the latest locations so we can reliably find the new one after add
+  const locationsRef = useRef(state.locations);
+  useEffect(() => {
+    locationsRef.current = state.locations;
+  }, [state.locations]);
+
+  // Ensure nothing is pre-selected when arriving at Step 3
+  useEffect(() => {
+    actions.selectLocation(""); // clear any previous selection
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Load user locations from backend when this page is shown
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        setErrorMsg(null);
+        const remote = await fetchUserLocations({ auth: true });
+
+        // Merge into wizard state without duplicates (case-insensitive by name)
+        const existing = new Map(
+          state.locations.map((l) => [l.name.trim().toLowerCase(), l])
+        );
+        remote.forEach((r) => {
+          const key = r.name.trim().toLowerCase();
+          if (!existing.has(key)) {
+            // pass through id IF your reducer accepts it; if not, it will ignore it
+            actions.addLocation(r.name, r.category as LocationCategory, String(r.id));
+          }
+        });
+
+        // Guarantee NONE is selected on initial load
+        actions.selectLocation("");
+
+      } catch (e: any) {
+        setErrorMsg(e?.message ?? "Failed to load locations.");
+      } finally {
+        mounted && setLoading(false);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const grouped = useMemo(() => {
     return {
@@ -25,17 +77,50 @@ export default function Step03_SelectLocation({
   }, [state.locations]);
 
   const openCreate = () => {
+    setErrorMsg(null);
     setModalOpen(true);
     onScrollTop?.();
   };
 
-  const onCreate = (name: string, cat: LocationCategory) => {
-    actions.addLocation(name, cat);
-    setModalOpen(false);
+  // Create on backend first, then mirror into wizard state (avoids duplicates)
+  const onCreate = async (name: string, cat: LocationCategory) => {
+    const norm = name.trim().toLowerCase();
+
+    // local duplicate guard (case-insensitive)
+    if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
+      setErrorMsg("Location with this name already exists.");
+      setModalOpen(false);
+      return;
+    }
+
+    try {
+      setErrorMsg(null);
+      const created = await createLocation({ name, category: cat }, { auth: true });
+
+      // Add into wizard state (reducer may replace/ignore id — that's fine)
+      actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
+
+      // ✅ Robust auto-select:
+      setTimeout(() => {
+        const match = locationsRef.current.find(
+          (l) =>
+            l.name.trim().toLowerCase() === created.name.trim().toLowerCase() &&
+            l.category === created.category
+        );
+        if (match?.id) {
+          actions.selectLocation(String(match.id));
+        }
+      }, 0);
+
+      setModalOpen(false);
+      onScrollTop?.();
+    } catch (e: any) {
+      setErrorMsg(e?.message ?? "Could not create location.");
+    }
   };
 
-  const onPickExisting = (id: string) => {
-    actions.selectLocation(id);
+  const onPickExisting = (id: string | number) => {
+    actions.selectLocation(String(id)); // normalize
     onScrollTop?.();
   };
 
@@ -63,55 +148,105 @@ export default function Step03_SelectLocation({
           Optional but helpful: locations let you group plants and later sort or filter them.
         </Text>
 
-        <Pressable style={wiz.actionFull} onPress={openCreate}>
+        {errorMsg && (
+          <Text style={{ color: "#ffdddd", fontWeight: "700", marginBottom: 6 }}>
+            {errorMsg}
+          </Text>
+        )}
+
+        <Pressable style={wiz.actionFull} onPress={openCreate} disabled={loading}>
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
           <Text style={wiz.actionText}>Create new location</Text>
         </Pressable>
 
         {/* Prev / Next under the button */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-        {/* Previous (left aligned, left arrow) */}
-        <Pressable
-            style={[wiz.btn, { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 }]}
+          {/* Previous (left aligned, left arrow) */}
+          <Pressable
+            style={[
+              wiz.btn,
+              { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 },
+            ]}
             onPress={() => actions.goPrev()}
-        >
+          >
             <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
             <Text style={wiz.btnText}>Previous</Text>
-        </Pressable>
+          </Pressable>
 
-        {/* Next (right aligned text + right arrow) */}
-        <Pressable
+          {/* Next (right aligned text + right arrow) */}
+          <Pressable
             style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
             onPress={() => actions.goNext()}
             disabled={nextDisabled}
-        >
+          >
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
-            <Text style={wiz.btnText}>Next</Text>
-            <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+              <Text style={wiz.btnText}>Next</Text>
+              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
             </View>
-        </Pressable>
+          </Pressable>
         </View>
 
         {/* User-defined locations only */}
-        <Text style={wiz.sectionTitle}>Your locations</Text>
-        {(["indoor","outdoor","other"] as LocationCategory[]).map((cat) => {
+        <Text
+          style={[
+            wiz.sectionTitle,
+            { marginBottom: 12, marginTop: 18 }, // tiny bit more space under "Your locations"
+          ]}
+        >
+          Your locations
+        </Text>
+
+        {(["indoor", "outdoor", "other"] as LocationCategory[]).map((cat) => {
           const arr = grouped[cat];
           return (
             <View key={cat} style={{ marginBottom: 8 }}>
-              <Text style={wiz.locationCat}>{cat[0].toUpperCase() + cat.slice(1)}</Text>
+              {/* Category: bold + italic + faint underline */}
+              <View style={{ marginBottom: 5 }}>
+                <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
+                  {cat[0].toUpperCase() + cat.slice(1)}
+                </Text>
+                <View
+                  style={{
+                    height: 1,
+                    backgroundColor: "rgba(255,255,255,0.18)",
+                    marginTop: 4,
+                  }}
+                />
+              </View>
+
               {arr.length === 0 ? (
                 <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
-                  No {cat} locations yet.
+                  {loading ? "Loading…" : `No ${cat} locations yet.`}
                 </Text>
               ) : (
-                arr.map((l) => (
-                  <Pressable key={l.id} style={wiz.locationRow} onPress={() => onPickExisting(l.id)}>
-                    <Text style={wiz.locationName}>{l.name}</Text>
-                    {state.selectedLocationId === l.id && (
-                      <MaterialCommunityIcons name="check-circle" size={18} color="#FFFFFF" />
-                    )}
-                  </Pressable>
-                ))
+                arr.map((l) => {
+                  const isSelected = String(state.selectedLocationId) === String(l.id);
+                  return (
+                    <Pressable
+                      key={String(l.id)}
+                      onPress={() => onPickExisting(l.id)}
+                      style={[
+                        wiz.locationRow,
+                        {
+                          borderBottomWidth: 0, // remove underline for items
+                          paddingVertical: 6,   // slightly less vertical space
+                        },
+                      ]}
+                    >
+                      <Text
+                        style={[
+                          wiz.locationName,
+                          { fontWeight: isSelected ? "900" : "500" }, // selected = bold, others lighter
+                        ]}
+                      >
+                        {l.name}
+                      </Text>
+                      {isSelected && (
+                        <MaterialCommunityIcons name="check-circle" size={18} color="#FFFFFF" />
+                      )}
+                    </Pressable>
+                  );
+                })
               )}
             </View>
           );
