@@ -188,3 +188,46 @@ export type PlantDefinition = {
   difficulty: DifficultyLevel;
   popular: boolean;           // popular items come as true from the endpoint
 };
+
+// ---- Plant Instance API payload/response ----
+export type ApiPlantInstanceCreatePayload = {
+  plant_definition_id: number | null;
+  location_id: number;
+
+  display_name: string;
+  notes: string;
+  purchase_date: string | null; // "YYYY-MM-DD" or null
+  photo_uri: string;
+
+  light_level: LightLevel;
+  orientation: Orientation;
+  distance_cm: number;
+
+  pot_material: string; // keep free text key
+  soil_mix: string;     // keep free text key
+
+  create_auto_tasks: boolean;
+  water_task_enabled: boolean;
+  repot_task_enabled: boolean;
+  moisture_required: boolean;
+  fertilize_required: boolean;
+  care_required: boolean;
+
+  last_watered: LastWatered | "" | undefined;
+  last_repotted: LastRepotted | "" | undefined;
+
+  moisture_interval_days: number | null;
+  fertilize_interval_days: number | null;
+  care_interval_days: number | null;
+  repot_interval_months: number | null;
+};
+
+export type ApiPlantInstance = {
+  id: number;
+  // the same fields may be echoed back; we keep it loose for now
+  plant_definition_id: number | null;
+  location_id: number;
+  created_at: string;
+  updated_at: string;
+};
+

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # local
     "accounts",
     "plant_definitions",
+    "plant_instances",
     "locations",
 ]
 

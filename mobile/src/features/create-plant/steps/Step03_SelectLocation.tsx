@@ -101,7 +101,7 @@ export default function Step03_SelectLocation({
       // Add into wizard state (reducer may replace/ignore id — that's fine)
       actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
 
-      // ✅ Robust auto-select:
+      // Robust auto-select:
       setTimeout(() => {
         const match = locationsRef.current.find(
           (l) =>

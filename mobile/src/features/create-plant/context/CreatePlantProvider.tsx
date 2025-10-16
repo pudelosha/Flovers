@@ -1,5 +1,13 @@
 ﻿// context/CreatePlantProvider.tsx
-import React, { createContext, useContext, useMemo, useReducer } from "react";
+import React, {
+  createContext,
+  useContext,
+  useMemo,
+  useReducer,
+  useCallback,
+  useRef,
+  useEffect,
+} from "react";
 import type {
   WizardState,
   SelectedPlant,
@@ -13,6 +21,7 @@ import type {
   LastWatered,
   LastRepotted,
 } from "../types/create-plant.types";
+import { createPlantInstance } from "../../../api/services/plant-instances.service";
 
 type Action =
   | { type: "SET_QUERY"; query: string }
@@ -56,7 +65,7 @@ const initial: WizardState = {
   selectedPlant: undefined,
 
   locations: [],
-  selectedLocationId: undefined,
+  selectedLocationId: null, // ✅ must be null (not undefined) per type
 
   // Step 4 defaults
   lightLevel: "bright-indirect",
@@ -93,7 +102,7 @@ const initial: WizardState = {
   createdPlantId: undefined,
 };
 
-// 🔵 ORDER: Step 9 = "creating", then we can go to "summary" (and keep "distance" after if you want).
+// 🔵 ORDER: Step 9 = "creating", then we can go to "summary"
 const ORDER: WizardStep[] = [
   "selectPlant",
   "traits",
@@ -104,8 +113,8 @@ const ORDER: WizardStep[] = [
   "photo",      // 7
   "name",       // 8
   "creating",   // 9
-  "summary",    // 10 (target after creation)
-  "distance",   // 11 (still available if you keep it)
+  "summary",    // 10
+  "distance",   // 11
 ];
 
 function reducer(state: WizardState, action: Action): WizardState {
@@ -131,7 +140,11 @@ function reducer(state: WizardState, action: Action): WizardState {
       return { ...state, ...action.patch };
 
     case "ADD_LOCATION":
-      return { ...state, locations: [...state.locations, action.loc], selectedLocationId: action.loc.id };
+      return {
+        ...state,
+        locations: [...state.locations, action.loc],
+        selectedLocationId: action.loc.id,
+      };
     case "SELECT_LOCATION":
       return { ...state, selectedLocationId: action.id };
 
@@ -205,7 +218,7 @@ const Ctx = createContext<{
     reset: () => void;
     patch: (patch: Partial<WizardState>) => void;
 
-    addLocation: (name: string, category: LocationCategory) => void;
+    addLocation: (name: string, category: LocationCategory, idOverride?: string) => void;
     selectLocation: (id: string) => void;
 
     setLightLevel: (level: LightLevel) => void;
@@ -243,26 +256,34 @@ const Ctx = createContext<{
   };
 } | null>(null);
 
-function id() {
+function genId() {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
 export function CreatePlantProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initial);
 
-  // 🔵 Simulated backend create; replace with your API call later.
-  async function createPlant(): Promise<string> {
-    // Build a payload if needed from state
-    // const payload = { ...state };
-    // const resp = await api.createPlant(payload);
-    // const newId = resp.id;
-    const newId = `plant_${Date.now()}`; // mock id
-    // Simulate network delay
-    await new Promise(r => setTimeout(r, 1200));
+  // Keep a ref to latest state so createPlant can be stable but still use fresh data
+  const stateRef = useRef(state);
+  useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
+
+  // ✅ Stable function: no deps; reads latest state from ref.
+  const createPlant = useCallback(async (): Promise<string> => {
+    const s = stateRef.current;
+
+    if (!s.selectedLocationId) {
+      throw new Error("Location is required to create a plant.");
+    }
+
+    const created = await createPlantInstance(s, { auth: true });
+    const newId = String(created.id);
     dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
     return newId;
-  }
+  }, []);
 
+  // All other actions are dispatch-only and can be stable
   const actions = useMemo(
     () => ({
       setPlantQuery: (q: string) => dispatch({ type: "SET_QUERY", query: q }),
@@ -273,8 +294,8 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       reset: () => dispatch({ type: "RESET" }),
       patch: (patch: Partial<WizardState>) => dispatch({ type: "PATCH", patch }),
 
-      addLocation: (name: string, category: LocationCategory) =>
-        dispatch({ type: "ADD_LOCATION", loc: { id: id(), name, category } }),
+      addLocation: (name: string, category: LocationCategory, idOverride?: string) =>
+        dispatch({ type: "ADD_LOCATION", loc: { id: idOverride ?? genId(), name, category } }),
       selectLocation: (locId: string) => dispatch({ type: "SELECT_LOCATION", id: locId }),
 
       setLightLevel: (level: LightLevel) => dispatch({ type: "SET_LIGHT", val: level }),
@@ -284,7 +305,6 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setPotMaterial: (m?: PotMaterial) => dispatch({ type: "SET_POT_MATERIAL", val: m }),
       setSoilMix: (m?: SoilMix) => dispatch({ type: "SET_SOIL_MIX", val: m }),
 
-      // Step 6
       setCreateAutoTasks: (v: boolean) => dispatch({ type: "SET_CREATE_AUTO", val: v }),
       setWaterTaskEnabled: (v: boolean) => dispatch({ type: "SET_WATER_TASK_ENABLED", val: v }),
       setRepotTaskEnabled: (v: boolean) => dispatch({ type: "SET_REPOT_TASK_ENABLED", val: v }),
@@ -298,19 +318,16 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
       setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
 
-      // Step 7
       setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
       clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
 
-      // Step 8
       setDisplayName: (v: string) => dispatch({ type: "SET_DISPLAY_NAME", val: v }),
       setNotes: (v: string) => dispatch({ type: "SET_NOTES", val: v }),
       setPurchaseDateISO: (v?: string) => dispatch({ type: "SET_PURCHASE_DATE_ISO", val: v }),
 
-      // Step 9
       createPlant,
     }),
-    []
+    [createPlant]
   );
 
   return <Ctx.Provider value={{ state, actions }}>{children}</Ctx.Provider>;

@@ -1,7 +1,7 @@
 ﻿// steps/Step09_Creating.tsx
 import React, { useEffect, useRef, useState } from "react";
 import { View, Text } from "react-native";
-import { useNavigation, CommonActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
@@ -21,10 +21,16 @@ export default function Step09_Creating() {
   const [status, setStatus] = useState<"creating" | "success">("creating");
   const lottieRef = useRef<any>(null);
 
+  // one-shot guard to prevent multiple POSTs even if the effect re-runs
+  const startedRef = useRef(false);
+
   useEffect(() => {
     let mounted = true;
 
     const run = async () => {
+      if (startedRef.current) return; // ✅ guard
+      startedRef.current = true;
+
       setStatus("creating");
       try {
         await actions.createPlant(); // call backend in provider
@@ -34,14 +40,7 @@ export default function Step09_Creating() {
         // Navigate to Plants tab after ~2.5s
         setTimeout(() => {
           if (!mounted) return;
-
-          // Simple: go to the Plants tab
           navigation.navigate(PLANTS_ROUTE_NAME);
-
-          // If you prefer to clear the wizard from history, use a reset instead:
-          // navigation.dispatch(
-          //   CommonActions.reset({ index: 0, routes: [{ name: PLANTS_ROUTE_NAME }] })
-          // );
         }, 2500);
       } catch (e) {
         console.error("Create plant failed", e);
