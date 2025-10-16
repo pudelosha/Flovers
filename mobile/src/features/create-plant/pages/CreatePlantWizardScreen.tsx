@@ -21,6 +21,22 @@ import Step07_Photo from "../steps/Step07_Photo";
 import Step08_NameAndNotes from "../steps/Step08_NameAndNotes";
 import Step09_Creating from "../steps/Step09_Creating";
 
+/** Resets the wizard state every time the screen gains focus. */
+function ResetOnFocus() {
+  const { actions } = useCreatePlantWizard();
+  const scrollRef = useRef<ScrollView | null>(null); // only to satisfy TS in WizardBody; noop here
+
+  useFocusEffect(
+    React.useCallback(() => {
+      // Hard reset to initial (step: "selectPlant", cleared createdPlantId, etc.)
+      actions.reset();
+      return () => {};
+    }, [actions])
+  );
+
+  return null;
+}
+
 function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
@@ -31,7 +47,9 @@ function WizardBody() {
 
   useFocusEffect(
     React.useCallback(() => {
-      setFreshOpen(true); // wizard just opened
+      // Fresh open every time we focus the screen
+      setFreshOpen(true);
+      // make sure we start at top
       scrollRef.current?.scrollTo({ y: 0, animated: false });
       return () => {};
     }, [])
@@ -49,7 +67,7 @@ function WizardBody() {
         <Step01_SelectPlant
           onScrollToTop={scrollTop}
           freshOpen={freshOpen}
-          onCleared={() => setFreshOpen(false)} // drop the flag after Step 1 clears once
+          onCleared={() => setFreshOpen(false)}
         />
       )}
       {state.step === "traits" && <Step02_PlantTraits />}
@@ -88,6 +106,9 @@ function WizardBody() {
 export default function CreatePlantWizardScreen() {
   return (
     <CreatePlantProvider>
+      {/* Reset state whenever this screen regains focus */}
+      <ResetOnFocus />
+
       <View style={{ flex: 1 }}>
         <GlassHeader
           title="Create plant"
