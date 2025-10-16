@@ -1,7 +1,11 @@
 from rest_framework import serializers
+from django.utils import timezone
+
 from .models import PlantInstance
 from locations.models import Location
 from plant_definitions.models import PlantDefinition
+from reminders.models import Reminder
+
 
 class PlantInstanceSerializer(serializers.ModelSerializer):
     # incoming payload uses these simple ids
@@ -74,7 +78,47 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             **validated_data,
         )
         obj.save()
+
+        # ---------------------------
+        # Auto-reminders initialization
+        # ---------------------------
+        def _mk_reminder(_type: str, interval_value: int, unit: str):
+            r, _ = Reminder.objects.get_or_create(
+                plant=obj,
+                user=request.user,
+                type=_type,
+                defaults={
+                    "start_date": timezone.localdate(),
+                    "interval_value": interval_value,
+                    "interval_unit": unit,  # "days" | "months"
+                    "is_active": True,
+                },
+            )
+            r.ensure_one_pending_task()
+
+        if obj.create_auto_tasks:
+            # Watering (NOTE: currently reusing moisture_interval_days for water as well)
+            if obj.water_task_enabled and obj.moisture_interval_days:
+                _mk_reminder("water", int(obj.moisture_interval_days), "days")
+
+            # Misting / moisture (NEW)
+            if obj.moisture_required and obj.moisture_interval_days:
+                _mk_reminder("moisture", int(obj.moisture_interval_days), "days")
+
+            # Fertilising
+            if obj.fertilize_required and obj.fertilize_interval_days:
+                _mk_reminder("fertilize", int(obj.fertilize_interval_days), "days")
+
+            # General care
+            if obj.care_required and obj.care_interval_days:
+                _mk_reminder("care", int(obj.care_interval_days), "days")
+
+            # Repotting (months)
+            if obj.repot_task_enabled and obj.repot_interval_months:
+                _mk_reminder("repot", int(obj.repot_interval_months), "months")
+
         return obj
+
 
 class PlantInstanceListSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()

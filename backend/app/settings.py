@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "plant_definitions",
     "plant_instances",
     "locations",
+    "reminders",
 ]
 
 MIDDLEWARE = [

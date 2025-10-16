@@ -1,0 +1,20 @@
+from rest_framework import serializers
+from .models import Reminder, ReminderTask
+
+class ReminderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reminder
+        fields = [
+            "id", "plant", "type", "start_date", "interval_value",
+            "interval_unit", "is_active", "created_at", "updated_at",
+        ]
+        read_only_fields = ["id", "created_at", "updated_at"]
+
+class ReminderTaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ReminderTask
+        fields = [
+            "id", "reminder", "due_date", "status", "completed_at",
+            "created_at", "updated_at",
+        ]
+        read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]
