@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { View, Pressable, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+// features/plants/screens/PlantsScreen.tsx
+import React, { useCallback, useState } from "react";
+import { View, Pressable, FlatList, RefreshControl, ActivityIndicator } from "react-native";
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -16,26 +17,30 @@ import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/EditPlantModal";
 import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
 
+import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api/services/plant-instances.service";
+
+function mapApiItemToPlant(item: ApiPlantInstanceListItem): Plant {
+  const def = item.plant_definition || undefined;
+  const loc = item.location || undefined;
+
+  // Name priority: display_name > definition name > "Untitled"
+  const name = (item.display_name?.trim() || def?.name?.trim() || "Untitled").trim();
+
+  return {
+    id: String(item.id),
+    name,
+    latin: def?.latin || undefined,
+    location: loc?.name || undefined,
+    notes: item.notes?.trim() || "",
+  };
+}
+
 export default function PlantsScreen() {
   const nav = useNavigation();
 
-  // Demo data
-  const [plants, setPlants] = useState<Plant[]>(
-    Array.from({ length: 10 }).map((_, i) => ({
-      id: String(i + 1),
-      name: ["Big Awesome Monstera", "Fiddle Leaf Fig", "Aloe Vera", "Orchid", "Dracaena"][i % 5],
-      latin: [
-        "Monstera deliciosa",
-        "Ficus lyrata",
-        "Aloe vera",
-        "Phalaenopsis aphrodite",
-        "Dracaena fragrans",
-      ][i % 5],
-      location: ["Living Room", "Bedroom", "Kitchen", "Office", "Hallway"][i % 5],
-      notes: "",
-    }))
-  );
-
+  const [plants, setPlants] = useState<Plant[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [refreshing, setRefreshing] = useState<boolean>(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
   // --- EDIT MODAL state ---
@@ -51,9 +56,40 @@ export default function PlantsScreen() {
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
+  const load = useCallback(async () => {
+    try {
+      setLoading(true);
+      const data = await fetchPlantInstances({ auth: true });
+      setPlants(data.map(mapApiItemToPlant));
+    } catch (e) {
+      console.warn("Failed to load plants", e);
+      setPlants([]); // fallback to empty on error
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const onRefresh = useCallback(async () => {
+    try {
+      setRefreshing(true);
+      const data = await fetchPlantInstances({ auth: true });
+      setPlants(data.map(mapApiItemToPlant));
+    } catch (e) {
+      console.warn("Refresh failed", e);
+    } finally {
+      setRefreshing(false);
+    }
+  }, []);
+
+  // Load on focus
+  useFocusEffect(
+    useCallback(() => {
+      load();
+    }, [load])
+  );
+
   const openCreatePlantWizard = () => {
     setMenuOpenId(null);
-    // Make sure this route name matches your navigator registration
     nav.navigate("CreatePlantWizard" as never);
   };
 
@@ -70,6 +106,7 @@ export default function PlantsScreen() {
 
   const closeEdit = () => setEditOpen(false);
 
+  // Local-only edit (does not persist yet)
   const onUpdate = () => {
     if (!editingId || !fName.trim()) return;
     setPlants((prev) =>
@@ -94,6 +131,7 @@ export default function PlantsScreen() {
     setMenuOpenId(null);
   };
 
+  // Local-only delete (you can wire backend later)
   const confirmDelete = () => {
     if (confirmDeleteId) {
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
@@ -116,31 +154,39 @@ export default function PlantsScreen() {
       {/* Tap outside list to close any open tile menu */}
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
-      <FlatList
-        data={plants}
-        keyExtractor={(p) => p.id}
-        renderItem={({ item }) => (
-          <PlantTile
-            plant={item}
-            isMenuOpen={menuOpenId === item.id}
-            onPressBody={() => nav.navigate("PlantDetails" as never)}
-            onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
-            onEdit={() => openEditModal(item)}
-            onReminders={() => {
-              /* wire later */
-            }}
-            onDelete={() => askDelete(item)}
-          />
-        )}
-        ListHeaderComponent={() => <View style={{ height: 5 }} />}
-        // Generous bottom padding so the last card clears the FAB + tab bar
-        ListFooterComponent={() => <View style={{ height: 200 }} />}
-        contentContainerStyle={s.listContent}
-        ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-        showsVerticalScrollIndicator={false}
-        onScrollBeginDrag={() => setMenuOpenId(null)}
-        keyboardShouldPersistTaps="handled"
-      />
+      {loading ? (
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <ActivityIndicator />
+        </View>
+      ) : (
+        <FlatList
+          data={plants}
+          keyExtractor={(p) => p.id}
+          renderItem={({ item }) => (
+            <PlantTile
+              plant={item}
+              isMenuOpen={menuOpenId === item.id}
+              onPressBody={() => nav.navigate("PlantDetails" as never)}
+              onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
+              onEdit={() => openEditModal(item)}
+              onReminders={() => {
+                /* wire later */
+              }}
+              onDelete={() => askDelete(item)}
+            />
+          )}
+          ListHeaderComponent={() => <View style={{ height: 5 }} />}
+          ListFooterComponent={() => <View style={{ height: 200 }} />}
+          contentContainerStyle={s.listContent}
+          ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
+          showsVerticalScrollIndicator={false}
+          onScrollBeginDrag={() => setMenuOpenId(null)}
+          keyboardShouldPersistTaps="handled"
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+        />
+      )}
 
       {/* Page FAB */}
       <FAB

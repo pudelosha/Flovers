@@ -60,3 +60,25 @@ export async function createPlantInstance(
     { auth: opts.auth ?? true }
   );
 }
+
+/** List types + fetch */
+export type ApiPlantInstanceListItem = {
+  id: number;
+  display_name: string;
+  notes: string;
+  location?: { id: number; name: string; category: "indoor" | "outdoor" | "other" } | null;
+  plant_definition?: { id: number; name: string; latin: string } | null;
+  created_at: string;
+  updated_at: string;
+};
+
+export async function fetchPlantInstances(
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceListItem[]> {
+  return await request<ApiPlantInstanceListItem[]>(
+    "/api/plant-instances/",
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}

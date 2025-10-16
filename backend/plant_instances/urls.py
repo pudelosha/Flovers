@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import PlantInstanceCreateView
+from .views import PlantInstanceListCreateView
 
 urlpatterns = [
-    path("", PlantInstanceCreateView.as_view(), name="plant-instances-create"),
+    path("", PlantInstanceListCreateView.as_view(), name="plant-instance-list-create"),
 ]

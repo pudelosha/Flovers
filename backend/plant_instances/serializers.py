@@ -75,3 +75,37 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
         )
         obj.save()
         return obj
+
+class PlantInstanceListSerializer(serializers.ModelSerializer):
+    location = serializers.SerializerMethodField()
+    plant_definition = serializers.SerializerMethodField()
+
+    class Meta:
+        model = PlantInstance
+        fields = [
+            "id",
+            "display_name",
+            "notes",
+            "location",
+            "plant_definition",
+            "created_at",
+            "updated_at",
+        ]
+
+    def get_location(self, obj):
+        if not obj.location_id:
+            return None
+        return {
+            "id": obj.location_id,
+            "name": obj.location.name,
+            "category": obj.location.category,
+        }
+
+    def get_plant_definition(self, obj):
+        if not obj.plant_definition_id:
+            return None
+        return {
+            "id": obj.plant_definition_id,
+            "name": obj.plant_definition.name,
+            "latin": obj.plant_definition.latin,
+        }
