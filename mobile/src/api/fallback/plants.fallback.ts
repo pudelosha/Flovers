@@ -1,5 +1,5 @@
 import type { PlantDefinition } from "../../features/create-plant/types/create-plant.types";
-import type { ApiPlantSuggestion } from "../serializers/plants.serializer";
+import type { ApiPlantSuggestion } from "../serializers/plant-definitions.serializer";
 import type { PlantProfile } from "../../features/create-plant/types/create-plant.types";
 import { PLANT_PROFILES_MOCK } from "../../features/create-plant/constants/create-plant.constants";
 

@@ -5,14 +5,14 @@ import {
   serializePlantSuggestion,
   type ApiPlantDefinition,
   type ApiPlantSuggestion,
-} from "../serializers/plants.serializer";
+} from "../../api/serializers/plant-definitions.serializer";
 import { POPULAR_FALLBACK, SEARCH_INDEX_FALLBACK } from "../fallback/plants.fallback";
-import { serializePlantProfile, type ApiPlantProfile } from "../serializers/plants.serializer";
+import { serializePlantProfile, type ApiPlantProfile } from "../serializers/plant-definitions.serializer";
 
 const ENDPOINTS = {
-  popular: "/api/plants/popular/",          // ← include /api prefix
-  searchIndex: "/api/plants/search-index/", // ← include /api prefix
-  profile: (id: string | number) => `/api/plants/${id}/profile/`,
+  popular: "/api/plant-definitions/popular/",          // ← include /api prefix
+  searchIndex: "/api/plant-definitions/search-index/", // ← include /api prefix
+  profile: (id: string | number) => `/api/plant-definitions/${id}/profile/`,
 };
 
 /** Popular cards: includes image + requirements */

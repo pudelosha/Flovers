@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # local
     "accounts",
-    "plants",
+    "plant_definitions",
     "locations",
 ]
 

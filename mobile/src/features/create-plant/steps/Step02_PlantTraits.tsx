@@ -1,4 +1,5 @@
-﻿import React, { useEffect, useMemo, useState } from "react";
+﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\pages\Step02_PlantTraits.tsx
+import React, { useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -12,7 +13,7 @@ import {
 } from "../constants/create-plant.constants";
 import SafeImage from "../../../shared/ui/SafeImage";
 
-import { fetchPlantProfile, fetchPlantSearchIndex } from "../../../api/services/plants.service";
+import { fetchPlantProfile, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
 
 export default function Step02_PlantTraits() {

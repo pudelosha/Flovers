@@ -1,4 +1,5 @@
-﻿import React, { useEffect, useMemo, useRef, useState } from "react";
+﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\pages\Step03_SelectLocation.tsx
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
@@ -190,7 +191,7 @@ export default function Step03_SelectLocation({
         <Text
           style={[
             wiz.sectionTitle,
-            { marginBottom: 12, marginTop: 18 }, // tiny bit more space under "Your locations"
+            { marginBottom: 12, marginTop: 18 },
           ]}
         >
           Your locations
@@ -200,7 +201,7 @@ export default function Step03_SelectLocation({
           const arr = grouped[cat];
           return (
             <View key={cat} style={{ marginBottom: 8 }}>
-              {/* Category: bold + italic + faint underline */}
+              {/* Category header */}
               <View style={{ marginBottom: 5 }}>
                 <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
                   {cat[0].toUpperCase() + cat.slice(1)}
@@ -228,15 +229,15 @@ export default function Step03_SelectLocation({
                       style={[
                         wiz.locationRow,
                         {
-                          borderBottomWidth: 0, // remove underline for items
-                          paddingVertical: 6,   // slightly less vertical space
+                          borderBottomWidth: 0,
+                          paddingVertical: 6,
                         },
                       ]}
                     >
                       <Text
                         style={[
                           wiz.locationName,
-                          { fontWeight: isSelected ? "900" : "500" }, // selected = bold, others lighter
+                          { fontWeight: isSelected ? "900" : "500" },
                         ]}
                       >
                         {l.name}

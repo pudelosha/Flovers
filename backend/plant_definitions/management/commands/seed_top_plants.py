@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from plants.models import Plant
+from plant_definitions.models import PlantDefinition
 
 # Allowed trait keys your UI knows:
 # sun, soil, temp, humidity, difficulty, watering, moisture, toxic
@@ -698,7 +698,7 @@ class Command(BaseCommand):
         created_cnt = 0
         updated_cnt = 0
         for p in SAMPLES:
-            obj, created = Plant.objects.update_or_create(
+            obj, created = PlantDefinition.objects.update_or_create(
                 latin=p["latin"],  # stable key for updates
                 defaults=p,
             )

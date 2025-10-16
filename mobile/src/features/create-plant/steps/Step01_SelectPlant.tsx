@@ -1,4 +1,5 @@
-﻿import React, { useEffect, useState } from "react";
+﻿// steps/Step01_SelectPlant.tsx
+import React, { useEffect, useMemo, useState } from "react";
 import { View, Text, Pressable, ActivityIndicator } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -7,7 +8,7 @@ import { useNavigation } from "@react-navigation/native";
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plants.service";
+import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import SafeImage from "../../../shared/ui/SafeImage";
 
@@ -22,14 +23,38 @@ import {
 
 export default function Step01_SelectPlant({
   onScrollToTop,
+  freshOpen = false,
+  onCleared,
 }: {
   onScrollToTop: () => void;
+  /** true only right after the wizard screen is opened */
+  freshOpen?: boolean;
+  /** called after we clear once so the parent can drop the flag */
+  onCleared?: () => void;
 }) {
   const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
-  const [query, setQuery] = useState(state.plantQuery || "");
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  // Initial query: hydrate from store (useful when navigating back),
+  // but if this is a fresh open, we'll clear it immediately in the effect below.
+  const initialQuery = useMemo(
+    () => state.plantQuery?.trim() || state.selectedPlant?.name?.trim() || "",
+    [state.plantQuery, state.selectedPlant?.name]
+  );
+
+  const [query, setQuery] = useState<string>(initialQuery);
+  const [showSuggestions, setShowSuggestions] = useState<boolean>(false); // start closed
+
+  // Clear once if the wizard has just been opened and Step 1 is displayed
+  useEffect(() => {
+    if (freshOpen) {
+      actions.reset();              // clear entire wizard store
+      setQuery("");                 // clear local input
+      setShowSuggestions(false);    // keep dropdown closed
+      onCleared?.();                // tell parent we handled the fresh open
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [freshOpen]);
 
   const [popular, setPopular] = useState<PopularPlant[]>([]);
   const [loadingPopular, setLoadingPopular] = useState(true);
@@ -126,7 +151,6 @@ export default function Step01_SelectPlant({
 
         {/* Scan + Search row (compact 48px height) */}
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, marginBottom: 6 }}>
-          {/* Scan Plant button (no text) */}
           <Pressable
             onPress={() => navigation.navigate("Scanner")}
             style={{
@@ -153,7 +177,7 @@ export default function Step01_SelectPlant({
               value={query}
               onChange={(t) => {
                 setQuery(t);
-                setShowSuggestions(!!t.trim());
+                setShowSuggestions(!!t.trim()); // open only when user types
                 if (!t.trim()) actions.setSelectedPlant(undefined);
               }}
               showSuggestions={showSuggestions}

@@ -177,3 +177,14 @@ export type PlantProfile = {
   description: string;  // long paragraph
   traits: PlantTrait[]; // list rendered in Step 2
 };
+
+export type PlantDefinition = {
+  id: string;                 // always serialized to string for state
+  name: string;
+  latin: string;
+  image: string | null;       // API may return null if no image
+  sun: SunRequirement;
+  water: WaterRequirement;
+  difficulty: DifficultyLevel;
+  popular: boolean;           // popular items come as true from the endpoint
+};

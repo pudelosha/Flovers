@@ -17,7 +17,7 @@ DIFFICULTY_CHOICES = [
     ("hard", "Hard"),
 ]
 
-class Plant(models.Model):
+class PlantDefinition(models.Model):
     name = models.CharField(max_length=120)
     latin = models.CharField(max_length=160, unique=True)
 

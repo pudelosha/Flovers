@@ -1,5 +1,5 @@
 ﻿// screens/CreatePlantWizardScreen.tsx
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { View, ScrollView, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -24,13 +24,17 @@ import Step09_Creating from "../steps/Step09_Creating";
 function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
-  const { state, actions } = useCreatePlantWizard();
+  const { state } = useCreatePlantWizard();
+
+  // Marks that the wizard was just opened; Step 1 will clear once, then turn this off.
+  const [freshOpen, setFreshOpen] = useState(false);
 
   useFocusEffect(
     React.useCallback(() => {
-      actions.reset();
+      setFreshOpen(true); // wizard just opened
       scrollRef.current?.scrollTo({ y: 0, animated: false });
-    }, [actions])
+      return () => {};
+    }, [])
   );
 
   const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: true });
@@ -41,29 +45,23 @@ function WizardBody() {
       contentContainerStyle={[wiz.pageContent, { paddingBottom: insets.bottom + 120 }]}
       keyboardShouldPersistTaps="handled"
     >
-      {state.step === "selectPlant" && <Step01_SelectPlant onScrollToTop={scrollTop} />}
+      {state.step === "selectPlant" && (
+        <Step01_SelectPlant
+          onScrollToTop={scrollTop}
+          freshOpen={freshOpen}
+          onCleared={() => setFreshOpen(false)} // drop the flag after Step 1 clears once
+        />
+      )}
       {state.step === "traits" && <Step02_PlantTraits />}
       {state.step === "location" && <Step03_SelectLocation onScrollTop={scrollTop} />}
 
-      {/* Step 4 */}
       {state.step === "exposure" && <Step04_Exposure />}
-
-      {/* Step 5 */}
       {state.step === "potType" && <Step05_ContainerAndSoil />}
-
-      {/* Step 6 */}
       {state.step === "autoTasks" && <Step06_AutoTasks />}
-
-      {/* Step 7 */}
       {state.step === "photo" && <Step07_Photo />}
-
-      {/* Step 8 */}
       {state.step === "name" && <Step08_NameAndNotes />}
-
-      {/* 🔵 Step 9 */}
       {state.step === "creating" && <Step09_Creating />}
 
-      {/* Fallback for not-yet-implemented steps */}
       {!(
         state.step === "selectPlant" ||
         state.step === "traits" ||
