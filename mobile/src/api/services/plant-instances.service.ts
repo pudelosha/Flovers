@@ -2,17 +2,14 @@ import { request } from "../client";
 import type {
   WizardState,
   ApiPlantInstanceCreatePayload,
-  ApiPlantInstance,
 } from "../../features/create-plant/types/create-plant.types";
 
-/** Build the POST payload from wizard state */
+/** Build the POST/PUT/PATCH payload from wizard state */
 function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
   return {
     // FKs
-    location_id: Number(state.selectedLocationId),                   // required
-    plant_definition_id: state.selectedPlant?.id
-      ? Number(state.selectedPlant.id)
-      : null,
+    location_id: Number(state.selectedLocationId),
+    plant_definition_id: state.selectedPlant?.id ? Number(state.selectedPlant.id) : null,
 
     // display
     display_name: state.displayName?.trim() || "",
@@ -26,10 +23,10 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     distance_cm: Math.max(0, Math.round(state.distanceCm || 0)),
 
     // container / soil
-    pot_material: state.potMaterial ?? "",   // store the key as-is (or empty)
-    soil_mix: state.soilMix ?? "",           // store the key as-is (or empty)
+    pot_material: (state.potMaterial as any) ?? "",
+    soil_mix: (state.soilMix as any) ?? "",
 
-    // auto tasks preferences (just send settings; backend will generate later)
+    // auto tasks prefs
     create_auto_tasks: !!state.createAutoTasks,
     water_task_enabled: !!state.waterTaskEnabled,
     repot_task_enabled: !!state.repotTaskEnabled,
@@ -37,8 +34,8 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     fertilize_required: !!state.fertilizeRequired,
     care_required: !!state.careRequired,
 
-    last_watered: state.lastWatered ?? "",
-    last_repotted: state.lastRepotted ?? "",
+    last_watered: (state as any).lastWatered ?? "",
+    last_repotted: (state as any).lastRepotted ?? "",
 
     moisture_interval_days: state.moistureIntervalDays ?? null,
     fertilize_interval_days: state.fertilizeIntervalDays ?? null,
@@ -47,7 +44,15 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
   };
 }
 
-/** Create a plant instance on the server and return the created row */
+/** ---- Create ---- */
+export type ApiPlantInstance = {
+  id: number;
+  plant_definition_id: number | null;
+  location_id: number;
+  created_at: string;
+  updated_at: string;
+};
+
 export async function createPlantInstance(
   state: WizardState,
   opts: { auth?: boolean } = { auth: true }
@@ -61,7 +66,7 @@ export async function createPlantInstance(
   );
 }
 
-/** List types + fetch */
+/** ---- List/Detail types ---- */
 export type ApiPlantInstanceListItem = {
   id: number;
   display_name: string;
@@ -79,6 +84,36 @@ export async function fetchPlantInstances(
     "/api/plant-instances/",
     "GET",
     undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/** ---- Delete ---- */
+export async function deletePlantInstance(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<void> {
+  await request<void>(
+    `/api/plant-instances/${id}/`,
+    "DELETE",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/** ---- Update (for later) ---- */
+export type ApiPlantInstanceUpdatePayload = Partial<ApiPlantInstanceCreatePayload>;
+
+export async function updatePlantInstance(
+  id: number,
+  payload: ApiPlantInstanceUpdatePayload,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceListItem> {
+  // Using PATCH for partial updates
+  return await request<ApiPlantInstanceListItem>(
+    `/api/plant-instances/${id}/`,
+    "PATCH",
+    payload,
     { auth: opts.auth ?? true }
   );
 }

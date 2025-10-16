@@ -1,37 +1,43 @@
-// features/plants/screens/PlantsScreen.tsx
-import React, { useCallback, useState } from "react";
-import { View, Pressable, FlatList, RefreshControl, ActivityIndicator } from "react-native";
+import React, { useCallback, useMemo, useState } from "react";
+import { View, Pressable, FlatList, ActivityIndicator, RefreshControl, Alert } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/plants.styles";
-import { Plant } from "../types/plants.types";
+import PlantTile from "../components/PlantTile";
+import EditPlantModal from "../components/EditPlantModal";
+import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
+
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
   LATIN_CATALOG,
   USER_LOCATIONS,
 } from "../constants/plants.constants";
-import PlantTile from "../components/PlantTile";
-import EditPlantModal from "../components/EditPlantModal";
-import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
 
-import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api/services/plant-instances.service";
+import type { Plant } from "../types/plants.types";
+import {
+  fetchPlantInstances,
+  deletePlantInstance,
+  ApiPlantInstanceListItem,
+} from "../../../api/services/plant-instances.service";
 
-function mapApiItemToPlant(item: ApiPlantInstanceListItem): Plant {
-  const def = item.plant_definition || undefined;
-  const loc = item.location || undefined;
+/** Map API list item -> UI Plant shape used by PlantTile */
+function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
+  const name = (item.display_name?.trim())
+    || (item.plant_definition?.name?.trim())
+    || "Unnamed plant";
 
-  // Name priority: display_name > definition name > "Untitled"
-  const name = (item.display_name?.trim() || def?.name?.trim() || "Untitled").trim();
+  const latin = item.plant_definition?.latin || undefined;
+  const location = item.location?.name || undefined;
 
   return {
     id: String(item.id),
     name,
-    latin: def?.latin || undefined,
-    location: loc?.name || undefined,
-    notes: item.notes?.trim() || "",
+    latin,
+    location,
+    notes: item.notes || "",
   };
 }
 
@@ -39,8 +45,8 @@ export default function PlantsScreen() {
   const nav = useNavigation();
 
   const [plants, setPlants] = useState<Plant[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [refreshing, setRefreshing] = useState<boolean>(false);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
   // --- EDIT MODAL state ---
@@ -57,36 +63,33 @@ export default function PlantsScreen() {
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
   const load = useCallback(async () => {
-    try {
-      setLoading(true);
-      const data = await fetchPlantInstances({ auth: true });
-      setPlants(data.map(mapApiItemToPlant));
-    } catch (e) {
-      console.warn("Failed to load plants", e);
-      setPlants([]); // fallback to empty on error
-    } finally {
-      setLoading(false);
-    }
+    const data = await fetchPlantInstances({ auth: true });
+    setPlants(data.map(mapApiToPlant));
   }, []);
 
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+      (async () => {
+        setLoading(true);
+        try {
+          await load();
+        } finally {
+          if (mounted) setLoading(false);
+        }
+      })();
+      return () => { mounted = false; };
+    }, [load])
+  );
+
   const onRefresh = useCallback(async () => {
+    setRefreshing(true);
     try {
-      setRefreshing(true);
-      const data = await fetchPlantInstances({ auth: true });
-      setPlants(data.map(mapApiItemToPlant));
-    } catch (e) {
-      console.warn("Refresh failed", e);
+      await load();
     } finally {
       setRefreshing(false);
     }
-  }, []);
-
-  // Load on focus
-  useFocusEffect(
-    useCallback(() => {
-      load();
-    }, [load])
-  );
+  }, [load]);
 
   const openCreatePlantWizard = () => {
     setMenuOpenId(null);
@@ -106,8 +109,8 @@ export default function PlantsScreen() {
 
   const closeEdit = () => setEditOpen(false);
 
-  // Local-only edit (does not persist yet)
   const onUpdate = () => {
+    // Placeholder local update (we'll switch to backend PATCH later)
     if (!editingId || !fName.trim()) return;
     setPlants((prev) =>
       prev.map((p) =>
@@ -131,14 +134,37 @@ export default function PlantsScreen() {
     setMenuOpenId(null);
   };
 
-  // Local-only delete (you can wire backend later)
-  const confirmDelete = () => {
-    if (confirmDeleteId) {
+  const confirmDelete = async () => {
+    if (!confirmDeleteId) return;
+    try {
+      await deletePlantInstance(Number(confirmDeleteId), { auth: true });
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
+    } catch (e: any) {
+      Alert.alert("Delete failed", e?.message || "Could not delete this plant.");
+    } finally {
+      setConfirmDeleteId(null);
+      setConfirmDeleteName("");
     }
-    setConfirmDeleteId(null);
-    setConfirmDeleteName("");
   };
+
+  // Skeleton/loader
+  if (loading) {
+    return (
+      <View style={{ flex: 1 }}>
+        <GlassHeader
+          title="Plants"
+          gradientColors={HEADER_GRADIENT_TINT}
+          solidFallback={HEADER_SOLID_FALLBACK}
+          rightIconName="qrcode-scan"
+          onPressRight={() => nav.navigate("Scanner" as never)}
+          showSeparator={false}
+        />
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <ActivityIndicator />
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={{ flex: 1 }}>
@@ -154,39 +180,31 @@ export default function PlantsScreen() {
       {/* Tap outside list to close any open tile menu */}
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
-      {loading ? (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <ActivityIndicator />
-        </View>
-      ) : (
-        <FlatList
-          data={plants}
-          keyExtractor={(p) => p.id}
-          renderItem={({ item }) => (
-            <PlantTile
-              plant={item}
-              isMenuOpen={menuOpenId === item.id}
-              onPressBody={() => nav.navigate("PlantDetails" as never)}
-              onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
-              onEdit={() => openEditModal(item)}
-              onReminders={() => {
-                /* wire later */
-              }}
-              onDelete={() => askDelete(item)}
-            />
-          )}
-          ListHeaderComponent={() => <View style={{ height: 5 }} />}
-          ListFooterComponent={() => <View style={{ height: 200 }} />}
-          contentContainerStyle={s.listContent}
-          ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-          showsVerticalScrollIndicator={false}
-          onScrollBeginDrag={() => setMenuOpenId(null)}
-          keyboardShouldPersistTaps="handled"
-          refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-          }
-        />
-      )}
+      <FlatList
+        data={plants}
+        keyExtractor={(p) => p.id}
+        renderItem={({ item }) => (
+          <PlantTile
+            plant={item}
+            isMenuOpen={menuOpenId === item.id}
+            onPressBody={() => nav.navigate("PlantDetails" as never, { id: item.id } as never)}
+            onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
+            onEdit={() => openEditModal(item)}
+            onReminders={() => { /* wire later */ }}
+            onDelete={() => askDelete(item)}
+          />
+        )}
+        ListHeaderComponent={() => <View style={{ height: 5 }} />}
+        ListFooterComponent={() => <View style={{ height: 200 }} />}
+        contentContainerStyle={s.listContent}
+        ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
+        showsVerticalScrollIndicator={false}
+        onScrollBeginDrag={() => setMenuOpenId(null)}
+        keyboardShouldPersistTaps="handled"
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+      />
 
       {/* Page FAB */}
       <FAB
@@ -199,7 +217,7 @@ export default function PlantsScreen() {
         ]}
       />
 
-      {/* EDIT MODAL */}
+      {/* EDIT MODAL (local-only for now) */}
       <EditPlantModal
         visible={editOpen}
         latinCatalog={LATIN_CATALOG}
