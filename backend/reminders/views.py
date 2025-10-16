@@ -43,3 +43,19 @@ class TaskCompleteView(APIView):
             },
             status=status.HTTP_200_OK,
         )
+
+class ReminderTaskListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        qs = ReminderTask.objects.filter(reminder__plant__user=request.user).select_related(
+            "reminder", "reminder__plant"
+        )
+
+        status_param = request.query_params.get("status")
+        if status_param in {"pending", "completed"}:
+            qs = qs.filter(status=status_param)
+
+        qs = qs.order_by("due_date", "id")
+        data = ReminderTaskSerializer(qs, many=True).data
+        return Response(data)

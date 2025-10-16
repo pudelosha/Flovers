@@ -18,3 +18,4 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
             "created_at", "updated_at",
         ]
         read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]
+

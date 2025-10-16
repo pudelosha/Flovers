@@ -1,4 +1,4 @@
-export type ReminderType = "watering" | "moisture" | "fertilising" | "care";
+export type ReminderType = "watering" | "moisture" | "fertilising" | "care" | "repot";
 
 export type Reminder = {
   id: string;

@@ -9,16 +9,18 @@ export const TILE_BLUR = 8;
 
 // Accent colors by type
 export const ACCENT_BY_TYPE: Record<ReminderType, string> = {
-  watering: "#4dabf7",
-  moisture: "#20c997",
-  fertilising: "#ffd43b",
-  care: "#e599f7",
+  watering:   "#4dabf7", // blue
+  moisture:   "#20c997", // green
+  fertilising:"#ffd43b", // yellow
+  care:       "#e599f7", // purple
+  repot:      "#8B5E3C", // brown (NEW)
 };
 
-// Icons by type
+// Icons by type (MaterialCommunityIcons)
 export const ICON_BY_TYPE: Record<ReminderType, string> = {
-  watering: "water",
-  moisture: "water-percent",
-  fertilising: "leaf",
-  care: "flower",
+  watering:   "water",
+  moisture:   "water-percent",
+  fertilising:"leaf",
+  care:       "flower",
+  repot:      "pot",
 };
