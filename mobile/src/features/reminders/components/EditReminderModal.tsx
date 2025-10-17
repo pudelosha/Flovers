@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\EditReminderModal.tsx
 import React, { useState, useEffect } from "react";
 import { View, Text, Pressable, TextInput, Keyboard, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -14,6 +15,9 @@ type PlantOption = { id: string; name: string; location?: string };
 
 type Props = {
   visible: boolean;
+
+  /** NEW: drives title & button label */
+  mode?: "create" | "edit";
 
   plants: PlantOption[];
 
@@ -33,6 +37,8 @@ type Props = {
   setFIntervalUnit: (u: "days" | "months") => void;
 
   onCancel: () => void;
+
+  /** kept for compatibility (RemindersScreen already uses onSave) */
   onSave: () => void;
 };
 
@@ -62,6 +68,7 @@ function toYYYYMMDD(d: Date) {
 export default function EditReminderModal(props: Props) {
   const {
     visible,
+    mode = "edit",
     plants,
     fType, setFType,
     fPlantId, setFPlantId,
@@ -120,7 +127,7 @@ export default function EditReminderModal(props: Props) {
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Edit reminder</Text>
+          <Text style={s.promptTitle}>{mode === "create" ? "Add reminder" : "Edit reminder"}</Text>
 
           {/* Type */}
           <Text style={s.inputLabel}>Type</Text>
@@ -271,7 +278,9 @@ export default function EditReminderModal(props: Props) {
                 onSave();
               }}
             >
-              <Text style={[s.promptBtnText, s.promptPrimaryText]}>Update</Text>
+              <Text style={[s.promptBtnText, s.promptPrimaryText]}>
+                {mode === "create" ? "Create" : "Update"}
+              </Text>
             </Pressable>
           </View>
         </View>

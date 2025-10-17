@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
 import React, { useCallback, useState } from "react";
 import { View, Pressable, FlatList, Text, RefreshControl } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
@@ -7,7 +8,14 @@ import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
 import type { Reminder as UIReminder } from "../types/reminders.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/reminders.constants";
-import { listReminders, listReminderTasks, completeReminderTask } from "../../../api/services/reminders.service";
+import {
+  listReminders,
+  listReminderTasks,
+  completeReminderTask,
+  updateReminder,
+  deleteReminder,
+  createReminder,                // ⬅️ NEW
+} from "../../../api/services/reminders.service";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
 import ConfirmDeleteReminderModal from "../components/ConfirmDeleteReminderModal";
@@ -16,7 +24,6 @@ import EditReminderModal from "../components/EditReminderModal";
 type ViewMode = "list" | "calendar";
 type PlantOption = { id: string; name: string; location?: string };
 
-// Map API plant instances to dropdown options
 function mapPlantOptions(apiPlants: any[]): PlantOption[] {
   return (apiPlants || []).map((p) => ({
     id: String(p.id),
@@ -26,6 +33,15 @@ function mapPlantOptions(apiPlants: any[]): PlantOption[] {
       "Unnamed plant",
     location: p.location?.name || undefined,
   }));
+}
+
+// small helper
+function todayISO() {
+  const d = new Date();
+  const Y = d.getFullYear();
+  const M = String(d.getMonth() + 1).padStart(2, "0");
+  const D = String(d.getDate()).padStart(2, "0");
+  return `${Y}-${M}-${D}`;
 }
 
 export default function RemindersScreen() {
@@ -40,18 +56,22 @@ export default function RemindersScreen() {
   const [plantOptions, setPlantOptions] = useState<PlantOption[]>([]);
 
   // --- DELETE CONFIRMATION MODAL state ---
-  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteReminderId, setConfirmDeleteReminderId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
-  // --- EDIT MODAL state ---
+  // --- EDIT/CREATE MODAL state ---
   const [editOpen, setEditOpen] = useState(false);
-  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editingId, setEditingId] = useState<string | null>(null); // null => CREATE mode
 
   const [fType, setFType] = useState<"watering" | "moisture" | "fertilising" | "care" | "repot">("watering");
   const [fPlantId, setFPlantId] = useState<string | undefined>(undefined);
   const [fDueDate, setFDueDate] = useState<string>("");
   const [fIntervalValue, setFIntervalValue] = useState<number | undefined>(undefined);
   const [fIntervalUnit, setFIntervalUnit] = useState<"days" | "months">("days");
+
+  const uiTypeToApi = (t: "watering" | "moisture" | "fertilising" | "care" | "repot"):
+    "water" | "moisture" | "fertilize" | "care" | "repot" =>
+    t === "watering" ? "water" : t === "fertilising" ? "fertilize" : t;
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -74,18 +94,23 @@ export default function RemindersScreen() {
     }
   }, []);
 
-  useFocusEffect(
-    useCallback(() => {
-      load();
-    }, [load])
-  );
+  useFocusEffect(useCallback(() => { load(); }, [load]));
 
-  const onToggleMenu = (id: string) =>
-    setMenuOpenId((curr) => (curr === id ? null : id));
-
+  const onToggleMenu = (id: string) => setMenuOpenId((curr) => (curr === id ? null : id));
   const openList = () => setViewMode("list");
   const openCalendar = () => setViewMode("calendar");
-  const openAddReminder = () => nav.navigate("AddReminder" as never);
+
+  // ⬅️ FAB "Add" now opens the same modal in CREATE mode
+  const openAddReminder = () => {
+    setEditingId(null);                      // create mode
+    setFType("watering");
+    setFPlantId(undefined);
+    setFDueDate(todayISO());
+    setFIntervalValue(7);
+    setFIntervalUnit("days");
+    setEditOpen(true);
+    setMenuOpenId(null);
+  };
 
   const onComplete = async (rid: string) => {
     setMenuOpenId(null);
@@ -94,35 +119,38 @@ export default function RemindersScreen() {
     try {
       await completeReminderTask(idNum, { auth: true });
       await load();
-    } catch {
-      // TODO: toast/snackbar
-    }
+    } catch {}
   };
 
-  // --- DELETE FLOW (UI-only for now) ---
+  // --- DELETE FLOW ---
   const askDelete = (r: UIReminder) => {
-    setConfirmDeleteId(r.id);
+    setConfirmDeleteReminderId(r.reminderId);
     setConfirmDeleteName(r.plant);
     setMenuOpenId(null);
   };
 
-  const confirmDelete = () => {
-    // UI-only for now
-    setConfirmDeleteId(null);
-    setConfirmDeleteName("");
-  };
-
   const cancelDelete = () => {
-    setConfirmDeleteId(null);
+    setConfirmDeleteReminderId(null);
     setConfirmDeleteName("");
   };
 
-  // --- EDIT FLOW (UI-only for now) ---
-  const openEditModal = (r: UIReminder) => {
-    setEditingId(r.id);
-    setFType(r.type);
+  const confirmDelete = async () => {
+    try {
+      if (!confirmDeleteReminderId) return;
+      await deleteReminder(Number(confirmDeleteReminderId), { auth: true });
+      setConfirmDeleteReminderId(null);
+      setConfirmDeleteName("");
+      await load();
+    } catch {
+      setConfirmDeleteReminderId(null);
+      setConfirmDeleteName("");
+    }
+  };
 
-    // 🔹 Prefer stable plantId from serializer; fallback to name match
+  // --- EDIT FLOW ---
+  const openEditModal = (r: UIReminder) => {
+    setEditingId(r.reminderId);  // edit by reminder id
+    setFType(r.type);
     if (r.plantId) {
       setFPlantId(r.plantId);
     } else {
@@ -130,7 +158,6 @@ export default function RemindersScreen() {
       setFPlantId(match?.id);
     }
 
-    // YYYY-MM-DD
     const d = r.dueDate ? new Date(r.dueDate) : null;
     const iso =
       d && !isNaN(+d)
@@ -148,30 +175,35 @@ export default function RemindersScreen() {
 
   const closeEdit = () => setEditOpen(false);
 
-  const onSaveEdit = () => {
-    if (!editingId) return;
-    // Local UI update only
-    setUiReminders((prev) =>
-      prev.map((it) => {
-        if (it.id !== editingId) return it;
-        const plant = plantOptions.find((p) => p.id === fPlantId);
-        const newPlantName = plant?.name || it.plant;
-        const newLocation = plant?.location || it.location;
-        return {
-          ...it,
-          type: fType,
-          plant: newPlantName,
-          location: newLocation,
-          dueDate: fDueDate || undefined,
-          intervalValue: fIntervalValue,
-          intervalUnit: fType === "repot" ? "months" : "days",
-        };
-      })
-    );
-    closeEdit();
+  // ⬅️ Save handler: create when editingId === null; otherwise update
+  const onSaveEdit = async () => {
+    if (!fPlantId || !fDueDate || !fIntervalValue) return;
+
+    try {
+      const payload = {
+        plant: Number(fPlantId),
+        type: uiTypeToApi(fType),
+        start_date: fDueDate,
+        interval_value: Number(fIntervalValue),
+        interval_unit: fType === "repot" ? "months" : "days" as const,
+      };
+
+      if (editingId === null) {
+        // CREATE
+        await createReminder(payload, { auth: true });
+      } else {
+        // UPDATE
+        await updateReminder(Number(editingId), payload, { auth: true });
+      }
+
+      setEditOpen(false);
+      await load();
+    } catch {
+      setEditOpen(false);
+    }
   };
 
-  const showFAB = !editOpen && !confirmDeleteId;
+  const showFAB = !editOpen && !confirmDeleteReminderId;
 
   return (
     <View style={{ flex: 1 }}>
@@ -184,7 +216,6 @@ export default function RemindersScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
-      {/* Tap outside list to close any open tile menu */}
       {menuOpenId && (
         <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
       )}
@@ -230,26 +261,25 @@ export default function RemindersScreen() {
       {showFAB && (
         <FAB
           actions={[
-            { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
+            { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder }, // ⬅️ opens modal
             { key: "list", label: "List", icon: "view-list", onPress: openList },
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
-            { key: "sort", label: "Sort", icon: "sort", onPress: () => { /* TODO */ } },
-            { key: "filter", label: "Filter", icon: "filter-variant", onPress: () => { /* TODO */ } },
+            { key: "sort", label: "Sort", onPress: () => {} , icon: "sort" },
+            { key: "filter", label: "Filter", onPress: () => {}, icon: "filter-variant" },
           ]}
         />
       )}
 
-      {/* DELETE CONFIRMATION MODAL */}
       <ConfirmDeleteReminderModal
-        visible={!!confirmDeleteId}
+        visible={!!confirmDeleteReminderId}
         name={confirmDeleteName}
         onCancel={cancelDelete}
         onConfirm={confirmDelete}
       />
 
-      {/* EDIT REMINDER MODAL */}
       <EditReminderModal
         visible={editOpen}
+        mode={editingId === null ? "create" : "edit"}   // ⬅️ drive title + CTA
         plants={plantOptions}
         fType={fType}
         setFType={setFType}

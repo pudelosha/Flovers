@@ -33,24 +33,21 @@ export function formatDueLabel(dueISO: string): { label: string; date: Date } {
 
 /** What ReminderTile expects */
 export type UIReminder = {
-  id: string;
+  id: string;                 // 🔹 task id
+  reminderId: string;         // 🔹 NEW: reminder id (use this for DELETE/PATCH)
   type: ReminderTypeUI;
   plant: string;
-  plantId?: string;                 // 🔹 NEW: stable FK for modal preselect
+  plantId?: string;
   location?: string;
-  due: string;                      // "Today" / "Tomorrow" / "3 days" / short date
+  due: string;                // "Today" / "Tomorrow" / "3 days" / short date
   dueDate: Date;
   intervalValue?: number;
   intervalUnit?: "days" | "months";
 };
 
 /**
- * Build UI reminders by joining:
- *  - tasks (required),
- *  - remindersById (for type + plant id),
- *  - plantsById (for display_name [+ optionally location]).
- *
- * NOTE: when building each UI reminder, we pass interval values from the matching reminder (r)
+ * Join tasks + reminders + plants into UIReminders.
+ * NOTE: pass interval fields from the reminder (r).
  */
 export function buildUIReminders(
   tasks: ApiReminderTask[],
@@ -68,14 +65,14 @@ export function buildUIReminders(
     const { label, date } = formatDueLabel(task.due_date);
 
     return {
-      id: String(task.id),
+      id: String(task.id),                 // task id
+      reminderId: String(task.reminder),   // 🔹 keep the reminder id
       type: typeUI,
       plant: plant?.display_name || "Plant",
-      plantId: r?.plant != null ? String(r.plant) : undefined,   // 🔹 NEW
+      plantId: r?.plant != null ? String(r.plant) : undefined,
       location: plant?.location?.name,
       due: label,
       dueDate: date,
-      // pass through interval details from the reminder record
       intervalValue: r?.interval_value,
       intervalUnit: r?.interval_unit,
     };

@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.utils import timezone
 from .models import Reminder, ReminderTask
 
 class ReminderSerializer(serializers.ModelSerializer):
@@ -10,6 +11,12 @@ class ReminderSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ["id", "created_at", "updated_at"]
 
+    def update(self, instance: Reminder, validated_data):
+        """
+        Allow normal field updates; task regeneration handled in the view's perform_update.
+        """
+        return super().update(instance, validated_data)
+
 class ReminderTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReminderTask
@@ -18,4 +25,3 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
             "created_at", "updated_at",
         ]
         read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]
-

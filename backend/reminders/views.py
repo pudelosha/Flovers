@@ -3,14 +3,12 @@ from rest_framework.response import Response
 from rest_framework import status, generics
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
 
 from .models import Reminder, ReminderTask
 from .serializers import ReminderSerializer, ReminderTaskSerializer
 
 class ReminderListCreateView(generics.ListCreateAPIView):
-    """
-    (Optional) Basic list/create for reminders, filtered by user.
-    """
     permission_classes = [IsAuthenticated]
     serializer_class = ReminderSerializer
 
@@ -21,12 +19,40 @@ class ReminderListCreateView(generics.ListCreateAPIView):
         reminder = serializer.save(user=self.request.user)
         reminder.ensure_one_pending_task()
 
+class ReminderDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    GET    /api/reminders/<id>/
+    PATCH  /api/reminders/<id>/
+    DELETE /api/reminders/<id>/
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = ReminderSerializer
+
+    def get_queryset(self):
+        return Reminder.objects.filter(user=self.request.user).select_related("plant")
+
+    def perform_update(self, serializer):
+        """
+        On update:
+        - Save new fields
+        - Close any pending task(s)
+        - Create the new pending task based on updated schedule rules
+        """
+        reminder = serializer.save(user=self.request.user)
+
+        # Close all pending tasks (keep history intact)
+        # Mark as completed "now".
+        pending_qs = reminder.tasks.filter(status="pending")
+        now = timezone.now()
+        for t in pending_qs:
+            t.status = "completed"
+            t.completed_at = now
+            t.save(update_fields=["status", "completed_at", "updated_at"])
+
+        # Ensure one fresh pending task per updated schedule
+        reminder.ensure_one_pending_task()
 
 class TaskCompleteView(APIView):
-    """
-    POST /api/reminders/tasks/<id>/complete/
-    Marks a task as completed and spawns the next one.
-    """
     permission_classes = [IsAuthenticated]
 
     def post(self, request, pk: int):
