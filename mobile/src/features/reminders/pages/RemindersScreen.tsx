@@ -121,8 +121,15 @@ export default function RemindersScreen() {
   const openEditModal = (r: UIReminder) => {
     setEditingId(r.id);
     setFType(r.type);
-    const match = plantOptions.find((p) => p.name === r.plant);
-    setFPlantId(match?.id);
+
+    // 🔹 Prefer stable plantId from serializer; fallback to name match
+    if (r.plantId) {
+      setFPlantId(r.plantId);
+    } else {
+      const match = plantOptions.find((p) => p.name === r.plant);
+      setFPlantId(match?.id);
+    }
+
     // YYYY-MM-DD
     const d = r.dueDate ? new Date(r.dueDate) : null;
     const iso =
@@ -134,6 +141,7 @@ export default function RemindersScreen() {
     setFDueDate(iso);
     setFIntervalValue(r.intervalValue);
     setFIntervalUnit(r.intervalUnit || (r.type === "repot" ? "months" : "days"));
+
     setEditOpen(true);
     setMenuOpenId(null);
   };

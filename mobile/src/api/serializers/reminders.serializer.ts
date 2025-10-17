@@ -36,8 +36,9 @@ export type UIReminder = {
   id: string;
   type: ReminderTypeUI;
   plant: string;
+  plantId?: string;                 // 🔹 NEW: stable FK for modal preselect
   location?: string;
-  due: string;     // "Today" / "Tomorrow" / "3 days" / short date
+  due: string;                      // "Today" / "Tomorrow" / "3 days" / short date
   dueDate: Date;
   intervalValue?: number;
   intervalUnit?: "days" | "months";
@@ -48,8 +49,9 @@ export type UIReminder = {
  *  - tasks (required),
  *  - remindersById (for type + plant id),
  *  - plantsById (for display_name [+ optionally location]).
+ *
+ * NOTE: when building each UI reminder, we pass interval values from the matching reminder (r)
  */
-// when building each UI reminder, pass interval values from the matching reminder (r)
 export function buildUIReminders(
   tasks: ApiReminderTask[],
   reminders: ApiReminder[],
@@ -69,13 +71,13 @@ export function buildUIReminders(
       id: String(task.id),
       type: typeUI,
       plant: plant?.display_name || "Plant",
+      plantId: r?.plant != null ? String(r.plant) : undefined,   // 🔹 NEW
       location: plant?.location?.name,
       due: label,
       dueDate: date,
-      // NEW:
+      // pass through interval details from the reminder record
       intervalValue: r?.interval_value,
       intervalUnit: r?.interval_unit,
     };
   });
 }
-
