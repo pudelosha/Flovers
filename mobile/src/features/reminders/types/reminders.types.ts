@@ -5,6 +5,9 @@ export type Reminder = {
   type: ReminderType;
   plant: string;
   location: string;
-  due: string;   // e.g. "Today"
-  dueDate: Date; // exact date
+  dueDate?: Date | string;
+
+  // NEW: needed for the extra lines
+  intervalValue?: number;
+  intervalUnit?: "days" | "months";
 };

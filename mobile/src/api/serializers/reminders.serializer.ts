@@ -39,6 +39,8 @@ export type UIReminder = {
   location?: string;
   due: string;     // "Today" / "Tomorrow" / "3 days" / short date
   dueDate: Date;
+  intervalValue?: number;
+  intervalUnit?: "days" | "months";
 };
 
 /**
@@ -47,6 +49,7 @@ export type UIReminder = {
  *  - remindersById (for type + plant id),
  *  - plantsById (for display_name [+ optionally location]).
  */
+// when building each UI reminder, pass interval values from the matching reminder (r)
 export function buildUIReminders(
   tasks: ApiReminderTask[],
   reminders: ApiReminder[],
@@ -66,9 +69,13 @@ export function buildUIReminders(
       id: String(task.id),
       type: typeUI,
       plant: plant?.display_name || "Plant",
-      location: plant?.location?.name, // optional if present in your list serializer
+      location: plant?.location?.name,
       due: label,
       dueDate: date,
+      // NEW:
+      intervalValue: r?.interval_value,
+      intervalUnit: r?.interval_unit,
     };
   });
 }
+
