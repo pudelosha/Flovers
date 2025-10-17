@@ -79,8 +79,90 @@ export const s = StyleSheet.create({
   menuItem: { flexDirection: "row", alignItems: "center", paddingVertical: 6, paddingHorizontal: 2 },
   menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
 
-  // Calendar placeholder
-  calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 16 },
+  // Calendar (wizard-like frame & placement)
+  calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 21 }, // align with list tile start
+  calendarCard: {
+    position: "relative",
+    borderRadius: 18,
+    overflow: "hidden",
+    marginBottom: 12,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.28)",   // matches wiz.cardGlass
+    backgroundColor: "rgba(255,255,255,0.12)", // overlay to enhance blur
+  },
+  // the BlurView itself (sits under the overlay, same radius)
+  calendarGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 18,
+  },
+  calendarCore: {
+    borderRadius: 12,
+    overflow: "hidden",
+    backgroundColor: "transparent",
+  },
+
+  // Custom calendar header (Month + Year only)
+  calHeaderRow: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 6,
+  },
+  calHeaderTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 16,
+  },
+
+  // Legend inside the frame (centered, smaller)
+  calendarLegendRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 12,
+    marginTop: 8,
+    paddingHorizontal: 2,
+  },
+  legendItem: { flexDirection: "row", alignItems: "center" },
+  legendDotSmall: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    marginRight: 6,
+  },
+  legendLabelSmall: {
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "700",
+    fontSize: 11,
+  },
+
+  // Subheading + empty state (inside the frame)
+  calendarSubheading: {
+    marginTop: 10,
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 14,
+  },
+  calendarNoItems: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    marginTop: 6,
+  },
+
+  // Inside-frame list box (fixed max height; scrolls)
+  calendarListBox: {
+    marginTop: 8,
+    borderRadius: 12,
+    overflow: "hidden",
+    // subtle inner background for readability without losing the blur
+    backgroundColor: "rgba(0,0,0,0.10)",
+    maxHeight: 260,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+  },
+
+  // Placeholder text (elsewhere)
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
 
@@ -140,11 +222,7 @@ export const s = StyleSheet.create({
     color: "#FFFFFF",
     backgroundColor: "rgba(255,255,255,0.12)",
   },
-  // Same look as input, but no extra margins (for inline row)
-  inputInline: {
-    marginHorizontal: 0,
-    marginBottom: 0,
-  },
+  inputInline: { marginHorizontal: 0, marginBottom: 0 },
 
   dropdown: { marginHorizontal: 16, marginBottom: 10 },
   dropdownHeader: {
@@ -178,14 +256,12 @@ export const s = StyleSheet.create({
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
 
-  // Inline row that spans full width (same side margins as inputs)
   inlineRow: {
     flexDirection: "row",
     alignItems: "center",
     marginHorizontal: 16,
     marginBottom: 10,
   },
-  // Each half is 50% width with an 8px gutter
   inlineHalfLeft: { flex: 1, marginRight: 8 },
   inlineHalfRight: { flex: 1, marginLeft: 8 },
 

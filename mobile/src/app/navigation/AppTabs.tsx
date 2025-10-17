@@ -20,7 +20,6 @@ import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
 import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // adjust path to where you placed it
-import AddReminderScreen from "../../features/reminders/pages/AddReminderScreen";
 
 export type AppTabParamList = {
   Home: undefined;
@@ -185,7 +184,6 @@ export default function AppTabs() {
         component={CreatePlantWizardScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
-      <Tab.Screen name="AddReminder" component={AddReminderScreen} options={{ tabBarStyle: { display: "flex" } }} />
     </Tab.Navigator>
   );
 }

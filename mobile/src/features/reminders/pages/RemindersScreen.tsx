@@ -1,11 +1,20 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
-import React, { useCallback, useState } from "react";
-import { View, Pressable, FlatList, Text, RefreshControl } from "react-native";
+import React, { useCallback, useMemo, useState } from "react";
+import {
+  View,
+  Pressable,
+  FlatList,
+  Text,
+  RefreshControl,
+  PanResponder,
+  GestureResponderEvent,
+  PanResponderGestureState,
+} from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
+import RemindersCalendar from "../components/RemindersCalendar";
 import type { Reminder as UIReminder } from "../types/reminders.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/reminders.constants";
 import {
@@ -14,7 +23,7 @@ import {
   completeReminderTask,
   updateReminder,
   deleteReminder,
-  createReminder,                // ⬅️ NEW
+  createReminder,
 } from "../../../api/services/reminders.service";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
@@ -23,17 +32,6 @@ import EditReminderModal from "../components/EditReminderModal";
 
 type ViewMode = "list" | "calendar";
 type PlantOption = { id: string; name: string; location?: string };
-
-function mapPlantOptions(apiPlants: any[]): PlantOption[] {
-  return (apiPlants || []).map((p) => ({
-    id: String(p.id),
-    name:
-      (p.display_name?.trim()) ||
-      (p.plant_definition?.name?.trim()) ||
-      "Unnamed plant",
-    location: p.location?.name || undefined,
-  }));
-}
 
 // small helper
 function todayISO() {
@@ -44,11 +42,24 @@ function todayISO() {
   return `${Y}-${M}-${D}`;
 }
 
+function mapPlantOptions(apiPlants: any[]): PlantOption[] {
+  return (apiPlants || []).map((p) => ({
+    id: String(p.id),
+    name:
+      p.display_name?.trim() ||
+      p.plant_definition?.name?.trim() ||
+      "Unnamed plant",
+    location: p.location?.name || undefined,
+  }));
+}
+
 export default function RemindersScreen() {
   const nav = useNavigation();
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
+  const [selectedDate, setSelectedDate] = useState<string>(todayISO());
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -100,9 +111,27 @@ export default function RemindersScreen() {
   const openList = () => setViewMode("list");
   const openCalendar = () => setViewMode("calendar");
 
-  // ⬅️ FAB "Add" now opens the same modal in CREATE mode
+  // Swipe: toggle on every horizontal swipe (left or right)
+  const panResponder = useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: (_e: GestureResponderEvent, g: PanResponderGestureState) => {
+          const dx = Math.abs(g.dx);
+          const dy = Math.abs(g.dy);
+          return dx > 24 && dx > dy * 1.5;
+        },
+        onPanResponderRelease: (_e, g) => {
+          if (Math.abs(g.dx) >= 40) {
+            setViewMode((prev) => (prev === "list" ? "calendar" : "list"));
+          }
+        },
+      }),
+    []
+  );
+
+  // ⬅️ FAB "Add" opens the same modal in CREATE mode
   const openAddReminder = () => {
-    setEditingId(null);                      // create mode
+    setEditingId(null);
     setFType("watering");
     setFPlantId(undefined);
     setFDueDate(todayISO());
@@ -128,12 +157,10 @@ export default function RemindersScreen() {
     setConfirmDeleteName(r.plant);
     setMenuOpenId(null);
   };
-
   const cancelDelete = () => {
     setConfirmDeleteReminderId(null);
     setConfirmDeleteName("");
   };
-
   const confirmDelete = async () => {
     try {
       if (!confirmDeleteReminderId) return;
@@ -149,7 +176,7 @@ export default function RemindersScreen() {
 
   // --- EDIT FLOW ---
   const openEditModal = (r: UIReminder) => {
-    setEditingId(r.reminderId);  // edit by reminder id
+    setEditingId(r.reminderId);
     setFType(r.type);
     if (r.plantId) {
       setFPlantId(r.plantId);
@@ -172,7 +199,6 @@ export default function RemindersScreen() {
     setEditOpen(true);
     setMenuOpenId(null);
   };
-
   const closeEdit = () => setEditOpen(false);
 
   // ⬅️ Save handler: create when editingId === null; otherwise update
@@ -189,10 +215,8 @@ export default function RemindersScreen() {
       };
 
       if (editingId === null) {
-        // CREATE
         await createReminder(payload, { auth: true });
       } else {
-        // UPDATE
         await updateReminder(Number(editingId), payload, { auth: true });
       }
 
@@ -206,7 +230,7 @@ export default function RemindersScreen() {
   const showFAB = !editOpen && !confirmDeleteReminderId;
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
         title="Reminders"
         gradientColors={HEADER_GRADIENT_TINT}
@@ -252,16 +276,24 @@ export default function RemindersScreen() {
           }
         />
       ) : (
-        <View style={s.calendarWrap}>
-          <Text style={s.placeholderText}>Calendar view</Text>
-          <Text style={s.placeholderHint}>Days with scheduled reminders will be highlighted here.</Text>
-        </View>
+        <RemindersCalendar
+          reminders={uiReminders}
+          selectedDate={selectedDate}
+          onSelectDate={(iso) => {
+            setSelectedDate(iso);
+            setMenuOpenId(null);
+          }}
+          menuOpenId={menuOpenId}
+          onToggleMenu={(id) => setMenuOpenId((curr) => (curr === id || id === "" ? null : id))}
+          onEdit={openEditModal}
+          onDelete={askDelete}
+        />
       )}
 
       {showFAB && (
         <FAB
           actions={[
-            { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder }, // ⬅️ opens modal
+            { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
             { key: "list", label: "List", icon: "view-list", onPress: openList },
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
             { key: "sort", label: "Sort", onPress: () => {} , icon: "sort" },
@@ -279,7 +311,7 @@ export default function RemindersScreen() {
 
       <EditReminderModal
         visible={editOpen}
-        mode={editingId === null ? "create" : "edit"}   // ⬅️ drive title + CTA
+        mode={editingId === null ? "create" : "edit"}
         plants={plantOptions}
         fType={fType}
         setFType={setFType}
