@@ -12,7 +12,16 @@ export default function ReminderMenu({ onEdit, onDelete }: Props) {
   return (
     <View style={s.menuSheet} pointerEvents="auto">
       <MenuItem label="Edit reminder" icon="calendar-edit" onPress={onEdit} />
-      <MenuItem label="Delete" icon="trash-can-outline" danger onPress={onDelete} />
+      {/* 🔴 DEBUG: log before delegating to parent onDelete */}
+      <MenuItem
+        label="Delete"
+        icon="trash-can-outline"
+        danger
+        onPress={() => {
+          console.log("[ReminderMenu] Delete pressed");
+          onDelete();
+        }}
+      />
     </View>
   );
 }

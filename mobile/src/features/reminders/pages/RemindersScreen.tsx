@@ -1,36 +1,31 @@
-// features/reminders/screens/RemindersScreen.tsx
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { View, Pressable, FlatList, Text, RefreshControl } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
-import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
-import {
-  HEADER_GRADIENT_TINT,
-  HEADER_SOLID_FALLBACK,
-} from "../constants/reminders.constants";
-
-import {
-  listReminders,
-  listReminderTasks,
-  completeReminderTask,
-} from "../../../api/services/reminders.service";
+import type { Reminder as UIReminder } from "../types/reminders.types";
+import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/reminders.constants";
+import { listReminders, listReminderTasks, completeReminderTask } from "../../../api/services/reminders.service";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
+import ConfirmDeleteReminderModal from "../components/ConfirmDeleteReminderModal";
 
 type ViewMode = "list" | "calendar";
 
 export default function RemindersScreen() {
   const nav = useNavigation();
+
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
+
+  // --- DELETE CONFIRMATION MODAL state (Plants pattern) ---
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -39,7 +34,7 @@ export default function RemindersScreen() {
       const [tasks, reminders, plants] = await Promise.all([
         listReminderTasks({ status: "pending", auth: true }),
         listReminders({ auth: true }),
-        fetchPlantInstances({ auth: true }),  // you already have this for Plants screen
+        fetchPlantInstances({ auth: true }),
       ]);
       const ui = buildUIReminders(tasks, reminders, plants);
       setUiReminders(ui);
@@ -51,9 +46,14 @@ export default function RemindersScreen() {
     }
   }, []);
 
-  useFocusEffect(useCallback(() => { load(); }, [load]));
+  useFocusEffect(
+    useCallback(() => {
+      load();
+    }, [load])
+  );
 
-  const onToggleMenu = (id: string) => setMenuOpenId(curr => (curr === id ? null : id));
+  const onToggleMenu = (id: string) =>
+    setMenuOpenId((curr) => (curr === id ? null : id));
 
   const openList = () => setViewMode("list");
   const openCalendar = () => setViewMode("calendar");
@@ -65,10 +65,28 @@ export default function RemindersScreen() {
     if (!idNum) return;
     try {
       await completeReminderTask(idNum, { auth: true });
-      await load(); // refresh to see the next cloned task (if any)
+      await load();
     } catch {
-      // TODO: show a toast/snackbar
+      // TODO: toast/snackbar
     }
+  };
+
+  // --- DELETE FLOW (UI-only for now) ---
+  const askDelete = (r: UIReminder) => {
+    setConfirmDeleteId(r.id);
+    setConfirmDeleteName(r.plant); // or `${r.plant} — ${r.type}`
+    setMenuOpenId(null);
+  };
+
+  const confirmDelete = () => {
+    // UI-only for now
+    setConfirmDeleteId(null);
+    setConfirmDeleteName("");
+  };
+
+  const cancelDelete = () => {
+    setConfirmDeleteId(null);
+    setConfirmDeleteName("");
   };
 
   return (
@@ -82,6 +100,7 @@ export default function RemindersScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
+      {/* Tap outside list to close any open tile menu */}
       {menuOpenId && (
         <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
       )}
@@ -95,10 +114,9 @@ export default function RemindersScreen() {
               reminder={item}
               isMenuOpen={menuOpenId === item.id}
               onToggleMenu={() => onToggleMenu(item.id)}
-              onPressBody={() => nav.navigate("ReminderDetails" as never)}
+              onPressBody={() => { /* TODO: future details/edit */ }}
               onEdit={() => { /* TODO */ }}
-              onDelete={() => { /* TODO */ }}
-              onComplete={() => onComplete(item.id)} // add a button/menu in tile if not present
+              onDelete={() => askDelete(item)}
             />
           )}
           ListHeaderComponent={<View style={{ height: 5 }} />}
@@ -133,6 +151,14 @@ export default function RemindersScreen() {
           { key: "sort", label: "Sort", icon: "sort", onPress: () => { /* TODO */ } },
           { key: "filter", label: "Filter", icon: "filter-variant", onPress: () => { /* TODO */ } },
         ]}
+      />
+
+      {/* DELETE CONFIRMATION MODAL */}
+      <ConfirmDeleteReminderModal
+        visible={!!confirmDeleteId}
+        name={confirmDeleteName}
+        onCancel={cancelDelete}
+        onConfirm={confirmDelete}
       />
     </View>
   );

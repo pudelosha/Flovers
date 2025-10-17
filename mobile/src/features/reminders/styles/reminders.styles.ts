@@ -7,12 +7,13 @@ export const s = StyleSheet.create({
     paddingBottom: 24,
   },
 
-  // Backdrop to dismiss menus
+  // Backdrop to dismiss menus (⚠️ keep it BELOW menus → no zIndex/elevation)
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    zIndex: 5,
-    elevation: 5,
     backgroundColor: "transparent",
+    // ❌ REMOVE these, they put the backdrop on top of your menu
+    // zIndex: 5,
+    // elevation: 5,
   },
 
   // TILES (mirror Home)
@@ -48,11 +49,7 @@ export const s = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 6,
   },
-  leftCaption: {
-    fontSize: 9,
-    letterSpacing: 0.7,
-    fontWeight: "800",
-  },
+  leftCaption: { fontSize: 9, letterSpacing: 0.7, fontWeight: "800" },
 
   // Center column
   centerCol: { flex: 1, paddingHorizontal: 6 },
@@ -63,7 +60,12 @@ export const s = StyleSheet.create({
     fontSize: 12,
     marginTop: 2,
   },
-  dueRow: { flexDirection: "row", alignItems: "center", gap: 16, marginTop: 6 },
+  dueRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 16,
+    marginTop: 6,
+  },
   dueWhen: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
   dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 },
 
@@ -79,13 +81,13 @@ export const s = StyleSheet.create({
     borderWidth: 0,
   },
 
-  // Floating menu
+  // Floating menu (🔼 ensure this is clearly above)
   menuSheet: {
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 10,
-    elevation: 10,
+    zIndex: 20,          // was 10
+    elevation: 20,       // was 10
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
@@ -100,19 +102,71 @@ export const s = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 2,
   },
-  menuItemText: {
-    color: "#FFFFFF",
-    fontWeight: "700",
-    letterSpacing: 0.2,
-    fontSize: 12,
-  },
+  menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
 
   // Calendar placeholder container
-  calendarWrap: {
-    flex: 1,
+  calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 16 },
+  placeholderText: { color: "#FFFFFF", fontWeight: "800" },
+  placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
+
+  // --- PROMPT / MODALS (mirror Plants) ---
+  promptBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.6)",
+    zIndex: 20,
+  },
+  promptWrap: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 21,
+    paddingHorizontal: 24,
+  },
+  promptGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 18,
+    overflow: "hidden",
+  },
+  promptInner: {
+    width: "100%",
+    maxWidth: 520,
+    borderRadius: 18,
+    overflow: "hidden",
+    position: "relative",
+    backgroundColor: "transparent",
+  },
+  promptTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 12,
     paddingHorizontal: 16,
     paddingTop: 16,
   },
-  placeholderText: { color: "#FFFFFF", fontWeight: "800" },
-  placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
+  promptButtonsRow: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingBottom: 16,
+    paddingTop: 6,
+  },
+  promptBtn: {
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+  promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
+  promptDanger: {
+    backgroundColor: "rgba(255,107,107,0.2)",
+    borderColor: "rgba(255,107,107,0.45)",
+  },
+  confirmText: {
+    color: "rgba(255,255,255,0.95)",
+    paddingHorizontal: 16,
+    marginBottom: 10,
+  },
 });

@@ -7,17 +7,8 @@ import { ACCENT_BY_TYPE, ICON_BY_TYPE, TILE_BLUR } from "../constants/reminders.
 import type { Reminder } from "../types/reminders.types";
 import ReminderMenu from "./ReminderMenu";
 
-type Props = {
-  reminder: Reminder;
-  isMenuOpen: boolean;
-  onToggleMenu: () => void;
-  onPressBody: () => void;
-  onEdit: () => void;
-  onDelete: () => void;
-};
-
-// Map possible API/canonical keys to your display keys used by constants
-function toDisplayType(t: string) {
+// --- helpers (mirrors your earlier code) ---
+function toDisplayType(t?: string) {
   const x = (t || "").toLowerCase();
   if (x === "water" || x === "watering") return "watering";
   if (x === "fertilize" || x === "fertilising" || x === "fertilizing") return "fertilising";
@@ -26,8 +17,6 @@ function toDisplayType(t: string) {
   if (x === "repot" || x === "repotting") return "repot";
   return "care";
 }
-
-/* local helpers */
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(0,0,0,${alpha})`;
   if (!hex || typeof hex !== "string") return fallback;
@@ -43,7 +32,6 @@ function hexToRgba(hex?: string, alpha = 1) {
   const b = bigint & 255;
   return `rgba(${r},${g},${b},${alpha})`;
 }
-
 function formatDate(d?: Date | string) {
   if (!d) return "";
   const date = typeof d === "string" ? new Date(d) : d;
@@ -53,26 +41,27 @@ function formatDate(d?: Date | string) {
   const yyyy = date.getFullYear();
   return `${dd}.${mm}.${yyyy}`;
 }
-
 function daysUntil(d?: Date | string): number | null {
   if (!d) return null;
   const date = typeof d === "string" ? new Date(d) : d;
   if (!(date instanceof Date) || isNaN(+date)) return null;
-  const start = new Date();
-  start.setHours(0, 0, 0, 0);
-  const end = new Date(date);
-  end.setHours(0, 0, 0, 0);
+  const start = new Date(); start.setHours(0,0,0,0);
+  const end   = new Date(date); end.setHours(0,0,0,0);
   const diffMs = end.getTime() - start.getTime();
   return Math.round(diffMs / (1000 * 60 * 60 * 24));
 }
 
+type Props = {
+  reminder: Reminder;
+  isMenuOpen: boolean;
+  onToggleMenu: () => void;
+  onPressBody: () => void;
+  onEdit: () => void;
+  onDelete: () => void;
+};
+
 export default function ReminderTile({
-  reminder,
-  isMenuOpen,
-  onToggleMenu,
-  onPressBody,
-  onEdit,
-  onDelete,
+  reminder, isMenuOpen, onToggleMenu, onPressBody, onEdit, onDelete,
 }: Props) {
   const displayType = toDisplayType(reminder.type as any);
   const accent = ACCENT_BY_TYPE[displayType];
@@ -80,27 +69,20 @@ export default function ReminderTile({
 
   const everyStr =
     reminder.intervalValue && reminder.intervalUnit
-      ? `Reoccurs every ${reminder.intervalValue} ${
-          reminder.intervalUnit === "months" ? "months" : "days"
-        }`
+      ? `Reoccurs every ${reminder.intervalValue} ${reminder.intervalUnit === "months" ? "months" : "days"}`
       : "";
 
   const dueDays = daysUntil(reminder.dueDate);
   const duePrefix =
-    dueDays === null
-      ? ""
-      : dueDays === 0
-      ? "Due today"
-      : dueDays === 1
-      ? "Due in 1 day"
-      : `Due in ${dueDays} days`;
-  const dueLine = reminder.dueDate
-    ? `${duePrefix} on ${formatDate(reminder.dueDate)}`
-    : "";
+    dueDays === null ? "" :
+    dueDays === 0   ? "Due today" :
+    dueDays === 1   ? "Due in 1 day" :
+                      `Due in ${dueDays} days`;
+  const dueLine = reminder.dueDate ? `${duePrefix} on ${formatDate(reminder.dueDate)}` : "";
 
   return (
     <View style={s.cardWrap}>
-      {/* Frosted glass background with subtle type tint */}
+      {/* Glass (blur + subtle type tint) */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -108,10 +90,7 @@ export default function ReminderTile({
           blurAmount={TILE_BLUR}
           reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
         />
-        <View
-          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.1) }]}
-          pointerEvents="none"
-        />
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.1) }]} pointerEvents="none" />
       </View>
 
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
@@ -120,30 +99,15 @@ export default function ReminderTile({
           <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
-          <Text style={[s.leftCaption, { color: accent }]}>
-            {displayType.toUpperCase()}
-          </Text>
+          <Text style={[s.leftCaption, { color: accent }]}>{displayType.toUpperCase()}</Text>
         </View>
 
         {/* Body */}
         <Pressable style={s.centerCol} onPress={onPressBody}>
-          <Text style={s.plantName} numberOfLines={1}>
-            {reminder.plant}
-          </Text>
-          <Text style={s.location} numberOfLines={1}>
-            {reminder.location}
-          </Text>
-
-          {!!everyStr && (
-            <Text style={styles.metaCompact} numberOfLines={1}>
-              {everyStr}
-            </Text>
-          )}
-          {!!dueLine && (
-            <Text style={styles.metaCompact} numberOfLines={1}>
-              {dueLine}
-            </Text>
-          )}
+          <Text style={s.plantName} numberOfLines={1}>{reminder.plant}</Text>
+          <Text style={s.location} numberOfLines={1}>{reminder.location}</Text>
+          {!!everyStr && <Text style={styles.metaCompact} numberOfLines={1}>{everyStr}</Text>}
+          {!!dueLine &&  <Text style={styles.metaCompact} numberOfLines={1}>{dueLine}</Text>}
         </Pressable>
 
         {/* Right (menu) */}
@@ -159,7 +123,12 @@ export default function ReminderTile({
         </View>
       </View>
 
-      {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
+      {isMenuOpen && (
+        <ReminderMenu
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      )}
     </View>
   );
 }
