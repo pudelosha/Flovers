@@ -1,18 +1,21 @@
 import React, { useMemo } from "react";
-import { View, Text, FlatList, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+// Import subpath to avoid Agenda + missing velocityTracker
 import Calendar from "react-native-calendars/src/calendar";
 import { BlurView } from "@react-native-community/blur";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+
 import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
 import { ACCENT_BY_TYPE, TILE_BLUR } from "../constants/reminders.constants";
-import { s } from "../styles/reminders.styles";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import ReminderMiniTile from "./ReminderMiniTile";
+import { s } from "../styles/reminders.styles";
 
 type Props = {
   reminders: UIReminder[];
-  selectedDate: string;                           // YYYY-MM-DD
+  selectedDate: string;                 // YYYY-MM-DD
   onSelectDate: (isoDate: string) => void;
 
+  // reused callbacks for actions
   menuOpenId: string | null;
   onToggleMenu: (id: string) => void;
   onEdit: (r: UIReminder) => void;
@@ -36,7 +39,8 @@ function monthYearLabel(input: any) {
     (input && typeof input?.toDate === "function" && input.toDate()) ||
     (input instanceof Date ? input : new Date(input));
   const raw = d.toLocaleString(undefined, { month: "long", year: "numeric" });
-  return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase()); // leading uppercase (locale-safe)
+  // ensure leading uppercase in locales that start with lowercase
+  return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
 }
 
 export default function RemindersCalendar({
@@ -48,6 +52,7 @@ export default function RemindersCalendar({
   onEdit,
   onDelete,
 }: Props) {
+  // multi-dot marks
   const dotsByDate = useMemo(() => {
     const acc: Record<string, { key: string; color: string }[]> = {};
     for (const r of reminders) {
@@ -79,7 +84,6 @@ export default function RemindersCalendar({
       selected: true,
       selectedColor: "rgba(255,255,255,0.16)",
       selectedTextColor: "#FFFFFF",
-      disableTouchEvent: false,
     };
     return base;
   }, [dotsByDate, selectedDate]);
@@ -94,8 +98,9 @@ export default function RemindersCalendar({
       style={s.calendarWrap}
       contentContainerStyle={s.calendarScrollContent}
       showsVerticalScrollIndicator={false}
+      onScrollBeginDrag={() => onToggleMenu("")}
     >
-      {/* MAIN BLURRY FRAME */}
+      {/* Main blurry frame */}
       <View style={s.calendarCard}>
         <BlurView style={s.calendarGlass} blurType="light" blurAmount={TILE_BLUR} />
 
@@ -121,18 +126,15 @@ export default function RemindersCalendar({
             </View>
           )}
           renderArrow={(direction) => (
-            <Icon
-              name={direction === "left" ? "chevron-left" : "chevron-right"}
-              size={20}
-              color="#FFFFFF"
-            />
+            <Icon name={direction === "left" ? "chevron-left" : "chevron-right"} size={20} color="#FFFFFF" />
           )}
         />
 
-        {/* Legend — always one line; scrolls horizontally if needed */}
+        {/* Legend — one row (horizontal scroll), keeps your dot/label look */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
+          style={s.calendarLegendHScroll}
           contentContainerStyle={s.calendarLegendRow}
         >
           {ORDER.map((t) => (
@@ -145,34 +147,28 @@ export default function RemindersCalendar({
           ))}
         </ScrollView>
 
-        {/* "Scheduled on" */}
+        {/* Subheading */}
         <Text style={s.calendarSubheading}>Scheduled on {selectedDate}</Text>
 
-        {/* Inside-frame compact list */}
+        {/* Inside-frame list (plain View to avoid nested VirtualizedList warnings) */}
         {remindersForSelected.length === 0 ? (
           <Text style={s.calendarNoItems}>No reminders for this day.</Text>
         ) : (
           <View style={s.calendarListBox}>
-            <FlatList
-              data={remindersForSelected}
-              keyExtractor={(r) => r.id}
-              renderItem={({ item }) => (
+            {remindersForSelected.map((item) => (
+              <View key={item.id} style={{ marginBottom: 8 }}>
                 <ReminderMiniTile
                   reminder={item}
                   onEdit={() => onEdit(item)}
                   onDelete={() => onDelete(item)}
                 />
-              )}
-              ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
-              contentContainerStyle={{ paddingVertical: 6, paddingHorizontal: 6 }}
-              showsVerticalScrollIndicator={false}
-              onScrollBeginDrag={() => onToggleMenu("")}
-            />
+              </View>
+            ))}
           </View>
         )}
       </View>
 
-      {/* Spacer so you can slide the whole frame above the FAB */}
+      {/* Spacer so the whole frame can scroll above the FAB */}
       <View style={{ height: 140 }} />
     </ScrollView>
   );

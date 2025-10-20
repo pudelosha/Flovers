@@ -15,7 +15,7 @@ import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
 import RemindersCalendar from "../components/RemindersCalendar";
-import type { Reminder as UIReminder } from "../types/reminders.types";
+import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/reminders.constants";
 import {
   listReminders,
@@ -29,9 +29,23 @@ import { fetchPlantInstances } from "../../../api/services/plant-instances.servi
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
 import ConfirmDeleteReminderModal from "../components/ConfirmDeleteReminderModal";
 import EditReminderModal from "../components/EditReminderModal";
+import SortRemindersModal from "../components/SortRemindersModal";
+import FilterRemindersModal from "../components/FilterRemindersModal";
 
 type ViewMode = "list" | "calendar";
 type PlantOption = { id: string; name: string; location?: string };
+
+type SortKey = "dueDate" | "plant" | "location";
+type SortDir = "asc" | "desc";
+
+/** Filters kept local; reset on screen focus per your request */
+type Filters = {
+  plantId?: string;          // selected plant id (or undefined for Any)
+  location?: string;         // selected location string (or undefined for Any)
+  types?: ReminderType[];    // selected types (multi)
+  dueFrom?: string;          // ISO yyyy-mm-dd
+  dueTo?: string;            // ISO yyyy-mm-dd
+};
 
 // small helper
 function todayISO() {
@@ -53,6 +67,27 @@ function mapPlantOptions(apiPlants: any[]): PlantOption[] {
   }));
 }
 
+function normalizeStr(v?: string) {
+  return (v || "").toLowerCase().trim();
+}
+
+function parseISODate(d?: string | Date): Date | null {
+  if (!d) return null;
+  const dt = typeof d === "string" ? new Date(d) : d;
+  if (!(dt instanceof Date) || isNaN(+dt)) return null;
+  dt.setHours(0, 0, 0, 0);
+  return dt;
+}
+
+/** << NEW: centralized initial filters so we can reuse */
+const INITIAL_FILTERS: Filters = {
+  plantId: undefined,
+  location: undefined,
+  types: [],
+  dueFrom: "",
+  dueTo: "",
+};
+
 export default function RemindersScreen() {
   const nav = useNavigation();
 
@@ -65,6 +100,12 @@ export default function RemindersScreen() {
 
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
   const [plantOptions, setPlantOptions] = useState<PlantOption[]>([]);
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    for (const p of plantOptions) if (p.location) set.add(p.location);
+    for (const r of uiReminders) if (r.location) set.add(r.location);
+    return Array.from(set).sort((a, b) => normalizeStr(a).localeCompare(normalizeStr(b)));
+  }, [plantOptions, uiReminders]);
 
   // --- DELETE CONFIRMATION MODAL state ---
   const [confirmDeleteReminderId, setConfirmDeleteReminderId] = useState<string | null>(null);
@@ -79,6 +120,13 @@ export default function RemindersScreen() {
   const [fDueDate, setFDueDate] = useState<string>("");
   const [fIntervalValue, setFIntervalValue] = useState<number | undefined>(undefined);
   const [fIntervalUnit, setFIntervalUnit] = useState<"days" | "months">("days");
+
+  // --- SORT / FILTER UI STATE ---
+  const [sortOpen, setSortOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [sortKey, setSortKey] = useState<SortKey>("dueDate");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [filters, setFilters] = useState<Filters>(INITIAL_FILTERS);
 
   const uiTypeToApi = (t: "watering" | "moisture" | "fertilising" | "care" | "repot"):
     "water" | "moisture" | "fertilize" | "care" | "repot" =>
@@ -105,7 +153,18 @@ export default function RemindersScreen() {
     }
   }, []);
 
+  /** Keep existing data refresh on focus */
   useFocusEffect(useCallback(() => { load(); }, [load]));
+
+  /** << NEW: Reset filters whenever screen is focused (e.g., after navigating back) */
+  useFocusEffect(
+    useCallback(() => {
+      setFilters(INITIAL_FILTERS);
+      setFilterOpen(false);
+      setSortOpen(false);
+      setMenuOpenId(null);
+    }, [])
+  );
 
   const onToggleMenu = (id: string) => setMenuOpenId((curr) => (curr === id ? null : id));
   const openList = () => setViewMode("list");
@@ -227,7 +286,61 @@ export default function RemindersScreen() {
     }
   };
 
-  const showFAB = !editOpen && !confirmDeleteReminderId;
+  // ===== FILTER + SORT (derived data) =====
+  const derivedReminders = useMemo(() => {
+    const typesSet = new Set(filters.types || []);
+    const from = parseISODate(filters.dueFrom);
+    const to = parseISODate(filters.dueTo);
+
+    const filtered = uiReminders.filter((r) => {
+      // Plant (exact by id if available; fall back to name equality if reminder lacks plantId)
+      if (filters.plantId) {
+        if (r.plantId) {
+          if (r.plantId !== filters.plantId) return false;
+        } else {
+          const plant = plantOptions.find((p) => p.id === filters.plantId);
+          if (plant && normalizeStr(r.plant) !== normalizeStr(plant.name)) return false;
+        }
+      }
+      // Location (exact match)
+      if (filters.location && normalizeStr(r.location) !== normalizeStr(filters.location)) return false;
+      // Types (multi)
+      if (typesSet.size > 0 && !typesSet.has(r.type)) return false;
+      // Due date range
+      if (from || to) {
+        const rd = parseISODate(
+          typeof r.dueDate === "string" || r.dueDate instanceof Date ? r.dueDate : undefined
+        );
+        if (!rd) return false; // exclude items without dueDate when date filter is active
+        if (from && rd < from) return false;
+        if (to && rd > to) return false;
+      }
+      return true;
+    });
+
+    const sorted = [...filtered].sort((a, b) => {
+      let cmp = 0;
+
+      if (sortKey === "dueDate") {
+        const ad = parseISODate(a.dueDate as any);
+        const bd = parseISODate(b.dueDate as any);
+        if (ad && bd) cmp = ad.getTime() - bd.getTime();
+        else if (ad && !bd) cmp = -1;       // items with a date first
+        else if (!ad && bd) cmp = 1;
+        else cmp = 0;
+      } else if (sortKey === "plant") {
+        cmp = normalizeStr(a.plant).localeCompare(normalizeStr(b.plant));
+      } else if (sortKey === "location") {
+        cmp = normalizeStr(a.location).localeCompare(normalizeStr(b.location));
+      }
+
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+
+    return sorted;
+  }, [uiReminders, filters, sortKey, sortDir, plantOptions]);
+
+  const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
@@ -246,7 +359,7 @@ export default function RemindersScreen() {
 
       {viewMode === "list" ? (
         <FlatList
-          data={uiReminders}
+          data={derivedReminders}
           keyExtractor={(r) => r.id}
           renderItem={({ item }) => (
             <ReminderTile
@@ -277,7 +390,7 @@ export default function RemindersScreen() {
         />
       ) : (
         <RemindersCalendar
-          reminders={uiReminders}
+          reminders={derivedReminders}
           selectedDate={selectedDate}
           onSelectDate={(iso) => {
             setSelectedDate(iso);
@@ -296,8 +409,8 @@ export default function RemindersScreen() {
             { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
             { key: "list", label: "List", icon: "view-list", onPress: openList },
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
-            { key: "sort", label: "Sort", onPress: () => {} , icon: "sort" },
-            { key: "filter", label: "Filter", onPress: () => {}, icon: "filter-variant" },
+            { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
+            { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
           ]}
         />
       )}
@@ -325,6 +438,38 @@ export default function RemindersScreen() {
         setFIntervalUnit={setFIntervalUnit}
         onCancel={closeEdit}
         onSave={onSaveEdit}
+      />
+
+      <SortRemindersModal
+        visible={sortOpen}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => setSortOpen(false)}
+        onApply={(key, dir) => {
+          setSortKey(key);
+          setSortDir(dir);
+          setSortOpen(false);
+        }}
+        onReset={() => {
+          setSortKey("dueDate");
+          setSortDir("asc");
+          setSortOpen(false);
+        }}
+      />
+
+      <FilterRemindersModal
+        visible={filterOpen}
+        plants={plantOptions}
+        locations={locationOptions}
+        filters={filters}
+        onCancel={() => setFilterOpen(false)}
+        onApply={(f) => {
+          setFilters(f);
+          setFilterOpen(false);
+        }}
+        onClearAll={() => {
+          setFilters(INITIAL_FILTERS);
+        }}
       />
     </View>
   );

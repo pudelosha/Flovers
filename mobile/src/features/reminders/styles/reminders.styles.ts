@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\styles\reminders.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -15,7 +14,7 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // TILES (full-size)
+  // ===== TILES (full-size) =====
   cardWrap: {
     height: 100,
     borderRadius: 18,
@@ -45,12 +44,12 @@ export const s = StyleSheet.create({
   },
   leftCaption: { fontSize: 9, letterSpacing: 0.7, fontWeight: "800" },
 
-  // Center column
+  // Center
   centerCol: { flex: 1, paddingHorizontal: 6 },
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
   location: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12, marginTop: 2 },
 
-  // Right column
+  // Right column (menu)
   rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
   menuBtn: {
     width: 36,
@@ -80,19 +79,19 @@ export const s = StyleSheet.create({
   menuItem: { flexDirection: "row", alignItems: "center", paddingVertical: 6, paddingHorizontal: 2 },
   menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
 
-  // Calendar (wizard-like frame & placement)
+  // ===== CALENDAR =====
   calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 21 },
+  calendarScrollContent: { paddingBottom: 24 },
   calendarCard: {
     position: "relative",
     borderRadius: 18,
     overflow: "hidden",
-    marginBottom: 100,                  // more space so FAB never overlaps; easier to scroll past
+    marginBottom: 80,                          // your requested bottom margin
     padding: 12,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.28)",
-    backgroundColor: "rgba(255,255,255,0.12)", // overlay to enhance blur
+    backgroundColor: "rgba(255,255,255,0.12)",
   },
-  // the BlurView itself (sits under the overlay, same radius)
   calendarGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 18,
@@ -103,7 +102,7 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // Custom calendar header (Month + Year only; centered)
+  // Header (Month + Year centered)
   calHeaderRow: {
     alignItems: "center",
     justifyContent: "center",
@@ -115,55 +114,40 @@ export const s = StyleSheet.create({
     fontSize: 16,
   },
 
-  // Legend inside the frame (centered, smaller) — unchanged look
+  // Legend — one row via horizontal ScrollView
+  calendarLegendHScroll: { marginTop: 8 },
   calendarLegendRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
     alignItems: "center",
-    justifyContent: "center",
+    flexWrap: "nowrap",
     gap: 12,
-    marginTop: 8,
     paddingHorizontal: 2,
   },
   legendItem: { flexDirection: "row", alignItems: "center" },
-  legendDotSmall: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    marginRight: 6,
-  },
-  legendLabelSmall: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "700",
-    fontSize: 11,
-  },
+  legendDotSmall: { width: 6, height: 6, borderRadius: 3, marginRight: 6 },
+  legendLabelSmall: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11 },
 
-  // Subheading + empty state (inside the frame)
+  // Subheading + empty state
   calendarSubheading: {
-    marginTop: 25,     // extra breathing room above
-    marginBottom: 0,  // and below
-    marginLeft: 7,
+    marginTop: 40,     // your margins
+    marginBottom: 0,
     color: "#FFFFFF",
     fontWeight: "800",
     fontSize: 14,
   },
-  calendarNoItems: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "600",
-    marginTop: 6,
-  },
+  calendarNoItems: { color: "rgba(255,255,255,0.9)", fontWeight: "600", marginTop: 6 },
 
-  // Inside-frame list box (no dark background; generous height for many items)
+  // Inside-frame list
   calendarListBox: {
     marginTop: 8,
     borderRadius: 12,
     overflow: "hidden",
-    maxHeight: 460,                   // shows many tiles; scrolls if needed
+    maxHeight: 460,
     paddingHorizontal: 0,
     paddingVertical: 0,
   },
 
-  // Compact tiles for calendar view
+  // ===== MINI TILES (calendar view) =====
   miniCard: {
     flexDirection: "row",
     alignItems: "center",
@@ -199,11 +183,11 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.25)",
   },
 
-  // Placeholder text (general)
+  // ===== PLACEHOLDERS =====
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
 
-  // PROMPT / MODALS
+  // ===== MODALS / FORMS (restored) =====
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -216,11 +200,7 @@ export const s = StyleSheet.create({
     zIndex: 21,
     paddingHorizontal: 24,
   },
-  promptGlass: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 18,
-    overflow: "hidden",
-  },
+  promptGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 18, overflow: "hidden" },
   promptInner: {
     width: "100%",
     maxWidth: 520,
@@ -238,7 +218,7 @@ export const s = StyleSheet.create({
     paddingTop: 16,
   },
 
-  // FORM controls
+  // Inputs / dropdowns / inline rows
   inputLabel: {
     marginTop: 8,
     marginBottom: 6,
@@ -293,16 +273,11 @@ export const s = StyleSheet.create({
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
 
-  inlineRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginHorizontal: 16,
-    marginBottom: 10,
-  },
+  inlineRow: { flexDirection: "row", alignItems: "center", marginHorizontal: 16, marginBottom: 10 },
   inlineHalfLeft: { flex: 1, marginRight: 8 },
   inlineHalfRight: { flex: 1, marginLeft: 8 },
 
-  // Modal buttons
+  // Modal buttons (primary/secondary/danger)
   promptButtonsRow: {
     flexDirection: "row",
     justifyContent: "flex-end",
@@ -322,11 +297,60 @@ export const s = StyleSheet.create({
   promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
   promptPrimary: { backgroundColor: "rgba(11,114,133,0.9)", borderColor: "rgba(255,255,255,0.25)" },
   promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
-
-  // Danger variant (used by delete confirm)
   promptDanger: {
     backgroundColor: "rgba(255,107,107,0.2)",
     borderColor: "rgba(255,107,107,0.45)",
   },
   confirmText: { color: "rgba(255,255,255,0.95)", paddingHorizontal: 16, marginBottom: 10 },
+
+  // ===== ADDED: SORT/FILTER UI =====
+  sectionTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 13,
+    marginTop: 4,
+    marginBottom: 6,
+    paddingHorizontal: 16,
+  },
+  radioRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    gap: 10,
+  },
+  radioOuter: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderWidth: 2,
+    borderColor: "rgba(255,255,255,0.7)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  radioInner: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: "#FFFFFF",
+  },
+  chipRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    paddingHorizontal: 12,
+    gap: 8,
+  },
+  chip: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  chipSelected: {
+    backgroundColor: "rgba(11,114,133,0.25)",
+    borderColor: "rgba(11,114,133,0.65)",
+  },
+  chipText: { color: "#FFFFFF", fontWeight: "700", fontSize: 12 },
 });
