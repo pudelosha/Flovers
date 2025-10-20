@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\styles\reminders.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -14,7 +15,7 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // TILES
+  // TILES (full-size)
   cardWrap: {
     height: 100,
     borderRadius: 18,
@@ -80,15 +81,15 @@ export const s = StyleSheet.create({
   menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
 
   // Calendar (wizard-like frame & placement)
-  calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 21 }, // align with list tile start
+  calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 21 },
   calendarCard: {
     position: "relative",
     borderRadius: 18,
     overflow: "hidden",
-    marginBottom: 12,
-    padding: 10,
+    marginBottom: 100,                  // more space so FAB never overlaps; easier to scroll past
+    padding: 12,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",   // matches wiz.cardGlass
+    borderColor: "rgba(255,255,255,0.28)",
     backgroundColor: "rgba(255,255,255,0.12)", // overlay to enhance blur
   },
   // the BlurView itself (sits under the overlay, same radius)
@@ -102,7 +103,7 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // Custom calendar header (Month + Year only)
+  // Custom calendar header (Month + Year only; centered)
   calHeaderRow: {
     alignItems: "center",
     justifyContent: "center",
@@ -114,7 +115,7 @@ export const s = StyleSheet.create({
     fontSize: 16,
   },
 
-  // Legend inside the frame (centered, smaller)
+  // Legend inside the frame (centered, smaller) — unchanged look
   calendarLegendRow: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -139,7 +140,9 @@ export const s = StyleSheet.create({
 
   // Subheading + empty state (inside the frame)
   calendarSubheading: {
-    marginTop: 10,
+    marginTop: 25,     // extra breathing room above
+    marginBottom: 0,  // and below
+    marginLeft: 7,
     color: "#FFFFFF",
     fontWeight: "800",
     fontSize: 14,
@@ -150,23 +153,57 @@ export const s = StyleSheet.create({
     marginTop: 6,
   },
 
-  // Inside-frame list box (fixed max height; scrolls)
+  // Inside-frame list box (no dark background; generous height for many items)
   calendarListBox: {
     marginTop: 8,
     borderRadius: 12,
     overflow: "hidden",
-    // subtle inner background for readability without losing the blur
-    backgroundColor: "rgba(0,0,0,0.10)",
-    maxHeight: 260,
-    paddingHorizontal: 6,
-    paddingVertical: 4,
+    maxHeight: 460,                   // shows many tiles; scrolls if needed
+    paddingHorizontal: 0,
+    paddingVertical: 0,
   },
 
-  // Placeholder text (elsewhere)
+  // Compact tiles for calendar view
+  miniCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.08)",
+  },
+  miniIconBubble: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    marginRight: 10,
+  },
+  miniContent: { flex: 1 },
+  miniTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 15 },
+  miniSub: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontSize: 12, marginTop: 2 },
+  miniTag: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11, marginTop: 4 },
+  miniActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
+  miniActionBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+  },
+
+  // Placeholder text (general)
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
 
-  // PROMPT / MODALS (Plants-style)
+  // PROMPT / MODALS
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
