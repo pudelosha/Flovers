@@ -88,5 +88,6 @@ class PlantInstanceByQRView(APIView):
             # 404 to avoid leaking whether the code exists for other users
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
 
-        data = PlantInstanceSerializer(plant, context={"request": request}).data
+        # return the READ shape, same as list/detail GET
+        data = PlantInstanceListSerializer(plant, context={"request": request}).data
         return Response(data, status=status.HTTP_200_OK)
