@@ -1,6 +1,6 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useCallback } from "react";
 import { View, Text, StyleSheet, Platform, Pressable } from "react-native";
-import { useIsFocused } from "@react-navigation/native";
+import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -21,32 +21,79 @@ import { scannerStyles as styles } from "../styles/scanner.styles";
 import { SCANNER_INSTRUCTION } from "../constants/scanner.constants";
 import ScannerOverlay from "../components/ScannerOverlay";
 
+function extractToken(raw: string): string {
+  if (!raw) return "";
+  // try full URL first
+  try {
+    const maybeUrl = raw.startsWith("http") ? raw : `https://${raw}`;
+    const url = new URL(maybeUrl);
+    const hostOk = url.hostname === "flovers.app" || url.hostname.endsWith(".flovers.app");
+    if (hostOk) {
+      const token = url.searchParams.get("code") || url.searchParams.get("qr") || "";
+      if (token) return token;
+    }
+  } catch {
+    // not a URL — fall through to raw token check
+  }
+  // allow direct token (URL-safe base64-ish)
+  if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
+  return "";
+}
+
 export default function ScannerScreen() {
   const isFocused = useIsFocused();
+  const navigation = useNavigation<any>();
   const { hasPermission, requestPermission, openSettings } = useCameraPermission();
 
   const [active, setActive] = useState(true);
   const [lastScanned, setLastScanned] = useState<string>("");
 
   const device = useCameraDevice("back");
-
   const instructionText = useMemo(() => SCANNER_INSTRUCTION, []);
 
   useEffect(() => {
     (async () => {
-      if (!hasPermission) {
-        await requestPermission();
-      }
+      if (!hasPermission) await requestPermission();
     })();
   }, [hasPermission, requestPermission]);
+
+  // 🔁 Reset state every time the screen gains focus, and clean up on blur
+  useFocusEffect(
+    useCallback(() => {
+      setLastScanned("");
+      setActive(true);
+      return () => {
+        setLastScanned("");
+        setActive(false);
+      };
+    }, [])
+  );
+
+  const onValidToken = useCallback(
+    (token: string) => {
+      // stop camera to avoid double scans
+      setActive(false);
+      navigation.navigate("PlantDetails", { qrCode: token });
+    },
+    [navigation]
+  );
 
   const codeScanner = useCodeScanner({
     codeTypes: ["qr"],
     onCodeScanned: (codes) => {
       const value = codes[0]?.value ?? "";
       if (!value) return;
+
+      // prevent overlay spam
       setLastScanned((prev) => (prev === value ? prev : value));
-      setActive(true); // keep camera running
+
+      const token = extractToken(value);
+      if (token) {
+        onValidToken(token);
+      } else {
+        // keep camera running, show the raw value in overlay
+        setActive(true);
+      }
     },
   });
 
@@ -82,11 +129,11 @@ export default function ScannerScreen() {
             <View style={styles.exampleRow}>
               <MaterialCommunityIcons name="link-variant" size={16} color="#FFFFFF" />
               <Text style={styles.exampleUrl} numberOfLines={1}>
-                flovers.app/plant-details?ABcsgQQwe44ty
+                flovers.app/api/plant-instances/by-qr/?code=ABcsgQQwe44ty
               </Text>
             </View>
             <Text style={styles.infoHint}>
-              We’ll verify codes on the server when you proceed to details (not in this demo).
+              We only navigate after reading a Flovers QR (or a valid token).
             </Text>
           </View>
         </View>
@@ -114,6 +161,8 @@ export default function ScannerScreen() {
                   isActive={active && isFocused}
                   codeScanner={codeScanner}
                 />
+                {/* purely visual rounded frame on top (no clipping) */}
+                <View style={styles.roundedMask} pointerEvents="none" />
                 <ScannerOverlay value={lastScanned} onClear={() => setLastScanned("")} />
               </>
             ) : (

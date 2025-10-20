@@ -24,8 +24,22 @@ export const scannerStyles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.28)",
     minHeight: 320,
   },
-  camInner: { flex: 1, overflow: "hidden", borderRadius: 18 },
-  qrCamera: { width: "100%", height: "100%" },
+
+  // IMPORTANT: no overflow/borderRadius here to avoid black preview on Android
+  camInner: { flex: 1, position: "relative" },
+
+  // Let Camera fill the space
+  qrCamera: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0 },
+
+  // A visual rounded frame over the camera so it looks rounded without clipping
+  roundedMask: {
+    position: "absolute",
+    top: 0, right: 0, bottom: 0, left: 0,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+    pointerEvents: "none",
+  },
 
   placeholder: { flex: 1, alignItems: "center", justifyContent: "center", paddingVertical: 24 },
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },

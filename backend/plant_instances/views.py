@@ -2,6 +2,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.views import APIView
 
 from .models import PlantInstance
 from .serializers import PlantInstanceSerializer, PlantInstanceListSerializer
@@ -62,3 +63,30 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
             return PlantInstanceListSerializer
         # for write operations, use the write serializer
         return PlantInstanceSerializer
+
+
+class PlantInstanceByQRView(APIView):
+    """
+    GET /api/plant-instances/by-qr/?code=<opaque>
+    Requires auth. Returns 404 if code not found for this user.
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        code = request.query_params.get("code")
+        if not code:
+            return Response({"detail": "Missing 'code' query parameter."},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        plant = (
+            PlantInstance.objects
+            .filter(user=request.user, qr_code=code)
+            .select_related("location", "plant_definition")
+            .first()
+        )
+        if not plant:
+            # 404 to avoid leaking whether the code exists for other users
+            return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+
+        data = PlantInstanceSerializer(plant, context={"request": request}).data
+        return Response(data, status=status.HTTP_200_OK)

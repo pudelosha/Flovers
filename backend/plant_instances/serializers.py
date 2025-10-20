@@ -44,11 +44,12 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "fertilize_interval_days",
             "care_interval_days",
             "repot_interval_months",
-            # read-only meta
+            # QR & meta
+            "qr_code",
             "created_at",
             "updated_at",
         ]
-        read_only_fields = ["id", "created_at", "updated_at"]
+        read_only_fields = ["id", "qr_code", "created_at", "updated_at"]
 
     def validate_location_id(self, value: int):
         request = self.context["request"]
@@ -132,6 +133,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "notes",
             "location",
             "plant_definition",
+            "qr_code",
             "created_at",
             "updated_at",
         ]

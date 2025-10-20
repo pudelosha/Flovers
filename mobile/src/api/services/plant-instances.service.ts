@@ -49,6 +49,11 @@ export type ApiPlantInstance = {
   id: number;
   plant_definition_id: number | null;
   location_id: number;
+  // include qr_code so UI can render/print it too
+  qr_code: string;
+  // not strictly needed for details nav, but handy:
+  display_name?: string;
+  notes?: string;
   created_at: string;
   updated_at: string;
 };
@@ -73,6 +78,7 @@ export type ApiPlantInstanceListItem = {
   notes: string;
   location?: { id: number; name: string; category: "indoor" | "outdoor" | "other" } | null;
   plant_definition?: { id: number; name: string; latin: string } | null;
+  qr_code: string;
   created_at: string;
   updated_at: string;
 };
@@ -114,6 +120,32 @@ export async function updatePlantInstance(
     `/api/plant-instances/${id}/`,
     "PATCH",
     payload,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/** ---- Fetch by QR code ---- */
+export async function fetchPlantByQr(
+  code: string,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceListItem> {
+  return await request<ApiPlantInstanceListItem>(
+    `/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+// Keep this one for non-QR entry points
+export async function fetchPlantInstanceDetail(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceListItem> {
+  return await request<ApiPlantInstanceListItem>(
+    `/api/plant-instances/${id}/`,
+    "GET",
+    undefined,
     { auth: opts.auth ?? true }
   );
 }

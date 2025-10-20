@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+import secrets
 
 # Reuse the enums already used on mobile (keep keys identical)
 LIGHT_LEVEL_CHOICES = [
@@ -71,8 +72,27 @@ class PlantInstance(models.Model):
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
 
+    # Opaque token used in QR codes (URL-safe, unique, not editable)
+    qr_code = models.CharField(
+        max_length=64,
+        unique=True,
+        db_index=True,
+        editable=False,
+        null=True,
+        blank=True,
+    )
+
     class Meta:
         ordering = ["-created_at"]
 
     def __str__(self):
         return self.display_name or f"Plant #{self.pk}"
+    
+    def _ensure_qr_code(self):
+        if not self.qr_code:
+            # ~24 chars base64url; adjust entropy by changing the number
+            self.qr_code = secrets.token_urlsafe(18)
+
+    def save(self, *args, **kwargs):
+        self._ensure_qr_code()
+        super().save(*args, **kwargs)
