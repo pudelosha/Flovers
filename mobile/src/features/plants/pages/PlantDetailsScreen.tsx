@@ -1,5 +1,15 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\plants\pages\PlantDetailsScreen.tsx
 import React, { useEffect, useMemo, useState } from "react";
-import { View, Text, ActivityIndicator, Alert, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  ActivityIndicator,
+  Alert,
+  ScrollView,
+  PermissionsAndroid,
+  Platform,
+  Pressable,
+} from "react-native";
 import { useRoute } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
@@ -12,9 +22,8 @@ import {
   type ApiPlantInstanceListItem,
 } from "../../../api/services/plant-instances.service";
 
-// QR tile bits you already added:
+// QR tile bits
 import QRCode from "react-native-qrcode-svg";
-import { PermissionsAndroid, Platform, Pressable } from "react-native";
 import RNFS from "react-native-fs";
 import CameraRoll from "@react-native-camera-roll/camera-roll";
 
@@ -36,7 +45,7 @@ export default function PlantDetailsScreen() {
         setError("");
 
         if (qrFromNav) {
-          const p = await fetchPlantByQr(qrFromNav); // returns list-format w/ id, qr_code, etc.
+          const p = await fetchPlantByQr(qrFromNav);
           if (!isMounted) return;
           setPlant(p as unknown as ApiPlantInstanceListItem);
         } else if (idFromNav) {
@@ -53,7 +62,9 @@ export default function PlantDetailsScreen() {
         if (isMounted) setLoading(false);
       }
     })();
-    return () => { isMounted = false; };
+    return () => {
+      isMounted = false;
+    };
   }, [qrFromNav, idFromNav]);
 
   const qrCodeValue = useMemo(() => {
@@ -124,7 +135,8 @@ export default function PlantDetailsScreen() {
           <View style={s.wizardPlaceholder}>
             <Text style={s.wizardTitle}>{plant.display_name || `Plant #${plant.id}`}</Text>
             <Text style={s.wizardText}>
-              ID: {plant.id}{"\n"}
+              ID: {plant.id}
+              {"\n"}
               Created: {plant.created_at}
             </Text>
           </View>
@@ -137,16 +149,9 @@ export default function PlantDetailsScreen() {
                 Scan to open this plant on your device.
               </Text>
 
-              <QRCode
-                value={qrCodeValue}
-                size={220}
-                getRef={(c) => ((global as any).__qrRef = c)}
-              />
+              <QRCode value={qrCodeValue} size={220} getRef={(c) => ((global as any).__qrRef = c)} />
 
-              <Pressable
-                onPress={() => onSaveQr((global as any).__qrRef)}
-                style={{ marginTop: 14 }}
-              >
+              <Pressable onPress={() => onSaveQr((global as any).__qrRef)} style={{ marginTop: 14 }}>
                 <Text style={[s.wizardText, { textDecorationLine: "underline" }]}>
                   Save QR Code
                 </Text>

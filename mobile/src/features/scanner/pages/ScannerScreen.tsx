@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\scanner\pages\ScannerScreen.tsx
 import React, { useMemo, useState, useEffect, useCallback } from "react";
 import { View, Text, StyleSheet, Platform, Pressable } from "react-native";
 import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
