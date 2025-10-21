@@ -86,7 +86,7 @@ export const s = StyleSheet.create({
     position: "relative",
     borderRadius: 18,
     overflow: "hidden",
-    marginBottom: 80,                          // your requested bottom margin
+    marginBottom: 80,
     padding: 12,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.28)",
@@ -129,7 +129,7 @@ export const s = StyleSheet.create({
 
   // Subheading + empty state
   calendarSubheading: {
-    marginTop: 40,     // your margins
+    marginTop: 40,
     marginBottom: 0,
     color: "#FFFFFF",
     fontWeight: "800",
@@ -187,7 +187,7 @@ export const s = StyleSheet.create({
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
 
-  // ===== MODALS / FORMS (restored) =====
+  // ===== MODALS / FORMS =====
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -218,7 +218,6 @@ export const s = StyleSheet.create({
     paddingTop: 16,
   },
 
-  // Inputs / dropdowns / inline rows
   inputLabel: {
     marginTop: 8,
     marginBottom: 6,
@@ -353,4 +352,26 @@ export const s = StyleSheet.create({
     borderColor: "rgba(11,114,133,0.65)",
   },
   chipText: { color: "#FFFFFF", fontWeight: "700", fontSize: 12 },
+
+  /* ---------- EMPTY STATE (glassy card, same margins as tiles) ---------- */
+  emptyWrap: {
+    marginTop: 5,
+  },
+  emptyGlass: {
+    borderRadius: 18,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.28)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    minHeight: 140,
+  },
+  emptyInner: { padding: 16, alignItems: "center" },
+  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });

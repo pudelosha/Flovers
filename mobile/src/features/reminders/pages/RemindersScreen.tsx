@@ -8,10 +8,15 @@ import {
   PanResponder,
   GestureResponderEvent,
   PanResponderGestureState,
+  StyleSheet,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { BlurView } from "@react-native-community/blur";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
 import RemindersCalendar from "../components/RemindersCalendar";
@@ -79,7 +84,7 @@ function parseISODate(d?: string | Date): Date | null {
   return dt;
 }
 
-/** << NEW: centralized initial filters so we can reuse */
+/** Centralized initial filters */
 const INITIAL_FILTERS: Filters = {
   plantId: undefined,
   location: undefined,
@@ -96,6 +101,8 @@ export default function RemindersScreen() {
   const [selectedDate, setSelectedDate] = useState<string>(todayISO());
 
   const [loading, setLoading] = useState(false);
+  const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
+  const [refreshing, setRefreshing] = useState(false); // ⬅️ NEW: pull-to-refresh state
   const [error, setError] = useState<string | null>(null);
 
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
@@ -144,10 +151,12 @@ export default function RemindersScreen() {
       const ui = buildUIReminders(tasks, reminders, plants);
       setUiReminders(ui);
       setPlantOptions(mapPlantOptions(plants));
+      setHasLoadedOnce(true);
     } catch (e: any) {
       setError(e?.message || "Failed to load reminders");
       setUiReminders([]);
       setPlantOptions([]);
+      setHasLoadedOnce(true);
     } finally {
       setLoading(false);
     }
@@ -156,7 +165,7 @@ export default function RemindersScreen() {
   /** Keep existing data refresh on focus */
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
-  /** << NEW: Reset filters whenever screen is focused (e.g., after navigating back) */
+  /** Reset filters whenever screen is focused */
   useFocusEffect(
     useCallback(() => {
       setFilters(INITIAL_FILTERS);
@@ -165,6 +174,16 @@ export default function RemindersScreen() {
       setMenuOpenId(null);
     }, [])
   );
+
+  // ⬅️ NEW: dedicated pull-to-refresh handler (does not toggle `loading`)
+  const onPullRefresh = useCallback(async () => {
+    setRefreshing(true);
+    try {
+      await load();
+    } finally {
+      setRefreshing(false);
+    }
+  }, [load]);
 
   const onToggleMenu = (id: string) => setMenuOpenId((curr) => (curr === id ? null : id));
   const openList = () => setViewMode("list");
@@ -188,7 +207,7 @@ export default function RemindersScreen() {
     []
   );
 
-  // ⬅️ FAB "Add" opens the same modal in CREATE mode
+  // FAB "Add" opens the same modal in CREATE mode
   const openAddReminder = () => {
     setEditingId(null);
     setFType("watering");
@@ -260,7 +279,7 @@ export default function RemindersScreen() {
   };
   const closeEdit = () => setEditOpen(false);
 
-  // ⬅️ Save handler: create when editingId === null; otherwise update
+  // Save handler: create when editingId === null; otherwise update
   const onSaveEdit = async () => {
     if (!fPlantId || !fDueDate || !fIntervalValue) return;
 
@@ -270,7 +289,7 @@ export default function RemindersScreen() {
         type: uiTypeToApi(fType),
         start_date: fDueDate,
         interval_value: Number(fIntervalValue),
-        interval_unit: fType === "repot" ? "months" : "days" as const,
+        interval_unit: (fType === "repot" ? "months" : "days") as const,
       };
 
       if (editingId === null) {
@@ -293,7 +312,6 @@ export default function RemindersScreen() {
     const to = parseISODate(filters.dueTo);
 
     const filtered = uiReminders.filter((r) => {
-      // Plant (exact by id if available; fall back to name equality if reminder lacks plantId)
       if (filters.plantId) {
         if (r.plantId) {
           if (r.plantId !== filters.plantId) return false;
@@ -302,16 +320,14 @@ export default function RemindersScreen() {
           if (plant && normalizeStr(r.plant) !== normalizeStr(plant.name)) return false;
         }
       }
-      // Location (exact match)
       if (filters.location && normalizeStr(r.location) !== normalizeStr(filters.location)) return false;
-      // Types (multi)
       if (typesSet.size > 0 && !typesSet.has(r.type)) return false;
-      // Due date range
+
       if (from || to) {
         const rd = parseISODate(
           typeof r.dueDate === "string" || r.dueDate instanceof Date ? r.dueDate : undefined
         );
-        if (!rd) return false; // exclude items without dueDate when date filter is active
+        if (!rd) return false;
         if (from && rd < from) return false;
         if (to && rd > to) return false;
       }
@@ -325,7 +341,7 @@ export default function RemindersScreen() {
         const ad = parseISODate(a.dueDate as any);
         const bd = parseISODate(b.dueDate as any);
         if (ad && bd) cmp = ad.getTime() - bd.getTime();
-        else if (ad && !bd) cmp = -1;       // items with a date first
+        else if (ad && !bd) cmp = -1;
         else if (!ad && bd) cmp = 1;
         else cmp = 0;
       } else if (sortKey === "plant") {
@@ -342,6 +358,8 @@ export default function RemindersScreen() {
 
   const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
+  const showInitialSpinner = !hasLoadedOnce && loading;
+
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
@@ -353,11 +371,14 @@ export default function RemindersScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
+      {/* Initial page-load spinner (centered, shared UI) */}
+      {showInitialSpinner ? <CenteredSpinner size={56} color="#FFFFFF" /> : null}
+
       {menuOpenId && (
         <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
       )}
 
-      {viewMode === "list" ? (
+      {!showInitialSpinner && (viewMode === "list" ? (
         <FlatList
           data={derivedReminders}
           keyExtractor={(r) => r.id}
@@ -371,19 +392,47 @@ export default function RemindersScreen() {
               onDelete={() => askDelete(item)}
             />
           )}
-          ListHeaderComponent={<View style={{ height: 5 }} />}
+          ListHeaderComponent={<View style={{ height: 0 }} />}
           ListFooterComponent={<View style={{ height: 140 }} />}
           contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={() => setMenuOpenId(null)}
-          refreshControl={<RefreshControl refreshing={loading} onRefresh={load} />}
+          // ⬇️ Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
           ListEmptyComponent={
             !loading ? (
-              <View style={{ padding: 24, alignItems: "center" }}>
-                <Text style={s.placeholderText}>No reminders</Text>
-                <Text style={s.placeholderHint}>Pull to refresh or add a reminder.</Text>
-                {error ? <Text style={[s.placeholderHint, { marginTop: 8 }]}>{error}</Text> : null}
+              <View style={s.emptyWrap}>
+                <View style={s.emptyGlass}>
+                  <BlurView
+                    style={StyleSheet.absoluteFill}
+                    blurType="light"
+                    blurAmount={14}
+                    reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+                  />
+                  <View
+                    pointerEvents="none"
+                    style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
+                  />
+                  <View style={s.emptyInner}>
+                    {/* Centered header (icon + title) */}
+                    <MaterialCommunityIcons
+                      name="bell-outline"
+                      size={26}
+                      color="#FFFFFF"
+                      style={{ marginBottom: 10 }}
+                    />
+                    <Text style={s.emptyTitle}>No reminders yet</Text>
+
+                    {/* Left-aligned description */}
+                    <View style={s.emptyDescBox}>
+                      <Text style={s.emptyText}>
+                        Reminders are associated with specific plants. Please make sure you have at least one plant created first.{"\n\n"}
+                        Tap the <Text style={s.inlineBold}>“+” button</Text> to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, moisture, fertilising, care, or repot), set the first due date, and define how often it should repeat.
+                      </Text>
+                    </View>
+                  </View>
+                </View>
               </View>
             ) : null
           }
@@ -401,7 +450,7 @@ export default function RemindersScreen() {
           onEdit={openEditModal}
           onDelete={askDelete}
         />
-      )}
+      ))}
 
       {showFAB && (
         <FAB
