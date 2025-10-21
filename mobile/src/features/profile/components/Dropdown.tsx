@@ -10,7 +10,11 @@ export default function Dropdown({
 }: { open: boolean; valueText: string; onToggle: () => void; items: DropdownItem[] }) {
   return (
     <View style={controls.dropdown}>
-      <Pressable style={controls.dropdownHeader} onPress={onToggle} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+      <Pressable
+        style={controls.dropdownHeader}
+        onPress={onToggle}
+        android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+      >
         <Text style={controls.dropdownValue}>{valueText}</Text>
         <MaterialCommunityIcons name={open ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
       </Pressable>
