@@ -1,9 +1,20 @@
-import React, { useCallback, useMemo, useState } from "react";
-import { View, Pressable, FlatList, ActivityIndicator, RefreshControl, Alert } from "react-native";
+import React, { useCallback, useState } from "react";
+import {
+  View,
+  Pressable,
+  FlatList,
+  RefreshControl,
+  Alert,
+  Text,
+  StyleSheet,
+} from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { BlurView } from "@react-native-community/blur";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner"; // ⬅️ new
 import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/EditPlantModal";
@@ -25,9 +36,10 @@ import {
 
 /** Map API list item -> UI Plant shape used by PlantTile */
 function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
-  const name = (item.display_name?.trim())
-    || (item.plant_definition?.name?.trim())
-    || "Unnamed plant";
+  const name =
+    item.display_name?.trim() ||
+    item.plant_definition?.name?.trim() ||
+    "Unnamed plant";
 
   const latin = item.plant_definition?.latin || undefined;
   const location = item.location?.name || undefined;
@@ -78,7 +90,9 @@ export default function PlantsScreen() {
           if (mounted) setLoading(false);
         }
       })();
-      return () => { mounted = false; };
+      return () => {
+        mounted = false;
+      };
     }, [load])
   );
 
@@ -110,7 +124,6 @@ export default function PlantsScreen() {
   const closeEdit = () => setEditOpen(false);
 
   const onUpdate = () => {
-    // Placeholder local update (we'll switch to backend PATCH later)
     if (!editingId || !fName.trim()) return;
     setPlants((prev) =>
       prev.map((p) =>
@@ -159,9 +172,8 @@ export default function PlantsScreen() {
           onPressRight={() => nav.navigate("Scanner" as never)}
           showSeparator={false}
         />
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <ActivityIndicator />
-        </View>
+        {/* Shared, bigger, centered spinner */}
+        <CenteredSpinner size={56} color="#FFFFFF" />
       </View>
     );
   }
@@ -181,29 +193,68 @@ export default function PlantsScreen() {
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
       <FlatList
+        style={{ flex: 1 }}
         data={plants}
         keyExtractor={(p) => p.id}
         renderItem={({ item }) => (
           <PlantTile
             plant={item}
             isMenuOpen={menuOpenId === item.id}
-            onPressBody={() => nav.navigate("PlantDetails" as never, { id: item.id } as never)}
-            onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
+            onPressBody={() =>
+              nav.navigate("PlantDetails" as never, { id: item.id } as never)
+            }
+            onPressMenu={() =>
+              setMenuOpenId((curr) => (curr === item.id ? null : item.id))
+            }
             onEdit={() => openEditModal(item)}
-            onReminders={() => { /* wire later */ }}
+            onReminders={() => {}}
             onDelete={() => askDelete(item)}
           />
         )}
-        ListHeaderComponent={() => <View style={{ height: 5 }} />}
+        ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}
         contentContainerStyle={s.listContent}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
         keyboardShouldPersistTaps="handled"
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        ListEmptyComponent={() => (
+          <View style={s.emptyWrap}>
+            <View style={s.emptyGlass}>
+              <BlurView
+                style={StyleSheet.absoluteFill}
+                blurType="light"
+                blurAmount={14}
+                reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+              />
+              <View
+                pointerEvents="none"
+                style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
+              />
+              <View style={s.emptyInner}>
+                {/* Centered header (icon + title) */}
+                <MaterialCommunityIcons
+                  name="sprout-outline"
+                  size={26}
+                  color="#FFFFFF"
+                  style={{ marginBottom: 10 }}
+                />
+                <Text style={s.emptyTitle}>No plants yet</Text>
+
+                {/* Left-aligned description */}
+                <View style={s.emptyDescBox}>
+                  <Text style={s.emptyText}>
+                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the
+                    bottom-right corner to add your first plant. The Create Plant Wizard will help
+                    you set up your plant and specify its parameters, as well as schedule
+                    reminders.{"\n\n"}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        )}
       />
 
       {/* Page FAB */}
@@ -211,9 +262,9 @@ export default function PlantsScreen() {
         bottomOffset={92}
         actions={[
           { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
-          { key: "sort", icon: "sort", label: "Sort", onPress: () => {/* TODO */} },
-          { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => {/* TODO */} },
-          { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {/* TODO */} },
+          { key: "sort", icon: "sort", label: "Sort", onPress: () => {} },
+          { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => {} },
+          { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
         ]}
       />
 

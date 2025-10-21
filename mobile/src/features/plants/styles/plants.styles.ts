@@ -272,4 +272,27 @@ export const s = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 10,
   },
+
+  /* ---------- EMPTY STATE (glass card like profile) ---------- */
+  emptyWrap: {
+    // relies on listContent for horizontal margins; just provide top spacing like a tile
+    marginTop: 5,
+  },
+  emptyGlass: {
+    borderRadius: 18,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.28)",
+    backgroundColor: "rgba(255,255,255,0.12)",
+    minHeight: 140,
+  },
+  emptyInner: { padding: 16, alignItems: "center" },
+  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });
