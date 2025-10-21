@@ -1,6 +1,14 @@
 import { request } from "../client";
 import type { LangCode, FabPosition, BackgroundKey } from "../../features/profile/types/profile.types";
 
+/** Common envelope returned by the profiles API */
+type ApiEnvelope<T> = {
+  status: "success" | "error";
+  message: string;
+  data: T;
+  errors?: Record<string, unknown>;
+};
+
 /** ---- Notifications ---- */
 export type ApiProfileNotifications = {
   email_daily: boolean;
@@ -17,24 +25,26 @@ export type ApiProfileNotificationsUpdatePayload = Partial<ApiProfileNotificatio
 export async function fetchProfileNotifications(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileNotifications> {
-  return await request<ApiProfileNotifications>(
+  const res = await request<ApiEnvelope<ApiProfileNotifications>>(
     "/api/profile/notifications/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
   );
+  return res.data;
 }
 
 export async function updateProfileNotifications(
   payload: ApiProfileNotificationsUpdatePayload,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileNotifications> {
-  return await request<ApiProfileNotifications>(
+  const res = await request<ApiEnvelope<ApiProfileNotifications>>(
     "/api/profile/notifications/",
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
   );
+  return res.data;
 }
 
 /** ---- Settings ---- */
@@ -47,7 +57,6 @@ export type ApiProfileSettings = {
 
   tile_transparency: number; // 0..0.6 in UI
 
-  // NEW
   background: BackgroundKey; // "bg1" | "bg2" | "bg3" | "bg4"
   fab_position: FabPosition; // "left" | "right"
 };
@@ -57,27 +66,32 @@ export type ApiProfileSettingsUpdatePayload = Partial<ApiProfileSettings>;
 export async function fetchProfileSettings(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileSettings> {
-  return await request<ApiProfileSettings>(
+  const res = await request<ApiEnvelope<ApiProfileSettings>>(
     "/api/profile/settings/",
     "GET",
     undefined,
     { auth: opts.auth ?? true }
   );
+  return res.data;
 }
 
 export async function updateProfileSettings(
   payload: ApiProfileSettingsUpdatePayload,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiProfileSettings> {
-  return await request<ApiProfileSettings>(
+  const res = await request<ApiEnvelope<ApiProfileSettings>>(
     "/api/profile/settings/",
     "PATCH",
     payload,
     { auth: opts.auth ?? true }
   );
+  return res.data;
 }
 
-/** ---- Change password ---- */
+/** ---- Change password ----
+ * NOTE: Backend endpoints /api/auth/change-password/ do not exist yet.
+ * This will 404 until we implement them in `accounts`.
+ */
 export async function changeMyPassword(
   payload: { current_password: string; new_password: string },
   opts: { auth?: boolean } = { auth: true }
@@ -90,7 +104,10 @@ export async function changeMyPassword(
   );
 }
 
-/** ---- Change email ---- */
+/** ---- Change email ----
+ * NOTE: Backend endpoints /api/auth/change-email/ do not exist yet.
+ * This will 404 until we implement them in `accounts`.
+ */
 export async function changeMyEmail(
   payload: { new_email: string; password: string },
   opts: { auth?: boolean } = { auth: true }

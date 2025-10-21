@@ -140,26 +140,34 @@ class ResetPasswordView(APIView):
         return ok("Password has been reset successfully.")
 
 
+# --- Change Password ---
 class ChangePasswordView(APIView):
     permission_classes = [IsAuthenticated]
+
     def post(self, request):
         ser = ChangePasswordSerializer(data=request.data, context={"request": request})
         if not ser.is_valid():
-            return fail("Unable to change password.", ser.errors)
+            msg = ser.errors.get("message", ["Password change failed."])[0]
+            return fail(msg, errors=ser.errors)
+        new_password = ser.validated_data["new_password"]
         user = request.user
-        user.set_password(ser.validated_data["new_password"])
+        user.set_password(new_password)
         user.save(update_fields=["password"])
-        return ok("Password updated successfully.")
+        return ok("Password changed successfully.")
 
 
+# --- Change Email ---
 class ChangeEmailView(APIView):
     permission_classes = [IsAuthenticated]
+
     def post(self, request):
         ser = ChangeEmailSerializer(data=request.data, context={"request": request})
         if not ser.is_valid():
-            return fail("Unable to change email.", ser.errors)
+            msg = ser.errors.get("message", ["Email change failed."])[0]
+            return fail(msg, errors=ser.errors)
         user = request.user
-        user.email = ser.validated_data["new_email"]
+        new_email = ser.validated_data["new_email"]
+        user.email = new_email
         user.save(update_fields=["email"])
-        # Optional: send a notification or re-verify new email later
+
         return ok("Email updated successfully.", {"email": user.email})
