@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import {
   View, StyleSheet, KeyboardAvoidingView, Platform, Animated, TextInput as RNTextInput,
 } from "react-native";
-import { Text, TextInput, Button, Snackbar, Portal } from "react-native-paper";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Text, TextInput, Button } from "react-native-paper";
 import { ApiError } from "../../../api/client";
 import { useAuth } from "../../../app/providers/useAuth";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 const INPUT_HEIGHT = 64;
 
@@ -15,7 +15,8 @@ const AnimatedFloatingLabel = ({
 }: any) => {
   const [isFocused, setIsFocused] = useState(false);
   const animatedLabel = useRef(new Animated.Value(value ? 1 : 0)).current;
-  const animateLabel = (toValue: number) => Animated.timing(animatedLabel, { toValue, duration: 200, useNativeDriver: false }).start();
+  const animateLabel = (toValue: number) =>
+    Animated.timing(animatedLabel, { toValue, duration: 200, useNativeDriver: false }).start();
   const handleFocus = () => { setIsFocused(true); animateLabel(1); onFocus?.(); };
   const handleBlur = () => { setIsFocused(false); if (!value) animateLabel(0); onBlur?.(); };
   const handleChangeText = (text: string) => { if (!isFocused && text) animateLabel(1); onChangeText(text); };
@@ -42,27 +43,34 @@ const AnimatedFloatingLabel = ({
 };
 
 export default function ForgotPasswordScreen({ navigation }: any) {
-  const insets = useSafeAreaInsets();
   const { requestPasswordReset } = useAuth() as any;
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
+  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
+    visible: false,
+    msg: "",
+    variant: "default",
+  });
 
   const emailRef = useRef<RNTextInput | null>(null);
 
   async function onSubmit() {
     if (!email.trim()) {
-      setToast({ visible: true, msg: "Please enter your email." });
+      setToast({ visible: true, msg: "Please enter your email.", variant: "error" });
       return;
     }
     setLoading(true);
     try {
       if (typeof requestPasswordReset === "function") await requestPasswordReset({ email });
-      setToast({ visible: true, msg: "If an account exists for that email, we’ll send a reset link." });
+      setToast({
+        visible: true,
+        msg: "If an account exists for that email, we’ll send a reset link.",
+        variant: "success",
+      });
     } catch (e: any) {
       const msg = e instanceof ApiError ? e.body?.message || e.message : "Something went wrong. Try again.";
-      setToast({ visible: true, msg });
+      setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
     }
@@ -88,12 +96,13 @@ export default function ForgotPasswordScreen({ navigation }: any) {
           <Text style={s.linkLabel}>Back to Login</Text>
         </Button>
 
-        <Portal>
-          <Snackbar visible={toast.visible} onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000} style={s.snack} wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}>
-            {toast.msg}
-          </Snackbar>
-        </Portal>
+        {/* Shared top toast */}
+        <TopSnackbar
+          visible={toast.visible}
+          message={toast.msg}
+          variant={toast.variant}
+          onDismiss={() => setToast({ visible: false, msg: "" })}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -103,13 +112,13 @@ const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
   title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
   subtitle: { color: "rgba(255,255,255,0.85)", textAlign: "center", marginBottom: 4 },
+
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
   flat: { backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 14, height: INPUT_HEIGHT, paddingHorizontal: 12 },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
+
   button: { marginTop: 8 },
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
-  snackWrapper: { position: "absolute", left: 0, right: 0, alignItems: "center" },
-  snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });

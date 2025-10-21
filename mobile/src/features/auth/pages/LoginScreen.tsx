@@ -7,10 +7,10 @@ import {
   TextInput as RNTextInput,
   Animated,
 } from "react-native";
-import { Text, TextInput, Button, Snackbar, Portal } from "react-native-paper";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Text, TextInput, Button } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 const INPUT_HEIGHT = 64;
 
@@ -54,20 +54,26 @@ const AnimatedFloatingLabel = ({
 
 export default function LoginScreen({ navigation }: any) {
   const { login } = useAuth();
-  const insets = useSafeAreaInsets();
 
   const [email, setEmail] = useState(""); const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false); const [loading, setLoading] = useState(false);
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
+  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
+    visible: false,
+    msg: "",
+    variant: "default",
+  });
 
   const pwdRef = useRef<RNTextInput | null>(null); const emailRef = useRef<RNTextInput | null>(null);
 
   async function onSubmit() {
     setLoading(true);
-    try { await login({ email, password }); }
-    catch (e: any) {
+    try {
+      await login({ email, password });
+      // Optional success toast:
+      // setToast({ visible: true, msg: "Welcome back!", variant: "success" });
+    } catch (e: any) {
       const msg = e instanceof ApiError ? e.body?.message || e.message : "Invalid email or password.";
-      setToast({ visible: true, msg });
+      setToast({ visible: true, msg, variant: "error" });
     } finally { setLoading(false); }
   }
 
@@ -106,12 +112,13 @@ export default function LoginScreen({ navigation }: any) {
           <Text style={s.linkLabel}>Don&apos;t have an account? <Text style={[s.linkLabel, s.linkBold]}>Sign Up</Text></Text>
         </Button>
 
-        <Portal>
-          <Snackbar visible={toast.visible} onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000} style={s.snack} wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}>
-            {toast.msg}
-          </Snackbar>
-        </Portal>
+        {/* Top toast (shared UI) */}
+        <TopSnackbar
+          visible={toast.visible}
+          message={toast.msg}
+          variant={toast.variant}
+          onDismiss={() => setToast({ visible: false, msg: "" })}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -129,6 +136,4 @@ const s = StyleSheet.create({
   linkTight: { marginTop: -4 },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
   linkBold: { fontWeight: "700" },
-  snackWrapper: { position: "absolute", left: 0, right: 0, alignItems: "center" },
-  snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });

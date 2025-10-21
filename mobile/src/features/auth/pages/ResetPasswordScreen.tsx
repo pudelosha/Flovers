@@ -7,11 +7,11 @@ import {
   Animated,
   TextInput as RNTextInput,
 } from "react-native";
-import { Text, TextInput, Button, Snackbar, Portal } from "react-native-paper";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Text, TextInput, Button } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 const INPUT_HEIGHT = 64;
 
@@ -101,7 +101,6 @@ function parseQuery(url: string): Record<string, string> {
 }
 
 export default function ResetPasswordScreen({ navigation }: any) {
-  const insets = useSafeAreaInsets();
   const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
   const { resetPassword } = useAuth() as any; // rename to your actual method, e.g. confirmPasswordReset
 
@@ -126,7 +125,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const [showPwd2, setShowPwd2] = useState(false);
 
   const [loading, setLoading] = useState(false);
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
+  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
+    visible: false,
+    msg: "",
+    variant: "default",
+  });
 
   const pwdRef = useRef<RNTextInput | null>(null);
   const pwd2Ref = useRef<RNTextInput | null>(null);
@@ -141,7 +144,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
       if (!derived.token || !derived.uid) msg = "Invalid or missing reset link.";
       else if (!passwordValid) msg = "Password should be at least 6 characters.";
       else if (!passwordsMatch) msg = "Passwords do not match.";
-      setToast({ visible: true, msg });
+      setToast({ visible: true, msg, variant: "error" });
       return;
     }
 
@@ -153,14 +156,14 @@ export default function ResetPasswordScreen({ navigation }: any) {
         // Temporary fake success to let you test the flow without backend
         await new Promise((r) => setTimeout(r, 500));
       }
-      setToast({ visible: true, msg: "Password changed. Please log in." });
+      setToast({ visible: true, msg: "Password changed. Please log in.", variant: "success" });
       navigation.navigate("Login");
     } catch (e: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
           : "Could not reset password. The link may be invalid or expired.";
-      setToast({ visible: true, msg });
+      setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
     }
@@ -172,6 +175,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
       setToast({
         visible: true,
         msg: "Open this page via the reset link from your email.",
+        variant: "default",
       });
     }
   }, [derived]);
@@ -235,17 +239,13 @@ export default function ResetPasswordScreen({ navigation }: any) {
           <Text style={s.linkLabel}>Back to Login</Text>
         </Button>
 
-        <Portal>
-          <Snackbar
-            visible={toast.visible}
-            onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000}
-            style={s.snack}
-            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom + 10 }]}
-          >
-            {toast.msg}
-          </Snackbar>
-        </Portal>
+        {/* Top-aligned shared toast */}
+        <TopSnackbar
+          visible={toast.visible}
+          message={toast.msg}
+          variant={toast.variant}
+          onDismiss={() => setToast({ visible: false, msg: "" })}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -270,7 +270,7 @@ const s = StyleSheet.create({
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
 
-  // toast
+  // (old bottom Snackbar styles kept for reference; not used now)
   snackWrapper: { position: "absolute", left: 0, right: 0, alignItems: "center" },
   snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });

@@ -1,6 +1,6 @@
 // src/features/profile/pages/ProfileScreen.tsx
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, TextInput, Pressable, Alert } from "react-native";
+import { View, Text, ScrollView, TextInput, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -16,6 +16,7 @@ import NotificationsCard from "../components/NotificationsCard";
 import SettingsCard from "../components/SettingsCard";
 import SupportCard from "../components/SupportCard";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import {
   fetchProfileNotifications,
@@ -49,6 +50,11 @@ export default function ProfileScreen() {
   const [savingSettings, setSavingSettings] = useState<boolean>(false);
   const [savingChangeEmail, setSavingChangeEmail] = useState<boolean>(false);
   const [savingChangePassword, setSavingChangePassword] = useState<boolean>(false);
+
+  // ---------- Toast ----------
+  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
+  const showToast = (msg: string) => setToast({ visible: true, msg });
+  const hideToast = () => setToast({ visible: false, msg: "" });
 
   // ---------- Notifications state ----------
   const [emailDaily, setEmailDaily] = useState(true);
@@ -123,7 +129,7 @@ export default function ProfileScreen() {
         setFabPosition((settings.fab_position as FabPosition) ?? "right");
       } catch (e: any) {
         console.warn("Failed to load profile data", e);
-        Alert.alert("Error", "Failed to load Profile preferences. Please try again.");
+        showToast("Failed to load Profile preferences. Please try again.");
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -148,10 +154,10 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      Alert.alert("Saved", "Notification preferences updated.");
+      showToast("Notification preferences updated.");
     } catch (e: any) {
       console.warn("Failed to save notifications", e);
-      Alert.alert("Error", "Could not save notification preferences.");
+      showToast("Could not save notification preferences.");
     } finally {
       setSavingNotif(false);
     }
@@ -172,10 +178,10 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      Alert.alert("Saved", "Settings updated.");
+      showToast("Settings updated.");
     } catch (e: any) {
       console.warn("Failed to save settings", e);
-      Alert.alert("Error", "Could not save settings.");
+      showToast("Could not save settings.");
     } finally {
       setSavingSettings(false);
     }
@@ -183,23 +189,22 @@ export default function ProfileScreen() {
 
   const handleChangeEmail = async () => {
     if (!newEmail.trim()) {
-      Alert.alert("Validation", "Please enter the new email.");
+      showToast("Please enter the new email.");
       return;
     }
     if (!emailCurrentPassword) {
-      Alert.alert("Validation", "Please enter your current password.");
+      showToast("Please enter your current password.");
       return;
     }
     try {
       setSavingChangeEmail(true);
       const res = await changeMyEmail({ new_email: newEmail.trim(), password: emailCurrentPassword }, { auth: true });
-      // Optionally update local user.email if you keep it in context
-      Alert.alert("Success", res?.message || "Email updated successfully.");
+      showToast(res?.message || "Email updated successfully.");
       resetEmailPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change email failed", e);
-      Alert.alert("Error", "Could not change email. Check your password and try again.");
+      showToast("Could not change email. Check your password and try again.");
     } finally {
       setSavingChangeEmail(false);
     }
@@ -207,26 +212,26 @@ export default function ProfileScreen() {
 
   const handleChangePassword = async () => {
     if (!currentPassword) {
-      Alert.alert("Validation", "Please enter your current password.");
+      showToast("Please enter your current password.");
       return;
     }
     if (!newPassword) {
-      Alert.alert("Validation", "Please enter a new password.");
+      showToast("Please enter a new password.");
       return;
     }
     if (newPassword !== confirmNewPassword) {
-      Alert.alert("Validation", "New passwords do not match.");
+      showToast("New passwords do not match.");
       return;
     }
     try {
       setSavingChangePassword(true);
       const res = await changeMyPassword({ current_password: currentPassword, new_password: newPassword }, { auth: true });
-      Alert.alert("Success", res?.message || "Password updated successfully.");
+      showToast(res?.message || "Password updated successfully.");
       resetPasswordPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change password failed", e);
-      Alert.alert("Error", "Could not change password. Check your current password and try again.");
+      showToast("Could not change password. Check your current password and try again.");
     } finally {
       setSavingChangePassword(false);
     }
@@ -446,6 +451,9 @@ export default function ProfileScreen() {
           </View>
         </>
       )}
+
+      {/* Shared top toast */}
+      <TopSnackbar visible={toast.visible} message={toast.msg} onDismiss={hideToast} />
     </View>
   );
 }

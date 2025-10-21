@@ -6,11 +6,11 @@ import {
   Platform,
   Linking,
 } from "react-native";
-import { Text, Button, ActivityIndicator, Snackbar, Portal } from "react-native-paper";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Text, Button, ActivityIndicator } from "react-native-paper";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 type ConfirmParams = {
   token?: string;
@@ -41,16 +41,16 @@ function parseQuery(url: string): Record<string, string> {
 }
 
 export default function ConfirmEmailScreen({ navigation }: any) {
-  const insets = useSafeAreaInsets();
   const route = useRoute<RouteProp<AuthStackParamList, "ConfirmEmail">>();
   const { confirmEmail } = useAuth() as any; // rename if your hook uses another name
 
   const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState<boolean | null>(null);
   const [message, setMessage] = useState<string>("Confirming your email...");
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({
+  const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
     visible: false,
     msg: "",
+    variant: "default",
   });
 
   // Gather params from either route params or a full URL
@@ -100,7 +100,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
             e instanceof ApiError ? e.body?.message || e.message : "Activation failed. The link may be invalid or expired.";
           setOk(false);
           setMessage(msg);
-          setToast({ visible: true, msg });
+          setToast({ visible: true, msg, variant: "error" });
         }
       } finally {
         if (!cancelled) setLoading(false);
@@ -161,17 +161,13 @@ export default function ConfirmEmailScreen({ navigation }: any) {
           <Text style={s.linkLabel}>Back to Login</Text>
         </Button>
 
-        <Portal>
-          <Snackbar
-            visible={toast.visible}
-            onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000}
-            style={s.snack}
-            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}
-          >
-            {toast.msg}
-          </Snackbar>
-        </Portal>
+        {/* Shared top toast */}
+        <TopSnackbar
+          visible={toast.visible}
+          message={toast.msg}
+          variant={toast.variant}
+          onDismiss={() => setToast({ visible: false, msg: "" })}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -199,13 +195,4 @@ const s = StyleSheet.create({
   button: { marginTop: 8 },
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
-
-  // toast
-  snackWrapper: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    alignItems: "center",
-  },
-  snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });

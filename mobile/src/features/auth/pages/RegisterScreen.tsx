@@ -12,14 +12,13 @@ import {
   Text,
   TextInput,
   Button,
-  Snackbar,
-  Portal,
   Checkbox,
   TouchableRipple,
 } from "react-native-paper";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+// removed useSafeAreaInsets + Portal/Snackbar (replaced with shared TopSnackbar)
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 const INPUT_HEIGHT = 64;
 
@@ -123,7 +122,6 @@ const AnimatedFloatingLabel = ({
 };
 
 export default function RegisterScreen({ navigation }: any) {
-  const insets = useSafeAreaInsets();
   const { register } = useAuth() as any;
 
   const [email, setEmail] = useState("");
@@ -286,17 +284,12 @@ export default function RegisterScreen({ navigation }: any) {
           </Text>
         </Button>
 
-        <Portal>
-          <Snackbar
-            visible={toast.visible}
-            onDismiss={() => setToast({ visible: false, msg: "" })}
-            duration={3000}
-            style={s.snack}
-            wrapperStyle={[s.snackWrapper, { bottom: insets.bottom }]}
-          >
-            {toast.msg}
-          </Snackbar>
-        </Portal>
+        {/* Shared top toast */}
+        <TopSnackbar
+          visible={toast.visible}
+          message={toast.msg}
+          onDismiss={() => setToast({ visible: false, msg: "" })}
+        />
       </View>
     </KeyboardAvoidingView>
   );
@@ -358,16 +351,4 @@ const s = StyleSheet.create({
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
   linkBold: { fontWeight: "700" },
   linkUnderline: { textDecorationLine: "underline" },
-
-  // toast
-  snackWrapper: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    alignItems: "center",
-  },
-  snack: {
-    backgroundColor: "#0a5161",
-    borderRadius: 24,
-  },
 });
