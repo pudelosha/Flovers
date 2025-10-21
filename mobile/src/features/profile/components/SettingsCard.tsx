@@ -4,8 +4,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import GlassCard from "./../components/GlassCard";
 import Dropdown from "./../components/Dropdown";
 import { card, controls } from "../styles/profile.styles";
-import { LANG_OPTIONS, DATE_OPTIONS } from "../constants/profile.constants";
-import type { LangCode } from "../types/profile.types";
+import { LANG_OPTIONS, DATE_OPTIONS, BACKGROUND_OPTIONS, FAB_POSITION_OPTIONS } from "../constants/profile.constants";
+import type { LangCode, FabPosition, BackgroundKey } from "../types/profile.types";
 
 // Try slider if installed
 let SliderView: any = View;
@@ -31,6 +31,9 @@ export default function SettingsCard({
   temperatureUnit, setTemperatureUnit, tempOpen, setTempOpen,
   measureUnit, setMeasureUnit, measureOpen, setMeasureOpen,
   tileTransparency, setTileTransparency,
+  // NEW props
+  background, setBackground, bgOpen, setBgOpen,
+  fabPosition, setFabPosition, fabOpen, setFabOpen,
   onSave,
 }: {
   language: LangCode; setLanguage: (c: LangCode) => void;
@@ -46,6 +49,14 @@ export default function SettingsCard({
   measureOpen: boolean; setMeasureOpen: (o: boolean | ((o: boolean) => boolean)) => void;
 
   tileTransparency: number; setTileTransparency: (v: number | ((v: number) => number)) => void;
+
+  // NEW: Background + FAB position
+  background: BackgroundKey; setBackground: (b: BackgroundKey) => void;
+  bgOpen: boolean; setBgOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
+  fabPosition: FabPosition; setFabPosition: (p: FabPosition) => void;
+  fabOpen: boolean; setFabOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
   onSave: () => void;
 }) {
   const currentLang = LANG_OPTIONS.find(l => l.code === language);
@@ -107,6 +118,34 @@ export default function SettingsCard({
           text: opt.label,
           selected: measureUnit === opt.key,
           onPress: () => { setMeasureUnit(opt.key); setMeasureOpen(false); },
+        }))}
+      />
+
+      {/* NEW: FAB POSITION */}
+      <Text style={controls.sectionTitle}>FAB position</Text>
+      <Dropdown
+        open={fabOpen}
+        valueText={FAB_POSITION_OPTIONS.find(f => f.key === fabPosition)?.label ?? "Right"}
+        onToggle={() => setFabOpen((o: boolean) => !o)}
+        items={FAB_POSITION_OPTIONS.map(opt => ({
+          key: opt.key,
+          text: opt.label,
+          selected: fabPosition === opt.key,
+          onPress: () => { setFabPosition(opt.key as FabPosition); setFabOpen(false); },
+        }))}
+      />
+
+      {/* NEW: BACKGROUND (placed above Tiles transparency) */}
+      <Text style={controls.sectionTitle}>Background</Text>
+      <Dropdown
+        open={bgOpen}
+        valueText={BACKGROUND_OPTIONS.find(b => b.key === background)?.label ?? "Background 1"}
+        onToggle={() => setBgOpen((o: boolean) => !o)}
+        items={BACKGROUND_OPTIONS.map(opt => ({
+          key: opt.key,
+          text: opt.label,
+          selected: background === opt.key,
+          onPress: () => { setBackground(opt.key as BackgroundKey); setBgOpen(false); },
         }))}
       />
 

@@ -9,7 +9,7 @@ import { useAuth } from "../../../app/providers/useAuth";
 
 import { layout as ly, prompts as pr } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
-import type { PromptKey, LangCode } from "../types/profile.types";
+import type { PromptKey, LangCode, FabPosition, BackgroundKey } from "../types/profile.types";
 
 import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
@@ -56,6 +56,14 @@ export default function ProfileScreen() {
   const [tempOpen, setTempOpen] = useState(false);
   const [measureOpen, setMeasureOpen] = useState(false);
 
+  // NEW: Background selection (above tile transparency)
+  const [background, setBackground] = useState<BackgroundKey>("bg1");
+  const [bgOpen, setBgOpen] = useState(false);
+
+  // NEW: FAB position (right default)
+  const [fabPosition, setFabPosition] = useState<FabPosition>("right");
+  const [fabOpen, setFabOpen] = useState(false);
+
   return (
     <View style={{ flex: 1 }}>
       {/* HEADER (no submenu, no right icon) */}
@@ -97,6 +105,11 @@ export default function ProfileScreen() {
           measureUnit={measureUnit} setMeasureUnit={setMeasureUnit}
           measureOpen={measureOpen} setMeasureOpen={setMeasureOpen}
           tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
+          // NEW props for Background + FAB position
+          background={background} setBackground={setBackground}
+          bgOpen={bgOpen} setBgOpen={setBgOpen}
+          fabPosition={fabPosition} setFabPosition={setFabPosition}
+          fabOpen={fabOpen} setFabOpen={setFabOpen}
           onSave={() => { /* TODO: persist settings later */ }}
         />
 
