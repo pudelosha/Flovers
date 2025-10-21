@@ -53,8 +53,10 @@ class LoginSerializer(serializers.Serializer):
         attrs["user"] = user
         return attrs
 
+
 class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField()
+
 
 class ResetPasswordSerializer(serializers.Serializer):
     uid = serializers.CharField()
@@ -64,3 +66,32 @@ class ResetPasswordSerializer(serializers.Serializer):
     def validate_new_password(self, value):
         password_validation.validate_password(value)
         return value
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    current_password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True, min_length=8, max_length=128)
+
+    def validate(self, attrs):
+        user = self.context["request"].user
+        if not user.check_password(attrs["current_password"]):
+            raise serializers.ValidationError({"current_password": [_("Current password is incorrect.")]})
+        password_validation.validate_password(attrs["new_password"], user=user)
+        return attrs
+
+
+class ChangeEmailSerializer(serializers.Serializer):
+    new_email = serializers.EmailField(validators=[EmailValidator()])
+    password = serializers.CharField(write_only=True)
+
+    def validate(self, attrs):
+        user = self.context["request"].user
+        # verify password
+        if not user.check_password(attrs["password"]):
+            raise serializers.ValidationError({"password": [_("Password is incorrect.")]})
+        # ensure email not taken by someone else
+        new_email = attrs["new_email"].strip().lower()
+        if User.objects.filter(email__iexact=new_email).exclude(pk=user.pk).exists():
+            raise serializers.ValidationError({"new_email": [_("Email is already taken.")]})
+        attrs["new_email"] = new_email
+        return attrs

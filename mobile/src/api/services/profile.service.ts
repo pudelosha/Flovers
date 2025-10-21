@@ -76,3 +76,29 @@ export async function updateProfileSettings(
     { auth: opts.auth ?? true }
   );
 }
+
+/** ---- Change password ---- */
+export async function changeMyPassword(
+  payload: { current_password: string; new_password: string },
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ status: string; message: string; data: Record<string, unknown> }> {
+  return await request<{ status: string; message: string; data: Record<string, unknown> }>(
+    "/api/auth/change-password/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/** ---- Change email ---- */
+export async function changeMyEmail(
+  payload: { new_email: string; password: string },
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ status: string; message: string; data: { email?: string } }> {
+  return await request<{ status: string; message: string; data: { email?: string } }>(
+    "/api/auth/change-email/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+}

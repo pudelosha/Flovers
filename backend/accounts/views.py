@@ -4,12 +4,13 @@ from django.utils.encoding import force_str
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import (
     RegisterSerializer, LoginSerializer,
-    ForgotPasswordSerializer, ResetPasswordSerializer
+    ForgotPasswordSerializer, ResetPasswordSerializer,
+    ChangePasswordSerializer, ChangeEmailSerializer,   # NEW
 )
 from .tokens import activation_token, reset_password_token
 from .emails import send_activation_email
@@ -137,3 +138,28 @@ class ResetPasswordView(APIView):
         user.save(update_fields=["password"])
 
         return ok("Password has been reset successfully.")
+
+
+class ChangePasswordView(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request):
+        ser = ChangePasswordSerializer(data=request.data, context={"request": request})
+        if not ser.is_valid():
+            return fail("Unable to change password.", ser.errors)
+        user = request.user
+        user.set_password(ser.validated_data["new_password"])
+        user.save(update_fields=["password"])
+        return ok("Password updated successfully.")
+
+
+class ChangeEmailView(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request):
+        ser = ChangeEmailSerializer(data=request.data, context={"request": request})
+        if not ser.is_valid():
+            return fail("Unable to change email.", ser.errors)
+        user = request.user
+        user.email = ser.validated_data["new_email"]
+        user.save(update_fields=["email"])
+        # Optional: send a notification or re-verify new email later
+        return ok("Email updated successfully.", {"email": user.email})

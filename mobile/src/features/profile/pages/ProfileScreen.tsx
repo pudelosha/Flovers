@@ -22,6 +22,8 @@ import {
   fetchProfileSettings,
   updateProfileNotifications,
   updateProfileSettings,
+  changeMyPassword,
+  changeMyEmail,
 } from "../../../api/services/profile.service";
 
 function formatDate(d?: string | Date | null) {
@@ -45,6 +47,8 @@ export default function ProfileScreen() {
   // Optional save states
   const [savingNotif, setSavingNotif] = useState<boolean>(false);
   const [savingSettings, setSavingSettings] = useState<boolean>(false);
+  const [savingChangeEmail, setSavingChangeEmail] = useState<boolean>(false);
+  const [savingChangePassword, setSavingChangePassword] = useState<boolean>(false);
 
   // ---------- Notifications state ----------
   const [emailDaily, setEmailDaily] = useState(true);
@@ -77,6 +81,17 @@ export default function ProfileScreen() {
   // NEW: FAB position (right default)
   const [fabPosition, setFabPosition] = useState<FabPosition>("right");
   const [fabOpen, setFabOpen] = useState(false);
+
+  // ---------- Prompt input state (change email/password) ----------
+  const [newEmail, setNewEmail] = useState("");
+  const [emailCurrentPassword, setEmailCurrentPassword] = useState("");
+
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+
+  const resetEmailPrompt = () => { setNewEmail(""); setEmailCurrentPassword(""); };
+  const resetPasswordPrompt = () => { setCurrentPassword(""); setNewPassword(""); setConfirmNewPassword(""); };
 
   // ---------- Initial fetch ----------
   useEffect(() => {
@@ -166,6 +181,57 @@ export default function ProfileScreen() {
     }
   };
 
+  const handleChangeEmail = async () => {
+    if (!newEmail.trim()) {
+      Alert.alert("Validation", "Please enter the new email.");
+      return;
+    }
+    if (!emailCurrentPassword) {
+      Alert.alert("Validation", "Please enter your current password.");
+      return;
+    }
+    try {
+      setSavingChangeEmail(true);
+      const res = await changeMyEmail({ new_email: newEmail.trim(), password: emailCurrentPassword }, { auth: true });
+      // Optionally update local user.email if you keep it in context
+      Alert.alert("Success", res?.message || "Email updated successfully.");
+      resetEmailPrompt();
+      setPrompt(null);
+    } catch (e: any) {
+      console.warn("Change email failed", e);
+      Alert.alert("Error", "Could not change email. Check your password and try again.");
+    } finally {
+      setSavingChangeEmail(false);
+    }
+  };
+
+  const handleChangePassword = async () => {
+    if (!currentPassword) {
+      Alert.alert("Validation", "Please enter your current password.");
+      return;
+    }
+    if (!newPassword) {
+      Alert.alert("Validation", "Please enter a new password.");
+      return;
+    }
+    if (newPassword !== confirmNewPassword) {
+      Alert.alert("Validation", "New passwords do not match.");
+      return;
+    }
+    try {
+      setSavingChangePassword(true);
+      const res = await changeMyPassword({ current_password: currentPassword, new_password: newPassword }, { auth: true });
+      Alert.alert("Success", res?.message || "Password updated successfully.");
+      resetPasswordPrompt();
+      setPrompt(null);
+    } catch (e: any) {
+      console.warn("Change password failed", e);
+      Alert.alert("Error", "Could not change password. Check your current password and try again.");
+    } finally {
+      setSavingChangePassword(false);
+    }
+  };
+
   return (
     <View style={{ flex: 1 }}>
       {/* HEADER (no submenu, no right icon) */}
@@ -227,6 +293,8 @@ export default function ProfileScreen() {
       {/* Optional small overlays while saving (non-blocking). Keep page interactive. */}
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
       {savingSettings && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
+      {savingChangeEmail && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
+      {savingChangePassword && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
       {/* PROMPTS / MODALS */}
       {prompt && (
@@ -250,13 +318,28 @@ export default function ProfileScreen() {
             {prompt === "email" && (
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>Change email</Text>
-                <TextInput style={pr.input} placeholder="New email" placeholderTextColor="rgba(255,255,255,0.7)" />
-                <TextInput style={pr.input} placeholder="Current password" placeholderTextColor="rgba(255,255,255,0.7)" secureTextEntry />
+                <TextInput
+                  style={pr.input}
+                  placeholder="New email"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  value={newEmail}
+                  onChangeText={setNewEmail}
+                  autoCapitalize="none"
+                  keyboardType="email-address"
+                />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Current password"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  secureTextEntry
+                  value={emailCurrentPassword}
+                  onChangeText={setEmailCurrentPassword}
+                />
                 <View style={pr.promptButtonsRow}>
-                  <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
+                  <Pressable style={pr.promptBtn} onPress={() => { resetEmailPrompt(); setPrompt(null); }}>
                     <Text style={pr.promptBtnText}>Cancel</Text>
                   </Pressable>
-                  <Pressable style={[pr.promptBtn, pr.promptPrimary]}>
+                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangeEmail}>
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Change</Text>
                   </Pressable>
                 </View>
@@ -266,14 +349,35 @@ export default function ProfileScreen() {
             {prompt === "password" && (
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>Change password</Text>
-                <TextInput style={pr.input} placeholder="Current password" placeholderTextColor="rgba(255,255,255,0.7)" secureTextEntry />
-                <TextInput style={pr.input} placeholder="New password" placeholderTextColor="rgba(255,255,255,0.7)" secureTextEntry />
-                <TextInput style={pr.input} placeholder="Confirm new password" placeholderTextColor="rgba(255,255,255,0.7)" secureTextEntry />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Current password"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  secureTextEntry
+                  value={currentPassword}
+                  onChangeText={setCurrentPassword}
+                />
+                <TextInput
+                  style={pr.input}
+                  placeholder="New password"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  secureTextEntry
+                  value={newPassword}
+                  onChangeText={setNewPassword}
+                />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Confirm new password"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  secureTextEntry
+                  value={confirmNewPassword}
+                  onChangeText={setConfirmNewPassword}
+                />
                 <View style={pr.promptButtonsRow}>
-                  <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
+                  <Pressable style={pr.promptBtn} onPress={() => { resetPasswordPrompt(); setPrompt(null); }}>
                     <Text style={pr.promptBtnText}>Cancel</Text>
                   </Pressable>
-                  <Pressable style={[pr.promptBtn, pr.promptPrimary]}>
+                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangePassword}>
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Update</Text>
                   </Pressable>
                 </View>
