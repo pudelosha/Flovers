@@ -272,19 +272,23 @@ export default function PlantsScreen() {
                 style={StyleSheet.absoluteFill}
                 blurType="light"
                 blurAmount={20}
-                reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+                overlayColor="transparent"
+                reducedTransparencyFallbackColor="transparent"
               />
+              {/* White tint for readability */}
               <View
                 pointerEvents="none"
                 style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
               />
+              {/* Thin border */}
               <View
                 pointerEvents="none"
                 style={[
                   StyleSheet.absoluteFill,
-                  { borderRadius: 18, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                  { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
                 ]}
               />
+
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
                   name="sprout-outline"
@@ -305,9 +309,10 @@ export default function PlantsScreen() {
             </View>
           </View>
         )}
+
       />
 
-      {/* ⬇️ Only show when no modal is open */}
+      {/* Only show when no modal is open */}
       {showFAB && (
         <FAB
           bottomOffset={92}

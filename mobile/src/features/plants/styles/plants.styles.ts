@@ -265,14 +265,8 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.20)",
   },
   emptyInner: { padding: 16, alignItems: "center" },
-  emptyTitle: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "800",
-    marginBottom: 8,
-    textAlign: "center",
-  },
-  emptyDescBox: { alignSelf: "stretch", marginTop: 0 },
+  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
   emptyText: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
-  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
+  inlineBold: { color: "#FFFFFF", fontWeight: "800" }
 });
