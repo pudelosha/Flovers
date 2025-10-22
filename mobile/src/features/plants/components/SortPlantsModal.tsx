@@ -4,8 +4,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/plants.styles";
 
-type SortKey = "name" | "location";
-type SortDir = "asc" | "desc";
+export type SortKey = "plant" | "location";
+export type SortDir = "asc" | "desc";
 
 type Props = {
   visible: boolean;
@@ -47,11 +47,13 @@ export default function SortPlantsModal({
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
+            style={{ position: "absolute", inset: 0 } as any
+            }
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
+          {/* Dark overlay — no white tint, no border */}
           <View
             pointerEvents="none"
             style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
@@ -71,13 +73,13 @@ export default function SortPlantsModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{k === "name" ? "Plant name" : "Location"}</Text>
+              <Text style={s.dropdownValue}>{k === "plant" ? "Plant name" : "Location"}</Text>
               <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {keyOpen && (
               <View style={s.dropdownList}>
                 {([
-                  { key: "name", label: "Plant name" },
+                  { key: "plant", label: "Plant name" },
                   { key: "location", label: "Location" },
                 ] as const).map((opt) => (
                   <Pressable
@@ -133,8 +135,8 @@ export default function SortPlantsModal({
 
           <View style={s.promptButtonsRow}>
             {onReset ? (
-              <Pressable onPress={onReset} style={s.promptBtn}>
-                <Text style={s.promptBtnText}>Reset</Text>
+              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
+                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
               </Pressable>
             ) : null}
             <Pressable onPress={onCancel} style={s.promptBtn}>

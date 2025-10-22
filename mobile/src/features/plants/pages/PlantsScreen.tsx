@@ -19,14 +19,13 @@ import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/EditPlantModal";
 import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
-import SortPlantsModal from "../components/SortPlantsModal";
+
+import SortPlantsModal, { SortDir, SortKey } from "../components/SortPlantsModal";
 import FilterPlantsModal from "../components/FilterPlantsModal";
 
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
-  LATIN_CATALOG,
-  USER_LOCATIONS,
 } from "../constants/plants.constants";
 
 import type { Plant } from "../types/plants.types";
@@ -55,9 +54,9 @@ function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
   };
 }
 
-type SortKey = "name" | "location";
-type SortDir = "asc" | "desc";
-type Filters = { location?: string; latin?: string };
+function norm(v?: string) {
+  return (v || "").toLowerCase().trim();
+}
 
 export default function PlantsScreen() {
   const nav = useNavigation();
@@ -76,30 +75,12 @@ export default function PlantsScreen() {
   const [fLocation, setFLocation] = useState<string | undefined>(undefined);
   const [fNotes, setFNotes] = useState("");
 
-  // Delete confirmation
-  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
-  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
-
-  // ---- SORT / FILTER ----
+  // --- SORT / FILTER state ---
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
-  const [sortKey, setSortKey] = useState<SortKey>("name");
+  const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
-  const [filters, setFilters] = useState<Filters>({});
-
-  const locationOptions = useMemo(() => {
-    const set = new Set<string>();
-    plants.forEach((p) => p.location && set.add(p.location));
-    USER_LOCATIONS.forEach((l) => set.add(l)); // include user-known
-    return Array.from(set).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-  }, [plants]);
-
-  const latinOptions = useMemo(() => {
-    const set = new Set<string>();
-    plants.forEach((p) => p.latin && set.add(p.latin));
-    LATIN_CATALOG.forEach((l) => set.add(l));
-    return Array.from(set).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-  }, [plants]);
+  const [filters, setFilters] = useState<{ location?: string; latin?: string }>({});
 
   const load = useCallback(async () => {
     const data = await fetchPlantInstances({ auth: true });
@@ -174,6 +155,9 @@ export default function PlantsScreen() {
     setMenuOpenId(null);
   };
 
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+
   const confirmDelete = async () => {
     if (!confirmDeleteId) return;
     try {
@@ -187,20 +171,37 @@ export default function PlantsScreen() {
     }
   };
 
-  // ---- Derived list (filter then sort) ----
+  // ------- Derive dropdown options from fetched plants -------
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    plants.forEach((p) => p.location && set.add(p.location));
+    return Array.from(set).sort((a, b) => norm(a).localeCompare(norm(b)));
+  }, [plants]);
+
+  const latinOptions = useMemo(() => {
+    const set = new Set<string>();
+    plants.forEach((p) => p.latin && set.add(p.latin));
+    return Array.from(set).sort((a, b) => norm(a).localeCompare(norm(b)));
+  }, [plants]);
+
+  // ------- Apply filters + sort -------
   const derivedPlants = useMemo(() => {
-    const norm = (v?: string) => (v || "").toLowerCase().trim();
     const filtered = plants.filter((p) => {
       if (filters.location && norm(p.location) !== norm(filters.location)) return false;
       if (filters.latin && norm(p.latin) !== norm(filters.latin)) return false;
       return true;
     });
+
     const sorted = [...filtered].sort((a, b) => {
-      const av = sortKey === "name" ? a.name : (a.location || "");
-      const bv = sortKey === "name" ? b.name : (b.location || "");
-      const cmp = av.toLowerCase().localeCompare(bv.toLowerCase());
+      let cmp = 0;
+      if (sortKey === "plant") {
+        cmp = norm(a.name).localeCompare(norm(b.name));
+      } else {
+        cmp = norm(a.location).localeCompare(norm(b.location));
+      }
       return sortDir === "asc" ? cmp : -cmp;
     });
+
     return sorted;
   }, [plants, filters, sortKey, sortDir]);
 
@@ -232,7 +233,6 @@ export default function PlantsScreen() {
         showSeparator={false}
       />
 
-      {/* Tap outside list to close any open tile menu */}
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
       <FlatList
@@ -268,14 +268,20 @@ export default function PlantsScreen() {
               <BlurView
                 style={StyleSheet.absoluteFill}
                 blurType="light"
-                blurAmount={20} // match Profile
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
+                blurAmount={20}
+                reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
               />
-              {/* single tint + single thin border (no duplicates), same as Profile/Reminders */}
-              <View pointerEvents="none" style={s.emptyTint} />
-              <View pointerEvents="none" style={s.emptyBorder} />
-
+              <View
+                pointerEvents="none"
+                style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
+              />
+              <View
+                pointerEvents="none"
+                style={[
+                  StyleSheet.absoluteFill,
+                  { borderRadius: 18, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                ]}
+              />
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
                   name="sprout-outline"
@@ -284,12 +290,12 @@ export default function PlantsScreen() {
                   style={{ marginBottom: 10 }}
                 />
                 <Text style={s.emptyTitle}>No plants yet</Text>
-
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
-                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the bottom-right corner to add your
-                    first plant. The Create Plant Wizard will help you set up your plant and specify its
-                    parameters, as well as schedule reminders.{"\n\n"}
+                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the
+                    bottom-right corner to add your first plant. The Create Plant Wizard will help
+                    you set up your plant and specify its parameters, as well as schedule
+                    reminders.{"\n\n"}
                   </Text>
                 </View>
               </View>
@@ -298,7 +304,6 @@ export default function PlantsScreen() {
         )}
       />
 
-      {/* Page FAB */}
       <FAB
         bottomOffset={92}
         actions={[
@@ -309,11 +314,10 @@ export default function PlantsScreen() {
         ]}
       />
 
-      {/* EDIT MODAL (local-only for now) */}
       <EditPlantModal
         visible={editOpen}
-        latinCatalog={LATIN_CATALOG}
-        locations={USER_LOCATIONS}
+        latinCatalog={latinOptions /* keep suggestions relevant to what user has; swap to global later if desired */}
+        locations={locationOptions}
         fName={fName}
         setFName={setFName}
         fLatinQuery={fLatinQuery}
@@ -328,7 +332,6 @@ export default function PlantsScreen() {
         onSave={onUpdate}
       />
 
-      {/* DELETE CONFIRMATION MODAL */}
       <ConfirmDeleteModal
         visible={!!confirmDeleteId}
         name={confirmDeleteName}
@@ -336,7 +339,7 @@ export default function PlantsScreen() {
         onConfirm={confirmDelete}
       />
 
-      {/* SORT / FILTER MODALS */}
+      {/* NEW: Sort / Filter modals */}
       <SortPlantsModal
         visible={sortOpen}
         sortKey={sortKey}
@@ -348,7 +351,7 @@ export default function PlantsScreen() {
           setSortOpen(false);
         }}
         onReset={() => {
-          setSortKey("name");
+          setSortKey("plant");
           setSortDir("asc");
           setSortOpen(false);
         }}
@@ -357,10 +360,13 @@ export default function PlantsScreen() {
       <FilterPlantsModal
         visible={filterOpen}
         locations={locationOptions}
-        latins={latinOptions}
+        latinOptions={latinOptions}
         filters={filters}
         onCancel={() => setFilterOpen(false)}
-        onApply={(f) => { setFilters(f); setFilterOpen(false); }}
+        onApply={(f) => {
+          setFilters(f);
+          setFilterOpen(false);
+        }}
         onClearAll={() => setFilters({})}
       />
     </View>
