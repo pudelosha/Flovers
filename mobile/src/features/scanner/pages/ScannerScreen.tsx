@@ -1,7 +1,8 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\scanner\pages\ScannerScreen.tsx
 import React, { useMemo, useState, useEffect, useCallback } from "react";
-import { View, Text, StyleSheet, Platform, Pressable } from "react-native";
+import { View, StyleSheet, Platform, Pressable } from "react-native";
 import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
+import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -111,19 +112,19 @@ export default function ScannerScreen() {
 
       <View style={{ height: 5 }} />
 
-      {/* Instruction card */}
+      {/* Instruction card — match AuthCard frosting */}
       <View style={styles.infoWrap}>
         <View style={styles.infoGlass}>
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+            blurAmount={20}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="transparent"
           />
-          <View
-            pointerEvents="none"
-            style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
-          />
+          <View pointerEvents="none" style={styles.frostTint} />
+          <View pointerEvents="none" style={styles.frameBorder} />
+
           <View style={styles.infoInner}>
             <Text style={styles.infoTitle}>How it works</Text>
             <Text style={styles.infoText}>{instructionText}</Text>
@@ -140,19 +141,19 @@ export default function ScannerScreen() {
         </View>
       </View>
 
-      {/* Camera frame */}
+      {/* Camera frame — rounded + thin border + light fog */}
       <View style={styles.camWrap}>
         <View style={styles.camGlass}>
+          {/* Frosted panel under camera for consistency with Login */}
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
-            blurAmount={14}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+            blurAmount={20}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="transparent"
           />
-          <View
-            pointerEvents="none"
-            style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.10)" }]}
-          />
+          <View pointerEvents="none" style={styles.frostTint} />
+
           <View style={styles.camInner}>
             {showCamera ? (
               <>
@@ -162,7 +163,7 @@ export default function ScannerScreen() {
                   isActive={active && isFocused}
                   codeScanner={codeScanner}
                 />
-                {/* purely visual rounded frame on top (no clipping) */}
+                {/* Top overlay to visually round + haze + border (no clipping) */}
                 <View style={styles.roundedMask} pointerEvents="none" />
                 <ScannerOverlay value={lastScanned} onClear={() => setLastScanned("")} />
               </>

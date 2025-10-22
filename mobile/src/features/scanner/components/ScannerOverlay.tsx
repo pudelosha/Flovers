@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Pressable, StyleSheet } from "react-native";
+import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { scannerStyles as styles } from "../styles/scanner.styles";
@@ -12,16 +13,19 @@ const ScannerOverlay: React.FC<ScannerOverlayProps> = ({ value, onClear }) => {
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
       <View style={styles.overlayCenter}>
         <View style={styles.overlayGlass}>
+          {/* Frosted blur like Login/AuthCard */}
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
-            blurAmount={18}
-            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+            blurAmount={20}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="transparent"
           />
-          <View
-            pointerEvents="none"
-            style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.25)" }]}
-          />
+          {/* White tint for readability */}
+          <View pointerEvents="none" style={styles.overlayTint} />
+          {/* Thin border on top */}
+          <View pointerEvents="none" style={styles.overlayBorder} />
+
           <View style={styles.overlayInner}>
             <MaterialCommunityIcons
               name="qrcode-scan"
