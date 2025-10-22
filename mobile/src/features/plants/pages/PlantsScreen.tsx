@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   View,
   Pressable,
@@ -14,11 +14,13 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
-import CenteredSpinner from "../../../shared/ui/CenteredSpinner"; // ⬅️ new
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/EditPlantModal";
 import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
+import SortPlantsModal from "../components/SortPlantsModal";
+import FilterPlantsModal from "../components/FilterPlantsModal";
 
 import {
   HEADER_GRADIENT_TINT,
@@ -53,6 +55,10 @@ function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
   };
 }
 
+type SortKey = "name" | "location";
+type SortDir = "asc" | "desc";
+type Filters = { location?: string; latin?: string };
+
 export default function PlantsScreen() {
   const nav = useNavigation();
 
@@ -73,6 +79,27 @@ export default function PlantsScreen() {
   // Delete confirmation
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+
+  // ---- SORT / FILTER ----
+  const [sortOpen, setSortOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [sortKey, setSortKey] = useState<SortKey>("name");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  const [filters, setFilters] = useState<Filters>({});
+
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    plants.forEach((p) => p.location && set.add(p.location));
+    USER_LOCATIONS.forEach((l) => set.add(l)); // include user-known
+    return Array.from(set).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  }, [plants]);
+
+  const latinOptions = useMemo(() => {
+    const set = new Set<string>();
+    plants.forEach((p) => p.latin && set.add(p.latin));
+    LATIN_CATALOG.forEach((l) => set.add(l));
+    return Array.from(set).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  }, [plants]);
 
   const load = useCallback(async () => {
     const data = await fetchPlantInstances({ auth: true });
@@ -160,6 +187,23 @@ export default function PlantsScreen() {
     }
   };
 
+  // ---- Derived list (filter then sort) ----
+  const derivedPlants = useMemo(() => {
+    const norm = (v?: string) => (v || "").toLowerCase().trim();
+    const filtered = plants.filter((p) => {
+      if (filters.location && norm(p.location) !== norm(filters.location)) return false;
+      if (filters.latin && norm(p.latin) !== norm(filters.latin)) return false;
+      return true;
+    });
+    const sorted = [...filtered].sort((a, b) => {
+      const av = sortKey === "name" ? a.name : (a.location || "");
+      const bv = sortKey === "name" ? b.name : (b.location || "");
+      const cmp = av.toLowerCase().localeCompare(bv.toLowerCase());
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+    return sorted;
+  }, [plants, filters, sortKey, sortDir]);
+
   // Skeleton/loader
   if (loading) {
     return (
@@ -172,7 +216,6 @@ export default function PlantsScreen() {
           onPressRight={() => nav.navigate("Scanner" as never)}
           showSeparator={false}
         />
-        {/* Shared, bigger, centered spinner */}
         <CenteredSpinner size={56} color="#FFFFFF" />
       </View>
     );
@@ -194,7 +237,7 @@ export default function PlantsScreen() {
 
       <FlatList
         style={{ flex: 1 }}
-        data={plants}
+        data={derivedPlants}
         keyExtractor={(p) => p.id}
         renderItem={({ item }) => (
           <PlantTile
@@ -225,15 +268,15 @@ export default function PlantsScreen() {
               <BlurView
                 style={StyleSheet.absoluteFill}
                 blurType="light"
-                blurAmount={14}
-                reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+                blurAmount={20} // match Profile
+                overlayColor="transparent"
+                reducedTransparencyFallbackColor="transparent"
               />
-              <View
-                pointerEvents="none"
-                style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
-              />
+              {/* single tint + single thin border (no duplicates), same as Profile/Reminders */}
+              <View pointerEvents="none" style={s.emptyTint} />
+              <View pointerEvents="none" style={s.emptyBorder} />
+
               <View style={s.emptyInner}>
-                {/* Centered header (icon + title) */}
                 <MaterialCommunityIcons
                   name="sprout-outline"
                   size={26}
@@ -242,13 +285,11 @@ export default function PlantsScreen() {
                 />
                 <Text style={s.emptyTitle}>No plants yet</Text>
 
-                {/* Left-aligned description */}
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
-                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the
-                    bottom-right corner to add your first plant. The Create Plant Wizard will help
-                    you set up your plant and specify its parameters, as well as schedule
-                    reminders.{"\n\n"}
+                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the bottom-right corner to add your
+                    first plant. The Create Plant Wizard will help you set up your plant and specify its
+                    parameters, as well as schedule reminders.{"\n\n"}
                   </Text>
                 </View>
               </View>
@@ -262,8 +303,8 @@ export default function PlantsScreen() {
         bottomOffset={92}
         actions={[
           { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
-          { key: "sort", icon: "sort", label: "Sort", onPress: () => {} },
-          { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => {} },
+          { key: "sort", icon: "sort", label: "Sort", onPress: () => setSortOpen(true) },
+          { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => setFilterOpen(true) },
           { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
         ]}
       />
@@ -293,6 +334,34 @@ export default function PlantsScreen() {
         name={confirmDeleteName}
         onCancel={() => setConfirmDeleteId(null)}
         onConfirm={confirmDelete}
+      />
+
+      {/* SORT / FILTER MODALS */}
+      <SortPlantsModal
+        visible={sortOpen}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => setSortOpen(false)}
+        onApply={(key, dir) => {
+          setSortKey(key);
+          setSortDir(dir);
+          setSortOpen(false);
+        }}
+        onReset={() => {
+          setSortKey("name");
+          setSortDir("asc");
+          setSortOpen(false);
+        }}
+      />
+
+      <FilterPlantsModal
+        visible={filterOpen}
+        locations={locationOptions}
+        latins={latinOptions}
+        filters={filters}
+        onCancel={() => setFilterOpen(false)}
+        onApply={(f) => { setFilters(f); setFilterOpen(false); }}
+        onClearAll={() => setFilters({})}
       />
     </View>
   );

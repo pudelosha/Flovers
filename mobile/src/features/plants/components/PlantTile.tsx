@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Pressable, Text, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/plants.styles";
@@ -28,40 +28,28 @@ export default function PlantTile({
 }: Props) {
   return (
     <View style={s.cardWrap}>
-      {/* Glass (blur only + subtle white tint) */}
+      {/* Glass: same recipe as Profile (blur 20 + white tint + thin border) */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
           blurAmount={TILE_BLUR}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
-          pointerEvents="none"
-        />
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
       <View style={s.cardRow}>
-        {/* Body tap → PlantDetails */}
         <Pressable
           style={{ flex: 1, paddingRight: 8 }}
           onPress={onPressBody}
           android_ripple={{ color: "rgba(255,255,255,0.08)" }}
         >
-          <Text style={s.plantName} numberOfLines={1}>
-            {plant.name}
-          </Text>
-          {!!plant.latin && (
-            <Text style={s.latin} numberOfLines={1}>
-              {plant.latin}
-            </Text>
-          )}
-          {!!plant.location && (
-            <Text style={s.location} numberOfLines={1}>
-              {plant.location}
-            </Text>
-          )}
+          <Text style={s.plantName} numberOfLines={1}>{plant.name}</Text>
+          {!!plant.latin && <Text style={s.latin} numberOfLines={1}>{plant.latin}</Text>}
+          {!!plant.location && <Text style={s.location} numberOfLines={1}>{plant.location}</Text>}
         </Pressable>
 
         <Pressable

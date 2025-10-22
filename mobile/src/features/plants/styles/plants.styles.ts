@@ -1,10 +1,11 @@
+// src/features/plants/styles/plants.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
   // LIST / LAYOUT
   listContent: {
     paddingHorizontal: 16,
-    paddingTop: 16,
+    paddingTop: 21,
     paddingBottom: 24,
   },
 
@@ -64,26 +65,38 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // TILES
+  // ---------- TILES: blur + white tint + thin border (match Profile) ----------
   cardWrap: {
     height: 96,
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "visible",
     position: "relative",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 8,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
+  },
+  cardTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
+  },
+  cardBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.35)",
-    backgroundColor: "rgba(255,255,255,0.15)",
+    borderColor: "rgba(255,255,255,0.20)",
   },
   cardRow: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 18, // more left padding
+    paddingHorizontal: 18,
     gap: 8,
   },
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
@@ -134,7 +147,7 @@ export const s = StyleSheet.create({
     fontSize: 12,
   },
 
-  // PROMPT / MODALS (shared)
+  // PROMPT / MODALS (match Profile prompts)
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -149,13 +162,13 @@ export const s = StyleSheet.create({
   },
   promptGlass: {
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
   },
   promptInner: {
     width: "100%",
     maxWidth: 520,
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
     position: "relative",
     backgroundColor: "transparent",
@@ -168,71 +181,43 @@ export const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 16,
   },
+
+  // Flat, borderless inputs/dropdowns
   input: {
     marginHorizontal: 16,
     marginBottom: 10,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 16,
     color: "#FFFFFF",
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: "rgba(255,255,255,0.14)",
   },
-  // Suggestions dropdown for latin name
-  suggestBox: {
-    position: "absolute",
-    left: 16,
-    right: 16,
-    top: 56,
-    borderRadius: 12,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(0,0,0,0.65)",
-    zIndex: 30,
-  },
-  suggestItem: {
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.25)",
-  },
-  suggestText: { color: "#FFFFFF", fontWeight: "700" },
 
-  // Dropdown (location)
   dropdown: { marginHorizontal: 16, marginBottom: 10 },
   dropdownHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
   },
   dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
   dropdownList: {
     marginTop: 6,
-    borderRadius: 12,
+    borderRadius: 16,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(0,0,0,0.65)",
+    backgroundColor: "rgba(255,255,255,0.10)",
   },
   dropdownItem: {
-    paddingHorizontal: 12,
-    paddingVertical: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderColor: "rgba(255,255,255,0.16)",
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
 
@@ -246,53 +231,48 @@ export const s = StyleSheet.create({
     paddingTop: 6,
   },
   promptBtn: {
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
   },
   promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
-  promptPrimary: {
-    backgroundColor: "rgba(11,114,133,0.9)",
-    borderColor: "rgba(255,255,255,0.25)",
-  },
+  promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
+  promptDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
 
-  // Danger style
-  promptDanger: {
-    backgroundColor: "rgba(255,107,107,0.2)",
-    borderColor: "rgba(255,107,107,0.45)",
-  },
-
-  // Delete confirm text
   confirmText: {
     color: "rgba(255,255,255,0.95)",
     paddingHorizontal: 16,
     marginBottom: 10,
   },
 
-  /* ---------- EMPTY STATE (glass card like profile) ---------- */
-  emptyWrap: {
-    // relies on listContent for horizontal margins; just provide top spacing like a tile
-    marginTop: 5,
-  },
+  /* ---------- EMPTY STATE (match Reminders empty card) ---------- */
+  emptyWrap: { marginTop: 0 },
   emptyGlass: {
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    backgroundColor: "rgba(255,255,255,0.12)",
     minHeight: 140,
   },
-  emptyInner: { padding: 16, alignItems: "center" },
-  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
-  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
-  emptyText: {
-    color: "rgba(255,255,255,0.95)",
-    fontWeight: "600",
-    lineHeight: 18,
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
   },
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+  },
+  emptyInner: { padding: 16, alignItems: "center" },
+  emptyTitle: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 8,
+    textAlign: "center",
+  },
+  emptyDescBox: { alignSelf: "stretch", marginTop: 0 },
+  emptyText: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
   inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });

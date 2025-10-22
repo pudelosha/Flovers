@@ -15,3 +15,5 @@ export const LATIN_CATALOG = [
 ];
 
 export const USER_LOCATIONS = ["Living Room", "Bedroom", "Kitchen", "Office", "Hallway"];
+
+export const TILE_BLUR = 20;
