@@ -134,7 +134,7 @@ export default function PlantSearchBox({
             // IMPORTANT: keep marginLeft 0 so text start x == labelLeft
             marginLeft: 0,
           }}
-          contentStyle={{ paddingTop: 20, paddingBottom: 8 }}
+          contentStyle={{ paddingTop: 20, paddingBottom: 8, paddingLeft: 0 }}
           selectionColor="#FFFFFF"
           cursorColor="#FFFFFF"
           textColor="#FFFFFF"

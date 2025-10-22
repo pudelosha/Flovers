@@ -69,7 +69,7 @@ export const wiz = StyleSheet.create({
     top: 64,                        // dropdown sits right under the 64px input
     borderRadius: 12,
     overflow: "hidden",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.25)",
     backgroundColor: "rgba(0,0,0,0.85)",
     zIndex: 30,
