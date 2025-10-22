@@ -108,18 +108,17 @@ export default function Step02_PlantTraits() {
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass */}
+      {/* glass (match Step 1/AuthCard) */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -146,25 +145,34 @@ export default function Step02_PlantTraits() {
           <Text style={wiz.desc}>{profile.description}</Text>
         )}
 
-        {/* buttons */}
+        {/* buttons – use SAME flat container as Step 1 to avoid borders/artefacts */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
+          {/* Previous (glass) */}
           <Pressable
             onPress={onPrev}
             style={[
-              wiz.btn,
-              { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 },
+              wiz.nextBtnWide,            // flat, rounded, no border
+              { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14 },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
-            <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-            <Text style={wiz.btnText}>Previous</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
 
+          {/* Next (teal) */}
           <Pressable
             onPress={onNext}
-            style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
+            style={[
+              wiz.nextBtnWide,            // flat, rounded, no border
+              { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14 },
+            ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
-              <Text style={wiz.btnText}>Next</Text>
+              <Text style={wiz.nextBtnText}>Next</Text>
               <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
             </View>
           </Pressable>
