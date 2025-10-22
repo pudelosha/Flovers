@@ -205,6 +205,9 @@ export default function PlantsScreen() {
     return sorted;
   }, [plants, filters, sortKey, sortDir]);
 
+  // ⬇️ NEW: hide FAB when ANY modal is visible (edit, delete, sort, filter)
+  const showFAB = !editOpen && !confirmDeleteId && !sortOpen && !filterOpen;
+
   // Skeleton/loader
   if (loading) {
     return (
@@ -304,19 +307,22 @@ export default function PlantsScreen() {
         )}
       />
 
-      <FAB
-        bottomOffset={92}
-        actions={[
-          { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
-          { key: "sort", icon: "sort", label: "Sort", onPress: () => setSortOpen(true) },
-          { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => setFilterOpen(true) },
-          { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
-        ]}
-      />
+      {/* ⬇️ Only show when no modal is open */}
+      {showFAB && (
+        <FAB
+          bottomOffset={92}
+          actions={[
+            { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
+            { key: "sort", icon: "sort", label: "Sort", onPress: () => setSortOpen(true) },
+            { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => setFilterOpen(true) },
+            { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
+          ]}
+        />
+      )}
 
       <EditPlantModal
         visible={editOpen}
-        latinCatalog={latinOptions /* keep suggestions relevant to what user has; swap to global later if desired */}
+        latinCatalog={latinOptions}
         locations={locationOptions}
         fName={fName}
         setFName={setFName}
@@ -339,7 +345,6 @@ export default function PlantsScreen() {
         onConfirm={confirmDelete}
       />
 
-      {/* NEW: Sort / Filter modals */}
       <SortPlantsModal
         visible={sortOpen}
         sortKey={sortKey}
