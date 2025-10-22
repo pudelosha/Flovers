@@ -1,10 +1,10 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\FilterRemindersModal.tsx
 import React from "react";
-import { View, Text, Pressable, TextInput, Platform, StyleSheet } from "react-native";
+import { View, Text, Pressable, TextInput, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/reminders.styles";
 import type { ReminderType } from "../types/reminders.types";
+import { ACCENT_BY_TYPE } from "../constants/reminders.constants";
 
 // Optional datetime picker (same pattern as EditReminderModal)
 let DateTimePicker: any = null;
@@ -45,6 +45,23 @@ function toYYYYMMDD(d: Date) {
   const M = String(d.getMonth() + 1).padStart(2, "0");
   const D = String(d.getDate()).padStart(2, "0");
   return `${Y}-${M}-${D}`;
+}
+
+// tiny helper for tinted backgrounds
+function hexToRgba(hex?: string, alpha = 1) {
+  const fallback = `rgba(255,255,255,${alpha})`;
+  if (!hex || typeof hex !== "string") return fallback;
+  let h = hex.trim();
+  if (!h.startsWith("#")) h = `#${h}`;
+  h = h.replace("#", "");
+  if (h.length === 3) h = h.split("").map(c => c + c).join("");
+  if (h.length !== 6) return fallback;
+  const bigint = parseInt(h, 16);
+  if (Number.isNaN(bigint)) return fallback;
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r},${g},${b},${alpha})`;
 }
 
 export default function FilterRemindersModal({
@@ -91,7 +108,7 @@ export default function FilterRemindersModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={[s.promptGlass, styles.promptGlass28]}>
+        <View style={s.promptGlass}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -106,14 +123,14 @@ export default function FilterRemindersModal({
           />
         </View>
 
-        <View style={[s.promptInner, styles.promptInner28]}>
+        <View style={s.promptInner}>
           <Text style={s.promptTitle}>Filter reminders</Text>
 
           {/* Plant dropdown */}
           <Text style={s.inputLabel}>Plant</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              style={s.dropdownHeader}
               onPress={() => {
                 setLocOpen(false);
                 setPlantOpen((o) => !o);
@@ -126,10 +143,10 @@ export default function FilterRemindersModal({
               <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {plantOpen && (
-              <View style={[s.dropdownList, styles.ddListFlat]}>
+              <View style={s.dropdownList}>
                 <Pressable
                   key="__any_plant"
-                  style={[s.dropdownItem, styles.ddItemFlat]}
+                  style={s.dropdownItem}
                   onPress={() => {
                     setPlantId(undefined);
                     setPlantOpen(false);
@@ -141,7 +158,7 @@ export default function FilterRemindersModal({
                 {plants.map((p) => (
                   <Pressable
                     key={p.id}
-                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    style={s.dropdownItem}
                     onPress={() => {
                       setPlantId(p.id);
                       setPlantOpen(false);
@@ -159,7 +176,7 @@ export default function FilterRemindersModal({
           <Text style={s.inputLabel}>Location</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              style={s.dropdownHeader}
               onPress={() => {
                 setPlantOpen(false);
                 setLocOpen((o) => !o);
@@ -170,10 +187,10 @@ export default function FilterRemindersModal({
               <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {locOpen && (
-              <View style={[s.dropdownList, styles.ddListFlat]}>
+              <View style={s.dropdownList}>
                 <Pressable
                   key="__any_location"
-                  style={[s.dropdownItem, styles.ddItemFlat]}
+                  style={s.dropdownItem}
                   onPress={() => {
                     setLocation(undefined);
                     setLocOpen(false);
@@ -185,7 +202,7 @@ export default function FilterRemindersModal({
                 {locations.map((loc) => (
                   <Pressable
                     key={loc}
-                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    style={s.dropdownItem}
                     onPress={() => {
                       setLocation(loc);
                       setLocOpen(false);
@@ -199,21 +216,31 @@ export default function FilterRemindersModal({
             )}
           </View>
 
-          {/* Types (chips) */}
+          {/* Types (chips) — borderless & tinted; fills width and wraps to two rows */}
           <Text style={s.inputLabel}>Task types</Text>
           <View style={s.chipRow}>
-            {TYPE_OPTIONS.map((t) => (
-              <Pressable
-                key={t}
-                onPress={() => toggleType(t)}
-                style={[s.chip, types.includes(t) && s.chipSelected]}
-              >
-                <Text style={s.chipText}>{t.toUpperCase()}</Text>
-              </Pressable>
-            ))}
+            {TYPE_OPTIONS.map((t) => {
+              const selected = types.includes(t);
+              const tint = ACCENT_BY_TYPE[t];
+              return (
+                <Pressable
+                  key={t}
+                  onPress={() => toggleType(t)}
+                  style={[
+                    s.chip,
+                    {
+                      // borderless & glazed
+                      backgroundColor: selected ? hexToRgba(tint, 0.22) : "rgba(255,255,255,0.12)",
+                    },
+                  ]}
+                >
+                  <Text style={s.chipText}>{t.toUpperCase()}</Text>
+                </Pressable>
+              );
+            })}
           </View>
 
-          {/* Due date range */}
+          {/* Due date range (50/50 and full width) */}
           <Text style={s.inputLabel}>Due date range</Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
@@ -223,7 +250,7 @@ export default function FilterRemindersModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
-                  style={[s.input, styles.flatInput]}
+                  style={[s.input, s.inputInline]}
                   placeholder="YYYY-MM-DD"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueFrom}
@@ -254,7 +281,7 @@ export default function FilterRemindersModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
-                  style={[s.input, styles.flatInput]}
+                  style={[s.input, s.inputInline]}
                   placeholder="YYYY-MM-DD"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueTo}
@@ -280,10 +307,10 @@ export default function FilterRemindersModal({
           </View>
 
           <View style={s.promptButtonsRow}>
-            <Pressable onPress={onClearAll} style={[styles.btnBase, styles.btnDanger]}>
+            <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
               <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
             </Pressable>
-            <Pressable onPress={onCancel} style={[styles.btnBase]}>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
@@ -296,7 +323,7 @@ export default function FilterRemindersModal({
                   dueTo,
                 })
               }
-              style={[styles.btnBase, styles.btnPrimary]}
+              style={[s.promptBtn, s.promptPrimary]}
             >
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
@@ -306,44 +333,3 @@ export default function FilterRemindersModal({
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  promptGlass28: { borderRadius: 28 },
-  promptInner28: { borderRadius: 28 },
-  flatInput: {
-    borderWidth: 0,
-    backgroundColor: "rgba(255,255,255,0.14)",
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
-    marginHorizontal: 16,
-    marginBottom: 10,
-    color: "#FFFFFF",
-  },
-  ddHeaderFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  ddListFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.10)",
-  },
-  ddItemFlat: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-  },
-  btnBase: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
-});

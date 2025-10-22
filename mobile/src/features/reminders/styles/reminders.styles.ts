@@ -17,7 +17,7 @@ export const s = StyleSheet.create({
   // ===== TILES (full-size) =====
   cardWrap: {
     height: 100,
-    borderRadius: 28,                // match AuthCard/GlassCard
+    borderRadius: 28, // match AuthCard/GlassCard
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
@@ -32,7 +32,6 @@ export const s = StyleSheet.create({
     borderRadius: 28,
     overflow: "hidden",
   },
-  // NEW: white tint + thin border (single frame, like AuthCard)
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.20)",
@@ -213,7 +212,7 @@ export const s = StyleSheet.create({
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", marginTop: 6, fontWeight: "600" },
 
-  // ===== MODALS / FORMS =====
+  // ===== MODALS / FORMS (match Profile prompt styling) =====
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -244,6 +243,7 @@ export const s = StyleSheet.create({
     paddingTop: 16,
   },
 
+  // ---- FLAT, BORDERLESS INPUTS ----
   inputLabel: {
     marginTop: 8,
     marginBottom: 6,
@@ -256,53 +256,58 @@ export const s = StyleSheet.create({
   input: {
     marginHorizontal: 16,
     marginBottom: 10,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 16,
     color: "#FFFFFF",
-    backgroundColor: "rgba(255,255,255,0.12)",
+    backgroundColor: "rgba(255,255,255,0.14)", // <-- flat glaze
+    borderWidth: 0,                             // <-- no border
   },
   inputInline: { marginHorizontal: 0, marginBottom: 0 },
 
+  // ---- FLAT, BORDERLESS DROPDOWNS ----
   dropdown: { marginHorizontal: 16, marginBottom: 10 },
   dropdownHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)", // like Profile
+    borderWidth: 0,                              // <-- no border
   },
   dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
   dropdownList: {
     marginTop: 6,
-    borderRadius: 12,
+    borderRadius: 16,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(0,0,0,0.65)",
+    backgroundColor: "rgba(255,255,255,0.10)",  // like Profile
+    borderWidth: 0,                              // <-- no border
   },
   dropdownItem: {
-    paddingHorizontal: 12,
-    paddingVertical: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderColor: "rgba(255,255,255,0.16)",      // subtle divider like Profile
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
 
-  inlineRow: { flexDirection: "row", alignItems: "center", marginHorizontal: 16, marginBottom: 10 },
-  inlineHalfLeft: { flex: 1, marginRight: 8 },
-  inlineHalfRight: { flex: 1, marginLeft: 8 },
+  // 50:50 rows that fill the width
+  inlineRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginHorizontal: 16,
+    marginBottom: 10,
+    gap: 12,
+  },
+  inlineHalfLeft: { flex: 1, minWidth: 0 },
+  inlineHalfRight: { flex: 1, minWidth: 0 },
 
-  // Modal buttons (primary/secondary/danger)
+  // ---- FLAT BUTTONS (no borders) ----
   promptButtonsRow: {
     flexDirection: "row",
     justifyContent: "flex-end",
@@ -312,23 +317,19 @@ export const s = StyleSheet.create({
     paddingTop: 6,
   },
   promptBtn: {
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)", // flat
+    borderWidth: 0,                             // <-- no border
   },
   promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
-  promptPrimary: { backgroundColor: "rgba(11,114,133,0.9)", borderColor: "rgba(255,255,255,0.25)" },
+  promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
-  promptDanger: {
-    backgroundColor: "rgba(255,107,107,0.2)",
-    borderColor: "rgba(255,107,107,0.45)",
-  },
+  promptDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
   confirmText: { color: "rgba(255,255,255,0.95)", paddingHorizontal: 16, marginBottom: 10 },
 
-  // ===== ADDED: SORT/FILTER UI =====
+  // ===== SORT/FILTER EXTRAS =====
   sectionTitle: {
     color: "#FFFFFF",
     fontWeight: "800",
@@ -359,27 +360,25 @@ export const s = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: "#FFFFFF",
   },
+
+  // borderless chips; color/glaze set inline
   chipRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    paddingHorizontal: 12,
-    gap: 8,
+    paddingHorizontal: 16,
+    gap: 10,
   },
   chip: {
-    paddingHorizontal: 10,
-    paddingVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(255,255,255,0.10)",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 14,
   },
   chipSelected: {
     backgroundColor: "rgba(11,114,133,0.25)",
-    borderColor: "rgba(11,114,133,0.65)",
   },
-  chipText: { color: "#FFFFFF", fontWeight: "700", fontSize: 12 },
+  chipText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
 
-  /* ---------- EMPTY STATE (glassy card, same margins as tiles) ---------- */
+  /* ---------- EMPTY STATE ---------- */
   emptyWrap: {
     marginTop: 0,
   },
