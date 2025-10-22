@@ -3,7 +3,7 @@ import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/reminders.styles";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE, TILE_BLUR } from "../constants/reminders.constants";
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import type { Reminder } from "../types/reminders.types";
 import ReminderMenu from "./ReminderMenu";
 
@@ -82,22 +82,18 @@ export default function ReminderTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass (blur + subtle type tint + thin border) */}
+      {/* Glass stack: Blur + white tint + single thin border + subtle accent tint */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
-          blurAmount={TILE_BLUR}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10) }]} pointerEvents="none" />
-        <View
-          style={[
-            StyleSheet.absoluteFill,
-            { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
-          ]}
-          pointerEvents="none"
-        />
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
+        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 }]} />
       </View>
 
       <View style={[s.cardRow, { paddingVertical: 4 }]}>

@@ -1,12 +1,12 @@
 import React, { useMemo } from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 // Import subpath to avoid Agenda + missing velocityTracker
 import Calendar from "react-native-calendars/src/calendar";
 import { BlurView } from "@react-native-community/blur";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
-import { ACCENT_BY_TYPE, TILE_BLUR } from "../constants/reminders.constants";
+import { ACCENT_BY_TYPE } from "../constants/reminders.constants";
 import ReminderMiniTile from "./ReminderMiniTile";
 import { s } from "../styles/reminders.styles";
 
@@ -100,11 +100,17 @@ export default function RemindersCalendar({
       showsVerticalScrollIndicator={false}
       onScrollBeginDrag={() => onToggleMenu("")}
     >
-      {/* Main blurry frame */}
+      {/* Main blurry frame — match AuthCard/GlassCard: blur 20, white tint, thin border, radius 28 */}
       <View style={s.calendarCard}>
-        <BlurView style={s.calendarGlass} blurType="light" blurAmount={TILE_BLUR} />
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: 28, backgroundColor: "rgba(255,255,255,0.20)" }]} />
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" }]} />
+        <BlurView
+          style={s.calendarGlass}
+          blurType="light"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
+        />
+        <View pointerEvents="none" style={s.calendarTint} />
+        <View pointerEvents="none" style={s.calendarBorder} />
 
         <Calendar
           current={selectedDate}

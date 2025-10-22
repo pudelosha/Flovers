@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
+import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/reminders.styles";
 import type { Reminder as UIReminder } from "../types/reminders.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
@@ -16,8 +17,18 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
   const color = ACCENT_BY_TYPE[reminder.type];
 
   return (
-    <Pressable onPress={onPress} style={s.miniCard}>
-      {/* Left type icon */}
+    <Pressable onPress={onPress} style={styles.wrap}>
+      {/* Glass stack: stronger blur + soft white tint (no borders) */}
+      <BlurView
+        style={StyleSheet.absoluteFill}
+        blurType="light"
+        blurAmount={20}
+        overlayColor="transparent"
+        reducedTransparencyFallbackColor="transparent"
+      />
+      <View pointerEvents="none" style={styles.tint} />
+
+      {/* Left type icon (unchanged) */}
       <View style={[s.miniIconBubble, { backgroundColor: color + "22", borderColor: color + "66" }]}>
         <Icon name={ICON_BY_TYPE[reminder.type]} size={16} color={color} />
       </View>
@@ -40,7 +51,7 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
         </Text>
       </View>
 
-      {/* Optional quick actions (tap tile -> open full details if you want later) */}
+      {/* Quick actions (unchanged) */}
       <View style={s.miniActions}>
         {onEdit ? (
           <Pressable onPress={onEdit} hitSlop={8} style={s.miniActionBtn}>
@@ -56,3 +67,21 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
     </Pressable>
   );
 }
+
+const styles = StyleSheet.create({
+  // Button-like glass container (no border)
+  wrap: {
+    position: "relative",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 18,
+    overflow: "hidden",
+  },
+  // Soft white tint similar to your Profile buttons
+  tint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
+  },
+});
