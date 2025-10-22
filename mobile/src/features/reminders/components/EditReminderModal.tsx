@@ -1,6 +1,6 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\EditReminderModal.tsx
 import React, { useState, useEffect } from "react";
-import { View, Text, Pressable, TextInput, Keyboard, Platform } from "react-native";
+import { View, Text, Pressable, TextInput, Keyboard, Platform, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/reminders.styles";
@@ -111,7 +111,7 @@ export default function EditReminderModal(props: Props) {
         }}
       />
       <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
+        <View style={[s.promptGlass, styles.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -126,14 +126,14 @@ export default function EditReminderModal(props: Props) {
           />
         </View>
 
-        <View style={s.promptInner}>
+        <View style={[s.promptInner, styles.promptInner28]}>
           <Text style={s.promptTitle}>{mode === "create" ? "Add reminder" : "Edit reminder"}</Text>
 
           {/* Type */}
           <Text style={s.inputLabel}>Type</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setPlantOpen(false);
                 setTypeOpen((o) => !o);
@@ -144,11 +144,11 @@ export default function EditReminderModal(props: Props) {
               <MaterialCommunityIcons name={typeOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {typeOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {TYPE_OPTIONS.map((opt) => (
                   <Pressable
                     key={opt}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setFType(opt);
                       setTypeOpen(false);
@@ -166,7 +166,7 @@ export default function EditReminderModal(props: Props) {
           <Text style={s.inputLabel}>Plant</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setTypeOpen(false);
                 setPlantOpen((o) => !o);
@@ -177,11 +177,11 @@ export default function EditReminderModal(props: Props) {
               <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {plantOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {plants.map((p) => (
                   <Pressable
                     key={p.id}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setFPlantId(p.id);
                       setPlantOpen(false);
@@ -198,7 +198,7 @@ export default function EditReminderModal(props: Props) {
           {/* Location (read-only) */}
           <Text style={s.inputLabel}>Location</Text>
           <TextInput
-            style={[s.input, { opacity: 0.85 }]}
+            style={[s.input, styles.flatInput, { opacity: 0.95 }]}
             placeholder="Location"
             placeholderTextColor="rgba(255,255,255,0.7)"
             value={location || ""}
@@ -212,7 +212,7 @@ export default function EditReminderModal(props: Props) {
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <TextInput
-              style={s.input}
+              style={[s.input, styles.flatInput]}
               placeholder="YYYY-MM-DD"
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={fDueDate}
@@ -242,7 +242,7 @@ export default function EditReminderModal(props: Props) {
           <Text style={s.inputLabel}>Interval</Text>
           <View style={s.inlineRow}>
             <TextInput
-              style={[s.input, s.inputInline, s.inlineHalfLeft]}
+              style={[s.input, s.inputInline, s.inlineHalfLeft, styles.flatInput]}
               placeholder="Value"
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={String(typeof fIntervalValue === "number" ? fIntervalValue : "")}
@@ -254,7 +254,7 @@ export default function EditReminderModal(props: Props) {
               keyboardType="number-pad"
             />
             <TextInput
-              style={[s.input, s.inputInline, s.inlineHalfRight, { opacity: 0.85 }]}
+              style={[s.input, s.inputInline, s.inlineHalfRight, styles.flatInput, { opacity: 0.95 }]}
               value={fIntervalUnit}
               editable={false}
             />
@@ -262,7 +262,7 @@ export default function EditReminderModal(props: Props) {
 
           <View style={s.promptButtonsRow}>
             <Pressable
-              style={s.promptBtn}
+              style={[styles.btnBase]}
               onPress={() => {
                 Keyboard.dismiss();
                 onCancel();
@@ -271,7 +271,7 @@ export default function EditReminderModal(props: Props) {
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
-              style={[s.promptBtn, s.promptPrimary, !canSave && { opacity: 0.5 }]}
+              style={[styles.btnBase, styles.btnPrimary, !canSave && { opacity: 0.5 }]}
               disabled={!canSave}
               onPress={() => {
                 Keyboard.dismiss();
@@ -288,3 +288,46 @@ export default function EditReminderModal(props: Props) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  // match Profile prompts look
+  promptGlass28: { borderRadius: 28 },
+  promptInner28: { borderRadius: 28 },
+  flatInput: {
+    borderWidth: 0,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    marginHorizontal: 16,
+    marginBottom: 10,
+    color: "#FFFFFF",
+  },
+  ddHeaderFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  ddListFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  ddItemFlat: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+  },
+  btnBase: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  btnPrimary: {
+    backgroundColor: "rgba(11,114,133,0.92)",
+  },
+});

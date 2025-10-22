@@ -1,5 +1,6 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\SortRemindersModal.tsx
 import React from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/reminders.styles";
@@ -45,7 +46,7 @@ export default function SortRemindersModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
+        <View style={[s.promptGlass, styles.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -60,14 +61,14 @@ export default function SortRemindersModal({
           />
         </View>
 
-        <View style={s.promptInner}>
+        <View style={[s.promptInner, styles.promptInner28]}>
           <Text style={s.promptTitle}>Sort reminders</Text>
 
           {/* Sort key dropdown */}
           <Text style={s.inputLabel}>Sort by</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setDirOpen(false);
                 setKeyOpen((o) => !o);
@@ -81,7 +82,7 @@ export default function SortRemindersModal({
             </Pressable>
 
             {keyOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
                   { key: "dueDate", label: "Due date" },
                   { key: "plant", label: "Plant name" },
@@ -89,7 +90,7 @@ export default function SortRemindersModal({
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setK(opt.key);
                       setKeyOpen(false);
@@ -107,7 +108,7 @@ export default function SortRemindersModal({
           <Text style={s.inputLabel}>Direction</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setKeyOpen(false);
                 setDirOpen((o) => !o);
@@ -119,14 +120,14 @@ export default function SortRemindersModal({
             </Pressable>
 
             {dirOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
                   { key: "asc", label: "Ascending" },
                   { key: "desc", label: "Descending" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setD(opt.key);
                       setDirOpen(false);
@@ -142,14 +143,14 @@ export default function SortRemindersModal({
 
           <View style={s.promptButtonsRow}>
             {onReset ? (
-              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
+              <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
               </Pressable>
             ) : null}
-            <Pressable onPress={onCancel} style={s.promptBtn}>
+            <Pressable onPress={onCancel} style={[styles.btnBase]}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
-            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
+            <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
           </View>
@@ -158,3 +159,34 @@ export default function SortRemindersModal({
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  promptGlass28: { borderRadius: 28 },
+  promptInner28: { borderRadius: 28 },
+  ddHeaderFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  ddListFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  ddItemFlat: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+  },
+  btnBase: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
+});

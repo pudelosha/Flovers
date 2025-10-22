@@ -1,5 +1,6 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\FilterRemindersModal.tsx
 import React from "react";
-import { View, Text, Pressable, TextInput, Platform } from "react-native";
+import { View, Text, Pressable, TextInput, Platform, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/reminders.styles";
@@ -90,7 +91,7 @@ export default function FilterRemindersModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
+        <View style={[s.promptGlass, styles.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -105,14 +106,14 @@ export default function FilterRemindersModal({
           />
         </View>
 
-        <View style={s.promptInner}>
+        <View style={[s.promptInner, styles.promptInner28]}>
           <Text style={s.promptTitle}>Filter reminders</Text>
 
           {/* Plant dropdown */}
           <Text style={s.inputLabel}>Plant</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setLocOpen(false);
                 setPlantOpen((o) => !o);
@@ -125,10 +126,10 @@ export default function FilterRemindersModal({
               <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {plantOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 <Pressable
                   key="__any_plant"
-                  style={s.dropdownItem}
+                  style={[s.dropdownItem, styles.ddItemFlat]}
                   onPress={() => {
                     setPlantId(undefined);
                     setPlantOpen(false);
@@ -140,7 +141,7 @@ export default function FilterRemindersModal({
                 {plants.map((p) => (
                   <Pressable
                     key={p.id}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setPlantId(p.id);
                       setPlantOpen(false);
@@ -158,7 +159,7 @@ export default function FilterRemindersModal({
           <Text style={s.inputLabel}>Location</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setPlantOpen(false);
                 setLocOpen((o) => !o);
@@ -169,10 +170,10 @@ export default function FilterRemindersModal({
               <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {locOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 <Pressable
                   key="__any_location"
-                  style={s.dropdownItem}
+                  style={[s.dropdownItem, styles.ddItemFlat]}
                   onPress={() => {
                     setLocation(undefined);
                     setLocOpen(false);
@@ -184,7 +185,7 @@ export default function FilterRemindersModal({
                 {locations.map((loc) => (
                   <Pressable
                     key={loc}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setLocation(loc);
                       setLocOpen(false);
@@ -222,7 +223,7 @@ export default function FilterRemindersModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
-                  style={s.input}
+                  style={[s.input, styles.flatInput]}
                   placeholder="YYYY-MM-DD"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueFrom}
@@ -253,7 +254,7 @@ export default function FilterRemindersModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
-                  style={s.input}
+                  style={[s.input, styles.flatInput]}
                   placeholder="YYYY-MM-DD"
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueTo}
@@ -279,10 +280,10 @@ export default function FilterRemindersModal({
           </View>
 
           <View style={s.promptButtonsRow}>
-            <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
+            <Pressable onPress={onClearAll} style={[styles.btnBase, styles.btnDanger]}>
               <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
             </Pressable>
-            <Pressable onPress={onCancel} style={s.promptBtn}>
+            <Pressable onPress={onCancel} style={[styles.btnBase]}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
@@ -295,7 +296,7 @@ export default function FilterRemindersModal({
                   dueTo,
                 })
               }
-              style={[s.promptBtn, s.promptPrimary]}
+              style={[styles.btnBase, styles.btnPrimary]}
             >
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
@@ -305,3 +306,44 @@ export default function FilterRemindersModal({
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  promptGlass28: { borderRadius: 28 },
+  promptInner28: { borderRadius: 28 },
+  flatInput: {
+    borderWidth: 0,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    marginHorizontal: 16,
+    marginBottom: 10,
+    color: "#FFFFFF",
+  },
+  ddHeaderFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  ddListFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  ddItemFlat: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+  },
+  btnBase: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
+});
