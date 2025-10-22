@@ -4,17 +4,37 @@ export const wiz = StyleSheet.create({
   /** page spacing */
   pageContent: { paddingHorizontal: 16, paddingTop: 21 },
 
-  /** glass card */
-  cardWrap: { borderRadius: 18, overflow: "visible", position: "relative", marginBottom: 18 },
+  /** glass card – AuthCard-style: big radius + shadow; blur/tint/border are layered in component */
+  cardWrap: {
+    borderRadius: 28,
+    overflow: "visible",
+    position: "relative",
+    marginBottom: 18,
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 8,
+  },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    backgroundColor: "rgba(255,255,255,0.12)",
   },
-  cardInner: { padding: 16 },
+  /** White tint + thin border layers (match Login/AuthCard) */
+  cardTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
+    zIndex: 1,
+  },
+  cardBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.2)",
+    zIndex: 2,
+  },
+  cardInner: { padding: 16, zIndex: 3 },
 
   /** headings */
   title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18 },
@@ -27,29 +47,38 @@ export const wiz = StyleSheet.create({
   },
   sectionTitle: { color: "#FFFFFF", fontWeight: "800", marginTop: 10, marginBottom: 8 },
 
-  /** Search box (Step 1) */
+  /**
+   * Search box (Step 1)
+   * Flat, button-like (NO border). Height handled in component (64) to match Login.
+   */
   inputRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderRadius: 14,               // match Login input radius
+    borderWidth: 0,                 // <-- no border (flat)
     backgroundColor: "rgba(255,255,255,0.12)",
   },
   input: { flex: 1, color: "#FFFFFF", fontWeight: "700" },
   suggestBox: {
     position: "absolute",
-    left: 0, right: 0, top: 48,
-    borderRadius: 12, overflow: "hidden",
-    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
-    backgroundColor: "rgba(0,0,0,0.85)", zIndex: 30,
+    left: 0,
+    right: 0,
+    top: 64,                        // dropdown sits right under the 64px input
+    borderRadius: 12,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(0,0,0,0.85)",
+    zIndex: 30,
   },
   suggestItem: {
-    paddingHorizontal: 12, paddingVertical: 10,
-    borderBottomWidth: StyleSheet.hairlineWidth, borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.25)",
   },
   suggestName: { color: "#FFFFFF", fontWeight: "800" },
   suggestLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic" },
@@ -61,16 +90,36 @@ export const wiz = StyleSheet.create({
   rowLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic", marginTop: 2 },
   tagRow: { flexDirection: "row", alignItems: "center", marginTop: 6 },
 
-  /** Footer buttons (Step 1) */
+  /** Footer buttons (Step 1) – flat, no border, subtle glare (no artifacts) */
   footerRow: { flexDirection: "row", justifyContent: "flex-end", marginTop: 10 },
   nextBtnWide: {
-    flexDirection: "row", alignItems: "center", gap: 8,
-    paddingHorizontal: 18, paddingVertical: 12, borderRadius: 14,
-    backgroundColor: "rgba(11,114,133,0.9)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+    borderRadius: 14,
+    backgroundColor: "rgba(11,114,133,0.9)",
+    borderWidth: 0,                  // <-- no border
+    position: "relative",
+    overflow: "hidden",
+  },
+  /** reusable glare overlay for flat buttons (lighter + non-interactive) */
+  btnGlare: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: "50%",
+    backgroundColor: "rgba(255,255,255,0.08)", // toned down to avoid artifacts
+    borderTopLeftRadius: 14,
+    borderTopRightRadius: 14,
+    pointerEvents: "none",
+    zIndex: 1,
   },
   nextBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** 50:50 Prev/Next (full width) */
+  /** 50:50 Prev/Next (full width) – unchanged for other steps */
   footerRowSplit: {
     flexDirection: "row",
     alignItems: "center",
@@ -98,7 +147,7 @@ export const wiz = StyleSheet.create({
   },
   splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 2 */
+  /** Step 2 (unchanged) */
   hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
   desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
   buttonRowDual: { flexDirection: "row", justifyContent: "space-between", gap: 10, marginTop: 12 },
@@ -113,7 +162,7 @@ export const wiz = StyleSheet.create({
   prefLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", flex: 1 },
   prefValue: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 3 */
+  /** Step 3 (unchanged) */
   actionFull: {
     alignSelf: "stretch", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10,
     paddingHorizontal: 14, paddingVertical: 12, borderRadius: 14,
@@ -129,7 +178,7 @@ export const wiz = StyleSheet.create({
   locationName: { color: "#FFFFFF", fontWeight: "800" },
   locationCat: { color: "#FFFFFF", fontWeight: "800", marginBottom: 6 },
 
-  /** Modal wrapper (used elsewhere) */
+  /** Modal wrapper (unchanged) */
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.6)", zIndex: 20 },
   promptWrap: {
     ...StyleSheet.absoluteFillObject,
@@ -150,7 +199,7 @@ export const wiz = StyleSheet.create({
     paddingTop: 0,
   },
 
-  /** Inputs / segments */
+  /** Inputs / segments (unchanged) */
   inputField: {
     marginHorizontal: 0, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 10,
     borderRadius: 12, borderWidth: 1, borderColor: "rgba(255,255,255,0.28)", color: "#FFFFFF",
@@ -168,7 +217,7 @@ export const wiz = StyleSheet.create({
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
   segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
 
-  /** 🔵 NEW: horizontal “chip” scrollers (Step 4) */
+  /** 🔵 NEW: horizontal “chip” scrollers (unchanged) */
   hScroll: { paddingVertical: 2 },
   hItem: {
     paddingHorizontal: 12, paddingVertical: 10,
@@ -190,7 +239,7 @@ export const wiz = StyleSheet.create({
   },
   chipText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** 🔵 NEW: Select (Step 5) — header matches Profile dropdown look */
+  /** 🔵 NEW: Select (unchanged) */
   selectField: {
     flexDirection: "row",
     alignItems: "center",
@@ -201,12 +250,12 @@ export const wiz = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.25)",
     backgroundColor: "rgba(255,255,255,0.12)",
-    marginBottom: 6, // tighter: list appears right below
+    marginBottom: 6,
   },
   selectValue: { color: "#FFFFFF", fontWeight: "800" },
   selectChevronPad: { paddingLeft: 10 },
 
-  /** 🔵 NEW: Inline dropdown list (mirrors profile.controls.*) */
+  /** 🔵 NEW: Inline dropdown list (unchanged) */
   dropdownList: {
     borderRadius: 12,
     overflow: "hidden",
@@ -215,7 +264,7 @@ export const wiz = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.12)",
     marginBottom: 10,
   },
-  dropdownListScroll: { maxHeight: 280 }, // prevent ultra-tall lists
+  dropdownListScroll: { maxHeight: 280 },
   dropdownItem: {
     paddingHorizontal: 12,
     paddingVertical: 12,

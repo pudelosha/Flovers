@@ -1,6 +1,7 @@
 ﻿// steps/Step01_SelectPlant.tsx
 import React, { useEffect, useMemo, useState } from "react";
-import { View, Text, Pressable, ActivityIndicator } from "react-native";
+import { View, Pressable, ActivityIndicator } from "react-native";
+import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
@@ -27,31 +28,26 @@ export default function Step01_SelectPlant({
   onCleared,
 }: {
   onScrollToTop: () => void;
-  /** true only right after the wizard screen is opened */
   freshOpen?: boolean;
-  /** called after we clear once so the parent can drop the flag */
   onCleared?: () => void;
 }) {
   const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
-  // Initial query: hydrate from store (useful when navigating back),
-  // but if this is a fresh open, we'll clear it immediately in the effect below.
   const initialQuery = useMemo(
     () => state.plantQuery?.trim() || state.selectedPlant?.name?.trim() || "",
     [state.plantQuery, state.selectedPlant?.name]
   );
 
   const [query, setQuery] = useState<string>(initialQuery);
-  const [showSuggestions, setShowSuggestions] = useState<boolean>(false); // start closed
+  const [showSuggestions, setShowSuggestions] = useState<boolean>(false);
 
-  // Clear once if the wizard has just been opened and Step 1 is displayed
   useEffect(() => {
     if (freshOpen) {
-      actions.reset();              // clear entire wizard store
-      setQuery("");                 // clear local input
-      setShowSuggestions(false);    // keep dropdown closed
-      onCleared?.();                // tell parent we handled the fresh open
+      actions.reset();
+      setQuery("");
+      setShowSuggestions(false);
+      onCleared?.();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [freshOpen]);
@@ -121,11 +117,8 @@ export default function Step01_SelectPlant({
   const onNext = () => {
     actions.setPlantQuery(query.trim());
     const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
-    if (hasPredefined) {
-      actions.goNext(); // Step 2
-    } else {
-      actions.goTo("location"); // skip Step 2
-    }
+    if (hasPredefined) actions.goNext(); // Step 2
+    else actions.goTo("location");       // skip Step 2
   };
 
   return (
@@ -134,13 +127,12 @@ export default function Step01_SelectPlant({
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -149,19 +141,19 @@ export default function Step01_SelectPlant({
           Optional step — you can pick a known plant to auto-prefill care, or just continue.
         </Text>
 
-        {/* Scan + Search row (compact 48px height) */}
+        {/* Scan + Search row – both 64 high */}
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, marginBottom: 6 }}>
+          {/* Scan button — flat, no border, NO glare (removed artifacts), 64 high */}
           <Pressable
             onPress={() => navigation.navigate("Scanner")}
             style={{
-              width: 48,
-              height: 48,
+              width: 64,
+              height: 64,
               alignItems: "center",
               justifyContent: "center",
-              borderRadius: 12,
+              borderRadius: 14,
               backgroundColor: "rgba(255,255,255,0.16)",
-              borderWidth: 1,
-              borderColor: "rgba(255,255,255,0.25)",
+              overflow: "hidden",
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
@@ -170,14 +162,13 @@ export default function Step01_SelectPlant({
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
 
-          {/* Search (compact) */}
+          {/* Search field – 64 high with animated label */}
           <View style={{ flex: 1 }}>
             <PlantSearchBox
-              compact
               value={query}
               onChange={(t) => {
                 setQuery(t);
-                setShowSuggestions(!!t.trim()); // open only when user types
+                setShowSuggestions(!!t.trim());
                 if (!t.trim()) actions.setSelectedPlant(undefined);
               }}
               showSuggestions={showSuggestions}
@@ -188,7 +179,7 @@ export default function Step01_SelectPlant({
           </View>
         </View>
 
-        {/* Next button */}
+        {/* Next button — flat, no border, NO glare */}
         <View style={wiz.footerRow}>
           <Pressable
             onPress={onNext}
@@ -225,43 +216,25 @@ export default function Step01_SelectPlant({
                 <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
                   <SafeImage uri={item.image} style={wiz.thumb} resizeMode="cover" />
                   <View style={{ flex: 1 }}>
-                    <Text style={wiz.rowName} numberOfLines={1}>
-                      {item.name}
-                    </Text>
-                    <Text style={wiz.rowLatin} numberOfLines={1}>
-                      {item.latin}
-                    </Text>
+                    <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
+                    <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
 
                     {/* 3 requirement icons + tiny labels */}
                     <View style={[wiz.tagRow, { gap: 12 }]}>
                       <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons
-                          name={SUN_ICON_BY_LEVEL[item.sun]}
-                          size={16}
-                          color="rgba(255,255,255,0.95)"
-                        />
+                        <MaterialCommunityIcons name={SUN_ICON_BY_LEVEL[item.sun]} size={16} color="rgba(255,255,255,0.95)" />
                         <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {SUN_LABEL_BY_LEVEL[item.sun]}
                         </Text>
                       </View>
-
                       <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons
-                          name={WATER_ICON_BY_LEVEL[item.water]}
-                          size={16}
-                          color="rgba(255,255,255,0.95)"
-                        />
+                        <MaterialCommunityIcons name={WATER_ICON_BY_LEVEL[item.water]} size={16} color="rgba(255,255,255,0.95)" />
                         <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {WATER_LABEL_BY_LEVEL[item.water]}
                         </Text>
                       </View>
-
                       <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons
-                          name={DIFFICULTY_ICON_BY_LEVEL[item.difficulty]}
-                          size={16}
-                          color="rgba(255,255,255,0.95)"
-                        />
+                        <MaterialCommunityIcons name={DIFFICULTY_ICON_BY_LEVEL[item.difficulty]} size={16} color="rgba(255,255,255,0.95)" />
                         <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
                           {DIFFICULTY_LABEL_BY_LEVEL[item.difficulty]}
                         </Text>
@@ -274,7 +247,6 @@ export default function Step01_SelectPlant({
           </View>
         )}
 
-        {/* (Optional) show an error about search list */}
         {errorSearch && (
           <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>{errorSearch}</Text>
         )}
