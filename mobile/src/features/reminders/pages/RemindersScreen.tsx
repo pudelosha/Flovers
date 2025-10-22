@@ -412,7 +412,14 @@ export default function RemindersScreen() {
                   />
                   <View
                     pointerEvents="none"
-                    style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.12)" }]}
+                    style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
+                  />
+                  <View
+                    pointerEvents="none"
+                    style={[
+                      StyleSheet.absoluteFill,
+                      { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                    ]}
                   />
                   <View style={s.emptyInner}>
                     {/* Centered header (icon + title) */}

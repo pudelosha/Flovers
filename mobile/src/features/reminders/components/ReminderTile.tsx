@@ -82,7 +82,7 @@ export default function ReminderTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass (blur + subtle type tint) */}
+      {/* Glass (blur + subtle type tint + thin border) */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -90,7 +90,14 @@ export default function ReminderTile({
           blurAmount={TILE_BLUR}
           reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
         />
-        <View style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.1) }]} pointerEvents="none" />
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10) }]} pointerEvents="none" />
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+          ]}
+          pointerEvents="none"
+        />
       </View>
 
       <View style={[s.cardRow, { paddingVertical: 4 }]}>

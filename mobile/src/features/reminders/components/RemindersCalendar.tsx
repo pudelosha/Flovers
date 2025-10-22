@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 // Import subpath to avoid Agenda + missing velocityTracker
 import Calendar from "react-native-calendars/src/calendar";
 import { BlurView } from "@react-native-community/blur";
@@ -103,6 +103,8 @@ export default function RemindersCalendar({
       {/* Main blurry frame */}
       <View style={s.calendarCard}>
         <BlurView style={s.calendarGlass} blurType="light" blurAmount={TILE_BLUR} />
+        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: 28, backgroundColor: "rgba(255,255,255,0.20)" }]} />
+        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" }]} />
 
         <Calendar
           current={selectedDate}
