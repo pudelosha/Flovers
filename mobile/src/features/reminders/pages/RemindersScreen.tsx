@@ -403,12 +403,14 @@ export default function RemindersScreen() {
           ListEmptyComponent={
             !loading ? (
               <View style={s.emptyWrap}>
-                <View style={s.emptyGlass}>
+                {/* Single glass frame — no duplicate borders/backgrounds */}
+                <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
                   <BlurView
                     style={StyleSheet.absoluteFill}
                     blurType="light"
-                    blurAmount={14}
-                    reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+                    blurAmount={20}
+                    overlayColor="transparent"
+                    reducedTransparencyFallbackColor="transparent"
                   />
                   <View
                     pointerEvents="none"

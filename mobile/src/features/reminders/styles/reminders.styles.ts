@@ -381,7 +381,7 @@ export const s = StyleSheet.create({
 
   /* ---------- EMPTY STATE (glassy card, same margins as tiles) ---------- */
   emptyWrap: {
-    marginTop: 5,
+    marginTop: 0,
   },
   emptyGlass: {
     borderRadius: 18,
