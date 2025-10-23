@@ -1,6 +1,6 @@
 ﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\pages\Step03_SelectLocation.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 
@@ -55,7 +55,6 @@ export default function Step03_SelectLocation({
 
         // Guarantee NONE is selected on initial load
         actions.selectLocation("");
-
       } catch (e: any) {
         setErrorMsg(e?.message ?? "Failed to load locations.");
       } finally {
@@ -129,7 +128,7 @@ export default function Step03_SelectLocation({
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass */}
+      {/* glass (keep as-is; frame already matches) */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -155,33 +154,62 @@ export default function Step03_SelectLocation({
           </Text>
         )}
 
-        <Pressable style={wiz.actionFull} onPress={openCreate} disabled={loading}>
+        {/* Create new location — flat button (same container as Step 1/2), no border */}
+        <Pressable
+          onPress={openCreate}
+          disabled={loading}
+          style={({ pressed }) => [
+            wiz.nextBtnWide,
+            {
+              alignSelf: "stretch",
+              backgroundColor: "rgba(255,255,255,0.12)",
+              justifyContent: "center",
+              gap: 10,
+              opacity: pressed || loading ? 0.92 : 1,
+            },
+          ]}
+        >
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
-          <Text style={wiz.actionText}>Create new location</Text>
+          <Text style={wiz.nextBtnText}>Create new location</Text>
         </Pressable>
 
-        {/* Prev / Next under the button */}
+        {/* Prev / Next */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-          {/* Previous (left aligned, left arrow) */}
+          {/* Previous (flat, glass) */}
           <Pressable
-            style={[
-              wiz.btn,
-              { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 },
-            ]}
             onPress={() => actions.goPrev()}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
           >
-            <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-            <Text style={wiz.btnText}>Previous</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
 
-          {/* Next (right aligned text + right arrow) */}
+          {/* Next (flat, teal) */}
           <Pressable
-            style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
             onPress={() => actions.goNext()}
             disabled={nextDisabled}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(11,114,133,0.9)",
+                paddingHorizontal: 14,
+                opacity: pressed || nextDisabled ? 0.92 : 1,
+              },
+            ]}
           >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
-              <Text style={wiz.btnText}>Next</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
+              <Text style={wiz.nextBtnText}>Next</Text>
               <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
             </View>
           </Pressable>

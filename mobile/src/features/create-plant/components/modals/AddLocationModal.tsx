@@ -60,7 +60,7 @@ export default function AddLocationModal({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop that stops at the tab bar (same darkness as Profile) */}
+        {/* Backdrop that stops at the tab bar */}
         <Pressable
           style={[styles.backdrop, { paddingBottom: bottomInset }]}
           onPress={onClose}
@@ -82,7 +82,7 @@ export default function AddLocationModal({
           <View
             style={[
               StyleSheet.absoluteFill,
-              { backgroundColor: "rgba(0,0,0,0.6)" }, // darker, matches Profile modals
+              { backgroundColor: "rgba(0,0,0,0.6)" },
             ]}
           />
         </View>
@@ -102,39 +102,72 @@ export default function AddLocationModal({
           >
             <Text style={wiz.promptTitle}>Create location</Text>
 
-            {/* Location name */}
+            {/* Location name – flat, rounded, no border */}
             <TextInput
-              style={wiz.inputField}
+              style={styles.inputFlat}
               placeholder="Location name"
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={name}
               onChangeText={setName}
             />
 
-            {/* Category segment (full width) */}
+            {/* Category segment (full width) — FLAT, NO BORDER */}
             <View style={wiz.segmentRow}>
               {(["indoor", "outdoor", "other"] as LocationCategory[]).map((k) => (
                 <Pressable
                   key={k}
-                  style={[wiz.segBtn, cat === k && wiz.segActive, { flex: 1 }]}
                   onPress={() => setCat(k)}
+                  style={({ pressed }) => [
+                    // start from segBtn geometry but force flat/glass surface
+                    wiz.segBtn,
+                    {
+                      borderWidth: 0, // remove frame
+                      backgroundColor:
+                        cat === k ? "rgba(11,114,133,0.9)" : "rgba(255,255,255,0.12)",
+                      flex: 1,
+                      opacity: pressed ? 0.92 : 1,
+                    },
+                  ]}
                 >
-                  <Text style={wiz.segText}>{k[0].toUpperCase() + k.slice(1)}</Text>
+                  <Text style={wiz.segText}>
+                    {k[0].toUpperCase() + k.slice(1)}
+                  </Text>
                 </Pressable>
               ))}
             </View>
 
-            {/* Buttons row 50:50 (above quick suggestions) */}
+            {/* Buttons row 50:50 – SAME flat button as steps (no border) */}
             <View style={styles.splitButtonsRow}>
-              <Pressable style={[styles.splitBtn, styles.splitBtnSecondary]} onPress={onClose}>
-                <Text style={styles.splitBtnText}>Close</Text>
+              <Pressable
+                onPress={onClose}
+                style={({ pressed }) => [
+                  wiz.nextBtnWide,
+                  {
+                    flex: 1,
+                    backgroundColor: "rgba(255,255,255,0.12)",
+                    opacity: pressed ? 0.92 : 1,
+                  },
+                ]}
+              >
+                <Text style={wiz.nextBtnText}>Close</Text>
               </Pressable>
-              <Pressable style={[styles.splitBtn, styles.splitBtnPrimary]} onPress={create}>
-                <Text style={[styles.splitBtnText, styles.splitBtnPrimaryText]}>Create location</Text>
+
+              <Pressable
+                onPress={create}
+                style={({ pressed }) => [
+                  wiz.nextBtnWide,
+                  {
+                    flex: 1,
+                    backgroundColor: "rgba(11,114,133,0.9)",
+                    opacity: pressed ? 0.92 : 1,
+                  },
+                ]}
+              >
+                <Text style={wiz.nextBtnText}>Create location</Text>
               </Pressable>
             </View>
 
-            {/* Quick suggestions – full width sections with 2-column grid chips */}
+            {/* Quick suggestions — FLAT chips (no border) */}
             <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>Quick suggestions</Text>
 
             <Text style={[wiz.locationCat, { marginBottom: 6 }]}>Indoor</Text>
@@ -142,8 +175,16 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map((label) => (
                 <Pressable
                   key={`ind-${label}`}
-                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "indoor")}
+                  style={({ pressed }) => [
+                    wiz.chip,
+                    styles.gridChip,
+                    {
+                      borderWidth: 0, // remove frame
+                      backgroundColor: "rgba(255,255,255,0.12)",
+                      opacity: pressed ? 0.92 : 1,
+                    },
+                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -155,8 +196,16 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((label) => (
                 <Pressable
                   key={`out-${label}`}
-                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "outdoor")}
+                  style={({ pressed }) => [
+                    wiz.chip,
+                    styles.gridChip,
+                    {
+                      borderWidth: 0, // remove frame
+                      backgroundColor: "rgba(255,255,255,0.12)",
+                      opacity: pressed ? 0.92 : 1,
+                    },
+                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -168,8 +217,16 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.other.slice(0, 9).map((label) => (
                 <Pressable
                   key={`oth-${label}`}
-                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "other")}
+                  style={({ pressed }) => [
+                    wiz.chip,
+                    styles.gridChip,
+                    {
+                      borderWidth: 0, // remove frame
+                      backgroundColor: "rgba(255,255,255,0.12)",
+                      opacity: pressed ? 0.92 : 1,
+                    },
+                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -185,7 +242,7 @@ export default function AddLocationModal({
 const styles = StyleSheet.create({
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)", // darker, same as Profile
+    backgroundColor: "rgba(0,0,0,0.6)",
   },
   contentWrap: {
     ...StyleSheet.absoluteFillObject,
@@ -198,32 +255,24 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
 
-  // 50:50 buttons row
+  /** Flat input (matches Login/SearchBox surface; no border) */
+  inputFlat: {
+    height: 64,
+    borderRadius: 14,
+    paddingHorizontal: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    color: "#FFFFFF",
+    fontWeight: "700",
+    marginBottom: 10,
+  },
+
+  /** 50:50 row using Step 1/2/3 flat buttons */
   splitButtonsRow: {
     flexDirection: "row",
     gap: 10,
     marginTop: 6,
     marginBottom: 10,
   },
-  splitBtn: {
-    flex: 1,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
-    borderWidth: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
-  splitBtnSecondary: {
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderColor: "rgba(255,255,255,0.25)",
-  },
-  splitBtnPrimary: {
-    backgroundColor: "rgba(11,114,133,0.9)",
-    borderColor: "rgba(255,255,255,0.25)",
-  },
-  splitBtnPrimaryText: { color: "#FFFFFF" },
 
   // full-width, 2-column grid for chips
   gridWrap: {
