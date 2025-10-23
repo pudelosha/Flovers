@@ -30,7 +30,7 @@ export const wiz = StyleSheet.create({
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
+    borderWidth: 1, // the ONLY visible border
     borderColor: "rgba(255,255,255,0.2)",
     zIndex: 2,
   },
@@ -47,18 +47,15 @@ export const wiz = StyleSheet.create({
   },
   sectionTitle: { color: "#FFFFFF", fontWeight: "800", marginTop: 10, marginBottom: 8 },
 
-  /**
-   * Search box (Step 1)
-   * Flat, button-like (NO border). Height handled in component (64) to match Login.
-   */
+  /** Search box (Step 1) – flat/borderless */
   inputRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    borderRadius: 14,               // match Login input radius
-    borderWidth: 0,                 // <-- no border (flat)
+    borderRadius: 14,
+    borderWidth: 0,
     backgroundColor: "rgba(255,255,255,0.12)",
   },
   input: { flex: 1, color: "#FFFFFF", fontWeight: "700" },
@@ -66,11 +63,10 @@ export const wiz = StyleSheet.create({
     position: "absolute",
     left: 0,
     right: 0,
-    top: 64,                        // dropdown sits right under the 64px input
+    top: 64,
     borderRadius: 12,
     overflow: "hidden",
     borderWidth: 0,
-    borderColor: "rgba(255,255,255,0.25)",
     backgroundColor: "rgba(0,0,0,0.85)",
     zIndex: 30,
   },
@@ -90,7 +86,7 @@ export const wiz = StyleSheet.create({
   rowLatin: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontStyle: "italic", marginTop: 2 },
   tagRow: { flexDirection: "row", alignItems: "center", marginTop: 6 },
 
-  /** Footer buttons (Step 1) – flat, no border, subtle glare (no artifacts) */
+  /** Footer buttons – flat, borderless */
   footerRow: { flexDirection: "row", justifyContent: "flex-end", marginTop: 10 },
   nextBtnWide: {
     flexDirection: "row",
@@ -100,18 +96,17 @@ export const wiz = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 14,
     backgroundColor: "rgba(11,114,133,0.9)",
-    borderWidth: 0,                  // <-- no border
+    borderWidth: 0,
     position: "relative",
     overflow: "hidden",
   },
-  /** reusable glare overlay for flat buttons (lighter + non-interactive) */
   btnGlare: {
     position: "absolute",
     left: 0,
     right: 0,
     top: 0,
     height: "50%",
-    backgroundColor: "rgba(255,255,255,0.08)", // toned down to avoid artifacts
+    backgroundColor: "rgba(255,255,255,0.08)",
     borderTopLeftRadius: 14,
     borderTopRightRadius: 14,
     pointerEvents: "none",
@@ -119,7 +114,7 @@ export const wiz = StyleSheet.create({
   },
   nextBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** 50:50 Prev/Next (full width) – unchanged for other steps */
+  /** 50:50 Prev/Next – flat, borderless */
   footerRowSplit: {
     flexDirection: "row",
     alignItems: "center",
@@ -133,52 +128,66 @@ export const wiz = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 12,
     borderRadius: 14,
-    borderWidth: 1,
+    borderWidth: 0,              // ← remove frame
     alignItems: "center",
     justifyContent: "center",
   },
   splitBtnSecondary: {
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(255,255,255,0.12)", // no border
   },
   splitBtnPrimary: {
-    backgroundColor: "rgba(11,114,133,0.9)",
-    borderColor: "rgba(255,255,255,0.25)",
+    backgroundColor: "rgba(11,114,133,0.9)",   // no border
   },
   splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 2 (unchanged) */
-  hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
-  desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
+  /** Step 2 buttons – flat, borderless */
   buttonRowDual: { flexDirection: "row", justifyContent: "space-between", gap: 10, marginTop: 12 },
   btn: {
-    paddingHorizontal: 14, paddingVertical: 10, borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0, // ← remove frame
   },
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.9)" },
   btnText: { color: "#FFFFFF", fontWeight: "800" },
+
+  /** Step 2 visuals */
+  hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
+  desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
   prefsGrid: { marginTop: 8, gap: 8 },
   prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
   prefLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", flex: 1 },
   prefValue: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Step 3 (unchanged) */
+  /** Step 3 */
   actionFull: {
-    alignSelf: "stretch", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 10,
-    paddingHorizontal: 14, paddingVertical: 12, borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.12)", borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    alignSelf: "stretch",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0,  // flat
   },
   actionText: { color: "#FFFFFF", fontWeight: "800" },
   smallMuted: { color: "rgba(255,255,255,0.92)", fontWeight: "600", marginTop: 6, marginBottom: 8 },
 
   locationRow: {
-    flexDirection: "row", alignItems: "center", justifyContent: "space-between",
-    paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: "rgba(255,255,255,0.18)",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 10,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.18)",
   },
   locationName: { color: "#FFFFFF", fontWeight: "800" },
   locationCat: { color: "#FFFFFF", fontWeight: "800", marginBottom: 6 },
 
-  /** Modal wrapper (unchanged) */
+  /** Modal wrapper */
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.6)", zIndex: 20 },
   promptWrap: {
     ...StyleSheet.absoluteFillObject,
@@ -199,29 +208,39 @@ export const wiz = StyleSheet.create({
     paddingTop: 0,
   },
 
-  /** Inputs / segments (unchanged) */
+  /** Inputs / segments — FLAT & 64-high input */
   inputField: {
-    marginHorizontal: 0, marginBottom: 10, paddingHorizontal: 12, paddingVertical: 10,
-    borderRadius: 12, borderWidth: 1, borderColor: "rgba(255,255,255,0.28)", color: "#FFFFFF",
+    height: 64,
+    marginHorizontal: 0,
+    marginBottom: 10,
+    paddingHorizontal: 12,
+    borderRadius: 14,
+    borderWidth: 0, // flat input
+    color: "#FFFFFF",
     backgroundColor: "rgba(255,255,255,0.12)",
+    fontWeight: "700",
   },
   segmentRow: { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 12 },
   segBtn: {
     flex: 1,
-    paddingHorizontal: 12, paddingVertical: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
-    alignItems: "center", justifyContent: "center",
+    borderWidth: 0, // ← remove frame
+    alignItems: "center",
+    justifyContent: "center",
   },
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
   segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
 
-  /** 🔵 NEW: horizontal “chip” scrollers (unchanged) */
+  /** Horizontal “chip” scrollers (unchanged) */
   hScroll: { paddingVertical: 2 },
   hItem: {
-    paddingHorizontal: 12, paddingVertical: 10,
-    borderRadius: 12, borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 12,
+    borderWidth: 1,
     borderColor: "rgba(255,255,255,0.25)",
     backgroundColor: "rgba(255,255,255,0.12)",
     marginRight: 8,
@@ -229,17 +248,18 @@ export const wiz = StyleSheet.create({
   hItemActive: { backgroundColor: "rgba(11,114,133,0.9)" },
   hItemText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** Chips (grid) */
+  /** Chips (grid) — QUICK SUGGESTIONS MUST BE BORDERLESS */
   chipsWrap: { width: "100%", flexDirection: "row", flexWrap: "wrap", gap: 8 },
   chip: {
-    paddingHorizontal: 12, paddingVertical: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1, borderColor: "rgba(255,255,255,0.25)",
+    borderWidth: 0,        // ← remove frame
   },
   chipText: { color: "#FFFFFF", fontWeight: "800" },
 
-  /** 🔵 NEW: Select (unchanged) */
+  /** Select (flat) */
   selectField: {
     flexDirection: "row",
     alignItems: "center",
@@ -247,20 +267,18 @@ export const wiz = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 14,
     borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderWidth: 0,        // ← remove frame
     backgroundColor: "rgba(255,255,255,0.12)",
     marginBottom: 6,
   },
   selectValue: { color: "#FFFFFF", fontWeight: "800" },
   selectChevronPad: { paddingLeft: 10 },
 
-  /** 🔵 NEW: Inline dropdown list (unchanged) */
+  /** Inline dropdown list (flat) */
   dropdownList: {
     borderRadius: 12,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.25)",
+    borderWidth: 0,        // ← remove frame
     backgroundColor: "rgba(255,255,255,0.12)",
     marginBottom: 10,
   },

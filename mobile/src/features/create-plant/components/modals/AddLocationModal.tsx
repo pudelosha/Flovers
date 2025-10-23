@@ -60,7 +60,7 @@ export default function AddLocationModal({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop that stops at the tab bar */}
+        {/* Backdrop that stops at the tab bar (same darkness as Profile) */}
         <Pressable
           style={[styles.backdrop, { paddingBottom: bottomInset }]}
           onPress={onClose}
@@ -69,105 +69,58 @@ export default function AddLocationModal({
         </Pressable>
 
         {/* Blur/tint layer in the same bounds as backdrop */}
-        <View
-          pointerEvents="none"
-          style={[StyleSheet.absoluteFill, { bottom: bottomInset }]}
-        >
+        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { bottom: bottomInset }]}>
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          <View
-            style={[
-              StyleSheet.absoluteFill,
-              { backgroundColor: "rgba(0,0,0,0.6)" },
-            ]}
-          />
+          <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.6)" }]} />
         </View>
 
         {/* Content above tab bar; full width */}
-        <View
-          style={[styles.contentWrap, { paddingBottom: bottomInset }]}
-          pointerEvents="box-none"
-        >
+        <View style={[styles.contentWrap, { paddingBottom: bottomInset }]} pointerEvents="box-none">
           <ScrollView
             ref={scrollRef}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[
-              styles.contentInner,
-              { paddingTop: insets.top + 16 },
-            ]}
+            contentContainerStyle={[styles.contentInner, { paddingTop: insets.top + 16 }]}
           >
             <Text style={wiz.promptTitle}>Create location</Text>
 
-            {/* Location name – flat, rounded, no border */}
+            {/* Location name — flat 64px input */}
             <TextInput
-              style={styles.inputFlat}
+              style={wiz.inputField}
               placeholder="Location name"
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={name}
               onChangeText={setName}
             />
 
-            {/* Category segment (full width) — FLAT, NO BORDER */}
+            {/* Category segment (full width) — flat, no borders */}
             <View style={wiz.segmentRow}>
               {(["indoor", "outdoor", "other"] as LocationCategory[]).map((k) => (
                 <Pressable
                   key={k}
+                  style={[wiz.segBtn, cat === k && wiz.segActive, { flex: 1 }]}
                   onPress={() => setCat(k)}
-                  style={({ pressed }) => [
-                    // start from segBtn geometry but force flat/glass surface
-                    wiz.segBtn,
-                    {
-                      borderWidth: 0, // remove frame
-                      backgroundColor:
-                        cat === k ? "rgba(11,114,133,0.9)" : "rgba(255,255,255,0.12)",
-                      flex: 1,
-                      opacity: pressed ? 0.92 : 1,
-                    },
-                  ]}
                 >
-                  <Text style={wiz.segText}>
-                    {k[0].toUpperCase() + k.slice(1)}
-                  </Text>
+                  <Text style={wiz.segText}>{k[0].toUpperCase() + k.slice(1)}</Text>
                 </Pressable>
               ))}
             </View>
 
-            {/* Buttons row 50:50 – SAME flat button as steps (no border) */}
+            {/* Buttons row 50:50 (above quick suggestions) — flat, borderless */}
             <View style={styles.splitButtonsRow}>
-              <Pressable
-                onPress={onClose}
-                style={({ pressed }) => [
-                  wiz.nextBtnWide,
-                  {
-                    flex: 1,
-                    backgroundColor: "rgba(255,255,255,0.12)",
-                    opacity: pressed ? 0.92 : 1,
-                  },
-                ]}
-              >
-                <Text style={wiz.nextBtnText}>Close</Text>
+              <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={onClose}>
+                <Text style={wiz.splitBtnText}>Close</Text>
               </Pressable>
-
-              <Pressable
-                onPress={create}
-                style={({ pressed }) => [
-                  wiz.nextBtnWide,
-                  {
-                    flex: 1,
-                    backgroundColor: "rgba(11,114,133,0.9)",
-                    opacity: pressed ? 0.92 : 1,
-                  },
-                ]}
-              >
-                <Text style={wiz.nextBtnText}>Create location</Text>
+              <Pressable style={[wiz.splitBtn, wiz.splitBtnPrimary]} onPress={create}>
+                <Text style={wiz.splitBtnText}>Create location</Text>
               </Pressable>
             </View>
 
-            {/* Quick suggestions — FLAT chips (no border) */}
+            {/* Quick suggestions — flat chips, no borders */}
             <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>Quick suggestions</Text>
 
             <Text style={[wiz.locationCat, { marginBottom: 6 }]}>Indoor</Text>
@@ -175,16 +128,8 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map((label) => (
                 <Pressable
                   key={`ind-${label}`}
+                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "indoor")}
-                  style={({ pressed }) => [
-                    wiz.chip,
-                    styles.gridChip,
-                    {
-                      borderWidth: 0, // remove frame
-                      backgroundColor: "rgba(255,255,255,0.12)",
-                      opacity: pressed ? 0.92 : 1,
-                    },
-                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -196,16 +141,8 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((label) => (
                 <Pressable
                   key={`out-${label}`}
+                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "outdoor")}
-                  style={({ pressed }) => [
-                    wiz.chip,
-                    styles.gridChip,
-                    {
-                      borderWidth: 0, // remove frame
-                      backgroundColor: "rgba(255,255,255,0.12)",
-                      opacity: pressed ? 0.92 : 1,
-                    },
-                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -217,16 +154,8 @@ export default function AddLocationModal({
               {PREDEFINED_LOCATIONS.other.slice(0, 9).map((label) => (
                 <Pressable
                   key={`oth-${label}`}
+                  style={[wiz.chip, styles.gridChip]}
                   onPress={() => pickSuggestion(label, "other")}
-                  style={({ pressed }) => [
-                    wiz.chip,
-                    styles.gridChip,
-                    {
-                      borderWidth: 0, // remove frame
-                      backgroundColor: "rgba(255,255,255,0.12)",
-                      opacity: pressed ? 0.92 : 1,
-                    },
-                  ]}
                 >
                   <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
                 </Pressable>
@@ -255,18 +184,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
 
-  /** Flat input (matches Login/SearchBox surface; no border) */
-  inputFlat: {
-    height: 64,
-    borderRadius: 14,
-    paddingHorizontal: 12,
-    backgroundColor: "rgba(255,255,255,0.12)",
-    color: "#FFFFFF",
-    fontWeight: "700",
-    marginBottom: 10,
-  },
-
-  /** 50:50 row using Step 1/2/3 flat buttons */
+  // 50:50 buttons row
   splitButtonsRow: {
     flexDirection: "row",
     gap: 10,
