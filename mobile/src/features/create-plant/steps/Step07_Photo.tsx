@@ -24,7 +24,7 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   ].filter(Boolean) as string[];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
-  const allGranted = perms.every(p => results[p] === PermissionsAndroid.RESULTS.GRANTED);
+  const allGranted = perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
   return allGranted;
 }
 
@@ -40,7 +40,7 @@ export default function Step07_Photo() {
 
     const opts: CameraOptions = {
       mediaType: "photo",
-      saveToPhotos: false, // keep it local to app sandbox
+      saveToPhotos: false,
       includeBase64: false,
       quality: 0.92,
     };
@@ -81,18 +81,17 @@ export default function Step07_Photo() {
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass layer */}
+      {/* glass frame — match Steps 1–6: blur 20 + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -130,31 +129,76 @@ export default function Step07_Photo() {
           )}
         </View>
 
-        {/* Stacked full-width buttons */}
+        {/* Stacked full-width actions */}
         <View style={{ gap: 10 }}>
-          <Pressable style={[wiz.actionFull, { backgroundColor: "rgba(11,114,133,0.9)" }]} onPress={doLaunchCamera}>
+          <Pressable
+            style={[wiz.actionFull, { backgroundColor: "rgba(11,114,133,0.9)" }]}
+            onPress={doLaunchCamera}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
             <MaterialCommunityIcons name="camera" size={18} color="#FFFFFF" />
             <Text style={wiz.actionText}>Take a photo</Text>
           </Pressable>
-          <Pressable style={wiz.actionFull} onPress={doLaunchLibrary}>
+
+          <Pressable style={wiz.actionFull} onPress={doLaunchLibrary} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
             <MaterialCommunityIcons name="image-multiple" size={18} color="#FFFFFF" />
             <Text style={wiz.actionText}>Choose from gallery</Text>
           </Pressable>
+
           {state.photoUri && (
-            <Pressable style={wiz.actionFull} onPress={removePhoto}>
+            <Pressable style={wiz.actionFull} onPress={removePhoto} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
               <MaterialCommunityIcons name="trash-can-outline" size={18} color="#FFFFFF" />
               <Text style={wiz.actionText}>Remove photo</Text>
             </Pressable>
           )}
         </View>
 
-        {/* Prev / Next */}
-        <View style={wiz.footerRowSplit}>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={actions.goPrev}>
-            <Text style={wiz.splitBtnText}>Previous</Text>
+        {/* Prev / Next — unified with earlier steps (flat, same height, arrows) */}
+        <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
+          <Pressable
+            onPress={actions.goPrev}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnPrimary]} onPress={actions.goNext}>
-            <Text style={wiz.splitBtnText}>Next</Text>
+
+          <Pressable
+            onPress={actions.goNext}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(11,114,133,0.9)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: 8,
+                width: "100%",
+              }}
+            >
+              <Text style={wiz.nextBtnText}>Next</Text>
+              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            </View>
           </Pressable>
         </View>
       </View>

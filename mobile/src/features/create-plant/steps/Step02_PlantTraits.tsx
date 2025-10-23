@@ -1,4 +1,4 @@
-﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\pages\Step02_PlantTraits.tsx
+﻿// steps/Step02_PlantTraits.tsx
 import React, { useEffect, useMemo, useState } from "react";
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -108,10 +108,10 @@ export default function Step02_PlantTraits() {
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass (match Step 1/AuthCard) */}
+      {/* glass (match Step 1/3 exactly): blur + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
-          style={StyleSheet.absoluteFill}
+          style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
           blurAmount={20}
           overlayColor="transparent"
@@ -145,13 +145,13 @@ export default function Step02_PlantTraits() {
           <Text style={wiz.desc}>{profile.description}</Text>
         )}
 
-        {/* buttons – use SAME flat container as Step 1 to avoid borders/artefacts */}
+        {/* buttons – flat containers, no borders */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
           {/* Previous (glass) */}
           <Pressable
             onPress={onPrev}
             style={[
-              wiz.nextBtnWide,            // flat, rounded, no border
+              wiz.nextBtnWide,
               { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14 },
             ]}
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
@@ -166,7 +166,7 @@ export default function Step02_PlantTraits() {
           <Pressable
             onPress={onNext}
             style={[
-              wiz.nextBtnWide,            // flat, rounded, no border
+              wiz.nextBtnWide,
               { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14 },
             ]}
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}

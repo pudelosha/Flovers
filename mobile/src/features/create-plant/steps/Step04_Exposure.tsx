@@ -1,4 +1,4 @@
-﻿// Step04_Exposure.tsx
+﻿// steps/Step04_Exposure.tsx
 import React, { useMemo, useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -34,18 +34,17 @@ export default function Step04_Exposure({
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass with blur (same as Step 3) */}
+      {/* glass frame — match Steps 1 & 3: Blur + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -80,7 +79,7 @@ export default function Step04_Exposure({
         <View
           style={{
             borderRadius: 12,
-            borderWidth: 0, // removed frame
+            borderWidth: 0, // borderless container
             backgroundColor: "rgba(255,255,255,0.12)",
             overflow: "hidden",
           }}
@@ -131,6 +130,7 @@ export default function Step04_Exposure({
         <Pressable
           style={[wiz.actionFull, { marginTop: 10, marginBottom: 10 }]}
           onPress={() => setMeasureOpen(true)}
+          android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#FFFFFF" />
           <Text style={wiz.actionText}>Measure light & direction</Text>
@@ -155,7 +155,7 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Prev / Next — now identical to Step 1–3 (flat, same height) */}
+        {/* Prev / Next — identical to Steps 1–3 (flat, same height) */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
           <Pressable
             onPress={() => actions.goPrev()}
@@ -168,6 +168,7 @@ export default function Step04_Exposure({
                 opacity: pressed ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
               <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
@@ -186,6 +187,7 @@ export default function Step04_Exposure({
                 opacity: pressed ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
               <Text style={wiz.nextBtnText}>Next</Text>

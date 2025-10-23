@@ -53,12 +53,12 @@ export default function Step08_NameAndNotes() {
   };
 
   const onCreate = () => {
-    // Navigate to Step 9 (creating). The Step 9 page triggers the backend call.
-    actions.goTo("creating");
+    actions.goTo("creating"); // Step 9 performs the backend call
   };
 
   return (
     <View style={wiz.cardWrap}>
+      {/* glass */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -66,9 +66,13 @@ export default function Step08_NameAndNotes() {
           blurAmount={10}
           reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
         />
-        <View pointerEvents="none" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any} />
+        <View
+          pointerEvents="none"
+          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
+        />
       </View>
 
+      {/* everything stays INSIDE this inner container */}
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Name & notes</Text>
         <Text style={wiz.subtitle}>
@@ -95,7 +99,7 @@ export default function Step08_NameAndNotes() {
         />
 
         <Text style={wiz.sectionTitle}>Purchase date (optional)</Text>
-        <Pressable style={wiz.selectField} onPress={openPurchaseDate}>
+        <Pressable style={[wiz.selectField, { borderWidth: 0 }]} onPress={openPurchaseDate}>
           <Text style={wiz.selectValue}>{state.purchaseDateISO ?? "Not set"}</Text>
           <View style={wiz.selectChevronPad}>
             <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />
@@ -113,8 +117,14 @@ export default function Step08_NameAndNotes() {
             />
             {Platform.OS === "ios" && (
               <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
-                <Pressable style={[wiz.btn, wiz.btnPrimary]} onPress={() => setShowPicker(false)}>
-                  <Text style={wiz.btnText}>Done</Text>
+                <Pressable
+                  onPress={() => setShowPicker(false)}
+                  style={({ pressed }) => [
+                    wiz.nextBtnWide,
+                    { backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1 },
+                  ]}
+                >
+                  <Text style={wiz.nextBtnText}>Done</Text>
                 </Pressable>
               </View>
             )}
@@ -125,9 +135,14 @@ export default function Step08_NameAndNotes() {
           <>
             <View style={wiz.backdrop} />
             <View style={wiz.promptWrap}>
-              <View style={[wiz.promptInnerFull]}>
+              <View style={wiz.promptInnerFull}>
                 <View style={wiz.cardGlass} />
-                <BlurView style={wiz.promptGlass as any} blurType="light" blurAmount={12} reducedTransparencyFallbackColor="rgba(255,255,255,0.15)" />
+                <BlurView
+                  style={wiz.promptGlass as any}
+                  blurType="light"
+                  blurAmount={12}
+                  reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+                />
                 <View style={wiz.promptScroll}>
                   <Text style={wiz.promptTitle}>Set purchase date</Text>
                   <TextInput
@@ -137,12 +152,24 @@ export default function Step08_NameAndNotes() {
                     onChangeText={setFallbackDate}
                     style={wiz.inputField}
                   />
-                  <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: 10 }}>
-                    <Pressable style={wiz.btn} onPress={() => setFallbackOpen(false)}>
-                      <Text style={wiz.btnText}>Cancel</Text>
+                  <View style={{ flexDirection: "row", gap: 10, marginTop: 6 }}>
+                    <Pressable
+                      onPress={() => setFallbackOpen(false)}
+                      style={({ pressed }) => [
+                        wiz.nextBtnWide,
+                        { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                      ]}
+                    >
+                      <Text style={wiz.nextBtnText}>Cancel</Text>
                     </Pressable>
-                    <Pressable style={[wiz.btn, wiz.btnPrimary]} onPress={onFallbackSave}>
-                      <Text style={wiz.btnText}>Set</Text>
+                    <Pressable
+                      onPress={onFallbackSave}
+                      style={({ pressed }) => [
+                        wiz.nextBtnWide,
+                        { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                      ]}
+                    >
+                      <Text style={wiz.nextBtnText}>Set</Text>
                     </Pressable>
                   </View>
                 </View>
@@ -151,12 +178,33 @@ export default function Step08_NameAndNotes() {
           </>
         )}
 
-        <View style={wiz.footerRowSplit}>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={actions.goPrev}>
-            <Text style={wiz.splitBtnText}>Previous</Text>
+        {/* Footer buttons — INSIDE the card, unified style */}
+        <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
+          {/* Previous: left chevron + text */}
+          <Pressable
+            onPress={actions.goPrev}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
+            ]}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnPrimary]} onPress={onCreate}>
-            <Text style={wiz.splitBtnText}>Create</Text>
+
+          {/* Create: NO arrow, right-aligned text */}
+          <Pressable
+            onPress={onCreate}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
+            ]}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", width: "100%" }}>
+              <Text style={wiz.nextBtnText}>Create</Text>
+            </View>
           </Pressable>
         </View>
       </View>

@@ -1,6 +1,6 @@
-﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\pages\Step03_SelectLocation.tsx
+﻿// steps/Step03_SelectLocation.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 
@@ -48,7 +48,6 @@ export default function Step03_SelectLocation({
         remote.forEach((r) => {
           const key = r.name.trim().toLowerCase();
           if (!existing.has(key)) {
-            // pass through id IF your reducer accepts it; if not, it will ignore it
             actions.addLocation(r.name, r.category as LocationCategory, String(r.id));
           }
         });
@@ -97,10 +96,10 @@ export default function Step03_SelectLocation({
       setErrorMsg(null);
       const created = await createLocation({ name, category: cat }, { auth: true });
 
-      // Add into wizard state (reducer may replace/ignore id — that's fine)
+      // Add into wizard state
       actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
 
-      // Robust auto-select:
+      // Robust auto-select
       setTimeout(() => {
         const match = locationsRef.current.find(
           (l) =>
@@ -128,18 +127,17 @@ export default function Step03_SelectLocation({
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass (keep as-is; frame already matches) */}
+      {/* glass frame — match Step 1: Blur + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -168,6 +166,7 @@ export default function Step03_SelectLocation({
               opacity: pressed || loading ? 0.92 : 1,
             },
           ]}
+          android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
           <Text style={wiz.nextBtnText}>Create new location</Text>
@@ -187,6 +186,7 @@ export default function Step03_SelectLocation({
                 opacity: pressed ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
               <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
@@ -207,6 +207,7 @@ export default function Step03_SelectLocation({
                 opacity: pressed || nextDisabled ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
               <Text style={wiz.nextBtnText}>Next</Text>

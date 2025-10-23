@@ -71,7 +71,7 @@ function InlineDropdown<T extends string>({
 }) {
   return (
     <>
-      <Pressable style={wiz.selectField} onPress={onToggle}>
+      <Pressable style={wiz.selectField} onPress={onToggle} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
         <Text style={wiz.selectValue}>{valueLabel}</Text>
         <View style={wiz.selectChevronPad}>
           <MaterialCommunityIcons
@@ -94,7 +94,7 @@ function InlineDropdown<T extends string>({
                 <Text style={wiz.dropdownItemDesc}>Skip if you’re not sure.</Text>
               </Pressable>
             )}
-            {options.map(opt => (
+            {options.map((opt) => (
               <Pressable key={opt.key} style={wiz.dropdownItem} onPress={() => onSelect(opt.key)}>
                 <Text style={wiz.dropdownItemText}>{opt.label}</Text>
               </Pressable>
@@ -144,7 +144,7 @@ function DaysSlider({
         />
       ) : (
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
-          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map(d => (
+          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map((d) => (
             <Pressable
               key={d}
               onPress={() => onChange(d)}
@@ -197,7 +197,7 @@ function MonthsSlider({
         />
       ) : (
         <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
-          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map(m => (
+          {Array.from({ length: max - min + 1 }, (_, i) => i + min).map((m) => (
             <Pressable
               key={m}
               onPress={() => onChange(m)}
@@ -222,28 +222,29 @@ export default function Step06_AutoTasks() {
 
   const wateredLabel = useMemo(() => {
     if (!state.lastWatered) return "Not specified";
-    return LAST_WATERED_OPTIONS.find(o => o.key === state.lastWatered)?.label ?? "Not specified";
+    return LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered)?.label ?? "Not specified";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastWatered]);
 
   const repottedLabel = useMemo(() => {
     if (!state.lastRepotted) return "Not specified";
-    return LAST_REPOTTED_OPTIONS.find(o => o.key === state.lastRepotted)?.label ?? "Not specified";
+    return LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted)?.label ?? "Not specified";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastRepotted]);
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass layer */}
+      {/* glass frame — match Steps 1–5 exactly: blur 20 + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
+        <View pointerEvents="none" style={wiz.cardTint} />
+        <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
@@ -394,6 +395,7 @@ export default function Step06_AutoTasks() {
                 opacity: pressed ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
               <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
@@ -412,6 +414,7 @@ export default function Step06_AutoTasks() {
                 opacity: pressed ? 0.92 : 1,
               },
             ]}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
               <Text style={wiz.nextBtnText}>Next</Text>
