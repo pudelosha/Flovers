@@ -292,7 +292,7 @@ export default function Step06_AutoTasks() {
               </>
             )}
 
-            {/* 2) MOISTURE / MISTING (2nd; default false unless plant profile later sets true) */}
+            {/* 2) MOISTURE / MISTING */}
             <Text style={wiz.sectionTitle}>Moisture / misting</Text>
             <SectionCheckbox
               checked={!!state.moistureRequired}
@@ -306,12 +306,12 @@ export default function Step06_AutoTasks() {
                   value={state.moistureIntervalDays}
                   onChange={(d) => actions.setMoistureInterval(d)}
                   min={1}
-                  max={30} // moisture 1–30
+                  max={30}
                 />
               </>
             )}
 
-            {/* 3) FERTILISING (1–60 days) */}
+            {/* 3) FERTILISING */}
             <Text style={wiz.sectionTitle}>Fertilising</Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
@@ -325,12 +325,12 @@ export default function Step06_AutoTasks() {
                   value={state.fertilizeIntervalDays}
                   onChange={(d) => actions.setFertilizeInterval(d)}
                   min={1}
-                  max={60} // fertilising 1–60
+                  max={60}
                 />
               </>
             )}
 
-            {/* 4) CARE / TRIMMING (1–60 days) */}
+            {/* 4) CARE / TRIMMING */}
             <Text style={wiz.sectionTitle}>Care / trimming</Text>
             <SectionCheckbox
               checked={!!state.careRequired}
@@ -344,12 +344,12 @@ export default function Step06_AutoTasks() {
                   value={state.careIntervalDays}
                   onChange={(d) => actions.setCareInterval(d)}
                   min={1}
-                  max={60} // care 1–60
+                  max={60}
                 />
               </>
             )}
 
-            {/* 5) REPOTTING (slider 1–12 months + dropdown for "last repotted") */}
+            {/* 5) REPOTTING */}
             <Text style={wiz.sectionTitle}>Repotting</Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
@@ -381,13 +381,42 @@ export default function Step06_AutoTasks() {
           </>
         )}
 
-        {/* Prev / Next in-card */}
-        <View style={wiz.footerRowSplit}>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={actions.goPrev}>
-            <Text style={wiz.splitBtnText}>Previous</Text>
+        {/* Prev / Next — unified with Steps 1–5 (flat, same height, arrows) */}
+        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
+          <Pressable
+            onPress={actions.goPrev}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
-          <Pressable style={[wiz.splitBtn, wiz.splitBtnPrimary]} onPress={actions.goNext}>
-            <Text style={wiz.splitBtnText}>Next</Text>
+
+          <Pressable
+            onPress={actions.goNext}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(11,114,133,0.9)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
+              <Text style={wiz.nextBtnText}>Next</Text>
+              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
+            </View>
           </Pressable>
         </View>
       </View>
