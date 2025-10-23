@@ -6,7 +6,6 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
-// Optional datetime picker
 let DateTimePicker: any = null;
 try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
 
@@ -52,160 +51,172 @@ export default function Step08_NameAndNotes() {
     actions.setPurchaseDateISO(toISODate(dt)); setFallbackOpen(false);
   };
 
-  const onCreate = () => {
-    actions.goTo("creating"); // Step 9 performs the backend call
-  };
+  const onCreate = () => actions.goTo("creating");
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass */}
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
-        />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
-      </View>
+      {/* CLIPPED CARD wraps glass + content so frame grows with content */}
+      <View style={{ position: "relative", borderRadius: 28, overflow: "hidden" }}>
+        {/* glass frame — same as other steps */}
+        <View style={wiz.cardGlass}>
+          <BlurView
+            style={{ position: "absolute", inset: 0 } as any}
+            blurType="light"
+            blurAmount={20}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="transparent"
+          />
+          <View pointerEvents="none" style={wiz.cardTint} />
+          <View pointerEvents="none" style={wiz.cardBorder} />
+        </View>
 
-      {/* everything stays INSIDE this inner container */}
-      <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Name & notes</Text>
-        <Text style={wiz.subtitle}>
-          Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age.
-        </Text>
+        {/* content */}
+        <View style={[wiz.cardInner, { paddingBottom: 48 }]}>
+          <Text style={wiz.title}>Name & notes</Text>
+          <Text style={wiz.subtitle}>
+            Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age.
+          </Text>
 
-        <Text style={wiz.sectionTitle}>Display name</Text>
-        <TextInput
-          placeholderTextColor="rgba(255,255,255,0.6)"
-          placeholder={placeholderName}
-          value={state.displayName}
-          onChangeText={actions.setDisplayName}
-          style={wiz.inputField}
-        />
+          <Text style={wiz.sectionTitle}>Display name</Text>
+          <TextInput
+            placeholderTextColor="rgba(255,255,255,0.6)"
+            placeholder={placeholderName}
+            value={state.displayName}
+            onChangeText={actions.setDisplayName}
+            style={wiz.inputField}
+          />
 
-        <Text style={wiz.sectionTitle}>Notes</Text>
-        <TextInput
-          placeholderTextColor="rgba(255,255,255,0.6)"
-          placeholder="Care tips, issues, where you bought it…"
-          value={state.notes}
-          onChangeText={actions.setNotes}
-          style={[wiz.inputField, { minHeight: 96, textAlignVertical: "top" }]}
-          multiline
-        />
+          <Text style={wiz.sectionTitle}>Notes</Text>
+          <TextInput
+            placeholderTextColor="rgba(255,255,255,0.6)"
+            placeholder="Care tips, issues, where you bought it…"
+            value={state.notes}
+            onChangeText={actions.setNotes}
+            style={[wiz.inputField, { minHeight: 96, textAlignVertical: "top" }]}
+            multiline
+          />
 
-        <Text style={wiz.sectionTitle}>Purchase date (optional)</Text>
-        <Pressable style={[wiz.selectField, { borderWidth: 0 }]} onPress={openPurchaseDate}>
-          <Text style={wiz.selectValue}>{state.purchaseDateISO ?? "Not set"}</Text>
-          <View style={wiz.selectChevronPad}>
-            <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />
-          </View>
-        </Pressable>
+          <Text style={wiz.sectionTitle}>Purchase date (optional)</Text>
+          <Pressable
+            style={[wiz.selectField, { borderWidth: 0 }]}
+            onPress={openPurchaseDate}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
+            <Text style={wiz.selectValue}>{state.purchaseDateISO ?? "Not set"}</Text>
+            <View style={wiz.selectChevronPad}>
+              <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />
+            </View>
+          </Pressable>
 
-        {showPicker && DateTimePicker && (
-          <View style={{ marginBottom: 10 }}>
-            <DateTimePicker
-              value={state.purchaseDateISO ? new Date(state.purchaseDateISO + "T00:00:00") : new Date()}
-              mode="date"
-              display={Platform.OS === "ios" ? "inline" : "default"}
-              onChange={onChangeDateNative}
-              maximumDate={new Date()}
-            />
-            {Platform.OS === "ios" && (
-              <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
-                <Pressable
-                  onPress={() => setShowPicker(false)}
-                  style={({ pressed }) => [
-                    wiz.nextBtnWide,
-                    { backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1 },
-                  ]}
-                >
-                  <Text style={wiz.nextBtnText}>Done</Text>
-                </Pressable>
-              </View>
-            )}
-          </View>
-        )}
+          {showPicker && DateTimePicker && (
+            <View style={{ marginBottom: 10 }}>
+              <DateTimePicker
+                value={state.purchaseDateISO ? new Date(state.purchaseDateISO + "T00:00:00") : new Date()}
+                mode="date"
+                display={Platform.OS === "ios" ? "inline" : "default"}
+                onChange={onChangeDateNative}
+                maximumDate={new Date()}
+              />
+              {Platform.OS === "ios" && (
+                <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
+                  <Pressable
+                    onPress={() => setShowPicker(false)}
+                    style={({ pressed }) => [
+                      wiz.nextBtnWide,
+                      { backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1 },
+                    ]}
+                    android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                  >
+                    <Text style={wiz.nextBtnText}>Done</Text>
+                  </Pressable>
+                </View>
+              )}
+            </View>
+          )}
 
-        {fallbackOpen && (
-          <>
-            <View style={wiz.backdrop} />
-            <View style={wiz.promptWrap}>
-              <View style={wiz.promptInnerFull}>
-                <View style={wiz.cardGlass} />
-                <BlurView
-                  style={wiz.promptGlass as any}
-                  blurType="light"
-                  blurAmount={12}
-                  reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
-                />
-                <View style={wiz.promptScroll}>
-                  <Text style={wiz.promptTitle}>Set purchase date</Text>
-                  <TextInput
-                    placeholder="YYYY-MM-DD"
-                    placeholderTextColor="rgba(255,255,255,0.6)"
-                    value={fallbackDate}
-                    onChangeText={setFallbackDate}
-                    style={wiz.inputField}
-                  />
-                  <View style={{ flexDirection: "row", gap: 10, marginTop: 6 }}>
-                    <Pressable
-                      onPress={() => setFallbackOpen(false)}
-                      style={({ pressed }) => [
-                        wiz.nextBtnWide,
-                        { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
-                      ]}
-                    >
-                      <Text style={wiz.nextBtnText}>Cancel</Text>
-                    </Pressable>
-                    <Pressable
-                      onPress={onFallbackSave}
-                      style={({ pressed }) => [
-                        wiz.nextBtnWide,
-                        { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
-                      ]}
-                    >
-                      <Text style={wiz.nextBtnText}>Set</Text>
-                    </Pressable>
+          {fallbackOpen && (
+            <>
+              <View style={wiz.backdrop} />
+              <View style={wiz.promptWrap}>
+                <View style={wiz.promptInnerFull}>
+                  <View style={wiz.promptGlass}>
+                    <BlurView
+                      style={{ position: "absolute", inset: 0 } as any}
+                      blurType="light"
+                      blurAmount={20}
+                      overlayColor="transparent"
+                      reducedTransparencyFallbackColor="transparent"
+                    />
+                    <View pointerEvents="none" style={wiz.cardTint} />
+                    <View pointerEvents="none" style={wiz.cardBorder} />
+                  </View>
+
+                  <View style={wiz.promptScroll}>
+                    <Text style={wiz.promptTitle}>Set purchase date</Text>
+                    <TextInput
+                      placeholder="YYYY-MM-DD"
+                      placeholderTextColor="rgba(255,255,255,0.6)"
+                      value={fallbackDate}
+                      onChangeText={setFallbackDate}
+                      style={wiz.inputField}
+                    />
+                    <View style={{ flexDirection: "row", gap: 10, marginTop: 6 }}>
+                      <Pressable
+                        onPress={() => setFallbackOpen(false)}
+                        style={({ pressed }) => [
+                          wiz.nextBtnWide,
+                          { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                        ]}
+                        android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                      >
+                        <Text style={wiz.nextBtnText}>Cancel</Text>
+                      </Pressable>
+                      <Pressable
+                        onPress={onFallbackSave}
+                        style={({ pressed }) => [
+                          wiz.nextBtnWide,
+                          { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                        ]}
+                        android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                      >
+                        <Text style={wiz.nextBtnText}>Set</Text>
+                      </Pressable>
+                    </View>
                   </View>
                 </View>
               </View>
-            </View>
-          </>
-        )}
+            </>
+          )}
 
-        {/* Footer buttons — INSIDE the card, unified style */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
-          {/* Previous: left chevron + text */}
-          <Pressable
-            onPress={actions.goPrev}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
-            ]}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
+          {/* Footer buttons — now sit above the curve */}
+          <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
+            <Pressable
+              onPress={actions.goPrev}
+              style={({ pressed }) => [
+                wiz.nextBtnWide,
+                { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
+              ]}
+              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+            >
+              <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+                <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+                <Text style={wiz.nextBtnText}>Previous</Text>
+              </View>
+            </Pressable>
 
-          {/* Create: NO arrow, right-aligned text */}
-          <Pressable
-            onPress={onCreate}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
-            ]}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", width: "100%" }}>
-              <Text style={wiz.nextBtnText}>Create</Text>
-            </View>
-          </Pressable>
+            <Pressable
+              onPress={onCreate}
+              style={({ pressed }) => [
+                wiz.nextBtnWide,
+                { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
+              ]}
+              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+            >
+              <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", width: "100%" }}>
+                <Text style={wiz.nextBtnText}>Create</Text>
+              </View>
+            </Pressable>
+          </View>
         </View>
       </View>
     </View>
