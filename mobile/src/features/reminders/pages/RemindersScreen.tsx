@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState } from "react";
 import {
   View,
@@ -102,7 +103,7 @@ export default function RemindersScreen() {
 
   const [loading, setLoading] = useState(false);
   const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
-  const [refreshing, setRefreshing] = useState(false); // ⬅️ NEW: pull-to-refresh state
+  const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [uiReminders, setUiReminders] = useState<UIReminder[]>([]);
@@ -175,7 +176,21 @@ export default function RemindersScreen() {
     }, [])
   );
 
-  // ⬅️ NEW: dedicated pull-to-refresh handler (does not toggle `loading`)
+  /** ⬇️ NEW: ALWAYS close all modals and menus when this screen becomes focused */
+  useFocusEffect(
+    useCallback(() => {
+      setEditOpen(false);
+      setEditingId(null);
+      setConfirmDeleteReminderId(null);
+      setConfirmDeleteName("");
+      setSortOpen(false);
+      setFilterOpen(false);
+      setMenuOpenId(null);
+      return undefined;
+    }, [])
+  );
+
+  // ⬅️ dedicated pull-to-refresh handler (does not toggle `loading`)
   const onPullRefresh = useCallback(async () => {
     setRefreshing(true);
     try {

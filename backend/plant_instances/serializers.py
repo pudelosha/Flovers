@@ -155,3 +155,82 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "name": obj.plant_definition.name,
             "latin": obj.plant_definition.latin,
         }
+
+
+# NEW: detail serializer for GET /api/plant-instances/<id>/
+# returns the full editable payload + nested read bits
+class PlantInstanceDetailSerializer(serializers.ModelSerializer):
+    location = serializers.SerializerMethodField()
+    plant_definition = serializers.SerializerMethodField()
+    # include ids as well for convenience on the client
+    plant_definition_id = serializers.IntegerField(source="plant_definition.id", read_only=True)
+    location_id = serializers.IntegerField(source="location.id", read_only=True)
+
+    class Meta:
+        model = PlantInstance
+        fields = [
+            "id",
+            # nested read
+            "plant_definition",
+            "location",
+            # ids (read)
+            "plant_definition_id",
+            "location_id",
+            # display
+            "display_name",
+            "notes",
+            "purchase_date",
+            "photo_uri",
+            # exposure
+            "light_level",
+            "orientation",
+            "distance_cm",
+            # container / soil
+            "pot_material",
+            "soil_mix",
+            # auto tasks prefs
+            "create_auto_tasks",
+            "water_task_enabled",
+            "repot_task_enabled",
+            "moisture_required",
+            "fertilize_required",
+            "care_required",
+            "last_watered",
+            "last_repotted",
+            "moisture_interval_days",
+            "fertilize_interval_days",
+            "care_interval_days",
+            "repot_interval_months",
+            # QR & meta
+            "qr_code",
+            "created_at",
+            "updated_at",
+        ]
+        read_only_fields = [
+            "id",
+            "plant_definition",
+            "location",
+            "plant_definition_id",
+            "location_id",
+            "qr_code",
+            "created_at",
+            "updated_at",
+        ]
+
+    def get_location(self, obj):
+        if not obj.location_id:
+            return None
+        return {
+            "id": obj.location_id,
+            "name": obj.location.name,
+            "category": obj.location.category,
+        }
+
+    def get_plant_definition(self, obj):
+        if not obj.plant_definition_id:
+            return None
+        return {
+            "id": obj.plant_definition_id,
+            "name": obj.plant_definition.name,
+            "latin": obj.plant_definition.latin,
+        }

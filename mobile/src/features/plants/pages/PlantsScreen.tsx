@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\plants\PlantsScreen.tsx
 import React, { useCallback, useMemo, useState } from "react";
 import {
   View,
@@ -33,7 +34,11 @@ import {
   fetchPlantInstances,
   deletePlantInstance,
   ApiPlantInstanceListItem,
+  fetchPlantInstanceForEdit,
+  updatePlantInstanceFromForm,
 } from "../../../api/services/plant-instances.service";
+
+type LightLevel5 = "very-low" | "low" | "medium" | "bright-indirect" | "bright-direct";
 
 /** Map API list item -> UI Plant shape used by PlantTile */
 function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
@@ -66,14 +71,26 @@ export default function PlantsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // --- EDIT MODAL state ---
+  // --- EDIT MODAL visibility & target ---
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
+
+  // --- EDIT MODAL controlled fields (include FULL detail fields) ---
   const [fName, setFName] = useState("");
   const [fLatinQuery, setFLatinQuery] = useState("");
   const [fLatinSelected, setFLatinSelected] = useState<string | undefined>(undefined);
   const [fLocation, setFLocation] = useState<string | undefined>(undefined);
   const [fNotes, setFNotes] = useState("");
+
+  const [fPurchaseDateISO, setFPurchaseDateISO] = useState<string | null | undefined>(null);
+  const [fLightLevel, setFLightLevel] = useState<LightLevel5>("medium");
+  const [fOrientation, setFOrientation] = useState<"N" | "E" | "S" | "W">("S");
+  const [fDistanceCm, setFDistanceCm] = useState<number>(0);
+  const [fPotMaterial, setFPotMaterial] = useState<string | undefined>(undefined);
+  const [fSoilMix, setFSoilMix] = useState<string | undefined>(undefined);
+
+  const [editLoading, setEditLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
 
   // --- SORT / FILTER state ---
   const [sortOpen, setSortOpen] = useState(false);
@@ -81,6 +98,17 @@ export default function PlantsScreen() {
   const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [filters, setFilters] = useState<{ location?: string; latin?: string }>({});
+
+  // ⬇️ NEW: Always hide the Edit modal whenever this screen becomes focused
+  useFocusEffect(
+    useCallback(() => {
+      setEditOpen(false);
+      setEditingId(null);
+      setMenuOpenId(null);
+      // no cleanup needed here
+      return undefined;
+    }, [])
+  );
 
   const load = useCallback(async () => {
     const data = await fetchPlantInstances({ auth: true });
@@ -118,35 +146,86 @@ export default function PlantsScreen() {
     nav.navigate("CreatePlantWizard" as never);
   };
 
-  const openEditModal = (p: Plant) => {
-    setEditingId(p.id);
-    setFName(p.name);
-    setFLatinQuery(p.latin || "");
-    setFLatinSelected(p.latin);
-    setFLocation(p.location);
-    setFNotes(p.notes || "");
-    setEditOpen(true);
+  /** Fetch FULL detail, then open modal with populated fields */
+  const openEditModal = async (p: Plant) => {
     setMenuOpenId(null);
+    setEditingId(p.id);
+    setEditLoading(true);
+
+    try {
+      // Pre-fill with what we have from the list (so UI feels snappy)
+      setFName(p.name);
+      setFLatinQuery(p.latin || "");
+      setFLatinSelected(p.latin);
+      setFLocation(p.location);
+      setFNotes(p.notes || "");
+
+      // Fetch full details needed by the modal controls
+      const detail = await fetchPlantInstanceForEdit(Number(p.id), { auth: true });
+
+      // display fields
+      if (detail.display_name !== undefined && detail.display_name !== null)
+        setFName(detail.display_name || "");
+      if (detail.notes !== undefined && detail.notes !== null)
+        setFNotes(detail.notes || "");
+      setFPurchaseDateISO(
+        detail.purchase_date === undefined ? null : detail.purchase_date
+      );
+
+      // exposure
+      setFLightLevel((detail.light_level as LightLevel5) || "medium");
+      setFOrientation((detail.orientation as any) || "S");
+      setFDistanceCm(detail.distance_cm ?? 0);
+
+      // pot/soil
+      setFPotMaterial(detail.pot_material ?? undefined);
+      setFSoilMix(detail.soil_mix ?? undefined);
+
+      // latin/location (nested read)
+      setFLatinQuery(detail.plant_definition?.name || p.latin || "");
+      setFLatinSelected(detail.plant_definition?.name || p.latin || undefined);
+      setFLocation(detail.location?.name || p.location);
+
+      setEditOpen(true);
+    } catch (e: any) {
+      Alert.alert("Load failed", e?.message || "Could not load plant details.");
+    } finally {
+      setEditLoading(false);
+    }
   };
 
   const closeEdit = () => setEditOpen(false);
 
-  const onUpdate = () => {
-    if (!editingId || !fName.trim()) return;
-    setPlants((prev) =>
-      prev.map((p) =>
-        p.id === editingId
-          ? {
-              ...p,
-              name: fName.trim(),
-              latin: (fLatinSelected || fLatinQuery || "").trim() || undefined,
-              location: fLocation,
-              notes: fNotes.trim() || undefined,
-            }
-          : p
-      )
-    );
-    closeEdit();
+  /** Build PATCH from modal state, send to API, then update local list item */
+  const onUpdate = async () => {
+    if (!editingId) return;
+    if (!fName.trim()) return;
+
+    setSaving(true);
+    try {
+      const form = {
+        display_name: fName.trim(),
+        notes: fNotes ?? "",
+        purchase_date: fPurchaseDateISO ?? null,
+        light_level: fLightLevel,
+        orientation: fOrientation,
+        distance_cm: fDistanceCm,
+        pot_material: fPotMaterial ?? "",
+        soil_mix: fSoilMix ?? "",
+      } as const;
+
+      const updatedListItem = await updatePlantInstanceFromForm(Number(editingId), form, { auth: true });
+
+      setPlants((prev) =>
+        prev.map((p) => (p.id === editingId ? mapApiToPlant(updatedListItem) : p))
+      );
+
+      closeEdit();
+    } catch (e: any) {
+      Alert.alert("Update failed", e?.message || "Could not update this plant.");
+    } finally {
+      setSaving(false);
+    }
   };
 
   const askDelete = (p: Plant) => {
@@ -205,7 +284,7 @@ export default function PlantsScreen() {
     return sorted;
   }, [plants, filters, sortKey, sortDir]);
 
-  // ⬇️ NEW: hide FAB when ANY modal is visible (edit, delete, sort, filter)
+  // Hide FAB when ANY modal is visible (edit, delete, sort, filter)
   const showFAB = !editOpen && !confirmDeleteId && !sortOpen && !filterOpen;
 
   // Skeleton/loader
@@ -329,6 +408,7 @@ export default function PlantsScreen() {
         visible={editOpen}
         latinCatalog={latinOptions}
         locations={locationOptions}
+        // existing fields
         fName={fName}
         setFName={setFName}
         fLatinQuery={fLatinQuery}
@@ -339,6 +419,19 @@ export default function PlantsScreen() {
         setFLocation={setFLocation}
         fNotes={fNotes}
         setFNotes={setFNotes}
+        // full detail fields
+        fPurchaseDateISO={fPurchaseDateISO ?? null}
+        setFPurchaseDateISO={setFPurchaseDateISO}
+        fLightLevel={fLightLevel}
+        setFLightLevel={setFLightLevel}
+        fOrientation={fOrientation}
+        setFOrientation={setFOrientation}
+        fDistanceCm={fDistanceCm}
+        setFDistanceCm={setFDistanceCm}
+        fPotMaterial={fPotMaterial}
+        setFPotMaterial={setFPotMaterial}
+        fSoilMix={fSoilMix}
+        setFSoilMix={setFSoilMix}
         onCancel={closeEdit}
         onSave={onUpdate}
       />
@@ -379,6 +472,12 @@ export default function PlantsScreen() {
         }}
         onClearAll={() => setFilters({})}
       />
+
+      {(editLoading || saving) && (
+        <View style={[StyleSheet.absoluteFill, { justifyContent: "center", alignItems: "center" }]}>
+          <CenteredSpinner size={46} color="#FFFFFF" />
+        </View>
+      )}
     </View>
   );
 }

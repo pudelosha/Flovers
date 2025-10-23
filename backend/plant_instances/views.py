@@ -5,7 +5,11 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.views import APIView
 
 from .models import PlantInstance
-from .serializers import PlantInstanceSerializer, PlantInstanceListSerializer
+from .serializers import (
+    PlantInstanceSerializer,
+    PlantInstanceListSerializer,
+    PlantInstanceDetailSerializer,  # NEW
+)
 
 
 class PlantInstanceListCreateView(ListCreateAPIView):
@@ -43,9 +47,9 @@ class PlantInstanceListCreateView(ListCreateAPIView):
 
 class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
     """
-    GET    /api/plant-instances/<id>/  -> retrieve single (read-format)
-    PATCH  /api/plant-instances/<id>/  -> partial update (write-format)
-    PUT    /api/plant-instances/<id>/  -> full update (write-format)
+    GET    /api/plant-instances/<id>/  -> retrieve single (FULL detail read-format)
+    PATCH  /api/plant-instances/<id>/  -> partial update (responds with list/read-format)
+    PUT    /api/plant-instances/<id>/  -> full update (responds with list/read-format)
     DELETE /api/plant-instances/<id>/  -> delete
     """
     permission_classes = [IsAuthenticated]
@@ -58,11 +62,32 @@ class PlantInstanceDetailView(RetrieveUpdateDestroyAPIView):
             .select_related("location", "plant_definition")
         )
 
-    def get_serializer_class(self):
-        if self.request.method in ["GET"]:
-            return PlantInstanceListSerializer
-        # for write operations, use the write serializer
-        return PlantInstanceSerializer
+    # keep default write serializer choice for PATCH/PUT via DRF, but override responses
+
+    def retrieve(self, request, *args, **kwargs):
+        """Return FULL detail shape needed by the mobile edit screen."""
+        instance = self.get_object()
+        serializer = PlantInstanceDetailSerializer(instance, context={"request": request})
+        return Response(serializer.data)
+
+    def partial_update(self, request, *args, **kwargs):
+        kwargs["partial"] = True
+        return self._update_and_respond(request, *args, **kwargs)
+
+    def update(self, request, *args, **kwargs):
+        return self._update_and_respond(request, *args, **kwargs)
+
+    def _update_and_respond(self, request, *args, **kwargs):
+        """Apply write serializer for validation, then respond with list/read shape."""
+        partial = kwargs.get("partial", False)
+        instance = self.get_object()
+        write_ser = PlantInstanceSerializer(
+            instance, data=request.data, partial=partial, context={"request": request}
+        )
+        write_ser.is_valid(raise_exception=True)
+        obj = write_ser.save()
+        read_ser = PlantInstanceListSerializer(obj, context={"request": request})
+        return Response(read_ser.data)
 
 
 class PlantInstanceByQRView(APIView):
@@ -88,6 +113,6 @@ class PlantInstanceByQRView(APIView):
             # 404 to avoid leaking whether the code exists for other users
             return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
 
-        # return the READ shape, same as list/detail GET
+        # return the READ shape, same as list/detail GET (list shape is fine here)
         data = PlantInstanceListSerializer(plant, context={"request": request}).data
         return Response(data, status=status.HTTP_200_OK)
