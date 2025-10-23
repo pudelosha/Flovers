@@ -7,7 +7,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
-// Lottie (optional). Graceful fallback if lib or file is not present.
+// Lottie (optional)
 let LottieView: any = null;
 try { LottieView = require("lottie-react-native").default; } catch {}
 let ANIM: any = null;
@@ -28,12 +28,12 @@ export default function Step09_Creating() {
     let mounted = true;
 
     const run = async () => {
-      if (startedRef.current) return; // ✅ guard
+      if (startedRef.current) return;
       startedRef.current = true;
 
       setStatus("creating");
       try {
-        await actions.createPlant(); // call backend in provider
+        await actions.createPlant();
         if (!mounted) return;
         setStatus("success");
 
@@ -51,48 +51,53 @@ export default function Step09_Creating() {
     return () => { mounted = false; };
   }, [actions, navigation]);
 
+  // Fixed card height (tweak to taste)
+  const CARD_HEIGHT = 360;
+
   return (
     <View style={wiz.cardWrap}>
-      {/* glass layer */}
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
-        />
-        <View
-          pointerEvents="none"
-          style={{ position: "absolute", inset: 0, backgroundColor: "rgba(255,255,255,0.12)" } as any}
-        />
-      </View>
-
-      <View style={[wiz.cardInner, { alignItems: "center" }]}>
-        {/* Lottie centered */}
-        <View style={{ width: 220, height: 220, alignItems: "center", justifyContent: "center", marginTop: 4 }}>
-          {LottieView && ANIM ? (
-            <LottieView
-              ref={lottieRef}
-              source={ANIM}
-              autoPlay
-              loop={status !== "success"}
-              style={{ width: "100%", height: "100%" }}
-            />
-          ) : (
-            <MaterialCommunityIcons name="sprout" size={92} color="#FFFFFF" />
-          )}
+      {/* Clipped rounded card that wraps glass + content */}
+      <View style={{ position: "relative", borderRadius: 28, overflow: "hidden", height: CARD_HEIGHT }}>
+        {/* glass frame — same as other steps */}
+        <View style={wiz.cardGlass}>
+          <BlurView
+            style={{ position: "absolute", inset: 0 } as any}
+            blurType="light"
+            blurAmount={20}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="transparent"
+          />
+          <View pointerEvents="none" style={wiz.cardTint} />
+          <View pointerEvents="none" style={wiz.cardBorder} />
         </View>
 
-        {/* Status text */}
-        <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
-          {status === "creating" ? "creating new plant" : "plant created successfully"}
-        </Text>
+        {/* content */}
+        <View style={[wiz.cardInner, { alignItems: "center", justifyContent: "center", height: "100%" }]}>
+          {/* Lottie centered */}
+          <View style={{ width: 220, height: 220, alignItems: "center", justifyContent: "center", marginTop: -10 }}>
+            {LottieView && ANIM ? (
+              <LottieView
+                ref={lottieRef}
+                source={ANIM}
+                autoPlay
+                loop={status !== "success"}
+                style={{ width: "100%", height: "100%" }}
+              />
+            ) : (
+              <MaterialCommunityIcons name="sprout" size={92} color="#FFFFFF" />
+            )}
+          </View>
 
-        {status === "success" && state.createdPlantId && (
-          <Text style={[wiz.smallMuted, { textAlign: "center" }]}>
-            ID: {state.createdPlantId}
+          {/* Status text */}
+          <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
+            {status === "creating" ? "creating new plant" : "plant created successfully"}
           </Text>
-        )}
+
+          {/* Reserve space for ID line so height never changes */}
+          <Text style={[wiz.smallMuted, { textAlign: "center", minHeight: 20, marginTop: 4 }]}>
+            {status === "success" && state.createdPlantId ? `ID: ${state.createdPlantId}` : "\u00A0"}
+          </Text>
+        </View>
       </View>
     </View>
   );
