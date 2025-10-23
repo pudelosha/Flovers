@@ -74,59 +74,60 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Window direction — smaller font, equal widths, fill touches frame */}
-        <Text style={wiz.sectionTitle}>Window direction</Text>
-        <View
-          style={{
-            borderRadius: 12,
-            borderWidth: 1,
-            borderColor: "rgba(255,255,255,0.25)",
-            backgroundColor: "rgba(255,255,255,0.12)",
-            overflow: "hidden",
-          }}
-        >
-          {/* glare */}
-          <View
-            pointerEvents="none"
-            style={{
-              position: "absolute",
-              left: 0,
-              right: 0,
-              top: 0,
-              height: 18,
-              backgroundColor: "rgba(255,255,255,0.06)",
-            }}
-          />
-          <SegmentedButtons
-            value={state.orientation}
-            onValueChange={(v) => actions.setOrientation(v as any)}
-            buttons={ORIENTATIONS.map(({ key, label }) => ({
-              value: key,
-              label,
-              style: {
-                flex: 1,
-                minWidth: 0,
-                paddingHorizontal: 4,
-                paddingVertical: 4,
-                marginHorizontal: 0,
-              },
-              labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
-            }))}
-            density="small"
-            // Pull segments slightly so the selected fill meets rounded frame
-            style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
-            labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
-            theme={{
-              colors: {
-                secondaryContainer: "rgba(11,114,133,0.9)",
-                onSecondaryContainer: "#FFFFFF",
-                surface: "transparent",
-                onSurface: "#FFFFFF",
-                outline: "transparent",
-              },
-            }}
-          />
-        </View>
+{/* Window direction — same height, keep selected fill; just remove the border */}
+<Text style={wiz.sectionTitle}>Window direction</Text>
+<View
+  style={{
+    borderRadius: 12,
+    borderWidth: 0,                              // ⬅️ removed border
+    backgroundColor: "rgba(255,255,255,0.12)",
+    overflow: "hidden",
+  }}
+>
+  {/* keep the subtle glare exactly as before */}
+  <View
+    pointerEvents="none"
+    style={{
+      position: "absolute",
+      left: 0,
+      right: 0,
+      top: 0,
+      height: 18,
+      backgroundColor: "rgba(255,255,255,0.06)",
+    }}
+  />
+  <SegmentedButtons
+    value={state.orientation}
+    onValueChange={(v) => actions.setOrientation(v as any)}
+    buttons={ORIENTATIONS.map(({ key, label }) => ({
+      value: key,
+      label,
+      style: {
+        flex: 1,
+        minWidth: 0,
+        paddingHorizontal: 4,
+        paddingVertical: 4,
+        marginHorizontal: 0,
+        // do NOT change per-segment size/height
+      },
+      labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
+    }))}
+    density="small"
+    // keep negative margins to preserve original height/fit
+    style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
+    labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
+    theme={{
+      colors: {
+        secondaryContainer: "rgba(11,114,133,0.9)", // selected fill (unchanged)
+        onSecondaryContainer: "#FFFFFF",
+        surface: "transparent",
+        onSurface: "#FFFFFF",
+        outline: "transparent",                     // no outline from Paper
+      },
+    }}
+  />
+</View>
+
 
         {/* Measure */}
         <Pressable
