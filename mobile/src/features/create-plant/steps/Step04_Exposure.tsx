@@ -1,4 +1,5 @@
-﻿import React, { useMemo, useState } from "react";
+﻿// Step04_Exposure.tsx
+import React, { useMemo, useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -74,60 +75,57 @@ export default function Step04_Exposure({
           />
         </View>
 
-{/* Window direction — same height, keep selected fill; just remove the border */}
-<Text style={wiz.sectionTitle}>Window direction</Text>
-<View
-  style={{
-    borderRadius: 12,
-    borderWidth: 0,                              // ⬅️ removed border
-    backgroundColor: "rgba(255,255,255,0.12)",
-    overflow: "hidden",
-  }}
->
-  {/* keep the subtle glare exactly as before */}
-  <View
-    pointerEvents="none"
-    style={{
-      position: "absolute",
-      left: 0,
-      right: 0,
-      top: 0,
-      height: 18,
-      backgroundColor: "rgba(255,255,255,0.06)",
-    }}
-  />
-  <SegmentedButtons
-    value={state.orientation}
-    onValueChange={(v) => actions.setOrientation(v as any)}
-    buttons={ORIENTATIONS.map(({ key, label }) => ({
-      value: key,
-      label,
-      style: {
-        flex: 1,
-        minWidth: 0,
-        paddingHorizontal: 4,
-        paddingVertical: 4,
-        marginHorizontal: 0,
-        // do NOT change per-segment size/height
-      },
-      labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
-    }))}
-    density="small"
-    // keep negative margins to preserve original height/fit
-    style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
-    labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
-    theme={{
-      colors: {
-        secondaryContainer: "rgba(11,114,133,0.9)", // selected fill (unchanged)
-        onSecondaryContainer: "#FFFFFF",
-        surface: "transparent",
-        onSurface: "#FFFFFF",
-        outline: "transparent",                     // no outline from Paper
-      },
-    }}
-  />
-</View>
-
+        {/* Window direction — same height, keep selected fill; just remove the border */}
+        <Text style={wiz.sectionTitle}>Window direction</Text>
+        <View
+          style={{
+            borderRadius: 12,
+            borderWidth: 0, // removed frame
+            backgroundColor: "rgba(255,255,255,0.12)",
+            overflow: "hidden",
+          }}
+        >
+          {/* subtle glare */}
+          <View
+            pointerEvents="none"
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: 0,
+              height: 18,
+              backgroundColor: "rgba(255,255,255,0.06)",
+            }}
+          />
+          <SegmentedButtons
+            value={state.orientation}
+            onValueChange={(v) => actions.setOrientation(v as any)}
+            buttons={ORIENTATIONS.map(({ key, label }) => ({
+              value: key,
+              label,
+              style: {
+                flex: 1,
+                minWidth: 0,
+                paddingHorizontal: 4,
+                paddingVertical: 4,
+                marginHorizontal: 0,
+              },
+              labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
+            }))}
+            density="small"
+            style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
+            labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
+            theme={{
+              colors: {
+                secondaryContainer: "rgba(11,114,133,0.9)",
+                onSecondaryContainer: "#FFFFFF",
+                surface: "transparent",
+                onSurface: "#FFFFFF",
+                outline: "transparent",
+              },
+            }}
+          />
+        </View>
 
         {/* Measure */}
         <Pressable
@@ -157,32 +155,47 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Prev / Next — same as Step 3 */}
+        {/* Prev / Next — now identical to Step 1–3 (flat, same height) */}
         <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
           <Pressable
-            style={[
-              wiz.btn,
-              { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap: 8 },
-            ]}
             onPress={() => actions.goPrev()}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
           >
-            <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-            <Text style={wiz.btnText}>Previous</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+              <Text style={wiz.nextBtnText}>Previous</Text>
+            </View>
           </Pressable>
 
           <Pressable
-            style={[wiz.btn, wiz.btnPrimary, { flex: 1, paddingHorizontal: 14 }]}
             onPress={() => actions.goNext()}
+            style={({ pressed }) => [
+              wiz.nextBtnWide,
+              {
+                flex: 1,
+                backgroundColor: "rgba(11,114,133,0.9)",
+                paddingHorizontal: 14,
+                opacity: pressed ? 0.92 : 1,
+              },
+            ]}
           >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 }}>
-              <Text style={wiz.btnText}>Next</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
+              <Text style={wiz.nextBtnText}>Next</Text>
               <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
             </View>
           </Pressable>
         </View>
       </View>
 
-      {/* NEW: functional modal */}
+      {/* Modal */}
       <MeasureExposureModal
         visible={measureOpen}
         onClose={() => setMeasureOpen(false)}
