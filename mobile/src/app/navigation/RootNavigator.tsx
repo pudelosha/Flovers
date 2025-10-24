@@ -30,24 +30,33 @@ export type AuthStackParamList = {
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 
-// deep linking (auth + tab screens, incl. hidden Scanner for direct links)
+// deep linking (auth + tab screens, incl. hidden screens for direct links)
 const linking = {
   prefixes: ["flovers://"],
   config: {
     screens: {
+      // auth
       Login: "login",
       Register: "register",
       ForgotPassword: "forgot-password",
       ResendActivation: "resend-activation",
       ConfirmEmail: "confirm-email",
       ResetPassword: "reset-password",
-      // app tabs
+
+      // app tabs (and selected hidden routes)
       Home: "home",
       Plants: "plants",
       Reminders: "reminders",
       Readings: "readings",
       Profile: "profile",
       Scanner: "scanner",
+
+      // NEW: deep links for readings history flow
+      ReadingsHistory: "readings-history",
+      ReadingDetails: "reading-details",
+      EditSensors: "edit-sensors",
+      SortHistory: "sort-history",
+      FilterHistory: "filter-history",
     },
   },
 };

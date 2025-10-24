@@ -19,7 +19,14 @@ import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
 import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
-import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // adjust path to where you placed it
+import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // hidden tab
+
+// NEW: readings history page (hidden)
+import ReadingsHistoryScreen from "../../features/readings-history/pages/ReadingsHistoryScreen";
+
+// Optional placeholders for hidden routes referenced by navigation calls.
+// Replace these with your real screens when ready.
+const Placeholder = () => <View style={{ flex: 1 }} />;
 
 export type AppTabParamList = {
   Home: undefined;
@@ -27,10 +34,20 @@ export type AppTabParamList = {
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;
-  Scanner: undefined;        // hidden
-  PlantDetails: undefined;   // hidden
-  CreatePlantWizard: undefined; // hidden
-  AddReminder: undefined;       // hidden
+
+  // Hidden
+  Scanner: undefined;
+  PlantDetails: undefined;
+  CreatePlantWizard: undefined;
+  AddReminder: undefined;
+
+  // NEW hidden routes for Readings flow
+  ReadingsHistory: { metric?: "temperature" | "humidity" | "light" | "moisture"; range?: "day" | "week" | "month"; id?: string } | undefined;
+  ReadingDetails: { id: string } | undefined;
+  EditSensors: { id?: string } | undefined;
+  DeleteReadingConfirm: { id: string } | undefined;
+  SortHistory: undefined;
+  FilterHistory: undefined;
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
@@ -40,6 +57,15 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
   CreatePlantWizard: "Plants",
   PlantDetails: "Plants",
   AddReminder: "Reminders",
+
+  // NEW: everything in the Readings flow should keep "Readings" active
+  ReadingsHistory: "Readings",
+  ReadingDetails: "Readings",
+  EditSensors: "Readings",
+  DeleteReadingConfirm: "Readings",
+  SortHistory: "Readings",
+  FilterHistory: "Readings",
+
   // If you want Scanner presses to keep Plants selected, map it too:
   // Scanner: "Plants",
 };
@@ -72,12 +98,22 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     "PlantDetails",
     "CreatePlantWizard",
     "AddReminder",
+    // NEW hidden routes (do not show on the bar)
+    "ReadingsHistory",
+    "ReadingDetails",
+    "EditSensors",
+    "DeleteReadingConfirm",
+    "SortHistory",
+    "FilterHistory",
   ]);
   const visibleRoutes = state.routes.filter((r: any) => !HIDDEN.has(r.name));
 
   // 🔹 Determine which tab should appear active, even if current route is hidden
   const activeRouteName: string | undefined = state.routes[state.index]?.name;
-  const parentTabName: string = (activeRouteName && PARENT_FOR_ROUTE[activeRouteName]) || activeRouteName || "Home";
+  const parentTabName: string =
+    (activeRouteName && PARENT_FOR_ROUTE[activeRouteName]) ||
+    activeRouteName ||
+    "Home";
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
@@ -106,8 +142,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 
         <View style={s.tabInner}>
           {visibleRoutes.map((route: any) => {
-            // ✅ Mark tab focused if it's the parent of the current hidden route,
-            // or if it's the actual active visible route
+            // ✅ Show the parent tab as focused for hidden child routes
             const isFocused = route.name === parentTabName;
 
             const onPress = () => {
@@ -179,11 +214,15 @@ export default function AppTabs() {
       {/* Hidden routes */}
       <Tab.Screen name="Scanner" component={ScannerScreen} options={{ tabBarStyle: { display: "flex" } }} />
       <Tab.Screen name="PlantDetails" component={PlantDetailsScreen} options={{ tabBarStyle: { display: "flex" } }} />
-      <Tab.Screen
-        name="CreatePlantWizard"
-        component={CreatePlantWizardScreen}
-        options={{ tabBarStyle: { display: "flex" } }}
-      />
+      <Tab.Screen name="CreatePlantWizard" component={CreatePlantWizardScreen} options={{ tabBarStyle: { display: "flex" } }} />
+
+      {/* NEW: hidden readings routes */}
+      <Tab.Screen name="ReadingsHistory" component={ReadingsHistoryScreen} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="ReadingDetails" component={Placeholder} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="EditSensors" component={Placeholder} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="DeleteReadingConfirm" component={Placeholder} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="SortHistory" component={Placeholder} options={{ tabBarStyle: { display: "flex" } }} />
+      <Tab.Screen name="FilterHistory" component={Placeholder} options={{ tabBarStyle: { display: "flex" } }} />
     </Tab.Navigator>
   );
 }

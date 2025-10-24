@@ -64,11 +64,9 @@ export default function ReadingsScreen() {
   const derivedItems = useMemo(() => {
     let arr = [...items];
 
-    // filter
     const q = filterQuery.trim().toLowerCase();
     if (q) arr = arr.filter((x) => x.name.toLowerCase().includes(q));
 
-    // sort
     arr.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
     if (sortDir === "desc") arr.reverse();
 
@@ -78,7 +76,6 @@ export default function ReadingsScreen() {
   // Hide FAB when any sheet/menu is open
   const showFAB = !menuOpenId && !sortOpen && !filterOpen;
 
-  // Skeleton/loader
   if (loading) {
     return (
       <View style={{ flex: 1 }}>
@@ -122,6 +119,10 @@ export default function ReadingsScreen() {
             onEdit={() => { setMenuOpenId(null); nav.navigate("EditSensors" as never, { id: item.id } as never); }}
             onDelete={() => { setMenuOpenId(null); nav.navigate("DeleteReadingConfirm" as never, { id: item.id } as never); }}
             onPlantDetails={() => { setMenuOpenId(null); nav.navigate("PlantDetails" as never, { id: item.id } as never); }}
+            // NEW: deep-link into ReadingsHistory with the selected metric
+            onMetricPress={(metric) =>
+              nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
+            }
           />
         )}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -150,10 +151,9 @@ export default function ReadingsScreen() {
               icon: "sort",
               label: "Sort",
               onPress: () => {
-                // simple toggle ASC/DESC for now
                 setSortDir((d) => (d === "asc" ? "desc" : "asc"));
                 setSortOpen(true);
-                setTimeout(() => setSortOpen(false), 250); // transient to hide FAB briefly like a sheet
+                setTimeout(() => setSortOpen(false), 250);
               },
             },
             {
@@ -161,9 +161,7 @@ export default function ReadingsScreen() {
               icon: "filter-variant",
               label: "Filter",
               onPress: () => {
-                // Example: navigate to a filter input, or open your own modal
                 setFilterOpen(true);
-                // Demo: set a static filter then close (replace with real modal)
                 setTimeout(() => {
                   setFilterQuery("");
                   setFilterOpen(false);

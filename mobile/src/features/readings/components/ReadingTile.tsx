@@ -7,6 +7,8 @@ import { ReadingTileModel } from "../types/readings.types";
 import { ICON_BG, METRIC_UNITS, TILE_BLUR } from "../constants/readings.constants";
 import ReadingMenu from "./ReadingMenu";
 
+type MetricKey = "temperature" | "humidity" | "light" | "moisture";
+
 type Props = {
   data: ReadingTileModel;
   isMenuOpen: boolean;
@@ -18,28 +20,32 @@ type Props = {
   onEdit: () => void;
   onDelete: () => void;
   onPlantDetails: () => void;
+
+  // NEW: deep-link to History for a specific metric
+  onMetricPress: (metric: MetricKey) => void;
 };
 
-function MetricCol({
-  icon, color, value, unit,
+function MetricColPressable({
+  icon, color, value, unit, onPress,
 }: {
-  icon: string; color: string; value: number | null; unit: string;
+  icon: string; color: string; value: number | null; unit: string; onPress: () => void;
 }) {
   return (
-    <View style={s.col}>
+    <Pressable style={s.col} onPress={onPress} android_ripple={{ color: "rgba(255,255,255,0.10)" }}>
       <View style={[s.iconCircle, { backgroundColor: color }]}>
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
       </View>
       <Text style={s.metricValue}>
         {value === null || value === undefined ? "—" : `${value}${unit}`}
       </Text>
-    </View>
+    </Pressable>
   );
 }
 
 export default function ReadingTile({
   data, isMenuOpen, onPressBody, onPressMenu,
   onHistory, onEdit, onDelete, onPlantDetails,
+  onMetricPress,
 }: Props) {
   const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
   const lastText = dt
@@ -73,10 +79,34 @@ export default function ReadingTile({
 
       {/* Metrics row — 4 columns (icon + value only) */}
       <View style={s.metricsRow}>
-        <MetricCol icon="thermometer"       color={ICON_BG.temperature} value={data.metrics.temperature} unit={METRIC_UNITS.temperature} />
-        <MetricCol icon="water-percent"     color={ICON_BG.humidity}    value={data.metrics.humidity}    unit={METRIC_UNITS.humidity} />
-        <MetricCol icon="white-balance-sunny" color={ICON_BG.light}     value={data.metrics.light}       unit={METRIC_UNITS.light} />
-        <MetricCol icon="water"             color={ICON_BG.moisture}    value={data.metrics.moisture}    unit={METRIC_UNITS.moisture} />
+        <MetricColPressable
+          icon="thermometer"
+          color={ICON_BG.temperature}
+          value={data.metrics.temperature}
+          unit={METRIC_UNITS.temperature}
+          onPress={() => onMetricPress("temperature")}
+        />
+        <MetricColPressable
+          icon="water-percent"
+          color={ICON_BG.humidity}
+          value={data.metrics.humidity}
+          unit={METRIC_UNITS.humidity}
+          onPress={() => onMetricPress("humidity")}
+        />
+        <MetricColPressable
+          icon="white-balance-sunny"
+          color={ICON_BG.light}
+          value={data.metrics.light}
+          unit={METRIC_UNITS.light}
+          onPress={() => onMetricPress("light")}
+        />
+        <MetricColPressable
+          icon="water"
+          color={ICON_BG.moisture}
+          value={data.metrics.moisture}
+          unit={METRIC_UNITS.moisture}
+          onPress={() => onMetricPress("moisture")}
+        />
       </View>
 
       {/* Last read */}
