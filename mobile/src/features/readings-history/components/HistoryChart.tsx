@@ -7,10 +7,11 @@ type Props = {
   values: number[];
   color: string;
   yTicks?: number; // number of horizontal guides (default 4)
-  maxY?: number;   // provide to clamp/normalize (else auto from data)
+  height: number;  // dynamic from parent
+  maxY?: number;   // optional clamp
 };
 
-export default function HistoryChart({ labels, values, color, yTicks = 4, maxY }: Props) {
+export default function HistoryChart({ labels, values, color, yTicks = 4, height, maxY }: Props) {
   const max = useMemo(() => {
     const m = values.reduce((acc, v) => (v > acc ? v : acc), 0);
     return Math.max(m, 1, maxY || 0);
@@ -24,8 +25,8 @@ export default function HistoryChart({ labels, values, color, yTicks = 4, maxY }
   return (
     <View style={s.chartBox}>
       <View style={{ position: "relative" }}>
-        <View style={s.yGuides}>{guides}</View>
-        <View style={s.chartArea}>
+        <View style={[s.yGuides, { height }]}>{guides}</View>
+        <View style={[s.chartArea, { height }]}>
           {values.map((v, idx) => {
             const hPct = Math.max(0, Math.min(100, (v / max) * 100));
             return (

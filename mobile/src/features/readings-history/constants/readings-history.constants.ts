@@ -25,3 +25,6 @@ export const METRIC_LABELS = {
   light: "Light",
   moisture: "Moist",
 } as const;
+
+// Active fill for selected buttons (match your wizard's strong teal)
+export const ACTIVE_BG = "rgba(11,114,133,0.92)";

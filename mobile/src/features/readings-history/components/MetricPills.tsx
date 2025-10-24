@@ -24,9 +24,13 @@ export default function MetricPills({ value, onChange }: Props) {
         return (
           <Pressable
             key={it.key}
-            style={[s.pill, active && s.pillActive]}
+            style={({ pressed }) => [
+              s.pill,
+              active && s.pillActive,
+              pressed && { opacity: 0.85 },
+            ]}
             onPress={() => onChange(it.key)}
-            android_ripple={{ color: "rgba(255,255,255,0.16)" }}
+            // no ripple to avoid overlay artifacts
           >
             <Text style={s.pillText}>{it.label}</Text>
           </Pressable>

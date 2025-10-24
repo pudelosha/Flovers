@@ -16,9 +16,14 @@ export default function HistorySegmented({ value, onChange }: Props) {
         return (
           <Pressable
             key={v}
-            style={[s.segBtn, active && s.segBtnActive]}
+            // Use style callback instead of android_ripple (prevents stuck overlay)
+            style={({ pressed }) => [
+              s.segBtn,
+              active && s.segBtnActive,
+              pressed && { opacity: 0.85 },
+            ]}
             onPress={() => onChange(v)}
-            android_ripple={{ color: "rgba(255,255,255,0.16)" }}
+            // no android_ripple here
           >
             <Text style={s.segText}>{v.toUpperCase()}</Text>
           </Pressable>
