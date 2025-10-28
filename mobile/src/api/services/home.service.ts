@@ -1,34 +1,35 @@
-// Placeholder service for Home feature.
-// Later replace with real `request` calls (like you do in AuthContext).
+// Thin wrapper that composes the Reminders + Plants endpoints for Home.
 
-import type { Task, TaskType } from "../../features/home/types/home.types";
+import {
+  listReminderTasks,
+  listReminders,
+  completeReminderTask,
+  deleteReminder,
+  type ApiReminderTask,
+} from "./reminders.service";
+import { fetchPlantInstances } from "./plant-instances.service";
+import { buildUITasks } from "../serializers/home.serializer";
+import type { Task } from "../../features/home/types/home.types";
 
-export async function fetchTasksDemo(): Promise<Task[]> {
-  const base = new Date(2025, 9, 6); // 2025-10-06
-  const types: TaskType[] = ["watering", "moisture", "fertilising", "care"];
-  const tasks: Task[] = Array.from({ length: 12 }).map((_, i) => ({
-    id: String(i + 1),
-    type: types[i % types.length],
-    plant: ["Big Awesome Monstera", "Ficus", "Aloe Vera", "Orchid"][i % 4],
-    location: ["Living Room", "Bedroom", "Kitchen", "Office"][i % 4],
-    due: ["Today", "Tomorrow", "3 days", "Next week"][i % 4],
-    dueDate: addDays(base, i % 4),
-  }));
-  return Promise.resolve(tasks);
+export type HomeTask = Task & { reminderId: string };
+
+export async function fetchHomeTasks(): Promise<HomeTask[]> {
+  const [tasks, reminders, plants] = await Promise.all([
+    listReminderTasks({ status: "pending", auth: true }),
+    listReminders({ auth: true }),
+    fetchPlantInstances({ auth: true }),
+  ]);
+
+  return buildUITasks(tasks as ApiReminderTask[], reminders, plants);
 }
 
-export async function markTaskCompleteDemo(id: string): Promise<void> {
-  // TODO: POST/PATCH to backend
-  return Promise.resolve();
+export async function markHomeTaskComplete(taskId: string): Promise<void> {
+  await completeReminderTask(Number(taskId), { auth: true });
 }
 
-export async function deleteTaskDemo(id: string): Promise<void> {
-  // TODO: DELETE to backend
-  return Promise.resolve();
-}
-
-function addDays(date: Date, n: number) {
-  const d = new Date(date);
-  d.setDate(d.getDate() + n);
-  return d;
+export async function deleteHomeTask(reminderId: string): Promise<void> {
+  // UX shows "Delete" — in this context, delete the underlying reminder
+  // (removes future tasks too). If later you want "Skip", add an API for that.
+  if (!reminderId) return;
+  await deleteReminder(Number(reminderId), { auth: true });
 }

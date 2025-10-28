@@ -3,7 +3,7 @@ import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/home.styles";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE, TILE_BLUR } from "../constants/home.constants";
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/home.constants";
 import type { Task } from "../types/home.types";
 import TaskMenu from "./TaskMenu";
 
@@ -26,33 +26,36 @@ export default function TaskTile({
   onGoToPlant,
   onDelete,
 }: Props) {
-  const a = ACCENT_BY_TYPE[task.type];
+  const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass background (blur + subtle colored tint) */}
-      <View style={s.cardGlass}>
+      {/* Glass stack: Blur + white tint + hairline border + subtle accent tint */}
+      <View style={s.cardGlass} pointerEvents="none">
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
-          blurAmount={TILE_BLUR}
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.15)"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
         <View
-          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(a, 0.10) }]}
           pointerEvents="none"
+          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 }]}
         />
       </View>
 
       {/* Content row */}
-      <View style={s.cardRow}>
-        {/* Left: action icon + caption */}
+      <View style={[s.cardRow, { paddingVertical: 4 }]}>
+        {/* Left: icon + caption */}
         <View style={s.leftCol}>
           <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
-            <MaterialCommunityIcons name={icon} size={20} color={a} />
+            <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
-          <Text style={[s.leftCaption, { color: a }]}>{task.type.toUpperCase()}</Text>
+          <Text style={[s.leftCaption, { color: accent }]}>{task.type.toUpperCase()}</Text>
         </View>
 
         {/* Center: title, location, due */}
@@ -78,7 +81,7 @@ export default function TaskTile({
         </View>
       </View>
 
-      {/* Floating menu */}
+      {/* Floating menu (zIndex/elevation handled in styles) */}
       {isMenuOpen && (
         <TaskMenu
           onMarkComplete={onMarkComplete}
@@ -91,10 +94,17 @@ export default function TaskTile({
   );
 }
 
-/* local helpers */
-function hexToRgba(hex: string, alpha = 1) {
-  const h = hex.replace("#", "");
+/* helpers (robust) */
+function hexToRgba(hex?: string, alpha = 1) {
+  const fallback = `rgba(0,0,0,${alpha})`;
+  if (!hex || typeof hex !== "string") return fallback;
+  let h = hex.trim();
+  if (!h.startsWith("#")) h = `#${h}`;
+  h = h.replace("#", "");
+  if (h.length === 3) h = h.split("").map(c => c + c).join("");
+  if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
+  if (Number.isNaN(bigint)) return fallback;
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
