@@ -16,6 +16,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/EditPlantModal";
@@ -70,6 +71,20 @@ export default function PlantsScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+
+  // --- TOAST / SNACKBAR STATE (same API as Reminders) ---
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+  const [toastVariant, setToastVariant] =
+    useState<"default" | "success" | "error">("default");
+  const showToast = (
+    message: string,
+    variant: "default" | "success" | "error" = "default"
+  ) => {
+    setToastMsg(message);
+    setToastVariant(variant);
+    setToastVisible(true);
+  };
 
   // --- EDIT MODAL visibility & target ---
   const [editOpen, setEditOpen] = useState(false);
@@ -221,6 +236,8 @@ export default function PlantsScreen() {
       );
 
       closeEdit();
+      // ✅ success toast
+      showToast("Plant updated", "success");
     } catch (e: any) {
       Alert.alert("Update failed", e?.message || "Could not update this plant.");
     } finally {
@@ -242,6 +259,8 @@ export default function PlantsScreen() {
     try {
       await deletePlantInstance(Number(confirmDeleteId), { auth: true });
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
+      // ✅ success toast
+      showToast("Plant deleted", "success");
     } catch (e: any) {
       Alert.alert("Delete failed", e?.message || "Could not delete this plant.");
     } finally {
@@ -494,6 +513,14 @@ export default function PlantsScreen() {
           <CenteredSpinner size={46} color="#FFFFFF" />
         </View>
       )}
+
+      {/* Top Snackbar (toast) */}
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={() => setToastVisible(false)}
+      />
     </View>
   );
 }
