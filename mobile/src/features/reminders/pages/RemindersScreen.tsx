@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState } from "react";
 import {
   View,
@@ -18,6 +17,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
 import RemindersCalendar from "../components/RemindersCalendar";
@@ -135,6 +135,16 @@ export default function RemindersScreen() {
   const [sortKey, setSortKey] = useState<SortKey>("dueDate");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [filters, setFilters] = useState<Filters>(INITIAL_FILTERS);
+
+  // --- TOAST / SNACKBAR STATE ---
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+  const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
+    setToastMsg(message);
+    setToastVariant(variant);
+    setToastVisible(true);
+  };
 
   const uiTypeToApi = (t: "watering" | "moisture" | "fertilising" | "care" | "repot"):
     "water" | "moisture" | "fertilize" | "care" | "repot" =>
@@ -261,9 +271,11 @@ export default function RemindersScreen() {
       setConfirmDeleteReminderId(null);
       setConfirmDeleteName("");
       await load();
-    } catch {
+      showToast("Reminder deleted", "success");
+    } catch (e: any) {
       setConfirmDeleteReminderId(null);
       setConfirmDeleteName("");
+      showToast(e?.message ? `Delete failed: ${e.message}` : "Delete failed", "error");
     }
   };
 
@@ -298,6 +310,8 @@ export default function RemindersScreen() {
   const onSaveEdit = async () => {
     if (!fPlantId || !fDueDate || !fIntervalValue) return;
 
+    const isCreate = editingId === null;
+
     try {
       const payload = {
         plant: Number(fPlantId),
@@ -307,7 +321,7 @@ export default function RemindersScreen() {
         interval_unit: (fType === "repot" ? "months" : "days") as const,
       };
 
-      if (editingId === null) {
+      if (isCreate) {
         await createReminder(payload, { auth: true });
       } else {
         await updateReminder(Number(editingId), payload, { auth: true });
@@ -315,8 +329,15 @@ export default function RemindersScreen() {
 
       setEditOpen(false);
       await load();
-    } catch {
+      showToast(isCreate ? "Reminder created" : "Reminder updated", "success");
+    } catch (e: any) {
       setEditOpen(false);
+      showToast(
+        isCreate
+          ? e?.message ? `Create failed: ${e.message}` : "Create failed"
+          : e?.message ? `Update failed: ${e.message}` : "Update failed",
+        "error"
+      );
     }
   };
 
@@ -424,7 +445,7 @@ export default function RemindersScreen() {
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={() => setMenuOpenId(null)}
-          // ⬇️ Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
+          //  Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
           ListEmptyComponent={
             !loading ? (
@@ -495,7 +516,7 @@ export default function RemindersScreen() {
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
             { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
             { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
-            // ⬇️ NEW: "Clear filter" directly beneath "Filter"; only visible when any filter is active
+            // ⬇️ "Clear filter" directly beneath "Filter"; only visible when any filter is active
             ...(isFilterActive
               ? [
                   {
@@ -565,6 +586,14 @@ export default function RemindersScreen() {
         onClearAll={() => {
           setFilters(INITIAL_FILTERS);
         }}
+      />
+
+      {/* Top Snackbar (toast) */}
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={() => setToastVisible(false)}
       />
     </View>
   );

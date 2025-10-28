@@ -1,18 +1,14 @@
+// C:\Projekty\Python\Flovers\mobile\src\shared\ui\TopSnackbar.tsx
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Portal, Snackbar } from "react-native-paper";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 type Props = {
-  /** Show/hide the toast */
   visible: boolean;
-  /** Message to display */
   message: string;
-  /** Dismiss handler */
   onDismiss: () => void;
-  /** ms, default 3000 */
   duration?: number;
-  /** Visual intent */
   variant?: "default" | "success" | "error";
 };
 
@@ -25,12 +21,13 @@ export default function TopSnackbar({
 }: Props) {
   const insets = useSafeAreaInsets();
 
-  const bg =
-    variant === "success"
-      ? "rgba(11,114,133,0.95)"
-      : variant === "error"
-      ? "rgba(255,107,107,0.95)"
-      : "#0a5161";
+  // unify success with default so both pages look the same
+  const DEFAULT_TEAL = "#0A5161";
+  const ERROR_RED = "rgba(255,107,107,1)";
+
+  const bg = variant === "error" ? ERROR_RED : DEFAULT_TEAL;
+
+  if (!visible) return null;
 
   return (
     <Portal>
@@ -41,9 +38,7 @@ export default function TopSnackbar({
         style={[styles.snack, { backgroundColor: bg }]}
         wrapperStyle={[
           styles.wrapper,
-          {
-            top: Math.max(8, insets.top + 8),
-          },
+          { top: Math.max(8, insets.top + 8) },
         ]}
       >
         {message}
@@ -58,8 +53,12 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     alignItems: "center",
+    zIndex: 9999,
+    elevation: 9999,
+    pointerEvents: "box-none",
   },
   snack: {
     borderRadius: 24,
+    opacity: 1,
   },
 });
