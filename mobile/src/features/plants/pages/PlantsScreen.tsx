@@ -284,6 +284,11 @@ export default function PlantsScreen() {
     return sorted;
   }, [plants, filters, sortKey, sortDir]);
 
+  // ➕ Determine if any filter is active (to show "Clear filter" action like Reminders page)
+  const isFilterActive = useMemo(() => {
+    return Boolean(filters.location || filters.latin);
+  }, [filters.location, filters.latin]);
+
   // Hide FAB when ANY modal is visible (edit, delete, sort, filter)
   const showFAB = !editOpen && !confirmDeleteId && !sortOpen && !filterOpen;
 
@@ -399,6 +404,17 @@ export default function PlantsScreen() {
             { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
             { key: "sort", icon: "sort", label: "Sort", onPress: () => setSortOpen(true) },
             { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => setFilterOpen(true) },
+            // ⬇️ NEW: Clear filter (beneath Filter, above Locations) — same styling as Reminders
+            ...(isFilterActive
+              ? [
+                  {
+                    key: "clearFilter",
+                    label: "Clear filter",
+                    icon: "filter-remove",
+                    onPress: () => setFilters({}),
+                  } as const,
+                ]
+              : []),
             { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
           ]}
         />
