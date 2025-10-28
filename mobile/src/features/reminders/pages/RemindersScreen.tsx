@@ -371,6 +371,17 @@ export default function RemindersScreen() {
     return sorted;
   }, [uiReminders, filters, sortKey, sortDir, plantOptions]);
 
+  // ➕ Determine if any filter is active (to show "Clear filter" action)
+  const isFilterActive = useMemo(() => {
+    return Boolean(
+      filters.plantId ||
+      filters.location ||
+      (filters.types && filters.types.length > 0) ||
+      (filters.dueFrom && filters.dueFrom.trim()) ||
+      (filters.dueTo && filters.dueTo.trim())
+    );
+  }, [filters]);
+
   const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
   const showInitialSpinner = !hasLoadedOnce && loading;
@@ -484,6 +495,17 @@ export default function RemindersScreen() {
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
             { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
             { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
+            // ⬇️ NEW: "Clear filter" directly beneath "Filter"; only visible when any filter is active
+            ...(isFilterActive
+              ? [
+                  {
+                    key: "clearFilter",
+                    label: "Clear filter",
+                    icon: "filter-remove",
+                    onPress: () => setFilters(INITIAL_FILTERS),
+                  } as const,
+                ]
+              : []),
           ]}
         />
       )}

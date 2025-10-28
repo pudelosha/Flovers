@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\styles\reminders.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({

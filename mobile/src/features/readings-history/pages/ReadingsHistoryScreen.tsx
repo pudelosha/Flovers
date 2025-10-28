@@ -168,7 +168,7 @@ export default function ReadingsHistoryScreen() {
     if (h !== headerH) setHeaderH(h);
   };
 
-  // ✅ You set paddings to 0 — kept as-is here
+  // You set paddings to 0 — kept as-is here
   const frameViewportH =
     windowH
     - insets.top - insets.bottom
