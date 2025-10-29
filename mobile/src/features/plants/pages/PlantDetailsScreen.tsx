@@ -1,5 +1,5 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\plants\pages\PlantDetailsScreen.tsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef, useCallback } from "react";
 import {
   View,
   Text,
@@ -10,8 +10,10 @@ import {
   Platform,
   Pressable,
   StyleSheet,
+  Animated,
+  Easing,
 } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -171,6 +173,33 @@ export default function PlantDetailsScreen() {
     } as never);
   };
 
+  // ---------- ✨ ENTER/EXIT CONTENT ANIMATION ----------
+  const entry = useRef(new Animated.Value(0)).current;
+  const contentOpacity = entry;
+  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
+  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+
+  useFocusEffect(
+    useCallback(() => {
+      Animated.timing(entry, {
+        toValue: 1,
+        duration: 220,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+
+      return () => {
+        Animated.timing(entry, {
+          toValue: 0,
+          duration: 160,
+          easing: Easing.in(Easing.cubic),
+          useNativeDriver: true,
+        }).start();
+      };
+    }, [entry])
+  );
+  // ----------------------------------------------------
+
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -180,145 +209,153 @@ export default function PlantDetailsScreen() {
         showSeparator={false}
       />
 
-      {loading ? (
-        <View style={[styles.centerBox]}>
-          <ActivityIndicator />
-          <Text style={[styles.dim, { marginTop: 8 }]}>Loading…</Text>
-        </View>
-      ) : error ? (
-        <View style={styles.centerBox}>
-          <Text style={styles.title}>Error</Text>
-          <Text style={styles.dim}>{error}</Text>
-        </View>
-      ) : !plant ? (
-        <View style={styles.centerBox}>
-          <Text style={styles.title}>Not found</Text>
-          <Text style={styles.dim}>We couldn’t load this plant.</Text>
-        </View>
-      ) : (
-        <ScrollView contentContainerStyle={{ paddingBottom: 24, paddingHorizontal: 16, paddingTop: 16 }} showsVerticalScrollIndicator={false}>
-          {/* ---------- INFO FRAME ---------- */}
-          <GlassFrame>
-            <Text style={styles.h1}>{plant.display_name || plant.plant_definition?.name || `Plant #${plant.id}`}</Text>
-            {!!plant.plant_definition?.latin && <Text style={styles.latin}>{plant.plant_definition.latin}</Text>}
-            {!!plant.location?.name && <Text style={styles.sub}>{plant.location.name}</Text>}
+      <Animated.View
+        style={{
+          flex: 1,
+          opacity: contentOpacity,
+          transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
+        }}
+      >
+        {loading ? (
+          <View style={[styles.centerBox]}>
+            <ActivityIndicator />
+            <Text style={[styles.dim, { marginTop: 8 }]}>Loading…</Text>
+          </View>
+        ) : error ? (
+          <View style={styles.centerBox}>
+            <Text style={styles.title}>Error</Text>
+            <Text style={styles.dim}>{error}</Text>
+          </View>
+        ) : !plant ? (
+          <View style={styles.centerBox}>
+            <Text style={styles.title}>Not found</Text>
+            <Text style={styles.dim}>We couldn’t load this plant.</Text>
+          </View>
+        ) : (
+          <ScrollView contentContainerStyle={{ paddingBottom: 24, paddingHorizontal: 16, paddingTop: 16 }} showsVerticalScrollIndicator={false}>
+            {/* ---------- INFO FRAME ---------- */}
+            <GlassFrame>
+              <Text style={styles.h1}>{plant.display_name || plant.plant_definition?.name || `Plant #${plant.id}`}</Text>
+              {!!plant.plant_definition?.latin && <Text style={styles.latin}>{plant.plant_definition.latin}</Text>}
+              {!!plant.location?.name && <Text style={styles.sub}>{plant.location.name}</Text>}
 
-            <View style={styles.infoGrid}>
-              {[
-                { icon: "calendar", label: "Purchased", value: plant.purchase_date || "—" },
-                { icon: "note-edit-outline", label: "Notes", value: plant.notes || "—" },
-                { icon: "white-balance-sunny", label: "Light", value: plant.light_level || "—" },
-                { icon: "compass-outline", label: "Orientation", value: plant.orientation || "—" },
-                { icon: "tape-measure", label: "Distance", value: (plant.distance_cm ?? "—") + (plant.distance_cm != null ? " cm" : "") },
-                { icon: "pot-outline", label: "Pot / Soil", value: [plant.pot_material, plant.soil_mix].filter(Boolean).join(" • ") || "—" },
-              ].map((it, i) => (
-                <View key={i} style={styles.infoRow}>
-                  <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
-                  <Text style={styles.infoLabel}>{it.label}:</Text>
-                  <Text style={styles.infoValue} numberOfLines={2}>{it.value}</Text>
-                </View>
-              ))}
-            </View>
-          </GlassFrame>
-
-          {/* ---------- READINGS FRAME ---------- */}
-          <GlassFrame>
-            <View style={styles.rowBetween}>
-              <Text style={styles.h2}>Latest readings</Text>
-              <Pressable onPress={() => goHistory()} style={styles.linkBtn}>
-                <Text style={styles.linkText}>View full history</Text>
-              </Pressable>
-            </View>
-
-            {/* 4 metrics: icon in colored circle + value; press → History with metric selected */}
-            <View style={styles.metricsRow}>
-              <MetricCol
-                color={ICON_BG.temperature}
-                icon="thermometer"
-                label="Temp"
-                value={latestRead.temperature}
-                unit={METRIC_UNITS.temperature}
-                onPress={() => goHistory("temperature")}
-              />
-              <MetricCol
-                color={ICON_BG.humidity}
-                icon="water-percent"
-                label="Hum"
-                value={latestRead.humidity}
-                unit={METRIC_UNITS.humidity}
-                onPress={() => goHistory("humidity")}
-              />
-              <MetricCol
-                color={ICON_BG.light}
-                icon="white-balance-sunny"
-                label="Light"
-                value={latestRead.light}
-                unit={METRIC_UNITS.light}
-                onPress={() => goHistory("light")}
-              />
-              <MetricCol
-                color={ICON_BG.moisture}
-                icon="water"
-                label="Moist"
-                value={latestRead.moisture}
-                unit={METRIC_UNITS.moisture}
-                onPress={() => goHistory("moisture")}
-              />
-            </View>
-
-            <Text style={styles.lastRead}>{lastReadText(latestRead.tsISO)}</Text>
-          </GlassFrame>
-
-          {/* ---------- REMINDERS FRAME ---------- */}
-          <GlassFrame>
-            <View style={styles.rowBetween}>
-              <Text style={styles.h2}>Reminders</Text>
-              <Pressable onPress={() => nav.navigate("Reminders" as never)} style={styles.linkBtn}>
-                <Text style={styles.linkText}>View all</Text>
-              </Pressable>
-            </View>
-
-            {reminders.length === 0 ? (
-              <Text style={styles.dim}>No reminders yet.</Text>
-            ) : (
-              <View style={{ marginTop: 6 }}>
-                {reminders.map((r) => (
-                  <View key={r.id} style={styles.remRow}>
-                    <View style={styles.remIcon}>
-                      <MaterialCommunityIcons name={r.icon as any} size={18} color="#FFFFFF" />
-                    </View>
-                    <View style={{ flex: 1 }}>
-                      <Text style={styles.remTitle}>{r.title}</Text>
-                      <Text style={styles.remWhen}>{r.when}</Text>
-                    </View>
-                    <Pressable onPress={() => { /* open reminder details/edit */ }} hitSlop={8}>
-                      <MaterialCommunityIcons name="chevron-right" size={20} color="#FFFFFF" />
-                    </Pressable>
+              <View style={styles.infoGrid}>
+                {[
+                  { icon: "calendar", label: "Purchased", value: plant.purchase_date || "—" },
+                  { icon: "note-edit-outline", label: "Notes", value: plant.notes || "—" },
+                  { icon: "white-balance-sunny", label: "Light", value: plant.light_level || "—" },
+                  { icon: "compass-outline", label: "Orientation", value: plant.orientation || "—" },
+                  { icon: "tape-measure", label: "Distance", value: (plant.distance_cm ?? "—") + (plant.distance_cm != null ? " cm" : "") },
+                  { icon: "pot-outline", label: "Pot / Soil", value: [plant.pot_material, plant.soil_mix].filter(Boolean).join(" • ") || "—" },
+                ].map((it, i) => (
+                  <View key={i} style={styles.infoRow}>
+                    <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
+                    <Text style={styles.infoLabel}>{it.label}:</Text>
+                    <Text style={styles.infoValue} numberOfLines={2}>{it.value}</Text>
                   </View>
                 ))}
               </View>
-            )}
-          </GlassFrame>
-
-          {/* ---------- QR FRAME (kept from your original) ---------- */}
-          {!!qrCodeValue && (
-            <GlassFrame center>
-              <Text style={styles.h2}>QR Code</Text>
-              <Text style={[styles.dim, { marginBottom: 12, textAlign: "center" }]}>
-                Scan to open this plant on your device.
-              </Text>
-
-              <QRCode value={qrCodeValue} size={220} getRef={(c) => ((global as any).__qrRef = c)} />
-
-              <Pressable onPress={() => onSaveQr((global as any).__qrRef)} style={{ marginTop: 14 }}>
-                <Text style={styles.linkText}>Save QR Code</Text>
-              </Pressable>
             </GlassFrame>
-          )}
 
-          <View style={{ height: 120 }} />
-        </ScrollView>
-      )}
+            {/* ---------- READINGS FRAME ---------- */}
+            <GlassFrame>
+              <View style={styles.rowBetween}>
+                <Text style={styles.h2}>Latest readings</Text>
+                <Pressable onPress={() => goHistory()} style={styles.linkBtn}>
+                  <Text style={styles.linkText}>View full history</Text>
+                </Pressable>
+              </View>
+
+              {/* 4 metrics: icon in colored circle + value; press → History with metric selected */}
+              <View style={styles.metricsRow}>
+                <MetricCol
+                  color={ICON_BG.temperature}
+                  icon="thermometer"
+                  label="Temp"
+                  value={latestRead.temperature}
+                  unit={METRIC_UNITS.temperature}
+                  onPress={() => goHistory("temperature")}
+                />
+                <MetricCol
+                  color={ICON_BG.humidity}
+                  icon="water-percent"
+                  label="Hum"
+                  value={latestRead.humidity}
+                  unit={METRIC_UNITS.humidity}
+                  onPress={() => goHistory("humidity")}
+                />
+                <MetricCol
+                  color={ICON_BG.light}
+                  icon="white-balance-sunny"
+                  label="Light"
+                  value={latestRead.light}
+                  unit={METRIC_UNITS.light}
+                  onPress={() => goHistory("light")}
+                />
+                <MetricCol
+                  color={ICON_BG.moisture}
+                  icon="water"
+                  label="Moist"
+                  value={latestRead.moisture}
+                  unit={METRIC_UNITS.moisture}
+                  onPress={() => goHistory("moisture")}
+                />
+              </View>
+
+              <Text style={styles.lastRead}>{lastReadText(latestRead.tsISO)}</Text>
+            </GlassFrame>
+
+            {/* ---------- REMINDERS FRAME ---------- */}
+            <GlassFrame>
+              <View style={styles.rowBetween}>
+                <Text style={styles.h2}>Reminders</Text>
+                <Pressable onPress={() => nav.navigate("Reminders" as never)} style={styles.linkBtn}>
+                  <Text style={styles.linkText}>View all</Text>
+                </Pressable>
+              </View>
+
+              {reminders.length === 0 ? (
+                <Text style={styles.dim}>No reminders yet.</Text>
+              ) : (
+                <View style={{ marginTop: 6 }}>
+                  {reminders.map((r) => (
+                    <View key={r.id} style={styles.remRow}>
+                      <View style={styles.remIcon}>
+                        <MaterialCommunityIcons name={r.icon as any} size={18} color="#FFFFFF" />
+                      </View>
+                      <View style={{ flex: 1 }}>
+                        <Text style={styles.remTitle}>{r.title}</Text>
+                        <Text style={styles.remWhen}>{r.when}</Text>
+                      </View>
+                      <Pressable onPress={() => { /* open reminder details/edit */ }} hitSlop={8}>
+                        <MaterialCommunityIcons name="chevron-right" size={20} color="#FFFFFF" />
+                      </Pressable>
+                    </View>
+                  ))}
+                </View>
+              )}
+            </GlassFrame>
+
+            {/* ---------- QR FRAME (kept from your original) ---------- */}
+            {!!qrCodeValue && (
+              <GlassFrame center>
+                <Text style={styles.h2}>QR Code</Text>
+                <Text style={[styles.dim, { marginBottom: 12, textAlign: "center" }]}>
+                  Scan to open this plant on your device.
+                </Text>
+
+                <QRCode value={qrCodeValue} size={220} getRef={(c) => ((global as any).__qrRef = c)} />
+
+                <Pressable onPress={() => onSaveQr((global as any).__qrRef)} style={{ marginTop: 14 }}>
+                  <Text style={styles.linkText}>Save QR Code</Text>
+                </Pressable>
+              </GlassFrame>
+            )}
+
+            <View style={{ height: 120 }} />
+          </ScrollView>
+        )}
+      </Animated.View>
     </View>
   );
 }
