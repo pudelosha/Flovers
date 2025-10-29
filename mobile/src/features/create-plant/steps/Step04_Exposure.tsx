@@ -154,47 +154,6 @@ export default function Step04_Exposure({
             thumbTintColor={theme.colors.primary}
           />
         </View>
-
-        {/* Prev / Next — identical to Steps 1–3 (flat, same height) */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-          <Pressable
-            onPress={() => actions.goPrev()}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(255,255,255,0.12)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
-
-          <Pressable
-            onPress={() => actions.goNext()}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(11,114,133,0.9)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
-        </View>
       </View>
 
       {/* Modal */}
