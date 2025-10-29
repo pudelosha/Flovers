@@ -1,14 +1,15 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
   Pressable,
-  FlatList,
   Text,
   RefreshControl,
   PanResponder,
   GestureResponderEvent,
   PanResponderGestureState,
   StyleSheet,
+  Animated,
+  Easing,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
@@ -173,8 +174,24 @@ export default function RemindersScreen() {
     }
   }, []);
 
-  /** Keep existing data refresh on focus */
-  useFocusEffect(useCallback(() => { load(); }, [load]));
+  /** Keep existing data refresh on focus, but clear stale tiles immediately so none are visible */
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+      (async () => {
+        setLoading(true);
+        setUiReminders([]); // clear stale list before fetching
+        try {
+          await load();
+        } finally {
+          if (!mounted) return;
+        }
+      })();
+      return () => {
+        mounted = false;
+      };
+    }, [load])
+  );
 
   /** Reset filters whenever screen is focused */
   useFocusEffect(
@@ -186,7 +203,7 @@ export default function RemindersScreen() {
     }, [])
   );
 
-  /** ⬇️ NEW: ALWAYS close all modals and menus when this screen becomes focused */
+  /** ALWAYS close all modals and menus when this screen becomes focused */
   useFocusEffect(
     useCallback(() => {
       setEditOpen(false);
@@ -407,6 +424,45 @@ export default function RemindersScreen() {
 
   const showInitialSpinner = !hasLoadedOnce && loading;
 
+  // ---------- ✨ ENTRANCE ANIMATION (staggered fade/translate for list items) ----------
+  const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
+  const getAnimForId = (id: string) => {
+    const m = animMapRef.current;
+    if (!m.has(id)) m.set(id, new Animated.Value(0));
+    return m.get(id)!;
+  };
+
+  const primeAnimations = useCallback((ids: string[]) => {
+    ids.forEach((id) => {
+      const v = getAnimForId(id);
+      v.setValue(0);
+    });
+  }, []);
+
+  const runStaggerIn = useCallback((ids: string[]) => {
+    const sequences = ids.map((id, i) => {
+      const v = getAnimForId(id);
+      return Animated.timing(v, {
+        toValue: 1,
+        duration: 280,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+        delay: i * 50,
+      });
+    });
+    Animated.stagger(50, sequences).start();
+  }, []);
+
+  useEffect(() => {
+    // Only animate list view after loading completes
+    if (loading || viewMode !== "list") return;
+    const ids = derivedReminders.map((r) => r.id);
+    primeAnimations(ids);
+    const raf = requestAnimationFrame(() => runStaggerIn(ids));
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, viewMode, derivedReminders.length]);
+
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
@@ -426,26 +482,35 @@ export default function RemindersScreen() {
       )}
 
       {!showInitialSpinner && (viewMode === "list" ? (
-        <FlatList
+        <Animated.FlatList
           data={derivedReminders}
           keyExtractor={(r) => r.id}
-          renderItem={({ item }) => (
-            <ReminderTile
-              reminder={item}
-              isMenuOpen={menuOpenId === item.id}
-              onToggleMenu={() => onToggleMenu(item.id)}
-              onPressBody={() => {}}
-              onEdit={() => openEditModal(item)}
-              onDelete={() => askDelete(item)}
-            />
-          )}
+          renderItem={({ item }) => {
+            const v = getAnimForId(item.id);
+            const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
+            const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+            const opacity = v;
+
+            return (
+              <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+                <ReminderTile
+                  reminder={item}
+                  isMenuOpen={menuOpenId === item.id}
+                  onToggleMenu={() => onToggleMenu(item.id)}
+                  onPressBody={() => {}}
+                  onEdit={() => openEditModal(item)}
+                  onDelete={() => askDelete(item)}
+                />
+              </Animated.View>
+            );
+          }}
           ListHeaderComponent={<View style={{ height: 0 }} />}
           ListFooterComponent={<View style={{ height: 140 }} />}
           contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={() => setMenuOpenId(null)}
-          //  Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
+          // Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
           ListEmptyComponent={
             !loading ? (
@@ -516,7 +581,7 @@ export default function RemindersScreen() {
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
             { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
             { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
-            // ⬇️ "Clear filter" directly beneath "Filter"; only visible when any filter is active
+            // "Clear filter" directly beneath "Filter"; only visible when any filter is active
             ...(isFilterActive
               ? [
                   {
