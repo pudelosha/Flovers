@@ -1,4 +1,4 @@
-export type TaskType = "watering" | "moisture" | "fertilising" | "care";
+export type TaskType = "watering" | "moisture" | "fertilising" | "care" | "repot";
 
 export type Task = {
   id: string;
