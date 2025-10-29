@@ -14,7 +14,8 @@ type Props = {
   onMarkComplete: () => void;
   onEdit: () => void;
   onGoToPlant: () => void;
-  onDelete: () => void;
+  // Intentionally omit onDelete to remove the Delete action from the menu on Home
+  // onDelete?: () => void;
 };
 
 export default function TaskTile({
@@ -24,15 +25,14 @@ export default function TaskTile({
   onMarkComplete,
   onEdit,
   onGoToPlant,
-  onDelete,
 }: Props) {
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass stack: Blur + white tint + hairline border + subtle accent tint */}
-      <View style={s.cardGlass} pointerEvents="none">
+      <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
@@ -40,11 +40,10 @@ export default function TaskTile({
           overlayColor="transparent"
           reducedTransparencyFallbackColor="transparent"
         />
-        <View pointerEvents="none" style={s.cardTint} />
-        <View pointerEvents="none" style={s.cardBorder} />
+        <View style={s.cardTint} />
+        <View style={s.cardBorder} />
         <View
-          pointerEvents="none"
-          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 }]}
+          style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10) }]}
         />
       </View>
 
@@ -81,13 +80,13 @@ export default function TaskTile({
         </View>
       </View>
 
-      {/* Floating menu (zIndex/elevation handled in styles) */}
+      {/* Floating menu — explicitly hide Delete on Home */}
       {isMenuOpen && (
         <TaskMenu
           onMarkComplete={onMarkComplete}
           onEdit={onEdit}
           onGoToPlant={onGoToPlant}
-          onDelete={onDelete}
+          showDelete={false}
         />
       )}
     </View>

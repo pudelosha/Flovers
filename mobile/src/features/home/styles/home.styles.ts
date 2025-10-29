@@ -4,7 +4,7 @@ export const s = StyleSheet.create({
   /* ---------- LIST / LAYOUT ---------- */
   listContent: {
     paddingHorizontal: 16,
-    paddingTop: 21,          // match Reminders
+    paddingTop: 21,          // match Reminders / Plants
     paddingBottom: 24,
   },
 
@@ -14,11 +14,11 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  /* ---------- TASK TILES (match Reminders) ---------- */
+  /* ---------- TASK TILES (match Plants layering so menu floats above) ---------- */
   cardWrap: {
     height: 100,
     borderRadius: 28,
-    overflow: "visible",     // allow floating menu to escape the tile
+    overflow: "visible",     // allow dropdown to escape
     position: "relative",
     marginBottom: 0,
     shadowColor: "#000",
@@ -26,6 +26,11 @@ export const s = StyleSheet.create({
     shadowRadius: 16,
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
+  },
+  // Raised state to keep an open menu above siblings
+  cardWrapRaised: {
+    zIndex: 20,
+    elevation: 20,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -35,14 +40,12 @@ export const s = StyleSheet.create({
   cardTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.20)",
-    zIndex: 1,
   },
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.20)",
-    zIndex: 2,
   },
   cardRow: {
     flex: 1,
@@ -92,13 +95,13 @@ export const s = StyleSheet.create({
     borderWidth: 0,
   },
 
-  // Floating menu — ensure it floats above blur layers and neighboring rows
+  // MENU SHEET — identical behavior to Plants so it renders above the tile
   menuSheet: {
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 30,             // higher than any tile/backdrop
-    elevation: 30,
+    zIndex: 10,
+    elevation: 10,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
