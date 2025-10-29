@@ -217,7 +217,7 @@ export default function RemindersScreen() {
     }, [])
   );
 
-  // ⬅️ dedicated pull-to-refresh handler (does not toggle `loading`)
+  // ⬅️ dedicated pull-to-refresh handler
   const onPullRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -422,8 +422,6 @@ export default function RemindersScreen() {
 
   const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
-  const showInitialSpinner = !hasLoadedOnce && loading;
-
   // ---------- ✨ ENTRANCE ANIMATION (staggered fade/translate for list items) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
@@ -463,6 +461,23 @@ export default function RemindersScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, viewMode, derivedReminders.length]);
 
+  // ---------- EXACTLY LIKE PLANTS: EARLY RETURN WHILE LOADING ----------
+  if (loading) {
+    return (
+      <View style={{ flex: 1 }}>
+        <GlassHeader
+          title="Reminders"
+          gradientColors={HEADER_GRADIENT_TINT}
+          solidFallback={HEADER_SOLID_FALLBACK}
+          showSeparator={false}
+          rightIconName="qrcode-scan"
+          onPressRight={() => nav.navigate("Scanner" as never)}
+        />
+        <CenteredSpinner size={56} color="#FFFFFF" />
+      </View>
+    );
+  }
+
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
@@ -474,14 +489,11 @@ export default function RemindersScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
-      {/* Initial page-load spinner (centered, shared UI) */}
-      {showInitialSpinner ? <CenteredSpinner size={56} color="#FFFFFF" /> : null}
-
       {menuOpenId && (
         <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
       )}
 
-      {!showInitialSpinner && (viewMode === "list" ? (
+      {viewMode === "list" ? (
         <Animated.FlatList
           data={derivedReminders}
           keyExtractor={(r) => r.id}
@@ -510,7 +522,6 @@ export default function RemindersScreen() {
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={() => setMenuOpenId(null)}
-          // Use the dedicated refreshing state/handler so top spinner doesn't appear on first load
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
           ListEmptyComponent={
             !loading ? (
@@ -571,7 +582,7 @@ export default function RemindersScreen() {
           onEdit={openEditModal}
           onDelete={askDelete}
         />
-      ))}
+      )}
 
       {showFAB && (
         <FAB
@@ -581,7 +592,6 @@ export default function RemindersScreen() {
             { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
             { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
             { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
-            // "Clear filter" directly beneath "Filter"; only visible when any filter is active
             ...(isFilterActive
               ? [
                   {
