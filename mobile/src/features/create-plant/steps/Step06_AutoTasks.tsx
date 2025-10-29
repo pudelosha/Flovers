@@ -15,6 +15,7 @@ import type { LastRepotted, LastWatered } from "../types/create-plant.types";
 // Try slider if installed (same approach as your other pages)
 let SliderView: any = View;
 try {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   SliderView = require("@react-native-community/slider").default;
 } catch {}
 
@@ -71,7 +72,11 @@ function InlineDropdown<T extends string>({
 }) {
   return (
     <>
-      <Pressable style={wiz.selectField} onPress={onToggle} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+      <Pressable
+        style={wiz.selectField}
+        onPress={onToggle}
+        android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+      >
         <Text style={wiz.selectValue}>{valueLabel}</Text>
         <View style={wiz.selectChevronPad}>
           <MaterialCommunityIcons
@@ -89,13 +94,20 @@ function InlineDropdown<T extends string>({
             nestedScrollEnabled
           >
             {showNotSpecified && (
-              <Pressable style={wiz.dropdownItem} onPress={() => onSelect(undefined)}>
+              <Pressable
+                style={wiz.dropdownItem}
+                onPress={() => onSelect(undefined)}
+              >
                 <Text style={wiz.dropdownItemText}>Not specified</Text>
                 <Text style={wiz.dropdownItemDesc}>Skip if you’re not sure.</Text>
               </Pressable>
             )}
             {options.map((opt) => (
-              <Pressable key={opt.key} style={wiz.dropdownItem} onPress={() => onSelect(opt.key)}>
+              <Pressable
+                key={opt.key}
+                style={wiz.dropdownItem}
+                onPress={() => onSelect(opt.key)}
+              >
                 <Text style={wiz.dropdownItemText}>{opt.label}</Text>
               </Pressable>
             ))}
@@ -222,13 +234,19 @@ export default function Step06_AutoTasks() {
 
   const wateredLabel = useMemo(() => {
     if (!state.lastWatered) return "Not specified";
-    return LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered)?.label ?? "Not specified";
+    return (
+      LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered)?.label ??
+      "Not specified"
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastWatered]);
 
   const repottedLabel = useMemo(() => {
     if (!state.lastRepotted) return "Not specified";
-    return LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted)?.label ?? "Not specified";
+    return (
+      LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted)?.label ??
+      "Not specified"
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastRepotted]);
 
@@ -257,13 +275,16 @@ export default function Step06_AutoTasks() {
         {/* master toggle (enabling sets Watering ON by default) */}
         <SectionCheckbox
           checked={!!state.createAutoTasks}
-          onToggle={() => canAutoCreate && actions.setCreateAutoTasks(!state.createAutoTasks)}
+          onToggle={() =>
+            canAutoCreate && actions.setCreateAutoTasks(!state.createAutoTasks)
+          }
           label="Create auto tasks for this plant"
           disabled={!canAutoCreate}
         />
         {!canAutoCreate && (
           <Text style={wiz.smallMuted}>
-            This requires a predefined plant (choose a plant in step 1). You can still add tasks later manually.
+            This requires a predefined plant (choose a plant in step 1). You can still add tasks
+            later manually.
           </Text>
         )}
 
@@ -283,7 +304,9 @@ export default function Step06_AutoTasks() {
                 <InlineDropdown<LastWatered>
                   open={openWhich === "watered"}
                   valueLabel={wateredLabel}
-                  onToggle={() => setOpenWhich(openWhich === "watered" ? null : "watered")}
+                  onToggle={() =>
+                    setOpenWhich(openWhich === "watered" ? null : "watered")
+                  }
                   options={LAST_WATERED_OPTIONS}
                   onSelect={(k) => {
                     actions.setLastWatered(k as LastWatered | undefined);
@@ -316,7 +339,9 @@ export default function Step06_AutoTasks() {
             <Text style={wiz.sectionTitle}>Fertilising</Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
-              onToggle={() => actions.setFertilizeRequired(!state.fertilizeRequired)}
+              onToggle={() =>
+                actions.setFertilizeRequired(!state.fertilizeRequired)
+              }
               label="Generate fertilising task"
             />
             {state.fertilizeRequired && (
@@ -354,7 +379,9 @@ export default function Step06_AutoTasks() {
             <Text style={wiz.sectionTitle}>Repotting</Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
-              onToggle={() => actions.setRepotTaskEnabled(!state.repotTaskEnabled)}
+              onToggle={() =>
+                actions.setRepotTaskEnabled(!state.repotTaskEnabled)
+              }
               label="Generate repotting task"
             />
             {state.repotTaskEnabled && (
@@ -370,7 +397,9 @@ export default function Step06_AutoTasks() {
                 <InlineDropdown<LastRepotted>
                   open={openWhich === "repotted"}
                   valueLabel={repottedLabel}
-                  onToggle={() => setOpenWhich(openWhich === "repotted" ? null : "repotted")}
+                  onToggle={() =>
+                    setOpenWhich(openWhich === "repotted" ? null : "repotted")
+                  }
                   options={LAST_REPOTTED_OPTIONS}
                   onSelect={(k) => {
                     actions.setLastRepotted(k as LastRepotted | undefined);
@@ -381,47 +410,6 @@ export default function Step06_AutoTasks() {
             )}
           </>
         )}
-
-        {/* Prev / Next — unified with Steps 1–5 (flat, same height, arrows) */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-          <Pressable
-            onPress={actions.goPrev}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(255,255,255,0.12)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
-
-          <Pressable
-            onPress={actions.goNext}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(11,114,133,0.9)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
-        </View>
       </View>
     </View>
   );

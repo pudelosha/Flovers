@@ -1,6 +1,14 @@
 ﻿// steps/Step07_Photo.tsx
 import React from "react";
-import { View, Text, Image, Pressable, Alert, PermissionsAndroid, Platform } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  Pressable,
+  Alert,
+  PermissionsAndroid,
+  Platform,
+} from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
@@ -24,7 +32,9 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   ].filter(Boolean) as string[];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
-  const allGranted = perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
+  const allGranted = perms.every(
+    (p) => results[p] === PermissionsAndroid.RESULTS.GRANTED
+  );
   return allGranted;
 }
 
@@ -34,7 +44,10 @@ export default function Step07_Photo() {
   const doLaunchCamera = async () => {
     const ok = await ensureAndroidPermissionCameraAndRead();
     if (!ok) {
-      Alert.alert("Permission required", "Please grant camera and media permissions to take a photo.");
+      Alert.alert(
+        "Permission required",
+        "Please grant camera and media permissions to take a photo."
+      );
       return;
     }
 
@@ -57,7 +70,10 @@ export default function Step07_Photo() {
   const doLaunchLibrary = async () => {
     const ok = await ensureAndroidPermissionCameraAndRead();
     if (!ok) {
-      Alert.alert("Permission required", "Please grant media permission to pick a photo.");
+      Alert.alert(
+        "Permission required",
+        "Please grant media permission to pick a photo."
+      );
       return;
     }
 
@@ -81,7 +97,7 @@ export default function Step07_Photo() {
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass frame — match Steps 1–6: blur 20 + white tint + thin border */}
+      {/* glass frame — match other steps */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -97,11 +113,13 @@ export default function Step07_Photo() {
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Add a photo</Text>
         <Text style={wiz.subtitle}>
-          Photograph your plant so you can spot it faster. The picture is saved locally on your
-          device (app storage) and is <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>not uploaded</Text> to our servers.
+          Photograph your plant so you can spot it faster. The picture is saved
+          locally on your device (app storage) and is{" "}
+          <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>not uploaded</Text>{" "}
+          to our servers.
         </Text>
 
-        {/* Always-visible preview area */}
+        {/* Preview frame */}
         <View
           style={[
             wiz.hero,
@@ -118,18 +136,28 @@ export default function Step07_Photo() {
           ]}
         >
           {state.photoUri ? (
-            <Image source={{ uri: state.photoUri }} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
+            <Image
+              source={{ uri: state.photoUri }}
+              style={{ width: "100%", height: "100%" }}
+              resizeMode="cover"
+            />
           ) : (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
-              <Text style={{ color: "rgba(255,255,255,0.92)", fontWeight: "600", marginTop: 8 }}>
+              <Text
+                style={{
+                  color: "rgba(255,255,255,0.92)",
+                  fontWeight: "600",
+                  marginTop: 8,
+                }}
+              >
                 No photo selected
               </Text>
             </View>
           )}
         </View>
 
-        {/* Stacked full-width actions */}
+        {/* Actions */}
         <View style={{ gap: 10 }}>
           <Pressable
             style={[wiz.actionFull, { backgroundColor: "rgba(11,114,133,0.9)" }]}
@@ -140,67 +168,31 @@ export default function Step07_Photo() {
             <Text style={wiz.actionText}>Take a photo</Text>
           </Pressable>
 
-          <Pressable style={wiz.actionFull} onPress={doLaunchLibrary} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+          <Pressable
+            style={wiz.actionFull}
+            onPress={doLaunchLibrary}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
             <MaterialCommunityIcons name="image-multiple" size={18} color="#FFFFFF" />
             <Text style={wiz.actionText}>Choose from gallery</Text>
           </Pressable>
 
           {state.photoUri && (
-            <Pressable style={wiz.actionFull} onPress={removePhoto} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
-              <MaterialCommunityIcons name="trash-can-outline" size={18} color="#FFFFFF" />
+            <Pressable
+              style={wiz.actionFull}
+              onPress={removePhoto}
+              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+            >
+              <MaterialCommunityIcons
+                name="trash-can-outline"
+                size={18}
+                color="#FFFFFF"
+              />
               <Text style={wiz.actionText}>Remove photo</Text>
             </Pressable>
           )}
         </View>
 
-        {/* Prev / Next — unified with earlier steps (flat, same height, arrows) */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
-          <Pressable
-            onPress={actions.goPrev}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(255,255,255,0.12)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
-
-          <Pressable
-            onPress={actions.goNext}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(11,114,133,0.9)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                gap: 8,
-                width: "100%",
-              }}
-            >
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
-        </View>
       </View>
     </View>
   );

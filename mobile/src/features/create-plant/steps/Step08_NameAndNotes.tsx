@@ -7,7 +7,9 @@ import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 
 let DateTimePicker: any = null;
-try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
+try {
+  DateTimePicker = require("@react-native-community/datetimepicker").default;
+} catch {}
 
 function toISODate(d: Date) {
   const y = d.getFullYear();
@@ -42,16 +44,25 @@ export default function Step08_NameAndNotes() {
   };
   const openPurchaseDate = () => {
     if (DateTimePicker) setShowPicker(true);
-    else { setFallbackDate(state.purchaseDateISO ?? ""); setFallbackOpen(true); }
+    else {
+      setFallbackDate(state.purchaseDateISO ?? "");
+      setFallbackOpen(true);
+    }
   };
   const onFallbackSave = () => {
-    if (!fallbackDate) { actions.setPurchaseDateISO(undefined); setFallbackOpen(false); return; }
+    if (!fallbackDate) {
+      actions.setPurchaseDateISO(undefined);
+      setFallbackOpen(false);
+      return;
+    }
     const dt = parseISODate(fallbackDate.trim());
-    if (!dt) { Alert.alert("Invalid date", "Please enter a valid date in the format YYYY-MM-DD."); return; }
-    actions.setPurchaseDateISO(toISODate(dt)); setFallbackOpen(false);
+    if (!dt) {
+      Alert.alert("Invalid date", "Please enter a valid date in the format YYYY-MM-DD.");
+      return;
+    }
+    actions.setPurchaseDateISO(toISODate(dt));
+    setFallbackOpen(false);
   };
-
-  const onCreate = () => actions.goTo("creating");
 
   return (
     <View style={wiz.cardWrap}>
@@ -74,7 +85,8 @@ export default function Step08_NameAndNotes() {
         <View style={[wiz.cardInner, { paddingBottom: 48 }]}>
           <Text style={wiz.title}>Name & notes</Text>
           <Text style={wiz.subtitle}>
-            Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age.
+            Give your plant a display name, add any notes, and (optionally) set the purchase date so we
+            can estimate its age.
           </Text>
 
           <Text style={wiz.sectionTitle}>Display name</Text>
@@ -111,19 +123,32 @@ export default function Step08_NameAndNotes() {
           {showPicker && DateTimePicker && (
             <View style={{ marginBottom: 10 }}>
               <DateTimePicker
-                value={state.purchaseDateISO ? new Date(state.purchaseDateISO + "T00:00:00") : new Date()}
+                value={
+                  state.purchaseDateISO
+                    ? new Date(state.purchaseDateISO + "T00:00:00")
+                    : new Date()
+                }
                 mode="date"
                 display={Platform.OS === "ios" ? "inline" : "default"}
                 onChange={onChangeDateNative}
                 maximumDate={new Date()}
               />
               {Platform.OS === "ios" && (
-                <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
+                <View
+                  style={{
+                    marginTop: 8,
+                    flexDirection: "row",
+                    justifyContent: "flex-end",
+                  }}
+                >
                   <Pressable
                     onPress={() => setShowPicker(false)}
                     style={({ pressed }) => [
                       wiz.nextBtnWide,
-                      { backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1 },
+                      {
+                        backgroundColor: "rgba(11,114,133,0.9)",
+                        opacity: pressed ? 0.92 : 1,
+                      },
                     ]}
                     android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                   >
@@ -165,7 +190,12 @@ export default function Step08_NameAndNotes() {
                         onPress={() => setFallbackOpen(false)}
                         style={({ pressed }) => [
                           wiz.nextBtnWide,
-                          { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                          {
+                            flex: 1,
+                            backgroundColor: "rgba(255,255,255,0.12)",
+                            opacity: pressed ? 0.92 : 1,
+                            paddingHorizontal: 14,
+                          },
                         ]}
                         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                       >
@@ -175,7 +205,12 @@ export default function Step08_NameAndNotes() {
                         onPress={onFallbackSave}
                         style={({ pressed }) => [
                           wiz.nextBtnWide,
-                          { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1, paddingHorizontal: 14 },
+                          {
+                            flex: 1,
+                            backgroundColor: "rgba(11,114,133,0.9)",
+                            opacity: pressed ? 0.92 : 1,
+                            paddingHorizontal: 14,
+                          },
                         ]}
                         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                       >
@@ -187,36 +222,6 @@ export default function Step08_NameAndNotes() {
               </View>
             </>
           )}
-
-          {/* Footer buttons — now sit above the curve */}
-          <View style={[wiz.buttonRowDual, { alignSelf: "stretch", marginTop: 12 }]}>
-            <Pressable
-              onPress={actions.goPrev}
-              style={({ pressed }) => [
-                wiz.nextBtnWide,
-                { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
-              ]}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-                <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-                <Text style={wiz.nextBtnText}>Previous</Text>
-              </View>
-            </Pressable>
-
-            <Pressable
-              onPress={onCreate}
-              style={({ pressed }) => [
-                wiz.nextBtnWide,
-                { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14, opacity: pressed ? 0.92 : 1 },
-              ]}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", width: "100%" }}>
-                <Text style={wiz.nextBtnText}>Create</Text>
-              </View>
-            </Pressable>
-          </View>
         </View>
       </View>
     </View>

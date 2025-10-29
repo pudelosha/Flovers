@@ -142,7 +142,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 
         <View style={s.tabInner}>
           {visibleRoutes.map((route: any) => {
-            // ✅ Show the parent tab as focused for hidden child routes
+            // Show the parent tab as focused for hidden child routes
             const isFocused = route.name === parentTabName;
 
             const onPress = () => {
