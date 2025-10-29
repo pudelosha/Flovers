@@ -1,5 +1,5 @@
-import React, { useCallback, useMemo, useState } from "react";
-import { View, FlatList, RefreshControl, Pressable } from "react-native";
+import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
+import { View, RefreshControl, Pressable, Animated, Easing } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
@@ -45,12 +45,18 @@ export default function ReadingsScreen() {
     setItems(data);
   }, []);
 
+  // Clear stale tiles on entry so only spinner is visible, then load and animate
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
       (async () => {
         setLoading(true);
-        try { await load(); } finally { if (mounted) setLoading(false); }
+        setItems([]); // clear to avoid stale flash
+        try {
+          await load();
+        } finally {
+          if (mounted) setLoading(false);
+        }
       })();
       return () => { mounted = false; };
     }, [load])
@@ -75,6 +81,42 @@ export default function ReadingsScreen() {
 
   // Hide FAB when any sheet/menu is open
   const showFAB = !menuOpenId && !sortOpen && !filterOpen;
+
+  // ---------- ✨ ENTRANCE ANIMATION (staggered fade & translate) ----------
+  const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
+  const getAnimForId = (id: string) => {
+    const m = animMapRef.current;
+    if (!m.has(id)) m.set(id, new Animated.Value(0));
+    return m.get(id)!;
+  };
+
+  const primeAnimations = useCallback((ids: string[]) => {
+    ids.forEach((id) => {
+      getAnimForId(id).setValue(0);
+    });
+  }, []);
+
+  const runStaggerIn = useCallback((ids: string[]) => {
+    const seq = ids.map((id, i) =>
+      Animated.timing(getAnimForId(id), {
+        toValue: 1,
+        duration: 280,           // lower = faster
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+        delay: i * 50,           // lower = tighter cascade
+      })
+    );
+    Animated.stagger(50, seq).start();
+  }, []);
+
+  useEffect(() => {
+    if (loading) return;
+    const ids = derivedItems.map((x) => x.id);
+    primeAnimations(ids);
+    const raf = requestAnimationFrame(() => runStaggerIn(ids));
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, derivedItems.length]);
 
   if (loading) {
     return (
@@ -105,26 +147,35 @@ export default function ReadingsScreen() {
 
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
-      <FlatList
+      <Animated.FlatList
         style={{ flex: 1 }}
         data={derivedItems}
         keyExtractor={(x) => x.id}
-        renderItem={({ item }) => (
-          <ReadingTile
-            data={item}
-            isMenuOpen={menuOpenId === item.id}
-            onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
-            onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
-            onHistory={() => { setMenuOpenId(null); nav.navigate("ReadingsHistory" as never, { id: item.id } as never); }}
-            onEdit={() => { setMenuOpenId(null); nav.navigate("EditSensors" as never, { id: item.id } as never); }}
-            onDelete={() => { setMenuOpenId(null); nav.navigate("DeleteReadingConfirm" as never, { id: item.id } as never); }}
-            onPlantDetails={() => { setMenuOpenId(null); nav.navigate("PlantDetails" as never, { id: item.id } as never); }}
-            // NEW: deep-link into ReadingsHistory with the selected metric
-            onMetricPress={(metric) =>
-              nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
-            }
-          />
-        )}
+        renderItem={({ item }) => {
+          const v = getAnimForId(item.id);
+          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
+          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const opacity = v;
+
+          return (
+            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+              <ReadingTile
+                data={item}
+                isMenuOpen={menuOpenId === item.id}
+                onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
+                onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
+                onHistory={() => { setMenuOpenId(null); nav.navigate("ReadingsHistory" as never, { id: item.id } as never); }}
+                onEdit={() => { setMenuOpenId(null); nav.navigate("EditSensors" as never, { id: item.id } as never); }}
+                onDelete={() => { setMenuOpenId(null); nav.navigate("DeleteReadingConfirm" as never, { id: item.id } as never); }}
+                onPlantDetails={() => { setMenuOpenId(null); nav.navigate("PlantDetails" as never, { id: item.id } as never); }}
+                // deep-link into ReadingsHistory with the selected metric
+                onMetricPress={(metric) =>
+                  nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
+                }
+              />
+            </Animated.View>
+          );
+        }}
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}
