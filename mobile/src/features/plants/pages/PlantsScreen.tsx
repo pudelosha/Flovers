@@ -1,13 +1,14 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\plants\PlantsScreen.tsx
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
   Pressable,
-  FlatList,
   RefreshControl,
   Alert,
   Text,
   StyleSheet,
+  Animated,
+  Easing,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
@@ -114,7 +115,7 @@ export default function PlantsScreen() {
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [filters, setFilters] = useState<{ location?: string; latin?: string }>({});
 
-  // ⬇️ NEW: Always hide the Edit modal whenever this screen becomes focused
+  // ⬇️ Always hide the Edit modal whenever this screen becomes focused
   useFocusEffect(
     useCallback(() => {
       setEditOpen(false);
@@ -130,11 +131,13 @@ export default function PlantsScreen() {
     setPlants(data.map(mapApiToPlant));
   }, []);
 
+  // Show spinner on focus, clear stale tiles (so list is empty), then load fresh data
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
       (async () => {
         setLoading(true);
+        setPlants([]); // clear to avoid stale flash
         try {
           await load();
         } finally {
@@ -311,6 +314,45 @@ export default function PlantsScreen() {
   // Hide FAB when ANY modal is visible (edit, delete, sort, filter)
   const showFAB = !editOpen && !confirmDeleteId && !sortOpen && !filterOpen;
 
+  // ---------- ✨ ENTRANCE ANIMATION (mirrors Home) ----------
+  const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
+  const getAnimForId = (id: string) => {
+    const m = animMapRef.current;
+    if (!m.has(id)) m.set(id, new Animated.Value(0));
+    return m.get(id)!;
+  };
+
+  const primeAnimations = useCallback((ids: string[]) => {
+    ids.forEach((id) => {
+      const v = getAnimForId(id);
+      v.setValue(0);
+    });
+  }, []);
+
+  const runStaggerIn = useCallback((ids: string[]) => {
+    const sequences = ids.map((id, i) => {
+      const v = getAnimForId(id);
+      return Animated.timing(v, {
+        toValue: 1,
+        duration: 280,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+        delay: i * 50,
+      });
+    });
+    Animated.stagger(50, sequences).start();
+  }, []);
+
+  // Start animation when loading finishes or the derived list changes in size
+  useEffect(() => {
+    if (loading) return;
+    const ids = derivedPlants.map((p) => p.id);
+    primeAnimations(ids);
+    const id = requestAnimationFrame(() => runStaggerIn(ids));
+    return () => cancelAnimationFrame(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, derivedPlants.length]);
+
   // Skeleton/loader
   if (loading) {
     return (
@@ -341,25 +383,34 @@ export default function PlantsScreen() {
 
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
-      <FlatList
+      <Animated.FlatList
         style={{ flex: 1 }}
         data={derivedPlants}
         keyExtractor={(p) => p.id}
-        renderItem={({ item }) => (
-          <PlantTile
-            plant={item}
-            isMenuOpen={menuOpenId === item.id}
-            onPressBody={() =>
-              nav.navigate("PlantDetails" as never, { id: item.id } as never)
-            }
-            onPressMenu={() =>
-              setMenuOpenId((curr) => (curr === item.id ? null : item.id))
-            }
-            onEdit={() => openEditModal(item)}
-            onReminders={() => {}}
-            onDelete={() => askDelete(item)}
-          />
-        )}
+        renderItem={({ item }) => {
+          const v = getAnimForId(item.id);
+          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
+          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const opacity = v;
+
+          return (
+            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+              <PlantTile
+                plant={item}
+                isMenuOpen={menuOpenId === item.id}
+                onPressBody={() =>
+                  nav.navigate("PlantDetails" as never, { id: item.id } as never)
+                }
+                onPressMenu={() =>
+                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
+                }
+                onEdit={() => openEditModal(item)}
+                onReminders={() => {}}
+                onDelete={() => askDelete(item)}
+              />
+            </Animated.View>
+          );
+        }}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}
         contentContainerStyle={s.listContent}
@@ -412,7 +463,6 @@ export default function PlantsScreen() {
             </View>
           </View>
         )}
-
       />
 
       {/* Only show when no modal is open */}
@@ -423,7 +473,6 @@ export default function PlantsScreen() {
             { key: "create", icon: "plus", label: "Create plant", onPress: openCreatePlantWizard },
             { key: "sort", icon: "sort", label: "Sort", onPress: () => setSortOpen(true) },
             { key: "filter", icon: "filter-variant", label: "Filter", onPress: () => setFilterOpen(true) },
-            // ⬇️ NEW: Clear filter (beneath Filter, above Locations) — same styling as Reminders
             ...(isFilterActive
               ? [
                   {
