@@ -16,7 +16,6 @@ type Props = {
   prevLabel?: string;
   nextLabel?: string;
   hidden?: boolean;
-  /** Extra clearance from bottom (e.g. tab bar). Defaults to 92. */
   bottomOffset?: number;
 };
 
@@ -62,7 +61,6 @@ export default function PreviousNextBar({
     };
   }, [step]);
 
-  // Built-in handlers if no overrides are provided
   const prevHandler = () => {
     if (step === "selectPlant") return;
     if (step === "location" && !hasPredefined) {
@@ -88,10 +86,12 @@ export default function PreviousNextBar({
   const handlePrev = onPrev || prevHandler;
   const handleNext = onNext || nextHandler;
 
-  const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
-  const isNextDisabled = !!nextDisabled;
+  // ⬇️ Disable Next on Step 3 until a location is selected
+  const blockNextBecauseOfStep = step === "location" && !state.selectedLocationId;
 
-  // Solid backgrounds + thin borders (match FAB thickness)
+  const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
+  const isNextDisabled = !!nextDisabled || blockNextBecauseOfStep;
+
   const prevBg = "#263238";
   const nextBg = "#0B7285";
   const borderStyle = {
@@ -111,7 +111,7 @@ export default function PreviousNextBar({
       }}
     >
       <View style={{ flexDirection: "row", gap: 12, alignItems: "center" }}>
-        {/* Left slot: Previous OR placeholder (keeps 50% width on step 1) */}
+        {/* Keep 50:50 layout — placeholder on Step 1 */}
         {defaults.hidePrev ? (
           <View style={{ flex: 1 }} pointerEvents="none" />
         ) : (
@@ -137,7 +137,6 @@ export default function PreviousNextBar({
           </Pressable>
         )}
 
-        {/* Right slot: Next / Create (always 50%) */}
         <Pressable
           onPress={handleNext}
           disabled={isNextDisabled}

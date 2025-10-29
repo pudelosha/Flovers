@@ -123,8 +123,6 @@ export default function Step03_SelectLocation({
     onScrollTop?.();
   };
 
-  const nextDisabled = !state.selectedLocationId;
-
   return (
     <View style={wiz.cardWrap}>
       {/* glass frame — match Step 1: Blur + white tint + thin border */}
@@ -172,57 +170,8 @@ export default function Step03_SelectLocation({
           <Text style={wiz.nextBtnText}>Create new location</Text>
         </Pressable>
 
-        {/* Prev / Next */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-          {/* Previous (flat, glass) */}
-          <Pressable
-            onPress={() => actions.goPrev()}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(255,255,255,0.12)",
-                paddingHorizontal: 14,
-                opacity: pressed ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
-
-          {/* Next (flat, teal) */}
-          <Pressable
-            onPress={() => actions.goNext()}
-            disabled={nextDisabled}
-            style={({ pressed }) => [
-              wiz.nextBtnWide,
-              {
-                flex: 1,
-                backgroundColor: "rgba(11,114,133,0.9)",
-                paddingHorizontal: 14,
-                opacity: pressed || nextDisabled ? 0.92 : 1,
-              },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
-        </View>
-
-        {/* User-defined locations only */}
-        <Text
-          style={[
-            wiz.sectionTitle,
-            { marginBottom: 12, marginTop: 18 },
-          ]}
-        >
+        {/* User-defined locations */}
+        <Text style={[wiz.sectionTitle, { marginBottom: 12, marginTop: 18 }]}>
           Your locations
         </Text>
 
