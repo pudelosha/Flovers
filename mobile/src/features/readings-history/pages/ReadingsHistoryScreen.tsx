@@ -1,7 +1,15 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { View, ScrollView, LayoutChangeEvent, Text, useWindowDimensions } from "react-native";
+import {
+  View,
+  ScrollView,
+  LayoutChangeEvent,
+  Text,
+  useWindowDimensions,
+  Animated,
+  Easing,
+} from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 
@@ -210,6 +218,33 @@ export default function ReadingsHistoryScreen() {
     nav.navigate(name as never);
   }, [nav]);
 
+  // ---------- ✨ ENTER/EXIT ANIMATION (like Profile/Login) ----------
+  const entry = useRef(new Animated.Value(0)).current;
+  const contentOpacity = entry;
+  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
+  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+
+  useFocusEffect(
+    useCallback(() => {
+      Animated.timing(entry, {
+        toValue: 1,
+        duration: 220,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+
+      return () => {
+        Animated.timing(entry, {
+          toValue: 0,
+          duration: 160,
+          easing: Easing.in(Easing.cubic),
+          useNativeDriver: true,
+        }).start();
+      };
+    }, [entry])
+  );
+  // -----------------------------------------------------------------
+
   if (loading) {
     return (
       <View style={{ flex: 1 }}>
@@ -240,49 +275,51 @@ export default function ReadingsHistoryScreen() {
         />
       </View>
 
-      <ScrollView contentContainerStyle={s.screenContent} showsVerticalScrollIndicator={false}>
-        {/* Glass frame */}
-        <View style={s.frameWrap}>
-          <View style={s.frameGlass}>
-            <BlurView
-              style={{ position: "absolute", inset: 0 } as any}
-              blurType="light"
-              blurAmount={TILE_BLUR}
-              overlayColor="transparent"
-              reducedTransparencyFallbackColor="transparent"
-            />
-            <View pointerEvents="none" style={s.frameTint} />
-            <View pointerEvents="none" style={s.frameBorder} />
+      <Animated.View style={{ flex: 1, opacity: contentOpacity, transform: [{ translateY: contentTranslateY }, { scale: contentScale }] }}>
+        <ScrollView contentContainerStyle={s.screenContent} showsVerticalScrollIndicator={false}>
+          {/* Glass frame */}
+          <View style={s.frameWrap}>
+            <View style={s.frameGlass}>
+              <BlurView
+                style={{ position: "absolute", inset: 0 } as any}
+                blurType="light"
+                blurAmount={TILE_BLUR}
+                overlayColor="transparent"
+                reducedTransparencyFallbackColor="transparent"
+              />
+              <View pointerEvents="none" style={s.frameTint} />
+              <View pointerEvents="none" style={s.frameBorder} />
+            </View>
+
+            <View style={s.inner}>
+              {/* Top segmented menu */}
+              <View onLayout={onLayoutSeg}>
+                <HistorySegmented value={range} onChange={setRange} />
+              </View>
+
+              {/* Plant name */}
+              <View onLayout={onLayoutName}>
+                <Text style={s.plantName}>{plantName}</Text>
+              </View>
+
+              {/* Date navigator */}
+              <View onLayout={onLayoutDate}>
+                <DateNavigator range={range} span={span} onPrev={prevSpan} onNext={nextSpan} />
+              </View>
+
+              {/* Chart with dynamic height */}
+              <HistoryChart labels={labels} values={values} color={series.color} yTicks={4} height={chartHeight} />
+
+              {/* Metric buttons */}
+              <View onLayout={onLayoutPills}>
+                <MetricPills value={metric} onChange={setMetric} />
+              </View>
+            </View>
           </View>
 
-          <View style={s.inner}>
-            {/* Top segmented menu */}
-            <View onLayout={onLayoutSeg}>
-              <HistorySegmented value={range} onChange={setRange} />
-            </View>
-
-            {/* Plant name */}
-            <View onLayout={onLayoutName}>
-              <Text style={s.plantName}>{plantName}</Text>
-            </View>
-
-            {/* Date navigator */}
-            <View onLayout={onLayoutDate}>
-              <DateNavigator range={range} span={span} onPrev={prevSpan} onNext={nextSpan} />
-            </View>
-
-            {/* Chart with dynamic height */}
-            <HistoryChart labels={labels} values={values} color={series.color} yTicks={4} height={chartHeight} />
-
-            {/* Metric buttons */}
-            <View onLayout={onLayoutPills}>
-              <MetricPills value={metric} onChange={setMetric} />
-            </View>
-          </View>
-        </View>
-
-        <View style={{ height: 60 }} />
-      </ScrollView>
+          <View style={{ height: 60 }} />
+        </ScrollView>
+      </Animated.View>
     </View>
   );
 }
