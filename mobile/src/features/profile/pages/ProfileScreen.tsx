@@ -1,8 +1,9 @@
 // src/features/profile/pages/ProfileScreen.tsx
-import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, TextInput, Pressable } from "react-native";
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import { View, Text, ScrollView, TextInput, Pressable, Animated, Easing } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
@@ -237,6 +238,34 @@ export default function ProfileScreen() {
     }
   };
 
+  // ---------- ✨ ENTER/EXIT CONTENT ANIMATION (like Login/Scanner) ----------
+  const entry = useRef(new Animated.Value(0)).current;
+  const contentOpacity = entry;
+  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
+  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+
+  useFocusEffect(
+    useCallback(() => {
+      // animate in on focus
+      Animated.timing(entry, {
+        toValue: 1,
+        duration: 220,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+
+      // animate out on blur
+      return () => {
+        Animated.timing(entry, {
+          toValue: 0,
+          duration: 160,
+          easing: Easing.in(Easing.cubic),
+          useNativeDriver: true,
+        }).start();
+      };
+    }, [entry])
+  );
+
   return (
     <View style={{ flex: 1 }}>
       {/* HEADER (no submenu, no right icon) */}
@@ -247,50 +276,52 @@ export default function ProfileScreen() {
         showSeparator={false}
       />
 
-      {/* CONTENT: all “subpages” combined */}
-      <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}>
-        <AccountCard
-          email={user?.email}
-          createdText={formatDate((user as any)?.date_joined)}
-          onPrompt={setPrompt}
-          onLogout={logout}
-        />
+      {/* CONTENT: all “subpages” combined (animated wrapper) */}
+      <Animated.View style={{ flex: 1, opacity: contentOpacity, transform: [{ translateY: contentTranslateY }, { scale: contentScale }] }}>
+        <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}>
+          <AccountCard
+            email={user?.email}
+            createdText={formatDate((user as any)?.date_joined)}
+            onPrompt={setPrompt}
+            onLogout={logout}
+          />
 
-        <NotificationsCard
-          emailDaily={emailDaily} setEmailDaily={setEmailDaily}
-          emailHour={emailHour} setEmailHour={setEmailHour}
-          email24h={email24h} setEmail24h={setEmail24h}
-          pushDaily={pushDaily} setPushDaily={setPushDaily}
-          pushHour={pushHour} setPushHour={setPushHour}
-          push24h={push24h} setPush24h={setPush24h}
-          formatHour={formatHour} incHour={incHour} decHour={decHour}
-          onSave={handleSaveNotifications}
-        />
+          <NotificationsCard
+            emailDaily={emailDaily} setEmailDaily={setEmailDaily}
+            emailHour={emailHour} setEmailHour={setEmailHour}
+            email24h={email24h} setEmail24h={setEmail24h}
+            pushDaily={pushDaily} setPushDaily={setPushDaily}
+            pushHour={pushHour} setPushHour={setPushHour}
+            push24h={push24h} setPush24h={setPush24h}
+            formatHour={formatHour} incHour={incHour} decHour={decHour}
+            onSave={handleSaveNotifications}
+          />
 
-        <SettingsCard
-          language={language} setLanguage={setLanguage}
-          langOpen={langOpen} setLangOpen={setLangOpen}
-          dateFormat={dateFormat} setDateFormat={setDateFormat}
-          dateOpen={dateOpen} setDateOpen={setDateOpen}
-          // NEW
-          temperatureUnit={temperatureUnit} setTemperatureUnit={setTemperatureUnit}
-          tempOpen={tempOpen} setTempOpen={setTempOpen}
-          measureUnit={measureUnit} setMeasureUnit={setMeasureUnit}
-          measureOpen={measureOpen} setMeasureOpen={setMeasureOpen}
-          tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
-          // NEW props for Background + FAB position
-          background={background} setBackground={setBackground}
-          bgOpen={bgOpen} setBgOpen={setBgOpen}
-          fabPosition={fabPosition} setFabPosition={setFabPosition}
-          fabOpen={fabOpen} setFabOpen={setFabOpen}
-          onSave={handleSaveSettings}
-        />
+          <SettingsCard
+            language={language} setLanguage={setLanguage}
+            langOpen={langOpen} setLangOpen={setLangOpen}
+            dateFormat={dateFormat} setDateFormat={setDateFormat}
+            dateOpen={dateOpen} setDateOpen={setDateOpen}
+            // NEW
+            temperatureUnit={temperatureUnit} setTemperatureUnit={setTemperatureUnit}
+            tempOpen={tempOpen} setTempOpen={setTempOpen}
+            measureUnit={measureUnit} setMeasureUnit={setMeasureUnit}
+            measureOpen={measureOpen} setMeasureOpen={setMeasureOpen}
+            tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
+            // NEW props for Background + FAB position
+            background={background} setBackground={setBackground}
+            bgOpen={bgOpen} setBgOpen={setBgOpen}
+            fabPosition={fabPosition} setFabPosition={setFabPosition}
+            fabOpen={fabOpen} setFabOpen={setFabOpen}
+            onSave={handleSaveSettings}
+          />
 
-        <SupportCard
-          onContact={() => setPrompt("contact")}
-          onBug={() => setPrompt("bug")}
-        />
-      </ScrollView>
+          <SupportCard
+            onContact={() => setPrompt("contact")}
+            onBug={() => setPrompt("bug")}
+          />
+        </ScrollView>
+      </Animated.View>
 
       {/* LOADING OVERLAY */}
       {loading && <CenteredSpinner overlay size={48} color="#FFFFFF" />}
