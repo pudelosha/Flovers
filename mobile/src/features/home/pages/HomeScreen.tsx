@@ -1,5 +1,5 @@
-import React, { useCallback, useMemo, useRef, useState } from "react";
-import { View, Pressable, FlatList, RefreshControl } from "react-native";
+import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
+import { View, Pressable, RefreshControl, Animated, Easing } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
@@ -34,7 +34,7 @@ export default function HomeScreen() {
   const [refreshing, setRefreshing] = useState(false);
 
   // FlatList ref to snap back to the top on focus
-  const listRef = useRef<FlatList<HomeTask>>(null);
+  const listRef = useRef<any>(null);
 
   // Local view filter for FAB "Show overdue" / "Show due today"
   const [viewFilter, setViewFilter] = useState<ViewFilter>("all");
@@ -63,12 +63,14 @@ export default function HomeScreen() {
     }
   }, []);
 
-  // Refresh data when the screen is focused (already done), keep it
+  // Refresh data when the screen is focused, but do NOT show stale tiles first.
+  // We clear the list immediately on focus so the Home page appears empty until fresh data arrives.
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
       (async () => {
         setLoading(true);
+        setTasks([]); // clear stale tiles right away to avoid flash
         try {
           await load();
         } finally {
@@ -85,9 +87,8 @@ export default function HomeScreen() {
   useFocusEffect(
     useCallback(() => {
       setMenuOpenId(null);
-      // Defer to next frame so FlatList is mounted before scrolling
       requestAnimationFrame(() => {
-        listRef.current?.scrollToOffset({ offset: 0, animated: false });
+        listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
       return undefined;
     }, [])
@@ -143,8 +144,54 @@ export default function HomeScreen() {
     });
   }, [tasks, viewFilter]);
 
-  // --- Initial page-load spinner (centered), same pattern as Plants ---
-  if (loading && !hasLoadedOnce) {
+  // ---------- ✨ ENTRANCE ANIMATION (no extra deps) ----------
+  // Animated value per task id
+  const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
+  // ensure value exists
+  const getAnimForId = (id: string) => {
+    const m = animMapRef.current;
+    if (!m.has(id)) m.set(id, new Animated.Value(0));
+    return m.get(id)!;
+  };
+
+  // Reset all current items to hidden (0)
+  const primeAnimations = useCallback((ids: string[]) => {
+    ids.forEach((id) => {
+      const v = getAnimForId(id);
+      v.setValue(0);
+    });
+  }, []);
+
+  // Run a nice staggered fade+translate for current list
+  const runStaggerIn = useCallback((ids: string[]) => {
+    const sequences = ids.map((id, i) => {
+      const v = getAnimForId(id);
+      return Animated.timing(v, {
+        toValue: 1,
+        duration: 280, // ANIMATION SPEED lower = faster
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+        delay: i * 50, // stagger
+      });
+    });
+    Animated.stagger(50, sequences).start();
+  }, []);
+
+  // Trigger animation when:
+  // - initial load finished (spinner disappears)
+  // - the filter changes
+  useEffect(() => {
+    if (loading) return;
+    const ids = derivedTasks.map((t) => t.id);
+    primeAnimations(ids);
+    // Defer a frame so list has laid out
+    const id = requestAnimationFrame(() => runStaggerIn(ids));
+    return () => cancelAnimationFrame(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, viewFilter, derivedTasks.length]);
+
+  // --- Spinner (match Plants: show whenever loading is true) ---
+  if (loading) {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
@@ -226,36 +273,47 @@ export default function HomeScreen() {
         <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
       )}
 
-      <FlatList
+      <Animated.FlatList
         ref={listRef}
         style={{ flex: 1 }}
         data={derivedTasks}
         keyExtractor={(t) => t.id}
-        renderItem={({ item }) => (
-          <TaskTile
-            task={item as Task} // HomeTask extends Task
-            isMenuOpen={menuOpenId === item.id}
-            onToggleMenu={() => onToggleMenu(item.id)}
-            onMarkComplete={async () => {
-              try {
-                await markHomeTaskComplete(item.id);
-                await load();
-                showToast("Task completed", "success");
-              } catch (e: any) {
-                showToast(e?.message ? `Complete failed: ${e.message}` : "Complete failed", "error");
-              }
-            }}
-            onEdit={() => {
-              // If you have a dedicated Reminders edit flow, use item.reminderId here.
-              // nav.navigate("Reminders" as never);
-            }}
-            onGoToPlant={() => {
-              // Hook up when plant details route is ready
-            }}
-            // ⬇️ No delete from Home tile menu
-            // onDelete={...}  // intentionally omitted
-          />
-        )}
+        renderItem={({ item }) => {
+          const v = getAnimForId(item.id);
+          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
+          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const opacity = v;
+
+          return (
+            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+              <TaskTile
+                task={item as Task} // HomeTask extends Task
+                isMenuOpen={menuOpenId === item.id}
+                onToggleMenu={() => onToggleMenu(item.id)}
+                onMarkComplete={async () => {
+                  try {
+                    await markHomeTaskComplete(item.id);
+                    await load();
+                    showToast("Task completed", "success");
+                  } catch (e: any) {
+                    showToast(
+                      e?.message ? `Complete failed: ${e.message}` : "Complete failed",
+                      "error"
+                    );
+                  }
+                }}
+                onEdit={() => {
+                  // If you have a dedicated Reminders edit flow, use item.reminderId here.
+                  // nav.navigate("Reminders" as never);
+                }}
+                onGoToPlant={() => {
+                  // Hook up when plant details route is ready
+                }}
+                // No delete from Home tile menu
+              />
+            </Animated.View>
+          );
+        }}
         ListHeaderComponent={<View style={{ height: 0 }} />}
         ListFooterComponent={<View style={{ height: 140 }} />}
         contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
