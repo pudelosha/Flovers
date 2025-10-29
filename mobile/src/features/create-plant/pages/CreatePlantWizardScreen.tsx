@@ -1,6 +1,6 @@
 ﻿// screens/CreatePlantWizardScreen.tsx
-import React, { useRef, useState } from "react";
-import { View, ScrollView, Text } from "react-native";
+import React, { useRef, useState, useEffect } from "react";
+import { View, ScrollView, Text, Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
 
@@ -21,14 +21,30 @@ import Step07_Photo from "../steps/Step07_Photo";
 import Step08_NameAndNotes from "../steps/Step08_NameAndNotes";
 import Step09_Creating from "../steps/Step09_Creating";
 
+import PreviousNextBar from "../components/PreviousNextBar";
+
+/** Order used to infer direction for step transition animations */
+const STEPS_ORDER = [
+  "selectPlant",
+  "traits",
+  "location",
+  "exposure",
+  "potType",
+  "autoTasks",
+  "photo",
+  "name",
+  "creating",
+] as const;
+
+type StepKey = typeof STEPS_ORDER[number];
+
 /** Resets the wizard state every time the screen gains focus. */
 function ResetOnFocus() {
   const { actions } = useCreatePlantWizard();
-  const scrollRef = useRef<ScrollView | null>(null); // only to satisfy TS in WizardBody; noop here
+  const scrollRef = useRef<ScrollView | null>(null); // noop here
 
   useFocusEffect(
     React.useCallback(() => {
-      // Hard reset to initial (step: "selectPlant", cleared createdPlantId, etc.)
       actions.reset();
       return () => {};
     }, [actions])
@@ -47,9 +63,7 @@ function WizardBody() {
 
   useFocusEffect(
     React.useCallback(() => {
-      // Fresh open every time we focus the screen
       setFreshOpen(true);
-      // make sure we start at top
       scrollRef.current?.scrollTo({ y: 0, animated: false });
       return () => {};
     }, [])
@@ -57,49 +71,102 @@ function WizardBody() {
 
   const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: true });
 
+  // ---------- ✨ STEP TRANSITION ANIMATION ----------
+  const entry = useRef(new Animated.Value(1)).current;
+  const prevStepRef = useRef<StepKey>("selectPlant");
+  const dirRef = useRef<1 | -1>(1);
+
+  const stepKey = state.step as StepKey;
+  useEffect(() => {
+    const prevKey = prevStepRef.current;
+    const steps = STEPS_ORDER;
+    const prevIdx = steps.indexOf(prevKey);
+    const nextIdx = steps.indexOf(stepKey);
+    if (prevIdx !== -1 && nextIdx !== -1) {
+      dirRef.current = nextIdx > prevIdx ? 1 : -1;
+    } else {
+      dirRef.current = 1;
+    }
+
+    entry.setValue(0);
+    Animated.timing(entry, {
+      toValue: 1,
+      duration: 260,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: true,
+    }).start();
+
+    prevStepRef.current = stepKey;
+  }, [stepKey, entry]);
+
+  const translateX = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [24 * dirRef.current, 0],
+  });
+  const opacity = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0, 1],
+  });
+  const scale = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+
+  // ---- Extra space beneath content so the floating bar doesn't overlap the card
+  const floatingBottomOffset = 80; // keep consistent with the bar
+  const extraBottomSpace = insets.bottom + floatingBottomOffset + 45;
+
   return (
-    <ScrollView
-      ref={scrollRef}
-      contentContainerStyle={[wiz.pageContent, { paddingBottom: insets.bottom + 120 }]}
-      keyboardShouldPersistTaps="handled"
-    >
-      {state.step === "selectPlant" && (
-        <Step01_SelectPlant
-          onScrollToTop={scrollTop}
-          freshOpen={freshOpen}
-          onCleared={() => setFreshOpen(false)}
-        />
-      )}
-      {state.step === "traits" && <Step02_PlantTraits />}
-      {state.step === "location" && <Step03_SelectLocation onScrollTop={scrollTop} />}
+    <>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={[wiz.pageContent, { paddingBottom: extraBottomSpace }]}
+        keyboardShouldPersistTaps="handled"
+      >
+        {/* Animated step container */}
+        <Animated.View style={{ opacity, transform: [{ translateX }, { scale }] }}>
+          {state.step === "selectPlant" && (
+            <Step01_SelectPlant
+              onScrollToTop={scrollTop}
+              freshOpen={freshOpen}
+              onCleared={() => setFreshOpen(false)}
+            />
+          )}
+          {state.step === "traits" && <Step02_PlantTraits />}
+          {state.step === "location" && <Step03_SelectLocation onScrollTop={scrollTop} />}
 
-      {state.step === "exposure" && <Step04_Exposure />}
-      {state.step === "potType" && <Step05_ContainerAndSoil />}
-      {state.step === "autoTasks" && <Step06_AutoTasks />}
-      {state.step === "photo" && <Step07_Photo />}
-      {state.step === "name" && <Step08_NameAndNotes />}
-      {state.step === "creating" && <Step09_Creating />}
+          {state.step === "exposure" && <Step04_Exposure />}
+          {state.step === "potType" && <Step05_ContainerAndSoil />}
+          {state.step === "autoTasks" && <Step06_AutoTasks />}
+          {state.step === "photo" && <Step07_Photo />}
+          {state.step === "name" && <Step08_NameAndNotes />}
+          {state.step === "creating" && <Step09_Creating />}
 
-      {!(
-        state.step === "selectPlant" ||
-        state.step === "traits" ||
-        state.step === "location" ||
-        state.step === "exposure" ||
-        state.step === "potType" ||
-        state.step === "autoTasks" ||
-        state.step === "photo" ||
-        state.step === "name" ||
-        state.step === "creating"
-      ) && (
-        <View style={wiz.cardWrap}>
-          <View style={wiz.cardGlass} />
-          <View style={wiz.cardInner}>
-            <Text style={wiz.title}>Step “{state.step}”</Text>
-            <Text style={wiz.subtitle}>This step will be implemented next.</Text>
-          </View>
-        </View>
-      )}
-    </ScrollView>
+          {!(
+            state.step === "selectPlant" ||
+            state.step === "traits" ||
+            state.step === "location" ||
+            state.step === "exposure" ||
+            state.step === "potType" ||
+            state.step === "autoTasks" ||
+            state.step === "photo" ||
+            state.step === "name" ||
+            state.step === "creating"
+          ) && (
+            <View style={wiz.cardWrap}>
+              <View style={wiz.cardGlass} />
+              <View style={wiz.cardInner}>
+                <Text style={wiz.title}>Step “{state.step}”</Text>
+                <Text style={wiz.subtitle}>This step will be implemented next.</Text>
+              </View>
+            </View>
+          )}
+        </Animated.View>
+      </ScrollView>
+
+      {/* Floating Previous / Next — solid backgrounds, logic handled internally */}
+      <PreviousNextBar bottomOffset={floatingBottomOffset} />
+    </>
   );
 }
 

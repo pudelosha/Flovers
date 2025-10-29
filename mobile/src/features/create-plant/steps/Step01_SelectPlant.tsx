@@ -114,13 +114,6 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
-  const onNext = () => {
-    actions.setPlantQuery(query.trim());
-    const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
-    if (hasPredefined) actions.goNext(); // Step 2
-    else actions.goTo("location");       // skip Step 2
-  };
-
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass}>
@@ -143,7 +136,7 @@ export default function Step01_SelectPlant({
 
         {/* Scan + Search row – both 64 high */}
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, marginBottom: 6 }}>
-          {/* Scan button — flat, no border, NO glare (removed artifacts), 64 high */}
+          {/* Scan button */}
           <Pressable
             onPress={() => navigation.navigate("Scanner")}
             style={{
@@ -162,7 +155,7 @@ export default function Step01_SelectPlant({
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
 
-          {/* Search field – 64 high with animated label */}
+          {/* Search field */}
           <View style={{ flex: 1 }}>
             <PlantSearchBox
               value={query}
@@ -177,28 +170,6 @@ export default function Step01_SelectPlant({
               suggestions={searchIndex}
             />
           </View>
-        </View>
-
-        {/* Next button — flat, no border, NO glare */}
-        <View style={wiz.footerRow}>
-          <Pressable
-            onPress={onNext}
-            style={[wiz.nextBtnWide, { width: "50%", alignSelf: "flex-end", paddingHorizontal: 14 }]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                gap: 8,
-                width: "100%",
-              }}
-            >
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
         </View>
 
         {/* Popular plants */}

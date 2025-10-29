@@ -17,7 +17,7 @@ import { fetchPlantProfile, fetchPlantSearchIndex } from "../../../api/services/
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
 
 export default function Step02_PlantTraits() {
-  const { state, actions } = useCreatePlantWizard();
+  const { state } = useCreatePlantWizard();
 
   const selected = state.selectedPlant;
   const selectedId = selected?.id;
@@ -27,9 +27,6 @@ export default function Step02_PlantTraits() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const onPrev = () => actions.goPrev();
-  const onNext = () => actions.goNext(); // goes to "location"
-
   useEffect(() => {
     let alive = true;
 
@@ -38,7 +35,6 @@ export default function Step02_PlantTraits() {
       setError(null);
 
       try {
-        // 1) If we have an id from Step 1, use it directly.
         if (selectedId) {
           const p = await fetchPlantProfile(String(selectedId), { auth: true });
           if (!alive) return;
@@ -47,7 +43,6 @@ export default function Step02_PlantTraits() {
           return;
         }
 
-        // 2) Otherwise try to resolve id via search-index by name/latin (fallback behavior).
         if (selectedName) {
           const all: Suggestion[] = await fetchPlantSearchIndex({ auth: true });
           const q = selectedName.toLowerCase();
@@ -68,7 +63,6 @@ export default function Step02_PlantTraits() {
           }
         }
 
-        // 3) Final fallback to mock
         const fallback =
           (selectedName && (PLANT_PROFILES_MOCK as any)[selectedName]) ||
           PLANT_PROFILES_MOCK.generic;
@@ -144,39 +138,6 @@ export default function Step02_PlantTraits() {
         {!!profile && !!profile.description && (
           <Text style={wiz.desc}>{profile.description}</Text>
         )}
-
-        {/* buttons – flat containers, no borders */}
-        <View style={[wiz.buttonRowDual, { alignSelf: "stretch" }]}>
-          {/* Previous (glass) */}
-          <Pressable
-            onPress={onPrev}
-            style={[
-              wiz.nextBtnWide,
-              { flex: 1, backgroundColor: "rgba(255,255,255,0.12)", paddingHorizontal: 14 },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-              <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
-              <Text style={wiz.nextBtnText}>Previous</Text>
-            </View>
-          </Pressable>
-
-          {/* Next (teal) */}
-          <Pressable
-            onPress={onNext}
-            style={[
-              wiz.nextBtnWide,
-              { flex: 1, backgroundColor: "rgba(11,114,133,0.9)", paddingHorizontal: 14 },
-            ]}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8, width: "100%" }}>
-              <Text style={wiz.nextBtnText}>Next</Text>
-              <MaterialCommunityIcons name="chevron-right" size={18} color="#FFFFFF" />
-            </View>
-          </Pressable>
-        </View>
 
         {/* preferences grid */}
         {!!profile && (
