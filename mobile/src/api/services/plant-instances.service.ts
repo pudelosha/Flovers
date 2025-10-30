@@ -60,7 +60,11 @@ export async function createPlantInstance(
 export async function fetchPlantInstances(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceListItem[]> {
-  return await request<ApiPlantInstanceListItem[]>("/api/plant-instances/", "GET", undefined, { auth: opts.auth ?? true });
+  const resp = await request<any>("/api/plant-instances/", "GET", undefined, { auth: opts.auth ?? true });
+  // DRF pagination support + safety
+  if (Array.isArray(resp)) return resp as ApiPlantInstanceListItem[];
+  if (resp && Array.isArray(resp.results)) return resp.results as ApiPlantInstanceListItem[];
+  return [];
 }
 
 /** ---- Detail for edit ---- */

@@ -18,42 +18,25 @@ import ConfirmDeleteReadingModal from "../components/ConfirmDeleteReadingModal";
 import DeviceSetupModal from "../components/DeviceSetupModal";
 import UpsertReadingDeviceModal from "../components/UpsertReadingDeviceModal";
 
+// === Services (readings) ===
+import {
+  listReadingDevices,
+  createReadingDevice,
+  updateReadingDevice,
+  deleteReadingDevice as apiDeleteReadingDevice,
+  rotateAccountSecret,
+  toReadingTile,
+} from "../../../api/services/readings.service";
+
+// === Services (plants → Plant Instances) ===
+import { ApiReadingDevice } from "../types/readings.types";
+
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
 type ReadingTileModel = BaseReadingTileModel & {
   location?: string | null;
   status?: Status; // whether the linked device is enabled/disabled
 };
-
-// ===== Mock: replace with your service =====
-async function fetchCurrentReadings(): Promise<ReadingTileModel[]> {
-  return [
-    {
-      id: "1",
-      name: "Ficus",
-      location: "Living room",
-      status: "enabled",
-      lastReadISO: new Date().toISOString(),
-      metrics: { temperature: 22, humidity: 61, light: 540, moisture: 44 },
-    },
-    {
-      id: "2",
-      name: "Monstera",
-      location: "Bedroom",
-      status: "disabled",
-      lastReadISO: new Date().toISOString(),
-      metrics: { temperature: 25, humidity: 58, light: 805, moisture: 35 },
-    },
-  ];
-}
-
-// Mock delete; replace with real API call
-async function deleteReading(id: string): Promise<void> {
-  // simulate latency
-  await new Promise((r) => setTimeout(r, 200));
-  return;
-}
-// ===========================================
 
 // ===== Filters shape for the modal =====
 type Filters = {
@@ -66,6 +49,9 @@ export default function ReadingsScreen() {
   const nav = useNavigation();
 
   const [items, setItems] = useState<ReadingTileModel[]>([]);
+  const [devicesRaw, setDevicesRaw] = useState<ApiReadingDevice[]>([]);
+  const [plantInstances, setPlantInstances] = useState<ApiPlantInstanceListItem[]>([]);
+
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
@@ -100,9 +86,18 @@ export default function ReadingsScreen() {
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
   const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
 
+  // ===== Load devices and plant instances =====
   const load = useCallback(async () => {
-    const data = await fetchCurrentReadings();
-    setItems(data);
+    const [devices, plantsList] = await Promise.all([
+      listReadingDevices(),
+      fetchPlantInstances(),
+    ]);
+
+    setDevicesRaw(devices);
+    setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
+
+    const tiles = devices.map(toReadingTile);
+    setItems(tiles);
   }, []);
 
   // Clear stale tiles on entry so only spinner is visible, then load and animate
@@ -127,7 +122,7 @@ export default function ReadingsScreen() {
     try { await load(); } finally { setRefreshing(false); }
   }, [load]);
 
-  // ----- Derived plants & locations for modal options -----
+  // ----- Derived plants & locations for Filter modal options (kept as-is) -----
   const plantOptions = useMemo(
     () => items.map((x) => ({ id: x.id, name: x.name })),
     [items]
@@ -138,7 +133,7 @@ export default function ReadingsScreen() {
     return Array.from(set);
   }, [items]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (staggered fade & translate) ----------
+  // ---------- ✨ ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -156,10 +151,10 @@ export default function ReadingsScreen() {
     const seq = ids.map((id, i) =>
       Animated.timing(getAnimForId(id), {
         toValue: 1,
-        duration: 280,           // lower = faster
+        duration: 280,
         easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
-        delay: i * 50,           // lower = tighter cascade
+        delay: i * 50,
       })
     );
     Animated.stagger(50, seq).start();
@@ -169,12 +164,12 @@ export default function ReadingsScreen() {
   const derivedItems = useMemo(() => {
     let arr = [...items];
 
-    // Filter by plant (exact via dropdown)
+    // Filter by plant (exact via dropdown; kept as-is)
     if (filters.plantId) {
       arr = arr.filter((x) => x.id === filters.plantId);
     }
 
-    // Legacy: allow contains filter by name if filterQuery is used elsewhere in the app
+    // Legacy: contains filter by name
     const q = (filterQuery || "").trim().toLowerCase();
     if (q) {
       arr = arr.filter((x) => x.name?.toLowerCase().includes(q));
@@ -242,8 +237,9 @@ export default function ReadingsScreen() {
   const confirmDelete = useCallback(async () => {
     if (!deleteId) return;
     try {
-      await deleteReading(deleteId);
+      await apiDeleteReadingDevice(Number(deleteId));
       setItems((prev) => prev.filter((x) => x.id !== deleteId));
+      setDevicesRaw((prev) => prev.filter((d) => String(d.id) !== deleteId));
     } finally {
       setDeleteVisible(false);
       setDeleteId(null);
@@ -252,12 +248,19 @@ export default function ReadingsScreen() {
   }, [deleteId]);
 
   // ---- Upsert (add/edit) handlers ----
-  const openAddDevice = useCallback(() => {
+  const openAddDevice = useCallback(async () => {
+    // If plants didn't load yet (or were empty due to a race), fetch right now
+    if (!plantInstances || plantInstances.length === 0) {
+      try {
+        const latest = await fetchPlantInstances();
+        setPlantInstances(Array.isArray(latest) ? latest : []);
+      } catch {}
+    }
     setUpsertMode("add");
     setUpsertReadingId(null);
     setUpsertReadingName(undefined);
     setUpsertVisible(true);
-  }, []);
+  }, [plantInstances]);
 
   const openEditDevice = useCallback((id: string) => {
     const item = items.find((x) => x.id === id);
@@ -267,11 +270,59 @@ export default function ReadingsScreen() {
     setUpsertVisible(true);
   }, [items]);
 
-  const handleUpsertSave = useCallback((payload: { mode: "add" | "edit"; readingId?: string | null }) => {
-    // Placeholder: invoke API and refresh items if needed
-    // For now we just close the modal.
+  const handleUpsertSave = useCallback(async (payload: {
+    mode: "add" | "edit";
+    plantId: string;
+    name: string;
+    notes?: string;
+    enabled?: boolean;
+    sensors: {
+      temperature: boolean;
+      humidity: boolean;
+      light: boolean;
+      moisture: boolean;
+      moistureAlertEnabled?: boolean;
+      moistureAlertPct?: number;
+    };
+    intervalHours: number;
+  }) => {
+    if (payload.mode === "add") {
+      await createReadingDevice({
+        plant: Number(payload.plantId),
+        device_name: payload.name,
+        notes: payload.notes,
+        interval_hours: payload.intervalHours,
+        sensors: {
+          temperature: payload.sensors.temperature,
+          humidity: payload.sensors.humidity,
+          light: payload.sensors.light,
+          moisture: payload.sensors.moisture,
+          moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
+          moisture_alert_pct: payload.sensors.moistureAlertPct,
+        },
+      });
+    } else {
+      if (!upsertReadingId) return;
+      await updateReadingDevice(Number(upsertReadingId), {
+        plant: Number(payload.plantId),
+        device_name: payload.name,
+        notes: payload.notes ?? null,
+        is_active: typeof payload.enabled === "boolean" ? payload.enabled : undefined,
+        interval_hours: payload.intervalHours,
+        sensors: {
+          temperature: payload.sensors.temperature,
+          humidity: payload.sensors.humidity,
+          light: payload.sensors.light,
+          moisture: payload.sensors.moisture,
+          moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
+          moisture_alert_pct: payload.sensors.moistureAlertPct ?? null,
+        },
+      });
+    }
+
     setUpsertVisible(false);
-  }, []);
+    await load(); // refresh devices + plant instances
+  }, [upsertReadingId, load]);
 
   if (loading) {
     return (
@@ -356,9 +407,7 @@ export default function ReadingsScreen() {
               key: "link-device",
               icon: "link-variant",
               label: "Link device",
-              onPress: () => {
-                openAddDevice();
-              },
+              onPress: openAddDevice,
             },
             {
               key: "device-setup",
@@ -422,7 +471,7 @@ export default function ReadingsScreen() {
         onApply={(f) => {
           setFilters(f);
           // Keep legacy "contains name" quick filter intact if used elsewhere
-          setFilterQuery(""); // modal now uses exact plant via dropdown
+          setFilterQuery("");
           setFilterModalVisible(false);
           setFilterSheetOpen(false);
         }}
@@ -444,33 +493,74 @@ export default function ReadingsScreen() {
         onConfirm={confirmDelete}
       />
 
-      {/* Device setup (dummy) */}
+      {/* Device setup */}
       <DeviceSetupModal
         visible={deviceSetupVisible}
         onClose={() => setDeviceSetupVisible(false)}
+        onRotateSecret={async () => {
+          try {
+            await rotateAccountSecret();
+          } catch {}
+        }}
       />
 
       {/* Upsert (add/edit) reading device */}
       <UpsertReadingDeviceModal
         visible={upsertVisible}
         mode={upsertMode}
-        plants={items.map((x) => ({ id: x.id, name: x.name, location: x.location ?? undefined }))}
-        initialPlantId={upsertMode === "edit" ? upsertReadingId ?? undefined : items[0]?.id}
+        // Feed REAL Plant Instances (handle various location field names)
+        plants={plantInstances.map((p) => ({
+          id: String(p.id),
+          name: (p as any).display_name ?? `Plant #${p.id}`,
+          location:
+            (p as any).location_name ??
+            (p as any).location_label ??
+            (p as any).location_display ??
+            (p as any).location?.name ??
+            (p as any).location ??
+            undefined,
+        }))}
+        // For edit: use device's plant FK. For add: empty to force "Select plant".
+        initialPlantId={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return dev ? String(dev.plant) : "";
+              })()
+            : ""
+        }
         initialName={upsertMode === "edit" ? upsertReadingName : ""}
         initialEnabled={
           upsertMode === "edit"
-            ? (items.find((i) => i.id === upsertReadingId)?.status ?? "enabled") === "enabled"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return dev ? !!dev.is_active : true;
+              })()
             : true
         }
+        // Defaults; you can feed real values later if needed
         initialSensors={{ temperature: true, humidity: true, light: true, moisture: true }}
         initialHumidityAlertPct={30}
-        initialIntervalHours={5}
+        initialIntervalHours={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return dev?.interval_hours ?? 5;
+              })()
+            : 5
+        }
         authSecret={upsertMode === "edit" ? "••••••••••••••" : undefined}
-        deviceKey={upsertMode === "edit" ? "ABC12DEF" : undefined}
+        deviceKey={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return dev?.device_key ?? "—";
+              })()
+            : undefined
+        }
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
       />
-
     </View>
   );
 }

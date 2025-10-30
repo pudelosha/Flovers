@@ -103,7 +103,6 @@ export default function UpsertReadingDeviceModal({
   // Keep plantId valid if it points to a missing plant; do NOT auto-pick first in add mode.
   React.useEffect(() => {
     if (plantId && !plants.some((p) => p.id === plantId)) {
-      // Invalid selection -> clear
       setPlantId("");
     }
   }, [plants, plantId]);
@@ -150,6 +149,7 @@ export default function UpsertReadingDeviceModal({
   const buildNameFromPlant = (p: PlantOption) => {
     const loc = p.location ? ` – ${p.location}` : "";
     return `${p.name}${loc}`;
+    // NOTE: we only auto-fill if name is empty; we never override a user-entered name.
   };
 
   // Required: both plantId and non-empty device name
