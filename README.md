@@ -209,3 +209,13 @@ POSTGRES_PASSWORD=apppass
 - 🌍 **Offline-first support:** caching and optimistic updates for poor connectivity.
 
 ---
+
+## 📸 Photos
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4b37dfa0-e3fd-4be2-a6fe-0928606ac974" width="19%" alt="Plants">
+  <img src="https://github.com/user-attachments/assets/cb5d8dd4-b3c2-46b0-a205-e727cb7e2b90" width="19%" alt="Create Plant">
+  <img src="https://github.com/user-attachments/assets/500a98ce-c073-42ec-8b47-a2f5d30ff687" width="19%" alt="Reminders">
+  <img src="https://github.com/user-attachments/assets/1f0629d8-4f66-49c8-9742-ea8a0fc37a31" width="19%" alt="Profile">
+  <img src="https://github.com/user-attachments/assets/4139ed8d-c45e-4c95-8c5f-6f477e233136" width="19%" alt="Modal">
+</p>
+
