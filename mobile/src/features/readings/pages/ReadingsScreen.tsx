@@ -454,11 +454,23 @@ export default function ReadingsScreen() {
       <UpsertReadingDeviceModal
         visible={upsertVisible}
         mode={upsertMode}
-        readingId={upsertReadingId}
-        readingName={upsertReadingName}
+        plants={items.map((x) => ({ id: x.id, name: x.name, location: x.location ?? undefined }))}
+        initialPlantId={upsertMode === "edit" ? upsertReadingId ?? undefined : items[0]?.id}
+        initialName={upsertMode === "edit" ? upsertReadingName : ""}
+        initialEnabled={
+          upsertMode === "edit"
+            ? (items.find((i) => i.id === upsertReadingId)?.status ?? "enabled") === "enabled"
+            : true
+        }
+        initialSensors={{ temperature: true, humidity: true, light: true, moisture: true }}
+        initialHumidityAlertPct={30}
+        initialIntervalHours={5}
+        authSecret={upsertMode === "edit" ? "••••••••••••••" : undefined}
+        deviceKey={upsertMode === "edit" ? "ABC12DEF" : undefined}
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
       />
+
     </View>
   );
 }
