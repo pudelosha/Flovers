@@ -15,6 +15,8 @@ import type { ReadingTileModel as BaseReadingTileModel } from "../types/readings
 import SortReadingsModal, { SortKey, SortDir } from "../components/SortReadingsModal";
 import FilterReadingsModal from "../components/FilterReadingsModal";
 import ConfirmDeleteReadingModal from "../components/ConfirmDeleteReadingModal";
+import DeviceSetupModal from "../components/DeviceSetupModal";
+import UpsertReadingDeviceModal from "../components/UpsertReadingDeviceModal";
 
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
@@ -88,6 +90,15 @@ export default function ReadingsScreen() {
   const [deleteVisible, setDeleteVisible] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deleteName, setDeleteName] = useState<string>("");
+
+  // Device setup (dummy) modal state
+  const [deviceSetupVisible, setDeviceSetupVisible] = useState(false);
+
+  // Upsert (add/edit) device modal state
+  const [upsertVisible, setUpsertVisible] = useState(false);
+  const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
+  const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
+  const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
 
   const load = useCallback(async () => {
     const data = await fetchCurrentReadings();
@@ -216,7 +227,9 @@ export default function ReadingsScreen() {
     !filterSheetOpen &&
     !sortModalVisible &&
     !filterModalVisible &&
-    !deleteVisible;
+    !deleteVisible &&
+    !deviceSetupVisible &&
+    !upsertVisible;
 
   // ---- Delete handlers ----
   const openDeleteFor = useCallback((id: string) => {
@@ -237,6 +250,28 @@ export default function ReadingsScreen() {
       setDeleteName("");
     }
   }, [deleteId]);
+
+  // ---- Upsert (add/edit) handlers ----
+  const openAddDevice = useCallback(() => {
+    setUpsertMode("add");
+    setUpsertReadingId(null);
+    setUpsertReadingName(undefined);
+    setUpsertVisible(true);
+  }, []);
+
+  const openEditDevice = useCallback((id: string) => {
+    const item = items.find((x) => x.id === id);
+    setUpsertMode("edit");
+    setUpsertReadingId(id);
+    setUpsertReadingName(item?.name);
+    setUpsertVisible(true);
+  }, [items]);
+
+  const handleUpsertSave = useCallback((payload: { mode: "add" | "edit"; readingId?: string | null }) => {
+    // Placeholder: invoke API and refresh items if needed
+    // For now we just close the modal.
+    setUpsertVisible(false);
+  }, []);
 
   if (loading) {
     return (
@@ -285,7 +320,10 @@ export default function ReadingsScreen() {
                 onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
                 onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
                 onHistory={() => { setMenuOpenId(null); nav.navigate("ReadingsHistory" as never, { id: item.id } as never); }}
-                onEdit={() => { setMenuOpenId(null); nav.navigate("EditSensors" as never, { id: item.id } as never); }}
+                onEdit={() => {
+                  setMenuOpenId(null);
+                  openEditDevice(item.id);
+                }}
                 onDelete={() => {
                   setMenuOpenId(null);
                   openDeleteFor(item.id);
@@ -318,13 +356,15 @@ export default function ReadingsScreen() {
               key: "link-device",
               icon: "link-variant",
               label: "Link device",
-              onPress: () => nav.navigate("Scanner" as never), // QR flow to pair device
+              onPress: () => {
+                openAddDevice();
+              },
             },
             {
               key: "device-setup",
               icon: "key-variant",
               label: "Device setup",
-              onPress: () => nav.navigate("DeviceSetup" as never), // screen to show secret, sample code, instructions
+              onPress: () => setDeviceSetupVisible(true),
             },
             {
               key: "sort",
@@ -402,6 +442,22 @@ export default function ReadingsScreen() {
           setDeleteName("");
         }}
         onConfirm={confirmDelete}
+      />
+
+      {/* Device setup (dummy) */}
+      <DeviceSetupModal
+        visible={deviceSetupVisible}
+        onClose={() => setDeviceSetupVisible(false)}
+      />
+
+      {/* Upsert (add/edit) reading device */}
+      <UpsertReadingDeviceModal
+        visible={upsertVisible}
+        mode={upsertMode}
+        readingId={upsertReadingId}
+        readingName={upsertReadingName}
+        onCancel={() => setUpsertVisible(false)}
+        onSave={handleUpsertSave}
       />
     </View>
   );
