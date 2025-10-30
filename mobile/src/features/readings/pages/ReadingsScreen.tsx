@@ -28,8 +28,14 @@ import {
   toReadingTile,
 } from "../../../api/services/readings.service";
 
-// === Services (plants → Plant Instances) ===
+// Pull the API type from centralized readings types
 import { ApiReadingDevice } from "../types/readings.types";
+
+// === Services (plants → Plant Instances) ===
+import {
+  fetchPlantInstances,                    // ✅ FIX: import the function
+  type ApiPlantInstanceListItem,          // ✅ FIX: import the type
+} from "../../../api/services/plant-instances.service";
 
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
