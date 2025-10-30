@@ -11,9 +11,10 @@ import ReadingTile from "../components/ReadingTile";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/readings.constants";
 import type { ReadingTileModel as BaseReadingTileModel } from "../types/readings.types";
 
-// New modals
+// Modals
 import SortReadingsModal, { SortKey, SortDir } from "../components/SortReadingsModal";
 import FilterReadingsModal from "../components/FilterReadingsModal";
+import ConfirmDeleteReadingModal from "../components/ConfirmDeleteReadingModal";
 
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
@@ -42,6 +43,13 @@ async function fetchCurrentReadings(): Promise<ReadingTileModel[]> {
       metrics: { temperature: 25, humidity: 58, light: 805, moisture: 35 },
     },
   ];
+}
+
+// Mock delete; replace with real API call
+async function deleteReading(id: string): Promise<void> {
+  // simulate latency
+  await new Promise((r) => setTimeout(r, 200));
+  return;
 }
 // ===========================================
 
@@ -75,6 +83,11 @@ export default function ReadingsScreen() {
 
   // Backwards-compat: legacy quick filter query (maps to "name contains"), keep existing logic intact
   const [filterQuery, setFilterQuery] = useState<string>("");
+
+  // Delete modal state
+  const [deleteVisible, setDeleteVisible] = useState(false);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [deleteName, setDeleteName] = useState<string>("");
 
   const load = useCallback(async () => {
     const data = await fetchCurrentReadings();
@@ -197,7 +210,33 @@ export default function ReadingsScreen() {
   }, [loading, derivedItems.length]);
 
   // Hide FAB when any sheet/menu/modal is open
-  const showFAB = !menuOpenId && !sortSheetOpen && !filterSheetOpen && !sortModalVisible && !filterModalVisible;
+  const showFAB =
+    !menuOpenId &&
+    !sortSheetOpen &&
+    !filterSheetOpen &&
+    !sortModalVisible &&
+    !filterModalVisible &&
+    !deleteVisible;
+
+  // ---- Delete handlers ----
+  const openDeleteFor = useCallback((id: string) => {
+    const item = items.find((x) => x.id === id);
+    setDeleteId(id);
+    setDeleteName(item?.name ?? "this reading");
+    setDeleteVisible(true);
+  }, [items]);
+
+  const confirmDelete = useCallback(async () => {
+    if (!deleteId) return;
+    try {
+      await deleteReading(deleteId);
+      setItems((prev) => prev.filter((x) => x.id !== deleteId));
+    } finally {
+      setDeleteVisible(false);
+      setDeleteId(null);
+      setDeleteName("");
+    }
+  }, [deleteId]);
 
   if (loading) {
     return (
@@ -247,7 +286,10 @@ export default function ReadingsScreen() {
                 onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
                 onHistory={() => { setMenuOpenId(null); nav.navigate("ReadingsHistory" as never, { id: item.id } as never); }}
                 onEdit={() => { setMenuOpenId(null); nav.navigate("EditSensors" as never, { id: item.id } as never); }}
-                onDelete={() => { setMenuOpenId(null); nav.navigate("DeleteReadingConfirm" as never, { id: item.id } as never); }}
+                onDelete={() => {
+                  setMenuOpenId(null);
+                  openDeleteFor(item.id);
+                }}
                 onPlantDetails={() => { setMenuOpenId(null); nav.navigate("PlantDetails" as never, { id: item.id } as never); }}
                 // deep-link into ReadingsHistory with the selected metric
                 onMetricPress={(metric) =>
@@ -348,6 +390,18 @@ export default function ReadingsScreen() {
           setFilters({});
           setFilterQuery("");
         }}
+      />
+
+      {/* Delete modal */}
+      <ConfirmDeleteReadingModal
+        visible={deleteVisible}
+        name={deleteName}
+        onCancel={() => {
+          setDeleteVisible(false);
+          setDeleteId(null);
+          setDeleteName("");
+        }}
+        onConfirm={confirmDelete}
       />
     </View>
   );
