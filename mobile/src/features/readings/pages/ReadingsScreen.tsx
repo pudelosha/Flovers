@@ -9,18 +9,48 @@ import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/readings.styles";
 import ReadingTile from "../components/ReadingTile";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/readings.constants";
-import type { ReadingTileModel } from "../types/readings.types";
+import type { ReadingTileModel as BaseReadingTileModel } from "../types/readings.types";
+
+// New modals
+import SortReadingsModal, { SortKey, SortDir } from "../components/SortReadingsModal";
+import FilterReadingsModal from "../components/FilterReadingsModal";
+
+// ===== Extend the reading model locally (non-breaking) =====
+type Status = "enabled" | "disabled";
+type ReadingTileModel = BaseReadingTileModel & {
+  location?: string | null;
+  status?: Status; // whether the linked device is enabled/disabled
+};
 
 // ===== Mock: replace with your service =====
 async function fetchCurrentReadings(): Promise<ReadingTileModel[]> {
   return [
-    { id: "1", name: "Ficus",    lastReadISO: new Date().toISOString(), metrics: { temperature: 22, humidity: 61, light: 540, moisture: 44 } },
-    { id: "2", name: "Monstera", lastReadISO: new Date().toISOString(), metrics: { temperature: 25, humidity: 58, light: 805, moisture: 35 } },
+    {
+      id: "1",
+      name: "Ficus",
+      location: "Living room",
+      status: "enabled",
+      lastReadISO: new Date().toISOString(),
+      metrics: { temperature: 22, humidity: 61, light: 540, moisture: 44 },
+    },
+    {
+      id: "2",
+      name: "Monstera",
+      location: "Bedroom",
+      status: "disabled",
+      lastReadISO: new Date().toISOString(),
+      metrics: { temperature: 25, humidity: 58, light: 805, moisture: 35 },
+    },
   ];
 }
 // ===========================================
 
-type SortDir = "asc" | "desc";
+// ===== Filters shape for the modal =====
+type Filters = {
+  plantId?: string;     // exact plant from dropdown
+  location?: string;    // exact
+  status?: Status;      // exact
+};
 
 export default function ReadingsScreen() {
   const nav = useNavigation();
@@ -30,14 +60,20 @@ export default function ReadingsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // FAB-related sheet visibility (to control hiding logic)
-  const [sortOpen, setSortOpen] = useState(false);
-  const [filterOpen, setFilterOpen] = useState(false);
+  // FAB-related flags (to hide FAB when any sheet/menu is open)
+  const [sortSheetOpen, setSortSheetOpen] = useState(false);
+  const [filterSheetOpen, setFilterSheetOpen] = useState(false);
 
-  // very simple sort: by plant name
-  const [sortDir, setSortDir] = useState<SortDir>("asc");
+  // Sort modal state
+  const [sortModalVisible, setSortModalVisible] = useState(false);
+  const [sortKey, setSortKey] = useState<SortKey>("name"); // name | location | lastRead
+  const [sortDir, setSortDir] = useState<SortDir>("asc");   // asc | desc
 
-  // simple filter: name contains query (extend later if needed)
+  // Filter modal state
+  const [filterModalVisible, setFilterModalVisible] = useState(false);
+  const [filters, setFilters] = useState<Filters>({}); // plantId, location, status
+
+  // Backwards-compat: legacy quick filter query (maps to "name contains"), keep existing logic intact
   const [filterQuery, setFilterQuery] = useState<string>("");
 
   const load = useCallback(async () => {
@@ -67,20 +103,16 @@ export default function ReadingsScreen() {
     try { await load(); } finally { setRefreshing(false); }
   }, [load]);
 
-  const derivedItems = useMemo(() => {
-    let arr = [...items];
-
-    const q = filterQuery.trim().toLowerCase();
-    if (q) arr = arr.filter((x) => x.name.toLowerCase().includes(q));
-
-    arr.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-    if (sortDir === "desc") arr.reverse();
-
-    return arr;
-  }, [items, sortDir, filterQuery]);
-
-  // Hide FAB when any sheet/menu is open
-  const showFAB = !menuOpenId && !sortOpen && !filterOpen;
+  // ----- Derived plants & locations for modal options -----
+  const plantOptions = useMemo(
+    () => items.map((x) => ({ id: x.id, name: x.name })),
+    [items]
+  );
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    items.forEach((x) => { if (x.location) set.add(x.location); });
+    return Array.from(set);
+  }, [items]);
 
   // ---------- ✨ ENTRANCE ANIMATION (staggered fade & translate) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -109,6 +141,52 @@ export default function ReadingsScreen() {
     Animated.stagger(50, seq).start();
   }, []);
 
+  // ----- Apply filtering & sorting -----
+  const derivedItems = useMemo(() => {
+    let arr = [...items];
+
+    // Filter by plant (exact via dropdown)
+    if (filters.plantId) {
+      arr = arr.filter((x) => x.id === filters.plantId);
+    }
+
+    // Legacy: allow contains filter by name if filterQuery is used elsewhere in the app
+    const q = (filterQuery || "").trim().toLowerCase();
+    if (q) {
+      arr = arr.filter((x) => x.name?.toLowerCase().includes(q));
+    }
+
+    // Filter by location (exact)
+    if (filters.location) {
+      arr = arr.filter((x) => (x.location ?? "").toLowerCase() === filters.location!.toLowerCase());
+    }
+
+    // Filter by status (exact)
+    if (filters.status) {
+      arr = arr.filter((x) => (x.status ?? "enabled") === filters.status);
+    }
+
+    // Sorting
+    const collator = new Intl.Collator(undefined, { sensitivity: "base" });
+
+    arr.sort((a, b) => {
+      let cmp = 0;
+      if (sortKey === "name") {
+        cmp = collator.compare(a.name ?? "", b.name ?? "");
+      } else if (sortKey === "location") {
+        cmp = collator.compare(a.location ?? "", b.location ?? "");
+      } else {
+        // lastRead
+        const ad = a.lastReadISO ? new Date(a.lastReadISO).getTime() : -Infinity;
+        const bd = b.lastReadISO ? new Date(b.lastReadISO).getTime() : -Infinity;
+        cmp = ad === bd ? 0 : ad < bd ? -1 : 1;
+      }
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+
+    return arr;
+  }, [items, filters, filterQuery, sortKey, sortDir]);
+
   useEffect(() => {
     if (loading) return;
     const ids = derivedItems.map((x) => x.id);
@@ -117,6 +195,9 @@ export default function ReadingsScreen() {
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, derivedItems.length]);
+
+  // Hide FAB when any sheet/menu/modal is open
+  const showFAB = !menuOpenId && !sortSheetOpen && !filterSheetOpen && !sortModalVisible && !filterModalVisible;
 
   if (loading) {
     return (
@@ -186,25 +267,30 @@ export default function ReadingsScreen() {
         keyboardShouldPersistTaps="handled"
       />
 
-      {/* FAB — hidden when any sheet/menu is open */}
+      {/* FAB — hidden when any sheet/menu/modal is open */}
       {showFAB && (
         <FAB
           bottomOffset={92}
           actions={[
             {
-              key: "configure",
-              icon: "cog-outline",
-              label: "Configure sensors",
-              onPress: () => nav.navigate("EditSensors" as never),
+              key: "link-device",
+              icon: "link-variant",
+              label: "Link device",
+              onPress: () => nav.navigate("Scanner" as never), // QR flow to pair device
+            },
+            {
+              key: "device-setup",
+              icon: "key-variant",
+              label: "Device setup",
+              onPress: () => nav.navigate("DeviceSetup" as never), // screen to show secret, sample code, instructions
             },
             {
               key: "sort",
               icon: "sort",
               label: "Sort",
               onPress: () => {
-                setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-                setSortOpen(true);
-                setTimeout(() => setSortOpen(false), 250);
+                setSortSheetOpen(true);
+                setSortModalVisible(true);
               },
             },
             {
@@ -212,16 +298,57 @@ export default function ReadingsScreen() {
               icon: "filter-variant",
               label: "Filter",
               onPress: () => {
-                setFilterOpen(true);
-                setTimeout(() => {
-                  setFilterQuery("");
-                  setFilterOpen(false);
-                }, 250);
+                setFilterSheetOpen(true);
+                setFilterModalVisible(true);
               },
             },
           ]}
         />
       )}
+
+      {/* Sort modal */}
+      <SortReadingsModal
+        visible={sortModalVisible}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => {
+          setSortModalVisible(false);
+          setSortSheetOpen(false);
+        }}
+        onApply={(key, dir) => {
+          setSortKey(key);
+          setSortDir(dir);
+          setSortModalVisible(false);
+          setSortSheetOpen(false);
+        }}
+        onReset={() => {
+          setSortKey("name");
+          setSortDir("asc");
+        }}
+      />
+
+      {/* Filter modal */}
+      <FilterReadingsModal
+        visible={filterModalVisible}
+        plants={plantOptions}
+        locations={locationOptions}
+        filters={filters}
+        onCancel={() => {
+          setFilterModalVisible(false);
+          setFilterSheetOpen(false);
+        }}
+        onApply={(f) => {
+          setFilters(f);
+          // Keep legacy "contains name" quick filter intact if used elsewhere
+          setFilterQuery(""); // modal now uses exact plant via dropdown
+          setFilterModalVisible(false);
+          setFilterSheetOpen(false);
+        }}
+        onClearAll={() => {
+          setFilters({});
+          setFilterQuery("");
+        }}
+      />
     </View>
   );
 }
