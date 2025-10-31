@@ -210,6 +210,16 @@ export default function ReadingsScreen() {
     Animated.stagger(50, seq).start();
   }, []);
 
+  // Is any filter active? (includes legacy text query)
+  const isFilterActive = useMemo(() => {
+    return Boolean(
+      filters.plantId ||
+      filters.location ||
+      filters.status ||
+      (filterQuery && filterQuery.trim().length > 0)
+    );
+  }, [filters, filterQuery]);
+
   // ----- Apply filtering & sorting -----
   const derivedItems = useMemo(() => {
     let arr = [...items];
@@ -262,8 +272,7 @@ export default function ReadingsScreen() {
     primeAnimations(ids);
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loading, derivedItems.length]);
+  }, [loading, derivedItems.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Keep FAB visible even when a 3-dot tile menu is open (difference vs. before)
   const showFAB =
@@ -562,6 +571,19 @@ export default function ReadingsScreen() {
                 setFilterModalVisible(true);
               },
             },
+            ...(isFilterActive
+              ? [
+                  {
+                    key: "clear-filter",
+                    icon: "filter-remove",
+                    label: "Clear filter",
+                    onPress: () => {
+                      setFilters({});
+                      setFilterQuery("");
+                    },
+                  } as const,
+                ]
+              : []),
           ]}
         />
       )}
@@ -692,6 +714,51 @@ export default function ReadingsScreen() {
         }
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
+      />
+
+      {/* Sort modal */}
+      <SortReadingsModal
+        visible={sortModalVisible}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => {
+          setSortModalVisible(false);
+          setSortSheetOpen(false);
+        }}
+        onApply={(k, d) => {
+          setSortKey(k);
+          setSortDir(d);
+          setSortModalVisible(false);
+          setSortSheetOpen(false);
+        }}
+        onReset={() => {
+          setSortKey("name");
+          setSortDir("asc");
+          setSortModalVisible(false);
+          setSortSheetOpen(false);
+        }}
+      />
+
+      {/* Filter modal */}
+      <FilterReadingsModal
+        visible={filterModalVisible}
+        plants={plantOptions}
+        locations={locationOptions}
+        filters={filters}
+        onCancel={() => {
+          setFilterModalVisible(false);
+          setFilterSheetOpen(false);
+        }}
+        onApply={(next) => {
+          setFilters(next);
+          setFilterModalVisible(false);
+          setFilterSheetOpen(false);
+        }}
+        onClearAll={() => {
+          setFilters({});
+          setFilterModalVisible(false);
+          setFilterSheetOpen(false);
+        }}
       />
 
       {/* Top Snackbar (shared toast) */}
