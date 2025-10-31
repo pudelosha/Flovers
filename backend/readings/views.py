@@ -139,12 +139,20 @@ def device_setup(request):
         "sample_payloads": {
             "ingest": {
                 "secret": "ACCOUNT_SECRET",
-                "device_id": 123,
+                # device_id is optional when device_key is provided
+                # "device_id": 123,
                 "device_key": "AB12CD34",
                 "timestamp": "2025-10-31T13:45:00Z",
                 "metrics": {"temperature": 22.8, "humidity": 41.2, "light": 771, "moisture": 29}
             },
-            "read": "/api/readings/feed/?secret=...&device_id=...&device_key=..."
+            "read": {
+                "secret": "ACCOUNT_SECRET",
+                # "device_id": 123,  # optional
+                "device_key": "AB12CD34",
+                "from": "2025-10-30T00:00:00Z",
+                "to":   "2025-10-31T23:59:59Z",
+                "limit": 200
+            }
         },
         "secret": secret,
     })
@@ -157,7 +165,8 @@ def ingest(request):
     """
     Body:
     {
-      "secret":"...","device_id":123,"device_key":"AB12CD34",
+      "secret":"...","device_key":"AB12CD34",            # device_id optional
+      "device_id":123,                                   # optional when device_key present
       "timestamp":"ISO-8601 optional",
       "metrics":{"temperature":22.8,"humidity":41.2,"light":771,"moisture":29}
     }
@@ -167,16 +176,21 @@ def ingest(request):
     secret_str = request.data.get("secret")
     metrics = request.data.get("metrics") or {}
 
-    if not (device_id and device_key and secret_str):
-        return Response({"detail": "device_id, device_key and secret are required"}, status=400)
+    # Require at least secret + device_key
+    if not (device_key and secret_str):
+        return Response({"detail": "device_key and secret are required"}, status=400)
 
-    device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key)
-    try:
-        acct = device.user.readings_secret
-    except AccountSecret.DoesNotExist:
-        raise Http404("Secret not configured")
-    if acct.secret != secret_str:
+    # Resolve account by secret first
+    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
+    if not acct:
         return Response({"detail": "invalid credentials"}, status=403)
+
+    # Find device: prefer id+key if id provided, else key within this user's devices
+    if device_id:
+        device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key, user=acct.user)
+    else:
+        device = get_object_or_404(ReadingDevice, device_key=device_key, user=acct.user)
+
     if not device.is_active:
         return Response({"detail": "device disabled"}, status=403)
 
@@ -220,22 +234,24 @@ def ingest(request):
 @throttle_classes([FeedPerDeviceThrottle])
 def feed(request):
     """
-    Query: ?secret=...&device_id=123&device_key=AB12CD34[&from=ISO][&to=ISO][&limit=200]
+    Query: ?secret=...&device_key=AB12CD34[&device_id=123][&from=ISO][&to=ISO][&limit=200]
+    (device_id optional — device_key + secret is sufficient)
     """
     device_id = request.query_params.get("device_id")
     device_key = request.query_params.get("device_key")
     secret_str = request.query_params.get("secret")
 
-    if not (device_id and device_key and secret_str):
-        return Response({"detail": "device_id, device_key and secret are required"}, status=400)
+    if not (device_key and secret_str):
+        return Response({"detail": "device_key and secret are required"}, status=400)
 
-    device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key)
-    try:
-        acct = device.user.readings_secret
-    except AccountSecret.DoesNotExist:
-        raise Http404("Secret not configured")
-    if acct.secret != secret_str:
+    acct = AccountSecret.objects.select_related("user").filter(secret=secret_str).first()
+    if not acct:
         return Response({"detail": "invalid credentials"}, status=403)
+
+    if device_id:
+        device = get_object_or_404(ReadingDevice, id=device_id, device_key=device_key, user=acct.user)
+    else:
+        device = get_object_or_404(ReadingDevice, device_key=device_key, user=acct.user)
 
     qs = device.readings.all()
     if "from" in request.query_params:

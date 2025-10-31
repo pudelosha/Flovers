@@ -81,13 +81,20 @@ AUTH_USER_MODEL = "accounts.User"
 
 # --- DRF ---
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
-    "DEFAULT_THROTTLE_CLASSES": [
-        "rest_framework.throttling.UserRateThrottle",
-        "rest_framework.throttling.AnonRateThrottle",
-    ],
-    "DEFAULT_THROTTLE_RATES": {"user": "200/min", "anon": "50/min"},
-    "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
+  "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
+  "DEFAULT_THROTTLE_CLASSES": [
+      "rest_framework.throttling.UserRateThrottle",
+      "rest_framework.throttling.AnonRateThrottle",
+      "readings.throttles.IngestPerDeviceThrottle",
+      "readings.throttles.FeedPerDeviceThrottle",
+  ],
+  "DEFAULT_THROTTLE_RATES": {
+      "user": "200/min",
+      "anon": "50/min",
+      "ingest_per_device": "60/hour",
+      "feed_per_device": "120/hour",
+  },
+  "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 }
 
 # --- JWT ---
