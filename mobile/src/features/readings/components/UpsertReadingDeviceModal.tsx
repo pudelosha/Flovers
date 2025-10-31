@@ -1,4 +1,3 @@
-// UpsertReadingDeviceModal.tsx
 import React from "react";
 import { View, Text, Pressable, TextInput, ScrollView, Switch } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -97,9 +96,78 @@ export default function UpsertReadingDeviceModal({
   // ---- hooks (always run) ----
   const [plantOpen, setPlantOpen] = React.useState(false);
 
-  // Add mode: start empty (force "Select plant"), Edit mode: respect initialPlantId if provided
-  const initialId = mode === "edit" && initialPlantId ? initialPlantId : "";
-  const [plantId, setPlantId] = React.useState<string>(initialId);
+  // Local state (will be reset by sync effect below when props/visibility change)
+  const [plantId, setPlantId] = React.useState<string>(mode === "edit" && initialPlantId ? initialPlantId : "");
+  const [name, setName] = React.useState<string>(initialName ?? "");
+  const [notes, setNotes] = React.useState<string>(initialNotes ?? "");
+  const [enabled, setEnabled] = React.useState<boolean>(initialEnabled);
+
+  const [sensorTemp, setSensorTemp] = React.useState<boolean>(initialSensors?.temperature ?? true);
+  const [sensorHum, setSensorHum] = React.useState<boolean>(initialSensors?.humidity ?? true);
+  const [sensorLight, setSensorLight] = React.useState<boolean>(initialSensors?.light ?? true);
+  const [sensorMoist, setSensorMoist] = React.useState<boolean>(initialSensors?.moisture ?? true);
+
+  const defaultMoistPct =
+    typeof initialMoistureAlertPct === "number"
+      ? initialMoistureAlertPct
+      : typeof initialHumidityAlertPct === "number"
+      ? initialHumidityAlertPct
+      : 30;
+
+  const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(Boolean(initialMoistureAlertEnabled));
+  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(Math.max(0, Math.min(100, defaultMoistPct)));
+
+  const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+  const [intervalHours, setIntervalHours] = React.useState<number>(clamp(initialIntervalHours, 1, 24));
+
+  // show/hide secret
+  const [showSecret, setShowSecret] = React.useState(false);
+
+  // Close dropdown when modal opens
+  React.useEffect(() => { if (visible) setPlantOpen(false); }, [visible]);
+
+  // ✅ SYNC EFFECT: when opening the modal (or when any initial* changes), re-seed local state
+  React.useEffect(() => {
+    if (!visible) return;
+    const nextPlantId = mode === "edit" && initialPlantId ? initialPlantId : "";
+    setPlantId(nextPlantId);
+    setName(initialName ?? "");
+    setNotes(initialNotes ?? "");
+    setEnabled(initialEnabled);
+
+    setSensorTemp(initialSensors?.temperature ?? true);
+    setSensorHum(initialSensors?.humidity ?? true);
+    setSensorLight(initialSensors?.light ?? true);
+    setSensorMoist(initialSensors?.moisture ?? true);
+
+    const moistPct =
+      typeof initialMoistureAlertPct === "number"
+        ? initialMoistureAlertPct
+        : typeof initialHumidityAlertPct === "number"
+        ? initialHumidityAlertPct
+        : 30;
+
+    setMoistAlertEnabled(Boolean(initialMoistureAlertEnabled));
+    setMoistAlertPct(Math.max(0, Math.min(100, moistPct)));
+
+    setIntervalHours(clamp(initialIntervalHours ?? 5, 1, 24));
+    setShowSecret(false);
+  }, [
+    visible,
+    mode,
+    initialPlantId,
+    initialName,
+    initialNotes,
+    initialEnabled,
+    initialSensors?.temperature,
+    initialSensors?.humidity,
+    initialSensors?.light,
+    initialSensors?.moisture,
+    initialMoistureAlertEnabled,
+    initialMoistureAlertPct,
+    initialHumidityAlertPct,
+    initialIntervalHours,
+  ]);
 
   // Keep plantId valid if it points to a missing plant; do NOT auto-pick first in add mode.
   React.useEffect(() => {
@@ -113,44 +181,10 @@ export default function UpsertReadingDeviceModal({
     [plantId, plants]
   );
 
-  // Device name is mandatory
-  const [name, setName] = React.useState<string>(initialName ?? "");
-  const [notes, setNotes] = React.useState<string>(initialNotes ?? "");
-  const [enabled, setEnabled] = React.useState<boolean>(initialEnabled);
-
-  const [sensorTemp, setSensorTemp] = React.useState<boolean>(initialSensors?.temperature ?? true);
-  const [sensorHum, setSensorHum] = React.useState<boolean>(initialSensors?.humidity ?? true);
-  const [sensorLight, setSensorLight] = React.useState<boolean>(initialSensors?.light ?? true);
-  const [sensorMoist, setSensorMoist] = React.useState<boolean>(initialSensors?.moisture ?? true);
-
-  // Soil moisture alert
-  const defaultMoistPct =
-    typeof initialMoistureAlertPct === "number"
-      ? initialMoistureAlertPct
-      : typeof initialHumidityAlertPct === "number"
-      ? initialHumidityAlertPct
-      : 30;
-
-  const [moistAlertEnabled, setMoistAlertEnabled] = React.useState<boolean>(
-    Boolean(initialMoistureAlertEnabled)
-  );
-  const [moistAlertPct, setMoistAlertPct] = React.useState<number>(
-    Math.max(0, Math.min(100, defaultMoistPct))
-  );
-
-  const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
-  const [intervalHours, setIntervalHours] = React.useState<number>(clamp(initialIntervalHours, 1, 24));
-
-  // show/hide secret
-  const [showSecret, setShowSecret] = React.useState(false);
-
-  React.useEffect(() => { if (visible) setPlantOpen(false); }, [visible]);
-
   // When user picks a plant and the device name is still empty, auto-fill "Plant – Location"
   const buildNameFromPlant = (p: PlantOption) => {
     const loc = p.location ? ` – ${p.location}` : "";
     return `${p.name}${loc}`;
-    // NOTE: we only auto-fill if name is empty; we never override a user-entered name.
   };
 
   // Required: both plantId and non-empty device name

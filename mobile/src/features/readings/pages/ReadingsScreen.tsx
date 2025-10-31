@@ -1,11 +1,13 @@
-// ReadingsScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
-import { View, RefreshControl, Pressable, Animated, Easing } from "react-native";
+import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { BlurView } from "@react-native-community/blur";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import FAB from "../../../shared/ui/FAB";
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/readings.styles";
 import ReadingTile from "../components/ReadingTile";
@@ -63,7 +65,7 @@ export default function ReadingsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // FAB-related flags (to hide FAB when any sheet/menu is open)
+  // FAB-related flags (to hide FAB only for sheets/modals; NOT for per-tile menus)
   const [sortSheetOpen, setSortSheetOpen] = useState(false);
   const [filterSheetOpen, setFilterSheetOpen] = useState(false);
 
@@ -92,6 +94,16 @@ export default function ReadingsScreen() {
   const [upsertMode, setUpsertMode] = useState<"add" | "edit">("add");
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
   const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
+
+  // 🔔 Shared toast (TopSnackbar)
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+  const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
+    setToastMsg(message);
+    setToastVariant(variant);
+    setToastVisible(true);
+  };
 
   // FlatList ref to force scroll-to-top on focus
   const listRef = useRef<Animated.FlatList<any>>(null);
@@ -127,7 +139,7 @@ export default function ReadingsScreen() {
     }, [load])
   );
 
-  // 🔁 On focus: ensure page is reset (hide all modals, reset filters, close menus, scroll to top)
+  // 🔁 On focus: ensure page is reset (hide all modals/sheets, close menus, scroll to top)
   useFocusEffect(
     useCallback(() => {
       // hide all modals/sheets
@@ -146,7 +158,7 @@ export default function ReadingsScreen() {
       setFilters({});
       setFilterQuery("");
 
-      // make sure top of the page is displayed
+      // scroll to top
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
@@ -253,9 +265,9 @@ export default function ReadingsScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, derivedItems.length]);
 
-  // Hide FAB when any sheet/menu/modal is open
+  // Keep FAB visible even when a 3-dot tile menu is open (difference vs. before)
   const showFAB =
-    !menuOpenId &&
+    //!menuOpenId &&   <-- removed to keep FAB visible with open tile menus
     !sortSheetOpen &&
     !filterSheetOpen &&
     !sortModalVisible &&
@@ -278,6 +290,9 @@ export default function ReadingsScreen() {
       await apiDeleteReadingDevice(Number(deleteId));
       setItems((prev) => prev.filter((x) => x.id !== deleteId));
       setDevicesRaw((prev) => prev.filter((d) => String(d.id) !== deleteId));
+      showToast("Device deleted", "success");
+    } catch (e: any) {
+      showToast(e?.message ? `Delete failed: ${e.message}` : "Delete failed", "error");
     } finally {
       setDeleteVisible(false);
       setDeleteId(null);
@@ -301,13 +316,12 @@ export default function ReadingsScreen() {
   }, [plantInstances]);
 
   const openEditDevice = useCallback((id: string) => {
-    const dev = devicesRaw.find(d => String(d.id) === id);
+    const item = items.find((x) => x.id === id);
     setUpsertMode("edit");
     setUpsertReadingId(id);
-    // Prefer device_name; fallback to tile name if not found
-    setUpsertReadingName(dev?.device_name ?? items.find(x => x.id === id)?.name);
+    setUpsertReadingName(item?.name);
     setUpsertVisible(true);
-  }, [devicesRaw, items]);
+  }, [items]);
 
   const handleUpsertSave = useCallback(async (payload: {
     mode: "add" | "edit";
@@ -325,42 +339,54 @@ export default function ReadingsScreen() {
     };
     intervalHours: number;
   }) => {
-    if (payload.mode === "add") {
-      await createReadingDevice({
-        plant: Number(payload.plantId),
-        device_name: payload.name,
-        notes: payload.notes,
-        interval_hours: payload.intervalHours,
-        sensors: {
-          temperature: payload.sensors.temperature,
-          humidity: payload.sensors.humidity,
-          light: payload.sensors.light,
-          moisture: payload.sensors.moisture,
-          moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
-          moisture_alert_pct: payload.sensors.moistureAlertPct,
-        },
-      });
-    } else {
-      if (!upsertReadingId) return;
-      await updateReadingDevice(Number(upsertReadingId), {
-        plant: Number(payload.plantId),
-        device_name: payload.name,
-        notes: payload.notes ?? null,
-        is_active: typeof payload.enabled === "boolean" ? payload.enabled : undefined,
-        interval_hours: payload.intervalHours,
-        sensors: {
-          temperature: payload.sensors.temperature,
-          humidity: payload.sensors.humidity,
-          light: payload.sensors.light,
-          moisture: payload.sensors.moisture,
-          moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
-          moisture_alert_pct: payload.sensors.moistureAlertPct ?? null,
-        },
-      });
-    }
+    const isCreate = payload.mode === "add";
+    try {
+      if (isCreate) {
+        await createReadingDevice({
+          plant: Number(payload.plantId),
+          device_name: payload.name,
+          notes: payload.notes,
+          interval_hours: payload.intervalHours,
+          sensors: {
+            temperature: payload.sensors.temperature,
+            humidity: payload.sensors.humidity,
+            light: payload.sensors.light,
+            moisture: payload.sensors.moisture,
+            moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
+            moisture_alert_pct: payload.sensors.moistureAlertPct,
+          },
+        });
+      } else {
+        if (!upsertReadingId) return;
+        await updateReadingDevice(Number(upsertReadingId), {
+          plant: Number(payload.plantId),
+          device_name: payload.name,
+          notes: payload.notes ?? null,
+          is_active: typeof payload.enabled === "boolean" ? payload.enabled : undefined,
+          interval_hours: payload.intervalHours,
+          sensors: {
+            temperature: payload.sensors.temperature,
+            humidity: payload.sensors.humidity,
+            light: payload.sensors.light,
+            moisture: payload.sensors.moisture,
+            moisture_alert_enabled: payload.sensors.moistureAlertEnabled,
+            moisture_alert_pct: payload.sensors.moistureAlertPct ?? null,
+          },
+        });
+      }
 
-    setUpsertVisible(false);
-    await load(); // refresh devices + plant instances
+      setUpsertVisible(false);
+      await load(); // refresh devices + plant instances
+      showToast(isCreate ? "Device added" : "Device updated", "success");
+    } catch (e: any) {
+      setUpsertVisible(false);
+      showToast(
+        isCreate
+          ? e?.message ? `Add failed: ${e.message}` : "Add failed"
+          : e?.message ? `Update failed: ${e.message}` : "Update failed",
+        "error"
+      );
+    }
   }, [upsertReadingId, load]);
 
   if (loading) {
@@ -378,6 +404,8 @@ export default function ReadingsScreen() {
       </View>
     );
   }
+
+  const isEmpty = derivedItems.length === 0;
 
   return (
     <View style={{ flex: 1 }}>
@@ -435,10 +463,57 @@ export default function ReadingsScreen() {
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-        keyboardShouldPersistTaps="handled"
+        ListEmptyComponent={
+          !loading ? (
+            <View style={s.emptyWrap}>
+              {/* Single glass frame — identical recipe to Reminders' empty state */}
+              <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
+                <BlurView
+                  style={StyleSheet.absoluteFill}
+                  blurType="light"
+                  blurAmount={20}
+                  overlayColor="transparent"
+                  reducedTransparencyFallbackColor="transparent"
+                />
+                <View
+                  pointerEvents="none"
+                  style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
+                />
+                <View
+                  pointerEvents="none"
+                  style={[
+                    StyleSheet.absoluteFill,
+                    { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                  ]}
+                />
+                <View style={s.emptyInner}>
+                  {/* Centered header (icon + title) */}
+                  <MaterialCommunityIcons
+                    name="access-point"
+                    size={26}
+                    color="#FFFFFF"
+                    style={{ marginBottom: 10 }}
+                  />
+                  <Text style={s.emptyTitle}>No devices yet</Text>
+
+                  {/* Left-aligned description */}
+                  <View style={s.emptyDescBox}>
+                    <Text style={s.emptyText}>
+                      Devices let you ingest temperature, humidity, light, and soil moisture readings for a plant.{"\n\n"}
+                      Tap the <Text style={s.inlineBold}>“+ Link device”</Text> action to add one. Pick a plant, name the device,
+                      choose sensors, and set a sampling interval. You can then open{" "}
+                      <Text style={s.inlineBold}>Device setup</Text> to view your account secret, rotate it, and email
+                      a ready-to-paste Arduino/ESP sketch.
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          ) : null
+        }
       />
 
-      {/* FAB — hidden when any sheet/menu/modal is open */}
+      {/* FAB — stays visible even when a tile menu is open */}
       {showFAB && (
         <FAB
           bottomOffset={92}
@@ -477,50 +552,6 @@ export default function ReadingsScreen() {
         />
       )}
 
-      {/* Sort modal */}
-      <SortReadingsModal
-        visible={sortModalVisible}
-        sortKey={sortKey}
-        sortDir={sortDir}
-        onCancel={() => {
-          setSortModalVisible(false);
-          setSortSheetOpen(false);
-        }}
-        onApply={(key, dir) => {
-          setSortKey(key);
-          setSortDir(dir);
-          setSortModalVisible(false);
-          setSortSheetOpen(false);
-        }}
-        onReset={() => {
-          setSortKey("name");
-          setSortDir("asc");
-        }}
-      />
-
-      {/* Filter modal */}
-      <FilterReadingsModal
-        visible={filterModalVisible}
-        plants={plantOptions}
-        locations={locationOptions}
-        filters={filters}
-        onCancel={() => {
-          setFilterModalVisible(false);
-          setFilterSheetOpen(false);
-        }}
-        onApply={(f) => {
-          setFilters(f);
-          // Keep legacy "contains name" quick filter intact if used elsewhere
-          setFilterQuery("");
-          setFilterModalVisible(false);
-          setFilterSheetOpen(false);
-        }}
-        onClearAll={() => {
-          setFilters({});
-          setFilterQuery("");
-        }}
-      />
-
       {/* Delete modal */}
       <ConfirmDeleteReadingModal
         visible={deleteVisible}
@@ -540,7 +571,10 @@ export default function ReadingsScreen() {
         onRotateSecret={async () => {
           try {
             await rotateAccountSecret();
-          } catch {}
+            showToast("Secret rotated", "success");
+          } catch (e: any) {
+            showToast(e?.message ? `Rotate failed: ${e.message}` : "Rotate failed", "error");
+          }
         }}
       />
 
@@ -569,15 +603,16 @@ export default function ReadingsScreen() {
               })()
             : ""
         }
-        initialName={upsertMode === "edit" ? upsertReadingName : ""}
-        initialNotes={
+        // IMPORTANT: use device_name from the raw device, not the tile's composite name
+        initialName={
           upsertMode === "edit"
             ? (() => {
                 const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
-                return dev?.notes ?? "";
+                return dev?.device_name ?? "";
               })()
             : ""
         }
+        // Show actual enabled/interval/etc from device
         initialEnabled={
           upsertMode === "edit"
             ? (() => {
@@ -586,38 +621,6 @@ export default function ReadingsScreen() {
               })()
             : true
         }
-        // Use real sensor toggles + alerts when editing; defaults in add mode
-        initialSensors={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
-                const s = dev?.sensors ?? {};
-                return {
-                  temperature: !!s.temperature,
-                  humidity: !!s.humidity,
-                  light: !!s.light,
-                  moisture: !!s.moisture,
-                };
-              })()
-            : { temperature: true, humidity: true, light: true, moisture: true }
-        }
-        initialMoistureAlertEnabled={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
-                return !!dev?.sensors?.moisture_alert_enabled;
-              })()
-            : false
-        }
-        initialMoistureAlertPct={
-          upsertMode === "edit"
-            ? (() => {
-                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
-                const pct = dev?.sensors?.moisture_alert_pct;
-                return typeof pct === "number" ? pct : 30;
-              })()
-            : 30
-        }
         initialIntervalHours={
           upsertMode === "edit"
             ? (() => {
@@ -625,6 +628,44 @@ export default function ReadingsScreen() {
                 return dev?.interval_hours ?? 5;
               })()
             : 5
+        }
+        // NEW: pass notes and sensors + moisture alert details from device
+        initialNotes={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return (dev?.notes ?? "") || "";
+              })()
+            : ""
+        }
+        initialSensors={
+          upsertMode === "edit"
+            ? (() => {
+                const s = devicesRaw.find(d => String(d.id) === upsertReadingId)?.sensors;
+                return {
+                  temperature: !!s?.temperature,
+                  humidity: !!s?.humidity,
+                  light: !!s?.light,
+                  moisture: !!s?.moisture,
+                };
+              })()
+            : { temperature: true, humidity: true, light: true, moisture: true }
+        }
+        initialMoistureAlertEnabled={
+          upsertMode === "edit"
+            ? (() => {
+                const s = devicesRaw.find(d => String(d.id) === upsertReadingId)?.sensors;
+                return Boolean(s?.moisture_alert_enabled);
+              })()
+            : undefined
+        }
+        initialMoistureAlertPct={
+          upsertMode === "edit"
+            ? (() => {
+                const s = devicesRaw.find(d => String(d.id) === upsertReadingId)?.sensors;
+                return typeof s?.moisture_alert_pct === "number" ? s!.moisture_alert_pct! : undefined;
+              })()
+            : undefined
         }
         authSecret={upsertMode === "edit" ? "••••••••••••••" : undefined}
         deviceKey={
@@ -637,6 +678,14 @@ export default function ReadingsScreen() {
         }
         onCancel={() => setUpsertVisible(false)}
         onSave={handleUpsertSave}
+      />
+
+      {/* Top Snackbar (shared toast) */}
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={() => setToastVisible(false)}
       />
     </View>
   );

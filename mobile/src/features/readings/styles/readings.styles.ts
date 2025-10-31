@@ -28,7 +28,6 @@ export const s = StyleSheet.create({
     paddingHorizontal: 18,
     paddingTop: 14,
   },
-  // Match Plants name size (17 / 800)
   name: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
   dotsBtn: {
     width: 36, height: 36, borderRadius: 18, alignItems: "center", justifyContent: "center",
@@ -51,11 +50,9 @@ export const s = StyleSheet.create({
     shadowColor: "#000", shadowOpacity: 0.15, shadowRadius: 6, shadowOffset: { width: 0, height: 3 },
     elevation: 2,
   },
-  // Slightly smaller numbers than before
   metricValue: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
 
   lastRow: { paddingHorizontal: 25, paddingTop: 8, paddingBottom: 14 },
-  // Smaller & less bold than before
   lastText: { color: "rgba(255,255,255,0.88)", fontWeight: "600", fontSize: 10 },
 
   // menu sheet (match Plants)
@@ -72,4 +69,20 @@ export const s = StyleSheet.create({
   menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
 
   backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "transparent" },
+
+  /* ---------- EMPTY STATE (mirror Reminders look) ---------- */
+  emptyWrap: {
+    marginTop: 0,
+    paddingHorizontal: 16,
+    paddingTop: 21,
+  },
+  emptyInner: { padding: 16, alignItems: "center" },
+  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });
