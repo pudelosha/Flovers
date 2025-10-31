@@ -438,11 +438,12 @@ export default function UpsertReadingDeviceModal({
                 </View>
 
                 <View style={{ flexDirection: "row", gap: 10, marginHorizontal: 16, marginTop: 12 }}>
-                  <Pressable onPress={onSendCodeByEmail} style={[pr.promptBtn, { flex: 1, alignItems: "center" }]}>
-                    <Text style={pr.promptBtnText}>Send code via email</Text>
+                  {/* Make these primary (blue) to match Save */}
+                  <Pressable onPress={onSendCodeByEmail} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Send code via email</Text>
                   </Pressable>
-                  <Pressable onPress={onSaveCodeAsText} style={[pr.promptBtn, { flex: 1, alignItems: "center" }]}>
-                    <Text style={pr.promptBtnText}>Save code as text</Text>
+                  <Pressable onPress={onSaveCodeAsText} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Save code as text</Text>
                   </Pressable>
                 </View>
 
