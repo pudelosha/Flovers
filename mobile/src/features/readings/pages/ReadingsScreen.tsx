@@ -425,11 +425,15 @@ export default function ReadingsScreen() {
         style={{ flex: 1 }}
         data={derivedItems}
         keyExtractor={(x) => x.id}
+
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
           const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
           const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
           const opacity = v;
+
+          // Look up the raw device to get device_name and sensors
+          const dev = devicesRaw.find(d => String(d.id) === item.id);
 
           return (
             <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
@@ -452,10 +456,20 @@ export default function ReadingsScreen() {
                 onMetricPress={(metric) =>
                   nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
                 }
+
+                // NEW: provide device name & sensors so the tile can render correctly
+                deviceName={dev?.device_name}
+                sensors={{
+                  temperature: !!dev?.sensors?.temperature,
+                  humidity: !!dev?.sensors?.humidity,
+                  light: !!dev?.sensors?.light,
+                  moisture: !!dev?.sensors?.moisture,
+                }}
               />
             </Animated.View>
           );
         }}
+
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}

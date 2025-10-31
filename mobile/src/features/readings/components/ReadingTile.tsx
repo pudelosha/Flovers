@@ -23,6 +23,15 @@ type Props = {
 
   // NEW: deep-link to History for a specific metric
   onMetricPress: (metric: MetricKey) => void;
+
+  // NEW: explicitly pass device name and selected sensors
+  deviceName?: string;
+  sensors?: {
+    temperature?: boolean;
+    humidity?: boolean;
+    light?: boolean;
+    moisture?: boolean;
+  };
 };
 
 function MetricColPressable({
@@ -46,11 +55,21 @@ export default function ReadingTile({
   data, isMenuOpen, onPressBody, onPressMenu,
   onHistory, onEdit, onDelete, onPlantDetails,
   onMetricPress,
+  deviceName,
+  sensors,
 }: Props) {
   const dt = data.lastReadISO ? new Date(data.lastReadISO) : null;
   const lastText = dt
     ? `Last read: ${dt.toLocaleDateString()} ${dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`
     : "Last read: —";
+
+  // Decide which metrics to show:
+  // - If sensors not provided → keep existing behavior (show all).
+  // - If provided → show only enabled ones, in the same order.
+  const showTemp = sensors ? !!sensors.temperature : true;
+  const showHum  = sensors ? !!sensors.humidity   : true;
+  const showLight= sensors ? !!sensors.light      : true;
+  const showMoist= sensors ? !!sensors.moisture   : true;
 
   return (
     <View style={s.cardWrap}>
@@ -70,43 +89,52 @@ export default function ReadingTile({
       {/* Top row: name + dots */}
       <View style={s.topRow}>
         <Pressable style={{ flex: 1, paddingRight: 8 }} onPress={onPressBody} android_ripple={{ color: "rgba(255,255,255,0.08)" }}>
-          <Text style={s.name} numberOfLines={1}>{data.name}</Text>
+          {/* Show device name (fallback to previous composite name) */}
+          <Text style={s.name} numberOfLines={1}>{deviceName ?? data.name}</Text>
         </Pressable>
         <Pressable onPress={onPressMenu} style={s.dotsBtn} android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }} hitSlop={8}>
           <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
         </Pressable>
       </View>
 
-      {/* Metrics row — 4 columns (icon + value only) */}
+      {/* Metrics row — up to 4 columns (icon + value only) */}
       <View style={s.metricsRow}>
-        <MetricColPressable
-          icon="thermometer"
-          color={ICON_BG.temperature}
-          value={data.metrics.temperature}
-          unit={METRIC_UNITS.temperature}
-          onPress={() => onMetricPress("temperature")}
-        />
-        <MetricColPressable
-          icon="water-percent"
-          color={ICON_BG.humidity}
-          value={data.metrics.humidity}
-          unit={METRIC_UNITS.humidity}
-          onPress={() => onMetricPress("humidity")}
-        />
-        <MetricColPressable
-          icon="white-balance-sunny"
-          color={ICON_BG.light}
-          value={data.metrics.light}
-          unit={METRIC_UNITS.light}
-          onPress={() => onMetricPress("light")}
-        />
-        <MetricColPressable
-          icon="water"
-          color={ICON_BG.moisture}
-          value={data.metrics.moisture}
-          unit={METRIC_UNITS.moisture}
-          onPress={() => onMetricPress("moisture")}
-        />
+        {showTemp && (
+          <MetricColPressable
+            icon="thermometer"
+            color={ICON_BG.temperature}
+            value={data.metrics.temperature}
+            unit={METRIC_UNITS.temperature}
+            onPress={() => onMetricPress("temperature")}
+          />
+        )}
+        {showHum && (
+          <MetricColPressable
+            icon="water-percent"
+            color={ICON_BG.humidity}
+            value={data.metrics.humidity}
+            unit={METRIC_UNITS.humidity}
+            onPress={() => onMetricPress("humidity")}
+          />
+        )}
+        {showLight && (
+          <MetricColPressable
+            icon="white-balance-sunny"
+            color={ICON_BG.light}
+            value={data.metrics.light}
+            unit={METRIC_UNITS.light}
+            onPress={() => onMetricPress("light")}
+          />
+        )}
+        {showMoist && (
+          <MetricColPressable
+            icon="water"
+            color={ICON_BG.moisture}
+            value={data.metrics.moisture}
+            unit={METRIC_UNITS.moisture}
+            onPress={() => onMetricPress("moisture")}
+          />
+        )}
       </View>
 
       {/* Last read */}
