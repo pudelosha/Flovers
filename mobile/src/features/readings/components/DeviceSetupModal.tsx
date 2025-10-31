@@ -31,6 +31,13 @@ export default function DeviceSetupModal({
   onDownloadPdf,
 }: Props) {
   const [showConfirmRotate, setShowConfirmRotate] = React.useState(false);
+  const [revealSecret, setRevealSecret] = React.useState(false);
+
+  // ✅ Move the hook ABOVE the conditional return
+  const masked = React.useMemo(() => {
+    const len = Math.max(10, (authSecret || "").replace(/\s/g, "").length || 12);
+    return "•".repeat(len);
+  }, [authSecret]);
 
   if (!visible) return null;
 
@@ -92,14 +99,48 @@ export default function DeviceSetupModal({
             </Block>
 
             {/* Current secret + rotate */}
-            <Text style={s.inputLabel}>Current auth secret</Text>
-            <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
-              <Text style={s.dropdownValue}>{authSecret}</Text>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+              <Text style={s.inputLabel}>Current auth secret</Text>
+              <Pressable
+                onPress={() => setRevealSecret((v) => !v)}
+                accessibilityRole="button"
+                accessibilityLabel={revealSecret ? "Hide auth secret" : "Show auth secret"}
+                hitSlop={10}
+                style={{ padding: 4 }}
+              >
+                <MaterialCommunityIcons
+                  name={revealSecret ? "eye-off-outline" : "eye-outline"}
+                  size={20}
+                  color="#fff"
+                />
+              </Pressable>
+            </View>
+
+            <View
+              style={{
+                padding: 12,
+                borderRadius: 12,
+                backgroundColor: "rgba(255,255,255,0.10)",
+                position: "relative",
+              }}
+            >
+              <Text
+                style={[s.dropdownValue, { fontVariant: ["tabular-nums"] }]}
+                selectable={revealSecret}
+              >
+                {revealSecret ? authSecret : masked}
+              </Text>
             </View>
 
             <Pressable
               onPress={() => setShowConfirmRotate(true)}
-              style={{ marginTop: 8, paddingVertical: 12, borderRadius: 16, backgroundColor: "rgba(255,255,255,0.12)", alignItems: "center" }}
+              style={{
+                marginTop: 8,
+                paddingVertical: 12,
+                borderRadius: 16,
+                backgroundColor: "rgba(255,255,255,0.12)",
+                alignItems: "center",
+              }}
             >
               <Text style={s.promptBtnText}>Generate new secret</Text>
             </Pressable>
@@ -107,7 +148,13 @@ export default function DeviceSetupModal({
             {/* Download PDF doc */}
             <Pressable
               onPress={onDownloadPdf}
-              style={{ marginTop: 12, paddingVertical: 12, borderRadius: 16, backgroundColor: "rgba(11,114,133,0.92)", alignItems: "center" }}
+              style={{
+                marginTop: 12,
+                paddingVertical: 12,
+                borderRadius: 16,
+                backgroundColor: "rgba(11,114,133,0.92)",
+                alignItems: "center",
+              }}
             >
               <Text style={s.promptPrimaryText}>Download PDF documentation</Text>
             </Pressable>
@@ -158,6 +205,7 @@ export default function DeviceSetupModal({
                       await onRotateSecret?.();
                     } finally {
                       setShowConfirmRotate(false);
+                      setRevealSecret(false); // hide again after rotate
                     }
                   }}
                 >
@@ -180,7 +228,9 @@ function InfoRow({ icon, label, value }: { icon: string; label: string; value: s
         <Text style={s.dropdownValue}>{label}</Text>
       </View>
       <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
-        <Text style={[s.dropdownValue, { fontVariant: ["tabular-nums"] }]} selectable>{value}</Text>
+        <Text style={[s.dropdownValue, { fontVariant: ["tabular-nums"] }]} selectable>
+          {value}
+        </Text>
       </View>
     </View>
   );
@@ -198,7 +248,13 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
 function CodeBlock({ text }: { text: string }) {
   return (
     <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(0,0,0,0.35)" }}>
-      <Text style={[s.dropdownItemText, { fontFamily: Platform.select({ ios: "Menlo", android: "monospace" }) as any }]} selectable>
+      <Text
+        style={[
+          s.dropdownItemText,
+          { fontFamily: Platform.select({ ios: "Menlo", android: "monospace" }) as any },
+        ]}
+        selectable
+      >
         {text}
       </Text>
     </View>

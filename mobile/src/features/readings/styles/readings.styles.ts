@@ -73,8 +73,8 @@ export const s = StyleSheet.create({
   /* ---------- EMPTY STATE (mirror Reminders look) ---------- */
   emptyWrap: {
     marginTop: 0,
-    paddingHorizontal: 16,
-    paddingTop: 21,
+    paddingHorizontal: 0,
+    paddingTop: 0,
   },
   emptyInner: { padding: 16, alignItems: "center" },
   emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
