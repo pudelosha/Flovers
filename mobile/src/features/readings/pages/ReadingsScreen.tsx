@@ -33,8 +33,8 @@ import { ApiReadingDevice } from "../types/readings.types";
 
 // === Services (plants → Plant Instances) ===
 import {
-  fetchPlantInstances,                    // ✅ FIX: import the function
-  type ApiPlantInstanceListItem,          // ✅ FIX: import the type
+  fetchPlantInstances,
+  type ApiPlantInstanceListItem,
 } from "../../../api/services/plant-instances.service";
 
 // ===== Extend the reading model locally (non-breaking) =====
@@ -92,6 +92,9 @@ export default function ReadingsScreen() {
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
   const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
 
+  // FlatList ref to force scroll-to-top on focus
+  const listRef = useRef<Animated.FlatList<any>>(null);
+
   // ===== Load devices and plant instances =====
   const load = useCallback(async () => {
     const [devices, plantsList] = await Promise.all([
@@ -121,6 +124,34 @@ export default function ReadingsScreen() {
       })();
       return () => { mounted = false; };
     }, [load])
+  );
+
+  // 🔁 On focus: ensure page is reset (hide all modals, reset filters, close menus, scroll to top)
+  useFocusEffect(
+    useCallback(() => {
+      // hide all modals/sheets
+      setSortModalVisible(false);
+      setFilterModalVisible(false);
+      setDeleteVisible(false);
+      setDeviceSetupVisible(false);
+      setUpsertVisible(false);
+      setSortSheetOpen(false);
+      setFilterSheetOpen(false);
+
+      // close any 3-dot dropdown
+      setMenuOpenId(null);
+
+      // reset all filters
+      setFilters({});
+      setFilterQuery("");
+
+      // make sure top of the page is displayed
+      requestAnimationFrame(() => {
+        listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
+      });
+
+      return undefined;
+    }, [])
   );
 
   const onRefresh = useCallback(async () => {
@@ -360,6 +391,7 @@ export default function ReadingsScreen() {
       {menuOpenId && <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />}
 
       <Animated.FlatList
+        ref={listRef}
         style={{ flex: 1 }}
         data={derivedItems}
         keyExtractor={(x) => x.id}
