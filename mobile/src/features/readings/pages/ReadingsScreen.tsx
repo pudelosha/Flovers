@@ -1,3 +1,4 @@
+// ReadingsScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import { View, RefreshControl, Pressable, Animated, Easing } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
@@ -300,12 +301,13 @@ export default function ReadingsScreen() {
   }, [plantInstances]);
 
   const openEditDevice = useCallback((id: string) => {
-    const item = items.find((x) => x.id === id);
+    const dev = devicesRaw.find(d => String(d.id) === id);
     setUpsertMode("edit");
     setUpsertReadingId(id);
-    setUpsertReadingName(item?.name);
+    // Prefer device_name; fallback to tile name if not found
+    setUpsertReadingName(dev?.device_name ?? items.find(x => x.id === id)?.name);
     setUpsertVisible(true);
-  }, [items]);
+  }, [devicesRaw, items]);
 
   const handleUpsertSave = useCallback(async (payload: {
     mode: "add" | "edit";
@@ -568,6 +570,14 @@ export default function ReadingsScreen() {
             : ""
         }
         initialName={upsertMode === "edit" ? upsertReadingName : ""}
+        initialNotes={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return dev?.notes ?? "";
+              })()
+            : ""
+        }
         initialEnabled={
           upsertMode === "edit"
             ? (() => {
@@ -576,9 +586,38 @@ export default function ReadingsScreen() {
               })()
             : true
         }
-        // Defaults; you can feed real values later if needed
-        initialSensors={{ temperature: true, humidity: true, light: true, moisture: true }}
-        initialHumidityAlertPct={30}
+        // Use real sensor toggles + alerts when editing; defaults in add mode
+        initialSensors={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                const s = dev?.sensors ?? {};
+                return {
+                  temperature: !!s.temperature,
+                  humidity: !!s.humidity,
+                  light: !!s.light,
+                  moisture: !!s.moisture,
+                };
+              })()
+            : { temperature: true, humidity: true, light: true, moisture: true }
+        }
+        initialMoistureAlertEnabled={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                return !!dev?.sensors?.moisture_alert_enabled;
+              })()
+            : false
+        }
+        initialMoistureAlertPct={
+          upsertMode === "edit"
+            ? (() => {
+                const dev = devicesRaw.find(d => String(d.id) === upsertReadingId);
+                const pct = dev?.sensors?.moisture_alert_pct;
+                return typeof pct === "number" ? pct : 30;
+              })()
+            : 30
+        }
         initialIntervalHours={
           upsertMode === "edit"
             ? (() => {

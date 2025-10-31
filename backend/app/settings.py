@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "plant_instances",
     "locations",
     "reminders",
+    "readings",
 ]
 
 MIDDLEWARE = [

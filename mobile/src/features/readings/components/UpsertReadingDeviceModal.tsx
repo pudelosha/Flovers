@@ -1,3 +1,4 @@
+// UpsertReadingDeviceModal.tsx
 import React from "react";
 import { View, Text, Pressable, TextInput, ScrollView, Switch } from "react-native";
 import { BlurView } from "@react-native-community/blur";
