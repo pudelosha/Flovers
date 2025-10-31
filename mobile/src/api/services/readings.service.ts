@@ -1,6 +1,6 @@
 import { request } from "../client";
 
-// ⬇️ import all API and UI types from the central types file
+// import all API and UI types from the central types file
 import {
   ApiReadingDevice,
   ApiReadingDeviceCreatePayload,
@@ -92,4 +92,15 @@ export function toReadingTile(api: ApiReadingDevice): ReadingTileModel {
     // @ts-ignore same
     status: api.is_active ? "enabled" : "disabled",
   };
+}
+
+/* ============================== DEVICE SETUP (ENDPOINTS + SECRET) ============================== */
+export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }):
+  Promise<{ endpoints: { ingest: string; read: string }, sample_payloads: any, secret: string }> {
+  return await request(
+    "/api/readings/device-setup/",
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
 }

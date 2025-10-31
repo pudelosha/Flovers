@@ -416,7 +416,7 @@ export default function UpsertReadingDeviceModal({
                     justifyContent: "space-between",
                   }}
                 >
-                  <Text style={sp.dropdownValue}>
+                  <Text style={sp.dropdownValue} selectable={showSecret}>
                     {authSecret ? (showSecret ? authSecret : "••••••••••••••") : "—"}
                   </Text>
                   {authSecret ? (

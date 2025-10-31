@@ -29,6 +29,8 @@ import {
   deleteReadingDevice as apiDeleteReadingDevice,
   rotateAccountSecret,
   toReadingTile,
+  // ⬇️ newly used to fetch endpoints + secret for the modal
+  fetchDeviceSetup,
 } from "../../../api/services/readings.service";
 
 // Pull the API type from centralized readings types
@@ -86,8 +88,11 @@ export default function ReadingsScreen() {
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [deleteName, setDeleteName] = useState<string>("");
 
-  // Device setup (dummy) modal state
+  // Device setup modal state + fetched data
   const [deviceSetupVisible, setDeviceSetupVisible] = useState(false);
+  const [setupSecret, setSetupSecret] = useState<string | null>(null);
+  const [setupIngest, setSetupIngest] = useState<string>("");
+  const [setupRead, setSetupRead] = useState<string>("");
 
   // Upsert (add/edit) device modal state
   const [upsertVisible, setUpsertVisible] = useState(false);
@@ -95,7 +100,7 @@ export default function ReadingsScreen() {
   const [upsertReadingId, setUpsertReadingId] = useState<string | null>(null);
   const [upsertReadingName, setUpsertReadingName] = useState<string | undefined>(undefined);
 
-  // 🔔 Shared toast (TopSnackbar)
+  // Shared toast (TopSnackbar)
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
@@ -324,7 +329,17 @@ export default function ReadingsScreen() {
     setUpsertVisible(true);
   }, [plantInstances]);
 
-  const openEditDevice = useCallback((id: string) => {
+  const openEditDevice = useCallback(async (id: string) => {
+    // ensure we have a fresh secret before opening the edit modal
+    try {
+      const data = await fetchDeviceSetup();
+      setSetupSecret(data.secret);
+      setSetupIngest(data.endpoints?.ingest || "");
+      setSetupRead(data.endpoints?.read || "");
+    } catch {
+      // keep going; modal will show masked secret if fetch fails
+      setSetupSecret(null);
+    }
     const item = items.find((x) => x.id === id);
     setUpsertMode("edit");
     setUpsertReadingId(id);
@@ -397,6 +412,24 @@ export default function ReadingsScreen() {
       );
     }
   }, [upsertReadingId, load]);
+
+  // ---- Device setup: fetch endpoints + secret then show modal ----
+  const openDeviceSetup = useCallback(async () => {
+    try {
+      const data = await fetchDeviceSetup();
+      setSetupSecret(data.secret);
+      setSetupIngest(data.endpoints?.ingest || "");
+      setSetupRead(data.endpoints?.read || "");
+    } catch (e: any) {
+      // keep modal usable even if fetch fails
+      showToast(e?.message ? `Failed to load setup: ${e.message}` : "Failed to load setup", "error");
+      setSetupSecret(null);
+      setSetupIngest("");
+      setSetupRead("");
+    } finally {
+      setDeviceSetupVisible(true);
+    }
+  }, [showToast]);
 
   if (loading) {
     return (
@@ -551,7 +584,7 @@ export default function ReadingsScreen() {
               key: "device-setup",
               icon: "key-variant",
               label: "Device setup",
-              onPress: () => setDeviceSetupVisible(true),
+              onPress: openDeviceSetup, // ⬅️ fetches secret + endpoints, then opens modal
             },
             {
               key: "sort",
@@ -603,10 +636,14 @@ export default function ReadingsScreen() {
       {/* Device setup */}
       <DeviceSetupModal
         visible={deviceSetupVisible}
+        writeEndpoint={setupIngest || "—"}
+        readEndpoint={setupRead || "—"}
+        authSecret={setupSecret ?? "••••••••••••••"}
         onClose={() => setDeviceSetupVisible(false)}
         onRotateSecret={async () => {
           try {
-            await rotateAccountSecret();
+            const { secret } = await rotateAccountSecret();
+            setSetupSecret(secret); // update UI immediately with new secret
             showToast("Secret rotated", "success");
           } catch (e: any) {
             showToast(e?.message ? `Rotate failed: ${e.message}` : "Rotate failed", "error");
@@ -703,7 +740,7 @@ export default function ReadingsScreen() {
               })()
             : undefined
         }
-        authSecret={upsertMode === "edit" ? "••••••••••••••" : undefined}
+        authSecret={upsertMode === "edit" ? (setupSecret ?? "••••••••••••••") : undefined}
         deviceKey={
           upsertMode === "edit"
             ? (() => {
