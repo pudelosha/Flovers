@@ -28,6 +28,80 @@ def _get_or_create_secret(user) -> AccountSecret:
 def _get_secret_str(user) -> str:
     return _get_or_create_secret(user).secret
 
+# ---- History helpers (for new /history/ endpoint) ----
+
+HISTORY_UNITS = {
+    "temperature": "°C",
+    "humidity": "%",
+    "light": "lx",
+    "moisture": "%",
+}
+
+VALID_METRICS = set(HISTORY_UNITS.keys())
+VALID_RANGES = {"day", "week", "month"}
+
+
+def _start_of_week_mon(dt: timezone.datetime) -> timezone.datetime:
+    """
+    Monday as the first day of the week.
+    dt is assumed to be timezone-aware (local time).
+    """
+    day = dt.weekday()  # Monday=0..Sunday=6
+    start = (dt - timedelta(days=day)).replace(hour=0, minute=0, second=0, microsecond=0)
+    return start
+
+
+def _end_of_week_sun(dt: timezone.datetime) -> timezone.datetime:
+    start = _start_of_week_mon(dt)
+    end = start + timedelta(days=6, hours=23, minutes=59, seconds=59, microseconds=999999)
+    return end
+
+
+def _first_of_month(dt: timezone.datetime) -> timezone.datetime:
+    return dt.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+
+
+def _month_day_count(dt: timezone.datetime) -> int:
+    first = _first_of_month(dt)
+    if first.month == 12:
+        next_month = first.replace(year=first.year + 1, month=1)
+    else:
+        next_month = first.replace(month=first.month + 1)
+    return (next_month.date() - first.date()).days
+
+
+def _last_of_month(dt: timezone.datetime) -> timezone.datetime:
+    first = _first_of_month(dt)
+    if first.month == 12:
+        next_month = first.replace(year=first.year + 1, month=1)
+    else:
+        next_month = first.replace(month=first.month + 1)
+    last = next_month - timedelta(microseconds=1)
+    return last
+
+
+def _span_for(range_str: str, anchor_dt: timezone.datetime):
+    """
+    Returns (from, to) as timezone-aware datetimes in the current timezone.
+    """
+    if range_str == "day":
+        s = anchor_dt.replace(hour=0, minute=0, second=0, microsecond=0)
+        e = anchor_dt.replace(hour=23, minute=59, second=59, microsecond=999999)
+        return s, e
+    if range_str == "week":
+        s = _start_of_week_mon(anchor_dt)
+        e = _end_of_week_sun(anchor_dt)
+        return s, e
+    # month
+    s = _first_of_month(anchor_dt)
+    e = _last_of_month(anchor_dt)
+    return s, e
+
+
+def _weekday_short(dt: timezone.datetime) -> str:
+    return ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][dt.weekday()]
+
+
 # ---------- ViewSet: Devices CRUD ----------
 
 class ReadingDeviceViewSet(viewsets.ModelViewSet):
@@ -126,6 +200,7 @@ def rotate_secret(request):
     rec.save(update_fields=["secret", "rotated_at"])
     return Response({"secret": rec.secret})
 
+
 @api_view(["GET"])
 @permission_classes([permissions.IsAuthenticated])
 def device_setup(request):
@@ -158,6 +233,7 @@ def device_setup(request):
     })
 
 # ---------- IoT endpoints (no JWT) ----------
+
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([IngestPerDeviceThrottle])
@@ -229,13 +305,16 @@ def ingest(request):
 
     return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
 
+
 @api_view(["GET"])
 @permission_classes([permissions.AllowAny])
 @throttle_classes([FeedPerDeviceThrottle])
 def feed(request):
     """
-    Query: ?secret=...&device_key=AB12CD34[&device_id=123][&from=ISO][&to=ISO][&limit=200]
+    Query: ?secret=...&device_key=AB12CD34[&device_id=123][&from=ISO][&to=ISO]
     (device_id optional — device_key + secret is sufficient)
+
+    Returns only the latest reading (as an array with at most one item).
     """
     device_id = request.query_params.get("device_id")
     device_key = request.query_params.get("device_key")
@@ -259,13 +338,13 @@ def feed(request):
     if "to" in request.query_params:
         qs = qs.filter(timestamp__lte=request.query_params["to"])
 
-    try:
-        limit = min(int(request.query_params.get("limit", 200)), 1000)
-    except Exception:
-        limit = 200
+    # Only the latest reading (matching optional filters)
+    latest = qs.order_by("-timestamp").first()
+    if latest is None:
+        readings_data = []
+    else:
+        readings_data = [ReadingSerializer(latest).data]
 
-    rows = qs.order_by("-timestamp")[:limit]
-    ser = ReadingSerializer(rows, many=True)
     return Response({
         "device": {
             "id": device.id,
@@ -273,5 +352,134 @@ def feed(request):
             "plant_name": device.plant_name,
             "interval_hours": device.interval_hours,
         },
-        "readings": ser.data,
+        "readings": readings_data,
+    })
+
+
+# ---------- New: Authenticated history endpoint for charts ----------
+
+@api_view(["GET"])
+@permission_classes([permissions.IsAuthenticated])
+def history(request):
+    """
+    Authenticated chart data for Readings History page.
+
+    Query params:
+      - device_id: required, ID of ReadingDevice belonging to current user
+      - range: "day" | "week" | "month"  (default "day")
+      - metric: "temperature" | "humidity" | "light" | "moisture" (default "temperature")
+      - anchor: ISO datetime for the anchor day (optional, defaults to now)
+
+    Returns:
+      {
+        "device": {...},
+        "range": "day" | "week" | "month",
+        "metric": "...",
+        "unit": "°C" | "%" | "lx",
+        "span": { "from": "...", "to": "..." },
+        "points": [{ "label": string, "value": number }, ...]
+      }
+    """
+    device_id = request.query_params.get("device_id")
+    if not device_id:
+        return Response({"detail": "device_id is required"}, status=400)
+
+    try:
+        device = ReadingDevice.objects.get(id=device_id, user=request.user)
+    except ReadingDevice.DoesNotExist:
+        raise Http404
+
+    range_str = request.query_params.get("range", "day")
+    if range_str not in VALID_RANGES:
+        return Response({"detail": "range must be one of: day, week, month"}, status=400)
+
+    metric = request.query_params.get("metric", "temperature")
+    if metric not in VALID_METRICS:
+        return Response({"detail": "metric must be one of: temperature, humidity, light, moisture"}, status=400)
+
+    # Anchor date (defaults to now); parse_ts_or_now handles None/invalid gracefully
+    anchor = parse_ts_or_now(request.query_params.get("anchor"))
+    anchor_local = timezone.localtime(anchor)
+
+    span_from, span_to = _span_for(range_str, anchor_local)
+
+    # Django will convert local aware datetimes to UTC when comparing with stored timestamps
+    qs = device.readings.filter(timestamp__gte=span_from, timestamp__lte=span_to).order_by("timestamp")
+
+    # Determine number of bins
+    if range_str == "day":
+        bin_count = 24
+    elif range_str == "week":
+        bin_count = 7
+    else:
+        bin_count = _month_day_count(anchor_local)
+
+    bins = [{"sum": 0.0, "cnt": 0} for _ in range(bin_count)]
+
+    for rec in qs:
+        ts_local = timezone.localtime(rec.timestamp)
+
+        if range_str == "day":
+            idx = ts_local.hour  # 0..23
+        elif range_str == "week":
+            idx = (ts_local.date() - span_from.date()).days  # 0..6 ideally
+            if idx < 0 or idx >= bin_count:
+                continue
+        else:  # month
+            idx = ts_local.day - 1  # 0..(days-1)
+            if idx < 0 or idx >= bin_count:
+                continue
+
+        val = getattr(rec, metric, None)
+        if val is None:
+            continue
+        try:
+            val_f = float(val)
+        except (TypeError, ValueError):
+            continue
+
+        bins[idx]["sum"] += val_f
+        bins[idx]["cnt"] += 1
+
+    values = []
+    for b in bins:
+        if b["cnt"]:
+            values.append(round(b["sum"] / b["cnt"], 2))
+        else:
+            values.append(0.0)
+
+    # Build labels like your RN chart:
+    if range_str == "day":
+        labels = [str(h) if h % 3 == 0 else "" for h in range(24)]
+    elif range_str == "week":
+        labels = [_weekday_short(span_from + timedelta(days=i)) for i in range(bin_count)]
+    else:
+        days = bin_count
+        labels = []
+        for i in range(days):
+            day_num = i + 1
+            is_every_3rd = ((day_num - 1) % 3) == 0  # 1,4,7,10,...
+            is_last = day_num == days
+            labels.append(str(day_num) if (is_every_3rd or is_last) else "")
+
+    points = [
+        {"label": labels[i], "value": values[i]}
+        for i in range(bin_count)
+    ]
+
+    return Response({
+        "device": {
+            "id": device.id,
+            "device_name": device.device_name,
+            "plant_name": device.plant_name,
+            "interval_hours": device.interval_hours,
+        },
+        "range": range_str,
+        "metric": metric,
+        "unit": HISTORY_UNITS[metric],
+        "span": {
+            "from": span_from.isoformat(),
+            "to": span_to.isoformat(),
+        },
+        "points": points,
     })

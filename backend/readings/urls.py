@@ -1,7 +1,12 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import (
-    ReadingDeviceViewSet, rotate_secret, ingest, feed, device_setup
+    ReadingDeviceViewSet,
+    rotate_secret,
+    ingest,
+    feed,
+    device_setup,
+    history,
 )
 
 router = DefaultRouter()
@@ -13,4 +18,5 @@ urlpatterns = [
     path("device-setup/", device_setup, name="device-setup"),
     path("ingest/", ingest, name="ingest"),
     path("feed/", feed, name="feed"),
+    path("history/", history, name="history"),
 ]

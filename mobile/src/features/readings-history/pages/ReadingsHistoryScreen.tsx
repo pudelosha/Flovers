@@ -22,7 +22,7 @@ import MetricPills from "../components/MetricPills";
 import HistoryChart from "../components/HistoryChart";
 import DateNavigator from "../components/DateNavigator";
 
-import type { HistoryRange, MetricKey, HistorySeries, DateSpan } from "../types/readings-history.types";
+import type { HistoryRange, MetricKey, DateSpan } from "../types/readings-history.types";
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
@@ -30,6 +30,9 @@ import {
   METRIC_UNITS,
   TILE_BLUR,
 } from "../constants/readings-history.constants";
+
+import { listReadingDevices, fetchReadingsHistory } from "../../../api/services/readings.service";
+import type { ApiReadingDevice } from "../../readings/types/readings.types";
 
 /* ------------ Date helpers for spans and label generation ------------ */
 function startOfWeekMon(d: Date) {
@@ -66,71 +69,6 @@ function weekdayShort(d: Date) {
 }
 /* -------------------------------------------------------------------- */
 
-/* --------------- Dummy series generator using span ------------------- */
-function getHistory(range: HistoryRange, metric: MetricKey, span: DateSpan): HistorySeries {
-  let labels: string[] = [];
-  let values: number[] = [];
-
-  if (range === "day") {
-    // show label every 3 hours: 0,3,6,...
-    labels = Array.from({ length: 24 }, (_, h) => (h % 3 === 0 ? `${h}` : ""));
-    const seed = metric.charCodeAt(0) + span.from.getDate();
-    let x = seed;
-    const rand = () => ((x = (x * 9301 + 49297) % 233280) / 233280);
-    values = Array.from({ length: 24 }, () => {
-      const base =
-        metric === "temperature" ? 18 + rand() * 10 :
-        metric === "humidity"    ? 40 + rand() * 40 :
-        metric === "light"       ? 200 + rand() * 900 :
-                                   25 + rand() * 60;
-      return Math.round(base);
-    });
-  } else if (range === "week") {
-    const start = span.from;
-    labels = Array.from({ length: 7 }, (_, i) => weekdayShort(addDays(start, i)));
-    const seed = metric.charCodeAt(0) + start.getDate();
-    let x = seed;
-    const rand = () => ((x = (x * 9301 + 49297) % 233280) / 233280);
-    values = Array.from({ length: 7 }, () => {
-      const base =
-        metric === "temperature" ? 18 + rand() * 10 :
-        metric === "humidity"    ? 40 + rand() * 40 :
-        metric === "light"       ? 200 + rand() * 900 :
-                                   25 + rand() * 60;
-      return Math.round(base);
-    });
-  } else {
-    // MONTH: label every 3 days (1,4,7,10,...) and ALWAYS last day
-    const days = lastOfMonth(span.from).getDate();
-    labels = Array.from({ length: days }, (_, i) => {
-      const dayNum = i + 1;
-      const isEvery3rd = ((dayNum - 1) % 3) === 0; // 1,4,7,10,...
-      const isLast = dayNum === days;
-      return (isEvery3rd || isLast) ? `${dayNum}` : "";
-    });
-
-    const seed = metric.charCodeAt(0) + days;
-    let x = seed;
-    const rand = () => ((x = (x * 9301 + 49297) % 233280) / 233280);
-    values = Array.from({ length: days }, () => {
-      const base =
-        metric === "temperature" ? 18 + rand() * 10 :
-        metric === "humidity"    ? 40 + rand() * 40 :
-        metric === "light"       ? 200 + rand() * 900 :
-                                   25 + rand() * 60;
-      return Math.round(base);
-    });
-  }
-
-  return {
-    metric,
-    unit: METRIC_UNITS[metric],
-    color: METRIC_COLORS[metric],
-    points: values.map((v, i) => ({ label: labels[i], value: v })),
-  };
-}
-/* -------------------------------------------------------------------- */
-
 type RouteParams = Partial<{ metric: MetricKey; range: HistoryRange; id: string; name?: string }>;
 
 export default function ReadingsHistoryScreen() {
@@ -142,8 +80,11 @@ export default function ReadingsHistoryScreen() {
   const [range, setRange] = useState<HistoryRange>("day");
   const [metric, setMetric] = useState<MetricKey>("temperature");
 
-  // selected plant (optional display)
-  const plantName = params?.name || "Plant";
+  // selected device (id + names, fetched under auth)
+  const [device, setDevice] = useState<Pick<ApiReadingDevice, "id" | "device_name" | "plant_name"> | null>(null);
+
+  // selected plant (display name)
+  const plantName = params?.name || device?.plant_name || "Plant";
 
   // date anchor (center for current range)
   const [anchor, setAnchor] = useState<Date>(new Date());
@@ -209,10 +150,86 @@ export default function ReadingsHistoryScreen() {
   useEffect(() => { updateChartHeight(); }, [frameViewportH, updateChartHeight]);
   // --------------------------------------------------------------------
 
-  const [loading] = useState(false);
-  const series = useMemo(() => getHistory(range, metric, span), [range, metric, span]);
-  const labels = useMemo(() => series.points.map((p) => p.label), [series]);
-  const values = useMemo(() => series.points.map((p) => p.value), [series]);
+  // LIVE: loading + chart data
+  const [loading, setLoading] = useState(false);
+  const [labels, setLabels] = useState<string[]>([]);
+  const [values, setValues] = useState<number[]>([]);
+
+  // initial fetch: list devices, pick one (optionally based on params.id)
+  useEffect(() => {
+    let mounted = true;
+
+    (async () => {
+      try {
+        setLoading(true);
+        const list = await listReadingDevices({ auth: true });
+        if (!mounted) return;
+
+        let chosen: ApiReadingDevice | undefined;
+        if (params.id) {
+          chosen = list.find((d) => String(d.id) === String(params.id));
+        }
+        if (!chosen && list.length > 0) {
+          chosen = list[0];
+        }
+
+        if (chosen) {
+          setDevice({
+            id: chosen.id,
+            device_name: chosen.device_name,
+            plant_name: chosen.plant_name,
+          });
+        }
+      } catch {
+        // swallow for now; UI will just show empty chart
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [params.id]);
+
+  // fetch history whenever device/range/metric/anchor changes
+  useEffect(() => {
+    if (!device) return;
+
+    let mounted = true;
+
+    const run = async () => {
+      try {
+        setLoading(true);
+        const resp = await fetchReadingsHistory(
+          {
+            deviceId: device.id,
+            range,
+            metric,
+            anchor: anchor.toISOString(),
+          },
+          { auth: true }
+        );
+
+        if (!mounted) return;
+
+        setLabels(resp.points.map((p) => p.label));
+        setValues(resp.points.map((p) => p.value));
+      } catch {
+        if (!mounted) return;
+        setLabels([]);
+        setValues([]);
+      } finally {
+        if (mounted) setLoading(false);
+      }
+    };
+
+    run();
+
+    return () => {
+      mounted = false;
+    };
+  }, [device, range, metric, anchor]);
 
   const navTo = useCallback((name: string) => {
     nav.navigate(name as never);
@@ -245,7 +262,8 @@ export default function ReadingsHistoryScreen() {
   );
   // -----------------------------------------------------------------
 
-  if (loading) {
+  if (loading && !device) {
+    // initial loading state (no device selected yet)
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
@@ -308,7 +326,13 @@ export default function ReadingsHistoryScreen() {
               </View>
 
               {/* Chart with dynamic height */}
-              <HistoryChart labels={labels} values={values} color={series.color} yTicks={4} height={chartHeight} />
+              <HistoryChart
+                labels={labels}
+                values={values}
+                color={METRIC_COLORS[metric]}
+                yTicks={4}
+                height={chartHeight}
+              />
 
               {/* Metric buttons */}
               <View onLayout={onLayoutPills}>

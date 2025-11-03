@@ -104,3 +104,103 @@ export async function fetchDeviceSetup(opts: { auth?: boolean } = { auth: true }
     { auth: opts.auth ?? true }
   );
 }
+
+/* ============================== READ FEED (LATEST ONLY) ============================== */
+
+/**
+ * Types for /api/readings/feed/
+ * (backend now returns only the latest reading in `readings` array)
+ */
+export type ApiReading = {
+  timestamp: string;
+  temperature?: number | null;
+  humidity?: number | null;
+  light?: number | null;
+  moisture?: number | null;
+};
+
+export type ApiFeedResponse = {
+  device: { id: number; device_name: string; plant_name: string | null; interval_hours: number };
+  readings: ApiReading[]; // at most 1 item with current backend
+};
+
+/**
+ * Wrapper for /api/readings/feed/.
+ * Generally used by devices/Arduino; kept here for completeness.
+ */
+export async function fetchReadingsFeed(params: {
+  deviceKey: string;   // device.device_key
+  secret: string;      // account secret
+  from?: string;       // ISO
+  to?: string;         // ISO
+  limit?: number;      // default 200, server max 1000 (though you now get only latest)
+  deviceId?: number;
+}, opts: { auth?: boolean } = { auth: true }): Promise<ApiFeedResponse> {
+  const q = new URLSearchParams();
+  q.set("secret", params.secret);
+  q.set("device_key", params.deviceKey);
+  if (params.deviceId) q.set("device_id", String(params.deviceId));
+  if (params.from) q.set("from", params.from);
+  if (params.to) q.set("to", params.to);
+  q.set("limit", String(params.limit ?? 200));
+
+  return await request<ApiFeedResponse>(
+    `/api/readings/feed/?${q.toString()}`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/* ============================== AUTH'D HISTORY (FOR CHART) ============================== */
+
+export type ApiHistoryPoint = {
+  label: string;
+  value: number;
+};
+
+export type ApiHistoryResponse = {
+  device: {
+    id: number;
+    device_name: string;
+    plant_name: string | null;
+    interval_hours: number;
+  };
+  range: "day" | "week" | "month";
+  metric: "temperature" | "humidity" | "light" | "moisture";
+  unit: string;
+  span: {
+    from: string; // ISO
+    to: string;   // ISO
+  };
+  points: ApiHistoryPoint[];
+};
+
+/**
+ * Authenticated history endpoint for Readings History page.
+ * GET /api/readings/history/
+ */
+export async function fetchReadingsHistory(
+  params: {
+    deviceId: number;
+    range: "day" | "week" | "month";
+    metric: "temperature" | "humidity" | "light" | "moisture";
+    anchor?: string; // ISO datetime; defaults to now on backend if omitted
+  },
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiHistoryResponse> {
+  const q = new URLSearchParams();
+  q.set("device_id", String(params.deviceId));
+  q.set("range", params.range);
+  q.set("metric", params.metric);
+  if (params.anchor) {
+    q.set("anchor", params.anchor);
+  }
+
+  return await request<ApiHistoryResponse>(
+    `/api/readings/history/?${q.toString()}`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
