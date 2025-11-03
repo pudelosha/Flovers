@@ -29,7 +29,6 @@ import {
   deleteReadingDevice as apiDeleteReadingDevice,
   rotateAccountSecret,
   toReadingTile,
-  // ⬇️ newly used to fetch endpoints + secret for the modal
   fetchDeviceSetup,
 } from "../../../api/services/readings.service";
 
@@ -104,28 +103,43 @@ export default function ReadingsScreen() {
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
-  const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
-    setToastMsg(message);
-    setToastVariant(variant);
-    setToastVisible(true);
-  };
+
+  const showToast = useCallback(
+    (message: string, variant: "default" | "success" | "error" = "default") => {
+      setToastMsg(message);
+      setToastVariant(variant);
+      setToastVisible(true);
+    },
+    []
+  );
 
   // FlatList ref to force scroll-to-top on focus
   const listRef = useRef<Animated.FlatList<any>>(null);
 
   // ===== Load devices and plant instances =====
   const load = useCallback(async () => {
-    const [devices, plantsList] = await Promise.all([
-      listReadingDevices(),
-      fetchPlantInstances(),
-    ]);
+    try {
+      const [devices, plantsList] = await Promise.all([
+        listReadingDevices(),
+        fetchPlantInstances(),
+      ]);
 
-    setDevicesRaw(devices);
-    setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
+      setDevicesRaw(devices);
+      setPlantInstances(Array.isArray(plantsList) ? plantsList : []);
 
-    const tiles = devices.map(toReadingTile);
-    setItems(tiles);
-  }, []);
+      const tiles = devices.map(toReadingTile);
+      setItems(tiles);
+    } catch (e: any) {
+      const msg =
+        typeof e?.message === "string" && e.message.toLowerCase().includes("401")
+          ? "Unauthorized. Please log in again."
+          : e?.message || "Failed to load devices";
+      showToast(msg, "error");
+      setDevicesRaw([]);
+      setPlantInstances([]);
+      setItems([]);
+    }
+  }, [showToast]);
 
   // Clear stale tiles on entry so only spinner is visible, then load and animate
   useFocusEffect(
@@ -177,7 +191,7 @@ export default function ReadingsScreen() {
     try { await load(); } finally { setRefreshing(false); }
   }, [load]);
 
-  // ----- Derived plants & locations for Filter modal options (kept as-is) -----
+  // ----- Derived plants & locations for Filter modal options -----
   const plantOptions = useMemo(
     () => items.map((x) => ({ id: x.id, name: x.name })),
     [items]
@@ -229,7 +243,7 @@ export default function ReadingsScreen() {
   const derivedItems = useMemo(() => {
     let arr = [...items];
 
-    // Filter by plant (exact via dropdown; kept as-is)
+    // Filter by plant (exact via dropdown)
     if (filters.plantId) {
       arr = arr.filter((x) => x.id === filters.plantId);
     }
@@ -277,11 +291,11 @@ export default function ReadingsScreen() {
     primeAnimations(ids);
     const raf = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(raf);
-  }, [loading, derivedItems.length]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, derivedItems.length]);
 
-  // Keep FAB visible even when a 3-dot tile menu is open (difference vs. before)
+  // Keep FAB visible even when a 3-dot tile menu is open
   const showFAB =
-    //!menuOpenId &&   <-- removed to keep FAB visible with open tile menus
     !sortSheetOpen &&
     !filterSheetOpen &&
     !sortModalVisible &&
@@ -312,7 +326,7 @@ export default function ReadingsScreen() {
       setDeleteId(null);
       setDeleteName("");
     }
-  }, [deleteId]);
+  }, [deleteId, showToast]);
 
   // ---- Upsert (add/edit) handlers ----
   const openAddDevice = useCallback(async () => {
@@ -411,7 +425,7 @@ export default function ReadingsScreen() {
         "error"
       );
     }
-  }, [upsertReadingId, load]);
+  }, [upsertReadingId, load, showToast]);
 
   // ---- Device setup: fetch endpoints + secret then show modal ----
   const openDeviceSetup = useCallback(async () => {
@@ -447,7 +461,7 @@ export default function ReadingsScreen() {
     );
   }
 
-  const isEmpty = derivedItems.length === 0;
+  const isEmpty = derivedItems.length === 0; // (kept for future use if needed)
 
   return (
     <View style={{ flex: 1 }}>
@@ -467,7 +481,6 @@ export default function ReadingsScreen() {
         style={{ flex: 1 }}
         data={derivedItems}
         keyExtractor={(x) => x.id}
-
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
           const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
@@ -498,8 +511,7 @@ export default function ReadingsScreen() {
                 onMetricPress={(metric) =>
                   nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
                 }
-
-                // NEW: provide device name & sensors so the tile can render correctly
+                // provide device name & sensors so the tile can render correctly
                 deviceName={dev?.device_name}
                 sensors={{
                   temperature: !!dev?.sensors?.temperature,
@@ -511,7 +523,6 @@ export default function ReadingsScreen() {
             </Animated.View>
           );
         }}
-
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}
@@ -584,7 +595,7 @@ export default function ReadingsScreen() {
               key: "device-setup",
               icon: "key-variant",
               label: "Device setup",
-              onPress: openDeviceSetup, // ⬅️ fetches secret + endpoints, then opens modal
+              onPress: openDeviceSetup,
             },
             {
               key: "sort",
@@ -655,7 +666,6 @@ export default function ReadingsScreen() {
       <UpsertReadingDeviceModal
         visible={upsertVisible}
         mode={upsertMode}
-        // Feed REAL Plant Instances (handle various location field names)
         plants={plantInstances.map((p) => ({
           id: String(p.id),
           name: (p as any).display_name ?? `Plant #${p.id}`,
@@ -667,7 +677,6 @@ export default function ReadingsScreen() {
             (p as any).location ??
             undefined,
         }))}
-        // For edit: use device's plant FK. For add: empty to force "Select plant".
         initialPlantId={
           upsertMode === "edit"
             ? (() => {
@@ -676,7 +685,6 @@ export default function ReadingsScreen() {
               })()
             : ""
         }
-        // IMPORTANT: use device_name from the raw device, not the tile's composite name
         initialName={
           upsertMode === "edit"
             ? (() => {
@@ -685,7 +693,6 @@ export default function ReadingsScreen() {
               })()
             : ""
         }
-        // Show actual enabled/interval/etc from device
         initialEnabled={
           upsertMode === "edit"
             ? (() => {
@@ -702,7 +709,6 @@ export default function ReadingsScreen() {
               })()
             : 5
         }
-        // NEW: pass notes and sensors + moisture alert details from device
         initialNotes={
           upsertMode === "edit"
             ? (() => {
