@@ -37,6 +37,18 @@ function formatDate(d?: string | Date | null) {
   return `${dd}.${mm}.${yyyy}`;
 }
 
+// Shared helper: detect 401 / unauthorized like other screens
+function isUnauthorizedError(e: any): boolean {
+  const status = (e?.response?.status ?? e?.status) as number | undefined;
+  const msg = String(e?.message ?? "").toLowerCase();
+  return (
+    status === 401 ||
+    msg.includes("401") ||
+    msg.includes("unauthorized") ||
+    msg.includes("unauthorised")
+  );
+}
+
 export default function ProfileScreen() {
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
@@ -52,10 +64,20 @@ export default function ProfileScreen() {
   const [savingChangeEmail, setSavingChangeEmail] = useState<boolean>(false);
   const [savingChangePassword, setSavingChangePassword] = useState<boolean>(false);
 
-  // ---------- Toast ----------
-  const [toast, setToast] = useState<{ visible: boolean; msg: string }>({ visible: false, msg: "" });
-  const showToast = (msg: string) => setToast({ visible: true, msg });
-  const hideToast = () => setToast({ visible: false, msg: "" });
+  // ---------- Toast (aligned with other screens) ----------
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+
+  const showToast = (
+    msg: string,
+    variant: "default" | "success" | "error" = "default"
+  ) => {
+    setToastMsg(msg);
+    setToastVariant(variant);
+    setToastVisible(true);
+  };
+  const hideToast = () => setToastVisible(false);
 
   // ---------- Notifications state ----------
   const [emailDaily, setEmailDaily] = useState(true);
@@ -97,8 +119,15 @@ export default function ProfileScreen() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
 
-  const resetEmailPrompt = () => { setNewEmail(""); setEmailCurrentPassword(""); };
-  const resetPasswordPrompt = () => { setCurrentPassword(""); setNewPassword(""); setConfirmNewPassword(""); };
+  const resetEmailPrompt = () => {
+    setNewEmail("");
+    setEmailCurrentPassword("");
+  };
+  const resetPasswordPrompt = () => {
+    setCurrentPassword("");
+    setNewPassword("");
+    setConfirmNewPassword("");
+  };
 
   // ---------- Initial fetch ----------
   useEffect(() => {
@@ -125,12 +154,18 @@ export default function ProfileScreen() {
         setDateFormat(settings.date_format ?? "DD.MM.YYYY");
         setTemperatureUnit((settings.temperature_unit as "C" | "F" | "K") ?? "C");
         setMeasureUnit((settings.measure_unit as "metric" | "imperial") ?? "metric");
-        setTileTransparency(typeof settings.tile_transparency === "number" ? settings.tile_transparency : 0.12);
+        setTileTransparency(
+          typeof settings.tile_transparency === "number" ? settings.tile_transparency : 0.12
+        );
         setBackground((settings.background as BackgroundKey) ?? "bg1");
         setFabPosition((settings.fab_position as FabPosition) ?? "right");
       } catch (e: any) {
         console.warn("Failed to load profile data", e);
-        showToast("Failed to load Profile preferences. Please try again.");
+        if (isUnauthorizedError(e)) {
+          showToast("Unauthorized", "error");
+        } else {
+          showToast("Failed to load Profile preferences. Please try again.", "error");
+        }
       } finally {
         if (isMounted) setLoading(false);
       }
@@ -155,10 +190,14 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      showToast("Notification preferences updated.");
+      showToast("Notification preferences updated.", "success");
     } catch (e: any) {
       console.warn("Failed to save notifications", e);
-      showToast("Could not save notification preferences.");
+      if (isUnauthorizedError(e)) {
+        showToast("Unauthorized", "error");
+      } else {
+        showToast("Could not save notification preferences.", "error");
+      }
     } finally {
       setSavingNotif(false);
     }
@@ -179,10 +218,14 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      showToast("Settings updated.");
+      showToast("Settings updated.", "success");
     } catch (e: any) {
       console.warn("Failed to save settings", e);
-      showToast("Could not save settings.");
+      if (isUnauthorizedError(e)) {
+        showToast("Unauthorized", "error");
+      } else {
+        showToast("Could not save settings.", "error");
+      }
     } finally {
       setSavingSettings(false);
     }
@@ -190,22 +233,29 @@ export default function ProfileScreen() {
 
   const handleChangeEmail = async () => {
     if (!newEmail.trim()) {
-      showToast("Please enter the new email.");
+      showToast("Please enter the new email.", "error");
       return;
     }
     if (!emailCurrentPassword) {
-      showToast("Please enter your current password.");
+      showToast("Please enter your current password.", "error");
       return;
     }
     try {
       setSavingChangeEmail(true);
-      const res = await changeMyEmail({ new_email: newEmail.trim(), password: emailCurrentPassword }, { auth: true });
-      showToast(res?.message || "Email updated successfully.");
+      const res = await changeMyEmail(
+        { new_email: newEmail.trim(), password: emailCurrentPassword },
+        { auth: true }
+      );
+      showToast(res?.message || "Email updated successfully.", "success");
       resetEmailPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change email failed", e);
-      showToast("Could not change email. Check your password and try again.");
+      if (isUnauthorizedError(e)) {
+        showToast("Unauthorized. Please log in again.", "error");
+      } else {
+        showToast("Could not change email. Check your password and try again.", "error");
+      }
     } finally {
       setSavingChangeEmail(false);
     }
@@ -213,26 +263,36 @@ export default function ProfileScreen() {
 
   const handleChangePassword = async () => {
     if (!currentPassword) {
-      showToast("Please enter your current password.");
+      showToast("Please enter your current password.", "error");
       return;
     }
     if (!newPassword) {
-      showToast("Please enter a new password.");
+      showToast("Please enter a new password.", "error");
       return;
     }
     if (newPassword !== confirmNewPassword) {
-      showToast("New passwords do not match.");
+      showToast("New passwords do not match.", "error");
       return;
     }
     try {
       setSavingChangePassword(true);
-      const res = await changeMyPassword({ current_password: currentPassword, new_password: newPassword }, { auth: true });
-      showToast(res?.message || "Password updated successfully.");
+      const res = await changeMyPassword(
+        { current_password: currentPassword, new_password: newPassword },
+        { auth: true }
+      );
+      showToast(res?.message || "Password updated successfully.", "success");
       resetPasswordPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change password failed", e);
-      showToast("Could not change password. Check your current password and try again.");
+      if (isUnauthorizedError(e)) {
+        showToast("Unauthorized. Please log in again.", "error");
+      } else {
+        showToast(
+          "Could not change password. Check your current password and try again.",
+          "error"
+        );
+      }
     } finally {
       setSavingChangePassword(false);
     }
@@ -241,8 +301,14 @@ export default function ProfileScreen() {
   // ---------- ✨ ENTER/EXIT CONTENT ANIMATION (like Login/Scanner) ----------
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
-  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
-  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+  const contentTranslateY = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const contentScale = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
 
   useFocusEffect(
     useCallback(() => {
@@ -277,8 +343,16 @@ export default function ProfileScreen() {
       />
 
       {/* CONTENT: all “subpages” combined (animated wrapper) */}
-      <Animated.View style={{ flex: 1, opacity: contentOpacity, transform: [{ translateY: contentTranslateY }, { scale: contentScale }] }}>
-        <ScrollView contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}>
+      <Animated.View
+        style={{
+          flex: 1,
+          opacity: contentOpacity,
+          transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
+        }}
+      >
+        <ScrollView
+          contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}
+        >
           <AccountCard
             email={user?.email}
             createdText={formatDate((user as any)?.date_joined)}
@@ -287,39 +361,57 @@ export default function ProfileScreen() {
           />
 
           <NotificationsCard
-            emailDaily={emailDaily} setEmailDaily={setEmailDaily}
-            emailHour={emailHour} setEmailHour={setEmailHour}
-            email24h={email24h} setEmail24h={setEmail24h}
-            pushDaily={pushDaily} setPushDaily={setPushDaily}
-            pushHour={pushHour} setPushHour={setPushHour}
-            push24h={push24h} setPush24h={setPush24h}
-            formatHour={formatHour} incHour={incHour} decHour={decHour}
+            emailDaily={emailDaily}
+            setEmailDaily={setEmailDaily}
+            emailHour={emailHour}
+            setEmailHour={setEmailHour}
+            email24h={email24h}
+            setEmail24h={setEmail24h}
+            pushDaily={pushDaily}
+            setPushDaily={setPushDaily}
+            pushHour={pushHour}
+            setPushHour={setPushHour}
+            push24h={push24h}
+            setPush24h={setPush24h}
+            formatHour={formatHour}
+            incHour={incHour}
+            decHour={decHour}
             onSave={handleSaveNotifications}
           />
 
           <SettingsCard
-            language={language} setLanguage={setLanguage}
-            langOpen={langOpen} setLangOpen={setLangOpen}
-            dateFormat={dateFormat} setDateFormat={setDateFormat}
-            dateOpen={dateOpen} setDateOpen={setDateOpen}
+            language={language}
+            setLanguage={setLanguage}
+            langOpen={langOpen}
+            setLangOpen={setLangOpen}
+            dateFormat={dateFormat}
+            setDateFormat={setDateFormat}
+            dateOpen={dateOpen}
+            setDateOpen={setDateOpen}
             // NEW
-            temperatureUnit={temperatureUnit} setTemperatureUnit={setTemperatureUnit}
-            tempOpen={tempOpen} setTempOpen={setTempOpen}
-            measureUnit={measureUnit} setMeasureUnit={setMeasureUnit}
-            measureOpen={measureOpen} setMeasureOpen={setMeasureOpen}
-            tileTransparency={tileTransparency} setTileTransparency={setTileTransparency}
+            temperatureUnit={temperatureUnit}
+            setTemperatureUnit={setTemperatureUnit}
+            tempOpen={tempOpen}
+            setTempOpen={setTempOpen}
+            measureUnit={measureUnit}
+            setMeasureUnit={setMeasureUnit}
+            measureOpen={measureOpen}
+            setMeasureOpen={setMeasureOpen}
+            tileTransparency={tileTransparency}
+            setTileTransparency={setTileTransparency}
             // NEW props for Background + FAB position
-            background={background} setBackground={setBackground}
-            bgOpen={bgOpen} setBgOpen={setBgOpen}
-            fabPosition={fabPosition} setFabPosition={setFabPosition}
-            fabOpen={fabOpen} setFabOpen={setFabOpen}
+            background={background}
+            setBackground={setBackground}
+            bgOpen={bgOpen}
+            setBgOpen={setBgOpen}
+            fabPosition={fabPosition}
+            setFabPosition={setFabPosition}
+            fabOpen={fabOpen}
+            setFabOpen={setFabOpen}
             onSave={handleSaveSettings}
           />
 
-          <SupportCard
-            onContact={() => setPrompt("contact")}
-            onBug={() => setPrompt("bug")}
-          />
+          <SupportCard onContact={() => setPrompt("contact")} onBug={() => setPrompt("bug")} />
         </ScrollView>
       </Animated.View>
 
@@ -339,15 +431,18 @@ export default function ProfileScreen() {
           <View style={pr.promptWrap}>
             <View style={pr.promptGlass}>
               <BlurView
-                style={{ position: "absolute", inset: 0 } as any
-                }
+                style={{ position: "absolute", inset: 0 } as any}
                 blurType="light"
                 blurAmount={14}
                 reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
               />
               <View
                 pointerEvents="none"
-                style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  backgroundColor: "rgba(0,0,0,0.35)",
+                } as any}
               />
             </View>
 
@@ -372,10 +467,19 @@ export default function ProfileScreen() {
                   onChangeText={setEmailCurrentPassword}
                 />
                 <View style={pr.promptButtonsRow}>
-                  <Pressable style={pr.promptBtn} onPress={() => { resetEmailPrompt(); setPrompt(null); }}>
+                  <Pressable
+                    style={pr.promptBtn}
+                    onPress={() => {
+                      resetEmailPrompt();
+                      setPrompt(null);
+                    }}
+                  >
                     <Text style={pr.promptBtnText}>Cancel</Text>
                   </Pressable>
-                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangeEmail}>
+                  <Pressable
+                    style={[pr.promptBtn, pr.promptPrimary]}
+                    onPress={handleChangeEmail}
+                  >
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Change</Text>
                   </Pressable>
                 </View>
@@ -410,10 +514,19 @@ export default function ProfileScreen() {
                   onChangeText={setConfirmNewPassword}
                 />
                 <View style={pr.promptButtonsRow}>
-                  <Pressable style={pr.promptBtn} onPress={() => { resetPasswordPrompt(); setPrompt(null); }}>
+                  <Pressable
+                    style={pr.promptBtn}
+                    onPress={() => {
+                      resetPasswordPrompt();
+                      setPrompt(null);
+                    }}
+                  >
                     <Text style={pr.promptBtnText}>Cancel</Text>
                   </Pressable>
-                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangePassword}>
+                  <Pressable
+                    style={[pr.promptBtn, pr.promptPrimary]}
+                    onPress={handleChangePassword}
+                  >
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Update</Text>
                   </Pressable>
                 </View>
@@ -424,9 +537,15 @@ export default function ProfileScreen() {
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>Delete account</Text>
                 <Text style={pr.warningText}>
-                  This action is irreversible. If you proceed, your account and data will be permanently deleted.
+                  This action is irreversible. If you proceed, your account and data will be
+                  permanently deleted.
                 </Text>
-                <TextInput style={pr.input} placeholder="Enter password to confirm" placeholderTextColor="rgba(255,255,255,0.7)" secureTextEntry />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Enter password to confirm"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                  secureTextEntry
+                />
                 <View style={pr.promptButtonsRow}>
                   <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
                     <Text style={pr.promptBtnText}>Cancel</Text>
@@ -441,7 +560,11 @@ export default function ProfileScreen() {
             {prompt === "bug" && (
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>Report a bug</Text>
-                <TextInput style={pr.input} placeholder="Subject" placeholderTextColor="rgba(255,255,255,0.7)" />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Subject"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                />
                 <TextInput
                   style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
                   placeholder="Describe the issue…"
@@ -462,7 +585,11 @@ export default function ProfileScreen() {
             {prompt === "contact" && (
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>Contact us</Text>
-                <TextInput style={pr.input} placeholder="Subject" placeholderTextColor="rgba(255,255,255,0.7)" />
+                <TextInput
+                  style={pr.input}
+                  placeholder="Subject"
+                  placeholderTextColor="rgba(255,255,255,0.7)"
+                />
                 <TextInput
                   style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
                   placeholder="How can we help?"
@@ -484,7 +611,12 @@ export default function ProfileScreen() {
       )}
 
       {/* Shared top toast */}
-      <TopSnackbar visible={toast.visible} message={toast.msg} onDismiss={hideToast} />
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={hideToast}
+      />
     </View>
   );
 }
