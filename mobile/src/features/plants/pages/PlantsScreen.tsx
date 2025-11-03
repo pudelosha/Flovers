@@ -73,7 +73,7 @@ export default function PlantsScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
-  // --- TOAST / SNACKBAR STATE (same API as Reminders) ---
+  // --- TOAST / SNACKBAR STATE (same API as Reminders/Home) ---
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] =
@@ -126,9 +126,16 @@ export default function PlantsScreen() {
     }, [])
   );
 
+  // --- MAIN LOAD with unauthorized handling (like HomeScreen) ---
   const load = useCallback(async () => {
-    const data = await fetchPlantInstances({ auth: true });
-    setPlants(data.map(mapApiToPlant));
+    try {
+      const data = await fetchPlantInstances({ auth: true });
+      setPlants(data.map(mapApiToPlant));
+    } catch (e: any) {
+      // Show toast (e.g. for "unauthorised" coming from request helper)
+      showToast(e?.message || "Failed to load plants", "error");
+      setPlants([]);
+    }
   }, []);
 
   // Show spinner on focus, clear stale tiles (so list is empty), then load fresh data
