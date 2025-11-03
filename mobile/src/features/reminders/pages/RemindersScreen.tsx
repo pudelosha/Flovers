@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -169,6 +170,8 @@ export default function RemindersScreen() {
       setUiReminders([]);
       setPlantOptions([]);
       setHasLoadedOnce(true);
+      // 🔴 show toast on unauthorized / any load error
+      showToast(e?.message || "Failed to load reminders", "error");
     } finally {
       setLoading(false);
     }
