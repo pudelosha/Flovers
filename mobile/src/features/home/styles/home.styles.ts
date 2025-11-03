@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\styles\home.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -121,5 +122,46 @@ export const s = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 0.2,
     fontSize: 12,
+  },
+
+  /* ---------- EMPTY STATE (blurry card, like Plants) ---------- */
+  emptyWrap: {
+    marginTop: 0, // match Plants: no extra padding, rely on listContent padding
+  },
+  emptyGlass: {
+    borderRadius: 28,
+    overflow: "hidden",
+    minHeight: 160,
+  },
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
+  },
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+  },
+  emptyInner: { padding: 16, alignItems: "center" },
+  emptyTitle: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 8,
+    textAlign: "center",
+  },
+  emptyDescBox: {
+    alignSelf: "stretch",
+    marginTop: 20,
+  },
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+  inlineBold: {
+    color: "#FFFFFF",
+    fontWeight: "800",
   },
 });

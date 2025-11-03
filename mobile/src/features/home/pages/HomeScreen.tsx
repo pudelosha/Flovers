@@ -1,6 +1,17 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\pages\HomeScreen.tsx
 import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
-import { View, Pressable, RefreshControl, Animated, Easing } from "react-native";
+import {
+  View,
+  Pressable,
+  RefreshControl,
+  Animated,
+  Easing,
+  StyleSheet,
+  Text,
+} from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { BlurView } from "@react-native-community/blur";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -321,6 +332,52 @@ export default function HomeScreen() {
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        ListEmptyComponent={() => (
+          <View style={s.emptyWrap}>
+            <View style={s.emptyGlass}>
+              <BlurView
+                style={StyleSheet.absoluteFill}
+                blurType="light"
+                blurAmount={20}
+                overlayColor="transparent"
+                reducedTransparencyFallbackColor="transparent"
+              />
+              {/* White tint for readability */}
+              <View pointerEvents="none" style={s.emptyTint} />
+              {/* Thin border */}
+              <View pointerEvents="none" style={s.emptyBorder} />
+
+              <View style={s.emptyInner}>
+                <MaterialCommunityIcons
+                  name="calendar-check-outline"
+                  size={26}
+                  color="#FFFFFF"
+                  style={{ marginBottom: 10 }}
+                />
+                <Text style={s.emptyTitle}>No tasks yet</Text>
+                <View style={s.emptyDescBox}>
+                  <Text style={s.emptyText}>
+                    This page shows your upcoming{" "}
+                    <Text style={s.inlineBold}>plant care reminders</Text> — watering, fertilizing,
+                    repotting, and more.{"\n\n"}
+                    To get started:
+                    {"\n\n"}
+                    • <Text style={s.inlineBold}>Create your plants</Text> in the{" "}
+                    <Text style={s.inlineBold}>Plants</Text> tab.{"\n"}
+                    • Add <Text style={s.inlineBold}>reminders</Text> for each plant so they appear
+                    here as tasks.{"\n"}
+                    • Optionally connect{" "}
+                    <Text style={s.inlineBold}>IoT devices (Arduino boards)</Text> in the{" "}
+                    <Text style={s.inlineBold}>Readings</Text> tab to track temperature, humidity,
+                    light and soil moisture in real time.{"\n\n"}
+                    Once you’ve set those up, your Home screen will become your central place to
+                    see what each plant needs today.
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        )}
       />
 
       {/* Capture taps on the FAB (including the main button) to hide any open tile menu,
