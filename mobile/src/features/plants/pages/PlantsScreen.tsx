@@ -321,7 +321,7 @@ export default function PlantsScreen() {
   // Hide FAB when ANY modal is visible (edit, delete, sort, filter)
   const showFAB = !editOpen && !confirmDeleteId && !sortOpen && !filterOpen;
 
-  // ---------- ✨ ENTRANCE ANIMATION (mirrors Home) ----------
+  // ---------- ✨ ENTRANCE ANIMATION (per-plant tiles, mirrors Home) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -359,6 +359,38 @@ export default function PlantsScreen() {
     return () => cancelAnimationFrame(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, derivedPlants.length]);
+
+  // ---------- ✨ EMPTY-STATE FRAME ANIMATION (for "No plants yet") ----------
+  const emptyAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (loading) {
+      emptyAnim.setValue(0);
+      return;
+    }
+
+    if (derivedPlants.length === 0) {
+      emptyAnim.setValue(0);
+      Animated.timing(emptyAnim, {
+        toValue: 1,
+        duration: 260,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+    } else {
+      emptyAnim.setValue(0);
+    }
+  }, [loading, derivedPlants.length, emptyAnim]);
+
+  const emptyTranslateY = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
 
   // Skeleton/loader
   if (loading) {
@@ -427,7 +459,15 @@ export default function PlantsScreen() {
         keyboardShouldPersistTaps="handled"
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         ListEmptyComponent={() => (
-          <View style={s.emptyWrap}>
+          <Animated.View
+            style={[
+              s.emptyWrap,
+              {
+                opacity: emptyOpacity,
+                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+              },
+            ]}
+          >
             <View style={s.emptyGlass}>
               <BlurView
                 style={StyleSheet.absoluteFill}
@@ -468,7 +508,7 @@ export default function PlantsScreen() {
                 </View>
               </View>
             </View>
-          </View>
+          </Animated.View>
         )}
       />
 

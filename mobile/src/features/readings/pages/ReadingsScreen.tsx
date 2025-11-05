@@ -202,7 +202,7 @@ export default function ReadingsScreen() {
     return Array.from(set);
   }, [items]);
 
-  // ---------- ✨ ENTRANCE ANIMATION ----------
+  // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -293,6 +293,38 @@ export default function ReadingsScreen() {
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, derivedItems.length]);
+
+  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ("No devices yet") ----------
+  const emptyAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (loading) {
+      emptyAnim.setValue(0);
+      return;
+    }
+
+    if (derivedItems.length === 0) {
+      emptyAnim.setValue(0);
+      Animated.timing(emptyAnim, {
+        toValue: 1,
+        duration: 260,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+    } else {
+      emptyAnim.setValue(0);
+    }
+  }, [loading, derivedItems.length, emptyAnim]);
+
+  const emptyTranslateY = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
 
   // Keep FAB visible even when a 3-dot tile menu is open
   const showFAB =
@@ -532,7 +564,15 @@ export default function ReadingsScreen() {
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         ListEmptyComponent={
           !loading ? (
-            <View style={s.emptyWrap}>
+            <Animated.View
+              style={[
+                s.emptyWrap,
+                {
+                  opacity: emptyOpacity,
+                  transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                },
+              ]}
+            >
               {/* Single glass frame — identical recipe to Reminders' empty state */}
               <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
                 <BlurView
@@ -575,7 +615,7 @@ export default function ReadingsScreen() {
                   </View>
                 </View>
               </View>
-            </View>
+            </Animated.View>
           ) : null
         }
       />

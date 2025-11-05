@@ -464,6 +464,38 @@ export default function RemindersScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, viewMode, derivedReminders.length]);
 
+  // ---------- ✨ EMPTY-STATE FRAME ANIMATION (for "No reminders yet") ----------
+  const emptyAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (loading || viewMode !== "list") {
+      emptyAnim.setValue(0);
+      return;
+    }
+
+    if (derivedReminders.length === 0) {
+      emptyAnim.setValue(0);
+      Animated.timing(emptyAnim, {
+        toValue: 1,
+        duration: 260,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+    } else {
+      emptyAnim.setValue(0);
+    }
+  }, [loading, viewMode, derivedReminders.length, emptyAnim]);
+
+  const emptyTranslateY = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
+
   // ---------- EXACTLY LIKE PLANTS: EARLY RETURN WHILE LOADING ----------
   if (loading) {
     return (
@@ -528,7 +560,15 @@ export default function RemindersScreen() {
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
           ListEmptyComponent={
             !loading ? (
-              <View style={s.emptyWrap}>
+              <Animated.View
+                style={[
+                  s.emptyWrap,
+                  {
+                    opacity: emptyOpacity,
+                    transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                  },
+                ]}
+              >
                 {/* Single glass frame — no duplicate borders/backgrounds */}
                 <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
                   <BlurView
@@ -568,7 +608,7 @@ export default function RemindersScreen() {
                     </View>
                   </View>
                 </View>
-              </View>
+              </Animated.View>
             ) : null
           }
         />

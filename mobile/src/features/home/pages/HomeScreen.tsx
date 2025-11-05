@@ -54,7 +54,10 @@ export default function HomeScreen() {
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
-  const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
+  const showToast = (
+    message: string,
+    variant: "default" | "success" | "error" = "default"
+  ) => {
     setToastMsg(message);
     setToastVariant(variant);
     setToastVisible(true);
@@ -155,17 +158,14 @@ export default function HomeScreen() {
     });
   }, [tasks, viewFilter]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (no extra deps) ----------
-  // Animated value per task id
+  // ---------- ✨ ENTRANCE ANIMATION (per-task tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
-  // ensure value exists
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
     if (!m.has(id)) m.set(id, new Animated.Value(0));
     return m.get(id)!;
   };
 
-  // Reset all current items to hidden (0)
   const primeAnimations = useCallback((ids: string[]) => {
     ids.forEach((id) => {
       const v = getAnimForId(id);
@@ -173,33 +173,53 @@ export default function HomeScreen() {
     });
   }, []);
 
-  // Run a nice staggered fade+translate for current list
   const runStaggerIn = useCallback((ids: string[]) => {
     const sequences = ids.map((id, i) => {
       const v = getAnimForId(id);
       return Animated.timing(v, {
         toValue: 1,
-        duration: 280, // ANIMATION SPEED lower = faster
+        duration: 280,
         easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
-        delay: i * 50, // stagger
+        delay: i * 50,
       });
     });
     Animated.stagger(50, sequences).start();
   }, []);
 
-  // Trigger animation when:
-  // - initial load finished (spinner disappears)
-  // - the filter changes
   useEffect(() => {
     if (loading) return;
     const ids = derivedTasks.map((t) => t.id);
     primeAnimations(ids);
-    // Defer a frame so list has laid out
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, viewFilter, derivedTasks.length]);
+
+  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ----------
+  // Separate animated value for the "No tasks yet" blurry frame
+  const emptyAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (loading) {
+      emptyAnim.setValue(0);
+      return;
+    }
+
+    if (derivedTasks.length === 0) {
+      // animate the empty card in, similar to other glass frames
+      emptyAnim.setValue(0);
+      Animated.timing(emptyAnim, {
+        toValue: 1,
+        duration: 260,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
+    } else {
+      // hide/reset when there are tasks
+      emptyAnim.setValue(0);
+    }
+  }, [loading, derivedTasks.length, emptyAnim]);
 
   // --- Spinner (match Plants: show whenever loading is true) ---
   if (loading) {
@@ -268,6 +288,17 @@ export default function HomeScreen() {
           { key: "history", label: "History", icon: "history", onPress: () => {} },
         ];
 
+  // Animated transforms for empty frame
+  const emptyTranslateY = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
+
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -333,7 +364,15 @@ export default function HomeScreen() {
         onScrollBeginDrag={() => setMenuOpenId(null)}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
         ListEmptyComponent={() => (
-          <View style={s.emptyWrap}>
+          <Animated.View
+            style={[
+              s.emptyWrap,
+              {
+                opacity: emptyOpacity,
+                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+              },
+            ]}
+          >
             <View style={s.emptyGlass}>
               <BlurView
                 style={StyleSheet.absoluteFill}
@@ -376,7 +415,7 @@ export default function HomeScreen() {
                 </View>
               </View>
             </View>
-          </View>
+          </Animated.View>
         )}
       />
 
