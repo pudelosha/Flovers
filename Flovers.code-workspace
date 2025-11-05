@@ -1,230 +1,230 @@
-﻿{
-  "folders": [
-    { "path": "backend" },
-    { "path": "mobile" }
-  ],
-  "settings": {},
-  "tasks": {
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "Backend: up (Docker)",
-        "type": "shell",
-        "command": "docker compose up -d --build",
-        "options": { "cwd": "${workspaceFolder}" },
-        "group": { "kind": "build", "isDefault": true }
-      },
-      {
-        "label": "Backend: logs",
-        "type": "shell",
-        "command": "docker compose logs -f web",
-        "options": { "cwd": "${workspaceFolder}" }
-      },
-      {
-        "label": "Backend: migrate",
-        "type": "shell",
-        "command": "docker compose exec web python manage.py migrate",
-        "options": { "cwd": "${workspaceFolder}" }
-      },
-      {
-        "label": "Backend: down",
-        "type": "shell",
-        "command": "docker compose down",
-        "options": { "cwd": "${workspaceFolder}" }
-      },
+﻿	{
+	  "folders": [
+		{ "path": "backend" },
+		{ "path": "mobile" }
+	  ],
+	  "settings": {},
+	  "tasks": {
+		"version": "2.0.0",
+		"tasks": [
+		  {
+			"label": "Backend: up (Docker)",
+			"type": "shell",
+			"command": "docker compose up -d --build",
+			"options": { "cwd": "${workspaceFolder}" },
+			"group": { "kind": "build", "isDefault": true }
+		  },
+		  {
+			"label": "Backend: logs",
+			"type": "shell",
+			"command": "docker compose logs -f web",
+			"options": { "cwd": "${workspaceFolder}" }
+		  },
+		  {
+			"label": "Backend: migrate",
+			"type": "shell",
+			"command": "docker compose exec web python manage.py migrate",
+			"options": { "cwd": "${workspaceFolder}" }
+		  },
+		  {
+			"label": "Backend: down",
+			"type": "shell",
+			"command": "docker compose down",
+			"options": { "cwd": "${workspaceFolder}" }
+		  },
 
-      {
-        "label": "Mobile: start Metro",
-        "type": "shell",
-        "command": "npx react-native start --clear-cache",
-        "options": { "cwd": "${workspaceFolder:mobile}" },
-        "presentation": { "reveal": "always", "panel": "new" },
-        "problemMatcher": []
-      },
+		  {
+			"label": "Mobile: start Metro",
+			"type": "shell",
+			"command": "npx react-native start --clear-cache",
+			"options": { "cwd": "${workspaceFolder:mobile}" },
+			"presentation": { "reveal": "always", "panel": "new" },
+			"problemMatcher": []
+		  },
 
-      {
-        "label": "Mobile: check devices",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found. Install Android SDK Platform-Tools or set ANDROID_SDK_ROOT.'; exit 1 }; " +
-          "& $adb version; & $adb devices"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "Mobile: USB reverse Metro (8081)",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb reverse tcp:8081 tcp:8081; & $adb reverse --list"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "Mobile: USB reverse Backend (8000)",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "Mobile: USB reverse 8081+8000",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb reverse tcp:8081 tcp:8081; & $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
+		  {
+			"label": "Mobile: check devices",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found. Install Android SDK Platform-Tools or set ANDROID_SDK_ROOT.'; exit 1 }; " +
+			  "& $adb version; & $adb devices"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "Mobile: USB reverse Metro (8081)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb reverse tcp:8081 tcp:8081; & $adb reverse --list"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "Mobile: USB reverse Backend (8000)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "Mobile: USB reverse 8081+8000",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb reverse tcp:8081 tcp:8081; & $adb reverse tcp:8000 tcp:8000; & $adb reverse --list"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
 
-      {
-        "label": "Mobile: run Android (THIS DEVICE)",
-        "type": "shell",
-        "command": "npx",
-        "args": ["react-native", "run-android", "--deviceId", "R3CT30SVWFW"],
-        "options": { "cwd": "${workspaceFolder:mobile}" },
-        "presentation": { "reveal": "always" }
-      },
-      {
-        "label": "Mobile: deploy (USB)",
-        "type": "shell",
-        "command": "echo Deploying to physical device…",
-        "dependsOn": [
-          "Mobile: check devices",
-          "Mobile: USB reverse 8081+8000",
-          "Mobile: run Android (THIS DEVICE)"
-        ],
-        "dependsOrder": "sequence",
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
+		  {
+			"label": "Mobile: run Android (THIS DEVICE)",
+			"type": "shell",
+			"command": "npx",
+			"args": ["react-native", "run-android", "--deviceId", "R3CT30SVWFW", "--port", "8081"],
+			"options": { "cwd": "${workspaceFolder:mobile}" },
+			"presentation": { "reveal": "always" }
+		  },
+		  {
+			"label": "Mobile: deploy (USB)",
+			"type": "shell",
+			"command": "echo Deploying to physical device…",
+			"dependsOn": [
+			  "Mobile: check devices",
+			  "Mobile: USB reverse 8081+8000",
+			  "Mobile: run Android (THIS DEVICE)"
+			],
+			"dependsOrder": "sequence",
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
 
-      {
-        "label": "Network: show LAN IPv4",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notmatch '^127\\.|^169\\.254\\.' -and $_.PrefixOrigin -ne 'WellKnown' } | Select-Object InterfaceAlias,IPAddress | Format-Table -Auto"
-        ],
-        "options": { "cwd": "${workspaceFolder}" },
-        "presentation": { "reveal": "always" }
-      },
-      {
-        "label": "Firewall: allow 8000 (Private)",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to add firewall rules.'; exit 1 }; if(-not (Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue)){ New-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -Direction Inbound -Profile Private -Action Allow -Protocol TCP -LocalPort 8000; Write-Host 'Rule created.' } else { Write-Host 'Rule already exists.' }"
-        ],
-        "options": { "cwd": "${workspaceFolder}" },
-        "presentation": { "reveal": "always" }
-      },
-      {
-        "label": "Firewall: show rule 8000",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$rule = Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue; if($rule){ $rule | Get-NetFirewallPortFilter | Format-Table -Auto } else { Write-Host 'Rule not found.' }"
-        ],
-        "options": { "cwd": "${workspaceFolder}" },
-        "presentation": { "reveal": "always" }
-      },
-      {
-        "label": "Firewall: remove rule 8000",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to remove firewall rules.'; exit 1 }; if(Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue){ Remove-NetFirewallRule -DisplayName 'Flovers Dev Port 8000'; Write-Host 'Rule removed.' } else { Write-Host 'Rule not found.' }"
-        ],
-        "options": { "cwd": "${workspaceFolder}" },
-        "presentation": { "reveal": "always" }
-      },
+		  {
+			"label": "Network: show LAN IPv4",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notmatch '^127\\.|^169\\.254\\.' -and $_.PrefixOrigin -ne 'WellKnown' } | Select-Object InterfaceAlias,IPAddress | Format-Table -Auto"
+			],
+			"options": { "cwd": "${workspaceFolder}" },
+			"presentation": { "reveal": "always" }
+		  },
+		  {
+			"label": "Firewall: allow 8000 (Private)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to add firewall rules.'; exit 1 }; if(-not (Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue)){ New-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -Direction Inbound -Profile Private -Action Allow -Protocol TCP -LocalPort 8000; Write-Host 'Rule created.' } else { Write-Host 'Rule already exists.' }"
+			],
+			"options": { "cwd": "${workspaceFolder}" },
+			"presentation": { "reveal": "always" }
+		  },
+		  {
+			"label": "Firewall: show rule 8000",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$rule = Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue; if($rule){ $rule | Get-NetFirewallPortFilter | Format-Table -Auto } else { Write-Host 'Rule not found.' }"
+			],
+			"options": { "cwd": "${workspaceFolder}" },
+			"presentation": { "reveal": "always" }
+		  },
+		  {
+			"label": "Firewall: remove rule 8000",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator); if(-not $isAdmin){ Write-Error 'Run VS Code as Administrator to remove firewall rules.'; exit 1 }; if(Get-NetFirewallRule -DisplayName 'Flovers Dev Port 8000' -ErrorAction SilentlyContinue){ Remove-NetFirewallRule -DisplayName 'Flovers Dev Port 8000'; Write-Host 'Rule removed.' } else { Write-Host 'Rule not found.' }"
+			],
+			"options": { "cwd": "${workspaceFolder}" },
+			"presentation": { "reveal": "always" }
+		  },
 
-      {
-        "label": "DL: open activate (USB)",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/activate/?uid=TEST&token=TEST'"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "DL: open reset-password (USB)",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/reset-password/?uid=TEST&token=TEST'"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "DL: confirm-email deep link",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://confirm-email?uid=TEST&token=TEST'"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      },
-      {
-        "label": "DL: reset-password deep link",
-        "type": "shell",
-        "command": "powershell",
-        "args": [
-          "-NoProfile",
-          "-Command",
-          "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
-          "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
-          "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
-          "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://reset-password?uid=TEST&token=TEST'"
-        ],
-        "options": { "cwd": "${workspaceFolder:mobile}" }
-      }
-    ]
-  }
-}
+		  {
+			"label": "DL: open activate (USB)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/activate/?uid=TEST&token=TEST'"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "DL: open reset-password (USB)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb shell am start -a android.intent.action.VIEW -d 'http://127.0.0.1:8000/api/auth/open/reset-password/?uid=TEST&token=TEST'"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "DL: confirm-email deep link",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://confirm-email?uid=TEST&token=TEST'"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  },
+		  {
+			"label": "DL: reset-password deep link",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+			  "-NoProfile",
+			  "-Command",
+			  "$adb1 = Join-Path $env:ANDROID_SDK_ROOT 'platform-tools/adb.exe'; " +
+			  "$adb2 = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'; " +
+			  "if (Test-Path $adb1) { $adb = $adb1 } elseif (Test-Path $adb2) { $adb = $adb2 } else { Write-Error 'adb not found.'; exit 1 }; " +
+			  "& $adb shell am start -a android.intent.action.VIEW -d 'flovers://reset-password?uid=TEST&token=TEST'"
+			],
+			"options": { "cwd": "${workspaceFolder:mobile}" }
+		  }
+		]
+	  }
+	}
