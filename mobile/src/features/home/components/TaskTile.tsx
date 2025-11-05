@@ -29,6 +29,11 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
+  // 🔴 Detect overdue by the label text (e.g. "Overdue", "Overdue by 2 days")
+  const isOverdue =
+    typeof task.due === "string" &&
+    task.due.toLowerCase().includes("overdue");
+
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass stack: Blur + white tint + hairline border + subtle accent tint */}
@@ -62,8 +67,22 @@ export default function TaskTile({
           <Text style={s.plantName} numberOfLines={1}>{task.plant}</Text>
           <Text style={s.location} numberOfLines={1}>{task.location}</Text>
           <View style={s.dueRow}>
-            <Text style={s.dueWhen}>{task.due}</Text>
-            <Text style={s.dueDateText}>{formatDate(task.dueDate)}</Text>
+            <Text
+              style={[
+                s.dueWhen,
+                isOverdue && s.dueOverdue, // 🔴 overdue styling
+              ]}
+            >
+              {task.due}
+            </Text>
+            <Text
+              style={[
+                s.dueDateText,
+                isOverdue && s.dueOverdue, // 🔴 overdue styling
+              ]}
+            >
+              {formatDate(task.dueDate)}
+            </Text>
           </View>
         </View>
 

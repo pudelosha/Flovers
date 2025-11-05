@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\styles\home.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -83,6 +82,11 @@ export const s = StyleSheet.create({
   dueRow: { flexDirection: "row", alignItems: "center", gap: 16, marginTop: 6 },
   dueWhen: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
   dueDateText: { color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 },
+
+  // 🔴 Overdue styling (applied to both label & date)
+  dueOverdue: {
+    color: "#FF4B4B", // dark-ish red; tweak if you want
+  },
 
   // Right column
   rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
