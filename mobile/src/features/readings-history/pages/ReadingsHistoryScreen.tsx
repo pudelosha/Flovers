@@ -129,10 +129,20 @@ export default function ReadingsHistoryScreen() {
       range === "day" ? addDays(a, -1) : range === "week" ? addWeeks(a, -1) : addMonths(a, -1)
     );
   }, [range]);
+
+  // ⛔ Block navigation into future spans
   const nextSpan = useCallback(() => {
-    setAnchor((a) =>
-      range === "day" ? addDays(a, 1) : range === "week" ? addWeeks(a, 1) : addMonths(a, 1)
-    );
+    setAnchor((a) => {
+      const candidate =
+        range === "day" ? addDays(a, 1) : range === "week" ? addWeeks(a, 1) : addMonths(a, 1);
+      const today = new Date();
+      const candidateSpan = spanFor(range, candidate);
+      // if the whole new span starts after "now", block
+      if (candidateSpan.from > today) {
+        return a;
+      }
+      return candidate;
+    });
   }, [range]);
 
   // ----------- Height calculation including top & bottom bars ----------
@@ -310,10 +320,31 @@ export default function ReadingsHistoryScreen() {
         if (!mounted) return;
         setLabels([]);
         setValues([]);
+
+        const status = e?.response?.status;
+        const detail =
+          e?.response?.data?.detail ||
+          e?.response?.data?.error ||
+          e?.response?.data?.message ||
+          null;
+
+        if (__DEV__) {
+          // eslint-disable-next-line no-console
+          console.log("fetchReadingsHistory error", {
+            status,
+            data: e?.response?.data,
+            message: e?.message,
+          });
+        }
+
         if (isUnauthorizedError(e)) {
           showToast("Unauthorized. Please log in again.", "error");
+        } else if (status === 404) {
+          showToast("This device was not found (404).", "error");
+        } else if (status === 400) {
+          showToast(detail || "Invalid request for history (400).", "error");
         } else {
-          showToast(e?.message || "Failed to load history.", "error");
+          showToast(detail || e?.message || "Failed to load history.", "error");
         }
       } finally {
         if (mounted) setLoadingHistory(false);
@@ -365,6 +396,35 @@ export default function ReadingsHistoryScreen() {
       };
     }, [entry])
   );
+  // -----------------------------------------------------------------
+
+  // --------- Derived helpers for labels & navigation limits ---------
+  const today = new Date();
+
+  // Is currently selected span the "current" day/week/month (contains today)?
+  const isCurrentSpan = span.from <= today && span.to >= today;
+
+  // Latest available non-empty reading index in the current span
+  let latestIndexInCurrentSpan: number | null = null;
+  if (isCurrentSpan) {
+    for (let i = values.length - 1; i >= 0; i--) {
+      const v = values[i];
+      if (typeof v === "number" && Number.isFinite(v)) {
+        latestIndexInCurrentSpan = i;
+        break;
+      }
+    }
+  }
+
+  // Whether the "next" arrow should be enabled (span starting in the future is blocked)
+  const nextCandidateAnchor =
+    range === "day"
+      ? addDays(anchor, 1)
+      : range === "week"
+      ? addWeeks(anchor, 1)
+      : addMonths(anchor, 1);
+  const nextCandidateSpan = spanFor(range, nextCandidateAnchor);
+  const canGoNext = nextCandidateSpan.from <= today;
   // -----------------------------------------------------------------
 
   if (loadingDevice && !device) {
@@ -442,7 +502,13 @@ export default function ReadingsHistoryScreen() {
 
               {/* Date navigator */}
               <View onLayout={onLayoutDate}>
-                <DateNavigator range={range} span={span} onPrev={prevSpan} onNext={nextSpan} />
+                <DateNavigator
+                  range={range}
+                  span={span}
+                  onPrev={prevSpan}
+                  onNext={nextSpan}
+                  canGoNext={canGoNext}
+                />
               </View>
 
               {/* Chart with dynamic height */}
@@ -452,6 +518,9 @@ export default function ReadingsHistoryScreen() {
                 color={METRIC_COLORS[metric]}
                 yTicks={4}
                 height={chartHeight}
+                fixedLabelIndex={
+                  latestIndexInCurrentSpan !== null ? latestIndexInCurrentSpan : undefined
+                }
               />
 
               {/* Metric buttons */}

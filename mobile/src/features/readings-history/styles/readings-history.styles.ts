@@ -16,8 +16,13 @@ export const s = StyleSheet.create({
     minHeight: 360,
   },
   frameGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 28, overflow: "hidden" },
-  frameTint:  { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(255,255,255,0.20)" },
-  frameBorder:{ ...StyleSheet.absoluteFillObject, borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+  frameTint: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(255,255,255,0.20)" },
+  frameBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+  },
 
   inner: { paddingHorizontal: 16, paddingTop: 14, paddingBottom: 16 },
 
@@ -44,9 +49,15 @@ export const s = StyleSheet.create({
     marginBottom: 10,
   },
   dateBtn: {
-    width: 36, height: 36, borderRadius: 18,
-    alignItems: "center", justifyContent: "center",
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "rgba(255,255,255,0.13)",
+  },
+  dateBtnDisabled: {
+    backgroundColor: "rgba(255,255,255,0.08)",
   },
   dateText: { color: "rgba(255,255,255,0.92)", fontWeight: "800", fontSize: 14 },
 
@@ -68,17 +79,40 @@ export const s = StyleSheet.create({
   },
   yGuides: {
     position: "absolute",
-    left: 0, right: 0, top: 0, bottom: 0,
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
   },
   guideLine: {
     position: "absolute",
-    left: 0, right: 0,
+    left: 0,
+    right: 0,
     height: 1,
     backgroundColor: "rgba(255,255,255,0.15)",
   },
-  bar: {
+  // Container for each bar + its label (tap area)
+  barTapArea: {
     flex: 1,
-    borderTopLeftRadius: 8, borderTopRightRadius: 8,
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  bar: {
+    width: "100%",
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  valueLabelBubble: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 10,
+    marginBottom: 4,
+    backgroundColor: "rgba(0,0,0,0.6)",
+  },
+  valueLabelText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    fontSize: 10,
   },
   xRow: {
     flexDirection: "row",
