@@ -321,31 +321,27 @@ export default function ReadingsHistoryScreen() {
         setLabels([]);
         setValues([]);
 
-        const status = e?.response?.status;
-        const detail =
-          e?.response?.data?.detail ||
-          e?.response?.data?.error ||
-          e?.response?.data?.message ||
-          null;
-
+        // 🔍 RAW error output for debugging
         if (__DEV__) {
           // eslint-disable-next-line no-console
-          console.log("fetchReadingsHistory error", {
-            status,
-            data: e?.response?.data,
-            message: e?.message,
-          });
+          console.log("fetchReadingsHistory RAW error", e);
         }
 
-        if (isUnauthorizedError(e)) {
-          showToast("Unauthorized. Please log in again.", "error");
-        } else if (status === 404) {
-          showToast("This device was not found (404).", "error");
-        } else if (status === 400) {
-          showToast(detail || "Invalid request for history (400).", "error");
+        // Try to show the backend payload directly; fallback to message / generic
+        let msg = "Failed to load history.";
+        if (e?.response?.data) {
+          try {
+            msg = JSON.stringify(e.response.data);
+          } catch {
+            msg = String(e.response.data);
+          }
+        } else if (e?.message) {
+          msg = e.message;
         } else {
-          showToast(detail || e?.message || "Failed to load history.", "error");
+          msg = String(e);
         }
+
+        showToast(msg, "error");
       } finally {
         if (mounted) setLoadingHistory(false);
       }
@@ -405,11 +401,12 @@ export default function ReadingsHistoryScreen() {
   const isCurrentSpan = span.from <= today && span.to >= today;
 
   // Latest available non-empty reading index in the current span
+  // Treat 0 as "no reading" so we pick the latest bin that actually has data
   let latestIndexInCurrentSpan: number | null = null;
   if (isCurrentSpan) {
     for (let i = values.length - 1; i >= 0; i--) {
       const v = values[i];
-      if (typeof v === "number" && Number.isFinite(v)) {
+      if (typeof v === "number" && Number.isFinite(v) && v > 0) {
         latestIndexInCurrentSpan = i;
         break;
       }

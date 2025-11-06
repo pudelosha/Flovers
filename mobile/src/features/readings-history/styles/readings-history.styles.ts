@@ -112,7 +112,7 @@ export const s = StyleSheet.create({
   valueLabelText: {
     color: "#FFFFFF",
     fontWeight: "700",
-    fontSize: 10,
+    fontSize: 10, // same as xLabel
   },
   xRow: {
     flexDirection: "row",

@@ -16,11 +16,18 @@ type Props = {
 function pad2(n: number) {
   return n < 10 ? `0${n}` : String(n);
 }
+
 function fmtDM(d: Date) {
   return `${pad2(d.getDate())}.${pad2(d.getMonth() + 1)}`;
 }
 
-export default function DateNavigator({ range, span, onPrev, onNext, canGoNext = true }: Props) {
+export default function DateNavigator({
+  range,
+  span,
+  onPrev,
+  onNext,
+  canGoNext = true,
+}: Props) {
   const text =
     range === "day"
       ? `${fmtDM(span.from)}.${span.from.getFullYear()}`
