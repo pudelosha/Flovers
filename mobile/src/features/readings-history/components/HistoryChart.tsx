@@ -74,14 +74,25 @@ export default function HistoryChart({
             const isToggled = visibleLabelIndexes.has(idx);
             const showLabel = isFixed || isToggled;
 
+            const barHeightStyle = { height: `${hPct}%` };
+            // convert percentage-based bar height to pixels so we can position the bubble
+            const labelBottom = (hPct / 100) * height;
+            const labelPosStyle = { bottom: labelBottom };
+
             return (
               <Pressable key={idx} style={s.barTapArea} onPress={() => toggleLabel(idx)}>
                 {showLabel && Number.isFinite(v) && (
-                  <View style={s.valueLabelBubble}>
-                    <Text style={s.valueLabelText}>{formatValue(v)}</Text>
+                  <View style={[s.valueLabelBubble, labelPosStyle]}>
+                    <Text
+                      style={s.valueLabelText}
+                      numberOfLines={1}
+                      ellipsizeMode="tail"
+                    >
+                      {formatValue(v)}
+                    </Text>
                   </View>
                 )}
-                <View style={[s.bar, { height: `${hPct}%`, backgroundColor: color }]} />
+                <View style={[s.bar, barHeightStyle, { backgroundColor: color }]} />
               </Pressable>
             );
           })}

@@ -16,6 +16,7 @@ from .emails import send_device_code_email
 
 import secrets
 from django.utils import timezone
+import math  # ✅ NEW: needed to detect NaN/Infinity
 
 # ---------- helpers ----------
 
@@ -436,6 +437,10 @@ def history(request):
         try:
             val_f = float(val)
         except (TypeError, ValueError):
+            continue
+
+        # ✅ NEW: skip non-finite values (NaN, +inf, -inf) so JSON stays valid
+        if not math.isfinite(val_f):
             continue
 
         bins[idx]["sum"] += val_f

@@ -76,6 +76,7 @@ export const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     gap: 8,
+    overflow: "visible",
   },
   yGuides: {
     position: "absolute",
@@ -94,8 +95,9 @@ export const s = StyleSheet.create({
   // Container for each bar + its label (tap area)
   barTapArea: {
     flex: 1,
-    alignItems: "center",
+    alignItems: "stretch",
     justifyContent: "flex-end",
+    overflow: "visible",
   },
   bar: {
     width: "100%",
@@ -103,16 +105,24 @@ export const s = StyleSheet.create({
     borderTopRightRadius: 8,
   },
   valueLabelBubble: {
+    position: "absolute",
+    left: "50%",
+    // vertical position comes from bottom: <pixels> in component
+    transform: [{ translateX: -20 }, { translateY: -6 }],
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 10,
-    marginBottom: 4,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: "rgba(0,0,0,0.8)",
+    minWidth: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 10,
   },
   valueLabelText: {
     color: "#FFFFFF",
     fontWeight: "700",
     fontSize: 10, // same as xLabel
+    textAlign: "center",
   },
   xRow: {
     flexDirection: "row",
