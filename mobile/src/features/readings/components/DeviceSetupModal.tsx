@@ -77,10 +77,15 @@ export default function DeviceSetupModal({
           />
         </View>
 
-        <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Device setup</Text>
+        {/* Sheet — full width like Profile/Plants; entire content scrollable with capped height */}
+        <View style={[s.promptInner, { maxHeight: "86%" }]}>
+          <ScrollView
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
+          >
+            <Text style={s.promptTitle}>Device setup</Text>
 
-          <ScrollView style={{ maxHeight: 420 }} contentContainerStyle={{ paddingBottom: 8, gap: 12 }}>
             {/* Endpoints */}
             <Text style={s.inputLabel}>HTTP endpoints</Text>
 
@@ -158,13 +163,14 @@ export default function DeviceSetupModal({
             >
               <Text style={s.promptPrimaryText}>Download PDF documentation</Text>
             </Pressable>
-          </ScrollView>
 
-          <View style={s.promptButtonsRow}>
-            <Pressable style={s.promptBtn} onPress={onClose}>
-              <Text style={s.promptBtnText}>Close</Text>
-            </Pressable>
-          </View>
+            {/* Footer buttons (inside scroll, like EditPlantModal) */}
+            <View style={s.promptButtonsRow}>
+              <Pressable style={s.promptBtn} onPress={onClose}>
+                <Text style={s.promptBtnText}>Close</Text>
+              </Pressable>
+            </View>
+          </ScrollView>
         </View>
       </View>
 

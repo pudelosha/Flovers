@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Background color while app is starting -->
-    <item android:drawable="@color/splash_bg" />
+    <!-- Gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:startColor="#071017"
+                android:endColor="#122733"
+                android:angle="90" />
+        </shape>
+    </item>
 
-    <!-- Centered app icon (optional – keep or remove this item) -->
+    <!-- Centered app icon (clean transparent PNG looks best) -->
     <item>
         <bitmap
             android:gravity="center"
