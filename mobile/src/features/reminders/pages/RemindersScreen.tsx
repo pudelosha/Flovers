@@ -332,6 +332,22 @@ export default function RemindersScreen() {
 
     const isCreate = editingId === null;
 
+    // DUPLICATE CHECK: only one reminder of a given type per plant
+    const hasDuplicate = uiReminders.some((r) => {
+      // same plant
+      const samePlant = r.plantId === fPlantId;
+      // same type
+      const sameType = r.type === fType;
+      // if editing, ignore the reminder we’re currently editing
+      const isSameReminder = !isCreate && r.reminderId === editingId;
+      return samePlant && sameType && !isSameReminder;
+    });
+
+    if (hasDuplicate) {
+      showToast("This plant already has a reminder of that type.", "error");
+      return;
+    }
+
     try {
       const payload = {
         plant: Number(fPlantId),
