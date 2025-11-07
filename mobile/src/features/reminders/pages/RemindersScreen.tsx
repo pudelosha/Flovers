@@ -12,7 +12,7 @@ import {
   Animated,
   Easing,
 } from "react-native";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -98,6 +98,7 @@ const INITIAL_FILTERS: Filters = {
 
 export default function RemindersScreen() {
   const nav = useNavigation();
+  const route = useRoute<any>();
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
@@ -220,6 +221,33 @@ export default function RemindersScreen() {
     }, [])
   );
 
+  // --- handle "editReminderId" navigation param from Home ---
+  const pendingEditIdRef = useRef<string | null>(null);
+
+  // whenever route params change, store editReminderId (if provided) and clear param
+  useEffect(() => {
+    const params = (route as any)?.params;
+    const editReminderId = params?.editReminderId;
+    if (!editReminderId) return;
+
+    pendingEditIdRef.current = String(editReminderId);
+    // clear param so it doesn't keep re-triggering
+    (nav as any).setParams?.({ editReminderId: undefined });
+  }, [route, nav]);
+
+  // when reminders are loaded and we have a pending edit id, open the modal
+  useEffect(() => {
+    const id = pendingEditIdRef.current;
+    if (!id) return;
+    if (loading || uiReminders.length === 0) return;
+
+    const target = uiReminders.find((r) => String(r.reminderId) === id);
+    if (target) {
+      openEditModal(target);
+      pendingEditIdRef.current = null;
+    }
+  }, [loading, uiReminders]);
+
   // ⬅️ dedicated pull-to-refresh handler
   const onPullRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -306,7 +334,7 @@ export default function RemindersScreen() {
     if (r.plantId) {
       setFPlantId(r.plantId);
     } else {
-      const match = plantOptions.find((p) => p.name === r.plant);
+      const match = plantOptions.find((p) => p.id === r.plantId || p.name === r.plant);
       setFPlantId(match?.id);
     }
 

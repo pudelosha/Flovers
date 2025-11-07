@@ -345,8 +345,16 @@ export default function HomeScreen() {
                   }
                 }}
                 onEdit={() => {
-                  // If you have a dedicated Reminders edit flow, use item.reminderId here.
-                  // nav.navigate("Reminders" as never);
+                  setMenuOpenId(null);
+                  const reminderId = (item as any).reminderId;
+                  if (reminderId != null) {
+                    nav.navigate(
+                      "Reminders" as never,
+                      { editReminderId: String(reminderId) } as never
+                    );
+                  } else {
+                    nav.navigate("Reminders" as never);
+                  }
                 }}
                 onGoToPlant={() => {
                   // Hook up when plant details route is ready
