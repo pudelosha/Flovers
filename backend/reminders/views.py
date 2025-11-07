@@ -61,7 +61,10 @@ class TaskCompleteView(APIView):
             pk=pk,
             user=request.user,
         )
-        new_task = task.mark_complete_and_spawn_next()
+
+        note = request.data.get("note") or request.data.get("notes")
+
+        new_task = task.mark_complete_and_spawn_next(note=note)
         return Response(
             {
                 "completed_task": ReminderTaskSerializer(task).data,

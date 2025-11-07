@@ -21,7 +21,7 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReminderTask
         fields = [
-            "id", "reminder", "due_date", "status", "completed_at",
+            "id", "reminder", "due_date", "status", "completed_at", "note",
             "created_at", "updated_at",
         ]
         read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]

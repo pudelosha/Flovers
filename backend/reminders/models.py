@@ -129,6 +129,8 @@ class ReminderTask(models.Model):
     status = models.CharField(max_length=12, choices=STATUS_CHOICES, default="pending")
     completed_at = models.DateTimeField(null=True, blank=True)
 
+    note = models.TextField(null=True, blank=True)
+
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -139,17 +141,22 @@ class ReminderTask(models.Model):
         return f"Task#{self.pk} {self.reminder.type} due {self.due_date} ({self.status})"
 
     @transaction.atomic
-    def mark_complete_and_spawn_next(self):
+    def mark_complete_and_spawn_next(self, note=None):
         """
         Complete this task and create the next one based on the reminder’s interval.
         Creates exactly one new pending task due_date = current_due + interval.
+
+        If `note` is provided, store it on this completed task.
         """
         if self.status == "completed":
             return None  # idempotent
 
+        if note is not None:
+            self.note = note
+
         self.status = "completed"
         self.completed_at = timezone.now()
-        self.save(update_fields=["status", "completed_at", "updated_at"])
+        self.save(update_fields=["status", "completed_at", "updated_at", "note"])
 
         rem = self.reminder
         # compute next due from *this* task's due_date forward
@@ -166,3 +173,4 @@ class ReminderTask(models.Model):
             due_date=next_due,
             status="pending",
         )
+
