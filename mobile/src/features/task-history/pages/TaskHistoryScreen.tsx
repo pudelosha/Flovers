@@ -19,6 +19,9 @@ import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-h
 import TaskHistoryTile from "../components/TaskHistoryTile";
 import type { TaskHistoryItem } from "../types/task-history.types";
 
+// 🔹 NEW: import history fetcher (completed tasks only)
+import { fetchHomeHistoryTasks } from "../../../api/services/home.service";
+
 type RouteParams = {
   plantId?: string; // optional: when passed, show history for one plant
 };
@@ -49,14 +52,18 @@ export default function TaskHistoryScreen() {
     setToastVisible(true);
   };
 
-  // TODO: plug into real API that returns COMPLETED tasks only.
+  // 🔹 Load COMPLETED tasks via home history service
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      // Example of what you'll do later:
-      // const data = await fetchCompletedTasks({ plantId: plantIdFilter });
-      // setItems(data);
-      setItems([]); // empty for now
+      const data = await fetchHomeHistoryTasks();
+      const allItems = data as unknown as TaskHistoryItem[];
+
+      const filtered = plantIdFilter
+        ? allItems.filter((x) => (x as any).plantId === plantIdFilter)
+        : allItems;
+
+      setItems(filtered);
     } catch (e: any) {
       showToast(e?.message || "Failed to load task history", "error");
       setItems([]);

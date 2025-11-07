@@ -529,11 +529,11 @@ export default function HomeScreen() {
                 }}
                 onShowHistory={() => {
                   setMenuOpenId(null);
-                  const reminderId = (item as any).reminderId;
-                  if (reminderId) {
+                  const plantId = (item as HomeTask).plantId;
+                  if (plantId) {
                     nav.navigate(
                       "TaskHistory" as never,
-                      { reminderId: String(reminderId) } as never
+                      { plantId: String(plantId) } as never
                     );
                   } else {
                     nav.navigate("TaskHistory" as never);
