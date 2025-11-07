@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\api\services\home.service.ts
 // Thin wrapper that composes the Reminders + Plants endpoints for Home.
 
 import {
@@ -34,8 +35,19 @@ export async function fetchHomeHistoryTasks(): Promise<HomeTask[]> {
   return buildUITasks(tasks as ApiReminderTask[], reminders, plants) as HomeTask[];
 }
 
-export async function markHomeTaskComplete(taskId: string): Promise<void> {
-  await completeReminderTask(Number(taskId), { auth: true });
+// 🔹 now accepts optional note and forwards it to backend
+export async function markHomeTaskComplete(
+  taskId: string,
+  note?: string
+): Promise<void> {
+  const payload =
+    note && note.trim().length > 0 ? { note: note.trim() } : undefined;
+
+  await completeReminderTask(
+    Number(taskId),
+    { auth: true },
+    payload
+  );
 }
 
 export async function deleteHomeTask(reminderId: string): Promise<void> {

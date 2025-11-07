@@ -171,16 +171,17 @@ export const s = StyleSheet.create({
   },
 
   /* ---------- MODALS / FORMS (copied from Reminders for consistent UI) ---------- */
+  // 🔼 bumped zIndex so modal always sits above task tiles and menus
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
-    zIndex: 20,
+    zIndex: 80,
   },
   promptWrap: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
-    zIndex: 21,
+    zIndex: 81,
     paddingHorizontal: 24,
   },
   promptGlass: {

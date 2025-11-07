@@ -21,6 +21,8 @@ export type ApiReminderTask = {
   completed_at: string | null;
   created_at: string;
   updated_at: string;
+  // NEW: optional note from backend (can be null)
+  note?: string | null;
 };
 
 export async function listReminders(
@@ -47,9 +49,11 @@ export async function listReminderTasks(
   );
 }
 
+// 🔹 now accepts optional payload with note, but keeps old call signature working
 export async function completeReminderTask(
   taskId: number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean } = { auth: true },
+  payload?: { note?: string }
 ): Promise<{
   completed_task: ApiReminderTask;
   next_task: ApiReminderTask | null;
@@ -57,7 +61,7 @@ export async function completeReminderTask(
   return await request(
     `/api/reminders/tasks/${taskId}/complete/`,
     "POST",
-    undefined,
+    payload ?? undefined,
     { auth: opts.auth ?? true }
   );
 }

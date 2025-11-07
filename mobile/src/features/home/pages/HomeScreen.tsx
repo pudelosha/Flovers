@@ -20,6 +20,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
+import CompleteTaskModal from "../components/CompleteTaskModal"; // NEW
 import type { Task, TaskType } from "../types/home.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/home.constants";
 
@@ -90,7 +91,9 @@ export default function HomeScreen() {
   // Toast
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
+  const [toastVariant, setToastVariant] = useState<
+    "default" | "success" | "error"
+  >("default");
   const showToast = (
     message: string,
     variant: "default" | "success" | "error" = "default"
@@ -99,6 +102,11 @@ export default function HomeScreen() {
     setToastVariant(variant);
     setToastVisible(true);
   };
+
+  // NEW: "mark complete" modal state
+  const [completeModalVisible, setCompleteModalVisible] = useState(false);
+  const [completeTaskId, setCompleteTaskId] = useState<string | null>(null);
+  const [completeNote, setCompleteNote] = useState("");
 
   const load = useCallback(async () => {
     try {
@@ -191,7 +199,9 @@ export default function HomeScreen() {
     for (const t of tasks) {
       if (t.location) set.add(t.location);
     }
-    return Array.from(set).sort((a, b) => normalizeStr(a).localeCompare(normalizeStr(b)));
+    return Array.from(set).sort((a, b) =>
+      normalizeStr(a).localeCompare(normalizeStr(b))
+    );
   }, [tasks]);
 
   // Is any filter active?
@@ -233,7 +243,10 @@ export default function HomeScreen() {
 
     const filtered = base.filter((t) => {
       if (filters.plantId && t.plantId !== filters.plantId) return false;
-      if (filters.location && normalizeStr(t.location) !== normalizeStr(filters.location))
+      if (
+        filters.location &&
+        normalizeStr(t.location) !== normalizeStr(filters.location)
+      )
         return false;
       if (typesSet.size > 0 && !typesSet.has(t.type)) return false;
 
@@ -358,6 +371,50 @@ export default function HomeScreen() {
 
   const showFAB = !sortOpen && !filterOpen;
 
+  // NEW: open / close / confirm handlers for complete-with-note
+  const openCompleteModal = (taskId: string) => {
+    setCompleteTaskId(taskId);
+    setCompleteNote("");
+    setCompleteModalVisible(true);
+  };
+
+  const closeCompleteModal = () => {
+    setCompleteModalVisible(false);
+    setCompleteTaskId(null);
+    setCompleteNote("");
+  };
+
+  const handleConfirmComplete = async () => {
+    if (!completeTaskId) {
+      closeCompleteModal();
+      return;
+    }
+
+    const finishedTaskId = completeTaskId; // capture before we clear state
+
+    try {
+      // Show spinner + avoid broken intermediate list
+      setLoading(true);
+      setTasks([]);
+
+      await markHomeTaskComplete(finishedTaskId, completeNote);
+
+      closeCompleteModal();
+
+      // Reload from backend so cloned/next task appears
+      await load(); // load() will setLoading(false) in its finally
+
+      showToast("Task completed", "success");
+    } catch (e: any) {
+      closeCompleteModal();
+      setLoading(false); // in case load() was not reached
+      showToast(
+        e?.message ? `Complete failed: ${e.message}` : "Complete failed",
+        "error"
+      );
+    }
+  };
+
   // FAB actions, mirroring Reminders
   const baseFabActions = [
     {
@@ -460,7 +517,11 @@ export default function HomeScreen() {
 
       {/* Backdrop to dismiss menus (keep no zIndex so menus sit above) */}
       {menuOpenId && (
-        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
+        <Pressable
+          onPress={() => setMenuOpenId(null)}
+          style={s.backdrop}
+          pointerEvents="auto"
+        />
       )}
 
       <Animated.FlatList
@@ -470,8 +531,14 @@ export default function HomeScreen() {
         keyExtractor={(t) => t.id}
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
-          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
-          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const translateY = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [14, 0],
+          });
+          const scale = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0.98, 1],
+          });
           const opacity = v;
 
           const isOpen = menuOpenId === item.id;
@@ -487,17 +554,9 @@ export default function HomeScreen() {
                 task={item as Task} // HomeTask extends Task
                 isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
-                onMarkComplete={async () => {
-                  try {
-                    await markHomeTaskComplete(item.id);
-                    await load();
-                    showToast("Task completed", "success");
-                  } catch (e: any) {
-                    showToast(
-                      e?.message ? `Complete failed: ${e.message}` : "Complete failed",
-                      "error"
-                    );
-                  }
+                onMarkComplete={() => {
+                  setMenuOpenId(null);
+                  openCompleteModal(item.id);
                 }}
                 onEdit={() => {
                   setMenuOpenId(null);
@@ -549,7 +608,9 @@ export default function HomeScreen() {
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
         ListEmptyComponent={() => (
           <Animated.View
             style={[
@@ -584,20 +645,20 @@ export default function HomeScreen() {
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
                     This page shows your upcoming{" "}
-                    <Text style={s.inlineBold}>plant care reminders</Text> — watering, fertilizing,
-                    repotting, and more.{"\n\n"}
+                    <Text style={s.inlineBold}>plant care reminders</Text> — watering,
+                    fertilizing, repotting, and more.{"\n\n"}
                     To get started:
                     {"\n\n"}
                     • <Text style={s.inlineBold}>Create your plants</Text> in the{" "}
                     <Text style={s.inlineBold}>Plants</Text> tab.{"\n"}
-                    • Add <Text style={s.inlineBold}>reminders</Text> for each plant so they appear
-                    here as tasks.{"\n"}
+                    • Add <Text style={s.inlineBold}>reminders</Text> for each plant so
+                    they appear here as tasks.{"\n"}
                     • Optionally connect{" "}
                     <Text style={s.inlineBold}>IoT devices (Arduino boards)</Text> in the{" "}
-                    <Text style={s.inlineBold}>Readings</Text> tab to track temperature, humidity,
-                    light and soil moisture in real time.{"\n\n"}
-                    Once you’ve set those up, your Home screen will become your central place to
-                    see what each plant needs today.
+                    <Text style={s.inlineBold}>Readings</Text> tab to track temperature,
+                    humidity, light and soil moisture in real time.{"\n\n"}
+                    Once you’ve set those up, your Home screen will become your central
+                    place to see what each plant needs today.
                   </Text>
                 </View>
               </View>
@@ -649,6 +710,15 @@ export default function HomeScreen() {
         onClearAll={() => {
           setFilters(INITIAL_FILTERS);
         }}
+      />
+
+      {/* NEW: Complete-with-note modal */}
+      <CompleteTaskModal
+        visible={completeModalVisible}
+        note={completeNote}
+        onChangeNote={setCompleteNote}
+        onCancel={closeCompleteModal}
+        onConfirm={handleConfirmComplete}
       />
 
       {/* Top Snackbar (toast) */}
