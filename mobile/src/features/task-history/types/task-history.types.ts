@@ -8,4 +8,6 @@ export type TaskHistoryItem = {
   type: TaskType;
   // ISO or display string; you can later split into label + Date if needed
   completedAt: string;
+  // optional note attached when the task was completed
+  note?: string;
 };

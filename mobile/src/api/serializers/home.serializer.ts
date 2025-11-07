@@ -49,8 +49,14 @@ export function buildUITasks(
       plant: plantName(p),
       location: p?.location?.name || "",
       due: dueLabel(t.due_date),         // Today/Tomorrow/… (simple label)
-      dueDate: new Date(t.due_date),
-      reminderId: String(r?.id ?? ""),   // used for Delete/Edit routing
+      dueDate: new Date(t.due_date),     // exact date
+
+      // used for Delete/Edit routing
+      reminderId: String(r?.id ?? ""),
+
+      // 🔹 extra fields used by Task History
+      completedAt: t.completed_at || "", // ISO string or "" if not completed
+      note: t.note ?? undefined,         // optional note saved on completion
     };
 
     return ui;
