@@ -513,6 +513,40 @@ export default function RemindersScreen() {
     );
   }
 
+  // ---------- FAB ACTIONS (conditional List/Calendar) ----------
+  const fabActions = [
+    { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
+    ...(viewMode === "list"
+      ? [
+          {
+            key: "calendar",
+            label: "Calendar",
+            icon: "calendar-month",
+            onPress: openCalendar,
+          },
+        ]
+      : [
+          {
+            key: "list",
+            label: "List",
+            icon: "view-list",
+            onPress: openList,
+          },
+        ]),
+    { key: "sort", label: "Sort", onPress: () => setSortOpen(true), icon: "sort" },
+    { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
+    ...(isFilterActive
+      ? [
+          {
+            key: "clearFilter",
+            label: "Clear filter",
+            icon: "filter-remove",
+            onPress: () => setFilters(INITIAL_FILTERS),
+          } as const,
+        ]
+      : []),
+  ];
+
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
@@ -627,27 +661,7 @@ export default function RemindersScreen() {
         />
       )}
 
-      {showFAB && (
-        <FAB
-          actions={[
-            { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
-            { key: "list", label: "List", icon: "view-list", onPress: openList },
-            { key: "calendar", label: "Calendar", icon: "calendar-month", onPress: openCalendar },
-            { key: "sort", label: "Sort", onPress: () => setSortOpen(true) , icon: "sort" },
-            { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
-            ...(isFilterActive
-              ? [
-                  {
-                    key: "clearFilter",
-                    label: "Clear filter",
-                    icon: "filter-remove",
-                    onPress: () => setFilters(INITIAL_FILTERS),
-                  } as const,
-                ]
-              : []),
-          ]}
-        />
-      )}
+      {showFAB && <FAB actions={fabActions} />}
 
       <ConfirmDeleteReminderModal
         visible={!!confirmDeleteReminderId}

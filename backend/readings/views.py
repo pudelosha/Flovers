@@ -16,7 +16,7 @@ from .emails import send_device_code_email
 
 import secrets
 from django.utils import timezone
-import math  # ✅ NEW: needed to detect NaN/Infinity
+import math  # NEW: needed to detect NaN/Infinity
 
 # ---------- helpers ----------
 
@@ -247,6 +247,11 @@ def ingest(request):
       "timestamp":"ISO-8601 optional",
       "metrics":{"temperature":22.8,"humidity":41.2,"light":771,"moisture":29}
     }
+
+    New behavior:
+      - Timestamps are rounded down to the full hour (e.g. 14:26 -> 14:00).
+      - If a reading for (device, rounded_hour) exists, it is UPDATED instead of rejected.
+      - The previous 59-minute minimum interval check has been removed.
     """
     device_id = request.data.get("device_id")
     device_key = request.data.get("device_key")
@@ -271,20 +276,21 @@ def ingest(request):
     if not device.is_active:
         return Response({"detail": "device disabled"}, status=403)
 
+    # Original timestamp (for "last_read_at" / UX)
     ts = parse_ts_or_now(request.data.get("timestamp"))
 
-    # ---- Minimum interval enforcement (≥ 59 minutes) ----
-    last = device.last_read_at
-    if last and ts < (last + timedelta(minutes=59)):
-        # Too soon since the last accepted reading for this device
-        return Response({"detail": "Minimum interval is 59 minutes between readings"}, status=429)
-    # -----------------------------------------------------
+    # NEW: round timestamp down to full hour for storage in Reading.timestamp
+    ts_rounded = ts.replace(minute=0, second=0, microsecond=0)
+
+    # NOTE: previous "minimum interval 59 minutes" check has been removed.
+    # We now upsert into the hourly bucket instead.
 
     try:
         with transaction.atomic():
+            # Either create a new hourly record or update the existing one
             rec, created = Reading.objects.get_or_create(
                 device=device,
-                timestamp=ts,
+                timestamp=ts_rounded,
                 defaults=dict(
                     temperature=metrics.get("temperature"),
                     humidity=metrics.get("humidity"),
@@ -292,6 +298,16 @@ def ingest(request):
                     moisture=metrics.get("moisture"),
                 ),
             )
+
+            if not created:
+                # NEW: update the existing record for this hour
+                rec.temperature = metrics.get("temperature")
+                rec.humidity = metrics.get("humidity")
+                rec.light = metrics.get("light")
+                rec.moisture = metrics.get("moisture")
+                rec.save(update_fields=["temperature", "humidity", "light", "moisture"])
+
+            # Update device's cached fields (last_read_at keeps the REAL timestamp)
             device.last_read_at = ts
             device.latest_snapshot = {
                 "temperature": rec.temperature,
@@ -301,11 +317,10 @@ def ingest(request):
             }
             device.save(update_fields=["last_read_at", "latest_snapshot", "updated_at"])
     except IntegrityError:
-        # Duplicate (device, timestamp) — treat as idempotent
+        # Very unlikely with get_or_create, but keep behavior consistent / idempotent
         pass
 
     return Response({"status": "ok"}, status=status.HTTP_202_ACCEPTED)
-
 
 @api_view(["GET"])
 @permission_classes([permissions.AllowAny])
