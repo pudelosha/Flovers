@@ -1,5 +1,3 @@
-// Builds UI Task[] for Home from reminder tasks + reminders + plants.
-
 import type { Task, TaskType } from "../../features/home/types/home.types";
 import type { ApiReminder, ApiReminderTask } from "../services/reminders.service";
 
@@ -40,15 +38,21 @@ export function buildUITasks(
     const p = r ? plantById.get(r.plant) : undefined;
 
     const type: TaskType = toTaskType(r?.type ?? "care");
+
     const ui: Task & { reminderId: string } = {
       id: String(t.id),                  // task id (used for complete)
       type,
+
+      // underlying plant instance id for navigation from Home → PlantDetails
+      plantId: p ? String(p.id) : undefined,
+
       plant: plantName(p),
       location: p?.location?.name || "",
       due: dueLabel(t.due_date),         // Today/Tomorrow/… (simple label)
       dueDate: new Date(t.due_date),
       reminderId: String(r?.id ?? ""),   // used for Delete/Edit routing
     };
+
     return ui;
   });
 }

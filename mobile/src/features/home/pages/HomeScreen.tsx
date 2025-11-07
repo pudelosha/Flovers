@@ -196,7 +196,7 @@ export default function HomeScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, viewFilter, derivedTasks.length]);
 
-  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ----------
+  // ---------- EMPTY-STATE FRAME ANIMATION ----------
   // Separate animated value for the "No tasks yet" blurry frame
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
@@ -357,7 +357,20 @@ export default function HomeScreen() {
                   }
                 }}
                 onGoToPlant={() => {
-                  // Hook up when plant details route is ready
+                  setMenuOpenId(null);
+
+                  const plantId = (item as HomeTask).plantId;
+
+                  if (!plantId) {
+                    console.warn("[HomeScreen] Task has no plantId:", item);
+                    showToast("This task is not linked to a plant.", "error");
+                    return;
+                  }
+
+                  nav.navigate(
+                    "PlantDetails" as never,
+                    { id: plantId } as never // PlantDetailsScreen reads route.params.id / plantId
+                  );
                 }}
                 // No delete from Home tile menu
               />
