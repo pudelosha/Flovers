@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\components\TaskMenu.tsx
 import React from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -7,6 +8,10 @@ type Props = {
   onMarkComplete: () => void;
   onEdit: () => void;
   onGoToPlant: () => void;
+
+  /** Optional: open history for this reminder/task */
+  onShowHistory?: () => void;
+
   /** Provide to enable Delete action. */
   onDelete?: () => void;
   /**
@@ -22,6 +27,7 @@ export default function TaskMenu({
   onMarkComplete,
   onEdit,
   onGoToPlant,
+  onShowHistory,
   onDelete,
   showDelete,
 }: Props) {
@@ -29,7 +35,7 @@ export default function TaskMenu({
     showDelete === true || (showDelete === undefined && typeof onDelete === "function");
 
   return (
-    <View style={s.menuSheet}>
+    <View style={s.menuSheet} pointerEvents="auto">
       <Pressable
         style={s.menuItem}
         onPress={onMarkComplete}
@@ -71,6 +77,22 @@ export default function TaskMenu({
         />
         <Text style={s.menuItemText}>Go to plant</Text>
       </Pressable>
+
+      {onShowHistory && (
+        <Pressable
+          style={s.menuItem}
+          onPress={onShowHistory}
+          android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+        >
+          <MaterialCommunityIcons
+            name="history"
+            size={18}
+            color="#FFFFFF"
+            style={{ marginRight: 8 }}
+          />
+          <Text style={s.menuItemText}>Show history</Text>
+        </Pressable>
+      )}
 
       {shouldShowDelete && (
         <Pressable

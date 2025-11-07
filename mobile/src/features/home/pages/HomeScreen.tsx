@@ -1,9 +1,11 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\pages\HomeScreen.tsx
 import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
 import {
   View,
   Pressable,
   RefreshControl,
   Animated,
+  Easing,
   StyleSheet,
   Text,
 } from "react-native";
@@ -288,7 +290,7 @@ export default function HomeScreen() {
       return Animated.timing(v, {
         toValue: 1,
         duration: 280,
-        easing: Animated.Easing?.out?.(Animated.Easing.cubic) || undefined,
+        easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
         delay: i * 50,
       });
@@ -319,7 +321,7 @@ export default function HomeScreen() {
       Animated.timing(emptyAnim, {
         toValue: 1,
         duration: 260,
-        easing: Animated.Easing?.out?.(Animated.Easing.cubic) || undefined,
+        easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
     } else {
@@ -389,7 +391,15 @@ export default function HomeScreen() {
           } as const,
         ]
       : []),
-    { key: "history", label: "History", icon: "history", onPress: () => {} },
+    {
+      key: "history",
+      label: "History",
+      icon: "history",
+      onPress: () => {
+        setMenuOpenId(null);
+        nav.navigate("TaskHistory" as never);
+      },
+    },
   ];
 
   const fabActions =
@@ -464,11 +474,18 @@ export default function HomeScreen() {
           const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
           const opacity = v;
 
+          const isOpen = menuOpenId === item.id;
+
           return (
-            <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+            <Animated.View
+              style={[
+                { opacity, transform: [{ translateY }, { scale }] },
+                isOpen && { zIndex: 50, elevation: 50 }, // keep open row above others
+              ]}
+            >
               <TaskTile
                 task={item as Task} // HomeTask extends Task
-                isMenuOpen={menuOpenId === item.id}
+                isMenuOpen={isOpen}
                 onToggleMenu={() => onToggleMenu(item.id)}
                 onMarkComplete={async () => {
                   try {
@@ -509,6 +526,18 @@ export default function HomeScreen() {
                     "PlantDetails" as never,
                     { id: plantId } as never // PlantDetailsScreen reads route.params.id / plantId
                   );
+                }}
+                onShowHistory={() => {
+                  setMenuOpenId(null);
+                  const reminderId = (item as any).reminderId;
+                  if (reminderId) {
+                    nav.navigate(
+                      "TaskHistory" as never,
+                      { reminderId: String(reminderId) } as never
+                    );
+                  } else {
+                    nav.navigate("TaskHistory" as never);
+                  }
                 }}
               />
             </Animated.View>

@@ -57,6 +57,9 @@ const linking = {
       EditSensors: "edit-sensors",
       SortHistory: "sort-history",
       FilterHistory: "filter-history",
+
+      // NEW: deep link for task/reminders history
+      TaskHistory: "task-history",
     },
   },
 };

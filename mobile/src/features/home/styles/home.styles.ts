@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\styles\home.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -29,8 +30,8 @@ export const s = StyleSheet.create({
   },
   // Raised state to keep an open menu above siblings
   cardWrapRaised: {
-    zIndex: 20,
-    elevation: 20,
+    zIndex: 30,
+    elevation: 30,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -105,8 +106,8 @@ export const s = StyleSheet.create({
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 10,
-    elevation: 10,
+    zIndex: 40,
+    elevation: 40,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,

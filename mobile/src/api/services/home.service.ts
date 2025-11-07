@@ -23,6 +23,17 @@ export async function fetchHomeTasks(): Promise<HomeTask[]> {
   return buildUITasks(tasks as ApiReminderTask[], reminders, plants);
 }
 
+// fetch *completed* reminder tasks for history screen
+export async function fetchHomeHistoryTasks(): Promise<HomeTask[]> {
+  const [tasks, reminders, plants] = await Promise.all([
+    listReminderTasks({ status: "completed", auth: true }),
+    listReminders({ auth: true }),
+    fetchPlantInstances({ auth: true }),
+  ]);
+
+  return buildUITasks(tasks as ApiReminderTask[], reminders, plants) as HomeTask[];
+}
+
 export async function markHomeTaskComplete(taskId: string): Promise<void> {
   await completeReminderTask(Number(taskId), { auth: true });
 }
