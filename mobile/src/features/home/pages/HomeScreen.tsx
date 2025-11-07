@@ -1,11 +1,9 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\pages\HomeScreen.tsx
 import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
 import {
   View,
   Pressable,
   RefreshControl,
   Animated,
-  Easing,
   StyleSheet,
   Text,
 } from "react-native";
@@ -20,7 +18,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
-import type { Task } from "../types/home.types";
+import type { Task, TaskType } from "../types/home.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/home.constants";
 
 // Reminders-backed home service
@@ -31,7 +29,37 @@ import {
   type HomeTask,
 } from "../../../api/services/home.service";
 
+import SortHomeTasksModal, {
+  type HomeSortKey,
+  type HomeSortDir,
+} from "../components/SortHomeTasksModal";
+import FilterHomeTasksModal, {
+  type HomeFilters,
+} from "../components/FilterHomeTasksModal";
+
 type ViewFilter = "all" | "overdue" | "today";
+
+type PlantOption = { id: string; name: string };
+
+const INITIAL_FILTERS: HomeFilters = {
+  plantId: undefined,
+  location: undefined,
+  types: [],
+  dueFrom: "",
+  dueTo: "",
+};
+
+function normalizeStr(v?: string) {
+  return (v || "").toLowerCase().trim();
+}
+
+function parseISODate(d?: string): Date | null {
+  if (!d) return null;
+  const dt = new Date(d);
+  if (!(dt instanceof Date) || isNaN(+dt)) return null;
+  dt.setHours(0, 0, 0, 0);
+  return dt;
+}
 
 export default function HomeScreen() {
   const nav = useNavigation();
@@ -49,6 +77,13 @@ export default function HomeScreen() {
 
   // Local view filter for FAB "Show overdue" / "Show due today"
   const [viewFilter, setViewFilter] = useState<ViewFilter>("all");
+
+  // Sort / Filter modals state
+  const [sortOpen, setSortOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [sortKey, setSortKey] = useState<HomeSortKey>("dueDate");
+  const [sortDir, setSortDir] = useState<HomeSortDir>("asc");
+  const [filters, setFilters] = useState<HomeFilters>(INITIAL_FILTERS);
 
   // Toast
   const [toastVisible, setToastVisible] = useState(false);
@@ -78,7 +113,6 @@ export default function HomeScreen() {
   }, []);
 
   // Refresh data when the screen is focused, but do NOT show stale tiles first.
-  // We clear the list immediately on focus so the Home page appears empty until fresh data arrives.
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
@@ -101,6 +135,8 @@ export default function HomeScreen() {
   useFocusEffect(
     useCallback(() => {
       setMenuOpenId(null);
+      setSortOpen(false);
+      setFilterOpen(false);
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
@@ -137,26 +173,99 @@ export default function HomeScreen() {
     return d.getTime();
   };
 
-  // Apply local filter for "Show overdue" / "Show due today"
-  const derivedTasks = useMemo(() => {
-    if (viewFilter === "all") return tasks;
+  // Derive plant + location options from current tasks
+  const plantOptions: PlantOption[] = useMemo(() => {
+    const byId = new Map<string, string>();
+    for (const t of tasks) {
+      if (t.plantId) {
+        if (!byId.has(t.plantId)) byId.set(t.plantId, t.plant);
+      }
+    }
+    return Array.from(byId.entries()).map(([id, name]) => ({ id, name }));
+  }, [tasks]);
 
+  const locationOptions: string[] = useMemo(() => {
+    const set = new Set<string>();
+    for (const t of tasks) {
+      if (t.location) set.add(t.location);
+    }
+    return Array.from(set).sort((a, b) => normalizeStr(a).localeCompare(normalizeStr(b)));
+  }, [tasks]);
+
+  // Is any filter active?
+  const isFilterActive = useMemo(() => {
+    return Boolean(
+      filters.plantId ||
+        filters.location ||
+        (filters.types && filters.types.length > 0) ||
+        (filters.dueFrom && filters.dueFrom.trim()) ||
+        (filters.dueTo && filters.dueTo.trim())
+    );
+  }, [filters]);
+
+  // Apply viewFilter + Home filters + sort
+  const derivedTasks = useMemo(() => {
     const start = startOfToday();
     const end = endOfToday();
 
-    if (viewFilter === "overdue") {
+    // 1) coarse filter (overdue/today/all)
+    const base = (() => {
+      if (viewFilter === "all") return tasks;
+      if (viewFilter === "overdue") {
+        return tasks.filter((t) => {
+          const ms = normDateMs((t as any).dueDate);
+          return Number.isFinite(ms) && ms < start;
+        });
+      }
+      // viewFilter === "today"
       return tasks.filter((t) => {
         const ms = normDateMs((t as any).dueDate);
-        return Number.isFinite(ms) && ms < start;
+        return Number.isFinite(ms) && ms >= start && ms <= end;
       });
-    }
+    })();
 
-    // viewFilter === "today"
-    return tasks.filter((t) => {
-      const ms = normDateMs((t as any).dueDate);
-      return Number.isFinite(ms) && ms >= start && ms <= end;
+    // 2) detailed filters
+    const typesSet = new Set<TaskType>(filters.types || []);
+    const from = parseISODate(filters.dueFrom);
+    const to = parseISODate(filters.dueTo);
+
+    const filtered = base.filter((t) => {
+      if (filters.plantId && t.plantId !== filters.plantId) return false;
+      if (filters.location && normalizeStr(t.location) !== normalizeStr(filters.location))
+        return false;
+      if (typesSet.size > 0 && !typesSet.has(t.type)) return false;
+
+      if (from || to) {
+        const td = new Date(t.dueDate);
+        td.setHours(0, 0, 0, 0);
+        if (from && td < from) return false;
+        if (to && td > to) return false;
+      }
+
+      return true;
     });
-  }, [tasks, viewFilter]);
+
+    // 3) sort
+    const sorted = [...filtered].sort((a, b) => {
+      let cmp = 0;
+
+      if (sortKey === "dueDate") {
+        const ad = new Date(a.dueDate);
+        const bd = new Date(b.dueDate);
+        ad.setHours(0, 0, 0, 0);
+        bd.setHours(0, 0, 0, 0);
+        cmp = ad.getTime() - bd.getTime();
+      } else if (sortKey === "plant") {
+        cmp = normalizeStr(a.plant).localeCompare(normalizeStr(b.plant));
+      } else if (sortKey === "location") {
+        cmp = normalizeStr(a.location).localeCompare(normalizeStr(b.location));
+      }
+
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+
+    return sorted;
+  }, [tasks, viewFilter, filters, sortKey, sortDir]);
 
   // ---------- ✨ ENTRANCE ANIMATION (per-task tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -179,7 +288,7 @@ export default function HomeScreen() {
       return Animated.timing(v, {
         toValue: 1,
         duration: 280,
-        easing: Easing.out(Easing.cubic),
+        easing: Animated.Easing?.out?.(Animated.Easing.cubic) || undefined,
         useNativeDriver: true,
         delay: i * 50,
       });
@@ -197,7 +306,6 @@ export default function HomeScreen() {
   }, [loading, viewFilter, derivedTasks.length]);
 
   // ---------- EMPTY-STATE FRAME ANIMATION ----------
-  // Separate animated value for the "No tasks yet" blurry frame
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -207,16 +315,14 @@ export default function HomeScreen() {
     }
 
     if (derivedTasks.length === 0) {
-      // animate the empty card in, similar to other glass frames
       emptyAnim.setValue(0);
       Animated.timing(emptyAnim, {
         toValue: 1,
         duration: 260,
-        easing: Easing.out(Easing.cubic),
+        easing: Animated.Easing?.out?.(Animated.Easing.cubic) || undefined,
         useNativeDriver: true,
       }).start();
     } else {
-      // hide/reset when there are tasks
       emptyAnim.setValue(0);
     }
   }, [loading, derivedTasks.length, emptyAnim]);
@@ -238,7 +344,54 @@ export default function HomeScreen() {
     );
   }
 
-  // Build FAB actions dynamically based on filter state
+  const emptyTranslateY = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
+
+  const showFAB = !sortOpen && !filterOpen;
+
+  // FAB actions, mirroring Reminders
+  const baseFabActions = [
+    {
+      key: "sort",
+      label: "Sort",
+      icon: "sort",
+      onPress: () => {
+        setMenuOpenId(null);
+        setSortOpen(true);
+      },
+    },
+    {
+      key: "filter",
+      label: "Filter",
+      icon: "filter-variant",
+      onPress: () => {
+        setMenuOpenId(null);
+        setFilterOpen(true);
+      },
+    },
+    ...(isFilterActive
+      ? [
+          {
+            key: "clearFilter",
+            label: "Clear filter",
+            icon: "filter-remove",
+            onPress: () => {
+              setMenuOpenId(null);
+              setFilters(INITIAL_FILTERS);
+            },
+          } as const,
+        ]
+      : []),
+    { key: "history", label: "History", icon: "history", onPress: () => {} },
+  ];
+
   const fabActions =
     viewFilter === "all"
       ? [
@@ -266,16 +419,13 @@ export default function HomeScreen() {
               );
             },
           },
-          { key: "sort", label: "Sort", icon: "sort", onPress: () => {} },
-          { key: "filter", label: "Filter", icon: "filter-variant", onPress: () => {} },
-          { key: "history", label: "History", icon: "history", onPress: () => {} },
+          ...baseFabActions,
         ]
       : [
-          { key: "sort", label: "Sort", icon: "sort", onPress: () => {} },
-          { key: "filter", label: "Filter", icon: "filter-variant", onPress: () => {} },
+          ...baseFabActions,
           {
-            key: "clearFilter",
-            label: "Clear filter",
+            key: "clearViewFilter",
+            label: "Show all tasks",
             icon: "filter-remove",
             onPress: () => {
               setMenuOpenId(null);
@@ -285,19 +435,7 @@ export default function HomeScreen() {
               );
             },
           },
-          { key: "history", label: "History", icon: "history", onPress: () => {} },
         ];
-
-  // Animated transforms for empty frame
-  const emptyTranslateY = emptyAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: [10, 0],
-  });
-  const emptyScale = emptyAnim.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0.98, 1],
-  });
-  const emptyOpacity = emptyAnim;
 
   return (
     <View style={{ flex: 1 }}>
@@ -372,7 +510,6 @@ export default function HomeScreen() {
                     { id: plantId } as never // PlantDetailsScreen reads route.params.id / plantId
                   );
                 }}
-                // No delete from Home tile menu
               />
             </Animated.View>
           );
@@ -440,16 +577,50 @@ export default function HomeScreen() {
         )}
       />
 
-      {/* Capture taps on the FAB (including the main button) to hide any open tile menu,
-          but DO NOT change FAB visibility or behavior. */}
-      <View
-        onStartShouldSetResponderCapture={() => {
-          setMenuOpenId(null);
-          return false; // allow FAB to receive the touch normally
+      {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
+      {showFAB && (
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setMenuOpenId(null);
+            return false;
+          }}
+        >
+          <FAB icon="plus" actions={fabActions} />
+        </View>
+      )}
+
+      {/* Sort & Filter modals */}
+      <SortHomeTasksModal
+        visible={sortOpen}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => setSortOpen(false)}
+        onApply={(key, dir) => {
+          setSortKey(key);
+          setSortDir(dir);
+          setSortOpen(false);
         }}
-      >
-        <FAB icon="plus" actions={fabActions} />
-      </View>
+        onReset={() => {
+          setSortKey("dueDate");
+          setSortDir("asc");
+          setSortOpen(false);
+        }}
+      />
+
+      <FilterHomeTasksModal
+        visible={filterOpen}
+        plants={plantOptions}
+        locations={locationOptions}
+        filters={filters}
+        onCancel={() => setFilterOpen(false)}
+        onApply={(f) => {
+          setFilters(f);
+          setFilterOpen(false);
+        }}
+        onClearAll={() => {
+          setFilters(INITIAL_FILTERS);
+        }}
+      />
 
       {/* Top Snackbar (toast) */}
       <TopSnackbar
