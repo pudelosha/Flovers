@@ -5,6 +5,7 @@ import {
   Pressable,
   StyleSheet,
   Animated,
+  Easing,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -60,7 +61,7 @@ type Props = {
 
 export default function TaskHistoryTile({ item }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const [contentHeight, setContentHeight] = useState(0);
+  const [noteHeight, setNoteHeight] = useState(0);
   const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
 
   const type = item.type as TaskType;
@@ -81,30 +82,31 @@ export default function TaskHistoryTile({ item }: Props) {
     setExpanded(!expanded);
     Animated.timing(anim, {
       toValue: next,
-      duration: 220,
-      useNativeDriver: false, // animating height/margin
+      duration: 140,                     // same speed both ways
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: false,            // animating height/margin
     }).start();
   };
 
   const animatedHeight =
-    contentHeight > 0
+    noteHeight > 0
       ? anim.interpolate({
           inputRange: [0, 1],
-          outputRange: [0, contentHeight],
+          outputRange: [0, noteHeight],
         })
       : 0;
 
   const animatedOpacity = anim;
   const animatedMarginTop = anim.interpolate({
     inputRange: [0, 1],
-    outputRange: [0, 10],
+    outputRange: [0, 6], // subtle extra spacing when expanded
   });
 
   const chevronName = expanded ? "chevron-up" : "chevron-down";
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass stack: identical pattern to Reminders tiles */}
+      {/* Glass stack: identical to Reminders tiles */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -124,7 +126,10 @@ export default function TaskHistoryTile({ item }: Props) {
         />
       </View>
 
-      <Pressable style={s.cardRow} onPress={onToggle}>
+      <Pressable
+        style={[s.cardRow, !expanded && styles.compactRow]}  // 👈 less bottom padding when collapsed
+        onPress={onToggle}
+      >
         {/* Left: icon + type label */}
         <View style={s.leftCol}>
           <View
@@ -157,29 +162,41 @@ export default function TaskHistoryTile({ item }: Props) {
           )}
 
           {hasNote && (
-            <Animated.View
-              style={[
-                s.noteContainer,
-                {
-                  height: animatedHeight,
-                  opacity: animatedOpacity,
-                  marginTop: animatedMarginTop,
-                },
-              ]}
-            >
+            <>
+              {/* Invisible measurement copy: same styles, off-layout visually */}
               <View
-                style={s.noteBox}
+                style={styles.noteMeasureWrapper}
+                pointerEvents="none"
                 onLayout={(e) => {
                   const h = e.nativeEvent.layout.height;
-                  if (h > 0 && h !== contentHeight) {
-                    setContentHeight(h);
+                  if (h > 0 && h !== noteHeight) {
+                    setNoteHeight(h);
                   }
                 }}
               >
-                <Text style={s.noteLabel}>Note</Text>
-                <Text style={s.noteText}>{item.note}</Text>
+                <View style={s.noteBox}>
+                  <Text style={s.noteLabel}>Note</Text>
+                  <Text style={s.noteText}>{item.note}</Text>
+                </View>
               </View>
-            </Animated.View>
+
+              {/* Animated visible note */}
+              <Animated.View
+                style={[
+                  s.noteContainer,
+                  {
+                    height: animatedHeight,
+                    opacity: animatedOpacity,
+                    marginTop: animatedMarginTop,
+                  },
+                ]}
+              >
+                <View style={s.noteBox}>
+                  <Text style={s.noteLabel}>Note</Text>
+                  <Text style={s.noteText}>{item.note}</Text>
+                </View>
+              </Animated.View>
+            </>
           )}
         </View>
 
@@ -197,3 +214,15 @@ export default function TaskHistoryTile({ item }: Props) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  noteMeasureWrapper: {
+    position: "absolute",
+    opacity: 0,
+    left: 0,
+    right: 0,
+  },
+  compactRow: {
+    paddingBottom: 4,  // tighten bottom padding in collapsed state
+  },
+});

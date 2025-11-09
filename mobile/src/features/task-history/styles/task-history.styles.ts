@@ -47,16 +47,17 @@ export const s = StyleSheet.create({
   cardRow: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",  // 👈 pin content to top, no centering jump
     paddingHorizontal: 14,
-    paddingVertical: 8,
+    paddingVertical: 10,
   },
 
   // Left column
   leftCol: {
     width: 64,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
+    paddingTop: 2,
   },
   leftIconBubble: {
     width: 32,
@@ -100,7 +101,8 @@ export const s = StyleSheet.create({
   rightCol: {
     width: 40,
     alignItems: "flex-end",
-    justifyContent: "center",
+    justifyContent: "flex-start",
+    paddingTop: 8,
   },
 
   // Note animation container (outer)
@@ -141,7 +143,7 @@ export const s = StyleSheet.create({
     marginTop: 4,
   },
 
-  // EMPTY STATE (same pattern as Reminders / Readings)
+  // EMPTY STATE
   emptyWrap: {
     marginTop: 0,
   },
