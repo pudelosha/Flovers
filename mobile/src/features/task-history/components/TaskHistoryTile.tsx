@@ -1,10 +1,12 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import {
   View,
   Text,
   Pressable,
   StyleSheet,
+  Animated,
 } from "react-native";
+import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { s } from "../styles/task-history.styles";
@@ -58,6 +60,8 @@ type Props = {
 
 export default function TaskHistoryTile({ item }: Props) {
   const [expanded, setExpanded] = useState(false);
+  const [contentHeight, setContentHeight] = useState(0);
+  const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
 
   const type = item.type as TaskType;
   const displayType = toDisplayType(type as any);
@@ -72,24 +76,43 @@ export default function TaskHistoryTile({ item }: Props) {
   const hasNote = !!item.note && item.note.trim().length > 0;
 
   const onToggle = () => {
-    if (!hasNote) return; // tile is still pressable, but only toggles when note exists
-    setExpanded((v) => !v);
+    if (!hasNote) return;
+    const next = expanded ? 0 : 1;
+    setExpanded(!expanded);
+    Animated.timing(anim, {
+      toValue: next,
+      duration: 220,
+      useNativeDriver: false, // animating height/margin
+    }).start();
   };
+
+  const animatedHeight =
+    contentHeight > 0
+      ? anim.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, contentHeight],
+        })
+      : 0;
+
+  const animatedOpacity = anim;
+  const animatedMarginTop = anim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0, 10],
+  });
 
   const chevronName = expanded ? "chevron-up" : "chevron-down";
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass stack: Blur + white tint + border + subtle accent tint */}
+      {/* Glass stack: identical pattern to Reminders tiles */}
       <View style={s.cardGlass}>
-        <MaterialCommunityIcons // dummy element for RN to keep vector lib linked; BlurView added below
-          name="blank"
-          size={0.01}
-          color="transparent"
-          style={{ position: "absolute", opacity: 0 }}
+        <BlurView
+          style={StyleSheet.absoluteFill}
+          blurType="light"
+          blurAmount={20}
+          overlayColor="transparent"
+          reducedTransparencyFallbackColor="transparent"
         />
-        {/* If you want real blur, replace this View with <BlurView /> as done in Reminders */}
-        <View style={StyleSheet.absoluteFill} />
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
         <View
@@ -117,7 +140,7 @@ export default function TaskHistoryTile({ item }: Props) {
           </Text>
         </View>
 
-        {/* Center: plant + location + completed date + note (expanded) */}
+        {/* Center: plant + location + completed date + animated note */}
         <View style={s.centerCol}>
           <Text style={s.plantName} numberOfLines={1}>
             {item.plant}
@@ -133,18 +156,41 @@ export default function TaskHistoryTile({ item }: Props) {
             </Text>
           )}
 
-          {expanded && hasNote && (
-            <View style={s.noteBox}>
-              <Text style={s.noteLabel}>Note</Text>
-              <Text style={s.noteText}>{item.note}</Text>
-            </View>
+          {hasNote && (
+            <Animated.View
+              style={[
+                s.noteContainer,
+                {
+                  height: animatedHeight,
+                  opacity: animatedOpacity,
+                  marginTop: animatedMarginTop,
+                },
+              ]}
+            >
+              <View
+                style={s.noteBox}
+                onLayout={(e) => {
+                  const h = e.nativeEvent.layout.height;
+                  if (h > 0 && h !== contentHeight) {
+                    setContentHeight(h);
+                  }
+                }}
+              >
+                <Text style={s.noteLabel}>Note</Text>
+                <Text style={s.noteText}>{item.note}</Text>
+              </View>
+            </Animated.View>
           )}
         </View>
 
-        {/* Right: chevron (only visible if note exists) */}
+        {/* Right: chevron (only if note exists) */}
         <View style={s.rightCol}>
           {hasNote && (
-            <MaterialCommunityIcons name={chevronName} size={22} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name={chevronName}
+              size={22}
+              color="#FFFFFF"
+            />
           )}
         </View>
       </Pressable>

@@ -103,9 +103,13 @@ export const s = StyleSheet.create({
     justifyContent: "center",
   },
 
-  // Note area (when expanded)
+  // Note animation container (outer)
+  noteContainer: {
+    overflow: "hidden", // ensures animated height clips contents cleanly
+  },
+
+  // Note area (inner content)
   noteBox: {
-    marginTop: 10,
     paddingTop: 8,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "rgba(255,255,255,0.25)",
@@ -166,7 +170,7 @@ export const s = StyleSheet.create({
     fontWeight: "800",
   },
 
-  // ===== SORT/FILTER SHEETS (simplified version of Reminders modals) =====
+  // ===== SORT/FILTER SHEETS (simplified) =====
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
