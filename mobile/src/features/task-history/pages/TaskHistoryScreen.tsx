@@ -11,7 +11,6 @@ import {
   RefreshControl,
   Animated,
   StyleSheet,
-  Pressable,
 } from "react-native";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
@@ -31,6 +30,14 @@ import type { TaskType } from "../../home/types/home.types";
 // completed tasks via home history service
 import { fetchHomeHistoryTasks } from "../../../api/services/home.service";
 
+import SortHistoryTasksModal, {
+  HistorySortDir,
+} from "../components/SortHistoryTasksModal";
+import FilterHistoryTasksModal from "../components/FilterHistoryTasksModal";
+import DeleteHistoryTasksModal, {
+  HistoryDeletePayload,
+} from "../components/DeleteHistoryTasksModal";
+
 type RouteParams = {
   plantId?: string; // optional: when passed, show history for one plant
 };
@@ -42,14 +49,6 @@ type HistoryFilters = {
 const INITIAL_FILTERS: HistoryFilters = {
   types: [],
 };
-
-const TYPE_OPTIONS: { key: TaskType; label: string }[] = [
-  { key: "watering", label: "Watering" },
-  { key: "moisture", label: "Moisture" },
-  { key: "fertilising", label: "Fertilising" },
-  { key: "care", label: "Care" },
-  { key: "repot", label: "Repot" },
-];
 
 export default function TaskHistoryScreen() {
   const nav = useNavigation();
@@ -77,25 +76,17 @@ export default function TaskHistoryScreen() {
     setToastVisible(true);
   };
 
-  // --- SORT / FILTER STATE ---
+  // --- SORT / FILTER / DELETE STATE ---
   const [filters, setFilters] = useState<HistoryFilters>(INITIAL_FILTERS);
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [sortDir, setSortDir] = useState<HistorySortDir>("desc");
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
+  const [deleteOpen, setDeleteOpen] = useState(false);
 
   const isFilterActive = useMemo(
     () => Boolean(filters.types && filters.types.length > 0),
     [filters]
   );
-
-  const toggleTypeFilter = (type: TaskType) => {
-    setFilters((prev) => {
-      const current = new Set(prev.types || []);
-      if (current.has(type)) current.delete(type);
-      else current.add(type);
-      return { ...prev, types: Array.from(current) as TaskType[] };
-    });
-  };
 
   // --- DATA LOAD (completed tasks) ---
   const load = useCallback(async () => {
@@ -222,7 +213,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen;
+    !loading && !sortOpen && !filterOpen && !deleteOpen;
 
   const fabActions = [
     {
@@ -237,6 +228,12 @@ export default function TaskHistoryScreen() {
       icon: "filter-variant",
       onPress: () => setFilterOpen(true),
     },
+    {
+      key: "delete",
+      label: "Delete",
+      icon: "delete-outline",
+      onPress: () => setDeleteOpen(true),
+    },
     ...(isFilterActive
       ? [
           {
@@ -248,6 +245,26 @@ export default function TaskHistoryScreen() {
         ]
       : []),
   ];
+
+  const handleConfirmDelete = (payload: HistoryDeletePayload) => {
+    setDeleteOpen(false);
+
+    // TODO: wire this up to actual delete logic / API.
+    if (payload.mode === "plant") {
+      if (plantIdFilter) {
+        showToast("Delete for selected plant is not implemented yet.", "default");
+      } else {
+        showToast("No plant is selected for deletion.", "error");
+      }
+    } else if (payload.mode === "location") {
+      showToast("Delete for selected location is not implemented yet.", "default");
+    } else if (payload.mode === "olderThan") {
+      showToast(
+        `Delete tasks older than ${payload.days} days is not implemented yet.`,
+        "default"
+      );
+    }
+  };
 
   // Early return while loading (match other screens)
   if (loading) {
@@ -382,115 +399,44 @@ export default function TaskHistoryScreen() {
         }
       />
 
-      {/* FAB: Sort / Filter / Clear filter */}
+      {/* FAB: Sort / Filter / Delete / Clear filter */}
       {showFAB && <FAB actions={fabActions} />}
 
-      {/* Simple SORT sheet */}
-      {sortOpen && (
-        <View style={s.promptBackdrop}>
-          <View style={s.promptWrap}>
-            <View style={s.promptInner}>
-              <BlurView
-                style={s.promptGlass}
-                blurType="light"
-                blurAmount={22}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
-              />
-              <View style={{ padding: 16 }}>
-                <Text style={s.promptTitle}>Sort history</Text>
-                <Text style={s.sectionTitle}>Order</Text>
+      {/* Sort modal */}
+      <SortHistoryTasksModal
+        visible={sortOpen}
+        sortDir={sortDir}
+        onCancel={() => setSortOpen(false)}
+        onApply={(dir) => {
+          setSortDir(dir);
+          setSortOpen(false);
+        }}
+        onReset={() => {
+          setSortDir("desc");
+          setSortOpen(false);
+        }}
+      />
 
-                <Pressable
-                  style={s.radioRow}
-                  onPress={() => setSortDir("desc")}
-                >
-                  <View style={s.radioOuter}>
-                    {sortDir === "desc" && <View style={s.radioInner} />}
-                  </View>
-                  <Text style={s.emptyText}>Most recent first</Text>
-                </Pressable>
+      {/* Filter modal */}
+      <FilterHistoryTasksModal
+        visible={filterOpen}
+        filters={filters}
+        onCancel={() => setFilterOpen(false)}
+        onClearAll={() => setFilters(INITIAL_FILTERS)}
+        onApply={(nextFilters) => {
+          setFilters(nextFilters);
+          setFilterOpen(false);
+        }}
+      />
 
-                <Pressable
-                  style={s.radioRow}
-                  onPress={() => setSortDir("asc")}
-                >
-                  <View style={s.radioOuter}>
-                    {sortDir === "asc" && <View style={s.radioInner} />}
-                  </View>
-                  <Text style={s.emptyText}>Oldest first</Text>
-                </Pressable>
-
-                <View style={s.promptButtonsRow}>
-                  <Pressable
-                    style={s.promptBtn}
-                    onPress={() => setSortOpen(false)}
-                  >
-                    <Text style={s.promptBtnText}>Close</Text>
-                  </Pressable>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      )}
-
-      {/* Simple FILTER sheet (by task type) */}
-      {filterOpen && (
-        <View style={s.promptBackdrop}>
-          <View style={s.promptWrap}>
-            <View style={s.promptInner}>
-              <BlurView
-                style={s.promptGlass}
-                blurType="light"
-                blurAmount={22}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
-              />
-              <View style={{ padding: 16 }}>
-                <Text style={s.promptTitle}>Filter history</Text>
-
-                <Text style={s.sectionTitle}>Task types</Text>
-                <View style={s.chipRow}>
-                  {TYPE_OPTIONS.map(({ key, label }) => {
-                    const active =
-                      !!filters.types && filters.types.includes(key);
-                    return (
-                      <Pressable
-                        key={key}
-                        onPress={() => toggleTypeFilter(key)}
-                        style={[
-                          s.chip,
-                          active && s.chipSelected,
-                        ]}
-                      >
-                        <Text style={s.chipText}>{label}</Text>
-                      </Pressable>
-                    );
-                  })}
-                </View>
-
-                <View style={s.promptButtonsRow}>
-                  {isFilterActive && (
-                    <Pressable
-                      style={[s.promptBtn, s.promptDanger]}
-                      onPress={() => setFilters(INITIAL_FILTERS)}
-                    >
-                      <Text style={s.promptBtnText}>Clear all</Text>
-                    </Pressable>
-                  )}
-                  <Pressable
-                    style={s.promptBtn}
-                    onPress={() => setFilterOpen(false)}
-                  >
-                    <Text style={s.promptBtnText}>Close</Text>
-                  </Pressable>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      )}
+      {/* Delete modal */}
+      <DeleteHistoryTasksModal
+        visible={deleteOpen}
+        hasPlantScope={!!plantIdFilter}
+        hasLocationScope={false}
+        onCancel={() => setDeleteOpen(false)}
+        onConfirm={handleConfirmDelete}
+      />
 
       <TopSnackbar
         visible={toastVisible}
