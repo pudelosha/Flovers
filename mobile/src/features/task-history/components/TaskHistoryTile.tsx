@@ -127,7 +127,7 @@ export default function TaskHistoryTile({ item }: Props) {
       </View>
 
       <Pressable
-        style={[s.cardRow, !expanded && styles.compactRow]}  // 👈 less bottom padding when collapsed
+        style={[s.cardRow, !expanded && hasNote && styles.compactRow]}
         onPress={onToggle}
       >
         {/* Left: icon + type label */}

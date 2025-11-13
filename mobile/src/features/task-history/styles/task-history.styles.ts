@@ -25,7 +25,7 @@ export const s = StyleSheet.create({
     shadowRadius: 16,
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
-    minHeight: 90,
+    minHeight: 72,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -47,9 +47,9 @@ export const s = StyleSheet.create({
   cardRow: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "flex-start",  // 👈 pin content to top, no centering jump
+    alignItems: "flex-start",  // pin content to top, no centering jump
     paddingHorizontal: 14,
-    paddingVertical: 10,
+    paddingVertical: 8,        // slightly reduced overall vertical padding
   },
 
   // Left column
@@ -81,7 +81,7 @@ export const s = StyleSheet.create({
   plantName: {
     color: "#FFFFFF",
     fontWeight: "800",
-    fontSize: 17,
+    fontSize: 14,
   },
   location: {
     color: "rgba(255,255,255,0.9)",
@@ -108,6 +108,7 @@ export const s = StyleSheet.create({
   // Note animation container (outer)
   noteContainer: {
     overflow: "hidden", // ensures animated height clips contents cleanly
+    marginTop: 6,       // fixed margin so expansion doesn't shift other controls
   },
 
   // Note area (inner content)
@@ -198,6 +199,13 @@ export const s = StyleSheet.create({
     borderRadius: 18,
     overflow: "hidden",
   },
+  // rounded variants for “pill” modals
+  promptGlass28: {
+    borderRadius: 28,
+  },
+  promptInner28: {
+    borderRadius: 28,
+  },
   promptTitle: {
     color: "#FFFFFF",
     fontWeight: "800",
@@ -258,6 +266,7 @@ export const s = StyleSheet.create({
     gap: 10,
     paddingTop: 16,
   },
+  // base button for modals
   promptBtn: {
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -269,6 +278,15 @@ export const s = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "800",
   },
+  // primary button variant
+  promptPrimary: {
+    backgroundColor: "rgba(11,114,133,0.92)",
+  },
+  promptPrimaryText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+  },
+  // destructive button variant
   promptDanger: {
     backgroundColor: "rgba(255,107,107,0.22)",
   },

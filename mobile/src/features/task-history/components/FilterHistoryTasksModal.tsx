@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/task-history.styles";
 import type { TaskType } from "../../home/types/home.types";
@@ -48,7 +48,7 @@ export default function FilterHistoryTasksModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={[s.promptGlass, styles.promptGlass28]}>
+        <View style={[s.promptGlass, s.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -63,7 +63,7 @@ export default function FilterHistoryTasksModal({
           />
         </View>
 
-        <View style={[s.promptInner, styles.promptInner28]}>
+        <View style={[s.promptInner, s.promptInner28]}>
           <Text style={s.promptTitle}>Filter history</Text>
 
           <Text style={s.inputLabel}>Task types</Text>
@@ -89,19 +89,19 @@ export default function FilterHistoryTasksModal({
                   onClearAll();
                   setTypes([]);
                 }}
-                style={[styles.btnBase, styles.btnDanger]}
+                style={[s.promptBtn, s.promptDanger]}
               >
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
                   Clear
                 </Text>
               </Pressable>
             )}
-            <Pressable onPress={onCancel} style={[styles.btnBase]}>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={() => onApply({ types })}
-              style={[styles.btnBase, styles.btnPrimary]}
+              style={[s.promptBtn, s.promptPrimary]}
             >
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
@@ -111,16 +111,3 @@ export default function FilterHistoryTasksModal({
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  promptGlass28: { borderRadius: 28 },
-  promptInner28: { borderRadius: 28 },
-  btnBase: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
-});

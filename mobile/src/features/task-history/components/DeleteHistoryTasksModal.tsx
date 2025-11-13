@@ -61,7 +61,7 @@ export default function DeleteHistoryTasksModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={[s.promptGlass, styles.promptGlass28]}>
+        <View style={[s.promptGlass, s.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -76,7 +76,7 @@ export default function DeleteHistoryTasksModal({
           />
         </View>
 
-        <View style={[s.promptInner, styles.promptInner28]}>
+        <View style={[s.promptInner, s.promptInner28]}>
           <Text style={s.promptTitle}>Delete history</Text>
 
           <Text style={s.inputLabel}>Scope</Text>
@@ -133,7 +133,11 @@ export default function DeleteHistoryTasksModal({
           {/* Days dropdown */}
           <View style={[s.dropdown, { marginTop: 8 }]}>
             <Pressable
-              style={[s.dropdownHeader, styles.ddHeaderFlat, mode !== "olderThan" && { opacity: 0.6 }]}
+              style={[
+                s.dropdownHeader,
+                styles.ddHeaderFlat,
+                mode !== "olderThan" && { opacity: 0.6 },
+              ]}
               onPress={() => {
                 if (mode !== "olderThan") return;
                 setDaysOpen((o) => !o);
@@ -170,14 +174,14 @@ export default function DeleteHistoryTasksModal({
           </View>
 
           <View style={[s.promptButtonsRow, { marginTop: 18 }]}>
-            <Pressable onPress={onCancel} style={[styles.btnBase]}>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={handleConfirm}
               style={[
-                styles.btnBase,
-                styles.btnDanger,
+                s.promptBtn,
+                s.promptDanger,
                 !canConfirm && { opacity: 0.5 },
               ]}
               disabled={!canConfirm}
@@ -194,8 +198,6 @@ export default function DeleteHistoryTasksModal({
 }
 
 const styles = StyleSheet.create({
-  promptGlass28: { borderRadius: 28 },
-  promptInner28: { borderRadius: 28 },
   ddHeaderFlat: {
     borderWidth: 0,
     borderRadius: 16,
@@ -214,13 +216,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 14,
   },
-  btnBase: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
   helperText: {
     fontSize: 12,
     color: "rgba(255,255,255,0.75)",

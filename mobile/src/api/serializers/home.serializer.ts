@@ -54,7 +54,7 @@ export function buildUITasks(
       // used for Delete/Edit routing
       reminderId: String(r?.id ?? ""),
 
-      // 🔹 extra fields used by Task History
+      // extra fields used by Task History
       completedAt: t.completed_at || "", // ISO string or "" if not completed
       note: t.note ?? undefined,         // optional note saved on completion
     };
