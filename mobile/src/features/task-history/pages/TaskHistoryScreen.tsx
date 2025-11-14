@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\task-history\pages\TaskHistoryScreen.tsx
 import React, {
   useCallback,
   useState,
@@ -25,7 +26,6 @@ import { s } from "../styles/task-history.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-history.constants";
 import TaskHistoryTile from "../components/TaskHistoryTile";
 import type { TaskHistoryItem } from "../types/task-history.types";
-import type { TaskType } from "../../home/types/home.types";
 
 // completed tasks via home history service
 import { fetchHomeHistoryTasks } from "../../../api/services/home.service";
@@ -101,6 +101,9 @@ export default function TaskHistoryScreen() {
     [filters]
   );
 
+  // --- MENU STATE (only one open at a time, like Home / Reminders) ---
+  const [openMenuId, setOpenMenuId] = useState<string | null>(null);
+
   // --- DATA LOAD (completed tasks) ---
   const load = useCallback(async () => {
     setLoading(true);
@@ -126,10 +129,11 @@ export default function TaskHistoryScreen() {
     useCallback(() => {
       let mounted = true;
 
-      // reset modal & sort/filter state on every focus
+      // reset modal & sort/filter/menu state on every focus
       setSortOpen(false);
       setFilterOpen(false);
       setDeleteOpen(false);
+      setOpenMenuId(null);
       setFilters(INITIAL_FILTERS);
       setSortKey("completedAt");
       setSortDir("desc");
@@ -151,6 +155,7 @@ export default function TaskHistoryScreen() {
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
+    setOpenMenuId(null);
     try {
       await load();
     } finally {
@@ -306,7 +311,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen;
+    !loading && !sortOpen && !filterOpen && !deleteOpen && !openMenuId;
 
   const fabActions = [
     {
@@ -370,6 +375,28 @@ export default function TaskHistoryScreen() {
     }
   };
 
+  // Placeholder handlers for tile menu actions
+  const handleDeleteItem = (item: TaskHistoryItem) => {
+    showToast(
+      `Delete history task "${item.plant}" is not implemented yet.`,
+      "default"
+    );
+  };
+
+  const handleEditHistoryReminder = (item: TaskHistoryItem) => {
+    showToast(
+      `Edit reminder from history is not implemented yet.`,
+      "default"
+    );
+  };
+
+  const handleGoToPlant = (item: TaskHistoryItem) => {
+    showToast(
+      `Go to plant from history is not implemented yet.`,
+      "default"
+    );
+  };
+
   // Early return while loading (match other screens)
   if (loading) {
     return (
@@ -398,6 +425,19 @@ export default function TaskHistoryScreen() {
         onPressRight={() => nav.navigate("Scanner" as never)}
       />
 
+      {/* Backdrop to dismiss menus (kept under FlatList so menus stay above) */}
+      {openMenuId && (
+        <View
+          style={s.backdrop}
+          pointerEvents="auto"
+          // When pressed, close any open menu
+          onStartShouldSetResponder={() => {
+            setOpenMenuId(null);
+            return true;
+          }}
+        />
+      )}
+
       <Animated.FlatList
         ref={listRef}
         style={{ flex: 1 }}
@@ -415,11 +455,25 @@ export default function TaskHistoryScreen() {
           });
           const opacity = v;
 
+          const isOpen = openMenuId === item.id;
+
           return (
             <Animated.View
-              style={{ opacity, transform: [{ translateY }, { scale }] }}
+              style={[
+                { opacity, transform: [{ translateY }, { scale }] },
+                isOpen && { zIndex: 50, elevation: 50 }, // ⬅ like Home: keep open row above others
+              ]}
             >
-              <TaskHistoryTile item={item} />
+              <TaskHistoryTile
+                item={item}
+                isMenuOpen={isOpen}
+                onToggleMenu={() =>
+                  setOpenMenuId((curr) => (curr === item.id ? null : item.id))
+                }
+                onDelete={handleDeleteItem}
+                onEditReminder={handleEditHistoryReminder}
+                onGoToPlant={handleGoToPlant}
+              />
             </Animated.View>
           );
         }}
@@ -431,6 +485,9 @@ export default function TaskHistoryScreen() {
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
+        onScrollBeginDrag={() => {
+          if (openMenuId) setOpenMenuId(null);
+        }}
         ListEmptyComponent={
           !loading ? (
             <Animated.View

@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\task-history\components\TaskHistoryTile.tsx
 import React, { useState, useMemo, useRef } from "react";
 import {
   View,
@@ -57,9 +58,22 @@ function formatCompletedAt(v?: string) {
 
 type Props = {
   item: TaskHistoryItem;
+  isMenuOpen: boolean;
+  onToggleMenu: () => void;
+  // optional callbacks, can be wired up later from the screen
+  onDelete?: (item: TaskHistoryItem) => void;
+  onEditReminder?: (item: TaskHistoryItem) => void;
+  onGoToPlant?: (item: TaskHistoryItem) => void;
 };
 
-export default function TaskHistoryTile({ item }: Props) {
+export default function TaskHistoryTile({
+  item,
+  isMenuOpen,
+  onToggleMenu,
+  onDelete,
+  onEditReminder,
+  onGoToPlant,
+}: Props) {
   const [expanded, setExpanded] = useState(false);
   const [noteHeight, setNoteHeight] = useState(0);
   const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
@@ -76,16 +90,34 @@ export default function TaskHistoryTile({ item }: Props) {
 
   const hasNote = !!item.note && item.note.trim().length > 0;
 
-  const onToggle = () => {
-    if (!hasNote) return;
-    const next = expanded ? 0 : 1;
-    setExpanded(!expanded);
+  const animateTo = (value: 0 | 1) => {
     Animated.timing(anim, {
-      toValue: next,
-      duration: 140,                     // same speed both ways
+      toValue: value,
+      duration: 140,
       easing: Easing.out(Easing.cubic),
-      useNativeDriver: false,            // animating height/margin
+      useNativeDriver: false, // animating height/margin
     }).start();
+  };
+
+  const expand = () => {
+    if (!hasNote || expanded) return;
+    setExpanded(true);
+    animateTo(1);
+  };
+
+  const collapse = () => {
+    if (!hasNote || !expanded) return;
+    setExpanded(false);
+    animateTo(0);
+  };
+
+  const onToggleBody = () => {
+    if (!hasNote) return;
+    if (expanded) {
+      collapse();
+    } else {
+      expand();
+    }
   };
 
   const animatedHeight =
@@ -102,10 +134,35 @@ export default function TaskHistoryTile({ item }: Props) {
     outputRange: [0, 6], // subtle extra spacing when expanded
   });
 
-  const chevronName = expanded ? "chevron-up" : "chevron-down";
+  const handleDelete = () => {
+    onToggleMenu();
+    if (onDelete) {
+      onDelete(item);
+    }
+  };
+
+  const handleExpandFromMenu = () => {
+    onToggleMenu();
+    expand();
+  };
+
+  const handleCollapseFromMenu = () => {
+    onToggleMenu();
+    collapse();
+  };
+
+  const handleEditReminder = () => {
+    onToggleMenu();
+    if (onEditReminder) onEditReminder(item);
+  };
+
+  const handleGoToPlant = () => {
+    onToggleMenu();
+    if (onGoToPlant) onGoToPlant(item);
+  };
 
   return (
-    <View style={s.cardWrap}>
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass stack: identical to Reminders tiles */}
       <View style={s.cardGlass}>
         <BlurView
@@ -121,101 +178,185 @@ export default function TaskHistoryTile({ item }: Props) {
           pointerEvents="none"
           style={[
             StyleSheet.absoluteFill,
-            { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 },
+            { backgroundColor: hexToRgba(accent, 0.1), zIndex: 1 },
           ]}
         />
       </View>
 
-      <Pressable
-        style={[s.cardRow, !expanded && hasNote && styles.compactRow]}
-        onPress={onToggle}
-      >
-        {/* Left: icon + type label */}
-        <View style={s.leftCol}>
-          <View
-            style={[
-              s.leftIconBubble,
-              { backgroundColor: hexToRgba("#000000", 0.15) },
-            ]}
-          >
-            <MaterialCommunityIcons name={icon} size={20} color={accent} />
+      <View style={[s.cardRow, !expanded && hasNote && styles.compactRow]}>
+        {/* BODY (pressable): left + center – expands/collapses */}
+        <Pressable
+          style={styles.bodyPressable}
+          onPress={onToggleBody}
+          android_ripple={{ color: "rgba(255,255,255,0.10)" }}
+        >
+          {/* Left: icon + type label */}
+          <View style={s.leftCol}>
+            <View
+              style={[
+                s.leftIconBubble,
+                { backgroundColor: hexToRgba("#000000", 0.15) },
+              ]}
+            >
+              <MaterialCommunityIcons name={icon} size={20} color={accent} />
+            </View>
+            <Text style={[s.leftCaption, { color: accent }]}>
+              {displayType.toUpperCase()}
+            </Text>
           </View>
-          <Text style={[s.leftCaption, { color: accent }]}>
-            {displayType.toUpperCase()}
-          </Text>
-        </View>
 
-        {/* Center: plant + location + completed date + animated note */}
-        <View style={s.centerCol}>
-          <Text style={s.plantName} numberOfLines={1}>
-            {item.plant}
-          </Text>
-          {!!item.location && (
-            <Text style={s.location} numberOfLines={1}>
-              {item.location}
+          {/* Center: plant + location + completed date + animated note */}
+          <View style={s.centerCol}>
+            <Text style={s.plantName} numberOfLines={1}>
+              {item.plant}
             </Text>
-          )}
-          {!!completedLabel && (
-            <Text style={s.metaCompact} numberOfLines={1}>
-              Completed on {completedLabel}
-            </Text>
-          )}
+            {!!item.location && (
+              <Text style={s.location} numberOfLines={1}>
+                {item.location}
+              </Text>
+            )}
+            {!!completedLabel && (
+              <Text style={s.metaCompact} numberOfLines={1}>
+                Completed on {completedLabel}
+              </Text>
+            )}
 
-          {hasNote && (
-            <>
-              {/* Invisible measurement copy: same styles, off-layout visually */}
-              <View
-                style={styles.noteMeasureWrapper}
-                pointerEvents="none"
-                onLayout={(e) => {
-                  const h = e.nativeEvent.layout.height;
-                  if (h > 0 && h !== noteHeight) {
-                    setNoteHeight(h);
-                  }
-                }}
-              >
-                <View style={s.noteBox}>
-                  <Text style={s.noteLabel}>Note</Text>
-                  <Text style={s.noteText}>{item.note}</Text>
+            {hasNote && (
+              <>
+                {/* Invisible measurement copy: same styles, off-layout visually */}
+                <View
+                  style={styles.noteMeasureWrapper}
+                  pointerEvents="none"
+                  onLayout={(e) => {
+                    const h = e.nativeEvent.layout.height;
+                    if (h > 0 && h !== noteHeight) {
+                      setNoteHeight(h);
+                    }
+                  }}
+                >
+                  <View style={s.noteBox}>
+                    <Text style={s.noteLabel}>Note</Text>
+                    <Text style={s.noteText}>{item.note}</Text>
+                  </View>
                 </View>
-              </View>
 
-              {/* Animated visible note */}
-              <Animated.View
-                style={[
-                  s.noteContainer,
-                  {
-                    height: animatedHeight,
-                    opacity: animatedOpacity,
-                    marginTop: animatedMarginTop,
-                  },
-                ]}
-              >
-                <View style={s.noteBox}>
-                  <Text style={s.noteLabel}>Note</Text>
-                  <Text style={s.noteText}>{item.note}</Text>
-                </View>
-              </Animated.View>
-            </>
-          )}
-        </View>
+                {/* Animated visible note */}
+                <Animated.View
+                  style={[
+                    s.noteContainer,
+                    {
+                      height: animatedHeight,
+                      opacity: animatedOpacity,
+                      marginTop: animatedMarginTop,
+                    },
+                  ]}
+                >
+                  <View style={s.noteBox}>
+                    <Text style={s.noteLabel}>Note</Text>
+                    <Text style={s.noteText}>{item.note}</Text>
+                  </View>
+                </Animated.View>
+              </>
+            )}
+          </View>
+        </Pressable>
 
-        {/* Right: chevron (only if note exists) */}
+        {/* Right: 3-dot menu (same position as Reminders) */}
         <View style={s.rightCol}>
-          {hasNote && (
+          <Pressable
+            onPress={onToggleMenu}
+            style={s.menuBtn}
+            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+            hitSlop={8}
+          >
             <MaterialCommunityIcons
-              name={chevronName}
-              size={22}
+              name="dots-horizontal"
+              size={20}
               color="#FFFFFF"
             />
-          )}
+          </Pressable>
         </View>
-      </Pressable>
+      </View>
+
+      {/* Inline menu – same positioning as ReminderMenu */}
+      {isMenuOpen && (
+        <View style={s.menuSheet}>
+          {/* Expand / Collapse (first, only if there is a note) */}
+          {hasNote && !expanded && (
+            <Pressable style={s.menuItem} onPress={handleExpandFromMenu}>
+              <MaterialCommunityIcons
+                name="unfold-more-horizontal"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={s.menuItemText}>Expand</Text>
+            </Pressable>
+          )}
+
+          {hasNote && expanded && (
+            <Pressable style={s.menuItem} onPress={handleCollapseFromMenu}>
+              <MaterialCommunityIcons
+                name="unfold-less-horizontal"
+                size={18}
+                color="#FFFFFF"
+                style={{ marginRight: 8 }}
+              />
+              <Text style={s.menuItemText}>Collapse</Text>
+            </Pressable>
+          )}
+
+          {/* Edit reminder */}
+          <Pressable style={s.menuItem} onPress={handleEditReminder}>
+            <MaterialCommunityIcons
+              name="pencil-outline"
+              size={18}
+              color="#FFFFFF"
+              style={{ marginRight: 8 }}
+            />
+            <Text style={s.menuItemText}>Edit reminder</Text>
+          </Pressable>
+
+          {/* Go to plant */}
+          <Pressable style={s.menuItem} onPress={handleGoToPlant}>
+            <MaterialCommunityIcons
+              name="flower-outline"
+              size={18}
+              color="#FFFFFF"
+              style={{ marginRight: 8 }}
+            />
+            <Text style={s.menuItemText}>Go to plant</Text>
+          </Pressable>
+
+          {/* Delete – last & red (like Reminders) */}
+          <Pressable style={s.menuItem} onPress={handleDelete}>
+            <MaterialCommunityIcons
+              name="delete-outline"
+              size={18}
+              color="#FF6B6B"
+              style={{ marginRight: 8 }}
+            />
+            <Text
+              style={[
+                s.menuItemText,
+                { color: "#FF6B6B", fontWeight: "800" },
+              ]}
+            >
+              Delete
+            </Text>
+          </Pressable>
+        </View>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  bodyPressable: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "flex-start",
+  },
   noteMeasureWrapper: {
     position: "absolute",
     opacity: 0,
@@ -223,6 +364,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   compactRow: {
-    paddingBottom: 4,  // tighten bottom padding in collapsed state
+    paddingTop: 8,   // keep same as base
+    paddingBottom: 4 // only tighten bottom padding a bit
   },
 });

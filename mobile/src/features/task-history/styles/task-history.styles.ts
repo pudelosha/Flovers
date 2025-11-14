@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\task-history\styles\task-history.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -26,6 +27,11 @@ export const s = StyleSheet.create({
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
     minHeight: 72,
+  },
+  // raised state when menu is open (so it floats above neighbours)
+  cardWrapRaised: {
+    zIndex: 50,
+    elevation: 50,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -97,12 +103,49 @@ export const s = StyleSheet.create({
     marginTop: 2,
   },
 
-  // Right column (chevron)
+  // Right column (menu button)
   rightCol: {
-    width: 40,
+    width: 56,
     alignItems: "flex-end",
-    justifyContent: "flex-start",
-    paddingTop: 8,
+    justifyContent: "center",
+  },
+  menuBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "transparent",
+    borderWidth: 0,
+    marginTop: 10, // small nudge down to align visually with content
+  },
+
+  // Floating menu (same idea as Reminders)
+  menuSheet: {
+    position: "absolute",
+    right: 6,
+    top: -6,
+    zIndex: 60,
+    elevation: 60,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(0,0,0,0.85)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    gap: 6,
+  },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+  },
+  menuItemText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    letterSpacing: 0.2,
+    fontSize: 12,
   },
 
   // Note animation container (outer)
