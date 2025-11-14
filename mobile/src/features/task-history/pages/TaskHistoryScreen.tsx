@@ -32,6 +32,7 @@ import { fetchHomeHistoryTasks } from "../../../api/services/home.service";
 
 import SortHistoryTasksModal, {
   HistorySortDir,
+  HistorySortKey,
 } from "../components/SortHistoryTasksModal";
 import FilterHistoryTasksModal from "../components/FilterHistoryTasksModal";
 import DeleteHistoryTasksModal, {
@@ -78,6 +79,7 @@ export default function TaskHistoryScreen() {
 
   // --- SORT / FILTER / DELETE STATE ---
   const [filters, setFilters] = useState<HistoryFilters>(INITIAL_FILTERS);
+  const [sortKey, setSortKey] = useState<HistorySortKey>("completedAt");
   const [sortDir, setSortDir] = useState<HistorySortDir>("desc");
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
@@ -113,11 +115,12 @@ export default function TaskHistoryScreen() {
     useCallback(() => {
       let mounted = true;
 
-      // 🔁 On every focus, reset modals + filters + sort to defaults
+      // reset modal & sort/filter state on every focus
       setSortOpen(false);
       setFilterOpen(false);
       setDeleteOpen(false);
       setFilters(INITIAL_FILTERS);
+      setSortKey("completedAt");
       setSortDir("desc");
 
       (async () => {
@@ -154,16 +157,29 @@ export default function TaskHistoryScreen() {
     });
 
     const sorted = [...filtered].sort((a, b) => {
-      const da = new Date(a.completedAt);
-      const db = new Date(b.completedAt);
-      const ta = isNaN(+da) ? 0 : da.getTime();
-      const tb = isNaN(+db) ? 0 : db.getTime();
-      const diff = ta - tb;
+      let diff = 0;
+
+      if (sortKey === "completedAt") {
+        const da = new Date(a.completedAt);
+        const db = new Date(b.completedAt);
+        const ta = isNaN(+da) ? 0 : da.getTime();
+        const tb = isNaN(+db) ? 0 : db.getTime();
+        diff = ta - tb;
+      } else if (sortKey === "plant") {
+        const pa = (a.plant || "").toString();
+        const pb = (b.plant || "").toString();
+        diff = pa.localeCompare(pb, undefined, { sensitivity: "base" });
+      } else if (sortKey === "location") {
+        const la = (a.location || "").toString();
+        const lb = (b.location || "").toString();
+        diff = la.localeCompare(lb, undefined, { sensitivity: "base" });
+      }
+
       return sortDir === "asc" ? diff : -diff;
     });
 
     return sorted;
-  }, [items, filters, sortDir]);
+  }, [items, filters, sortKey, sortDir]);
 
   // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -413,13 +429,16 @@ export default function TaskHistoryScreen() {
       {/* Sort modal */}
       <SortHistoryTasksModal
         visible={sortOpen}
+        sortKey={sortKey}
         sortDir={sortDir}
         onCancel={() => setSortOpen(false)}
-        onApply={(dir) => {
+        onApply={(key, dir) => {
+          setSortKey(key);
           setSortDir(dir);
           setSortOpen(false);
         }}
         onReset={() => {
+          setSortKey("completedAt");
           setSortDir("desc");
           setSortOpen(false);
         }}
