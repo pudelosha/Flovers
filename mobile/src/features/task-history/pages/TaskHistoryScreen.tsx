@@ -34,7 +34,9 @@ import SortHistoryTasksModal, {
   HistorySortDir,
   HistorySortKey,
 } from "../components/SortHistoryTasksModal";
-import FilterHistoryTasksModal from "../components/FilterHistoryTasksModal";
+import FilterHistoryTasksModal, {
+  HistoryFilters as HistoryFilterShape,
+} from "../components/FilterHistoryTasksModal";
 import DeleteHistoryTasksModal, {
   HistoryDeletePayload,
 } from "../components/DeleteHistoryTasksModal";
@@ -43,12 +45,14 @@ type RouteParams = {
   plantId?: string; // optional: when passed, show history for one plant
 };
 
-type HistoryFilters = {
-  types?: TaskType[];
-};
+type HistoryFilters = HistoryFilterShape;
 
 const INITIAL_FILTERS: HistoryFilters = {
   types: [],
+  plantId: undefined,
+  location: undefined,
+  completedFrom: undefined,
+  completedTo: undefined,
 };
 
 export default function TaskHistoryScreen() {
@@ -86,7 +90,14 @@ export default function TaskHistoryScreen() {
   const [deleteOpen, setDeleteOpen] = useState(false);
 
   const isFilterActive = useMemo(
-    () => Boolean(filters.types && filters.types.length > 0),
+    () =>
+      Boolean(
+        (filters.types && filters.types.length > 0) ||
+        filters.plantId ||
+        filters.location ||
+        filters.completedFrom ||
+        filters.completedTo
+      ),
     [filters]
   );
 
@@ -147,12 +158,70 @@ export default function TaskHistoryScreen() {
     }
   }, [load]);
 
+  // Options for plant & location dropdowns (derived from items)
+  const plantOptions = useMemo(
+    () => {
+      const map = new Map<string, string>();
+      items.forEach((item) => {
+        const pid = (item as any).plantId as string | undefined;
+        if (pid && !map.has(pid)) {
+          map.set(pid, item.plant || "Unnamed plant");
+        }
+      });
+      return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+    },
+    [items]
+  );
+
+  const locationOptions = useMemo(
+    () => {
+      const set = new Set<string>();
+      items.forEach((item) => {
+        if (item.location) set.add(item.location);
+      });
+      return Array.from(set);
+    },
+    [items]
+  );
+
   // ===== DERIVED LIST (sort + filter) =====
   const derivedItems = useMemo(() => {
     const typeSet = new Set(filters.types || []);
 
+    const fromDate = filters.completedFrom ? new Date(filters.completedFrom) : null;
+    const toDate = filters.completedTo ? new Date(filters.completedTo) : null;
+    const hasFrom = fromDate && !isNaN(+fromDate);
+    const hasTo = toDate && !isNaN(+toDate);
+
     const filtered = items.filter((item) => {
+      // by task type
       if (typeSet.size > 0 && !typeSet.has(item.type)) return false;
+
+      // by plant
+      if (filters.plantId) {
+        const pid = (item as any).plantId as string | undefined;
+        if (!pid || pid !== filters.plantId) return false;
+      }
+
+      // by location
+      if (filters.location) {
+        if (!item.location || item.location !== filters.location) return false;
+      }
+
+      // by completed date range
+      if (hasFrom || hasTo) {
+        const d = new Date(item.completedAt);
+        if (isNaN(+d)) return false;
+        const time = d.getTime();
+        if (hasFrom && time < (fromDate as Date).getTime()) return false;
+        if (hasTo) {
+          // inclusive end-of-day comparison
+          const end = new Date(toDate as Date);
+          end.setHours(23, 59, 59, 999);
+          if (time > end.getTime()) return false;
+        }
+      }
+
       return true;
     });
 
@@ -447,6 +516,8 @@ export default function TaskHistoryScreen() {
       {/* Filter modal */}
       <FilterHistoryTasksModal
         visible={filterOpen}
+        plants={plantOptions}
+        locations={locationOptions}
         filters={filters}
         onCancel={() => setFilterOpen(false)}
         onClearAll={() => setFilters(INITIAL_FILTERS)}
