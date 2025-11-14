@@ -3,6 +3,7 @@ import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../styles/task-history.styles";
 import type { TaskType } from "../../home/types/home.types";
+import { ACCENT_BY_TYPE } from "../../home/constants/home.constants";
 
 type Props = {
   visible: boolean;
@@ -19,6 +20,23 @@ const TYPE_OPTIONS: { key: TaskType; label: string }[] = [
   { key: "care", label: "Care" },
   { key: "repot", label: "Repot" },
 ];
+
+// same helper as in Reminders filter
+function hexToRgba(hex?: string, alpha = 1) {
+  const fallback = `rgba(255,255,255,${alpha})`;
+  if (!hex || typeof hex !== "string") return fallback;
+  let h = hex.trim();
+  if (!h.startsWith("#")) h = `#${h}`;
+  h = h.replace("#", "");
+  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  if (h.length !== 6) return fallback;
+  const bigint = parseInt(h, 16);
+  if (Number.isNaN(bigint)) return fallback;
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r},${g},${b},${alpha})`;
+}
 
 export default function FilterHistoryTasksModal({
   visible,
@@ -69,14 +87,23 @@ export default function FilterHistoryTasksModal({
           <Text style={s.inputLabel}>Task types</Text>
           <View style={s.chipRow}>
             {TYPE_OPTIONS.map(({ key, label }) => {
-              const active = types.includes(key);
+              const selected = types.includes(key);
+              const tint = ACCENT_BY_TYPE[key];
               return (
                 <Pressable
                   key={key}
                   onPress={() => toggleType(key)}
-                  style={[s.chip, active && s.chipSelected]}
+                  style={[
+                    s.chip,
+                    {
+                      // same glazed, borderless behaviour as Reminders filter
+                      backgroundColor: selected
+                        ? hexToRgba(tint, 0.22)
+                        : "rgba(255,255,255,0.12)",
+                    },
+                  ]}
                 >
-                  <Text style={s.chipText}>{label}</Text>
+                  <Text style={s.chipText}>{label.toUpperCase()}</Text>
                 </Pressable>
               );
             })}

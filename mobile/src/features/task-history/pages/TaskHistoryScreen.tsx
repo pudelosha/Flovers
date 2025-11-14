@@ -108,10 +108,18 @@ export default function TaskHistoryScreen() {
     }
   }, [plantIdFilter]);
 
-  // Refresh on focus (clear stale list first)
+  // Refresh on focus (clear stale list first) + reset UI state
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
+
+      // 🔁 On every focus, reset modals + filters + sort to defaults
+      setSortOpen(false);
+      setFilterOpen(false);
+      setDeleteOpen(false);
+      setFilters(INITIAL_FILTERS);
+      setSortDir("desc");
+
       (async () => {
         setLoading(true);
         setItems([]);

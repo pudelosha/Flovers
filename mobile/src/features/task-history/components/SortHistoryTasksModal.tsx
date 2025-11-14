@@ -38,7 +38,7 @@ export default function SortHistoryTasksModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={[s.promptGlass, styles.promptGlass28]}>
+        <View style={[s.promptGlass, s.promptGlass28]}>
           <BlurView
             // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
@@ -53,7 +53,7 @@ export default function SortHistoryTasksModal({
           />
         </View>
 
-        <View style={[s.promptInner, styles.promptInner28]}>
+        <View style={[s.promptInner, s.promptInner28]}>
           <Text style={s.promptTitle}>Sort history</Text>
 
           <Text style={s.inputLabel}>Direction</Text>
@@ -63,7 +63,9 @@ export default function SortHistoryTasksModal({
               onPress={() => setDirOpen((o) => !o)}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{d === "asc" ? "Oldest first" : "Most recent first"}</Text>
+              <Text style={s.dropdownValue}>
+                {d === "asc" ? "Oldest first" : "Most recent first"}
+              </Text>
               <MaterialCommunityIcons
                 name={dirOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -99,19 +101,19 @@ export default function SortHistoryTasksModal({
             {onReset ? (
               <Pressable
                 onPress={onReset}
-                style={[styles.btnBase, styles.btnDanger]}
+                style={[s.promptBtn, s.promptDanger]}
               >
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
                   Reset
                 </Text>
               </Pressable>
             ) : null}
-            <Pressable onPress={onCancel} style={[styles.btnBase]}>
+            <Pressable onPress={onCancel} style={s.promptBtn}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={() => onApply(d)}
-              style={[styles.btnBase, styles.btnPrimary]}
+              style={[s.promptBtn, s.promptPrimary]}
             >
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
@@ -123,8 +125,6 @@ export default function SortHistoryTasksModal({
 }
 
 const styles = StyleSheet.create({
-  promptGlass28: { borderRadius: 28 },
-  promptInner28: { borderRadius: 28 },
   ddHeaderFlat: {
     borderWidth: 0,
     borderRadius: 16,
@@ -143,12 +143,4 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 14,
   },
-  btnBase: {
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
-  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
 });
