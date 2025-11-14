@@ -122,3 +122,48 @@ export async function deleteReminder(
     { auth: opts.auth ?? true }
   );
 }
+
+/* ---------------------- HISTORY-TASK DELETION ---------------------- */
+
+/**
+ * Delete a single ReminderTask row (used by Task History per-row "Delete").
+ *
+ * Backend endpoint (to be implemented server-side):
+ *   DELETE /api/reminders/tasks/<id>/
+ */
+export async function deleteReminderTask(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<void> {
+  await request<void>(
+    `/api/reminders/tasks/${id}/`,
+    "DELETE",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+}
+
+/**
+ * Bulk delete completed ReminderTask rows based on a scope.
+ * Shape mirrors the HistoryDeletePayload on the client.
+ *
+ * Backend endpoint (to be implemented server-side):
+ *   POST /api/reminders/tasks/bulk-delete/
+ */
+export type ApiBulkDeleteReminderTasksPayload =
+  | { mode: "plant"; plantId: string }
+  | { mode: "location"; location: string }
+  | { mode: "types"; types: string[] }
+  | { mode: "olderThan"; days: number };
+
+export async function bulkDeleteReminderTasks(
+  payload: ApiBulkDeleteReminderTasksPayload,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<void> {
+  await request<void>(
+    `/api/reminders/tasks/bulk-delete/`,
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+}

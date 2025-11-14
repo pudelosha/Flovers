@@ -27,8 +27,12 @@ import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-h
 import TaskHistoryTile from "../components/TaskHistoryTile";
 import type { TaskHistoryItem } from "../types/task-history.types";
 
-// completed tasks via home history service
-import { fetchHomeHistoryTasks } from "../../../api/services/home.service";
+// completed tasks via dedicated history service
+import {
+  fetchHistoryItems,
+  deleteHistoryEntry,
+  bulkDeleteHistoryEntries,
+} from "../../../api/services/history.service";
 
 import SortHistoryTasksModal, {
   HistorySortDir,
@@ -108,8 +112,8 @@ export default function TaskHistoryScreen() {
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      const data = await fetchHomeHistoryTasks();
-      const allItems = data as unknown as TaskHistoryItem[];
+      const data = await fetchHistoryItems();
+      const allItems = data as TaskHistoryItem[];
 
       const filteredByPlant = plantIdFilter
         ? allItems.filter((x) => (x as any).plantId === plantIdFilter)
@@ -344,56 +348,68 @@ export default function TaskHistoryScreen() {
       : []),
   ];
 
-  const handleConfirmDelete = (payload: HistoryDeletePayload) => {
+  const handleConfirmDelete = async (payload: HistoryDeletePayload) => {
     setDeleteOpen(false);
+    setOpenMenuId(null);
 
-    // TODO: wire this up to actual delete logic / API.
-    if (payload.mode === "plant") {
-      const plantName =
-        plantOptions.find((p) => p.id === payload.plantId)?.name ||
-        "selected plant";
+    try {
+      setLoading(true);
+      setItems([]);
+      await bulkDeleteHistoryEntries(payload as any);
+      await load();
+      showToast("History deleted", "success");
+    } catch (e: any) {
+      setLoading(false);
       showToast(
-        `Delete tasks for plant "${plantName}" is not implemented yet.`,
-        "default"
-      );
-    } else if (payload.mode === "location") {
-      showToast(
-        `Delete tasks for location "${payload.location}" is not implemented yet.`,
-        "default"
-      );
-    } else if (payload.mode === "types") {
-      const label = payload.types.join(", ");
-      showToast(
-        `Delete tasks of type(s): ${label} is not implemented yet.`,
-        "default"
-      );
-    } else if (payload.mode === "olderThan") {
-      showToast(
-        `Delete tasks older than ${payload.days} days is not implemented yet.`,
-        "default"
+        e?.message || "Failed to delete history",
+        "error"
       );
     }
   };
 
-  // Placeholder handlers for tile menu actions
-  const handleDeleteItem = (item: TaskHistoryItem) => {
-    showToast(
-      `Delete history task "${item.plant}" is not implemented yet.`,
-      "default"
-    );
+  // Tile menu actions
+  const handleDeleteItem = async (item: TaskHistoryItem) => {
+    setOpenMenuId(null);
+    try {
+      setLoading(true);
+      setItems([]);
+      await deleteHistoryEntry(item.id);
+      await load();
+      showToast("History task deleted", "success");
+    } catch (e: any) {
+      setLoading(false);
+      showToast(
+        e?.message || "Failed to delete history task",
+        "error"
+      );
+    }
   };
 
   const handleEditHistoryReminder = (item: TaskHistoryItem) => {
-    showToast(
-      `Edit reminder from history is not implemented yet.`,
-      "default"
-    );
+    setOpenMenuId(null);
+    const reminderId = (item as any).reminderId;
+    if (reminderId != null && String(reminderId).trim() !== "") {
+      nav.navigate(
+        "Reminders" as never,
+        { editReminderId: String(reminderId) } as never
+      );
+    } else {
+      nav.navigate("Reminders" as never);
+    }
   };
 
   const handleGoToPlant = (item: TaskHistoryItem) => {
-    showToast(
-      `Go to plant from history is not implemented yet.`,
-      "default"
+    setOpenMenuId(null);
+
+    const plantId = (item as any).plantId;
+    if (!plantId) {
+      showToast("This task is not linked to a plant.", "error");
+      return;
+    }
+
+    nav.navigate(
+      "PlantDetails" as never,
+      { id: String(plantId) } as never
     );
   };
 
