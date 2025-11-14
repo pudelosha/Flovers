@@ -344,13 +344,24 @@ export default function TaskHistoryScreen() {
 
     // TODO: wire this up to actual delete logic / API.
     if (payload.mode === "plant") {
-      if (plantIdFilter) {
-        showToast("Delete for selected plant is not implemented yet.", "default");
-      } else {
-        showToast("No plant is selected for deletion.", "error");
-      }
+      const plantName =
+        plantOptions.find((p) => p.id === payload.plantId)?.name ||
+        "selected plant";
+      showToast(
+        `Delete tasks for plant "${plantName}" is not implemented yet.`,
+        "default"
+      );
     } else if (payload.mode === "location") {
-      showToast("Delete for selected location is not implemented yet.", "default");
+      showToast(
+        `Delete tasks for location "${payload.location}" is not implemented yet.`,
+        "default"
+      );
+    } else if (payload.mode === "types") {
+      const label = payload.types.join(", ");
+      showToast(
+        `Delete tasks of type(s): ${label} is not implemented yet.`,
+        "default"
+      );
     } else if (payload.mode === "olderThan") {
       showToast(
         `Delete tasks older than ${payload.days} days is not implemented yet.`,
@@ -530,8 +541,8 @@ export default function TaskHistoryScreen() {
       {/* Delete modal */}
       <DeleteHistoryTasksModal
         visible={deleteOpen}
-        hasPlantScope={!!plantIdFilter}
-        hasLocationScope={false}
+        plantOptions={plantOptions}
+        locationOptions={locationOptions}
         onCancel={() => setDeleteOpen(false)}
         onConfirm={handleConfirmDelete}
       />
