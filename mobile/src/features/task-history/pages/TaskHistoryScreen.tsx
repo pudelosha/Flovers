@@ -317,7 +317,8 @@ export default function TaskHistoryScreen() {
   const showFAB =
     !loading && !sortOpen && !filterOpen && !deleteOpen && !openMenuId;
 
-  const fabActions = [
+  // FAB actions
+  const baseFabActions = [
     {
       key: "sort",
       label: "Sort",
@@ -343,6 +344,25 @@ export default function TaskHistoryScreen() {
             label: "Clear filter",
             icon: "filter-remove",
             onPress: () => setFilters(INITIAL_FILTERS),
+          } as const,
+        ]
+      : []),
+  ];
+
+  const fabActions = [
+    ...baseFabActions,
+    ...(plantIdFilter
+      ? [
+          {
+            key: "showAllHistory",
+            label: "Show all history",
+            icon: "filter-remove",
+            onPress: () => {
+              // clear any in-screen filters and remove the route-level plant filter
+              setFilters(INITIAL_FILTERS);
+              setOpenMenuId(null);
+              nav.navigate("TaskHistory" as never);
+            },
           } as const,
         ]
       : []),
@@ -578,7 +598,7 @@ export default function TaskHistoryScreen() {
         }
       />
 
-      {/* FAB: Sort / Filter / Delete / Clear filter */}
+      {/* FAB: Sort / Filter / Delete / Clear filter / Show all history (when plantIdFilter) */}
       {showFAB && <FAB actions={fabActions} />}
 
       {/* Sort modal */}
