@@ -489,7 +489,7 @@ export default function HomeScreen() {
           ...baseFabActions,
         ]
       : [
-          ...baseFabActions,
+          // 🔼 Put "Show all tasks" at the top when a view filter is active
           {
             key: "clearViewFilter",
             label: "Show all tasks",
@@ -502,6 +502,7 @@ export default function HomeScreen() {
               );
             },
           },
+          ...baseFabActions,
         ];
 
   return (
@@ -605,66 +606,121 @@ export default function HomeScreen() {
         ListHeaderComponent={<View style={{ height: 0 }} />}
         ListFooterComponent={<View style={{ height: 140 }} />}
         contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
+
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
-        ListEmptyComponent={() => (
-          <Animated.View
-            style={[
-              s.emptyWrap,
-              {
-                opacity: emptyOpacity,
-                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
-              },
-            ]}
-          >
-            <View style={s.emptyGlass}>
-              <BlurView
-                style={StyleSheet.absoluteFill}
-                blurType="light"
-                blurAmount={20}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
-              />
-              {/* White tint for readability */}
-              <View pointerEvents="none" style={s.emptyTint} />
-              {/* Thin border */}
-              <View pointerEvents="none" style={s.emptyBorder} />
+        ListEmptyComponent={() => {
+          // Different empty frames based on viewFilter
+          if (viewFilter === "all") {
+            // Original "no tasks yet" frame for truly empty app
+            return (
+              <Animated.View
+                style={[
+                  s.emptyWrap,
+                  {
+                    opacity: emptyOpacity,
+                    transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                  },
+                ]}
+              >
+                <View style={s.emptyGlass}>
+                  <BlurView
+                    style={StyleSheet.absoluteFill}
+                    blurType="light"
+                    blurAmount={20}
+                    overlayColor="transparent"
+                    reducedTransparencyFallbackColor="transparent"
+                  />
+                  {/* White tint for readability */}
+                  <View pointerEvents="none" style={s.emptyTint} />
+                  {/* Thin border */}
+                  <View pointerEvents="none" style={s.emptyBorder} />
 
-              <View style={s.emptyInner}>
-                <MaterialCommunityIcons
-                  name="calendar-check-outline"
-                  size={26}
-                  color="#FFFFFF"
-                  style={{ marginBottom: 10 }}
+                  <View style={s.emptyInner}>
+                    <MaterialCommunityIcons
+                      name="calendar-check-outline"
+                      size={26}
+                      color="#FFFFFF"
+                      style={{ marginBottom: 10 }}
+                    />
+                    <Text style={s.emptyTitle}>No tasks yet</Text>
+                    <View style={s.emptyDescBox}>
+                      <Text style={s.emptyText}>
+                        This page shows your upcoming{" "}
+                        <Text style={s.inlineBold}>plant care reminders</Text> — watering,
+                        fertilizing, repotting, and more.{"\n\n"}
+                        To get started:
+                        {"\n\n"}
+                        • <Text style={s.inlineBold}>Create your plants</Text> in the{" "}
+                        <Text style={s.inlineBold}>Plants</Text> tab.{"\n"}
+                        • Add <Text style={s.inlineBold}>reminders</Text> for each plant so
+                        they appear here as tasks.{"\n"}
+                        • Optionally connect{" "}
+                        <Text style={s.inlineBold}>IoT devices (Arduino boards)</Text> in the{" "}
+                        <Text style={s.inlineBold}>Readings</Text> tab to track temperature,
+                        humidity, light and soil moisture in real time.{"\n\n"}
+                        Once you’ve set those up, your Home screen will become your central
+                        place to see what each plant needs today.
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </Animated.View>
+            );
+          }
+
+          // For "overdue" / "today" view filters, show a filter-specific frame
+          const isOverdue = viewFilter === "overdue";
+          const title = isOverdue ? "No overdue tasks" : "No tasks due today";
+          const iconName = isOverdue
+            ? "calendar-remove-outline"
+            : "calendar-today";
+
+          const bodyText = isOverdue
+            ? "You don't have any overdue tasks right now.\n\nYou're all caught up — use \"Show all tasks\" from the FAB to see everything, or switch filters to explore upcoming tasks."
+            : "You don't have any tasks due today.\n\nUse \"Show all tasks\" from the FAB to see upcoming reminders, or adjust your reminder schedules on your plants.";
+
+          return (
+            <Animated.View
+              style={[
+                s.emptyWrap,
+                {
+                  opacity: emptyOpacity,
+                  transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                },
+              ]}
+            >
+              <View style={s.emptyGlass}>
+                <BlurView
+                  style={StyleSheet.absoluteFill}
+                  blurType="light"
+                  blurAmount={20}
+                  overlayColor="transparent"
+                  reducedTransparencyFallbackColor="transparent"
                 />
-                <Text style={s.emptyTitle}>No tasks yet</Text>
-                <View style={s.emptyDescBox}>
-                  <Text style={s.emptyText}>
-                    This page shows your upcoming{" "}
-                    <Text style={s.inlineBold}>plant care reminders</Text> — watering,
-                    fertilizing, repotting, and more.{"\n\n"}
-                    To get started:
-                    {"\n\n"}
-                    • <Text style={s.inlineBold}>Create your plants</Text> in the{" "}
-                    <Text style={s.inlineBold}>Plants</Text> tab.{"\n"}
-                    • Add <Text style={s.inlineBold}>reminders</Text> for each plant so
-                    they appear here as tasks.{"\n"}
-                    • Optionally connect{" "}
-                    <Text style={s.inlineBold}>IoT devices (Arduino boards)</Text> in the{" "}
-                    <Text style={s.inlineBold}>Readings</Text> tab to track temperature,
-                    humidity, light and soil moisture in real time.{"\n\n"}
-                    Once you’ve set those up, your Home screen will become your central
-                    place to see what each plant needs today.
-                  </Text>
+                <View pointerEvents="none" style={s.emptyTint} />
+                <View pointerEvents="none" style={s.emptyBorder} />
+
+                <View style={s.emptyInner}>
+                  <MaterialCommunityIcons
+                    name={iconName}
+                    size={26}
+                    color="#FFFFFF"
+                    style={{ marginBottom: 10 }}
+                  />
+                  <Text style={s.emptyTitle}>{title}</Text>
+                  <View style={s.emptyDescBox}>
+                    <Text style={s.emptyText}>{bodyText}</Text>
+                  </View>
                 </View>
               </View>
-            </View>
-          </Animated.View>
-        )}
+            </Animated.View>
+          );
+        }}
       />
 
       {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
