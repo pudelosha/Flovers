@@ -355,6 +355,7 @@ export default function TaskHistoryScreen() {
     try {
       setLoading(true);
       setItems([]);
+      // Shape matches the expected union in bulkDeleteHistoryEntries
       await bulkDeleteHistoryEntries(payload as any);
       await load();
       showToast("History deleted", "success");
@@ -387,11 +388,12 @@ export default function TaskHistoryScreen() {
 
   const handleEditHistoryReminder = (item: TaskHistoryItem) => {
     setOpenMenuId(null);
-    const reminderId = (item as any).reminderId;
-    if (reminderId != null && String(reminderId).trim() !== "") {
+    const reminderId = item.reminderId;
+
+    if (reminderId && reminderId.trim() !== "") {
       nav.navigate(
         "Reminders" as never,
-        { editReminderId: String(reminderId) } as never
+        { editReminderId: reminderId.trim() } as never
       );
     } else {
       nav.navigate("Reminders" as never);
@@ -401,7 +403,7 @@ export default function TaskHistoryScreen() {
   const handleGoToPlant = (item: TaskHistoryItem) => {
     setOpenMenuId(null);
 
-    const plantId = (item as any).plantId;
+    const plantId = item.plantId;
     if (!plantId) {
       showToast("This task is not linked to a plant.", "error");
       return;

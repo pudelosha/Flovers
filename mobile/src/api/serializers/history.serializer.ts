@@ -1,4 +1,3 @@
-// src/api/serializers/history.serializer.ts
 import type {
   ApiReminder,
   ApiReminderTask,
@@ -6,7 +5,6 @@ import type {
 import { buildUITasks } from "./home.serializer";
 import type { TaskHistoryItem } from "../../features/task-history/types/task-history.types";
 
-// Copied from home.serializer for typing only
 type ApiPlant = {
   id: number;
   display_name?: string | null;
@@ -19,21 +17,23 @@ export function buildUIHistoryItems(
   reminders: ApiReminder[],
   plants: ApiPlant[]
 ): TaskHistoryItem[] {
-  // Home’s serializer already knows how to compose tasks+reminders+plants.
   const uiTasks = buildUITasks(tasks, reminders, plants) as any[];
 
-  // History only needs a subset + some fields for navigation.
   return uiTasks.map(
-    (t): TaskHistoryItem => ({
-      id: String(t.id),
-      type: t.type,
-      plant: t.plant,
-      location: t.location,
-      // for navigation
-      plantId: t.plantId,
-      // history-specific
-      completedAt: t.completedAt,
-      note: t.note,
-    })
+    (t): TaskHistoryItem => {
+      const rawReminderId = typeof t.reminderId === "string" ? t.reminderId : "";
+      const trimmedReminderId = rawReminderId.trim();
+
+      return {
+        id: String(t.id),
+        type: t.type,
+        plant: t.plant,
+        location: t.location,
+        plantId: t.plantId,
+        reminderId: trimmedReminderId || undefined,
+        completedAt: t.completedAt,
+        note: t.note,
+      };
+    }
   );
 }
