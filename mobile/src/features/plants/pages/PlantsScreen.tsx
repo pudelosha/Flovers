@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\PlantsScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -239,7 +238,11 @@ export default function PlantsScreen() {
         soil_mix: fSoilMix ?? "",
       } as const;
 
-      const updatedListItem = await updatePlantInstanceFromForm(Number(editingId), form, { auth: true });
+      const updatedListItem = await updatePlantInstanceFromForm(
+        Number(editingId),
+        form,
+        { auth: true }
+      );
 
       setPlants((prev) =>
         prev.map((p) => (p.id === editingId ? mapApiToPlant(updatedListItem) : p))
@@ -530,7 +533,15 @@ export default function PlantsScreen() {
                   } as const,
                 ]
               : []),
-            { key: "locations", icon: "map-marker-outline", label: "Locations", onPress: () => {} },
+            {
+              key: "locations",
+              icon: "map-marker-outline",
+              label: "Locations",
+              onPress: () => {
+                setMenuOpenId(null);
+                nav.navigate("PlantLocations" as never);
+              },
+            },
           ]}
         />
       )}
@@ -605,7 +616,12 @@ export default function PlantsScreen() {
       />
 
       {(editLoading || saving) && (
-        <View style={[StyleSheet.absoluteFill, { justifyContent: "center", alignItems: "center" }]}>
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            { justifyContent: "center", alignItems: "center" },
+          ]}
+        >
           <CenteredSpinner size={46} color="#FFFFFF" />
         </View>
       )}

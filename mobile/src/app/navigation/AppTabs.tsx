@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\app\navigation\AppTabs.tsx
 import React from "react";
 import { View, Pressable, StyleSheet, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -27,6 +28,9 @@ import ReadingsHistoryScreen from "../../features/readings-history/pages/Reading
 // NEW: task/reminders history page (hidden)
 import TaskHistoryScreen from "../../features/task-history/pages/TaskHistoryScreen";
 
+// NEW: locations screen (hidden, under Plants)
+import LocationsScreen from "../../features/locations/pages/LocationsScreen";
+
 const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
 
 export type AppTabParamList = {
@@ -41,6 +45,9 @@ export type AppTabParamList = {
   PlantDetails: undefined;
   CreatePlantWizard: undefined;
   AddReminder: undefined;
+
+  // NEW: Locations (under Plants, hidden tab)
+  PlantLocations: undefined;
 
   // NEW hidden routes for Readings flow
   ReadingsHistory:
@@ -67,6 +74,9 @@ const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
   CreatePlantWizard: "Plants",
   PlantDetails: "Plants",
   AddReminder: "Reminders",
+
+  // Locations live under the Plants tab
+  PlantLocations: "Plants",
 
   // Readings flow
   ReadingsHistory: "Readings",
@@ -116,6 +126,8 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     "FilterHistory",
     // NEW: hide TaskHistory tab
     "TaskHistory",
+    // NEW: hide Locations route (under Plants)
+    "PlantLocations",
   ]);
 
   const visibleRoutes = state.routes.filter((r: any) => !HIDDEN.has(r.name));
@@ -274,6 +286,13 @@ export default function AppTabs() {
       <Tab.Screen
         name="TaskHistory"
         component={TaskHistoryScreen}
+        options={{ tabBarStyle: { display: "flex" } }}
+      />
+
+      {/* NEW: hidden PlantLocations route (Locations screen) */}
+      <Tab.Screen
+        name="PlantLocations"
+        component={LocationsScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
     </Tab.Navigator>

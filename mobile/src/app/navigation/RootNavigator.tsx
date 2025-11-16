@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\app\navigation\RootNavigator.tsx
 import React from "react";
 import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
@@ -60,6 +61,9 @@ const linking = {
 
       // NEW: deep link for task/reminders history
       TaskHistory: "task-history",
+
+      // NEW: deep link for locations screen (under Plants)
+      PlantLocations: "locations",
     },
   },
 };
