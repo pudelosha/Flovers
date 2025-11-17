@@ -9,59 +9,98 @@ import type { PlantLocation } from "../types/locations.types";
 
 type Props = {
   location: PlantLocation;
-  onPress?: (loc: PlantLocation) => void;
+  isMenuOpen: boolean;
+  onPressBody: () => void;
+  onPressMenu: () => void;
+  onEdit: () => void;
+  onDelete: () => void;
 };
 
-export default function LocationTile({ location, onPress }: Props) {
+export default function LocationTile({
+  location,
+  isMenuOpen,
+  onPressBody,
+  onPressMenu,
+  onEdit,
+  onDelete,
+}: Props) {
+  const plantLabel =
+    location.plantCount === 1 ? "1 plant" : `${location.plantCount} plants`;
+
   return (
-    <View style={s.tileWrap}>
-      <View style={s.tileGlass}>
+    <View style={s.cardWrap}>
+      {/* Glass background: blur + white tint + thin border (matching Plants tiles) */}
+      <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
           blurType="light"
-          blurAmount={18}
+          blurAmount={20}
           overlayColor="transparent"
-          reducedTransparencyFallbackColor="rgba(255,255,255,0.2)"
+          reducedTransparencyFallbackColor="transparent"
         />
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
+      </View>
 
-        <View
-          pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            { backgroundColor: "rgba(0,0,0,0.25)" },
-          ]}
-        />
+      <View style={s.cardRow}>
+        {/* Location icon on the left (restored from original concept) */}
+        <View style={s.iconCircle}>
+          <MaterialCommunityIcons
+            name="map-marker-outline"
+            size={18}
+            color="#FFFFFF"
+          />
+        </View>
 
         <Pressable
-          style={s.tileInner}
-          android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          onPress={() => onPress?.(location)}
+          style={{ flex: 1, paddingRight: 8 }}
+          onPress={onPressBody}
+          android_ripple={{ color: "rgba(255,255,255,0.08)" }}
         >
-          <View style={s.tileLeft}>
-            <View style={s.iconCircle}>
-              <MaterialCommunityIcons
-                name="map-marker-outline"
-                size={20}
-                color="#FFFFFF"
-              />
-            </View>
-
-            <View style={{ flex: 1 }}>
-              <Text style={s.locationName} numberOfLines={1}>
-                {location.name}
-              </Text>
-              <Text style={s.plantCount}>
-                {location.plantCount === 1
-                  ? "1 plant"
-                  : `${location.plantCount} plants`}
-              </Text>
-            </View>
-          </View>
-
-          <View style={s.countBadge}>
-            <Text style={s.countText}>{location.plantCount}</Text>
-          </View>
+          <Text style={s.locationName} numberOfLines={1}>
+            {location.name}
+          </Text>
+          <Text style={s.plantCount} numberOfLines={1}>
+            {plantLabel}
+          </Text>
         </Pressable>
+
+        <Pressable
+          onPress={onPressMenu}
+          style={s.menuBtn}
+          android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+          hitSlop={8}
+        >
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            size={20}
+            color="#FFFFFF"
+          />
+        </Pressable>
+
+        {isMenuOpen && (
+          <View style={s.menuSheet}>
+            <Pressable style={s.menuItem} onPress={onEdit}>
+              <MaterialCommunityIcons
+                name="pencil-outline"
+                size={16}
+                color="#FFFFFF"
+                style={{ marginRight: 6 }}
+              />
+              <Text style={s.menuItemText}>Edit</Text>
+            </Pressable>
+
+            <Pressable style={s.menuItem} onPress={onDelete}>
+              <MaterialCommunityIcons
+                name="delete-outline"
+                size={16}
+                color="#FFFFFF"
+                style={{ marginRight: 6 }}
+              />
+              <Text style={s.menuItemText}>Delete</Text>
+            </Pressable>
+          </View>
+        )}
       </View>
     </View>
   );

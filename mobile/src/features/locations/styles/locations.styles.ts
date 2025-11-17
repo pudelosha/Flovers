@@ -2,75 +2,224 @@
 import { StyleSheet } from "react-native";
 
 export const locStyles = StyleSheet.create({
+  // LIST / LAYOUT – match PlantsScreen paddings
   listContent: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 40,
-  },
-
-  tileWrap: {
-    borderRadius: 24,
-    overflow: "hidden",
-  },
-  tileGlass: {
-    borderRadius: 24,
-    overflow: "hidden",
-    minHeight: 72,
-  },
-  tileInner: {
     paddingHorizontal: 16,
-    paddingVertical: 14,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    paddingTop: 21,
+    paddingBottom: 24,
   },
 
-  tileLeft: {
+  // BACKDROP to dismiss tile menus
+  backdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "transparent",
+  },
+
+  // ---------- TILES: blur + white tint + thin border (match Plants tiles) ----------
+  cardWrap: {
+    minHeight: 72, // shorter than Plants' 96
+    borderRadius: 28,
+    overflow: "visible",
+    position: "relative",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 8,
+  },
+  cardGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    overflow: "hidden",
+  },
+  cardTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.20)",
+  },
+  cardBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+  },
+  cardRow: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    flex: 1,
+    paddingHorizontal: 18,
+    paddingVertical: 10, // reduced top/bottom padding
+    gap: 8,
   },
+
   iconCircle: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.6)",
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 12,
-    backgroundColor: "rgba(0,0,0,0.15)",
+    marginRight: 10,
+    backgroundColor: "rgba(0,0,0,0.18)",
   },
 
   locationName: {
     color: "#FFFFFF",
+    fontWeight: "800",
     fontSize: 16,
-    fontWeight: "600",
   },
   plantCount: {
-    color: "rgba(255,255,255,0.80)",
-    fontSize: 13,
-  },
-
-  countBadge: {
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    backgroundColor: "rgba(0,0,0,0.2)",
-  },
-  countText: {
-    color: "#FFFFFF",
-    fontSize: 13,
+    color: "rgba(255,255,255,0.9)",
     fontWeight: "600",
+    fontSize: 12,
+    marginTop: 2,
   },
 
-  // Empty state
+  // MENU BUTTON + SHEET (same positioning as Plants menu)
+  menuBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "transparent",
+    borderWidth: 0,
+  },
+  menuSheet: {
+    position: "absolute",
+    right: 6,
+    top: -6,
+    zIndex: 10,
+    elevation: 10,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 12,
+    backgroundColor: "rgba(0,0,0,0.85)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    gap: 6,
+  },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+  },
+  menuItemText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    letterSpacing: 0.2,
+    fontSize: 12,
+  },
+
+  // ---------- MODAL / PROMPT STYLES (mirroring Plants prompts) ----------
+  promptBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.6)",
+    zIndex: 20,
+  },
+  promptWrap: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 21,
+    paddingHorizontal: 24,
+  },
+  promptGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    overflow: "hidden",
+  },
+  promptInner: {
+    width: "100%",
+    maxWidth: 520,
+    borderRadius: 28,
+    overflow: "hidden",
+    position: "relative",
+    backgroundColor: "transparent",
+  },
+  promptTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 12,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+  },
+  confirmText: {
+    color: "rgba(255,255,255,0.95)",
+    paddingHorizontal: 16,
+    marginBottom: 10,
+  },
+
+  inputLabel: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "700",
+    fontSize: 12,
+    marginTop: 8,
+    marginBottom: 4,
+    paddingHorizontal: 16,
+  },
+  input: {
+    marginHorizontal: 16,
+    marginBottom: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    borderRadius: 16,
+    color: "#FFFFFF",
+    backgroundColor: "rgba(255,255,255,0.14)",
+  },
+
+  dropdown: { marginHorizontal: 16, marginBottom: 10 },
+  dropdownHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
+  dropdownList: {
+    marginTop: 6,
+    borderRadius: 16,
+    overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  dropdownItem: {
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+  },
+  dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
+
+  promptButtonsRow: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingBottom: 16,
+    paddingTop: 6,
+  },
+  promptBtn: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
+  promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
+  promptDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
+
+  // ---------- EMPTY STATE (matching Reminders/Plants empty card) ----------
   emptyWrap: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 40,
+    marginTop: 0,
   },
   emptyGlass: {
     borderRadius: 28,
@@ -78,24 +227,28 @@ export const locStyles = StyleSheet.create({
     minHeight: 140,
   },
   emptyInner: {
-    paddingHorizontal: 18,
-    paddingVertical: 18,
+    padding: 16,
+    alignItems: "center",
   },
   emptyTitle: {
-    fontSize: 18,
-    fontWeight: "700",
     color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
     marginBottom: 8,
+    textAlign: "center",
   },
   emptyDescBox: {
-    borderRadius: 18,
-    padding: 10,
+    alignSelf: "stretch",
+    marginTop: 20,
   },
   emptyText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.9)",
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+    textAlign: "center",
   },
   inlineBold: {
-    fontWeight: "700",
+    color: "#FFFFFF",
+    fontWeight: "800",
   },
 });

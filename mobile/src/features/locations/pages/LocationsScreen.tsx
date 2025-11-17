@@ -2,6 +2,7 @@
 import React, {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -11,12 +12,15 @@ import {
   RefreshControl,
   StyleSheet,
   Text,
+  Pressable,
+  Easing,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
+import FAB from "../../../shared/ui/FAB";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
@@ -30,16 +34,37 @@ import {
 
 import { locStyles as s } from "../styles/locations.styles";
 import LocationTile from "../components/LocationTile";
+import ConfirmDeleteLocationModal from "../components/ConfirmDeleteLocationModal";
+import SortLocationsModal, {
+  SortDir,
+  SortKey,
+} from "../components/SortLocationsModal";
+import EditLocationModal from "../components/EditLocationModal";
 
 import type { PlantLocation } from "../types/locations.types";
 
 import {
-  fetchPlantInstances,
-  type ApiPlantInstanceListItem,
-} from "../../../api/services/plant-instances.service";
+  fetchUserLocations,
+  createLocation,
+  type ApiLocation,
+} from "../../../api/services/locations.service";
 
 function norm(v?: string | null) {
   return (v || "").toLowerCase().trim();
+}
+
+function mapApiToLocation(api: ApiLocation): PlantLocation {
+  // Try to keep plant count if backend provides it under a known key
+  const count =
+    (api as any).plantCount ??
+    (api as any).plant_count ??
+    0;
+
+  return {
+    id: api.id,
+    name: api.name,
+    plantCount: typeof count === "number" ? count : 0,
+  };
 }
 
 export default function LocationsScreen() {
@@ -49,6 +74,9 @@ export default function LocationsScreen() {
   const [loading, setLoading] = useState<boolean>(true);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
+  const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
+
+  // Toast / snackbar
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] =
@@ -63,34 +91,31 @@ export default function LocationsScreen() {
     setToastVisible(true);
   };
 
-  const buildLocations = (items: ApiPlantInstanceListItem[]): PlantLocation[] => {
-    const map = new Map<string, number>();
+  // Add/Edit Location modal
+  const [editOpen, setEditOpen] = useState(false);
+  const [editMode, setEditMode] = useState<"create" | "edit">("edit");
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editingName, setEditingName] = useState<string>("");
 
-    for (const p of items) {
-      const name = p.location?.name?.trim() || "Unassigned";
-      const key = norm(name) || "unassigned";
+  // Confirm delete modal
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
-      map.set(key, (map.get(key) || 0) + 1);
-    }
+  // Sort modal + state
+  const [sortOpen, setSortOpen] = useState(false);
+  const [sortKey, setSortKey] = useState<SortKey>("name");
+  const [sortDir, setSortDir] = useState<SortDir>("asc");
 
-    return Array.from(map.entries())
-      .map(([key, count]) => ({
-        id: key,
-        name: key === "unassigned" ? "No location set" : key,
-        plantCount: count,
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name));
-  };
+  // Hide FAB when any modal is open
+  const showFAB = !editOpen && !confirmDeleteId && !sortOpen;
 
   const load = useCallback(async () => {
     try {
-      const data = await fetchPlantInstances({ auth: true });
-      setLocations(buildLocations(data));
+      const data = await fetchUserLocations({ auth: true });
+      setLocations(data.map(mapApiToLocation));
     } catch (e: any) {
       showToast(e?.message || "Failed to load locations", "error");
       setLocations([]);
-    } finally {
-      setLoading(false);
     }
   }, []);
 
@@ -98,14 +123,23 @@ export default function LocationsScreen() {
     useCallback(() => {
       let mounted = true;
 
+      // reset modal/menu state when screen comes into focus
+      setEditOpen(false);
+      setEditingId(null);
+      setEditingName("");
+      setMenuOpenId(null);
+      setConfirmDeleteId(null);
+      setConfirmDeleteName("");
+      setSortOpen(false);
+
       (async () => {
         setLoading(true);
-        setLocations([]);
+        setLocations([]); // avoid stale flash
 
         try {
           await load();
         } finally {
-          if (!mounted) return;
+          if (mounted) setLoading(false);
         }
       })();
 
@@ -117,37 +151,68 @@ export default function LocationsScreen() {
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await load();
-    setRefreshing(false);
+    try {
+      await load();
+    } finally {
+      setRefreshing(false);
+    }
   };
 
-  // Entrance animation
+  // ---------- SORTED DERIVED LIST ----------
+  const derivedLocations = useMemo(() => {
+    const result = [...locations];
+    result.sort((a, b) => {
+      let cmp = 0;
+
+      if (sortKey === "name") {
+        cmp = norm(a.name).localeCompare(norm(b.name));
+      } else {
+        cmp = a.plantCount - b.plantCount;
+      }
+
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+    return result;
+  }, [locations, sortKey, sortDir]);
+
+  // ---------- ✨ ENTRANCE ANIMATION (per-location tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
-  const getAnim = (id: string) => {
-    if (!animMapRef.current.has(id))
-      animMapRef.current.set(id, new Animated.Value(0));
-    return animMapRef.current.get(id)!;
+  const getAnimForId = (id: string) => {
+    const m = animMapRef.current;
+    if (!m.has(id)) m.set(id, new Animated.Value(0));
+    return m.get(id)!;
   };
+
+  const primeAnimations = useCallback((ids: string[]) => {
+    ids.forEach((id) => {
+      const v = getAnimForId(id);
+      v.setValue(0);
+    });
+  }, []);
+
+  const runStaggerIn = useCallback((ids: string[]) => {
+    const sequences = ids.map((id, i) => {
+      const v = getAnimForId(id);
+      return Animated.timing(v, {
+        toValue: 1,
+        duration: 280,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+        delay: i * 50,
+      });
+    });
+    Animated.stagger(50, sequences).start();
+  }, []);
 
   useEffect(() => {
     if (loading) return;
+    const ids = derivedLocations.map((l) => l.id);
+    primeAnimations(ids);
+    const frameId = requestAnimationFrame(() => runStaggerIn(ids));
+    return () => cancelAnimationFrame(frameId);
+  }, [loading, derivedLocations, derivedLocations.length, primeAnimations, runStaggerIn]);
 
-    const ids = locations.map((l) => l.id);
-    ids.forEach((id) => getAnim(id).setValue(0));
-
-    const seq = ids.map((id, i) =>
-      Animated.timing(getAnim(id), {
-        toValue: 1,
-        duration: 260,
-        delay: i * 50,
-        useNativeDriver: true,
-      })
-    );
-
-    Animated.stagger(50, seq).start();
-  }, [loading, locations.length]);
-
-  // Empty state animation
+  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -156,24 +221,109 @@ export default function LocationsScreen() {
       return;
     }
 
-    if (locations.length === 0) {
+    if (derivedLocations.length === 0) {
+      emptyAnim.setValue(0);
       Animated.timing(emptyAnim, {
         toValue: 1,
         duration: 260,
+        easing: Easing.out(Easing.cubic),
         useNativeDriver: true,
       }).start();
+    } else {
+      emptyAnim.setValue(0);
     }
-  }, [loading, locations.length]);
+  }, [loading, derivedLocations.length, emptyAnim]);
 
   const emptyTranslateY = emptyAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [10, 0],
   });
+  const emptyScale = emptyAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
+  const emptyOpacity = emptyAnim;
 
-  const handlePressLocation = (loc: PlantLocation) => {
-    showToast(`${loc.name}: ${loc.plantCount} plants`);
+  const handlePressLocationBody = (loc: PlantLocation) => {
+    const label =
+      loc.plantCount === 1 ? "1 plant" : `${loc.plantCount} plants`;
+    showToast(`${loc.name}: ${label}`);
   };
 
+  const openAddLocation = () => {
+    setMenuOpenId(null);
+    setEditingId(null);
+    setEditingName("");
+    setEditMode("create");
+    setEditOpen(true);
+  };
+
+  const openEditLocation = (loc: PlantLocation) => {
+    setMenuOpenId(null);
+    setEditingId(loc.id);
+    setEditingName(loc.name);
+    setEditMode("edit");
+    setEditOpen(true);
+  };
+
+  const askDeleteLocation = (loc: PlantLocation) => {
+    setMenuOpenId(null);
+    setConfirmDeleteId(loc.id);
+    setConfirmDeleteName(loc.name);
+  };
+
+  const confirmDelete = () => {
+    if (!confirmDeleteId) return;
+
+    // For now only local removal – extend with API delete when available
+    setLocations((prev) => prev.filter((l) => l.id !== confirmDeleteId));
+
+    setConfirmDeleteId(null);
+    setConfirmDeleteName("");
+    showToast("Location deleted", "success");
+  };
+
+  const handleSaveLocation = async (name: string) => {
+    try {
+      if (editMode === "create") {
+        // Use existing API; default category to "indoor" for now
+        const created = await createLocation(
+          { name, category: "indoor" },
+          { auth: true }
+        );
+        const loc = mapApiToLocation(created);
+        setLocations((prev) => [...prev, loc]);
+        showToast("Location added", "success");
+      } else if (editMode === "edit" && editingId) {
+        // No updateLocation API yet; update locally
+        setLocations((prev) =>
+          prev.map((l) =>
+            l.id === editingId ? { ...l, name } : l
+          )
+        );
+        showToast("Location updated (local only)", "success");
+      }
+    } catch (e: any) {
+      showToast(e?.message || "Could not save location", "error");
+    } finally {
+      setEditOpen(false);
+      setEditingId(null);
+      setEditingName("");
+    }
+  };
+
+  const openSortModal = () => {
+    setMenuOpenId(null);
+    setSortOpen(true);
+  };
+
+  const resetSort = () => {
+    setSortKey("name");
+    setSortDir("asc");
+    setSortOpen(false);
+  };
+
+  // Skeleton/loader
   if (loading) {
     return (
       <View style={{ flex: 1 }}>
@@ -183,7 +333,6 @@ export default function LocationsScreen() {
           solidFallback={LOCATIONS_HEADER_SOLID_FALLBACK}
           showSeparator={false}
         />
-
         <CenteredSpinner size={56} color="#FFFFFF" />
       </View>
     );
@@ -191,6 +340,7 @@ export default function LocationsScreen() {
 
   return (
     <View style={{ flex: 1 }}>
+      {/* Same GlassHeader style as PlantsScreen */}
       <GlassHeader
         title={LOCATIONS_HEADER_TITLE}
         gradientColors={LOCATIONS_HEADER_GRADIENT_TINT}
@@ -198,82 +348,171 @@ export default function LocationsScreen() {
         showSeparator={false}
       />
 
+      {menuOpenId && (
+        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
+      )}
+
       <Animated.FlatList
-        data={locations}
+        style={{ flex: 1 }}
+        data={derivedLocations}
         keyExtractor={(l) => l.id}
         renderItem={({ item }) => {
-          const v = getAnim(item.id);
+          const v = getAnimForId(item.id);
+          const translateY = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [14, 0],
+          });
+          const scale = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0.98, 1],
+          });
+          const opacity = v;
 
           return (
             <Animated.View
-              style={{
-                opacity: v,
-                transform: [
-                  {
-                    translateY: v.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [12, 0],
-                    }),
-                  },
-                ],
-                marginBottom: 12,
-              }}
+              style={{ opacity, transform: [{ translateY }, { scale }] }}
             >
-              <LocationTile location={item} onPress={handlePressLocation} />
+              <LocationTile
+                location={item}
+                isMenuOpen={menuOpenId === item.id}
+                onPressBody={() => handlePressLocationBody(item)}
+                onPressMenu={() =>
+                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
+                }
+                onEdit={() => openEditLocation(item)}
+                onDelete={() => askDeleteLocation(item)}
+              />
             </Animated.View>
           );
         }}
+        ListHeaderComponent={() => <View style={{ height: 0 }} />}
+        ListFooterComponent={() => <View style={{ height: 200 }} />}
         contentContainerStyle={s.listContent}
+        ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
+        onScrollBeginDrag={() => setMenuOpenId(null)}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ListEmptyComponent={() => (
           <Animated.View
-            style={{
-              opacity: emptyAnim,
-              transform: [{ translateY: emptyTranslateY }],
-            }}
+            style={[
+              s.emptyWrap,
+              {
+                opacity: emptyOpacity,
+                transform: [
+                  { translateY: emptyTranslateY },
+                  { scale: emptyScale },
+                ],
+              },
+            ]}
           >
             <View style={s.emptyGlass}>
               <BlurView
                 style={StyleSheet.absoluteFill}
                 blurType="light"
                 blurAmount={20}
+                overlayColor="transparent"
+                reducedTransparencyFallbackColor="transparent"
               />
-
+              {/* White tint for readability */}
               <View
                 pointerEvents="none"
                 style={[
                   StyleSheet.absoluteFill,
-                  { backgroundColor: "rgba(255,255,255,0.15)" },
+                  { backgroundColor: "rgba(255,255,255,0.20)" },
                 ]}
               />
-
+              {/* Thin border */}
               <View
                 pointerEvents="none"
                 style={[
                   StyleSheet.absoluteFill,
-                  { borderWidth: 1, borderColor: "rgba(255,255,255,0.25)" },
+                  {
+                    borderRadius: 28,
+                    borderWidth: 1,
+                    borderColor: "rgba(255,255,255,0.20)",
+                  },
                 ]}
               />
 
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
                   name="map-marker-outline"
-                  size={24}
+                  size={26}
                   color="#FFFFFF"
                   style={{ marginBottom: 10 }}
                 />
-
                 <Text style={s.emptyTitle}>{LOCATIONS_EMPTY_TITLE}</Text>
-                <Text style={s.emptyText}>{LOCATIONS_EMPTY_DESCRIPTION}</Text>
+                <View style={s.emptyDescBox}>
+                  <Text style={s.emptyText}>{LOCATIONS_EMPTY_DESCRIPTION}</Text>
+                </View>
               </View>
             </View>
           </Animated.View>
         )}
       />
 
+      {/* FAB: Add location + Sort (shared component, same feel as Plants) */}
+      {showFAB && (
+        <FAB
+          bottomOffset={92}
+          actions={[
+            {
+              key: "add",
+              icon: "plus",
+              label: "Add location",
+              onPress: openAddLocation,
+            },
+            {
+              key: "sort",
+              icon: "sort",
+              label: "Sort",
+              onPress: openSortModal,
+            },
+          ]}
+        />
+      )}
+
+      {/* Edit/Add Location modal */}
+      <EditLocationModal
+        visible={editOpen}
+        mode={editMode}
+        initialName={editingName}
+        onCancel={() => {
+          setEditOpen(false);
+          setEditingId(null);
+          setEditingName("");
+        }}
+        onSave={handleSaveLocation}
+      />
+
+      {/* Confirm delete modal */}
+      <ConfirmDeleteLocationModal
+        visible={!!confirmDeleteId}
+        name={confirmDeleteName}
+        onCancel={() => {
+          setConfirmDeleteId(null);
+          setConfirmDeleteName("");
+        }}
+        onConfirm={confirmDelete}
+      />
+
+      {/* Sort modal */}
+      <SortLocationsModal
+        visible={sortOpen}
+        sortKey={sortKey}
+        sortDir={sortDir}
+        onCancel={() => setSortOpen(false)}
+        onApply={(key, dir) => {
+          setSortKey(key);
+          setSortDir(dir);
+          setSortOpen(false);
+        }}
+        onReset={resetSort}
+      />
+
+      {/* Top Snackbar (toast) */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
