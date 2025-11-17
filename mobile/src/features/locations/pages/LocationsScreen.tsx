@@ -26,11 +26,14 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import {
   LOCATIONS_HEADER_TITLE,
-  LOCATIONS_HEADER_GRADIENT_TINT,
-  LOCATIONS_HEADER_SOLID_FALLBACK,
   LOCATIONS_EMPTY_TITLE,
   LOCATIONS_EMPTY_DESCRIPTION,
 } from "../constants/locations.constants";
+
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+} from "../../plants/constants/plants.constants";
 
 import { locStyles as s } from "../styles/locations.styles";
 import LocationTile from "../components/LocationTile";
@@ -42,6 +45,7 @@ import SortLocationsModal, {
 import EditLocationModal from "../components/EditLocationModal";
 
 import type { PlantLocation } from "../types/locations.types";
+import type { LocationCategory } from "../../create-plant/types/create-plant.types";
 
 import {
   fetchUserLocations,
@@ -54,7 +58,6 @@ function norm(v?: string | null) {
 }
 
 function mapApiToLocation(api: ApiLocation): PlantLocation {
-  // Try to keep plant count if backend provides it under a known key
   const count =
     (api as any).plantCount ??
     (api as any).plant_count ??
@@ -64,6 +67,7 @@ function mapApiToLocation(api: ApiLocation): PlantLocation {
     id: api.id,
     name: api.name,
     plantCount: typeof count === "number" ? count : 0,
+    category: api.category as LocationCategory,
   };
 }
 
@@ -96,6 +100,8 @@ export default function LocationsScreen() {
   const [editMode, setEditMode] = useState<"create" | "edit">("edit");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editingName, setEditingName] = useState<string>("");
+  const [editingCategory, setEditingCategory] =
+    useState<LocationCategory>("indoor");
 
   // Confirm delete modal
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
@@ -127,6 +133,7 @@ export default function LocationsScreen() {
       setEditOpen(false);
       setEditingId(null);
       setEditingName("");
+      setEditingCategory("indoor");
       setMenuOpenId(null);
       setConfirmDeleteId(null);
       setConfirmDeleteName("");
@@ -175,7 +182,7 @@ export default function LocationsScreen() {
     return result;
   }, [locations, sortKey, sortDir]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (per-location tiles) ----------
+  // ---------- ✨ ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -212,7 +219,7 @@ export default function LocationsScreen() {
     return () => cancelAnimationFrame(frameId);
   }, [loading, derivedLocations, derivedLocations.length, primeAnimations, runStaggerIn]);
 
-  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ----------
+  // ---------- EMPTY-STATE ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -254,6 +261,7 @@ export default function LocationsScreen() {
     setMenuOpenId(null);
     setEditingId(null);
     setEditingName("");
+    setEditingCategory("indoor");
     setEditMode("create");
     setEditOpen(true);
   };
@@ -262,6 +270,7 @@ export default function LocationsScreen() {
     setMenuOpenId(null);
     setEditingId(loc.id);
     setEditingName(loc.name);
+    setEditingCategory(loc.category);
     setEditMode("edit");
     setEditOpen(true);
   };
@@ -275,7 +284,7 @@ export default function LocationsScreen() {
   const confirmDelete = () => {
     if (!confirmDeleteId) return;
 
-    // For now only local removal – extend with API delete when available
+    // Local removal for now
     setLocations((prev) => prev.filter((l) => l.id !== confirmDeleteId));
 
     setConfirmDeleteId(null);
@@ -283,12 +292,14 @@ export default function LocationsScreen() {
     showToast("Location deleted", "success");
   };
 
-  const handleSaveLocation = async (name: string) => {
+  const handleSaveLocation = async (
+    name: string,
+    category: LocationCategory
+  ) => {
     try {
       if (editMode === "create") {
-        // Use existing API; default category to "indoor" for now
         const created = await createLocation(
-          { name, category: "indoor" },
+          { name, category },
           { auth: true }
         );
         const loc = mapApiToLocation(created);
@@ -298,7 +309,7 @@ export default function LocationsScreen() {
         // No updateLocation API yet; update locally
         setLocations((prev) =>
           prev.map((l) =>
-            l.id === editingId ? { ...l, name } : l
+            l.id === editingId ? { ...l, name, category } : l
           )
         );
         showToast("Location updated (local only)", "success");
@@ -309,6 +320,7 @@ export default function LocationsScreen() {
       setEditOpen(false);
       setEditingId(null);
       setEditingName("");
+      setEditingCategory("indoor");
     }
   };
 
@@ -329,8 +341,8 @@ export default function LocationsScreen() {
       <View style={{ flex: 1 }}>
         <GlassHeader
           title={LOCATIONS_HEADER_TITLE}
-          gradientColors={LOCATIONS_HEADER_GRADIENT_TINT}
-          solidFallback={LOCATIONS_HEADER_SOLID_FALLBACK}
+          gradientColors={HEADER_GRADIENT_TINT}
+          solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
         />
         <CenteredSpinner size={56} color="#FFFFFF" />
@@ -340,11 +352,10 @@ export default function LocationsScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Same GlassHeader style as PlantsScreen */}
       <GlassHeader
         title={LOCATIONS_HEADER_TITLE}
-        gradientColors={LOCATIONS_HEADER_GRADIENT_TINT}
-        solidFallback={LOCATIONS_HEADER_SOLID_FALLBACK}
+        gradientColors={HEADER_GRADIENT_TINT}
+        solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
       />
 
@@ -453,7 +464,6 @@ export default function LocationsScreen() {
         )}
       />
 
-      {/* FAB: Add location + Sort (shared component, same feel as Plants) */}
       {showFAB && (
         <FAB
           bottomOffset={92}
@@ -474,20 +484,20 @@ export default function LocationsScreen() {
         />
       )}
 
-      {/* Edit/Add Location modal */}
       <EditLocationModal
         visible={editOpen}
         mode={editMode}
         initialName={editingName}
+        initialCategory={editingCategory}
         onCancel={() => {
           setEditOpen(false);
           setEditingId(null);
           setEditingName("");
+          setEditingCategory("indoor");
         }}
         onSave={handleSaveLocation}
       />
 
-      {/* Confirm delete modal */}
       <ConfirmDeleteLocationModal
         visible={!!confirmDeleteId}
         name={confirmDeleteName}
@@ -498,7 +508,6 @@ export default function LocationsScreen() {
         onConfirm={confirmDelete}
       />
 
-      {/* Sort modal */}
       <SortLocationsModal
         visible={sortOpen}
         sortKey={sortKey}
@@ -512,7 +521,6 @@ export default function LocationsScreen() {
         onReset={resetSort}
       />
 
-      {/* Top Snackbar (toast) */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}

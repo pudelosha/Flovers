@@ -15,9 +15,9 @@ export const locStyles = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // ---------- TILES: blur + white tint + thin border (match Plants tiles) ----------
+  // ---------- TILES ----------
   cardWrap: {
-    minHeight: 72, // shorter than Plants' 96
+    minHeight: 72,
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
@@ -47,7 +47,7 @@ export const locStyles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 18,
-    paddingVertical: 10, // reduced top/bottom padding
+    paddingVertical: 10,
     gap: 8,
   },
 
@@ -75,7 +75,7 @@ export const locStyles = StyleSheet.create({
     marginTop: 2,
   },
 
-  // MENU BUTTON + SHEET (same positioning as Plants menu)
+  // MENU BUTTON + SHEET
   menuBtn: {
     width: 36,
     height: 36,
@@ -112,7 +112,7 @@ export const locStyles = StyleSheet.create({
     fontSize: 12,
   },
 
-  // ---------- MODAL / PROMPT STYLES (mirroring Plants prompts) ----------
+  // ---------- MODAL / PROMPT ----------
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -217,7 +217,79 @@ export const locStyles = StyleSheet.create({
   promptPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
   promptDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
 
-  // ---------- EMPTY STATE (matching Reminders/Plants empty card) ----------
+  // ---------- CATEGORY SEGMENT & CHIPS ----------
+  segmentRow: {
+    flexDirection: "row",
+    gap: 10,
+    marginHorizontal: 16,
+    marginBottom: 6,
+  },
+  // base shape only
+  segBtn: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  // inactive: soft neutral background
+  segInactive: {
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+  },
+  // active: strong blue highlight
+  segActive: {
+    backgroundColor: "rgba(11,114,133,0.92)",
+    borderWidth: 1,
+    borderColor: "rgba(11,114,133,1)",
+  },
+  segText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+  },
+
+  sectionTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 14,
+    paddingHorizontal: 16,
+    marginBottom: 4,
+  },
+  locationCat: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "700",
+    fontSize: 12,
+    paddingHorizontal: 16,
+    marginTop: 8,
+    marginBottom: 4,
+  },
+
+  // 2-column grid chips (2x4 when using 8 items)
+  chipRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    gap: 8,
+    paddingHorizontal: 16,
+    marginBottom: 4,
+  },
+  chip: {
+    flexBasis: "48%",
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  chipText: {
+    color: "#FFFFFF",
+    fontWeight: "600",
+    fontSize: 12,
+  },
+
+  // ---------- EMPTY STATE ----------
   emptyWrap: {
     marginTop: 0,
   },
