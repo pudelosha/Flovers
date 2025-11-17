@@ -1,4 +1,3 @@
-// src/features/locations/pages/LocationsScreen.tsx
 import React, {
   useCallback,
   useEffect,
@@ -14,6 +13,7 @@ import {
   Text,
   Pressable,
   Easing,
+  Alert,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
@@ -50,6 +50,7 @@ import type { LocationCategory } from "../../create-plant/types/create-plant.typ
 import {
   fetchUserLocations,
   createLocation,
+  deleteLocation,
   type ApiLocation,
 } from "../../../api/services/locations.service";
 
@@ -281,15 +282,22 @@ export default function LocationsScreen() {
     setConfirmDeleteName(loc.name);
   };
 
-  const confirmDelete = () => {
+  const confirmDelete = async () => {
     if (!confirmDeleteId) return;
 
-    // Local removal for now
-    setLocations((prev) => prev.filter((l) => l.id !== confirmDeleteId));
+    try {
+      await deleteLocation(confirmDeleteId, { auth: true });
 
-    setConfirmDeleteId(null);
-    setConfirmDeleteName("");
-    showToast("Location deleted", "success");
+      setLocations((prev) => prev.filter((l) => l.id !== confirmDeleteId));
+
+      showToast("Location deleted", "success");
+    } catch (e: any) {
+      const msg = e?.message || "Could not delete this location.";
+      Alert.alert("Delete failed", msg);
+    } finally {
+      setConfirmDeleteId(null);
+      setConfirmDeleteName("");
+    }
   };
 
   const handleSaveLocation = async (

@@ -4,6 +4,7 @@ export type ApiLocation = {
   id: string;
   name: string;
   category: "indoor" | "outdoor" | "other";
+  plant_count?: number;
 };
 
 export async function fetchUserLocations(
@@ -32,11 +33,31 @@ export async function createLocation(
     return data;
   } catch (e) {
     if (e instanceof ApiError && (e.status === 409 || e.status === 400)) {
-      // Bubble up readable message for UI
       const msg =
         (e.data as any)?.message ||
         (e.data as any)?.detail ||
         "Could not create location.";
+      throw new Error(String(msg));
+    }
+    throw e;
+  }
+}
+
+export async function deleteLocation(
+  id: string,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<void> {
+  try {
+    await request<void>(`/api/locations/${id}/`, "DELETE", undefined, {
+      auth: opts.auth ?? true,
+    });
+  } catch (e) {
+    // Bubble up readable message for UI (e.g. ProtectedError 409)
+    if (e instanceof ApiError && (e.status === 409 || e.status === 400)) {
+      const msg =
+        (e.data as any)?.message ||
+        (e.data as any)?.detail ||
+        "Could not delete location.";
       throw new Error(String(msg));
     }
     throw e;
