@@ -114,7 +114,7 @@ export default function PlantsScreen() {
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [filters, setFilters] = useState<{ location?: string; latin?: string }>({});
 
-  // ⬇️ Always hide the Edit modal whenever this screen becomes focused
+  // Always hide the Edit modal whenever this screen becomes focused
   useFocusEffect(
     useCallback(() => {
       setEditOpen(false);
@@ -249,7 +249,7 @@ export default function PlantsScreen() {
       );
 
       closeEdit();
-      // ✅ success toast
+      // success toast
       showToast("Plant updated", "success");
     } catch (e: any) {
       Alert.alert("Update failed", e?.message || "Could not update this plant.");
@@ -272,7 +272,7 @@ export default function PlantsScreen() {
     try {
       await deletePlantInstance(Number(confirmDeleteId), { auth: true });
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
-      // ✅ success toast
+      // success toast
       showToast("Plant deleted", "success");
     } catch (e: any) {
       Alert.alert("Delete failed", e?.message || "Could not delete this plant.");

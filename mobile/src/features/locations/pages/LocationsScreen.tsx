@@ -183,7 +183,7 @@ export default function LocationsScreen() {
     return result;
   }, [locations, sortKey, sortDir]);
 
-  // ---------- ✨ ENTRANCE ANIMATION ----------
+  // ---------- ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;

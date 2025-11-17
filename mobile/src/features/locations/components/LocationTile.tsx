@@ -80,7 +80,11 @@ export default function LocationTile({
 
         {isMenuOpen && (
           <View style={s.menuSheet}>
-            <Pressable style={s.menuItem} onPress={onEdit}>
+            <Pressable
+              style={s.menuItem}
+              onPress={onEdit}
+              android_ripple={{ color: "rgba(255,255,255,0.16)" }}
+            >
               <MaterialCommunityIcons
                 name="pencil-outline"
                 size={16}
@@ -90,14 +94,20 @@ export default function LocationTile({
               <Text style={s.menuItemText}>Edit</Text>
             </Pressable>
 
-            <Pressable style={s.menuItem} onPress={onDelete}>
+            <Pressable
+              style={s.menuItem}
+              onPress={onDelete}
+              android_ripple={{ color: "rgba(255,107,107,0.18)" }}
+            >
               <MaterialCommunityIcons
                 name="delete-outline"
                 size={16}
-                color="#FFFFFF"
+                color="#FF6B6B"
                 style={{ marginRight: 6 }}
               />
-              <Text style={s.menuItemText}>Delete</Text>
+              <Text style={[s.menuItemText, s.menuItemDangerText]}>
+                Delete
+              </Text>
             </Pressable>
           </View>
         )}

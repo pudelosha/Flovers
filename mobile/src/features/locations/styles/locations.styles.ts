@@ -111,6 +111,11 @@ export const locStyles = StyleSheet.create({
     letterSpacing: 0.2,
     fontSize: 12,
   },
+  // 🔴 special style for Delete label
+  menuItemDangerText: {
+    color: "#FF6B6B",
+    fontWeight: "800",
+  },
 
   // ---------- MODAL / PROMPT ----------
   promptBackdrop: {
