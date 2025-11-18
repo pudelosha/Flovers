@@ -24,6 +24,10 @@ import {
   SOIL_MIXES,       // [{ key: string, label: string, description?: string }]
 } from "../../create-plant/constants/create-plant.constants";
 
+// 🔁 Reuse the create-plant measure modal
+import MeasureExposureModal from "../../create-plant/components/modals/MeasureExposureModal";
+import type { LightLevel } from "../../create-plant/types/create-plant.types";
+
 type LightLevel5 = "very-low" | "low" | "medium" | "bright-indirect" | "bright-direct";
 
 let DateTimePicker: any = null;
@@ -116,6 +120,9 @@ export default function EditPlantModal(props: Props) {
   const [nativePickerOpen, setNativePickerOpen] = useState(false);
   const [fallbackOpen, setFallbackOpen] = useState(false);
   const [fallbackDate, setFallbackDate] = useState<string>(fPurchaseDateISO ?? "");
+
+  // 👉 New: control the Measure light & direction modal
+  const [measureVisible, setMeasureVisible] = useState(false);
 
   const lightOrder: LightLevel5[] = ["very-low", "low", "medium", "bright-indirect", "bright-direct"];
   const lightIndex = Math.max(0, lightOrder.indexOf(fLightLevel));
@@ -332,9 +339,16 @@ export default function EditPlantModal(props: Props) {
                       <Pressable
                         style={[pr.promptBtn, pr.promptPrimary]}
                         onPress={() => {
-                          if (!fallbackDate) { setFPurchaseDateISO?.(null); setFallbackOpen(false); return; }
+                          if (!fallbackDate) {
+                            setFPurchaseDateISO?.(null);
+                            setFallbackOpen(false);
+                            return;
+                          }
                           const dt = parseISODate(fallbackDate.trim());
-                          if (!dt) { Alert.alert("Invalid date", "Use format YYYY-MM-DD"); return; }
+                          if (!dt) {
+                            Alert.alert("Invalid date", "Use format YYYY-MM-DD");
+                            return;
+                          }
                           setFPurchaseDateISO?.(toISODate(dt));
                           setFallbackOpen(false);
                         }}
@@ -402,6 +416,32 @@ export default function EditPlantModal(props: Props) {
                   </Pressable>
                 );
               })}
+            </View>
+
+            {/* 👉 New: Measure light & direction button */}
+            <View style={{ marginHorizontal: 16, marginBottom: 6 }}>
+              <Pressable
+                style={[
+                  pr.promptBtn,
+                  {
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 8,
+                  },
+                ]}
+                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                onPress={() => {
+                  setMeasureVisible(true);
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="lightbulb-on-outline"
+                  size={18}
+                  color="#FFFFFF"
+                />
+                <Text style={pr.promptBtnText}>Measure light & direction</Text>
+              </Pressable>
             </View>
 
             {/* Distance from window */}
@@ -527,6 +567,21 @@ export default function EditPlantModal(props: Props) {
           </ScrollView>
         </View>
       </View>
+
+      {/* 🔁 Shared Measure light & direction modal */}
+      <MeasureExposureModal
+        visible={measureVisible}
+        onClose={() => setMeasureVisible(false)}
+        onApply={({ light, orientation }) => {
+          if (light) {
+            // cast because unions are compatible
+            setFLightLevel(light as LightLevel5 as LightLevel);
+          }
+          if (orientation) {
+            setFOrientation(orientation);
+          }
+        }}
+      />
     </>
   );
 }
