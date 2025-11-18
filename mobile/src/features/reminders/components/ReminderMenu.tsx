@@ -12,9 +12,9 @@ export default function ReminderMenu({ onEdit, onDelete }: Props) {
   return (
     <View style={s.menuSheet} pointerEvents="auto">
       <MenuItem label="Edit reminder" icon="calendar-edit" onPress={onEdit} />
-      {/* 🔴 DEBUG: log before delegating to parent onDelete */}
+      {/* DEBUG: log before delegating to parent onDelete */}
       <MenuItem
-        label="Delete"
+        label="Delete reminder"
         icon="trash-can-outline"
         danger
         onPress={() => {

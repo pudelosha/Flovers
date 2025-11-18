@@ -36,9 +36,9 @@ function MenuItem({
 export default function PlantMenu({ onEdit, onReminders, onDelete }: Props) {
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      <MenuItem label="Edit" icon="pencil-outline" onPress={onEdit} />
+      <MenuItem label="Edit plant" icon="pencil-outline" onPress={onEdit} />
       <MenuItem label="Show reminders" icon="bell-outline" onPress={onReminders} />
-      <MenuItem label="Delete" icon="trash-can-outline" danger onPress={onDelete} />
+      <MenuItem label="Delete plant" icon="trash-can-outline" danger onPress={onDelete} />
     </View>
   );
 }

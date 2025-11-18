@@ -513,13 +513,14 @@ export default function ReadingsScreen() {
         style={{ flex: 1 }}
         data={derivedItems}
         keyExtractor={(x) => x.id}
+
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
           const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
           const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
           const opacity = v;
 
-          // Look up the raw device to get device_name and sensors
+          // Look up the raw device to get device_name, sensors, *and plant id*
           const dev = devicesRaw.find(d => String(d.id) === item.id);
 
           return (
@@ -527,9 +528,19 @@ export default function ReadingsScreen() {
               <ReadingTile
                 data={item}
                 isMenuOpen={menuOpenId === item.id}
-                onPressBody={() => nav.navigate("ReadingDetails" as never, { id: item.id } as never)}
-                onPressMenu={() => setMenuOpenId((curr) => (curr === item.id ? null : item.id))}
-                onHistory={() => { setMenuOpenId(null); nav.navigate("ReadingsHistory" as never, { id: item.id } as never); }}
+                onPressBody={() =>
+                  nav.navigate(
+                    "ReadingDetails" as never,
+                    { id: item.id } as never
+                  )
+                }
+                onPressMenu={() =>
+                  setMenuOpenId((curr) => (curr === item.id ? null : item.id))
+                }
+                onHistory={() => {
+                  setMenuOpenId(null);
+                  nav.navigate("ReadingsHistory" as never, { id: item.id } as never);
+                }}
                 onEdit={() => {
                   setMenuOpenId(null);
                   openEditDevice(item.id);
@@ -538,12 +549,22 @@ export default function ReadingsScreen() {
                   setMenuOpenId(null);
                   openDeleteFor(item.id);
                 }}
-                onPlantDetails={() => { setMenuOpenId(null); nav.navigate("PlantDetails" as never, { id: item.id } as never); }}
+                onPlantDetails={() => {
+                  setMenuOpenId(null);
+                  if (dev?.plant) {
+                    nav.navigate(
+                      "PlantDetails" as never,
+                      { id: String(dev.plant) } as never
+                    );
+                  }
+                }}
                 // deep-link into ReadingsHistory with the selected metric
                 onMetricPress={(metric) =>
-                  nav.navigate("ReadingsHistory" as never, { metric, range: "day", id: item.id } as never)
+                  nav.navigate(
+                    "ReadingsHistory" as never,
+                    { metric, range: "day", id: item.id } as never
+                  )
                 }
-                // provide device name & sensors so the tile can render correctly
                 deviceName={dev?.device_name}
                 sensors={{
                   temperature: !!dev?.sensors?.temperature,
@@ -555,6 +576,7 @@ export default function ReadingsScreen() {
             </Animated.View>
           );
         }}
+
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         ListHeaderComponent={() => <View style={{ height: 0 }} />}
         ListFooterComponent={() => <View style={{ height: 200 }} />}

@@ -91,7 +91,7 @@ export default function LocationTile({
                 color="#FFFFFF"
                 style={{ marginRight: 6 }}
               />
-              <Text style={s.menuItemText}>Edit</Text>
+              <Text style={s.menuItemText}>Edit location</Text>
             </Pressable>
 
             <Pressable
@@ -106,7 +106,7 @@ export default function LocationTile({
                 style={{ marginRight: 6 }}
               />
               <Text style={[s.menuItemText, s.menuItemDangerText]}>
-                Delete
+                Delete location
               </Text>
             </Pressable>
           </View>

@@ -197,14 +197,29 @@ export default function RemindersScreen() {
     }, [load])
   );
 
-  /** Reset filters whenever screen is focused */
+  /**
+   * Reset filters whenever screen is focused.
+   * If a plantId is passed via route params, pre-filter by that plant.
+   */
   useFocusEffect(
     useCallback(() => {
-      setFilters(INITIAL_FILTERS);
+      const params = (route as any)?.params;
+      const plantIdFromRoute = params?.plantId ? String(params.plantId) : undefined;
+
+      setFilters(() => {
+        if (plantIdFromRoute) {
+          return {
+            ...INITIAL_FILTERS,
+            plantId: plantIdFromRoute,
+          };
+        }
+        return INITIAL_FILTERS;
+      });
+
       setFilterOpen(false);
       setSortOpen(false);
       setMenuOpenId(null);
-    }, [])
+    }, [route])
   );
 
   /** ALWAYS close all modals and menus when this screen becomes focused */

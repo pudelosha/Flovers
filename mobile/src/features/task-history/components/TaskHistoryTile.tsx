@@ -342,7 +342,7 @@ export default function TaskHistoryTile({
                 { color: "#FF6B6B", fontWeight: "800" },
               ]}
             >
-              Delete
+              Delete task
             </Text>
           </Pressable>
         </View>

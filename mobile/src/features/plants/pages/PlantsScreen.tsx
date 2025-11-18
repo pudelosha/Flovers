@@ -447,7 +447,15 @@ export default function PlantsScreen() {
                   setMenuOpenId((curr) => (curr === item.id ? null : item.id))
                 }
                 onEdit={() => openEditModal(item)}
-                onReminders={() => {}}
+                onReminders={() =>
+                  nav.navigate(
+                    "Reminders" as never,
+                    {
+                      plantId: item.id,
+                      plantName: item.name,
+                    } as never
+                  )
+                }
                 onDelete={() => askDelete(item)}
               />
             </Animated.View>
