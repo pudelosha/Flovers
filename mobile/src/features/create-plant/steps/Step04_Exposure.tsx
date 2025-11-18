@@ -1,5 +1,5 @@
 ﻿// steps/Step04_Exposure.tsx
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,23 +9,28 @@ import { SegmentedButtons, useTheme } from "react-native-paper";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { ORIENTATIONS } from "../constants/create-plant.constants";
-import MeasureExposureModal from "../components/modals/MeasureExposureModal";
+
+type Props = {
+  measureUnit?: "metric" | "imperial";
+  onOpenMeasureModal: () => void;
+};
 
 export default function Step04_Exposure({
-  measureUnit = "metric" as "metric" | "imperial",
-}) {
+  measureUnit = "metric",
+  onOpenMeasureModal,
+}: Props) {
   const { state, actions } = useCreatePlantWizard();
   const theme = useTheme();
-  const [measureOpen, setMeasureOpen] = useState(false);
 
   const toDisplay = (cm: number) =>
     measureUnit === "imperial" ? `${Math.round(cm / 2.54)} in` : `${cm} cm`;
 
   // Map slider index <-> LightLevel
-  const lightOrder: Array<"very-low" | "low" | "medium" | "bright-indirect" | "bright-direct"> = useMemo(
-    () => ["very-low", "low", "medium", "bright-indirect", "bright-direct"],
-    []
-  );
+  const lightOrder: Array<"very-low" | "low" | "medium" | "bright-indirect" | "bright-direct"> =
+    useMemo(
+      () => ["very-low", "low", "medium", "bright-indirect", "bright-direct"],
+      []
+    );
   const lightIndex = Math.max(0, lightOrder.indexOf(state.lightLevel as any));
   const onLightChange = (v: number) => {
     const idx = Math.max(0, Math.min(4, Math.round(v)));
@@ -50,8 +55,8 @@ export default function Step04_Exposure({
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Exposure</Text>
         <Text style={wiz.subtitle}>
-          Light exposure helps us tune watering schedules and care reminders. Tell us how much light
-          this spot gets and the window direction.
+          Light exposure helps us tune watering schedules and care reminders. Tell us how much
+          light this spot gets and the window direction.
         </Text>
 
         {/* Light level — slider with Low / High labels aligned with header */}
@@ -112,7 +117,12 @@ export default function Step04_Exposure({
               labelStyle: { fontSize: 11, fontWeight: "800", color: "#FFFFFF" },
             }))}
             density="small"
-            style={{ backgroundColor: "transparent", borderWidth: 0, marginHorizontal: -6, marginVertical: -6 }}
+            style={{
+              backgroundColor: "transparent",
+              borderWidth: 0,
+              marginHorizontal: -6,
+              marginVertical: -6,
+            }}
             labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
             theme={{
               colors: {
@@ -129,7 +139,7 @@ export default function Step04_Exposure({
         {/* Measure */}
         <Pressable
           style={[wiz.actionFull, { marginTop: 10, marginBottom: 10 }]}
-          onPress={() => setMeasureOpen(true)}
+          onPress={onOpenMeasureModal}
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#FFFFFF" />
@@ -139,7 +149,14 @@ export default function Step04_Exposure({
         {/* Distance — Slider only; show only selected value */}
         <Text style={wiz.sectionTitle}>Distance from window</Text>
         <View style={{ marginTop: 6, marginBottom: 4 }}>
-          <Text style={{ color: "#FFFFFF", fontWeight: "800", alignSelf: "flex-end", marginBottom: 4 }}>
+          <Text
+            style={{
+              color: "#FFFFFF",
+              fontWeight: "800",
+              alignSelf: "flex-end",
+              marginBottom: 4,
+            }}
+          >
             {toDisplay(state.distanceCm)}
           </Text>
           <Slider
@@ -155,16 +172,6 @@ export default function Step04_Exposure({
           />
         </View>
       </View>
-
-      {/* Modal */}
-      <MeasureExposureModal
-        visible={measureOpen}
-        onClose={() => setMeasureOpen(false)}
-        onApply={({ light, orientation }) => {
-          if (light) actions.setLightLevel(light);
-          if (orientation) actions.setOrientation(orientation);
-        }}
-      />
     </View>
   );
 }

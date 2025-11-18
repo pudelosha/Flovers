@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  Modal,
   View,
   Pressable,
   Text,
@@ -13,9 +12,12 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import { wiz } from "../../styles/wizard.styles";
 import type { LightLevel, Orientation } from "../../types/create-plant.types";
 import { Sensors } from "../../services/Sensors";
+// Reuse the modal shell from Reminders
+import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 
 /** ---------- Light helpers ---------- */
 function luxToLightLevel(lux: number | null): LightLevel | null {
@@ -28,16 +30,22 @@ function luxToLightLevel(lux: number | null): LightLevel | null {
 }
 function lightLevelLabel(level: LightLevel | null): string {
   switch (level) {
-    case "bright-direct": return "Bright direct";
-    case "bright-indirect": return "Bright indirect";
-    case "medium": return "Medium / dappled";
-    case "low": return "Low light";
-    case "very-low": return "Very low";
-    default: return "—";
+    case "bright-direct":
+      return "Bright direct";
+    case "bright-indirect":
+      return "Bright indirect";
+    case "medium":
+      return "Medium / dappled";
+    case "low":
+      return "Low light";
+    case "very-low":
+      return "Very low";
+    default:
+      return "—";
   }
 }
 
-/** ---------- Cardinal bucketing (exactly as requested) ----------
+/** ---------- Cardinal bucketing ----------
  * N: 315–360 or 0–45
  * E: 45–135
  * S: 135–225
@@ -96,12 +104,12 @@ export default function MeasureExposureModal({
   // Optional extra JS smoothing (native already smooths)
   const [headingSmooth, setHeadingSmooth] = useState<number | null>(null);
   useEffect(() => {
-    setHeadingSmooth(prev => smoothHeading(prev, headingDeg, 0.25));
+    setHeadingSmooth((prev) => smoothHeading(prev, headingDeg, 0.25));
   }, [headingDeg]);
 
   /** Start sensors: native compass + ambient light */
   const startSensors = useCallback(async () => {
-    // Light (unchanged)
+    // Light
     try {
       const sub = await Sensors.startLight?.((lx: number | null) => {
         setLux(typeof lx === "number" ? lx : null);
@@ -121,7 +129,7 @@ export default function MeasureExposureModal({
     // Heading (tilt-invariant via native on Android), JS smoothing on top
     try {
       const sub = await Sensors.startHeading((deg: number) => {
-        setHeadingDeg(prev => {
+        setHeadingDeg((prev) => {
           if (prev == null) return Math.round(deg);
           let d = deg - prev;
           if (d > 180) d -= 360;
@@ -147,8 +155,12 @@ export default function MeasureExposureModal({
   }, []);
 
   const stopSensors = useCallback(() => {
-    try { headingCleanupRef.current?.(); } catch {}
-    try { lightCleanupRef.current?.(); } catch {}
+    try {
+      headingCleanupRef.current?.();
+    } catch {}
+    try {
+      lightCleanupRef.current?.();
+    } catch {}
     headingCleanupRef.current = null;
     lightCleanupRef.current = null;
   }, []);
@@ -186,7 +198,10 @@ export default function MeasureExposureModal({
   /** 5-second test */
   const endTest = useCallback(() => {
     setIsTestRunning(false);
-    if (timerRef.current != null) { clearInterval(timerRef.current); timerRef.current = null; }
+    if (timerRef.current != null) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
     setRemainMs(0);
 
     const maxLux = testMaxLuxRef.current;
@@ -283,66 +298,59 @@ export default function MeasureExposureModal({
     return finalOrientation;
   }, [finalOrientation]);
 
-  /** Render */
   if (!visible) return null;
   const countdownSec = Math.ceil(remainMs / 1000);
 
   return (
-    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
-      <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop - matches other modals */}
-        <Pressable
-          style={[s.backdrop, { paddingBottom: insets.bottom }]}
-          onPress={onClose}
-        >
-          <View style={{ flex: 1 }} />
-        </Pressable>
+    <>
+      {/* Backdrop (matches Reminders / AddLocationModal) */}
+      <Pressable style={remindersStyles.promptBackdrop} onPress={onClose} />
 
-        {/* Blur/tint layer - matches other modals */}
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { bottom: insets.bottom }]}>
+      {/* Centered glass card wrapper (same shell as AddLocationModal) */}
+      <View style={remindersStyles.promptWrap}>
+        <View style={remindersStyles.promptGlass}>
           <BlurView
-            style={StyleSheet.absoluteFill}
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0 }}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.6)" }]} />
+          <View
+            pointerEvents="none"
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+          />
         </View>
 
-        {/* Content container - matches the structure from AddLocationModal */}
-        <View style={[s.promptWrap, { paddingBottom: insets.bottom }]} pointerEvents="box-none">
-          <View style={s.promptGlass}>
-            <BlurView
-              style={StyleSheet.absoluteFill}
-              blurType="light"
-              blurAmount={14}
-              reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-            />
-            <View
-              pointerEvents="none"
-              style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]}
-            />
-          </View>
-
+        {/* Sheet — full width; scrollable with capped height (like AddLocationModal) */}
+        <View style={[remindersStyles.promptInner, { maxHeight: "86%" }]}>
           <ScrollView
-            style={s.promptInnerFull}
-            contentContainerStyle={[s.promptScroll, { paddingTop: insets.top + 24 }]}
             keyboardShouldPersistTaps="handled"
+            contentContainerStyle={[
+              styles.contentInner,
+              { paddingTop: 16 + insets.top, paddingBottom: 80 + insets.bottom },
+            ]}
+            showsVerticalScrollIndicator={false}
           >
             <Text style={wiz.promptTitle}>Measure light & direction</Text>
 
             <Text style={{ color: "#FFFFFF", fontWeight: "600", marginBottom: 10 }}>
-              Hold the phone <Text style={{ fontWeight: "800" }}>horizontally (screen up)</Text>, with the{" "}
-              <Text style={{ fontWeight: "800" }}>top edge</Text> pointing toward the window. Move/scan slowly
-              near the window to record the brightest spot and direction. Then tap{" "}
-              <Text style={{ fontWeight: "800" }}>Measure</Text> to run a 5-second test.
+              Hold the phone <Text style={{ fontWeight: "800" }}>horizontally (screen up)</Text>,
+              with the <Text style={{ fontWeight: "800" }}>top edge</Text> pointing toward the
+              window. Move/scan slowly near the window to record the brightest spot and direction.
+              Then tap <Text style={{ fontWeight: "800" }}>Measure</Text> to run a 5-second test.
             </Text>
 
             {/* Live readouts */}
             <View style={{ gap: 10 }}>
               <View style={rowStyle}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons name="white-balance-sunny" size={18} color="#FFFFFF" />
+                  <MaterialCommunityIcons
+                    name="white-balance-sunny"
+                    size={18}
+                    color="#FFFFFF"
+                  />
                   <Text style={rowTitle}>Ambient light (live)</Text>
                 </View>
                 <Text style={rowVal}>{lightLabelLive}</Text>
@@ -350,7 +358,11 @@ export default function MeasureExposureModal({
 
               <View style={rowStyle}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons name="compass-outline" size={18} color="#FFFFFF" />
+                  <MaterialCommunityIcons
+                    name="compass-outline"
+                    size={18}
+                    color="#FFFFFF"
+                  />
                   <Text style={rowTitle}>Heading (live)</Text>
                 </View>
                 <Text style={rowVal}>{orientationLabelLive}</Text>
@@ -359,7 +371,11 @@ export default function MeasureExposureModal({
               {/* 5s measurement summary */}
               <View style={[rowStyle, { borderBottomWidth: 0 }]}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons name="timer-sand" size={18} color="#FFFFFF" />
+                  <MaterialCommunityIcons
+                    name="timer-sand"
+                    size={18}
+                    color="#FFFFFF"
+                  />
                   <Text style={rowTitle}>
                     5-second measurement {isTestRunning ? "(running…)" : "(last)"}
                   </Text>
@@ -378,16 +394,29 @@ export default function MeasureExposureModal({
             </View>
 
             {/* Actions */}
-            <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: 10, marginTop: 12 }}>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                gap: 10,
+                marginTop: 12,
+              }}
+            >
               <Pressable style={wiz.btn} onPress={onClose}>
                 <Text style={wiz.btnText}>Close</Text>
               </Pressable>
               <Pressable
-                style={[wiz.btn, { minWidth: 110 }, isTestRunning ? { opacity: 0.9 } : undefined]}
+                style={[
+                  wiz.btn,
+                  { minWidth: 110 },
+                  isTestRunning ? { opacity: 0.9 } : undefined,
+                ]}
                 onPress={isTestRunning ? undefined : start5sTest}
                 disabled={isTestRunning}
               >
-                <Text style={wiz.btnText}>{isTestRunning ? "Measuring…" : "Measure (5s)"}</Text>
+                <Text style={wiz.btnText}>
+                  {isTestRunning ? "Measuring…" : "Measure (5s)"}
+                </Text>
               </Pressable>
               <Pressable
                 style={[wiz.btn, wiz.btnPrimary]}
@@ -406,14 +435,15 @@ export default function MeasureExposureModal({
             </View>
 
             <Text style={{ color: "rgba(255,255,255,0.82)", marginTop: 10 }}>
-              Tip: On many phones the ambient light sensor sits near the earpiece at the top. Keep the phone flat,
-              point the top edge toward the window, and slowly move it to find the brightest reading. The test picks
-              the highest lux over 5 seconds and averages the compass to decide between N/E/S/W (±45° buckets).
+              Tip: On many phones the ambient light sensor sits near the earpiece at the top. Keep
+              the phone flat, point the top edge toward the window, and slowly move it to find the
+              brightest reading. The test picks the highest lux over 5 seconds and averages the
+              compass to decide between N/E/S/W (±45° buckets).
             </Text>
           </ScrollView>
         </View>
       </View>
-    </Modal>
+    </>
   );
 }
 
@@ -430,31 +460,8 @@ const rowLeft = { flexDirection: "row" as const, alignItems: "center" as const, 
 const rowTitle = { color: "#FFFFFF", fontWeight: "800" as const };
 const rowVal = { color: "#FFFFFF", fontWeight: "800" as const };
 
-const s = StyleSheet.create({
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)",
-  },
-  promptWrap: {
-    ...StyleSheet.absoluteFillObject,
-    left: 0,
-    right: 0,
-    top: 0,
-  },
-  promptGlass: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 0,
-    overflow: "hidden",
-  },
-  promptInnerFull: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-  },
-  promptScroll: {
+const styles = StyleSheet.create({
+  contentInner: {
     paddingHorizontal: 16,
-    paddingBottom: 24,
   },
 });

@@ -22,6 +22,7 @@ import Step09_Creating from "../steps/Step09_Creating";
 
 import PreviousNextBar from "../components/PreviousNextBar";
 import AddLocationModal from "../components/modals/AddLocationModal";
+import MeasureExposureModal from "../components/modals/MeasureExposureModal";
 import type { LocationCategory } from "../types/create-plant.types";
 
 /** Order used to infer direction for step transition animations */
@@ -57,7 +58,7 @@ function ResetOnFocus() {
 function WizardBody() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
-  const { state } = useCreatePlantWizard();
+  const { state, actions } = useCreatePlantWizard();
 
   // Marks that the wizard was just opened; Step 1 will clear once, then turn this off.
   const [freshOpen, setFreshOpen] = useState(false);
@@ -90,10 +91,16 @@ function WizardBody() {
     setLocationModalOpen(false);
   };
 
-  // Close modal automatically if user leaves Step 3
+  // ---------- EXPOSURE MEASURE MODAL STATE (shared with Step 4) ----------
+  const [measureModalOpen, setMeasureModalOpen] = useState(false);
+
+  // Close modals automatically if user leaves their steps
   useEffect(() => {
     if (state.step !== "location") {
       setLocationModalOpen(false);
+    }
+    if (state.step !== "exposure") {
+      setMeasureModalOpen(false);
     }
   }, [state.step]);
 
@@ -167,7 +174,9 @@ function WizardBody() {
             />
           )}
 
-          {state.step === "exposure" && <Step04_Exposure />}
+          {state.step === "exposure" && (
+            <Step04_Exposure onOpenMeasureModal={() => setMeasureModalOpen(true)} />
+          )}
           {state.step === "potType" && <Step05_ContainerAndSoil />}
           {state.step === "autoTasks" && <Step06_AutoTasks />}
           {state.step === "photo" && <Step07_Photo />}
@@ -199,7 +208,10 @@ function WizardBody() {
       {/* Floating Previous / Next — solid backgrounds, logic handled internally */}
       <PreviousNextBar
         bottomOffset={floatingBottomOffset}
-        hidden={locationModalOpen && state.step === "location"}
+        hidden={
+          (locationModalOpen && state.step === "location") ||
+          (measureModalOpen && state.step === "exposure")
+        }
       />
 
       {/* Location modal overlay (same pattern as Reminders / EditPlant modals) */}
@@ -207,6 +219,16 @@ function WizardBody() {
         visible={locationModalOpen && state.step === "location"}
         onClose={() => setLocationModalOpen(false)}
         onCreate={handleLocationCreate}
+      />
+
+      {/* Measure exposure modal – same shell as AddLocation, lives at screen level */}
+      <MeasureExposureModal
+        visible={measureModalOpen && state.step === "exposure"}
+        onClose={() => setMeasureModalOpen(false)}
+        onApply={({ light, orientation }) => {
+          if (light) actions.setLightLevel(light);
+          if (orientation) actions.setOrientation(orientation);
+        }}
       />
     </>
   );
