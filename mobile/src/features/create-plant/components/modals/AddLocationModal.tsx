@@ -1,20 +1,30 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Modal,
   View,
   Pressable,
   Text,
   TextInput,
   ScrollView,
   StyleSheet,
+  Keyboard,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
 import { wiz } from "../../styles/wizard.styles";
 import type { LocationCategory } from "../../types/create-plant.types";
 import { PREDEFINED_LOCATIONS } from "../../constants/create-plant.constants";
 
-const TAB_HEIGHT = 16; // matches your AppTabs space reservation
+// Reuse the modal shell from Reminders
+import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
+
+type Props = {
+  visible: boolean;
+  initialName?: string;
+  initialCategory?: LocationCategory;
+  onClose: () => void;
+  onCreate: (name: string, category: LocationCategory) => void;
+};
 
 export default function AddLocationModal({
   visible,
@@ -22,13 +32,7 @@ export default function AddLocationModal({
   initialCategory = "indoor",
   onClose,
   onCreate,
-}: {
-  visible: boolean;
-  initialName?: string;
-  initialCategory?: LocationCategory;
-  onClose: () => void;
-  onCreate: (name: string, category: LocationCategory) => void;
-}) {
+}: Props) {
   const insets = useSafeAreaInsets();
   const [name, setName] = useState(initialName ?? "");
   const [cat, setCat] = useState<LocationCategory>(initialCategory);
@@ -55,40 +59,45 @@ export default function AddLocationModal({
 
   if (!visible) return null;
 
-  const bottomInset = TAB_HEIGHT + insets.bottom;
-
   return (
-    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
-      <View style={StyleSheet.absoluteFill}>
-        {/* Backdrop that stops at the tab bar (same darkness as Profile) */}
-        <Pressable
-          style={[styles.backdrop, { paddingBottom: bottomInset }]}
-          onPress={onClose}
-        >
-          <View style={{ flex: 1 }} />
-        </Pressable>
+    <>
+      {/* Backdrop (matches Reminders/EditReminderModal) */}
+      <Pressable
+        style={remindersStyles.promptBackdrop}
+        onPress={() => {
+          Keyboard.dismiss();
+          onClose();
+        }}
+      />
 
-        {/* Blur/tint layer in the same bounds as backdrop */}
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { bottom: bottomInset }]}>
+      {/* Centered glass card wrapper (matches Reminders / EditPlantModal shell) */}
+      <View style={remindersStyles.promptWrap}>
+        <View style={remindersStyles.promptGlass}>
           <BlurView
-            style={StyleSheet.absoluteFill}
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0 }}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.6)" }]} />
+          <View
+            pointerEvents="none"
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+          />
         </View>
 
-        {/* Content above tab bar; full width */}
-        <View style={[styles.contentWrap, { paddingBottom: bottomInset }]} pointerEvents="box-none">
+        {/* Sheet — full width; Scrollable with capped height (like EditPlantModal) */}
+        <View style={[remindersStyles.promptInner, { maxHeight: "86%" }]}>
           <ScrollView
             ref={scrollRef}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[styles.contentInner, { paddingTop: insets.top + 16 }]}
+            contentContainerStyle={[styles.scrollContent, { paddingBottom: 80 }]}
+            showsVerticalScrollIndicator={false}
           >
-            <Text style={wiz.promptTitle}>Create location</Text>
+            <Text style={remindersStyles.promptTitle}>Create location</Text>
 
-            {/* Location name — flat 64px input */}
+            {/* Name input – reuse wizard’s flat 64px style */}
             <TextInput
               style={wiz.inputField}
               placeholder="Location name"
@@ -97,7 +106,7 @@ export default function AddLocationModal({
               onChangeText={setName}
             />
 
-            {/* Category segment (full width) — flat, no borders */}
+            {/* Category segment */}
             <View style={wiz.segmentRow}>
               {(["indoor", "outdoor", "other"] as LocationCategory[]).map((k) => (
                 <Pressable
@@ -110,17 +119,36 @@ export default function AddLocationModal({
               ))}
             </View>
 
-            {/* Buttons row 50:50 (above quick suggestions) — flat, borderless */}
-            <View style={styles.splitButtonsRow}>
-              <Pressable style={[wiz.splitBtn, wiz.splitBtnSecondary]} onPress={onClose}>
-                <Text style={wiz.splitBtnText}>Close</Text>
+            {/* Buttons row – same layout as Reminders prompt buttons */}
+            <View style={remindersStyles.promptButtonsRow}>
+              <Pressable
+                style={remindersStyles.promptBtn}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  onClose();
+                }}
+              >
+                <Text style={remindersStyles.promptBtnText}>Cancel</Text>
               </Pressable>
-              <Pressable style={[wiz.splitBtn, wiz.splitBtnPrimary]} onPress={create}>
-                <Text style={wiz.splitBtnText}>Create location</Text>
+              <Pressable
+                style={[remindersStyles.promptBtn, remindersStyles.promptPrimary]}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  create();
+                }}
+              >
+                <Text
+                  style={[
+                    remindersStyles.promptBtnText,
+                    remindersStyles.promptPrimaryText,
+                  ]}
+                >
+                  Create location
+                </Text>
               </Pressable>
             </View>
 
-            {/* Quick suggestions — flat chips, no borders */}
+            {/* Quick suggestions – same chips grid */}
             <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>Quick suggestions</Text>
 
             <Text style={[wiz.locationCat, { marginBottom: 6 }]}>Indoor</Text>
@@ -136,7 +164,9 @@ export default function AddLocationModal({
               ))}
             </View>
 
-            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>Outdoor</Text>
+            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
+              Outdoor
+            </Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((label) => (
                 <Pressable
@@ -149,7 +179,9 @@ export default function AddLocationModal({
               ))}
             </View>
 
-            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>Other</Text>
+            <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
+              Other
+            </Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.other.slice(0, 9).map((label) => (
                 <Pressable
@@ -164,35 +196,15 @@ export default function AddLocationModal({
           </ScrollView>
         </View>
       </View>
-    </Modal>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.6)",
-  },
-  contentWrap: {
-    ...StyleSheet.absoluteFillObject,
-    left: 0,
-    right: 0,
-    top: 0,
-  },
-  contentInner: {
+  scrollContent: {
     paddingHorizontal: 16,
-    paddingBottom: 20,
+    paddingTop: 16,
   },
-
-  // 50:50 buttons row
-  splitButtonsRow: {
-    flexDirection: "row",
-    gap: 10,
-    marginTop: 6,
-    marginBottom: 10,
-  },
-
-  // full-width, 2-column grid for chips
   gridWrap: {
     flexDirection: "row",
     flexWrap: "wrap",

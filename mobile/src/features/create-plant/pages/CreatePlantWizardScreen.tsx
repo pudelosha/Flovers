@@ -1,5 +1,4 @@
-﻿// screens/CreatePlantWizardScreen.tsx
-import React, { useRef, useState, useEffect } from "react";
+﻿import React, { useRef, useState, useEffect } from "react";
 import { View, ScrollView, Text, Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -22,6 +21,8 @@ import Step08_NameAndNotes from "../steps/Step08_NameAndNotes";
 import Step09_Creating from "../steps/Step09_Creating";
 
 import PreviousNextBar from "../components/PreviousNextBar";
+import AddLocationModal from "../components/modals/AddLocationModal";
+import type { LocationCategory } from "../types/create-plant.types";
 
 /** Order used to infer direction for step transition animations */
 const STEPS_ORDER = [
@@ -70,6 +71,31 @@ function WizardBody() {
   );
 
   const scrollTop = () => scrollRef.current?.scrollTo({ y: 0, animated: true });
+
+  // ---------- LOCATION MODAL STATE (shared with Step 3) ----------
+  const [locationModalOpen, setLocationModalOpen] = useState(false);
+  const locationCreateHandlerRef = useRef<
+    ((name: string, category: LocationCategory) => void) | null
+  >(null);
+
+  const registerLocationCreateHandler = React.useCallback(
+    (fn: (name: string, category: LocationCategory) => void) => {
+      locationCreateHandlerRef.current = fn;
+    },
+    []
+  );
+
+  const handleLocationCreate = (name: string, category: LocationCategory) => {
+    locationCreateHandlerRef.current?.(name, category);
+    setLocationModalOpen(false);
+  };
+
+  // Close modal automatically if user leaves Step 3
+  useEffect(() => {
+    if (state.step !== "location") {
+      setLocationModalOpen(false);
+    }
+  }, [state.step]);
 
   // ---------- ✨ STEP TRANSITION ANIMATION ----------
   const entry = useRef(new Animated.Value(1)).current;
@@ -133,7 +159,13 @@ function WizardBody() {
             />
           )}
           {state.step === "traits" && <Step02_PlantTraits />}
-          {state.step === "location" && <Step03_SelectLocation onScrollTop={scrollTop} />}
+          {state.step === "location" && (
+            <Step03_SelectLocation
+              onScrollTop={scrollTop}
+              onOpenAddLocation={() => setLocationModalOpen(true)}
+              onRegisterCreateHandler={registerLocationCreateHandler}
+            />
+          )}
 
           {state.step === "exposure" && <Step04_Exposure />}
           {state.step === "potType" && <Step05_ContainerAndSoil />}
@@ -165,7 +197,17 @@ function WizardBody() {
       </ScrollView>
 
       {/* Floating Previous / Next — solid backgrounds, logic handled internally */}
-      <PreviousNextBar bottomOffset={floatingBottomOffset} />
+      <PreviousNextBar
+        bottomOffset={floatingBottomOffset}
+        hidden={locationModalOpen && state.step === "location"}
+      />
+
+      {/* Location modal overlay (same pattern as Reminders / EditPlant modals) */}
+      <AddLocationModal
+        visible={locationModalOpen && state.step === "location"}
+        onClose={() => setLocationModalOpen(false)}
+        onCreate={handleLocationCreate}
+      />
     </>
   );
 }

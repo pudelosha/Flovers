@@ -64,8 +64,6 @@ function smoothHeading(prev: number | null, next: number | null, alpha = 0.2): n
   return Math.round(sm);
 }
 
-const TAB_HEIGHT = 16;
-
 export default function MeasureExposureModal({
   visible,
   onClose,
@@ -287,17 +285,21 @@ export default function MeasureExposureModal({
 
   /** Render */
   if (!visible) return null;
-  const bottomInset = TAB_HEIGHT + insets.bottom;
   const countdownSec = Math.ceil(remainMs / 1000);
 
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={StyleSheet.absoluteFill}>
-        <Pressable style={[styles.backdrop, { paddingBottom: bottomInset }]} onPress={onClose}>
+        {/* Backdrop - matches other modals */}
+        <Pressable
+          style={[s.backdrop, { paddingBottom: insets.bottom }]}
+          onPress={onClose}
+        >
           <View style={{ flex: 1 }} />
         </Pressable>
 
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { bottom: bottomInset }]}>
+        {/* Blur/tint layer - matches other modals */}
+        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { bottom: insets.bottom }]}>
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
@@ -307,10 +309,25 @@ export default function MeasureExposureModal({
           <View style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.6)" }]} />
         </View>
 
-        <View style={[styles.contentWrap, { paddingBottom: bottomInset }]} pointerEvents="box-none">
+        {/* Content container - matches the structure from AddLocationModal */}
+        <View style={[s.promptWrap, { paddingBottom: insets.bottom }]} pointerEvents="box-none">
+          <View style={s.promptGlass}>
+            <BlurView
+              style={StyleSheet.absoluteFill}
+              blurType="light"
+              blurAmount={14}
+              reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+            />
+            <View
+              pointerEvents="none"
+              style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(0,0,0,0.35)" }]}
+            />
+          </View>
+
           <ScrollView
+            style={s.promptInnerFull}
+            contentContainerStyle={[s.promptScroll, { paddingTop: insets.top + 24 }]}
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[styles.contentInner, { paddingTop: insets.top + 16 }]}
           >
             <Text style={wiz.promptTitle}>Measure light & direction</Text>
 
@@ -413,19 +430,31 @@ const rowLeft = { flexDirection: "row" as const, alignItems: "center" as const, 
 const rowTitle = { color: "#FFFFFF", fontWeight: "800" as const };
 const rowVal = { color: "#FFFFFF", fontWeight: "800" as const };
 
-const styles = StyleSheet.create({
+const s = StyleSheet.create({
   backdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
   },
-  contentWrap: {
+  promptWrap: {
     ...StyleSheet.absoluteFillObject,
     left: 0,
     right: 0,
     top: 0,
   },
-  contentInner: {
+  promptGlass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 0,
+    overflow: "hidden",
+  },
+  promptInnerFull: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+  },
+  promptScroll: {
     paddingHorizontal: 16,
-    paddingBottom: 20,
+    paddingBottom: 24,
   },
 });

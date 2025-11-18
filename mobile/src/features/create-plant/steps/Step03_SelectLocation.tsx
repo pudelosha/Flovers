@@ -1,5 +1,4 @@
-﻿// steps/Step03_SelectLocation.tsx
-import React, { useEffect, useMemo, useRef, useState } from "react";
+﻿import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
@@ -7,16 +6,18 @@ import { BlurView } from "@react-native-community/blur";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { LocationCategory } from "../types/create-plant.types";
-import AddLocationModal from "../components/modals/AddLocationModal";
 import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
 
 export default function Step03_SelectLocation({
   onScrollTop,
+  onOpenAddLocation,
+  onRegisterCreateHandler,
 }: {
   onScrollTop?: () => void;
+  onOpenAddLocation: () => void;
+  onRegisterCreateHandler: (fn: (name: string, category: LocationCategory) => void) => void;
 }) {
   const { state, actions } = useCreatePlantWizard();
-  const [modalOpen, setModalOpen] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -77,46 +78,56 @@ export default function Step03_SelectLocation({
 
   const openCreate = () => {
     setErrorMsg(null);
-    setModalOpen(true);
+    onOpenAddLocation();
     onScrollTop?.();
   };
 
   // Create on backend first, then mirror into wizard state (avoids duplicates)
-  const onCreate = async (name: string, cat: LocationCategory) => {
-    const norm = name.trim().toLowerCase();
+  const onCreate = useCallback(
+    async (name: string, cat: LocationCategory) => {
+      const norm = name.trim().toLowerCase();
 
-    // local duplicate guard (case-insensitive)
-    if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
-      setErrorMsg("Location with this name already exists.");
-      setModalOpen(false);
-      return;
-    }
+      // local duplicate guard (case-insensitive)
+      if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
+        setErrorMsg("Location with this name already exists.");
+        return;
+      }
 
-    try {
-      setErrorMsg(null);
-      const created = await createLocation({ name, category: cat }, { auth: true });
+      try {
+        setErrorMsg(null);
+        const created = await createLocation({ name, category: cat }, { auth: true });
 
-      // Add into wizard state
-      actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
-
-      // Robust auto-select
-      setTimeout(() => {
-        const match = locationsRef.current.find(
-          (l) =>
-            l.name.trim().toLowerCase() === created.name.trim().toLowerCase() &&
-            l.category === created.category
+        // Add into wizard state
+        actions.addLocation(
+          created.name,
+          created.category as LocationCategory,
+          String(created.id)
         );
-        if (match?.id) {
-          actions.selectLocation(String(match.id));
-        }
-      }, 0);
 
-      setModalOpen(false);
-      onScrollTop?.();
-    } catch (e: any) {
-      setErrorMsg(e?.message ?? "Could not create location.");
-    }
-  };
+        // Robust auto-select
+        setTimeout(() => {
+          const match = locationsRef.current.find(
+            (l) =>
+              l.name.trim().toLowerCase() === created.name.trim().toLowerCase() &&
+              l.category === created.category
+          );
+          if (match?.id) {
+            actions.selectLocation(String(match.id));
+          }
+        }, 0);
+
+        onScrollTop?.();
+      } catch (e: any) {
+        setErrorMsg(e?.message ?? "Could not create location.");
+      }
+    },
+    [actions, onScrollTop, state.locations]
+  );
+
+  // register create handler with parent (WizardBody)
+  useEffect(() => {
+    onRegisterCreateHandler(onCreate);
+  }, [onRegisterCreateHandler, onCreate]);
 
   const onPickExisting = (id: string | number) => {
     actions.selectLocation(String(id)); // normalize
@@ -231,12 +242,6 @@ export default function Step03_SelectLocation({
           );
         })}
       </View>
-
-      <AddLocationModal
-        visible={modalOpen}
-        onClose={() => setModalOpen(false)}
-        onCreate={onCreate}
-      />
     </View>
   );
 }
