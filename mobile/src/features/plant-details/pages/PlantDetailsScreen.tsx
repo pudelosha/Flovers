@@ -1,5 +1,11 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\pages\PlantDetailsScreen.tsx
-import React, { useEffect, useMemo, useState, useRef, useCallback } from "react";
+// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\pages\PlantDetailsScreen.tsx
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+  useRef,
+  useCallback,
+} from "react";
 import {
   View,
   Text,
@@ -13,131 +19,126 @@ import {
   Animated,
   Easing,
 } from "react-native";
-import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
+import {
+  useNavigation,
+  useRoute,
+  useFocusEffect,
+} from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+  import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
+
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
   TILE_BLUR,
-} from "../constants/plants.constants";
-import { s } from "../styles/plants.styles";
+} from "../constants/plant-details.constants";
+import { s } from "../styles/plant-details.styles";
 
 import {
-  fetchPlantInstanceDetail,
-  fetchPlantByQr,
-  type ApiPlantInstanceListItem,
-  type ApiPlantInstanceDetailFull,
-} from "../../../api/services/plant-instances.service";
+  fetchPlantDetailsById,
+  fetchPlantDetailsByQr,
+} from "../../../api/services/plant-details.service";
+
+import type {
+  PlantMetricKey,
+  PlantDetailsComposite,
+} from "../types/plant-details.types";
 
 // QR tile bits
 import QRCode from "react-native-qrcode-svg";
 import RNFS from "react-native-fs";
 import CameraRoll from "@react-native-camera-roll/camera-roll";
 
-/* ---------------- Local helpers / dummy constants ---------------- */
-type MetricKey = "temperature" | "humidity" | "light" | "moisture";
-
-const METRIC_UNITS: Record<MetricKey, string> = {
+/* ---------------- Local helpers / constants ---------------- */
+const METRIC_UNITS: Record<PlantMetricKey, string> = {
   temperature: "°C",
   humidity: "%",
   light: "lx",
   moisture: "%",
 };
 
-const ICON_BG: Record<MetricKey, string> = {
+const ICON_BG: Record<PlantMetricKey, string> = {
   temperature: "#F7831F", // orange
-  humidity: "#10B981",    // teal/green
-  light: "#F2C94C",       // yellow
-  moisture: "#2EA0FF",    // blue
+  humidity: "#10B981", // teal/green
+  light: "#F2C94C", // yellow
+  moisture: "#2EA0FF", // blue
 };
 
 function lastReadText(d?: string | null) {
   if (!d) return "Last read: —";
   const dt = new Date(d);
-  return `Last read: ${dt.toLocaleDateString()} ${dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`;
+  return `Last read: ${dt.toLocaleDateString()} ${dt.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  })}`;
 }
-/* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 
 export default function PlantDetailsScreen() {
   const nav = useNavigation();
   const route = useRoute<any>();
+
+  // Keep backward compatibility with both param names:
   const qrFromNav: string | undefined = route.params?.qrCode;
-  const idFromNav: number | undefined = route.params?.plantId ?? route.params?.id;
+  const idFromNav: number | undefined =
+    route.params?.plantId ?? route.params?.id;
 
   const [loading, setLoading] = useState(true);
-  const [plant, setPlant] = useState<ApiPlantInstanceDetailFull | null>(null);
+  const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
   const [error, setError] = useState<string>("");
 
-  // Dummy readings (replace with real API later)
-  const [latestRead, setLatestRead] = useState<{
-    temperature: number | null;
-    humidity: number | null;
-    light: number | null;
-    moisture: number | null;
-    tsISO: string | null;
-  }>({
-    temperature: 23,
-    humidity: 57,
-    light: 640,
-    moisture: 42,
-    tsISO: new Date().toISOString(),
-  });
-
-  // Dummy reminders (replace with real API later)
-  const [reminders] = useState<
-    { id: string; title: string; when: string; icon: string }[]
-  >([
-    { id: "r1", title: "Watering", when: "in 2 days", icon: "watering-can-outline" },
-    { id: "r2", title: "Fertilize", when: "next week", icon: "sprout-outline" },
-    { id: "r3", title: "Repot check", when: "in 2 months", icon: "pot-outline" },
-  ]);
-
-  // Fetch plant by id or QR
+  // Fetch composite data (plant + readings + reminders)
   useEffect(() => {
     let isMounted = true;
+
     (async () => {
       try {
         setLoading(true);
         setError("");
 
         if (qrFromNav) {
-          const p = await fetchPlantByQr(qrFromNav);
+          const full = await fetchPlantDetailsByQr(qrFromNav);
           if (!isMounted) return;
-          setPlant(p as unknown as ApiPlantInstanceDetailFull);
+          setDetails(full);
         } else if (idFromNav) {
-          const p = await fetchPlantInstanceDetail(Number(idFromNav));
+          const full = await fetchPlantDetailsById(Number(idFromNav));
           if (!isMounted) return;
-          setPlant(p);
+          setDetails(full);
         } else {
           throw new Error("No plant id or QR code provided.");
         }
       } catch (e: any) {
         if (!isMounted) return;
         setError(e?.message || "Failed to load plant.");
+        setDetails(null);
       } finally {
         if (isMounted) setLoading(false);
       }
     })();
+
     return () => {
       isMounted = false;
     };
   }, [qrFromNav, idFromNav]);
 
   const qrCodeValue = useMemo(() => {
-    const code = plant?.qr_code || qrFromNav || "";
+    const code = details?.plant.qr_code || qrFromNav || "";
     if (!code) return "";
-    return `https://flovers.app/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`;
-  }, [plant, qrFromNav]);
+    return `https://flovers.app/api/plant-instances/by-qr/?code=${encodeURIComponent(
+      code
+    )}`;
+  }, [details, qrFromNav]);
 
   // Save QR code (dataURL -> file -> CameraRoll)
   const onSaveQr = async (svgRef: any) => {
     try {
       if (!svgRef?.toDataURL) throw new Error("QR renderer not ready.");
       const dataUrl: string = await new Promise((res, rej) =>
-        svgRef.toDataURL((d: string) => (d ? res(d) : rej(new Error("No dataURL"))))
+        svgRef.toDataURL((d: string) =>
+          d ? res(d) : rej(new Error("No dataURL"))
+        )
       );
 
       const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
@@ -165,19 +166,31 @@ export default function PlantDetailsScreen() {
     }
   };
 
-  const goHistory = (metric?: MetricKey) => {
-    nav.navigate("ReadingsHistory" as never, {
-      metric: metric || "temperature",
-      range: "day",
-      name: plant?.display_name || plant?.plant_definition?.name || "Plant",
-    } as never);
+  const goHistory = (metric?: PlantMetricKey) => {
+    nav.navigate(
+      "ReadingsHistory" as never,
+      {
+        metric: metric || "temperature",
+        range: "day",
+        name:
+          details?.plant.display_name ||
+          details?.plant.plant_definition?.name ||
+          "Plant",
+      } as never
+    );
   };
 
   // ---------- ✨ ENTER/EXIT CONTENT ANIMATION ----------
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
-  const contentTranslateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
-  const contentScale = entry.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+  const contentTranslateY = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 0],
+  });
+  const contentScale = entry.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1],
+  });
 
   useFocusEffect(
     useCallback(() => {
@@ -200,6 +213,9 @@ export default function PlantDetailsScreen() {
   );
   // ----------------------------------------------------
 
+  const latestRead = details?.latestReadings;
+  const reminders = details?.reminders ?? [];
+
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -213,7 +229,10 @@ export default function PlantDetailsScreen() {
         style={{
           flex: 1,
           opacity: contentOpacity,
-          transform: [{ translateY: contentTranslateY }, { scale: contentScale }],
+          transform: [
+            { translateY: contentTranslateY },
+            { scale: contentScale },
+          ],
         }}
       >
         {loading ? (
@@ -226,32 +245,85 @@ export default function PlantDetailsScreen() {
             <Text style={styles.title}>Error</Text>
             <Text style={styles.dim}>{error}</Text>
           </View>
-        ) : !plant ? (
+        ) : !details ? (
           <View style={styles.centerBox}>
             <Text style={styles.title}>Not found</Text>
             <Text style={styles.dim}>We couldn’t load this plant.</Text>
           </View>
         ) : (
-          <ScrollView contentContainerStyle={{ paddingBottom: 24, paddingHorizontal: 16, paddingTop: 16 }} showsVerticalScrollIndicator={false}>
+          <ScrollView
+            contentContainerStyle={{
+              paddingBottom: 24,
+              paddingHorizontal: 16,
+              paddingTop: 16,
+            }}
+            showsVerticalScrollIndicator={false}
+          >
             {/* ---------- INFO FRAME ---------- */}
             <GlassFrame>
-              <Text style={styles.h1}>{plant.display_name || plant.plant_definition?.name || `Plant #${plant.id}`}</Text>
-              {!!plant.plant_definition?.latin && <Text style={styles.latin}>{plant.plant_definition.latin}</Text>}
-              {!!plant.location?.name && <Text style={styles.sub}>{plant.location.name}</Text>}
+              <Text style={styles.h1}>
+                {details.plant.display_name ||
+                  details.plant.plant_definition?.name ||
+                  `Plant #${details.plant.id}`}
+              </Text>
+              {!!details.plant.plant_definition?.latin && (
+                <Text style={styles.latin}>
+                  {details.plant.plant_definition.latin}
+                </Text>
+              )}
+              {!!details.plant.location?.name && (
+                <Text style={styles.sub}>{details.plant.location.name}</Text>
+              )}
 
               <View style={styles.infoGrid}>
                 {[
-                  { icon: "calendar", label: "Purchased", value: plant.purchase_date || "—" },
-                  { icon: "note-edit-outline", label: "Notes", value: plant.notes || "—" },
-                  { icon: "white-balance-sunny", label: "Light", value: plant.light_level || "—" },
-                  { icon: "compass-outline", label: "Orientation", value: plant.orientation || "—" },
-                  { icon: "tape-measure", label: "Distance", value: (plant.distance_cm ?? "—") + (plant.distance_cm != null ? " cm" : "") },
-                  { icon: "pot-outline", label: "Pot / Soil", value: [plant.pot_material, plant.soil_mix].filter(Boolean).join(" • ") || "—" },
+                  {
+                    icon: "calendar",
+                    label: "Purchased",
+                    value: details.plant.purchase_date || "—",
+                  },
+                  {
+                    icon: "note-edit-outline",
+                    label: "Notes",
+                    value: details.plant.notes || "—",
+                  },
+                  {
+                    icon: "white-balance-sunny",
+                    label: "Light",
+                    value: details.plant.light_level || "—",
+                  },
+                  {
+                    icon: "compass-outline",
+                    label: "Orientation",
+                    value: details.plant.orientation || "—",
+                  },
+                  {
+                    icon: "tape-measure",
+                    label: "Distance",
+                    value:
+                      (details.plant.distance_cm ?? "—") +
+                      (details.plant.distance_cm != null ? " cm" : ""),
+                  },
+                  {
+                    icon: "pot-outline",
+                    label: "Pot / Soil",
+                    value:
+                      [details.plant.pot_material, details.plant.soil_mix]
+                        .filter(Boolean)
+                        .join(" • ") || "—",
+                  },
                 ].map((it, i) => (
                   <View key={i} style={styles.infoRow}>
-                    <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
+                    <MaterialCommunityIcons
+                      name={it.icon as any}
+                      size={16}
+                      color="#FFFFFF"
+                      style={{ marginRight: 8 }}
+                    />
                     <Text style={styles.infoLabel}>{it.label}:</Text>
-                    <Text style={styles.infoValue} numberOfLines={2}>{it.value}</Text>
+                    <Text style={styles.infoValue} numberOfLines={2}>
+                      {it.value}
+                    </Text>
                   </View>
                 ))}
               </View>
@@ -266,13 +338,12 @@ export default function PlantDetailsScreen() {
                 </Pressable>
               </View>
 
-              {/* 4 metrics: icon in colored circle + value; press → History with metric selected */}
               <View style={styles.metricsRow}>
                 <MetricCol
                   color={ICON_BG.temperature}
                   icon="thermometer"
                   label="Temp"
-                  value={latestRead.temperature}
+                  value={latestRead?.temperature ?? null}
                   unit={METRIC_UNITS.temperature}
                   onPress={() => goHistory("temperature")}
                 />
@@ -280,7 +351,7 @@ export default function PlantDetailsScreen() {
                   color={ICON_BG.humidity}
                   icon="water-percent"
                   label="Hum"
-                  value={latestRead.humidity}
+                  value={latestRead?.humidity ?? null}
                   unit={METRIC_UNITS.humidity}
                   onPress={() => goHistory("humidity")}
                 />
@@ -288,7 +359,7 @@ export default function PlantDetailsScreen() {
                   color={ICON_BG.light}
                   icon="white-balance-sunny"
                   label="Light"
-                  value={latestRead.light}
+                  value={latestRead?.light ?? null}
                   unit={METRIC_UNITS.light}
                   onPress={() => goHistory("light")}
                 />
@@ -296,20 +367,25 @@ export default function PlantDetailsScreen() {
                   color={ICON_BG.moisture}
                   icon="water"
                   label="Moist"
-                  value={latestRead.moisture}
+                  value={latestRead?.moisture ?? null}
                   unit={METRIC_UNITS.moisture}
                   onPress={() => goHistory("moisture")}
                 />
               </View>
 
-              <Text style={styles.lastRead}>{lastReadText(latestRead.tsISO)}</Text>
+              <Text style={styles.lastRead}>
+                {lastReadText(latestRead?.tsISO)}
+              </Text>
             </GlassFrame>
 
             {/* ---------- REMINDERS FRAME ---------- */}
             <GlassFrame>
               <View style={styles.rowBetween}>
                 <Text style={styles.h2}>Reminders</Text>
-                <Pressable onPress={() => nav.navigate("Reminders" as never)} style={styles.linkBtn}>
+                <Pressable
+                  onPress={() => nav.navigate("Reminders" as never)}
+                  style={styles.linkBtn}
+                >
                   <Text style={styles.linkText}>View all</Text>
                 </Pressable>
               </View>
@@ -321,14 +397,27 @@ export default function PlantDetailsScreen() {
                   {reminders.map((r) => (
                     <View key={r.id} style={styles.remRow}>
                       <View style={styles.remIcon}>
-                        <MaterialCommunityIcons name={r.icon as any} size={18} color="#FFFFFF" />
+                        <MaterialCommunityIcons
+                          name={r.icon as any}
+                          size={18}
+                          color="#FFFFFF"
+                        />
                       </View>
                       <View style={{ flex: 1 }}>
                         <Text style={styles.remTitle}>{r.title}</Text>
                         <Text style={styles.remWhen}>{r.when}</Text>
                       </View>
-                      <Pressable onPress={() => { /* open reminder details/edit */ }} hitSlop={8}>
-                        <MaterialCommunityIcons name="chevron-right" size={20} color="#FFFFFF" />
+                      <Pressable
+                        onPress={() => {
+                          // TODO: open reminder details/edit for this specific plant
+                        }}
+                        hitSlop={8}
+                      >
+                        <MaterialCommunityIcons
+                          name="chevron-right"
+                          size={20}
+                          color="#FFFFFF"
+                        />
                       </Pressable>
                     </View>
                   ))}
@@ -336,17 +425,29 @@ export default function PlantDetailsScreen() {
               )}
             </GlassFrame>
 
-            {/* ---------- QR FRAME (kept from your original) ---------- */}
+            {/* ---------- QR FRAME ---------- */}
             {!!qrCodeValue && (
               <GlassFrame center>
                 <Text style={styles.h2}>QR Code</Text>
-                <Text style={[styles.dim, { marginBottom: 12, textAlign: "center" }]}>
+                <Text
+                  style={[
+                    styles.dim,
+                    { marginBottom: 12, textAlign: "center" },
+                  ]}
+                >
                   Scan to open this plant on your device.
                 </Text>
 
-                <QRCode value={qrCodeValue} size={220} getRef={(c) => ((global as any).__qrRef = c)} />
+                <QRCode
+                  value={qrCodeValue}
+                  size={220}
+                  getRef={(c) => ((global as any).__qrRef = c)}
+                />
 
-                <Pressable onPress={() => onSaveQr((global as any).__qrRef)} style={{ marginTop: 14 }}>
+                <Pressable
+                  onPress={() => onSaveQr((global as any).__qrRef)}
+                  style={{ marginTop: 14 }}
+                >
                   <Text style={styles.linkText}>Save QR Code</Text>
                 </Pressable>
               </GlassFrame>
@@ -364,7 +465,10 @@ export default function PlantDetailsScreen() {
 function GlassFrame({
   children,
   center,
-}: { children: React.ReactNode; center?: boolean }) {
+}: {
+  children: React.ReactNode;
+  center?: boolean;
+}) {
   return (
     <View style={styles.frameWrap}>
       <View style={s.cardGlass}>
@@ -404,7 +508,11 @@ function MetricCol({
   return (
     <Pressable style={styles.metricCol} onPress={onPress}>
       <View style={[styles.iconCircle, { backgroundColor: color }]}>
-        <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
+        <MaterialCommunityIcons
+          name={icon as any}
+          size={22}
+          color="#FFFFFF"
+        />
       </View>
       <Text style={styles.metricValue}>
         {value == null ? "—" : `${value}${unit}`}
@@ -416,7 +524,18 @@ function MetricCol({
 
 /* -------------------- Local styles for this screen -------------------- */
 const styles = StyleSheet.create({
-  centerBox: { padding: 16, alignItems: "center", justifyContent: "center" },
+  centerBox: {
+    padding: 16,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  title: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 6,
+  },
 
   frameWrap: {
     borderRadius: 28,
@@ -434,29 +553,77 @@ const styles = StyleSheet.create({
   h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 20, marginBottom: 6 },
   h2: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 8 },
 
-  latin: { color: "rgba(255,255,255,0.9)", fontStyle: "italic", fontWeight: "600", fontSize: 12, marginBottom: 4 },
-  sub: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12, marginBottom: 10 },
+  latin: {
+    color: "rgba(255,255,255,0.9)",
+    fontStyle: "italic",
+    fontWeight: "600",
+    fontSize: 12,
+    marginBottom: 4,
+  },
+  sub: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    fontSize: 12,
+    marginBottom: 10,
+  },
   dim: { color: "rgba(255,255,255,0.92)", fontWeight: "600" },
 
   infoGrid: { gap: 8, marginTop: 6 },
   infoRow: { flexDirection: "row", alignItems: "center" },
   infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
-  infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
+  infoValue: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    flex: 1,
+  },
 
-  rowBetween: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  rowBetween: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
   linkBtn: { paddingVertical: 4, paddingHorizontal: 6 },
-  linkText: { color: "#FFFFFF", fontWeight: "800", textDecorationLine: "underline" },
+  linkText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    textDecorationLine: "underline",
+  },
 
-  metricsRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 6, marginBottom: 6, gap: 10 },
+  metricsRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginTop: 6,
+    marginBottom: 6,
+    gap: 10,
+  },
   metricCol: { flex: 1, alignItems: "center" },
   iconCircle: {
-    width: 38, height: 38, borderRadius: 19,
-    alignItems: "center", justifyContent: "center",
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    alignItems: "center",
+    justifyContent: "center",
   },
-  metricValue: { color: "#FFFFFF", fontWeight: "800", fontSize: 14, marginTop: 6 },
-  metricLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11, marginTop: 2 },
+  metricValue: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 14,
+    marginTop: 6,
+  },
+  metricLabel: {
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "700",
+    fontSize: 11,
+    marginTop: 2,
+  },
 
-  lastRead: { color: "rgba(255,255,255,0.85)", fontWeight: "600", fontSize: 12, marginTop: 6 },
+  lastRead: {
+    color: "rgba(255,255,255,0.85)",
+    fontWeight: "600",
+    fontSize: 12,
+    marginTop: 6,
+  },
 
   remRow: {
     flexDirection: "row",
@@ -466,11 +633,22 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.15)",
   },
   remIcon: {
-    width: 32, height: 32, borderRadius: 16,
-    alignItems: "center", justifyContent: "center",
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: "center",
+    justifyContent: "center",
     marginRight: 12,
     backgroundColor: "rgba(255,255,255,0.14)",
   },
-  remTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 14 },
-  remWhen: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12 },
+  remTitle: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 14,
+  },
+  remWhen: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    fontSize: 12,
+  },
 });

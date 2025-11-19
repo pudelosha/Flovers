@@ -19,7 +19,7 @@ import RemindersScreen from "../../features/reminders/pages/RemindersScreen";
 import ReadingsScreen from "../../features/readings/pages/ReadingsScreen";
 import ProfileScreen from "../../features/profile/pages/ProfileScreen";
 import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidden tab
-import PlantDetailsScreen from "../../features/plants/pages/PlantDetailsScreen"; // hidden tab
+import PlantDetailsScreen from "../../features/plant-details/pages/PlantDetailsScreen"; // hidden tab
 import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // hidden tab
 
 // NEW: readings history page (hidden)

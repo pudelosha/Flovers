@@ -53,14 +53,24 @@ export async function createPlantInstance(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstance> {
   const payload = buildPayload(state);
-  return await request<ApiPlantInstance>("/api/plant-instances/", "POST", payload, { auth: opts.auth ?? true });
+  return await request<ApiPlantInstance>(
+    "/api/plant-instances/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
 }
 
 /** ---- List ---- */
 export async function fetchPlantInstances(
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceListItem[]> {
-  const resp = await request<any>("/api/plant-instances/", "GET", undefined, { auth: opts.auth ?? true });
+  const resp = await request<any>(
+    "/api/plant-instances/",
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
   // DRF pagination support + safety
   if (Array.isArray(resp)) return resp as ApiPlantInstanceListItem[];
   if (resp && Array.isArray(resp.results)) return resp.results as ApiPlantInstanceListItem[];
@@ -72,7 +82,12 @@ export async function fetchPlantInstanceForEdit(
   id: number,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<ApiPlantInstanceDetailFull> {
-  return await request<ApiPlantInstanceDetailFull>(`/api/plant-instances/${id}/`, "GET", undefined, { auth: opts.auth ?? true });
+  return await request<ApiPlantInstanceDetailFull>(
+    `/api/plant-instances/${id}/`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
 }
 
 /** ---- Delete ---- */
@@ -80,7 +95,12 @@ export async function deletePlantInstance(
   id: number,
   opts: { auth?: boolean } = { auth: true }
 ): Promise<void> {
-  await request<void>(`/api/plant-instances/${id}/`, "DELETE", undefined, { auth: opts.auth ?? true });
+  await request<void>(
+    `/api/plant-instances/${id}/`,
+    "DELETE",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
 }
 
 /** ---- Update (PATCH) with raw API payload ---- */
@@ -89,15 +109,24 @@ export async function updatePlantInstance(
   payload: ApiPlantInstanceUpdatePayload,
   opts: { auth?: boolean } = { auth: true }
 ) {
-  return await request<ApiPlantInstanceListItem>(`/api/plant-instances/${id}/`, "PATCH", payload, { auth: opts.auth ?? true });
+  return await request<ApiPlantInstanceListItem>(
+    `/api/plant-instances/${id}/`,
+    "PATCH",
+    payload,
+    { auth: opts.auth ?? true }
+  );
 }
 
 /** UI form -> API PATCH payload (uses PlantEditForm from plants.types) */
-export function buildUpdatePayloadFromForm(form: PlantEditForm): ApiPlantInstanceUpdatePayload {
-  const coerceNum = (v: any) => (v === null || v === undefined || v === "" ? null : Number(v));
+export function buildUpdatePayloadFromForm(
+  form: PlantEditForm
+): ApiPlantInstanceUpdatePayload {
+  const coerceNum = (v: any) =>
+    v === null || v === undefined || v === "" ? null : Number(v);
   const out: ApiPlantInstanceUpdatePayload = {};
 
-  if ("plant_definition_id" in form) out.plant_definition_id = coerceNum(form.plant_definition_id);
+  if ("plant_definition_id" in form)
+    out.plant_definition_id = coerceNum(form.plant_definition_id);
   if ("location_id" in form && form.location_id !== undefined && form.location_id !== null) {
     out.location_id = Number(form.location_id);
   }
@@ -109,7 +138,8 @@ export function buildUpdatePayloadFromForm(form: PlantEditForm): ApiPlantInstanc
 
   if ("light_level" in form) out.light_level = form.light_level!;
   if ("orientation" in form) out.orientation = form.orientation!;
-  if ("distance_cm" in form && typeof form.distance_cm === "number") out.distance_cm = Math.max(0, Math.round(form.distance_cm));
+  if ("distance_cm" in form && typeof form.distance_cm === "number")
+    out.distance_cm = Math.max(0, Math.round(form.distance_cm));
 
   if ("pot_material" in form) out.pot_material = String(form.pot_material ?? "");
   if ("soil_mix" in form) out.soil_mix = String(form.soil_mix ?? "");
@@ -124,10 +154,14 @@ export function buildUpdatePayloadFromForm(form: PlantEditForm): ApiPlantInstanc
   if ("last_watered" in form) out.last_watered = (form.last_watered as any) ?? "";
   if ("last_repotted" in form) out.last_repotted = (form.last_repotted as any) ?? "";
 
-  if ("moisture_interval_days" in form) out.moisture_interval_days = form.moisture_interval_days ?? null;
-  if ("fertilize_interval_days" in form) out.fertilize_interval_days = form.fertilize_interval_days ?? null;
-  if ("care_interval_days" in form) out.care_interval_days = form.care_interval_days ?? null;
-  if ("repot_interval_months" in form) out.repot_interval_months = form.repot_interval_months ?? null;
+  if ("moisture_interval_days" in form)
+    out.moisture_interval_days = form.moisture_interval_days ?? null;
+  if ("fertilize_interval_days" in form)
+    out.fertilize_interval_days = form.fertilize_interval_days ?? null;
+  if ("care_interval_days" in form)
+    out.care_interval_days = form.care_interval_days ?? null;
+  if ("repot_interval_months" in form)
+    out.repot_interval_months = form.repot_interval_months ?? null;
 
   return out;
 }
@@ -143,10 +177,27 @@ export async function updatePlantInstanceFromForm(
 }
 
 /** ---- Fetch by QR ---- */
-export async function fetchPlantByQr(code: string, opts: { auth?: boolean } = { auth: true }) {
-  return await request<ApiPlantInstanceListItem>(`/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`, "GET", undefined, { auth: opts.auth ?? true });
+export async function fetchPlantByQr(
+  code: string,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceDetailFull> {
+  return await request<ApiPlantInstanceDetailFull>(
+    `/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
 }
 
-export async function fetchPlantInstanceDetail(id: number, opts: { auth?: boolean } = { auth: true }) {
-  return await request<ApiPlantInstanceDetailFull>(`/api/plant-instances/${id}/`, "GET", undefined, { auth: opts.auth ?? true });
+/** ---- Detail for PlantDetails (same as edit) ---- */
+export async function fetchPlantInstanceDetail(
+  id: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantInstanceDetailFull> {
+  return await request<ApiPlantInstanceDetailFull>(
+    `/api/plant-instances/${id}/`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
 }
