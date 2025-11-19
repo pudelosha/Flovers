@@ -9,10 +9,11 @@ import type {
   PlantDetailsComposite,
   LatestReadings,
   PlantReminderSummary,
+  PlantSensorsConfig,
 } from "../../features/plant-details/types/plant-details.types";
 
 /**
- * For now we keep readings + reminders as dummy data,
+ * For now we keep readings + reminders + device metadata as dummy data,
  * but the structure is ready to be wired into real APIs later.
  */
 
@@ -49,6 +50,16 @@ function createDummyReminders(): PlantReminderSummary[] {
   ];
 }
 
+// Dummy sensor config – in real code you’d derive this from the linked device
+function createDummySensors(): PlantSensorsConfig {
+  return {
+    temperature: true,
+    humidity: true,
+    light: true,
+    moisture: true,
+  };
+}
+
 /**
  * Fetch details by numeric plant ID and compose them into a single object
  * for the screen to consume.
@@ -58,13 +69,16 @@ export async function fetchPlantDetailsById(
 ): Promise<PlantDetailsComposite> {
   const plant = await fetchPlantInstanceDetail(id);
 
-  // When you add real endpoints:
-  // - replace createDummyLatestReadings with fetchLatestReadingsForPlant(id)
-  // - replace createDummyReminders with fetchRemindersForPlant(id)
   const latestReadings = createDummyLatestReadings();
   const reminders = createDummyReminders();
+  const sensors = createDummySensors();
 
-  return { plant, latestReadings, reminders };
+  // For now, pretend every plant has a linked device.
+  // Later you can set deviceLinked based on real API.
+  const deviceLinked = true;
+  const deviceName = "Demo sensor";
+
+  return { plant, latestReadings, reminders, deviceLinked, deviceName, sensors };
 }
 
 /**
@@ -77,6 +91,10 @@ export async function fetchPlantDetailsByQr(
 
   const latestReadings = createDummyLatestReadings();
   const reminders = createDummyReminders();
+  const sensors = createDummySensors();
 
-  return { plant, latestReadings, reminders };
+  const deviceLinked = true;
+  const deviceName = "Demo sensor";
+
+  return { plant, latestReadings, reminders, deviceLinked, deviceName, sensors };
 }

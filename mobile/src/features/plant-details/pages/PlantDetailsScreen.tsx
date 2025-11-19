@@ -25,7 +25,7 @@ import {
   useFocusEffect,
 } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
-  import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 
@@ -46,35 +46,12 @@ import type {
   PlantDetailsComposite,
 } from "../types/plant-details.types";
 
+import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
+
 // QR tile bits
 import QRCode from "react-native-qrcode-svg";
 import RNFS from "react-native-fs";
 import CameraRoll from "@react-native-camera-roll/camera-roll";
-
-/* ---------------- Local helpers / constants ---------------- */
-const METRIC_UNITS: Record<PlantMetricKey, string> = {
-  temperature: "°C",
-  humidity: "%",
-  light: "lx",
-  moisture: "%",
-};
-
-const ICON_BG: Record<PlantMetricKey, string> = {
-  temperature: "#F7831F", // orange
-  humidity: "#10B981", // teal/green
-  light: "#F2C94C", // yellow
-  moisture: "#2EA0FF", // blue
-};
-
-function lastReadText(d?: string | null) {
-  if (!d) return "Last read: —";
-  const dt = new Date(d);
-  return `Last read: ${dt.toLocaleDateString()} ${dt.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  })}`;
-}
-/* ----------------------------------------------------------- */
 
 export default function PlantDetailsScreen() {
   const nav = useNavigation();
@@ -89,7 +66,7 @@ export default function PlantDetailsScreen() {
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
   const [error, setError] = useState<string>("");
 
-  // Fetch composite data (plant + readings + reminders)
+  // Fetch composite data (plant + readings + reminders + device)
   useEffect(() => {
     let isMounted = true;
 
@@ -213,8 +190,10 @@ export default function PlantDetailsScreen() {
   );
   // ----------------------------------------------------
 
-  const latestRead = details?.latestReadings;
+  const latestRead = details?.latestReadings ?? null;
   const reminders = details?.reminders ?? [];
+  const showLatestReadingsTile =
+    !!details && details.deviceLinked && latestRead !== null;
 
   return (
     <View style={{ flex: 1 }}>
@@ -329,54 +308,15 @@ export default function PlantDetailsScreen() {
               </View>
             </GlassFrame>
 
-            {/* ---------- READINGS FRAME ---------- */}
-            <GlassFrame>
-              <View style={styles.rowBetween}>
-                <Text style={styles.h2}>Latest readings</Text>
-                <Pressable onPress={() => goHistory()} style={styles.linkBtn}>
-                  <Text style={styles.linkText}>View full history</Text>
-                </Pressable>
-              </View>
-
-              <View style={styles.metricsRow}>
-                <MetricCol
-                  color={ICON_BG.temperature}
-                  icon="thermometer"
-                  label="Temp"
-                  value={latestRead?.temperature ?? null}
-                  unit={METRIC_UNITS.temperature}
-                  onPress={() => goHistory("temperature")}
-                />
-                <MetricCol
-                  color={ICON_BG.humidity}
-                  icon="water-percent"
-                  label="Hum"
-                  value={latestRead?.humidity ?? null}
-                  unit={METRIC_UNITS.humidity}
-                  onPress={() => goHistory("humidity")}
-                />
-                <MetricCol
-                  color={ICON_BG.light}
-                  icon="white-balance-sunny"
-                  label="Light"
-                  value={latestRead?.light ?? null}
-                  unit={METRIC_UNITS.light}
-                  onPress={() => goHistory("light")}
-                />
-                <MetricCol
-                  color={ICON_BG.moisture}
-                  icon="water"
-                  label="Moist"
-                  value={latestRead?.moisture ?? null}
-                  unit={METRIC_UNITS.moisture}
-                  onPress={() => goHistory("moisture")}
-                />
-              </View>
-
-              <Text style={styles.lastRead}>
-                {lastReadText(latestRead?.tsISO)}
-              </Text>
-            </GlassFrame>
+            {/* ---------- LATEST READINGS TILE (shared look, dynamic metrics) ---------- */}
+            {showLatestReadingsTile && latestRead && (
+              <PlantLatestReadingsTile
+                latestReadings={latestRead}
+                sensors={details.sensors}
+                onTilePress={() => goHistory()}
+                onMetricPress={(metric) => goHistory(metric)}
+              />
+            )}
 
             {/* ---------- REMINDERS FRAME ---------- */}
             <GlassFrame>
@@ -489,39 +429,6 @@ function GlassFrame({
   );
 }
 
-/* -------------------- Metric column -------------------- */
-function MetricCol({
-  color,
-  icon,
-  label,
-  value,
-  unit,
-  onPress,
-}: {
-  color: string;
-  icon: string;
-  label: string;
-  value: number | null;
-  unit: string;
-  onPress: () => void;
-}) {
-  return (
-    <Pressable style={styles.metricCol} onPress={onPress}>
-      <View style={[styles.iconCircle, { backgroundColor: color }]}>
-        <MaterialCommunityIcons
-          name={icon as any}
-          size={22}
-          color="#FFFFFF"
-        />
-      </View>
-      <Text style={styles.metricValue}>
-        {value == null ? "—" : `${value}${unit}`}
-      </Text>
-      <Text style={styles.metricLabel}>{label}</Text>
-    </Pressable>
-  );
-}
-
 /* -------------------- Local styles for this screen -------------------- */
 const styles = StyleSheet.create({
   centerBox: {
@@ -587,35 +494,6 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "800",
     textDecorationLine: "underline",
-  },
-
-  metricsRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: 6,
-    marginBottom: 6,
-    gap: 10,
-  },
-  metricCol: { flex: 1, alignItems: "center" },
-  iconCircle: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  metricValue: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 14,
-    marginTop: 6,
-  },
-  metricLabel: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "700",
-    fontSize: 11,
-    marginTop: 2,
   },
 
   lastRead: {
