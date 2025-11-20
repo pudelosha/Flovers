@@ -48,6 +48,7 @@ import type {
 
 import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
 import PlantRemindersTile from "../components/PlantRemindersTile";
+import PlantQrTile from "../components/PlantQrTile";
 
 // Reuse CompleteTaskModal from Home for the "mark as complete" flow
 import CompleteTaskModal from "../../home/components/CompleteTaskModal";
@@ -55,10 +56,12 @@ import CompleteTaskModal from "../../home/components/CompleteTaskModal";
 // If you want to hook into Home tasks for completion:
 import { markHomeTaskComplete } from "../../../api/services/home.service";
 
-// QR tile bits
-import QRCode from "react-native-qrcode-svg";
+// QR tile bits: still used for actual saving
 import RNFS from "react-native-fs";
 import CameraRoll from "@react-native-camera-roll/camera-roll";
+
+// Shared toast
+import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 export default function PlantDetailsScreen() {
   const nav = useNavigation();
@@ -79,6 +82,22 @@ export default function PlantDetailsScreen() {
     null
   );
   const [completeNote, setCompleteNote] = useState("");
+
+  // Toast state (for QR actions)
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
+  const [toastVariant, setToastVariant] = useState<
+    "default" | "success" | "error"
+  >("default");
+
+  const showToast = (
+    message: string,
+    variant: "default" | "success" | "error" = "default"
+  ) => {
+    setToastMsg(message);
+    setToastVariant(variant);
+    setToastVisible(true);
+  };
 
   // Helper to load / reload details (used on first mount and after completion)
   const loadDetails = useCallback(async () => {
@@ -124,39 +143,37 @@ export default function PlantDetailsScreen() {
     )}`;
   }, [details, qrFromNav]);
 
-  // Save QR code (dataURL -> file -> CameraRoll)
+  // Save QR code (dataURL -> file -> CameraRoll) – now pure, messaging via toast
   const onSaveQr = async (svgRef: any) => {
-    try {
-      if (!svgRef?.toDataURL) throw new Error("QR renderer not ready.");
-      const dataUrl: string = await new Promise((res, rej) =>
-        svgRef.toDataURL((d: string) =>
-          d ? res(d) : rej(new Error("No dataURL"))
-        )
-      );
-
-      const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
-      const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
-      await RNFS.writeFile(filePath, base64, "base64");
-
-      if (Platform.OS === "android") {
-        const granted = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-          {
-            title: "Storage permission",
-            message: "We need access to save the QR code to your gallery.",
-            buttonPositive: "OK",
-          }
-        );
-        if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
-          throw new Error("Storage permission denied.");
-        }
-      }
-
-      await CameraRoll.save(filePath, { type: "photo" });
-      Alert.alert("Saved", "QR Code saved to your gallery.");
-    } catch (err: any) {
-      Alert.alert("Save failed", err?.message ?? String(err));
+    if (!svgRef?.toDataURL) {
+      throw new Error("QR renderer not ready.");
     }
+
+    const dataUrl: string = await new Promise((res, rej) =>
+      svgRef.toDataURL((d: string) =>
+        d ? res(d) : rej(new Error("No dataURL"))
+      )
+    );
+
+    const base64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+    const filePath = `${RNFS.CachesDirectoryPath}/plant_qr_${Date.now()}.png`;
+    await RNFS.writeFile(filePath, base64, "base64");
+
+    if (Platform.OS === "android") {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+        {
+          title: "Storage permission",
+          message: "We need access to save the QR code to your gallery.",
+          buttonPositive: "OK",
+        }
+      );
+      if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+        throw new Error("Storage permission denied.");
+      }
+    }
+
+    await CameraRoll.save(filePath, { type: "photo" });
   };
 
   const goHistory = (metric?: PlantMetricKey) => {
@@ -416,29 +433,32 @@ export default function PlantDetailsScreen() {
 
             {/* ---------- QR FRAME ---------- */}
             {!!qrCodeValue && (
-              <GlassFrame center>
-                <Text style={styles.h2}>QR Code</Text>
-                <Text
-                  style={[
-                    styles.dim,
-                    { marginBottom: 12, textAlign: "center" },
-                  ]}
-                >
-                  Scan to open this plant on your device.
-                </Text>
-
-                <QRCode
-                  value={qrCodeValue}
-                  size={220}
-                  getRef={(c) => ((global as any).__qrRef = c)}
+              <GlassFrame>
+                <PlantQrTile
+                  qrCodeValue={qrCodeValue}
+                  onPressSave={async () => {
+                    try {
+                      await onSaveQr((global as any).__qrRef);
+                      showToast(
+                        "QR code saved to your gallery.",
+                        "success"
+                      );
+                    } catch (err: any) {
+                      console.warn("[PlantDetails] save QR failed:", err);
+                      showToast(
+                        err?.message || "Failed to save QR code.",
+                        "error"
+                      );
+                    }
+                  }}
+                  onPressEmail={() => {
+                    // Placeholder – hook actual email endpoint later
+                    showToast(
+                      "An email with this QR code will be sent to your account address.",
+                      "default"
+                    );
+                  }}
                 />
-
-                <Pressable
-                  onPress={() => onSaveQr((global as any).__qrRef)}
-                  style={{ marginTop: 14 }}
-                >
-                  <Text style={styles.linkText}>Save QR Code</Text>
-                </Pressable>
               </GlassFrame>
             )}
 
@@ -454,6 +474,14 @@ export default function PlantDetailsScreen() {
         onChangeNote={setCompleteNote}
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
+      />
+
+      {/* Toast for QR actions */}
+      <TopSnackbar
+        visible={toastVisible}
+        message={toastMsg}
+        variant={toastVariant}
+        onDismiss={() => setToastVisible(false)}
       />
     </View>
   );
