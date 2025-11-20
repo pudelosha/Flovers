@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\styles\plant-details.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({

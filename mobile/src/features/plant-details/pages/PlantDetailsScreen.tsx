@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\pages\PlantDetailsScreen.tsx
 import React, {
   useEffect,
   useMemo,
@@ -44,6 +43,7 @@ import {
 import type {
   PlantMetricKey,
   PlantDetailsComposite,
+  LatestReadings,
 } from "../types/plant-details.types";
 
 import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
@@ -208,8 +208,18 @@ export default function PlantDetailsScreen() {
 
   const latestRead = details?.latestReadings ?? null;
   const reminders = details?.reminders ?? [];
-  const showLatestReadingsTile =
-    !!details && details.deviceLinked && latestRead !== null;
+
+  // Show tile whenever there is a linked device, even if there is no reading yet.
+  const showLatestReadingsTile = !!details && details.deviceLinked;
+
+  // Safe fallback LatestReadings object so the tile can render dashes
+  const latestReadSafe: LatestReadings = latestRead ?? {
+    temperature: null,
+    humidity: null,
+    light: null,
+    moisture: null,
+    tsISO: null,
+  };
 
   // --- Mark complete modal helpers ---
   const openCompleteModal = (reminderId: string) => {
@@ -373,9 +383,9 @@ export default function PlantDetailsScreen() {
             </GlassFrame>
 
             {/* ---------- LATEST READINGS TILE ---------- */}
-            {showLatestReadingsTile && latestRead && (
+            {showLatestReadingsTile && (
               <PlantLatestReadingsTile
-                latestReadings={latestRead}
+                latestReadings={latestReadSafe}
                 sensors={details.sensors}
                 onTilePress={() => goHistory()}
                 onMetricPress={(metric) => goHistory(metric)}
