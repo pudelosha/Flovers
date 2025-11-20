@@ -1,6 +1,5 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\plant-details\screens\PlantDetailsScreen.tsx
 import React, {
-  useEffect,
   useMemo,
   useState,
   useRef,
@@ -9,7 +8,6 @@ import React, {
 import {
   View,
   Text,
-  ActivityIndicator,
   Alert,
   ScrollView,
   PermissionsAndroid,
@@ -62,6 +60,7 @@ import CameraRoll from "@react-native-camera-roll/camera-roll";
 
 // Shared toast
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 export default function PlantDetailsScreen() {
   const nav = useNavigation();
@@ -90,6 +89,9 @@ export default function PlantDetailsScreen() {
     "default" | "success" | "error"
   >("default");
 
+  // Used to force-remount child tiles when data is refreshed (e.g. reset 3-dot menu state)
+  const [refreshCounter, setRefreshCounter] = useState(0);
+
   const showToast = (
     message: string,
     variant: "default" | "success" | "error" = "default"
@@ -99,7 +101,7 @@ export default function PlantDetailsScreen() {
     setToastVisible(true);
   };
 
-  // Helper to load / reload details (used on first mount and after completion)
+  // Helper to load / reload details (used on focus and after completion)
   const loadDetails = useCallback(async () => {
     if (!qrFromNav && !idFromNav) {
       throw new Error("No plant id or QR code provided.");
@@ -113,27 +115,6 @@ export default function PlantDetailsScreen() {
       setDetails(full);
     }
   }, [qrFromNav, idFromNav]);
-
-  // Fetch composite data (plant + readings + reminders + device)
-  useEffect(() => {
-    let isMounted = true;
-    (async () => {
-      try {
-        setLoading(true);
-        setError("");
-        await loadDetails();
-      } catch (e: any) {
-        if (!isMounted) return;
-        setError(e?.message || "Failed to load plant.");
-        setDetails(null);
-      } finally {
-        if (isMounted) setLoading(false);
-      }
-    })();
-    return () => {
-      isMounted = false;
-    };
-  }, [loadDetails]);
 
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || "";
@@ -190,7 +171,7 @@ export default function PlantDetailsScreen() {
     );
   };
 
-  // ---------- ENTER/EXIT CONTENT ANIMATION ----------
+  // ---------- ENTER/EXIT CONTENT ANIMATION + REFRESH ON FOCUS ----------
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({
@@ -204,6 +185,27 @@ export default function PlantDetailsScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      let isActive = true;
+
+      const run = async () => {
+        try {
+          setLoading(true);
+          setError("");
+          await loadDetails();
+          if (isActive) {
+            // bump counter so children (e.g. Reminders tile) remount and reset internal state
+            setRefreshCounter((c) => c + 1);
+          }
+        } catch (e: any) {
+          if (!isActive) return;
+          setError(e?.message || "Failed to load plant.");
+          setDetails(null);
+        } finally {
+          if (isActive) setLoading(false);
+        }
+      };
+
+      // animate in on focus (same as Profile)
       Animated.timing(entry, {
         toValue: 1,
         duration: 220,
@@ -211,15 +213,26 @@ export default function PlantDetailsScreen() {
         useNativeDriver: true,
       }).start();
 
+      // refresh data whenever the screen gains focus
+      run();
+
+      // animate out on blur + clean up transient UI
       return () => {
+        isActive = false;
+
         Animated.timing(entry, {
           toValue: 0,
           duration: 160,
           easing: Easing.in(Easing.cubic),
           useNativeDriver: true,
         }).start();
+
+        setToastVisible(false);
+        setCompleteModalVisible(false);
+        setCompleteReminderId(null);
+        setCompleteNote("");
       };
-    }, [entry])
+    }, [entry, loadDetails])
   );
   // ----------------------------------------------------
 
@@ -273,6 +286,7 @@ export default function PlantDetailsScreen() {
 
       // Refresh the plant details (and thus the Reminders tile)
       await loadDetails();
+      setRefreshCounter((c) => c + 1); // ensure 3-dot menu state resets as well
 
       // Use shared toast instead of Alert
       showToast("Reminder marked as complete.", "success");
@@ -286,6 +300,8 @@ export default function PlantDetailsScreen() {
       setLoading(false);
     }
   };
+
+  const isInitialLoading = loading && !details && !error;
 
   return (
     <View style={{ flex: 1 }}>
@@ -306,11 +322,9 @@ export default function PlantDetailsScreen() {
           ],
         }}
       >
-        {loading ? (
-          <View style={[styles.centerBox]}>
-            <ActivityIndicator />
-            <Text style={[styles.dim, { marginTop: 8 }]}>Loading…</Text>
-          </View>
+        {isInitialLoading ? (
+          // Shared centered spinner while the plant details are loading for the first time
+          <CenteredSpinner />
         ) : error ? (
           <View style={styles.centerBox}>
             <Text style={styles.title}>Error</Text>
@@ -326,7 +340,7 @@ export default function PlantDetailsScreen() {
             contentContainerStyle={{
               paddingBottom: 24,
               paddingHorizontal: 16,
-              // 🔧 Match Home list top padding
+              // Match Home list top padding
               paddingTop: 21,
             }}
             showsVerticalScrollIndicator={false}
@@ -349,6 +363,7 @@ export default function PlantDetailsScreen() {
             {/* ---------- REMINDERS TILE ---------- */}
             {reminders.length > 0 && (
               <PlantRemindersTile
+                key={refreshCounter} // remount on refresh so 3-dot menu closes
                 reminders={reminders}
                 onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
                 onEditReminder={(reminderId) => {
@@ -400,6 +415,11 @@ export default function PlantDetailsScreen() {
           </ScrollView>
         )}
       </Animated.View>
+
+      {/* Overlay spinner when refreshing while details are already shown */}
+      {loading && details && !error && (
+        <CenteredSpinner overlay size={36} color="#FFFFFF" />
+      )}
 
       {/* Complete-with-note modal for Plant Reminders */}
       <CompleteTaskModal
