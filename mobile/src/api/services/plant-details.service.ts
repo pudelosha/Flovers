@@ -1,5 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\api\services\plant-details.service.ts
-
 import {
   fetchPlantInstanceDetail,
   fetchPlantByQr,
@@ -31,21 +29,19 @@ function createDummyReminders(): PlantReminderSummary[] {
   return [
     {
       id: "r1",
-      title: "Watering",
+      type: "watering",
       when: "in 2 days",
-      icon: "watering-can-outline",
+      // taskId: "home-task-1", // optional, fill when wiring to real Home tasks
     },
     {
       id: "r2",
-      title: "Fertilize",
+      type: "fertilize",
       when: "next week",
-      icon: "sprout-outline",
     },
     {
       id: "r3",
-      title: "Repot check",
+      type: "repot",
       when: "in 2 months",
-      icon: "pot-outline",
     },
   ];
 }

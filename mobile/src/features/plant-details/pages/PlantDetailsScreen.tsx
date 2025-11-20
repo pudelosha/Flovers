@@ -47,6 +47,13 @@ import type {
 } from "../types/plant-details.types";
 
 import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
+import PlantRemindersTile from "../components/PlantRemindersTile";
+
+// Reuse CompleteTaskModal from Home for the "mark as complete" flow
+import CompleteTaskModal from "../../home/components/CompleteTaskModal";
+
+// If you want to hook into Home tasks for completion:
+import { markHomeTaskComplete } from "../../../api/services/home.service";
 
 // QR tile bits
 import QRCode from "react-native-qrcode-svg";
@@ -66,26 +73,36 @@ export default function PlantDetailsScreen() {
   const [details, setDetails] = useState<PlantDetailsComposite | null>(null);
   const [error, setError] = useState<string>("");
 
+  // "Mark as complete" modal state for reminders
+  const [completeModalVisible, setCompleteModalVisible] = useState(false);
+  const [completeReminderId, setCompleteReminderId] = useState<string | null>(
+    null
+  );
+  const [completeNote, setCompleteNote] = useState("");
+
+  // Helper to load / reload details (used on first mount and after completion)
+  const loadDetails = useCallback(async () => {
+    if (!qrFromNav && !idFromNav) {
+      throw new Error("No plant id or QR code provided.");
+    }
+
+    if (qrFromNav) {
+      const full = await fetchPlantDetailsByQr(qrFromNav);
+      setDetails(full);
+    } else if (idFromNav) {
+      const full = await fetchPlantDetailsById(Number(idFromNav));
+      setDetails(full);
+    }
+  }, [qrFromNav, idFromNav]);
+
   // Fetch composite data (plant + readings + reminders + device)
   useEffect(() => {
     let isMounted = true;
-
     (async () => {
       try {
         setLoading(true);
         setError("");
-
-        if (qrFromNav) {
-          const full = await fetchPlantDetailsByQr(qrFromNav);
-          if (!isMounted) return;
-          setDetails(full);
-        } else if (idFromNav) {
-          const full = await fetchPlantDetailsById(Number(idFromNav));
-          if (!isMounted) return;
-          setDetails(full);
-        } else {
-          throw new Error("No plant id or QR code provided.");
-        }
+        await loadDetails();
       } catch (e: any) {
         if (!isMounted) return;
         setError(e?.message || "Failed to load plant.");
@@ -94,11 +111,10 @@ export default function PlantDetailsScreen() {
         if (isMounted) setLoading(false);
       }
     })();
-
     return () => {
       isMounted = false;
     };
-  }, [qrFromNav, idFromNav]);
+  }, [loadDetails]);
 
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || "";
@@ -194,6 +210,54 @@ export default function PlantDetailsScreen() {
   const reminders = details?.reminders ?? [];
   const showLatestReadingsTile =
     !!details && details.deviceLinked && latestRead !== null;
+
+  // --- Mark complete modal helpers ---
+  const openCompleteModal = (reminderId: string) => {
+    setCompleteReminderId(reminderId);
+    setCompleteNote("");
+    setCompleteModalVisible(true);
+  };
+
+  const closeCompleteModal = () => {
+    setCompleteModalVisible(false);
+    setCompleteReminderId(null);
+    setCompleteNote("");
+  };
+
+  const handleConfirmComplete = async () => {
+    if (!completeReminderId || !details) {
+      closeCompleteModal();
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      // Try to find underlying taskId if available (for markHomeTaskComplete)
+      const r = details.reminders.find((x) => x.id === completeReminderId);
+      if (r?.taskId) {
+        await markHomeTaskComplete(r.taskId, completeNote);
+      } else {
+        // If you later add a dedicated reminders.complete API,
+        // call it here instead.
+      }
+
+      closeCompleteModal();
+
+      // Refresh the plant details (and thus the Reminders tile)
+      await loadDetails();
+
+      Alert.alert("Marked as complete", "This reminder has been marked complete.");
+    } catch (e: any) {
+      closeCompleteModal();
+      Alert.alert(
+        "Complete failed",
+        e?.message ? String(e.message) : "Could not complete this reminder."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -308,7 +372,7 @@ export default function PlantDetailsScreen() {
               </View>
             </GlassFrame>
 
-            {/* ---------- LATEST READINGS TILE (shared look, dynamic metrics) ---------- */}
+            {/* ---------- LATEST READINGS TILE ---------- */}
             {showLatestReadingsTile && latestRead && (
               <PlantLatestReadingsTile
                 latestReadings={latestRead}
@@ -318,52 +382,27 @@ export default function PlantDetailsScreen() {
               />
             )}
 
-            {/* ---------- REMINDERS FRAME ---------- */}
-            <GlassFrame>
-              <View style={styles.rowBetween}>
-                <Text style={styles.h2}>Reminders</Text>
-                <Pressable
-                  onPress={() => nav.navigate("Reminders" as never)}
-                  style={styles.linkBtn}
-                >
-                  <Text style={styles.linkText}>View all</Text>
-                </Pressable>
-              </View>
-
-              {reminders.length === 0 ? (
-                <Text style={styles.dim}>No reminders yet.</Text>
-              ) : (
-                <View style={{ marginTop: 6 }}>
-                  {reminders.map((r) => (
-                    <View key={r.id} style={styles.remRow}>
-                      <View style={styles.remIcon}>
-                        <MaterialCommunityIcons
-                          name={r.icon as any}
-                          size={18}
-                          color="#FFFFFF"
-                        />
-                      </View>
-                      <View style={{ flex: 1 }}>
-                        <Text style={styles.remTitle}>{r.title}</Text>
-                        <Text style={styles.remWhen}>{r.when}</Text>
-                      </View>
-                      <Pressable
-                        onPress={() => {
-                          // TODO: open reminder details/edit for this specific plant
-                        }}
-                        hitSlop={8}
-                      >
-                        <MaterialCommunityIcons
-                          name="chevron-right"
-                          size={20}
-                          color="#FFFFFF"
-                        />
-                      </Pressable>
-                    </View>
-                  ))}
-                </View>
-              )}
-            </GlassFrame>
+            {/* ---------- REMINDERS TILE ---------- */}
+            {reminders.length > 0 && (
+              <PlantRemindersTile
+                reminders={reminders}
+                onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
+                onEditReminder={(reminderId) => {
+                  // IMPORTANT: this must be the real reminder ID
+                  // for the Reminders screen to open the edit form.
+                  nav.navigate(
+                    "Reminders" as never,
+                    { editReminderId: String(reminderId) } as never
+                  );
+                }}
+                onShowHistory={() => {
+                  nav.navigate(
+                    "TaskHistory" as never,
+                    { plantId: String(details.plant.id) } as never
+                  );
+                }}
+              />
+            )}
 
             {/* ---------- QR FRAME ---------- */}
             {!!qrCodeValue && (
@@ -397,6 +436,15 @@ export default function PlantDetailsScreen() {
           </ScrollView>
         )}
       </Animated.View>
+
+      {/* Complete-with-note modal for Plant Reminders */}
+      <CompleteTaskModal
+        visible={completeModalVisible}
+        note={completeNote}
+        onChangeNote={setCompleteNote}
+        onCancel={closeCompleteModal}
+        onConfirm={handleConfirmComplete}
+      />
     </View>
   );
 }
