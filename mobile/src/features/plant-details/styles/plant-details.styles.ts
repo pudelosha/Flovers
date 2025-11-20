@@ -22,8 +22,8 @@ export const s = StyleSheet.create({
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 40,
-    elevation: 40,
+    zIndex: 40,      // ⬅ bumped from 10
+    elevation: 40,   // ⬅ bumped from 10
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,

@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\PlantRemindersTile.tsx
 import React, { useState } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -69,8 +68,15 @@ export default function PlantRemindersTile({
     return null;
   }
 
+  const anyMenuOpen = !!menuOpenId;
+
   return (
-    <View style={styles.cardWrap}>
+    <View
+      style={[
+        styles.cardWrap,
+        anyMenuOpen && styles.cardWrapRaised, // 🔼 raise whole tile above others
+      ]}
+    >
       {/* Glass background */}
       <View style={s.cardGlass}>
         <BlurView
@@ -182,6 +188,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
     marginBottom: 14,
+  },
+  // 🔼 keep tile above siblings when any row menu is open
+  cardWrapRaised: {
+    zIndex: 40,
+    elevation: 40,
   },
   inner: {
     padding: 16,

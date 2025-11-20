@@ -13,7 +13,6 @@ import {
   ScrollView,
   PermissionsAndroid,
   Platform,
-  Pressable,
   StyleSheet,
   Animated,
   Easing,
@@ -56,7 +55,7 @@ import CompleteTaskModal from "../../home/components/CompleteTaskModal";
 // If you want to hook into Home tasks for completion:
 import { markHomeTaskComplete } from "../../../api/services/home.service";
 
-// QR tile bits: still used for actual saving
+// QR bits
 import RNFS from "react-native-fs";
 import CameraRoll from "@react-native-camera-roll/camera-roll";
 
@@ -83,7 +82,7 @@ export default function PlantDetailsScreen() {
   );
   const [completeNote, setCompleteNote] = useState("");
 
-  // Toast state (for QR actions)
+  // Toast state (QR + reminders)
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] = useState<
@@ -143,7 +142,7 @@ export default function PlantDetailsScreen() {
     )}`;
   }, [details, qrFromNav]);
 
-  // Save QR code (dataURL -> file -> CameraRoll) – now pure, messaging via toast
+  // Save QR code (dataURL -> file -> CameraRoll)
   const onSaveQr = async (svgRef: any) => {
     if (!svgRef?.toDataURL) {
       throw new Error("QR renderer not ready.");
@@ -274,7 +273,8 @@ export default function PlantDetailsScreen() {
       // Refresh the plant details (and thus the Reminders tile)
       await loadDetails();
 
-      Alert.alert("Marked as complete", "This reminder has been marked complete.");
+      // ✅ Use shared toast instead of Alert
+      showToast("Reminder marked as complete.", "success");
     } catch (e: any) {
       closeCompleteModal();
       Alert.alert(
@@ -439,10 +439,7 @@ export default function PlantDetailsScreen() {
                   onPressSave={async () => {
                     try {
                       await onSaveQr((global as any).__qrRef);
-                      showToast(
-                        "QR code saved to your gallery.",
-                        "success"
-                      );
+                      showToast("QR code saved to your gallery.", "success");
                     } catch (err: any) {
                       console.warn("[PlantDetails] save QR failed:", err);
                       showToast(
@@ -476,7 +473,7 @@ export default function PlantDetailsScreen() {
         onConfirm={handleConfirmComplete}
       />
 
-      {/* Toast for QR actions */}
+      {/* Toast for QR + reminders */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
