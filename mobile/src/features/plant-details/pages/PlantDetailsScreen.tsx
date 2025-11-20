@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\screens\PlantDetailsScreen.tsx
 import React, {
   useEffect,
   useMemo,
@@ -23,7 +24,6 @@ import {
   useFocusEffect,
 } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 
@@ -48,6 +48,7 @@ import type {
 import PlantLatestReadingsTile from "../components/PlantLatestReadingsTile";
 import PlantRemindersTile from "../components/PlantRemindersTile";
 import PlantQrTile from "../components/PlantQrTile";
+import PlantInfoTile from "../components/PlantInfoTile";
 
 // Reuse CompleteTaskModal from Home for the "mark as complete" flow
 import CompleteTaskModal from "../../home/components/CompleteTaskModal";
@@ -189,7 +190,7 @@ export default function PlantDetailsScreen() {
     );
   };
 
-  // ---------- ✨ ENTER/EXIT CONTENT ANIMATION ----------
+  // ---------- ENTER/EXIT CONTENT ANIMATION ----------
   const entry = useRef(new Animated.Value(0)).current;
   const contentOpacity = entry;
   const contentTranslateY = entry.interpolate({
@@ -273,7 +274,7 @@ export default function PlantDetailsScreen() {
       // Refresh the plant details (and thus the Reminders tile)
       await loadDetails();
 
-      // ✅ Use shared toast instead of Alert
+      // Use shared toast instead of Alert
       showToast("Reminder marked as complete.", "success");
     } catch (e: any) {
       closeCompleteModal();
@@ -325,78 +326,14 @@ export default function PlantDetailsScreen() {
             contentContainerStyle={{
               paddingBottom: 24,
               paddingHorizontal: 16,
-              paddingTop: 16,
+              // 🔧 Match Home list top padding
+              paddingTop: 21,
             }}
             showsVerticalScrollIndicator={false}
           >
             {/* ---------- INFO FRAME ---------- */}
             <GlassFrame>
-              <Text style={styles.h1}>
-                {details.plant.display_name ||
-                  details.plant.plant_definition?.name ||
-                  `Plant #${details.plant.id}`}
-              </Text>
-              {!!details.plant.plant_definition?.latin && (
-                <Text style={styles.latin}>
-                  {details.plant.plant_definition.latin}
-                </Text>
-              )}
-              {!!details.plant.location?.name && (
-                <Text style={styles.sub}>{details.plant.location.name}</Text>
-              )}
-
-              <View style={styles.infoGrid}>
-                {[
-                  {
-                    icon: "calendar",
-                    label: "Purchased",
-                    value: details.plant.purchase_date || "—",
-                  },
-                  {
-                    icon: "note-edit-outline",
-                    label: "Notes",
-                    value: details.plant.notes || "—",
-                  },
-                  {
-                    icon: "white-balance-sunny",
-                    label: "Light",
-                    value: details.plant.light_level || "—",
-                  },
-                  {
-                    icon: "compass-outline",
-                    label: "Orientation",
-                    value: details.plant.orientation || "—",
-                  },
-                  {
-                    icon: "tape-measure",
-                    label: "Distance",
-                    value:
-                      (details.plant.distance_cm ?? "—") +
-                      (details.plant.distance_cm != null ? " cm" : ""),
-                  },
-                  {
-                    icon: "pot-outline",
-                    label: "Pot / Soil",
-                    value:
-                      [details.plant.pot_material, details.plant.soil_mix]
-                        .filter(Boolean)
-                        .join(" • ") || "—",
-                  },
-                ].map((it, i) => (
-                  <View key={i} style={styles.infoRow}>
-                    <MaterialCommunityIcons
-                      name={it.icon as any}
-                      size={16}
-                      color="#FFFFFF"
-                      style={{ marginRight: 8 }}
-                    />
-                    <Text style={styles.infoLabel}>{it.label}:</Text>
-                    <Text style={styles.infoValue} numberOfLines={2}>
-                      {it.value}
-                    </Text>
-                  </View>
-                ))}
-              </View>
+              <PlantInfoTile plant={details.plant} />
             </GlassFrame>
 
             {/* ---------- LATEST READINGS TILE ---------- */}
