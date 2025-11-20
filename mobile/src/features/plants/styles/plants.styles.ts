@@ -65,17 +65,22 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // ---------- TILES: blur + white tint + thin border (match Profile) ----------
+  // ---------- TILES ----------
   cardWrap: {
     height: 96,
     borderRadius: 28,
-    overflow: "visible",
+    overflow: "visible", // allow submenu to escape
     position: "relative",
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowRadius: 16,
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
+  },
+  // raised when menu is open (like Home)
+  cardWrapRaised: {
+    zIndex: 30,
+    elevation: 30,
   },
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
@@ -107,7 +112,12 @@ export const s = StyleSheet.create({
     fontStyle: "italic",
     marginTop: 2,
   },
-  location: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12, marginTop: 2 },
+  location: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    fontSize: 12,
+    marginTop: 2,
+  },
 
   menuBtn: {
     width: 36,
@@ -119,13 +129,13 @@ export const s = StyleSheet.create({
     borderWidth: 0,
   },
 
-  // MENU SHEET
+  // MENU SHEET — same layering as Home
   menuSheet: {
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 10,
-    elevation: 10,
+    zIndex: 40,
+    elevation: 40,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
@@ -182,7 +192,7 @@ export const s = StyleSheet.create({
     paddingTop: 16,
   },
 
-  // Flat, borderless inputs/dropdowns
+  // inputs/dropdowns
   input: {
     marginHorizontal: 16,
     marginBottom: 10,
@@ -247,7 +257,7 @@ export const s = StyleSheet.create({
     marginBottom: 10,
   },
 
-  /* ---------- EMPTY STATE (match Reminders empty card) ---------- */
+  /* ---------- EMPTY STATE ---------- */
   emptyWrap: { marginTop: 0 },
   emptyGlass: {
     borderRadius: 28,
@@ -265,8 +275,18 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.20)",
   },
   emptyInner: { padding: 16, alignItems: "center" },
-  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyTitle: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 8,
+    textAlign: "center",
+  },
   emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
-  emptyText: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
-  inlineBold: { color: "#FFFFFF", fontWeight: "800" }
+  emptyText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "600",
+    lineHeight: 18,
+  },
+  inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });

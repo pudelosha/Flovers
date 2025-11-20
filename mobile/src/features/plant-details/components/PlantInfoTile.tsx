@@ -55,13 +55,16 @@ export default function PlantInfoTile({ plant }: Props) {
               (plant.distance_cm ?? "—") +
               (plant.distance_cm != null ? " cm" : ""),
           },
+          // 🔹 Split Pot and Soil into two rows
           {
             icon: "pot-outline",
-            label: "Pot / Soil",
-            value:
-              [plant.pot_material, plant.soil_mix]
-                .filter(Boolean)
-                .join(" • ") || "—",
+            label: "Pot",
+            value: plant.pot_material || "—",
+          },
+          {
+            icon: "shovel",
+            label: "Soil",
+            value: plant.soil_mix || "—",
           },
         ].map((it, i) => (
           <View key={i} style={styles.infoRow}>

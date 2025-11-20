@@ -1,3 +1,4 @@
+// src/features/plants/components/PlantMenu.tsx
 import React from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -7,6 +8,7 @@ type Props = {
   onEdit: () => void;
   onReminders: () => void;
   onDelete: () => void;
+  onShowQr: () => void;
 };
 
 function MenuItem({
@@ -28,17 +30,38 @@ function MenuItem({
         color={danger ? "#FF6B6B" : "#FFFFFF"}
         style={{ marginRight: 8 }}
       />
-      <Text style={[s.menuItemText, danger && { color: "#FF6B6B" }]}>{label}</Text>
+      <Text style={[s.menuItemText, danger && { color: "#FF6B6B" }]}>
+        {label}
+      </Text>
     </Pressable>
   );
 }
 
-export default function PlantMenu({ onEdit, onReminders, onDelete }: Props) {
+export default function PlantMenu({
+  onEdit,
+  onReminders,
+  onDelete,
+  onShowQr,
+}: Props) {
   return (
     <View style={s.menuSheet} pointerEvents="auto">
       <MenuItem label="Edit plant" icon="pencil-outline" onPress={onEdit} />
-      <MenuItem label="Show reminders" icon="bell-outline" onPress={onReminders} />
-      <MenuItem label="Delete plant" icon="trash-can-outline" danger onPress={onDelete} />
+      <MenuItem
+        label="Show reminders"
+        icon="bell-outline"
+        onPress={onReminders}
+      />
+      <MenuItem
+        label="Show QR code"
+        icon="qrcode"
+        onPress={onShowQr}
+      />
+      <MenuItem
+        label="Delete plant"
+        icon="trash-can-outline"
+        danger
+        onPress={onDelete}
+      />
     </View>
   );
 }

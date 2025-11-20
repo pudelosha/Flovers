@@ -1,7 +1,9 @@
+// src/features/plants/components/PlantTile.tsx
 import React from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
@@ -15,6 +17,7 @@ type Props = {
   onEdit: () => void;
   onReminders: () => void;
   onDelete: () => void;
+  onShowQr: () => void;
 };
 
 export default function PlantTile({
@@ -25,10 +28,11 @@ export default function PlantTile({
   onEdit,
   onReminders,
   onDelete,
+  onShowQr,
 }: Props) {
   return (
-    <View style={s.cardWrap}>
-      {/* Glass: same recipe as Profile (blur 20 + white tint + thin border) */}
+    <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
+      {/* Glass: blur + tint + border */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -47,9 +51,19 @@ export default function PlantTile({
           onPress={onPressBody}
           android_ripple={{ color: "rgba(255,255,255,0.08)" }}
         >
-          <Text style={s.plantName} numberOfLines={1}>{plant.name}</Text>
-          {!!plant.latin && <Text style={s.latin} numberOfLines={1}>{plant.latin}</Text>}
-          {!!plant.location && <Text style={s.location} numberOfLines={1}>{plant.location}</Text>}
+          <Text style={s.plantName} numberOfLines={1}>
+            {plant.name}
+          </Text>
+          {!!plant.latin && (
+            <Text style={s.latin} numberOfLines={1}>
+              {plant.latin}
+            </Text>
+          )}
+          {!!plant.location && (
+            <Text style={s.location} numberOfLines={1}>
+              {plant.location}
+            </Text>
+          )}
         </Pressable>
 
         <Pressable
@@ -58,12 +72,21 @@ export default function PlantTile({
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
           hitSlop={8}
         >
-          <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            size={20}
+            color="#FFFFFF"
+          />
         </Pressable>
       </View>
 
       {isMenuOpen && (
-        <PlantMenu onEdit={onEdit} onReminders={onReminders} onDelete={onDelete} />
+        <PlantMenu
+          onEdit={onEdit}
+          onReminders={onReminders}
+          onDelete={onDelete}
+          onShowQr={onShowQr}
+        />
       )}
     </View>
   );
