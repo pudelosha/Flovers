@@ -41,6 +41,17 @@ function hexToRgba(hex?: string, alpha = 1) {
   const b = bigint & 255;
   return `rgba(${r},${g},${b},${alpha})`;
 }
+
+/** Same format as Home TaskTile: dd.mm.yyyy */
+function formatDate(d: string | Date | null | undefined): string {
+  if (!d) return "";
+  const dt = d instanceof Date ? d : new Date(d);
+  if (Number.isNaN(+dt)) return "";
+  const dd = String(dt.getDate()).padStart(2, "0");
+  const mm = String(dt.getMonth() + 1).padStart(2, "0");
+  const yyyy = dt.getFullYear();
+  return `${dd}.${mm}.${yyyy}`;
+}
 /* --------------------------------------------- */
 
 type Props = {
@@ -74,7 +85,7 @@ export default function PlantRemindersTile({
     <View
       style={[
         styles.cardWrap,
-        anyMenuOpen && styles.cardWrapRaised, // 🔼 raise whole tile above others
+        anyMenuOpen && styles.cardWrapRaised, // keep menu above other tiles
       ]}
     >
       {/* Glass background */}
@@ -101,6 +112,8 @@ export default function PlantRemindersTile({
           const icon = ICON_BY_TYPE[displayType] ?? "calendar";
 
           const isOpen = menuOpenId === r.id;
+
+          const dateSuffix = r.dueDate ? `     ${formatDate(r.dueDate)}` : "";
 
           return (
             <View
@@ -129,6 +142,7 @@ export default function PlantRemindersTile({
                   </Text>
                   <Text style={styles.whenText} numberOfLines={1}>
                     {r.when}
+                    {dateSuffix}
                   </Text>
                 </View>
               </View>
@@ -189,7 +203,6 @@ const styles = StyleSheet.create({
     elevation: 8,
     marginBottom: 14,
   },
-  // 🔼 keep tile above siblings when any row menu is open
   cardWrapRaised: {
     zIndex: 40,
     elevation: 40,

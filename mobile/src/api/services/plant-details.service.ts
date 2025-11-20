@@ -120,12 +120,14 @@ function mapHomeTaskToReminderSummary(task: HomeTask): PlantReminderSummary | nu
 
   const type = toPlantReminderType((task as any).type);
   const when = (task as any).due || "";
+  const dueDate = (task as any).dueDate ?? null;
 
   return {
     id: String(baseId),
     taskId: String(task.id),
     type,
     when,
+    dueDate,
   };
 }
 

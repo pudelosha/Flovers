@@ -53,6 +53,8 @@ export type PlantReminderSummary = {
   type: PlantReminderType;
   /** Human-friendly due text, e.g. "Due today", "Due in 2 days", "Overdue by 1 day" */
   when: string;
+  /** Raw due date coming from HomeTask (string or Date), used for "16.12.2025" formatting */
+  dueDate?: string | Date | null;
 };
 
 /**
