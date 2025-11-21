@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
@@ -60,7 +60,10 @@ type Props = {
   // navigation / actions
   onMarkComplete: (reminderId: string) => void;
   onEditReminder: (reminderId: string) => void;
-  onShowHistory: (reminderId: string) => void;
+  onShowHistory: () => void;
+
+  /** Tick value from parent used to collapse any open 3-dot menu on scroll */
+  collapseMenusSignal?: number;
 };
 
 export default function PlantRemindersTile({
@@ -68,12 +71,18 @@ export default function PlantRemindersTile({
   onMarkComplete,
   onEditReminder,
   onShowHistory,
+  collapseMenusSignal,
 }: Props) {
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
   const toggleMenu = (id: string) => {
     setMenuOpenId((curr) => (curr === id ? null : id));
   };
+
+  // Close any open menu whenever parent bumps the signal (e.g. on scroll)
+  useEffect(() => {
+    setMenuOpenId(null);
+  }, [collapseMenusSignal]);
 
   if (!reminders || reminders.length === 0) {
     return null;
@@ -179,7 +188,7 @@ export default function PlantRemindersTile({
                   }}
                   onShowHistory={() => {
                     setMenuOpenId(null);
-                    onShowHistory(r.id);
+                    onShowHistory();
                   }}
                 />
               )}

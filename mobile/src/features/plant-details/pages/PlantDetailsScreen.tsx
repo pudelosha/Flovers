@@ -92,6 +92,12 @@ export default function PlantDetailsScreen() {
   // Used to force-remount child tiles when data is refreshed (e.g. reset 3-dot menu state)
   const [refreshCounter, setRefreshCounter] = useState(0);
 
+  // Used to tell PlantRemindersTile to collapse its menus on scroll
+  const [dismissMenusTick, setDismissMenusTick] = useState(0);
+
+  // ScrollView ref so we can always jump back to top on focus
+  const scrollRef = useRef<ScrollView | null>(null);
+
   const showToast = (
     message: string,
     variant: "default" | "success" | "error" = "default"
@@ -195,6 +201,11 @@ export default function PlantDetailsScreen() {
           if (isActive) {
             // bump counter so children (e.g. Reminders tile) remount and reset internal state
             setRefreshCounter((c) => c + 1);
+
+            // ⬆️ Always jump to the TOP of the page when this screen gains focus
+            requestAnimationFrame(() => {
+              scrollRef.current?.scrollTo({ y: 0, animated: false });
+            });
           }
         } catch (e: any) {
           if (!isActive) return;
@@ -337,6 +348,7 @@ export default function PlantDetailsScreen() {
           </View>
         ) : (
           <ScrollView
+            ref={scrollRef}
             contentContainerStyle={{
               paddingBottom: 24,
               paddingHorizontal: 16,
@@ -344,6 +356,10 @@ export default function PlantDetailsScreen() {
               paddingTop: 21,
             }}
             showsVerticalScrollIndicator={false}
+            // ❷ Hide any open 3-dot menus when the user starts scrolling
+            onScrollBeginDrag={() =>
+              setDismissMenusTick((t) => t + 1)
+            }
           >
             {/* ---------- INFO FRAME ---------- */}
             <GlassFrame>
@@ -364,6 +380,7 @@ export default function PlantDetailsScreen() {
             {reminders.length > 0 && (
               <PlantRemindersTile
                 key={refreshCounter} // remount on refresh so 3-dot menu closes
+                collapseMenusSignal={dismissMenusTick} // ⬅ NEW: close menus on scroll
                 reminders={reminders}
                 onMarkComplete={(reminderId) => openCompleteModal(reminderId)}
                 onEditReminder={(reminderId) => {

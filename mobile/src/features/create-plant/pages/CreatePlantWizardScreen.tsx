@@ -1,4 +1,5 @@
-﻿import React, { useRef, useState, useEffect } from "react";
+﻿// screens/CreatePlantWizardScreen.tsx (or wherever this file lives)
+import React, { useRef, useState, useEffect } from "react";
 import { View, ScrollView, Text, Animated, Easing } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -23,7 +24,8 @@ import Step09_Creating from "../steps/Step09_Creating";
 import PreviousNextBar from "../components/PreviousNextBar";
 import AddLocationModal from "../components/modals/AddLocationModal";
 import MeasureExposureModal from "../components/modals/MeasureExposureModal";
-import type { LocationCategory } from "../types/create-plant.types";
+import PlantScannerModal from "../components/modals/PlantScannerModal";
+import type { LocationCategory, Suggestion } from "../types/create-plant.types";
 
 /** Order used to infer direction for step transition animations */
 const STEPS_ORDER = [
@@ -94,6 +96,22 @@ function WizardBody() {
   // ---------- EXPOSURE MEASURE MODAL STATE (shared with Step 4) ----------
   const [measureModalOpen, setMeasureModalOpen] = useState(false);
 
+  // ---------- SCANNER MODAL STATE (shared with Step 1) ----------
+  const [scannerModalOpen, setScannerModalOpen] = useState(false);
+  const scannerResultHandlerRef = useRef<((plant: Suggestion) => void) | null>(null);
+
+  const registerScannerResultHandler = React.useCallback(
+    (fn: (plant: Suggestion) => void) => {
+      scannerResultHandlerRef.current = fn;
+    },
+    []
+  );
+
+  const handleScanResult = (plant: Suggestion) => {
+    scannerResultHandlerRef.current?.(plant);
+    setScannerModalOpen(false);
+  };
+
   // Close modals automatically if user leaves their steps
   useEffect(() => {
     if (state.step !== "location") {
@@ -101,6 +119,9 @@ function WizardBody() {
     }
     if (state.step !== "exposure") {
       setMeasureModalOpen(false);
+    }
+    if (state.step !== "selectPlant") {
+      setScannerModalOpen(false);
     }
   }, [state.step]);
 
@@ -163,6 +184,8 @@ function WizardBody() {
               onScrollToTop={scrollTop}
               freshOpen={freshOpen}
               onCleared={() => setFreshOpen(false)}
+              onOpenScanner={() => setScannerModalOpen(true)}
+              onRegisterScanResultHandler={registerScannerResultHandler}
             />
           )}
           {state.step === "traits" && <Step02_PlantTraits />}
@@ -210,18 +233,19 @@ function WizardBody() {
         bottomOffset={floatingBottomOffset}
         hidden={
           (locationModalOpen && state.step === "location") ||
-          (measureModalOpen && state.step === "exposure")
+          (measureModalOpen && state.step === "exposure") ||
+          (scannerModalOpen && state.step === "selectPlant")
         }
       />
 
-      {/* Location modal overlay (same pattern as Reminders / EditPlant modals) */}
+      {/* Location modal overlay */}
       <AddLocationModal
         visible={locationModalOpen && state.step === "location"}
         onClose={() => setLocationModalOpen(false)}
         onCreate={handleLocationCreate}
       />
 
-      {/* Measure exposure modal – same shell as AddLocation, lives at screen level */}
+      {/* Measure exposure modal */}
       <MeasureExposureModal
         visible={measureModalOpen && state.step === "exposure"}
         onClose={() => setMeasureModalOpen(false)}
@@ -230,6 +254,13 @@ function WizardBody() {
           if (orientation) actions.setOrientation(orientation);
         }}
       />
+
+      {/* Scanner modal – now at screen level */}
+      <PlantScannerModal
+        visible={scannerModalOpen && state.step === "selectPlant"}
+        onClose={() => setScannerModalOpen(false)}
+        onPlantDetected={handleScanResult}
+      />
     </>
   );
 }
@@ -237,7 +268,6 @@ function WizardBody() {
 export default function CreatePlantWizardScreen() {
   return (
     <CreatePlantProvider>
-      {/* Reset state whenever this screen regains focus */}
       <ResetOnFocus />
 
       <View style={{ flex: 1 }}>

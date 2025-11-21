@@ -1,5 +1,5 @@
 ﻿// steps/Step01_SelectPlant.tsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { View, Pressable, ActivityIndicator } from "react-native";
 import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
@@ -9,7 +9,10 @@ import { useNavigation } from "@react-navigation/native";
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
+import {
+  fetchPopularPlants,
+  fetchPlantSearchIndex,
+} from "../../../api/services/plant-definitions.service";
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import SafeImage from "../../../shared/ui/SafeImage";
 
@@ -22,16 +25,26 @@ import {
   DIFFICULTY_LABEL_BY_LEVEL,
 } from "../constants/create-plant.constants";
 
+type Props = {
+  onScrollToTop: () => void;
+  freshOpen?: boolean;
+  onCleared?: () => void;
+
+  // open scanner modal at screen level
+  onOpenScanner: () => void;
+
+  // register handler that receives recognized plant from modal
+  onRegisterScanResultHandler: (fn: (plant: Suggestion) => void) => void;
+};
+
 export default function Step01_SelectPlant({
   onScrollToTop,
   freshOpen = false,
   onCleared,
-}: {
-  onScrollToTop: () => void;
-  freshOpen?: boolean;
-  onCleared?: () => void;
-}) {
-  const navigation = useNavigation<any>();
+  onOpenScanner,
+  onRegisterScanResultHandler,
+}: Props) {
+  const navigation = useNavigation<any>(); // kept in case used elsewhere
   const { state, actions } = useCreatePlantWizard();
 
   const initialQuery = useMemo(
@@ -114,6 +127,27 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
+  // local handler for recognized plant (used by modal via registration)
+  const onScanPlantDetected = useCallback(
+    (item: Suggestion) => {
+      setQuery(item.name);
+      setShowSuggestions(false);
+      actions.setSelectedPlant({
+        id: item.id,
+        name: item.name,
+        latin: item.latin,
+        predefined: true,
+      });
+      onScrollToTop();
+    },
+    [actions, onScrollToTop]
+  );
+
+  // register this handler with the parent (screen)
+  useEffect(() => {
+    onRegisterScanResultHandler(onScanPlantDetected);
+  }, [onRegisterScanResultHandler, onScanPlantDetected]);
+
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass}>
@@ -131,14 +165,24 @@ export default function Step01_SelectPlant({
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Select a plant</Text>
         <Text style={wiz.subtitle}>
-          Optional step — you can pick a known plant to auto-prefill care, or just continue.
+          You can search our full plant library, pick from the popular list, or scan a
+          plant using your camera. You can also skip this step, but selecting a plant
+          lets us automatically suggest care tasks like watering for you.
         </Text>
 
         {/* Scan + Search row – both 64 high */}
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 10, marginTop: 12, marginBottom: 6 }}>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 10,
+            marginTop: 12,
+            marginBottom: 6,
+          }}
+        >
           {/* Scan button */}
           <Pressable
-            onPress={() => navigation.navigate("Scanner")}
+            onPress={onOpenScanner}
             style={{
               width: 64,
               height: 64,
@@ -152,7 +196,11 @@ export default function Step01_SelectPlant({
             accessibilityRole="button"
             accessibilityLabel="Scan Plant"
           >
-            <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
+            <MaterialCommunityIcons
+              name="image-search-outline"
+              size={22}
+              color="#FFFFFF"
+            />
           </Pressable>
 
           {/* Search field */}
@@ -183,30 +231,88 @@ export default function Step01_SelectPlant({
         ) : (
           <View style={{ paddingTop: 6, paddingBottom: 6 }}>
             {popular.map((item, idx) => (
-              <View key={item.id} style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}>
-                <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
+              <View
+                key={item.id}
+                style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}
+              >
+                <Pressable
+                  style={wiz.rowItem}
+                  onPress={() => onPickPopular(item)}
+                >
                   <SafeImage uri={item.image} style={wiz.thumb} resizeMode="cover" />
                   <View style={{ flex: 1 }}>
-                    <Text style={wiz.rowName} numberOfLines={1}>{item.name}</Text>
-                    <Text style={wiz.rowLatin} numberOfLines={1}>{item.latin}</Text>
+                    <Text style={wiz.rowName} numberOfLines={1}>
+                      {item.name}
+                    </Text>
+                    <Text style={wiz.rowLatin} numberOfLines={1}>
+                      {item.latin}
+                    </Text>
 
                     {/* 3 requirement icons + tiny labels */}
                     <View style={[wiz.tagRow, { gap: 12 }]}>
-                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons name={SUN_ICON_BY_LEVEL[item.sun]} size={16} color="rgba(255,255,255,0.95)" />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          gap: 6,
+                        }}
+                      >
+                        <MaterialCommunityIcons
+                          name={SUN_ICON_BY_LEVEL[item.sun]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text
+                          style={{
+                            color: "rgba(255,255,255,0.95)",
+                            fontWeight: "700",
+                            fontSize: 12,
+                          }}
+                        >
                           {SUN_LABEL_BY_LEVEL[item.sun]}
                         </Text>
                       </View>
-                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons name={WATER_ICON_BY_LEVEL[item.water]} size={16} color="rgba(255,255,255,0.95)" />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          gap: 6,
+                        }}
+                      >
+                        <MaterialCommunityIcons
+                          name={WATER_ICON_BY_LEVEL[item.water]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text
+                          style={{
+                            color: "rgba(255,255,255,0.95)",
+                            fontWeight: "700",
+                            fontSize: 12,
+                          }}
+                        >
                           {WATER_LABEL_BY_LEVEL[item.water]}
                         </Text>
                       </View>
-                      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
-                        <MaterialCommunityIcons name={DIFFICULTY_ICON_BY_LEVEL[item.difficulty]} size={16} color="rgba(255,255,255,0.95)" />
-                        <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          gap: 6,
+                        }}
+                      >
+                        <MaterialCommunityIcons
+                          name={DIFFICULTY_ICON_BY_LEVEL[item.difficulty]}
+                          size={16}
+                          color="rgba(255,255,255,0.95)"
+                        />
+                        <Text
+                          style={{
+                            color: "rgba(255,255,255,0.95)",
+                            fontWeight: "700",
+                            fontSize: 12,
+                          }}
+                        >
                           {DIFFICULTY_LABEL_BY_LEVEL[item.difficulty]}
                         </Text>
                       </View>
@@ -219,7 +325,14 @@ export default function Step01_SelectPlant({
         )}
 
         {errorSearch && (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>{errorSearch}</Text>
+          <Text
+            style={[
+              wiz.subtitle,
+              { color: "#ffdddd", marginTop: 6 },
+            ]}
+          >
+            {errorSearch}
+          </Text>
         )}
       </View>
     </View>
