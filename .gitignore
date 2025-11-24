@@ -38,3 +38,13 @@ mobile/ios/*.xcworkspace/
 mobile/.expo/
 mobile/.expo-shared/
 mobile/.DS_Store
+
+# ML / training
+/ml/data/
+/ml/checkpoints/
+/ml/logs/
+/ml/runs/
+/ml/__pycache__/
+/ml/.venv/
+/ml/venv/
+/ml/**/*.log
