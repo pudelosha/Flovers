@@ -65,9 +65,9 @@ export default function PlantQrModal({
               straight to the details screen of this plant{" "}
               <Text style={{ fontWeight: "800" }}>({plantName})</Text>.{"\n\n"}
               You can:
-              {"\n"}• save the QR image to your phone and{" "}
-              <Text style={{ fontWeight: "800" }}>print</Text> it,
-              {"\n"}• attach the printed label directly to the pot,
+              {"\n"}• save the QR image to your phone or email it, then print it for labeling,{" "}
+              {"\n"}• attach the printed label directly to the pot so the code is always
+              easy to access,
               {"\n"}• let anyone in your household scan the label to quickly
               open this plant in the app.
             </Text>

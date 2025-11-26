@@ -1,6 +1,13 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\scanner\pages\ScannerScreen.tsx
 import React, { useMemo, useState, useEffect, useCallback, useRef } from "react";
-import { View, StyleSheet, Platform, Pressable, Animated, Easing } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Platform,
+  Pressable,
+  Animated,
+  Easing,
+  useWindowDimensions,
+} from "react-native";
 import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
 import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
@@ -25,7 +32,6 @@ import ScannerOverlay from "../components/ScannerOverlay";
 
 function extractToken(raw: string): string {
   if (!raw) return "";
-  // try full URL first
   try {
     const maybeUrl = raw.startsWith("http") ? raw : `https://${raw}`;
     const url = new URL(maybeUrl);
@@ -34,21 +40,23 @@ function extractToken(raw: string): string {
       const token = url.searchParams.get("code") || url.searchParams.get("qr") || "";
       if (token) return token;
     }
-  } catch {
-    // not a URL — fall through to raw token check
-  }
-  // allow direct token (URL-safe base64-ish)
+  } catch {}
   if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
   return "";
 }
 
 export default function ScannerScreen() {
+  const { height: screenHeight } = useWindowDimensions();
   const isFocused = useIsFocused();
   const navigation = useNavigation<any>();
   const { hasPermission, requestPermission, openSettings } = useCameraPermission();
 
   const [active, setActive] = useState(true);
   const [lastScanned, setLastScanned] = useState<string>("");
+
+  // measured heights (below header)
+  const [contentHeight, setContentHeight] = useState(screenHeight);
+  const [infoHeight, setInfoHeight] = useState(0);
 
   const device = useCameraDevice("back");
   const instructionText = useMemo(() => SCANNER_INSTRUCTION, []);
@@ -59,7 +67,6 @@ export default function ScannerScreen() {
     })();
   }, [hasPermission, requestPermission]);
 
-  // 🔁 Reset state every time the screen gains focus, and clean up on blur
   useFocusEffect(
     useCallback(() => {
       setLastScanned("");
@@ -73,7 +80,6 @@ export default function ScannerScreen() {
 
   const onValidToken = useCallback(
     (token: string) => {
-      // stop camera to avoid double scans
       setActive(false);
       navigation.navigate("PlantDetails", { qrCode: token });
     },
@@ -86,14 +92,12 @@ export default function ScannerScreen() {
       const value = codes[0]?.value ?? "";
       if (!value) return;
 
-      // prevent overlay spam
       setLastScanned((prev) => (prev === value ? prev : value));
 
       const token = extractToken(value);
       if (token) {
         onValidToken(token);
       } else {
-        // keep camera running, show the raw value in overlay
         setActive(true);
       }
     },
@@ -101,7 +105,7 @@ export default function ScannerScreen() {
 
   const showCamera = hasPermission && !!device;
 
-  // ---------- ✨ ENTER/EXIT ANIMATION (similar feel to Login's snappy timing) ----------
+  // ---------- ENTER/EXIT ANIMATION ----------
   const entry = useRef(new Animated.Value(0)).current;
   const opacity = entry;
   const translateY = entry.interpolate({ inputRange: [0, 1], outputRange: [10, 0] });
@@ -109,7 +113,6 @@ export default function ScannerScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      // animate in
       Animated.timing(entry, {
         toValue: 1,
         duration: 220,
@@ -117,7 +120,6 @@ export default function ScannerScreen() {
         useNativeDriver: true,
       }).start();
 
-      // animate out on blur (lets the screen "flash out" slightly)
       return () => {
         Animated.timing(entry, {
           toValue: 0,
@@ -129,6 +131,17 @@ export default function ScannerScreen() {
     }, [entry])
   );
 
+  // ----- Dynamic camera frame height based on real layout -----
+  const TOP_SPACER = 5;
+  const CAM_WRAP_PADDING_TOP = 16; // from styles.camWrap
+  const BOTTOM_SPACER = 130;
+
+  const available =
+    contentHeight - infoHeight - TOP_SPACER - CAM_WRAP_PADDING_TOP - BOTTOM_SPACER;
+
+  // min 200, expand if there's more room, cap a bit so it doesn't dominate huge screens
+  const cameraHeight = Math.max(200, Math.min(available, 320));
+
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -138,12 +151,17 @@ export default function ScannerScreen() {
         showSeparator={false}
       />
 
-      {/* Animate the entire content area below the header */}
-      <Animated.View style={{ flex: 1, opacity, transform: [{ translateY }, { scale }] }}>
-        <View style={{ height: 5 }} />
+      <Animated.View
+        style={{ flex: 1, opacity, transform: [{ translateY }, { scale }] }}
+        onLayout={(e) => setContentHeight(e.nativeEvent.layout.height)}
+      >
+        <View style={{ height: TOP_SPACER }} />
 
-        {/* Instruction card — match AuthCard frosting */}
-        <View style={styles.infoWrap}>
+        {/* Instruction card */}
+        <View
+          style={styles.infoWrap}
+          onLayout={(e) => setInfoHeight(e.nativeEvent.layout.height)}
+        >
           <View style={styles.infoGlass}>
             <BlurView
               style={StyleSheet.absoluteFill}
@@ -158,23 +176,40 @@ export default function ScannerScreen() {
             <View style={styles.infoInner}>
               <Text style={styles.infoTitle}>How it works</Text>
               <Text style={styles.infoText}>{instructionText}</Text>
-              <View style={styles.exampleRow}>
-                <MaterialCommunityIcons name="link-variant" size={16} color="#FFFFFF" />
-                <Text style={styles.exampleUrl} numberOfLines={1}>
-                  flovers.app/api/plant-instances/by-qr/?code=ABcsgQQwe44ty
+
+              <Text
+                style={[
+                  styles.infoHint,
+                  { marginTop: 8, color: "#FFFFFF" },
+                ]}
+              >
+                Each plant has its own QR code. You can save it, print it as a small label,
+                attach it to the pot, and scan it here to open the plant instantly.
+              </Text>
+
+              <Text
+                style={[
+                  styles.infoHint,
+                  { marginTop: 8, color: "#FFFFFF" },
+                ]}
+              >
+                QR codes are available in:
+                {"\n"}•{" "}
+                <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
+                  Plants → tap a plant → Plant Details
                 </Text>
-              </View>
-              <Text style={styles.infoHint}>
-                We only navigate after reading a Flovers QR (or a valid token).
+                {"\n"}•{" "}
+                <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
+                  Plants → tile menu → Show QR code
+                </Text>
               </Text>
             </View>
           </View>
         </View>
 
-        {/* Camera frame — rounded + thin border + light fog */}
+        {/* Camera frame */}
         <View style={styles.camWrap}>
-          <View style={styles.camGlass}>
-            {/* Frosted panel under camera for consistency with Login */}
+          <View style={[styles.camGlass, { height: cameraHeight }]}>
             <BlurView
               style={StyleSheet.absoluteFill}
               blurType="light"
@@ -193,7 +228,6 @@ export default function ScannerScreen() {
                     isActive={active && isFocused}
                     codeScanner={codeScanner}
                   />
-                  {/* Top overlay to visually round + haze + border (no clipping) */}
                   <View style={styles.roundedMask} pointerEvents="none" />
                   <ScannerOverlay value={lastScanned} onClear={() => setLastScanned("")} />
                 </>
@@ -212,7 +246,12 @@ export default function ScannerScreen() {
                         Enable camera access in system settings to scan QR codes.
                       </Text>
                       <Pressable onPress={openSettings} style={{ marginTop: 12 }}>
-                        <Text style={[styles.placeholderHint, { textDecorationLine: "underline" }]}>
+                        <Text
+                          style={[
+                            styles.placeholderHint,
+                            { textDecorationLine: "underline" },
+                          ]}
+                        >
                           Open Settings
                         </Text>
                       </Pressable>
@@ -226,7 +265,7 @@ export default function ScannerScreen() {
           </View>
         </View>
 
-        <View style={{ height: 18 }} />
+        <View style={{ height: BOTTOM_SPACER }} />
       </Animated.View>
     </View>
   );

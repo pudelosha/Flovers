@@ -4,23 +4,20 @@ export const scannerStyles = StyleSheet.create({
   // ===== Info card =====
   infoWrap: { paddingHorizontal: 16, paddingTop: 16 },
   infoGlass: {
-    borderRadius: 28,          // match AuthCard
+    borderRadius: 28,
     overflow: "hidden",
     minHeight: 100,
-    // subtle shadow like AuthCard (Android uses elevation)
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowRadius: 16,
     shadowOffset: { width: 0, height: 8 },
     elevation: 8,
   },
-  // White tint layer reused in multiple frames
   frostTint: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.20)",
     zIndex: 1,
   },
-  // Thin border overlay
   frameBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
@@ -39,9 +36,9 @@ export const scannerStyles = StyleSheet.create({
   // ===== Camera frame =====
   camWrap: { paddingHorizontal: 16, paddingTop: 16 },
   camGlass: {
-    borderRadius: 28,          // match AuthCard
+    borderRadius: 28,
     overflow: "hidden",
-    minHeight: 320,
+    minHeight: 200,     // lower bound; actual height comes from ScannerScreen
     shadowColor: "#000",
     shadowOpacity: 0.25,
     shadowRadius: 16,
@@ -49,20 +46,16 @@ export const scannerStyles = StyleSheet.create({
     elevation: 8,
   },
 
-  // IMPORTANT: no overflow/borderRadius on camInner to avoid black preview on Android
   camInner: { flex: 1, position: "relative" },
-
-  // Let Camera fill the space
   qrCamera: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0 },
 
-  // Visual rounded frame/tint/border over the camera (no clipping)
   roundedMask: {
     position: "absolute",
     top: 0, right: 0, bottom: 0, left: 0,
     borderRadius: 28,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.2)",
-    backgroundColor: "rgba(255,255,255,0.12)", // slight fog like Login
+    backgroundColor: "rgba(255,255,255,0.12)",
     pointerEvents: "none",
     zIndex: 3,
   },
@@ -71,7 +64,6 @@ export const scannerStyles = StyleSheet.create({
   placeholderText: { color: "#FFFFFF", fontWeight: "800" },
   placeholderHint: { color: "rgba(255,255,255,0.9)", fontWeight: "600", marginTop: 6 },
 
-  // ===== Overlay styles (scan result) =====
   overlayCenter: {
     flex: 1,
     alignItems: "center",
@@ -79,7 +71,7 @@ export const scannerStyles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   overlayGlass: {
-    borderRadius: 28,      // align to main card radius
+    borderRadius: 28,
     overflow: "hidden",
     maxWidth: 520,
     width: "100%",

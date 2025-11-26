@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\scanner\components\ScannerOverlay.tsx
 import React from "react";
 import { View, Pressable, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
@@ -13,7 +14,6 @@ const ScannerOverlay: React.FC<ScannerOverlayProps> = ({ value, onClear }) => {
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
       <View style={styles.overlayCenter}>
         <View style={styles.overlayGlass}>
-          {/* Frosted blur like Login/AuthCard */}
           <BlurView
             style={StyleSheet.absoluteFill}
             blurType="light"
@@ -21,9 +21,7 @@ const ScannerOverlay: React.FC<ScannerOverlayProps> = ({ value, onClear }) => {
             overlayColor="transparent"
             reducedTransparencyFallbackColor="transparent"
           />
-          {/* White tint for readability */}
           <View pointerEvents="none" style={styles.overlayTint} />
-          {/* Thin border on top */}
           <View pointerEvents="none" style={styles.overlayBorder} />
 
           <View style={styles.overlayInner}>
