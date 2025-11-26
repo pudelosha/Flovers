@@ -25,6 +25,7 @@ import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/task-history.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-history.constants";
 import TaskHistoryTile from "../components/TaskHistoryTile";
+import TaskHistoryEmptyState from "../components/TaskHistoryEmptyState";
 import type { TaskHistoryItem } from "../types/task-history.types";
 
 // completed tasks via dedicated history service
@@ -37,13 +38,13 @@ import {
 import SortHistoryTasksModal, {
   HistorySortDir,
   HistorySortKey,
-} from "../components/SortHistoryTasksModal";
+} from "../components/modals/SortHistoryTasksModal";
 import FilterHistoryTasksModal, {
   HistoryFilters as HistoryFilterShape,
-} from "../components/FilterHistoryTasksModal";
+} from "../components/modals/FilterHistoryTasksModal";
 import DeleteHistoryTasksModal, {
   HistoryDeletePayload,
-} from "../components/DeleteHistoryTasksModal";
+} from "../components/modals/DeleteHistoryTasksModal";
 
 type RouteParams = {
   plantId?: string; // optional: when passed, show history for one plant
@@ -259,7 +260,7 @@ export default function TaskHistoryScreen() {
     return sorted;
   }, [items, filters, sortKey, sortDir]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (tiles) ----------
+  // ---------- ENTRANCE ANIMATION (tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -315,7 +316,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen && !openMenuId;
+    !loading && !sortOpen && !filterOpen && !deleteOpen;
 
   // FAB actions
   const baseFabActions = [
@@ -540,59 +541,7 @@ export default function TaskHistoryScreen() {
                 },
               ]}
             >
-              <View
-                style={{
-                  borderRadius: 28,
-                  overflow: "hidden",
-                  minHeight: 140,
-                }}
-              >
-                <BlurView
-                  style={StyleSheet.absoluteFill}
-                  blurType="light"
-                  blurAmount={20}
-                  overlayColor="transparent"
-                  reducedTransparencyFallbackColor="transparent"
-                />
-                <View
-                  pointerEvents="none"
-                  style={[
-                    StyleSheet.absoluteFill,
-                    { backgroundColor: "rgba(255,255,255,0.20)" },
-                  ]}
-                />
-                <View
-                  pointerEvents="none"
-                  style={[
-                    StyleSheet.absoluteFill,
-                    {
-                      borderRadius: 28,
-                      borderWidth: 1,
-                      borderColor: "rgba(255,255,255,0.20)",
-                    },
-                  ]}
-                />
-                <View style={s.emptyInner}>
-                  <MaterialCommunityIcons
-                    name="history"
-                    size={26}
-                    color="#FFFFFF"
-                    style={{ marginBottom: 10 }}
-                  />
-                  <Text style={s.emptyTitle}>No completed tasks yet</Text>
-                  <View style={s.emptyDescBox}>
-                    <Text style={s.emptyText}>
-                      This screen shows{" "}
-                      <Text style={s.inlineBold}>closed reminder tasks</Text> from
-                      your Home page (pending tasks are not shown).
-                      {"\n\n"}
-                      {plantIdFilter
-                        ? `Currently filtered to plant id ${plantIdFilter}.`
-                        : "Open it from a specific task to see history just for that plant."}
-                    </Text>
-                  </View>
-                </View>
-              </View>
+              <TaskHistoryEmptyState plantIdFilter={plantIdFilter} />
             </Animated.View>
           ) : null
         }

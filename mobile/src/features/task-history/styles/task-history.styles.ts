@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\task-history\styles\task-history.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -304,6 +303,26 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.16)",
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
+
+  // flat variants for sort/delete dropdowns
+  flatDropdownHeader: {
+    borderWidth: 0,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  flatDropdownList: {
+    borderWidth: 0,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  flatDropdownItem: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+  },
 
   // 50/50 ROWS (if ever needed)
   inlineRow: {

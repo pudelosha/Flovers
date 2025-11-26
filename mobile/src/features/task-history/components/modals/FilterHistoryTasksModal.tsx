@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, Pressable, TextInput, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { s } from "../styles/task-history.styles";
-import type { TaskType } from "../../home/types/home.types";
-import { ACCENT_BY_TYPE } from "../../home/constants/home.constants";
+import { s } from "../../styles/task-history.styles";
+import type { TaskType } from "../../../home/types/home.types";
+import { ACCENT_BY_TYPE } from "../../../home/constants/home.constants";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // Optional datetime picker (same pattern as Reminders)

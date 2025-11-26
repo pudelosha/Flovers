@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../styles/task-history.styles";
-import type { TaskType } from "../../home/types/home.types";
-import { ACCENT_BY_TYPE } from "../../home/constants/home.constants";
+import { s } from "../../styles/task-history.styles";
+import type { TaskType } from "../../../home/types/home.types";
+import { ACCENT_BY_TYPE } from "../../../home/constants/home.constants";
 
 export type HistoryDeleteMode = "plant" | "location" | "types" | "olderThan";
 
@@ -88,7 +88,7 @@ export default function DeleteHistoryTasksModal({
   };
 
   const canConfirm =
-    (mode === "olderThan") ||
+    mode === "olderThan" ||
     (mode === "plant" && !!selectedPlantId) ||
     (mode === "location" && !!selectedLocation) ||
     (mode === "types" && selectedTypes.length > 0);
@@ -316,7 +316,7 @@ export default function DeleteHistoryTasksModal({
           {mode === "olderThan" && (
             <View style={[s.dropdown, { marginTop: 8 }]}>
               <Pressable
-                style={[s.dropdownHeader, styles.ddHeaderFlat]}
+                style={[s.dropdownHeader, s.flatDropdownHeader]}
                 onPress={() => setDaysOpen((o) => !o)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
@@ -329,11 +329,11 @@ export default function DeleteHistoryTasksModal({
               </Pressable>
 
               {daysOpen && (
-                <View style={[s.dropdownList, styles.ddListFlat]}>
+                <View style={[s.dropdownList, s.flatDropdownList]}>
                   {DAYS_OPTIONS.map((opt) => (
                     <Pressable
                       key={opt}
-                      style={[s.dropdownItem, styles.ddItemFlat]}
+                      style={[s.dropdownItem, s.flatDropdownItem]}
                       onPress={() => {
                         setDays(opt);
                         setDaysOpen(false);
@@ -379,24 +379,6 @@ export default function DeleteHistoryTasksModal({
 }
 
 const styles = StyleSheet.create({
-  ddHeaderFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  ddListFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.10)",
-  },
-  ddItemFlat: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-  },
   helperText: {
     fontSize: 12,
     color: "rgba(255,255,255,0.75)",

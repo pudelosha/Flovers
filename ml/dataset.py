@@ -1,49 +1,98 @@
 ﻿"""
-PlantNet-300K dataset definition for training.
-TODO: update IMAGE_ROOT and METADATA_PATH usage to match your real layout.
+Dataset for PlantNet-300K based on folder structure:
+
+    .../images/train/<species_name>/image.jpg
+    .../images/test/<species_name>/image.jpg
+
+We use torchvision.datasets.ImageFolder, which:
+- scans subfolders,
+- assigns a numeric class index to each subfolder,
+- builds a list of (image_path, class_id).
+
+We also override the default image loader with a "safe_loader"
+that gracefully handles corrupted or unreadable images so that
+training does not freeze on bad files.
 """
 
-import json
 from pathlib import Path
-from typing import Tuple
 
-from PIL import Image
-import torch
-from torch.utils.data import Dataset
-from torchvision import transforms
+from PIL import Image, UnidentifiedImageError
+from torchvision import transforms, datasets
 
 
-class PlantNetDataset(Dataset):
-    def __init__(self, image_root: Path, metadata_path: Path, split: str = "train"):
-        self.image_root = Path(image_root)
-        self.metadata_path = Path(metadata_path)
-        self.split = split
+def get_train_transform():
+    """
+    Data augmentation and preprocessing used for training.
+    """
+    return transforms.Compose([
+        transforms.Resize(256),
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            mean=[0.485, 0.456, 0.406],  # standard ImageNet means
+            std=[0.229, 0.224, 0.225],   # standard ImageNet stds
+        ),
+    ])
 
-        # Expected JSON format: list of objects with keys:
-        # {"image_path": "...relative/path.jpg", "class_id": int, "split": "train"/"val"/"test"}
-        meta = json.loads(self.metadata_path.read_text())
-        self.items = [
-            (item["image_path"], item["class_id"])
-            for item in meta
-            if item["split"] == split
-        ]
 
-        self.transform = transforms.Compose([
-            transforms.Resize(256),
-            transforms.CenterCrop(224),
-            transforms.ToTensor(),
-            transforms.Normalize(
-                mean=[0.485, 0.456, 0.406],
-                std=[0.229, 0.224, 0.225],
-            ),
-        ])
+def get_val_transform():
+    """
+    Preprocessing used for validation / evaluation.
+    """
+    return transforms.Compose([
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            mean=[0.485, 0.456, 0.406],
+            std=[0.229, 0.224, 0.225],
+        ),
+    ])
 
-    def __len__(self) -> int:
-        return len(self.items)
 
-    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
-        rel_path, class_id = self.items[idx]
-        img_path = self.image_root / rel_path
-        img = Image.open(img_path).convert("RGB")
-        img = self.transform(img)
-        return img, int(class_id)
+def safe_loader(path: str) -> Image.Image:
+    """
+    Robust image loader.
+
+    - Tries to open the image and convert it to RGB.
+    - If the file is corrupted, truncated, or otherwise unreadable,
+      it returns a simple black image instead of raising or hanging.
+
+    This way, training can continue even if a few images are bad.
+    """
+    try:
+        img = Image.open(path)
+        return img.convert("RGB")
+    except (UnidentifiedImageError, OSError, IOError):
+        # Fallback: black dummy image (224x224). It won't teach the model much,
+        # but it prevents the whole training from freezing on a bad file.
+        return Image.new("RGB", (224, 224), (0, 0, 0))
+
+
+class PlantNetFolderDataset(datasets.ImageFolder):
+    """
+    Thin wrapper around torchvision.datasets.ImageFolder,
+    mainly for readability and to plug in our transforms + safe loader.
+
+    ImageFolder expects:
+      root/
+        class_0/
+          img001.jpg
+          ...
+        class_1/
+          ...
+        ...
+
+    It automatically builds:
+      - self.samples: list of (path, class_index)
+      - self.classes: list of class names (subfolder names)
+    """
+
+    def __init__(self, root: Path, train: bool = True):
+        root = Path(root)
+        transform = get_train_transform() if train else get_val_transform()
+        super().__init__(root=root, transform=transform)
+
+        # Override how images are loaded so corrupted files can't freeze training
+        self.loader = safe_loader

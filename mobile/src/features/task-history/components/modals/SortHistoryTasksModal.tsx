@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../styles/task-history.styles";
+import { s } from "../../styles/task-history.styles";
 
 export type HistorySortKey = "completedAt" | "plant" | "location";
 export type HistorySortDir = "asc" | "desc";
@@ -70,7 +70,7 @@ export default function SortHistoryTasksModal({
           <Text style={s.inputLabel}>Sort by</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              style={[s.dropdownHeader, s.flatDropdownHeader]}
               onPress={() => {
                 setDirOpen(false);
                 setKeyOpen((o) => !o);
@@ -86,7 +86,7 @@ export default function SortHistoryTasksModal({
             </Pressable>
 
             {keyOpen && (
-              <View style={[s.dropdownList, styles.ddListFlat]}>
+              <View style={[s.dropdownList, s.flatDropdownList]}>
                 {([
                   { key: "completedAt", label: "Completed date" },
                   { key: "plant", label: "Plant name" },
@@ -94,7 +94,7 @@ export default function SortHistoryTasksModal({
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    style={[s.dropdownItem, s.flatDropdownItem]}
                     onPress={() => {
                       setK(opt.key);
                       setKeyOpen(false);
@@ -114,7 +114,7 @@ export default function SortHistoryTasksModal({
           <Text style={s.inputLabel}>Direction</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={[s.dropdownHeader, styles.ddHeaderFlat]}
+              style={[s.dropdownHeader, s.flatDropdownHeader]}
               onPress={() => {
                 setKeyOpen(false);
                 setDirOpen((o) => !o);
@@ -130,14 +130,14 @@ export default function SortHistoryTasksModal({
             </Pressable>
 
             {dirOpen && (
-              <View style={[s.dropdownList, styles.ddListFlat]}>
+              <View style={[s.dropdownList, s.flatDropdownList]}>
                 {([
                   { key: "asc", label: "Ascending" },
                   { key: "desc", label: "Descending" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={[s.dropdownItem, styles.ddItemFlat]}
+                    style={[s.dropdownItem, s.flatDropdownItem]}
                     onPress={() => {
                       setD(opt.key);
                       setDirOpen(false);
@@ -179,24 +179,3 @@ export default function SortHistoryTasksModal({
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  ddHeaderFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-    backgroundColor: "rgba(255,255,255,0.12)",
-  },
-  ddListFlat: {
-    borderWidth: 0,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.10)",
-  },
-  ddItemFlat: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-  },
-});
