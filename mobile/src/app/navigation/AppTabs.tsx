@@ -218,7 +218,11 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 export default function AppTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{ headerShown: false, sceneStyle: { backgroundColor: "transparent" } }}
+      backBehavior="history"
+      screenOptions={{
+        headerShown: false,
+        sceneStyle: { backgroundColor: "transparent" },
+      }}
       tabBar={(props) => <GlassTabBar {...props} />}
       sceneContainerStyle={{
         paddingTop: 16,
@@ -250,7 +254,6 @@ export default function AppTabs() {
         options={{ tabBarStyle: { display: "flex" } }}
       />
 
-      {/* Hidden readings routes */}
       <Tab.Screen
         name="ReadingsHistory"
         component={ReadingsHistoryScreen}
@@ -282,14 +285,12 @@ export default function AppTabs() {
         options={{ tabBarStyle: { display: "flex" } }}
       />
 
-      {/* NEW: hidden TaskHistory route */}
       <Tab.Screen
         name="TaskHistory"
         component={TaskHistoryScreen}
         options={{ tabBarStyle: { display: "flex" } }}
       />
 
-      {/* NEW: hidden PlantLocations route (Locations screen) */}
       <Tab.Screen
         name="PlantLocations"
         component={LocationsScreen}
