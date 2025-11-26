@@ -25,7 +25,6 @@ import FAB from "../../../shared/ui/FAB";
 import { s } from "../styles/task-history.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/task-history.constants";
 import TaskHistoryTile from "../components/TaskHistoryTile";
-import TaskHistoryEmptyState from "../components/TaskHistoryEmptyState";
 import type { TaskHistoryItem } from "../types/task-history.types";
 
 // completed tasks via dedicated history service
@@ -46,6 +45,8 @@ import DeleteHistoryTasksModal, {
   HistoryDeletePayload,
 } from "../components/modals/DeleteHistoryTasksModal";
 
+import { useSettings } from "../../../app/providers/SettingsProvider";
+
 type RouteParams = {
   plantId?: string; // optional: when passed, show history for one plant
 };
@@ -65,6 +66,9 @@ export default function TaskHistoryScreen() {
   const route = useRoute<any>();
   const params = (route?.params || {}) as RouteParams;
   const plantIdFilter = params.plantId;
+
+  const { settings } = useSettings();
+  const fabPosition = settings.fabPosition || "right";
 
   const [items, setItems] = useState<TaskHistoryItem[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -98,10 +102,10 @@ export default function TaskHistoryScreen() {
     () =>
       Boolean(
         (filters.types && filters.types.length > 0) ||
-        filters.plantId ||
-        filters.location ||
-        filters.completedFrom ||
-        filters.completedTo
+          filters.plantId ||
+          filters.location ||
+          filters.completedFrom ||
+          filters.completedTo
       ),
     [filters]
   );
@@ -169,36 +173,32 @@ export default function TaskHistoryScreen() {
   }, [load]);
 
   // Options for plant & location dropdowns (derived from items)
-  const plantOptions = useMemo(
-    () => {
-      const map = new Map<string, string>();
-      items.forEach((item) => {
-        const pid = (item as any).plantId as string | undefined;
-        if (pid && !map.has(pid)) {
-          map.set(pid, item.plant || "Unnamed plant");
-        }
-      });
-      return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-    },
-    [items]
-  );
+  const plantOptions = useMemo(() => {
+    const map = new Map<string, string>();
+    items.forEach((item) => {
+      const pid = (item as any).plantId as string | undefined;
+      if (pid && !map.has(pid)) {
+        map.set(pid, item.plant || "Unnamed plant");
+      }
+    });
+    return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+  }, [items]);
 
-  const locationOptions = useMemo(
-    () => {
-      const set = new Set<string>();
-      items.forEach((item) => {
-        if (item.location) set.add(item.location);
-      });
-      return Array.from(set);
-    },
-    [items]
-  );
+  const locationOptions = useMemo(() => {
+    const set = new Set<string>();
+    items.forEach((item) => {
+      if (item.location) set.add(item.location);
+    });
+    return Array.from(set);
+  }, [items]);
 
   // ===== DERIVED LIST (sort + filter) =====
   const derivedItems = useMemo(() => {
     const typeSet = new Set(filters.types || []);
 
-    const fromDate = filters.completedFrom ? new Date(filters.completedFrom) : null;
+    const fromDate = filters.completedFrom
+      ? new Date(filters.completedFrom)
+      : null;
     const toDate = filters.completedTo ? new Date(filters.completedTo) : null;
     const hasFrom = fromDate && !isNaN(+fromDate);
     const hasTo = toDate && !isNaN(+toDate);
@@ -316,7 +316,7 @@ export default function TaskHistoryScreen() {
   const emptyOpacity = emptyAnim;
 
   const showFAB =
-    !loading && !sortOpen && !filterOpen && !deleteOpen;
+    !loading && !sortOpen && !filterOpen && !deleteOpen && !openMenuId;
 
   // FAB actions
   const baseFabActions = [
@@ -382,10 +382,7 @@ export default function TaskHistoryScreen() {
       showToast("History deleted", "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(
-        e?.message || "Failed to delete history",
-        "error"
-      );
+      showToast(e?.message || "Failed to delete history", "error");
     }
   };
 
@@ -400,10 +397,7 @@ export default function TaskHistoryScreen() {
       showToast("History task deleted", "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(
-        e?.message || "Failed to delete history task",
-        "error"
-      );
+      showToast(e?.message || "Failed to delete history task", "error");
     }
   };
 
@@ -541,14 +535,75 @@ export default function TaskHistoryScreen() {
                 },
               ]}
             >
-              <TaskHistoryEmptyState plantIdFilter={plantIdFilter} />
+              <View
+                style={{
+                  borderRadius: 28,
+                  overflow: "hidden",
+                  minHeight: 140,
+                }}
+              >
+                <BlurView
+                  style={StyleSheet.absoluteFill}
+                  blurType="light"
+                  blurAmount={20}
+                  overlayColor="transparent"
+                  reducedTransparencyFallbackColor="transparent"
+                />
+                <View
+                  pointerEvents="none"
+                  style={[
+                    StyleSheet.absoluteFill,
+                    { backgroundColor: "rgba(255,255,255,0.20)" },
+                  ]}
+                />
+                <View
+                  pointerEvents="none"
+                  style={[
+                    StyleSheet.absoluteFill,
+                    {
+                      borderRadius: 28,
+                      borderWidth: 1,
+                      borderColor: "rgba(255,255,255,0.20)",
+                    },
+                  ]}
+                />
+                <View style={s.emptyInner}>
+                  <MaterialCommunityIcons
+                    name="history"
+                    size={26}
+                    color="#FFFFFF"
+                    style={{ marginBottom: 10 }}
+                  />
+                  <Text style={s.emptyTitle}>No completed tasks yet</Text>
+                  <View style={s.emptyDescBox}>
+                    <Text style={s.emptyText}>
+                      This screen shows{" "}
+                      <Text style={s.inlineBold}>closed reminder tasks</Text>{" "}
+                      from your Home page (pending tasks are not shown).
+                      {"\n\n"}
+                      {plantIdFilter
+                        ? `Currently filtered to plant id ${plantIdFilter}.`
+                        : "Open it from a specific task to see history just for that plant."}
+                    </Text>
+                  </View>
+                </View>
+              </View>
             </Animated.View>
           ) : null
         }
       />
 
       {/* FAB: Sort / Filter / Delete / Clear filter / Show all history (when plantIdFilter) */}
-      {showFAB && <FAB actions={fabActions} />}
+      {showFAB && (
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setOpenMenuId(null);
+            return false;
+          }}
+        >
+          <FAB actions={fabActions} position={fabPosition} />
+        </View>
+      )}
 
       {/* Sort modal */}
       <SortHistoryTasksModal

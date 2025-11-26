@@ -15,12 +15,14 @@ import { s } from "../styles/task-history.styles";
 import type { TaskHistoryItem } from "../types/task-history.types";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../home/constants/home.constants";
 import type { TaskType } from "../../home/types/home.types";
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 // --- helpers (mirrors ReminderTile) ---
 function toDisplayType(t?: string) {
   const x = (t || "").toLowerCase();
   if (x === "water" || x === "watering") return "watering";
-  if (x === "fertilize" || x === "fertilising" || x === "fertilizing") return "fertilising";
+  if (x === "fertilize" || x === "fertilising" || x === "fertilizing")
+    return "fertilising";
   if (x === "moisture" || x === "misting") return "moisture";
   if (x === "care") return "care";
   if (x === "repot" || x === "repotting") return "repot";
@@ -43,24 +45,27 @@ function hexToRgba(hex?: string, alpha = 1) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-function formatCompletedAt(v?: string) {
-  if (!v) return "";
-  const d = new Date(v);
-  if (!(d instanceof Date) || isNaN(+d)) {
-    // already display-ready
-    return v;
-  }
-  const dd = String(d.getDate()).padStart(2, "0");
-  const mm = String(d.getMonth() + 1).padStart(2, "0");
-  const yyyy = d.getFullYear();
-  return `${dd}.${mm}.${yyyy}`;
+function formatDateWithPattern(d: Date | string, pattern: string): string {
+  const dt = d instanceof Date ? d : new Date(d);
+  if (Number.isNaN(+dt)) return "";
+
+  const dd = String(dt.getDate()).padStart(2, "0");
+  const mm = String(dt.getMonth() + 1).padStart(2, "0");
+  const yyyy = dt.getFullYear();
+
+  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+
+  return fmt
+    .replace("YYYY", String(yyyy))
+    .replace("MM", mm)
+    .replace("DD", dd);
 }
 
 type Props = {
   item: TaskHistoryItem;
   isMenuOpen: boolean;
   onToggleMenu: () => void;
-  // optional callbacks, can be wired up later from the screen
+  // optional callbacks
   onDelete?: (item: TaskHistoryItem) => void;
   onEditReminder?: (item: TaskHistoryItem) => void;
   onGoToPlant?: (item: TaskHistoryItem) => void;
@@ -78,14 +83,17 @@ export default function TaskHistoryTile({
   const [noteHeight, setNoteHeight] = useState(0);
   const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
 
+  const { settings } = useSettings();
+  const dateFormat = settings.dateFormat || "DD.MM.YYYY";
+
   const type = item.type as TaskType;
   const displayType = toDisplayType(type as any);
   const accent = ACCENT_BY_TYPE[displayType];
   const icon = ICON_BY_TYPE[displayType] ?? "calendar-check";
 
   const completedLabel = useMemo(
-    () => formatCompletedAt(item.completedAt),
-    [item.completedAt]
+    () => formatDateWithPattern(item.completedAt, dateFormat),
+    [item.completedAt, dateFormat]
   );
 
   const hasNote = !!item.note && item.note.trim().length > 0;
@@ -364,7 +372,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   compactRow: {
-    paddingTop: 8,   // keep same as base
-    paddingBottom: 4 // only tighten bottom padding a bit
+    paddingTop: 8, // keep same as base
+    paddingBottom: 4, // only tighten bottom padding a bit
   },
 });

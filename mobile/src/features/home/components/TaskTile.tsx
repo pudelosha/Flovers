@@ -7,7 +7,7 @@ import { s } from "../styles/home.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/home.constants";
 import type { Task } from "../types/home.types";
 import TaskMenu from "./TaskMenu";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type Props = {
   task: Task;
@@ -32,13 +32,13 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   // Detect overdue by the label text (e.g. "Overdue", "Overdue by 2 days")
   const isOverdue =
     typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
 
-  const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat); // 👈 NEW
+  const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat);
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
