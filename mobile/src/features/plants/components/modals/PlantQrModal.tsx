@@ -5,7 +5,7 @@ import { BlurView } from "@react-native-community/blur";
 import QRCode from "react-native-qrcode-svg";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import { s } from "../styles/plants.styles";
+import { s } from "../../styles/plants.styles";
 
 type Props = {
   visible: boolean;

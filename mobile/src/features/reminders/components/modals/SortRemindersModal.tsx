@@ -1,11 +1,12 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\SortRemindersModal.tsx
 import React from "react";
-import { View, Text, Pressable } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { s } from "../styles/plants.styles";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { s } from "../../styles/reminders.styles";
 
-export type SortKey = "plant" | "location";
-export type SortDir = "asc" | "desc";
+type SortKey = "dueDate" | "plant" | "location";
+type SortDir = "asc" | "desc";
 
 type Props = {
   visible: boolean;
@@ -16,7 +17,7 @@ type Props = {
   onReset?: () => void;
 };
 
-export default function SortPlantsModal({
+export default function SortRemindersModal({
   visible,
   sortKey,
   sortDir,
@@ -45,46 +46,51 @@ export default function SortPlantsModal({
       <Pressable style={s.promptBackdrop} onPress={onCancel} />
 
       <View style={s.promptWrap}>
-        <View style={s.promptGlass}>
+        <View style={[s.promptGlass, styles.promptGlass28]}>
           <BlurView
-            style={{ position: "absolute", inset: 0 } as any
-            }
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0 }}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          {/* Dark overlay — no white tint, no border */}
           <View
             pointerEvents="none"
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
+            // @ts-ignore
+            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
           />
         </View>
 
-        <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Sort plants</Text>
+        <View style={[s.promptInner, styles.promptInner28]}>
+          <Text style={s.promptTitle}>Sort reminders</Text>
 
-          {/* Sort key */}
+          {/* Sort key dropdown */}
+          <Text style={s.inputLabel}>Sort by</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setDirOpen(false);
                 setKeyOpen((o) => !o);
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{k === "plant" ? "Plant name" : "Location"}</Text>
+              <Text style={s.dropdownValue}>
+                {k === "dueDate" ? "Due date" : k === "plant" ? "Plant name" : "Location"}
+              </Text>
               <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
+
             {keyOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
+                  { key: "dueDate", label: "Due date" },
                   { key: "plant", label: "Plant name" },
                   { key: "location", label: "Location" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setK(opt.key);
                       setKeyOpen(false);
@@ -98,10 +104,11 @@ export default function SortPlantsModal({
             )}
           </View>
 
-          {/* Direction */}
+          {/* Direction dropdown */}
+          <Text style={s.inputLabel}>Direction</Text>
           <View style={s.dropdown}>
             <Pressable
-              style={s.dropdownHeader}
+              style={[s.dropdownHeader, styles.ddHeaderFlat]}
               onPress={() => {
                 setKeyOpen(false);
                 setDirOpen((o) => !o);
@@ -111,15 +118,16 @@ export default function SortPlantsModal({
               <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
               <MaterialCommunityIcons name={dirOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
+
             {dirOpen && (
-              <View style={s.dropdownList}>
+              <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
                   { key: "asc", label: "Ascending" },
                   { key: "desc", label: "Descending" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
-                    style={s.dropdownItem}
+                    style={[s.dropdownItem, styles.ddItemFlat]}
                     onPress={() => {
                       setD(opt.key);
                       setDirOpen(false);
@@ -135,14 +143,14 @@ export default function SortPlantsModal({
 
           <View style={s.promptButtonsRow}>
             {onReset ? (
-              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
+              <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
               </Pressable>
             ) : null}
-            <Pressable onPress={onCancel} style={s.promptBtn}>
+            <Pressable onPress={onCancel} style={[styles.btnBase]}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
-            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
+            <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
           </View>
@@ -151,3 +159,34 @@ export default function SortPlantsModal({
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  promptGlass28: { borderRadius: 28 },
+  promptInner28: { borderRadius: 28 },
+  ddHeaderFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  ddListFlat: {
+    borderWidth: 0,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.10)",
+  },
+  ddItemFlat: {
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: "rgba(255,255,255,0.16)",
+    paddingHorizontal: 14,
+    paddingVertical: 14,
+  },
+  btnBase: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  btnDanger: { backgroundColor: "rgba(255,107,107,0.22)" },
+});

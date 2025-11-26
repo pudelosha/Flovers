@@ -26,15 +26,15 @@ import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/plants.styles";
 import PlantTile from "../components/PlantTile";
-import EditPlantModal from "../components/EditPlantModal";
-import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
-import PlantQrModal from "../components/PlantQrModal";
+import EditPlantModal from "../components/modals/EditPlantModal";
+import ConfirmDeleteModal from "../components/modals/ConfirmDeleteModal";
+import PlantQrModal from "../components/modals/PlantQrModal";
 
 import SortPlantsModal, {
   SortDir,
   SortKey,
-} from "../components/SortPlantsModal";
-import FilterPlantsModal from "../components/FilterPlantsModal";
+} from "../components/modals/SortPlantsModal";
+import FilterPlantsModal from "../components/modals/FilterPlantsModal";
 
 import {
   HEADER_GRADIENT_TINT,

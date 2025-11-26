@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { s } from "../styles/reminders.styles";
+
+// Reuse the same modal styles as Reminders
+import { s } from "../../../reminders/styles/reminders.styles";
 
 type Props = {
   visible: boolean;
@@ -10,7 +12,7 @@ type Props = {
   onConfirm: () => void;
 };
 
-export default function ConfirmDeleteReminderModal({ visible, name, onCancel, onConfirm }: Props) {
+export default function ConfirmDeleteReadingModal({ visible, name, onCancel, onConfirm }: Props) {
   if (!visible) return null;
 
   return (
@@ -33,7 +35,7 @@ export default function ConfirmDeleteReminderModal({ visible, name, onCancel, on
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Delete reminder</Text>
+          <Text style={s.promptTitle}>Delete reading</Text>
           <Text style={s.confirmText}>
             Are you sure you want to delete{" "}
             <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>? This action cannot be undone.

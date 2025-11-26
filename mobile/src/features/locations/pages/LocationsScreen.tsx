@@ -37,12 +37,12 @@ import {
 
 import { locStyles as s } from "../styles/locations.styles";
 import LocationTile from "../components/LocationTile";
-import ConfirmDeleteLocationModal from "../components/ConfirmDeleteLocationModal";
+import ConfirmDeleteLocationModal from "../components/modals/ConfirmDeleteLocationModal";
 import SortLocationsModal, {
   SortDir,
   SortKey,
-} from "../components/SortLocationsModal";
-import EditLocationModal from "../components/EditLocationModal";
+} from "../components/modals/SortLocationsModal";
+import EditLocationModal from "../components/modals/EditLocationModal";
 
 import type { PlantLocation } from "../types/locations.types";
 import type { LocationCategory } from "../../create-plant/types/create-plant.types";

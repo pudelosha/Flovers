@@ -35,10 +35,10 @@ import {
 } from "../../../api/services/reminders.service";
 import { fetchPlantInstances } from "../../../api/services/plant-instances.service";
 import { buildUIReminders } from "../../../api/serializers/reminders.serializer";
-import ConfirmDeleteReminderModal from "../components/ConfirmDeleteReminderModal";
-import EditReminderModal from "../components/EditReminderModal";
-import SortRemindersModal from "../components/SortRemindersModal";
-import FilterRemindersModal from "../components/FilterRemindersModal";
+import ConfirmDeleteReminderModal from "../components/modals/ConfirmDeleteReminderModal";
+import EditReminderModal from "../components/modals/EditReminderModal";
+import SortRemindersModal from "../components/modals/SortRemindersModal";
+import FilterRemindersModal from "../components/modals/FilterRemindersModal";
 
 type ViewMode = "list" | "calendar";
 type PlantOption = { id: string; name: string; location?: string };

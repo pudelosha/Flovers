@@ -15,11 +15,11 @@ import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/readin
 import type { ReadingTileModel as BaseReadingTileModel } from "../types/readings.types";
 
 // Modals
-import SortReadingsModal, { SortKey, SortDir } from "../components/SortReadingsModal";
-import FilterReadingsModal from "../components/FilterReadingsModal";
-import ConfirmDeleteReadingModal from "../components/ConfirmDeleteReadingModal";
-import DeviceSetupModal from "../components/DeviceSetupModal";
-import UpsertReadingDeviceModal from "../components/UpsertReadingDeviceModal";
+import SortReadingsModal, { SortKey, SortDir } from "../components/modals/SortReadingsModal";
+import FilterReadingsModal from "../components/modals/FilterReadingsModal";
+import ConfirmDeleteReadingModal from "../components/modals/ConfirmDeleteReadingModal";
+import DeviceSetupModal from "../components/modals/DeviceSetupModal";
+import UpsertReadingDeviceModal from "../components/modals/UpsertReadingDeviceModal";
 
 // === Services (readings) ===
 import {

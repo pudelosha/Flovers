@@ -4,7 +4,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // Reuse Reminders modal styles
-import { s } from "../../reminders/styles/reminders.styles";
+import { s } from "../../../reminders/styles/reminders.styles";
 
 type Props = {
   visible: boolean;

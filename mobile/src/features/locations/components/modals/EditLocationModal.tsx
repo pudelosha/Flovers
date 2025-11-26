@@ -10,9 +10,9 @@ import {
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 
-import { locStyles as s } from "../styles/locations.styles";
-import type { LocationCategory } from "../../create-plant/types/create-plant.types";
-import { PREDEFINED_LOCATIONS } from "../../create-plant/constants/create-plant.constants";
+import { locStyles as s } from "../../styles/locations.styles";
+import type { LocationCategory } from "../../../create-plant/types/create-plant.types";
+import { PREDEFINED_LOCATIONS } from "../../../create-plant/constants/create-plant.constants";
 
 type Props = {
   visible: boolean;

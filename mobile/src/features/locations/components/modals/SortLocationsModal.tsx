@@ -4,7 +4,7 @@ import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 
-import { locStyles as s } from "../styles/locations.styles";
+import { locStyles as s } from "../../styles/locations.styles";
 
 export type SortKey = "name" | "count";
 export type SortDir = "asc" | "desc";

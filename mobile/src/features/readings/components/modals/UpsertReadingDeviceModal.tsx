@@ -4,8 +4,8 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // Match the Edit Plant modal styling:
-import { s as sp } from "../../plants/styles/plants.styles";        // dropdown / inputs styles
-import { prompts as pr } from "../../profile/styles/profile.styles"; // prompt chrome (backdrop/sheet/buttons)
+import { s as sp } from "../../../plants/styles/plants.styles";        // dropdown / inputs styles
+import { prompts as pr } from "../../../profile/styles/profile.styles"; // prompt chrome (backdrop/sheet/buttons)
 
 type Mode = "add" | "edit";
 type PlantOption = { id: string; name: string; location?: string | null };

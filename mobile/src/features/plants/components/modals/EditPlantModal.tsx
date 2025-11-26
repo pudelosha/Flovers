@@ -14,19 +14,19 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Slider from "@react-native-community/slider";
 
 // Keep plant dropdown styles (identical look), etc.
-import { s } from "../styles/plants.styles";
+import { s } from "../../styles/plants.styles";
 // Import the Profile modal styles to match formatting/look
-import { prompts as pr } from "../../profile/styles/profile.styles";
+import { prompts as pr } from "../../../profile/styles/profile.styles";
 
 import {
   ORIENTATIONS,     // [{ key: 'N'|'E'|'S'|'W', label: string }]
   POT_MATERIALS,    // [{ key: string, label: string, description?: string }]
   SOIL_MIXES,       // [{ key: string, label: string, description?: string }]
-} from "../../create-plant/constants/create-plant.constants";
+} from "../../../create-plant/constants/create-plant.constants";
 
 // 🔁 Reuse the create-plant measure modal
-import MeasureExposureModal from "../../create-plant/components/modals/MeasureExposureModal";
-import type { LightLevel } from "../../create-plant/types/create-plant.types";
+import MeasureExposureModal from "../../../create-plant/components/modals/MeasureExposureModal";
+import type { LightLevel } from "../../../create-plant/types/create-plant.types";
 
 type LightLevel5 = "very-low" | "low" | "medium" | "bright-indirect" | "bright-direct";
 

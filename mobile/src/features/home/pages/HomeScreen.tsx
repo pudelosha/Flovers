@@ -20,7 +20,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
-import CompleteTaskModal from "../components/CompleteTaskModal"; // NEW
+import CompleteTaskModal from "../components/modals/CompleteTaskModal"; // NEW
 import type { Task, TaskType } from "../types/home.types";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/home.constants";
 
@@ -35,10 +35,10 @@ import {
 import SortHomeTasksModal, {
   type HomeSortKey,
   type HomeSortDir,
-} from "../components/SortHomeTasksModal";
+} from "../components/modals/SortHomeTasksModal";
 import FilterHomeTasksModal, {
   type HomeFilters,
-} from "../components/FilterHomeTasksModal";
+} from "../components/modals/FilterHomeTasksModal";
 
 type ViewFilter = "all" | "overdue" | "today";
 

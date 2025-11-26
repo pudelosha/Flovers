@@ -4,7 +4,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // Reuse Reminders modal look & feel
-import { s } from "../../reminders/styles/reminders.styles";
+import { s } from "../../../reminders/styles/reminders.styles";
 
 type Status = "enabled" | "disabled";
 type PlantOption = { id: string; name: string };

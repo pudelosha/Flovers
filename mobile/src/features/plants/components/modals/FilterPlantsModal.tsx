@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
-import { s } from "../styles/plants.styles";
+import { s } from "../../styles/plants.styles";
 
 type Props = {
   visible: boolean;

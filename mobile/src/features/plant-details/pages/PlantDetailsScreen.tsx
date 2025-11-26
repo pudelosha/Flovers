@@ -49,7 +49,7 @@ import PlantQrTile from "../components/PlantQrTile";
 import PlantInfoTile from "../components/PlantInfoTile";
 
 // Reuse CompleteTaskModal from Home for the "mark as complete" flow
-import CompleteTaskModal from "../../home/components/CompleteTaskModal";
+import CompleteTaskModal from "../../home/components/modals/CompleteTaskModal";
 
 // If you want to hook into Home tasks for completion:
 import { markHomeTaskComplete } from "../../../api/services/home.service";

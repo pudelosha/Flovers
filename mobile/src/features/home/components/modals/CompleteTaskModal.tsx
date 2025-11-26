@@ -8,7 +8,7 @@ import {
   Keyboard,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
-import { s } from "../styles/home.styles";
+import { s } from "../../styles/home.styles";
 
 type Props = {
   visible: boolean;

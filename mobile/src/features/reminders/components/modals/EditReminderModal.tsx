@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Pressable, TextInput, Keyboard, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../styles/reminders.styles";
+import { s } from "../../styles/reminders.styles";
 
 export type ReminderType = "watering" | "moisture" | "fertilising" | "care" | "repot";
 

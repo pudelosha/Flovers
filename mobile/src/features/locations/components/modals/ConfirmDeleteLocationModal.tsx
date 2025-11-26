@@ -3,7 +3,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 
-import { locStyles as s } from "../styles/locations.styles";
+import { locStyles as s } from "../../styles/locations.styles";
 
 type Props = {
   visible: boolean;

@@ -2,23 +2,21 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { s } from "../../styles/home.styles";
 
-// Reuse Reminders modal look & feel
-import { s } from "../../reminders/styles/reminders.styles";
-
-export type SortKey = "name" | "location" | "lastRead";
-export type SortDir = "asc" | "desc";
+export type HomeSortKey = "dueDate" | "plant" | "location";
+export type HomeSortDir = "asc" | "desc";
 
 type Props = {
   visible: boolean;
-  sortKey: SortKey;
-  sortDir: SortDir;
+  sortKey: HomeSortKey;
+  sortDir: HomeSortDir;
   onCancel: () => void;
-  onApply: (key: SortKey, dir: SortDir) => void;
+  onApply: (key: HomeSortKey, dir: HomeSortDir) => void;
   onReset?: () => void;
 };
 
-export default function SortReadingsModal({
+export default function SortHomeTasksModal({
   visible,
   sortKey,
   sortDir,
@@ -28,8 +26,8 @@ export default function SortReadingsModal({
 }: Props) {
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
-  const [k, setK] = React.useState<SortKey>(sortKey);
-  const [d, setD] = React.useState<SortDir>(sortDir);
+  const [k, setK] = React.useState<HomeSortKey>(sortKey);
+  const [d, setD] = React.useState<HomeSortDir>(sortDir);
 
   React.useEffect(() => {
     if (visible) {
@@ -63,7 +61,7 @@ export default function SortReadingsModal({
         </View>
 
         <View style={[s.promptInner, styles.promptInner28]}>
-          <Text style={s.promptTitle}>Sort readings</Text>
+          <Text style={s.promptTitle}>Sort tasks</Text>
 
           {/* Sort key dropdown */}
           <Text style={s.inputLabel}>Sort by</Text>
@@ -77,17 +75,21 @@ export default function SortReadingsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {k === "name" ? "Plant name" : k === "location" ? "Location" : "Last read"}
+                {k === "dueDate" ? "Due date" : k === "plant" ? "Plant name" : "Location"}
               </Text>
-              <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <MaterialCommunityIcons
+                name={keyOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
 
             {keyOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "name", label: "Plant name" },
+                  { key: "dueDate", label: "Due date" },
+                  { key: "plant", label: "Plant name" },
                   { key: "location", label: "Location" },
-                  { key: "lastRead", label: "Last read" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -98,7 +100,9 @@ export default function SortReadingsModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{opt.label}</Text>
-                    {k === opt.key && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {k === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -117,7 +121,11 @@ export default function SortReadingsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
-              <MaterialCommunityIcons name={dirOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <MaterialCommunityIcons
+                name={dirOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
 
             {dirOpen && (
@@ -135,7 +143,9 @@ export default function SortReadingsModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{opt.label}</Text>
-                    {d === opt.key && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {d === opt.key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -145,13 +155,18 @@ export default function SortReadingsModal({
           <View style={s.promptButtonsRow}>
             {onReset ? (
               <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
-                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
+                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                  Reset
+                </Text>
               </Pressable>
             ) : null}
             <Pressable onPress={onCancel} style={[styles.btnBase]}>
               <Text style={s.promptBtnText}>Cancel</Text>
             </Pressable>
-            <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
+            <Pressable
+              onPress={() => onApply(k, d)}
+              style={[styles.btnBase, styles.btnPrimary]}
+            >
               <Text style={s.promptPrimaryText}>Apply</Text>
             </Pressable>
           </View>

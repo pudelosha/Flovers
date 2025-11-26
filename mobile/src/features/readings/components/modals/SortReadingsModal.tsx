@@ -1,12 +1,13 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\SortRemindersModal.tsx
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../styles/reminders.styles";
 
-type SortKey = "dueDate" | "plant" | "location";
-type SortDir = "asc" | "desc";
+// Reuse Reminders modal look & feel
+import { s } from "../../../reminders/styles/reminders.styles";
+
+export type SortKey = "name" | "location" | "lastRead";
+export type SortDir = "asc" | "desc";
 
 type Props = {
   visible: boolean;
@@ -17,7 +18,7 @@ type Props = {
   onReset?: () => void;
 };
 
-export default function SortRemindersModal({
+export default function SortReadingsModal({
   visible,
   sortKey,
   sortDir,
@@ -62,7 +63,7 @@ export default function SortRemindersModal({
         </View>
 
         <View style={[s.promptInner, styles.promptInner28]}>
-          <Text style={s.promptTitle}>Sort reminders</Text>
+          <Text style={s.promptTitle}>Sort readings</Text>
 
           {/* Sort key dropdown */}
           <Text style={s.inputLabel}>Sort by</Text>
@@ -76,7 +77,7 @@ export default function SortRemindersModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {k === "dueDate" ? "Due date" : k === "plant" ? "Plant name" : "Location"}
+                {k === "name" ? "Plant name" : k === "location" ? "Location" : "Last read"}
               </Text>
               <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
@@ -84,9 +85,9 @@ export default function SortRemindersModal({
             {keyOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "dueDate", label: "Due date" },
-                  { key: "plant", label: "Plant name" },
+                  { key: "name", label: "Plant name" },
                   { key: "location", label: "Location" },
+                  { key: "lastRead", label: "Last read" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}

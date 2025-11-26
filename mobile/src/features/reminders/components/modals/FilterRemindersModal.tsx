@@ -2,37 +2,35 @@ import React from "react";
 import { View, Text, Pressable, TextInput, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { s } from "../styles/home.styles";
-import type { TaskType } from "../types/home.types";
-import { ACCENT_BY_TYPE } from "../constants/home.constants";
+import { s } from "../../styles/reminders.styles";
+import type { ReminderType } from "../../types/reminders.types";
+import { ACCENT_BY_TYPE } from "../../constants/reminders.constants";
 
-// Optional datetime picker (same pattern as Reminders)
+// Optional datetime picker (same pattern as EditReminderModal)
 let DateTimePicker: any = null;
-try {
-  DateTimePicker = require("@react-native-community/datetimepicker").default;
-} catch {}
+try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
 
-type PlantOption = { id: string; name: string };
+type PlantOption = { id: string; name: string; location?: string };
 
-export type HomeFilters = {
-  plantId?: string; // specific plant or undefined for Any
-  location?: string; // specific location or undefined for Any
-  types?: TaskType[]; // multi
-  dueFrom?: string; // "YYYY-MM-DD"
-  dueTo?: string; // "YYYY-MM-DD"
+type Filters = {
+  plantId?: string;       // specific plant or undefined for Any
+  location?: string;      // specific location or undefined for Any
+  types?: ReminderType[]; // multi
+  dueFrom?: string;       // "YYYY-MM-DD"
+  dueTo?: string;         // "YYYY-MM-DD"
 };
 
 type Props = {
   visible: boolean;
   plants: PlantOption[];
   locations: string[];
-  filters: HomeFilters;
+  filters: Filters;
   onCancel: () => void;
-  onApply: (filters: HomeFilters) => void;
+  onApply: (filters: Filters) => void;
   onClearAll: () => void;
 };
 
-const TYPE_OPTIONS: TaskType[] = ["watering", "moisture", "fertilising", "care", "repot"];
+const TYPE_OPTIONS: ReminderType[] = ["watering", "moisture", "fertilising", "care", "repot"];
 
 function isValidDateYYYYMMDD(v?: string) {
   if (!v) return false;
@@ -56,7 +54,7 @@ function hexToRgba(hex?: string, alpha = 1) {
   let h = hex.trim();
   if (!h.startsWith("#")) h = `#${h}`;
   h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  if (h.length === 3) h = h.split("").map(c => c + c).join("");
   if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
@@ -66,7 +64,7 @@ function hexToRgba(hex?: string, alpha = 1) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-export default function FilterHomeTasksModal({
+export default function FilterRemindersModal({
   visible,
   plants,
   locations,
@@ -77,7 +75,7 @@ export default function FilterHomeTasksModal({
 }: Props) {
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
-  const [types, setTypes] = React.useState<TaskType[]>(filters.types || []);
+  const [types, setTypes] = React.useState<ReminderType[]>(filters.types || []);
 
   const [plantId, setPlantId] = React.useState<string | undefined>(filters.plantId);
   const [location, setLocation] = React.useState<string | undefined>(filters.location);
@@ -99,7 +97,7 @@ export default function FilterHomeTasksModal({
     }
   }, [visible, filters]);
 
-  const toggleType = (t: TaskType) => {
+  const toggleType = (t: ReminderType) => {
     setTypes((curr) => (curr.includes(t) ? curr.filter((x) => x !== t) : [...curr, t]));
   };
 
@@ -126,7 +124,7 @@ export default function FilterHomeTasksModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Filter tasks</Text>
+          <Text style={s.promptTitle}>Filter reminders</Text>
 
           {/* Plant dropdown */}
           <Text style={s.inputLabel}>Plant</Text>
@@ -140,15 +138,9 @@ export default function FilterHomeTasksModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {plantId
-                  ? plants.find((p) => p.id === plantId)?.name || "Select plant"
-                  : "Any plant"}
+                {plantId ? (plants.find((p) => p.id === plantId)?.name || "Select plant") : "Any plant"}
               </Text>
-              <MaterialCommunityIcons
-                name={plantOpen ? "chevron-up" : "chevron-down"}
-                size={20}
-                color="#FFFFFF"
-              />
+              <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {plantOpen && (
               <View style={s.dropdownList}>
@@ -161,9 +153,7 @@ export default function FilterHomeTasksModal({
                   }}
                 >
                   <Text style={s.dropdownItemText}>Any plant</Text>
-                  {!plantId && (
-                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                  )}
+                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {plants.map((p) => (
                   <Pressable
@@ -175,9 +165,7 @@ export default function FilterHomeTasksModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{p.name}</Text>
-                    {plantId === p.id && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                    )}
+                    {plantId === p.id && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                   </Pressable>
                 ))}
               </View>
@@ -196,11 +184,7 @@ export default function FilterHomeTasksModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>{location ? location : "Any location"}</Text>
-              <MaterialCommunityIcons
-                name={locOpen ? "chevron-up" : "chevron-down"}
-                size={20}
-                color="#FFFFFF"
-              />
+              <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {locOpen && (
               <View style={s.dropdownList}>
@@ -213,9 +197,7 @@ export default function FilterHomeTasksModal({
                   }}
                 >
                   <Text style={s.dropdownItemText}>Any location</Text>
-                  {!location && (
-                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                  )}
+                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {locations.map((loc) => (
                   <Pressable
@@ -227,16 +209,14 @@ export default function FilterHomeTasksModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{loc}</Text>
-                    {location === loc && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                    )}
+                    {location === loc && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                   </Pressable>
                 ))}
               </View>
             )}
           </View>
 
-          {/* Types (chips) */}
+          {/* Types (chips) — borderless & tinted; fills width and wraps to two rows */}
           <Text style={s.inputLabel}>Task types</Text>
           <View style={s.chipRow}>
             {TYPE_OPTIONS.map((t) => {
@@ -249,9 +229,8 @@ export default function FilterHomeTasksModal({
                   style={[
                     s.chip,
                     {
-                      backgroundColor: selected
-                        ? hexToRgba(tint, 0.22)
-                        : "rgba(255,255,255,0.12)",
+                      // borderless & glazed
+                      backgroundColor: selected ? hexToRgba(tint, 0.22) : "rgba(255,255,255,0.12)",
                     },
                   ]}
                 >
@@ -261,7 +240,7 @@ export default function FilterHomeTasksModal({
             })}
           </View>
 
-          {/* Due date range */}
+          {/* Due date range (50/50 and full width) */}
           <Text style={s.inputLabel}>Due date range</Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
@@ -329,9 +308,7 @@ export default function FilterHomeTasksModal({
 
           <View style={s.promptButtonsRow}>
             <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                Clear
-              </Text>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
             </Pressable>
             <Pressable onPress={onCancel} style={s.promptBtn}>
               <Text style={s.promptBtnText}>Cancel</Text>
