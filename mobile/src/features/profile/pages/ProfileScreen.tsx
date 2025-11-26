@@ -7,6 +7,7 @@ import { useFocusEffect } from "@react-navigation/native";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 import { layout as ly, prompts as pr } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
@@ -27,7 +28,6 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import {
   fetchProfileNotifications,
-  fetchProfileSettings,
   updateProfileNotifications,
   updateProfileSettings,
   changeMyPassword,
@@ -58,11 +58,13 @@ function isUnauthorizedError(e: any): boolean {
 export default function ProfileScreen() {
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
+  const { settings, loading: settingsLoading, applyServerSettings } = useSettings(); // 👈 NEW
 
   // PROMPTS
   const [prompt, setPrompt] = useState<PromptKey | "contact" | null>(null);
 
   // ---------- Loading state for initial fetch ----------
+  // This now covers NOTIFICATIONS fetch; settings are handled by SettingsProvider.
   const [loading, setLoading] = useState<boolean>(true);
   // Optional save states
   const [savingNotif, setSavingNotif] = useState<boolean>(false);
@@ -97,7 +99,7 @@ export default function ProfileScreen() {
   const incHour = (h: number) => (h + 1) % 24;
   const decHour = (h: number) => (h + 23) % 24;
 
-  // ---------- Settings state ----------
+  // ---------- Settings state (local form, synced with global settings) ----------
   const [language, setLanguage] = useState<LangCode>("en");
   const [langOpen, setLangOpen] = useState(false);
   const [dateFormat, setDateFormat] = useState<string>("DD.MM.YYYY");
@@ -121,6 +123,9 @@ export default function ProfileScreen() {
   const [fabPosition, setFabPosition] = useState<FabPosition>("right");
   const [fabOpen, setFabOpen] = useState(false);
 
+  // To avoid overwriting edits, initialize form from global settings once.
+  const [formInitialized, setFormInitialized] = useState(false); // 👈 NEW
+
   // ---------- Prompt input state (change email/password) ----------
   const [newEmail, setNewEmail] = useState("");
   const [emailCurrentPassword, setEmailCurrentPassword] = useState("");
@@ -139,15 +144,12 @@ export default function ProfileScreen() {
     setConfirmNewPassword("");
   };
 
-  // ---------- Initial fetch ----------
+  // ---------- Initial fetch: NOTIFICATIONS only ----------
   useEffect(() => {
     let isMounted = true;
     (async () => {
       try {
-        const [notif, settings] = await Promise.all([
-          fetchProfileNotifications({ auth: true }),
-          fetchProfileSettings({ auth: true }),
-        ]);
+        const notif = await fetchProfileNotifications({ auth: true });
 
         if (!isMounted) return;
 
@@ -158,20 +160,8 @@ export default function ProfileScreen() {
         setPushDaily(!!notif.push_daily);
         setPushHour(typeof notif.push_hour === "number" ? notif.push_hour : 12);
         setPush24h(!!notif.push_24h);
-
-        // Apply Settings
-        setLanguage((settings.language as LangCode) ?? "en");
-        setDateFormat(settings.date_format ?? "DD.MM.YYYY");
-        setTemperatureUnit((settings.temperature_unit as "C" | "F" | "K") ?? "C");
-        setMeasureUnit((settings.measure_unit as "metric" | "imperial") ?? "metric");
-        setTileTransparency(
-          typeof settings.tile_transparency === "number" ? settings.tile_transparency : 0.12
-        );
-        setBackground((settings.background as BackgroundKey) ?? "bg1");
-        setFabPosition((settings.fab_position as FabPosition) ?? "right");
-        setTileMotive((settings.tile_motive as TileMotive) ?? "light");
       } catch (e: any) {
-        console.warn("Failed to load profile data", e);
+        console.warn("Failed to load profile notifications", e);
         if (isUnauthorizedError(e)) {
           showToast("Unauthorized", "error");
         } else {
@@ -185,6 +175,24 @@ export default function ProfileScreen() {
       isMounted = false;
     };
   }, []);
+
+  // ---------- Initialize local settings form from global settings ----------
+  useEffect(() => {
+    if (formInitialized) return;
+    if (settingsLoading) return;
+
+    // Copy values from global settings once
+    setLanguage(settings.language);
+    setDateFormat(settings.dateFormat);
+    setTemperatureUnit(settings.temperatureUnit);
+    setMeasureUnit(settings.measureUnit);
+    setTileTransparency(settings.tileTransparency);
+    setBackground(settings.background);
+    setFabPosition(settings.fabPosition);
+    setTileMotive(settings.tileMotive);
+
+    setFormInitialized(true);
+  }, [formInitialized, settings, settingsLoading]);
 
   // ---------- Save handlers ----------
   const handleSaveNotifications = async () => {
@@ -217,7 +225,7 @@ export default function ProfileScreen() {
   const handleSaveSettings = async () => {
     try {
       setSavingSettings(true);
-      await updateProfileSettings(
+      const res = await updateProfileSettings(
         {
           language,
           date_format: dateFormat,
@@ -230,6 +238,8 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
+      // 👇 NEW: sync global settings with what backend returned
+      applyServerSettings(res);
       showToast("Settings updated.", "success");
     } catch (e: any) {
       console.warn("Failed to save settings", e);
@@ -344,6 +354,8 @@ export default function ProfileScreen() {
     }, [entry])
   );
 
+  const showLoadingOverlay = loading || settingsLoading || !formInitialized; // 👈 NEW
+
   return (
     <View style={{ flex: 1 }}>
       {/* HEADER (no submenu, no right icon) */}
@@ -432,7 +444,7 @@ export default function ProfileScreen() {
       </Animated.View>
 
       {/* LOADING OVERLAY */}
-      {loading && <CenteredSpinner overlay size={48} color="#FFFFFF" />}
+      {showLoadingOverlay && <CenteredSpinner overlay size={48} color="#FFFFFF" />}
 
       {/* Optional small overlays while saving (non-blocking). Keep page interactive. */}
       {savingNotif && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
