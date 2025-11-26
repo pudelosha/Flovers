@@ -50,6 +50,9 @@ from config import (
 LAST_CHECKPOINT_NAME = "plantnet_resnet18_checkpoint.pth"
 BEST_MODEL_NAME = "plantnet_resnet18_best.pth"
 
+# Save a checkpoint every N global steps in addition to at each epoch end
+SAVE_EVERY_STEPS = 2000
+
 
 def get_loaders():
     """
@@ -94,16 +97,23 @@ def build_model(num_classes: int) -> nn.Module:
     return model
 
 
-def train_one_epoch(model, loader, criterion, optimizer, epoch: int):
+def train_one_epoch(
+    model,
+    loader,
+    criterion,
+    optimizer,
+    epoch: int,
+    global_step: int,
+    last_ckpt_path: Path,
+    best_val_acc: float,
+    num_classes: int,
+):
     """
     Run a single training epoch:
-    - forward pass
-    - loss computation
-    - backward pass
-    - optimizer step
-    - track average loss and accuracy
-
-    Logging is done every N steps with running averages.
+    - forward + backward + optimizer step
+    - track average loss/accuracy
+    - update global_step
+    - periodically save mid-epoch checkpoints
     """
     model.train()
     running_loss = 0.0
@@ -111,7 +121,7 @@ def train_one_epoch(model, loader, criterion, optimizer, epoch: int):
     total = 0
 
     num_batches = len(loader)
-    log_every = 100  # print progress every 100 steps
+    log_every = 50  # print progress every 50 steps
 
     epoch_start_time = time.time()
 
@@ -132,6 +142,9 @@ def train_one_epoch(model, loader, criterion, optimizer, epoch: int):
         correct += (preds == targets).sum().item()
         total += batch_size
 
+        global_step += 1
+
+        # Logging
         if step % log_every == 0 or step == 1 or step == num_batches:
             avg_loss = running_loss / float(total)
             avg_acc = correct / float(total)
@@ -143,11 +156,28 @@ def train_one_epoch(model, loader, criterion, optimizer, epoch: int):
             print(
                 f"Epoch {epoch} "
                 f"| step {step}/{num_batches} "
-                f"| loss (last batch)={loss.item():.4f} "
+                f"| global_step={global_step} "
+                f"| loss (last)={loss.item():.4f} "
                 f"| avg_loss={avg_loss:.4f} "
                 f"| avg_acc={avg_acc:.4f} "
                 f"| elapsed={elapsed/60:.1f} min "
                 f"| ETA={eta_sec/60:.1f} min"
+            )
+
+        # Mid-epoch checkpoint
+        if global_step % SAVE_EVERY_STEPS == 0:
+            state = {
+                "epoch": epoch,
+                "model_state": model.state_dict(),
+                "optimizer_state": optimizer.state_dict(),
+                "best_val_acc": best_val_acc,
+                "num_classes": num_classes,
+                "global_step": global_step,
+            }
+            torch.save(state, last_ckpt_path)
+            print(
+                f"[Checkpoint] Mid-epoch save at global_step={global_step} "
+                f"(epoch={epoch}, step={step}/{num_batches}) -> {last_ckpt_path}"
             )
 
     epoch_time = time.time() - epoch_start_time
@@ -157,7 +187,7 @@ def train_one_epoch(model, loader, criterion, optimizer, epoch: int):
         f"[Epoch {epoch}] Finished in {epoch_time/60:.1f} min "
         f"-> train_loss={epoch_loss:.4f}, train_acc={epoch_acc:.4f}"
     )
-    return epoch_loss, epoch_acc
+    return epoch_loss, epoch_acc, global_step
 
 
 def evaluate(model, loader, criterion, epoch: int):
@@ -203,6 +233,7 @@ def save_checkpoint(
     epoch: int,
     best_val_acc: float,
     num_classes: int,
+    global_step: int,
     path: Path,
 ):
     """
@@ -211,7 +242,8 @@ def save_checkpoint(
     - optimizer state
     - current epoch
     - best validation accuracy so far
-    - number of classes (safety check)
+    - number of classes
+    - global step
     """
     state = {
         "epoch": epoch,
@@ -219,6 +251,7 @@ def save_checkpoint(
         "optimizer_state": optimizer.state_dict(),
         "best_val_acc": best_val_acc,
         "num_classes": num_classes,
+        "global_step": global_step,
     }
     torch.save(state, path)
     print(f"[Checkpoint] Saved training state to {path}")
@@ -230,8 +263,9 @@ def load_checkpoint(path: Path, model: nn.Module, optimizer: optim.Optimizer):
 
     Returns:
         start_epoch (int): epoch to start from (last_epoch + 1)
-        best_val_acc (float): best validation accuracy from the checkpoint
-        num_classes (int): number of classes that checkpoint was trained with
+        best_val_acc (float)
+        num_classes (int)
+        global_step (int)
     """
     checkpoint = torch.load(path, map_location=DEVICE)
     model.load_state_dict(checkpoint["model_state"])
@@ -240,15 +274,16 @@ def load_checkpoint(path: Path, model: nn.Module, optimizer: optim.Optimizer):
     last_epoch = checkpoint.get("epoch", 0)
     best_val_acc = checkpoint.get("best_val_acc", 0.0)
     num_classes = checkpoint.get("num_classes", None)
+    global_step = checkpoint.get("global_step", 0)
 
     print(
         f"[Checkpoint] Loaded from {path} "
-        f"(last_epoch={last_epoch}, best_val_acc={best_val_acc:.4f})"
+        f"(last_epoch={last_epoch}, best_val_acc={best_val_acc:.4f}, "
+        f"global_step={global_step})"
     )
 
-    # We will continue from next epoch
     start_epoch = last_epoch + 1
-    return start_epoch, best_val_acc, num_classes
+    return start_epoch, best_val_acc, num_classes, global_step
 
 
 def parse_args():
@@ -265,8 +300,11 @@ def parse_args():
         "--checkpoint-path",
         type=str,
         default=None,
-        help="Optional custom checkpoint path. "
-             "If not provided, uses CHECKPOINT_DIR/plantnet_resnet18_checkpoint.pth",
+        help=(
+            "Optional custom checkpoint path. "
+            "If not provided, uses "
+            "CHECKPOINT_DIR/plantnet_resnet18_checkpoint.pth"
+        ),
     )
     return parser.parse_args()
 
@@ -296,6 +334,7 @@ def main():
     num_classes = len(train_ds.classes)
     print(f"[Setup] Using device: {DEVICE}")
     print(f"[Setup] Batch size: {BATCH_SIZE}, Epochs: {NUM_EPOCHS}")
+    print(f"[Setup] Num workers: {NUM_WORKERS}, Save-every-steps: {SAVE_EVERY_STEPS}")
 
     model = build_model(num_classes).to(DEVICE)
     criterion = nn.CrossEntropyLoss()
@@ -304,11 +343,12 @@ def main():
     # Resume logic
     start_epoch = 1
     best_val_acc = 0.0
+    global_step = 0
 
     if args.resume and last_ckpt_path.exists():
         print(f"[Resume] Attempting to resume from {last_ckpt_path}")
-        start_epoch, best_val_acc_ckpt, num_classes_ckpt = load_checkpoint(
-            last_ckpt_path, model, optimizer
+        start_epoch, best_val_acc_ckpt, num_classes_ckpt, global_step_ckpt = (
+            load_checkpoint(last_ckpt_path, model, optimizer)
         )
 
         # Safety check: number of classes should match
@@ -320,11 +360,14 @@ def main():
             )
             start_epoch = 1
             best_val_acc = 0.0
+            global_step = 0
         else:
             best_val_acc = best_val_acc_ckpt
+            global_step = global_step_ckpt
             print(
                 f"[Resume] Continuing from epoch {start_epoch} "
-                f"with best_val_acc={best_val_acc:.4f}"
+                f"with best_val_acc={best_val_acc:.4f}, "
+                f"global_step={global_step}"
             )
     elif args.resume:
         print(
@@ -338,8 +381,16 @@ def main():
         for epoch in range(start_epoch, NUM_EPOCHS + 1):
             print(f"\n========== Epoch {epoch}/{NUM_EPOCHS} ==========")
 
-            train_loss, train_acc = train_one_epoch(
-                model, train_loader, criterion, optimizer, epoch
+            train_loss, train_acc, global_step = train_one_epoch(
+                model,
+                train_loader,
+                criterion,
+                optimizer,
+                epoch,
+                global_step,
+                last_ckpt_path,
+                best_val_acc,
+                num_classes,
             )
             val_loss, val_acc = evaluate(model, val_loader, criterion, epoch)
 
@@ -356,6 +407,7 @@ def main():
                 epoch=epoch,
                 best_val_acc=best_val_acc,
                 num_classes=num_classes,
+                global_step=global_step,
                 path=last_ckpt_path,
             )
 
@@ -371,7 +423,6 @@ def main():
         total_time = time.time() - overall_start
         print(f"\n[Done] Training finished in {total_time/3600:.2f} hours.")
     except KeyboardInterrupt:
-        # If you stop with Ctrl+C, we still keep the last checkpoint
         print("\n[Interrupt] Training interrupted by user.")
         print(f"[Interrupt] Last checkpoint is at: {last_ckpt_path}")
 

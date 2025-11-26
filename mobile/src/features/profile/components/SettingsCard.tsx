@@ -5,7 +5,7 @@ import GlassCard from "./../components/GlassCard";
 import Dropdown from "./../components/Dropdown";
 import { card, controls } from "../styles/profile.styles";
 import { LANG_OPTIONS, DATE_OPTIONS, BACKGROUND_OPTIONS, FAB_POSITION_OPTIONS } from "../constants/profile.constants";
-import type { LangCode, FabPosition, BackgroundKey } from "../types/profile.types";
+import type { LangCode, FabPosition, BackgroundKey, TileMotive } from "../types/profile.types";
 
 // Try slider if installed
 let SliderView: any = View;
@@ -25,6 +25,12 @@ const MEASURE_OPTIONS: { key: MeasureUnit; label: string }[] = [
   { key: "imperial", label: "Imperial (in / ft)" },
 ];
 
+// NEW: Tile motive options
+const TILE_MOTIVE_OPTIONS: { key: TileMotive; label: string }[] = [
+  { key: "light", label: "Light" },
+  { key: "dark", label: "Dark" },
+];
+
 export default function SettingsCard({
   language, setLanguage, langOpen, setLangOpen,
   dateFormat, setDateFormat, dateOpen, setDateOpen,
@@ -33,6 +39,7 @@ export default function SettingsCard({
   tileTransparency, setTileTransparency,
   // NEW props
   background, setBackground, bgOpen, setBgOpen,
+  tileMotive, setTileMotive, tileMotiveOpen, setTileMotiveOpen,
   fabPosition, setFabPosition, fabOpen, setFabOpen,
   onSave,
 }: {
@@ -50,9 +57,12 @@ export default function SettingsCard({
 
   tileTransparency: number; setTileTransparency: (v: number | ((v: number) => number)) => void;
 
-  // NEW: Background + FAB position
+  // NEW: Background + Tile motive + FAB position
   background: BackgroundKey; setBackground: (b: BackgroundKey) => void;
   bgOpen: boolean; setBgOpen: (o: boolean | ((o: boolean) => boolean)) => void;
+
+  tileMotive: TileMotive; setTileMotive: (m: TileMotive) => void;
+  tileMotiveOpen: boolean; setTileMotiveOpen: (o: boolean | ((o: boolean) => boolean)) => void;
 
   fabPosition: FabPosition; setFabPosition: (p: FabPosition) => void;
   fabOpen: boolean; setFabOpen: (o: boolean | ((o: boolean) => boolean)) => void;
@@ -146,6 +156,22 @@ export default function SettingsCard({
           text: opt.label,
           selected: background === opt.key,
           onPress: () => { setBackground(opt.key as BackgroundKey); setBgOpen(false); },
+        }))}
+      />
+
+      {/* NEW: TILE MOTIVE */}
+      <Text style={controls.sectionTitle}>Tile motive</Text>
+      <Dropdown
+        open={tileMotiveOpen}
+        valueText={
+          TILE_MOTIVE_OPTIONS.find(t => t.key === tileMotive)?.label ?? "Light"
+        }
+        onToggle={() => setTileMotiveOpen((o: boolean) => !o)}
+        items={TILE_MOTIVE_OPTIONS.map(opt => ({
+          key: opt.key,
+          text: opt.label,
+          selected: tileMotive === opt.key,
+          onPress: () => { setTileMotive(opt.key); setTileMotiveOpen(false); },
         }))}
       />
 

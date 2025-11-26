@@ -16,8 +16,11 @@ training does not freeze on bad files.
 
 from pathlib import Path
 
-from PIL import Image, UnidentifiedImageError
+from PIL import Image, UnidentifiedImageError, ImageFile
 from torchvision import transforms, datasets
+
+# Allow loading of truncated / slightly corrupted JPEGs
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
 def get_train_transform():

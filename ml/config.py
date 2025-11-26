@@ -28,7 +28,7 @@ LOG_DIR = ML_ROOT / "logs"
 
 # Training hyperparameters
 BATCH_SIZE = 16        # if your PC struggles, reduce to 16 or 8
-NUM_EPOCHS = 20        # start with this, then adjust based on training time
+NUM_EPOCHS = 10        # we'll go to 10 first, can later bump to 20 and resume
 LR = 1e-4
 WEIGHT_DECAY = 1e-4
 NUM_WORKERS = 0        # 0 is safest on Windows; on Linux you can increase (e.g. 4)

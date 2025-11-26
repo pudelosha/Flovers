@@ -1,5 +1,10 @@
 import { request } from "../client";
-import type { LangCode, FabPosition, BackgroundKey } from "../../features/profile/types/profile.types";
+import type {
+  LangCode,
+  FabPosition,
+  BackgroundKey,
+  TileMotive,
+} from "../../features/profile/types/profile.types";
 
 /** Common envelope returned by the profiles API */
 type ApiEnvelope<T> = {
@@ -56,6 +61,7 @@ export type ApiProfileSettings = {
   measure_unit: "metric" | "imperial";
 
   tile_transparency: number; // 0..0.6 in UI
+  tile_motive: TileMotive;   // "light" | "dark" - tiles gloom mode
 
   background: BackgroundKey; // "bg1" | "bg2" | "bg3" | "bg4"
   fab_position: FabPosition; // "left" | "right"

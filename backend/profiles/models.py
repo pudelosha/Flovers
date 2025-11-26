@@ -15,6 +15,13 @@ MEASURE_CHOICES = [("metric", "Metric"), ("imperial", "Imperial")]
 BACKGROUND_CHOICES = [("bg1", "Background 1"), ("bg2", "Background 2"), ("bg3", "Background 3"), ("bg4", "Background 4")]
 FAB_CHOICES = [("left", "Left"), ("right", "Right")]
 
+# NEW: Tile motive choices (light / dark tiles)
+TILE_MOTIVE_CHOICES = [
+    ("light", "Light"),
+    ("dark", "Dark"),
+]
+
+
 class TimeStampedModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -37,6 +44,14 @@ class ProfileSettings(TimeStampedModel):
         max_digits=3, decimal_places=2, default=0.12,
         validators=[MinValueValidator(0.0), MaxValueValidator(0.6)],
         help_text="UI overlay transparency (0.00 – 0.60).",
+    )
+
+    # NEW: Light / dark tile motive
+    tile_motive = models.CharField(
+        max_length=5,
+        choices=TILE_MOTIVE_CHOICES,
+        default="light",
+        help_text="Tile gloom style: light or dark.",
     )
 
     background = models.CharField(max_length=3, choices=BACKGROUND_CHOICES, default="bg1")

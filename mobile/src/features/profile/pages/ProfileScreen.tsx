@@ -10,7 +10,13 @@ import { useAuth } from "../../../app/providers/useAuth";
 
 import { layout as ly, prompts as pr } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
-import type { PromptKey, LangCode, FabPosition, BackgroundKey } from "../types/profile.types";
+import type {
+  PromptKey,
+  LangCode,
+  FabPosition,
+  BackgroundKey,
+  TileMotive,
+} from "../types/profile.types";
 
 import AccountCard from "../components/AccountCard";
 import NotificationsCard from "../components/NotificationsCard";
@@ -107,6 +113,10 @@ export default function ProfileScreen() {
   const [background, setBackground] = useState<BackgroundKey>("bg1");
   const [bgOpen, setBgOpen] = useState(false);
 
+  // NEW: Tile motive (light/dark tiles)
+  const [tileMotive, setTileMotive] = useState<TileMotive>("light");
+  const [tileMotiveOpen, setTileMotiveOpen] = useState(false);
+
   // NEW: FAB position (right default)
   const [fabPosition, setFabPosition] = useState<FabPosition>("right");
   const [fabOpen, setFabOpen] = useState(false);
@@ -159,6 +169,7 @@ export default function ProfileScreen() {
         );
         setBackground((settings.background as BackgroundKey) ?? "bg1");
         setFabPosition((settings.fab_position as FabPosition) ?? "right");
+        setTileMotive((settings.tile_motive as TileMotive) ?? "light");
       } catch (e: any) {
         console.warn("Failed to load profile data", e);
         if (isUnauthorizedError(e)) {
@@ -215,6 +226,7 @@ export default function ProfileScreen() {
           tile_transparency: tileTransparency,
           background,
           fab_position: fabPosition,
+          tile_motive: tileMotive,
         },
         { auth: true }
       );
@@ -399,11 +411,15 @@ export default function ProfileScreen() {
             setMeasureOpen={setMeasureOpen}
             tileTransparency={tileTransparency}
             setTileTransparency={setTileTransparency}
-            // NEW props for Background + FAB position
+            // NEW props for Background + Tile motive + FAB position
             background={background}
             setBackground={setBackground}
             bgOpen={bgOpen}
             setBgOpen={setBgOpen}
+            tileMotive={tileMotive}
+            setTileMotive={setTileMotive}
+            tileMotiveOpen={tileMotiveOpen}
+            setTileMotiveOpen={setTileMotiveOpen}
             fabPosition={fabPosition}
             setFabPosition={setFabPosition}
             fabOpen={fabOpen}

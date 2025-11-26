@@ -1,6 +1,15 @@
 from decimal import Decimal, InvalidOperation
 from rest_framework import serializers
-from .models import ProfileSettings, ProfileNotifications, LANG_CHOICES, TEMP_CHOICES, MEASURE_CHOICES, BACKGROUND_CHOICES, FAB_CHOICES
+from .models import (
+    ProfileSettings,
+    ProfileNotifications,
+    LANG_CHOICES,
+    TEMP_CHOICES,
+    MEASURE_CHOICES,
+    BACKGROUND_CHOICES,
+    FAB_CHOICES,
+    TILE_MOTIVE_CHOICES,  # NEW
+)
 
 
 class ProfileSettingsSerializer(serializers.ModelSerializer):
@@ -12,6 +21,7 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
             "temperature_unit",
             "measure_unit",
             "tile_transparency",
+            "tile_motive",      # NEW
             "background",
             "fab_position",
         ]
@@ -44,6 +54,13 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
         valid = {c for c, _ in FAB_CHOICES}
         if v not in valid:
             raise serializers.ValidationError("Invalid FAB position.")
+        return v
+
+    # NEW: validate tile motive
+    def validate_tile_motive(self, v):
+        valid = {c for c, _ in TILE_MOTIVE_CHOICES}
+        if v not in valid:
+            raise serializers.ValidationError("Invalid tile motive.")
         return v
 
     def validate_tile_transparency(self, v):
