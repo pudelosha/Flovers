@@ -39,6 +39,7 @@ import SortHomeTasksModal, {
 import FilterHomeTasksModal, {
   type HomeFilters,
 } from "../components/modals/FilterHomeTasksModal";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 type ViewFilter = "all" | "overdue" | "today";
 
@@ -66,6 +67,7 @@ function parseISODate(d?: string): Date | null {
 
 export default function HomeScreen() {
   const nav = useNavigation();
+  const { settings } = useSettings(); // 👈 NEW
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
@@ -731,7 +733,11 @@ export default function HomeScreen() {
             return false;
           }}
         >
-          <FAB icon="plus" actions={fabActions} />
+          <FAB
+            icon="plus"
+            actions={fabActions}
+            position={settings.fabPosition} // 👈 NEW: left/right from settings
+          />
         </View>
       )}
 

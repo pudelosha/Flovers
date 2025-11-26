@@ -7,6 +7,7 @@ import { s } from "../styles/home.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/home.constants";
 import type { Task } from "../types/home.types";
 import TaskMenu from "./TaskMenu";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 type Props = {
   task: Task;
@@ -31,9 +32,13 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
+  const { settings } = useSettings(); // 👈 NEW
+
   // Detect overdue by the label text (e.g. "Overdue", "Overdue by 2 days")
   const isOverdue =
     typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
+
+  const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat); // 👈 NEW
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
@@ -90,7 +95,7 @@ export default function TaskTile({
                 isOverdue && s.dueOverdue,
               ]}
             >
-              {formatDate(task.dueDate)}
+              {formattedDate}
             </Text>
           </View>
         </View>
@@ -139,11 +144,18 @@ function hexToRgba(hex?: string, alpha = 1) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-function formatDate(d: Date) {
+function formatDateWithPattern(d: Date | string, pattern: string): string {
   const dt = d instanceof Date ? d : new Date(d);
   if (Number.isNaN(+dt)) return "";
+
   const dd = String(dt.getDate()).padStart(2, "0");
   const mm = String(dt.getMonth() + 1).padStart(2, "0");
   const yyyy = dt.getFullYear();
-  return `${dd}.${mm}.${yyyy}`;
+
+  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+
+  return fmt
+    .replace("YYYY", String(yyyy))
+    .replace("MM", mm)
+    .replace("DD", dd);
 }

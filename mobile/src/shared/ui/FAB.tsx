@@ -15,29 +15,38 @@ type Props = {
   actions: FabAction[];
   /**
    * How far above the bottom to place the FAB (to clear the tab bar).
-   * If you already pad your screens with sceneContainerStyle (e.g. 112),
-   * a good starting point here is 88–96.
    */
   bottomOffset?: number;
-  /** Horizontal margin from the right edge */
+  /** Horizontal margin from the edge (left or right, depending on position). */
   rightOffset?: number;
+  /** Horizontal position: "left" or "right". Defaults to "right". */
+  position?: "left" | "right";
 };
 
 export default function FAB({
   actions,
   bottomOffset = 92,
   rightOffset = 16,
+  position = "right",
 }: Props) {
   const insets = useSafeAreaInsets();
   const [open, setOpen] = useState(false);
 
+  // Anchor the FAB container to the correct side
+  const horizontalStyle =
+    position === "left" ? { left: rightOffset } : { right: rightOffset };
+
+  // Keep children anchored to the same side so the main FAB doesn't move
+  const wrapAlignItems = position === "left" ? "flex-start" : "flex-end";
+
+  // Action row alignment (labels/icons within each row)
+  const rowJustify =
+    position === "left" ? "flex-start" : "flex-end";
+
   return (
     <View
       pointerEvents="box-none"
-      style={[
-        StyleSheet.absoluteFill,
-        { zIndex: 1000, elevation: 1000 },
-      ]}
+      style={[StyleSheet.absoluteFill, { zIndex: 1000, elevation: 1000 }]}
     >
       {/* Backdrop only when open */}
       {open && (
@@ -47,15 +56,13 @@ export default function FAB({
         />
       )}
 
-      {/* Dial container (bottom-right) */}
+      {/* FAB container */}
       <View
         pointerEvents="box-none"
         style={[
           s.wrap,
-          {
-            right: rightOffset,
-            bottom: insets.bottom + bottomOffset,
-          },
+          horizontalStyle,
+          { bottom: insets.bottom + bottomOffset, alignItems: wrapAlignItems },
         ]}
       >
         {/* Actions list (stacked upwards) */}
@@ -68,21 +75,45 @@ export default function FAB({
                   setOpen(false);
                   requestAnimationFrame(() => a.onPress());
                 }}
-                style={s.actionRow}
+                style={[s.actionRow, { justifyContent: rowJustify }]}
               >
-                <View style={[s.labelPill, a.danger && s.labelDanger]}>
-                  <Text style={[s.labelText, a.danger && s.labelTextDanger]}>
-                    {a.label}
-                  </Text>
-                </View>
-
-                <View style={[s.miniBtn, a.danger && s.miniBtnDanger]}>
-                  <MaterialCommunityIcons
-                    name={a.icon}
-                    size={20}
-                    color={a.danger ? "#FF6B6B" : "#FFFFFF"}
-                  />
-                </View>
+                {/* When on the right, label on left, icon on right (original) */}
+                {/* When on the left, icon on left, label on right */}
+                {position === "left" ? (
+                  <>
+                    <View style={[s.miniBtn, a.danger && s.miniBtnDanger]}>
+                      <MaterialCommunityIcons
+                        name={a.icon}
+                        size={20}
+                        color={a.danger ? "#FF6B6B" : "#FFFFFF"}
+                      />
+                    </View>
+                    <View style={[s.labelPill, a.danger && s.labelDanger]}>
+                      <Text
+                        style={[s.labelText, a.danger && s.labelTextDanger]}
+                      >
+                        {a.label}
+                      </Text>
+                    </View>
+                  </>
+                ) : (
+                  <>
+                    <View style={[s.labelPill, a.danger && s.labelDanger]}>
+                      <Text
+                        style={[s.labelText, a.danger && s.labelTextDanger]}
+                      >
+                        {a.label}
+                      </Text>
+                    </View>
+                    <View style={[s.miniBtn, a.danger && s.miniBtnDanger]}>
+                      <MaterialCommunityIcons
+                        name={a.icon}
+                        size={20}
+                        color={a.danger ? "#FF6B6B" : "#FFFFFF"}
+                      />
+                    </View>
+                  </>
+                )}
               </Pressable>
             ))}
           </View>
@@ -108,7 +139,6 @@ export default function FAB({
 const s = StyleSheet.create({
   wrap: {
     position: "absolute",
-    alignItems: "flex-end",
   },
 
   // MAIN FAB
@@ -141,7 +171,6 @@ const s = StyleSheet.create({
   actionRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-end",
     gap: 10,
   },
   miniBtn: {
