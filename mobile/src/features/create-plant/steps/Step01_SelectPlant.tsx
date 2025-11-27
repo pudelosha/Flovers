@@ -127,7 +127,6 @@ export default function Step01_SelectPlant({
     onScrollToTop();
   };
 
-  // local handler for recognized plant (used by modal via registration)
   const onScanPlantDetected = useCallback(
     (item: Suggestion) => {
       setQuery(item.name);
@@ -136,7 +135,7 @@ export default function Step01_SelectPlant({
         id: item.id,
         name: item.name,
         latin: item.latin,
-        predefined: true,
+        predefined: false,
       });
       onScrollToTop();
     },

@@ -19,6 +19,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 import type { Suggestion } from "../../types/create-plant.types";
+import { recognizePlantFromUri } from "../../../../api/services/plant-recognition.service";
 
 import {
   launchCamera,
@@ -155,16 +156,12 @@ export default function PlantScannerModal({
       setError(null);
       setIsRecognizing(true);
 
-      // Dummy recognition for now:
-      await new Promise((r) => setTimeout(r, 700));
+      const suggestion = await recognizePlantFromUri(photoUri, { auth: true });
 
-      handleRecognitionSuccess({
-        id: "dummy-id",
-        name: "Monstera deliciosa",
-        latin: "Monstera deliciosa",
-      } as Suggestion);
-    } catch {
-      setError("Failed to recognize the plant.");
+      handleRecognitionSuccess(suggestion);
+    } catch (e: any) {
+      console.log("Recognition error", e);
+      setError(e?.message ?? "Failed to recognize the plant.");
     } finally {
       setIsRecognizing(false);
     }
