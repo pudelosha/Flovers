@@ -161,7 +161,11 @@ export default function PlantScannerModal({
       handleRecognitionSuccess(suggestion);
     } catch (e: any) {
       console.log("Recognition error", e);
-      setError(e?.message ?? "Failed to recognize the plant.");
+      setError(
+        e?.message ??
+        (e?.response?.data?.detail as string) ??
+        "Failed to recognize the plant."
+      );
     } finally {
       setIsRecognizing(false);
     }

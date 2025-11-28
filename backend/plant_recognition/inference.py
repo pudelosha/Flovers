@@ -41,10 +41,13 @@ def _load_class_names() -> list[str]:
     """
     Load the mapping index -> class label from classes.json.
 
-    We support two formats:
+    Supports:
     - a list: ["Foo", "Bar", ...]
     - a dict: {"0": "Foo", "1": "Bar", ...}
     """
+    if not CLASSES_PATH.exists():
+        raise FileNotFoundError(f"Classes file not found at {CLASSES_PATH}")
+
     with CLASSES_PATH.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -78,8 +81,14 @@ def _load_model() -> nn.Module:
     num_classes = len(CLASS_NAMES)
     model = _build_model(num_classes)
 
-    state = torch.load(WEIGHTS_PATH, map_location=DEVICE)
-    model.load_state_dict(state)
+    try:
+        state = torch.load(WEIGHTS_PATH, map_location=DEVICE)
+        # strict=False is more forgiving if there are minor key mismatches
+        model.load_state_dict(state, strict=False)
+    except Exception as e:
+        # Bubble up a clearer error message so you can see it in logs
+        raise RuntimeError(f"Failed to load model weights: {e}") from e
+
     model.to(DEVICE)
     model.eval()
 

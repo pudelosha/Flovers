@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any
+import logging
 
 from PIL import Image, UnidentifiedImageError
 from rest_framework.views import APIView
@@ -11,6 +12,8 @@ from rest_framework import status
 from .inference import predict_topk
 from .serializers import PlantRecognitionResultSerializer
 
+logger = logging.getLogger(__name__)
+
 
 class PlantRecognitionView(APIView):
     """
@@ -19,7 +22,7 @@ class PlantRecognitionView(APIView):
     Body: multipart/form-data with field "image"
     Optional field "topk" (default=3).
 
-    Response (Option A – matches mobile client types):
+    Response (matches mobile client types):
     {
       "results": [
         {
@@ -58,12 +61,20 @@ class PlantRecognitionView(APIView):
         except (TypeError, ValueError):
             topk = 3
 
-        # Raw ML predictions:
-        # [
-        #   { "id": "ml-0", "name": "...", "latin": "...", "score": 0.85, "rank": 1 },
-        #   ...
-        # ]
-        predictions = predict_topk(image, topk=topk)
+        try:
+            # Raw ML predictions:
+            # [
+            #   { "id": "ml-0", "name": "...", "latin": "...", "score": 0.85, "rank": 1 },
+            #   ...
+            # ]
+            predictions = predict_topk(image, topk=topk)
+        except Exception as e:
+            # This will show up in your Django console / log files
+            logger.exception("Plant recognition failed")
+            return Response(
+                {"detail": f"Internal error during plant recognition: {e}"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
 
         # Adapt to mobile contract: ApiRecognitionResult[]
         # id: always null for now (no DB link yet)

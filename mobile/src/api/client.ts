@@ -2,6 +2,7 @@
 // A tiny HTTP helper + error class to talk to your Django API.
 // - Automatically prefixes requests with API_BASE
 // - Optionally attaches JWT Authorization header (when opts.auth === true)
+// - Handles both JSON bodies and multipart/FormData bodies correctly
 // - Normalizes error handling into a typed ApiError
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -34,22 +35,36 @@ export async function request<T>(
   body?: any,
   opts: { auth?: boolean } = { auth: false }
 ): Promise<T> {
-  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  const headers: Record<string, string> = {};
 
+  // Attach auth header if requested
   if (opts.auth) {
     const token = await getToken();
     if (token) headers.Authorization = `Bearer ${token}`;
   }
 
+  let fetchBody: any = undefined;
+
+  // IMPORTANT: handle FormData separately (for uploads)
+  if (body instanceof FormData) {
+    // Let fetch/React Native set multipart/form-data; boundary=...
+    fetchBody = body;
+  } else if (body !== undefined && body !== null) {
+    // Normal JSON request
+    headers["Content-Type"] = "application/json";
+    fetchBody = JSON.stringify(body);
+  }
+
   const res = await fetch(`${API_BASE}${path}`, {
     method,
     headers,
-    body: body ? JSON.stringify(body) : undefined,
+    body: fetchBody,
   });
 
   // Try to parse JSON only if content-type says JSON.
   let data: any = null;
   const raw = await res.text();
+
   if (raw) {
     if (isJsonContent(res)) {
       try {
