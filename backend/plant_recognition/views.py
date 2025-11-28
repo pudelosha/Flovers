@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .inference import predict_topk
+from .serializers import PlantRecognitionResultSerializer
 
 
 class PlantRecognitionView(APIView):
@@ -18,10 +19,17 @@ class PlantRecognitionView(APIView):
     Body: multipart/form-data with field "image"
     Optional field "topk" (default=3).
 
-    Response:
+    Response (Option A – matches mobile client types):
     {
-      "best": { id, name, latin, score, rank },
-      "candidates": [ ...topk items... ]
+      "results": [
+        {
+          "id": null,
+          "name": "Nephrolepis exaltata",
+          "latin": "Nephrolepis exaltata",
+          "confidence": 0.85
+        },
+        ...
+      ]
     }
     """
 
@@ -43,19 +51,36 @@ class PlantRecognitionView(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
+        # topk: between 1 and 10, default 3
         try:
             topk_raw = request.data.get("topk", "3")
             topk = max(1, min(10, int(topk_raw)))
         except (TypeError, ValueError):
             topk = 3
 
+        # Raw ML predictions:
+        # [
+        #   { "id": "ml-0", "name": "...", "latin": "...", "score": 0.85, "rank": 1 },
+        #   ...
+        # ]
         predictions = predict_topk(image, topk=topk)
-        best = predictions[0] if predictions else None
+
+        # Adapt to mobile contract: ApiRecognitionResult[]
+        # id: always null for now (no DB link yet)
+        raw_results = [
+            {
+                "id": None,
+                "name": p["name"],
+                "latin": p["latin"],
+                "confidence": p["score"],
+            }
+            for p in predictions
+        ]
+
+        serializer = PlantRecognitionResultSerializer(data=raw_results, many=True)
+        serializer.is_valid(raise_exception=True)
 
         return Response(
-            {
-                "best": best,
-                "candidates": predictions,
-            },
+            {"results": serializer.data},
             status=status.HTTP_200_OK,
         )
