@@ -1,12 +1,13 @@
 ﻿"""
-Central config for PlantNet-300K training
+Central config for training on the 'plants_downloaded' dataset.
 
 We assume this folder structure:
 
-ml/data/plantnet_300K/plantnet_300K/images/train/...
-ml/data/plantnet_300K/plantnet_300K/images/test/...
+    ml/data/plants_downloaded/images/train/<latin_name>/*.jpg
+    ml/data/plants_downloaded/images/val/<latin_name>/*.jpg
 
-If you later get a separate 'val' folder, you can change VAL_DIR below.
+The dataset is prepared by a script that copies images from your
+OneDrive download folder into this structure with an 80/20 train/val split.
 """
 
 from pathlib import Path
@@ -16,19 +17,20 @@ import torch
 PROJECT_ROOT = Path(__file__).resolve().parents[1]   # .../Flovers
 ML_ROOT = PROJECT_ROOT / "ml"
 
-# Extracted dataset root
-DATA_ROOT = ML_ROOT / "data" / "plantnet_300K" / "plantnet_300K" / "images"
+# Extracted dataset root for the new dataset
+DATA_ROOT = ML_ROOT / "data" / "plants_downloaded" / "images"
 
 # Subfolders with images
-TRAIN_DIR = DATA_ROOT / "train"   # used as training set
-VAL_DIR = DATA_ROOT / "test"      # used as validation set (for now test=val)
+TRAIN_DIR = DATA_ROOT / "train"   # training set
+VAL_DIR = DATA_ROOT / "val"       # validation set
 
+# Checkpoints & logs
 CHECKPOINT_DIR = ML_ROOT / "checkpoints"
 LOG_DIR = ML_ROOT / "logs"
 
 # Training hyperparameters
 BATCH_SIZE = 16        # if your PC struggles, reduce to 16 or 8
-NUM_EPOCHS = 10        # we'll go to 10 first, can later bump to 20 and resume
+NUM_EPOCHS = 10        # can later bump to 20 or more and resume
 LR = 1e-4
 WEIGHT_DECAY = 1e-4
 NUM_WORKERS = 0        # 0 is safest on Windows; on Linux you can increase (e.g. 4)

@@ -1,6 +1,11 @@
 ﻿"""
-Full training script for ResNet18 on PlantNet-300K using folder structure,
-with checkpointing and resume support.
+Full training script for ResNet18 on the 'plants_downloaded' dataset
+using folder structure, with checkpointing and resume support.
+
+Expected dataset layout (configured in config.py):
+
+    ml/data/plants_downloaded/images/train/<latin_name>/image.jpg
+    ml/data/plants_downloaded/images/val/<latin_name>/image.jpg
 
 Usage (from the 'ml' folder):
 
@@ -20,13 +25,15 @@ This script will:
 - create a ResNet18 with ImageNet weights,
 - train for NUM_EPOCHS (see config.py),
 - save:
-    - the latest checkpoint  -> ml/checkpoints/plantnet_resnet18_checkpoint.pth
-    - the best model so far  -> ml/checkpoints/plantnet_resnet18_best.pth
+    - the latest checkpoint  -> ml/checkpoints/plants_downloaded_resnet18_v1_checkpoint.pth
+    - the best model so far  -> ml/checkpoints/plants_downloaded_resnet18_v1_best.pth
+    - class names (latin)    -> ml/checkpoints/plants_downloaded_resnet18_v1_classes.json
 """
 
 import argparse
 import time
 from pathlib import Path
+import json
 
 import torch
 from torch import nn, optim
@@ -46,9 +53,10 @@ from config import (
     CHECKPOINT_DIR,
 )
 
-# Default checkpoint filenames
-LAST_CHECKPOINT_NAME = "plantnet_resnet18_checkpoint.pth"
-BEST_MODEL_NAME = "plantnet_resnet18_best.pth"
+# Default checkpoint filenames for this dataset/version
+LAST_CHECKPOINT_NAME = "plants_downloaded_resnet18_v1_checkpoint.pth"
+BEST_MODEL_NAME = "plants_downloaded_resnet18_v1_best.pth"
+CLASSES_FILENAME = "plants_downloaded_resnet18_v1_classes.json"
 
 # Save a checkpoint every N global steps in addition to at each epoch end
 SAVE_EVERY_STEPS = 2000
@@ -82,6 +90,18 @@ def get_loaders():
     )
 
     return train_loader, val_loader, train_ds, val_ds
+
+
+def save_class_names(train_ds):
+    """
+    Save the class names (latin folder names) to a JSON file.
+    This will be used later by the backend for inference.
+    """
+    classes = train_ds.classes  # list of folder names sorted
+    classes_path = CHECKPOINT_DIR / CLASSES_FILENAME
+    with classes_path.open("w", encoding="utf-8") as f:
+        json.dump(classes, f, ensure_ascii=False, indent=2)
+    print(f"[Classes] Saved {len(classes)} class names to {classes_path}")
 
 
 def build_model(num_classes: int) -> nn.Module:
@@ -290,7 +310,7 @@ def parse_args():
     """
     Parse command-line arguments.
     """
-    parser = argparse.ArgumentParser(description="Train ResNet18 on PlantNet-300K")
+    parser = argparse.ArgumentParser(description="Train ResNet18 on plants_downloaded")
     parser.add_argument(
         "--resume",
         action="store_true",
@@ -303,7 +323,7 @@ def parse_args():
         help=(
             "Optional custom checkpoint path. "
             "If not provided, uses "
-            "CHECKPOINT_DIR/plantnet_resnet18_checkpoint.pth"
+            "CHECKPOINT_DIR/plants_downloaded_resnet18_v1_checkpoint.pth"
         ),
     )
     return parser.parse_args()
@@ -316,7 +336,7 @@ def main():
     - build loaders and model
     - (optionally) resume from checkpoint
     - train for NUM_EPOCHS
-    - track best validation accuracy and save best model
+    - track best validation accuracy and save best model + class names
     """
     args = parse_args()
 
@@ -332,6 +352,10 @@ def main():
     # Build datasets and loaders
     train_loader, val_loader, train_ds, _ = get_loaders()
     num_classes = len(train_ds.classes)
+
+    # Save class names once (on first run)
+    save_class_names(train_ds)
+
     print(f"[Setup] Using device: {DEVICE}")
     print(f"[Setup] Batch size: {BATCH_SIZE}, Epochs: {NUM_EPOCHS}")
     print(f"[Setup] Num workers: {NUM_WORKERS}, Save-every-steps: {SAVE_EVERY_STEPS}")

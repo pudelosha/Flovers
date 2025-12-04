@@ -1,8 +1,8 @@
 ﻿"""
-Dataset for PlantNet-300K based on folder structure:
+Dataset for the plants_downloaded dataset based on folder structure:
 
-    .../images/train/<species_name>/image.jpg
-    .../images/test/<species_name>/image.jpg
+    .../images/train/<latin_name>/image.jpg
+    .../images/val/<latin_name>/image.jpg
 
 We use torchvision.datasets.ImageFolder, which:
 - scans subfolders,
