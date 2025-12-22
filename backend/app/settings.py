@@ -6,6 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- .env ---
 env = environ.Env()
+
+# Load .env if present (but DO NOT use its existence to decide DB engine)
 env_file = BASE_DIR / ".env"
 if env_file.exists():
     environ.Env.read_env(env_file)
@@ -34,6 +36,7 @@ INSTALLED_APPS = [
     "locations",
     "reminders",
     "readings",
+    "plant_recognition",
 ]
 
 MIDDLEWARE = [
@@ -63,7 +66,15 @@ TEMPLATES = [{
 WSGI_APPLICATION = "app.wsgi.application"
 
 # --- Database ---
-if env_file.exists():
+# Prefer DATABASE_URL if you have it (common in Docker/prod)
+DATABASE_URL = env("DATABASE_URL", default="").strip()
+USE_POSTGRES = env.bool("USE_POSTGRES", default=False)
+
+if DATABASE_URL:
+    # Example: postgres://appuser:apppass@db:5432/appdb
+    DATABASES = {"default": env.db("DATABASE_URL")}
+elif USE_POSTGRES:
+    # Classic discrete env vars
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
@@ -75,26 +86,34 @@ if env_file.exists():
         }
     }
 else:
-    DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": BASE_DIR / "db.sqlite3"}}
+    # Default local dev (no psycopg needed)
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 AUTH_USER_MODEL = "accounts.User"
 
 # --- DRF ---
 REST_FRAMEWORK = {
-  "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
-  "DEFAULT_THROTTLE_CLASSES": [
-      "rest_framework.throttling.UserRateThrottle",
-      "rest_framework.throttling.AnonRateThrottle",
-      "readings.throttles.IngestPerDeviceThrottle",
-      "readings.throttles.FeedPerDeviceThrottle",
-  ],
-  "DEFAULT_THROTTLE_RATES": {
-      "user": "200/min",
-      "anon": "50/min",
-      "ingest_per_device": "60/hour",
-      "feed_per_device": "120/hour",
-  },
-  "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.UserRateThrottle",
+        "rest_framework.throttling.AnonRateThrottle",
+        "readings.throttles.IngestPerDeviceThrottle",
+        "readings.throttles.FeedPerDeviceThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "user": "200/min",
+        "anon": "50/min",
+        "ingest_per_device": "60/hour",
+        "feed_per_device": "120/hour",
+    },
+    "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 }
 
 # --- JWT ---
@@ -109,11 +128,21 @@ TIME_ZONE = "Europe/Warsaw"
 USE_I18N = True
 USE_TZ = True
 
+LANGUAGES = [
+    ("en", "English"),
+    ("pl", "Polski"),
+    ("de", "Deutsch"),
+]
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
+
 # --- Static / Media ---
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # --- CORS (dev: open) ---
@@ -140,4 +169,3 @@ DEEP_LINK_ENABLED = env.bool("DEEP_LINK_ENABLED", default=True)
 PUBLIC_WEB_BASE = env("PUBLIC_WEB_BASE", default=SITE_URL)  # where /open/* is served
 
 ANDROID_PACKAGE_NAME = "com.flovers"  # <-- set your actual appId
-
