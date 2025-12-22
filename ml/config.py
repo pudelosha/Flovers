@@ -1,13 +1,10 @@
 ﻿"""
-Central config for training on the 'plants_downloaded' dataset.
+Central config for training on the 'web_scrapped' dataset.
 
-We assume this folder structure:
+Expected folder structure:
 
-    ml/data/plants_downloaded/images/train/<latin_name>/*.jpg
-    ml/data/plants_downloaded/images/val/<latin_name>/*.jpg
-
-The dataset is prepared by a script that copies images from your
-OneDrive download folder into this structure with an 80/20 train/val split.
+    ml/data/web_scrapped/images/train/<class_name>/*.jpg
+    ml/data/web_scrapped/images/val/<class_name>/*.jpg
 """
 
 from pathlib import Path
@@ -17,22 +14,22 @@ import torch
 PROJECT_ROOT = Path(__file__).resolve().parents[1]   # .../Flovers
 ML_ROOT = PROJECT_ROOT / "ml"
 
-# Extracted dataset root for the new dataset
-DATA_ROOT = ML_ROOT / "data" / "plants_downloaded" / "images"
+# Dataset root
+DATA_ROOT = ML_ROOT / "data" / "web_scrapped" / "images"
 
 # Subfolders with images
-TRAIN_DIR = DATA_ROOT / "train"   # training set
-VAL_DIR = DATA_ROOT / "val"       # validation set
+TRAIN_DIR = DATA_ROOT / "train"
+VAL_DIR = DATA_ROOT / "val"
 
 # Checkpoints & logs
 CHECKPOINT_DIR = ML_ROOT / "checkpoints"
 LOG_DIR = ML_ROOT / "logs"
 
 # Training hyperparameters
-BATCH_SIZE = 16        # if your PC struggles, reduce to 16 or 8
-NUM_EPOCHS = 10        # can later bump to 20 or more and resume
+BATCH_SIZE = 16
+NUM_EPOCHS = 10
 LR = 1e-4
 WEIGHT_DECAY = 1e-4
-NUM_WORKERS = 0        # 0 is safest on Windows; on Linux you can increase (e.g. 4)
+NUM_WORKERS = 0  # safest on Windows
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")

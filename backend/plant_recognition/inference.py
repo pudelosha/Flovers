@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import List, Dict
 
@@ -15,8 +16,14 @@ from PIL import Image
 BASE_DIR = Path(__file__).resolve().parent
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 
-WEIGHTS_PATH = ARTIFACTS_DIR / "plantnet_resnet18_v1_state_dict.pt"
-CLASSES_PATH = ARTIFACTS_DIR / "plantnet_resnet18_v1_classes.json"
+# Choose which model to load via env var (optional).
+# Examples:
+#   setx PLANT_MODEL web_scrapped_resnet18_v1
+#   setx PLANT_MODEL plants_downloaded_resnet18_v1
+MODEL_NAME = os.environ.get("PLANT_MODEL", "web_scrapped_resnet18_v1")
+
+WEIGHTS_PATH = ARTIFACTS_DIR / f"{MODEL_NAME}_best.pth"
+CLASSES_PATH = ARTIFACTS_DIR / f"{MODEL_NAME}_classes.json"
 
 DEVICE = torch.device("cpu")  # VPS will run CPU inference
 
@@ -76,28 +83,41 @@ def _build_model(num_classes: int) -> nn.Module:
 
 def _load_model() -> nn.Module:
     if not WEIGHTS_PATH.exists():
-        raise FileNotFoundError(f"Model weights not found at {WEIGHTS_PATH}")
+        raise FileNotFoundError(
+            f"Model weights not found at {WEIGHTS_PATH}. "
+            f"Set PLANT_MODEL env var or place the file in artifacts/."
+        )
 
     num_classes = len(CLASS_NAMES)
     model = _build_model(num_classes)
 
     try:
         state = torch.load(WEIGHTS_PATH, map_location=DEVICE)
-        # strict=False is more forgiving if there are minor key mismatches
-        model.load_state_dict(state, strict=False)
+
+        # In your training, "best.pth" is saved via torch.save(model.state_dict(), ...),
+        # so 'state' should be a state_dict. This handles both formats safely:
+        if isinstance(state, dict) and "model_state" in state:
+            # checkpoint-style dict (if ever used)
+            state_dict = state["model_state"]
+        else:
+            # state_dict-style (expected)
+            state_dict = state
+
+        # strict=True is safer; if you ever change heads/classes it should fail loudly.
+        model.load_state_dict(state_dict, strict=True)
+
     except Exception as e:
-        # Bubble up a clearer error message so you can see it in logs
-        raise RuntimeError(f"Failed to load model weights: {e}") from e
+        raise RuntimeError(
+            f"Failed to load model weights from {WEIGHTS_PATH}. Error: {e}"
+        ) from e
 
     model.to(DEVICE)
     model.eval()
-
     return model
 
 
 # Single global model instance, loaded once at import time
 MODEL: nn.Module = _load_model()
-
 
 # --- Public prediction API -------------------------------------------------
 
@@ -113,8 +133,8 @@ def predict_topk(
     [
       {
         "id": "ml-123",
-        "name": "Nephrolepis exaltata",
-        "latin": "Nephrolepis exaltata",
+        "name": "Nephrolepis_exaltata",
+        "latin": "Nephrolepis_exaltata",
         "score": 0.85,
         "rank": 1,
       },
@@ -127,16 +147,17 @@ def predict_topk(
     with torch.no_grad():
         logits = MODEL(x)
         probs = torch.softmax(logits, dim=1)[0]
-        top_probs, top_idxs = probs.topk(topk)
+        k = max(1, min(int(topk), 10))
+        top_probs, top_idxs = probs.topk(k)
 
     results: List[Dict] = []
     for rank, (p, idx) in enumerate(zip(top_probs.tolist(), top_idxs.tolist()), start=1):
         name = CLASS_NAMES[idx]
         results.append(
             {
-                "id": f"ml-{idx}",  # no DB id yet, just a stable ML id
+                "id": f"ml-{idx}",  # views.py maps this to id=None for API output
                 "name": name,
-                "latin": name,  # you can refine later if you store separate latin/common
+                "latin": name,
                 "score": float(p),
                 "rank": rank,
             }
