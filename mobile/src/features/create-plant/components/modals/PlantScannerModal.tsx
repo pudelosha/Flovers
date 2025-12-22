@@ -1,5 +1,5 @@
 // components/modals/PlantScannerModal.tsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   View,
   Pressable,
@@ -19,14 +19,12 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 import type { Suggestion } from "../../types/create-plant.types";
-import { recognizePlantFromUri } from "../../../../api/services/plant-recognition.service";
-
 import {
-  launchCamera,
-  launchImageLibrary,
-  type CameraOptions,
-  type ImageLibraryOptions,
-} from "react-native-image-picker";
+  recognizePlantFromUri,
+  type ApiRecognitionResult,
+} from "../../../../api/services/plant-recognition.service";
+
+import { launchCamera, launchImageLibrary } from "react-native-image-picker";
 
 type Props = {
   visible: boolean;
@@ -48,39 +46,69 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   return perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
 }
 
+function toPercent(prob01: number | undefined | null): string | null {
+  if (prob01 === null || prob01 === undefined) return null;
+  const n = Number(prob01);
+  if (!Number.isFinite(n)) return null;
+
+  const pct = Math.max(0, Math.min(1, n)) * 100;
+  const rounded = Math.round(pct);
+  if (Math.abs(pct - rounded) < 0.05) return `${rounded}%`;
+  return `${Math.round(pct * 10) / 10}%`;
+}
+
+function toSuggestion(item: ApiRecognitionResult): Suggestion {
+  return {
+    id: item.id ?? `ml:${item.latin}`,
+    name: item.name,
+    latin: item.latin,
+  } as Suggestion;
+}
+
 export default function PlantScannerModal({
   visible,
   onClose,
   onPlantDetected,
 }: Props) {
   const insets = useSafeAreaInsets();
+
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [isPicking, setIsPicking] = useState(false);
   const [isRecognizing, setIsRecognizing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(
+    null
+  );
+
   const busy = isPicking || isRecognizing;
 
-  // RESET STATE WHEN OPENED
+  const stage: "photo" | "results" = useMemo(
+    () => (candidates && candidates.length > 0 ? "results" : "photo"),
+    [candidates]
+  );
+
   useEffect(() => {
     if (visible) {
       setPhotoUri(null);
       setError(null);
       setIsPicking(false);
       setIsRecognizing(false);
+      setCandidates(null);
     }
   }, [visible]);
 
   if (!visible) return null;
 
-  const handleRecognitionSuccess = (plant: Suggestion) => {
-    onPlantDetected?.(plant);
+  const handleSelectCandidate = (item: ApiRecognitionResult) => {
+    onPlantDetected?.(toSuggestion(item));
     onClose();
   };
 
   const doLaunchCamera = async () => {
     try {
       setError(null);
+      setCandidates(null);
       setIsPicking(true);
 
       const ok = await ensureAndroidPermissionCameraAndRead();
@@ -106,7 +134,7 @@ export default function PlantScannerModal({
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
-    } catch (e: any) {
+    } catch {
       setError("Failed to open camera.");
     } finally {
       setIsPicking(false);
@@ -116,6 +144,7 @@ export default function PlantScannerModal({
   const doLaunchLibrary = async () => {
     try {
       setError(null);
+      setCandidates(null);
       setIsPicking(true);
 
       const ok = await ensureAndroidPermissionCameraAndRead();
@@ -142,7 +171,7 @@ export default function PlantScannerModal({
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
-    } catch (e: any) {
+    } catch {
       setError("Failed to open gallery.");
     } finally {
       setIsPicking(false);
@@ -156,15 +185,23 @@ export default function PlantScannerModal({
       setError(null);
       setIsRecognizing(true);
 
-      const suggestion = await recognizePlantFromUri(photoUri, { auth: true });
+      const resp = await recognizePlantFromUri(photoUri, { auth: true, topk: 3 });
+      const results = (resp?.results ?? []).slice(0, 3);
 
-      handleRecognitionSuccess(suggestion);
+      if (results.length === 0) {
+        setCandidates(null);
+        setError("No results returned. Try a clearer photo.");
+        return;
+      }
+
+      setCandidates(results);
     } catch (e: any) {
       console.log("Recognition error", e);
+      setCandidates(null);
       setError(
         e?.message ??
-        (e?.response?.data?.detail as string) ??
-        "Failed to recognize the plant."
+          (e?.response?.data?.detail as string) ??
+          "Failed to recognize the plant."
       );
     } finally {
       setIsRecognizing(false);
@@ -207,122 +244,211 @@ export default function PlantScannerModal({
         >
           <ScrollView
             keyboardShouldPersistTaps="handled"
-            contentContainerStyle={[
-              styles.scrollContent,
-              { paddingBottom: 24 },
-            ]}
+            contentContainerStyle={styles.scrollContent}
           >
-            {/* FIX: remove left padding from header */}
-            <Text
-              style={[
-                remindersStyles.promptTitle,
-                { paddingHorizontal: 0 }
-              ]}
-            >
-              Scan plant
+            <Text style={[remindersStyles.promptTitle, { paddingHorizontal: 0 }]}>
+              {stage === "photo" ? "Scan plant" : "Select the detected plant"}
             </Text>
 
-            <Text style={wiz.subtitle}>
-              Take a photo or choose one from your gallery. We’ll try to
-              recognize the plant and prefill its details.
-            </Text>
+            {stage === "photo" ? (
+              <>
+                <Text style={wiz.subtitle}>
+                  Take a photo or choose one from your gallery. Please use a clear,
+                  good-quality image that shows the plant’s leaf shape well, centered
+                  and not blocked by other plants or objects.
+                </Text>
 
-            {/* Preview */}
-            <View
-              style={[
-                wiz.hero,
-                styles.previewFrame,
-              ]}
-            >
-              {photoUri ? (
-                <Image
-                  source={{ uri: photoUri }}
-                  style={{ width: "100%", height: "100%" }}
-                  resizeMode="cover"
-                />
-              ) : (
-                <View style={styles.previewPlaceholder}>
-                  <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
-                  <Text style={styles.previewText}>No photo selected</Text>
+                {/* Preview */}
+                <View style={[wiz.hero, styles.previewFrame]}>
+                  {photoUri ? (
+                    <Image
+                      source={{ uri: photoUri }}
+                      style={{ width: "100%", height: "100%" }}
+                      resizeMode="cover"
+                    />
+                  ) : (
+                    <View style={styles.previewPlaceholder}>
+                      <MaterialCommunityIcons
+                        name="image-plus"
+                        size={28}
+                        color="#FFFFFF"
+                      />
+                      <Text style={styles.previewText}>No photo selected</Text>
+                    </View>
+                  )}
                 </View>
-              )}
-            </View>
 
-            {/* Actions row */}
-            <View style={styles.actionsRow}>
-              <Pressable
-                disabled={busy}
-                style={styles.actionCard}
-                onPress={doLaunchCamera}
-              >
-                <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
-                <Text style={styles.actionLabel}>Take a photo</Text>
-              </Pressable>
-
-              <Pressable
-                disabled={busy}
-                style={styles.actionCard}
-                onPress={doLaunchLibrary}
-              >
-                <MaterialCommunityIcons name="image-multiple" size={24} color="#FFFFFF" />
-                <Text style={styles.actionLabel}>From gallery</Text>
-              </Pressable>
-            </View>
-
-            {/* Recognize */}
-            <Pressable
-              disabled={!photoUri || isRecognizing}
-              onPress={handleRecognize}
-              style={[
-                wiz.actionFull,
-                {
-                  marginTop: 12,
-                  backgroundColor: "rgba(11,114,133,0.9)",
-                  opacity: !photoUri || isRecognizing ? 0.45 : 1,
-                },
-              ]}
-              android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-            >
-              {isRecognizing ? (
-                <ActivityIndicator />
-              ) : (
-                <>
-                  <MaterialCommunityIcons
-                    name="leaf"
-                    size={18}
-                    color="#FFFFFF"
-                    style={{ opacity: !photoUri ? 0.55 : 1 }}
-                  />
-                  <Text
-                    style={[
-                      wiz.actionText,
-                      { opacity: !photoUri ? 0.55 : 1 }
-                    ]}
+                {/* Actions row */}
+                <View style={styles.actionsRow}>
+                  <Pressable
+                    disabled={busy}
+                    style={[styles.actionCard, busy && { opacity: 0.6 }]}
+                    onPress={doLaunchCamera}
                   >
-                    Recognize plant
+                    <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
+                    <Text style={styles.actionLabel}>Take a photo</Text>
+                  </Pressable>
+
+                  <Pressable
+                    disabled={busy}
+                    style={[styles.actionCard, busy && { opacity: 0.6 }]}
+                    onPress={doLaunchLibrary}
+                  >
+                    <MaterialCommunityIcons
+                      name="image-multiple"
+                      size={24}
+                      color="#FFFFFF"
+                    />
+                    <Text style={styles.actionLabel}>From gallery</Text>
+                  </Pressable>
+                </View>
+
+                {/* Recognize */}
+                <Pressable
+                  disabled={!photoUri || isRecognizing}
+                  onPress={handleRecognize}
+                  style={[
+                    wiz.actionFull,
+                    {
+                      marginTop: 12,
+                      backgroundColor: "rgba(11,114,133,0.9)",
+                      opacity: !photoUri || isRecognizing ? 0.45 : 1,
+                    },
+                  ]}
+                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                >
+                  {isRecognizing ? (
+                    <ActivityIndicator />
+                  ) : (
+                    <>
+                      <MaterialCommunityIcons
+                        name="leaf"
+                        size={18}
+                        color="#FFFFFF"
+                        style={{ opacity: !photoUri ? 0.55 : 1 }}
+                      />
+                      <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
+                        Recognize plant
+                      </Text>
+                    </>
+                  )}
+                </Pressable>
+
+                {error && (
+                  <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 10 }]}>
+                    {error}
                   </Text>
-                </>
-              )}
-            </Pressable>
+                )}
 
+                {/* Close */}
+                <View style={styles.bottomRowFull}>
+                  <Pressable
+                    style={[styles.bottomBtn, { flex: 1 }]}
+                    onPress={() => {
+                      if (!busy) onClose();
+                    }}
+                  >
+                    <Text style={styles.bottomBtnText}>Close</Text>
+                  </Pressable>
+                </View>
+              </>
+            ) : (
+              <>
+                <Text style={wiz.subtitle}>
+                  We found a few possible matches. Pick one to prefill plant details.
+                </Text>
 
-            {error && (
-              <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 10 }]}>
-                {error}
-              </Text>
+                {/* Preview */}
+                <View style={styles.previewMiniWrap}>
+                  <View style={styles.previewMiniFrame}>
+                    {photoUri ? (
+                      <Image
+                        source={{ uri: photoUri }}
+                        style={{ width: "100%", height: "100%" }}
+                        resizeMode="cover"
+                      />
+                    ) : (
+                      <View style={styles.previewPlaceholder}>
+                        <MaterialCommunityIcons
+                          name="image-plus"
+                          size={22}
+                          color="#FFFFFF"
+                        />
+                        <Text style={styles.previewText}>No photo</Text>
+                      </View>
+                    )}
+                  </View>
+                </View>
+
+                {/* Candidates */}
+                <View style={{ marginTop: 12, gap: 10 }}>
+                  {(candidates ?? []).slice(0, 3).map((item, idx) => {
+                    const pct = toPercent(item.probability ?? item.confidence);
+                    return (
+                      <Pressable
+                        key={`${item.latin}-${idx}`}
+                        onPress={() => handleSelectCandidate(item)}
+                        style={styles.candidateCard}
+                        android_ripple={{ color: "rgba(255,255,255,0.10)" }}
+                      >
+                        <View style={{ flex: 1 }}>
+                          <Text style={styles.candidateName} numberOfLines={1}>
+                            {item.name}
+                          </Text>
+                          {!!item.latin && (
+                            <Text style={styles.candidateLatin} numberOfLines={1}>
+                              {item.latin}
+                            </Text>
+                          )}
+                        </View>
+
+                        <View style={styles.candidateRight}>
+                          {pct ? (
+                            <View style={styles.pill}>
+                              <Text style={styles.pillText}>{pct}</Text>
+                            </View>
+                          ) : null}
+                          <MaterialCommunityIcons
+                            name="chevron-right"
+                            size={22}
+                            color="rgba(255,255,255,0.9)"
+                          />
+                        </View>
+                      </Pressable>
+                    );
+                  })}
+                </View>
+
+                {error && (
+                  <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 10 }]}>
+                    {error}
+                  </Text>
+                )}
+
+                {/* Bottom buttons: Back + Close (50/50, full width) */}
+                <View style={styles.bottomRowFull}>
+                  <Pressable
+                    style={[styles.bottomBtn, { flex: 1 }]}
+                    onPress={() => {
+                      if (busy) return;
+                      setCandidates(null);
+                      setError(null);
+                    }}
+                  >
+                    <Text style={styles.bottomBtnText}>Back</Text>
+                  </Pressable>
+
+                  <Pressable
+                    style={[styles.bottomBtn, { flex: 1 }]}
+                    onPress={() => {
+                      if (!busy) onClose();
+                    }}
+                  >
+                    <Text style={styles.bottomBtnText}>Close</Text>
+                  </Pressable>
+                </View>
+              </>
             )}
-
-            {/* FIX: remove right margin of Close button */}
-            <View style={[remindersStyles.promptButtonsRow, { marginRight: 0 }]}>
-              <Pressable
-                style={[remindersStyles.promptBtn, { marginRight: 0 }]}
-                onPress={() => {
-                  if (!busy) onClose();
-                }}
-              >
-                <Text style={remindersStyles.promptBtnText}>Close</Text>
-              </Pressable>
-            </View>
           </ScrollView>
         </View>
       </View>
@@ -334,7 +460,10 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 16,
     paddingTop: 16,
+    // IMPORTANT: no extra bottom padding (prevents "empty bar" feeling)
+    paddingBottom: 0,
   },
+
   previewFrame: {
     marginTop: 8,
     marginBottom: 10,
@@ -354,6 +483,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     marginTop: 8,
   },
+
   actionsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -373,5 +503,83 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     color: "#FFFFFF",
+  },
+
+  previewMiniWrap: {
+    marginTop: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+  },
+  previewMiniFrame: {
+    width: 72,
+    height: 72,
+    borderRadius: 14,
+    overflow: "hidden",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+  },
+
+  candidateCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 14,
+    paddingHorizontal: 14,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.14)",
+    overflow: "hidden",
+  },
+  candidateName: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 15,
+  },
+  candidateLatin: {
+    marginTop: 2,
+    color: "rgba(255,255,255,0.78)",
+    fontWeight: "600",
+    fontSize: 13,
+  },
+  candidateRight: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  pill: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 999,
+    backgroundColor: "rgba(11,114,133,0.35)",
+    borderWidth: 1,
+    borderColor: "rgba(11,114,133,0.65)",
+  },
+  pillText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 12,
+  },
+
+  // Full-width bottom buttons row
+  bottomRowFull: {
+    marginTop: 14,
+    flexDirection: "row",
+    width: "100%",
+    gap: 10,
+    paddingBottom: 12, // small breathing room
+  },
+  bottomBtn: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.14)",
+  },
+  bottomBtnText: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 14,
   },
 });

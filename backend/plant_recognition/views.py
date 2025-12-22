@@ -22,13 +22,14 @@ class PlantRecognitionView(APIView):
     Body: multipart/form-data with field "image"
     Optional field "topk" (default=3).
 
-    Response (matches mobile client types):
+    Response:
     {
       "results": [
         {
           "id": null,
           "name": "Nephrolepis exaltata",
           "latin": "Nephrolepis exaltata",
+          "probability": 0.85,
           "confidence": 0.85
         },
         ...
@@ -62,28 +63,31 @@ class PlantRecognitionView(APIView):
             topk = 3
 
         try:
-            # Raw ML predictions:
+            # predictions example:
             # [
             #   { "id": "ml-0", "name": "...", "latin": "...", "score": 0.85, "rank": 1 },
             #   ...
             # ]
             predictions = predict_topk(image, topk=topk)
         except Exception as e:
-            # This will show up in your Django console / log files
             logger.exception("Plant recognition failed")
             return Response(
                 {"detail": f"Internal error during plant recognition: {e}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
 
-        # Adapt to mobile contract: ApiRecognitionResult[]
-        # id: always null for now (no DB link yet)
+        # Ensure best-first ordering regardless of inference output
+        predictions = sorted(predictions, key=lambda p: float(p.get("score", 0.0)), reverse=True)[:topk]
+
+        # score is treated as probability (0..1)
         raw_results = [
             {
-                "id": None,
+                "id": None,  # no DB link yet
                 "name": p["name"],
                 "latin": p["latin"],
-                "confidence": p["score"],
+                "probability": float(p.get("score", 0.0)),
+                # keep old field for backward-compat
+                "confidence": float(p.get("score", 0.0)),
             }
             for p in predictions
         ]

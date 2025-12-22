@@ -1,15 +1,19 @@
 import { ApiError, request } from "../client";
-import type { Suggestion } from "../../features/create-plant/types/create-plant.types";
 
 const ENDPOINTS = {
   scan: "/api/plant-recognition/scan/",
 };
 
 export type ApiRecognitionResult = {
-  id: number | null;      // always null for now
+  id: number | null; // currently null
   name: string;
   latin: string;
-  confidence: number;
+
+  // new field from backend (0..1)
+  probability: number;
+
+  // optional legacy field (0..1)
+  confidence?: number;
 };
 
 export type ApiRecognitionResponse = {
@@ -18,8 +22,8 @@ export type ApiRecognitionResponse = {
 
 export async function recognizePlantFromUri(
   uri: string,
-  opts: { auth?: boolean } = { auth: true }
-): Promise<Suggestion> {
+  opts: { auth?: boolean; topk?: number } = { auth: true, topk: 3 }
+): Promise<ApiRecognitionResponse> {
   const form = new FormData();
   form.append("image", {
     uri,
@@ -27,15 +31,14 @@ export async function recognizePlantFromUri(
     type: "image/jpeg",
   } as any);
 
+  form.append("topk", String(opts.topk ?? 3));
+
   let data: ApiRecognitionResponse;
 
   try {
-    data = await request<ApiRecognitionResponse>(
-      ENDPOINTS.scan,
-      "POST",
-      form,
-      { auth: opts.auth ?? true }
-    );
+    data = await request<ApiRecognitionResponse>(ENDPOINTS.scan, "POST", form, {
+      auth: opts.auth ?? true,
+    });
   } catch (err) {
     if (err instanceof ApiError) throw err;
     throw err;
@@ -45,12 +48,14 @@ export async function recognizePlantFromUri(
     throw new Error("No recognition results returned.");
   }
 
-  const best = data.results[0];
+  const topk = opts.topk ?? 3;
 
-  // id is null now -> treat as custom/ML-only plant
-  return {
-    id: best.id ?? `ml:${best.latin}`,
-    name: best.name,
-    latin: best.latin,
-  } as Suggestion;
+  // sort best-first defensively and cap
+  const sorted = [...data.results].sort((a, b) => {
+    const ap = a.probability ?? a.confidence ?? 0;
+    const bp = b.probability ?? b.confidence ?? 0;
+    return bp - ap;
+  });
+
+  return { results: sorted.slice(0, topk) };
 }
