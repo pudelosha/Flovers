@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.conf import settings
 from .models import PlantDefinition, PlantDefinitionTranslation
 
 
@@ -22,6 +23,26 @@ def _get_translation(obj: PlantDefinition, lang: str) -> PlantDefinitionTranslat
     return obj.translations.filter(language_code="en").first()
 
 
+def _abs_media_url(request, file_field) -> str | None:
+    """
+    Build an absolute URL that works for real devices.
+    Prefer settings.SITE_URL as a stable base, fallback to request.build_absolute_uri.
+    """
+    if not file_field:
+        return None
+
+    rel = getattr(file_field, "url", None)
+    if not rel:
+        return None
+
+    base = (getattr(settings, "SITE_URL", "") or "").strip()
+    if base:
+        return base.rstrip("/") + rel
+
+    # fallback
+    return request.build_absolute_uri(rel) if request else rel
+
+
 class PopularPlantDefinitionSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
     display_name = serializers.SerializerMethodField()
@@ -33,9 +54,9 @@ class PopularPlantDefinitionSerializer(serializers.ModelSerializer):
     def get_image(self, obj: PlantDefinition):
         request = self.context.get("request")
         if obj.image_thumb:
-            return request.build_absolute_uri(obj.image_thumb.url) if request else obj.image_thumb.url
+            return _abs_media_url(request, obj.image_thumb)
         if obj.image_hero:
-            return request.build_absolute_uri(obj.image_hero.url) if request else obj.image_hero.url
+            return _abs_media_url(request, obj.image_hero)
         return None
 
     def get_display_name(self, obj: PlantDefinition):
@@ -80,7 +101,7 @@ class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
             "image",
             "image_thumb",
             "description",
-            "traits",  # JSON field kept for now
+            "traits",
             "sun",
             "water",
             "difficulty",
@@ -99,15 +120,15 @@ class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
     def get_image(self, obj: PlantDefinition):
         request = self.context.get("request")
         if obj.image_hero:
-            return request.build_absolute_uri(obj.image_hero.url) if request else obj.image_hero.url
+            return _abs_media_url(request, obj.image_hero)
         if obj.image_thumb:
-            return request.build_absolute_uri(obj.image_thumb.url) if request else obj.image_thumb.url
+            return _abs_media_url(request, obj.image_thumb)
         return None
 
     def get_image_thumb(self, obj: PlantDefinition):
         request = self.context.get("request")
         if obj.image_thumb:
-            return request.build_absolute_uri(obj.image_thumb.url) if request else obj.image_thumb.url
+            return _abs_media_url(request, obj.image_thumb)
         return None
 
     def get_display_name(self, obj: PlantDefinition):

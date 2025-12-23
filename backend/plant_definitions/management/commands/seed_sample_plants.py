@@ -54,6 +54,8 @@ class Command(BaseCommand):
         ]
 
         created = 0
+        updated = 0
+        images_attached = 0
 
         for p in plants:
             obj, is_created = PlantDefinition.objects.get_or_create(
@@ -79,21 +81,51 @@ class Command(BaseCommand):
             )
 
             if is_created:
-                # attach images
-                hero_path = settings.MEDIA_ROOT / p["hero"]
-                thumb_path = settings.MEDIA_ROOT / p["thumb"]
-
-                if hero_path.exists():
-                    with open(hero_path, "rb") as f:
-                        obj.image_hero.save(hero_path.name, File(f), save=False)
-
-                if thumb_path.exists():
-                    with open(thumb_path, "rb") as f:
-                        obj.image_thumb.save(thumb_path.name, File(f), save=False)
-
-                obj.save()
                 created += 1
+            else:
+                # ✅ ensure existing rows are updated too (especially images)
+                obj.name = p["name"]
+                obj.latin = p["latin"]
+                obj.sun = p["sun"]
+                obj.water = p["water"]
+                obj.difficulty = p["difficulty"]
+                obj.popular = p["popular"]
+
+                obj.water_required = p.get("water_required", False)
+                obj.water_interval_days = p.get("water_interval_days")
+                obj.moisture_required = p.get("moisture_required", False)
+                obj.moisture_interval_days = p.get("moisture_interval_days")
+                obj.fertilize_required = p.get("fertilize_required", False)
+                obj.fertilize_interval_days = p.get("fertilize_interval_days")
+                obj.repot_required = p.get("repot_required", False)
+                obj.repot_interval_months = p.get("repot_interval_months")
+                obj.recommended_pot_materials = p.get("recommended_pot_materials", [])
+                obj.recommended_soil_mixes = p.get("recommended_soil_mixes", [])
+                updated += 1
+
+            # ✅ attach images even if object already existed
+            hero_path = settings.MEDIA_ROOT / p["hero"]
+            thumb_path = settings.MEDIA_ROOT / p["thumb"]
+
+            changed = False
+
+            if hero_path.exists() and not obj.image_hero:
+                with open(hero_path, "rb") as f:
+                    obj.image_hero.save(hero_path.name, File(f), save=False)
+                changed = True
+
+            if thumb_path.exists() and not obj.image_thumb:
+                with open(thumb_path, "rb") as f:
+                    obj.image_thumb.save(thumb_path.name, File(f), save=False)
+                changed = True
+
+            if changed:
+                images_attached += 1
+
+            obj.save()
 
         self.stdout.write(
-            self.style.SUCCESS(f"✅ Seed completed. Created {created} plant definitions.")
+            self.style.SUCCESS(
+                f"Seed completed. Created={created}, Updated={updated}, ImagesAttached/Fixed={images_attached}"
+            )
         )
