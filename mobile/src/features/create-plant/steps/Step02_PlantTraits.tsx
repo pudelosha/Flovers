@@ -1,6 +1,5 @@
-﻿// steps/Step02_PlantTraits.tsx
-import React, { useEffect, useMemo, useState } from "react";
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-native";
+﻿import React, { useEffect, useMemo, useState } from "react";
+import { ActivityIndicator, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -13,11 +12,14 @@ import {
 } from "../constants/create-plant.constants";
 import SafeImage from "../../../shared/ui/SafeImage";
 
-import { fetchPlantProfile, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
+import {
+  fetchPlantProfile,
+  fetchPlantSearchIndex,
+} from "../../../api/services/plant-definitions.service";
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
 
 export default function Step02_PlantTraits() {
-  const { state } = useCreatePlantWizard();
+  const { state, actions } = useCreatePlantWizard();
 
   const selected = state.selectedPlant;
   const selectedId = selected?.id;
@@ -35,17 +37,23 @@ export default function Step02_PlantTraits() {
       setError(null);
 
       try {
+        // 1) If we have an id already -> fetch directly
         if (selectedId) {
           const p = await fetchPlantProfile(String(selectedId), { auth: true });
           if (!alive) return;
+
           setProfile(p);
+          actions.setSelectedPlantDefinition(p as any);
+
           setLoading(false);
           return;
         }
 
+        // 2) If we only have a name -> find best match from index, then fetch profile
         if (selectedName) {
           const all: Suggestion[] = await fetchPlantSearchIndex({ auth: true });
           const q = selectedName.toLowerCase();
+
           const hit =
             all.find((s) => s.name.toLowerCase() === q) ||
             all.find((s) => s.latin.toLowerCase() === q) ||
@@ -54,51 +62,76 @@ export default function Step02_PlantTraits() {
                 s.name.toLowerCase().includes(q) ||
                 s.latin.toLowerCase().includes(q)
             );
+
           if (hit?.id) {
             const p = await fetchPlantProfile(String(hit.id), { auth: true });
             if (!alive) return;
+
             setProfile(p);
+            actions.setSelectedPlantDefinition(p as any);
+
             setLoading(false);
             return;
           }
         }
 
+        // 3) Fallback mock profile (still persist so later steps can read it)
         const fallback =
           (selectedName && (PLANT_PROFILES_MOCK as any)[selectedName]) ||
           PLANT_PROFILES_MOCK.generic;
-        if (!alive) return;
-        setProfile({
+
+        const fallbackProfile: PlantProfile = {
           id: undefined,
           name: selectedName || undefined,
           latin: selected?.latin,
           image: fallback.image,
           description: fallback.description,
-          traits: fallback.traits?.map((t: any) => ({ key: t.key, value: t.value })) ?? [],
-        });
+          traits:
+            fallback.traits?.map((t: any) => ({ key: t.key, value: t.value })) ??
+            [],
+        };
+
+        if (!alive) return;
+
+        setProfile(fallbackProfile);
+        actions.setSelectedPlantDefinition(fallbackProfile as any);
         setLoading(false);
       } catch (e: any) {
         if (!alive) return;
+
         setError(e?.message ?? "Failed to load plant profile.");
+
         const fallback =
           (selectedName && (PLANT_PROFILES_MOCK as any)[selectedName]) ||
           PLANT_PROFILES_MOCK.generic;
-        setProfile({
+
+        const fallbackProfile: PlantProfile = {
           id: undefined,
           name: selectedName || undefined,
           latin: selected?.latin,
           image: fallback.image,
           description: fallback.description,
-          traits: fallback.traits?.map((t: any) => ({ key: t.key, value: t.value })) ?? [],
-        });
+          traits:
+            fallback.traits?.map((t: any) => ({ key: t.key, value: t.value })) ??
+            [],
+        };
+
+        setProfile(fallbackProfile);
+        actions.setSelectedPlantDefinition(fallbackProfile as any);
         setLoading(false);
       }
     }
 
     load();
-    return () => { alive = false; };
-  }, [selectedId, selectedName, selected?.latin]);
+    return () => {
+      alive = false;
+    };
+  }, [selectedId, selectedName, selected?.latin, actions]);
 
-  const traits = useMemo(() => (Array.isArray(profile?.traits) ? profile!.traits : []), [profile]);
+  const traits = useMemo(
+    () => (Array.isArray(profile?.traits) ? profile!.traits : []),
+    [profile]
+  );
 
   return (
     <View style={wiz.cardWrap}>
@@ -126,7 +159,9 @@ export default function Step02_PlantTraits() {
             <ActivityIndicator />
           </View>
         ) : error ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>{error}</Text>
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>
+            {error}
+          </Text>
         ) : null}
 
         {/* hero image */}
@@ -135,9 +170,7 @@ export default function Step02_PlantTraits() {
         )}
 
         {/* description */}
-        {!!profile && !!profile.description && (
-          <Text style={wiz.desc}>{profile.description}</Text>
-        )}
+        {!!profile?.description && <Text style={wiz.desc}>{profile.description}</Text>}
 
         {/* preferences grid */}
         {!!profile && (
@@ -147,11 +180,13 @@ export default function Step02_PlantTraits() {
               {traits.map((t, idx) => (
                 <View key={`${t.key}-${idx}`} style={wiz.prefRow}>
                   <MaterialCommunityIcons
-                    name={TRAIT_ICON_BY_KEY[t.key]}
+                    name={(TRAIT_ICON_BY_KEY as any)[t.key]}
                     size={18}
                     color="#FFFFFF"
                   />
-                  <Text style={wiz.prefLabel}>{TRAIT_LABEL_BY_KEY[t.key]}</Text>
+                  <Text style={wiz.prefLabel}>
+                    {(TRAIT_LABEL_BY_KEY as any)[t.key]}
+                  </Text>
                   <Text style={wiz.prefValue}>{t.value}</Text>
                 </View>
               ))}

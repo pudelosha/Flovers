@@ -8,7 +8,7 @@ services:
     volumes:
       - ./backend:/app
       - static_volume:/app/staticfiles
-      - media_volume:/app/media
+      - ./backend/media:/app/media
     ports:
       - "8000:8000"
     depends_on:

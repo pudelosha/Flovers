@@ -7,13 +7,13 @@ import { wiz } from "../styles/wizard.styles";
 type Suggestion = { id: string; name: string; latin: string };
 
 type Props = {
-  value: string;
+  value?: string; // ✅ allow undefined safely
   onChange: (t: string) => void;
   showSuggestions: boolean;
   setShowSuggestions: (v: boolean) => void;
   onSelectSuggestion: (item: Suggestion) => void;
   suggestions: Suggestion[];
-  compact?: boolean;         // not used for height: fixed 64 to match Login
+  compact?: boolean; // not used for height: fixed 64 to match Login
   style?: ViewStyle;
 };
 
@@ -27,56 +27,71 @@ export default function PlantSearchBox({
   compact = false,
   style,
 }: Props) {
+  // ✅ never allow undefined to flow into trim / input
+  const safeValue = typeof value === "string" ? value : "";
+
   // filter suggestions locally
   const data = useMemo(
     () =>
-      value.trim().length === 0
+      safeValue.trim().length === 0
         ? []
-        : suggestions.filter(
-            (s) =>
-              s.name.toLowerCase().includes(value.toLowerCase()) ||
-              s.latin.toLowerCase().includes(value.toLowerCase())
-          ),
-    [value, suggestions]
+        : (suggestions ?? []).filter((s) => {
+            const name = (s?.name ?? "").toLowerCase();
+            const latin = (s?.latin ?? "").toLowerCase();
+            const q = safeValue.toLowerCase();
+            return name.includes(q) || latin.includes(q);
+          }),
+    [safeValue, suggestions]
   );
 
   // ---- Animated floating label (Login-style) ----
   const [isFocused, setIsFocused] = useState(false);
-  const animatedLabel = useRef(new Animated.Value(value ? 1 : 0)).current;
+  const animatedLabel = useRef(new Animated.Value(safeValue ? 1 : 0)).current;
 
   const animateLabel = (to: number) => {
-    Animated.timing(animatedLabel, { toValue: to, duration: 200, useNativeDriver: false }).start();
+    Animated.timing(animatedLabel, {
+      toValue: to,
+      duration: 200,
+      useNativeDriver: false,
+    }).start();
   };
 
-  // ⬇️ NEW: float label when value is set programmatically (popular list)
+  // float label when value is set programmatically (popular list)
   useEffect(() => {
-    if (value && animatedLabel) {
+    if (safeValue && animatedLabel) {
       animateLabel(1);
     } else if (!isFocused) {
       animateLabel(0);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value, isFocused]);
+  }, [safeValue, isFocused]);
 
   const handleFocus = () => {
     setIsFocused(true);
     animateLabel(1);
-    setShowSuggestions(!!value.trim());
+    setShowSuggestions(!!safeValue.trim());
   };
 
   const handleBlur = () => {
     setIsFocused(false);
-    if (!value) animateLabel(0);
+    if (!safeValue) animateLabel(0);
   };
 
   const handleChangeText = (t: string) => {
-    if (!isFocused && t) animateLabel(1); // ensure float on first programmatic write
-    onChange(t);
+    const next = typeof t === "string" ? t : "";
+    if (!isFocused && next) animateLabel(1);
+    onChange(next);
   };
 
   // label animation values (tuned for 64px height)
-  const labelTop = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [22, 8] });
-  const labelFontSize = animatedLabel.interpolate({ inputRange: [0, 1], outputRange: [16, 12] });
+  const labelTop = animatedLabel.interpolate({
+    inputRange: [0, 1],
+    outputRange: [22, 8],
+  });
+  const labelFontSize = animatedLabel.interpolate({
+    inputRange: [0, 1],
+    outputRange: [16, 12],
+  });
   const labelColor = animatedLabel.interpolate({
     inputRange: [0, 1],
     outputRange: ["rgba(255,255,255,0.6)", "#FFFFFF"],
@@ -84,8 +99,13 @@ export default function PlantSearchBox({
 
   // Container: flat, 64 high to match Login
   const containerStyle = [
-    wiz.inputRow, // flat, no border
-    { height: 64, paddingVertical: 0, paddingHorizontal: 12, position: "relative" as const },
+    wiz.inputRow,
+    {
+      height: 64,
+      paddingVertical: 0,
+      paddingHorizontal: 12,
+      position: "relative" as const,
+    },
     style,
   ];
 
@@ -101,7 +121,6 @@ export default function PlantSearchBox({
       <View style={containerStyle}>
         <MaterialCommunityIcons name="magnify" size={18} color="#FFFFFF" />
 
-        {/* Animated floating label (Login-style). */}
         <Animated.Text
           style={{
             position: "absolute",
@@ -116,11 +135,9 @@ export default function PlantSearchBox({
           Search plant
         </Animated.Text>
 
-        {/* Paper TextInput with no internal label; flat, white text/caret.
-            Left edge aligns with label (no extra margin). */}
         <TextInput
           mode="flat"
-          value={value}
+          value={safeValue}
           onChangeText={handleChangeText}
           onFocus={handleFocus}
           onBlur={handleBlur}
@@ -131,7 +148,6 @@ export default function PlantSearchBox({
             flex: 1,
             backgroundColor: "transparent",
             height: 64,
-            // IMPORTANT: keep marginLeft 0 so text start x == labelLeft
             marginLeft: 0,
           }}
           contentStyle={{ paddingTop: 20, paddingBottom: 8, paddingLeft: 0 }}
@@ -140,8 +156,8 @@ export default function PlantSearchBox({
           textColor="#FFFFFF"
           theme={{
             colors: {
-              primary: "#FFFFFF",          // caret, focus
-              onSurfaceVariant: "#FFFFFF", // keep Android from dimming to gray/black
+              primary: "#FFFFFF",
+              onSurfaceVariant: "#FFFFFF",
             },
           }}
           onSubmitEditing={() => setShowSuggestions(false)}
@@ -149,7 +165,7 @@ export default function PlantSearchBox({
           autoCapitalize="none"
         />
 
-        {!!value && (
+        {!!safeValue && (
           <Pressable
             onPress={() => {
               onChange("");
@@ -158,7 +174,11 @@ export default function PlantSearchBox({
             }}
             hitSlop={8}
           >
-            <MaterialCommunityIcons name="close-circle" size={18} color="rgba(255,255,255,0.9)" />
+            <MaterialCommunityIcons
+              name="close-circle"
+              size={18}
+              color="rgba(255,255,255,0.9)"
+            />
           </Pressable>
         )}
       </View>

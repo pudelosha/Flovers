@@ -62,12 +62,8 @@ function WizardBody() {
   const scrollRef = useRef<ScrollView>(null);
   const { state, actions } = useCreatePlantWizard();
 
-  // Marks that the wizard was just opened; Step 1 will clear once, then turn this off.
-  const [freshOpen, setFreshOpen] = useState(false);
-
   useFocusEffect(
     React.useCallback(() => {
-      setFreshOpen(true);
       scrollRef.current?.scrollTo({ y: 0, animated: false });
       return () => {};
     }, [])
@@ -182,8 +178,6 @@ function WizardBody() {
           {state.step === "selectPlant" && (
             <Step01_SelectPlant
               onScrollToTop={scrollTop}
-              freshOpen={freshOpen}
-              onCleared={() => setFreshOpen(false)}
               onOpenScanner={() => setScannerModalOpen(true)}
               onRegisterScanResultHandler={registerScannerResultHandler}
             />

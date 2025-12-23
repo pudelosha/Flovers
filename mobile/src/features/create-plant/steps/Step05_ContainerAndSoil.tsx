@@ -1,5 +1,5 @@
 ﻿// steps/Step05_ContainerAndSoil.tsx
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -17,6 +17,32 @@ export default function Step05_ContainerAndSoil() {
   const { state, actions } = useCreatePlantWizard();
 
   const [openWhich, setOpenWhich] = useState<"material" | "soil" | null>(null);
+
+  /**
+   * Auto-prefill from plant definition
+   * – only if exactly one recommendation exists
+   * – never overrides user choice
+   */
+  useEffect(() => {
+    const pd: any = (state as any).selectedPlantDefinition;
+    if (!pd) return;
+
+    if (
+      !state.potMaterial &&
+      Array.isArray(pd.recommended_pot_materials) &&
+      pd.recommended_pot_materials.length === 1
+    ) {
+      actions.setPotMaterial(pd.recommended_pot_materials[0] as PotMaterialKey);
+    }
+
+    if (
+      !state.soilMix &&
+      Array.isArray(pd.recommended_soil_mixes) &&
+      pd.recommended_soil_mixes.length === 1
+    ) {
+      actions.setSoilMix(pd.recommended_soil_mixes[0] as SoilMixKey);
+    }
+  }, [state, actions]);
 
   const materialLabel = useMemo(() => {
     if (!state.potMaterial) return "Not specified";
@@ -37,7 +63,7 @@ export default function Step05_ContainerAndSoil() {
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass frame — match Steps 1–4 exactly: blur 20 + white tint + thin border */}
+      {/* glass frame */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -53,8 +79,8 @@ export default function Step05_ContainerAndSoil() {
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Container & soil</Text>
         <Text style={wiz.subtitle}>
-          These details are optional. Choose the pot/container material and soil or potting mix — or
-          leave them as “Not specified” and continue.
+          These details are optional. Choose the pot/container material and soil or
+          potting mix — or leave them as “Not specified” and continue.
         </Text>
 
         {/* Container material */}
@@ -82,7 +108,6 @@ export default function Step05_ContainerAndSoil() {
               nestedScrollEnabled
               keyboardShouldPersistTaps="handled"
             >
-              {/* Not specified */}
               <Pressable
                 style={wiz.dropdownItem}
                 onPress={() => {
@@ -91,7 +116,9 @@ export default function Step05_ContainerAndSoil() {
                 }}
               >
                 <Text style={wiz.dropdownItemText}>Not specified</Text>
-                <Text style={wiz.dropdownItemDesc}>Skip this if you’re not sure.</Text>
+                <Text style={wiz.dropdownItemDesc}>
+                  Skip this if you’re not sure.
+                </Text>
               </Pressable>
 
               {POT_MATERIALS.map((opt) => (
@@ -105,7 +132,9 @@ export default function Step05_ContainerAndSoil() {
                 >
                   <Text style={wiz.dropdownItemText}>{opt.label}</Text>
                   {!!opt.description && (
-                    <Text style={wiz.dropdownItemDesc}>{opt.description}</Text>
+                    <Text style={wiz.dropdownItemDesc}>
+                      {opt.description}
+                    </Text>
                   )}
                 </Pressable>
               ))}
@@ -113,7 +142,7 @@ export default function Step05_ContainerAndSoil() {
           </View>
         )}
 
-        {/* Soil / mix */}
+        {/* Soil */}
         <Text style={wiz.sectionTitle}>Soil / potting mix</Text>
         <Pressable
           style={[wiz.selectField, { borderWidth: 0 }]}
@@ -138,7 +167,6 @@ export default function Step05_ContainerAndSoil() {
               nestedScrollEnabled
               keyboardShouldPersistTaps="handled"
             >
-              {/* Not specified */}
               <Pressable
                 style={wiz.dropdownItem}
                 onPress={() => {
@@ -147,7 +175,9 @@ export default function Step05_ContainerAndSoil() {
                 }}
               >
                 <Text style={wiz.dropdownItemText}>Not specified</Text>
-                <Text style={wiz.dropdownItemDesc}>Skip this if you’re not sure.</Text>
+                <Text style={wiz.dropdownItemDesc}>
+                  Skip this if you’re not sure.
+                </Text>
               </Pressable>
 
               {SOIL_MIXES.map((opt) => (
@@ -161,7 +191,9 @@ export default function Step05_ContainerAndSoil() {
                 >
                   <Text style={wiz.dropdownItemText}>{opt.label}</Text>
                   {!!opt.description && (
-                    <Text style={wiz.dropdownItemDesc}>{opt.description}</Text>
+                    <Text style={wiz.dropdownItemDesc}>
+                      {opt.description}
+                    </Text>
                   )}
                 </Pressable>
               ))}

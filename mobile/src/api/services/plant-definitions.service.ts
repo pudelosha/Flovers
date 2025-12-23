@@ -3,40 +3,51 @@ import type { PlantDefinition } from "../../features/create-plant/types/create-p
 import {
   serializePlantDefinition,
   serializePlantSuggestion,
+  serializePlantProfile,
   type ApiPlantDefinition,
   type ApiPlantSuggestion,
-} from "../../api/serializers/plant-definitions.serializer";
+  type ApiPlantProfile,
+} from "../serializers/plant-definitions.serializer";
 import { POPULAR_FALLBACK, SEARCH_INDEX_FALLBACK } from "../fallback/plants.fallback";
-import { serializePlantProfile, type ApiPlantProfile } from "../serializers/plant-definitions.serializer";
 
 const ENDPOINTS = {
-  popular: "/api/plant-definitions/popular/",          // ← include /api prefix
-  searchIndex: "/api/plant-definitions/search-index/", // ← include /api prefix
-  profile: (id: string | number) => `/api/plant-definitions/${id}/profile/`,
+  popular: "/api/plant-definitions/popular/",
+  searchIndex: "/api/plant-definitions/search-index/",
+
+  profile: (idOrKey: string | number) =>
+    typeof idOrKey === "number"
+      ? `/api/plant-definitions/${idOrKey}/profile/`
+      : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
 };
 
-/** Popular cards: includes image + requirements */
+/** Popular cards */
 export async function fetchPopularPlants(
-  opts: { auth?: boolean; useFallbackOnError?: boolean } = { auth: true, useFallbackOnError: true } // ← default auth true
+  opts: { auth?: boolean; useFallbackOnError?: boolean } = {
+    auth: true,
+    useFallbackOnError: true,
+  }
 ): Promise<PlantDefinition[]> {
   try {
     const data = await request<ApiPlantDefinition[]>(
       ENDPOINTS.popular,
       "GET",
       undefined,
-      { auth: opts.auth ?? true } // ← ensure Authorization header
+      { auth: opts.auth ?? true }
     );
     return (data ?? []).map(serializePlantDefinition);
   } catch (err) {
     if (!opts.useFallbackOnError) throw err;
-    if (err instanceof ApiError && err.status === 401) throw err; // surface auth problems
+    if (err instanceof ApiError && err.status === 401) throw err;
     return POPULAR_FALLBACK;
   }
 }
 
-/** Search suggestions dataset: no images, just id/name/latin */
+/** Search index */
 export async function fetchPlantSearchIndex(
-  opts: { auth?: boolean; useFallbackOnError?: boolean } = { auth: true, useFallbackOnError: true }
+  opts: { auth?: boolean; useFallbackOnError?: boolean } = {
+    auth: true,
+    useFallbackOnError: true,
+  }
 ) {
   try {
     const data = await request<ApiPlantSuggestion[]>(
@@ -53,12 +64,16 @@ export async function fetchPlantSearchIndex(
   }
 }
 
+/** Full plant profile */
 export async function fetchPlantProfile(
-  id: string | number,
+  idOrExternalId: string | number,
   opts: { auth?: boolean } = { auth: true }
 ) {
-  const data = await request<ApiPlantProfile>(ENDPOINTS.profile(id), "GET", undefined, {
-    auth: opts.auth ?? true,
-  });
+  const data = await request<ApiPlantProfile>(
+    ENDPOINTS.profile(idOrExternalId),
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
   return serializePlantProfile(data);
 }

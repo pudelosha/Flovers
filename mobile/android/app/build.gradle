@@ -81,13 +81,17 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.mobile"
-    defaultConfig {
-        applicationId "com.mobile"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
-    }
+	defaultConfig {
+		applicationId "com.mobile"
+		minSdkVersion rootProject.ext.minSdkVersion
+		targetSdkVersion rootProject.ext.targetSdkVersion
+		versionCode 1
+		versionName "1.0"
+
+		manifestPlaceholders = [
+			usesCleartextTraffic: true
+		]
+	}
     signingConfigs {
         debug {
             storeFile file('debug.keystore')

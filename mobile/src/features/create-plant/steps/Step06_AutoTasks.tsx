@@ -1,5 +1,5 @@
 ﻿// steps/Step06_AutoTasks.tsx
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -12,14 +12,18 @@ import {
 } from "../constants/create-plant.constants";
 import type { LastRepotted, LastWatered } from "../types/create-plant.types";
 
-// Try slider if installed (same approach as your other pages)
+// Try slider if installed
 let SliderView: any = View;
 try {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   SliderView = require("@react-native-community/slider").default;
 } catch {}
 
-const PRIMARY = "#0B7285"; // matches rgba(11,114,133,0.9)
+const PRIMARY = "#0B7285";
+
+/* ------------------------------------------------------------------ */
+/* UI helpers (unchanged)                                              */
+/* ------------------------------------------------------------------ */
 
 function SectionCheckbox({
   checked,
@@ -86,6 +90,7 @@ function InlineDropdown<T extends string>({
           />
         </View>
       </Pressable>
+
       {open && (
         <View style={wiz.dropdownList}>
           <ScrollView
@@ -102,6 +107,7 @@ function InlineDropdown<T extends string>({
                 <Text style={wiz.dropdownItemDesc}>Skip if you’re not sure.</Text>
               </Pressable>
             )}
+
             {options.map((opt) => (
               <Pressable
                 key={opt.key}
@@ -130,6 +136,7 @@ function DaysSlider({
   max?: number;
 }) {
   const v = Math.max(min, Math.min(max, value ?? min));
+
   return (
     <View style={{ marginTop: 6, marginBottom: 6 }}>
       <Text
@@ -142,6 +149,7 @@ function DaysSlider({
       >
         {v} {v === 1 ? "day" : "days"}
       </Text>
+
       {SliderView !== View ? (
         <SliderView
           value={v}
@@ -183,6 +191,7 @@ function MonthsSlider({
   max?: number;
 }) {
   const v = Math.max(min, Math.min(max, value ?? min));
+
   return (
     <View style={{ marginTop: 6, marginBottom: 6 }}>
       <Text
@@ -195,6 +204,7 @@ function MonthsSlider({
       >
         {v} {v === 1 ? "month" : "months"}
       </Text>
+
       {SliderView !== View ? (
         <SliderView
           value={v}
@@ -224,13 +234,61 @@ function MonthsSlider({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* MAIN STEP                                                          */
+/* ------------------------------------------------------------------ */
+
 export default function Step06_AutoTasks() {
   const { state, actions } = useCreatePlantWizard();
-
-  // which inline dropdown is open
   const [openWhich, setOpenWhich] = useState<"watered" | "repotted" | null>(null);
 
   const canAutoCreate = !!state.selectedPlant?.predefined;
+
+  /**
+   * 🔁 Auto-prefill from plant definition
+   * Safe, one-time, never overwrites user input
+   */
+  useEffect(() => {
+    if (!canAutoCreate) return;
+
+    const pd: any = (state as any).selectedPlantDefinition;
+    if (!pd) return;
+
+    if (!state.createAutoTasks) {
+      actions.setCreateAutoTasks(true);
+    }
+
+    if (pd.water_required && !state.waterTaskEnabled) {
+      actions.setWaterTaskEnabled(true);
+    }
+
+    if (
+      pd.moisture_required &&
+      !state.moistureRequired &&
+      typeof pd.moisture_interval_days === "number"
+    ) {
+      actions.setMoistureRequired(true);
+      actions.setMoistureInterval(pd.moisture_interval_days);
+    }
+
+    if (
+      pd.fertilize_required &&
+      !state.fertilizeRequired &&
+      typeof pd.fertilize_interval_days === "number"
+    ) {
+      actions.setFertilizeRequired(true);
+      actions.setFertilizeInterval(pd.fertilize_interval_days);
+    }
+
+    if (
+      pd.repot_required &&
+      !state.repotTaskEnabled &&
+      typeof pd.repot_interval_months === "number"
+    ) {
+      actions.setRepotTaskEnabled(true);
+      actions.setRepotIntervalMonths(pd.repot_interval_months);
+    }
+  }, [canAutoCreate, state, actions]);
 
   const wateredLabel = useMemo(() => {
     if (!state.lastWatered) return "Not specified";
@@ -238,7 +296,6 @@ export default function Step06_AutoTasks() {
       LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered)?.label ??
       "Not specified"
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastWatered]);
 
   const repottedLabel = useMemo(() => {
@@ -247,12 +304,10 @@ export default function Step06_AutoTasks() {
       LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted)?.label ??
       "Not specified"
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.lastRepotted]);
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass frame — match Steps 1–5 exactly: blur 20 + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -268,11 +323,10 @@ export default function Step06_AutoTasks() {
       <View style={wiz.cardInner}>
         <Text style={wiz.title}>Automatic tasks</Text>
         <Text style={wiz.subtitle}>
-          We can auto-create reminders (watering, repotting, moisture, fertilising, care) based on
-          your plant profile. You can edit them later in the plant details.
+          We can auto-create reminders (watering, repotting, moisture, fertilising,
+          care) based on your plant profile.
         </Text>
 
-        {/* master toggle (enabling sets Watering ON by default) */}
         <SectionCheckbox
           checked={!!state.createAutoTasks}
           onToggle={() =>
@@ -281,23 +335,25 @@ export default function Step06_AutoTasks() {
           label="Create auto tasks for this plant"
           disabled={!canAutoCreate}
         />
+
         {!canAutoCreate && (
           <Text style={wiz.smallMuted}>
-            This requires a predefined plant (choose a plant in step 1). You can still add tasks
-            later manually.
+            This requires a predefined plant.
           </Text>
         )}
 
-        {/* only show the rest if allowed + enabled */}
         {canAutoCreate && state.createAutoTasks && (
           <>
-            {/* 1) WATERING */}
+            {/* WATERING */}
             <Text style={wiz.sectionTitle}>Watering</Text>
             <SectionCheckbox
               checked={!!state.waterTaskEnabled}
-              onToggle={() => actions.setWaterTaskEnabled(!state.waterTaskEnabled)}
+              onToggle={() =>
+                actions.setWaterTaskEnabled(!state.waterTaskEnabled)
+              }
               label="Generate watering task"
             />
+
             {state.waterTaskEnabled && (
               <>
                 <Text style={wiz.smallMuted}>When was it last watered?</Text>
@@ -316,26 +372,27 @@ export default function Step06_AutoTasks() {
               </>
             )}
 
-            {/* 2) MOISTURE / MISTING */}
+            {/* MOISTURE */}
             <Text style={wiz.sectionTitle}>Moisture / misting</Text>
             <SectionCheckbox
               checked={!!state.moistureRequired}
-              onToggle={() => actions.setMoistureRequired(!state.moistureRequired)}
+              onToggle={() =>
+                actions.setMoistureRequired(!state.moistureRequired)
+              }
               label="Generate moisture task"
             />
+
             {state.moistureRequired && (
               <>
                 <Text style={wiz.smallMuted}>Select interval (days)</Text>
                 <DaysSlider
                   value={state.moistureIntervalDays}
                   onChange={(d) => actions.setMoistureInterval(d)}
-                  min={1}
-                  max={30}
                 />
               </>
             )}
 
-            {/* 3) FERTILISING */}
+            {/* FERTILISING */}
             <Text style={wiz.sectionTitle}>Fertilising</Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
@@ -344,38 +401,38 @@ export default function Step06_AutoTasks() {
               }
               label="Generate fertilising task"
             />
+
             {state.fertilizeRequired && (
               <>
                 <Text style={wiz.smallMuted}>Select interval (days)</Text>
                 <DaysSlider
                   value={state.fertilizeIntervalDays}
                   onChange={(d) => actions.setFertilizeInterval(d)}
-                  min={1}
                   max={60}
                 />
               </>
             )}
 
-            {/* 4) CARE / TRIMMING */}
+            {/* CARE */}
             <Text style={wiz.sectionTitle}>Care / trimming</Text>
             <SectionCheckbox
               checked={!!state.careRequired}
               onToggle={() => actions.setCareRequired(!state.careRequired)}
               label="Generate care task"
             />
+
             {state.careRequired && (
               <>
                 <Text style={wiz.smallMuted}>Select interval (days)</Text>
                 <DaysSlider
                   value={state.careIntervalDays}
                   onChange={(d) => actions.setCareInterval(d)}
-                  min={1}
                   max={60}
                 />
               </>
             )}
 
-            {/* 5) REPOTTING */}
+            {/* REPOTTING */}
             <Text style={wiz.sectionTitle}>Repotting</Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
@@ -384,15 +441,15 @@ export default function Step06_AutoTasks() {
               }
               label="Generate repotting task"
             />
+
             {state.repotTaskEnabled && (
               <>
                 <Text style={wiz.smallMuted}>Recommended interval</Text>
                 <MonthsSlider
                   value={state.repotIntervalMonths}
                   onChange={(m) => actions.setRepotIntervalMonths(m)}
-                  min={1}
-                  max={12}
                 />
+
                 <Text style={wiz.smallMuted}>When was it last repotted?</Text>
                 <InlineDropdown<LastRepotted>
                   open={openWhich === "repotted"}
