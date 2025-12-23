@@ -49,7 +49,9 @@ export default function PreviousNextBar({
   if (hidden || !state?.step) return null;
 
   const step = state.step as StepKey;
-  const hasPredefined = !!state.selectedPlant?.predefined && !!state.selectedPlant?.name;
+
+  // ✅ A plant is "selected" if it exists (regardless of predefined/scanned)
+  const hasSelectedPlant = !!state.selectedPlant?.id;
 
   const defaults = useMemo(() => {
     const hidePrev = step === "selectPlant";
@@ -63,23 +65,30 @@ export default function PreviousNextBar({
 
   const prevHandler = () => {
     if (step === "selectPlant") return;
-    if (step === "location" && !hasPredefined) {
+
+    // If user skipped plant selection, they landed on location.
+    // Going back from location should return to selectPlant.
+    if (step === "location" && !hasSelectedPlant) {
       actions.goTo("selectPlant");
       return;
     }
+
     actions.goPrev();
   };
 
   const nextHandler = () => {
     if (step === "selectPlant") {
-      if (hasPredefined) actions.goNext(); // traits
-      else actions.goTo("location");       // skip traits
+      // ✅ If any plant selected -> go to traits (Step 2), else skip to location (Step 3)
+      if (hasSelectedPlant) actions.goNext(); // traits
+      else actions.goTo("location"); // skip traits
       return;
     }
+
     if (step === "name") {
       actions.goTo("creating"); // Create
       return;
     }
+
     actions.goNext();
   };
 

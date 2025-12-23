@@ -80,11 +80,22 @@ export default function Step01_SelectPlant({
       try {
         setLoadingPopular(true);
         setLoadingSearch(true);
+
         const [popularRes, searchRes] = await Promise.all([
           fetchPopularPlants({ auth: true }),
           fetchPlantSearchIndex({ auth: true }),
         ]);
         if (!mounted) return;
+
+        // DEBUG: verify payload shape
+        console.log(
+          "[Step01] popularRes[0] =",
+          (popularRes as any)?.[0]
+        );
+        console.log(
+          "[Step01] searchRes[0] =",
+          (searchRes as any)?.[0]
+        );
 
         setPopular(popularRes as any);
         setSearchIndex(searchRes);
@@ -109,6 +120,8 @@ export default function Step01_SelectPlant({
 
   const onSelectFromSearch = (item: Suggestion) => {
     const name = pickName(item);
+    console.log("[Step01] onSelectFromSearch", { id: item?.id, name, latin: item?.latin });
+
     setQuery(name);
     setShowSuggestions(false);
     actions.setSelectedPlant({
@@ -121,6 +134,12 @@ export default function Step01_SelectPlant({
 
   const onPickPopular = (item: PopularPlant) => {
     const name = pickName(item);
+    console.log("[Step01] onPickPopular", {
+      id: (item as any)?.id,
+      name,
+      latin: (item as any)?.latin,
+    });
+
     setQuery(name);
     setShowSuggestions(false);
     actions.setSelectedPlant({
@@ -135,6 +154,8 @@ export default function Step01_SelectPlant({
   const onScanPlantDetected = useCallback(
     (item: Suggestion) => {
       const name = pickName(item);
+      console.log("[Step01] onScanPlantDetected", { id: item?.id, name, latin: item?.latin });
+
       setQuery(name);
       setShowSuggestions(false);
       actions.setSelectedPlant({
@@ -153,15 +174,26 @@ export default function Step01_SelectPlant({
     onRegisterScanResultHandler(onScanPlantDetected);
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
 
+  // DEBUG: verify that query + wizard state actually update
+  useEffect(() => {
+    console.log("[Step01] query =", query);
+  }, [query]);
+
+  useEffect(() => {
+    console.log("[Step01] selectedPlant =", (state as any)?.selectedPlant);
+  }, [(state as any)?.selectedPlant]);
+
   return (
     <View style={wiz.cardWrap}>
-      <View style={wiz.cardGlass}>
+      {/* IMPORTANT: make the glass layer non-interactive so it can’t steal touches */}
+      <View style={wiz.cardGlass} pointerEvents="none">
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
           blurType="light"
           blurAmount={20}
           overlayColor="transparent"
           reducedTransparencyFallbackColor="transparent"
+          pointerEvents="none"
         />
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
@@ -236,7 +268,7 @@ export default function Step01_SelectPlant({
               const displayName = pickName(item);
               return (
                 <View
-                  key={(item as any).id}
+                  key={(item as any).id ?? `${idx}`}
                   style={{ marginBottom: idx === popular.length - 1 ? 0 : 10 }}
                 >
                   <Pressable style={wiz.rowItem} onPress={() => onPickPopular(item)}>
@@ -257,7 +289,13 @@ export default function Step01_SelectPlant({
                             size={16}
                             color="rgba(255,255,255,0.95)"
                           />
-                          <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          <Text
+                            style={{
+                              color: "rgba(255,255,255,0.95)",
+                              fontWeight: "700",
+                              fontSize: 12,
+                            }}
+                          >
                             {SUN_LABEL_BY_LEVEL[(item as any).sun]}
                           </Text>
                         </View>
@@ -268,7 +306,13 @@ export default function Step01_SelectPlant({
                             size={16}
                             color="rgba(255,255,255,0.95)"
                           />
-                          <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          <Text
+                            style={{
+                              color: "rgba(255,255,255,0.95)",
+                              fontWeight: "700",
+                              fontSize: 12,
+                            }}
+                          >
                             {WATER_LABEL_BY_LEVEL[(item as any).water]}
                           </Text>
                         </View>
@@ -279,7 +323,13 @@ export default function Step01_SelectPlant({
                             size={16}
                             color="rgba(255,255,255,0.95)"
                           />
-                          <Text style={{ color: "rgba(255,255,255,0.95)", fontWeight: "700", fontSize: 12 }}>
+                          <Text
+                            style={{
+                              color: "rgba(255,255,255,0.95)",
+                              fontWeight: "700",
+                              fontSize: 12,
+                            }}
+                          >
                             {DIFFICULTY_LABEL_BY_LEVEL[(item as any).difficulty]}
                           </Text>
                         </View>
