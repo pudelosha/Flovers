@@ -4,6 +4,7 @@ import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/app/providers/AuthContext";
 import { SettingsProvider } from "./src/app/providers/SettingsProvider";
 import RootNavigator from "./src/app/navigation/RootNavigator";
+import "./src/i18n";
 
 const theme = {
   ...MD3LightTheme,

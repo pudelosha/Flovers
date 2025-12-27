@@ -6,16 +6,17 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import {
-  TRAIT_ICON_BY_KEY,
-  TRAIT_LABEL_BY_KEY,
-} from "../constants/create-plant.constants";
+import { TRAIT_ICON_BY_KEY, TRAIT_LABEL_BY_KEY } from "../constants/create-plant.constants";
 import SafeImage from "../../../shared/ui/SafeImage";
 
-// Read global settings (same provider used in HomeScreen)
+// Global settings (language lives here)
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
-// Call API with explicit lang param (so we don’t depend on device Accept-Language yet)
+// i18n
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n";
+
+// API (force lang via ?lang=)
 import { request } from "../../../api/client";
 import {
   serializePlantProfile,
@@ -56,13 +57,11 @@ function pickTextValue(value: any, lang: string = "en"): string {
 
   if (typeof value === "string") return value.trim();
 
-  // e.g. { text: { en: "...", pl: "..." } }
   if (typeof value === "object" && value.text && typeof value.text === "object") {
     const v = value.text[lang] ?? value.text.en ?? value.text.pl;
     if (typeof v === "string") return v.trim();
   }
 
-  // e.g. { en: "...", pl: "..." }
   if (typeof value === "object") {
     const v = value[lang] ?? value.en ?? value.pl;
     if (typeof v === "string") return v.trim();
@@ -78,17 +77,54 @@ function pickTextValue(value: any, lang: string = "en"): string {
 function normalizeLang(input: any): string {
   const raw = typeof input === "string" ? input.trim().toLowerCase() : "";
   if (!raw) return "en";
-  // handle values like "pl-PL"
   return raw.split("-")[0] || "en";
 }
+
+function capitalizeFirst(s: string) {
+  const v = (s || "").trim();
+  if (!v) return v;
+  return v.charAt(0).toUpperCase() + v.slice(1);
+}
+
+/**
+ * Map backend trait keys -> i18n label keys (Step02 only).
+ * If a trait key is not listed here, we fall back to TRAIT_LABEL_BY_KEY.
+ */
+const I18N_LABEL_KEY_BY_TRAIT_KEY: Record<string, string> = {
+  sun: "sun",
+  water: "water",
+  difficulty: "difficulty",
+  soil: "soilMixes", // (you can adjust if you later split soil vs soilMixes)
+  temperature: "temperature",
+  humidity: "humidity",
+  toxic: "toxic",
+  growth: "growth",
+
+  // these are not backend "traits", but we also show them as rows:
+  recommended_pot_materials: "potMaterials",
+  recommended_soil_mixes: "soilMixes",
+  water_interval_days: "wateringInterval",
+  moisture_interval_days: "moistureInterval",
+  fertilize_interval_days: "fertilizeInterval",
+  repot_interval_months: "repotInterval",
+};
 
 export default function Step02_PlantTraits() {
   const { state, actions } = useCreatePlantWizard();
   const { settings } = useSettings();
+  const { t } = useTranslation();
 
-  // Global language from settings (fallback to English)
-  // Supports both `settings.language` or `settings.lang` to be safe.
-  const preferredLang = normalizeLang((settings as any)?.language ?? (settings as any)?.lang ?? "en");
+  // read language from settings (support both settings.language and settings.lang)
+  const preferredLang = normalizeLang(
+    (settings as any)?.language ?? (settings as any)?.lang ?? "en"
+  );
+
+  // keep i18n in sync with settings language (UI labels)
+  useEffect(() => {
+    if (preferredLang && i18n.language !== preferredLang) {
+      i18n.changeLanguage(preferredLang);
+    }
+  }, [preferredLang]);
 
   // keep stable ref to avoid effect re-run loops if actions identity changes
   const actionsRef = useRef(actions);
@@ -108,13 +144,11 @@ export default function Step02_PlantTraits() {
   const persistProfile = (p: PlantProfile) => {
     const a: any = actionsRef.current;
 
-    // preferred (if your wizard has it)
     if (typeof a?.setSelectedPlantDefinition === "function") {
       a.setSelectedPlantDefinition(p);
       return;
     }
 
-    // fallback: keep selected plant synced
     if (typeof a?.setSelectedPlant === "function") {
       a.setSelectedPlant({
         ...(selected ?? {}),
@@ -148,7 +182,6 @@ export default function Step02_PlantTraits() {
       setError(null);
 
       try {
-        // 1) If we have an id already -> fetch directly.
         if (selectedId) {
           const numericId = toNumericIdOrNull(selectedId);
           const p = await fetchProfileWithLang(
@@ -161,7 +194,6 @@ export default function Step02_PlantTraits() {
           return;
         }
 
-        // 2) If we only have a name -> find best match from index, then fetch profile
         if (selectedName) {
           const all: Suggestion[] = await fetchSearchIndexWithLang();
           const q = selectedName.toLowerCase();
@@ -173,7 +205,9 @@ export default function Step02_PlantTraits() {
 
           if (hit?.id) {
             const hitNumeric = toNumericIdOrNull(hit.id);
-            const p = await fetchProfileWithLang(hitNumeric !== null ? hitNumeric : String(hit.id));
+            const p = await fetchProfileWithLang(
+              hitNumeric !== null ? hitNumeric : String(hit.id)
+            );
             if (!alive) return;
 
             setProfile(p);
@@ -182,12 +216,11 @@ export default function Step02_PlantTraits() {
           }
         }
 
-        // If nothing selected
         if (!alive) return;
         setProfile(null);
       } catch (e: any) {
         if (!alive) return;
-        setError(e?.message ?? "Failed to load plant profile.");
+        setError(e?.message ?? t("createPlant.step02.errorProfile"));
       } finally {
         if (alive) setLoading(false);
       }
@@ -197,8 +230,18 @@ export default function Step02_PlantTraits() {
     return () => {
       alive = false;
     };
-    // language is part of the fetch contract now
-  }, [selectedId, selectedName, selected?.latin, preferredLang]);
+  }, [selectedId, selectedName, selected?.latin, preferredLang, t]);
+
+  const resolveLabel = (key: string): string => {
+    const i18nKey = I18N_LABEL_KEY_BY_TRAIT_KEY[key];
+    if (i18nKey) {
+      const translated = t(`createPlant.step02.labels.${i18nKey}`);
+      // If missing, i18next returns the key string; detect that and fallback.
+      if (translated && !translated.includes("createPlant.step02.labels.")) return translated;
+    }
+    const fallback = (TRAIT_LABEL_BY_KEY as any)[key] ?? key;
+    return capitalizeFirst(String(fallback));
+  };
 
   const preferences = useMemo(() => {
     const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
@@ -206,14 +249,14 @@ export default function Step02_PlantTraits() {
 
     // 1) Backend traits
     const traits = Array.isArray(p?.traits) ? p.traits : [];
-    for (const t of traits) {
-      const key = String(t?.key ?? "");
-      const value = pickTextValue(t?.value, preferredLang);
+    for (const tRow of traits) {
+      const key = String(tRow?.key ?? "");
+      const value = pickTextValue(tRow?.value, preferredLang);
       if (!key || !value) continue;
 
       out.push({
         key,
-        label: (TRAIT_LABEL_BY_KEY as any)[key] ?? key,
+        label: resolveLabel(key),
         icon: (TRAIT_ICON_BY_KEY as any)[key] ?? "leaf",
         value,
       });
@@ -225,7 +268,7 @@ export default function Step02_PlantTraits() {
       if (v) {
         out.push({
           key: "sun",
-          label: (TRAIT_LABEL_BY_KEY as any)["sun"] ?? "Sun",
+          label: resolveLabel("sun"),
           icon: (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
           value: v,
         });
@@ -237,7 +280,7 @@ export default function Step02_PlantTraits() {
       if (v) {
         out.push({
           key: "water",
-          label: (TRAIT_LABEL_BY_KEY as any)["water"] ?? "Water",
+          label: resolveLabel("water"),
           icon: (TRAIT_ICON_BY_KEY as any)["water"] ?? "water",
           value: v,
         });
@@ -249,7 +292,7 @@ export default function Step02_PlantTraits() {
       if (v) {
         out.push({
           key: "difficulty",
-          label: (TRAIT_LABEL_BY_KEY as any)["difficulty"] ?? "Difficulty",
+          label: resolveLabel("difficulty"),
           icon: (TRAIT_ICON_BY_KEY as any)["difficulty"] ?? "arm-flex",
           value: v,
         });
@@ -263,7 +306,7 @@ export default function Step02_PlantTraits() {
       if (v.length) {
         out.push({
           key: "recommended_pot_materials",
-          label: "Pot materials",
+          label: resolveLabel("recommended_pot_materials"),
           icon: "cup-outline",
           value: v.join(", "),
         });
@@ -276,7 +319,7 @@ export default function Step02_PlantTraits() {
       if (v.length) {
         out.push({
           key: "recommended_soil_mixes",
-          label: "Soil mixes",
+          label: resolveLabel("recommended_soil_mixes"),
           icon: "shovel",
           value: v.join(", "),
         });
@@ -287,41 +330,41 @@ export default function Step02_PlantTraits() {
     if (p?.water_required && p?.water_interval_days != null) {
       out.push({
         key: "water_interval_days",
-        label: "Watering",
+        label: resolveLabel("water_interval_days"),
         icon: "watering-can",
-        value: `Every ${p.water_interval_days} days`,
+        value: t("createPlant.step02.values.everyDays", { count: p.water_interval_days }),
       });
     }
 
     if (p?.moisture_required && p?.moisture_interval_days != null) {
       out.push({
         key: "moisture_interval_days",
-        label: "Moisture check",
+        label: resolveLabel("moisture_interval_days"),
         icon: "water-percent",
-        value: `Every ${p.moisture_interval_days} days`,
+        value: t("createPlant.step02.values.everyDays", { count: p.moisture_interval_days }),
       });
     }
 
     if (p?.fertilize_required && p?.fertilize_interval_days != null) {
       out.push({
         key: "fertilize_interval_days",
-        label: "Fertilize",
+        label: resolveLabel("fertilize_interval_days"),
         icon: "sprout",
-        value: `Every ${p.fertilize_interval_days} days`,
+        value: t("createPlant.step02.values.everyDays", { count: p.fertilize_interval_days }),
       });
     }
 
     if (p?.repot_required && p?.repot_interval_months != null) {
       out.push({
         key: "repot_interval_months",
-        label: "Repot",
+        label: resolveLabel("repot_interval_months"),
         icon: "flower-pot",
-        value: `Every ${p.repot_interval_months} months`,
+        value: t("createPlant.step02.values.everyMonths", { count: p.repot_interval_months }),
       });
     }
 
     return out;
-  }, [profile, preferredLang]);
+  }, [profile, preferredLang, t]);
 
   return (
     <View style={wiz.cardWrap}>
@@ -341,7 +384,7 @@ export default function Step02_PlantTraits() {
 
       <View style={wiz.cardInner}>
         <Text style={[wiz.title, { marginBottom: 6 }]}>
-          {selectedName ? `${selectedName}` : "Plant profile"}
+          {selectedName ? `${selectedName}` : t("createPlant.step02.title")}
         </Text>
 
         {loading && !profile ? (
@@ -349,9 +392,7 @@ export default function Step02_PlantTraits() {
             <ActivityIndicator />
           </View>
         ) : error ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>
-            {error}
-          </Text>
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>{error}</Text>
         ) : null}
 
         {!!profile && (
@@ -364,7 +405,9 @@ export default function Step02_PlantTraits() {
 
         {!!profile && (
           <>
-            <Text style={wiz.sectionTitle}>Preferences</Text>
+            {/* FIX: correct translation key */}
+            <Text style={wiz.sectionTitle}>{t("createPlant.step02.preferences")}</Text>
+
             <View style={wiz.prefsGrid}>
               {preferences.map((row) => (
                 <View key={row.key} style={wiz.prefRow}>
