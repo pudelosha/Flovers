@@ -1,11 +1,15 @@
-﻿import React, { useEffect, useMemo, useRef, useState } from "react";
+﻿// steps/Step02_PlantTraits.tsx
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { TRAIT_ICON_BY_KEY, TRAIT_LABEL_BY_KEY } from "../constants/create-plant.constants";
+import {
+  TRAIT_ICON_BY_KEY,
+  TRAIT_LABEL_BY_KEY,
+} from "../constants/create-plant.constants";
 import SafeImage from "../../../shared/ui/SafeImage";
 
 import {
@@ -22,6 +26,38 @@ function toNumericIdOrNull(id: unknown): number | null {
     if (/^\d+$/.test(trimmed)) return Number(trimmed);
   }
   return null;
+}
+
+/**
+ * ✅ Force "English everywhere" for values that come as:
+ * - string
+ * - { text: { en: "...", pl: "..." } }
+ * - { en: "...", pl: "..." }
+ * - anything else -> stringify safely
+ */
+function pickTextValue(value: any, lang: string = "en"): string {
+  if (value == null) return "";
+
+  if (typeof value === "string") return value.trim();
+
+  // e.g. { text: { en: "...", pl: "..." } }
+  if (typeof value === "object" && value.text && typeof value.text === "object") {
+    const v = value.text[lang] ?? value.text.en ?? value.text.pl;
+    if (typeof v === "string") return v.trim();
+  }
+
+  // e.g. { en: "...", pl: "..." }
+  if (typeof value === "object") {
+    const v = value[lang] ?? value.en ?? value.pl;
+    if (typeof v === "string") return v.trim();
+  }
+
+  // last resort (avoid [object Object] display)
+  try {
+    return JSON.stringify(value);
+  } catch {
+    return String(value);
+  }
 }
 
 export default function Step02_PlantTraits() {
@@ -41,6 +77,9 @@ export default function Step02_PlantTraits() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
+  // ✅ Force English values in UI regardless of device language (for now)
+  const preferredLang = "en";
+
   // helper: persist profile in wizard memory if supported
   const persistProfile = (p: PlantProfile) => {
     const a: any = actionsRef.current;
@@ -51,7 +90,7 @@ export default function Step02_PlantTraits() {
       return;
     }
 
-    // fallback: at least keep selected plant synced (no extra logic changed)
+    // fallback: keep selected plant synced
     if (typeof a?.setSelectedPlant === "function") {
       a.setSelectedPlant({
         ...(selected ?? {}),
@@ -94,7 +133,11 @@ export default function Step02_PlantTraits() {
           const hit =
             all.find((s) => s.name.toLowerCase() === q) ||
             all.find((s) => s.latin.toLowerCase() === q) ||
-            all.find((s) => s.name.toLowerCase().includes(q) || s.latin.toLowerCase().includes(q));
+            all.find(
+              (s) =>
+                s.name.toLowerCase().includes(q) ||
+                s.latin.toLowerCase().includes(q)
+            );
 
           if (hit?.id) {
             const hitNumeric = toNumericIdOrNull(hit.id);
@@ -110,7 +153,7 @@ export default function Step02_PlantTraits() {
           }
         }
 
-        // If nothing selected (shouldn't normally happen if you reached Step2)
+        // If nothing selected
         if (!alive) return;
         setProfile(null);
       } catch (e: any) {
@@ -133,7 +176,12 @@ export default function Step02_PlantTraits() {
    * If backend starts returning `traits` list later, it will show too.
    */
   const preferences = useMemo(() => {
-    const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
+    const out: Array<{
+      key: string;
+      label: string;
+      icon: string;
+      value: string;
+    }> = [];
 
     const p: any = profile;
 
@@ -141,7 +189,7 @@ export default function Step02_PlantTraits() {
     const traits = Array.isArray(p?.traits) ? p.traits : [];
     for (const t of traits) {
       const key = String(t?.key ?? "");
-      const value = t?.value != null ? String(t.value) : "";
+      const value = pickTextValue(t?.value, preferredLang);
       if (!key || !value) continue;
 
       out.push({
@@ -153,52 +201,74 @@ export default function Step02_PlantTraits() {
     }
 
     // 2) Add live core fields even if traits empty
-    if (p?.sun) {
-      out.push({
-        key: "sun",
-        label: (TRAIT_LABEL_BY_KEY as any)["sun"] ?? "Sun",
-        icon: (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
-        value: String(p.sun),
-      });
+    // Note: p.sun/water/difficulty might be objects -> normalize to text
+    if (p?.sun != null) {
+      const v = pickTextValue(p.sun, preferredLang);
+      if (v) {
+        out.push({
+          key: "sun",
+          label: (TRAIT_LABEL_BY_KEY as any)["sun"] ?? "Sun",
+          icon:
+            (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
+          value: v,
+        });
+      }
     }
 
-    if (p?.water) {
-      out.push({
-        key: "water",
-        label: (TRAIT_LABEL_BY_KEY as any)["water"] ?? "Water",
-        icon: (TRAIT_ICON_BY_KEY as any)["water"] ?? "water",
-        value: String(p.water),
-      });
+    if (p?.water != null) {
+      const v = pickTextValue(p.water, preferredLang);
+      if (v) {
+        out.push({
+          key: "water",
+          label: (TRAIT_LABEL_BY_KEY as any)["water"] ?? "Water",
+          icon: (TRAIT_ICON_BY_KEY as any)["water"] ?? "water",
+          value: v,
+        });
+      }
     }
 
-    if (p?.difficulty) {
-      out.push({
-        key: "difficulty",
-        label: (TRAIT_LABEL_BY_KEY as any)["difficulty"] ?? "Difficulty",
-        icon: (TRAIT_ICON_BY_KEY as any)["difficulty"] ?? "arm-flex",
-        value: String(p.difficulty),
-      });
+    if (p?.difficulty != null) {
+      const v = pickTextValue(p.difficulty, preferredLang);
+      if (v) {
+        out.push({
+          key: "difficulty",
+          label:
+            (TRAIT_LABEL_BY_KEY as any)["difficulty"] ?? "Difficulty",
+          icon: (TRAIT_ICON_BY_KEY as any)["difficulty"] ?? "arm-flex",
+          value: v,
+        });
+      }
     }
 
-    // 3) Add recommended pot/soil mixes (live)
-    const pots = Array.isArray(p?.recommended_pot_materials) ? p.recommended_pot_materials : [];
+    // 3) Add recommended pot/soil mixes (live) — these may be strings or {text:{...}}
+    const pots = Array.isArray(p?.recommended_pot_materials)
+      ? p.recommended_pot_materials
+      : [];
     if (pots.length) {
-      out.push({
-        key: "recommended_pot_materials",
-        label: "Pot materials",
-        icon: "cup-outline",
-        value: pots.join(", "),
-      });
+      const v = pots.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
+      if (v.length) {
+        out.push({
+          key: "recommended_pot_materials",
+          label: "Pot materials",
+          icon: "cup-outline",
+          value: v.join(", "),
+        });
+      }
     }
 
-    const soils = Array.isArray(p?.recommended_soil_mixes) ? p.recommended_soil_mixes : [];
+    const soils = Array.isArray(p?.recommended_soil_mixes)
+      ? p.recommended_soil_mixes
+      : [];
     if (soils.length) {
-      out.push({
-        key: "recommended_soil_mixes",
-        label: "Soil mixes",
-        icon: "shovel",
-        value: soils.join(", "),
-      });
+      const v = soils.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
+      if (v.length) {
+        out.push({
+          key: "recommended_soil_mixes",
+          label: "Soil mixes",
+          icon: "shovel",
+          value: v.join(", "),
+        });
+      }
     }
 
     // 4) Add live intervals (only if required flag true)
@@ -239,7 +309,7 @@ export default function Step02_PlantTraits() {
     }
 
     return out;
-  }, [profile]);
+  }, [profile, preferredLang]);
 
   return (
     <View style={wiz.cardWrap}>
@@ -274,7 +344,11 @@ export default function Step02_PlantTraits() {
         ) : null}
 
         {!!profile && (
-          <SafeImage uri={(profile as any)?.image} resizeMode="cover" style={wiz.hero} />
+          <SafeImage
+            uri={(profile as any)?.image}
+            resizeMode="cover"
+            style={wiz.hero}
+          />
         )}
 
         {!!(profile as any)?.description && (
@@ -287,7 +361,11 @@ export default function Step02_PlantTraits() {
             <View style={wiz.prefsGrid}>
               {preferences.map((row) => (
                 <View key={row.key} style={wiz.prefRow}>
-                  <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
+                  <MaterialCommunityIcons
+                    name={row.icon as any}
+                    size={18}
+                    color="#FFFFFF"
+                  />
                   <Text style={wiz.prefLabel}>{row.label}</Text>
                   <Text style={wiz.prefValue}>{row.value}</Text>
                 </View>
