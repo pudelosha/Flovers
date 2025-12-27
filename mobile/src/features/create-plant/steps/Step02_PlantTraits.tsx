@@ -12,11 +12,27 @@ import {
 } from "../constants/create-plant.constants";
 import SafeImage from "../../../shared/ui/SafeImage";
 
+// Read global settings (same provider used in HomeScreen)
+import { useSettings } from "../../../app/providers/SettingsProvider";
+
+// Call API with explicit lang param (so we don’t depend on device Accept-Language yet)
+import { request } from "../../../api/client";
 import {
-  fetchPlantProfile,
-  fetchPlantSearchIndex,
-} from "../../../api/services/plant-definitions.service";
+  serializePlantProfile,
+  serializePlantSuggestion,
+  type ApiPlantProfile,
+  type ApiPlantSuggestion,
+} from "../../../api/serializers/plant-definitions.serializer";
+
 import type { PlantProfile, Suggestion } from "../types/create-plant.types";
+
+const ENDPOINTS = {
+  searchIndex: "/api/plant-definitions/search-index/",
+  profile: (idOrKey: string | number) =>
+    typeof idOrKey === "number"
+      ? `/api/plant-definitions/${idOrKey}/profile/`
+      : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
+};
 
 function toNumericIdOrNull(id: unknown): number | null {
   if (typeof id === "number" && Number.isFinite(id)) return id;
@@ -29,11 +45,11 @@ function toNumericIdOrNull(id: unknown): number | null {
 }
 
 /**
- * ✅ Force "English everywhere" for values that come as:
+ * Pick a string for the requested language from possible shapes:
  * - string
  * - { text: { en: "...", pl: "..." } }
  * - { en: "...", pl: "..." }
- * - anything else -> stringify safely
+ * - anything else -> stringify safely (avoid [object Object])
  */
 function pickTextValue(value: any, lang: string = "en"): string {
   if (value == null) return "";
@@ -52,7 +68,6 @@ function pickTextValue(value: any, lang: string = "en"): string {
     if (typeof v === "string") return v.trim();
   }
 
-  // last resort (avoid [object Object] display)
   try {
     return JSON.stringify(value);
   } catch {
@@ -60,8 +75,20 @@ function pickTextValue(value: any, lang: string = "en"): string {
   }
 }
 
+function normalizeLang(input: any): string {
+  const raw = typeof input === "string" ? input.trim().toLowerCase() : "";
+  if (!raw) return "en";
+  // handle values like "pl-PL"
+  return raw.split("-")[0] || "en";
+}
+
 export default function Step02_PlantTraits() {
   const { state, actions } = useCreatePlantWizard();
+  const { settings } = useSettings();
+
+  // Global language from settings (fallback to English)
+  // Supports both `settings.language` or `settings.lang` to be safe.
+  const preferredLang = normalizeLang((settings as any)?.language ?? (settings as any)?.lang ?? "en");
 
   // keep stable ref to avoid effect re-run loops if actions identity changes
   const actionsRef = useRef(actions);
@@ -76,9 +103,6 @@ export default function Step02_PlantTraits() {
   const [profile, setProfile] = useState<PlantProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
-  // ✅ Force English values in UI regardless of device language (for now)
-  const preferredLang = "en";
 
   // helper: persist profile in wizard memory if supported
   const persistProfile = (p: PlantProfile) => {
@@ -102,6 +126,20 @@ export default function Step02_PlantTraits() {
     }
   };
 
+  // Local API wrappers that force backend language via ?lang=
+  const fetchSearchIndexWithLang = async (): Promise<Suggestion[]> => {
+    const url = `${ENDPOINTS.searchIndex}?lang=${encodeURIComponent(preferredLang)}`;
+    const data = await request<ApiPlantSuggestion[]>(url, "GET", undefined, { auth: true });
+    return (data ?? []).map(serializePlantSuggestion);
+  };
+
+  const fetchProfileWithLang = async (idOrExternalId: string | number): Promise<PlantProfile> => {
+    const base = ENDPOINTS.profile(idOrExternalId);
+    const url = `${base}?lang=${encodeURIComponent(preferredLang)}`;
+    const data = await request<ApiPlantProfile>(url, "GET", undefined, { auth: true });
+    return serializePlantProfile(data);
+  };
+
   useEffect(() => {
     let alive = true;
 
@@ -111,12 +149,10 @@ export default function Step02_PlantTraits() {
 
       try {
         // 1) If we have an id already -> fetch directly.
-        // IMPORTANT: number => /<id>/profile/, string => /by-key/<external_id>/profile/
         if (selectedId) {
           const numericId = toNumericIdOrNull(selectedId);
-          const p = await fetchPlantProfile(
-            numericId !== null ? numericId : String(selectedId),
-            { auth: true }
+          const p = await fetchProfileWithLang(
+            numericId !== null ? numericId : String(selectedId)
           );
           if (!alive) return;
 
@@ -127,24 +163,17 @@ export default function Step02_PlantTraits() {
 
         // 2) If we only have a name -> find best match from index, then fetch profile
         if (selectedName) {
-          const all: Suggestion[] = await fetchPlantSearchIndex({ auth: true });
+          const all: Suggestion[] = await fetchSearchIndexWithLang();
           const q = selectedName.toLowerCase();
 
           const hit =
             all.find((s) => s.name.toLowerCase() === q) ||
             all.find((s) => s.latin.toLowerCase() === q) ||
-            all.find(
-              (s) =>
-                s.name.toLowerCase().includes(q) ||
-                s.latin.toLowerCase().includes(q)
-            );
+            all.find((s) => s.name.toLowerCase().includes(q) || s.latin.toLowerCase().includes(q));
 
           if (hit?.id) {
             const hitNumeric = toNumericIdOrNull(hit.id);
-            const p = await fetchPlantProfile(
-              hitNumeric !== null ? hitNumeric : String(hit.id),
-              { auth: true }
-            );
+            const p = await fetchProfileWithLang(hitNumeric !== null ? hitNumeric : String(hit.id));
             if (!alive) return;
 
             setProfile(p);
@@ -168,24 +197,14 @@ export default function Step02_PlantTraits() {
     return () => {
       alive = false;
     };
-    // do not depend on `actions`
-  }, [selectedId, selectedName, selected?.latin]);
+    // language is part of the fetch contract now
+  }, [selectedId, selectedName, selected?.latin, preferredLang]);
 
-  /**
-   * Build a live "Preferences" list from backend profile fields.
-   * If backend starts returning `traits` list later, it will show too.
-   */
   const preferences = useMemo(() => {
-    const out: Array<{
-      key: string;
-      label: string;
-      icon: string;
-      value: string;
-    }> = [];
-
+    const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
     const p: any = profile;
 
-    // 1) Use backend traits if present
+    // 1) Backend traits
     const traits = Array.isArray(p?.traits) ? p.traits : [];
     for (const t of traits) {
       const key = String(t?.key ?? "");
@@ -200,16 +219,14 @@ export default function Step02_PlantTraits() {
       });
     }
 
-    // 2) Add live core fields even if traits empty
-    // Note: p.sun/water/difficulty might be objects -> normalize to text
+    // 2) Core fields (normalize to text)
     if (p?.sun != null) {
       const v = pickTextValue(p.sun, preferredLang);
       if (v) {
         out.push({
           key: "sun",
           label: (TRAIT_LABEL_BY_KEY as any)["sun"] ?? "Sun",
-          icon:
-            (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
+          icon: (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
           value: v,
         });
       }
@@ -232,18 +249,15 @@ export default function Step02_PlantTraits() {
       if (v) {
         out.push({
           key: "difficulty",
-          label:
-            (TRAIT_LABEL_BY_KEY as any)["difficulty"] ?? "Difficulty",
+          label: (TRAIT_LABEL_BY_KEY as any)["difficulty"] ?? "Difficulty",
           icon: (TRAIT_ICON_BY_KEY as any)["difficulty"] ?? "arm-flex",
           value: v,
         });
       }
     }
 
-    // 3) Add recommended pot/soil mixes (live) — these may be strings or {text:{...}}
-    const pots = Array.isArray(p?.recommended_pot_materials)
-      ? p.recommended_pot_materials
-      : [];
+    // 3) Recommended pot/soil mixes
+    const pots = Array.isArray(p?.recommended_pot_materials) ? p.recommended_pot_materials : [];
     if (pots.length) {
       const v = pots.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
       if (v.length) {
@@ -256,9 +270,7 @@ export default function Step02_PlantTraits() {
       }
     }
 
-    const soils = Array.isArray(p?.recommended_soil_mixes)
-      ? p.recommended_soil_mixes
-      : [];
+    const soils = Array.isArray(p?.recommended_soil_mixes) ? p.recommended_soil_mixes : [];
     if (soils.length) {
       const v = soils.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
       if (v.length) {
@@ -271,7 +283,7 @@ export default function Step02_PlantTraits() {
       }
     }
 
-    // 4) Add live intervals (only if required flag true)
+    // 4) Intervals
     if (p?.water_required && p?.water_interval_days != null) {
       out.push({
         key: "water_interval_days",
@@ -332,7 +344,6 @@ export default function Step02_PlantTraits() {
           {selectedName ? `${selectedName}` : "Plant profile"}
         </Text>
 
-        {/* show spinner only if we have nothing to show yet */}
         {loading && !profile ? (
           <View style={{ paddingVertical: 16 }}>
             <ActivityIndicator />
@@ -344,11 +355,7 @@ export default function Step02_PlantTraits() {
         ) : null}
 
         {!!profile && (
-          <SafeImage
-            uri={(profile as any)?.image}
-            resizeMode="cover"
-            style={wiz.hero}
-          />
+          <SafeImage uri={(profile as any)?.image} resizeMode="cover" style={wiz.hero} />
         )}
 
         {!!(profile as any)?.description && (
@@ -361,11 +368,7 @@ export default function Step02_PlantTraits() {
             <View style={wiz.prefsGrid}>
               {preferences.map((row) => (
                 <View key={row.key} style={wiz.prefRow}>
-                  <MaterialCommunityIcons
-                    name={row.icon as any}
-                    size={18}
-                    color="#FFFFFF"
-                  />
+                  <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
                   <Text style={wiz.prefLabel}>{row.label}</Text>
                   <Text style={wiz.prefValue}>{row.value}</Text>
                 </View>
