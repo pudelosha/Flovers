@@ -12,6 +12,31 @@ from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
 LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
 MAX_TRAIT_TEXT_LEN = 30
 
+# ---- Trait key normalization (consistency) ----
+# Keep one canonical key per concept across your whole dataset.
+TRAIT_KEY_ALIASES = {
+    "watering": "water",
+    "light": "sun",
+    "fertiliser": "fertilizer",
+}
+
+
+def normalize_trait_key(key: str) -> str:
+    k = (key or "").strip().lower()
+    return TRAIT_KEY_ALIASES.get(k, k)
+
+
+def normalize_traits_in_place(payload: dict) -> None:
+    traits = payload.get("traits")
+    if not isinstance(traits, list):
+        return
+    for t in traits:
+        if not isinstance(t, dict):
+            continue
+        t["key"] = normalize_trait_key(t.get("key", ""))
+    # drop empties
+    payload["traits"] = [t for t in traits if isinstance(t, dict) and (t.get("key") or "").strip()]
+
 
 def _media_root() -> Path:
     mr = getattr(settings, "MEDIA_ROOT", None)
@@ -115,6 +140,10 @@ class Command(BaseCommand):
         for fp in files:
             try:
                 payload = json.loads(fp.read_text(encoding="utf-8"))
+
+                # Normalize trait keys before validating/storing (consistency fix)
+                normalize_traits_in_place(payload)
+
                 validate_plant_payload(payload)
 
                 obj, _ = PlantDefinition.objects.update_or_create(
@@ -164,12 +193,10 @@ class Command(BaseCommand):
                     )
 
                 # ---- Images ----
-                # JSON provides filenames like "monstera_deliciosa.jpg"
                 hero_name = (payload.get("image_hero") or "").strip()
                 thumb_name = (payload.get("image_thumb") or "").strip()
 
-                # If old bad values exist (e.g. plants/hero/xxx.jpg saved into field name),
-                # clear so we can re-attach correctly.
+                # Clear old bad values (e.g. 'plants/hero/...' stored inside the field name)
                 if obj.image_hero and _is_probably_bad_image_name(obj.image_hero.name):
                     obj.image_hero.delete(save=False)
                 if obj.image_thumb and _is_probably_bad_image_name(obj.image_thumb.name):
@@ -186,7 +213,8 @@ class Command(BaseCommand):
                 # Attach thumb (always if force_images, otherwise if empty)
                 if thumb_name and (force_images or not obj.image_thumb):
                     thumb_path = media_root / "plants" / "thumb" / thumb_name
-                    # If you store thumbs in hero folder too, fallback:
+
+                    # Fallback: some setups store thumbs in hero folder too
                     if not thumb_path.exists():
                         alt = media_root / "plants" / "hero" / thumb_name
                         if alt.exists():

@@ -85,6 +85,24 @@ function titleCaseKey(key: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+/**
+ * Normalize keys coming from backend traits vs "core fields"
+ * so we don't get duplicates like water + watering, temp + temperature, etc.
+ */
+function normalizeTraitKey(raw: string): string {
+  const k = (raw || "").trim().toLowerCase();
+  if (!k) return "";
+
+  const map: Record<string, string> = {
+    // backend variations -> canonical keys we want to display
+    watering: "water",
+    temp: "temperature",
+    light: "sun",
+  };
+
+  return map[k] ?? k;
+}
+
 export default function Step02_PlantTraits() {
   const { t, i18n } = useTranslation();
   const { state, actions } = useCreatePlantWizard();
@@ -204,7 +222,6 @@ export default function Step02_PlantTraits() {
 
   // label resolver: i18n -> constants fallback -> prettified key
   const getLabelForKey = (key: string) => {
-    // expects keys like createPlant.step02.traits.temperature etc.
     const i18nKey = `createPlant.step02.traits.${key}`;
     const localized = t(i18nKey);
     if (localized && localized !== i18nKey) return localized;
@@ -219,11 +236,18 @@ export default function Step02_PlantTraits() {
     const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
     const p: any = profile;
 
+    const seen = new Set<string>();
+
+    // 1) Traits from backend (normalize keys + dedupe)
     const traits = Array.isArray(p?.traits) ? p.traits : [];
     for (const tr of traits) {
-      const key = String(tr?.key ?? "");
+      const rawKey = String(tr?.key ?? "").trim();
+      const key = normalizeTraitKey(rawKey);
       const value = pickTextValue(tr?.value, preferredLang);
       if (!key || !value) continue;
+
+      if (seen.has(key)) continue;
+      seen.add(key);
 
       out.push({
         key,
@@ -233,44 +257,27 @@ export default function Step02_PlantTraits() {
       });
     }
 
-    // Core fields (if present)
-    if (p?.sun != null) {
-      const v = pickTextValue(p.sun, preferredLang);
-      if (v) {
-        out.push({
-          key: "sun",
-          label: getLabelForKey("sun"),
-          icon: (TRAIT_ICON_BY_KEY as any)["sun"] ?? "white-balance-sunny",
-          value: v,
-        });
-      }
-    }
+    // helper: add core fields only if not already present in traits
+    const addCore = (key: string, rawValue: any, fallbackIcon: string) => {
+      const value = pickTextValue(rawValue, preferredLang);
+      if (!value) return;
+      if (seen.has(key)) return;
+      seen.add(key);
 
-    if (p?.water != null) {
-      const v = pickTextValue(p.water, preferredLang);
-      if (v) {
-        out.push({
-          key: "water",
-          label: getLabelForKey("water"),
-          icon: (TRAIT_ICON_BY_KEY as any)["water"] ?? "water",
-          value: v,
-        });
-      }
-    }
+      out.push({
+        key,
+        label: getLabelForKey(key),
+        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? fallbackIcon,
+        value,
+      });
+    };
 
-    if (p?.difficulty != null) {
-      const v = pickTextValue(p.difficulty, preferredLang);
-      if (v) {
-        out.push({
-          key: "difficulty",
-          label: getLabelForKey("difficulty"),
-          icon: (TRAIT_ICON_BY_KEY as any)["difficulty"] ?? "arm-flex",
-          value: v,
-        });
-      }
-    }
+    // 2) Core fields (only if not already in traits)
+    if (p?.sun != null) addCore("sun", p.sun, "white-balance-sunny");
+    if (p?.water != null) addCore("water", p.water, "watering-can-outline");
+    if (p?.difficulty != null) addCore("difficulty", p.difficulty, "arm-flex");
 
-    // Recommended pot/soil mixes
+    // 3) Recommended pot/soil mixes
     const pots = Array.isArray(p?.recommended_pot_materials) ? p.recommended_pot_materials : [];
     if (pots.length) {
       const v = pots.map((x: any) => pickTextValue(x, preferredLang)).filter(Boolean);
@@ -297,7 +304,7 @@ export default function Step02_PlantTraits() {
       }
     }
 
-    // Intervals
+    // 4) Intervals
     if (p?.water_required && p?.water_interval_days != null) {
       out.push({
         key: "water_interval_days",
@@ -363,14 +370,10 @@ export default function Step02_PlantTraits() {
             <ActivityIndicator />
           </View>
         ) : error ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>
-            {error}
-          </Text>
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginBottom: 10 }]}>{error}</Text>
         ) : null}
 
-        {!!profile && (
-          <SafeImage uri={(profile as any)?.image} resizeMode="cover" style={wiz.hero} />
-        )}
+        {!!profile && <SafeImage uri={(profile as any)?.image} resizeMode="cover" style={wiz.hero} />}
 
         {!!(profile as any)?.description && (
           <Text style={wiz.desc}>{(profile as any).description}</Text>

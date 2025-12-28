@@ -1,10 +1,6 @@
 ﻿// constants/create-plant.constants.ts
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
-import type {
-  SunRequirement,
-  WaterRequirement,
-  DifficultyLevel,
-} from "../types/create-plant.types";
+import type { SunRequirement, WaterRequirement, DifficultyLevel } from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
 export const HEADER_GRADIENT_TINT = ["rgba(5,31,24,0.70)", "rgba(16,80,63,0.70)"];
@@ -65,42 +61,62 @@ export const PLANT_PROFILES_MOCK = {
   },
 };
 
+/**
+ * IMPORTANT:
+ * Step02 uses backend trait keys like:
+ * - temperature, humidity, toxic, growth, soil, sun
+ * and core fields like:
+ * - water, difficulty, sun
+ *
+ * If a key is missing here, Step02 falls back to "leaf" which looks like duplicated icons.
+ */
 export const TRAIT_ICON_BY_KEY: Record<string, string> = {
+  // canonical / core
   sun: "white-balance-sunny",
+  water: "watering-can-outline",
+  difficulty: "arm-flex",
+
+  // backend keys
   soil: "shovel",
-  temp: "thermometer",
+  temperature: "thermometer",
   humidity: "water-percent",
-  difficulty: "star-outline",
   toxic: "alert-octagon-outline",
-  watering: "water",
+  growth: "trending-up",
+
+  // aliases (for older data / mocks)
+  temp: "thermometer",
+  watering: "watering-can-outline",
   moisture: "spray-bottle",
+  fertilizer: "sprout",
+  light: "white-balance-sunny",
 };
 
 export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
+  // canonical / core
   sun: "Sun exposure",
-  soil: "Soil",
-  temp: "Temperature",
-  humidity: "Humidity",
+  water: "Watering",
   difficulty: "Difficulty",
+
+  // backend keys
+  soil: "Soil",
+  temperature: "Temperature",
+  humidity: "Humidity",
   toxic: "Toxic?",
+  growth: "Growth",
+
+  // aliases
+  temp: "Temperature",
   watering: "Watering",
   moisture: "Moisture",
+  fertilizer: "Fertilizer",
+  light: "Light",
 };
 
 // ---------- Step 3 predefined location suggestions ----------
 export const PREDEFINED_LOCATIONS = {
-  indoor: [
-    "Living room", "Kitchen", "Dining room", "Bedroom", "Bathroom",
-    "Hallway", "Office", "Kids room",
-  ],
-  outdoor: [
-    "Balcony", "Terrace", "Patio", "Garden", "Front yard",
-    "Backyard", "Porch", "Greenhouse",
-  ],
-  other: [
-    "Staircase", "Garage", "Basement", "Lobby", "Sunroom",
-    "Workshop", "Studio", "Attic",
-  ],
+  indoor: ["Living room", "Kitchen", "Dining room", "Bedroom", "Bathroom", "Hallway", "Office", "Kids room"],
+  outdoor: ["Balcony", "Terrace", "Patio", "Garden", "Front yard", "Backyard", "Porch", "Greenhouse"],
+  other: ["Staircase", "Garage", "Basement", "Lobby", "Sunroom", "Workshop", "Studio", "Attic"],
 } as const;
 
 // ---------- 🔵 Step 4 exposure options ----------
@@ -120,7 +136,7 @@ export const ORIENTATIONS = [
 ] as const;
 
 // ===================================================================
-// 🔵 Step 5 – Container & Soil constants (new)
+// 🔵 Step 5 – Container & Soil constants
 // ===================================================================
 
 export type PotMaterialKey =

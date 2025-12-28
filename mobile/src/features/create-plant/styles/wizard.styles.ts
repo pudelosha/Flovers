@@ -154,7 +154,7 @@ export const wiz = StyleSheet.create({
 
   /** Step 2 visuals */
   hero: { width: "100%", height: 180, borderRadius: 14, marginTop: 8, marginBottom: 10 },
-  desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
+  desc: { color: "rgba(255,255,255,0.95)", fontSize: 13, fontWeight: "300", lineHeight: 18, textAlign: "justify" },
   prefsGrid: { marginTop: 8, gap: 8 },
   prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
   prefLabel: { color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: "700", flex: 1 },
