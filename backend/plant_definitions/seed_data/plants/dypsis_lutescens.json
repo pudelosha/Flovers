@@ -1,0 +1,238 @@
+{
+  "external_id": "dypsis_lutescens",
+  "name": "Areca Palm",
+  "latin": "Dypsis lutescens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dypsis_lutescens.jpg",
+  "image_thumb": "dypsis_lutescens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping palm",
+          "pl": "Palmowa kępa",
+          "de": "Horstbildend",
+          "fr": "Palmier en touffe",
+          "it": "Palma cespitosa",
+          "es": "Palmera en mata",
+          "pt": "Palmeira touceira",
+          "ar": "نمو عنقودي",
+          "hi": "गुच्छेदार",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Areca Palm",
+      "description": "Dypsis lutescens is a clumping tropical palm native to Madagascar. It prefers bright, indirect light and evenly moist soil indoors. The plant is valued for its air-purifying foliage."
+    },
+    "pl": {
+      "common_name": "Palma areka",
+      "description": "Dypsis lutescens to tropikalna palma kępowa z Madagaskaru. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnym podłożu. Często uprawiana w pomieszczeniach."
+    },
+    "de": {
+      "common_name": "Goldfruchtpalme",
+      "description": "Dypsis lutescens ist eine tropische Horstpalme aus Madagaskar. Sie mag helles, indirektes Licht und gleichmäßig feuchte Erde. Sie wird häufig als Zimmerpflanze gehalten."
+    },
+    "fr": {
+      "common_name": "Palmier areca",
+      "description": "Dypsis lutescens est un palmier tropical originaire de Madagascar. Il apprécie une lumière vive indirecte et un sol légèrement humide. Il est courant en culture intérieure."
+    },
+    "it": {
+      "common_name": "Palma areca",
+      "description": "Dypsis lutescens è una palma tropicale originaria del Madagascar. Predilige luce indiretta luminosa e terreno moderatamente umido. È molto usata come pianta da interno."
+    },
+    "es": {
+      "common_name": "Palma areca",
+      "description": "Dypsis lutescens es una palmera tropical de Madagascar. Prefiere luz brillante indirecta y riego regular. Es común como planta de interior."
+    },
+    "pt": {
+      "common_name": "Palmeira areca",
+      "description": "Dypsis lutescens é uma palmeira tropical de Madagascar. Cresce bem com luz indireta brilhante e solo levemente úmido. Muito cultivada em interiores."
+    },
+    "ar": {
+      "common_name": "نخيل الأريكا",
+      "description": "نبات Dypsis lutescens نخيل استوائي موطنه مدغشقر. يفضل الضوء الساطع غير المباشر والتربة الرطبة باعتدال. شائع كنبات داخلي."
+    },
+    "hi": {
+      "common_name": "एरेका पाम",
+      "description": "Dypsis lutescens मेडागास्कर का एक उष्णकटिबंधीय पाम है। यह अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद करता है। इसे घरों में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "散尾葵",
+      "description": "Dypsis lutescens 原产于马达加斯加，是一种丛生热带棕榈。适合明亮散射光和均匀湿润的土壤。常作为室内植物栽培。"
+    },
+    "ja": {
+      "common_name": "アレカヤシ",
+      "description": "Dypsis lutescens はマダガスカル原産の熱帯ヤシです。明るい間接光と適度に湿った土を好みます。観葉植物として人気です。"
+    },
+    "ko": {
+      "common_name": "아레카야자",
+      "description": "Dypsis lutescens는 마다가스카르 원산의 열대 야자입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 실내 식물로 흔합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/6357/dypsis-lutescens/details",
+      "https://edis.ifas.ufl.edu/publication/FP185",
+      "https://www.kew.org/plants/dypsis-lutescens"
+    ]
+  }
+}

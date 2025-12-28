@@ -1,0 +1,236 @@
+{
+  "external_id": "aquilegia_vulgaris",
+  "name": "Common columbine",
+  "latin": "Aquilegia vulgaris",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aquilegia_vulgaris.jpg",
+  "image_thumb": "aquilegia_vulgaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz’ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist loam",
+          "pl": "Wilgotna glina",
+          "de": "Feuchter Lehm",
+          "fr": "Sol limoneux",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम दोमट",
+          "zh": "湿润壤土",
+          "ja": "湿った壌土",
+          "ko": "습한 양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Chłodny klimat",
+          "de": "Kühl gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل بارد",
+          "hi": "शीतोष्ण",
+          "zh": "凉爽温带",
+          "ja": "冷涼",
+          "ko": "서늘한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna wilgoć",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Trująca po zjedzeniu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica ingerida",
+          "pt": "Tóxica ingerida",
+          "ar": "سامة عند الأكل",
+          "hi": "विषैला सेवन पर",
+          "zh": "食用有毒",
+          "ja": "摂取で有毒",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clump forming",
+          "pl": "Kępowy wzrost",
+          "de": "Horstbildend",
+          "fr": "Croissance en touffe",
+          "it": "Crescita cespitosa",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common columbine",
+      "description": "Aquilegia vulgaris is a herbaceous perennial native to Europe. It produces nodding, spurred flowers in spring and prefers partial shade with moist, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Orlik pospolity",
+      "description": "Aquilegia vulgaris to bylina pochodząca z Europy. Kwitnie wiosną i najlepiej rośnie w półcieniu na wilgotnej, przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Gewöhnliche Akelei",
+      "description": "Aquilegia vulgaris ist eine ausdauernde Pflanze aus Europa. Sie blüht im Frühjahr und gedeiht am besten im Halbschatten in feuchtem Boden."
+    },
+    "fr": {
+      "common_name": "Ancolie commune",
+      "description": "Aquilegia vulgaris est une plante vivace européenne. Elle fleurit au printemps et préfère une exposition mi-ombragée avec un sol humide."
+    },
+    "it": {
+      "common_name": "Aquilegia comune",
+      "description": "Aquilegia vulgaris è una pianta perenne originaria dell’Europa. Fiorisce in primavera e predilige mezz’ombra e terreno umido drenato."
+    },
+    "es": {
+      "common_name": "Aguileña común",
+      "description": "Aquilegia vulgaris es una planta perenne europea. Florece en primavera y crece mejor en semisombra con suelo húmedo."
+    },
+    "pt": {
+      "common_name": "Aquilégia-comum",
+      "description": "Aquilegia vulgaris é uma planta perene da Europa. Floresce na primavera e prefere meia-sombra e solo úmido."
+    },
+    "ar": {
+      "common_name": "أكويليجيا شائعة",
+      "description": "نبات معمر موطنه أوروبا. يزهر في الربيع ويفضل الظل الجزئي والتربة الرطبة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "कॉमन कोलंबाइन",
+      "description": "Aquilegia vulgaris यूरोप का बहुवर्षीय पौधा है। यह वसंत में खिलता है और आंशिक धूप व नम मिट्टी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "普通耧斗菜",
+      "description": "Aquilegia vulgaris 原产于欧洲，为多年生植物。春季开花，适合半阴和湿润土壤。"
+    },
+    "ja": {
+      "common_name": "セイヨウオダマキ",
+      "description": "Aquilegia vulgaris はヨーロッパ原産の多年草です。春に花を咲かせ、半日陰と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "서양매발톱꽃",
+      "description": "Aquilegia vulgaris는 유럽 원산의 다년생 식물입니다. 봄에 꽃이 피며 반그늘과 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1021/aquilegia-vulgaris/details",
+      "https://www.gardenersworld.com/plants/aquilegia-vulgaris/",
+      "https://plants.ces.ncsu.edu/plants/aquilegia-vulgaris/"
+    ]
+  }
+}

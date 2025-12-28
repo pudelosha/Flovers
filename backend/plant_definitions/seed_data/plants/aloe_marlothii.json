@@ -1,0 +1,236 @@
+{
+  "external_id": "aloe_marlothii",
+  "name": "Mountain aloe",
+  "latin": "Aloe marlothii",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aloe_marlothii.jpg",
+  "image_thumb": "aloe_marlothii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म जलवायु",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mountain aloe",
+      "description": "Aloe marlothii is a large, tree-like aloe native to southern Africa. It prefers full sun, very well-drained soil, and infrequent watering. Indoors, it grows slowly and needs ample space and bright light."
+    },
+    "pl": {
+      "common_name": "Aloes górski",
+      "description": "Aloe marlothii to duży, drzewiasty aloes pochodzący z południowej Afryki. Wymaga pełnego słońca, bardzo przepuszczalnej gleby i rzadkiego podlewania. W domu rośnie wolno i potrzebuje dużo światła."
+    },
+    "de": {
+      "common_name": "Berg-Aloe",
+      "description": "Aloe marlothii ist eine große, baumartige Aloe aus dem südlichen Afrika. Sie benötigt volle Sonne, gut durchlässiges Substrat und seltenes Gießen. In Innenräumen wächst sie langsam und braucht viel Licht."
+    },
+    "fr": {
+      "common_name": "Aloès de montagne",
+      "description": "Aloe marlothii est un grand aloès arborescent originaire d’Afrique australe. Il apprécie le plein soleil, un sol très drainant et des arrosages peu fréquents. En intérieur, sa croissance est lente."
+    },
+    "it": {
+      "common_name": "Aloe di montagna",
+      "description": "Aloe marlothii è un grande aloe arborescente originario dell’Africa meridionale. Predilige pieno sole, terreno molto drenante e annaffiature rare. In casa cresce lentamente."
+    },
+    "es": {
+      "common_name": "Aloe de montaña",
+      "description": "Aloe marlothii es un aloe grande y arborescente originario del sur de África. Requiere pleno sol, suelo muy drenante y riegos poco frecuentes. En interiores su crecimiento es lento."
+    },
+    "pt": {
+      "common_name": "Aloe-da-montanha",
+      "description": "Aloe marlothii é um aloe grande e arbóreo nativo do sul da África. Prefere sol pleno, solo bem drenado e regas espaçadas. Em ambientes internos cresce lentamente."
+    },
+    "ar": {
+      "common_name": "صبار الجبل",
+      "description": "نبات Aloe marlothii صبار كبير يشبه الشجرة وموطنه جنوب أفريقيا. يحتاج إلى شمس كاملة وتربة جيدة الصرف وري متباعد. ينمو ببطء عند زراعته داخل المنزل."
+    },
+    "hi": {
+      "common_name": "माउंटेन एलो",
+      "description": "Aloe marlothii दक्षिणी अफ्रीका का एक बड़ा, वृक्षाकार एलो है। इसे तेज धूप, अच्छी जल निकासी वाली मिट्टी और कम पानी की आवश्यकता होती है। घर के अंदर इसकी वृद्धि धीमी होती है।"
+    },
+    "zh": {
+      "common_name": "山地芦荟",
+      "description": "Aloe marlothii 原产于南部非洲，是大型树状芦荟。它需要充足阳光、良好排水的土壤和少量浇水。室内栽培时生长缓慢。"
+    },
+    "ja": {
+      "common_name": "マウンテンアロエ",
+      "description": "Aloe marlothii は南アフリカ原産の大型の木立性アロエです。強い日光と水はけの良い土、控えめな水やりを好みます。室内では成長が遅いです。"
+    },
+    "ko": {
+      "common_name": "마운틴 알로에",
+      "description": "Aloe marlothii는 남아프리카 원산의 큰 나무형 알로에입니다. 강한 햇빛과 배수가 좋은 흙, 적은 물주기를 선호합니다. 실내에서는 성장 속도가 느립니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/aloe-marlothii",
+      "https://worldofsucculents.com/aloe-marlothii-mountain-aloe/",
+      "https://www.sanbi.org/plant/aloe-marlothii/"
+    ]
+  }
+}

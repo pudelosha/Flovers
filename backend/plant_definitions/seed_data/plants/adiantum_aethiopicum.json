@@ -1,0 +1,238 @@
+{
+  "external_id": "adiantum_aethiopicum",
+  "name": "Maidenhair Fern",
+  "latin": "Adiantum aethiopicum",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "adiantum_aethiopicum.jpg",
+  "image_thumb": "adiantum_aethiopicum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष प्रकाश",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, well-drained",
+          "pl": "Wilgotna przepuszczalna",
+          "de": "Feucht, durchlässig",
+          "fr": "Humide drainé",
+          "it": "Umido drenante",
+          "es": "Húmedo drenante",
+          "pt": "Úmido drenado",
+          "ar": "رطبة جيدة التصريف",
+          "hi": "नम व जलनिकास",
+          "zh": "湿润排水好",
+          "ja": "湿潤で排水良",
+          "ko": "습하고 배수됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة مستمرة",
+          "hi": "लगातार नम",
+          "zh": "保持均匀湿润",
+          "ja": "常に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping fern",
+          "pl": "Kępiasta paproć",
+          "de": "Horstbildend",
+          "fr": "Fougère en touffe",
+          "it": "Felce cespitosa",
+          "es": "Helecho en mata",
+          "pt": "Samambaia em touceira",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Maidenhair fern",
+      "description": "Adiantum aethiopicum is a delicate fern native to Australia and southern Africa. It grows in moist, shaded habitats and is valued for its fine, fan-shaped fronds. Indoors, it needs consistent moisture and high humidity."
+    },
+    "pl": {
+      "common_name": "Paprotka australijska",
+      "description": "Adiantum aethiopicum to delikatna paproć pochodząca z Australii i Afryki Południowej. Naturalnie rośnie w wilgotnych i zacienionych miejscach. W domu wymaga stałej wilgoci i wysokiej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Frauenhaarfarn",
+      "description": "Adiantum aethiopicum ist ein zarter Farn aus Australien und dem südlichen Afrika. Er wächst in feuchten, schattigen Lebensräumen. Als Zimmerpflanze benötigt er gleichmäßige Feuchtigkeit und hohe Luftfeuchte."
+    },
+    "fr": {
+      "common_name": "Fougère cheveux-de-Vénus",
+      "description": "Adiantum aethiopicum est une fougère délicate originaire d’Australie et d’Afrique australe. Elle pousse dans des milieux humides et ombragés. En intérieur, elle demande une humidité constante."
+    },
+    "it": {
+      "common_name": "Felce capelvenere",
+      "description": "Adiantum aethiopicum è una felce delicata originaria dell’Australia e dell’Africa meridionale. Cresce in ambienti umidi e ombreggiati. In casa richiede annaffiature regolari e alta umidità."
+    },
+    "es": {
+      "common_name": "Culantrillo",
+      "description": "Adiantum aethiopicum es un helecho delicado originario de Australia y África austral. Vive en zonas húmedas y sombreadas. Como planta de interior necesita humedad constante."
+    },
+    "pt": {
+      "common_name": "Avenca",
+      "description": "Adiantum aethiopicum é uma samambaia delicada nativa da Austrália e do sul da África. Desenvolve-se em locais úmidos e sombreados. Em interiores, precisa de umidade constante e ar úmido."
+    },
+    "ar": {
+      "common_name": "سرخس شعر العذراء",
+      "description": "Adiantum aethiopicum هو سرخس رقيق موطنه أستراليا وجنوب أفريقيا. ينمو في بيئات رطبة ومظللة. كنبات داخلي يحتاج إلى رطوبة ثابتة."
+    },
+    "hi": {
+      "common_name": "मेडेनहेयर फर्न",
+      "description": "Adiantum aethiopicum एक नाज़ुक फ़र्न है जो ऑस्ट्रेलिया और दक्षिणी अफ्रीका का मूल निवासी है। यह नम और छायादार स्थानों में उगता है। घर के अंदर इसे लगातार नमी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "铁线蕨",
+      "description": "Adiantum aethiopicum 原产于澳大利亚和非洲南部，是一种外形精致的蕨类植物。它生长在潮湿阴凉的环境中。室内养护需保持土壤湿润和空气湿度。"
+    },
+    "ja": {
+      "common_name": "アジアンタム",
+      "description": "Adiantum aethiopicum はオーストラリアと南部アフリカ原産の繊細なシダ植物です。湿った半日陰の環境に自生します。室内では高い湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "아디안텀 고사리",
+      "description": "Adiantum aethiopicum은 호주와 남부 아프리카 원산의 섬세한 고사리입니다. 습하고 그늘진 환경에서 자랍니다. 실내에서는 지속적인 수분과 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/adiantum-aethiopicum/details",
+      "https://www.botanicgardens.sa.gov.au/learn/gardening/growing-adiantum",
+      "https://www.gardenersworld.com/plants/adiantum-aethiopicum/"
+    ]
+  }
+}

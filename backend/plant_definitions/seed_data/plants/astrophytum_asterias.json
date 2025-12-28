@@ -1,0 +1,237 @@
+{
+  "external_id": "astrophytum_asterias",
+  "name": "Astrophytum asterias",
+  "latin": "Astrophytum asterias",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "astrophytum_asterias.jpg",
+  "image_thumb": "astrophytum_asterias.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining soil",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm conditions",
+          "pl": "Ciepłe warunki",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "جو دافئ",
+          "hi": "गर्म तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Star Cactus",
+      "description": "Astrophytum asterias is a small, spineless cactus native to Texas and Mexico. It prefers bright sun, excellent drainage, and infrequent watering. Overwatering can quickly cause rot."
+    },
+    "pl": {
+      "common_name": "Astrofitum gwiaździste",
+      "description": "Astrophytum asterias to niewielki, bezkolcowy kaktus z Teksasu i Meksyku. Wymaga silnego światła, bardzo przepuszczalnego podłoża i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia."
+    },
+    "de": {
+      "common_name": "Sternkaktus",
+      "description": "Astrophytum asterias ist ein kleiner, dornenloser Kaktus aus Texas und Mexiko. Er benötigt viel Sonne, stark drainiertes Substrat und seltenes Gießen. Staunässe verursacht Fäulnis."
+    },
+    "fr": {
+      "common_name": "Cactus étoile",
+      "description": "Astrophytum asterias est un petit cactus sans épines originaire du Texas et du Mexique. Il demande beaucoup de soleil, un sol très drainant et peu d’arrosage. L’excès d’eau provoque la pourriture."
+    },
+    "it": {
+      "common_name": "Cactus stella",
+      "description": "Astrophytum asterias è un piccolo cactus senza spine originario di Texas e Messico. Necessita di pieno sole, terreno molto drenante e annaffiature rare. L’acqua in eccesso causa marciumi."
+    },
+    "es": {
+      "common_name": "Cactus estrella",
+      "description": "Astrophytum asterias es un cactus pequeño y sin espinas de Texas y México. Requiere sol intenso, sustrato muy drenante y riego escaso. El exceso de agua provoca pudrición."
+    },
+    "pt": {
+      "common_name": "Cacto estrela",
+      "description": "Astrophytum asterias é um pequeno cacto sem espinhos nativo do Texas e do México. Precisa de sol pleno, solo muito drenante e regas espaçadas. O excesso de água causa apodrecimento."
+    },
+    "ar": {
+      "common_name": "صبار النجمة",
+      "description": "Astrophytum asterias صبار صغير بلا أشواك موطنه تكساس والمكسيك. يحتاج إلى شمس قوية وتربة جيدة التصريف وري قليل. الإفراط في الري يسبب التعفن."
+    },
+    "hi": {
+      "common_name": "स्टार कैक्टस",
+      "description": "Astrophytum asterias टेक्सास और मेक्सिको का छोटा बिना कांटों वाला कैक्टस है। इसे तेज धूप, अच्छी जल निकासी और कम पानी की आवश्यकता होती है। अधिक पानी से सड़न होती है।"
+    },
+    "zh": {
+      "common_name": "星形仙人掌",
+      "description": "Astrophytum asterias 是原产于德州和墨西哥的小型无刺仙人掌。需要充足阳光、良好排水的土壤和少量浇水。浇水过多容易腐烂。"
+    },
+    "ja": {
+      "common_name": "アストロフィツム",
+      "description": "アストロフィツム・アステリアスはテキサスとメキシコ原産の小型無刺サボテンです。強い日光と水はけの良い用土、控えめな水やりが必要です。過湿は腐敗の原因になります。"
+    },
+    "ko": {
+      "common_name": "별선인장",
+      "description": "Astrophytum asterias는 텍사스와 멕시코 원산의 작은 무가시 선인장입니다. 강한 햇빛과 배수가 좋은 토양, 적은 물을 선호합니다. 과습하면 부패합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/astrophytum/asterias/details",
+      "https://www.cactus-art.biz/schede/ASTROPHYTUM/Astrophytum_asterias/Astrophytum_asterias.htm",
+      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1746/Astrophytum_asterias"
+    ]
+  }
+}

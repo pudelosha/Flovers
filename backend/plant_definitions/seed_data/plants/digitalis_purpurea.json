@@ -1,0 +1,235 @@
+{
+  "external_id": "digitalis_purpurea",
+  "name": "Foxglove",
+  "latin": "Digitalis purpurea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "digitalis_purpurea.jpg",
+  "image_thumb": "digitalis_purpurea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "partial sun",
+          "pl": "półcień",
+          "de": "Halbschatten",
+          "fr": "mi-ombre",
+          "it": "mezz'ombra",
+          "es": "semisombra",
+          "pt": "meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained loam",
+          "pl": "żyzna gleba",
+          "de": "durchlässiger Lehm",
+          "fr": "sol drainé",
+          "it": "terreno drenato",
+          "es": "suelo drenado",
+          "pt": "solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "regular watering",
+          "pl": "umiarkowane",
+          "de": "regelmäßig",
+          "fr": "arrosage régulier",
+          "it": "innaffiature reg.",
+          "es": "riego regular",
+          "pt": "rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool temperate",
+          "pl": "umiarkowana",
+          "de": "gemäßigt",
+          "fr": "tempéré",
+          "it": "temperato",
+          "es": "templado",
+          "pt": "temperado",
+          "ar": "معتدلة",
+          "hi": "समशीतोष्ण",
+          "zh": "温带气候",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "average",
+          "pl": "przeciętna",
+          "de": "durchschnittlich",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "औसत",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "highly toxic",
+          "pl": "silnie trująca",
+          "de": "stark giftig",
+          "fr": "très toxique",
+          "it": "molto tossica",
+          "es": "muy tóxica",
+          "pt": "muito tóxica",
+          "ar": "سامة جدًا",
+          "hi": "अत्यंत विषैला",
+          "zh": "高度有毒",
+          "ja": "強い毒性",
+          "ko": "강한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "biennial",
+          "pl": "dwuletnia",
+          "de": "zweijährig",
+          "fr": "bisannuelle",
+          "it": "biennale",
+          "es": "bienal",
+          "pt": "bienal",
+          "ar": "ثنائية الحول",
+          "hi": "द्विवर्षीय",
+          "zh": "二年生",
+          "ja": "二年草",
+          "ko": "2년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Foxglove",
+      "description": "Digitalis purpurea is a biennial flowering plant native to Europe. It produces tall spikes of tubular purple flowers and prefers partial sun and moist, well-drained soil. All parts of the plant are highly toxic."
+    },
+    "pl": {
+      "common_name": "Naparstnica purpurowa",
+      "description": "Digitalis purpurea to dwuletnia roślina kwitnąca pochodząca z Europy. Wytwarza wysokie kwiatostany z fioletowymi kwiatami i najlepiej rośnie w półcieniu. Roślina jest silnie trująca."
+    },
+    "de": {
+      "common_name": "Roter Fingerhut",
+      "description": "Digitalis purpurea ist eine zweijährige Pflanze aus Europa. Sie bildet hohe Blütenstände mit röhrenförmigen violetten Blüten und wächst am besten im Halbschatten. Die Pflanze ist stark giftig."
+    },
+    "fr": {
+      "common_name": "Digitale pourpre",
+      "description": "Digitalis purpurea est une plante bisannuelle originaire d’Europe. Elle porte de hautes hampes de fleurs tubulaires violettes et préfère la mi-ombre. Toutes les parties sont très toxiques."
+    },
+    "it": {
+      "common_name": "Digitale purpurea",
+      "description": "Digitalis purpurea è una pianta biennale originaria dell’Europa. Produce alte spighe di fiori tubolari viola e cresce bene in mezz’ombra. È una pianta altamente tossica."
+    },
+    "es": {
+      "common_name": "Dedalera",
+      "description": "Digitalis purpurea es una planta bienal originaria de Europa. Presenta altas espigas de flores tubulares púrpuras y prefiere semisombra. Toda la planta es muy tóxica."
+    },
+    "pt": {
+      "common_name": "Dedaleira",
+      "description": "Digitalis purpurea é uma planta bienal nativa da Europa. Produz hastes altas com flores tubulares roxas e prefere meia-sombra. Todas as partes são muito tóxicas."
+    },
+    "ar": {
+      "common_name": "قفاز الثعلب",
+      "description": "Digitalis purpurea نبات ثنائي الحول موطنه أوروبا. يتميز بسيقان طويلة تحمل أزهارًا أنبوبية أرجوانية ويفضل الشمس الجزئية. جميع أجزائه شديدة السمية."
+    },
+    "hi": {
+      "common_name": "फॉक्सग्लोव",
+      "description": "Digitalis purpurea यूरोप का एक द्विवर्षीय फूलदार पौधा है। इसमें लंबे तनों पर बैंगनी नलीनुमा फूल लगते हैं और यह आंशिक धूप पसंद करता है। पौधा अत्यंत विषैला है।"
+    },
+    "zh": {
+      "common_name": "毛地黄",
+      "description": "Digitalis purpurea 是原产于欧洲的二年生植物。它具有高耸的紫色管状花序，适合半日照和湿润排水良好的土壤。全株有毒。"
+    },
+    "ja": {
+      "common_name": "ジギタリス",
+      "description": "Digitalis purpurea はヨーロッパ原産の二年草です。紫色の筒状の花を高く咲かせ、半日陰を好みます。全草に強い毒性があります。"
+    },
+    "ko": {
+      "common_name": "폭스글러브",
+      "description": "Digitalis purpurea는 유럽 원산의 이년생 식물입니다. 보라색 관 모양의 꽃을 높이 피우며 반그늘을 선호합니다. 식물 전체에 강한 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/digitalis-purpurea",
+      "https://plants.ces.ncsu.edu/plants/digitalis-purpurea/"
+    ]
+  }
+}

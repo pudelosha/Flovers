@@ -1,0 +1,237 @@
+{
+  "external_id": "columnea_hirta",
+  "name": "Goldfish Plant",
+  "latin": "Columnea hirta",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "columnea_hirta.jpg",
+  "image_thumb": "columnea_hirta.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ परोक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy epiphyte mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性用土",
+          "ko": "통기성 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Sempre umido",
+          "es": "Humedad constante",
+          "pt": "Úmido regular",
+          "ar": "رطوبة منتظمة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "均一に湿らす",
+          "ko": "고르게 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing epiphyte",
+          "pl": "Pnąca epifit",
+          "de": "Hängender Epiphyt",
+          "fr": "Épiphyte retombant",
+          "it": "Epifita ricadente",
+          "es": "Epífita colgante",
+          "pt": "Epífita pendente",
+          "ar": "نبات متدلٍ",
+          "hi": "लटकने वाला",
+          "zh": "下垂生长",
+          "ja": "垂れ下がる",
+          "ko": "늘어지는 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Goldfish Plant",
+      "description": "Columnea hirta is a tropical epiphytic plant known for its bright orange, fish-shaped flowers. It grows naturally on trees in humid forests and adapts well to indoor conditions with warm temperatures and indirect light."
+    },
+    "pl": {
+      "common_name": "Kolumnea",
+      "description": "Columnea hirta to tropikalna roślina epifityczna o pomarańczowych kwiatach przypominających rybki. W naturze rośnie na drzewach w wilgotnych lasach i dobrze sprawdza się w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Goldfischpflanze",
+      "description": "Columnea hirta ist eine tropische epiphytische Pflanze mit auffälligen orangefarbenen Blüten. Sie stammt aus feuchten Wäldern und gedeiht bei Wärme und hellem, indirektem Licht."
+    },
+    "fr": {
+      "common_name": "Plante poisson rouge",
+      "description": "Columnea hirta est une plante tropicale épiphyte aux fleurs orange vives. Elle pousse naturellement dans les forêts humides et apprécie la chaleur et la lumière indirecte."
+    },
+    "it": {
+      "common_name": "Pianta pesce rosso",
+      "description": "Columnea hirta è una pianta tropicale epifita con fiori arancioni decorativi. Proviene da foreste umide e cresce bene in ambienti interni luminosi e caldi."
+    },
+    "es": {
+      "common_name": "Planta pez dorado",
+      "description": "Columnea hirta es una planta tropical epífita con flores naranjas llamativas. Es originaria de bosques húmedos y se adapta bien al cultivo en interiores."
+    },
+    "pt": {
+      "common_name": "Planta-peix-dourado",
+      "description": "Columnea hirta é uma planta tropical epífita com flores alaranjadas vistosas. Cresce naturalmente em florestas úmidas e prefere ambientes internos quentes e iluminados."
+    },
+    "ar": {
+      "common_name": "نبات السمكة الذهبية",
+      "description": "Columnea hirta نبات استوائي يعيش كنبات هوائي وله أزهار برتقالية مميزة. ينمو في الغابات الرطبة ويفضل الدفء والضوء غير المباشر داخل المنازل."
+    },
+    "hi": {
+      "common_name": "गोल्डफिश पौधा",
+      "description": "Columnea hirta एक उष्णकटिबंधीय एपिफाइट पौधा है जिसके फूल चमकीले नारंगी होते हैं। यह नम जंगलों का मूल निवासी है और घर के अंदर अच्छी तरह उगता है।"
+    },
+    "zh": {
+      "common_name": "金鱼花",
+      "description": "Columnea hirta 是一种热带附生植物，以橙色花朵著称。原生于潮湿森林，在温暖明亮的室内环境中生长良好。"
+    },
+    "ja": {
+      "common_name": "キンギョソウ",
+      "description": "Columnea hirta は明るいオレンジ色の花を持つ熱帯性の着生植物です。湿潤な森林原産で、室内でも育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "금붕어식물",
+      "description": "Columnea hirta는 주황색 꽃이 특징인 열대 착생식물입니다. 습한 숲이 원산지이며 따뜻한 실내 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282445",
+      "https://edis.ifas.ufl.edu/publication/FP136",
+      "https://www.rhs.org.uk/plants/columnea/growing-guide"
+    ]
+  }
+}

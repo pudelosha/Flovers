@@ -1,0 +1,238 @@
+{
+  "external_id": "anthurium_clarinervium",
+  "name": "Anthurium Clarinervium",
+  "latin": "Anthurium clarinervium",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "anthurium_clarinervium.jpg",
+  "image_thumb": "anthurium_clarinervium.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalna",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Umiarkowane",
+          "de": "Mäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido regolare",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "保持微湿",
+          "ja": "適度な湿り気",
+          "ko": "적당한 수분"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27 °م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27 ℃",
+          "ko": "18–27 ℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Velvet Cardboard Anthurium",
+      "description": "Anthurium clarinervium is a tropical aroid native to southern Mexico. It is known for thick, heart-shaped leaves with striking white veins. It grows best indoors with bright indirect light and high humidity."
+    },
+    "pl": {
+      "common_name": "Anturium welurowe",
+      "description": "Anthurium clarinervium pochodzi z południowego Meksyku. Ma grube, sercowate liście z jasnym unerwieniem. Najlepiej rośnie w jasnym miejscu i wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Samt-Anthurie",
+      "description": "Anthurium clarinervium stammt aus dem Süden Mexikos. Die Pflanze hat dicke, herzförmige Blätter mit weißen Adern. Sie eignet sich gut für helle Innenräume ohne direkte Sonne."
+    },
+    "fr": {
+      "common_name": "Anthurium velours",
+      "description": "Anthurium clarinervium est originaire du sud du Mexique. Il se distingue par ses feuilles épaisses et nervurées. En intérieur, il préfère une lumière indirecte et une forte humidité."
+    },
+    "it": {
+      "common_name": "Anthurium vellutato",
+      "description": "Anthurium clarinervium proviene dal Messico meridionale. È apprezzato per le sue foglie vellutate e nervate. Richiede luce indiretta e umidità elevata in casa."
+    },
+    "es": {
+      "common_name": "Anturio aterciopelado",
+      "description": "Anthurium clarinervium es originario del sur de México. Presenta hojas gruesas con venas blancas evidentes. Se cultiva mejor en interior con luz indirecta y humedad alta."
+    },
+    "pt": {
+      "common_name": "Antúrio aveludado",
+      "description": "Anthurium clarinervium é nativo do sul do México. Destaca-se pelas folhas grossas e aveludadas. Prefere ambientes internos com luz indireta e boa umidade."
+    },
+    "ar": {
+      "common_name": "أنثوريوم مخملي",
+      "description": "نبات أنثوريوم كلارينيرفيوم موطنه جنوب المكسيك. يتميز بأوراق قلبية سميكة مع عروق بيضاء. يفضل الضوء غير المباشر والرطوبة العالية داخل المنازل."
+    },
+    "hi": {
+      "common_name": "वेल्वेट एन्थूरियम",
+      "description": "एन्थूरियम क्लैरिनेर्वियम दक्षिणी मेक्सिको का पौधा है। इसकी पत्तियाँ मोटी और दिल के आकार की होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी और नमी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "绒叶花烛",
+      "description": "Anthurium clarinervium 原产于墨西哥南部。其心形厚叶和白色叶脉非常醒目。适合在室内明亮散射光和高湿度环境中生长。"
+    },
+    "ja": {
+      "common_name": "クラリネルビウム",
+      "description": "アンスリウム・クラリネルビウムはメキシコ南部原産です。白い葉脈のある厚い葉が特徴です。室内では明るい間接光と高湿度を好みます。"
+    },
+    "ko": {
+      "common_name": "벨벳 안스리움",
+      "description": "안스리움 클라리네르비움은 멕시코 남부 원산입니다. 두껍고 하트 모양의 잎이 특징입니다. 실내에서는 밝은 간접광과 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/200683/anthurium-clarinervium/details",
+      "https://edis.ifas.ufl.edu/publication/EP490",
+      "https://www.aroid.org/genera/anthurium.php"
+    ]
+  }
+}

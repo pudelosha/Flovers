@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_sinuata",
+  "name": "Alocasia Sinuata",
+  "latin": "Alocasia sinuata",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_sinuata.jpg",
+  "image_thumb": "alocasia_sinuata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining aroid",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Húmedo constante",
+          "pt": "Úmido constante",
+          "ar": "رطوبة ثابتة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気を保つ",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sinuate Alocasia",
+      "description": "Alocasia sinuata is a tropical aroid known for its thick, glossy, deeply veined leaves. It prefers warm temperatures, high humidity, and bright indirect light. Consistent moisture and good drainage are essential."
+    },
+    "pl": {
+      "common_name": "Alokazja Sinuata",
+      "description": "Alocasia sinuata to tropikalna roślina o grubych, błyszczących liściach. Wymaga ciepła, wysokiej wilgotności i jasnego, rozproszonego światła. Podłoże powinno być stale lekko wilgotne."
+    },
+    "de": {
+      "common_name": "Alokasie Sinuata",
+      "description": "Alocasia sinuata ist eine tropische Aronstabpflanze mit dicken, glänzenden Blättern. Sie mag Wärme, hohe Luftfeuchtigkeit und helles, indirektes Licht. Gleichmäßige Feuchtigkeit ist wichtig."
+    },
+    "fr": {
+      "common_name": "Alocasia sinuata",
+      "description": "Alocasia sinuata est une plante tropicale aux feuilles épaisses et brillantes. Elle apprécie la chaleur, une forte humidité et une lumière indirecte. Le substrat doit rester légèrement humide."
+    },
+    "it": {
+      "common_name": "Alocasia sinuata",
+      "description": "Alocasia sinuata è una pianta tropicale con foglie spesse e lucide. Predilige caldo, alta umidità e luce indiretta intensa. Richiede irrigazioni regolari senza ristagni."
+    },
+    "es": {
+      "common_name": "Alocasia sinuata",
+      "description": "Alocasia sinuata es una planta tropical con hojas gruesas y brillantes. Necesita calor, alta humedad y luz indirecta brillante. El sustrato debe mantenerse ligeramente húmedo."
+    },
+    "pt": {
+      "common_name": "Alocasia sinuata",
+      "description": "Alocasia sinuata é uma planta tropical de folhas grossas e brilhantes. Prefere calor, alta umidade e luz indireta intensa. O solo deve permanecer levemente úmido."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا سينواتا",
+      "description": "ألوكاسيا سينواتا نبات استوائي بأوراق سميكة ولامعة. يحتاج إلى حرارة ورطوبة عالية وضوء ساطع غير مباشر. يجب الحفاظ على رطوبة التربة دون تشبع."
+    },
+    "hi": {
+      "common_name": "एलोकैसिया साइनुएटा",
+      "description": "एलोकैसिया साइनुएटा एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी और चमकदार होती हैं। इसे गर्मी, अधिक नमी और अप्रत्यक्ष रोशनी पसंद है। मिट्टी हल्की नम रहनी चाहिए।"
+    },
+    "zh": {
+      "common_name": "波纹海芋",
+      "description": "Alocasia sinuata 是一种热带海芋植物，叶片厚实有光泽。它需要温暖环境、高湿度和明亮的散射光。土壤应保持微湿但排水良好。"
+    },
+    "ja": {
+      "common_name": "アロカシア・シヌアータ",
+      "description": "アロカシア・シヌアータは厚く光沢のある葉を持つ熱帯植物です。高温多湿と明るい間接光を好みます。用土は適度な湿り気を保ちます。"
+    },
+    "ko": {
+      "common_name": "알로카시아 시누아타",
+      "description": "알로카시아 시누아타는 두껍고 윤기 있는 잎을 가진 열대 식물입니다. 따뜻한 온도와 높은 습도, 밝은 간접광을 선호합니다. 흙은 항상 약간 촉촉해야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/EP106",
+      "https://www.aroid.org/genera/alocasia.php"
+    ]
+  }
+}

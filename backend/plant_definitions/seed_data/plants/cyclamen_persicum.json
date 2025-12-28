@@ -1,0 +1,238 @@
+{
+  "external_id": "cyclamen_persicum",
+  "name": "Florist’s Cyclamen",
+  "latin": "Cyclamen persicum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cyclamen_persicum.jpg",
+  "image_thumb": "cyclamen_persicum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne rozproszone",
+          "de": "helles Streulicht",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained soil",
+          "pl": "przepuszczalna",
+          "de": "durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate watering",
+          "pl": "umiarkowane",
+          "de": "mäßig gießen",
+          "fr": "arrosage modéré",
+          "it": "innaffiature medie",
+          "es": "riego moderado",
+          "pt": "rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium care",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool conditions",
+          "pl": "chłodne",
+          "de": "kühl",
+          "fr": "températures fraîches",
+          "it": "clima fresco",
+          "es": "ambiente fresco",
+          "pt": "ambiente fresco",
+          "ar": "جو بارد",
+          "hi": "ठंडा तापमान",
+          "zh": "凉爽环境",
+          "ja": "涼しい環境",
+          "ko": "서늘한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "average humidity",
+          "pl": "umiarkowana",
+          "de": "normal",
+          "fr": "humidité moyenne",
+          "it": "umidità media",
+          "es": "humedad media",
+          "pt": "umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic to pets",
+          "pl": "trująca",
+          "de": "giftig",
+          "fr": "toxique",
+          "it": "tossica",
+          "es": "tóxica",
+          "pt": "tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow growing",
+          "pl": "wolny wzrost",
+          "de": "langsam",
+          "fr": "croissance lente",
+          "it": "crescita lenta",
+          "es": "crecimiento lento",
+          "pt": "crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Florist’s Cyclamen",
+      "description": "Cyclamen persicum is a popular indoor flowering plant grown for its colorful winter blooms. It prefers bright indirect light, cool temperatures, and evenly moist but well-drained soil."
+    },
+    "pl": {
+      "common_name": "Cyklamen perski",
+      "description": "Cyclamen persicum to popularna roślina doniczkowa o efektownych zimowych kwiatach. Wymaga jasnego, rozproszonego światła, chłodnych warunków i umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Persisches Alpenveilchen",
+      "description": "Cyclamen persicum ist eine beliebte Zimmerpflanze mit dekorativen Winterblüten. Sie bevorzugt helles, indirektes Licht, kühle Temperaturen und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Cyclamen de Perse",
+      "description": "Cyclamen persicum est une plante d’intérieur appréciée pour sa floraison hivernale. Elle aime la lumière indirecte, les températures fraîches et un sol légèrement humide."
+    },
+    "it": {
+      "common_name": "Ciclamino persiano",
+      "description": "Cyclamen persicum è una pianta da interno molto coltivata per i suoi fiori invernali. Richiede luce indiretta, temperature fresche e annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Ciclamen persa",
+      "description": "Cyclamen persicum es una planta ornamental de interior conocida por su floración invernal. Prefiere luz indirecta, ambiente fresco y riego moderado."
+    },
+    "pt": {
+      "common_name": "Ciclame-da-Pérsia",
+      "description": "Cyclamen persicum é uma planta de interior popular pelas suas flores de inverno. Desenvolve-se melhor com luz indireta, temperaturas amenas e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "بخور مريم الفارسي",
+      "description": "Cyclamen persicum نبات زينة داخلي مشهور بأزهاره الشتوية. يفضل الضوء غير المباشر ودرجات الحرارة المعتدلة مع ري منتظم دون إغراق."
+    },
+    "hi": {
+      "common_name": "साइक्लेमन",
+      "description": "Cyclamen persicum एक लोकप्रिय इनडोर फूलदार पौधा है जो सर्दियों में खिलता है। इसे अप्रत्यक्ष रोशनी, ठंडा वातावरण और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "仙客来",
+      "description": "Cyclamen persicum 是常见的室内观花植物，以冬季开花著称。适合明亮散射光、凉爽环境和适度浇水。"
+    },
+    "ja": {
+      "common_name": "シクラメン",
+      "description": "Cyclamen persicum は冬に花を咲かせる観葉植物として人気があります。明るい間接光と涼しい環境、適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "시클라멘",
+      "description": "Cyclamen persicum은 겨울에 꽃을 피우는 실내 관상식물입니다. 밝은 간접광과 서늘한 온도, 적당한 물주기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/cyclamen/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281564",
+      "https://extension.umn.edu/houseplants/cyclamen"
+    ]
+  }
+}

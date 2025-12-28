@@ -1,0 +1,238 @@
+{
+  "external_id": "episcia_cupreata",
+  "name": "Flame Violet",
+  "latin": "Episcia cupreata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "episcia_cupreata.jpg",
+  "image_thumb": "episcia_cupreata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loose rich soil",
+          "pl": "Luźna gleba",
+          "de": "Lockere Erde",
+          "fr": "Sol léger",
+          "it": "Terreno soffice",
+          "es": "Suelo suelto",
+          "pt": "Solo solto",
+          "ar": "تربة خفيفة",
+          "hi": "ढीली मिट्टी",
+          "zh": "疏松土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido costante",
+          "es": "Humedad media",
+          "pt": "Solo úmido",
+          "ar": "رطوبة معتدلة",
+          "hi": "नम मिट्टी",
+          "zh": "保持湿润",
+          "ja": "適度な湿り気",
+          "ko": "촉촉한 흙"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoor",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गरम",
+          "zh": "温暖环境",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing growth",
+          "pl": "Płożąca",
+          "de": "Kriechend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Rastrera",
+          "pt": "Rasteira",
+          "ar": "زاحفة",
+          "hi": "फैलने वाली",
+          "zh": "匍匐生长",
+          "ja": "ほふく性",
+          "ko": "늘어짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flame Violet",
+      "description": "Episcia cupreata is a tropical trailing plant known for velvety leaves and bright tubular flowers. It thrives indoors with warm temperatures, high humidity, and bright indirect light."
+    },
+    "pl": {
+      "common_name": "Episcia",
+      "description": "Episcia cupreata to tropikalna roślina o aksamitnych liściach i jaskrawych kwiatach. Najlepiej rośnie w cieple, przy wysokiej wilgotności i jasnym świetle pośrednim."
+    },
+    "de": {
+      "common_name": "Flammenveilchen",
+      "description": "Episcia cupreata ist eine tropische Hängepflanze mit samtigen Blättern und leuchtenden Blüten. Sie bevorzugt warme Temperaturen, hohe Luftfeuchte und helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Violette flamboyante",
+      "description": "Episcia cupreata est une plante tropicale rampante aux feuilles veloutées et fleurs colorées. Elle apprécie la chaleur, une forte humidité et une lumière vive indirecte."
+    },
+    "it": {
+      "common_name": "Episcia",
+      "description": "Episcia cupreata è una pianta tropicale ricadente con foglie vellutate e fiori vivaci. Cresce bene in ambienti caldi, umidi e con luce indiretta."
+    },
+    "es": {
+      "common_name": "Violeta de fuego",
+      "description": "Episcia cupreata es una planta tropical rastrera con hojas aterciopeladas y flores brillantes. Prefiere calor, humedad alta y luz indirecta intensa."
+    },
+    "pt": {
+      "common_name": "Violeta-de-fogo",
+      "description": "Episcia cupreata é uma planta tropical pendente com folhas aveludadas e flores vistosas. Desenvolve-se melhor com calor, alta umidade e luz indireta."
+    },
+    "ar": {
+      "common_name": "نبات الإبيسيا",
+      "description": "نبات Episcia cupreata نبات استوائي زاحف بأوراق مخملية وأزهار زاهية. ينمو جيدًا في الدفء مع رطوبة عالية وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "एपिसिया",
+      "description": "Episcia cupreata एक उष्णकटिबंधीय फैलने वाला पौधा है जिसकी पत्तियाँ मखमली होती हैं। इसे गर्म वातावरण, अधिक नमी और अप्रत्यक्ष रोशनी पसंद है।"
+    },
+    "zh": {
+      "common_name": "火焰紫罗兰",
+      "description": "Episcia cupreata 是一种热带匍匐植物，叶片柔软，花色鲜艳。适合温暖、高湿度和明亮散射光的室内环境。"
+    },
+    "ja": {
+      "common_name": "エピスシア",
+      "description": "エピスシア・クプレアタはビロード状の葉と鮮やかな花を持つ熱帯植物です。暖かく湿度の高い明るい日陰を好みます。"
+    },
+    "ko": {
+      "common_name": "에피시아",
+      "description": "Episcia cupreata는 벨벳 같은 잎과 화려한 꽃을 가진 열대 식물입니다. 따뜻하고 습도가 높으며 밝은 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/episcia/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/EP149",
+      "https://www.gardenersworld.com/plants/episcia-cupreata/"
+    ]
+  }
+}

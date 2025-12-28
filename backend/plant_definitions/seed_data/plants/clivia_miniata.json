@@ -1,0 +1,238 @@
+{
+  "external_id": "clivia_miniata",
+  "name": "Clivia",
+  "latin": "Clivia miniata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "clivia_miniata.jpg",
+  "image_thumb": "clivia_miniata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい日陰",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bush lily",
+      "description": "Clivia miniata is a shade-tolerant perennial native to South Africa. It produces clusters of orange flowers and thick evergreen leaves. It is commonly grown indoors in bright, indirect light."
+    },
+    "pl": {
+      "common_name": "Kliwia pomarańczowa",
+      "description": "Clivia miniata to bylina pochodząca z Afryki Południowej. Tworzy pomarańczowe kwiaty i mięsiste, zielone liście. Dobrze rośnie w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Riemenblume",
+      "description": "Clivia miniata stammt aus Südafrika und ist eine robuste Zimmerpflanze. Sie bildet auffällige orange Blüten und dicke Blätter. Sie bevorzugt helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Clivie",
+      "description": "Clivia miniata est une plante vivace originaire d’Afrique du Sud. Elle porte des fleurs orange décoratives et des feuilles persistantes. Elle apprécie une lumière vive sans soleil direct."
+    },
+    "it": {
+      "common_name": "Clivia",
+      "description": "Clivia miniata è una pianta perenne sudafricana. Produce fiori arancioni vistosi e foglie sempreverdi. È adatta alla coltivazione in casa con luce indiretta."
+    },
+    "es": {
+      "common_name": "Clivia",
+      "description": "Clivia miniata es una planta perenne de Sudáfrica. Destaca por sus flores anaranjadas y hojas verdes gruesas. Se cultiva bien en interiores con luz indirecta."
+    },
+    "pt": {
+      "common_name": "Clívia",
+      "description": "Clivia miniata é uma planta perene originária da África do Sul. Possui flores alaranjadas e folhas verdes espessas. Prefere luz indireta e cuidados simples."
+    },
+    "ar": {
+      "common_name": "كليفيا",
+      "description": "نبات كليفيا مينيياتا موطنه جنوب أفريقيا. يتميز بأزهاره البرتقالية وأوراقه الخضراء السميكة. يزرع غالبًا في الداخل مع ضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "क्लिविया",
+      "description": "क्लिविया मिनिएटा दक्षिण अफ्रीका का एक बहुवर्षीय पौधा है। इसमें नारंगी फूल और मोटी हरी पत्तियाँ होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "君子兰",
+      "description": "君子兰原产于南非，是一种多年生植物。它具有橙色花朵和厚实的常绿叶片。适合在室内明亮散射光下生长。"
+    },
+    "ja": {
+      "common_name": "クンシラン",
+      "description": "クンシランは南アフリカ原産の多年草です。オレンジ色の花と厚い葉が特徴です。室内の明るい日陰で育てられます。"
+    },
+    "ko": {
+      "common_name": "군자란",
+      "description": "군자란은 남아프리카 원산의 다년생 식물입니다. 주황색 꽃과 두꺼운 잎이 특징입니다. 밝은 간접광의 실내 환경에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/clivia/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280234",
+      "https://plants.ces.ncsu.edu/plants/clivia-miniata/"
+    ]
+  }
+}

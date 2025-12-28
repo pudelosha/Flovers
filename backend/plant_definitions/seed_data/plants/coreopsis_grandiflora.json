@@ -1,0 +1,238 @@
+{
+  "external_id": "coreopsis_grandiflora",
+  "name": "Large-flowered Tickseed",
+  "latin": "Coreopsis grandiflora",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "coreopsis_grandiflora.jpg",
+  "image_thumb": "coreopsis_grandiflora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno-ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा-गरम",
+          "zh": "凉至暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Horstig",
+          "fr": "Vivace touffe",
+          "it": "Perenne cespo",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार",
+          "zh": "丛生多年生",
+          "ja": "株立ち",
+          "ko": "포기형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Large-flowered Tickseed",
+      "description": "Coreopsis grandiflora is a sun-loving perennial known for its bright yellow daisy-like flowers. It thrives in well-drained soil and blooms reliably through summer. The plant is drought tolerant once established."
+    },
+    "pl": {
+      "common_name": "Nachyłek wielkokwiatowy",
+      "description": "Coreopsis grandiflora to bylina kochająca słońce, o dużych żółtych kwiatach. Najlepiej rośnie w przepuszczalnej glebie i kwitnie latem. Po ukorzenieniu dobrze znosi suszę."
+    },
+    "de": {
+      "common_name": "Großblütiges Mädchenauge",
+      "description": "Coreopsis grandiflora ist eine mehrjährige Pflanze mit leuchtend gelben Blüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Nach dem Anwachsen ist sie trockenheitsverträglich."
+    },
+    "fr": {
+      "common_name": "Coréopsis à grandes fleurs",
+      "description": "Coreopsis grandiflora est une vivace appréciant le plein soleil et les sols drainés. Elle produit de grandes fleurs jaunes tout l’été. Une fois établie, elle tolère la sécheresse."
+    },
+    "it": {
+      "common_name": "Coreopsis a grandi fiori",
+      "description": "Coreopsis grandiflora è una perenne rustica dai fiori gialli brillanti. Predilige pieno sole e terreno ben drenato. Resiste bene alla siccità dopo l’attecchimento."
+    },
+    "es": {
+      "common_name": "Coreopsis de flor grande",
+      "description": "Coreopsis grandiflora es una planta perenne amante del sol con flores amarillas vistosas. Crece mejor en suelos bien drenados. Es tolerante a la sequía cuando está establecida."
+    },
+    "pt": {
+      "common_name": "Coreópsis-de-flor-grande",
+      "description": "Coreopsis grandiflora é uma planta perene de sol pleno com flores amarelas vibrantes. Prefere solo bem drenado. Após estabelecida, tolera períodos de seca."
+    },
+    "ar": {
+      "common_name": "كوريوپسيس كبيرة الأزهار",
+      "description": "Coreopsis grandiflora نبات معمر محب للشمس يتميز بأزهاره الصفراء الزاهية. ينمو في تربة جيدة التصريف. يتحمل الجفاف بعد استقراره."
+    },
+    "hi": {
+      "common_name": "बड़ा फूल टिकसीड",
+      "description": "Coreopsis grandiflora एक धूप पसंद करने वाला बहुवर्षीय पौधा है। यह अच्छी जल निकास वाली मिट्टी में उगता है और गर्मियों में फूल देता है। स्थापित होने पर सूखा सहन करता है।"
+    },
+    "zh": {
+      "common_name": "大花金鸡菊",
+      "description": "Coreopsis grandiflora 是喜阳的多年生植物，开鲜黄色花。适合排水良好的土壤。成活后具有一定耐旱性。"
+    },
+    "ja": {
+      "common_name": "オオキンケイギク",
+      "description": "Coreopsis grandiflora は日当たりを好む多年草で、鮮やかな黄色の花を咲かせます。水はけの良い土壌を好み、定着後は乾燥に強いです。"
+    },
+    "ko": {
+      "common_name": "큰금계국",
+      "description": "Coreopsis grandiflora는 햇빛을 좋아하는 다년생 식물입니다. 배수가 좋은 토양에서 잘 자라며 노란 꽃을 피웁니다. 활착 후에는 건조에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a375",
+      "https://www.rhs.org.uk/plants/4220/coreopsis-grandiflora/details",
+      "https://extension.umn.edu/flowers/coreopsis"
+    ]
+  }
+}

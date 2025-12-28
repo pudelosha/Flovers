@@ -1,0 +1,236 @@
+{
+  "external_id": "aloe_arborescens",
+  "name": "Aloe arborescens",
+  "latin": "Aloe arborescens",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aloe_arborescens.jpg",
+  "image_thumb": "aloe_arborescens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Skąpe",
+          "de": "Wenig",
+          "fr": "Faible",
+          "it": "Scarsa",
+          "es": "Escaso",
+          "pt": "Pouca",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "控えめ",
+          "ko": "적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30℃",
+          "ko": "10–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby aloe",
+          "pl": "Krzewiasty aloes",
+          "de": "Strauchartig",
+          "fr": "Aloès arbustif",
+          "it": "Aloe arbustiva",
+          "es": "Aloe arbustivo",
+          "pt": "Aloe arbustiva",
+          "ar": "نمو شجيري",
+          "hi": "झाड़ीदार",
+          "zh": "灌木状",
+          "ja": "低木状",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Candelabra Aloe",
+      "description": "Aloe arborescens is a shrubby succulent native to southern Africa. It thrives in bright sunlight and well-drained soil with infrequent watering. The plant is valued for its red winter flowers and drought tolerance."
+    },
+    "pl": {
+      "common_name": "Aloes drzewiasty",
+      "description": "Aloe arborescens to krzewiasty sukulent pochodzący z południowej Afryki. Preferuje jasne stanowiska i przepuszczalne podłoże oraz rzadkie podlewanie. Jest ceniony za czerwone zimowe kwiaty i odporność na suszę."
+    },
+    "de": {
+      "common_name": "Baum-Aloe",
+      "description": "Aloe arborescens ist eine strauchartige Sukkulente aus dem südlichen Afrika. Sie benötigt viel Sonne, gut drainiertes Substrat und seltenes Gießen. Die Pflanze ist bekannt für ihre roten Winterblüten."
+    },
+    "fr": {
+      "common_name": "Aloès candélabre",
+      "description": "Aloe arborescens est une plante succulente arbustive originaire d'Afrique australe. Elle apprécie le plein soleil, un sol bien drainé et des arrosages espacés. Elle est remarquable pour sa floraison rouge en hiver."
+    },
+    "it": {
+      "common_name": "Aloe candelabro",
+      "description": "Aloe arborescens è una succulenta arbustiva originaria dell'Africa meridionale. Cresce bene in pieno sole con terreno drenante e annaffiature sporadiche. È apprezzata per i suoi fiori rossi invernali."
+    },
+    "es": {
+      "common_name": "Aloe candelabro",
+      "description": "Aloe arborescens es una suculenta arbustiva originaria del sur de África. Requiere sol pleno, suelo bien drenado y riego poco frecuente. Destaca por sus flores rojas en invierno."
+    },
+    "pt": {
+      "common_name": "Aloe candelabro",
+      "description": "Aloe arborescens é uma suculenta arbustiva nativa do sul da África. Prefere sol pleno, solo bem drenado e regas espaçadas. É conhecida pelas flores vermelhas no inverno."
+    },
+    "ar": {
+      "common_name": "الألوة الشجرية",
+      "description": "الألوة الشجرية نبات عصاري شجيري موطنه جنوب أفريقيا. يحتاج إلى شمس قوية وتربة جيدة الصرف مع ري متباعد. يتميز بأزهاره الحمراء في فصل الشتاء."
+    },
+    "hi": {
+      "common_name": "कैंडेलाब्रा एलो",
+      "description": "Aloe arborescens दक्षिणी अफ्रीका का झाड़ीदार रसीला पौधा है। इसे तेज धूप, अच्छी जल निकासी वाली मिट्टी और कम पानी की आवश्यकता होती है। यह सर्दियों में लाल फूलों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "树状芦荟",
+      "description": "Aloe arborescens 原产于非洲南部，是一种灌木状多肉植物。它需要充足阳光、良好排水的土壤和少量浇水。冬季会开红色花朵。"
+    },
+    "ja": {
+      "common_name": "木立アロエ",
+      "description": "Aloe arborescens は南アフリカ原産の低木状多肉植物です。強い日光と水はけの良い土壌を好み、水やりは控えめにします。冬に赤い花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "나무알로에",
+      "description": "Aloe arborescens는 남아프리카 원산의 관목형 다육식물입니다. 강한 햇빛과 배수가 좋은 토양, 적은 물을 선호합니다. 겨울에 붉은 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/aloe-arborescens",
+      "https://www.rhs.org.uk/plants/1022/aloe-arborescens/details",
+      "https://edis.ifas.ufl.edu/publication/FP039"
+    ]
+  }
+}

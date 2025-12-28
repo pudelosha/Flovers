@@ -1,0 +1,237 @@
+{
+  "external_id": "crassula_ovata_gollum",
+  "name": "Gollum Jade",
+  "latin": "Crassula ovata 'Gollum'",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "crassula_ovata_gollum.jpg",
+  "image_thumb": "crassula_ovata_gollum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "유독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crec. lenta",
+          "pt": "Lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Gollum Jade",
+      "description": "Crassula ovata 'Gollum' is a succulent cultivar with tubular leaves. It prefers bright light and infrequent watering. Allow soil to dry fully between waterings."
+    },
+    "pl": {
+      "common_name": "Grubosz Gollum",
+      "description": "Crassula ovata 'Gollum' to sukulent o rurkowatych liściach. Wymaga jasnego światła i rzadkiego podlewania. Podłoże powinno całkowicie przeschnąć."
+    },
+    "de": {
+      "common_name": "Gollum-Jadebaum",
+      "description": "Crassula ovata 'Gollum' ist eine sukkulente Sorte mit röhrenförmigen Blättern. Sie benötigt viel Licht und wenig Wasser. Erde zwischen dem Gießen austrocknen lassen."
+    },
+    "fr": {
+      "common_name": "Plante jade Gollum",
+      "description": "Crassula ovata 'Gollum' est une succulente aux feuilles tubulaires. Elle aime la lumière vive et peu d’arrosage. Laisser sécher le substrat entre deux arrosages."
+    },
+    "it": {
+      "common_name": "Albero di giada Gollum",
+      "description": "Crassula ovata 'Gollum' è una succulenta con foglie tubolari. Richiede molta luce e poca acqua. Il terreno deve asciugare completamente."
+    },
+    "es": {
+      "common_name": "Jade Gollum",
+      "description": "Crassula ovata 'Gollum' es una suculenta de hojas tubulares. Prefiere luz intensa y riego escaso. Dejar secar el sustrato entre riegos."
+    },
+    "pt": {
+      "common_name": "Jade Gollum",
+      "description": "Crassula ovata 'Gollum' é uma suculenta de folhas tubulares. Precisa de muita luz e pouca água. O solo deve secar totalmente."
+    },
+    "ar": {
+      "common_name": "نبات الجيد غولوم",
+      "description": "Crassula ovata 'Gollum' نبات عصاري بأوراق أنبوبية. يفضل الضوء الساطع والري القليل. اترك التربة تجف بين الري."
+    },
+    "hi": {
+      "common_name": "गोलम जेड पौधा",
+      "description": "Crassula ovata 'Gollum' एक सक्युलेंट है जिसकी पत्तियाँ नलीनुमा होती हैं। इसे तेज रोशनी और कम पानी चाहिए। मिट्टी को सूखने दें।"
+    },
+    "zh": {
+      "common_name": "咕噜姆玉树",
+      "description": "Crassula ovata 'Gollum' 是一种管状叶多肉植物。需要明亮光照和少量浇水。每次浇水前让土壤干透。"
+    },
+    "ja": {
+      "common_name": "ゴラムジェイド",
+      "description": "Crassula ovata 'Gollum' は筒状の葉を持つ多肉植物です。明るい光と控えめな水やりを好みます。土は完全に乾かします。"
+    },
+    "ko": {
+      "common_name": "골룸 비취",
+      "description": "Crassula ovata 'Gollum'은 관 모양 잎을 가진 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 흙이 완전히 마른 후 물을 줍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/4466/crassula-ovata/details",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/jade-plant",
+      "https://extension.umn.edu/houseplants/jade-plant"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "asparagus_densiflorus",
+  "name": "Foxtail Fern",
+  "latin": "Asparagus densiflorus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "asparagus_densiflorus.jpg",
+  "image_thumb": "asparagus_densiflorus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Foxtail Fern",
+      "description": "Asparagus densiflorus is a perennial evergreen with fine, feathery foliage often grown as a houseplant. It prefers bright, indirect light and evenly moist but well-drained soil. The plant is easy to care for indoors."
+    },
+    "pl": {
+      "common_name": "Szparag gęstokwiatowy",
+      "description": "Asparagus densiflorus to zimozielona bylina o delikatnych, pierzastych pędach. Najlepiej rośnie w jasnym, rozproszonym świetle i przepuszczalnym podłożu. Jest łatwa w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Fuchsschwanzspargel",
+      "description": "Asparagus densiflorus ist eine immergrüne Staude mit feinem, nadelartigem Laub. Er wächst gut bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Die Pflanze gilt als pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Asperge queue-de-renard",
+      "description": "Asparagus densiflorus est une plante vivace au feuillage fin et plumeux. Elle apprécie une lumière vive indirecte et un sol bien drainé. Elle est facile à cultiver en intérieur."
+    },
+    "it": {
+      "common_name": "Asparago piumoso",
+      "description": "Asparagus densiflorus è una pianta perenne sempreverde con fogliame leggero. Predilige luce indiretta intensa e terreno ben drenato. È considerata facile da coltivare in casa."
+    },
+    "es": {
+      "common_name": "Espárrago cola de zorro",
+      "description": "Asparagus densiflorus es una planta perenne con follaje fino y decorativo. Crece mejor con luz indirecta brillante y riego moderado. Es una planta de interior sencilla."
+    },
+    "pt": {
+      "common_name": "Aspargo-rabo-de-raposa",
+      "description": "Asparagus densiflorus é uma planta perene com folhagem delicada e densa. Prefere luz indireta e solo bem drenado. É fácil de manter em ambientes internos."
+    },
+    "ar": {
+      "common_name": "سرخس ذيل الثعلب",
+      "description": "نبات Asparagus densiflorus معمر ذو أوراق ريشية ناعمة. يفضل الضوء الساطع غير المباشر والتربة جيدة التصريف. مناسب للزراعة داخل المنازل."
+    },
+    "hi": {
+      "common_name": "फॉक्सटेल फर्न",
+      "description": "Asparagus densiflorus एक सदाबहार पौधा है जिसकी पत्तियाँ मुलायम होती हैं। यह अप्रत्यक्ष रोशनी और अच्छी जल निकास वाली मिट्टी पसंद करता है। इसे उगाना आसान है।"
+    },
+    "zh": {
+      "common_name": "狐尾天门冬",
+      "description": "Asparagus densiflorus 是一种常绿多年生植物，叶片细密柔软。适合明亮的散射光和排水良好的土壤。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "フォックステールシダ",
+      "description": "Asparagus densiflorus は細かく柔らかい葉を持つ常緑多年草です。明るい間接光と水はけの良い土を好みます。室内で育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "여우꼬리 아스파라거스",
+      "description": "Asparagus densiflorus는 부드러운 잎을 가진 상록 다년생 식물입니다. 밝은 간접광과 배수가 좋은 토양을 선호합니다. 실내에서 키우기 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1712/asparagus-densiflorus/details",
+      "https://edis.ifas.ufl.edu/publication/FP052",
+      "https://www.gardenersworld.com/plants/asparagus-densiflorus/"
+    ]
+  }
+}

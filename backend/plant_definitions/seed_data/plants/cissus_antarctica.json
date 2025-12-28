@@ -1,0 +1,238 @@
+{
+  "external_id": "cissus_antarctica",
+  "name": "Kangaroo Vine",
+  "latin": "Cissus antarctica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cissus_antarctica.jpg",
+  "image_thumb": "cissus_antarctica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26 °C",
+          "pl": "18–26 °C",
+          "de": "18–26 °C",
+          "fr": "18–26 °C",
+          "it": "18–26 °C",
+          "es": "18–26 °C",
+          "pt": "18–26 °C",
+          "ar": "18–26°م",
+          "hi": "18–26 °C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing vine",
+          "pl": "Szybki wzrost",
+          "de": "Schnellwachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Kangaroo Vine",
+      "description": "Cissus antarctica is a vigorous evergreen vine native to eastern Australia. It is commonly grown indoors for its glossy foliage and trailing habit. The plant tolerates a range of indoor conditions and is considered low maintenance."
+    },
+    "pl": {
+      "common_name": "Cissus australijski",
+      "description": "Cissus antarctica to silnie rosnące pnącze pochodzące ze wschodniej Australii. W uprawie domowej cenione jest za dekoracyjne liście i łatwość pielęgnacji. Dobrze radzi sobie w warunkach mieszkaniowych."
+    },
+    "de": {
+      "common_name": "Känguruwein",
+      "description": "Cissus antarctica ist eine schnell wachsende Kletterpflanze aus Ost-Australien. Sie wird als Zimmerpflanze wegen ihrer glänzenden Blätter geschätzt. Die Art gilt als robust und pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Cissus d’Australie",
+      "description": "Cissus antarctica est une plante grimpante originaire de l’est de l’Australie. Elle est cultivée en intérieur pour son feuillage décoratif. Elle supporte bien les conditions domestiques courantes."
+    },
+    "it": {
+      "common_name": "Cisso australiano",
+      "description": "Cissus antarctica è una pianta rampicante sempreverde originaria dell’Australia orientale. È apprezzata come pianta da interno per le sue foglie lucide. Richiede cure semplici e regolari."
+    },
+    "es": {
+      "common_name": "Ciso australiano",
+      "description": "Cissus antarctica es una enredadera perenne originaria del este de Australia. Se cultiva como planta de interior por su follaje ornamental. Es resistente y fácil de mantener."
+    },
+    "pt": {
+      "common_name": "Cisso-australiano",
+      "description": "Cissus antarctica é uma trepadeira perene nativa do leste da Austrália. É cultivada em interiores devido às suas folhas decorativas. Adapta-se bem a ambientes internos."
+    },
+    "ar": {
+      "common_name": "نبات سيسوس",
+      "description": "Cissus antarctica نبات متسلق موطنه شرق أستراليا. يُزرع كنبات داخلي لأوراقه اللامعة. يتميز بسهولة العناية به داخل المنازل."
+    },
+    "hi": {
+      "common_name": "कंगारू बेल",
+      "description": "Cissus antarctica ऑस्ट्रेलिया का एक सदाबहार लता पौधा है। इसे घर के अंदर सजावटी पत्तियों के लिए उगाया जाता है। यह सामान्य घरेलू परिस्थितियों में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "南极西藤",
+      "description": "Cissus antarctica 原产于澳大利亚东部，是一种常绿藤本植物。因其光亮的叶片而常作为室内观叶植物栽培。适应性强，养护简单。"
+    },
+    "ja": {
+      "common_name": "カンガルーアイビー",
+      "description": "Cissus antarctica はオーストラリア東部原産のつる性植物です。光沢のある葉が特徴で観葉植物として利用されます。室内環境に適応しやすいです。"
+    },
+    "ko": {
+      "common_name": "캥거루덩굴",
+      "description": "Cissus antarctica는 호주 동부가 원산지인 상록 덩굴식물입니다. 윤기 있는 잎으로 실내 관엽식물로 많이 재배됩니다. 관리가 쉬운 편입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/4313/cissus-antarctica/details",
+      "https://plants.ces.ncsu.edu/plants/cissus-antarctica/",
+      "https://www.botanicgardens.sa.gov.au/plant-profile/cissus-antarctica"
+    ]
+  }
+}

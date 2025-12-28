@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_bowerae",
+  "name": "Eyelash Begonia",
+  "latin": "Begonia bowerae",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "begonia_bowerae.jpg",
+  "image_thumb": "begonia_bowerae.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जल निकास वाली",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowane",
+          "de": "Gleichmäßig",
+          "fr": "Humidité stable",
+          "it": "Umidità costante",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "均匀浇水",
+          "ja": "適度な水やり",
+          "ko": "고른 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Intermédiaire",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità",
+          "es": "Le gusta humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact grower",
+          "pl": "Zwarty wzrost",
+          "de": "Kompakt",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مدمج",
+          "hi": "सघन वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクト",
+          "ko": "콤팩트 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Eyelash Begonia",
+      "description": "Begonia bowerae is a compact tropical begonia known for its fuzzy leaf margins and patterned foliage. It grows well indoors with bright, indirect light and evenly moist soil. Consistent warmth and good air circulation support healthy growth."
+    },
+    "pl": {
+      "common_name": "Begonia rzęsista",
+      "description": "Begonia bowerae to niewielka begonia tropikalna o owłosionych brzegach liści. Dobrze rośnie w jasnym, rozproszonym świetle i stale lekko wilgotnym podłożu. Preferuje ciepłe warunki i stabilną pielęgnację."
+    },
+    "de": {
+      "common_name": "Wimpern-Begonie",
+      "description": "Begonia bowerae ist eine kompakte tropische Begonie mit behaarten Blatträndern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Warme Temperaturen fördern ein gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Bégonia à cils",
+      "description": "Begonia bowerae est un bégonia tropical compact aux feuilles décoratives. Elle apprécie une lumière vive indirecte et un sol légèrement humide. Une chaleur constante favorise son bon développement."
+    },
+    "it": {
+      "common_name": "Begonia cigliata",
+      "description": "Begonia bowerae è una begonia tropicale compatta con foglie ornamentali. Cresce bene in luce indiretta e terreno moderatamente umido. Temperature miti e cure regolari sono ideali."
+    },
+    "es": {
+      "common_name": "Begonia pestañas",
+      "description": "Begonia bowerae es una begonia tropical compacta con bordes de hojas vellosos. Prefiere luz indirecta brillante y riego regular. Se adapta bien a interiores cálidos."
+    },
+    "pt": {
+      "common_name": "Begônia cílios",
+      "description": "Begonia bowerae é uma begônia tropical compacta de folhas decorativas. Desenvolve-se bem com luz indireta e solo levemente úmido. Ambientes quentes favorecem seu crescimento."
+    },
+    "ar": {
+      "common_name": "بيغونيا الرموش",
+      "description": "بيغونيا باوراي نبات استوائي صغير بأوراق مزخرفة. ينمو جيدًا في ضوء ساطع غير مباشر وتربة رطبة باعتدال. يفضل درجات حرارة دافئة ومستقرة."
+    },
+    "hi": {
+      "common_name": "आईलैश बेगोनिया",
+      "description": "Begonia bowerae एक छोटा उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ सजावटी होती हैं। यह तेज अप्रत्यक्ष रोशनी और हल्की नमी वाली मिट्टी में अच्छा बढ़ता है। गर्म वातावरण इसके लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "睫毛秋海棠",
+      "description": "Begonia bowerae 是一种紧凑的热带秋海棠，叶缘具绒毛。适合在明亮的散射光和微湿土壤中生长。温暖稳定的环境有利于其生长。"
+    },
+    "ja": {
+      "common_name": "アイラッシュベゴニア",
+      "description": "ベゴニア・ボウエラエは葉縁に毛のあるコンパクトな熱帯植物です。明るい間接光と適度な湿り気を好みます。安定した暖かさが重要です。"
+    },
+    "ko": {
+      "common_name": "아이래시 베고니아",
+      "description": "Begonia bowerae는 잎 가장자리에 털이 있는 소형 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 따뜻한 실내 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2415/begonia-bowerae/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c580",
+      "https://www.gardenia.net/plant/begonia-bowerae"
+    ]
+  }
+}

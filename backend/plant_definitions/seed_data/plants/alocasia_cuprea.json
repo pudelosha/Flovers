@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_cuprea",
+  "name": "Alocasia Cuprea",
+  "latin": "Alocasia cuprea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_cuprea.jpg",
+  "image_thumb": "alocasia_cuprea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles indirektes Licht",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta intensa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮的散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining aroid mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Gut drainierendes Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的基质",
+          "ja": "水はけの良い用土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj lekko wilgotne",
+          "de": "Gleichmäßig feucht halten",
+          "fr": "Garder humide",
+          "it": "Mantenere umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "حافظ على رطوبة متوازنة",
+          "hi": "समान रूप से नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado medio",
+          "pt": "Cuidado moderado",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity preferred",
+          "pl": "Lubi wysoką wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping growth",
+          "pl": "Wzniesiony pokrój",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा गुच्छेदार विकास",
+          "zh": "直立丛生",
+          "ja": "直立性の成長",
+          "ko": "직립형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jewel Alocasia",
+      "description": "Alocasia cuprea is a tropical aroid prized for its metallic, textured leaves. It prefers bright indirect light, warm temperatures, and evenly moist but well-draining soil indoors."
+    },
+    "pl": {
+      "common_name": "Alokazja klejnotowa",
+      "description": "Alocasia cuprea to tropikalna roślina o metalicznych liściach. Wymaga jasnego, pośredniego światła, ciepła i lekko wilgotnego podłoża."
+    },
+    "de": {
+      "common_name": "Juwelen-Alokasie",
+      "description": "Alocasia cuprea ist eine tropische Aronstabpflanze mit metallisch schimmernden Blättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchtem Substrat."
+    },
+    "fr": {
+      "common_name": "Alocasie bijou",
+      "description": "Alocasia cuprea est une plante tropicale appréciée pour son feuillage métallique. Elle aime une lumière indirecte vive, la chaleur et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Alocasia gioiello",
+      "description": "Alocasia cuprea è una pianta tropicale nota per le foglie metalliche. Richiede luce indiretta intensa, temperature calde e terreno umido ma drenante."
+    },
+    "es": {
+      "common_name": "Alocasia joya",
+      "description": "Alocasia cuprea es una planta tropical valorada por sus hojas metálicas. Prefiere luz indirecta brillante y riego regular con buen drenaje."
+    },
+    "pt": {
+      "common_name": "Alocásia joia",
+      "description": "Alocasia cuprea é uma planta tropical conhecida pelas folhas metálicas. Desenvolve-se melhor com luz indireta brilhante e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا جوهرة",
+      "description": "ألوكاسيا كوبريا نبات استوائي يتميز بأوراق معدنية. يحتاج إلى ضوء غير مباشر ساطع وتربة جيدة التصريف مع رطوبة معتدلة."
+    },
+    "hi": {
+      "common_name": "ज्वेल एलोकैसिया",
+      "description": "एलोकैसिया कुप्रिया एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ धात्विक होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "铜叶海芋",
+      "description": "Alocasia cuprea 是一种以金属质感叶片著称的热带植物。适合明亮散射光和排水良好的微湿土壤。"
+    },
+    "ja": {
+      "common_name": "クプレア・アロカシア",
+      "description": "アロカシア・クプレアは金属光沢の葉を持つ熱帯植物です。明るい間接光と水はけの良い湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "쿠프레아 알로카시아",
+      "description": "Alocasia cuprea는 금속성 잎이 특징인 열대 식물입니다. 밝은 간접광과 배수가 잘되는 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1713/alocasia-cuprea/details",
+      "https://edis.ifas.ufl.edu/publication/EP468",
+      "https://www.gardenersworld.com/plants/alocasia-cuprea/"
+    ]
+  }
+}

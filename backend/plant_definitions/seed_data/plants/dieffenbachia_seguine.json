@@ -1,0 +1,238 @@
+{
+  "external_id": "dieffenbachia_seguine",
+  "name": "Dumb Cane",
+  "latin": "Dieffenbachia seguine",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dieffenbachia_seguine.jpg",
+  "image_thumb": "dieffenbachia_seguine.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowana woda",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide modéré",
+          "it": "Umido moderato",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम सिंचाई",
+          "zh": "保持微湿",
+          "ja": "適度に湿らす",
+          "ko": "적당히 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27℃",
+          "ja": "18～27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "普通湿度",
+          "ja": "標準的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright foliage",
+          "pl": "Wzniesiony pokrój",
+          "de": "Aufrecht wachsend",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dumb Cane",
+      "description": "Dieffenbachia seguine is a tropical houseplant with large variegated leaves. It prefers bright indirect light and evenly moist soil. All parts are toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Difenbachia",
+      "description": "Dieffenbachia seguine to tropikalna roślina doniczkowa o dużych, pstrych liściach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Jest trująca po spożyciu."
+    },
+    "de": {
+      "common_name": "Dieffenbachie",
+      "description": "Dieffenbachia seguine ist eine tropische Zimmerpflanze mit großen, panaschierten Blättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßiger Feuchte. Die Pflanze ist giftig."
+    },
+    "fr": {
+      "common_name": "Canne des muets",
+      "description": "Dieffenbachia seguine est une plante tropicale aux grandes feuilles décoratives. Elle apprécie une lumière indirecte et un arrosage modéré. Elle est toxique pour les humains et les animaux."
+    },
+    "it": {
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia seguine è una pianta tropicale da interno con foglie grandi e variegate. Preferisce luce indiretta e terreno leggermente umido. È tossica se ingerita."
+    },
+    "es": {
+      "common_name": "Diefembaquia",
+      "description": "Dieffenbachia seguine es una planta tropical de interior con hojas grandes y decorativas. Necesita luz indirecta brillante y riego regular. Es tóxica si se ingiere."
+    },
+    "pt": {
+      "common_name": "Comigo-ninguém-pode",
+      "description": "Dieffenbachia seguine é uma planta tropical ornamental de folhas grandes. Prefere luz indireta e solo levemente úmido. Todas as partes são tóxicas."
+    },
+    "ar": {
+      "common_name": "ديفنباخيا",
+      "description": "نبات ديفنباخيا سيغوين نبات استوائي منزلي بأوراق كبيرة مزخرفة. يفضل الضوء غير المباشر والري المنتظم. النبات سام عند الابتلاع."
+    },
+    "hi": {
+      "common_name": "डाइफेनबैचिया",
+      "description": "Dieffenbachia seguine एक उष्णकटिबंधीय घरेलू पौधा है जिसकी पत्तियाँ बड़ी और रंगीन होती हैं। इसे अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। यह विषैला होता है।"
+    },
+    "zh": {
+      "common_name": "花叶万年青",
+      "description": "Dieffenbachia seguine 是一种热带观叶植物，叶片宽大且具斑纹。适合明亮的散射光和均匀湿润的土壤。全株有毒。"
+    },
+    "ja": {
+      "common_name": "ディフェンバキア",
+      "description": "ディフェンバキア・セグイネは大きな斑入り葉を持つ熱帯植物です。明るい間接光と適度な水分を好みます。毒性があります。"
+    },
+    "ko": {
+      "common_name": "디펜바키아",
+      "description": "Dieffenbachia seguine는 크고 무늬 있는 잎을 가진 열대 식물입니다. 밝은 간접광과 고른 수분을 선호합니다. 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5030/dieffenbachia-seguine/details",
+      "https://edis.ifas.ufl.edu/publication/FP174",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a287"
+    ]
+  }
+}

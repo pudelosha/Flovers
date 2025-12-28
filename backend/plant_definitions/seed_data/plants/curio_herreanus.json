@@ -1,0 +1,236 @@
+{
+  "external_id": "curio_herreanus",
+  "name": "String of Watermelons",
+  "latin": "Curio herreanus",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "curio_herreanus.jpg",
+  "image_thumb": "curio_herreanus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenante",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Infrequent watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing succulent",
+          "pl": "Zwisający",
+          "de": "Hängend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "متدلي",
+          "hi": "लटकने वाला",
+          "zh": "垂吊生长",
+          "ja": "垂れ下がる",
+          "ko": "늘어짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "String of Watermelons",
+      "description": "Curio herreanus is a trailing succulent native to arid regions of southern Africa. It stores water in its bead-like leaves and prefers bright light with minimal watering."
+    },
+    "pl": {
+      "common_name": "Sznur arbuzów",
+      "description": "Curio herreanus to sukulent o zwisającym pokroju pochodzący z suchych rejonów Afryki. Gromadzi wodę w liściach i wymaga jasnego światła oraz rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Wassermelonen-Kette",
+      "description": "Curio herreanus ist eine hängende Sukkulente aus trockenen Regionen Afrikas. Sie speichert Wasser in ihren Blättern und benötigt viel Licht und wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Collier de pastèques",
+      "description": "Curio herreanus est une plante succulente retombante originaire de régions arides d’Afrique. Elle stocke l’eau dans ses feuilles et demande peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Filo di angurie",
+      "description": "Curio herreanus è una succulenta ricadente originaria di zone aride africane. Conserva acqua nelle foglie e richiede luce intensa e poca acqua."
+    },
+    "es": {
+      "common_name": "Cadena de sandías",
+      "description": "Curio herreanus es una suculenta colgante de regiones áridas de África. Almacena agua en sus hojas y necesita riego poco frecuente."
+    },
+    "pt": {
+      "common_name": "Colar de melancias",
+      "description": "Curio herreanus é uma suculenta pendente nativa de regiões áridas da África. Armazena água nas folhas e prefere luz intensa com pouca rega."
+    },
+    "ar": {
+      "common_name": "سلسلة البطيخ",
+      "description": "نبات عصاري متدلٍ موطنه مناطق جافة في إفريقيا. يخزن الماء في أوراقه ويحتاج إلى ضوء ساطع وري قليل."
+    },
+    "hi": {
+      "common_name": "वॉटरमेलन स्ट्रिंग",
+      "description": "Curio herreanus एक लटकने वाला सक्युलेंट है जो अफ्रीका के शुष्क क्षेत्रों से आता है। यह पत्तियों में पानी संचित करता है और कम सिंचाई चाहता है।"
+    },
+    "zh": {
+      "common_name": "西瓜串",
+      "description": "Curio herreanus 是原产于非洲干旱地区的多肉植物。叶片储水，喜明亮光照，需水量低。"
+    },
+    "ja": {
+      "common_name": "スイカの多肉",
+      "description": "Curio herreanus はアフリカ原産の多肉植物です。葉に水を蓄え、明るい光と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "수박 다육이",
+      "description": "Curio herreanus는 아프리카 건조 지역 원산의 다육식물입니다. 잎에 수분을 저장하며 밝은 빛과 적은 물을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/curio/herreanus/details",
+      "https://www.gardenersworld.com/plants/curio-herreanus/",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77139168-1"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "amorphophallus_konjac",
+  "name": "Konjac Lily",
+  "latin": "Amorphophallus konjac",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "amorphophallus_konjac.jpg",
+  "image_thumb": "amorphophallus_konjac.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい日陰",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular in growth",
+          "pl": "Regularne w sezonie",
+          "de": "Regelmäßig aktiv",
+          "fr": "Régulier en saison",
+          "it": "Regolare in crescita",
+          "es": "Regular en crecimiento",
+          "pt": "Regular no crescimento",
+          "ar": "ري منتظم",
+          "hi": "विकास में नियमित",
+          "zh": "生长期定期",
+          "ja": "成長期に給水",
+          "ko": "생장기 규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "보통 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if raw",
+          "pl": "Toksyczna surowa",
+          "de": "Roh giftig",
+          "fr": "Toxique cru",
+          "it": "Tossica cruda",
+          "es": "Tóxica cruda",
+          "pt": "Tóxica crua",
+          "ar": "سامة نيئة",
+          "hi": "कच्ची विषैली",
+          "zh": "生食有毒",
+          "ja": "生は有毒",
+          "ko": "생것은 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Seasonal dormancy",
+          "pl": "Sezonowy spoczynek",
+          "de": "Saisonal ruhend",
+          "fr": "Dormance saisonnière",
+          "it": "Dormienza stagionale",
+          "es": "Latencia estacional",
+          "pt": "Dormência sazonal",
+          "ar": "سكون موسمي",
+          "hi": "मौसमी सुप्तावस्था",
+          "zh": "季节性休眠",
+          "ja": "季節休眠",
+          "ko": "계절 휴면"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Konjac Lily",
+      "description": "Amorphophallus konjac is a tuberous aroid known for its large single leaf and dramatic inflorescence. It grows actively in warm months and enters full dormancy in winter."
+    },
+    "pl": {
+      "common_name": "Dziwidło konjac",
+      "description": "Amorphophallus konjac to bulwiasta roślina z rodziny obrazkowatych o jednym dużym liściu. Latem intensywnie rośnie, a zimą przechodzi w stan spoczynku."
+    },
+    "de": {
+      "common_name": "Teufelszunge",
+      "description": "Amorphophallus konjac ist eine knollenbildende Aronstabpflanze mit einem einzelnen großen Blatt. Sie wächst im Sommer und ruht im Winter vollständig."
+    },
+    "fr": {
+      "common_name": "Lys vaudou",
+      "description": "Amorphophallus konjac est une plante tubéreuse à une seule grande feuille. Elle pousse pendant la saison chaude et entre en dormance en hiver."
+    },
+    "it": {
+      "common_name": "Giglio konjac",
+      "description": "Amorphophallus konjac è una pianta tuberosa con una grande foglia singola. Cresce nei mesi caldi e va in dormienza in inverno."
+    },
+    "es": {
+      "common_name": "Lirio konjac",
+      "description": "Amorphophallus konjac es una planta tuberosa con una sola hoja grande. Crece en épocas cálidas y entra en reposo en invierno."
+    },
+    "pt": {
+      "common_name": "Lírio konjac",
+      "description": "Amorphophallus konjac é uma planta tuberosa com uma folha grande única. Cresce no calor e entra em dormência no inverno."
+    },
+    "ar": {
+      "common_name": "زنبق الكونجاك",
+      "description": "Amorphophallus konjac نبات درني له ورقة كبيرة واحدة. ينمو في الفصول الدافئة ويدخل في سكون شتوي."
+    },
+    "hi": {
+      "common_name": "कोनजैक लिली",
+      "description": "Amorphophallus konjac एक कंदीय पौधा है जिसमें एक बड़ा पत्ता होता है। यह गर्म मौसम में बढ़ता है और सर्दियों में सुप्त रहता है।"
+    },
+    "zh": {
+      "common_name": "魔芋",
+      "description": "Amorphophallus konjac 是一种块茎天南星科植物，只有一片大叶。夏季生长旺盛，冬季完全休眠。"
+    },
+    "ja": {
+      "common_name": "コンニャク",
+      "description": "Amorphophallus konjac は大きな葉を一枚だけ出す塊茎植物です。暖かい季節に成長し、冬は休眠します。"
+    },
+    "ko": {
+      "common_name": "곤약",
+      "description": "Amorphophallus konjac은 하나의 큰 잎을 가진 괴경 식물입니다. 따뜻한 계절에 자라고 겨울에는 휴면합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/amorphophallus-konjac",
+      "https://plants.ces.ncsu.edu/plants/amorphophallus-konjac/",
+      "https://www.rhs.org.uk/plants/1620/amorphophallus-konjac/details"
+    ]
+  }
+}

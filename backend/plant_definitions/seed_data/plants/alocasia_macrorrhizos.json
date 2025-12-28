@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_macrorrhizos",
+  "name": "Giant Taro",
+  "latin": "Alocasia macrorrhizos",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_macrorrhizos.jpg",
+  "image_thumb": "alocasia_macrorrhizos.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Bien drainant",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة باستمرار",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषाक्त",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast, very large",
+          "pl": "Szybki, duży",
+          "de": "Schnell, groß",
+          "fr": "Rapide, grande",
+          "it": "Rapida, grande",
+          "es": "Rápido, grande",
+          "pt": "Rápido, grande",
+          "ar": "سريع وكبير",
+          "hi": "तेज़, बड़ा",
+          "zh": "快速大型",
+          "ja": "早く大きい",
+          "ko": "빠른 대형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Giant Taro",
+      "description": "Alocasia macrorrhizos is a large tropical aroid with massive leaves and thick stems. It thrives indoors with bright indirect light, warm temperatures, and consistently moist soil."
+    },
+    "pl": {
+      "common_name": "Alokazja olbrzymia",
+      "description": "Alocasia macrorrhizos to tropikalna roślina o bardzo dużych liściach. Wymaga jasnego światła pośredniego, ciepła i stale wilgotnego podłoża."
+    },
+    "de": {
+      "common_name": "Riesen-Pfeilblatt",
+      "description": "Alocasia macrorrhizos ist eine tropische Blattpflanze mit sehr großen Blättern. Sie wächst am besten bei hellem indirektem Licht und gleichmäßig feuchter Erde."
+    },
+    "fr": {
+      "common_name": "Alocasia géant",
+      "description": "Alocasia macrorrhizos est une plante tropicale aux feuilles immenses. Elle préfère une lumière indirecte vive, la chaleur et un sol humide."
+    },
+    "it": {
+      "common_name": "Alocasia gigante",
+      "description": "Alocasia macrorrhizos è una pianta tropicale con foglie molto grandi. In casa necessita luce indiretta, caldo e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Alocasia gigante",
+      "description": "Alocasia macrorrhizos es una planta tropical de hojas enormes. Requiere luz indirecta brillante, temperaturas cálidas y riego regular."
+    },
+    "pt": {
+      "common_name": "Alocasia gigante",
+      "description": "Alocasia macrorrhizos é uma planta tropical de folhas grandes. Prefere luz indireta, calor e solo sempre levemente úmido."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا عملاقة",
+      "description": "ألوكاسيا ماكروريزوس نبات استوائي بأوراق كبيرة جدًا. تنمو جيدًا في ضوء غير مباشر وبيئة دافئة وتربة رطبة."
+    },
+    "hi": {
+      "common_name": "जायंट एलोकैसिया",
+      "description": "Alocasia macrorrhizos एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बहुत बड़ी होती हैं। इसे अप्रत्यक्ष रोशनी, गर्मी और नम मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "巨型海芋",
+      "description": "Alocasia macrorrhizos 是一种叶片巨大的热带植物。适合明亮散射光、温暖环境和持续湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "オオクワズイモ",
+      "description": "アロカシア・マクロリゾスは非常に大きな葉を持つ熱帯植物です。明るい間接光と温暖で湿った環境を好みます。"
+    },
+    "ko": {
+      "common_name": "자이언트 알로카시아",
+      "description": "알로카시아 마크로리조스는 매우 큰 잎을 가진 열대 식물입니다. 밝은 간접광과 따뜻하고 촉촉한 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1013/alocasia-macrorrhizos/details",
+      "https://edis.ifas.ufl.edu/publication/FP036",
+      "https://www.kew.org/plants/alocasia-macrorrhizos"
+    ]
+  }
+}

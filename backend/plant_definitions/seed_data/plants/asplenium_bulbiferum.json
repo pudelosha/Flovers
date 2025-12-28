@@ -1,0 +1,238 @@
+{
+  "external_id": "asplenium_bulbiferum",
+  "name": "Mother Fern",
+  "latin": "Asplenium bulbiferum",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "asplenium_bulbiferum.jpg",
+  "image_thumb": "asplenium_bulbiferum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich moist soil",
+          "pl": "Żyzna wilgotna",
+          "de": "Humos feucht",
+          "fr": "Sol riche humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة غنية",
+          "hi": "नम समृद्ध मिट्टी",
+          "zh": "肥沃湿润土",
+          "ja": "湿った肥沃土",
+          "ko": "비옥한 습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "يبقى رطبًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°م",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime humidité",
+          "it": "Ama umidità",
+          "es": "Gusta humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿度",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mother Fern",
+      "description": "Asplenium bulbiferum is a lush evergreen fern known for producing small plantlets on its fronds. It prefers bright indirect light and consistently moist soil. It is commonly grown as an easy-care indoor fern."
+    },
+    "pl": {
+      "common_name": "Paproć żyworodna",
+      "description": "Asplenium bulbiferum to zimozielona paproć wytwarzająca młode rośliny na liściach. Preferuje jasne, pośrednie światło i stale wilgotne podłoże. Jest łatwa w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Brutfarn",
+      "description": "Asplenium bulbiferum ist ein immergrüner Farn mit Brutpflänzchen an den Wedeln. Er mag helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze gilt als pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Fougère vivipare",
+      "description": "Asplenium bulbiferum est une fougère persistante produisant des plantules sur ses frondes. Elle préfère une lumière indirecte et un sol constamment humide. Elle est adaptée à la culture en intérieur."
+    },
+    "it": {
+      "common_name": "Felce madre",
+      "description": "Asplenium bulbiferum è una felce sempreverde che produce nuove piantine sulle fronde. Cresce bene in luce indiretta con terreno umido. È considerata facile da coltivare in casa."
+    },
+    "es": {
+      "common_name": "Helecho madre",
+      "description": "Asplenium bulbiferum es un helecho perenne que forma plántulas en las hojas. Prefiere luz indirecta y suelo siempre húmedo. Es una planta de interior sencilla."
+    },
+    "pt": {
+      "common_name": "Feto-mãe",
+      "description": "Asplenium bulbiferum é uma samambaia perene que produz mudas nas frondes. Gosta de luz indireta e solo constantemente úmido. É fácil de manter dentro de casa."
+    },
+    "ar": {
+      "common_name": "سرخس أم",
+      "description": "Asplenium bulbiferum سرخس دائم الخضرة ينتج نباتات صغيرة على أوراقه. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. مناسب للزراعة الداخلية."
+    },
+    "hi": {
+      "common_name": "मदर फर्न",
+      "description": "Asplenium bulbiferum एक सदाबहार फर्न है जो पत्तियों पर नए पौधे बनाता है। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। यह घर के अंदर उगाने में आसान है।"
+    },
+    "zh": {
+      "common_name": "胎生铁角蕨",
+      "description": "Asplenium bulbiferum 是一种常绿蕨类，会在叶片上长出小植株。它喜欢明亮的散射光和持续湿润的土壤。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "マザーファーン",
+      "description": "Asplenium bulbiferum は葉に子株を付ける常緑シダです。明るい間接光と湿った土壌を好みます。室内で育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "마더 고사리",
+      "description": "Asplenium bulbiferum은 잎에 새끼 식물을 만드는 상록 양치식물입니다. 밝은 간접광과 촉촉한 토양을 좋아합니다. 실내에서 키우기 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1593/asplenium-bulbiferum/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280999",
+      "https://plants.ces.ncsu.edu/plants/asplenium-bulbiferum/"
+    ]
+  }
+}

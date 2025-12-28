@@ -1,0 +1,237 @@
+{
+  "external_id": "cereus_hildmannianus",
+  "name": "Hedge cactus",
+  "latin": "Cereus hildmannianus",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cereus_hildmannianus.jpg",
+  "image_thumb": "cereus_hildmannianus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm tolerant",
+          "pl": "Ciepłolubny",
+          "de": "Wärmeliebend",
+          "fr": "Aime la chaleur",
+          "it": "Ama il caldo",
+          "es": "Prefiere calor",
+          "pt": "Gosta de calor",
+          "ar": "محب للدفء",
+          "hi": "गरम पसंद",
+          "zh": "喜温暖",
+          "ja": "暖かさ好む",
+          "ko": "따뜻함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright columnar",
+          "pl": "Kolumnowy wzrost",
+          "de": "Säulenförmig",
+          "fr": "Croissance dressée",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو عمودي",
+          "hi": "सीधा बढ़त",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Hedge cactus",
+      "description": "Cereus hildmannianus is a fast-growing columnar cactus native to South America. It thrives in bright light and dry conditions. The plant is valued for its sculptural form and occasional night-blooming flowers."
+    },
+    "pl": {
+      "common_name": "Kaktus żywopłotowy",
+      "description": "Cereus hildmannianus to kolumnowy kaktus pochodzący z Ameryki Południowej. Preferuje jasne stanowiska i rzadkie podlewanie. Jest ceniony za dekoracyjny pokrój."
+    },
+    "de": {
+      "common_name": "Säulenkaktus",
+      "description": "Cereus hildmannianus ist ein schnell wachsender Kaktus aus Südamerika. Er benötigt viel Licht und wenig Wasser. Die Pflanze wird wegen ihrer markanten Form geschätzt."
+    },
+    "fr": {
+      "common_name": "Cactus candélabre",
+      "description": "Cereus hildmannianus est un cactus colonnaire originaire d’Amérique du Sud. Il aime la lumière intense et les arrosages espacés. Sa silhouette graphique en fait une plante décorative."
+    },
+    "it": {
+      "common_name": "Cactus colonnare",
+      "description": "Cereus hildmannianus è un cactus originario del Sud America. Cresce bene in piena luce e con poca acqua. È apprezzato per la sua forma architettonica."
+    },
+    "es": {
+      "common_name": "Cactus columnar",
+      "description": "Cereus hildmannianus es un cactus originario de Sudamérica. Necesita mucha luz y riegos poco frecuentes. Destaca por su crecimiento vertical."
+    },
+    "pt": {
+      "common_name": "Cacto colunar",
+      "description": "Cereus hildmannianus é um cacto da América do Sul. Prefere sol intenso e pouca rega. É cultivado pela sua forma escultural."
+    },
+    "ar": {
+      "common_name": "صبار عمودي",
+      "description": "Cereus hildmannianus صبار موطنه أمريكا الجنوبية. يحتاج إلى ضوء قوي وري متباعد. يتميز بشكل عمودي زخرفي."
+    },
+    "hi": {
+      "common_name": "कॉलम कैक्टस",
+      "description": "Cereus hildmannianus दक्षिण अमेरिका का कैक्टस है। इसे तेज रोशनी और कम पानी की आवश्यकता होती है। इसका सीधा आकार आकर्षक होता है।"
+    },
+    "zh": {
+      "common_name": "柱状仙人掌",
+      "description": "Cereus hildmannianus 原产于南美洲。喜强光和干燥环境。因其直立造型而受到喜爱。"
+    },
+    "ja": {
+      "common_name": "カラムサボテン",
+      "description": "Cereus hildmannianus は南米原産の柱状サボテンです。強い光と控えめな水やりを好みます。形の美しさで観賞されます。"
+    },
+    "ko": {
+      "common_name": "기둥선인장",
+      "description": "Cereus hildmannianus는 남아메리카 원산의 선인장입니다. 강한 빛과 적은 물을 선호합니다. 수직적인 형태가 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/256595/cereus-hildmannianus/details",
+      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/2788/Cereus_hildmannianus",
+      "https://www.botanicgardens.org"
+    ]
+  }
+}

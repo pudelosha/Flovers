@@ -1,0 +1,236 @@
+{
+  "external_id": "crassula_arborescens",
+  "name": "Silver Dollar Jade",
+  "latin": "Crassula arborescens",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "crassula_arborescens.jpg",
+  "image_thumb": "crassula_arborescens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol forte",
+          "ar": "شمس ساطعة",
+          "hi": "तेज धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse water",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控え",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement tox.",
+          "it": "Leggermente toss.",
+          "es": "Leve toxicidad",
+          "pt": "Leve toxidade",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻度有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow shrub",
+          "pl": "Wolny krzew",
+          "de": "Langsam wach.",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crec. lenta",
+          "pt": "Cresc. lenta",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Silver Dollar Jade",
+      "description": "Crassula arborescens is a succulent shrub native to South Africa. It has thick, silvery-blue leaves and woody stems. It is drought tolerant and well suited to bright indoor locations."
+    },
+    "pl": {
+      "common_name": "Grubosz srebrzysty",
+      "description": "Crassula arborescens to sukulent pochodzący z Afryki Południowej. Ma grube, srebrzyste liście i zdrewniałe pędy. Dobrze znosi suszę i jasne stanowiska."
+    },
+    "de": {
+      "common_name": "Silberdollar-Jade",
+      "description": "Crassula arborescens ist eine sukkulente Pflanze aus Südafrika. Sie besitzt dicke, silbrig-blaue Blätter und verholzte Triebe. Sie ist pflegeleicht und trockenheitsverträglich."
+    },
+    "fr": {
+      "common_name": "Plante de jade argentée",
+      "description": "Crassula arborescens est une succulente originaire d’Afrique du Sud. Elle se distingue par ses feuilles épaisses bleu argenté. Elle préfère une forte lumière et peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Giada argentata",
+      "description": "Crassula arborescens è una succulenta sudafricana. Ha foglie carnose di colore argenteo e fusti legnosi. Richiede molta luce e annaffiature ridotte."
+    },
+    "es": {
+      "common_name": "Planta de jade plateada",
+      "description": "Crassula arborescens es una suculenta originaria de Sudáfrica. Presenta hojas gruesas de tono plateado y tallos leñosos. Tolera bien la sequía y la luz intensa."
+    },
+    "pt": {
+      "common_name": "Jade prateada",
+      "description": "Crassula arborescens é uma suculenta da África do Sul. Possui folhas grossas azul-prateadas e caules lenhosos. Prefere sol forte e pouca rega."
+    },
+    "ar": {
+      "common_name": "نبات اليشم الفضي",
+      "description": "Crassula arborescens نبات عصاري موطنه جنوب أفريقيا. يتميز بأوراق سميكة فضية وسيقان خشبية. يتحمل الجفاف ويحتاج ضوءاً قوياً."
+    },
+    "hi": {
+      "common_name": "सिल्वर जेड पौधा",
+      "description": "Crassula arborescens दक्षिण अफ्रीका का एक रसीला पौधा है। इसकी पत्तियाँ मोटी और चांदी-नीली होती हैं। यह कम पानी और तेज रोशनी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "银元景天",
+      "description": "Crassula arborescens 原产于南非，是一种多肉植物。叶片厚实呈银蓝色，茎部木质化。耐旱，适合明亮环境。"
+    },
+    "ja": {
+      "common_name": "シルバージェード",
+      "description": "クラッスラ・アルボレッセンスは南アフリカ原産の多肉植物です。銀青色の厚い葉と木質の茎を持ちます。乾燥に強く明るい場所を好みます。"
+    },
+    "ko": {
+      "common_name": "실버 제이드",
+      "description": "Crassula arborescens는 남아프리카 원산의 다육식물입니다. 은빛이 도는 두꺼운 잎과 목질 줄기를 가집니다. 건조에 강하고 밝은 빛을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/crassula-arborescens",
+      "https://www.rhs.org.uk/plants/1715/crassula-arborescens/details",
+      "https://extension.umn.edu/houseplants/jade-plant"
+    ]
+  }
+}

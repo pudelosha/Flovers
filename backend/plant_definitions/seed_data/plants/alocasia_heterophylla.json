@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_heterophylla",
+  "name": "Alocasia Heterophylla",
+  "latin": "Alocasia heterophylla",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_heterophylla.jpg",
+  "image_thumb": "alocasia_heterophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮的散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przewiewna mieszanka",
+          "de": "Lockeres Aroid-Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松的天南星土",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol légèrement humide",
+          "it": "Terreno umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "تربة رطبة باستمرار",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–28°C",
+          "pl": "18–28°C",
+          "de": "18–28°C",
+          "fr": "18–28°C",
+          "it": "18–28°C",
+          "es": "18–28°C",
+          "pt": "18–28°C",
+          "ar": "18–28°م",
+          "hi": "18–28°C",
+          "zh": "18–28°C",
+          "ja": "18–28℃",
+          "ko": "18–28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高い湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Port en touffe",
+          "it": "Crescita a cespi",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو متكتل",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Alocasia",
+      "description": "Alocasia heterophylla is a tropical aroid valued for its distinctive veined foliage. It grows naturally in humid forest understories and prefers stable warmth. Consistent moisture and high humidity support healthy growth indoors."
+    },
+    "pl": {
+      "common_name": "Alokazja",
+      "description": "Alocasia heterophylla to tropikalna roślina z rodziny obrazkowatych o dekoracyjnych liściach. Naturalnie rośnie w wilgotnych lasach. Wymaga ciepła, wilgoci i rozproszonego światła w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Alokasie",
+      "description": "Alocasia heterophylla ist eine tropische Aronstabpflanze mit markanter Blattzeichnung. Sie stammt aus feuchten Waldgebieten. Gleichmäßige Feuchte und hohe Luftfeuchtigkeit sind wichtig."
+    },
+    "fr": {
+      "common_name": "Alocasie",
+      "description": "Alocasia heterophylla est une plante tropicale appréciée pour son feuillage nervuré. Elle pousse dans les sous-bois humides. Une chaleur constante et une bonne humidité sont nécessaires."
+    },
+    "it": {
+      "common_name": "Alocasia",
+      "description": "Alocasia heterophylla è una pianta tropicale ornamentale con foglie decorative. Proviene da ambienti forestali umidi. Predilige luce indiretta e umidità elevata."
+    },
+    "es": {
+      "common_name": "Alocasia",
+      "description": "Alocasia heterophylla es una planta tropical con hojas muy decorativas. Crece de forma natural en bosques húmedos. Necesita humedad constante y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Alocasia",
+      "description": "Alocasia heterophylla é uma planta tropical conhecida pela folhagem ornamental. É nativa de florestas úmidas. Requer calor estável, umidade e luz indireta."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا",
+      "description": "نبات Alocasia heterophylla استوائي يتميز بأوراقه المزخرفة. ينمو في البيئات الغابية الرطبة. يحتاج إلى رطوبة عالية وحرارة معتدلة."
+    },
+    "hi": {
+      "common_name": "अलोकैसिया",
+      "description": "Alocasia heterophylla एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ आकर्षक होती हैं। यह नम जंगलों में पाया जाता है। इसे नमी, गर्मी और अप्रत्यक्ष रोशनी चाहिए।"
+    },
+    "zh": {
+      "common_name": "海芋",
+      "description": "Alocasia heterophylla 是一种热带观叶植物，以叶脉明显著称。原生于潮湿的森林环境。室内养护需保持湿度和温暖。"
+    },
+    "ja": {
+      "common_name": "アロカシア",
+      "description": "Alocasia heterophylla は葉脈が美しい熱帯性植物です。湿った森林環境に自生します。室内では高湿度と安定した温度が必要です。"
+    },
+    "ko": {
+      "common_name": "알로카시아",
+      "description": "Alocasia heterophylla는 독특한 잎맥이 특징인 열대 식물입니다. 습한 숲 환경이 원산지입니다. 실내에서는 습도와 따뜻한 온도가 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/alocasia",
+      "https://edis.ifas.ufl.edu/publication/EP260",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide"
+    ]
+  }
+}

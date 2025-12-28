@@ -1,0 +1,237 @@
+{
+  "external_id": "crassula_ovata_hobbit",
+  "name": "Hobbit Jade Plant",
+  "latin": "Crassula ovata 'Hobbit'",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "crassula_ovata_hobbit.jpg",
+  "image_thumb": "crassula_ovata_hobbit.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء قوي",
+          "hi": "तेज रोशनी",
+          "zh": "强光照",
+          "ja": "強い光",
+          "ko": "강한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Hobbit Jade Plant",
+      "description": "Crassula ovata 'Hobbit' is a compact jade cultivar with tubular, curled leaves. It prefers bright light and infrequent watering. Allow soil to dry fully between waterings."
+    },
+    "pl": {
+      "common_name": "Grubosz Hobbit",
+      "description": "Crassula ovata 'Hobbit' to sukulent o rurkowatych liściach. Wymaga jasnego światła i rzadkiego podlewania. Ziemia powinna całkowicie wyschnąć."
+    },
+    "de": {
+      "common_name": "Hobbit-Geldbaum",
+      "description": "Crassula ovata 'Hobbit' ist eine kompakte Jadepflanze mit röhrenförmigen Blättern. Sie mag viel Licht und wenig Wasser. Staunässe unbedingt vermeiden."
+    },
+    "fr": {
+      "common_name": "Plante de jade Hobbit",
+      "description": "Crassula ovata 'Hobbit' est une succulente aux feuilles tubulaires. Elle aime la lumière vive et peu d’arrosage. Le substrat doit sécher entre deux arrosages."
+    },
+    "it": {
+      "common_name": "Pianta di giada Hobbit",
+      "description": "Crassula ovata 'Hobbit' è una succulenta compatta con foglie tubolari. Richiede molta luce e annaffiature rare. Il terreno deve asciugare completamente."
+    },
+    "es": {
+      "common_name": "Planta de jade Hobbit",
+      "description": "Crassula ovata 'Hobbit' es una suculenta de hojas tubulares. Necesita mucha luz y riego poco frecuente. Deja secar el sustrato entre riegos."
+    },
+    "pt": {
+      "common_name": "Planta-jade Hobbit",
+      "description": "Crassula ovata 'Hobbit' é uma suculenta de folhas tubulares. Prefere luz intensa e pouca rega. O solo deve secar completamente."
+    },
+    "ar": {
+      "common_name": "نبات اليشم هوبيت",
+      "description": "Crassula ovata 'Hobbit' نبات عصاري بأوراق أنبوبية. يحتاج إلى ضوء قوي وري خفيف. يجب أن تجف التربة بين الري."
+    },
+    "hi": {
+      "common_name": "हॉबिट जेड पौधा",
+      "description": "Crassula ovata 'Hobbit' एक सक्यूलेंट पौधा है जिसकी पत्तियाँ नलिकाकार होती हैं। इसे तेज रोशनी और कम पानी चाहिए। मिट्टी सूखनी चाहिए।"
+    },
+    "zh": {
+      "common_name": "霍比特玉树",
+      "description": "Crassula ovata 'Hobbit' 是一种管状叶多肉植物。喜欢强光和少量浇水。每次浇水前应完全干燥。"
+    },
+    "ja": {
+      "common_name": "ホビット金のなる木",
+      "description": "Crassula ovata 'Hobbit' は筒状の葉を持つ多肉植物です。明るい光と控えめな水やりを好みます。土は乾かします。"
+    },
+    "ko": {
+      "common_name": "호빗 옥나무",
+      "description": "Crassula ovata 'Hobbit'는 관 모양 잎의 다육식물입니다. 강한 빛과 적은 물을 좋아합니다. 흙은 완전히 말려주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/47658/crassula-ovata/details",
+      "https://extension.umn.edu/houseplants/jade-plant",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/jade-plant"
+    ]
+  }
+}

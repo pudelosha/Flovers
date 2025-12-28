@@ -1,0 +1,238 @@
+{
+  "external_id": "campyloneurum_phyllitidis",
+  "name": "Strap Fern",
+  "latin": "Campyloneurum phyllitidis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "campyloneurum_phyllitidis.jpg",
+  "image_thumb": "campyloneurum_phyllitidis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained epiphytic",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلاً",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "缓慢生长",
+          "ja": "成長遅め",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Strap Fern",
+      "description": "Campyloneurum phyllitidis is a tropical epiphytic fern native to Central and South America. It has long, strap-like fronds and thrives in warm, humid indoor conditions with indirect light."
+    },
+    "pl": {
+      "common_name": "Paproć taśmowa",
+      "description": "Campyloneurum phyllitidis to tropikalna paproć epifityczna z Ameryki Środkowej i Południowej. Ma długie, taśmowate liście i wymaga wilgoci oraz jasnego, rozproszonego światła."
+    },
+    "de": {
+      "common_name": "Riemenfarn",
+      "description": "Campyloneurum phyllitidis ist ein tropischer Epiphytenfarn aus Mittel- und Südamerika. Er besitzt lange, riemenförmige Wedel und bevorzugt warme, feuchte Standorte mit indirektem Licht."
+    },
+    "fr": {
+      "common_name": "Fougère ruban",
+      "description": "Campyloneurum phyllitidis est une fougère épiphyte tropicale d’Amérique centrale et du Sud. Elle se distingue par ses frondes longues et plates et apprécie une forte humidité."
+    },
+    "it": {
+      "common_name": "Felce a nastro",
+      "description": "Campyloneurum phyllitidis è una felce epifita tropicale originaria dell’America centrale e meridionale. Presenta fronde lunghe e strette e cresce bene in ambienti caldi e umidi."
+    },
+    "es": {
+      "common_name": "Helecho cinta",
+      "description": "Campyloneurum phyllitidis es un helecho epífito tropical de América Central y del Sur. Tiene frondas largas en forma de cinta y requiere humedad elevada y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Samambaia-fita",
+      "description": "Campyloneurum phyllitidis é uma samambaia epífita tropical da América Central e do Sul. Possui frondes longas e cresce melhor em ambientes quentes e úmidos."
+    },
+    "ar": {
+      "common_name": "سرخس الشريط",
+      "description": "Campyloneurum phyllitidis هو سرخس استوائي يعيش على الأشجار موطنه أمريكا الوسطى والجنوبية. يتميز بأوراق طويلة مسطحة ويحتاج إلى رطوبة عالية وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "स्ट्रैप फ़र्न",
+      "description": "Campyloneurum phyllitidis मध्य और दक्षिण अमेरिका का एक उष्णकटिबंधीय एपिफाइट फ़र्न है। इसकी लंबी पट्टीनुमा पत्तियाँ होती हैं और इसे नमी तथा अप्रत्यक्ष रोशनी पसंद है।"
+    },
+    "zh": {
+      "common_name": "带蕨",
+      "description": "Campyloneurum phyllitidis 是原产于中美洲和南美洲的热带附生蕨类。其叶片细长呈带状，适合温暖高湿和散射光环境。"
+    },
+    "ja": {
+      "common_name": "ストラップファーン",
+      "description": "Campyloneurum phyllitidis は中南米原産の熱帯着生シダです。細長い帯状の葉を持ち、高湿度と明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "스트랩 고사리",
+      "description": "Campyloneurum phyllitidis는 중남미 원산의 열대 착생 고사리입니다. 길고 띠 모양의 잎을 가지며 따뜻하고 습한 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/campyloneurum-phyllitidis",
+      "https://plants.ces.ncsu.edu/plants/campyloneurum-phyllitidis/",
+      "https://tropicos.org/name/26600027"
+    ]
+  }
+}

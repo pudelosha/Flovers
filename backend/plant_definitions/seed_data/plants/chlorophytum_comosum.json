@@ -1,0 +1,237 @@
+{
+  "external_id": "chlorophytum_comosum",
+  "name": "Spider Plant",
+  "latin": "Chlorophytum comosum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "chlorophytum_comosum.jpg",
+  "image_thumb": "chlorophytum_comosum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining soil",
+          "pl": "przepuszczalna",
+          "de": "durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowane",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderata",
+          "es": "moderado",
+          "pt": "moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "very easy",
+          "pl": "bardzo łatwa",
+          "de": "sehr leicht",
+          "fr": "très facile",
+          "it": "molto facile",
+          "es": "muy fácil",
+          "pt": "muito fácil",
+          "ar": "سهل جداً",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "매우 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "average",
+          "pl": "średnia",
+          "de": "durchschnittlich",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietrująca",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast clumping",
+          "pl": "szybki wzrost",
+          "de": "schnell wachsend",
+          "fr": "croissance rapide",
+          "it": "crescita rapida",
+          "es": "crecimiento rápido",
+          "pt": "crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spider Plant",
+      "description": "Chlorophytum comosum is a hardy houseplant known for its arching striped leaves. It thrives in bright, indirect light and tolerates a wide range of indoor conditions. The plant produces small plantlets that are easy to propagate."
+    },
+    "pl": {
+      "common_name": "Zielistka Sternberga",
+      "description": "Chlorophytum comosum to wytrzymała roślina doniczkowa o pasiastych liściach. Dobrze rośnie w jasnym, rozproszonym świetle i jest łatwa w uprawie. Wytwarza liczne rozłogi z młodymi roślinami."
+    },
+    "de": {
+      "common_name": "Grünlilie",
+      "description": "Chlorophytum comosum ist eine pflegeleichte Zimmerpflanze mit überhängenden Blättern. Sie bevorzugt helles, indirektes Licht und ist sehr anpassungsfähig. Ableger können leicht bewurzelt werden."
+    },
+    "fr": {
+      "common_name": "Plante araignée",
+      "description": "Chlorophytum comosum est une plante d’intérieur robuste aux feuilles arquées. Elle apprécie une lumière vive sans soleil direct. Elle produit facilement des rejets décoratifs."
+    },
+    "it": {
+      "common_name": "Falangio",
+      "description": "Il Chlorophytum comosum è una pianta da interno resistente e decorativa. Cresce bene con luce indiretta e annaffiature moderate. Produce facilmente nuovi getti pendenti."
+    },
+    "es": {
+      "common_name": "Cinta",
+      "description": "Chlorophytum comosum es una planta de interior muy resistente y común. Prefiere luz indirecta brillante y riegos moderados. Produce hijuelos fáciles de propagar."
+    },
+    "pt": {
+      "common_name": "Clorofito",
+      "description": "O Chlorophytum comosum é uma planta de interior fácil de cuidar. Desenvolve-se bem em luz indireta e ambientes domésticos normais. Produz mudas pendentes com facilidade."
+    },
+    "ar": {
+      "common_name": "نبات العنكبوت",
+      "description": "نبات الكلوروفيتوم كوموسوم من نباتات الزينة سهلة العناية. يفضل الضوء غير المباشر والري المعتدل. ينتج فسائل صغيرة يسهل إكثارها."
+    },
+    "hi": {
+      "common_name": "स्पाइडर प्लांट",
+      "description": "क्लोरोफाइटम कोमोसुम एक आसान इनडोर पौधा है। यह अप्रत्यक्ष रोशनी में अच्छी तरह बढ़ता है और कम देखभाल चाहता है। इससे छोटे पौधे आसानी से उगाए जा सकते हैं।"
+    },
+    "zh": {
+      "common_name": "吊兰",
+      "description": "吊兰是一种非常耐养的室内植物。它适合明亮的散射光环境，并且对室内条件适应性强。可长出许多小植株用于繁殖。"
+    },
+    "ja": {
+      "common_name": "オリヅルラン",
+      "description": "オリヅルランは丈夫で育てやすい観葉植物です。明るい間接光を好み、室内環境に適応します。子株が垂れ下がって増えます。"
+    },
+    "ko": {
+      "common_name": "접란",
+      "description": "접란은 관리가 쉬운 대표적인 실내 식물입니다. 밝은 간접광에서 잘 자라며 환경 적응력이 뛰어납니다. 새끼 식물이 쉽게 생깁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/chlorophytum",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276300",
+      "https://plants.ces.ncsu.edu/plants/chlorophytum-comosum/"
+    ]
+  }
+}

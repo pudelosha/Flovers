@@ -1,0 +1,238 @@
+{
+  "external_id": "epipremnum_aureum",
+  "name": "Golden Pothos",
+  "latin": "Epipremnum aureum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "epipremnum_aureum.jpg",
+  "image_thumb": "epipremnum_aureum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30 °C",
+          "pl": "18–30 °C",
+          "de": "18–30 °C",
+          "fr": "18–30 °C",
+          "it": "18–30 °C",
+          "es": "18–30 °C",
+          "pt": "18–30 °C",
+          "ar": "18–30°م",
+          "hi": "18–30 °C",
+          "zh": "18–30℃",
+          "ja": "18–30℃",
+          "ko": "18–30℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Normale Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast vining",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Golden Pothos",
+      "description": "Epipremnum aureum is a tropical climbing plant native to the Solomon Islands. It is widely grown indoors for its trailing vines and tolerance of varied light. The plant is hardy and forgiving of occasional care mistakes."
+    },
+    "pl": {
+      "common_name": "Epipremnum złociste",
+      "description": "Epipremnum aureum to tropikalne pnącze pochodzące z Wysp Salomona. Jest popularną rośliną domową dzięki wytrzymałości i dekoracyjnym liściom. Dobrze znosi różne warunki świetlne."
+    },
+    "de": {
+      "common_name": "Efeutute",
+      "description": "Epipremnum aureum ist eine tropische Kletterpflanze aus den Salomonen. Sie wird häufig als Zimmerpflanze kultiviert und ist sehr pflegeleicht. Die langen Triebe eignen sich gut zum Hängen oder Klettern."
+    },
+    "fr": {
+      "common_name": "Pothos doré",
+      "description": "Epipremnum aureum est une plante tropicale grimpante originaire des îles Salomon. Elle est appréciée en intérieur pour sa robustesse et son feuillage décoratif. Elle tolère bien des conditions variées."
+    },
+    "it": {
+      "common_name": "Pothos",
+      "description": "Epipremnum aureum è una pianta tropicale rampicante originaria delle Isole Salomone. È molto diffusa come pianta da interno per la sua facilità di coltivazione. Si adatta bene a diversi livelli di luce."
+    },
+    "es": {
+      "common_name": "Poto",
+      "description": "Epipremnum aureum es una planta tropical trepadora originaria de las Islas Salomón. Se cultiva ampliamente en interiores por su resistencia y hojas ornamentales. Tolera bien condiciones variables."
+    },
+    "pt": {
+      "common_name": "Jiboia",
+      "description": "Epipremnum aureum é uma planta tropical trepadeira nativa das Ilhas Salomão. É muito popular como planta de interior pela sua resistência. Cresce bem em diferentes condições de luz."
+    },
+    "ar": {
+      "common_name": "بوتس ذهبي",
+      "description": "Epipremnum aureum نبات استوائي متسلق موطنه جزر سليمان. يزرع كنبات منزلي لسهولة العناية به. يتحمل ظروف إضاءة مختلفة."
+    },
+    "hi": {
+      "common_name": "गोल्डन पोथोस",
+      "description": "Epipremnum aureum एक उष्णकटिबंधीय लता है जो सोलोमन द्वीप की मूल निवासी है। यह घरों में आसानी से उगाई जाती है। यह विभिन्न रोशनी परिस्थितियों को सहन करती है।"
+    },
+    "zh": {
+      "common_name": "黄金葛",
+      "description": "Epipremnum aureum 原产于所罗门群岛，是一种热带藤本植物。常作为室内植物栽培，适应性强。对光照要求不高。"
+    },
+    "ja": {
+      "common_name": "ポトス",
+      "description": "Epipremnum aureum はソロモン諸島原産の熱帯性つる植物です。丈夫で育てやすく、観葉植物として広く利用されています。さまざまな光条件に適応します。"
+    },
+    "ko": {
+      "common_name": "포토스",
+      "description": "Epipremnum aureum는 솔로몬 제도 원산의 열대 덩굴식물입니다. 관리가 쉬워 실내 식물로 널리 재배됩니다. 다양한 빛 환경에 잘 적응합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/epipremnum/aureum/details",
+      "https://edis.ifas.ufl.edu/publication/FP207",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a330"
+    ]
+  }
+}

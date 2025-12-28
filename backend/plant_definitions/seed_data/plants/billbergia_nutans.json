@@ -1,0 +1,237 @@
+{
+  "external_id": "billbergia_nutans",
+  "name": "Queen's Tears",
+  "latin": "Billbergia nutans",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "billbergia_nutans.jpg",
+  "image_thumb": "billbergia_nutans.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy orchid mix",
+          "pl": "Przewiewna kora",
+          "de": "Lockeres Orchideensub.",
+          "fr": "Substrat orchidée",
+          "it": "Substrato orchidee",
+          "es": "Sustrato orquídea",
+          "pt": "Substrato orquídea",
+          "ar": "وسط أوركيد جيد",
+          "hi": "हवादार माध्यम",
+          "zh": "兰花基质",
+          "ja": "ラン用土",
+          "ko": "난용 배지"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlew.",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping rosette",
+          "pl": "Rozeta kępiasta",
+          "de": "Rosettenbildend",
+          "fr": "Rosette en touffe",
+          "it": "Rosetta cespitosa",
+          "es": "Roseta en mata",
+          "pt": "Roseta em touceira",
+          "ar": "نمو وردي",
+          "hi": "गुच्छेदार रोसेट",
+          "zh": "丛生莲座",
+          "ja": "群生ロゼット",
+          "ko": "군생 로제트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Queen's Tears",
+      "description": "Billbergia nutans is a bromeliad native to South America, often grown as an easy houseplant. It prefers bright indirect light and well-draining orchid-style media. Water moderately and allow slight drying between waterings."
+    },
+    "pl": {
+      "common_name": "Billbergia zwisła",
+      "description": "Billbergia nutans to bromelia pochodząca z Ameryki Południowej, łatwa w uprawie domowej. Lubi jasne, rozproszone światło i przepuszczalne podłoże. Podlewaj umiarkowanie, pozwalając lekko przeschnąć."
+    },
+    "de": {
+      "common_name": "Tränenkönigin",
+      "description": "Billbergia nutans ist eine Bromelie aus Südamerika und eine pflegeleichte Zimmerpflanze. Sie wächst am besten bei hellem, indirektem Licht und lockerem Substrat. Mäßig gießen und Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Larmes de la reine",
+      "description": "Billbergia nutans est une broméliacée originaire d’Amérique du Sud. Elle apprécie une lumière vive indirecte et un substrat bien drainé. Arrosez modérément et laissez sécher légèrement entre deux arrosages."
+    },
+    "it": {
+      "common_name": "Lacrime della regina",
+      "description": "Billbergia nutans è una bromeliacea sudamericana coltivata come pianta d'appartamento. Predilige luce indiretta intensa e substrato drenante. Annaffiare con moderazione evitando ristagni."
+    },
+    "es": {
+      "common_name": "Lágrimas de la reina",
+      "description": "Billbergia nutans es una bromelia originaria de Sudamérica. Crece bien con luz indirecta brillante y sustrato aireado. Requiere riego moderado y buen drenaje."
+    },
+    "pt": {
+      "common_name": "Lágrimas-da-rainha",
+      "description": "Billbergia nutans é uma bromélia da América do Sul, fácil de cultivar em interiores. Prefere luz indireta brilhante e substrato bem drenado. Regue moderadamente."
+    },
+    "ar": {
+      "common_name": "دموع الملكة",
+      "description": "Billbergia nutans نبات بروميلي موطنه أمريكا الجنوبية. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. يتم ريّه باعتدال مع تجنب تجمع الماء."
+    },
+    "hi": {
+      "common_name": "क्वीन टियर्स",
+      "description": "Billbergia nutans दक्षिण अमेरिका की एक ब्रॉमेलियाड प्रजाति है। इसे तेज अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाला माध्यम पसंद है। मध्यम सिंचाई करें।"
+    },
+    "zh": {
+      "common_name": "女王泪",
+      "description": "Billbergia nutans 原产于南美洲，是常见的室内凤梨植物。喜明亮散射光和良好排水的基质。浇水适中，避免积水。"
+    },
+    "ja": {
+      "common_name": "クイーンズティアーズ",
+      "description": "Billbergia nutans は南米原産のブロメリアです。明るい間接光と水はけの良い用土を好みます。水やりは控えめに行います。"
+    },
+    "ko": {
+      "common_name": "퀸즈 티어스",
+      "description": "Billbergia nutans는 남아메리카 원산의 브로멜리아 식물입니다. 밝은 간접광과 배수가 좋은 토양을 선호합니다. 물은 중간 정도로 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2404/billbergia-nutans/details",
+      "https://edis.ifas.ufl.edu/publication/FP065",
+      "https://www.bromeliads.info/billbergia-nutans/"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "browallia_speciosa",
+  "name": "Bush Violet",
+  "latin": "Browallia speciosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "browallia_speciosa.jpg",
+  "image_thumb": "browallia_speciosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgotność",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido costante",
+          "es": "Humedad regular",
+          "pt": "Umidade regular",
+          "ar": "رطوبة منتظمة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "均一に湿らす",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgn.",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24°م",
+          "hi": "18–24 °C",
+          "zh": "18–24°C",
+          "ja": "18–24℃",
+          "ko": "18–24℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Normale Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact bushy",
+          "pl": "Zwarty pokrój",
+          "de": "Kompakt buschig",
+          "fr": "Compact buissonn.",
+          "it": "Compatto cesp.",
+          "es": "Compacta",
+          "pt": "Compacta",
+          "ar": "نمو كثيف",
+          "hi": "घना विकास",
+          "zh": "紧凑生长",
+          "ja": "コンパクト",
+          "ko": "콤팩트 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bush Violet",
+      "description": "Browallia speciosa is a flowering plant native to South America, commonly grown as a short-lived houseplant. It produces vivid violet-blue flowers and prefers bright, indirect light. Even soil moisture supports continuous blooming."
+    },
+    "pl": {
+      "common_name": "Browalia",
+      "description": "Browallia speciosa to roślina kwitnąca pochodząca z Ameryki Południowej. Uprawiana jest często jako roślina doniczkowa o intensywnie niebieskich kwiatach. Wymaga jasnego stanowiska i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Browallie",
+      "description": "Browallia speciosa stammt aus Südamerika und wird häufig als Zimmerpflanze kultiviert. Sie bildet auffällige violettblaue Blüten. Gleichmäßige Feuchtigkeit und helles Streulicht fördern die Blüte."
+    },
+    "fr": {
+      "common_name": "Browallia",
+      "description": "Browallia speciosa est originaire d’Amérique du Sud et appréciée pour ses fleurs bleu violet. Elle est souvent cultivée en intérieur. Un arrosage régulier et une lumière indirecte sont recommandés."
+    },
+    "it": {
+      "common_name": "Browallia",
+      "description": "Browallia speciosa è una pianta ornamentale sudamericana coltivata come pianta da interno. Produce fiori viola intensi. Predilige luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Browallia",
+      "description": "Browallia speciosa es una planta con flores originaria de América del Sur. Se cultiva comúnmente en interiores por sus flores violetas. Requiere luz indirecta y riego regular."
+    },
+    "pt": {
+      "common_name": "Browallia",
+      "description": "Browallia speciosa é nativa da América do Sul e cultivada como planta ornamental. Destaca-se pelas flores azul-violeta. Prefere luz indireta e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "براواليا",
+      "description": "نبات Browallia speciosa موطنه أمريكا الجنوبية ويزرع كنبات زينة داخلي. يتميز بأزهاره البنفسجية الزاهية. يحتاج إلى ضوء غير مباشر وري منتظم."
+    },
+    "hi": {
+      "common_name": "ब्रावालिया",
+      "description": "Browallia speciosa दक्षिण अमेरिका का एक फूलदार पौधा है। इसे घर के अंदर सजावटी पौधे के रूप में उगाया जाता है। यह अप्रत्यक्ष रोशनी और नियमित पानी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "紫花布罗瓦利亚",
+      "description": "Browallia speciosa 原产于南美洲，是常见的观赏开花植物。它以紫蓝色花朵著称。适合在明亮散射光和均匀湿润的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ブロワリア",
+      "description": "Browallia speciosa は南米原産の開花植物です。鮮やかな紫青色の花を咲かせます。明るい間接光と定期的な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "브로왈리아",
+      "description": "Browallia speciosa는 남아메리카 원산의 개화 식물입니다. 보라색 꽃이 특징이며 실내에서 잘 자랍니다. 밝은 간접광과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2738/browallia-speciosa/details",
+      "https://edis.ifas.ufl.edu/publication/FP085",
+      "https://plants.ces.ncsu.edu/plants/browallia-speciosa/"
+    ]
+  }
+}

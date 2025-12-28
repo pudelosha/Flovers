@@ -1,0 +1,238 @@
+{
+  "external_id": "convallaria_majalis",
+  "name": "Lily of the Valley",
+  "latin": "Convallaria majalis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "convallaria_majalis.jpg",
+  "image_thumb": "convallaria_majalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sombra parcial",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, loamy",
+          "pl": "Wilgotna, gliniasta",
+          "de": "Feucht, lehmig",
+          "fr": "Humide, limoneux",
+          "it": "Umido, franco",
+          "es": "Húmedo, franco",
+          "pt": "Úmido, franco",
+          "ar": "تربة رطبة",
+          "hi": "नम, दोमट",
+          "zh": "湿润壤土",
+          "ja": "湿った壌土",
+          "ko": "습한 양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à tempéré",
+          "it": "Fresco-mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل إلى بارد",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Highly toxic",
+          "pl": "Silnie trująca",
+          "de": "Stark giftig",
+          "fr": "Très toxique",
+          "it": "Molto tossica",
+          "es": "Muy tóxica",
+          "pt": "Muito tóxica",
+          "ar": "شديدة السمية",
+          "hi": "अत्यंत विषैली",
+          "zh": "高度有毒",
+          "ja": "強い毒性",
+          "ko": "강한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Spreading perennial",
+          "pl": "Bylina rozłogowa",
+          "de": "Ausbreitend",
+          "fr": "Vivace traçante",
+          "it": "Perenne rizomatosa",
+          "es": "Perenne expansiva",
+          "pt": "Perene expansiva",
+          "ar": "معمرة زاحفة",
+          "hi": "फैलने वाला बारहमासी",
+          "zh": "蔓延多年生",
+          "ja": "地下茎で拡大",
+          "ko": "퍼지는 다년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lily of the Valley",
+      "description": "Convallaria majalis is a woodland perennial native to temperate regions of Europe and Asia. It produces fragrant white bell-shaped flowers in spring and prefers partial shade and moist soil."
+    },
+    "pl": {
+      "common_name": "Konwalia majowa",
+      "description": "Convallaria majalis to bylina leśna pochodząca z umiarkowanych obszarów Europy i Azji. Kwitnie wiosną białymi, pachnącymi kwiatami i najlepiej rośnie w półcieniu."
+    },
+    "de": {
+      "common_name": "Maiglöckchen",
+      "description": "Convallaria majalis ist eine mehrjährige Waldpflanze aus gemäßigten Regionen Europas und Asiens. Sie blüht im Frühjahr mit duftenden weißen Blüten und mag halbschattige Standorte."
+    },
+    "fr": {
+      "common_name": "Muguet",
+      "description": "Convallaria majalis est une plante vivace des sous-bois d’Europe et d’Asie tempérées. Elle fleurit au printemps avec des clochettes blanches parfumées et aime les sols frais."
+    },
+    "it": {
+      "common_name": "Mughetto",
+      "description": "Convallaria majalis è una pianta perenne dei boschi europei e asiatici temperati. Fiorisce in primavera con fiori bianchi profumati e predilige zone ombreggiate."
+    },
+    "es": {
+      "common_name": "Lirio de los valles",
+      "description": "Convallaria majalis es una planta perenne de bosques templados de Europa y Asia. Produce flores blancas muy fragantes en primavera y requiere sombra parcial."
+    },
+    "pt": {
+      "common_name": "Lírio-do-vale",
+      "description": "Convallaria majalis é uma planta perene de florestas temperadas da Europa e Ásia. Floresce na primavera com flores brancas perfumadas e prefere meia-sombra."
+    },
+    "ar": {
+      "common_name": "زنبق الوادي",
+      "description": "Convallaria majalis نبات معمر ينمو في غابات المناطق المعتدلة في أوروبا وآسيا. يتميز بأزهاره البيضاء العطرية في الربيع ويفضل الظل الجزئي."
+    },
+    "hi": {
+      "common_name": "लिली ऑफ द वैली",
+      "description": "Convallaria majalis यूरोप और एशिया के समशीतोष्ण वनों की एक बारहमासी पौधा है। यह वसंत में सुगंधित सफेद फूल देता है और आंशिक छाया पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "铃兰",
+      "description": "Convallaria majalis 是原产于欧洲和亚洲温带地区的林下多年生植物。春季开白色芳香小花，适合半阴环境。"
+    },
+    "ja": {
+      "common_name": "スズラン",
+      "description": "Convallaria majalis はヨーロッパとアジアの温帯林に自生する多年草です。春に香りのある白い花を咲かせ、半日陰を好みます。"
+    },
+    "ko": {
+      "common_name": "은방울꽃",
+      "description": "Convallaria majalis는 유럽과 아시아의 온대 숲에서 자라는 다년생 식물입니다. 봄에 향기로운 흰 꽃이 피며 반그늘을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b470",
+      "https://www.rhs.org.uk/plants/4177/convallaria-majalis/details",
+      "https://plants.ces.ncsu.edu/plants/convallaria-majalis/"
+    ]
+  }
+}

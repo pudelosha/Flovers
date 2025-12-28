@@ -1,0 +1,236 @@
+{
+  "external_id": "bellis_perennis",
+  "name": "Common Daisy",
+  "latin": "Bellis perennis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "bellis_perennis.jpg",
+  "image_thumb": "bellis_perennis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun to partial",
+          "pl": "Słońce do półcienia",
+          "de": "Sonne bis Halbschat",
+          "fr": "Soleil à mi-ombre",
+          "it": "Sole a mezzombra",
+          "es": "Sol a semisombra",
+          "pt": "Sol a meia-sombra",
+          "ar": "شمس إلى ظل جزئي",
+          "hi": "धूप से आंशिक छाया",
+          "zh": "全日照到半阴",
+          "ja": "日向から半日陰",
+          "ko": "양지~반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, well-drained",
+          "pl": "Wilgotna, przepuszcz",
+          "de": "Feucht, durchlässig",
+          "fr": "Humide et drainé",
+          "it": "Umido e drenante",
+          "es": "Húmedo y drenado",
+          "pt": "Úmido e drenado",
+          "ar": "رطبة وجيدة الصرف",
+          "hi": "नम व जलनिकास",
+          "zh": "湿润且排水好",
+          "ja": "湿り気と排水",
+          "ko": "촉촉·배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlew",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature reg",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित सिंचाई",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiark",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco o mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से हल्का",
+          "zh": "凉爽到温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘~온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotn",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low growing",
+          "pl": "Nisko rosnąca",
+          "de": "Niedrig wachsend",
+          "fr": "Croissance basse",
+          "it": "Crescita bassa",
+          "es": "Crecimiento bajo",
+          "pt": "Crescimento baixo",
+          "ar": "نمو منخفض",
+          "hi": "कम ऊँचाई",
+          "zh": "低矮生长",
+          "ja": "低く成長",
+          "ko": "낮게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Daisy",
+      "description": "Bellis perennis is a low-growing perennial commonly found in lawns and meadows. It produces white flowers with yellow centers and prefers cool conditions with regular moisture."
+    },
+    "pl": {
+      "common_name": "Stokrotka pospolita",
+      "description": "Bellis perennis to niska bylina często spotykana na trawnikach i łąkach. Tworzy białe kwiaty z żółtym środkiem i najlepiej rośnie w chłodniejszych warunkach."
+    },
+    "de": {
+      "common_name": "Gänseblümchen",
+      "description": "Bellis perennis ist eine niedrig wachsende Staude aus Wiesen und Rasenflächen. Sie bildet weiße Blüten mit gelber Mitte und mag gleichmäßige Feuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Pâquerette",
+      "description": "Bellis perennis est une plante vivace basse commune dans les pelouses. Elle porte des fleurs blanches à cœur jaune et préfère un sol frais."
+    },
+    "it": {
+      "common_name": "Pratolina comune",
+      "description": "Bellis perennis è una pianta perenne bassa diffusa nei prati. Produce fiori bianchi con centro giallo e cresce bene in climi freschi."
+    },
+    "es": {
+      "common_name": "Margarita común",
+      "description": "Bellis perennis es una planta perenne de bajo crecimiento común en céspedes. Tiene flores blancas con centro amarillo y requiere riego regular."
+    },
+    "pt": {
+      "common_name": "Margarida-comum",
+      "description": "Bellis perennis é uma planta perene baixa comum em relvados. Produz flores brancas com centro amarelo e prefere solos húmidos."
+    },
+    "ar": {
+      "common_name": "الأقحوان الشائع",
+      "description": "Bellis perennis نبات معمر منخفض الانتشار في المروج. ينتج أزهارًا بيضاء ذات مركز أصفر ويفضل تربة رطبة."
+    },
+    "hi": {
+      "common_name": "साधारण डेज़ी",
+      "description": "Bellis perennis एक कम ऊँचाई वाला बहुवर्षीय पौधा है जो घास के मैदानों में पाया जाता है। इसमें पीले केंद्र के साथ सफेद फूल आते हैं।"
+    },
+    "zh": {
+      "common_name": "雏菊",
+      "description": "Bellis perennis 是一种常见的低矮多年生植物，常见于草坪。它开白色花，黄色花心，喜湿润环境。"
+    },
+    "ja": {
+      "common_name": "デイジー",
+      "description": "Bellis perennis は芝生によく見られる低成長の多年草です。白い花と黄色い中心が特徴で、適度な水分を好みます。"
+    },
+    "ko": {
+      "common_name": "데이지",
+      "description": "Bellis perennis 는 잔디밭에서 흔히 자라는 낮은 다년생 식물입니다. 노란 중심의 흰 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2153/bellis-perennis/details",
+      "https://plants.ces.ncsu.edu/plants/bellis-perennis/",
+      "https://www.gardenersworld.com/plants/bellis-perennis/"
+    ]
+  }
+}

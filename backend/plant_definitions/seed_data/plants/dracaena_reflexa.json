@@ -1,0 +1,238 @@
+{
+  "external_id": "dracaena_reflexa",
+  "name": "Dracaena reflexa",
+  "latin": "Dracaena reflexa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dracaena_reflexa.jpg",
+  "image_thumb": "dracaena_reflexa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierte Erde",
+          "fr": "Sol bien drainé",
+          "it": "Terriccio drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 잘되는 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18～27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiark.",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lenta-moderata",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "نمو بطيء متوسط",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "缓慢至中等",
+          "ja": "遅い〜中程度",
+          "ko": "느림~보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Song of India",
+      "description": "Dracaena reflexa is a tropical evergreen shrub native to Madagascar and nearby islands. It is valued for its variegated, arching leaves and adaptability to indoor conditions."
+    },
+    "pl": {
+      "common_name": "Dracena odgięta",
+      "description": "Dracaena reflexa to tropikalny krzew z Madagaskaru. Ceniona jest za pasiastą dekoracyjną rozetę liści i łatwość uprawy w domu."
+    },
+    "de": {
+      "common_name": "Drachenbaum",
+      "description": "Dracaena reflexa ist ein tropischer Strauch aus Madagaskar. Sie wird wegen ihrer panaschierten Blätter und Robustheit als Zimmerpflanze geschätzt."
+    },
+    "fr": {
+      "common_name": "Dragonnier réfléchi",
+      "description": "Dracaena reflexa est un arbuste tropical originaire de Madagascar. Elle est appréciée pour son feuillage décoratif et sa culture facile en intérieur."
+    },
+    "it": {
+      "common_name": "Dracena",
+      "description": "Dracaena reflexa è una pianta tropicale del Madagascar. È coltivata come pianta da interno per le sue foglie variegate e la manutenzione semplice."
+    },
+    "es": {
+      "common_name": "Drácena",
+      "description": "Dracaena reflexa es un arbusto tropical de Madagascar. Destaca por sus hojas variegadas y su buena adaptación a interiores."
+    },
+    "pt": {
+      "common_name": "Dracena",
+      "description": "Dracaena reflexa é uma planta tropical de Madagascar. É popular em interiores devido às folhas ornamentais e cuidados simples."
+    },
+    "ar": {
+      "common_name": "دراسينا",
+      "description": "دراسينا ريفليكسا نبات استوائي موطنه مدغشقر. يزرع كنبات داخلي لجمال أوراقه وسهولة العناية به."
+    },
+    "hi": {
+      "common_name": "ड्रासेना",
+      "description": "ड्रासेना रिफ्लेक्सा मेडागास्कर का उष्णकटिबंधीय पौधा है। इसे इसकी सजावटी पत्तियों और आसान देखभाल के लिए उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "龙血树",
+      "description": "Dracaena reflexa 原产于马达加斯加的热带植物。因其斑纹叶片和良好的室内适应性而广受欢迎。"
+    },
+    "ja": {
+      "common_name": "ドラセナ",
+      "description": "ドラセナ・レフレクサはマダガスカル原産の熱帯植物です。観葉植物として丈夫で育てやすいです。"
+    },
+    "ko": {
+      "common_name": "드라세나",
+      "description": "드라세나 레플렉사는 마다가스카르 원산의 열대 식물입니다. 무늬 잎과 실내 적응력이 뛰어납니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5440/dracaena-reflexa/details",
+      "https://edis.ifas.ufl.edu/publication/FP170",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/dracaena"
+    ]
+  }
+}

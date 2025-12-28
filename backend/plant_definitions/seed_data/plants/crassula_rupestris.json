@@ -1,0 +1,236 @@
+{
+  "external_id": "crassula_rupestris",
+  "name": "Baby's Necklace",
+  "latin": "Crassula rupestris",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "crassula_rupestris.jpg",
+  "image_thumb": "crassula_rupestris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining",
+          "pl": "Dobrze zdren.",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Oszczędne",
+          "de": "Wenig",
+          "fr": "Peu",
+          "it": "Raro",
+          "es": "Escaso",
+          "pt": "Pouca",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "控えめ",
+          "ko": "적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Baby's Necklace",
+      "description": "Crassula rupestris is a compact succulent with stacked, triangular leaves. It prefers bright light and infrequent watering. The plant is well suited to indoor pots with excellent drainage."
+    },
+    "pl": {
+      "common_name": "Grubosz naszyjnik",
+      "description": "Crassula rupestris to sukulent o warstwowych liściach. Wymaga jasnego stanowiska i rzadkiego podlewania. Najlepiej rośnie w przepuszczalnym podłożu."
+    },
+    "de": {
+      "common_name": "Baby-Halskette",
+      "description": "Crassula rupestris ist eine kompakte Sukkulente mit gestapelten Blättern. Sie mag helles Licht und wenig Wasser. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Collier de bébé",
+      "description": "Crassula rupestris est une plante succulente compacte. Elle aime la lumière vive et peu d’arrosage. Un sol très drainant est essentiel."
+    },
+    "it": {
+      "common_name": "Collana di bambina",
+      "description": "Crassula rupestris è una succulenta ornamentale a crescita lenta. Preferisce molta luce e annaffiature sporadiche. Il drenaggio è fondamentale."
+    },
+    "es": {
+      "common_name": "Collar de bebé",
+      "description": "Crassula rupestris es una suculenta compacta. Necesita mucha luz y riego escaso. El exceso de agua puede dañarla."
+    },
+    "pt": {
+      "common_name": "Colar de bebê",
+      "description": "Crassula rupestris é uma suculenta de folhas empilhadas. Gosta de luz intensa e pouca água. Cultive em solo bem drenado."
+    },
+    "ar": {
+      "common_name": "عقد الطفل",
+      "description": "Crassula rupestris نبات عصاري صغير. يفضل الضوء الساطع والري القليل. التربة جيدة التصريف ضرورية."
+    },
+    "hi": {
+      "common_name": "बेबी नेकलेस",
+      "description": "Crassula rupestris एक छोटा सक्युलेंट पौधा है। इसे तेज रोशनी और कम पानी चाहिए। अच्छी जल निकासी आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "婴儿项链景天",
+      "description": "Crassula rupestris 是一种紧凑的多肉植物。它需要充足光照和少量浇水。排水良好的土壤很重要。"
+    },
+    "ja": {
+      "common_name": "ベビーネックレス",
+      "description": "Crassula rupestris は葉が重なる多肉植物です。明るい光と控えめな水やりを好みます。水はけの良い土が必要です。"
+    },
+    "ko": {
+      "common_name": "베이비 목걸이",
+      "description": "Crassula rupestris는 층진 잎을 가진 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 배수가 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/53359/crassula-rupestris/details",
+      "https://www.sanbi.org/plant/crassula-rupestris",
+      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Crassulaceae/Crassula_rupestris/"
+    ]
+  }
+}

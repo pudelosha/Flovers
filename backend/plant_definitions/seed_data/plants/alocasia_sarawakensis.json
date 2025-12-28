@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_sarawakensis",
+  "name": "Alocasia Sarawakensis",
+  "latin": "Alocasia sarawakensis",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "alocasia_sarawakensis.jpg",
+  "image_thumb": "alocasia_sarawakensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière vive",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Lockeres Aroid-Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة خفيفة جيدة التصريف",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة ثابتة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Trudna pielęgnacja",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Difficile",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "देखभाल कठिन",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very large leaves",
+          "pl": "Bardzo duże liście",
+          "de": "Sehr große Blätter",
+          "fr": "Très grandes feuilles",
+          "it": "Foglie enormi",
+          "es": "Hojas muy grandes",
+          "pt": "Folhas enormes",
+          "ar": "أوراق ضخمة",
+          "hi": "बहुत बड़े पत्ते",
+          "zh": "巨大叶片",
+          "ja": "非常に大きい葉",
+          "ko": "매우 큰 잎"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Giant Alocasia",
+      "description": "Alocasia sarawakensis is a tropical aroid native to Borneo, known for its massive, glossy leaves. It requires warm temperatures, high humidity, and consistently moist but well-draining soil indoors."
+    },
+    "pl": {
+      "common_name": "Alokazja olbrzymia",
+      "description": "Alocasia sarawakensis pochodzi z Borneo i wyróżnia się ogromnymi liśćmi. W uprawie domowej wymaga ciepła, wysokiej wilgotności i stale lekko wilgotnego podłoża."
+    },
+    "de": {
+      "common_name": "Riesen-Alokasie",
+      "description": "Alocasia sarawakensis stammt aus Borneo und besitzt sehr große Blätter. Sie benötigt Wärme, hohe Luftfeuchtigkeit und gleichmäßig feuchtes Substrat."
+    },
+    "fr": {
+      "common_name": "Alocasia géant",
+      "description": "Alocasia sarawakensis est originaire de Bornéo et se distingue par ses feuilles géantes. Elle demande chaleur, forte humidité et un substrat constamment humide."
+    },
+    "it": {
+      "common_name": "Alocasia gigante",
+      "description": "Alocasia sarawakensis è una specie tropicale del Borneo con foglie molto grandi. In casa necessita di caldo, elevata umidità e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Alocasia gigante",
+      "description": "Alocasia sarawakensis es originaria de Borneo y destaca por sus hojas enormes. Requiere calor, alta humedad y un sustrato siempre ligeramente húmedo."
+    },
+    "pt": {
+      "common_name": "Alocásia gigante",
+      "description": "Alocasia sarawakensis é nativa de Bornéu e apresenta folhas gigantes. Precisa de calor, alta umidade e solo constantemente úmido em ambientes internos."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا عملاقة",
+      "description": "نبات Alocasia sarawakensis موطنه بورنيو ويتميز بأوراق ضخمة. يحتاج إلى دفء ورطوبة عالية وتربة رطبة باستمرار داخل المنزل."
+    },
+    "hi": {
+      "common_name": "जायंट एलोकैसिया",
+      "description": "Alocasia sarawakensis बोर्नियो का उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बहुत बड़ी होती हैं। इसे गर्मी, अधिक नमी और लगातार नम मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "巨型海芋",
+      "description": "Alocasia sarawakensis 原产于婆罗洲，以巨大的叶片著称。室内养护需要温暖环境、高湿度和持续湿润的基质。"
+    },
+    "ja": {
+      "common_name": "ジャイアントアロカシア",
+      "description": "Alocasia sarawakensis はボルネオ原産で非常に大きな葉を持ちます。室内では高温多湿と常に湿った用土が必要です。"
+    },
+    "ko": {
+      "common_name": "자이언트 알로카시아",
+      "description": "Alocasia sarawakensis는 보르네오 원산의 대형 잎을 가진 식물입니다. 실내에서는 따뜻함과 높은 습도, 지속적으로 촉촉한 토양이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/187354/alocasia-sarawakensis/details",
+      "https://www.kew.org/plants/alocasia-sarawakensis",
+      "https://edis.ifas.ufl.edu/publication/EP486"
+    ]
+  }
+}

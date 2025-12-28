@@ -1,0 +1,238 @@
+{
+  "external_id": "chamaedorea_seifrizii",
+  "name": "Bamboo Palm",
+  "latin": "Chamaedorea seifrizii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "chamaedorea_seifrizii.jpg",
+  "image_thumb": "chamaedorea_seifrizii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido regolare",
+          "es": "Humedad regular",
+          "pt": "Umidade regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "普通湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping palm",
+          "pl": "Palma kępowa",
+          "de": "Horstbildende Palme",
+          "fr": "Palmier en touffe",
+          "it": "Palma cespitosa",
+          "es": "Palmera en mata",
+          "pt": "Palmeira entouceirada",
+          "ar": "نخيل متكتل",
+          "hi": "झाड़ीदार ताड़",
+          "zh": "丛生棕榈",
+          "ja": "株立ちヤシ",
+          "ko": "군생 야자"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bamboo Palm",
+      "description": "Chamaedorea seifrizii is a clumping palm native to Central America. It is widely grown indoors for its tolerance of moderate light and ease of care. The plant prefers evenly moist soil and stable indoor temperatures."
+    },
+    "pl": {
+      "common_name": "Palma bambusowa",
+      "description": "Chamaedorea seifrizii to kępowa palma pochodząca z Ameryki Środkowej. Dobrze rośnie w warunkach domowych przy umiarkowanym świetle. Wymaga regularnego podlewania i przepuszczalnego podłoża."
+    },
+    "de": {
+      "common_name": "Bambuspalme",
+      "description": "Chamaedorea seifrizii ist eine horstbildende Palme aus Mittelamerika. Sie eignet sich gut als Zimmerpflanze bei hellem, indirektem Licht. Gleichmäßige Wasserversorgung ist wichtig."
+    },
+    "fr": {
+      "common_name": "Palmier bambou",
+      "description": "Chamaedorea seifrizii est un palmier originaire d’Amérique centrale. Il est apprécié en intérieur pour sa facilité d’entretien. Le sol doit rester légèrement humide."
+    },
+    "it": {
+      "common_name": "Palma di bambù",
+      "description": "Chamaedorea seifrizii è una palma cespitosa dell’America Centrale. È adatta alla coltivazione in casa con luce indiretta. Preferisce un terreno costantemente umido ma drenante."
+    },
+    "es": {
+      "common_name": "Palmera bambú",
+      "description": "Chamaedorea seifrizii es una palmera originaria de Centroamérica. Se cultiva comúnmente en interiores por su resistencia. Necesita riego regular y buen drenaje."
+    },
+    "pt": {
+      "common_name": "Palmeira-bambu",
+      "description": "Chamaedorea seifrizii é uma palmeira nativa da América Central. É muito usada como planta de interior. Prefere solo levemente úmido e luz indireta."
+    },
+    "ar": {
+      "common_name": "نخيل الخيزران",
+      "description": "Chamaedorea seifrizii نخيل موطنه أمريكا الوسطى. يزرع كنبات داخلي لسهولة العناية به. يحتاج إلى تربة رطبة باعتدال وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "बैम्बू पाम",
+      "description": "Chamaedorea seifrizii मध्य अमेरिका की मूल पाम है। इसे घर के अंदर आसानी से उगाया जाता है। मिट्टी को हल्का नम रखना आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "竹棕",
+      "description": "Chamaedorea seifrizii 原产于中美洲。它常作为室内植物栽培，适应性强。喜欢明亮的散射光和微湿土壤。"
+    },
+    "ja": {
+      "common_name": "バンブーパーム",
+      "description": "Chamaedorea seifrizii は中米原産のヤシです。室内観葉植物として育てやすいです。土は適度に湿らせます。"
+    },
+    "ko": {
+      "common_name": "대나무야자",
+      "description": "Chamaedorea seifrizii는 중앙아메리카 원산의 야자입니다. 실내에서 키우기 쉬운 식물입니다. 흙은 촉촉하게 유지합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/3723/chamaedorea-seifrizii/details",
+      "https://edis.ifas.ufl.edu/publication/FP133",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a531"
+    ]
+  }
+}

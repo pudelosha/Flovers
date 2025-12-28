@@ -1,0 +1,237 @@
+{
+  "external_id": "drosera_capensis",
+  "name": "Cape Sundew",
+  "latin": "Drosera capensis",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 2,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "drosera_capensis.jpg",
+  "image_thumb": "drosera_capensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Luce intensa",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "شمس قوية",
+          "hi": "तेज धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic sandy",
+          "pl": "Kwaśna piaszczysta",
+          "de": "Sauer sandig",
+          "fr": "Acide sableux",
+          "it": "Acido sabbioso",
+          "es": "Ácido arenoso",
+          "pt": "Ácido arenoso",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय रेतीली",
+          "zh": "酸性沙质",
+          "ja": "酸性砂質",
+          "ko": "산성 모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep very wet",
+          "pl": "Stale mokre",
+          "de": "Sehr nass",
+          "fr": "Toujours humide",
+          "it": "Sempre bagnato",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "हमेशा गीला",
+          "zh": "始终湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–30°C",
+          "pl": "15–30°C",
+          "de": "15–30°C",
+          "fr": "15–30°C",
+          "it": "15–30°C",
+          "es": "15–30°C",
+          "pt": "15–30°C",
+          "ar": "15–30°م",
+          "hi": "15–30°C",
+          "zh": "15–30°C",
+          "ja": "15–30°C",
+          "ko": "15–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Rosette clump",
+          "pl": "Rozeta",
+          "de": "Rosette",
+          "fr": "Rosette",
+          "it": "Rosetta",
+          "es": "Roseta",
+          "pt": "Roseta",
+          "ar": "وردة",
+          "hi": "रोसेट",
+          "zh": "莲座状",
+          "ja": "ロゼット",
+          "ko": "로제트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cape Sundew",
+      "description": "Drosera capensis is a carnivorous plant native to South Africa. It captures insects with sticky leaves and thrives in bright light and constantly wet, acidic soil."
+    },
+    "pl": {
+      "common_name": "Rosiczka przylądkowa",
+      "description": "Drosera capensis to roślina owadożerna z Afryki Południowej. Łapie owady lepkimi liśćmi i wymaga jasnego światła oraz stale wilgotnego, kwaśnego podłoża."
+    },
+    "de": {
+      "common_name": "Kap-Sonnentau",
+      "description": "Drosera capensis ist eine fleischfressende Pflanze aus Südafrika. Sie fängt Insekten mit klebrigen Blättern und benötigt viel Licht sowie dauerhaft nasses, saures Substrat."
+    },
+    "fr": {
+      "common_name": "Rossolis du Cap",
+      "description": "Drosera capensis est une plante carnivore originaire d’Afrique du Sud. Elle attrape les insectes avec ses feuilles collantes et pousse en sol acide constamment humide."
+    },
+    "it": {
+      "common_name": "Drosera del Capo",
+      "description": "Drosera capensis è una pianta carnivora del Sudafrica. Cattura insetti con foglie appiccicose e richiede luce intensa e substrato acido sempre bagnato."
+    },
+    "es": {
+      "common_name": "Drosera del Cabo",
+      "description": "Drosera capensis es una planta carnívora de Sudáfrica. Atrapa insectos con hojas pegajosas y necesita mucha luz y suelo ácido siempre húmedo."
+    },
+    "pt": {
+      "common_name": "Drosera-do-Cabo",
+      "description": "Drosera capensis é uma planta carnívora da África do Sul. Captura insetos com folhas pegajosas e prefere luz intensa e solo ácido constantemente úmido."
+    },
+    "ar": {
+      "common_name": "دروسيرا الرأس",
+      "description": "Drosera capensis نبات لاحم موطنه جنوب أفريقيا. يصطاد الحشرات بأوراق لزجة ويحتاج إلى ضوء قوي وتربة حمضية رطبة باستمرار."
+    },
+    "hi": {
+      "common_name": "केप सनड्यू",
+      "description": "Drosera capensis दक्षिण अफ्रीका का एक कीटभक्षी पौधा है। यह चिपचिपी पत्तियों से कीड़े पकड़ता है और तेज रोशनी व लगातार गीली मिट्टी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "好望角茅膏菜",
+      "description": "Drosera capensis 原产于南非，是一种食虫植物。它用黏性叶片捕捉昆虫，适合强光和长期湿润的酸性土壤。"
+    },
+    "ja": {
+      "common_name": "ケープモウセンゴケ",
+      "description": "Drosera capensis は南アフリカ原産の食虫植物です。粘着性の葉で昆虫を捕らえ、強い光と常に湿った酸性土を好みます。"
+    },
+    "ko": {
+      "common_name": "케이프 끈끈이주걱",
+      "description": "Drosera capensis는 남아프리카 원산의 식충식물입니다. 끈적한 잎으로 곤충을 잡으며 밝은 빛과 항상 젖은 산성 토양을 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/103109/drosera-capensis/details",
+      "https://www.carnivorousplants.org/grow/guides/Dcapensis",
+      "https://www.botanicgardens.sa.gov.au/plant-index/drosera-capensis"
+    ]
+  }
+}

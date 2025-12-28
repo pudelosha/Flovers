@@ -1,0 +1,238 @@
+{
+  "external_id": "chrysanthemum_morifolium",
+  "name": "Chrysanthemum",
+  "latin": "Chrysanthemum morifolium",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "chrysanthemum_morifolium.jpg",
+  "image_thumb": "chrysanthemum_morifolium.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährstoffreich",
+          "fr": "Sol riche",
+          "it": "Terriccio ricco",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowana wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humidité régulière",
+          "it": "Umidità costante",
+          "es": "Riego regular",
+          "pt": "Umidade regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित सिंचाई",
+          "zh": "均匀浇水",
+          "ja": "均一な水やり",
+          "ko": "고른 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°م",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Zwykła wilg.",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻度有毒",
+          "ja": "軽い毒性",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Bushy clump",
+          "pl": "Kępiasty",
+          "de": "Buschig",
+          "fr": "Touffe dense",
+          "it": "Cespugliosa",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "نمو كثيف",
+          "hi": "घना विकास",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "덤불형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Florist’s chrysanthemum",
+      "description": "Chrysanthemum morifolium is a popular ornamental plant grown for its long-lasting, colorful blooms. It prefers bright sunlight, evenly moist soil, and cooler indoor temperatures during flowering."
+    },
+    "pl": {
+      "common_name": "Chryzantema wielkokwiatowa",
+      "description": "Chrysanthemum morifolium to popularna roślina ozdobna ceniona za trwałe kwiaty. Wymaga dużo światła, umiarkowanego podlewania i chłodniejszych warunków w czasie kwitnienia."
+    },
+    "de": {
+      "common_name": "Garten-Chrysantheme",
+      "description": "Chrysanthemum morifolium ist eine weit verbreitete Zierpflanze mit dekorativen Blüten. Sie benötigt viel Licht, gleichmäßige Wassergaben und eher kühle Temperaturen während der Blüte."
+    },
+    "fr": {
+      "common_name": "Chrysanthème des fleuristes",
+      "description": "Chrysanthemum morifolium est une plante ornementale très cultivée pour ses fleurs durables. Elle apprécie une forte luminosité, un sol humide mais drainé et des températures modérées."
+    },
+    "it": {
+      "common_name": "Crisantemo",
+      "description": "Chrysanthemum morifolium è una pianta ornamentale molto diffusa per la fioritura prolungata. Cresce bene con molta luce, irrigazione regolare e temperature fresche durante la fioritura."
+    },
+    "es": {
+      "common_name": "Crisantemo",
+      "description": "Chrysanthemum morifolium es una planta ornamental apreciada por sus flores duraderas. Necesita buena luz solar, riego constante y temperaturas moderadas en interior."
+    },
+    "pt": {
+      "common_name": "Crisântemo",
+      "description": "Chrysanthemum morifolium é uma planta ornamental popular pelas suas flores vistosas. Prefere sol pleno, solo levemente úmido e temperaturas mais amenas durante a floração."
+    },
+    "ar": {
+      "common_name": "الأقحوان",
+      "description": "Chrysanthemum morifolium نبات زينة مشهور بأزهاره طويلة العمر. يحتاج إلى ضوء قوي وري منتظم ودرجات حرارة معتدلة داخل المنزل."
+    },
+    "hi": {
+      "common_name": "गुलदाउदी",
+      "description": "Chrysanthemum morifolium एक लोकप्रिय सजावटी पौधा है जो अपने लंबे समय तक टिकने वाले फूलों के लिए जाना जाता है। इसे तेज रोशनी, नियमित पानी और मध्यम तापमान पसंद है।"
+    },
+    "zh": {
+      "common_name": "菊花",
+      "description": "Chrysanthemum morifolium 是一种常见的观赏植物，以花期长而闻名。它需要充足的光照、均匀的浇水和较凉爽的生长环境。"
+    },
+    "ja": {
+      "common_name": "キク",
+      "description": "Chrysanthemum morifolium は観賞用として広く栽培される植物です。明るい日光と適度な水やり、開花期の涼しい環境を好みます。"
+    },
+    "ko": {
+      "common_name": "국화",
+      "description": "Chrysanthemum morifolium 은 오랫동안 꽃을 감상할 수 있는 관상식물입니다. 충분한 햇빛과 규칙적인 물주기, 서늘한 온도를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/chrysanthemum/growing-guide",
+      "https://extension.umn.edu/houseplants/chrysanthemums",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-chrysanthemums/"
+    ]
+  }
+}

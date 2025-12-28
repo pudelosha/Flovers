@@ -1,0 +1,236 @@
+{
+  "external_id": "agave_parryi",
+  "name": "Parry's Agave",
+  "latin": "Agave parryi",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "agave_parryi.jpg",
+  "image_thumb": "agave_parryi.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Rare",
+          "it": "Raro",
+          "es": "Escaso",
+          "pt": "Pouco",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "少なめ",
+          "ko": "적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "弱い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Parry's agave",
+      "description": "Agave parryi is a compact, slow-growing agave native to the southwestern United States and northern Mexico. It thrives in full sun and very well-drained soil. Water sparingly and allow the soil to dry completely between waterings."
+    },
+    "pl": {
+      "common_name": "Agawa Parry’ego",
+      "description": "Agave parryi to zwarta, wolno rosnąca agawa z południowo-zachodnich USA i północnego Meksyku. Wymaga pełnego słońca i bardzo przepuszczalnego podłoża. Podlewać rzadko po całkowitym wyschnięciu ziemi."
+    },
+    "de": {
+      "common_name": "Parry-Agave",
+      "description": "Agave parryi ist eine kompakte, langsam wachsende Agave aus dem Südwesten der USA und Nordmexiko. Sie bevorzugt volle Sonne und gut durchlässiges Substrat. Nur sparsam gießen und Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Agave de Parry",
+      "description": "Agave parryi est une agave compacte à croissance lente originaire du sud-ouest des États-Unis et du nord du Mexique. Elle aime le plein soleil et un sol très drainant. Arroser rarement lorsque le sol est complètement sec."
+    },
+    "it": {
+      "common_name": "Agave di Parry",
+      "description": "Agave parryi è un’agave compatta a crescita lenta originaria del sud-ovest degli Stati Uniti e del Messico settentrionale. Predilige pieno sole e terreno ben drenato. Annaffiare poco e solo a substrato asciutto."
+    },
+    "es": {
+      "common_name": "Agave de Parry",
+      "description": "Agave parryi es una agave compacta de crecimiento lento originaria del suroeste de Estados Unidos y el norte de México. Necesita pleno sol y suelo muy drenante. Regar poco y solo cuando el sustrato esté seco."
+    },
+    "pt": {
+      "common_name": "Agave de Parry",
+      "description": "Agave parryi é uma agave compacta de crescimento lento, nativa do sudoeste dos EUA e do norte do México. Prefere sol pleno e solo bem drenado. Regar com moderação após a secagem do solo."
+    },
+    "ar": {
+      "common_name": "أغاف باري",
+      "description": "نبات أغاف باري نبات عصاري مدمج بطيء النمو موطنه جنوب غرب الولايات المتحدة وشمال المكسيك. يحتاج إلى شمس كاملة وتربة جيدة التصريف. يُسقى باعتدال بعد جفاف التربة تمامًا."
+    },
+    "hi": {
+      "common_name": "पैरी अगावे",
+      "description": "Agave parryi एक छोटा और धीमी गति से बढ़ने वाला अगावे है जो दक्षिण-पश्चिम अमेरिका और उत्तरी मेक्सिको का मूल निवासी है। इसे तेज धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। मिट्टी सूखने पर ही पानी दें।"
+    },
+    "zh": {
+      "common_name": "帕里龙舌兰",
+      "description": "Agave parryi 是一种生长缓慢、株型紧凑的龙舌兰，原产于美国西南部和墨西哥北部。喜全日照和良好排水的土壤。浇水要少，待土壤完全干燥后再浇。"
+    },
+    "ja": {
+      "common_name": "パリーアガベ",
+      "description": "アガベ・パリーは米国南西部とメキシコ北部原産の成長が遅いコンパクトな多肉植物です。直射日光と水はけの良い土を好みます。土が完全に乾いてから水やりします。"
+    },
+    "ko": {
+      "common_name": "패리 아가베",
+      "description": "Agave parryi는 미국 남서부와 멕시코 북부가 원산지인 성장 속도가 느린 아가베입니다. 강한 햇빛과 배수가 좋은 흙을 선호합니다. 흙이 완전히 마른 후 물을 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.desertmuseum.org/kids/oz/long-fact-sheets/Agave%20parryi.php",
+      "https://www.rhs.org.uk/plants/1767/agave-parryi/details",
+      "https://plants.ces.ncsu.edu/plants/agave-parryi/"
+    ]
+  }
+}

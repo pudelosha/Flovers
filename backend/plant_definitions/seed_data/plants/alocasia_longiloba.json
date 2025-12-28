@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_longiloba",
+  "name": "Alocasia Longiloba",
+  "latin": "Alocasia longiloba",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_longiloba.jpg",
+  "image_thumb": "alocasia_longiloba.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Indirect light",
+          "pl": "Światło pośrednie",
+          "de": "Indirektes Licht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "间接光照",
+          "ja": "間接光",
+          "ko": "간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierend",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿潤",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27 °م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27 ℃",
+          "ko": "18–27 ℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wysoką wilgoć",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime forte humidité",
+          "it": "Ama umidità alta",
+          "es": "Prefiere humedad alta",
+          "pt": "Gosta de umidade",
+          "ar": "رطوبة عالية مفضلة",
+          "hi": "उच्च आर्द्रता पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Croissance en touffe",
+          "it": "Crescita a ciuffi",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو متكتل",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生直立",
+          "ja": "株立ち",
+          "ko": "포기형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dragon's Tooth Alocasia",
+      "description": "Alocasia longiloba is a tropical aroid known for its narrow, arrow-shaped leaves with silver veins. It grows naturally in Southeast Asian rainforests and prefers warm, humid indoor conditions. Consistent moisture and bright indirect light support healthy growth."
+    },
+    "pl": {
+      "common_name": "Alokazja długolistna",
+      "description": "Alocasia longiloba to tropikalna roślina o wąskich, strzałkowatych liściach z jasnymi nerwami. Pochodzi z lasów deszczowych Azji Południowo-Wschodniej i najlepiej rośnie w ciepłych, wilgotnych warunkach domowych. Wymaga regularnego podlewania i światła pośredniego."
+    },
+    "de": {
+      "common_name": "Langlappige Alokasie",
+      "description": "Alocasia longiloba ist eine tropische Aronstabpflanze mit schmalen, pfeilförmigen Blättern und hellen Adern. Sie stammt aus südostasiatischen Regenwäldern und bevorzugt warme, feuchte Innenräume. Gleichmäßige Feuchtigkeit und indirektes Licht sind wichtig."
+    },
+    "fr": {
+      "common_name": "Alocasie longilobe",
+      "description": "Alocasia longiloba est une plante tropicale appréciée pour ses feuilles étroites et nervurées d'argent. Originaire des forêts humides d’Asie du Sud-Est, elle aime la chaleur et l’humidité en intérieur. Un arrosage régulier et une lumière indirecte sont recommandés."
+    },
+    "it": {
+      "common_name": "Alocasia longiloba",
+      "description": "Alocasia longiloba è una pianta tropicale con foglie strette a forma di freccia e venature chiare. Proviene dalle foreste pluviali del Sud-Est asiatico e predilige ambienti caldi e umidi. Necessita di luce indiretta e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Alocasia longiloba",
+      "description": "Alocasia longiloba es una planta tropical con hojas estrechas en forma de flecha y nervaduras plateadas. Es originaria de selvas del sudeste asiático y se adapta bien al interior cálido y húmedo. Requiere riego constante y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Alocasia longiloba",
+      "description": "Alocasia longiloba é uma planta tropical de folhas estreitas e nervuras claras. Originária do Sudeste Asiático, prefere ambientes internos quentes e úmidos. Luz indireta e regas regulares ajudam no seu desenvolvimento."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا لونغيلوبا",
+      "description": "نبات ألوكاسيا لونغيلوبا استوائي يتميز بأوراق ضيقة مع عروق فاتحة. موطنه الغابات المطيرة في جنوب شرق آسيا ويحتاج إلى دفء ورطوبة داخلية. يفضل الضوء غير المباشر والري المنتظم."
+    },
+    "hi": {
+      "common_name": "एलोकैसिया लॉन्गिलोबा",
+      "description": "Alocasia longiloba एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ संकरी और तीर के आकार की होती हैं। यह दक्षिण-पूर्व एशिया के वर्षावनों का मूल निवासी है और घर के अंदर गर्म व आर्द्र वातावरण पसंद करता है। नियमित पानी और अप्रत्यक्ष रोशनी आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "长裂海芋",
+      "description": "Alocasia longiloba 是一种热带观叶植物，叶片狭长并带有银色叶脉。原产于东南亚雨林，适合温暖湿润的室内环境。需要明亮的间接光和稳定的水分。"
+    },
+    "ja": {
+      "common_name": "アロカシア・ロンギロバ",
+      "description": "アロカシア・ロンギロバは細長い矢じり形の葉を持つ熱帯植物です。東南アジアの熱帯雨林原産で、室内では高温多湿を好みます。明るい間接光と定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "알로카시아 롱길로바",
+      "description": "알로카시아 롱길로바는 은색 맥이 있는 좁은 화살 모양 잎이 특징인 열대 식물입니다. 동남아시아 열대우림이 원산지이며 따뜻하고 습한 실내 환경을 선호합니다. 간접광과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/alocasia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a404",
+      "https://plants.ces.ncsu.edu/plants/alocasia/"
+    ]
+  }
+}

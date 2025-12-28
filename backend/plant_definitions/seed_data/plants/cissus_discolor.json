@@ -1,0 +1,238 @@
+{
+  "external_id": "cissus_discolor",
+  "name": "Rex Begonia Vine",
+  "latin": "Cissus discolor",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cissus_discolor.jpg",
+  "image_thumb": "cissus_discolor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta intensa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Dobrze przepuszczalne",
+          "de": "Gut drainierendes Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgotne",
+          "de": "Gleichmäßig feucht halten",
+          "fr": "Garder humide",
+          "it": "Mantenere umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "تربة رطبة باعتدال",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mäßiger Pflegeaufwand",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado moderado",
+          "pt": "Cuidado moderado",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18～27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wysoką wilgotność",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l'humidité élevée",
+          "it": "Preferisce umidità alta",
+          "es": "Prefiere alta humedad",
+          "pt": "Prefere alta umidade",
+          "ar": "يفضل رطوبة عالية",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletternde Ranke",
+          "fr": "Plante grimpante",
+          "it": "Rampicante",
+          "es": "Enredadera",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "चढ़ने वाली बेल",
+          "zh": "攀缘藤本",
+          "ja": "つる性植物",
+          "ko": "덩굴성 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rex Begonia Vine",
+      "description": "Cissus discolor is a tropical climbing vine known for its striking patterned leaves with silver and purple tones. It grows best indoors in bright, indirect light with evenly moist, well-draining soil."
+    },
+    "pl": {
+      "common_name": "Cissus dekoracyjny",
+      "description": "Cissus discolor to tropikalne pnącze o ozdobnych liściach z srebrnym i purpurowym wzorem. Najlepiej rośnie w jasnym, pośrednim świetle i stale lekko wilgotnym podłożu."
+    },
+    "de": {
+      "common_name": "Rex-Begonien-Wein",
+      "description": "Cissus discolor ist eine tropische Kletterpflanze mit auffällig gemusterten Blättern. Sie gedeiht in hellem, indirektem Licht und gleichmäßig feuchtem, gut drainiertem Substrat."
+    },
+    "fr": {
+      "common_name": "Vigne bégonia rex",
+      "description": "Cissus discolor est une plante grimpante tropicale aux feuilles décoratives argentées et pourpres. Elle préfère une lumière vive indirecte et un sol drainant maintenu légèrement humide."
+    },
+    "it": {
+      "common_name": "Cisso decorativo",
+      "description": "Cissus discolor è una pianta rampicante tropicale apprezzata per le sue foglie ornamentali. In casa cresce bene con luce indiretta intensa e terreno costantemente umido ma drenante."
+    },
+    "es": {
+      "common_name": "Cissus ornamental",
+      "description": "Cissus discolor es una enredadera tropical de hojas muy decorativas. Se desarrolla mejor con luz indirecta brillante y riego regular en un sustrato bien drenado."
+    },
+    "pt": {
+      "common_name": "Cisso ornamental",
+      "description": "Cissus discolor é uma trepadeira tropical conhecida pelas folhas decorativas. Prefere luz indireta brilhante e solo bem drenado mantido levemente úmido."
+    },
+    "ar": {
+      "common_name": "سيسوس مزخرف",
+      "description": "Cissus discolor نبات متسلق استوائي يتميز بأوراق مزخرفة. ينجح داخل المنزل مع ضوء ساطع غير مباشر وتربة رطبة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "रेक्स बेगोनिया बेल",
+      "description": "Cissus discolor एक उष्णकटिबंधीय बेल है जिसकी पत्तियाँ आकर्षक होती हैं। यह घर के अंदर तेज़ अप्रत्यक्ष रोशनी और हल्की नम मिट्टी में अच्छी बढ़त दिखाती है।"
+    },
+    "zh": {
+      "common_name": "彩叶西萨藤",
+      "description": "Cissus discolor 是一种热带攀缘植物，以其银紫色花纹叶片著称。适合在明亮散射光和排水良好的湿润土壤中生长。"
+    },
+    "ja": {
+      "common_name": "シッサス・ディスカラー",
+      "description": "Cissus discolor は美しい模様の葉を持つ熱帯性のつる植物です。明るい間接光と適度に湿った水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "시서스 디스컬러",
+      "description": "Cissus discolor는 무늬가 화려한 잎을 가진 열대 덩굴식물입니다. 밝은 간접광과 배수가 좋은 촉촉한 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/248034/cissus-discolor/details",
+      "https://plants.ces.ncsu.edu/plants/cissus-discolor/",
+      "https://www.gardenersworld.com/plants/cissus-discolor/"
+    ]
+  }
+}

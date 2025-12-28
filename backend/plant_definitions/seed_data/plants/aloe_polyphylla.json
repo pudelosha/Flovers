@@ -1,0 +1,236 @@
+{
+  "external_id": "aloe_polyphylla",
+  "name": "Spiral Aloe",
+  "latin": "Aloe polyphylla",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aloe_polyphylla.jpg",
+  "image_thumb": "aloe_polyphylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Very well-drained",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenado",
+          "ar": "تصريف ممتاز",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega esparsa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging",
+          "pl": "Trudna",
+          "de": "Anspruchsvoll",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool preferred",
+          "pl": "Lubi chłód",
+          "de": "Kühl bevorzugt",
+          "fr": "Aime le frais",
+          "it": "Preferisce fresco",
+          "es": "Prefiere fresco",
+          "pt": "Prefere fresco",
+          "ar": "يفضل البرودة",
+          "hi": "ठंडा पसंद",
+          "zh": "喜凉爽",
+          "ja": "冷涼好み",
+          "ko": "서늘함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spiral Aloe",
+      "description": "Aloe polyphylla is a rare aloe native to the mountains of Lesotho. It is known for its perfect spiral leaf arrangement and preference for cool, sunny conditions. It is difficult to grow indoors and requires excellent drainage."
+    },
+    "pl": {
+      "common_name": "Aloes spiralny",
+      "description": "Aloe polyphylla to rzadki aloes pochodzący z gór Lesotho. Słynie z idealnie spiralnego układu liści i preferuje chłodne, słoneczne warunki. W uprawie domowej jest trudny i wymaga doskonałego drenażu."
+    },
+    "de": {
+      "common_name": "Spiral-Aloe",
+      "description": "Aloe polyphylla ist eine seltene Aloe aus den Bergen Lesothos. Sie ist bekannt für ihre spiralförmige Blattanordnung und benötigt kühle, sonnige Standorte. Die Art ist anspruchsvoll in Kultur und braucht sehr gute Drainage."
+    },
+    "fr": {
+      "common_name": "Aloès spiralé",
+      "description": "Aloe polyphylla est un aloès rare originaire des montagnes du Lesotho. Il est célèbre pour sa spirale parfaite de feuilles et préfère des conditions fraîches et ensoleillées. Sa culture est délicate et nécessite un drainage excellent."
+    },
+    "it": {
+      "common_name": "Aloe spirale",
+      "description": "Aloe polyphylla è un aloe raro originario delle montagne del Lesotho. È noto per la disposizione a spirale delle foglie e predilige condizioni fresche e soleggiate. È difficile da coltivare in vaso e richiede un drenaggio eccellente."
+    },
+    "es": {
+      "common_name": "Aloe espiral",
+      "description": "Aloe polyphylla es un aloe raro originario de las montañas de Lesoto. Destaca por su perfecta espiral de hojas y prefiere climas frescos y soleados. Su cultivo es exigente y necesita un drenaje excelente."
+    },
+    "pt": {
+      "common_name": "Aloe espiral",
+      "description": "Aloe polyphylla é um aloe raro nativo das montanhas do Lesoto. É conhecido pela espiral perfeita das folhas e prefere clima fresco e sol pleno. O cultivo é difícil e exige drenagem excelente."
+    },
+    "ar": {
+      "common_name": "الألوة الحلزونية",
+      "description": "Aloe polyphylla نبات نادر موطنه جبال ليسوتو. يتميز بشكل حلزوني مثالي للأوراق ويفضل الأجواء الباردة والمشمسة. زراعته صعبة ويتطلب تصريفًا ممتازًا للتربة."
+    },
+    "hi": {
+      "common_name": "स्पाइरल एलो",
+      "description": "Aloe polyphylla लेसोथो के पहाड़ी क्षेत्रों का दुर्लभ एलो है। यह अपनी पत्तियों की सुंदर सर्पिल संरचना और ठंडी, धूप वाली जलवायु के लिए जाना जाता है। इसे उगाना कठिन है और अच्छी जल निकासी आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "螺旋芦荟",
+      "description": "Aloe polyphylla 原产于莱索托山区，是一种稀有芦荟。它以完美的螺旋叶序和喜凉爽、强光环境而闻名。栽培难度高，需要极佳的排水条件。"
+    },
+    "ja": {
+      "common_name": "スパイラルアロエ",
+      "description": "Aloe polyphylla はレソトの山岳地帯原産の希少なアロエです。葉が美しい螺旋状に並び、涼しく日当たりの良い環境を好みます。栽培は難しく、排水性が重要です。"
+    },
+    "ko": {
+      "common_name": "스파이럴 알로에",
+      "description": "Aloe polyphylla는 레소토 산악 지대 원산의 희귀한 알로에입니다. 완벽한 나선형 잎 배열과 서늘하고 햇빛이 풍부한 환경을 선호합니다. 재배가 까다롭고 배수가 매우 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/aloe-polyphylla",
+      "https://www.succulentsociety.org/resources/spiral-aloe/",
+      "https://www.rhs.org.uk/plants/142/aloe-polyphylla/details"
+    ]
+  }
+}

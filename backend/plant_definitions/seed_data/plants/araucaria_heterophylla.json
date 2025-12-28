@@ -1,0 +1,238 @@
+{
+  "external_id": "araucaria_heterophylla",
+  "name": "Norfolk Island Pine",
+  "latin": "Araucaria heterophylla",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "araucaria_heterophylla.jpg",
+  "image_thumb": "araucaria_heterophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic well-drained",
+          "pl": "Kwaśna przepuszczalna",
+          "de": "Sauer durchlässig",
+          "fr": "Acide drainant",
+          "it": "Acido drenante",
+          "es": "Ácido drenante",
+          "pt": "Ácido drenado",
+          "ar": "تربة حمضية جيدة",
+          "hi": "अम्लीय जलनिकास",
+          "zh": "酸性排水土",
+          "ja": "酸性排水土",
+          "ko": "산성 배수토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido regolare",
+          "es": "Humedad regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "保持微湿",
+          "ja": "適度な湿り",
+          "ko": "고른 습도"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average home",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य आर्द्रता",
+          "zh": "普通湿度",
+          "ja": "平均的",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic pets",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻度有毒",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow upright",
+          "pl": "Wolny pionowy",
+          "de": "Langsam aufrecht",
+          "fr": "Lent dressé",
+          "it": "Lento eretto",
+          "es": "Lento erguido",
+          "pt": "Lento ereto",
+          "ar": "نمو بطيء",
+          "hi": "धीमी सीधी वृद्धि",
+          "zh": "缓慢直立",
+          "ja": "ゆっくり直立",
+          "ko": "느린 직립"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Norfolk Island Pine",
+      "description": "Araucaria heterophylla is an evergreen conifer often grown indoors as a decorative tree. It prefers bright, indirect light and evenly moist, well-drained acidic soil. Growth is slow and it adapts well to typical indoor conditions."
+    },
+    "pl": {
+      "common_name": "Araukaria wyniosła",
+      "description": "Araucaria heterophylla to zimozielone drzewo iglaste często uprawiane w domu. Lubi jasne, rozproszone światło oraz umiarkowanie wilgotne, kwaśne podłoże. Rośnie wolno i dobrze znosi warunki domowe."
+    },
+    "de": {
+      "common_name": "Norfolk-Tanne",
+      "description": "Araucaria heterophylla ist ein immergrüner Nadelbaum für den Innenbereich. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte, saure Erde. Das Wachstum ist langsam und gut kontrollierbar."
+    },
+    "fr": {
+      "common_name": "Pin de Norfolk",
+      "description": "Araucaria heterophylla est un conifère persistant cultivé en intérieur. Elle aime une lumière vive indirecte et un sol acide bien drainé. Sa croissance est lente et régulière."
+    },
+    "it": {
+      "common_name": "Pino di Norfolk",
+      "description": "Araucaria heterophylla è una conifera sempreverde coltivata come pianta da interno. Richiede luce intensa indiretta e terreno acido ben drenato. La crescita è lenta e ordinata."
+    },
+    "es": {
+      "common_name": "Pino de Norfolk",
+      "description": "Araucaria heterophylla es una conífera perenne cultivada en interiores. Prefiere luz brillante indirecta y suelo ácido bien drenado. Su crecimiento es lento y estable."
+    },
+    "pt": {
+      "common_name": "Pinheiro-de-Norfolk",
+      "description": "Araucaria heterophylla é uma conífera perene cultivada em ambientes internos. Gosta de luz indireta brilhante e solo ácido bem drenado. O crescimento é lento."
+    },
+    "ar": {
+      "common_name": "صنوبر نورفولك",
+      "description": "Araucaria heterophylla شجرة مخروطية دائمة الخضرة تزرع داخل المنازل. تفضل الضوء الساطع غير المباشر وتربة حمضية جيدة التصريف. نموها بطيء ومنتظم."
+    },
+    "hi": {
+      "common_name": "नॉरफ़ॉक पाइन",
+      "description": "Araucaria heterophylla एक सदाबहार शंकुधारी पौधा है जो घर के अंदर उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी और अच्छी जलनिकासी वाली अम्लीय मिट्टी पसंद है। इसकी वृद्धि धीमी होती है।"
+    },
+    "zh": {
+      "common_name": "诺福克松",
+      "description": "Araucaria heterophylla 是常见的室内常绿针叶树。它喜欢明亮的散射光和排水良好的酸性土壤。生长缓慢且稳定。"
+    },
+    "ja": {
+      "common_name": "ノーフォークマツ",
+      "description": "Araucaria heterophylla は観葉用に育てられる常緑針葉樹です。明るい間接光と水はけの良い酸性土を好みます。成長はゆっくりです。"
+    },
+    "ko": {
+      "common_name": "노퍽소나무",
+      "description": "Araucaria heterophylla 는 실내에서 키우는 상록 침엽수입니다. 밝은 간접광과 배수가 좋은 산성 토양을 선호합니다. 생장은 느린 편입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/araucariah/heterophylla/details",
+      "https://edis.ifas.ufl.edu/publication/FP040",
+      "https://www.kew.org/plants/araucaria-heterophylla"
+    ]
+  }
+}

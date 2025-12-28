@@ -1,0 +1,237 @@
+{
+  "external_id": "delosperma_cooperi",
+  "name": "Delosperma cooperi",
+  "latin": "Delosperma cooperi",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "delosperma_cooperi.jpg",
+  "image_thumb": "delosperma_cooperi.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainé",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Oszczędne",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Scarso",
+          "es": "Escaso",
+          "pt": "Pouca",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "控えめ",
+          "ko": "적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गरम",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Groundcover",
+          "pl": "Okrywowa",
+          "de": "Bodendecker",
+          "fr": "Couvre-sol",
+          "it": "Tapissante",
+          "es": "Cubresuelos",
+          "pt": "Forração",
+          "ar": "غطاء أرضي",
+          "hi": "भूमि आवरण",
+          "zh": "地被",
+          "ja": "グランドカバー",
+          "ko": "지피식물"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ice plant",
+      "description": "Delosperma cooperi is a low-growing succulent groundcover native to southern Africa. It produces bright daisy-like flowers and thrives in full sun with excellent drainage."
+    },
+    "pl": {
+      "common_name": "Delosperma",
+      "description": "Delosperma cooperi to niska roślina sukulentowa pochodząca z południowej Afryki. Kwitnie intensywnie i najlepiej rośnie w pełnym słońcu oraz przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Mittagsblume",
+      "description": "Delosperma cooperi ist eine niedrig wachsende sukkulente Pflanze aus dem südlichen Afrika. Sie bevorzugt volle Sonne und sehr gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Plante des glaces",
+      "description": "Delosperma cooperi est une plante succulente tapissante originaire d’Afrique australe. Elle aime le plein soleil et un sol très bien drainé."
+    },
+    "it": {
+      "common_name": "Pianta del ghiaccio",
+      "description": "Delosperma cooperi è una succulenta tappezzante originaria dell’Africa meridionale. Cresce bene in pieno sole e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Planta del hielo",
+      "description": "Delosperma cooperi es una suculenta cubresuelos originaria del sur de África. Requiere pleno sol y suelos con excelente drenaje."
+    },
+    "pt": {
+      "common_name": "Planta-do-gelo",
+      "description": "Delosperma cooperi é uma suculenta rasteira nativa do sul da África. Desenvolve-se melhor em sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "نبات الجليد",
+      "description": "ديلوسبيرما كوبري نبات عصاري منخفض من جنوب أفريقيا. يفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "आइस प्लांट",
+      "description": "डेलोस्पर्मा कूपेरी दक्षिणी अफ्रीका की एक रसीली भूमि आवरण पौधा है। यह पूरी धूप और अच्छी जल निकास वाली मिट्टी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "冰花",
+      "description": "Delosperma cooperi 是原产于非洲南部的多肉地被植物。喜全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "アイスプラント",
+      "description": "デロスペルマ・クーペリーは南アフリカ原産の多肉植物です。日当たりと水はけの良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "아이스플랜트",
+      "description": "델로스페르마 쿠페리는 남아프리카 원산의 다육성 지피식물입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5051/delosperma-cooperi/details",
+      "https://extension.colostate.edu/topic-areas/yard-garden/ice-plants-7-406/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c547"
+    ]
+  }
+}

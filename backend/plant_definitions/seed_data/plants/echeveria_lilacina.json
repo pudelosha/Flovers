@@ -1,0 +1,236 @@
+{
+  "external_id": "echeveria_lilacina",
+  "name": "Ghost Echeveria",
+  "latin": "Echeveria lilacina",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "echeveria_lilacina.jpg",
+  "image_thumb": "echeveria_lilacina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "شمس ساطعة",
+          "hi": "तेज धूप",
+          "zh": "强光",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة مصرفة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadko podlewać",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoor",
+          "pl": "Ciepłe wnętrze",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गरम",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgoć",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ghost Echeveria",
+      "description": "Echeveria lilacina is a rosette-forming succulent native to Mexico. It has pale silvery-lilac leaves and thrives in bright light with minimal watering. It is well suited to indoor cultivation."
+    },
+    "pl": {
+      "common_name": "Echeveria duch",
+      "description": "Echeveria lilacina to sukulent tworzący rozety, pochodzący z Meksyku. Ma jasne, srebrnoliliowe liście i wymaga dużo światła oraz rzadkiego podlewania. Dobrze rośnie w warunkach domowych."
+    },
+    "de": {
+      "common_name": "Geister-Echeverie",
+      "description": "Echeveria lilacina ist eine rosettenbildende Sukkulente aus Mexiko. Sie besitzt silbrig-lila Blätter und benötigt viel Licht bei wenig Wasser. Sie eignet sich gut für die Zimmerkultur."
+    },
+    "fr": {
+      "common_name": "Échévéria fantôme",
+      "description": "Echeveria lilacina est une succulente en rosette originaire du Mexique. Ses feuilles sont pâles et lilas, et elle préfère une forte luminosité avec peu d’arrosage. Elle se cultive facilement en intérieur."
+    },
+    "it": {
+      "common_name": "Echeveria fantasma",
+      "description": "Echeveria lilacina è una succulenta a rosetta originaria del Messico. Presenta foglie grigio-lilla e richiede molta luce con annaffiature limitate. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Echeveria fantasma",
+      "description": "Echeveria lilacina es una suculenta en roseta originaria de México. Tiene hojas de color lila pálido y necesita mucha luz con riego escaso. Es ideal como planta de interior."
+    },
+    "pt": {
+      "common_name": "Echeveria fantasma",
+      "description": "Echeveria lilacina é uma suculenta em forma de roseta nativa do México. Possui folhas lilases claras e prefere luz intensa com pouca rega. Adapta-se bem a ambientes internos."
+    },
+    "ar": {
+      "common_name": "إشيفيريا الشبح",
+      "description": "إشيفيريا ليلاسينـا نبات عصاري موطنه المكسيك وينمو على شكل وردة. يتميز بأوراق فاتحة مائلة إلى الليلكي ويحتاج إلى ضوء قوي وري قليل. مناسب للزراعة داخل المنزل."
+    },
+    "hi": {
+      "common_name": "घोस्ट एचेवेरिया",
+      "description": "एचेवेरिया लिलासिना मेक्सिको का एक रसीला पौधा है जो रोसेट के रूप में बढ़ता है। इसके पत्ते हल्के बैंगनी रंग के होते हैं और इसे तेज रोशनी व कम पानी चाहिए। यह घर के अंदर अच्छी तरह उगता है।"
+    },
+    "zh": {
+      "common_name": "幽灵拟石莲",
+      "description": "拟石莲花幽灵种原产于墨西哥，为莲座状多肉植物。叶片呈浅银紫色，喜强光、少浇水。非常适合室内养护。"
+    },
+    "ja": {
+      "common_name": "ゴーストエケベリア",
+      "description": "エケベリア・リラシナはメキシコ原産の多肉植物です。淡い紫銀色の葉を持ち、強い光と控えめな水やりを好みます。室内栽培に適しています。"
+    },
+    "ko": {
+      "common_name": "고스트 에케베리아",
+      "description": "에케베리아 리라시나는 멕시코 원산의 로제트형 다육식물입니다. 은은한 연보라색 잎을 가지며 밝은 빛과 적은 물을 선호합니다. 실내에서 키우기 좋습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/367838/echeveria-lilacina/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276563"
+    ]
+  }
+}

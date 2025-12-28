@@ -1,0 +1,238 @@
+{
+  "external_id": "cuphea_ignea",
+  "name": "Cigar Plant",
+  "latin": "Cuphea ignea",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cuphea_ignea.jpg",
+  "image_thumb": "cuphea_ignea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "volle Sonne",
+          "fr": "plein soleil",
+          "it": "pieno sole",
+          "es": "pleno sol",
+          "pt": "sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained",
+          "pl": "przepuszczalna",
+          "de": "durchlässig",
+          "fr": "drainé",
+          "it": "ben drenato",
+          "es": "drenado",
+          "pt": "bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "regular",
+          "pl": "regularne",
+          "de": "regelmäßig",
+          "fr": "régulier",
+          "it": "regolare",
+          "es": "regular",
+          "pt": "regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期的",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "leicht",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "cálido",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "average",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietrująca",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "bushy",
+          "pl": "krzaczasta",
+          "de": "buschig",
+          "fr": "buissonnant",
+          "it": "cespugliosa",
+          "es": "arbustiva",
+          "pt": "arbustiva",
+          "ar": "كثيف",
+          "hi": "झाड़ीदार",
+          "zh": "丛生",
+          "ja": "茂る",
+          "ko": "덤불형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cigar Plant",
+      "description": "Cuphea ignea is a compact flowering plant known for its tubular red-orange blooms. It prefers bright sunlight and regular watering. Commonly grown as a houseplant or seasonal outdoor ornamental."
+    },
+    "pl": {
+      "common_name": "Kufea ognista",
+      "description": "Cuphea ignea to niewielka roślina kwitnąca o rurkowatych czerwono-pomarańczowych kwiatach. Lubi dużo słońca i regularne podlewanie. Często uprawiana w donicach."
+    },
+    "de": {
+      "common_name": "Zigarrenblume",
+      "description": "Cuphea ignea ist eine kompakte Blühpflanze mit röhrenförmigen roten Blüten. Sie benötigt viel Licht und gleichmäßige Wassergaben. Geeignet für Innenräume oder den Sommer im Freien."
+    },
+    "fr": {
+      "common_name": "Plante cigare",
+      "description": "Cuphea ignea est une plante fleurie compacte aux fleurs tubulaires rouge orangé. Elle apprécie le plein soleil et un arrosage régulier. Elle est souvent cultivée en pot."
+    },
+    "it": {
+      "common_name": "Pianta sigaro",
+      "description": "Cuphea ignea è una pianta compatta con fiori tubolari rosso-arancio. Richiede molta luce e annaffiature regolari. Adatta per interni luminosi o balconi."
+    },
+    "es": {
+      "common_name": "Planta cigarro",
+      "description": "Cuphea ignea es una planta ornamental compacta con flores tubulares rojas. Prefiere sol directo y riego regular. Se cultiva comúnmente en macetas."
+    },
+    "pt": {
+      "common_name": "Planta-charuto",
+      "description": "Cuphea ignea é uma planta compacta com flores tubulares vermelho-alaranjadas. Necessita de bastante sol e rega regular. Muito usada como ornamental."
+    },
+    "ar": {
+      "common_name": "نبات السيجار",
+      "description": "Cuphea ignea نبات مزهر صغير يتميز بأزهاره الأنبوبية الحمراء. يحتاج إلى ضوء قوي وري منتظم. يزرع غالبًا في الأصص."
+    },
+    "hi": {
+      "common_name": "सिगार पौधा",
+      "description": "Cuphea ignea एक छोटा फूलदार पौधा है जिसमें नलिकाकार लाल फूल होते हैं। इसे तेज धूप और नियमित पानी की आवश्यकता होती है। गमलों में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "雪茄花",
+      "description": "Cuphea ignea 是一种紧凑型开花植物，具有红橙色管状花朵。喜充足阳光和规律浇水。常用于盆栽观赏。"
+    },
+    "ja": {
+      "common_name": "シガープラント",
+      "description": "Cuphea ignea は赤橙色の筒状の花を咲かせる小型植物です。明るい日光と定期的な水やりを好みます。鉢植えに適しています。"
+    },
+    "ko": {
+      "common_name": "시가 플랜트",
+      "description": "Cuphea ignea는 붉은색 관 모양 꽃이 특징인 소형 개화식물입니다. 강한 햇빛과 규칙적인 물주기가 필요합니다. 화분 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a580",
+      "https://www.rhs.org.uk/plants/4550/cuphea-ignea/details",
+      "https://edis.ifas.ufl.edu/publication/FP162"
+    ]
+  }
+}

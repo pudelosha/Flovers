@@ -1,0 +1,237 @@
+{
+  "external_id": "ariocarpus_fissuratus",
+  "name": "Ariocarpus fissuratus",
+  "latin": "Ariocarpus fissuratus",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 36,
+  "image_hero": "ariocarpus_fissuratus.jpg",
+  "image_thumb": "ariocarpus_fissuratus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Gritty cactus soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Very sparse",
+          "pl": "Bardzo rzadko",
+          "de": "Sehr selten",
+          "fr": "Très rare",
+          "it": "Molto raro",
+          "es": "Muy escaso",
+          "pt": "Muito pouco",
+          "ar": "ري نادر",
+          "hi": "बहुत कम पानी",
+          "zh": "极少浇水",
+          "ja": "水やり極少",
+          "ko": "물 매우 적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm, dry",
+          "pl": "Ciepło i sucho",
+          "de": "Warm und trocken",
+          "fr": "Chaud et sec",
+          "it": "Caldo e secco",
+          "es": "Cálido y seco",
+          "pt": "Quente e seco",
+          "ar": "دافئ وجاف",
+          "hi": "गर्म और शुष्क",
+          "zh": "温暖干燥",
+          "ja": "暖かく乾燥",
+          "ko": "따뜻하고 건조"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very slow",
+          "pl": "Bardzo wolny",
+          "de": "Sehr langsam",
+          "fr": "Très lente",
+          "it": "Molto lenta",
+          "es": "Muy lento",
+          "pt": "Muito lento",
+          "ar": "بطيء جدًا",
+          "hi": "बहुत धीमी",
+          "zh": "生长极慢",
+          "ja": "成長が遅い",
+          "ko": "매우 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Living Rock Cactus",
+      "description": "Ariocarpus fissuratus is a small, spineless cactus native to limestone deserts of Texas and northern Mexico. It grows extremely slowly and relies on excellent drainage and bright sun. Overwatering is the most common cause of failure."
+    },
+    "pl": {
+      "common_name": "Kaktus żywy kamień",
+      "description": "Ariocarpus fissuratus to niewielki, bezkolcowy kaktus z suchych obszarów Teksasu i Meksyku. Rośnie bardzo wolno i wymaga silnego światła oraz doskonałego drenażu. Nadmiar wody łatwo prowadzi do gnicia."
+    },
+    "de": {
+      "common_name": "Lebender Felsenkaktus",
+      "description": "Ariocarpus fissuratus ist ein kleiner, dornenloser Kaktus aus den Kalkwüsten von Texas und Mexiko. Er wächst extrem langsam und benötigt volle Sonne sowie sehr durchlässiges Substrat. Zu viel Wasser führt schnell zu Fäulnis."
+    },
+    "fr": {
+      "common_name": "Cactus roche vivante",
+      "description": "Ariocarpus fissuratus est un petit cactus sans épines originaire des déserts calcaires du Texas et du Mexique. Sa croissance est très lente et il exige beaucoup de soleil et un sol très drainant. Un excès d’arrosage est dangereux."
+    },
+    "it": {
+      "common_name": "Cactus roccia viva",
+      "description": "Ariocarpus fissuratus è un piccolo cactus senza spine originario dei deserti calcarei del Texas e del Messico. Cresce molto lentamente e richiede pieno sole e terreno ben drenato. L’acqua in eccesso causa facilmente marciumi."
+    },
+    "es": {
+      "common_name": "Cactus roca viva",
+      "description": "Ariocarpus fissuratus es un cactus pequeño y sin espinas de los desiertos calcáreos de Texas y México. Su crecimiento es extremadamente lento y necesita sol intenso y sustrato muy drenante. El riego excesivo es perjudicial."
+    },
+    "pt": {
+      "common_name": "Cacto rocha viva",
+      "description": "Ariocarpus fissuratus é um pequeno cacto sem espinhos dos desertos calcários do Texas e do México. Cresce muito lentamente e necessita de sol pleno e solo bem drenado. O excesso de água causa apodrecimento."
+    },
+    "ar": {
+      "common_name": "صبار الصخرة الحية",
+      "description": "Ariocarpus fissuratus صبار صغير عديم الأشواك موطنه صحاري الحجر الجيري في تكساس والمكسيك. نموه بطيء جدًا ويتطلب شمسًا قوية وتصريفًا ممتازًا. الري الزائد يسبب تعفن الجذور."
+    },
+    "hi": {
+      "common_name": "लिविंग रॉक कैक्टस",
+      "description": "Ariocarpus fissuratus एक छोटा, बिना कांटों वाला कैक्टस है जो टेक्सास और मेक्सिको के चूना-पत्थर वाले रेगिस्तानों का मूल निवासी है। इसकी वृद्धि बहुत धीमी होती है और इसे तेज धूप व अच्छी जल निकासी चाहिए। अधिक पानी नुकसानदायक है।"
+    },
+    "zh": {
+      "common_name": "裂岩牡丹",
+      "description": "Ariocarpus fissuratus 原产于美国德州和墨西哥的石灰岩沙漠，是一种无刺小型仙人掌。其生长极其缓慢，需要强光和极佳的排水条件。浇水过多容易腐烂。"
+    },
+    "ja": {
+      "common_name": "裂岩牡丹",
+      "description": "Ariocarpus fissuratus はテキサス州やメキシコの石灰岩砂漠原産の小型で無刺のサボテンです。成長は非常に遅く、強い日光と優れた排水性が必要です。水の与えすぎは枯死の原因になります。"
+    },
+    "ko": {
+      "common_name": "아리오카르푸스 피수라투스",
+      "description": "Ariocarpus fissuratus는 미국 텍사스와 멕시코의 석회암 사막이 원산인 작은 무가시 선인장입니다. 생장이 매우 느리며 강한 햇빛과 뛰어난 배수가 필요합니다. 과습은 치명적입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/ariocarpus-fissuratus",
+      "https://llifle.com/Encyclopedia/CACTI/Family/Cactaceae/1156/Ariocarpus_fissuratus",
+      "https://www.cactusandsucculents.org.uk/cactus-and-succulent-care/"
+    ]
+  }
+}

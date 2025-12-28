@@ -1,0 +1,237 @@
+{
+  "external_id": "chamaerops_humilis",
+  "name": "Mediterranean Fan Palm",
+  "latin": "Chamaerops humilis",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "chamaerops_humilis.jpg",
+  "image_thumb": "chamaerops_humilis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobra przepuszczalność",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage léger",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Mild temperatures",
+          "pl": "Umiarkowana temp.",
+          "de": "Milde Temperaturen",
+          "fr": "Tempérées",
+          "it": "Temperature miti",
+          "es": "Temperaturas suaves",
+          "pt": "Temperaturas amenas",
+          "ar": "حرارة معتدلة",
+          "hi": "मध्यम तापमान",
+          "zh": "温和温度",
+          "ja": "温暖な気温",
+          "ko": "온화한 기온"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mediterranean Fan Palm",
+      "description": "Chamaerops humilis is a compact palm native to the Mediterranean region. It tolerates drought well and prefers bright light with minimal watering. This palm is suitable for indoor containers when given ample sun."
+    },
+    "pl": {
+      "common_name": "Karłatka niska",
+      "description": "Chamaerops humilis to niewielka palma pochodząca z rejonu Morza Śródziemnego. Dobrze znosi suszę i wymaga dużo światła oraz oszczędnego podlewania. Może być uprawiana w donicach w jasnych wnętrzach."
+    },
+    "de": {
+      "common_name": "Zwergpalme",
+      "description": "Chamaerops humilis ist eine kompakte Palme aus dem Mittelmeerraum. Sie ist trockenheitsverträglich und benötigt viel Licht sowie wenig Wasser. Geeignet für helle Innenräume."
+    },
+    "fr": {
+      "common_name": "Palmier nain",
+      "description": "Chamaerops humilis est un palmier compact originaire de la Méditerranée. Il supporte bien la sécheresse et préfère une forte luminosité avec peu d’arrosage. Adapté à la culture en pot."
+    },
+    "it": {
+      "common_name": "Palma nana",
+      "description": "Chamaerops humilis è una palma compatta originaria del Mediterraneo. Tollera bene la siccità e richiede molta luce con annaffiature limitate. Adatta alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Palmito",
+      "description": "Chamaerops humilis es una palmera compacta originaria del Mediterráneo. Tolera bien la sequía y necesita mucha luz con riego moderado. Puede cultivarse en maceta."
+    },
+    "pt": {
+      "common_name": "Palmeira-anã",
+      "description": "Chamaerops humilis é uma palmeira compacta do Mediterrâneo. Tolera bem a seca e prefere muita luz com pouca rega. Adequada para vasos em ambientes claros."
+    },
+    "ar": {
+      "common_name": "نخيل قزم متوسطي",
+      "description": "Chamaerops humilis نخيل صغير موطنه منطقة البحر المتوسط. يتحمل الجفاف ويفضل الضوء القوي مع ري محدود. مناسب للزراعة في الأصص."
+    },
+    "hi": {
+      "common_name": "मेडिटरेनियन फैन पाम",
+      "description": "Chamaerops humilis भूमध्यसागरीय क्षेत्र की एक छोटी ताड़ प्रजाति है। यह सूखे को सहन करती है और तेज रोशनी में कम पानी चाहती है। गमलों में उगाई जा सकती है।"
+    },
+    "zh": {
+      "common_name": "地中海矮棕榈",
+      "description": "Chamaerops humilis 原产于地中海地区，是一种紧凑型棕榈。耐旱，喜充足阳光，需水量低。适合盆栽养护。"
+    },
+    "ja": {
+      "common_name": "チャメロプス",
+      "description": "チャメロプス・フミリスは地中海原産のコンパクトなヤシです。乾燥に強く、強い光と控えめな水やりを好みます。鉢植えに適しています。"
+    },
+    "ko": {
+      "common_name": "지중해난야자",
+      "description": "Chamaerops humilis는 지중해 지역 원산의 작은 야자입니다. 건조에 강하고 밝은 빛과 적은 물을 선호합니다. 실내 화분 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/3857/chamaerops-humilis/details",
+      "https://plants.ces.ncsu.edu/plants/chamaerops-humilis/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=277877"
+    ]
+  }
+}

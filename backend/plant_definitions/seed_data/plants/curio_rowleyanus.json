@@ -1,0 +1,237 @@
+{
+  "external_id": "curio_rowleyanus",
+  "name": "String of Pearls",
+  "latin": "Curio rowleyanus",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "curio_rowleyanus.jpg",
+  "image_thumb": "curio_rowleyanus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24℃",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing succulent",
+          "pl": "Płożący sukulent",
+          "de": "Hängender Sukkulent",
+          "fr": "Succulente retombante",
+          "it": "Succulenta ricadente",
+          "es": "Suculenta colgante",
+          "pt": "Suculenta pendente",
+          "ar": "نبات متدلٍ",
+          "hi": "लटकने वाला पौधा",
+          "zh": "垂吊多肉",
+          "ja": "垂れ下がる",
+          "ko": "늘어지는 다육"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "String of Pearls",
+      "description": "Curio rowleyanus is a trailing succulent native to southern Africa. It stores water in its bead-like leaves and prefers bright indirect light. Overwatering is the most common cause of failure."
+    },
+    "pl": {
+      "common_name": "Starzec Rowleya",
+      "description": "Curio rowleyanus to zwisający sukulent pochodzący z południowej Afryki. Magazynuje wodę w kulistych liściach i lubi jasne światło. Nadmiar wody łatwo prowadzi do gnicia."
+    },
+    "de": {
+      "common_name": "Perlenschnur",
+      "description": "Curio rowleyanus ist eine hängende Sukkulente aus dem südlichen Afrika. Die kugeligen Blätter speichern Wasser und benötigen helles Licht. Zu häufiges Gießen schadet der Pflanze."
+    },
+    "fr": {
+      "common_name": "Plante collier de perles",
+      "description": "Curio rowleyanus est une succulente retombante originaire d’Afrique australe. Ses feuilles sphériques stockent l’eau et demandent une lumière vive. Un excès d’arrosage provoque la pourriture."
+    },
+    "it": {
+      "common_name": "Collana di perle",
+      "description": "Curio rowleyanus è una succulenta ricadente dell’Africa meridionale. Le foglie tonde immagazzinano acqua e richiedono luce intensa. L’eccesso d’acqua è dannoso."
+    },
+    "es": {
+      "common_name": "Planta rosario",
+      "description": "Curio rowleyanus es una suculenta colgante originaria del sur de África. Sus hojas esféricas almacenan agua y necesitan buena luz. El riego excesivo causa pudrición."
+    },
+    "pt": {
+      "common_name": "Colar de pérolas",
+      "description": "Curio rowleyanus é uma suculenta pendente do sul da África. As folhas arredondadas armazenam água e preferem luz intensa. O excesso de rega é prejudicial."
+    },
+    "ar": {
+      "common_name": "نبات عقد اللؤلؤ",
+      "description": "Curio rowleyanus نبات عصاري متدلٍ موطنه جنوب أفريقيا. أوراقه الكروية تخزن الماء وتحتاج ضوءًا ساطعًا. الري الزائد يسبب تعفن الجذور."
+    },
+    "hi": {
+      "common_name": "स्ट्रिंग ऑफ पर्ल्स",
+      "description": "Curio rowleyanus दक्षिणी अफ्रीका का लटकने वाला सक्यूलेंट है। इसकी गोल पत्तियाँ पानी संचित करती हैं और तेज रोशनी पसंद करती हैं। अधिक पानी हानिकारक है।"
+    },
+    "zh": {
+      "common_name": "珍珠吊兰",
+      "description": "Curio rowleyanus 原产于南部非洲，是一种垂吊多肉植物。其球形叶片可储水，适合明亮光照。浇水过多容易腐烂。"
+    },
+    "ja": {
+      "common_name": "グリーンネックレス",
+      "description": "Curio rowleyanus は南アフリカ原産の多肉植物です。玉状の葉に水を蓄え、明るい光を好みます。水のやりすぎは根腐れの原因です。"
+    },
+    "ko": {
+      "common_name": "진주줄식물",
+      "description": "Curio rowleyanus는 남부 아프리카 원산의 늘어지는 다육식물입니다. 구슬 모양 잎에 수분을 저장하며 밝은 빛을 선호합니다. 과습에 약합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/curio/rowleyanus/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b831",
+      "https://plants.ces.ncsu.edu/plants/curio-rowleyanus/"
+    ]
+  }
+}

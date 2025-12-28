@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_azlanii",
+  "name": "Alocasia azlanii",
+  "latin": "Alocasia azlanii",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_azlanii.jpg",
+  "image_thumb": "alocasia_azlanii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining aroid",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Utrzymuj wilgoć",
+          "de": "Feucht halten",
+          "fr": "Garder humide",
+          "it": "Sempre umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "تبقى رطبة",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿度を保つ",
+          "ko": "촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Red Mambo Alocasia",
+      "description": "Alocasia azlanii is a rare tropical aroid from Borneo with metallic purple leaves. It requires bright indirect light, warm temperatures, and consistently moist soil. High humidity is essential for healthy growth."
+    },
+    "pl": {
+      "common_name": "Alokazja azlanii",
+      "description": "Alocasia azlanii to rzadka roślina tropikalna z Borneo o metalicznych liściach. Wymaga jasnego światła pośredniego i stałej wilgotności podłoża. Najlepiej rośnie w wysokiej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Alokasie azlanii",
+      "description": "Alocasia azlanii ist eine seltene tropische Aroidpflanze aus Borneo. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist wichtig."
+    },
+    "fr": {
+      "common_name": "Alocasie azlanii",
+      "description": "Alocasia azlanii est une plante tropicale rare originaire de Bornéo. Elle aime la lumière indirecte et un sol toujours humide. Une forte humidité est nécessaire."
+    },
+    "it": {
+      "common_name": "Alocasia azlanii",
+      "description": "Alocasia azlanii è una rara pianta tropicale del Borneo. Necessita di luce indiretta intensa e terreno costantemente umido. L’umidità elevata è fondamentale."
+    },
+    "es": {
+      "common_name": "Alocasia azlanii",
+      "description": "Alocasia azlanii es una planta tropical rara de Borneo. Prefiere luz indirecta brillante y sustrato húmedo. Requiere alta humedad ambiental."
+    },
+    "pt": {
+      "common_name": "Alocasia azlanii",
+      "description": "Alocasia azlanii é uma planta tropical rara de Bornéu. Precisa de luz indireta brilhante e solo sempre úmido. Alta umidade é essencial."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا أزلاني",
+      "description": "نبات ألوكاسيا أزلاني نبات استوائي نادر من بورنيو. يحتاج إلى ضوء غير مباشر وتربة رطبة باستمرار. الرطوبة العالية ضرورية."
+    },
+    "hi": {
+      "common_name": "अलोकेशिया अज़लानी",
+      "description": "Alocasia azlanii बोर्नियो का एक दुर्लभ उष्णकटिबंधीय पौधा है। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी चाहिए। उच्च आर्द्रता आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "紫背海芋",
+      "description": "Alocasia azlanii 是原产于婆罗洲的稀有热带植物。喜明亮散射光和持续湿润的土壤。需要较高空气湿度。"
+    },
+    "ja": {
+      "common_name": "アロカシア・アズラニー",
+      "description": "アロカシア・アズラニーはボルネオ原産の希少な熱帯植物です。明るい間接光と湿った土壌を好みます。高湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "알로카시아 아즐라니",
+      "description": "알로카시아 아즐라니는 보르네오 원산의 희귀 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.aroidpedia.com/journal/alocasia-azlanii",
+      "https://www.rhs.org.uk/plants/Alocasia",
+      "https://www.gardenia.net/plant/alocasia"
+    ]
+  }
+}

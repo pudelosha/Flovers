@@ -1,0 +1,237 @@
+{
+  "external_id": "aloe_variegata",
+  "name": "Tiger Aloe",
+  "latin": "Aloe variegata",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aloe_variegata.jpg",
+  "image_thumb": "aloe_variegata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Helle Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole forte",
+          "es": "Sol intenso",
+          "pt": "Sol forte",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining",
+          "pl": "Dobrze zdren.",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Rzadkie",
+          "de": "Wenig",
+          "fr": "Peu",
+          "it": "Rado",
+          "es": "Escaso",
+          "pt": "Pouca",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "控えめ",
+          "ko": "적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement tox.",
+          "it": "Leggermente tox",
+          "es": "Leve tóxica",
+          "pt": "Leve tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषाक्त",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tiger Aloe",
+      "description": "Aloe variegata is a compact succulent native to South Africa with banded, triangular leaves. It thrives in bright light and dry conditions. Overwatering is the main cause of failure."
+    },
+    "pl": {
+      "common_name": "Aloes pstry",
+      "description": "Aloe variegata to niewielki sukulent z Afryki Południowej o pasiastych liściach. Lubi jasne stanowiska i suche podłoże. Nadmiar wody szkodzi roślinie."
+    },
+    "de": {
+      "common_name": "Tiger-Aloe",
+      "description": "Aloe variegata ist eine kompakte Sukkulente aus Südafrika mit gestreiften Blättern. Sie bevorzugt viel Licht und trockene Erde. Zu häufiges Gießen schadet ihr."
+    },
+    "fr": {
+      "common_name": "Aloès panaché",
+      "description": "Aloe variegata est une succulente compacte d’Afrique du Sud aux feuilles rayées. Elle aime la lumière vive et un sol sec. L’excès d’eau est à éviter."
+    },
+    "it": {
+      "common_name": "Aloe tigrata",
+      "description": "Aloe variegata è una succulenta compatta del Sudafrica con foglie striate. Predilige luce intensa e terreno asciutto. L’eccesso d’acqua è dannoso."
+    },
+    "es": {
+      "common_name": "Aloe tigre",
+      "description": "Aloe variegata es una suculenta compacta de Sudáfrica con hojas rayadas. Requiere mucha luz y riegos escasos. El exceso de agua provoca problemas."
+    },
+    "pt": {
+      "common_name": "Babosa-tigre",
+      "description": "Aloe variegata é uma suculenta compacta da África do Sul com folhas listradas. Prefere luz intensa e solo seco. Regas excessivas devem ser evitadas."
+    },
+    "ar": {
+      "common_name": "ألوة مخططة",
+      "description": "نبات Aloe variegata عصاري صغير من جنوب أفريقيا بأوراق مخططة. يحتاج إلى ضوء قوي وتربة جافة. الإفراط في الري يسبب تلفه."
+    },
+    "hi": {
+      "common_name": "टाइगर एलो",
+      "description": "Aloe variegata दक्षिण अफ्रीका का एक छोटा रसीला पौधा है। इसे तेज रोशनी और कम पानी पसंद है। अधिक पानी नुकसानदेह होता है।"
+    },
+    "zh": {
+      "common_name": "斑纹芦荟",
+      "description": "Aloe variegata 是原产南非的小型多肉植物，叶片有斑纹。喜强光和干燥环境。浇水过多容易腐烂。"
+    },
+    "ja": {
+      "common_name": "タイガーアロエ",
+      "description": "Aloe variegata は南アフリカ原産の小型多肉植物です。強い光と乾いた土を好みます。水の与えすぎに注意が必要です。"
+    },
+    "ko": {
+      "common_name": "타이거 알로에",
+      "description": "Aloe variegata는 남아프리카 원산의 소형 다육식물입니다. 밝은 빛과 건조한 토양을 선호합니다. 과습은 해롭습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/332/aloe-variegata/details",
+      "https://www.kew.org/plants/aloe-variegata",
+      "https://extension.psu.edu/houseplants-aloe"
+    ]
+  }
+}

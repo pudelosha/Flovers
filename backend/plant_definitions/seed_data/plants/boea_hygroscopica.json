@@ -1,0 +1,236 @@
+{
+  "external_id": "boea_hygroscopica",
+  "name": "Resurrection plant",
+  "latin": "Boea hygroscopica",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "boea_hygroscopica.jpg",
+  "image_thumb": "boea_hygroscopica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rocky sandy soil",
+          "pl": "Piaszczysto-kamienna",
+          "de": "Sandig steinig",
+          "fr": "Sableux rocheux",
+          "it": "Sabbioso roccioso",
+          "es": "Arenoso rocoso",
+          "pt": "Arenoso rochoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质岩性土",
+          "ja": "砂質岩混じり",
+          "ko": "모래 자갈 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Very infrequent",
+          "pl": "Bardzo rzadkie",
+          "de": "Sehr selten",
+          "fr": "Très rare",
+          "it": "Molto raro",
+          "es": "Muy escaso",
+          "pt": "Muito raro",
+          "ar": "نادر جدًا",
+          "hi": "बहुत कम",
+          "zh": "极少浇水",
+          "ja": "ごく控えめ",
+          "ko": "아주 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor",
+          "pl": "Normalna domowa",
+          "de": "Normale Raumluft",
+          "fr": "Intérieur normal",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通室内",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Resurrection plant",
+      "description": "Boea hygroscopica is a drought-tolerant lithophytic plant from East Asia. It can survive long dry periods by desiccating and rehydrating when watered. Indoors it prefers bright, indirect light and very sparse watering."
+    },
+    "pl": {
+      "common_name": "Roślina zmartwychwstania",
+      "description": "Boea hygroscopica to odporna na suszę roślina skalna z Azji Wschodniej. Potrafi przetrwać długie okresy bez wody, ponownie ożywając po nawodnieniu. W domu wymaga jasnego, rozproszonego światła i rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Auferstehungspflanze",
+      "description": "Boea hygroscopica ist eine trockenheitsresistente Felsenpflanze aus Ostasien. Sie übersteht lange Trockenzeiten und rehydriert sich nach dem Gießen. Als Zimmerpflanze benötigt sie helles, indirektes Licht und wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Plante de la résurrection",
+      "description": "Boea hygroscopica est une plante lithophyte résistante à la sécheresse originaire d’Asie de l’Est. Elle peut se dessécher complètement et repartir après arrosage. En intérieur, elle demande une lumière vive indirecte et peu d’eau."
+    },
+    "it": {
+      "common_name": "Pianta della resurrezione",
+      "description": "Boea hygroscopica è una pianta litofita tollerante alla siccità originaria dell’Asia orientale. Sopravvive a lunghi periodi secchi e si riprende con l’acqua. In casa richiede luce indiretta brillante e annaffiature molto rare."
+    },
+    "es": {
+      "common_name": "Planta de la resurrección",
+      "description": "Boea hygroscopica es una planta litófita resistente a la sequía de Asia oriental. Puede secarse casi por completo y rehidratarse al regar. En interior necesita luz indirecta brillante y riegos muy espaciados."
+    },
+    "pt": {
+      "common_name": "Planta da ressurreição",
+      "description": "Boea hygroscopica é uma planta litófita tolerante à seca da Ásia Oriental. Suporta longos períodos secos e se recupera com água. Cultivada em interior, prefere luz indireta intensa e regas raras."
+    },
+    "ar": {
+      "common_name": "نبات القيامة",
+      "description": "Boea hygroscopica نبات صخري مقاوم للجفاف موطنه شرق آسيا. يستطيع الجفاف لفترات طويلة ثم يعود للحياة عند الري. داخل المنزل يفضل ضوءًا ساطعًا غير مباشر وريًا نادرًا."
+    },
+    "hi": {
+      "common_name": "पुनर्जीवन पौधा",
+      "description": "Boea hygroscopica पूर्वी एशिया का सूखा सहने वाला शैल-वनस्पति पौधा है। यह लंबे समय तक सूखा रह सकता है और पानी मिलने पर फिर जीवित हो जाता है। घर में इसे तेज अप्रत्यक्ष रोशनी और बहुत कम पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "复活植物",
+      "description": "Boea hygroscopica 是一种原产于东亚的耐旱岩生植物。它可以在干旱时休眠，浇水后重新恢复生长。室内养护需明亮散射光和极少浇水。"
+    },
+    "ja": {
+      "common_name": "復活植物",
+      "description": "Boea hygroscopica は東アジア原産の耐乾性岩生植物です。長期間乾燥しても水分で回復します。室内では明るい間接光と控えめな水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "부활식물",
+      "description": "Boea hygroscopica는 동아시아 원산의 건조에 강한 암석식물입니다. 오랜 건조 후에도 물을 주면 회복합니다. 실내에서는 밝은 간접광과 매우 적은 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/read-and-watch/resurrection-plants",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60456323-2",
+      "https://www.botanicgardens.org/plant-talk/resurrection-plants"
+    ]
+  }
+}

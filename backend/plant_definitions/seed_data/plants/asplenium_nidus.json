@@ -1,0 +1,238 @@
+{
+  "external_id": "asplenium_nidus",
+  "name": "Bird's Nest Fern",
+  "latin": "Asplenium nidus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "asplenium_nidus.jpg",
+  "image_thumb": "asplenium_nidus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loose well drained",
+          "pl": "Przepuszczalna",
+          "de": "Locker drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "疏松排水好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة ثابتة",
+          "hi": "समान नमी",
+          "zh": "保持湿润",
+          "ja": "均一な湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18 to 27°C",
+          "pl": "18 do 27°C",
+          "de": "18 bis 27°C",
+          "fr": "18 à 27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18～27°C",
+          "ko": "18~27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright rosette",
+          "pl": "Rozeta pionowa",
+          "de": "Aufrechte Rosette",
+          "fr": "Rosette dressée",
+          "it": "Rosetta eretta",
+          "es": "Roseta erguida",
+          "pt": "Roseta ereta",
+          "ar": "نمو وردي",
+          "hi": "सीधा रोसेट",
+          "zh": "直立莲座",
+          "ja": "直立ロゼット",
+          "ko": "직립 로제트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bird's Nest Fern",
+      "description": "Asplenium nidus is a tropical fern with glossy, arching fronds forming a central rosette. It grows naturally on trees in humid forests and adapts well to indoor conditions. Consistent moisture and indirect light are essential."
+    },
+    "pl": {
+      "common_name": "Zanokcica gniazdowa",
+      "description": "Asplenium nidus to tropikalna paproć o błyszczących liściach tworzących rozetę. W naturze rośnie epifitycznie w wilgotnych lasach. W domu wymaga stałej wilgoci i jasnego, rozproszonego światła."
+    },
+    "de": {
+      "common_name": "Nestfarn",
+      "description": "Asplenium nidus ist ein tropischer Farn mit glänzenden, rosettenförmigen Wedeln. Er wächst in feuchten Wäldern oft auf Bäumen. In Innenräumen benötigt er gleichmäßige Feuchtigkeit und indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Fougère nid d’oiseau",
+      "description": "Asplenium nidus est une fougère tropicale aux frondes brillantes en rosette. Elle pousse naturellement dans les forêts humides sur les arbres. Elle préfère une humidité constante et une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Felce nido d'uccello",
+      "description": "Asplenium nidus è una felce tropicale con fronde lucide disposte a rosetta. In natura cresce in ambienti umidi come epifita. In casa richiede luce indiretta e umidità costante."
+    },
+    "es": {
+      "common_name": "Helecho nido de ave",
+      "description": "Asplenium nidus es un helecho tropical de frondas brillantes en forma de roseta. Crece de forma natural en bosques húmedos sobre árboles. Necesita humedad constante y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Samambaia ninho-de-passarinho",
+      "description": "Asplenium nidus é uma samambaia tropical com folhas brilhantes em roseta. Ocorre naturalmente em florestas úmidas como epífita. Prefere umidade constante e luz indireta."
+    },
+    "ar": {
+      "common_name": "سرخس عش الطائر",
+      "description": "نبات Asplenium nidus هو سرخس استوائي بأوراق لامعة مرتبة بشكل وردي. ينمو طبيعياً في الغابات الرطبة على الأشجار. يحتاج إلى رطوبة ثابتة وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "बर्ड्स नेस्ट फर्न",
+      "description": "Asplenium nidus एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ रोसेट बनाती हैं। यह प्राकृतिक रूप से नम जंगलों में पेड़ों पर उगता है। इसे अप्रत्यक्ष रोशनी और लगातार नमी चाहिए।"
+    },
+    "zh": {
+      "common_name": "鸟巢蕨",
+      "description": "Asplenium nidus 是一种热带蕨类，叶片呈莲座状生长。原产于潮湿森林，常附生于树上。适合室内养护，需要稳定湿度和散射光。"
+    },
+    "ja": {
+      "common_name": "オオタニワタリ",
+      "description": "Asplenium nidus は光沢のある葉を持つ熱帯性シダです。湿潤な森林で樹上に着生します。室内では間接光と安定した湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "새둥지양치",
+      "description": "Asplenium nidus는 광택 있는 잎이 로제트 형태로 자라는 열대 양치식물입니다. 자연에서는 습한 숲의 나무에 착생합니다. 실내에서는 간접광과 꾸준한 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1655/asplenium-nidus/details",
+      "https://edis.ifas.ufl.edu/publication/FP045",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282747"
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "external_id": "alstroemeria_aurea",
+  "name": "Golden Lily of the Incas",
+  "latin": "Alstroemeria aurea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alstroemeria_aurea.jpg",
+  "image_thumb": "alstroemeria_aurea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial to full sun",
+          "pl": "Półcień do słońca",
+          "de": "Halb- bis Vollsonne",
+          "fr": "Mi-ombre à soleil",
+          "it": "Mezzombra o sole",
+          "es": "Sol parcial o pleno",
+          "pt": "Sol parcial ou pleno",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日向",
+          "ko": "반양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierter Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à tempéré",
+          "it": "Fresco o mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل البرودة",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽到温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘~온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微毒性",
+          "ja": "弱い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Staude horstbildend",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespitosa",
+          "es": "Perenne en mata",
+          "pt": "Perene entouceirada",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार बारहमासी",
+          "zh": "丛生多年生",
+          "ja": "株立ち多年草",
+          "ko": "군생 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Golden Lily of the Incas",
+      "description": "Alstroemeria aurea is a rhizomatous perennial native to Chile. It produces bright yellow to orange flowers in summer and prefers well-drained soil with regular moisture."
+    },
+    "pl": {
+      "common_name": "Alstremeria złota",
+      "description": "Alstroemeria aurea to bylina kłączowa pochodząca z Chile. Kwitnie latem na żółto-pomarańczowo i najlepiej rośnie w przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Goldene Inkalilie",
+      "description": "Alstroemeria aurea ist eine rhizombildende Staude aus Chile. Sie blüht im Sommer gelb bis orange und bevorzugt gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Lys des Incas doré",
+      "description": "Alstroemeria aurea est une vivace originaire du Chili. Elle fleurit en été avec des fleurs jaunes à orangées et aime les sols drainés."
+    },
+    "it": {
+      "common_name": "Giglio degli Inca dorato",
+      "description": "Alstroemeria aurea è una perenne rizomatosa originaria del Cile. Fiorisce in estate e richiede terreno ben drenato e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Lirio de los Incas dorado",
+      "description": "Alstroemeria aurea es una planta perenne de Chile. Produce flores amarillas anaranjadas en verano y necesita suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Lírio-dos-incas dourado",
+      "description": "Alstroemeria aurea é uma planta perene originária do Chile. Floresce no verão e prefere solos bem drenados com umidade regular."
+    },
+    "ar": {
+      "common_name": "زنبق الإنكا الذهبي",
+      "description": "ألستروميريا أوريا نبات معمر موطنه تشيلي. يزهر صيفًا بألوان صفراء وبرتقالية ويحتاج إلى تربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "गोल्डन इंका लिली",
+      "description": "एल्स्ट्रोमेरिया ऑरिया चिली की एक बारहमासी पौधा है। यह गर्मियों में पीले-नारंगी फूल देता है और अच्छी जल निकासी वाली मिट्टी चाहता है।"
+    },
+    "zh": {
+      "common_name": "金印加百合",
+      "description": "金印加百合原产于智利，是多年生植物。夏季开黄色至橙色花，适合排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "ゴールデンアルストロメリア",
+      "description": "アルストロメリア・アウレアはチリ原産の多年草です。夏に黄色から橙色の花を咲かせ、水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "골든 잉카 백합",
+      "description": "알스트로메리아 아우레아는 칠레 원산의 다년생 식물입니다. 여름에 노랑에서 주황색 꽃을 피우며 배수 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/874/alstroemeria-aurea/details",
+      "https://plants.ces.ncsu.edu/plants/alstroemeria-aurea/"
+    ]
+  }
+}

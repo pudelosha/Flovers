@@ -1,0 +1,236 @@
+{
+  "external_id": "alocasia_nycteris",
+  "name": "Alocasia nycteris",
+  "latin": "Alocasia nycteris",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_nycteris.jpg",
+  "image_thumb": "alocasia_nycteris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining aroid mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Luftiges Aroid-Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी मिट्टी",
+          "zh": "疏松排水土",
+          "ja": "排水性の良い土",
+          "ko": "배수 잘되는 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Terreno umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "समान रूप से नम",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Difficile",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "देखभाल कठिन",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm tropical range",
+          "pl": "Ciepłolubna",
+          "de": "Warm, tropisch",
+          "fr": "Température chaude",
+          "it": "Clima caldo",
+          "es": "Temperatura cálida",
+          "pt": "Clima quente",
+          "ar": "حرارة دافئة",
+          "hi": "गरम तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wysoką wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Aime l'humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة مرتفعة",
+          "hi": "उच्च आर्द्रता",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright foliage growth",
+          "pl": "Wzniesiony pokrój",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Nycteris Alocasia",
+      "description": "Alocasia nycteris is a rare tropical aroid native to the Philippines. It has dark, arrow-shaped leaves and requires warm temperatures, high humidity, and consistent moisture. This species is best suited for experienced growers."
+    },
+    "pl": {
+      "common_name": "Alokazja Nycteris",
+      "description": "Alocasia nycteris to rzadka roślina tropikalna pochodząca z Filipin. Charakteryzuje się ciemnymi, strzałkowatymi liśćmi i wymaga ciepła oraz stałej wilgotności. Polecana jest dla doświadczonych hodowców."
+    },
+    "de": {
+      "common_name": "Nycteris-Alokasie",
+      "description": "Alocasia nycteris ist eine seltene tropische Aronstabpflanze aus den Philippinen. Sie besitzt dunkle, pfeilförmige Blätter und benötigt Wärme sowie gleichmäßige Feuchtigkeit. Die Pflege gilt als anspruchsvoll."
+    },
+    "fr": {
+      "common_name": "Alocasia Nycteris",
+      "description": "Alocasia nycteris est une espèce tropicale rare originaire des Philippines. Elle présente des feuilles sombres en forme de flèche et demande chaleur et humidité constante. Elle convient aux cultivateurs expérimentés."
+    },
+    "it": {
+      "common_name": "Alocasia Nycteris",
+      "description": "Alocasia nycteris è una rara pianta tropicale originaria delle Filippine. Ha foglie scure a forma di freccia e necessita di calore e umidità costante. È adatta a coltivatori esperti."
+    },
+    "es": {
+      "common_name": "Alocasia Nycteris",
+      "description": "Alocasia nycteris es una arácea tropical rara de Filipinas. Destaca por sus hojas oscuras en forma de flecha y requiere calor y humedad constante. Su cultivo es exigente."
+    },
+    "pt": {
+      "common_name": "Alocasia Nycteris",
+      "description": "Alocasia nycteris é uma planta tropical rara das Filipinas. Possui folhas escuras em forma de flecha e precisa de calor e umidade constante. Indicada para cultivadores experientes."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا نكتيريس",
+      "description": "ألوكاسيا نكتيريس نبات استوائي نادر موطنه الفلبين. يتميز بأوراق داكنة على شكل سهم ويحتاج إلى حرارة ورطوبة ثابتة. مناسب للمزارعين ذوي الخبرة."
+    },
+    "hi": {
+      "common_name": "नक्टेरिस एलोकैसिया",
+      "description": "Alocasia nycteris फिलीपींस की एक दुर्लभ उष्णकटिबंधीय पौधा है। इसकी पत्तियाँ गहरे रंग की और तीर के आकार की होती हैं। इसे गर्मी और लगातार नमी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "夜蝙蝠海芋",
+      "description": "Alocasia nycteris 是原产于菲律宾的稀有热带海芋。其叶片深色呈箭形，需要温暖和持续湿润的环境。适合有经验的养植者。"
+    },
+    "ja": {
+      "common_name": "アロカシア・ニクテリス",
+      "description": "アロカシア・ニクテリスはフィリピン原産の希少な熱帯植物です。暗色の矢じり形の葉を持ち、高温多湿な環境を好みます。栽培はやや難しいです。"
+    },
+    "ko": {
+      "common_name": "알로카시아 니크테리스",
+      "description": "알로카시아 니크테리스는 필리핀 원산의 희귀한 열대 식물입니다. 어두운 화살 모양의 잎이 특징이며 따뜻하고 습한 환경이 필요합니다. 관리 난이도가 높습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/alocasia",
+      "https://www.aroid.org/genera/alocasia.php",
+      "https://edis.ifas.ufl.edu/publication/EP258"
+    ]
+  }
+}

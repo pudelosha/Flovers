@@ -1,0 +1,237 @@
+{
+  "external_id": "campanula_isophylla",
+  "name": "Italian Bellflower",
+  "latin": "Campanula isophylla",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "campanula_isophylla.jpg",
+  "image_thumb": "campanula_isophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 잘되는 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowane",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido regolare",
+          "es": "Humedad regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम सिंचाई",
+          "zh": "保持湿润",
+          "ja": "均一に湿らす",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco mite",
+          "es": "Fresco templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "हल्का ठंडा",
+          "zh": "凉爽温和",
+          "ja": "涼しい環境",
+          "ko": "서늘한 편"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal room air",
+          "pl": "Zwykła wilg.",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "일반 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing perennial",
+          "pl": "Płożąca bylina",
+          "de": "Hängend wachsend",
+          "fr": "Vivace retombante",
+          "it": "Perenne ricadente",
+          "es": "Perenne colgante",
+          "pt": "Perenne pendente",
+          "ar": "معمرة متدلية",
+          "hi": "लटकने वाली",
+          "zh": "匍匐生长",
+          "ja": "下垂性多年草",
+          "ko": "늘어지는 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Italian Bellflower",
+      "description": "Campanula isophylla is a trailing perennial native to northern Italy. It produces star-shaped blue flowers and is commonly grown as a houseplant. It prefers bright indirect light and evenly moist soil."
+    },
+    "pl": {
+      "common_name": "Dzwonek włoski",
+      "description": "Campanula isophylla to bylina pochodząca z północnych Włoch. Ma zwisający pokrój i niebieskie kwiaty w kształcie gwiazdy. Lubi jasne stanowiska i umiarkowane podlewanie."
+    },
+    "de": {
+      "common_name": "Italienische Glockenblume",
+      "description": "Campanula isophylla stammt aus Norditalien und wächst überhängend. Sie bildet zahlreiche blaue Blüten und eignet sich gut für Innenräume. Bevorzugt helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Campanule d’Italie",
+      "description": "Campanula isophylla est une plante vivace originaire du nord de l’Italie. Elle présente un port retombant et des fleurs bleues décoratives. Elle apprécie une lumière vive sans soleil direct."
+    },
+    "it": {
+      "common_name": "Campanula isofilla",
+      "description": "Campanula isophylla è una perenne originaria dell’Italia settentrionale. Ha crescita ricadente e fiori blu a forma di stella. Preferisce luce indiretta e terreno umido."
+    },
+    "es": {
+      "common_name": "Campánula italiana",
+      "description": "Campanula isophylla es una planta perenne originaria del norte de Italia. Tiene hábito colgante y flores azules muy ornamentales. Se cultiva bien en interiores luminosos."
+    },
+    "pt": {
+      "common_name": "Campânula italiana",
+      "description": "Campanula isophylla é uma planta perene do norte da Itália. Possui crescimento pendente e flores azuis decorativas. Prefere luz indireta e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "زهرة الجرس الإيطالية",
+      "description": "نبات Campanula isophylla معمر موطنه شمال إيطاليا. يتميز بنمو متدلٍ وأزهار زرقاء جميلة. يفضل الضوء الساطع غير المباشر والتربة الرطبة."
+    },
+    "hi": {
+      "common_name": "इटालियन बेलफ्लावर",
+      "description": "Campanula isophylla उत्तरी इटली का एक बहुवर्षीय पौधा है। इसमें लटकने वाली वृद्धि और नीले तारे जैसे फूल होते हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "意大利风铃草",
+      "description": "Campanula isophylla 原产于意大利北部，是一种多年生植物。植株下垂生长，开蓝色星形花。适合明亮的散射光环境。"
+    },
+    "ja": {
+      "common_name": "イタリアンベルフラワー",
+      "description": "Campanula isophylla はイタリア北部原産の多年草です。下垂する性質と青い星形の花が特徴です。明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "이탈리아 벨플라워",
+      "description": "Campanula isophylla는 이탈리아 북부 원산의 다년생 식물입니다. 늘어지는 성장과 파란 꽃이 특징입니다. 밝은 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/3169/campanula-isophylla/details",
+      "https://www.gardenersworld.com/plants/campanula-isophylla/"
+    ]
+  }
+}

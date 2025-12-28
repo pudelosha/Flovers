@@ -1,0 +1,236 @@
+{
+  "external_id": "citrus_sinensis",
+  "name": "Sweet Orange",
+  "latin": "Citrus sinensis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "citrus_sinensis.jpg",
+  "image_thumb": "citrus_sinensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, well-drained",
+          "pl": "Kwaśna, przepuszczalna",
+          "de": "Sauer, durchlässig",
+          "fr": "Acide, drainé",
+          "it": "Acido drenante",
+          "es": "Ácido y drenado",
+          "pt": "Ácido drenado",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性排水好",
+          "ja": "酸性水はけ",
+          "ko": "산성 배수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 관수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm conditions",
+          "pl": "Ciepłe warunki",
+          "de": "Warme Temperaturen",
+          "fr": "Température chaude",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "جو دافئ",
+          "hi": "गर्म तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à moyenne",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は緩やか",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweet Orange",
+      "description": "Citrus sinensis is an evergreen citrus tree valued for its edible sweet oranges. Indoors it requires very bright light, regular watering, and warm conditions. With proper care it can flower and fruit in containers."
+    },
+    "pl": {
+      "common_name": "Pomarańcza słodka",
+      "description": "Citrus sinensis to zimozielone drzewo cytrusowe uprawiane dla słodkich owoców. W uprawie domowej wymaga dużo światła, regularnego podlewania i ciepła. Przy dobrej pielęgnacji może kwitnąć i owocować w donicy."
+    },
+    "de": {
+      "common_name": "Süßorange",
+      "description": "Citrus sinensis ist ein immergrüner Zitrusbaum mit essbaren Früchten. In Innenräumen braucht er sehr viel Licht, gleichmäßige Wassergaben und Wärme. Bei guter Pflege sind Blüten und Früchte möglich."
+    },
+    "fr": {
+      "common_name": "Oranger doux",
+      "description": "Citrus sinensis est un agrume persistant cultivé pour ses oranges sucrées. En intérieur, il demande une lumière intense, des arrosages réguliers et de la chaleur. Il peut fleurir et fructifier en pot."
+    },
+    "it": {
+      "common_name": "Arancio dolce",
+      "description": "Citrus sinensis è un agrume sempreverde noto per i suoi frutti dolci. Coltivato in casa necessita di molta luce, irrigazioni regolari e temperature calde. Con buone cure può produrre fiori e frutti."
+    },
+    "es": {
+      "common_name": "Naranjo dulce",
+      "description": "Citrus sinensis es un cítrico perenne cultivado por sus naranjas dulces. En interior requiere luz muy intensa, riego regular y calor. Con cuidados adecuados puede florecer y dar frutos."
+    },
+    "pt": {
+      "common_name": "Laranjeira doce",
+      "description": "Citrus sinensis é uma árvore cítrica perene cultivada pelos seus frutos doces. Em ambientes internos precisa de muita luz, regas regulares e temperaturas quentes. Pode florescer e frutificar em vaso."
+    },
+    "ar": {
+      "common_name": "البرتقال الحلو",
+      "description": "Citrus sinensis شجرة حمضيات دائمة الخضرة معروفة بثمارها الصالحة للأكل. عند زراعتها داخل المنزل تحتاج إلى ضوء قوي وري منتظم ودفء. يمكنها الإزهار والإثمار مع العناية الجيدة."
+    },
+    "hi": {
+      "common_name": "मीठा संतरा",
+      "description": "Citrus sinensis एक सदाबहार साइट्रस पौधा है जो मीठे फलों के लिए उगाया जाता है। घर के अंदर इसे तेज रोशनी, नियमित पानी और गर्म वातावरण चाहिए। सही देखभाल से इसमें फूल और फल आ सकते हैं।"
+    },
+    "zh": {
+      "common_name": "甜橙",
+      "description": "Citrus sinensis 是一种常绿柑橘植物，以可食用的甜橙著称。室内栽培需要充足阳光、规律浇水和温暖环境。在良好养护下可以开花结果。"
+    },
+    "ja": {
+      "common_name": "スイートオレンジ",
+      "description": "Citrus sinensis は食用の甘い果実をつける常緑の柑橘類です。室内では強い光、定期的な水やり、暖かい環境が必要です。適切な管理で開花結実します。"
+    },
+    "ko": {
+      "common_name": "스위트 오렌지",
+      "description": "Citrus sinensis는 달콤한 열매를 맺는 상록 감귤류입니다. 실내에서는 강한 빛과 규칙적인 물주기, 따뜻한 환경이 필요합니다. 관리가 좋으면 꽃과 열매를 볼 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/fruit/citrus/grow-your-own",
+      "https://extension.ifas.ufl.edu/publications/?keyword=citrus%20sinensis",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-citrus/"
+    ]
+  }
+}

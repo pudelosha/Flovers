@@ -1,0 +1,237 @@
+{
+  "external_id": "beta_vulgaris_subsp_cicla",
+  "name": "Swiss Chard",
+  "latin": "Beta vulgaris subsp. cicla",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "beta_vulgaris_subsp_cicla.jpg",
+  "image_thumb": "beta_vulgaris_subsp_cicla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährboden",
+          "fr": "Sol riche",
+          "it": "Suolo fertile",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodna",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "معتدل",
+          "hi": "हल्का ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سام",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast leafy",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "生长快",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Swiss chard",
+      "description": "Swiss chard is a leafy vegetable grown for its nutritious stems and leaves. It prefers full sun and consistently moist, fertile soil. The plant is easy to grow in containers or garden beds."
+    },
+    "pl": {
+      "common_name": "Boćwina",
+      "description": "Boćwina to warzywo liściowe uprawiane dla jadalnych liści i ogonków. Najlepiej rośnie w pełnym słońcu i wilgotnej, żyznej glebie. Jest łatwa w uprawie w gruncie i w donicach."
+    },
+    "de": {
+      "common_name": "Mangold",
+      "description": "Mangold ist ein Blattgemüse mit essbaren Stielen und Blättern. Er wächst am besten in voller Sonne und gleichmäßig feuchtem Boden. Die Pflanze ist pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Bette à carde",
+      "description": "La bette à carde est un légume-feuille cultivé pour ses tiges et feuilles comestibles. Elle aime le plein soleil et un sol fertile et humide. Sa culture est facile."
+    },
+    "it": {
+      "common_name": "Bietola",
+      "description": "La bietola è un ortaggio a foglia coltivato per foglie e coste. Preferisce sole pieno e terreno fertile e umido. È facile da coltivare anche in vaso."
+    },
+    "es": {
+      "common_name": "Acelga",
+      "description": "La acelga es una hortaliza de hoja apreciada por tallos y hojas. Crece bien a pleno sol y con riego regular. Es una planta fácil de cultivar."
+    },
+    "pt": {
+      "common_name": "Acelga",
+      "description": "A acelga é uma hortaliça cultivada pelas folhas e talos. Prefere sol pleno e solo fértil sempre úmido. É fácil de cuidar."
+    },
+    "ar": {
+      "common_name": "السلق",
+      "description": "السلق نبات ورقي يؤكل لأوراقه وسيقانه. يحتاج إلى شمس كاملة وتربة خصبة رطبة. سهل الزراعة في الحدائق أو الأصص."
+    },
+    "hi": {
+      "common_name": "स्विस चार्ड",
+      "description": "स्विस चार्ड एक पत्तेदार सब्जी है जिसे पत्तियों और डंठलों के लिए उगाया जाता है। इसे पूरी धूप और नम उपजाऊ मिट्टी पसंद है। इसे उगाना आसान है।"
+    },
+    "zh": {
+      "common_name": "瑞士甜菜",
+      "description": "瑞士甜菜是一种叶菜，食用其叶和茎。它需要充足阳光和持续湿润的肥沃土壤。适合庭院或盆栽种植。"
+    },
+    "ja": {
+      "common_name": "スイスチャード",
+      "description": "スイスチャードは葉と茎を食用にする野菜です。日当たりと湿った肥沃な土を好みます。栽培は簡単です。"
+    },
+    "ko": {
+      "common_name": "근대",
+      "description": "근대는 잎과 줄기를 먹는 잎채소입니다. 햇빛과 촉촉한 비옥한 토양을 좋아합니다. 재배가 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://extension.umn.edu/vegetables/growing-chard",
+      "https://www.rhs.org.uk/vegetables/chard/grow-your-own",
+      "https://www.britannica.com/plant/chard"
+    ]
+  }
+}

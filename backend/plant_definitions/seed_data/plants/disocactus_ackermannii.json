@@ -1,0 +1,238 @@
+{
+  "external_id": "disocactus_ackermannii",
+  "name": "Orchid Cactus",
+  "latin": "Disocactus ackermannii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "disocactus_ackermannii.jpg",
+  "image_thumb": "disocactus_ackermannii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy, well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Luftig, durchlässig",
+          "fr": "Aéré drainant",
+          "it": "Drenante leggera",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "疏松排水",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–25°C",
+          "pl": "18–25°C",
+          "de": "18–25°C",
+          "fr": "18–25°C",
+          "it": "18–25°C",
+          "es": "18–25°C",
+          "pt": "18–25°C",
+          "ar": "18–25°م",
+          "hi": "18–25°C",
+          "zh": "18–25°C",
+          "ja": "18–25°C",
+          "ko": "18–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "औसत",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing epiphyte",
+          "pl": "Epifit zwisający",
+          "de": "Hängender Epiphyt",
+          "fr": "Épiphyte retombant",
+          "it": "Epifita ricadente",
+          "es": "Epífita colgante",
+          "pt": "Epífita pendente",
+          "ar": "نبات متدلٍ",
+          "hi": "लटकता एपिफाइट",
+          "zh": "下垂附生",
+          "ja": "垂れ下がる",
+          "ko": "늘어지는 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Orchid Cactus",
+      "description": "Disocactus ackermannii is an epiphytic cactus native to Mexico. It has flattened stems and produces large red flowers in spring. It prefers bright indirect light and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Kaktus storczykowy",
+      "description": "Disocactus ackermannii to epifityczny kaktus z Meksyku. Ma spłaszczone pędy i duże czerwone kwiaty wiosną. Lubi jasne, rozproszone światło i przepuszczalne podłoże."
+    },
+    "de": {
+      "common_name": "Orchideenkaktus",
+      "description": "Disocactus ackermannii ist ein epiphytischer Kaktus aus Mexiko. Er bildet flache Triebe und große rote Blüten im Frühling. Bevorzugt helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Cactus orchidée",
+      "description": "Disocactus ackermannii est un cactus épiphyte originaire du Mexique. Il possède des tiges plates et de grandes fleurs rouges au printemps. Il aime la lumière indirecte."
+    },
+    "it": {
+      "common_name": "Cactus orchidea",
+      "description": "Disocactus ackermannii è un cactus epifita del Messico. Ha fusti appiattiti e grandi fiori rossi primaverili. Predilige luce indiretta e substrato drenante."
+    },
+    "es": {
+      "common_name": "Cactus orquídea",
+      "description": "Disocactus ackermannii es un cactus epífito de México. Presenta tallos planos y grandes flores rojas en primavera. Necesita luz indirecta brillante."
+    },
+    "pt": {
+      "common_name": "Cacto-orquídea",
+      "description": "Disocactus ackermannii é um cacto epífito do México. Possui caules achatados e flores vermelhas grandes na primavera. Prefere luz indireta e solo drenável."
+    },
+    "ar": {
+      "common_name": "صبار الأوركيد",
+      "description": "Disocactus ackermannii صبار هوائي موطنه المكسيك. يتميز بسيقان مسطحة وأزهار حمراء كبيرة في الربيع. يفضل الضوء غير المباشر."
+    },
+    "hi": {
+      "common_name": "ऑर्किड कैक्टस",
+      "description": "Disocactus ackermannii मेक्सिको का एक एपिफाइट कैक्टस है। इसमें चपटे तने और वसंत में बड़े लाल फूल होते हैं। इसे अप्रत्यक्ष रोशनी पसंद है।"
+    },
+    "zh": {
+      "common_name": "兰花仙人掌",
+      "description": "Disocactus ackermannii 原产于墨西哥，是一种附生仙人掌。具有扁平茎和春季盛开的红色大花。适合明亮散射光。"
+    },
+    "ja": {
+      "common_name": "オーキッドカクタス",
+      "description": "Disocactus ackermannii はメキシコ原産の着生サボテンです。平たい茎と春に咲く大きな赤い花が特徴です。明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "오키드 선인장",
+      "description": "Disocactus ackermannii는 멕시코 원산의 착생 선인장입니다. 납작한 줄기와 봄에 피는 큰 붉은 꽃이 특징입니다. 밝은 간접광을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/epiphyllum/care-guide",
+      "https://www.cactus-art.biz/schede/DISOCATUS/Disocactus_ackermannii/Disocactus_ackermannii.htm",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123"
+    ]
+  }
+}

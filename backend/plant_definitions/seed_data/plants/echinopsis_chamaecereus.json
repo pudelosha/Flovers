@@ -1,0 +1,236 @@
+{
+  "external_id": "echinopsis_chamaecereus",
+  "name": "Peanut Cactus",
+  "latin": "Echinopsis chamaecereus",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "echinopsis_chamaecereus.jpg",
+  "image_thumb": "echinopsis_chamaecereus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct sun",
+          "pl": "Jasne słońce",
+          "de": "Volle Sonne",
+          "fr": "Soleil direct",
+          "it": "Sole pieno",
+          "es": "Sol directo",
+          "pt": "Sol direto",
+          "ar": "شمس مباشرة",
+          "hi": "तेज़ धूप",
+          "zh": "强烈直射光",
+          "ja": "直射日光",
+          "ko": "강한 직사광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة مصرفة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30 °C",
+          "pl": "18–30 °C",
+          "de": "18–30 °C",
+          "fr": "18–30 °C",
+          "it": "18–30 °C",
+          "es": "18–30 °C",
+          "pt": "18–30 °C",
+          "ar": "18–30°م",
+          "hi": "18–30 °C",
+          "zh": "18–30℃",
+          "ja": "18–30℃",
+          "ko": "18–30℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping cactus",
+          "pl": "Kępiasty",
+          "de": "Horstbildend",
+          "fr": "En touffe",
+          "it": "Cespugliosa",
+          "es": "En matas",
+          "pt": "Em touceira",
+          "ar": "ينمو كتل",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "群生",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peanut Cactus",
+      "description": "Echinopsis chamaecereus is a small clumping cactus native to Argentina. It thrives in bright sunlight and well-draining soil. Water sparingly and allow soil to dry fully between waterings."
+    },
+    "pl": {
+      "common_name": "Kaktus orzeszkowy",
+      "description": "Echinopsis chamaecereus to niewielki kaktus pochodzący z Argentyny. Wymaga jasnego światła i bardzo przepuszczalnej gleby. Podlewać rzadko po całkowitym przeschnięciu podłoża."
+    },
+    "de": {
+      "common_name": "Erdnusskaktus",
+      "description": "Echinopsis chamaecereus ist ein kleinwüchsiger Kaktus aus Argentinien. Er bevorzugt volle Sonne und gut drainiertes Substrat. Nur gießen, wenn das Substrat vollständig trocken ist."
+    },
+    "fr": {
+      "common_name": "Cactus cacahuète",
+      "description": "Echinopsis chamaecereus est un petit cactus originaire d’Argentine. Il aime le soleil direct et un sol très drainant. Arrosez peu et seulement lorsque le sol est sec."
+    },
+    "it": {
+      "common_name": "Cactus arachide",
+      "description": "Echinopsis chamaecereus è un piccolo cactus originario dell’Argentina. Cresce bene in pieno sole e terreno drenante. Annaffiare solo a substrato completamente asciutto."
+    },
+    "es": {
+      "common_name": "Cactus maní",
+      "description": "Echinopsis chamaecereus es un cactus pequeño originario de Argentina. Necesita sol directo y sustrato muy drenante. Regar de forma escasa cuando el suelo esté seco."
+    },
+    "pt": {
+      "common_name": "Cacto amendoim",
+      "description": "Echinopsis chamaecereus é um pequeno cacto nativo da Argentina. Prefere sol pleno e solo bem drenado. Regue apenas quando o substrato estiver totalmente seco."
+    },
+    "ar": {
+      "common_name": "صبار الفول السوداني",
+      "description": "نبات Echinopsis chamaecereus صبار صغير موطنه الأرجنتين. يحتاج إلى شمس قوية وتربة جيدة التصريف. يُسقى قليلًا بعد جفاف التربة تمامًا."
+    },
+    "hi": {
+      "common_name": "पीनट कैक्टस",
+      "description": "Echinopsis chamaecereus अर्जेंटीना का एक छोटा कैक्टस है। इसे तेज धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। मिट्टी सूखने पर ही पानी दें।"
+    },
+    "zh": {
+      "common_name": "花生仙人掌",
+      "description": "Echinopsis chamaecereus 原产于阿根廷，是一种小型丛生仙人掌。喜强光和良好排水的土壤。土壤完全干燥后再浇水。"
+    },
+    "ja": {
+      "common_name": "ピーナッツカクタス",
+      "description": "エキノプシス・カマエケレウスはアルゼンチン原産の小型サボテンです。強い日光と水はけの良い土を好みます。完全に乾いてから水やりします。"
+    },
+    "ko": {
+      "common_name": "피너츠 선인장",
+      "description": "Echinopsis chamaecereus는 아르헨티나 원산의 소형 선인장입니다. 강한 햇빛과 배수가 좋은 흙을 선호합니다. 흙이 완전히 마른 후 물을 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/echinopsis/chamaecereus/details",
+      "https://www.cactus-art.biz/schede/ECHINOPSIS/Echinopsis_chamaecereus.htm",
+      "https://garden.org/plants/view/565604/Echinopsis-chamaecereus/"
+    ]
+  }
+}

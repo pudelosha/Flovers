@@ -1,0 +1,237 @@
+{
+  "external_id": "asparagus_setaceus",
+  "name": "Asparagus Fern",
+  "latin": "Asparagus setaceus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "asparagus_setaceus.jpg",
+  "image_thumb": "asparagus_setaceus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "परोक्ष प्रकाश",
+          "zh": "明亮散光",
+          "ja": "明るい間接光",
+          "ko": "간접 밝은빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well draining",
+          "pl": "drenażowa",
+          "de": "gut drainiert",
+          "fr": "bien drainant",
+          "it": "ben drenante",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep moist",
+          "pl": "utrzymuj wilgotno",
+          "de": "feucht halten",
+          "fr": "garder humide",
+          "it": "mantenere umido",
+          "es": "mantener húmedo",
+          "pt": "manter húmido",
+          "ar": "الحفاظ على رطوبة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気保つ",
+          "ko": "촉촉 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "13-25°C",
+          "pl": "13-25°C",
+          "de": "13-25°C",
+          "fr": "13-25°C",
+          "it": "13-25°C",
+          "es": "13-25°C",
+          "pt": "13-25°C",
+          "ar": "13-25°C",
+          "hi": "13-25°C",
+          "zh": "13-25°C",
+          "ja": "13-25°C",
+          "ko": "13-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic berries",
+          "pl": "toksyczne jagody",
+          "de": "giftige Beeren",
+          "fr": "baies toxiques",
+          "it": "bacche tossiche",
+          "es": "bayas tóxicas",
+          "pt": "bagas tóxicas",
+          "ar": "توت سام",
+          "hi": "जहरीले बेरी",
+          "zh": "有毒浆果",
+          "ja": "有毒の実",
+          "ko": "독성 열매"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "climbing fern-like",
+          "pl": "pnący paproć",
+          "de": "kletternd farnartig",
+          "fr": "grimpant fougère",
+          "it": "rampicante felce",
+          "es": "trepador helecho",
+          "pt": "trepador tipo samambaia",
+          "ar": "متسلق شبيه السرخس",
+          "hi": "चढ़ता फर्न जैसा",
+          "zh": "攀爬似蕨",
+          "ja": "絡むシダ状",
+          "ko": "기어오르는 양치"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Asparagus Fern",
+      "description": "Asparagus setaceus is an ornamental plant with fine, fern-like foliage. It prefers bright indirect light and moist, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Szparag pierzasty",
+      "description": "Asparagus setaceus to roślina ozdobna o delikatnych liściach. Wymaga jasnego światła rozproszonego i wilgotnej, dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Spargelfarn",
+      "description": "Asparagus setaceus ist eine Zierpflanze mit fein farnartigem Laub. Sie bevorzugt helles indirektes Licht und feuchte, gut durchlässige Erde."
+    },
+    "fr": {
+      "common_name": "Fougère asperge",
+      "description": "Asparagus setaceus est une plante ornementale aux fines feuilles. Elle aime la lumière indirecte et un sol humide bien drainé."
+    },
+    "it": {
+      "common_name": "Asparago felce",
+      "description": "Asparagus setaceus è una pianta ornamentale con foglie delicate. Preferisce luce indiretta e terreno umido ben drenato."
+    },
+    "es": {
+      "common_name": "Helecho de espárrago",
+      "description": "Asparagus setaceus es una planta ornamental de follaje fino. Prefiere luz indirecta y suelo húmedo bien drenado."
+    },
+    "pt": {
+      "common_name": "Aspargo samambaia",
+      "description": "Asparagus setaceus é uma planta ornamental de folhagem fina. Prefere luz indireta e solo úmido bem drenado."
+    },
+    "ar": {
+      "common_name": "سرخس الهليون",
+      "description": "Asparagus setaceus نبات زينة بأوراق دقيقة. يفضل الضوء غير المباشر وتربة رطبة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "एस्पैरेगस फर्न",
+      "description": "Asparagus setaceus एक सजावटी पौधा है जिसमें नाज़ुक पत्तियाँ होती हैं। यह परोक्ष रोशनी और नम मिट्टी पसंद करता है."
+    },
+    "zh": {
+      "common_name": "芦笋蕨",
+      "description": "Asparagus setaceus 是观赏植物，具有细蕨状叶片。它喜欢明亮散射光和湿润排水良好的土壤."
+    },
+    "ja": {
+      "common_name": "アスパラガスファーン",
+      "description": "Asparagus setaceus は細かい葉の観葉植物です。明るい間接光と湿った排水良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "아스파라거스 펀",
+      "description": "Asparagus setaceus 는 섬세한 잎이 있는 관상용 식물입니다. 밝은 간접광과 촉촉한 배수토를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plantemia.pl/rosliny-doniczkowe/143-asparagus-setaceus-",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-asparagus-ferns/"
+    ]
+  }
+}

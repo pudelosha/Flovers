@@ -1,0 +1,236 @@
+{
+  "external_id": "armeria_maritima",
+  "name": "Sea thrift",
+  "latin": "Armeria maritima",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "armeria_maritima.jpg",
+  "image_thumb": "armeria_maritima.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-drained",
+          "pl": "Piaszczysta",
+          "de": "Sandig",
+          "fr": "Sableux",
+          "it": "Sabbioso",
+          "es": "Arenoso",
+          "pt": "Arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土",
+          "ja": "砂質土",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Mało wody",
+          "de": "Wenig Wasser",
+          "fr": "Peu d’eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ماء قليل",
+          "hi": "कम पानी",
+          "zh": "少浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "تتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow clumping",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "缓慢生长",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sea thrift",
+      "description": "Armeria maritima is a hardy perennial native to coastal regions. It forms dense grassy clumps with pink flower heads and tolerates wind and salt."
+    },
+    "pl": {
+      "common_name": "Zawciąg nadmorski",
+      "description": "Armeria maritima to wytrzymała bylina z wybrzeży morskich. Tworzy zwarte kępy i dobrze znosi wiatr oraz zasolenie."
+    },
+    "de": {
+      "common_name": "Grasnelke",
+      "description": "Armeria maritima ist eine robuste Küstenstaude. Sie bildet dichte Horste und verträgt Wind sowie salzhaltige Luft."
+    },
+    "fr": {
+      "common_name": "Armérie maritime",
+      "description": "Armeria maritima est une plante vivace des zones côtières. Elle forme des touffes compactes et supporte le vent et le sel."
+    },
+    "it": {
+      "common_name": "Armeria marittima",
+      "description": "Armeria maritima è una perenne rustica delle coste. Cresce in ciuffi compatti e resiste al vento e alla salsedine."
+    },
+    "es": {
+      "common_name": "Clavelina de mar",
+      "description": "Armeria maritima es una planta perenne costera muy resistente. Forma matas densas y tolera el viento y la sal."
+    },
+    "pt": {
+      "common_name": "Armeria-marítima",
+      "description": "Armeria maritima é uma planta perene costeira resistente. Forma tufos densos e tolera vento e salinidade."
+    },
+    "ar": {
+      "common_name": "أرميريا بحرية",
+      "description": "نبات أرميريا ماريتيما معمر من المناطق الساحلية. يشكل كتلًا كثيفة ويتحمل الرياح والملوحة."
+    },
+    "hi": {
+      "common_name": "सी थ्रिफ्ट",
+      "description": "Armeria maritima एक तटीय बहुवर्षीय पौधा है। यह घनी गुच्छेदार वृद्धि करता है और हवा व लवणता सहन करता है।"
+    },
+    "zh": {
+      "common_name": "海滨石竹",
+      "description": "Armeria maritima 是一种原产于海岸的多年生植物。它形成紧密簇生，耐风耐盐。"
+    },
+    "ja": {
+      "common_name": "ハマカンザシ",
+      "description": "Armeria maritima は海岸原産の多年草です。密な株を作り、風や塩分に強いです。"
+    },
+    "ko": {
+      "common_name": "갯잔디석죽",
+      "description": "Armeria maritima는 해안 지역에 자라는 다년생 식물입니다. 바람과 염분에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1713/armeria-maritima/details",
+      "https://plants.ces.ncsu.edu/plants/armeria-maritima/",
+      "https://www.gardenersworld.com/plants/armeria-maritima/"
+    ]
+  }
+}

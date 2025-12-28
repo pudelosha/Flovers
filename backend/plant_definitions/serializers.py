@@ -23,15 +23,37 @@ def _get_translation(obj: PlantDefinition, lang: str) -> PlantDefinitionTranslat
     return obj.translations.filter(language_code="en").first()
 
 
-def _abs_media_url(request, file_field) -> str | None:
+def _abs_media_url(request, value) -> str | None:
     """
     Build an absolute URL that works for real devices.
-    Prefer settings.SITE_URL as a stable base, fallback to request.build_absolute_uri.
+
+    Supports:
+    - ImageField/FileField (has .url)
+    - raw strings:
+        - full URL: https://...
+        - relative media path: plants/hero/x.jpg
+        - bare filename: x.jpg (assumes plants/hero/)
     """
-    if not file_field:
+    if not value:
         return None
 
-    rel = getattr(file_field, "url", None)
+    rel = getattr(value, "url", None)
+
+    # Support string values too (in case some rows were seeded differently)
+    if not rel and isinstance(value, str):
+        v = value.strip()
+        if not v:
+            return None
+
+        if v.startswith("http://") or v.startswith("https://"):
+            return v
+
+        v = v.replace("\\", "/").lstrip("/")
+        if "/" not in v:
+            rel = f"{settings.MEDIA_URL.rstrip('/')}/plants/hero/{v}"
+        else:
+            rel = f"{settings.MEDIA_URL.rstrip('/')}/{v}"
+
     if not rel:
         return None
 
@@ -39,7 +61,6 @@ def _abs_media_url(request, file_field) -> str | None:
     if base:
         return base.rstrip("/") + rel
 
-    # fallback
     return request.build_absolute_uri(rel) if request else rel
 
 

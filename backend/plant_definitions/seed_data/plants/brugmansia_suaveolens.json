@@ -1,0 +1,238 @@
+{
+  "external_id": "brugmansia_suaveolens",
+  "name": "Angel's Trumpet",
+  "latin": "Brugmansia suaveolens",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "brugmansia_suaveolens.jpg",
+  "image_thumb": "brugmansia_suaveolens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent watering",
+          "pl": "Częste podlewanie",
+          "de": "Häufig gießen",
+          "fr": "Arrosage fréquent",
+          "it": "Annaffiature frequenti",
+          "es": "Riego frecuente",
+          "pt": "Rega frequente",
+          "ar": "ري متكرر",
+          "hi": "अधिक पानी",
+          "zh": "需勤浇水",
+          "ja": "水多め",
+          "ko": "자주 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म मौसम",
+          "zh": "温暖环境",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna wilgotność",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "普通湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Highly toxic",
+          "pl": "Silnie trująca",
+          "de": "Stark giftig",
+          "fr": "Très toxique",
+          "it": "Molto tossica",
+          "es": "Muy tóxica",
+          "pt": "Muito tóxica",
+          "ar": "شديدة السمية",
+          "hi": "अत्यंत विषैला",
+          "zh": "高度有毒",
+          "ja": "非常に有毒",
+          "ko": "강한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing shrub",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Angel's Trumpet",
+      "description": "Brugmansia suaveolens is a tropical shrub known for its large, pendulous trumpet-shaped flowers. It thrives in full sun with regular watering and fertile soil. All parts of the plant are highly toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Brugmansja wonna",
+      "description": "Brugmansia suaveolens to tropikalny krzew o dużych, zwisających kwiatach w kształcie trąbki. Wymaga pełnego słońca, regularnego podlewania i żyznej gleby. Roślina jest silnie trująca."
+    },
+    "de": {
+      "common_name": "Engelstrompete",
+      "description": "Brugmansia suaveolens ist ein tropischer Strauch mit großen, hängenden trompetenförmigen Blüten. Sie bevorzugt volle Sonne, regelmäßiges Gießen und nährstoffreichen Boden. Alle Pflanzenteile sind giftig."
+    },
+    "fr": {
+      "common_name": "Trompette des anges",
+      "description": "Brugmansia suaveolens est un arbuste tropical aux grandes fleurs pendantes en forme de trompette. Elle pousse mieux en plein soleil avec un arrosage régulier et un sol riche. La plante est très toxique."
+    },
+    "it": {
+      "common_name": "Tromba degli angeli",
+      "description": "Brugmansia suaveolens è un arbusto tropicale con grandi fiori penduli a forma di tromba. Necessita di pieno sole, annaffiature regolari e terreno fertile. Tutte le parti sono tossiche."
+    },
+    "es": {
+      "common_name": "Floripondio",
+      "description": "Brugmansia suaveolens es un arbusto tropical con grandes flores colgantes en forma de trompeta. Requiere pleno sol, riego frecuente y suelo fértil. La planta es muy tóxica."
+    },
+    "pt": {
+      "common_name": "Trombeta-dos-anjos",
+      "description": "Brugmansia suaveolens é um arbusto tropical com grandes flores pendentes em forma de trombeta. Prefere sol pleno, regas frequentes e solo rico. Todas as partes são tóxicas."
+    },
+    "ar": {
+      "common_name": "بوق الملاك",
+      "description": "Brugmansia suaveolens شجيرة استوائية ذات أزهار كبيرة متدلية على شكل بوق. تنمو في الشمس الكاملة مع ري منتظم وتربة غنية. النبات سام جدًا."
+    },
+    "hi": {
+      "common_name": "एंजेल ट्रम्पेट",
+      "description": "Brugmansia suaveolens एक उष्णकटिबंधीय झाड़ी है जिसमें बड़े, लटकते हुए फूल होते हैं। इसे पूरी धूप, नियमित पानी और उपजाऊ मिट्टी की आवश्यकता होती है। पौधा अत्यंत विषैला है।"
+    },
+    "zh": {
+      "common_name": "天使号角花",
+      "description": "Brugmansia suaveolens 是一种热带灌木，具有大型下垂的喇叭状花朵。它喜全日照、需经常浇水并生长在肥沃土壤中。全株有毒。"
+    },
+    "ja": {
+      "common_name": "エンジェルトランペット",
+      "description": "Brugmansia suaveolens は大きなラッパ状の花を下向きに咲かせる熱帯低木です。日当たりと定期的な水やり、肥沃な土を好みます。全草に強い毒性があります。"
+    },
+    "ko": {
+      "common_name": "엔젤 트럼펫",
+      "description": "Brugmansia suaveolens는 큰 나팔 모양의 꽃이 아래로 피는 열대 관목입니다. 강한 햇빛과 잦은 물주기, 비옥한 토양을 좋아합니다. 모든 부분에 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450",
+      "https://www.rhs.org.uk/plants/brugmansia/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/FP091"
+    ]
+  }
+}

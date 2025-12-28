@@ -1,0 +1,238 @@
+{
+  "external_id": "coleus_scutellarioides",
+  "name": "Coleus",
+  "latin": "Coleus scutellarioides",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "coleus_scutellarioides.jpg",
+  "image_thumb": "coleus_scutellarioides.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-drained soil",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Sol drainant",
+          "it": "Terreno drenato",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水土",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة دائمة",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿らす",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Coleus",
+      "description": "Coleus scutellarioides is a tropical foliage plant valued for its colorful leaves. It prefers bright indirect light and consistently moist soil indoors."
+    },
+    "pl": {
+      "common_name": "Koleus",
+      "description": "Coleus scutellarioides to tropikalna roślina ozdobna o barwnych liściach. Najlepiej rośnie w jasnym miejscu i wilgotnym podłożu."
+    },
+    "de": {
+      "common_name": "Buntnessel",
+      "description": "Coleus scutellarioides ist eine tropische Blattschmuckpflanze mit farbigen Blättern. Sie mag helles Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Coléus",
+      "description": "Coleus scutellarioides est une plante tropicale appréciée pour son feuillage coloré. Elle préfère une lumière vive et un sol humide."
+    },
+    "it": {
+      "common_name": "Coleo",
+      "description": "Coleus scutellarioides è una pianta tropicale ornamentale dalle foglie colorate. Richiede luce intensa e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Cóleo",
+      "description": "Coleus scutellarioides es una planta tropical apreciada por su follaje colorido. Necesita buena luz y riego regular."
+    },
+    "pt": {
+      "common_name": "Coleus",
+      "description": "Coleus scutellarioides é uma planta tropical ornamental de folhas coloridas. Prefere luz indireta e solo sempre úmido."
+    },
+    "ar": {
+      "common_name": "كوليوس",
+      "description": "Coleus scutellarioides نبات استوائي يتميز بأوراقه الملونة. يفضل الضوء الساطع غير المباشر وتربة رطبة."
+    },
+    "hi": {
+      "common_name": "कोलियस",
+      "description": "Coleus scutellarioides एक उष्णकटिबंधीय सजावटी पौधा है। इसे तेज अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "彩叶草",
+      "description": "Coleus scutellarioides 是一种热带观叶植物，以彩色叶片著称。适合明亮散射光和湿润土壤。"
+    },
+    "ja": {
+      "common_name": "コリウス",
+      "description": "Coleus scutellarioides は色鮮やかな葉を持つ熱帯植物です。明るい間接光と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "콜레우스",
+      "description": "Coleus scutellarioides 는 화려한 잎이 특징인 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/coleus/growing-guide",
+      "https://extension.umn.edu/houseplants/coleus",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b301"
+    ]
+  }
+}

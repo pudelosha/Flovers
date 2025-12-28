@@ -1,0 +1,237 @@
+{
+  "external_id": "echinacea_angustifolia",
+  "name": "Narrow-leaved coneflower",
+  "latin": "Echinacea angustifolia",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "echinacea_angustifolia.jpg",
+  "image_thumb": "echinacea_angustifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-drained",
+          "pl": "Piaszczysta",
+          "de": "Sandig",
+          "fr": "Sableux",
+          "it": "Sabbioso",
+          "es": "Arenoso",
+          "pt": "Arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土",
+          "ja": "砂質土",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Mało wody",
+          "de": "Wenig gießen",
+          "fr": "Peu d’eau",
+          "it": "Poca acqua",
+          "es": "Poco riego",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水少なめ",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Umiarkowana",
+          "de": "Mild",
+          "fr": "Tempérée",
+          "it": "Temperata",
+          "es": "Templada",
+          "pt": "Amena",
+          "ar": "معتدلة",
+          "hi": "मध्यम",
+          "zh": "温和",
+          "ja": "温和",
+          "ko": "온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Perennial clump",
+          "pl": "Bylina",
+          "de": "Staude",
+          "fr": "Vivace",
+          "it": "Perenne",
+          "es": "Perenne",
+          "pt": "Perene",
+          "ar": "معمرة",
+          "hi": "बहुवर्षीय",
+          "zh": "多年生",
+          "ja": "多年草",
+          "ko": "다년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Narrow-leaved coneflower",
+      "description": "Echinacea angustifolia is a hardy perennial native to the central North American prairies. It prefers full sun and dry, well-drained soils. The plant is drought tolerant and commonly used in naturalistic and medicinal gardens."
+    },
+    "pl": {
+      "common_name": "Jeżówka wąskolistna",
+      "description": "Echinacea angustifolia to odporna bylina pochodząca z prerii Ameryki Północnej. Najlepiej rośnie w pełnym słońcu i suchej, przepuszczalnej glebie. Jest odporna na suszę i często uprawiana w ogrodach naturalistycznych."
+    },
+    "de": {
+      "common_name": "Schmalblättriger Sonnenhut",
+      "description": "Echinacea angustifolia ist eine robuste Staude aus den Prärien Nordamerikas. Sie benötigt volle Sonne und gut durchlässigen Boden. Die Pflanze ist trockenheitsverträglich und pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Échinacée à feuilles étroites",
+      "description": "Echinacea angustifolia est une plante vivace originaire des prairies d’Amérique du Nord. Elle aime le plein soleil et les sols bien drainés. Elle supporte bien la sécheresse."
+    },
+    "it": {
+      "common_name": "Echinacea a foglie strette",
+      "description": "Echinacea angustifolia è una pianta perenne rustica delle praterie nordamericane. Predilige pieno sole e terreni ben drenati. È resistente alla siccità e facile da coltivare."
+    },
+    "es": {
+      "common_name": "Equinácea de hoja estrecha",
+      "description": "Echinacea angustifolia es una planta perenne resistente originaria de las praderas de Norteamérica. Requiere pleno sol y suelo bien drenado. Tolera bien la sequía."
+    },
+    "pt": {
+      "common_name": "Equinácea-de-folha-estreita",
+      "description": "Echinacea angustifolia é uma planta perene resistente das pradarias da América do Norte. Prefere sol pleno e solo bem drenado. É tolerante à seca."
+    },
+    "ar": {
+      "common_name": "القنفذية ضيقة الأوراق",
+      "description": "نبات Echinacea angustifolia معمر موطنه سهول أمريكا الشمالية. يفضل الشمس الكاملة والتربة جيدة التصريف. يتحمل الجفاف ولا يحتاج عناية كبيرة."
+    },
+    "hi": {
+      "common_name": "संकरी पत्ती वाली एकिनेशिया",
+      "description": "Echinacea angustifolia उत्तरी अमेरिका की प्रेयरी का एक मजबूत बहुवर्षीय पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। यह सूखे को सहन करता है।"
+    },
+    "zh": {
+      "common_name": "狭叶紫锥菊",
+      "description": "Echinacea angustifolia 原产于北美草原，是耐寒的多年生植物。它喜全日照和排水良好的土壤。具有较强的耐旱性。"
+    },
+    "ja": {
+      "common_name": "ホソバムラサキバレンギク",
+      "description": "Echinacea angustifolia は北米の草原原産の丈夫な多年草です。日当たりと水はけの良い土壌を好みます。乾燥に強い植物です。"
+    },
+    "ko": {
+      "common_name": "좁은잎 에키네시아",
+      "description": "Echinacea angustifolia는 북미 초원 원산의 강한 다년생 식물입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 건조에 잘 견딥니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plants.usda.gov/home/plantProfile?symbol=ECAN2",
+      "https://extension.umn.edu/perennials/echinacea",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450"
+    ]
+  }
+}

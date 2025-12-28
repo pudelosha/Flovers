@@ -1,0 +1,238 @@
+{
+  "external_id": "adiantum_capillus_veneris",
+  "name": "Maidenhair Fern",
+  "latin": "Adiantum capillus-veneris",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 4,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "adiantum_capillus_veneris.jpg",
+  "image_thumb": "adiantum_capillus_veneris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist rich soil",
+          "pl": "Wilgotna żyzna",
+          "de": "Feuchte Erde",
+          "fr": "Sol riche humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम समृद्ध मिट्टी",
+          "zh": "湿润肥沃土",
+          "ja": "湿った肥沃土",
+          "ko": "습한 비옥토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "हमेशा नम",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Sensitive care",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Délicate",
+          "it": "Delicata",
+          "es": "Delicada",
+          "pt": "Delicada",
+          "ar": "حساسة",
+          "hi": "संवेदनशील",
+          "zh": "较难养护",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping fern",
+          "pl": "Paprotka kępowa",
+          "de": "Horstbildend",
+          "fr": "Fougère en touffe",
+          "it": "Felce cespitosa",
+          "es": "Helecho en mata",
+          "pt": "Samambaia em touceira",
+          "ar": "سرخس متكتل",
+          "hi": "गुच्छेदार फर्न",
+          "zh": "丛生蕨类",
+          "ja": "株立ちシダ",
+          "ko": "군생 양치"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Maidenhair Fern",
+      "description": "Adiantum capillus-veneris is a delicate fern with fine, fan-shaped leaflets. It naturally grows in moist, shaded habitats and requires consistent humidity indoors."
+    },
+    "pl": {
+      "common_name": "Zanokcica włosowata",
+      "description": "Adiantum capillus-veneris to delikatna paproć o wachlarzowatych listkach. Wymaga stałej wilgotności i jasnego, rozproszonego światła w domu."
+    },
+    "de": {
+      "common_name": "Venushaarfarn",
+      "description": "Adiantum capillus-veneris ist ein zarter Farn mit feinen Fiederblättern. Er bevorzugt feuchte Luft und gleichmäßig feuchten Boden im Innenbereich."
+    },
+    "fr": {
+      "common_name": "Capillaire de Montpellier",
+      "description": "Adiantum capillus-veneris est une fougère fine aux frondes légères. Elle pousse naturellement en milieux humides et ombragés et demande une forte humidité."
+    },
+    "it": {
+      "common_name": "Capelvenere",
+      "description": "Adiantum capillus-veneris è una felce delicata con foglie sottili. Necessita di terreno sempre umido e aria molto umida in casa."
+    },
+    "es": {
+      "common_name": "Culantrillo de pozo",
+      "description": "Adiantum capillus-veneris es un helecho delicado de hojas finas. Requiere humedad alta y riego frecuente en interiores."
+    },
+    "pt": {
+      "common_name": "Avenca",
+      "description": "Adiantum capillus-veneris é uma samambaia delicada de folhas finas. Prefere ambientes úmidos e solo constantemente úmido."
+    },
+    "ar": {
+      "common_name": "سرخس شعر فينوس",
+      "description": "نبات Adiantum capillus-veneris سرخس رقيق بأوراق ناعمة. يحتاج إلى رطوبة عالية وتربة رطبة باستمرار داخل المنزل."
+    },
+    "hi": {
+      "common_name": "मैडनहेयर फर्न",
+      "description": "Adiantum capillus-veneris एक नाजुक फर्न है जिसकी पत्तियाँ पतली होती हैं। इसे घर के अंदर अधिक नमी और नियमित पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "铁线蕨",
+      "description": "Adiantum capillus-veneris 是一种叶片细小的蕨类植物。它喜欢湿润环境，在室内需要高湿度和均匀浇水。"
+    },
+    "ja": {
+      "common_name": "ホウライシダ",
+      "description": "Adiantum capillus-veneris は繊細な葉を持つシダ植物です。室内では高い湿度と一定の水分が必要です。"
+    },
+    "ko": {
+      "common_name": "아디안텀",
+      "description": "Adiantum capillus-veneris 는 잎이 섬세한 양치식물입니다. 실내에서는 높은 습도와 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/adiantum-capillus-veneris/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a213",
+      "https://plants.ces.ncsu.edu/plants/adiantum-capillus-veneris/"
+    ]
+  }
+}

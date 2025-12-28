@@ -1,0 +1,236 @@
+{
+  "external_id": "echeveria_elegans",
+  "name": "Mexican snowball",
+  "latin": "Echeveria elegans",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "echeveria_elegans.jpg",
+  "image_thumb": "echeveria_elegans.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "强光",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poche annaffiature",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe warunki",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい気温",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mexican snowball",
+      "description": "Echeveria elegans is a compact succulent forming rosettes of pale blue-green leaves. It prefers bright light and infrequent watering. Overwatering can cause root rot."
+    },
+    "pl": {
+      "common_name": "Eszeweria elegancka",
+      "description": "Echeveria elegans to niewielki sukulent o rozetach niebieskozielonych liści. Lubi jasne stanowiska i rzadkie podlewanie. Nadmiar wody może powodować gnicie korzeni."
+    },
+    "de": {
+      "common_name": "Mexikanischer Schneeball",
+      "description": "Echeveria elegans bildet kompakte Rosetten aus blaugrünen Blättern. Sie benötigt viel Licht und wenig Wasser. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Échevéria élégante",
+      "description": "Echeveria elegans est une succulente en rosette aux feuilles bleu-vert. Elle aime la lumière vive et des arrosages espacés. Un excès d’eau provoque la pourriture."
+    },
+    "it": {
+      "common_name": "Echeveria elegante",
+      "description": "Echeveria elegans è una succulenta compatta con foglie azzurro-verdi. Richiede molta luce e poche annaffiature. L’acqua in eccesso danneggia le radici."
+    },
+    "es": {
+      "common_name": "Bola de nieve mexicana",
+      "description": "Echeveria elegans es una suculenta de roseta con hojas azul verdosas. Necesita luz intensa y riego poco frecuente. El exceso de agua causa pudrición."
+    },
+    "pt": {
+      "common_name": "Bola de neve mexicana",
+      "description": "Echeveria elegans é uma suculenta compacta de folhas azul-esverdeadas. Prefere muita luz e pouca rega. O excesso de água prejudica as raízes."
+    },
+    "ar": {
+      "common_name": "إشيفيريا أنيقة",
+      "description": "نبات Echeveria elegans عصاري صغير بأوراق زرقاء مخضرة. يحتاج إلى ضوء قوي وري متباعد. كثرة الماء تسبب تعفن الجذور."
+    },
+    "hi": {
+      "common_name": "मैक्सिकन स्नोबॉल",
+      "description": "Echeveria elegans एक छोटा रसीला पौधा है जिसमें रोसेट आकार की पत्तियाँ होती हैं। इसे तेज रोशनी और कम पानी चाहिए। अधिक पानी से जड़ सड़न होती है।"
+    },
+    "zh": {
+      "common_name": "拟石莲花",
+      "description": "Echeveria elegans 是一种形成莲座状的多肉植物，叶片呈蓝绿色。它需要充足光照和少量浇水。浇水过多容易烂根。"
+    },
+    "ja": {
+      "common_name": "エケベリア・エレガンス",
+      "description": "Echeveria elegans は青緑色の葉を持つロゼット状の多肉植物です。明るい光と控えめな水やりを好みます。過湿は根腐れの原因になります。"
+    },
+    "ko": {
+      "common_name": "에케베리아 엘레강스",
+      "description": "Echeveria elegans는 청록색 잎의 로제트형 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 물을 많이 주면 뿌리가 썩습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/echeveria",
+      "https://extension.arizona.edu/pubs/succulents",
+      "https://www.gardenersworld.com/plants/echeveria-elegans/"
+    ]
+  }
+}

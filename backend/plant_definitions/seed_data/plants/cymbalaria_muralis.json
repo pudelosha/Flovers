@@ -1,0 +1,237 @@
+{
+  "external_id": "cymbalaria_muralis",
+  "name": "Ivy-leaved toadflax",
+  "latin": "Cymbalaria muralis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cymbalaria_muralis.jpg",
+  "image_thumb": "cymbalaria_muralis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool–mild",
+          "pl": "Chłodno",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "معتدل",
+          "hi": "हल्का ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing",
+          "pl": "Płożąca",
+          "de": "Kriechend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Rastrera",
+          "pt": "Rasteira",
+          "ar": "زاحفة",
+          "hi": "फैलने वाली",
+          "zh": "蔓生",
+          "ja": "匍匐性",
+          "ko": "포복형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ivy-leaved toadflax",
+      "description": "Cymbalaria muralis is a low-growing perennial often found on walls and rocky sites. It prefers partial sun and evenly moist, well-drained soil. The plant spreads gently by trailing stems."
+    },
+    "pl": {
+      "common_name": "Cymbalaria murowa",
+      "description": "Cymbalaria muralis to niska bylina rosnąca na murach i skałach. Lubi półcień oraz umiarkowanie wilgotną, przepuszczalną glebę. Rozrasta się płożącymi pędami."
+    },
+    "de": {
+      "common_name": "Mauer-Zimbelkraut",
+      "description": "Cymbalaria muralis ist eine niedrig wachsende Staude für Mauern und Steinfugen. Sie bevorzugt Halbschatten und gleichmäßig feuchten Boden. Die Pflanze wächst kriechend."
+    },
+    "fr": {
+      "common_name": "Cymbalaire des murailles",
+      "description": "Cymbalaria muralis est une vivace tapissante des murs et rocailles. Elle apprécie la mi-ombre et un sol drainant et frais. Sa croissance est retombante."
+    },
+    "it": {
+      "common_name": "Ciombolino murale",
+      "description": "Cymbalaria muralis è una perenne tappezzante che cresce su muri e rocce. Preferisce mezz'ombra e terreno ben drenato. Si espande con fusti ricadenti."
+    },
+    "es": {
+      "common_name": "Cimbalaria",
+      "description": "Cymbalaria muralis es una planta perenne rastrera de muros y rocas. Prefiere semisombra y suelo húmedo pero drenante. Crece formando tapices."
+    },
+    "pt": {
+      "common_name": "Cimbalária",
+      "description": "Cymbalaria muralis é uma planta perene rasteira comum em muros. Gosta de meia-sombra e solo bem drenado e húmido. O crescimento é pendente."
+    },
+    "ar": {
+      "common_name": "سيمبالاريا الجدران",
+      "description": "نبات Cymbalaria muralis معمر منخفض ينمو على الجدران والصخور. يفضل الشمس الجزئية وتربة جيدة التصريف ورطبة باعتدال. ينتشر بسيقان زاحفة."
+    },
+    "hi": {
+      "common_name": "आइवी-लीव्ड टोडफ्लैक्स",
+      "description": "Cymbalaria muralis एक छोटी बहुवर्षीय पौधा है जो दीवारों पर उगता है। इसे आंशिक धूप और अच्छी जल निकासी वाली नम मिट्टी पसंद है। यह फैलने वाली वृद्धि दिखाता है।"
+    },
+    "zh": {
+      "common_name": "常春藤叶蝇子草",
+      "description": "Cymbalaria muralis 是一种低矮的多年生植物，常生长在墙壁和岩石上。它喜半日照和排水良好的湿润土壤。植株呈蔓生生长。"
+    },
+    "ja": {
+      "common_name": "ツタバウンラン",
+      "description": "Cymbalaria muralis は壁や岩の隙間に育つ多年草です。半日陰と水はけの良い湿った土を好みます。茎は匍匐して広がります。"
+    },
+    "ko": {
+      "common_name": "담쟁이운란",
+      "description": "Cymbalaria muralis는 벽과 바위 틈에서 자라는 다년생 식물입니다. 반그늘과 배수가 좋은 촉촉한 토양을 선호합니다. 포복형으로 퍼집니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/4333/cymbalaria-muralis/details",
+      "https://plants.ces.ncsu.edu/plants/cymbalaria-muralis/",
+      "https://www.gardenersworld.com/plants/cymbalaria-muralis/"
+    ]
+  }
+}

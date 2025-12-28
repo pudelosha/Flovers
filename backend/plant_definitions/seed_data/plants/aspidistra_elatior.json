@@ -1,0 +1,238 @@
+{
+  "external_id": "aspidistra_elatior",
+  "name": "Cast Iron Plant",
+  "latin": "Aspidistra elatior",
+  "sun": "low",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aspidistra_elatior.jpg",
+  "image_thumb": "aspidistra_elatior.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Niskie światło",
+          "de": "Wenig Licht",
+          "fr": "Faible lumière",
+          "it": "Poca luce",
+          "es": "Poca luz",
+          "pt": "Pouca luz",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光照",
+          "ja": "弱い光",
+          "ko": "약한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cast Iron Plant",
+      "description": "Aspidistra elatior is a durable houseplant known for its tolerance of low light and neglect. It has dark green, leathery leaves and grows slowly. It is commonly used indoors."
+    },
+    "pl": {
+      "common_name": "Aspidistra wyniosła",
+      "description": "Aspidistra elatior to bardzo wytrzymała roślina doniczkowa tolerująca cień i zaniedbanie. Ma ciemnozielone, skórzaste liście. Rośnie powoli w warunkach domowych."
+    },
+    "de": {
+      "common_name": "Schusterpalme",
+      "description": "Aspidistra elatior ist eine robuste Zimmerpflanze, die wenig Licht verträgt. Sie besitzt ledrige, dunkelgrüne Blätter. Das Wachstum ist langsam."
+    },
+    "fr": {
+      "common_name": "Plante de fonte",
+      "description": "Aspidistra elatior est une plante d'intérieur très résistante supportant peu de lumière. Elle a des feuilles vert foncé et coriaces. Sa croissance est lente."
+    },
+    "it": {
+      "common_name": "Pianta di ghisa",
+      "description": "Aspidistra elatior è una pianta da interno molto resistente e tollerante alla scarsa luce. Presenta foglie verdi e coriacee. Cresce lentamente."
+    },
+    "es": {
+      "common_name": "Planta de hierro",
+      "description": "Aspidistra elatior es una planta de interior resistente que tolera poca luz. Tiene hojas verdes oscuras y firmes. Su crecimiento es lento."
+    },
+    "pt": {
+      "common_name": "Planta de ferro",
+      "description": "Aspidistra elatior é uma planta de interior muito resistente à pouca luz. Possui folhas verdes escuras e coriáceas. O crescimento é lento."
+    },
+    "ar": {
+      "common_name": "نبات الحديد",
+      "description": "Aspidistra elatior نبات منزلي شديد التحمل وقادر على العيش في إضاءة منخفضة. أوراقه خضراء داكنة وسميكة. نموه بطيء."
+    },
+    "hi": {
+      "common_name": "कास्ट आयरन प्लांट",
+      "description": "Aspidistra elatior एक मजबूत घरेलू पौधा है जो कम रोशनी सहन करता है। इसकी पत्तियाँ गहरे हरे रंग की होती हैं। इसकी वृद्धि धीमी होती है।"
+    },
+    "zh": {
+      "common_name": "蜘蛛抱蛋",
+      "description": "Aspidistra elatior 是一种非常耐阴的室内植物。叶片深绿色且坚韧。生长速度缓慢。"
+    },
+    "ja": {
+      "common_name": "ハラン",
+      "description": "Aspidistra elatior は耐陰性の高い丈夫な観葉植物です。濃い緑色の葉を持ちます。成長はゆっくりです。"
+    },
+    "ko": {
+      "common_name": "아스피디스트라",
+      "description": "Aspidistra elatior 는 약한 빛에서도 잘 자라는 튼튼한 실내 식물입니다. 잎은 진한 녹색입니다. 성장 속도는 느립니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/aspidistra/elatior/details",
+      "https://plants.ces.ncsu.edu/plants/aspidistra-elatior/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a820"
+    ]
+  }
+}

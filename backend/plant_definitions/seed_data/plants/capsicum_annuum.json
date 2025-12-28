@@ -1,0 +1,238 @@
+{
+  "external_id": "capsicum_annuum",
+  "name": "Pepper Plant",
+  "latin": "Capsicum annuum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 6,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "capsicum_annuum.jpg",
+  "image_thumb": "capsicum_annuum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Irrigazione regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म मौसम",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pepper Plant",
+      "description": "Capsicum annuum includes many pepper varieties grown for edible fruits. It requires bright light, warm temperatures, and regular watering. Plants are often grown indoors in containers for harvest."
+    },
+    "pl": {
+      "common_name": "Papryka",
+      "description": "Capsicum annuum obejmuje wiele odmian papryki uprawianych dla owoców. Wymaga dużo światła, ciepła i regularnego podlewania. Często uprawiana w donicach w domu."
+    },
+    "de": {
+      "common_name": "Paprikapflanze",
+      "description": "Capsicum annuum umfasst viele Paprikasorten mit essbaren Früchten. Die Pflanze benötigt viel Licht, Wärme und regelmäßiges Gießen. Sie eignet sich gut für den Anbau im Topf."
+    },
+    "fr": {
+      "common_name": "Poivrier",
+      "description": "Capsicum annuum regroupe de nombreuses variétés de piments et poivrons comestibles. Il a besoin de beaucoup de lumière, de chaleur et d'arrosages réguliers. Il peut être cultivé en pot."
+    },
+    "it": {
+      "common_name": "Peperone",
+      "description": "Capsicum annuum comprende molte varietà di peperoni coltivati per i frutti. Richiede luce intensa, temperature calde e irrigazione regolare. È adatto alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Pimiento",
+      "description": "Capsicum annuum incluye muchas variedades de pimientos comestibles. Necesita mucha luz, calor y riego regular. Se cultiva comúnmente en macetas."
+    },
+    "pt": {
+      "common_name": "Pimenteira",
+      "description": "Capsicum annuum inclui várias variedades de pimentas e pimentões. Precisa de sol intenso, calor e rega regular. Pode ser cultivada em vasos."
+    },
+    "ar": {
+      "common_name": "نبات الفلفل",
+      "description": "يشمل Capsicum annuum العديد من أنواع الفلفل الصالح للأكل. يحتاج إلى ضوء قوي وحرارة وسقي منتظم. يمكن زراعته في أوعية داخلية."
+    },
+    "hi": {
+      "common_name": "मिर्च का पौधा",
+      "description": "Capsicum annuum में कई प्रकार की खाने योग्य मिर्च शामिल हैं। इसे तेज़ रोशनी, गर्म तापमान और नियमित पानी की आवश्यकता होती है। इसे गमलों में उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "辣椒",
+      "description": "Capsicum annuum 包含多种可食用辣椒品种。它需要充足光照、温暖环境和规律浇水。常作为盆栽植物栽培。"
+    },
+    "ja": {
+      "common_name": "トウガラシ",
+      "description": "Capsicum annuum は多くの食用トウガラシ類を含みます。強い光と暖かさ、定期的な水やりが必要です。鉢植えで育てられます。"
+    },
+    "ko": {
+      "common_name": "고추",
+      "description": "Capsicum annuum 은 다양한 식용 고추 품종을 포함합니다. 강한 빛과 따뜻한 환경, 규칙적인 물주기가 필요합니다. 화분 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://extension.umn.edu/vegetables/growing-peppers",
+      "https://www.rhs.org.uk/plants/pepper/grow-your-own",
+      "https://edis.ifas.ufl.edu/publication/HS979"
+    ]
+  }
+}

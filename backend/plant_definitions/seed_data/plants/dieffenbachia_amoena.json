@@ -1,0 +1,237 @@
+{
+  "external_id": "dieffenbachia_amoena",
+  "name": "Dieffenbachia Amoena",
+  "latin": "Dieffenbachia amoena",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dieffenbachia_amoena.jpg",
+  "image_thumb": "dieffenbachia_amoena.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining aroid soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierte Erde",
+          "fr": "Sol bien drainé",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep soil lightly moist",
+          "pl": "Lekko wilgotna gleba",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol légèrement humide",
+          "it": "Terreno leggermente umido",
+          "es": "Suelo ligeramente húmedo",
+          "pt": "Solo levemente úmido",
+          "ar": "تربة رطبة قليلاً",
+          "hi": "मिट्टी हल्की नम रखें",
+          "zh": "保持微湿",
+          "ja": "土をやや湿らせる",
+          "ko": "흙을 약간 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile d’entretien",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "易于养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27 °م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27 °C",
+          "ko": "18–27 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers higher humidity",
+          "pl": "Lubi wyższą wilgotność",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Preferisce umidità",
+          "es": "Prefiere humedad",
+          "pt": "Prefere umidade",
+          "ar": "يفضل رطوبة أعلى",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright leafy growth",
+          "pl": "Wzniesiony wzrost",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा विकास",
+          "zh": "直立生长",
+          "ja": "直立した成長",
+          "ko": "직립형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dumb Cane",
+      "description": "Dieffenbachia amoena is a tropical foliage plant known for its large, variegated leaves. It grows well indoors in bright, indirect light and evenly moist soil. The plant is popular but toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Difenbachia",
+      "description": "Dieffenbachia amoena to tropikalna roślina liściasta o dużych, pstrych liściach. Dobrze rośnie w domu przy jasnym, rozproszonym świetle i umiarkowanym podlewaniu. Jest rośliną trującą."
+    },
+    "de": {
+      "common_name": "Dieffenbachie",
+      "description": "Dieffenbachia amoena ist eine tropische Blattschmuckpflanze mit großen, gemusterten Blättern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze ist giftig."
+    },
+    "fr": {
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia amoena est une plante tropicale appréciée pour son feuillage décoratif. Elle se cultive en intérieur avec une lumière indirecte et un sol légèrement humide. Elle est toxique en cas d’ingestion."
+    },
+    "it": {
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia amoena è una pianta tropicale ornamentale con grandi foglie variegate. Predilige luce indiretta e terreno costantemente umido. È tossica per persone e animali."
+    },
+    "es": {
+      "common_name": "Dieffenbachia",
+      "description": "Dieffenbachia amoena es una planta tropical de hojas decorativas y vistosas. Se adapta bien al interior con luz indirecta y riego regular. Es tóxica si se ingiere."
+    },
+    "pt": {
+      "common_name": "Comigo-ninguém-pode",
+      "description": "Dieffenbachia amoena é uma planta tropical ornamental muito popular. Prefere luz indireta e solo levemente úmido dentro de casa. É considerada tóxica."
+    },
+    "ar": {
+      "common_name": "ديفنباخيا",
+      "description": "نبات ديفنباخيا أمويـنا نبات استوائي يتميز بأوراقه الكبيرة المزخرفة. ينجح داخل المنازل مع ضوء غير مباشر وري منتظم. النبات سام عند الابتلاع."
+    },
+    "hi": {
+      "common_name": "डाइफेनबाखिया",
+      "description": "डाइफेनबाखिया अमोएना एक उष्णकटिबंधीय सजावटी पौधा है जिसकी पत्तियाँ आकर्षक होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी और नियमित पानी में अच्छा बढ़ता है। यह पौधा विषैला है।"
+    },
+    "zh": {
+      "common_name": "花叶万年青",
+      "description": "Dieffenbachia amoena 是一种热带观叶植物，以其斑纹叶片著称。适合在室内明亮散射光和湿润土壤中生长。植株具有毒性。"
+    },
+    "ja": {
+      "common_name": "ディフェンバキア",
+      "description": "ディフェンバキア・アモエナは大きな斑入りの葉を持つ熱帯植物です。明るい間接光と適度な水やりで室内でもよく育ちます。有毒なので注意が必要です。"
+    },
+    "ko": {
+      "common_name": "디펜바키아",
+      "description": "디펜바키아 아모에나는 화려한 잎을 가진 열대 관엽식물입니다. 실내에서 밝은 간접광과 규칙적인 물주기를 선호합니다. 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5318/dieffenbachia/details",
+      "https://www.gardenersworld.com/plants/dieffenbachia/",
+      "https://edis.ifas.ufl.edu/publication/FP181"
+    ]
+  }
+}

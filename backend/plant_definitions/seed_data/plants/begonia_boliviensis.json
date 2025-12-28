@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_boliviensis",
+  "name": "Bolivian Begonia",
+  "latin": "Begonia boliviensis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "begonia_boliviensis.jpg",
+  "image_thumb": "begonia_boliviensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowane",
+          "de": "Mäßig feucht",
+          "fr": "Humide",
+          "it": "Umido",
+          "es": "Húmedo",
+          "pt": "Úmido",
+          "ar": "رطب",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "適度に湿潤",
+          "ko": "적당히 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime humidité",
+          "it": "Ama umidità",
+          "es": "Gusta humedad",
+          "pt": "Gosta umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿度",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnellwachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bolivian Begonia",
+      "description": "Begonia boliviensis is a tuberous begonia native to Bolivia, known for its pendulous red-orange flowers. It grows best in bright, indirect light and evenly moist soil. The plant is commonly grown indoors or in sheltered outdoor conditions."
+    },
+    "pl": {
+      "common_name": "Begonia boliwijska",
+      "description": "Begonia boliviensis to bulwiasta begonia pochodząca z Boliwii, ceniona za zwisające czerwono-pomarańczowe kwiaty. Najlepiej rośnie w jasnym, rozproszonym świetle i stale lekko wilgotnym podłożu. Często uprawiana jest jako roślina doniczkowa."
+    },
+    "de": {
+      "common_name": "Bolivische Begonie",
+      "description": "Begonia boliviensis ist eine knollenbildende Begonie aus Bolivien mit hängenden rot-orangen Blüten. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Geeignet für Innenräume oder geschützte Außenbereiche."
+    },
+    "fr": {
+      "common_name": "Bégonia de Bolivie",
+      "description": "Begonia boliviensis est un bégonia tubéreux originaire de Bolivie, apprécié pour ses fleurs pendantes rouge orangé. Il préfère une lumière vive indirecte et un sol régulièrement humide. Il est souvent cultivé en pot."
+    },
+    "it": {
+      "common_name": "Begonia boliviana",
+      "description": "La Begonia boliviensis è una begonia tuberosa originaria della Bolivia, con fiori pendenti rosso-arancio. Predilige luce intensa ma indiretta e terreno costantemente umido. È adatta alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Begonia boliviana",
+      "description": "Begonia boliviensis es una begonia tuberosa originaria de Bolivia, conocida por sus flores colgantes rojo-anaranjadas. Prefiere luz brillante indirecta y riego regular. Se cultiva comúnmente en macetas."
+    },
+    "pt": {
+      "common_name": "Begônia boliviana",
+      "description": "Begonia boliviensis é uma begônia tuberosa nativa da Bolívia, com flores pendentes vermelho-alaranjadas. Gosta de luz brilhante indireta e solo sempre levemente úmido. É muito usada como planta ornamental."
+    },
+    "ar": {
+      "common_name": "بيغونيا بوليفية",
+      "description": "بيغونيا بوليفينسيس نبات درني موطنه بوليفيا ويتميز بأزهاره المتدلية الحمراء البرتقالية. يفضل الضوء الساطع غير المباشر والتربة الرطبة باعتدال. يزرع غالبًا في الأصص."
+    },
+    "hi": {
+      "common_name": "बोलिवियन बेगोनिया",
+      "description": "Begonia boliviensis एक कंदीय बेगोनिया है जो बोलीविया की मूल निवासी है। इसमें लटकते हुए लाल-नारंगी फूल होते हैं और यह तेज़ परोक्ष रोशनी पसंद करती है। मिट्टी को लगातार हल्का नम रखना चाहिए।"
+    },
+    "zh": {
+      "common_name": "玻利维亚秋海棠",
+      "description": "Begonia boliviensis 原产于玻利维亚，是一种块茎秋海棠，具有下垂的红橙色花朵。它适合明亮的散射光和均匀湿润的土壤。常作为盆栽植物栽培。"
+    },
+    "ja": {
+      "common_name": "ボリビアシュウカイドウ",
+      "description": "ベゴニア・ボリビエンシスはボリビア原産の球根性ベゴニアです。赤橙色の下垂する花が特徴で、明るい間接光を好みます。土は適度に湿らせて管理します。"
+    },
+    "ko": {
+      "common_name": "볼리비아 베고니아",
+      "description": "Begonia boliviensis는 볼리비아 원산의 구근성 베고니아입니다. 붉은 주황색의 늘어지는 꽃이 특징이며 밝은 간접광을 선호합니다. 토양은 항상 약간 촉촉하게 유지해야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1765/begonia-boliviensis/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b871",
+      "https://edis.ifas.ufl.edu/publication/EP306"
+    ]
+  }
+}

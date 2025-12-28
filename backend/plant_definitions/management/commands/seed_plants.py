@@ -9,9 +9,8 @@ from django.core.management.base import BaseCommand, CommandError
 
 from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
 
-
 LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
-MAX_TRAIT_TEXT_LEN = 25
+MAX_TRAIT_TEXT_LEN = 30
 
 
 def _media_root() -> Path:
@@ -52,9 +51,7 @@ def validate_plant_payload(p: dict) -> None:
             raise CommandError("Each trait must have 'key' and 'value'")
         val = trait["value"]
         if not isinstance(val, dict) or "text" not in val or not isinstance(val["text"], dict):
-            raise CommandError(
-                "Each trait.value must be like {'text': {'en': '...', 'pl': '...'}}"
-            )
+            raise CommandError("Each trait.value must be like {'text': {'en': '...', 'pl': '...'}}")
         for lang, txt in val["text"].items():
             if txt is None:
                 continue
@@ -67,6 +64,15 @@ def validate_plant_payload(p: dict) -> None:
                 )
 
 
+def _is_probably_bad_image_name(name: str) -> bool:
+    """
+    Guard against accidentally storing 'plants/hero/foo.jpg' in the DB field name
+    when upload_to already adds 'plants/hero/'.
+    """
+    n = (name or "").replace("\\", "/")
+    return n.startswith("plants/hero/") or n.startswith("plants/thumb/") or n.startswith("/")
+
+
 class Command(BaseCommand):
     help = "Seed/update PlantDefinitions from JSON files in plant_definitions/seed_data/plants/"
 
@@ -77,6 +83,11 @@ class Command(BaseCommand):
             default="",
             help="Seed only one plant file by external_id (e.g. monstera_deliciosa)",
         )
+        parser.add_argument(
+            "--force-images",
+            action="store_true",
+            help="Always re-attach images from MEDIA_ROOT even if DB already has image fields set.",
+        )
 
     def handle(self, *args, **options):
         seed_dir = _seed_dir()
@@ -84,6 +95,7 @@ class Command(BaseCommand):
             raise CommandError(f"Seed folder not found: {seed_dir}")
 
         only = (options.get("only") or "").strip()
+        force_images = bool(options.get("force_images", False))
 
         files = sorted(seed_dir.glob("*.json"))
         if only:
@@ -105,7 +117,6 @@ class Command(BaseCommand):
                 payload = json.loads(fp.read_text(encoding="utf-8"))
                 validate_plant_payload(payload)
 
-                # Defaults / canonical (non-translated) fields
                 obj, _ = PlantDefinition.objects.update_or_create(
                     external_id=payload["external_id"],
                     defaults={
@@ -125,7 +136,6 @@ class Command(BaseCommand):
                         "fertilize_interval_days": payload.get("fertilize_interval_days"),
                         "repot_required": bool(payload.get("repot_required", False)),
                         "repot_interval_months": payload.get("repot_interval_months"),
-                        # Legacy traits JSON (now multilingual)
                         "traits": payload.get("traits", []),
                     },
                 )
@@ -137,7 +147,6 @@ class Command(BaseCommand):
                     common_name = (tr.get("common_name") or "").strip()
                     description = (tr.get("description") or "").strip()
 
-                    # Fallbacks
                     if not common_name:
                         common_name = (
                             (translations.get("en") or {}).get("common_name")
@@ -154,24 +163,41 @@ class Command(BaseCommand):
                         defaults={"common_name": common_name, "description": description},
                     )
 
-                # Images: JSON provides filenames; you keep files in MEDIA_ROOT/plants/...
-                hero_name = (payload.get("image_hero") or "").strip()   # e.g. "monstera_deliciosa.jpg"
-                thumb_name = (payload.get("image_thumb") or "").strip() # e.g. "monstera_deliciosa.jpg"
+                # ---- Images ----
+                # JSON provides filenames like "monstera_deliciosa.jpg"
+                hero_name = (payload.get("image_hero") or "").strip()
+                thumb_name = (payload.get("image_thumb") or "").strip()
 
-                if hero_name and not obj.image_hero:
+                # If old bad values exist (e.g. plants/hero/xxx.jpg saved into field name),
+                # clear so we can re-attach correctly.
+                if obj.image_hero and _is_probably_bad_image_name(obj.image_hero.name):
+                    obj.image_hero.delete(save=False)
+                if obj.image_thumb and _is_probably_bad_image_name(obj.image_thumb.name):
+                    obj.image_thumb.delete(save=False)
+
+                # Attach hero (always if force_images, otherwise if empty)
+                if hero_name and (force_images or not obj.image_hero):
                     hero_path = media_root / "plants" / "hero" / hero_name
                     if hero_path.exists():
                         with open(hero_path, "rb") as f:
-                            # store under upload_to path (plants/hero/)
-                            obj.image_hero.save(f"plants/hero/{hero_name}", File(f), save=False)
+                            # IMPORTANT: pass only filename; upload_to adds plants/hero/
+                            obj.image_hero.save(hero_name, File(f), save=False)
 
-                if thumb_name and not obj.image_thumb:
+                # Attach thumb (always if force_images, otherwise if empty)
+                if thumb_name and (force_images or not obj.image_thumb):
                     thumb_path = media_root / "plants" / "thumb" / thumb_name
+                    # If you store thumbs in hero folder too, fallback:
+                    if not thumb_path.exists():
+                        alt = media_root / "plants" / "hero" / thumb_name
+                        if alt.exists():
+                            thumb_path = alt
+
                     if thumb_path.exists():
                         with open(thumb_path, "rb") as f:
-                            obj.image_thumb.save(f"plants/thumb/{thumb_name}", File(f), save=False)
+                            obj.image_thumb.save(thumb_name, File(f), save=False)
 
                 obj.save()
+
                 ok += 1
                 self.stdout.write(self.style.SUCCESS(f"OK  {payload['external_id']} ({fp.name})"))
 

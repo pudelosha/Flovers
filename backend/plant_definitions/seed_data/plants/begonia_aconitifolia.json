@@ -1,0 +1,237 @@
+{
+  "external_id": "begonia_aconitifolia",
+  "name": "Aconite-leaved Begonia",
+  "latin": "Begonia aconitifolia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "begonia_aconitifolia.jpg",
+  "image_thumb": "begonia_aconitifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche, drainé",
+          "it": "Ricco e drenato",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ, सूखा",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で排水良",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido regolare",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "適度に湿潤",
+          "ko": "고르게 관수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C ideal",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "喜高湿度",
+          "ja": "高湿度好み",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright shrubby",
+          "pl": "Krzaczasty",
+          "de": "Buschig",
+          "fr": "Buissonnant",
+          "it": "Cespugliosa",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "شجيري",
+          "hi": "झाड़ीदार",
+          "zh": "直立灌木状",
+          "ja": "直立低木状",
+          "ko": "직립 관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Aconite-leaved Begonia",
+      "description": "Begonia aconitifolia is a tropical begonia species native to Brazil. It is grown for its deeply cut decorative leaves and delicate pink flowers. The plant prefers bright indirect light and consistently moist soil."
+    },
+    "pl": {
+      "common_name": "Begonia akonitowa",
+      "description": "Begonia aconitifolia pochodzi z Brazylii i jest ceniona za ozdobne, głęboko klapowane liście. Wymaga jasnego, rozproszonego światła i umiarkowanie wilgotnego podłoża."
+    },
+    "de": {
+      "common_name": "Eisenhutblättrige Begonie",
+      "description": "Begonia aconitifolia stammt aus Brasilien und hat dekorative, tief gelappte Blätter. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Bégonia à feuilles d’aconit",
+      "description": "Begonia aconitifolia est originaire du Brésil et appréciée pour son feuillage décoratif. Elle aime une lumière indirecte et un sol régulièrement humide."
+    },
+    "it": {
+      "common_name": "Begonia a foglie di aconito",
+      "description": "Begonia aconitifolia è una specie tropicale brasiliana con foglie ornamentali. Cresce bene con luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Begonia de hojas de acónito",
+      "description": "Begonia aconitifolia es originaria de Brasil y destaca por sus hojas decorativas. Prefiere luz indirecta brillante y riego regular."
+    },
+    "pt": {
+      "common_name": "Begônia de folhas de acônito",
+      "description": "Begonia aconitifolia é nativa do Brasil e cultivada pela folhagem ornamental. Necessita luz indireta e solo sempre levemente úmido."
+    },
+    "ar": {
+      "common_name": "بيغونيا أوراق الأقونيط",
+      "description": "بيغونيا أكونيتيفوليا نبات استوائي من البرازيل يتميز بأوراقه الزخرفية. يفضل الضوء غير المباشر والتربة الرطبة."
+    },
+    "hi": {
+      "common_name": "एकोनाइट पत्ती बेगोनिया",
+      "description": "Begonia aconitifolia ब्राज़ील की उष्णकटिबंधीय प्रजाति है। इसे सजावटी पत्तियों और अप्रत्यक्ष रोशनी में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "乌头叶秋海棠",
+      "description": "Begonia aconitifolia 原产于巴西，以其装饰性叶片著称。适合明亮散射光和持续湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "アコニティフォリア・ベゴニア",
+      "description": "ベゴニア・アコニティフォリアはブラジル原産の観葉植物です。明るい間接光と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "아코니티폴리아 베고니아",
+      "description": "Begonia aconitifolia는 브라질 원산의 열대 베고니아입니다. 밝은 간접광과 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/begonia-aconitifolia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123"
+    ]
+  }
+}

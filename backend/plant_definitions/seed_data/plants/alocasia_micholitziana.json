@@ -1,0 +1,238 @@
+{
+  "external_id": "alocasia_micholitziana",
+  "name": "Green Velvet Alocasia",
+  "latin": "Alocasia micholitziana",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_micholitziana.jpg",
+  "image_thumb": "alocasia_micholitziana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalna",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Humedad constante",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clump",
+          "pl": "Kępiasty",
+          "de": "Aufrecht",
+          "fr": "Touffe dressée",
+          "it": "Crescita eretta",
+          "es": "Erecta",
+          "pt": "Ereta",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立丛生",
+          "ja": "直立性",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Green Velvet Alocasia",
+      "description": "Alocasia micholitziana is a tropical aroid known for its dark green, velvety leaves with pale veins. It prefers bright indirect light and consistently moist, well-draining soil. Stable warmth and good humidity help maintain healthy foliage."
+    },
+    "pl": {
+      "common_name": "Alokazja aksamitna",
+      "description": "Alocasia micholitziana to tropikalna roślina o ciemnozielonych, aksamitnych liściach z jasnym unerwieniem. Wymaga jasnego, rozproszonego światła i stale lekko wilgotnego podłoża. Lubi ciepło i podwyższoną wilgotność powietrza."
+    },
+    "de": {
+      "common_name": "Samt-Alokasie",
+      "description": "Alocasia micholitziana ist eine tropische Aronstabpflanze mit samtigen, dunkelgrünen Blättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Warme Temperaturen und höhere Luftfeuchte sind ideal."
+    },
+    "fr": {
+      "common_name": "Alocasia velours",
+      "description": "Alocasia micholitziana est une plante tropicale appréciée pour ses feuilles vert foncé et veloutées. Elle demande une lumière vive indirecte et un substrat toujours légèrement humide. Une ambiance chaude et humide favorise sa croissance."
+    },
+    "it": {
+      "common_name": "Alocasia vellutata",
+      "description": "Alocasia micholitziana è una pianta tropicale con foglie vellutate e nervature chiare. Predilige luce indiretta intensa e terreno costantemente umido ma drenante. Temperature stabili e umidità elevata sono importanti."
+    },
+    "es": {
+      "common_name": "Alocasia aterciopelada",
+      "description": "Alocasia micholitziana es una planta tropical de hojas verde oscuro y textura aterciopelada. Necesita luz indirecta brillante y riego regular para mantener el sustrato húmedo. El calor constante favorece su desarrollo."
+    },
+    "pt": {
+      "common_name": "Alocasia aveludada",
+      "description": "Alocasia micholitziana é uma planta tropical conhecida pelas folhas aveludadas verde-escuras. Prefere luz indireta brilhante e solo sempre levemente úmido. Ambientes quentes e estáveis são os mais adequados."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا مخملية",
+      "description": "ألوكاسيا ميخوليتزيانا نبات استوائي يتميز بأوراق مخملية خضراء داكنة. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة جيدة التصريف. يفضل درجات حرارة دافئة ورطوبة معتدلة."
+    },
+    "hi": {
+      "common_name": "ग्रीन वेलवेट एलोकैसिया",
+      "description": "Alocasia micholitziana एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मखमली और गहरे हरे रंग की होती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और नम, अच्छी जल निकासी वाली मिट्टी चाहिए। स्थिर गर्म तापमान इसके लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "绿绒海芋",
+      "description": "Alocasia micholitziana 是一种热带植物，以深绿色绒面叶片著称。它适合明亮的散射光和保持湿润的疏松土壤。温暖稳定的环境有助于生长。"
+    },
+    "ja": {
+      "common_name": "グリーンベルベットアロカシア",
+      "description": "アロカシア・ミコリツィアナは濃緑色のベルベット状の葉を持つ熱帯植物です。明るい間接光と適度に湿った用土を好みます。安定した暖かさが必要です。"
+    },
+    "ko": {
+      "common_name": "그린 벨벳 알로카시아",
+      "description": "Alocasia micholitziana는 벨벳 같은 짙은 녹색 잎이 특징인 열대 식물입니다. 밝은 간접광과 촉촉한 배양토를 선호합니다. 따뜻하고 안정된 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a533",
+      "https://extension.umn.edu/houseplants/alocasia"
+    ]
+  }
+}

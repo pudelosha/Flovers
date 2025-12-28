@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_maculata",
+  "name": "Polka Dot Begonia",
+  "latin": "Begonia maculata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "begonia_maculata.jpg",
+  "image_thumb": "begonia_maculata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "उपजाऊ व जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で排水良好",
+          "ko": "비옥하고 배수됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humidité modérée",
+          "it": "Umidità costante",
+          "es": "Humedad constante",
+          "pt": "Umidade constante",
+          "ar": "رطوبة معتدلة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "適度な水分",
+          "ko": "고른 수분"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama l’umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright cane growth",
+          "pl": "Wzrost pionowy",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Polka Dot Begonia",
+      "description": "Begonia maculata is known for its dark green leaves with silver spots and red undersides. It prefers bright indirect light and evenly moist soil indoors."
+    },
+    "pl": {
+      "common_name": "Begonia kropkowana",
+      "description": "Begonia maculata wyróżnia się zielonymi liśćmi z jasnymi kropkami i czerwonym spodem. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanej wilgotności."
+    },
+    "de": {
+      "common_name": "Forellenbegonie",
+      "description": "Begonia maculata hat grüne Blätter mit silbernen Punkten und roter Unterseite. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Bégonia à pois",
+      "description": "Begonia maculata possède des feuilles vertes tachetées d’argent au revers rouge. Elle apprécie une lumière indirecte et un sol légèrement humide."
+    },
+    "it": {
+      "common_name": "Begonia maculata",
+      "description": "La Begonia maculata è apprezzata per le foglie verdi a pois con il retro rosso. Cresce bene con luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Begonia de lunares",
+      "description": "Begonia maculata destaca por sus hojas verdes con manchas plateadas y envés rojo. Prefiere luz indirecta brillante y riego regular."
+    },
+    "pt": {
+      "common_name": "Begônia-maculada",
+      "description": "Begonia maculata tem folhas verdes com pintas claras e verso avermelhado. Desenvolve-se melhor com luz indireta e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "بيغونيا منقطة",
+      "description": "تتميز Begonia maculata بأوراق خضراء منقطة وظهر أحمر. تنمو جيدًا في ضوء ساطع غير مباشر وتربة رطبة باعتدال."
+    },
+    "hi": {
+      "common_name": "पोल्का डॉट बेगोनिया",
+      "description": "Begonia maculata अपने धब्बेदार हरे पत्तों और लाल निचली सतह के लिए जानी जाती है। इसे तेज अप्रत्यक्ष रोशनी और नियमित पानी पसंद है।"
+    },
+    "zh": {
+      "common_name": "波点秋海棠",
+      "description": "Begonia maculata 以带银色斑点的绿色叶片和红色背面著称。适合明亮散射光和均匀湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "ポルカドットベゴニア",
+      "description": "ベゴニア・マクラータは銀色の斑点と赤い裏面の葉が特徴です。明るい間接光と適度な水分を好みます。"
+    },
+    "ko": {
+      "common_name": "폴카닷 베고니아",
+      "description": "Begonia maculata는 은색 반점과 붉은 잎 뒷면이 특징입니다. 밝은 간접광과 고른 수분을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/18954/begonia-maculata/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a388",
+      "https://extension.umn.edu/houseplants/begonia"
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "external_id": "delphinium_elatum",
+  "name": "Tall Larkspur",
+  "latin": "Delphinium elatum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "delphinium_elatum.jpg",
+  "image_thumb": "delphinium_elatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährreicher Boden",
+          "fr": "Sol riche",
+          "it": "Terreno ricco",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃壤土",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular water",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعب",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Chłodny klimat",
+          "de": "Kühl gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Clima fresco",
+          "es": "Clima fresco",
+          "pt": "Clima fresco",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा मौसम",
+          "zh": "凉爽气候",
+          "ja": "冷涼な気候",
+          "ko": "서늘한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tall perennial",
+          "pl": "Wysoka bylina",
+          "de": "Hohe Staude",
+          "fr": "Vivace haute",
+          "it": "Perenne alta",
+          "es": "Perenne alta",
+          "pt": "Perene alta",
+          "ar": "معمرة طويلة",
+          "hi": "ऊँचा बहुवर्षीय",
+          "zh": "高大多年生",
+          "ja": "背の高い多年草",
+          "ko": "키 큰 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tall larkspur",
+      "description": "Delphinium elatum is a tall perennial native to Europe and western Asia. It produces striking blue flower spikes in early summer. The plant prefers full sun and fertile, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Ostróżka wyniosła",
+      "description": "Delphinium elatum to wysoka bylina pochodząca z Europy i Azji Zachodniej. Tworzy efektowne niebieskie kwiatostany latem. Wymaga słońca i żyznej gleby."
+    },
+    "de": {
+      "common_name": "Hoher Rittersporn",
+      "description": "Delphinium elatum ist eine hohe Staude aus Europa und Westasien. Sie bildet im Frühsommer blaue Blütenstände. Bevorzugt volle Sonne und nährreichen Boden."
+    },
+    "fr": {
+      "common_name": "Pied-d'alouette élevé",
+      "description": "Delphinium elatum est une vivace haute originaire d’Europe et d’Asie occidentale. Elle fleurit en épis bleus spectaculaires en été. Elle aime le plein soleil et un sol fertile."
+    },
+    "it": {
+      "common_name": "Speronella alta",
+      "description": "Delphinium elatum è una perenne alta originaria di Europa e Asia occidentale. Produce spighe di fiori blu in estate. Preferisce pieno sole e terreno fertile."
+    },
+    "es": {
+      "common_name": "Espuela de caballero alta",
+      "description": "Delphinium elatum es una planta perenne alta de Europa y Asia occidental. Destaca por sus flores azules en espiga. Necesita sol pleno y suelo fértil."
+    },
+    "pt": {
+      "common_name": "Delfínio alto",
+      "description": "Delphinium elatum é uma planta perene alta da Europa e Ásia ocidental. Produz flores azuis vistosas no verão. Prefere sol pleno e solo fértil."
+    },
+    "ar": {
+      "common_name": "لاركسبور طويل",
+      "description": "Delphinium elatum نبات معمر طويل موطنه أوروبا وغرب آسيا. يتميز بأزهاره الزرقاء في الصيف. يفضل الشمس الكاملة والتربة الخصبة."
+    },
+    "hi": {
+      "common_name": "लार्कस्पर",
+      "description": "Delphinium elatum यूरोप और पश्चिमी एशिया का एक ऊँचा बहुवर्षीय पौधा है। इसमें गर्मियों में नीले फूल आते हैं। इसे धूप और उपजाऊ मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "高翠雀花",
+      "description": "Delphinium elatum 原产于欧洲和西亚，是一种高大的多年生植物。夏季开蓝色花序。适合全日照和肥沃土壤。"
+    },
+    "ja": {
+      "common_name": "オオデルフィニウム",
+      "description": "Delphinium elatum はヨーロッパと西アジア原産の多年草です。夏に青い花穂を咲かせます。日当たりと肥沃な土を好みます。"
+    },
+    "ko": {
+      "common_name": "큰제비꽃",
+      "description": "Delphinium elatum은 유럽과 서아시아 원산의 키 큰 다년초입니다. 여름에 파란 꽃을 피웁니다. 햇빛과 비옥한 토양을 좋아합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5537/delphinium-elatum/details",
+      "https://www.gardenersworld.com/plants/delphinium-elatum/"
+    ]
+  }
+}

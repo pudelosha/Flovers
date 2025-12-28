@@ -1,0 +1,238 @@
+{
+  "external_id": "dracaena_marginata",
+  "name": "Dracaena Marginata",
+  "latin": "Dracaena marginata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dracaena_marginata.jpg",
+  "image_thumb": "dracaena_marginata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles, indirektes Licht",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮的散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol bien drainé",
+          "it": "Terriccio drenante",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dries",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega al secar",
+          "pt": "Regar após secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी दें",
+          "zh": "表土干后浇水",
+          "ja": "乾いてから水やり",
+          "ko": "마르면 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile d’entretien",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "易于养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27 °م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27 °C",
+          "ko": "18–27 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों हेतु विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lente à modérée",
+          "it": "Lenta-moderata",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "生长缓慢到中等",
+          "ja": "成長は緩やか",
+          "ko": "느림~보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dragon Tree",
+      "description": "Dracaena marginata is a popular indoor plant known for its slender trunk and arching leaves. It tolerates a range of indoor conditions and prefers bright, indirect light. Water sparingly and allow the soil to dry slightly between waterings."
+    },
+    "pl": {
+      "common_name": "Dracena obrzeżona",
+      "description": "Dracaena marginata to popularna roślina domowa o smukłym pniu i wąskich liściach. Dobrze rośnie w jasnym, pośrednim świetle i jest odporna na błędy pielęgnacyjne. Podlewaj umiarkowanie po przeschnięciu podłoża."
+    },
+    "de": {
+      "common_name": "Drachenbaum",
+      "description": "Dracaena marginata ist eine pflegeleichte Zimmerpflanze mit schlankem Stamm und schmalen Blättern. Sie bevorzugt helles, indirektes Licht und gleichmäßige Temperaturen. Gegossen wird erst, wenn die oberste Erdschicht trocken ist."
+    },
+    "fr": {
+      "common_name": "Dragonnier de Madagascar",
+      "description": "Dracaena marginata est une plante d’intérieur robuste au port élégant. Elle aime la lumière vive indirecte et un arrosage modéré. Laissez sécher le substrat en surface entre deux arrosages."
+    },
+    "it": {
+      "common_name": "Dracena marginata",
+      "description": "La Dracaena marginata è una pianta da interno resistente con foglie sottili e arcuate. Preferisce luce indiretta e annaffiature moderate. È ideale per ambienti domestici e uffici."
+    },
+    "es": {
+      "common_name": "Drácena marginata",
+      "description": "Dracaena marginata es una planta de interior muy popular y resistente. Crece bien con luz indirecta brillante y riegos moderados. Deja secar ligeramente el sustrato antes de volver a regar."
+    },
+    "pt": {
+      "common_name": "Dracena-de-madagascar",
+      "description": "A Dracaena marginata é uma planta ornamental fácil de cuidar. Prefere luz indireta e regas espaçadas. Tolera bem condições internas comuns."
+    },
+    "ar": {
+      "common_name": "نبات التنين",
+      "description": "نبات الدراسينا مارجيناتا نبات منزلي شائع وسهل العناية. يفضل الضوء الساطع غير المباشر والري المعتدل. اترك التربة تجف قليلاً بين الريات."
+    },
+    "hi": {
+      "common_name": "ड्रैसीना",
+      "description": "ड्रैसीना मार्जिनाटा एक लोकप्रिय इनडोर पौधा है जो कम देखभाल में अच्छा बढ़ता है। इसे अप्रत्यक्ष रोशनी पसंद है। मिट्टी सूखने पर ही पानी दें।"
+    },
+    "zh": {
+      "common_name": "龙血树",
+      "description": "龙血树是一种常见的室内观叶植物，外形挺拔美观。它喜欢明亮的散射光和适度浇水。土壤稍干后再浇水即可。"
+    },
+    "ja": {
+      "common_name": "ドラセナ・マルギナータ",
+      "description": "ドラセナ・マルギナータは丈夫で育てやすい観葉植物です。明るい間接光を好み、水は控えめに与えます。室内環境に適しています。"
+    },
+    "ko": {
+      "common_name": "드라세나 마지나타",
+      "description": "드라세나 마지나타는 관리가 쉬운 실내 식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 흙이 마른 후 물을 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/dracaena/growing-guide",
+      "https://extension.umn.edu/houseplants/dracaena",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a585"
+    ]
+  }
+}

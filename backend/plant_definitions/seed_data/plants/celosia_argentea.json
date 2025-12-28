@@ -1,0 +1,238 @@
+{
+  "external_id": "celosia_argentea",
+  "name": "Celosia",
+  "latin": "Celosia argentea",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "celosia_argentea.jpg",
+  "image_thumb": "celosia_argentea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期的",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Plumed Cockscomb",
+      "description": "Celosia argentea is a fast-growing annual known for its colorful plume-like flowers. It thrives in full sun and warm temperatures. Regular watering and well-drained soil support healthy blooming."
+    },
+    "pl": {
+      "common_name": "Celozja srebrzysta",
+      "description": "Celosia argentea to jednoroczna roślina ozdobna o barwnych kwiatostanach. Najlepiej rośnie w pełnym słońcu i cieple. Wymaga regularnego podlewania i przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Federbusch",
+      "description": "Celosia argentea ist eine einjährige Pflanze mit auffälligen, federartigen Blüten. Sie bevorzugt volle Sonne und warme Standorte. Gleichmäßiges Gießen fördert gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Célosie argentée",
+      "description": "Celosia argentea est une annuelle appréciée pour ses fleurs en forme de plume. Elle aime le plein soleil et la chaleur. Un arrosage régulier dans un sol drainant est conseillé."
+    },
+    "it": {
+      "common_name": "Celosia piumosa",
+      "description": "Celosia argentea è una pianta annuale ornamentale dai fiori piumosi. Cresce bene in pieno sole e clima caldo. Necessita di annaffiature regolari e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Cresta de gallo",
+      "description": "Celosia argentea es una planta anual con flores vistosas y plumosas. Prefiere sol pleno y temperaturas cálidas. El riego regular favorece una floración abundante."
+    },
+    "pt": {
+      "common_name": "Celósia",
+      "description": "Celosia argentea é uma planta anual de flores vistosas. Desenvolve-se melhor sob sol pleno e calor. Precisa de regas regulares e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "عرف الديك",
+      "description": "Celosia argentea نبات حولي يتميز بأزهاره الريشية الملونة. يفضل الشمس الكاملة والطقس الدافئ. الري المنتظم ضروري مع تربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "मुर्गा कलगी",
+      "description": "Celosia argentea एक वार्षिक पौधा है जिसमें चमकीले फूल होते हैं। यह पूरी धूप और गर्म मौसम में अच्छा बढ़ता है। नियमित सिंचाई आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "鸡冠花",
+      "description": "Celosia argentea 是一种一年生观赏植物，以羽状花序著称。喜全日照和温暖环境。保持土壤排水良好并定期浇水。"
+    },
+    "ja": {
+      "common_name": "ケイトウ",
+      "description": "Celosia argentea は鮮やかな花穂を持つ一年草です。日当たりと暖かさを好みます。水はけの良い土で定期的に水やりします。"
+    },
+    "ko": {
+      "common_name": "맨드라미",
+      "description": "Celosia argentea는 화려한 꽃을 가진 한해살이 식물입니다. 강한 햇빛과 따뜻한 환경을 좋아합니다. 배수가 잘되는 토양과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/celosia",
+      "https://edis.ifas.ufl.edu/publication/FP150",
+      "https://www.gardenersworld.com/plants/celosia/"
+    ]
+  }
+}

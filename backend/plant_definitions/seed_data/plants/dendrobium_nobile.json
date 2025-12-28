@@ -1,0 +1,237 @@
+{
+  "external_id": "dendrobium_nobile",
+  "name": "Dendrobium Nobile",
+  "latin": "Dendrobium nobile",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dendrobium_nobile.jpg",
+  "image_thumb": "dendrobium_nobile.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Orchid bark mix",
+          "pl": "Podłoże storczyków",
+          "de": "Orchideensubstrat",
+          "fr": "Substrat orchidée",
+          "it": "Substrato orchidee",
+          "es": "Sustrato orquídea",
+          "pt": "Substrato orquídea",
+          "ar": "وسط أوركيد",
+          "hi": "ऑर्किड मिक्स",
+          "zh": "兰花基质",
+          "ja": "洋ラン用土",
+          "ko": "난 전용 배지"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽至温暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Epiphytic orchid",
+          "pl": "Storczyk epifit",
+          "de": "Epiphytische Orchidee",
+          "fr": "Orchidée épiphyte",
+          "it": "Orchidea epifita",
+          "es": "Orquídea epífita",
+          "pt": "Orquídea epífita",
+          "ar": "أوركيد هوائي",
+          "hi": "एपिफाइट ऑर्किड",
+          "zh": "附生兰",
+          "ja": "着生ラン",
+          "ko": "착생 난초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Noble Dendrobium",
+      "description": "Dendrobium nobile is an epiphytic orchid native to Asia, valued for its fragrant flowers. It prefers bright indirect light and regular watering during growth. A cooler rest period encourages blooming."
+    },
+    "pl": {
+      "common_name": "Dendrobium szlachetne",
+      "description": "Dendrobium nobile to epifityczny storczyk pochodzący z Azji, ceniony za pachnące kwiaty. Wymaga jasnego światła i regularnego podlewania w okresie wzrostu. Chłodniejszy spoczynek sprzyja kwitnieniu."
+    },
+    "de": {
+      "common_name": "Edles Dendrobium",
+      "description": "Dendrobium nobile ist eine epiphytische Orchidee aus Asien mit duftenden Blüten. Sie benötigt helles, indirektes Licht und regelmäßiges Gießen. Eine kühlere Ruhephase fördert die Blüte."
+    },
+    "fr": {
+      "common_name": "Dendrobium noble",
+      "description": "Dendrobium nobile est une orchidée épiphyte originaire d’Asie, appréciée pour ses fleurs parfumées. Elle aime une lumière vive et des arrosages réguliers. Une période plus fraîche favorise la floraison."
+    },
+    "it": {
+      "common_name": "Dendrobium nobile",
+      "description": "Dendrobium nobile è un’orchidea epifita asiatica dai fiori profumati. Richiede luce intensa indiretta e annaffiature regolari durante la crescita. Un periodo più fresco stimola la fioritura."
+    },
+    "es": {
+      "common_name": "Dendrobium noble",
+      "description": "Dendrobium nobile es una orquídea epífita asiática con flores fragantes. Prefiere luz brillante indirecta y riego regular. Un descanso más fresco ayuda a la floración."
+    },
+    "pt": {
+      "common_name": "Dendrobium nobre",
+      "description": "Dendrobium nobile é uma orquídea epífita asiática de flores perfumadas. Gosta de luz intensa indireta e rega regular no crescimento. Um período mais fresco favorece a floração."
+    },
+    "ar": {
+      "common_name": "ديندروبيوم نبيل",
+      "description": "ديندروبيوم نوبيل هو أوركيد هوائي موطنه آسيا ويتميز بأزهاره العطرة. يحتاج إلى ضوء ساطع غير مباشر وري منتظم أثناء النمو. فترة برودة خفيفة تساعد على الإزهار."
+    },
+    "hi": {
+      "common_name": "डेंड्रोबियम नोबिले",
+      "description": "डेंड्रोबियम नोबिले एशिया का एक एपिफाइट ऑर्किड है, जो सुगंधित फूलों के लिए जाना जाता है। इसे तेज अप्रत्यक्ष रोशनी और नियमित पानी की आवश्यकता होती है। ठंडा विश्राम काल फूल लाने में मदद करता है।"
+    },
+    "zh": {
+      "common_name": "石斛兰",
+      "description": "Dendrobium nobile 是原产亚洲的附生兰花，以芳香花朵著称。它需要明亮的散射光和生长期定期浇水。较凉的休眠期有助于开花。"
+    },
+    "ja": {
+      "common_name": "デンドロビウム・ノビレ",
+      "description": "デンドロビウム・ノビレはアジア原産の着生ランで、香りのある花が特徴です。明るい間接光と成長期の定期的な水やりを好みます。涼しい休眠期が開花を促します。"
+    },
+    "ko": {
+      "common_name": "덴드로비움 노빌레",
+      "description": "덴드로비움 노빌레는 아시아 원산의 착생 난초로 향기로운 꽃이 특징입니다. 밝은 간접광과 생육기의 규칙적인 물주기가 필요합니다. 서늘한 휴면기가 개화를 돕습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2475/dendrobium-nobile/details",
+      "https://www.aos.org/orchids/orchid-care.aspx",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276285"
+    ]
+  }
+}

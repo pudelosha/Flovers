@@ -1,0 +1,237 @@
+{
+  "external_id": "dischidia_ruscifolia",
+  "name": "Million Hearts",
+  "latin": "Dischidia ruscifolia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dischidia_ruscifolia.jpg",
+  "image_thumb": "dischidia_ruscifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy epiphyte mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "وسط جيد التهوية",
+          "hi": "हवादार मिश्रण",
+          "zh": "通气基质",
+          "ja": "通気性用土",
+          "ko": "통기성 배합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when partly dry",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen bei Antrocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a metà asciutto",
+          "es": "Riega tras secar",
+          "pt": "Regar ao secar",
+          "ar": "اسق بعد الجفاف",
+          "hi": "आंशिक सूखने पर",
+          "zh": "半干再浇水",
+          "ja": "乾いてから給水",
+          "ko": "부분 건조 후 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing epiphyte",
+          "pl": "Zwisająca epifita",
+          "de": "Hängende Epiphyte",
+          "fr": "Épiphyte retombante",
+          "it": "Epifita ricadente",
+          "es": "Epífita colgante",
+          "pt": "Epífita pendente",
+          "ar": "نبات متدلي",
+          "hi": "लटकने वाला",
+          "zh": "下垂附生",
+          "ja": "下垂性着生",
+          "ko": "늘어지는 착생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Million Hearts",
+      "description": "Dischidia ruscifolia is an epiphytic vine with small heart-shaped leaves. It grows naturally on trees in tropical Asia and prefers bright, indirect light. The plant is well suited to indoor hanging displays."
+    },
+    "pl": {
+      "common_name": "Milion Serc",
+      "description": "Dischidia ruscifolia to epifityczne pnącze o drobnych liściach w kształcie serca. Naturalnie rośnie na drzewach w Azji Południowo-Wschodniej. Najlepiej czuje się w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Millionenherzen",
+      "description": "Dischidia ruscifolia ist eine epiphytische Kletterpflanze mit herzförmigen Blättern. Sie stammt aus tropischen Regionen Asiens. Ideal ist helles, indirektes Licht im Innenraum."
+    },
+    "fr": {
+      "common_name": "Million de cœurs",
+      "description": "Dischidia ruscifolia est une plante épiphyte aux feuilles en forme de cœur. Elle pousse naturellement sur les arbres en Asie tropicale. Elle apprécie une lumière vive sans soleil direct."
+    },
+    "it": {
+      "common_name": "Milione di cuori",
+      "description": "Dischidia ruscifolia è una pianta epifita con piccole foglie a forma di cuore. È originaria delle foreste tropicali asiatiche. Predilige luce intensa ma indiretta."
+    },
+    "es": {
+      "common_name": "Millón de corazones",
+      "description": "Dischidia ruscifolia es una planta epífita colgante con hojas en forma de corazón. Procede de regiones tropicales de Asia. Crece bien en interiores con luz indirecta brillante."
+    },
+    "pt": {
+      "common_name": "Milhão de corações",
+      "description": "Dischidia ruscifolia é uma planta epífita pendente com folhas em forma de coração. É nativa da Ásia tropical. Prefere luz brilhante indireta dentro de casa."
+    },
+    "ar": {
+      "common_name": "مليون القلوب",
+      "description": "نبات ديسكيديا روسكيفوليا نبات متدلي ذو أوراق على شكل قلب. موطنه الغابات الاستوائية في آسيا. ينمو جيدًا في ضوء ساطع غير مباشر."
+    },
+    "hi": {
+      "common_name": "मिलियन हार्ट्स",
+      "description": "डिस्किडिया रस्कीफोलिया एक एपिफाइटिक लता है जिसके पत्ते दिल के आकार के होते हैं। यह उष्णकटिबंधीय एशिया का मूल निवासी है। घर के अंदर अप्रत्यक्ष रोशनी में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "百万心",
+      "description": "Dischidia ruscifolia 是一种附生藤本植物，叶片呈心形。原产于热带亚洲森林。适合在明亮的散射光下室内栽培。"
+    },
+    "ja": {
+      "common_name": "ミリオンハート",
+      "description": "ディスキディア・ルスキフォリアはハート形の葉を持つ着生植物です。東南アジアの熱帯地域が原産です。明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "밀리언하트",
+      "description": "디스키디아 루스키폴리아는 하트 모양 잎을 가진 착생식물입니다. 열대 아시아가 원산지입니다. 실내에서는 밝은 간접광이 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/255449/dischidia-ruscifolia/details",
+      "https://plants.ces.ncsu.edu/plants/dischidia-ruscifolia/",
+      "https://www.gardenersworld.com/plants/dischidia-ruscifolia/"
+    ]
+  }
+}

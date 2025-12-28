@@ -1,0 +1,237 @@
+{
+  "external_id": "chionodoxa_forbesii",
+  "name": "Glory-of-the-snow",
+  "latin": "Chionodoxa forbesii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 180,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "chionodoxa_forbesii.jpg",
+  "image_thumb": "chionodoxa_forbesii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kühl tolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "تتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Spring bulb",
+          "pl": "Cebulowa",
+          "de": "Frühlingszwiebel",
+          "fr": "Bulbe printanier",
+          "it": "Bulbo primaverile",
+          "es": "Bulbo primaveral",
+          "pt": "Bolbo primavera",
+          "ar": "بصلي ربيعي",
+          "hi": "वसंत बल्ब",
+          "zh": "春季球根",
+          "ja": "春咲き球根",
+          "ko": "봄구근"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Glory-of-the-snow",
+      "description": "Chionodoxa forbesii is a small spring-flowering bulb native to western Turkey. It produces blue star-shaped flowers very early in the season. The plant is cold hardy and well suited to outdoor beds and containers."
+    },
+    "pl": {
+      "common_name": "Śnieżnik lśniący",
+      "description": "Chionodoxa forbesii to wczesnowiosenna roślina cebulowa pochodząca z Turcji. Kwitnie niebieskimi, gwiazdkowatymi kwiatami. Jest odporna na mróz i łatwa w uprawie."
+    },
+    "de": {
+      "common_name": "Schneeglanz",
+      "description": "Chionodoxa forbesii ist eine früh blühende Zwiebelpflanze aus der Türkei. Sie zeigt blaue sternförmige Blüten im zeitigen Frühjahr. Die Art ist winterhart und pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Gloire des neiges",
+      "description": "Chionodoxa forbesii est une petite plante bulbeuse à floraison précoce. Elle porte des fleurs bleues en forme d’étoile dès la fin de l’hiver. Elle est rustique et facile à cultiver."
+    },
+    "it": {
+      "common_name": "Gloria della neve",
+      "description": "Chionodoxa forbesii è una bulbosa primaverile originaria della Turchia. Fiorisce molto presto con fiori blu stellati. È rustica e richiede poche cure."
+    },
+    "es": {
+      "common_name": "Gloria de la nieve",
+      "description": "Chionodoxa forbesii es una planta bulbosa de floración temprana. Produce flores azules en forma de estrella a finales del invierno. Es resistente al frío y fácil de mantener."
+    },
+    "pt": {
+      "common_name": "Glória-da-neve",
+      "description": "Chionodoxa forbesii é uma planta bulbosa de floração precoce. Apresenta flores azuis estreladas no início da primavera. É resistente ao frio e de fácil cultivo."
+    },
+    "ar": {
+      "common_name": "مجد الثلج",
+      "description": "نبات Chionodoxa forbesii بصلي يزهر في أوائل الربيع. يتميز بأزهار زرقاء نجمية الشكل. يتحمل البرودة وسهل العناية."
+    },
+    "hi": {
+      "common_name": "स्नो ग्लोरी",
+      "description": "Chionodoxa forbesii एक शुरुआती वसंत में खिलने वाला बल्ब पौधा है। इसमें नीले तारे जैसे फूल आते हैं। यह ठंड सहनशील और उगाने में आसान है।"
+    },
+    "zh": {
+      "common_name": "雪光花",
+      "description": "Chionodoxa forbesii 是一种早春开花的球根植物。花朵呈蓝色星形。耐寒性强，适合户外种植。"
+    },
+    "ja": {
+      "common_name": "ユキゲユリ",
+      "description": "チオノドクサ・フォルベシーは早春に咲く球根植物です。青い星形の花を咲かせます。耐寒性があり育てやすいです。"
+    },
+    "ko": {
+      "common_name": "설광초",
+      "description": "Chionodoxa forbesii는 이른 봄에 피는 구근 식물입니다. 파란 별 모양의 꽃이 특징입니다. 추위에 강하고 관리가 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/3558/chionodoxa-forbesii/details",
+      "https://www.gardenersworld.com/plants/chionodoxa-forbesii/",
+      "https://plants.ces.ncsu.edu/plants/chionodoxa-forbesii/"
+    ]
+  }
+}

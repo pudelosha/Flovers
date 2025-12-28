@@ -1,0 +1,236 @@
+{
+  "external_id": "antirrhinum_majus",
+  "name": "Snapdragon",
+  "latin": "Antirrhinum majus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 21,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "antirrhinum_majus.jpg",
+  "image_thumb": "antirrhinum_majus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Suolo drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodna do umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل إلى بارد",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至温和",
+          "ja": "涼しい気候",
+          "ko": "서늘한 기온"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright annual",
+          "pl": "Wzniesiona roślina",
+          "de": "Aufrecht wachsend",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा बढ़ाव",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Snapdragon",
+      "description": "Antirrhinum majus is a popular flowering annual grown for its colorful, dragon-shaped blooms. It prefers full sun and well-drained soil. Regular watering encourages continuous flowering."
+    },
+    "pl": {
+      "common_name": "Wyżlin większy",
+      "description": "Antirrhinum majus to popularna roślina jednoroczna o barwnych kwiatach. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Regularne podlewanie sprzyja kwitnieniu."
+    },
+    "de": {
+      "common_name": "Löwenmäulchen",
+      "description": "Antirrhinum majus ist eine beliebte einjährige Blume mit auffälligen Blüten. Sie wächst am besten in voller Sonne und gut durchlässigem Boden. Regelmäßiges Gießen fördert die Blüte."
+    },
+    "fr": {
+      "common_name": "Muflier",
+      "description": "Antirrhinum majus est une plante annuelle appréciée pour ses fleurs colorées. Elle préfère le plein soleil et un sol bien drainé. Un arrosage régulier soutient la floraison."
+    },
+    "it": {
+      "common_name": "Bocca di leone",
+      "description": "Antirrhinum majus è una pianta annuale ornamentale dai fiori vistosi. Predilige pieno sole e terreno ben drenato. Annaffiature regolari favoriscono la fioritura."
+    },
+    "es": {
+      "common_name": "Boca de dragón",
+      "description": "Antirrhinum majus es una planta anual muy cultivada por sus flores vistosas. Requiere sol pleno y suelo bien drenado. El riego regular mantiene la floración."
+    },
+    "pt": {
+      "common_name": "Boca-de-leão",
+      "description": "Antirrhinum majus é uma planta anual ornamental de flores coloridas. Prefere sol pleno e solo bem drenado. Rega regular ajuda na floração contínua."
+    },
+    "ar": {
+      "common_name": "فم السمكة",
+      "description": "Antirrhinum majus نبات حولي مزهر معروف بأزهاره الملونة. يفضل الشمس الكاملة وتربة جيدة الصرف. الري المنتظم يساعد على استمرار الإزهار."
+    },
+    "hi": {
+      "common_name": "स्नैपड्रैगन",
+      "description": "Antirrhinum majus एक लोकप्रिय वार्षिक फूल वाला पौधा है। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी पसंद है। नियमित पानी देने से फूल अच्छे आते हैं।"
+    },
+    "zh": {
+      "common_name": "金鱼草",
+      "description": "Antirrhinum majus 是常见的一年生开花植物。它喜欢全日照和排水良好的土壤。定期浇水有助于持续开花。"
+    },
+    "ja": {
+      "common_name": "キンギョソウ",
+      "description": "Antirrhinum majus は観賞用の一年草です。日当たりと水はけの良い土壌を好みます。定期的な水やりで開花が続きます。"
+    },
+    "ko": {
+      "common_name": "금어초",
+      "description": "Antirrhinum majus는 화려한 꽃을 가진 한해살이 식물입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 규칙적인 물주기가 개화를 돕습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/antirrhinum/growing-guide",
+      "https://extension.umn.edu/flowers/snapdragons",
+      "https://www.britannica.com/plant/snapdragon-plant"
+    ]
+  }
+}

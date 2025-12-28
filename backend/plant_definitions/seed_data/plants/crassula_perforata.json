@@ -1,0 +1,238 @@
+{
+  "external_id": "crassula_perforata",
+  "name": "String of buttons",
+  "latin": "Crassula perforata",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": null,
+  "image_hero": "crassula_perforata.jpg",
+  "image_thumb": "crassula_perforata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Très drainant",
+          "it": "Ben drenante",
+          "es": "Muy drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة مصرفة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Dry out, then water",
+          "pl": "Podlej po wyschnięciu",
+          "de": "Erst trocken, dann",
+          "fr": "Sec puis arroser",
+          "it": "Asciuga poi annaffia",
+          "es": "Seca y riega",
+          "pt": "Seca e rega",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇水",
+          "ja": "乾いてから水",
+          "ko": "말린 뒤 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–30°C",
+          "pl": "15–30°C",
+          "de": "15–30°C",
+          "fr": "15–30°C",
+          "it": "15–30°C",
+          "es": "15–30°C",
+          "pt": "15–30°C",
+          "ar": "15–30°م",
+          "hi": "15–30°C",
+          "zh": "15–30°C",
+          "ja": "15–30°C",
+          "ko": "15–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Avg indoor OK",
+          "pl": "Domowa OK",
+          "de": "Normale Luft",
+          "fr": "Intérieur OK",
+          "it": "Casa OK",
+          "es": "Interior OK",
+          "pt": "Interior OK",
+          "ar": "عادية بالمنزل",
+          "hi": "घर की ठीक",
+          "zh": "室内正常即可",
+          "ja": "室内で十分",
+          "ko": "실내 보통 OK"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po zjedz.",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الأكل",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "誤食は有毒",
+          "ko": "먹으면 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright to trailing",
+          "pl": "Wzn. i zwisająca",
+          "de": "Aufrecht, hängend",
+          "fr": "Dressée à retombante",
+          "it": "Eretta poi ricade",
+          "es": "Erecta y colgante",
+          "pt": "Ereta e pendente",
+          "ar": "قائمة ثم متدلية",
+          "hi": "सीधी फिर लटकती",
+          "zh": "直立后下垂",
+          "ja": "直立→垂れ下がる",
+          "ko": "직립 후 늘어짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "String of buttons",
+      "description": "Crassula perforata is a South African succulent with stacked, triangular leaves along upright stems that often become trailing with age. Give bright light and a fast-draining cactus-style mix. Water only after the potting mix dries out completely, and protect from frost."
+    },
+    "pl": {
+      "common_name": "Sznur guzików",
+      "description": "Crassula perforata to południowoafrykański sukulent o „ułożonych” liściach na pędach, które z czasem mogą zwisać. Wymaga jasnego stanowiska i bardzo przepuszczalnego podłoża dla sukulentów. Podlewaj dopiero po całkowitym przeschnięciu ziemi i chroń przed mrozem."
+    },
+    "de": {
+      "common_name": "Knopfketten-Pflanze",
+      "description": "Crassula perforata ist eine sukkulente Art aus Südafrika mit gestapelten, dreieckigen Blättern an aufrechten Trieben, die später überhängen können. Stelle sie hell und verwende ein sehr gut drainierendes Kakteen-Substrat. Gieße erst, wenn das Substrat vollständig trocken ist, und schütze sie vor Frost."
+    },
+    "fr": {
+      "common_name": "Chaîne de boutons",
+      "description": "Crassula perforata est une succulente d’Afrique du Sud aux feuilles triangulaires empilées sur des tiges d’abord dressées puis retombantes. Elle préfère une lumière vive et un substrat très drainant type cactus. Arrosez seulement quand le mélange est complètement sec et évitez le gel."
+    },
+    "it": {
+      "common_name": "Collana di bottoni",
+      "description": "Crassula perforata è una succulenta sudafricana con foglie triangolari sovrapposte su fusti che possono diventare ricadenti. Preferisce luce intensa e un terriccio molto drenante per cactus. Annaffia solo quando il substrato è del tutto asciutto e proteggi dal gelo."
+    },
+    "es": {
+      "common_name": "Cadena de botones",
+      "description": "Crassula perforata es una suculenta de Sudáfrica con hojas triangulares apiladas en tallos que pueden volverse colgantes con el tiempo. Necesita mucha luz y un sustrato muy drenante tipo cactus. Riega solo cuando el sustrato esté completamente seco y evita las heladas."
+    },
+    "pt": {
+      "common_name": "Colar de botões",
+      "description": "Crassula perforata é uma suculenta sul-africana com folhas triangulares empilhadas em caules que podem ficar pendentes com a idade. Prefere luz intensa e substrato bem drenante para cactos e suculentas. Regue apenas quando o substrato estiver totalmente seco e proteja do frio intenso/geada."
+    },
+    "ar": {
+      "common_name": "سلسلة الأزرار",
+      "description": "Crassula perforata نبات عصاري من جنوب أفريقيا بأوراق مثلثة متراصة على سيقان قد تصبح متدلية مع الوقت. يحتاج إلى ضوء ساطع وتربة شديدة التصريف مثل خلطات الصبّار. اسقِ فقط بعد جفاف التربة تمامًا واحمه من الصقيع."
+    },
+    "hi": {
+      "common_name": "स्ट्रिंग ऑफ बटन्स",
+      "description": "Crassula perforata दक्षिण अफ्रीका की एक सक्यूलेंट है, जिसमें त्रिकोणी पत्तियाँ तनों पर परत-दर-परत लगी रहती हैं और उम्र के साथ तने लटक सकते हैं। इसे तेज़ रोशनी और अच्छी जलनिकासी वाला कैक्टस/सक्यूलेंट मिक्स दें। मिट्टी पूरी सूखने पर ही पानी दें और पाले से बचाएँ।"
+    },
+    "zh": {
+      "common_name": "纽扣串景天",
+      "description": "Crassula perforata 原产南非，是多肉植物，叶片呈三角形层层叠生，茎先直立后可下垂。需要明亮光照与排水良好的仙人掌/多肉基质。盆土完全干透后再浇水，并避免霜冻。"
+    },
+    "ja": {
+      "common_name": "ストリング・オブ・ボタン",
+      "description": "Crassula perforata は南アフリカ原産の多肉で、三角形の葉が茎に重なって付き、成長すると垂れやすくなります。明るい光と水はけの良いサボテン用土が適します。用土が完全に乾いてから水やりし、霜に当てないでください。"
+    },
+    "ko": {
+      "common_name": "스트링 오브 버튼",
+      "description": "Crassula perforata는 남아프리카 원산의 다육식물로, 삼각형 잎이 줄기를 따라 겹겹이 달리며 자라면서 늘어질 수 있습니다. 밝은 빛과 배수가 좋은 선인장/다육 배합토가 필요합니다. 흙이 완전히 마른 뒤에만 물을 주고 서리를 피하세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plants.ces.ncsu.edu/plants/crassula-perforata/",
+      "https://www.rhs.org.uk/plants/4744/crassula-perforata/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:273378-1",
+      "https://www.thespruce.com/growing-string-of-buttons-5091592"
+    ]
+  }
+}

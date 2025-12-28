@@ -1,0 +1,237 @@
+{
+  "external_id": "coelogyne_cristata",
+  "name": "Coelogyne cristata",
+  "latin": "Coelogyne cristata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "coelogyne_cristata.jpg",
+  "image_thumb": "coelogyne_cristata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid bark mix",
+          "pl": "mieszanka storczyk",
+          "de": "Orchideensubstrat",
+          "fr": "substrat orchidée",
+          "it": "substrato orchidea",
+          "es": "sustrato orquídea",
+          "pt": "substrato orquídea",
+          "ar": "وسط سحلبية",
+          "hi": "ऑर्किड मिक्स",
+          "zh": "兰花基质",
+          "ja": "ラン用培地",
+          "ko": "난초 배합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "regular, drain well",
+          "pl": "regularne, drenaż",
+          "de": "regelmäßig",
+          "fr": "arrosage régulier",
+          "it": "annaffiare regolare",
+          "es": "riego regular",
+          "pt": "rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "intermediate",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool to mild",
+          "pl": "chłodno-umiark.",
+          "de": "kühl-mild",
+          "fr": "frais à doux",
+          "it": "fresco-mite",
+          "es": "fresco a templado",
+          "pt": "fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा-हल्का",
+          "zh": "凉爽温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "humidité élevée",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "clumping orchid",
+          "pl": "storczyk kępkowy",
+          "de": "horstbildend",
+          "fr": "orchidée en touffe",
+          "it": "orchidea cespitosa",
+          "es": "orquídea en mata",
+          "pt": "orquídea entouceirada",
+          "ar": "نمو كتلي",
+          "hi": "झुंड में बढ़त",
+          "zh": "丛生兰花",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Crested Coelogyne",
+      "description": "Coelogyne cristata is a cool-growing Himalayan orchid known for its white, fragrant winter flowers. It prefers bright indirect light, high humidity, and regular watering during active growth."
+    },
+    "pl": {
+      "common_name": "Koelogyna grzebieniasta",
+      "description": "Coelogyne cristata to chłodnolubny storczyk z Himalajów o białych, pachnących kwiatach. Wymaga jasnego, pośredniego światła, wysokiej wilgotności i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Kamm-Coelogyne",
+      "description": "Coelogyne cristata ist eine kühl wachsende Orchidee aus dem Himalaya mit weißen, duftenden Blüten. Sie benötigt helles, indirektes Licht, hohe Luftfeuchte und regelmäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Coelogyne crêtée",
+      "description": "Coelogyne cristata est une orchidée de montagne à floraison blanche parfumée. Elle apprécie une lumière indirecte vive, une forte humidité et des arrosages réguliers."
+    },
+    "it": {
+      "common_name": "Coelogyne crestata",
+      "description": "Coelogyne cristata è un’orchidea himalayana a crescita fresca con fiori bianchi profumati. Richiede luce indiretta intensa, umidità elevata e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Coelogyne crestada",
+      "description": "Coelogyne cristata es una orquídea de clima fresco con flores blancas fragantes. Prefiere luz indirecta brillante, alta humedad y riego regular."
+    },
+    "pt": {
+      "common_name": "Coelogyne crestada",
+      "description": "Coelogyne cristata é uma orquídea de clima fresco do Himalaia com flores brancas perfumadas. Necessita luz indireta intensa, alta umidade e rega regular."
+    },
+    "ar": {
+      "common_name": "سيلوجيني متوجة",
+      "description": "Coelogyne cristata سحلبية جبلية ذات أزهار بيضاء عطرة. تحتاج إلى ضوء غير مباشر ساطع ورطوبة عالية وري منتظم."
+    },
+    "hi": {
+      "common_name": "कोएलोजाइन क्रिस्टाटा",
+      "description": "Coelogyne cristata हिमालय की ठंडी जलवायु की ऑर्किड है जिसमें सुगंधित सफेद फूल होते हैं। इसे अप्रत्यक्ष रोशनी, अधिक आर्द्रता और नियमित पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "冠唇贝母兰",
+      "description": "Coelogyne cristata 是一种喜冷的喜马拉雅兰花，开白色芳香花。需要明亮散射光、高湿度和定期浇水。"
+    },
+    "ja": {
+      "common_name": "セロジネ・クリスタータ",
+      "description": "Coelogyne cristata はヒマラヤ原産の冷涼性ランで、白い芳香花を咲かせます。明るい間接光と高湿度、定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "셀로지네 크리스타타",
+      "description": "Coelogyne cristata는 히말라야 원산의 서늘한 환경을 좋아하는 난초입니다. 밝은 간접광과 높은 습도, 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/228410/coelogyne-cristata/details",
+      "https://www.aos.org/orchids/orchid-care/coelogyne.aspx",
+      "https://www.kew.org/plants/coelogyne-cristata"
+    ]
+  }
+}

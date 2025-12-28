@@ -1,0 +1,238 @@
+{
+  "external_id": "alocasia_reginula",
+  "name": "Black Velvet Alocasia",
+  "latin": "Alocasia reginula",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_reginula.jpg",
+  "image_thumb": "alocasia_reginula.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining aroid mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Durchlässiges Substrat",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Leicht feucht halten",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "やや湿った状態",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Impegnativa",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "देखभाल कठिन",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow compact growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Black Velvet Alocasia",
+      "description": "Alocasia reginula is a compact tropical plant prized for its dark, velvety leaves with silver veins. It requires stable warmth, high humidity, and careful watering. Sudden changes in care can cause leaf drop."
+    },
+    "pl": {
+      "common_name": "Alokazja Black Velvet",
+      "description": "Alocasia reginula to niewielka roślina tropikalna o aksamitnych, ciemnych liściach. Wymaga wysokiej wilgotności powietrza i regularnego podlewania. Jest wrażliwa na zmiany warunków."
+    },
+    "de": {
+      "common_name": "Schwarze Samt-Alokasie",
+      "description": "Alocasia reginula ist eine kompakte Tropenpflanze mit samtigen Blättern. Sie benötigt hohe Luftfeuchtigkeit und gleichmäßige Pflege. Zugluft und Staunässe sollten vermieden werden."
+    },
+    "fr": {
+      "common_name": "Alocasia velours noir",
+      "description": "Alocasia reginula est une plante tropicale compacte aux feuilles veloutées. Elle apprécie une forte humidité et un arrosage régulier. Les conditions instables peuvent provoquer la chute des feuilles."
+    },
+    "it": {
+      "common_name": "Alocasia Black Velvet",
+      "description": "Alocasia reginula è una pianta tropicale compatta con foglie vellutate scure. Richiede umidità elevata e annaffiature controllate. È sensibile agli sbalzi ambientali."
+    },
+    "es": {
+      "common_name": "Alocasia Terciopelo Negro",
+      "description": "Alocasia reginula es una planta tropical compacta de hojas aterciopeladas. Necesita alta humedad y riego regular. Los cambios bruscos afectan su salud."
+    },
+    "pt": {
+      "common_name": "Alocasia Veludo Negro",
+      "description": "Alocasia reginula é uma planta tropical compacta com folhas aveludadas. Prefere alta umidade e rega cuidadosa. Mudanças repentinas podem causar estresse."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا المخمل الأسود",
+      "description": "ألوكاسيا ريجينولا نبات استوائي صغير بأوراق مخملية داكنة. يحتاج إلى رطوبة عالية وري منتظم. يتأثر بسرعة بتغير الظروف."
+    },
+    "hi": {
+      "common_name": "ब्लैक वेलवेट एलोकेशिया",
+      "description": "Alocasia reginula एक छोटा उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मखमली होती हैं। इसे अधिक नमी और सावधानीपूर्वक सिंचाई की आवश्यकता होती है। वातावरण में बदलाव इसे प्रभावित करता है।"
+    },
+    "zh": {
+      "common_name": "黑绒海芋",
+      "description": "Alocasia reginula 是一种小型热带植物，具有天鹅绒般的深色叶片。需要高湿度和规律浇水。环境变化容易导致问题。"
+    },
+    "ja": {
+      "common_name": "ブラックベルベットアロカシア",
+      "description": "アロカシア・レギヌラは濃い葉を持つコンパクトな熱帯植物です。高い湿度と安定した管理が必要です。環境変化に弱いです。"
+    },
+    "ko": {
+      "common_name": "블랙 벨벳 알로카시아",
+      "description": "Alocasia reginula는 벨벳 같은 잎을 가진 소형 열대 식물입니다. 높은 습도와 세심한 물 관리가 필요합니다. 환경 변화에 민감합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1865/alocasia-reginula/details",
+      "https://plants.ces.ncsu.edu/plants/alocasia-reginula/",
+      "https://www.botanicgardens.org/plant/alocasia-reginula"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "disocactus_phyllanthoides",
+  "name": "Orchid Cactus",
+  "latin": "Disocactus phyllanthoides",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "disocactus_phyllanthoides.jpg",
+  "image_thumb": "disocactus_phyllanthoides.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular, moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnitt",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "औसत",
+          "zh": "中等湿度",
+          "ja": "平均的",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing epiphyte",
+          "pl": "Zwieszająca",
+          "de": "Hängend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "متدلية",
+          "hi": "लटकने वाली",
+          "zh": "下垂生长",
+          "ja": "垂れ下がる",
+          "ko": "늘어지는 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Orchid Cactus",
+      "description": "Disocactus phyllanthoides is an epiphytic cactus native to Central America. It grows in bright, indirect light and prefers evenly moist but well-draining soil. The plant is known for its long trailing stems and large pink flowers."
+    },
+    "pl": {
+      "common_name": "Kaktus Storczykowy",
+      "description": "Disocactus phyllanthoides to epifityczny kaktus pochodzący z Ameryki Środkowej. Lubi jasne, rozproszone światło oraz umiarkowane podlewanie. Wytwarza długie, zwisające pędy i efektowne różowe kwiaty."
+    },
+    "de": {
+      "common_name": "Orchideenkaktus",
+      "description": "Disocactus phyllanthoides ist ein epiphytischer Kaktus aus Mittelamerika. Er bevorzugt helles, indirektes Licht und mäßige Wassergaben. Charakteristisch sind die hängenden Triebe und großen rosafarbenen Blüten."
+    },
+    "fr": {
+      "common_name": "Cactus Orchidée",
+      "description": "Disocactus phyllanthoides est un cactus épiphyte originaire d’Amérique centrale. Il apprécie une lumière vive sans soleil direct et un arrosage modéré. Il se distingue par ses tiges retombantes et ses grandes fleurs roses."
+    },
+    "it": {
+      "common_name": "Cactus Orchidea",
+      "description": "Disocactus phyllanthoides è un cactus epifita dell’America Centrale. Cresce bene in luce indiretta luminosa con annaffiature regolari. È apprezzato per i fusti ricadenti e i grandi fiori rosa."
+    },
+    "es": {
+      "common_name": "Cactus Orquídea",
+      "description": "Disocactus phyllanthoides es un cactus epífito originario de Centroamérica. Prefiere luz brillante indirecta y riego moderado. Destaca por sus tallos colgantes y flores rosadas grandes."
+    },
+    "pt": {
+      "common_name": "Cacto Orquídea",
+      "description": "Disocactus phyllanthoides é um cacto epífito da América Central. Desenvolve-se bem com luz indireta brilhante e regas moderadas. Possui caules pendentes e flores grandes de cor rosa."
+    },
+    "ar": {
+      "common_name": "صبار الأوركيد",
+      "description": "Disocactus phyllanthoides صبار هوائي موطنه أمريكا الوسطى. يفضل الضوء الساطع غير المباشر مع ري معتدل. يتميز بسيقانه المتدلية وأزهاره الوردية الكبيرة."
+    },
+    "hi": {
+      "common_name": "ऑर्किड कैक्टस",
+      "description": "Disocactus phyllanthoides मध्य अमेरिका का एक एपिफाइटिक कैक्टस है। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। इसके लटकते तने और बड़े गुलाबी फूल इसकी पहचान हैं।"
+    },
+    "zh": {
+      "common_name": "兰花仙人掌",
+      "description": "Disocactus phyllanthoides 原产于中美洲，是一种附生仙人掌。它适合明亮的散射光和适度浇水。其特点是下垂的茎和大型粉色花朵。"
+    },
+    "ja": {
+      "common_name": "オーキッドカクタス",
+      "description": "Disocactus phyllanthoides は中米原産の着生サボテンです。明るい間接光と適度な水やりを好みます。垂れ下がる茎と大きなピンク色の花が特徴です。"
+    },
+    "ko": {
+      "common_name": "오키드 선인장",
+      "description": "Disocactus phyllanthoides는 중앙아메리카 원산의 착생 선인장입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 늘어지는 줄기와 큰 분홍색 꽃이 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/30278/disocactus-phyllanthoides/details",
+      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/3036/Disocactus_phyllanthoides",
+      "https://www.gardenersworld.com/plants/disocactus-phyllanthoides/"
+    ]
+  }
+}

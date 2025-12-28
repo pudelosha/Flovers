@@ -1,0 +1,238 @@
+{
+  "external_id": "anthurium_crystallinum",
+  "name": "Crystal Anthurium",
+  "latin": "Anthurium crystallinum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "anthurium_crystallinum.jpg",
+  "image_thumb": "anthurium_crystallinum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przewiewna ziemia",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist soil",
+          "pl": "Umiarkowanie wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "保持湿润",
+          "ja": "均一な湿り気",
+          "ko": "고르게 촉촉함"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18～27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は遅め",
+          "ko": "느린 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Crystal Anthurium",
+      "description": "Anthurium crystallinum is a tropical aroid valued for its velvety leaves with striking white veins. It prefers bright indirect light, high humidity, and evenly moist but well-drained soil. Stable warmth and airflow help prevent stress."
+    },
+    "pl": {
+      "common_name": "Anturium kryształowe",
+      "description": "Anthurium crystallinum to tropikalna roślina o aksamitnych liściach z jasnym unerwieniem. Wymaga jasnego, rozproszonego światła oraz wysokiej wilgotności. Podłoże powinno być wilgotne, ale przepuszczalne."
+    },
+    "de": {
+      "common_name": "Kristall-Anthurie",
+      "description": "Anthurium crystallinum ist eine tropische Aronstabpflanze mit samtigen Blättern und hellen Adern. Sie benötigt helles, indirektes Licht und hohe Luftfeuchtigkeit. Das Substrat sollte gleichmäßig feucht bleiben."
+    },
+    "fr": {
+      "common_name": "Anthurium cristal",
+      "description": "Anthurium crystallinum est une plante tropicale appréciée pour ses feuilles veloutées veinées de blanc. Elle aime la lumière indirecte et une forte humidité. Le sol doit rester humide sans être détrempé."
+    },
+    "it": {
+      "common_name": "Anthurium cristallo",
+      "description": "Anthurium crystallinum è una pianta tropicale nota per le foglie vellutate con nervature chiare. Preferisce luce indiretta intensa e umidità elevata. Il terreno deve essere costantemente umido ma drenante."
+    },
+    "es": {
+      "common_name": "Anturio cristal",
+      "description": "Anthurium crystallinum es una planta tropical apreciada por sus hojas aterciopeladas con venas claras. Requiere luz indirecta brillante y alta humedad. El sustrato debe mantenerse húmedo y aireado."
+    },
+    "pt": {
+      "common_name": "Antúrio cristal",
+      "description": "Anthurium crystallinum é uma planta tropical conhecida por suas folhas aveludadas com veias claras. Prefere luz indireta brilhante e alta umidade. O solo deve permanecer levemente úmido e bem drenado."
+    },
+    "ar": {
+      "common_name": "أنثوريوم كريستال",
+      "description": "أنثوريوم كريستالينوم نبات استوائي يتميز بأوراق مخملية وعروق فاتحة. يفضل الضوء غير المباشر والرطوبة العالية. يجب أن تبقى التربة رطبة مع تصريف جيد."
+    },
+    "hi": {
+      "common_name": "क्रिस्टल एन्थूरियम",
+      "description": "Anthurium crystallinum एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मखमली होती हैं। इसे तेज अप्रत्यक्ष रोशनी और अधिक आर्द्रता पसंद है। मिट्टी को नम लेकिन हवादार रखें।"
+    },
+    "zh": {
+      "common_name": "水晶花烛",
+      "description": "Anthurium crystallinum 是一种热带观叶植物，以天鹅绒般的叶片和白色叶脉著称。适合明亮散射光和高湿度环境。基质需保持湿润且排水良好。"
+    },
+    "ja": {
+      "common_name": "クリスタルアンスリウム",
+      "description": "Anthurium crystallinum は白い葉脈が美しい熱帯植物です。明るい間接光と高湿度を好みます。用土は湿り気を保ちつつ排水性が必要です。"
+    },
+    "ko": {
+      "common_name": "크리스탈 안스리움",
+      "description": "Anthurium crystallinum은 벨벳 같은 잎과 뚜렷한 잎맥이 특징인 열대 식물입니다. 밝은 간접광과 높은 습도를 선호합니다. 흙은 촉촉하되 배수가 좋아야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/anthurium-crystallinum",
+      "https://edis.ifas.ufl.edu/publication/EP096",
+      "https://www.rhs.org.uk/plants/anthurium"
+    ]
+  }
+}

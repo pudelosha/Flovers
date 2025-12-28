@@ -1,0 +1,238 @@
+{
+  "external_id": "curcuma_alismatifolia",
+  "name": "Siam Tulip",
+  "latin": "Curcuma alismatifolia",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "curcuma_alismatifolia.jpg",
+  "image_thumb": "curcuma_alismatifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainant",
+          "it": "Ricco drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico drenável",
+          "ar": "تربة غنية جيدة",
+          "hi": "उपजाऊ जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥 배수토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "均一に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm 18–30°C",
+          "pl": "Ciepło 18–30°C",
+          "de": "Warm 18–30°C",
+          "fr": "Chaud 18–30°C",
+          "it": "Caldo 18–30°C",
+          "es": "Cálido 18–30°C",
+          "pt": "Quente 18–30°C",
+          "ar": "دافئ 18–30°",
+          "hi": "गरम 18–30°C",
+          "zh": "温暖18–30°C",
+          "ja": "18–30°C",
+          "ko": "따뜻함 18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers humid air",
+          "pl": "Lubi wilgoć",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Seasonal clumping",
+          "pl": "Kępowy wzrost",
+          "de": "Horstbildend",
+          "fr": "Touffes saisonnières",
+          "it": "Cespugli stagionali",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو موسمي",
+          "hi": "मौसमी गुच्छे",
+          "zh": "季节性丛生",
+          "ja": "季節性株立ち",
+          "ko": "계절성 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Siam Tulip",
+      "description": "Curcuma alismatifolia is a tropical ginger grown for its colorful upright bracts. It prefers bright light, warm temperatures, and consistently moist soil during active growth. The plant may go dormant and reduce watering in cooler months."
+    },
+    "pl": {
+      "common_name": "Tulipan syjamski",
+      "description": "Curcuma alismatifolia to tropikalny imbir o dekoracyjnych kwiatach. Wymaga jasnego stanowiska, ciepła i stale wilgotnej gleby w okresie wzrostu. Zimą może przechodzić w stan spoczynku."
+    },
+    "de": {
+      "common_name": "Siam-Tulpe",
+      "description": "Curcuma alismatifolia ist eine tropische Ingwerpflanze mit auffälligen Hochblättern. Sie benötigt helles Licht, Wärme und gleichmäßig feuchte Erde. In der Ruhezeit wird weniger gegossen."
+    },
+    "fr": {
+      "common_name": "Tulipe du Siam",
+      "description": "Curcuma alismatifolia est une plante tropicale appréciée pour ses bractées colorées. Elle aime la lumière vive, la chaleur et un sol humide en période de croissance. Un repos hivernal est fréquent."
+    },
+    "it": {
+      "common_name": "Tulipano del Siam",
+      "description": "Curcuma alismatifolia è una pianta tropicale della famiglia dello zenzero. Cresce bene con luce intensa, caldo e terreno costantemente umido. Durante il riposo vegetativo l’acqua va ridotta."
+    },
+    "es": {
+      "common_name": "Tulipán de Siam",
+      "description": "Curcuma alismatifolia es una planta tropical ornamental de la familia del jengibre. Prefiere luz brillante, temperaturas cálidas y suelo húmedo. Puede entrar en reposo estacional."
+    },
+    "pt": {
+      "common_name": "Tulipa-do-Sião",
+      "description": "Curcuma alismatifolia é uma planta tropical ornamental com brácteas vistosas. Necessita de luz intensa, calor e solo sempre úmido no crescimento ativo. Pode ficar dormente no inverno."
+    },
+    "ar": {
+      "common_name": "توليب سيامي",
+      "description": "Curcuma alismatifolia نبات استوائي من فصيلة الزنجبيل. يحتاج إلى ضوء ساطع وحرارة ورطوبة منتظمة أثناء النمو. قد يدخل في سكون موسمي."
+    },
+    "hi": {
+      "common_name": "सियाम ट्यूलिप",
+      "description": "Curcuma alismatifolia एक उष्णकटिबंधीय जिंजर पौधा है। इसे तेज रोशनी, गर्म तापमान और लगातार नमी की आवश्यकता होती है। सर्दियों में यह सुप्त हो सकता है।"
+    },
+    "zh": {
+      "common_name": "暹罗郁金香",
+      "description": "姜荷花是一种热带姜科植物，以色彩鲜艳的苞片著称。生长期需要明亮光照、温暖环境和湿润土壤。冬季可能进入休眠。"
+    },
+    "ja": {
+      "common_name": "シャムチューリップ",
+      "description": "クルクマ・アリスマティフォリアは熱帯性のショウガ科植物です。明るい光と暖かさ、適度な湿り気を好みます。休眠期には水やりを控えます。"
+    },
+    "ko": {
+      "common_name": "시암 튤립",
+      "description": "쿠르쿠마 알리스마티폴리아는 열대성 생강과 식물입니다. 밝은 빛과 따뜻한 온도, 촉촉한 토양을 선호합니다. 계절에 따라 휴면할 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c465",
+      "https://www.rhs.org.uk/plants/curcuma/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/EP299"
+    ]
+  }
+}

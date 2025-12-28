@@ -1,0 +1,237 @@
+{
+  "external_id": "araucaria_araucana",
+  "name": "Monkey Puzzle Tree",
+  "latin": "Araucaria araucana",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 180,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "araucaria_araucana.jpg",
+  "image_thumb": "araucaria_araucana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic loam",
+          "pl": "Kwaśna gleba",
+          "de": "Saurer Lehm",
+          "fr": "Sol acide",
+          "it": "Suolo acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Mało wody",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Chłodny klimat",
+          "de": "Kühl gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "مناخ معتدل",
+          "hi": "शीत जलवायु",
+          "zh": "凉爽气候",
+          "ja": "冷涼気候",
+          "ko": "서늘한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow tree",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Monkey Puzzle Tree",
+      "description": "Araucaria araucana is a large evergreen conifer native to southern Chile and Argentina. It prefers full sun, acidic soil, and cool temperate climates. This species is slow-growing and best suited for outdoor cultivation."
+    },
+    "pl": {
+      "common_name": "Araukaria chilijska",
+      "description": "Araucaria araucana to duże, zimozielone drzewo iglaste pochodzące z południowego Chile i Argentyny. Wymaga pełnego słońca, kwaśnej gleby i chłodnego klimatu. Rośnie wolno i nadaje się głównie do uprawy na zewnątrz."
+    },
+    "de": {
+      "common_name": "Chilenische Araukarie",
+      "description": "Araucaria araucana ist ein großer immergrüner Nadelbaum aus Südchile und Argentinien. Er bevorzugt volle Sonne, sauren Boden und ein kühles Klima. Die Art wächst langsam und ist für den Außenbereich geeignet."
+    },
+    "fr": {
+      "common_name": "Désespoir des singes",
+      "description": "Araucaria araucana est un grand conifère persistant originaire du sud du Chili et de l’Argentine. Elle aime le plein soleil, les sols acides et les climats tempérés frais. Sa croissance est lente et elle se cultive surtout en extérieur."
+    },
+    "it": {
+      "common_name": "Araucaria del Cile",
+      "description": "Araucaria araucana è una grande conifera sempreverde originaria del Cile e dell’Argentina meridionali. Preferisce pieno sole, terreno acido e climi temperati freschi. È a crescita lenta e adatta soprattutto all’esterno."
+    },
+    "es": {
+      "common_name": "Pehuén",
+      "description": "Araucaria araucana es una gran conífera perenne nativa del sur de Chile y Argentina. Prefiere pleno sol, suelos ácidos y climas templados frescos. Crece lentamente y se cultiva principalmente al aire libre."
+    },
+    "pt": {
+      "common_name": "Pinheiro-dos-Andes",
+      "description": "Araucaria araucana é uma grande conífera perene nativa do sul do Chile e da Argentina. Prefere sol pleno, solo ácido e clima temperado fresco. Tem crescimento lento e é indicada para áreas externas."
+    },
+    "ar": {
+      "common_name": "شجرة لغز القرد",
+      "description": "Araucaria araucana شجرة صنوبرية دائمة الخضرة موطنها جنوب تشيلي والأرجنتين. تفضل الشمس الكاملة والتربة الحمضية والمناخ المعتدل البارد. نموها بطيء وتزرع في الهواء الطلق."
+    },
+    "hi": {
+      "common_name": "मंकी पज़ल वृक्ष",
+      "description": "Araucaria araucana दक्षिणी चिली और अर्जेंटीना का सदाबहार शंकुधारी वृक्ष है। इसे पूरी धूप, अम्लीय मिट्टी और ठंडा समशीतोष्ण जलवायु पसंद है। इसकी वृद्धि धीमी होती है और यह बाहर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "智利南洋杉",
+      "description": "Araucaria araucana 原产于智利和阿根廷南部，是一种大型常绿针叶树。它喜欢全日照、酸性土壤和凉爽的温带气候。生长缓慢，适合户外种植。"
+    },
+    "ja": {
+      "common_name": "モンキーパズルツリー",
+      "description": "Araucaria araucana はチリ南部とアルゼンチン原産の常緑針葉樹です。直射日光と酸性土壌、冷涼な気候を好みます。成長は遅く、屋外向きです。"
+    },
+    "ko": {
+      "common_name": "아라우카리아",
+      "description": "Araucaria araucana는 칠레와 아르헨티나 남부 원산의 상록 침엽수입니다. 직사광선과 산성 토양, 서늘한 기후를 선호합니다. 성장 속도가 느려 주로 야외에서 재배합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/araucaria-araucana",
+      "https://www.rhs.org.uk/plants/1442/araucaria-araucana/details",
+      "https://plants.ces.ncsu.edu/plants/araucaria-araucana/"
+    ]
+  }
+}

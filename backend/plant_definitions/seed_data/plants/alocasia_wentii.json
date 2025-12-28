@@ -1,0 +1,237 @@
+{
+  "external_id": "alocasia_wentii",
+  "name": "New Guinea Shield",
+  "latin": "Alocasia wentii",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_wentii.jpg",
+  "image_thumb": "alocasia_wentii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "airy aroid mix",
+          "pl": "przewiewna aroid",
+          "de": "luftiges Aroid",
+          "fr": "mélange aéré",
+          "it": "substrato arioso",
+          "es": "sustrato aireado",
+          "pt": "substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep moist",
+          "pl": "umiark. wilgotna",
+          "de": "gleichmäßig feucht",
+          "fr": "sol humide",
+          "it": "sempre umido",
+          "es": "mantener húmedo",
+          "pt": "manter úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気を保つ",
+          "ko": "촉촉 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilg.",
+          "de": "hohe Luftfeuchte",
+          "fr": "forte humidité",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic to pets",
+          "pl": "toksyczna",
+          "de": "giftig",
+          "fr": "toxique",
+          "it": "tossica",
+          "es": "tóxica",
+          "pt": "tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "upright clump",
+          "pl": "wzniesiona",
+          "de": "horstig",
+          "fr": "touffe dressée",
+          "it": "cespuglio eretto",
+          "es": "porte erguido",
+          "pt": "porte ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा गुच्छा",
+          "zh": "直立丛生",
+          "ja": "直立株立ち",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "New Guinea Shield",
+      "description": "Alocasia wentii is a tropical aroid known for its large green leaves with purple undersides. It grows best indoors with bright indirect light, warm temperatures, and consistently moist soil. High humidity helps maintain healthy foliage."
+    },
+    "pl": {
+      "common_name": "Alokazja tarczowa",
+      "description": "Alocasia wentii to tropikalna roślina o dużych zielonych liściach z purpurowym spodem. Wymaga jasnego, rozproszonego światła i wilgotnego podłoża. Najlepiej rośnie w ciepłych i wilgotnych warunkach."
+    },
+    "de": {
+      "common_name": "Neuguinea-Schildblatt",
+      "description": "Alocasia wentii ist eine tropische Pflanze mit großen grünen Blättern und violetter Unterseite. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit unterstützt gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Alocasie de Nouvelle-Guinée",
+      "description": "Alocasia wentii est une plante tropicale aux grandes feuilles vertes au revers pourpre. Elle apprécie une lumière indirecte et un sol constamment humide. Une humidité élevée est recommandée."
+    },
+    "it": {
+      "common_name": "Alocasia della Nuova Guinea",
+      "description": "Alocasia wentii è una pianta tropicale con grandi foglie verdi e lato inferiore porpora. Predilige luce indiretta e terreno umido. L'umidità elevata favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Alocasia de Nueva Guinea",
+      "description": "Alocasia wentii es una planta tropical con hojas grandes y envés púrpura. Necesita luz indirecta brillante y riego regular. La humedad alta es beneficiosa."
+    },
+    "pt": {
+      "common_name": "Alocasia da Nova Guiné",
+      "description": "Alocasia wentii é uma planta tropical com folhas verdes grandes e verso arroxeado. Prefere luz indireta e solo sempre úmido. Alta umidade ajuda no desenvolvimento."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا غينيا الجديدة",
+      "description": "ألوكاسيا وينتي نبات استوائي بأوراق كبيرة خضراء وأسفل أرجواني. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية مفيدة لصحة النبات."
+    },
+    "hi": {
+      "common_name": "न्यू गिनी अलोकेशिया",
+      "description": "Alocasia wentii एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बड़ी और नीचे से बैंगनी होती हैं। इसे तेज अप्रत्यक्ष रोशनी और नम मिट्टी चाहिए। अधिक नमी से पौधा स्वस्थ रहता है।"
+    },
+    "zh": {
+      "common_name": "新几内亚海芋",
+      "description": "Alocasia wentii 是一种热带植物，叶片大且背面呈紫色。适合明亮散射光和持续湿润的土壤。高湿度有助于其生长。"
+    },
+    "ja": {
+      "common_name": "ニューギニアクワズイモ",
+      "description": "Alocasia wentii は大きな緑の葉と紫色の裏面を持つ熱帯植物です。明るい間接光と湿った土を好みます。高湿度が健康な成長を助けます。"
+    },
+    "ko": {
+      "common_name": "뉴기니 알로카시아",
+      "description": "Alocasia wentii는 잎이 크고 뒷면이 보라색인 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 잎 건강에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/17984/alocasia-wentii/details",
+      "https://edis.ifas.ufl.edu/publication/FP033",
+      "https://www.botanicalgarden.ubc.ca/alocasia-care-guide"
+    ]
+  }
+}

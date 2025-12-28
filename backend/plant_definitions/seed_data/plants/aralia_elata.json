@@ -1,0 +1,236 @@
+{
+  "external_id": "aralia_elata",
+  "name": "Japanese Angelica Tree",
+  "latin": "Aralia elata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aralia_elata.jpg",
+  "image_thumb": "aralia_elata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Arrosage rég.",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère frais",
+          "it": "Resiste freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "يتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Przeciętna",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع النمو",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Japanese Angelica Tree",
+      "description": "Aralia elata is a deciduous shrub or small tree native to East Asia. It prefers partial sun and well-drained soil. It is often grown outdoors but can be container-grown when young."
+    },
+    "pl": {
+      "common_name": "Aralia japońska",
+      "description": "Aralia elata to liściasty krzew lub małe drzewo pochodzące z Azji Wschodniej. Preferuje półcień i przepuszczalną glebę. Najczęściej uprawiana jest na zewnątrz."
+    },
+    "de": {
+      "common_name": "Japanische Aralie",
+      "description": "Aralia elata ist ein laubabwerfender Strauch aus Ostasien. Sie wächst am besten im Halbschatten und in gut durchlässigem Boden. Meist wird sie im Freien kultiviert."
+    },
+    "fr": {
+      "common_name": "Aralie du Japon",
+      "description": "Aralia elata est un arbuste caduc originaire d’Asie de l’Est. Elle apprécie la mi-ombre et un sol bien drainé. Elle est surtout cultivée en extérieur."
+    },
+    "it": {
+      "common_name": "Aralia giapponese",
+      "description": "Aralia elata è un arbusto deciduo originario dell’Asia orientale. Preferisce mezz’ombra e terreno ben drenato. Viene coltivata principalmente all’aperto."
+    },
+    "es": {
+      "common_name": "Aralia japonesa",
+      "description": "Aralia elata es un arbusto caducifolio originario de Asia oriental. Prefiere semisombra y suelo bien drenado. Se cultiva principalmente en exteriores."
+    },
+    "pt": {
+      "common_name": "Arália-japonesa",
+      "description": "Aralia elata é um arbusto decíduo nativo do Leste Asiático. Prefere meia-sombra e solo bem drenado. É cultivada principalmente ao ar livre."
+    },
+    "ar": {
+      "common_name": "أراليا يابانية",
+      "description": "أراليا إيلاطا شجيرة متساقطة الأوراق موطنها شرق آسيا. تفضل الشمس الجزئية والتربة جيدة التصريف. تزرع غالبًا في الهواء الطلق."
+    },
+    "hi": {
+      "common_name": "जापानी अरालिया",
+      "description": "Aralia elata पूर्वी एशिया की पर्णपाती झाड़ी है। इसे आंशिक धूप और अच्छी जल निकास वाली मिट्टी पसंद है। आमतौर पर इसे बाहर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "刺楤木",
+      "description": "刺楤木原产于东亚，是一种落叶灌木或小乔木。喜半日照和排水良好的土壤。多用于户外栽培。"
+    },
+    "ja": {
+      "common_name": "タラノキ",
+      "description": "タラノキは東アジア原産の落葉低木です。半日陰と水はけの良い土を好みます。主に屋外で栽培されます。"
+    },
+    "ko": {
+      "common_name": "두릅나무",
+      "description": "두릅나무는 동아시아 원산의 낙엽성 관목입니다. 반그늘과 배수가 좋은 토양을 선호합니다. 주로 야외에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1951/aralia-elata/details",
+      "https://plants.ces.ncsu.edu/plants/aralia-elata/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a540"
+    ]
+  }
+}

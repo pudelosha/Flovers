@@ -1,0 +1,238 @@
+{
+  "external_id": "cyrtomium_falcatum",
+  "name": "Japanese holly fern",
+  "latin": "Cyrtomium falcatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "cyrtomium_falcatum.jpg",
+  "image_thumb": "cyrtomium_falcatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sombra parcial",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, draining soil",
+          "pl": "Żyzna gleba",
+          "de": "Nährstoffreich",
+          "fr": "Sol riche",
+          "it": "Terriccio ricco",
+          "es": "Suelo fértil",
+          "pt": "Solo rico",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega média",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24 °C",
+          "pl": "10–24 °C",
+          "de": "10–24 °C",
+          "fr": "10–24 °C",
+          "it": "10–24 °C",
+          "es": "10–24 °C",
+          "pt": "10–24 °C",
+          "ar": "10–24°م",
+          "hi": "10–24 °C",
+          "zh": "10–24°C",
+          "ja": "10–24℃",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor",
+          "pl": "Pokojowa",
+          "de": "Zimmerfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常の湿度",
+          "ko": "일반 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping fern",
+          "pl": "Kępiasta paproć",
+          "de": "Horstbildend",
+          "fr": "Fougère en touffe",
+          "it": "Felce cespitosa",
+          "es": "Helecho compacto",
+          "pt": "Samambaia densa",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Japanese holly fern",
+      "description": "Cyrtomium falcatum is an evergreen fern native to East Asia. It has glossy, leathery fronds and adapts well to indoor conditions with moderate light. The plant is valued for its tolerance of cooler temperatures."
+    },
+    "pl": {
+      "common_name": "Paprotka japońska",
+      "description": "Cyrtomium falcatum to zimozielona paproć pochodząca z Azji Wschodniej. Ma błyszczące, skórzaste liście i dobrze rośnie w warunkach domowych. Preferuje umiarkowane światło i regularne podlewanie."
+    },
+    "de": {
+      "common_name": "Japanischer Ilexfarn",
+      "description": "Cyrtomium falcatum ist ein immergrüner Farn aus Ostasien. Er besitzt ledrige, glänzende Wedel und eignet sich gut für Innenräume. Die Pflanze ist relativ kältetolerant."
+    },
+    "fr": {
+      "common_name": "Fougère houx japonaise",
+      "description": "Cyrtomium falcatum est une fougère persistante originaire d’Asie de l’Est. Ses frondes coriaces et brillantes sont très décoratives. Elle pousse bien en intérieur à lumière modérée."
+    },
+    "it": {
+      "common_name": "Felce agrifoglio giapponese",
+      "description": "Cyrtomium falcatum è una felce sempreverde originaria dell’Asia orientale. Presenta fronde lucide e coriacee. È adatta alla coltivazione in casa con luce moderata."
+    },
+    "es": {
+      "common_name": "Helecho acebo japonés",
+      "description": "Cyrtomium falcatum es un helecho perenne originario del este de Asia. Tiene frondes brillantes y resistentes. Se adapta bien al cultivo en interiores con luz media."
+    },
+    "pt": {
+      "common_name": "Samambaia-azevinho-japonesa",
+      "description": "Cyrtomium falcatum é uma samambaia perene nativa do leste da Ásia. Possui frondes brilhantes e coriáceas. Desenvolve-se bem em ambientes internos com luz moderada."
+    },
+    "ar": {
+      "common_name": "سرخس الهولي الياباني",
+      "description": "Cyrtomium falcatum هو سرخس دائم الخضرة موطنه شرق آسيا. يتميز بأوراق لامعة وسميكة. ينمو جيدًا داخل المنازل مع إضاءة معتدلة."
+    },
+    "hi": {
+      "common_name": "जापानी होली फर्न",
+      "description": "Cyrtomium falcatum पूर्वी एशिया का सदाबहार फर्न है। इसकी पत्तियाँ चमकदार और मजबूत होती हैं। यह मध्यम रोशनी में घर के अंदर अच्छी तरह उगता है।"
+    },
+    "zh": {
+      "common_name": "贯众",
+      "description": "Cyrtomium falcatum 是原产于东亚的常绿蕨类植物。叶片厚实有光泽。适合在室内中等光照条件下生长。"
+    },
+    "ja": {
+      "common_name": "オニヤブソテツ",
+      "description": "Cyrtomium falcatum は東アジア原産の常緑シダです。光沢のある丈夫な葉を持ちます。室内の半日陰でも育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "도깨비고비",
+      "description": "Cyrtomium falcatum은 동아시아 원산의 상록 양치식물입니다. 두껍고 윤기 있는 잎이 특징입니다. 실내의 중간 밝기 환경에 잘 적응합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a566",
+      "https://www.rhs.org.uk/plants/5462/cyrtomium-falcatum/details",
+      "https://plants.ces.ncsu.edu/plants/cyrtomium-falcatum/"
+    ]
+  }
+}

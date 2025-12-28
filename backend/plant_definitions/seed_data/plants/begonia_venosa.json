@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_venosa",
+  "name": "Veined Begonia",
+  "latin": "Begonia venosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "begonia_venosa.jpg",
+  "image_thumb": "begonia_venosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24 م°",
+          "hi": "18–24 °C",
+          "zh": "18–24°C",
+          "ja": "18～24℃",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama umidità",
+          "es": "Gusta humedad",
+          "pt": "Gosta umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润空气",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は遅め",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Veined Begonia",
+      "description": "Begonia venosa is a tropical species known for its thick, velvety leaves with prominent pale veins. It prefers bright, indirect light and evenly moist but well-drained soil. This plant is commonly grown indoors as a foliage specimen."
+    },
+    "pl": {
+      "common_name": "Begonia żyłkowana",
+      "description": "Begonia venosa to tropikalny gatunek o grubych, aksamitnych liściach z wyraźnym unerwieniem. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnym podłożu. Uprawiana jest głównie jako roślina doniczkowa."
+    },
+    "de": {
+      "common_name": "Geäderte Begonie",
+      "description": "Begonia venosa ist eine tropische Art mit dicken, samtigen Blättern und hellen Adern. Sie gedeiht bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Die Pflanze wird meist als Zimmerpflanze kultiviert."
+    },
+    "fr": {
+      "common_name": "Bégonia veiné",
+      "description": "Begonia venosa est une espèce tropicale appréciée pour ses feuilles épaisses et veloutées aux nervures claires. Elle préfère une lumière vive indirecte et un sol légèrement humide. Elle est surtout cultivée en intérieur."
+    },
+    "it": {
+      "common_name": "Begonia venata",
+      "description": "Begonia venosa è una specie tropicale con foglie spesse e vellutate dalle nervature evidenti. Predilige luce indiretta intensa e terreno ben drenato ma umido. È coltivata principalmente come pianta da interno."
+    },
+    "es": {
+      "common_name": "Begonia venosa",
+      "description": "Begonia venosa es una especie tropical conocida por sus hojas gruesas y aterciopeladas con venas claras. Prefiere luz indirecta brillante y riego moderado. Se cultiva comúnmente en interiores."
+    },
+    "pt": {
+      "common_name": "Begônia venosa",
+      "description": "Begonia venosa é uma espécie tropical com folhas espessas e aveludadas e veias claras. Gosta de luz indireta brilhante e solo levemente úmido. É cultivada principalmente como planta de interior."
+    },
+    "ar": {
+      "common_name": "بيغونيا عرقية",
+      "description": "بيغونيا فينوسا نبات استوائي يتميز بأوراق سميكة مخملية ذات عروق فاتحة. يفضل الضوء الساطع غير المباشر وتربة رطبة باعتدال. يزرع غالبًا كنبات داخلي."
+    },
+    "hi": {
+      "common_name": "वेन्ड बेगोनिया",
+      "description": "Begonia venosa एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ मोटी और मखमली होती हैं। इसे तेज अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। इसे आमतौर पर घर के अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "脉叶秋海棠",
+      "description": "Begonia venosa 是一种热带植物，以其厚实绒毛状叶片和浅色叶脉著称。适合明亮的散射光和微湿但排水良好的土壤。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "ベゴニア・ベノサ",
+      "description": "ベゴニア・ベノサは厚くビロード状の葉と明るい葉脈が特徴の熱帯植物です。明るい間接光と適度に湿った土を好みます。主に観葉植物として室内で育てられます。"
+    },
+    "ko": {
+      "common_name": "베노사 베고니아",
+      "description": "Begonia venosa는 두껍고 벨벳 같은 잎과 뚜렷한 잎맥이 특징인 열대 식물입니다. 밝은 간접광과 적당히 촉촉한 토양을 선호합니다. 주로 실내 관엽식물로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a980",
+      "https://www.rhs.org.uk/plants/begonia/houseplant-care",
+      "https://edis.ifas.ufl.edu/publication/EP080"
+    ]
+  }
+}

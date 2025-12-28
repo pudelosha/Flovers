@@ -1,0 +1,238 @@
+{
+  "external_id": "acalypha_hispida",
+  "name": "Chenille Plant",
+  "latin": "Acalypha hispida",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "acalypha_hispida.jpg",
+  "image_thumb": "acalypha_hispida.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect sun",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenante",
+          "es": "Rico drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة دائمة",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm 18–27°C",
+          "pl": "Ciepło 18–27°C",
+          "de": "Warm 18–27°C",
+          "fr": "Chaud 18–27°C",
+          "it": "Caldo 18–27°C",
+          "es": "Cálido 18–27°C",
+          "pt": "Quente 18–27°C",
+          "ar": "دافئ 18–27°",
+          "hi": "गरम 18–27°C",
+          "zh": "温暖18–27°C",
+          "ja": "暖かい18–27℃",
+          "ko": "따뜻함 18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微毒性",
+          "ja": "弱い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing shrub",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chenille Plant",
+      "description": "Acalypha hispida is a tropical shrub known for its long red catkin-like flowers. It prefers bright light, warm temperatures, and consistently moist soil. High humidity helps maintain healthy foliage and blooms."
+    },
+    "pl": {
+      "common_name": "Akalifa szczeciniasta",
+      "description": "Acalypha hispida to tropikalny krzew o długich czerwonych kwiatostanach. Wymaga jasnego światła, ciepła i stale wilgotnego podłoża. Wysoka wilgotność powietrza sprzyja zdrowemu wzrostowi."
+    },
+    "de": {
+      "common_name": "Chenillepflanze",
+      "description": "Acalypha hispida ist ein tropischer Strauch mit roten, hängenden Blütenständen. Sie benötigt viel Licht, Wärme und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit fördert kräftiges Wachstum."
+    },
+    "fr": {
+      "common_name": "Plante chenille",
+      "description": "Acalypha hispida est un arbuste tropical aux inflorescences rouges pendantes. Elle aime la lumière vive, la chaleur et un sol constamment humide. Une forte humidité est bénéfique."
+    },
+    "it": {
+      "common_name": "Pianta ciniglia",
+      "description": "Acalypha hispida è un arbusto tropicale con lunghi fiori rossi penduli. Predilige luce intensa, temperature calde e terreno umido. L’umidità elevata favorisce la crescita."
+    },
+    "es": {
+      "common_name": "Planta cola de gato",
+      "description": "Acalypha hispida es un arbusto tropical con flores rojas colgantes. Necesita buena luz, calor y suelo siempre húmedo. La alta humedad ambiental es importante."
+    },
+    "pt": {
+      "common_name": "Rabo-de-gato",
+      "description": "Acalypha hispida é um arbusto tropical com inflorescências vermelhas pendentes. Prefere luz intensa, calor e solo constantemente úmido. Umidade alta é recomendada."
+    },
+    "ar": {
+      "common_name": "نبات الشنيل",
+      "description": "أكاليفا هيسبيدا نبات استوائي يتميز بأزهار حمراء متدلية. يحتاج إلى ضوء ساطع وحرارة ورطوبة منتظمة. الرطوبة العالية تساعد على نموه."
+    },
+    "hi": {
+      "common_name": "चेनिल पौधा",
+      "description": "Acalypha hispida एक उष्णकटिबंधीय झाड़ी है जिसमें लाल लटकते फूल होते हैं। इसे तेज रोशनी, गर्मी और नम मिट्टी चाहिए। अधिक नमी लाभदायक होती है।"
+    },
+    "zh": {
+      "common_name": "红穗铁苋菜",
+      "description": "Acalypha hispida 是一种热带灌木，具有下垂的红色花序。喜明亮光照、温暖环境和湿润土壤。高湿度有助于生长。"
+    },
+    "ja": {
+      "common_name": "ベニヒモノキ",
+      "description": "アカリファ・ヒスピダは赤い房状の花を持つ熱帯低木です。明るい光と暖かさ、湿った土を好みます。高湿度が生育に適します。"
+    },
+    "ko": {
+      "common_name": "홍수염나무",
+      "description": "Acalypha hispida는 붉은 꽃차례가 늘어지는 열대 관목입니다. 밝은 빛과 따뜻한 환경, 촉촉한 토양을 선호합니다. 높은 습도가 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a455",
+      "https://www.rhs.org.uk/plants/239/a-california-hispida/details",
+      "https://edis.ifas.ufl.edu/publication/FP010"
+    ]
+  }
+}

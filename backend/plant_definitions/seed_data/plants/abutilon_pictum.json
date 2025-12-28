@@ -1,0 +1,236 @@
+{
+  "external_id": "abutilon_pictum",
+  "name": "Flowering Maple",
+  "latin": "Abutilon pictum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "abutilon_pictum.jpg",
+  "image_thumb": "abutilon_pictum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière vive douce",
+          "it": "Luce intensa diffusa",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz indireta forte",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Lehm",
+          "fr": "Sol drainant",
+          "it": "Terriccio drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Manter úmido",
+          "ar": "رطوبة متوازنة",
+          "hi": "समान नमी रखें",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–24°C",
+          "pl": "15–24°C",
+          "de": "15–24°C",
+          "fr": "15–24°C",
+          "it": "15–24°C",
+          "es": "15–24°C",
+          "pt": "15–24°C",
+          "ar": "15–24°م",
+          "hi": "15–24°C",
+          "zh": "15–24°C",
+          "ja": "15–24°C",
+          "ko": "15–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing shrub",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flowering Maple",
+      "description": "Abutilon pictum is an evergreen shrub known for its hanging bell-shaped flowers. It grows well indoors with bright, indirect light and regular watering. Pruning helps maintain compact growth."
+    },
+    "pl": {
+      "common_name": "Klonik pokojowy",
+      "description": "Abutilon pictum to zimozielony krzew o dzwonkowatych kwiatach. Dobrze rośnie w jasnym, rozproszonym świetle i przy regularnym podlewaniu. Przycinanie sprzyja zwartemu pokrojowi."
+    },
+    "de": {
+      "common_name": "Blütenahorn",
+      "description": "Abutilon pictum ist ein immergrüner Strauch mit hängenden Blüten. Er bevorzugt helles, indirektes Licht und gleichmäßiges Gießen. Regelmäßiger Schnitt fördert buschiges Wachstum."
+    },
+    "fr": {
+      "common_name": "Érable d’intérieur",
+      "description": "Abutilon pictum est un arbuste persistant à fleurs pendantes. Il aime la lumière vive sans soleil direct et un arrosage régulier. La taille permet de contrôler sa forme."
+    },
+    "it": {
+      "common_name": "Abutilon",
+      "description": "Abutilon pictum è un arbusto sempreverde con fiori a campana. Cresce bene in luce intensa indiretta e con annaffiature regolari. La potatura favorisce una crescita compatta."
+    },
+    "es": {
+      "common_name": "Arce de flor",
+      "description": "Abutilon pictum es un arbusto perenne con flores colgantes. Prefiere luz brillante indirecta y riego regular. La poda ayuda a mantener su forma."
+    },
+    "pt": {
+      "common_name": "Abutilon",
+      "description": "Abutilon pictum é um arbusto perene com flores pendentes. Desenvolve-se bem em luz indireta intensa e rega regular. A poda mantém o crescimento controlado."
+    },
+    "ar": {
+      "common_name": "أبوتيلون",
+      "description": "نبات Abutilon pictum شجيرة دائمة الخضرة ذات أزهار متدلية. يفضل الضوء الساطع غير المباشر والري المنتظم. التقليم يساعد على الحفاظ على شكله."
+    },
+    "hi": {
+      "common_name": "फ्लावरिंग मेपल",
+      "description": "Abutilon pictum एक सदाबहार झाड़ी है जिसमें घंटी जैसे फूल होते हैं। यह तेज अप्रत्यक्ष रोशनी और नियमित पानी में अच्छी तरह बढ़ता है। छंटाई से आकार नियंत्रित रहता है।"
+    },
+    "zh": {
+      "common_name": "灯笼花",
+      "description": "Abutilon pictum 是一种常绿灌木，具有下垂的钟形花朵。适合明亮的散射光和规律浇水。修剪有助于保持株形。"
+    },
+    "ja": {
+      "common_name": "アブチロン",
+      "description": "Abutilon pictum は釣鐘状の花を持つ常緑低木です。明るい間接光と定期的な水やりを好みます。剪定で形を整えます。"
+    },
+    "ko": {
+      "common_name": "아부틸론",
+      "description": "Abutilon pictum은 종 모양의 꽃을 가진 상록 관목입니다. 밝은 간접광과 규칙적인 물주기를 선호합니다. 가지치기로 형태를 유지할 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/abutilon/growing-guide",
+      "https://extension.umn.edu/houseplants/abutilon",
+      "https://www.gardenersworld.com/plants/abutilon-pictum/"
+    ]
+  }
+}

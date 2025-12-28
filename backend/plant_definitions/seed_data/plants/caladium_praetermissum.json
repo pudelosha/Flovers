@@ -1,0 +1,237 @@
+{
+  "external_id": "caladium_praetermissum",
+  "name": "Hilo Beauty Elephant Ear",
+  "latin": "Caladium praetermissum",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "caladium_praetermissum.jpg",
+  "image_thumb": "caladium_praetermissum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "lumin. indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष उजाला",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "moist rich soil",
+          "pl": "wilgotna żyzna gleba",
+          "de": "feuchte reiche Erde",
+          "fr": "sol riche humide",
+          "it": "terreno umido ricco",
+          "es": "suelo húmedo rico",
+          "pt": "solo rico e úmido",
+          "ar": "تربة رطبة غنية",
+          "hi": "नमी मिट्टी",
+          "zh": "湿润肥沃土壤",
+          "ja": "湿った肥沃な土",
+          "ko": "습한 비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep soil moist",
+          "pl": "utrzymuj wilgotność",
+          "de": "Boden feucht halten",
+          "fr": "garder sol humide",
+          "it": "mantieni umido",
+          "es": "mantener húmedo",
+          "pt": "manter úmido",
+          "ar": "احتفظ برطوبة التربة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持土壤湿润",
+          "ja": "土を湿らせる",
+          "ko": "토양 촉촉 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyen",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-32°C",
+          "pl": "18-32°C",
+          "de": "18-32°C",
+          "fr": "18-32°C",
+          "it": "18-32°C",
+          "es": "18-32°C",
+          "pt": "18-32°C",
+          "ar": "18-32°C",
+          "hi": "18-32°C",
+          "zh": "18-32°C",
+          "ja": "18-32°C",
+          "ko": "18-32°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "humidité élevée",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta humidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic",
+          "pl": "toksyczna",
+          "de": "giftig",
+          "fr": "toxique",
+          "it": "tossica",
+          "es": "tóxica",
+          "pt": "tóxica",
+          "ar": "سامة",
+          "hi": "जहरीला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast tropical",
+          "pl": "szybki tropikalny",
+          "de": "schnelles tropisch",
+          "fr": "croissance rapide",
+          "it": "crescita rapida",
+          "es": "crecimiento rápido",
+          "pt": "crescimento rápido",
+          "ar": "نما سريع",
+          "hi": "तेज़ विकास",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Hilo Beauty Elephant Ear",
+      "description": "Caladium praetermissum is a tropical ornamental plant with large patterned leaves. It prefers bright indirect light, moist rich soil, and warm humid conditions."
+    },
+    "pl": {
+      "common_name": "Słoniowe ucho Hilo Beauty",
+      "description": "Caladium praetermissum to tropikalna roślina ozdobna o dużych liściach. Lubi jasne pośrednie światło, wilgotną żyzną glebę i ciepłe wilgotne warunki."
+    },
+    "de": {
+      "common_name": "Hilo Beauty Elefantenohr",
+      "description": "Caladium praetermissum ist eine tropische Zierpflanze mit gemusterten Blättern. Sie bevorzugt helles indirektes Licht, feuchte Erde und warme, feuchte Bedingungen."
+    },
+    "fr": {
+      "common_name": "Oreille d'éléphant Hilo Beauty",
+      "description": "Caladium praetermissum est une plante tropicale ornementale à grandes feuilles. Elle préfère la lumière indirecte, un sol humide riche et un climat chaud et humide."
+    },
+    "it": {
+      "common_name": "Orecchio d'elefante Hilo Beauty",
+      "description": "Caladium praetermissum è una pianta tropicale ornamentale con grandi foglie. Preferisce luce indiretta, terreno umido e condizioni calde e umide."
+    },
+    "es": {
+      "common_name": "Oreja de elefante Hilo Beauty",
+      "description": "Caladium praetermissum es una planta tropical ornamental de hojas grandes. Prefiere luz indirecta, suelo húmedo rico y condiciones cálidas y húmedas."
+    },
+    "pt": {
+      "common_name": "Orelha de Elefante Hilo Beauty",
+      "description": "Caladium praetermissum é uma planta tropical ornamental de folhas grandes. Prefere luz indireta, solo úmido rico e ambiente quente e úmido."
+    },
+    "ar": {
+      "common_name": "أذن فيل Hilo Beauty",
+      "description": "Caladium praetermissum هي نبتة استوائية زينة بأوراق كبيرة. تفضل ضوءًا غير مباشر وتربة رطبة غنية وظروف دافئة ورطبة."
+    },
+    "hi": {
+      "common_name": "हिलो ब्यूटी हाथी कान",
+      "description": "Caladium praetermissum एक उष्णकटिबंधीय सजावटी पौधा है. यह अप्रत्यक्ष प्रकाश, नम मिट्टी और गर्म आर्द्र स्थिति पसंद करता है."
+    },
+    "zh": {
+      "common_name": "Hilo 美丽象耳",
+      "description": "Caladium praetermissum 是热带观赏植物, 有大而有花纹的叶子. 它喜欢明亮的散射光和湿润肥沃土壤."
+    },
+    "ja": {
+      "common_name": "ヒロビューティーゾウノオ",
+      "description": "Caladium praetermissum は大きな葉をもつ熱帯観葉植物です. 明るい間接光と湿った豊かな土を好みます."
+    },
+    "ko": {
+      "common_name": "히로 뷰티 코끼리 귀",
+      "description": "Caladium praetermissum 은 큰 잎을 가진 열대 관상 식물입니다. 밝은 간접광과 촉촉한 비옥한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Caladium_praetermissum",
+      "https://www.gardendesign.com/plants/caladium.html"
+    ]
+  }
+}

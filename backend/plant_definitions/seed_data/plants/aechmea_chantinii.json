@@ -1,0 +1,237 @@
+{
+  "external_id": "aechmea_chantinii",
+  "name": "Zebra Bromeliad",
+  "latin": "Aechmea chantinii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aechmea_chantinii.jpg",
+  "image_thumb": "aechmea_chantinii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy orchid mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिश्रण",
+          "zh": "通气基质",
+          "ja": "通気性の土",
+          "ko": "통기성 배지"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoor",
+          "pl": "Ciepłe wnętrza",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità",
+          "es": "Gusta humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow clumping",
+          "pl": "Wolno rosnąca",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "缓慢生长",
+          "ja": "成長は遅い",
+          "ko": "느린 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Zebra Bromeliad",
+      "description": "Aechmea chantinii is a tropical bromeliad known for its banded leaves and tall colorful flower spike. It grows well indoors with bright indirect light and moderate watering. The central rosette should be kept filled with fresh water."
+    },
+    "pl": {
+      "common_name": "Bromelia zebra",
+      "description": "Aechmea chantinii to tropikalna bromelia o pasiastych liściach i efektownym kwiatostanie. Dobrze rośnie w jasnym, rozproszonym świetle i przy umiarkowanym podlewaniu. Rozeta liściowa powinna zawierać świeżą wodę."
+    },
+    "de": {
+      "common_name": "Zebra-Bromelie",
+      "description": "Aechmea chantinii ist eine tropische Bromelie mit gebänderten Blättern und auffälligem Blütenstand. Sie eignet sich gut als Zimmerpflanze bei hellem, indirektem Licht. Wasser sollte regelmäßig in der Rosette stehen."
+    },
+    "fr": {
+      "common_name": "Bromélia zébrée",
+      "description": "Aechmea chantinii est une broméliacée tropicale aux feuilles striées et à l'inflorescence décorative. Elle préfère une lumière vive indirecte et un arrosage modéré. L'eau doit être maintenue dans la rosette centrale."
+    },
+    "it": {
+      "common_name": "Bromelia zebra",
+      "description": "Aechmea chantinii è una bromelia tropicale con foglie striate e infiorescenza vistosa. Cresce bene in casa con luce indiretta brillante. L'acqua va mantenuta nella rosetta centrale."
+    },
+    "es": {
+      "common_name": "Bromelia cebra",
+      "description": "Aechmea chantinii es una bromelia tropical con hojas rayadas y floración llamativa. Se adapta bien al interior con luz indirecta brillante. El centro de la roseta debe contener agua limpia."
+    },
+    "pt": {
+      "common_name": "Bromélia-zebra",
+      "description": "Aechmea chantinii é uma bromélia tropical de folhas listradas e inflorescência ornamental. Desenvolve-se bem em ambientes internos com luz indireta. A roseta central deve conter água fresca."
+    },
+    "ar": {
+      "common_name": "بروميليا الحمار الوحشي",
+      "description": "Aechmea chantinii نبات بروميليا استوائي يتميز بأوراق مخططة ونورة جميلة. ينجح داخل المنازل مع ضوء ساطع غير مباشر وري معتدل. يجب الحفاظ على الماء داخل الوردة المركزية."
+    },
+    "hi": {
+      "common_name": "ज़ेब्रा ब्रोमेलियाड",
+      "description": "Aechmea chantinii एक उष्णकटिबंधीय ब्रोमेलियाड है जिसकी पत्तियाँ धारीदार होती हैं। यह घर के अंदर अप्रत्यक्ष रोशनी में अच्छी तरह बढ़ता है। इसके केंद्रीय रोसेट में पानी रखा जाता है।"
+    },
+    "zh": {
+      "common_name": "斑纹凤梨",
+      "description": "Aechmea chantinii 是一种热带凤梨，具有条纹叶片和醒目的花序。适合在明亮的散射光下室内养护。中心叶杯需要保持清水。"
+    },
+    "ja": {
+      "common_name": "ゼブラブロメリア",
+      "description": "Aechmea chantinii は縞模様の葉と美しい花序を持つ熱帯ブロメリアです。明るい間接光の室内でよく育ちます。中心のロゼットに水を保ちます。"
+    },
+    "ko": {
+      "common_name": "제브라 브로멜리아",
+      "description": "Aechmea chantinii는 줄무늬 잎과 화려한 꽃대를 가진 열대 브로멜리아입니다. 밝은 간접광의 실내 환경에 적합합니다. 중앙 로제트에 물을 유지합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/146/aechmea-chantinii/details",
+      "https://edis.ifas.ufl.edu/publication/EP011",
+      "https://www.bromeliad.org/aechmea.htm"
+    ]
+  }
+}

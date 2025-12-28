@@ -1,0 +1,237 @@
+{
+  "external_id": "centaurea_cyanus",
+  "name": "Cornflower",
+  "latin": "Centaurea cyanus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "centaurea_cyanus.jpg",
+  "image_thumb": "centaurea_cyanus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Gleba przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Suolo drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽至温暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual",
+          "pl": "Szybki jednoroczny",
+          "de": "Schnell wachsend",
+          "fr": "Annuelle rapide",
+          "it": "Annuale rapida",
+          "es": "Anual rápida",
+          "pt": "Anual rápida",
+          "ar": "سنوي سريع",
+          "hi": "तेजी से बढ़ता",
+          "zh": "快速一年生",
+          "ja": "一年草",
+          "ko": "빠른 한해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cornflower",
+      "description": "Centaurea cyanus is an annual wildflower native to Europe, commonly found in open fields and meadows. It produces bright blue flowers and prefers full sun with well-drained soil."
+    },
+    "pl": {
+      "common_name": "Chaber bławatek",
+      "description": "Centaurea cyanus to jednoroczna roślina łąkowa pochodząca z Europy. Kwitnie na niebiesko i najlepiej rośnie w pełnym słońcu na przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Kornblume",
+      "description": "Centaurea cyanus ist eine einjährige Wildblume aus Europa. Sie wächst auf offenen Flächen und bevorzugt sonnige Standorte mit gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Bleuet des champs",
+      "description": "Centaurea cyanus est une plante annuelle originaire d’Europe. Elle pousse dans les champs ouverts et apprécie le plein soleil et les sols drainés."
+    },
+    "it": {
+      "common_name": "Fiordaliso",
+      "description": "Centaurea cyanus è una pianta annuale europea. Cresce bene in pieno sole e in terreni ben drenati, producendo fiori blu intensi."
+    },
+    "es": {
+      "common_name": "Aciano",
+      "description": "Centaurea cyanus es una planta anual originaria de Europa. Se encuentra en campos abiertos y necesita sol pleno y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Centáurea-azul",
+      "description": "Centaurea cyanus é uma planta anual europeia. Desenvolve-se em áreas abertas, com sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "زهرة الذرة",
+      "description": "Centaurea cyanus نبات سنوي موطنه أوروبا. ينمو في الحقول المفتوحة ويفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "कॉर्नफ्लावर",
+      "description": "Centaurea cyanus यूरोप की एक वार्षिक जंगली फूल वाली पौधा है। यह खुली जगहों में उगता है और पूरी धूप पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "矢车菊",
+      "description": "Centaurea cyanus 是原产于欧洲的一年生野花。常见于开阔地带，喜全日照和良好排水的土壤。"
+    },
+    "ja": {
+      "common_name": "ヤグルマギク",
+      "description": "Centaurea cyanus はヨーロッパ原産の一年草です。日当たりと水はけの良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "수레국화",
+      "description": "Centaurea cyanus는 유럽 원산의 한해살이 꽃입니다. 햇빛이 잘 드는 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/centaurea/cyanus/details",
+      "https://www.kew.org/plants/centaurea-cyanus",
+      "https://plants.usda.gov/home/plantProfile?symbol=CECY"
+    ]
+  }
+}

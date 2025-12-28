@@ -1,0 +1,237 @@
+{
+  "external_id": "anemone_coronaria",
+  "name": "Poppy Anemone",
+  "latin": "Anemone coronaria",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "anemone_coronaria.jpg",
+  "image_thumb": "anemone_coronaria.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "जलनिकास वाली",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage moyen",
+          "it": "Acqua moderata",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水",
+          "ko": "보통 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno-umiark.",
+          "de": "Kühl-mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco suave",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा-हल्का",
+          "zh": "凉爽温和",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Seasonal growth",
+          "pl": "Sezonowy",
+          "de": "Saisonal",
+          "fr": "Saisonnier",
+          "it": "Stagionale",
+          "es": "Estacional",
+          "pt": "Sazonal",
+          "ar": "موسمي",
+          "hi": "मौसमी",
+          "zh": "季节性",
+          "ja": "季節的",
+          "ko": "계절성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Poppy Anemone",
+      "description": "Anemone coronaria is a tuberous perennial native to the Mediterranean region. It produces bright, poppy-like flowers in spring and prefers full sun with well-drained soil."
+    },
+    "pl": {
+      "common_name": "Zawilec wieńcowy",
+      "description": "Anemone coronaria to bulwiasta bylina pochodząca z rejonu Morza Śródziemnego. Kwitnie wiosną i najlepiej rośnie w pełnym słońcu na przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Kronen-Anemone",
+      "description": "Anemone coronaria ist eine knollenbildende Staude aus dem Mittelmeerraum. Sie blüht im Frühjahr und benötigt volle Sonne sowie gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Anémone couronnée",
+      "description": "Anemone coronaria est une plante vivace à tubercules originaire de la région méditerranéenne. Elle fleurit au printemps et préfère le plein soleil et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Anemone coronaria",
+      "description": "Anemone coronaria è una perenne tuberosa originaria del Mediterraneo. Fiorisce in primavera e richiede pieno sole e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Anémona coronaria",
+      "description": "Anemone coronaria es una planta perenne tuberosa del Mediterráneo. Florece en primavera y necesita sol pleno y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Anêmona-coronária",
+      "description": "Anemone coronaria é uma planta perene tuberosa originária do Mediterrâneo. Floresce na primavera e prefere sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "شقائق النعمان",
+      "description": "Anemone coronaria نبات معمر درني موطنه منطقة البحر المتوسط. يزهر في الربيع ويحتاج إلى شمس كاملة وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "पॉपी एनीमोन",
+      "description": "Anemone coronaria भूमध्यसागरीय क्षेत्र का कंदयुक्त बहुवर्षीय पौधा है। यह वसंत में खिलता है और अच्छी जल निकास वाली मिट्टी व धूप पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "银莲花",
+      "description": "Anemone coronaria 原产于地中海地区，是一种块茎多年生植物。春季开花，喜全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "アネモネ",
+      "description": "アネモネ・コロナリアは地中海原産の球根性多年草です。春に開花し、日当たりと水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "아네모네",
+      "description": "Anemone coronaria는 지중해 지역 원산의 괴경성 다년초입니다. 봄에 꽃이 피며 햇볕과 배수가 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1201/anemone-coronaria/details",
+      "https://www.gardenersworld.com/plants/anemone-coronaria/",
+      "https://plants.ces.ncsu.edu/plants/anemone-coronaria/"
+    ]
+  }
+}

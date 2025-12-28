@@ -1,0 +1,238 @@
+{
+  "external_id": "aglaonema_commutatum",
+  "name": "Chinese Evergreen",
+  "latin": "Aglaonema commutatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aglaonema_commutatum.jpg",
+  "image_thumb": "aglaonema_commutatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining mix",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mittel",
+          "fr": "Lente à moyenne",
+          "it": "Lenta-media",
+          "es": "Lento-medio",
+          "pt": "Lento-médio",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "缓慢到中等",
+          "ja": "遅め",
+          "ko": "느림~보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Evergreen",
+      "description": "Aglaonema commutatum is a tropical foliage plant native to Southeast Asia. It is valued for its patterned leaves and tolerance of lower indoor light. The plant is commonly grown as a houseplant."
+    },
+    "pl": {
+      "common_name": "Aglaonema zmienna",
+      "description": "Aglaonema commutatum pochodzi z Azji Południowo-Wschodniej. Ceniona jest za dekoracyjne liście i tolerancję słabszego światła. Często uprawiana jest w pomieszczeniach."
+    },
+    "de": {
+      "common_name": "Kolbenfaden",
+      "description": "Aglaonema commutatum stammt aus Südostasien. Sie ist für ihr gemustertes Laub und ihre Anpassungsfähigkeit bekannt. Die Pflanze eignet sich gut für Innenräume."
+    },
+    "fr": {
+      "common_name": "Aglaonème",
+      "description": "Aglaonema commutatum est originaire d’Asie du Sud-Est. Elle est appréciée pour son feuillage décoratif et sa robustesse. Elle est couramment cultivée en intérieur."
+    },
+    "it": {
+      "common_name": "Aglaonema",
+      "description": "Aglaonema commutatum è una pianta tropicale del Sud-Est asiatico. È apprezzata per le foglie ornamentali e la facilità di coltivazione. Viene spesso coltivata in casa."
+    },
+    "es": {
+      "common_name": "Aglaonema",
+      "description": "Aglaonema commutatum es originaria del sudeste asiático. Destaca por sus hojas decorativas y su resistencia. Es una planta común de interior."
+    },
+    "pt": {
+      "common_name": "Aglaonema",
+      "description": "Aglaonema commutatum é nativa do Sudeste Asiático. É valorizada pelas folhas ornamentais e pela adaptação a ambientes internos. Muito usada como planta de interior."
+    },
+    "ar": {
+      "common_name": "أجلونيما",
+      "description": "نبات أجلونيما كوميوتاتوم موطنه جنوب شرق آسيا. يتميز بأوراقه المزخرفة وتحمله للضوء المنخفض. يزرع عادة كنبات داخلي."
+    },
+    "hi": {
+      "common_name": "चाइनीज़ एवरग्रीन",
+      "description": "Aglaonema commutatum दक्षिण पूर्व एशिया का उष्णकटिबंधीय पौधा है। यह अपनी सजावटी पत्तियों और कम रोशनी सहनशीलता के लिए जाना जाता है। इसे घरों में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "广东万年青",
+      "description": "Aglaonema commutatum 原产于东南亚。因其观赏叶片和耐阴性而受到喜爱。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "アグラオネマ",
+      "description": "Aglaonema commutatum は東南アジア原産の観葉植物です。模様のある葉と耐陰性が特徴です。室内でよく栽培されます。"
+    },
+    "ko": {
+      "common_name": "아글라오네마",
+      "description": "Aglaonema commutatum은 동남아시아 원산의 식물입니다. 무늬 있는 잎과 낮은 광도 적응성이 특징입니다. 실내 식물로 널리 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276418",
+      "https://www.rhs.org.uk/plants/179/i/aglaonema/details",
+      "https://edis.ifas.ufl.edu/publication/FP036"
+    ]
+  }
+}

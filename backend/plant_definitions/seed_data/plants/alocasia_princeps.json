@@ -1,0 +1,236 @@
+{
+  "external_id": "alocasia_princeps",
+  "name": "Alocasia Princeps",
+  "latin": "Alocasia princeps",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_princeps.jpg",
+  "image_thumb": "alocasia_princeps.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles indirektes Licht",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta intensa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przewiewna mieszanka",
+          "de": "Luftiges Aroid-Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Terreno sempre umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "تربة رطبة دائمًا",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Wymagająca pielęgnacja",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Esigente",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "देखभाल कठिन",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Wzniesiony pokrój",
+          "de": "Aufrecht wachsend",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立丛生",
+          "ja": "直立性",
+          "ko": "직립성 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Prince Alocasia",
+      "description": "Alocasia princeps is a rare tropical aroid with metallic green leaves and pronounced veins. It requires warm temperatures, high humidity, and consistent moisture indoors. Best suited for experienced growers."
+    },
+    "pl": {
+      "common_name": "Alokazja Princeps",
+      "description": "Alocasia princeps to rzadka roślina tropikalna o metalicznie zielonych liściach. Wymaga ciepła, wysokiej wilgotności i stale wilgotnego podłoża. Polecana dla doświadczonych hodowców."
+    },
+    "de": {
+      "common_name": "Prinz-Alokasie",
+      "description": "Alocasia princeps ist eine seltene tropische Aroidpflanze mit metallisch grünen Blättern. Sie benötigt Wärme, hohe Luftfeuchtigkeit und gleichmäßige Feuchte. Geeignet für erfahrene Pflanzenhalter."
+    },
+    "fr": {
+      "common_name": "Alocasie Princeps",
+      "description": "Alocasia princeps est une plante tropicale rare aux feuilles vert métallique. Elle demande chaleur, forte humidité et un arrosage régulier. Recommandée aux cultivateurs expérimentés."
+    },
+    "it": {
+      "common_name": "Alocasia Princeps",
+      "description": "Alocasia princeps è un’aracea tropicale rara con foglie verde metallico. Necessita di caldo, alta umidità e terreno costantemente umido. Adatta a coltivatori esperti."
+    },
+    "es": {
+      "common_name": "Alocasia Princeps",
+      "description": "Alocasia princeps es una arácea tropical rara de hojas verde metálico. Requiere calor, alta humedad y riego constante. Recomendada para cultivadores experimentados."
+    },
+    "pt": {
+      "common_name": "Alocasia Princeps",
+      "description": "Alocasia princeps é uma arácea tropical rara com folhas verde metálico. Precisa de calor, alta umidade e rega constante. Indicada para cultivadores experientes."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا برينسيبس",
+      "description": "ألوكاسيا برينسيبس نبات استوائي نادر بأوراق خضراء معدنية. يحتاج إلى الدفء ورطوبة عالية وري منتظم. مناسب للمزارعين ذوي الخبرة."
+    },
+    "hi": {
+      "common_name": "एलोकैसिया प्रिन्सेप्स",
+      "description": "Alocasia princeps एक दुर्लभ उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ धात्विक हरी होती हैं। इसे गर्मी, अधिक आर्द्रता और नियमित सिंचाई चाहिए। अनुभवी उत्पादकों के लिए उपयुक्त।"
+    },
+    "zh": {
+      "common_name": "王子海芋",
+      "description": "Alocasia princeps 是一种稀有的热带海芋，叶片呈金属绿色。需要温暖环境、高湿度和稳定浇水。更适合有经验的种植者。"
+    },
+    "ja": {
+      "common_name": "アロカシア・プリンセプス",
+      "description": "アロカシア・プリンセプスは金属光沢のある葉を持つ希少な熱帯植物です。高温多湿と安定した水分管理が必要です。上級者向けです。"
+    },
+    "ko": {
+      "common_name": "알로카시아 프린셉스",
+      "description": "알로카시아 프린셉스는 금속빛 잎을 가진 희귀한 열대 식물입니다. 따뜻한 온도와 높은 습도, 꾸준한 물 관리가 필요합니다. 숙련자에게 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/alocasia-princeps",
+      "https://edis.ifas.ufl.edu/publication/EP258",
+      "https://www.rhs.org.uk/plants/alocasia"
+    ]
+  }
+}

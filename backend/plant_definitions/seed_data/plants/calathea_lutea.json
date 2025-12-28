@@ -1,0 +1,238 @@
+{
+  "external_id": "calathea_lutea",
+  "name": "Cigar Calathea",
+  "latin": "Calathea lutea",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "calathea_lutea.jpg",
+  "image_thumb": "calathea_lutea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-drained soil",
+          "pl": "Żyzna przepuszczalna gleba",
+          "de": "Lockere nährstoffreiche Erde",
+          "fr": "Sol riche drainant",
+          "it": "Terriccio ricco drenante",
+          "es": "Suelo rico y drenante",
+          "pt": "Solo rico drenado",
+          "ar": "تربة غنية جيدة الصرف",
+          "hi": "उपजाऊ जलनिकास वाली मिट्टी",
+          "zh": "肥沃排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgotne",
+          "de": "Gleichmäßig feucht halten",
+          "fr": "Garder humide",
+          "it": "Mantenere umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "الحفاظ على رطوبة التربة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持土壤湿润",
+          "ja": "土を湿らせる",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien modéré",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C preferred",
+          "pl": "Preferuje 18–27°C",
+          "de": "18–27°C bevorzugt",
+          "fr": "18–27°C idéal",
+          "it": "Ideale 18–27°C",
+          "es": "Ideal 18–27°C",
+          "pt": "Ideal 18–27°C",
+          "ar": "يفضل 18–27°م",
+          "hi": "18–27°C उपयुक्त",
+          "zh": "适宜18–27°C",
+          "ja": "18–27℃が最適",
+          "ko": "18–27°C 적합"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Large upright clumps",
+          "pl": "Duże wzniesione kępy",
+          "de": "Große aufrechte Horste",
+          "fr": "Grand port dressé",
+          "it": "Crescita eretta grande",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم كبير",
+          "hi": "बड़ा सीधा विकास",
+          "zh": "大型直立生长",
+          "ja": "大型で直立",
+          "ko": "크고 직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cigar Calathea",
+      "description": "Calathea lutea is a tropical plant native to Central and South America. It is known for its large paddle-shaped leaves with pale undersides. The plant prefers warm temperatures, high humidity, and consistently moist soil indoors."
+    },
+    "pl": {
+      "common_name": "Kalatea cygarowa",
+      "description": "Calathea lutea pochodzi z tropikalnych regionów Ameryki Środkowej i Południowej. Charakteryzuje się dużymi liśćmi o jasnym spodzie. Wymaga ciepła, wysokiej wilgotności i stale wilgotnej gleby."
+    },
+    "de": {
+      "common_name": "Zigarren-Korbmarante",
+      "description": "Calathea lutea stammt aus den Tropen Mittel- und Südamerikas. Sie besitzt große paddelförmige Blätter mit heller Unterseite. Sie gedeiht bei Wärme, hoher Luftfeuchtigkeit und gleichmäßig feuchtem Substrat."
+    },
+    "fr": {
+      "common_name": "Calathée cigare",
+      "description": "Calathea lutea est originaire d’Amérique centrale et du Sud. Elle se distingue par ses grandes feuilles en forme de pagaie au revers clair. Elle apprécie la chaleur, l’humidité élevée et un sol constamment humide."
+    },
+    "it": {
+      "common_name": "Calatea sigaro",
+      "description": "Calathea lutea è una pianta tropicale dell’America Centrale e Meridionale. Ha grandi foglie a forma di pala con il lato inferiore chiaro. Necessita di caldo, umidità elevata e terreno sempre leggermente umido."
+    },
+    "es": {
+      "common_name": "Calatea cigarro",
+      "description": "Calathea lutea es originaria de Centro y Sudamérica. Destaca por sus grandes hojas en forma de pala con envés claro. Requiere calor, alta humedad y sustrato constantemente húmedo."
+    },
+    "pt": {
+      "common_name": "Calatéia charuto",
+      "description": "Calathea lutea é nativa da América Central e do Sul. Possui folhas grandes em forma de pá com a face inferior clara. Prefere calor, alta umidade e solo sempre úmido."
+    },
+    "ar": {
+      "common_name": "كالاثيا السيجار",
+      "description": "نبات Calathea lutea موطنه المناطق الاستوائية في أمريكا الوسطى والجنوبية. يتميز بأوراق كبيرة تشبه المجاديف ذات سطح سفلي فاتح. يحتاج إلى الدفء ورطوبة عالية وتربة رطبة باستمرار."
+    },
+    "hi": {
+      "common_name": "सिगार कैलाथिया",
+      "description": "Calathea lutea मध्य और दक्षिण अमेरिका का उष्णकटिबंधीय पौधा है। इसकी पत्तियाँ बड़ी और नीचे से हल्की रंग की होती हैं। इसे गर्म तापमान, अधिक आर्द्रता और लगातार नम मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "雪茄竹芋",
+      "description": "Calathea lutea 原产于中美洲和南美洲的热带地区。其叶片宽大，叶背颜色较浅。适合温暖环境、高湿度和持续湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "シガー・カラテア",
+      "description": "Calathea lutea は中南米原産の熱帯植物です。明るい裏面をもつ大きな葉が特徴です。暖かさと高湿度、常に湿った用土を好みます。"
+    },
+    "ko": {
+      "common_name": "시가 칼라데아",
+      "description": "Calathea lutea는 중남미 열대 지역이 원산지입니다. 밝은 잎 뒷면을 가진 큰 잎이 특징입니다. 따뜻한 환경과 높은 습도, 지속적으로 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/17032/calathea-lutea/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a593"
+    ]
+  }
+}

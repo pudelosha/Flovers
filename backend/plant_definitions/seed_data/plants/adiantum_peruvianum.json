@@ -1,0 +1,238 @@
+{
+  "external_id": "adiantum_peruvianum",
+  "name": "Peruvian Maidenhair Fern",
+  "latin": "Adiantum peruvianum",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 4,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "adiantum_peruvianum.jpg",
+  "image_thumb": "adiantum_peruvianum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist rich soil",
+          "pl": "Wilgotna żyzna",
+          "de": "Feuchte Erde",
+          "fr": "Sol riche humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润肥土",
+          "ja": "湿った肥沃土",
+          "ko": "습한 비옥토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة دائمة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Difficile",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "कठिन देखभाल",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24°م",
+          "hi": "18–24 °C",
+          "zh": "18–24 °C",
+          "ja": "18～24℃",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping fern",
+          "pl": "Kępiasta paproć",
+          "de": "Horstartig",
+          "fr": "Fougère en touffe",
+          "it": "Felce cespitosa",
+          "es": "Helecho en mata",
+          "pt": "Samambaia em touceira",
+          "ar": "نمو خُصلي",
+          "hi": "झुरमुट वृद्धि",
+          "zh": "丛生蕨类",
+          "ja": "株立ち成長",
+          "ko": "포기형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peruvian Maidenhair Fern",
+      "description": "Adiantum peruvianum is a delicate tropical fern native to Central and South America. It is valued for its glossy, fan-shaped leaflets and dark wiry stems. The plant requires stable moisture, high humidity, and gentle light indoors."
+    },
+    "pl": {
+      "common_name": "Paprotka peruwiańska",
+      "description": "Adiantum peruvianum to delikatna paproć tropikalna pochodząca z Ameryki Środkowej i Południowej. Charakteryzuje się błyszczącymi liśćmi i cienkimi, ciemnymi ogonkami. W uprawie domowej wymaga stałej wilgoci i wysokiej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Peruanischer Frauenhaarfarn",
+      "description": "Adiantum peruvianum ist ein empfindlicher tropischer Farn aus Mittel- und Südamerika. Er besitzt glänzende, fächerförmige Wedel und dunkle, drahtige Stiele. Für gesundes Wachstum benötigt er gleichmäßige Feuchtigkeit und hohe Luftfeuchte."
+    },
+    "fr": {
+      "common_name": "Fougère capillaire du Pérou",
+      "description": "Adiantum peruvianum est une fougère tropicale délicate originaire d’Amérique centrale et du Sud. Elle se distingue par ses frondes brillantes et ses tiges sombres et fines. En intérieur, elle demande une humidité constante et un air humide."
+    },
+    "it": {
+      "common_name": "Capelvenere peruviana",
+      "description": "Adiantum peruvianum è una felce tropicale delicata originaria dell’America centrale e meridionale. Presenta foglioline lucide e steli scuri e sottili. In casa necessita di umidità elevata e irrigazioni regolari."
+    },
+    "es": {
+      "common_name": "Culantrillo peruano",
+      "description": "Adiantum peruvianum es un helecho tropical delicado nativo de América Central y del Sur. Destaca por sus hojas brillantes y tallos oscuros y finos. Requiere humedad constante y buena humedad ambiental en interiores."
+    },
+    "pt": {
+      "common_name": "Avenca-peruana",
+      "description": "Adiantum peruvianum é uma samambaia tropical delicada nativa da América Central e do Sul. Possui folíolos brilhantes e hastes escuras e finas. Em ambientes internos, precisa de umidade constante e ar úmido."
+    },
+    "ar": {
+      "common_name": "سرخس شعر العذراء البيروفي",
+      "description": "نبات Adiantum peruvianum هو سرخس استوائي دقيق موطنه أمريكا الوسطى والجنوبية. يتميز بأوراق لامعة وسيقان داكنة رفيعة. يحتاج إلى رطوبة ثابتة وهواء عالي الرطوبة داخل المنزل."
+    },
+    "hi": {
+      "common_name": "पेरुवियन मेडनहेयर फ़र्न",
+      "description": "Adiantum peruvianum एक नाज़ुक उष्णकटिबंधीय फ़र्न है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसकी पत्तियाँ चमकदार और डंठल गहरे रंग के होते हैं। इसे घर के अंदर निरंतर नमी और अधिक आर्द्रता की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "秘鲁铁线蕨",
+      "description": "Adiantum peruvianum 是原产于中美洲和南美洲的热带蕨类植物。其叶片光亮，叶柄细长而深色。室内养护需要保持土壤湿润并提供较高空气湿度。"
+    },
+    "ja": {
+      "common_name": "ペルーアジアンタム",
+      "description": "Adiantum peruvianum は中南米原産の繊細な熱帯シダ植物です。光沢のある小葉と黒っぽい細い茎が特徴です。室内では一定の湿り気と高い湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "페루 아디안텀",
+      "description": "Adiantum peruvianum은 중남미 원산의 섬세한 열대 양치식물입니다. 윤기 있는 잎과 어두운 가는 줄기가 특징입니다. 실내에서는 지속적인 수분과 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/adiantum/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/FP022",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a500"
+    ]
+  }
+}

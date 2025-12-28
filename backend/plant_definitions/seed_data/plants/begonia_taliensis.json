@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_taliensis",
+  "name": "Begonia Taliensis",
+  "latin": "Begonia taliensis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "begonia_taliensis.jpg",
+  "image_thumb": "begonia_taliensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne rozproszone",
+          "de": "helles Streulicht",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining soil",
+          "pl": "przepuszczalna gleba",
+          "de": "durchlässige Erde",
+          "fr": "sol drainant",
+          "it": "terreno drenante",
+          "es": "suelo drenante",
+          "pt": "solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep evenly moist",
+          "pl": "umiarkowanie wilgotna",
+          "de": "gleichmäßig feucht",
+          "fr": "humidité régulière",
+          "it": "umidità costante",
+          "es": "humedad constante",
+          "pt": "umidade constante",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "保持湿润",
+          "ja": "適度に湿らす",
+          "ko": "고르게 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "modérée",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "prefers high humidity",
+          "pl": "lubi wilgoć",
+          "de": "mag hohe Luftfeuchte",
+          "fr": "aime l’humidité",
+          "it": "ama umidità",
+          "es": "prefiere humedad",
+          "pt": "gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "उच्च आर्द्रता",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic to pets",
+          "pl": "toksyczna dla zwierząt",
+          "de": "giftig für Tiere",
+          "fr": "toxique animaux",
+          "it": "tossica animali",
+          "es": "tóxica mascotas",
+          "pt": "tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "compact perennial",
+          "pl": "zwarta bylina",
+          "de": "kompakt wachsend",
+          "fr": "vivace compacte",
+          "it": "perenne compatta",
+          "es": "perenne compacta",
+          "pt": "perene compacta",
+          "ar": "نمو مدمج",
+          "hi": "सघन वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクト成長",
+          "ko": "콤팩트 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Taliensis begonia",
+      "description": "Begonia taliensis is a rhizomatous begonia native to forested regions of China. It is valued for its textured foliage and delicate white flowers. The plant prefers stable moisture and bright, indirect light indoors."
+    },
+    "pl": {
+      "common_name": "Begonia taliensis",
+      "description": "Begonia taliensis to kłączowa begonia pochodząca z leśnych obszarów Chin. Ceniona jest za dekoracyjne liście i drobne białe kwiaty. Wymaga jasnego, rozproszonego światła i umiarkowanej wilgotności."
+    },
+    "de": {
+      "common_name": "Taliensis-Begonie",
+      "description": "Begonia taliensis ist eine rhizombildende Begonie aus den Wäldern Chinas. Sie wird wegen ihrer strukturierten Blätter und zarten weißen Blüten geschätzt. Im Innenbereich benötigt sie gleichmäßige Feuchte und helles Streulicht."
+    },
+    "fr": {
+      "common_name": "Bégonia taliensis",
+      "description": "Begonia taliensis est un bégonia à rhizome originaire des forêts chinoises. Elle est appréciée pour son feuillage texturé et ses petites fleurs blanches. Elle préfère une lumière vive indirecte et une humidité régulière."
+    },
+    "it": {
+      "common_name": "Begonia taliensis",
+      "description": "La Begonia taliensis è una begonia rizomatosa originaria delle foreste della Cina. È apprezzata per le foglie ornamentali e i fiori bianchi delicati. In casa richiede luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Begonia taliensis",
+      "description": "Begonia taliensis es una begonia rizomatosa nativa de bosques de China. Destaca por su follaje texturizado y flores blancas delicadas. Prefiere luz indirecta brillante y humedad constante."
+    },
+    "pt": {
+      "common_name": "Begônia taliensis",
+      "description": "Begonia taliensis é uma begônia rizomatosa originária de florestas da China. É valorizada por suas folhas texturizadas e flores brancas delicadas. Prefere luz indireta e umidade estável."
+    },
+    "ar": {
+      "common_name": "بيغونيا تالينسيس",
+      "description": "بيغونيا تالينسيس نبات ريزومي موطنه غابات الصين. يتميز بأوراقه المزخرفة وأزهاره البيضاء الصغيرة. يفضل الضوء الساطع غير المباشر ورطوبة منتظمة."
+    },
+    "hi": {
+      "common_name": "बेगोनिया टालिएन्सिस",
+      "description": "Begonia taliensis चीन के वनों में पाया जाने वाला एक राइजोम वाला पौधा है। इसकी बनावटदार पत्तियाँ और सफेद फूल इसे आकर्षक बनाते हैं। यह अप्रत्यक्ष रोशनी और समान नमी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "大理秋海棠",
+      "description": "Begonia taliensis 原产于中国森林地区，是一种根茎型秋海棠。以其质感叶片和白色小花而著称。适合在明亮的散射光和稳定湿度下生长。"
+    },
+    "ja": {
+      "common_name": "ベゴニア・タリエンシス",
+      "description": "ベゴニア・タリエンシスは中国の森林に自生する根茎性ベゴニアです。質感のある葉と白い花が特徴です。明るい間接光と安定した湿度を好みます。"
+    },
+    "ko": {
+      "common_name": "탈리엔시스 베고니아",
+      "description": "Begonia taliensis는 중국 숲 지역 원산의 근경성 베고니아입니다. 질감 있는 잎과 흰 꽃이 특징입니다. 밝은 간접광과 일정한 습도를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60445666-2",
+      "https://www.begonias.org/begonia-taliensis/",
+      "https://plants.ces.ncsu.edu/plants/begonia/"
+    ]
+  }
+}

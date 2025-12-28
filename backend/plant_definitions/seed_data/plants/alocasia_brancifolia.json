@@ -1,0 +1,238 @@
+{
+  "external_id": "alocasia_brancifolia",
+  "name": "Alocasia Brancifolia",
+  "latin": "Alocasia brancifolia",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_brancifolia.jpg",
+  "image_thumb": "alocasia_brancifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles, indirektes Licht",
+          "fr": "Lumière vive indirecte",
+          "it": "Luce intensa indiretta",
+          "es": "Luz brillante indirecta",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮的散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalna mieszanka",
+          "de": "Luftiges Aroid-Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato bem drenado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide en continu",
+          "it": "Sempre leggermente umida",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "رطوبة متوازنة",
+          "hi": "समान नमी रखें",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging care",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Impegnativa",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة العناية",
+          "hi": "देखभाल कठिन",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità elevata",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica para pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू जानवरों हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Wzniesiony pokrój",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा गुच्छेदार",
+          "zh": "直立丛生",
+          "ja": "直立して群生",
+          "ko": "직립 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Branched-leaf Alocasia",
+      "description": "Alocasia brancifolia is a tropical aroid with deeply lobed, architectural leaves. It requires warm temperatures, high humidity, and consistently moist but well-drained soil. This species is best suited for experienced indoor growers."
+    },
+    "pl": {
+      "common_name": "Alokazja brancifolia",
+      "description": "Alocasia brancifolia to tropikalna roślina o głęboko powcinanych liściach. Wymaga ciepła, wysokiej wilgotności i stale lekko wilgotnego podłoża. Najlepiej rośnie u doświadczonych hodowców."
+    },
+    "de": {
+      "common_name": "Alokasie Brancifolia",
+      "description": "Alocasia brancifolia ist eine tropische Aronstabpflanze mit stark gelappten Blättern. Sie benötigt Wärme, hohe Luftfeuchtigkeit und gleichmäßig feuchtes Substrat. Die Pflege gilt als anspruchsvoll."
+    },
+    "fr": {
+      "common_name": "Alocasia brancifolia",
+      "description": "Alocasia brancifolia est une plante tropicale aux feuilles profondément découpées. Elle préfère une forte humidité, une chaleur constante et un sol humide mais drainant. Elle convient aux cultivateurs expérimentés."
+    },
+    "it": {
+      "common_name": "Alocasia brancifolia",
+      "description": "Alocasia brancifolia è una pianta tropicale con foglie profondamente lobate. Necessita di umidità elevata, temperature calde e terreno costantemente umido. È indicata per coltivatori esperti."
+    },
+    "es": {
+      "common_name": "Alocasia brancifolia",
+      "description": "Alocasia brancifolia es una planta tropical con hojas profundamente lobuladas. Requiere alta humedad, calor constante y sustrato húmedo y bien drenado. Su cuidado es exigente."
+    },
+    "pt": {
+      "common_name": "Alocasia brancifolia",
+      "description": "Alocasia brancifolia é uma planta tropical com folhas profundamente recortadas. Precisa de alta umidade, calor e solo sempre levemente úmido. Recomendada para cultivadores experientes."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا برانسيفوليا",
+      "description": "نبات ألوكاسيا برانسيفوليا استوائي بأوراق عميقة التفصص. يحتاج إلى حرارة ورطوبة عاليتين وتربة رطبة جيدة التصريف. مناسب للمزارعين ذوي الخبرة."
+    },
+    "hi": {
+      "common_name": "अलोकासिया ब्रैंसिफोलिया",
+      "description": "अलोकासिया ब्रैंसिफोलिया एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहराई से कटी होती हैं। इसे गर्म तापमान, अधिक आर्द्रता और नम मिट्टी की आवश्यकता होती है। यह अनुभवी उत्पादकों के लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "裂叶海芋",
+      "description": "Alocasia brancifolia 是一种叶片深裂的热带海芋植物。它需要温暖、高湿度以及湿润但排水良好的基质。养护难度较高。"
+    },
+    "ja": {
+      "common_name": "アロカシア・ブランキフォリア",
+      "description": "アロカシア・ブランキフォリアは深く切れ込んだ葉を持つ熱帯植物です。高温多湿と常に湿った土壌を好みます。管理はやや難しいです。"
+    },
+    "ko": {
+      "common_name": "알로카시아 브란키폴리아",
+      "description": "알로카시아 브란키폴리아는 깊게 갈라진 잎이 특징인 열대 식물입니다. 높은 습도와 따뜻한 환경, 촉촉한 토양이 필요합니다. 관리 난이도가 높은 편입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.kew.org/plants/alocasia",
+      "https://edis.ifas.ufl.edu/publication/EP060"
+    ]
+  }
+}

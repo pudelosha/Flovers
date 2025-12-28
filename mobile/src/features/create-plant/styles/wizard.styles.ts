@@ -157,8 +157,8 @@ export const wiz = StyleSheet.create({
   desc: { color: "rgba(255,255,255,0.95)", fontWeight: "600", lineHeight: 18 },
   prefsGrid: { marginTop: 8, gap: 8 },
   prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
-  prefLabel: { color: "rgba(255,255,255,0.92)", fontWeight: "700", flex: 1 },
-  prefValue: { color: "#FFFFFF", fontWeight: "800" },
+  prefLabel: { color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: "700", flex: 1 },
+  prefValue: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
 
   /** Step 3 */
   actionFull: {

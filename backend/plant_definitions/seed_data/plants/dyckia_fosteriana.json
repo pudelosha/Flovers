@@ -1,0 +1,237 @@
+{
+  "external_id": "dyckia_fosteriana",
+  "name": "Dyckia Fosteriana",
+  "latin": "Dyckia fosteriana",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dyckia_fosteriana.jpg",
+  "image_thumb": "dyckia_fosteriana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Very well drained",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega rara",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "보통 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climates",
+          "pl": "Ciepłe warunki",
+          "de": "Warme Temperaturen",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म मौसम",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Foster's Dyckia",
+      "description": "Dyckia fosteriana is a terrestrial bromeliad native to Brazil. It forms spiny rosettes adapted to intense sun and drought. The plant prefers excellent drainage and infrequent watering."
+    },
+    "pl": {
+      "common_name": "Dyckia Fostera",
+      "description": "Dyckia fosteriana to naziemna bromelia pochodząca z Brazylii. Tworzy kolczaste rozety przystosowane do silnego słońca i suszy. Wymaga bardzo przepuszczalnego podłoża i rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Dyckia von Foster",
+      "description": "Dyckia fosteriana ist eine terrestrische Bromelie aus Brasilien. Sie bildet dornige Rosetten für sonnige und trockene Standorte. Staunässe sollte unbedingt vermieden werden."
+    },
+    "fr": {
+      "common_name": "Dyckia de Foster",
+      "description": "Dyckia fosteriana est une broméliacée terrestre originaire du Brésil. Elle forme des rosettes épineuses adaptées au plein soleil. Un sol très drainant et peu d’arrosage sont essentiels."
+    },
+    "it": {
+      "common_name": "Dyckia di Foster",
+      "description": "Dyckia fosteriana è una bromeliacea terrestre del Brasile. Cresce in rosette spinose resistenti al sole intenso. Necessita di substrato drenante e annaffiature sporadiche."
+    },
+    "es": {
+      "common_name": "Dyckia de Foster",
+      "description": "Dyckia fosteriana es una bromelia terrestre originaria de Brasil. Produce rosetas espinosas adaptadas al sol intenso. Requiere sustrato muy drenante y riego limitado."
+    },
+    "pt": {
+      "common_name": "Dyckia de Foster",
+      "description": "Dyckia fosteriana é uma bromélia terrestre nativa do Brasil. Forma rosetas espinhosas tolerantes ao sol pleno. Prefere solo bem drenado e pouca rega."
+    },
+    "ar": {
+      "common_name": "ديكيا فوستريانا",
+      "description": "نبات Dyckia fosteriana من البروميليات الأرضية موطنه البرازيل. يشكل وردات شوكية تتحمل الشمس القوية. يحتاج إلى تربة جيدة التصريف وري محدود."
+    },
+    "hi": {
+      "common_name": "डाइकिया फोस्टेरियाना",
+      "description": "Dyckia fosteriana ब्राज़ील का एक स्थलीय ब्रोमेलियाड है। यह तेज धूप और सूखे के अनुकूल कांटेदार रोसेट बनाता है। इसे अच्छी जलनिकासी और कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "福斯特狄克夏",
+      "description": "Dyckia fosteriana 是原产于巴西的地生凤梨科植物。它形成耐强光和干旱的刺状莲座。需要排水良好的土壤和较少浇水。"
+    },
+    "ja": {
+      "common_name": "ディッキア・フォステリアナ",
+      "description": "ディッキア・フォステリアナはブラジル原産の地生ブロメリアです。強い日差しと乾燥に適応したトゲのあるロゼットを形成します。水は控えめに管理します。"
+    },
+    "ko": {
+      "common_name": "디키아 포스테리아나",
+      "description": "Dyckia fosteriana는 브라질 원산의 지생 브로멜리아입니다. 강한 햇빛과 건조에 적응한 가시 로제트를 형성합니다. 배수가 잘되는 토양과 적은 물이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bromeliads.info/genus/dyckia/",
+      "https://www.rhs.org.uk/plants/182040/dyckia-fosteriana/details",
+      "https://www.llifle.com/Encyclopedia/BROMELIADS/Family/Bromeliaceae/13208/Dyckia_fosteriana"
+    ]
+  }
+}

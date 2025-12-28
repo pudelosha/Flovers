@@ -1,0 +1,236 @@
+{
+  "external_id": "beaucarnea_recurvata",
+  "name": "Ponytail Palm",
+  "latin": "Beaucarnea recurvata",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "beaucarnea_recurvata.jpg",
+  "image_thumb": "beaucarnea_recurvata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenante",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Peu fréquent",
+          "it": "Raro",
+          "es": "Escaso",
+          "pt": "Raro",
+          "ar": "نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ",
+          "ko": "드물게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "生长慢",
+          "ja": "成長遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ponytail Palm",
+      "description": "Beaucarnea recurvata is a slow-growing plant native to Mexico with a swollen trunk that stores water. It prefers bright light and infrequent watering, making it suitable for indoor conditions. Overwatering is the most common cause of problems."
+    },
+    "pl": {
+      "common_name": "Nolina odgięta",
+      "description": "Beaucarnea recurvata pochodzi z Meksyku i ma zgrubiały pień magazynujący wodę. Lubi jasne stanowiska i rzadkie podlewanie, dlatego dobrze sprawdza się w domu. Nadmiar wody jest jej największym zagrożeniem."
+    },
+    "de": {
+      "common_name": "Elefantenfuß",
+      "description": "Beaucarnea recurvata stammt aus Mexiko und speichert Wasser in ihrem verdickten Stamm. Sie benötigt viel Licht und nur selten Wasser. Staunässe sollte unbedingt vermieden werden."
+    },
+    "fr": {
+      "common_name": "Pied d’éléphant",
+      "description": "Beaucarnea recurvata est originaire du Mexique et possède un tronc renflé qui stocke l’eau. Elle apprécie une lumière vive et des arrosages espacés. Un excès d’eau peut provoquer des dégâts."
+    },
+    "it": {
+      "common_name": "Mangiafumo",
+      "description": "Beaucarnea recurvata è una pianta messicana con tronco rigonfio che accumula acqua. Predilige luce intensa e annaffiature poco frequenti. L’eccesso d’acqua va evitato."
+    },
+    "es": {
+      "common_name": "Pata de elefante",
+      "description": "Beaucarnea recurvata es originaria de México y almacena agua en su tronco ensanchado. Necesita mucha luz y riego poco frecuente. El exceso de agua es perjudicial."
+    },
+    "pt": {
+      "common_name": "Pata-de-elefante",
+      "description": "Beaucarnea recurvata vem do México e armazena água no tronco dilatado. Prefere luz intensa e regas espaçadas. O excesso de água pode causar problemas."
+    },
+    "ar": {
+      "common_name": "نبات ذيل الحصان",
+      "description": "نبات Beaucarnea recurvata موطنه المكسيك ويخزن الماء في جذعه المنتفخ. يحتاج إلى ضوء ساطع وري متباعد. الإفراط في الري قد يسبب تلف الجذور."
+    },
+    "hi": {
+      "common_name": "पोनीटेल पाम",
+      "description": "Beaucarnea recurvata मेक्सिको का पौधा है जिसकी मोटी तना पानी संचित करती है। इसे तेज़ रोशनी और कम पानी की आवश्यकता होती है। अधिक पानी देना नुकसानदायक हो सकता है।"
+    },
+    "zh": {
+      "common_name": "酒瓶兰",
+      "description": "Beaucarnea recurvata 原产于墨西哥，膨大的树干可以储存水分。它喜欢强光和少量浇水，适合室内养护。浇水过多容易出问题。"
+    },
+    "ja": {
+      "common_name": "トックリラン",
+      "description": "Beaucarnea recurvata はメキシコ原産で、膨らんだ幹に水を蓄えます。明るい光と控えめな水やりを好みます。水の与えすぎに注意が必要です。"
+    },
+    "ko": {
+      "common_name": "포니테일야자",
+      "description": "Beaucarnea recurvata는 멕시코 원산으로 줄기에 물을 저장합니다. 밝은 빛과 드문 물주기를 선호합니다. 과습은 피해야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2002/beaucarnea-recurvata/details",
+      "https://extension.umn.edu/houseplants/pony-tail-palm",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a457"
+    ]
+  }
+}

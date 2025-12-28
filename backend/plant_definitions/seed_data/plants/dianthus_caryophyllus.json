@@ -1,0 +1,238 @@
+{
+  "external_id": "dianthus_caryophyllus",
+  "name": "Carnation",
+  "latin": "Dianthus caryophyllus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dianthus_caryophyllus.jpg",
+  "image_thumb": "dianthus_caryophyllus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco a templ.",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل البرودة",
+          "hi": "हल्का ठंडा",
+          "zh": "凉爽至温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘함~온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic pets",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Leve toxicidad",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微毒性",
+          "ja": "軽い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Wzniesiony kępowy",
+          "de": "Aufrecht buschig",
+          "fr": "Touffe dressée",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立丛生",
+          "ja": "直立株立ち",
+          "ko": "직립형 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Carnation",
+      "description": "Dianthus caryophyllus is a classic flowering plant known for its fragrant, ruffled blooms. It prefers full sun and well-drained soil. Regular watering and light feeding support healthy flowering."
+    },
+    "pl": {
+      "common_name": "Goździk",
+      "description": "Dianthus caryophyllus to popularna roślina kwitnąca o pachnących kwiatach. Lubi pełne słońce i przepuszczalną glebę. Umiarkowane podlewanie sprzyja kwitnieniu."
+    },
+    "de": {
+      "common_name": "Nelke",
+      "description": "Dianthus caryophyllus ist eine bekannte Blühpflanze mit duftenden Blüten. Sie wächst am besten in voller Sonne und durchlässigem Boden. Regelmäßiges Gießen fördert die Blüte."
+    },
+    "fr": {
+      "common_name": "Œillet",
+      "description": "Dianthus caryophyllus est une plante à fleurs appréciée pour son parfum. Elle préfère le plein soleil et un sol bien drainé. Un arrosage modéré est recommandé."
+    },
+    "it": {
+      "common_name": "Garofano",
+      "description": "Dianthus caryophyllus è una pianta ornamentale dai fiori profumati. Richiede pieno sole e terreno drenante. Innaffiature regolari favoriscono la fioritura."
+    },
+    "es": {
+      "common_name": "Clavel",
+      "description": "Dianthus caryophyllus es una planta floral muy conocida y aromática. Necesita sol pleno y suelo bien drenado. El riego moderado mantiene su buen estado."
+    },
+    "pt": {
+      "common_name": "Cravo",
+      "description": "Dianthus caryophyllus é uma planta ornamental com flores perfumadas. Prefere sol pleno e solo drenado. A rega regular ajuda no florescimento."
+    },
+    "ar": {
+      "common_name": "قرنفل",
+      "description": "Dianthus caryophyllus نبات مزهر معروف بعطره. يفضل الشمس الكاملة وتربة جيدة الصرف. الري المنتظم يساعد على الإزهار."
+    },
+    "hi": {
+      "common_name": "कार्नेशन",
+      "description": "Dianthus caryophyllus एक सुगंधित फूलों वाला पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। नियमित सिंचाई से फूल अच्छे आते हैं।"
+    },
+    "zh": {
+      "common_name": "康乃馨",
+      "description": "Dianthus caryophyllus 是一种著名的芳香开花植物。适合全日照和排水良好的土壤。适度浇水有助于开花。"
+    },
+    "ja": {
+      "common_name": "カーネーション",
+      "description": "Dianthus caryophyllus は香りのある花で知られる植物です。日当たりと水はけの良い土を好みます。適度な水やりが重要です。"
+    },
+    "ko": {
+      "common_name": "카네이션",
+      "description": "Dianthus caryophyllus는 향기로운 꽃으로 유명한 식물입니다. 햇빛과 배수 좋은 토양을 선호합니다. 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/4519/dianthus-caryophyllus/details",
+      "https://extension.umn.edu/flowers/carnations",
+      "https://www.gardenersworld.com/plants/dianthus-caryophyllus/"
+    ]
+  }
+}

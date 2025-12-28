@@ -1,0 +1,236 @@
+{
+  "external_id": "angelica_archangelica",
+  "name": "Garden Angelica",
+  "latin": "Angelica archangelica",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "angelica_archangelica.jpg",
+  "image_thumb": "angelica_archangelica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Part sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährstoffreich",
+          "fr": "Sol riche",
+          "it": "Terreno ricco",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stała wilgoć",
+          "de": "Feucht halten",
+          "fr": "Sol humide",
+          "it": "Sempre umido",
+          "es": "Húmedo",
+          "pt": "Manter úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気維持",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Lubi chłód",
+          "de": "Kühltolerant",
+          "fr": "Aime le frais",
+          "it": "Clima fresco",
+          "es": "Clima fresco",
+          "pt": "Clima fresco",
+          "ar": "تتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐凉",
+          "ja": "冷涼向き",
+          "ko": "서늘함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tall biennial",
+          "pl": "Dwuletnia",
+          "de": "Zweijährig",
+          "fr": "Bisannuelle",
+          "it": "Biennale",
+          "es": "Bienal",
+          "pt": "Bienal",
+          "ar": "ثنائية الحول",
+          "hi": "द्विवर्षीय",
+          "zh": "二年生",
+          "ja": "二年草",
+          "ko": "이년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Garden Angelica",
+      "description": "Angelica archangelica is a tall biennial herb native to northern Europe. It prefers cool climates, moist soil, and partial sun. The plant is valued for its aromatic stems and medicinal uses."
+    },
+    "pl": {
+      "common_name": "Dzięgiel litwor",
+      "description": "Angelica archangelica to wysoka roślina dwuletnia pochodząca z północnej Europy. Lubi chłodny klimat, wilgotną glebę i półcień. Jest ceniona za aromatyczne pędy i zastosowania lecznicze."
+    },
+    "de": {
+      "common_name": "Echter Engelwurz",
+      "description": "Angelica archangelica ist eine hohe zweijährige Pflanze aus Nordeuropa. Sie bevorzugt kühles Klima, feuchten Boden und Halbschatten. Die Pflanze wird wegen ihrer aromatischen Stängel geschätzt."
+    },
+    "fr": {
+      "common_name": "Angélique officinale",
+      "description": "Angelica archangelica est une grande plante bisannuelle originaire d’Europe du Nord. Elle aime les climats frais, les sols humides et la mi-ombre. Elle est utilisée pour ses tiges aromatiques."
+    },
+    "it": {
+      "common_name": "Angelica officinale",
+      "description": "Angelica archangelica è una pianta biennale alta originaria del Nord Europa. Predilige climi freschi, terreno umido e mezz'ombra. È apprezzata per i suoi fusti aromatici."
+    },
+    "es": {
+      "common_name": "Angélica",
+      "description": "Angelica archangelica es una planta bienal alta nativa del norte de Europa. Prefiere climas frescos, suelo húmedo y semisombra. Es conocida por sus tallos aromáticos."
+    },
+    "pt": {
+      "common_name": "Angélica",
+      "description": "Angelica archangelica é uma planta bienal alta nativa do norte da Europa. Prefere clima fresco, solo úmido e meia-sombra. É valorizada por seus caules aromáticos."
+    },
+    "ar": {
+      "common_name": "حشيشة الملاك",
+      "description": "Angelica archangelica نبات ثنائي الحول طويل موطنه شمال أوروبا. يفضل المناخ البارد والتربة الرطبة والشمس الجزئية. يُعرف بسيقانه العطرية."
+    },
+    "hi": {
+      "common_name": "एंजेलिका",
+      "description": "Angelica archangelica एक लंबा द्विवर्षीय पौधा है जो उत्तरी यूरोप का मूल निवासी है। इसे ठंडी जलवायु, नम मिट्टी और आंशिक धूप पसंद है। इसके सुगंधित तनों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "欧当归",
+      "description": "Angelica archangelica 是原产于北欧的高大二年生草本植物。它喜欢凉爽气候、湿润土壤和半日照。常因其芳香茎而被利用。"
+    },
+    "ja": {
+      "common_name": "アンジェリカ",
+      "description": "Angelica archangelica は北ヨーロッパ原産の背の高い二年草です。冷涼な気候と湿った土、半日陰を好みます。香りのある茎で知られています。"
+    },
+    "ko": {
+      "common_name": "안젤리카",
+      "description": "Angelica archangelica는 북유럽 원산의 키가 큰 이년생 식물입니다. 서늘한 기후와 습한 토양, 반그늘을 선호합니다. 향기로운 줄기로 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1341/angelica-archangelica/details",
+      "https://plants.usda.gov/home/plantProfile?symbol=ANAR3",
+      "https://www.britannica.com/plant/angelica-plant-genus"
+    ]
+  }
+}

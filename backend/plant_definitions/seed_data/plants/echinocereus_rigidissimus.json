@@ -1,0 +1,237 @@
+{
+  "external_id": "echinocereus_rigidissimus",
+  "name": "Rainbow Cactus",
+  "latin": "Echinocereus rigidissimus",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "echinocereus_rigidissimus.jpg",
+  "image_thumb": "echinocereus_rigidissimus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Oszczędne",
+          "de": "Wenig",
+          "fr": "Rare",
+          "it": "Rara",
+          "es": "Escaso",
+          "pt": "Pouca",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "少なめ",
+          "ko": "적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rainbow Cactus",
+      "description": "Echinocereus rigidissimus is a small columnar cactus native to the southwestern United States and Mexico. It is known for its colorful spines and bright pink spring flowers. The plant prefers full sun and very infrequent watering."
+    },
+    "pl": {
+      "common_name": "Kaktus tęczowy",
+      "description": "Echinocereus rigidissimus to niewielki kaktus kolumnowy pochodzący z południowo-zachodnich USA i Meksyku. Słynie z barwnych cierni i różowych kwiatów wiosną. Wymaga pełnego słońca i rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Regenbogenkaktus",
+      "description": "Echinocereus rigidissimus ist ein kleiner Säulenkaktus aus dem Südwesten der USA und Mexiko. Er besitzt farbige Dornen und rosa Blüten im Frühling. Er benötigt volle Sonne und wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Cactus arc-en-ciel",
+      "description": "Echinocereus rigidissimus est un petit cactus colonnaire originaire du sud-ouest des États-Unis et du Mexique. Il est apprécié pour ses épines colorées et ses fleurs roses printanières. Il aime le plein soleil et un arrosage rare."
+    },
+    "it": {
+      "common_name": "Cactus arcobaleno",
+      "description": "Echinocereus rigidissimus è un piccolo cactus colonnare originario degli Stati Uniti sud-occidentali e del Messico. È noto per le spine colorate e i fiori rosa primaverili. Richiede pieno sole e poca acqua."
+    },
+    "es": {
+      "common_name": "Cactus arcoíris",
+      "description": "Echinocereus rigidissimus es un cactus columnar pequeño originario del suroeste de Estados Unidos y México. Destaca por sus espinas coloridas y flores rosadas en primavera. Necesita pleno sol y riego escaso."
+    },
+    "pt": {
+      "common_name": "Cacto-arco-íris",
+      "description": "Echinocereus rigidissimus é um pequeno cacto colunar nativo do sudoeste dos Estados Unidos e do México. Possui espinhos coloridos e flores rosa na primavera. Prefere sol pleno e pouca rega."
+    },
+    "ar": {
+      "common_name": "صبار قوس قزح",
+      "description": "نبات Echinocereus rigidissimus صبار صغير عمودي موطنه جنوب غرب الولايات المتحدة والمكسيك. يتميز بأشواكه الملونة وأزهاره الوردية في الربيع. يحتاج إلى شمس كاملة وري قليل."
+    },
+    "hi": {
+      "common_name": "रेनबो कैक्टस",
+      "description": "Echinocereus rigidissimus दक्षिण-पश्चिम अमेरिका और मेक्सिको का छोटा स्तंभाकार कैक्टस है। यह रंगीन कांटों और वसंत में गुलाबी फूलों के लिए जाना जाता है। इसे तेज धूप और कम पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "彩虹仙人掌",
+      "description": "Echinocereus rigidissimus 原产于美国西南部和墨西哥，是一种小型柱状仙人掌。它以彩色刺和春季粉色花朵而闻名。需要充足阳光和很少浇水。"
+    },
+    "ja": {
+      "common_name": "レインボーカクタス",
+      "description": "Echinocereus rigidissimus は米国南西部とメキシコ原産の小型柱状サボテンです。色鮮やかな棘と春のピンクの花が特徴です。強い日光と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "레인보우 선인장",
+      "description": "Echinocereus rigidissimus는 미국 남서부와 멕시코 원산의 작은 기둥형 선인장입니다. 화려한 가시와 봄철 분홍 꽃으로 유명합니다. 강한 햇빛과 적은 물을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.ubc.ca/echinocereus-rigidissimus",
+      "https://www.rhs.org.uk/plants/echinocereus/rigidissimus/details",
+      "https://www.desertmuseum.org/kids/oz/long-fact-sheets/Rainbow%20Cactus.php"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "cuminum_cyminum",
+  "name": "Cumin",
+  "latin": "Cuminum cyminum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "cuminum_cyminum.jpg",
+  "image_thumb": "cuminum_cyminum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepła",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئة",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Annual herb",
+          "pl": "Roczna",
+          "de": "Einjährig",
+          "fr": "Annuelle",
+          "it": "Annuale",
+          "es": "Anual",
+          "pt": "Anual",
+          "ar": "نبات حولي",
+          "hi": "वार्षिक",
+          "zh": "一年生",
+          "ja": "一年草",
+          "ko": "한해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cumin",
+      "description": "Cuminum cyminum is an annual herb grown for its aromatic seeds. It prefers full sun, warm temperatures, and well-drained soil. Regular but moderate watering supports healthy growth."
+    },
+    "pl": {
+      "common_name": "Kmin rzymski",
+      "description": "Cuminum cyminum to jednoroczna roślina przyprawowa uprawiana dla nasion. Wymaga pełnego słońca i przepuszczalnej gleby. Podlewanie powinno być umiarkowane."
+    },
+    "de": {
+      "common_name": "Kreuzkümmel",
+      "description": "Cuminum cyminum ist ein einjähriges Gewürzkraut mit aromatischen Samen. Es benötigt volle Sonne und gut durchlässigen Boden. Gleichmäßiges, mäßiges Gießen ist ideal."
+    },
+    "fr": {
+      "common_name": "Cumin",
+      "description": "Cuminum cyminum est une plante annuelle cultivée pour ses graines aromatiques. Elle aime le plein soleil et un sol bien drainé. L’arrosage doit rester modéré."
+    },
+    "it": {
+      "common_name": "Cumino",
+      "description": "Cuminum cyminum è un’erba annuale coltivata per i suoi semi. Predilige sole pieno e terreno ben drenato. L’irrigazione deve essere regolare ma moderata."
+    },
+    "es": {
+      "common_name": "Comino",
+      "description": "Cuminum cyminum es una hierba anual cultivada por sus semillas aromáticas. Requiere pleno sol y suelo bien drenado. El riego debe ser moderado."
+    },
+    "pt": {
+      "common_name": "Cominho",
+      "description": "Cuminum cyminum é uma erva anual cultivada pelas suas sementes. Necessita de sol pleno e solo bem drenado. A rega deve ser moderada."
+    },
+    "ar": {
+      "common_name": "كمون",
+      "description": "Cuminum cyminum نبات حولي يزرع من أجل بذوره العطرية. يفضل الشمس الكاملة والتربة جيدة التصريف. يحتاج إلى ري معتدل."
+    },
+    "hi": {
+      "common_name": "जीरा",
+      "description": "Cuminum cyminum एक वार्षिक जड़ी-बूटी है जिसे इसके सुगंधित बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी चाहिए। पानी मध्यम मात्रा में दें।"
+    },
+    "zh": {
+      "common_name": "孜然",
+      "description": "Cuminum cyminum 是一年生香料植物，以种子著名。它需要充足阳光和良好排水的土壤。浇水应适中。"
+    },
+    "ja": {
+      "common_name": "クミン",
+      "description": "Cuminum cyminum は香り高い種子を持つ一年草です。日当たりと水はけの良い土壌を好みます。水やりは控えめに行います。"
+    },
+    "ko": {
+      "common_name": "쿠민",
+      "description": "Cuminum cyminum은 향신료 씨앗을 위해 재배되는 한해살이 식물입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 물은 적당히 줍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/herbs/cumin/grow-your-own",
+      "https://plants.usda.gov/home/plantProfile?symbol=CUCY",
+      "https://en.wikipedia.org/wiki/Cuminum_cyminum"
+    ]
+  }
+}

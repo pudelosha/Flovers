@@ -1,0 +1,237 @@
+{
+  "external_id": "catharanthus_roseus",
+  "name": "Madagascar periwinkle",
+  "latin": "Catharanthus roseus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "catharanthus_roseus.jpg",
+  "image_thumb": "catharanthus_roseus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climates",
+          "pl": "Ciepły klimat",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गरम",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "औसत",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Bushy growth",
+          "pl": "Krzaczasty",
+          "de": "Buschig",
+          "fr": "Touffue",
+          "it": "Cespugliosa",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "كثيف",
+          "hi": "झाड़ीदार",
+          "zh": "丛生",
+          "ja": "茂る",
+          "ko": "덤불형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Madagascar periwinkle",
+      "description": "Catharanthus roseus is a sun-loving flowering plant native to Madagascar. It is widely grown as an ornamental for its long-lasting blooms and tolerance of heat and drought."
+    },
+    "pl": {
+      "common_name": "Katarantus różowy",
+      "description": "Catharanthus roseus to roślina kwitnąca pochodząca z Madagaskaru. Ceniona jest za długie kwitnienie i odporność na upały."
+    },
+    "de": {
+      "common_name": "Madagaskar-Immergrün",
+      "description": "Catharanthus roseus stammt aus Madagaskar und ist eine beliebte Zierpflanze. Sie blüht lange und verträgt Sonne sowie Trockenheit."
+    },
+    "fr": {
+      "common_name": "Pervenche de Madagascar",
+      "description": "Catharanthus roseus est originaire de Madagascar. Elle est cultivée pour ses fleurs abondantes et sa résistance à la chaleur."
+    },
+    "it": {
+      "common_name": "Pervinca del Madagascar",
+      "description": "Catharanthus roseus è una pianta ornamentale originaria del Madagascar. Fiorisce a lungo e tollera bene il caldo."
+    },
+    "es": {
+      "common_name": "Vinca de Madagascar",
+      "description": "Catharanthus roseus es originaria de Madagascar. Se cultiva por su floración prolongada y su resistencia al calor."
+    },
+    "pt": {
+      "common_name": "Vinca de Madagascar",
+      "description": "Catharanthus roseus é nativa de Madagascar. É valorizada pela floração contínua e pela tolerância ao calor."
+    },
+    "ar": {
+      "common_name": "ونكا مدغشقر",
+      "description": "نبات Catharanthus roseus موطنه مدغشقر. يزرع للزينة بسبب أزهاره المستمرة وتحمله للحرارة."
+    },
+    "hi": {
+      "common_name": "मेडागास्कर सदाबहार",
+      "description": "Catharanthus roseus मेडागास्कर का मूल पौधा है। यह लंबे समय तक फूल देने और गर्मी सहन करने के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "长春花",
+      "description": "Catharanthus roseus 原产于马达加斯加。因花期长且耐热而广泛栽培。"
+    },
+    "ja": {
+      "common_name": "ニチニチソウ",
+      "description": "Catharanthus roseus はマダガスカル原産の植物です。長い開花期と耐暑性で知られています。"
+    },
+    "ko": {
+      "common_name": "일일초",
+      "description": "Catharanthus roseus는 마다가스카르 원산의 식물입니다. 긴 개화 기간과 더위에 강한 특징이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a253",
+      "https://extension.umn.edu/flowers/growing-annual-vinca"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "begonia_escargot",
+  "name": "Escargot Begonia",
+  "latin": "Begonia 'Escargot'",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "begonia_escargot.jpg",
+  "image_thumb": "begonia_escargot.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining",
+          "pl": "dobrze przepuszczalna",
+          "de": "durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep lightly moist",
+          "pl": "lekko wilgotna",
+          "de": "leicht feucht",
+          "fr": "légèrement humide",
+          "it": "leggermente umido",
+          "es": "ligeramente húmedo",
+          "pt": "levemente úmido",
+          "ar": "رطبة قليلاً",
+          "hi": "हल्की नम",
+          "zh": "微湿",
+          "ja": "やや湿潤",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "modérée",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24℃",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "likes humidity",
+          "pl": "lubi wilgoć",
+          "de": "mag Feuchte",
+          "fr": "aime l’humidité",
+          "it": "ama umidità",
+          "es": "gusta humedad",
+          "pt": "gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "高湿度好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic to pets",
+          "pl": "toksyczna dla zwierząt",
+          "de": "giftig für Tiere",
+          "fr": "toxique animaux",
+          "it": "tossica animali",
+          "es": "tóxica mascotas",
+          "pt": "tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "clumping foliage",
+          "pl": "kępowy wzrost",
+          "de": "horstbildend",
+          "fr": "port touffu",
+          "it": "crescita cespugliosa",
+          "es": "crecimiento en mata",
+          "pt": "crescimento em touceira",
+          "ar": "نمو متكتل",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Escargot Begonia",
+      "description": "Begonia 'Escargot' is a rex begonia cultivar known for its spiral silver-green leaves. It prefers bright indirect light and evenly moist soil. Consistent warmth and gentle feeding support healthy foliage."
+    },
+    "pl": {
+      "common_name": "Begonia Escargot",
+      "description": "Begonia 'Escargot' to odmiana begonii królewskiej o spiralnych liściach. Wymaga jasnego, rozproszonego światła i lekko wilgotnego podłoża. Stała temperatura sprzyja dobremu wzrostowi."
+    },
+    "de": {
+      "common_name": "Escargot-Begonie",
+      "description": "Begonia 'Escargot' ist eine Rex-Begonie mit spiralförmigen Blättern. Sie mag helles, indirektes Licht und gleichmäßig feuchte Erde. Wärme und regelmäßige Düngung fördern das Blattwachstum."
+    },
+    "fr": {
+      "common_name": "Bégonia Escargot",
+      "description": "Le bégonia 'Escargot' est un bégonia rex aux feuilles spiralées décoratives. Il préfère une lumière vive indirecte et un sol légèrement humide. Une température stable est recommandée."
+    },
+    "it": {
+      "common_name": "Begonia Escargot",
+      "description": "Begonia 'Escargot' è una begonia rex con foglie a spirale. Cresce bene con luce indiretta luminosa e terreno moderatamente umido. Il calore costante favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Begonia Escargot",
+      "description": "Begonia 'Escargot' es una begonia rex de hojas en espiral. Prefiere luz indirecta brillante y suelo ligeramente húmedo. Evitar corrientes frías mejora su desarrollo."
+    },
+    "pt": {
+      "common_name": "Begônia Escargot",
+      "description": "Begonia 'Escargot' é uma begônia rex de folhas espirais. Gosta de luz indireta brilhante e substrato levemente úmido. Temperaturas estáveis ajudam na manutenção."
+    },
+    "ar": {
+      "common_name": "بيغونيا إسكارجوت",
+      "description": "بيغونيا إسكارجوت هي صنف من البيغونيا ذات أوراق حلزونية. تفضل الضوء الساطع غير المباشر وتربة رطبة قليلاً. الحرارة المعتدلة مهمة لنموها."
+    },
+    "hi": {
+      "common_name": "एस्कार्गोट बेगोनिया",
+      "description": "बेगोनिया 'एस्कार्गोट' सर्पिल पत्तियों वाली रेक्स बेगोनिया है। इसे अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। स्थिर तापमान लाभदायक होता है।"
+    },
+    "zh": {
+      "common_name": "蜗牛秋海棠",
+      "description": "Escargot 秋海棠是丽叶秋海棠的栽培品种，叶片呈螺旋状。适合明亮散射光和微湿土壤。保持温暖环境有助于生长。"
+    },
+    "ja": {
+      "common_name": "エスカルゴベゴニア",
+      "description": "ベゴニア‘エスカルゴ’は渦巻き状の葉が特徴です。明るい間接光と適度な湿り気を好みます。安定した温度が理想的です。"
+    },
+    "ko": {
+      "common_name": "에스카르고 베고니아",
+      "description": "베고니아 ‘에스카르고’는 소용돌이 모양의 잎이 특징입니다. 밝은 간접광과 약간 촉촉한 토양을 선호합니다. 따뜻한 환경이 좋습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/begonia/houseplant-care",
+      "https://extension.umn.edu/houseplants/begonia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a513"
+    ]
+  }
+}

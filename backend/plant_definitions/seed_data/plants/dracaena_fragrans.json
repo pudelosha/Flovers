@@ -1,0 +1,237 @@
+{
+  "external_id": "dracaena_fragrans",
+  "name": "Corn Plant",
+  "latin": "Dracaena fragrans",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dracaena_fragrans.jpg",
+  "image_thumb": "dracaena_fragrans.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سام للنباتات",
+          "hi": "पालतू विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow upright",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Corn Plant",
+      "description": "Dracaena fragrans is a popular indoor plant with arching green leaves. It tolerates moderate light and irregular watering. It is known for improving indoor air quality."
+    },
+    "pl": {
+      "common_name": "Dracena wonna",
+      "description": "Dracaena fragrans to popularna roślina doniczkowa o długich liściach. Dobrze rośnie w jasnym, rozproszonym świetle. Wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Drachenbaum",
+      "description": "Dracaena fragrans ist eine robuste Zimmerpflanze mit langen Blättern. Sie bevorzugt helles, indirektes Licht. Gießen Sie erst, wenn die Erde antrocknet."
+    },
+    "fr": {
+      "common_name": "Dragonnier parfumé",
+      "description": "Dracaena fragrans est une plante d’intérieur facile à cultiver. Elle aime la lumière indirecte et un arrosage modéré. Elle supporte bien les conditions domestiques."
+    },
+    "it": {
+      "common_name": "Tronchetto della felicità",
+      "description": "La Dracaena fragrans è una pianta da interno resistente. Preferisce luce indiretta e annaffiature moderate. È adatta anche ai principianti."
+    },
+    "es": {
+      "common_name": "Tronco de Brasil",
+      "description": "Dracaena fragrans es una planta de interior muy común. Crece bien con luz indirecta y riego moderado. Es fácil de mantener."
+    },
+    "pt": {
+      "common_name": "Pau-d’água",
+      "description": "A Dracaena fragrans é uma planta ornamental de interior. Prefere luz indireta e regas espaçadas. É resistente e duradoura."
+    },
+    "ar": {
+      "common_name": "دراسينا",
+      "description": "نبات الدراسينا العطري نبات داخلي شائع وسهل العناية. يفضل الضوء غير المباشر والري المعتدل. مناسب للمنازل والمكاتب."
+    },
+    "hi": {
+      "common_name": "कॉर्न प्लांट",
+      "description": "Dracaena fragrans एक लोकप्रिय इनडोर पौधा है। यह अप्रत्यक्ष रोशनी और मध्यम पानी में अच्छी तरह बढ़ता है। देखभाल आसान है।"
+    },
+    "zh": {
+      "common_name": "香龙血树",
+      "description": "Dracaena fragrans 是常见的室内观叶植物。适合明亮散射光和适量浇水。养护简单耐养。"
+    },
+    "ja": {
+      "common_name": "コーンプラント",
+      "description": "ドラセナ・フラグランスは丈夫な観葉植物です。明るい間接光を好みます。水やりは控えめで育てやすいです。"
+    },
+    "ko": {
+      "common_name": "행운목",
+      "description": "드라세나 프라그란스는 실내에서 키우기 쉬운 식물입니다. 밝은 간접광을 좋아합니다. 물은 적당히 주면 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/5376/dracaena-fragrans/details",
+      "https://extension.psu.edu/houseplants-dracaena",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b458"
+    ]
+  }
+}

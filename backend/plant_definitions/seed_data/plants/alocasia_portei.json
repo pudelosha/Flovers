@@ -1,0 +1,236 @@
+{
+  "external_id": "alocasia_portei",
+  "name": "Porte's Alocasia",
+  "latin": "Alocasia portei",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_portei.jpg",
+  "image_thumb": "alocasia_portei.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przewiewne aroidy",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Humedad constante",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "निरंतर नमी",
+          "zh": "保持湿润",
+          "ja": "常に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Impegnativa",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "较难养护",
+          "ja": "上級者向け",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgoć",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Forte humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Large upright",
+          "pl": "Duży pokrój",
+          "de": "Groß wachsend",
+          "fr": "Grande taille",
+          "it": "Crescita grande",
+          "es": "Gran tamaño",
+          "pt": "Porte grande",
+          "ar": "نمو كبير",
+          "hi": "बड़ा आकार",
+          "zh": "大型生长",
+          "ja": "大型に成長",
+          "ko": "대형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Porte's Alocasia",
+      "description": "Alocasia portei is a large tropical aroid with deeply lobed leaves and strong upright growth. It prefers bright indirect light, warm temperatures, and consistently moist but well-draining soil. High humidity and stable conditions are essential for healthy growth indoors."
+    },
+    "pl": {
+      "common_name": "Alokazja Porte’a",
+      "description": "Alocasia portei to duża roślina tropikalna o głęboko powcinanych liściach. Wymaga jasnego, rozproszonego światła, ciepła i stale lekko wilgotnego podłoża. Najlepiej rośnie przy wysokiej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Portes Alokasie",
+      "description": "Alocasia portei ist eine großwüchsige tropische Aronstabpflanze mit stark gelappten Blättern. Sie benötigt helles indirektes Licht, Wärme und gleichmäßig feuchtes Substrat. Eine hohe Luftfeuchtigkeit ist für die Kultur wichtig."
+    },
+    "fr": {
+      "common_name": "Alocasia de Porte",
+      "description": "Alocasia portei est une grande plante tropicale aux feuilles profondément découpées. Elle apprécie une lumière vive indirecte, une chaleur constante et un sol toujours légèrement humide. Une forte humidité ambiante favorise une croissance saine."
+    },
+    "it": {
+      "common_name": "Alocasia di Porte",
+      "description": "Alocasia portei è una grande pianta tropicale con foglie profondamente lobate. Predilige luce indiretta intensa, temperature calde e terreno costantemente umido ma drenante. L’elevata umidità è importante in casa."
+    },
+    "es": {
+      "common_name": "Alocasia de Porte",
+      "description": "Alocasia portei es una planta tropical grande con hojas profundamente lobuladas. Necesita luz indirecta brillante, calor y un sustrato siempre ligeramente húmedo. La alta humedad ambiental es clave para su buen desarrollo."
+    },
+    "pt": {
+      "common_name": "Alocásia de Porte",
+      "description": "Alocasia portei é uma planta tropical de grande porte com folhas profundamente recortadas. Prefere luz indireta brilhante, temperaturas quentes e solo sempre levemente úmido. Umidade elevada ajuda no crescimento saudável."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا بورتي",
+      "description": "ألوكاسيا بورتي نبات استوائي كبير بأوراق عميقة التفصص. يفضل الضوء الساطع غير المباشر والدفء وتربة رطبة جيدة التصريف. الرطوبة العالية ضرورية لنموه داخل المنزل."
+    },
+    "hi": {
+      "common_name": "अलोकासिया पोर्टेई",
+      "description": "अलोकासिया पोर्टेई एक बड़ा उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहराई से कटी होती हैं। इसे तेज अप्रत्यक्ष रोशनी, गर्म तापमान और लगातार नम लेकिन जलनिकास वाली मिट्टी चाहिए। उच्च आर्द्रता में यह बेहतर बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "波特海芋",
+      "description": "Alocasia portei 是一种大型热带观叶植物，叶片深裂而挺立。它适合明亮的散射光、温暖环境和持续微湿的排水良好基质。较高的空气湿度有助于健康生长。"
+    },
+    "ja": {
+      "common_name": "ポルテアロカシア",
+      "description": "アロカシア・ポルテイは深く切れ込んだ大きな葉を持つ熱帯植物です。明るい間接光と暖かい環境、常にやや湿った用土を好みます。高い湿度が室内管理では重要です。"
+    },
+    "ko": {
+      "common_name": "포르테 알로카시아",
+      "description": "알로카시아 포르테이는 깊게 갈라진 잎을 가진 대형 열대 식물입니다. 밝은 간접광과 따뜻한 온도, 항상 약간 촉촉한 배수 좋은 토양을 선호합니다. 높은 습도가 건강한 생장에 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx",
+      "https://edis.ifas.ufl.edu/publication/EP258"
+    ]
+  }
+}

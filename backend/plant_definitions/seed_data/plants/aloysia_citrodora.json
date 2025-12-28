@@ -1,0 +1,238 @@
+{
+  "external_id": "aloysia_citrodora",
+  "name": "Lemon verbena",
+  "latin": "Aloysia citrodora",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aloysia_citrodora.jpg",
+  "image_thumb": "aloysia_citrodora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "직사광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainé",
+          "it": "Drenante",
+          "es": "Drenado",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby",
+          "pl": "Krzewiasta",
+          "de": "Strauchig",
+          "fr": "Arbustive",
+          "it": "Arbustiva",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "شجيرية",
+          "hi": "झाड़ीदार",
+          "zh": "灌木状",
+          "ja": "低木状",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lemon verbena",
+      "description": "Aromatic shrub native to South America, valued for its lemon-scented leaves. It prefers full sun, warm conditions, and regular watering during growth."
+    },
+    "pl": {
+      "common_name": "Werbena cytrynowa",
+      "description": "Aromatyczny krzew z Ameryki Południowej o cytrynowym zapachu liści. Wymaga słońca, ciepła i regularnego podlewania w sezonie."
+    },
+    "de": {
+      "common_name": "Zitronenverbene",
+      "description": "Duftender Strauch aus Südamerika mit zitronigem Aroma. Bevorzugt volle Sonne, Wärme und gleichmäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Verveine citronnelle",
+      "description": "Arbuste aromatique d’Amérique du Sud aux feuilles citronnées. Il aime le plein soleil et un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Cedrina",
+      "description": "Arbusto aromatico sudamericano con foglie al profumo di limone. Cresce bene al sole con annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Hierba luisa",
+      "description": "Arbusto aromático de Sudamérica con intenso aroma a limón. Necesita sol pleno y riego moderado."
+    },
+    "pt": {
+      "common_name": "Lúcia-lima",
+      "description": "Arbusto aromático originário da América do Sul, com folhas perfumadas de limão. Prefere sol pleno e regas regulares."
+    },
+    "ar": {
+      "common_name": "لويزة",
+      "description": "شجيرة عطرية من أمريكا الجنوبية بأوراق برائحة الليمون. تحتاج إلى شمس كاملة وري معتدل."
+    },
+    "hi": {
+      "common_name": "लेमन वर्बेना",
+      "description": "दक्षिण अमेरिका की सुगंधित झाड़ी, जिसकी पत्तियों में नींबू की खुशबू होती है। इसे धूप और नियमित पानी पसंद है।"
+    },
+    "zh": {
+      "common_name": "柠檬马鞭草",
+      "description": "原产南美的芳香灌木，叶片带柠檬香味。喜全日照和适量浇水。"
+    },
+    "ja": {
+      "common_name": "レモンバーベナ",
+      "description": "南米原産の香り高い低木で、葉にレモンの香りがあります。日当たりと適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "레몬버베나",
+      "description": "남아메리카 원산의 향기로운 관목으로 잎에서 레몬 향이 납니다. 햇빛과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/aloysia-citrodora/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:8632-1",
+      "https://extension.oregonstate.edu/gardening/herbs/lemon-verbena"
+    ]
+  }
+}

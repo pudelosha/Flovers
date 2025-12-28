@@ -1,0 +1,236 @@
+{
+  "external_id": "alocasia_scalprum",
+  "name": "Scalpel-leaf Alocasia",
+  "latin": "Alocasia scalprum",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 21,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_scalprum.jpg",
+  "image_thumb": "alocasia_scalprum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide en continu",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Advanced care",
+          "pl": "Trudna w uprawie",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Difficile",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "عناية صعبة",
+          "hi": "उन्नत देखभाल",
+          "zh": "养护较难",
+          "ja": "上級者向け",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Forte humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Scalpel-leaf Alocasia",
+      "description": "Alocasia scalprum is a rare tropical aroid prized for its narrow, metallic-textured leaves. It prefers bright indirect light, consistently moist soil, and high humidity. This species is sensitive to cold, drought, and low humidity."
+    },
+    "pl": {
+      "common_name": "Alokazja skalpelowa",
+      "description": "Alocasia scalprum to rzadka roślina tropikalna o wąskich, metalicznych liściach. Wymaga jasnego, rozproszonego światła oraz stale wilgotnego podłoża. Najlepiej rośnie w wysokiej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Skalpell-Alokasie",
+      "description": "Alocasia scalprum ist eine seltene tropische Aronstabpflanze mit schmalen, metallisch wirkenden Blättern. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist wichtig für gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Alocasia à feuilles fines",
+      "description": "Alocasia scalprum est une espèce tropicale rare aux feuilles étroites et texturées. Elle préfère une lumière indirecte vive et un sol constamment humide. Une forte humidité ambiante est essentielle."
+    },
+    "it": {
+      "common_name": "Alocasia a foglie sottili",
+      "description": "Alocasia scalprum è una pianta tropicale rara con foglie strette dall'aspetto metallico. Necessita di luce indiretta intensa e terreno sempre umido. L'umidità elevata favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Alocasia de hoja fina",
+      "description": "Alocasia scalprum es una arácea tropical rara con hojas estrechas y textura metálica. Requiere luz brillante indirecta y sustrato constantemente húmedo. La alta humedad ambiental es muy importante."
+    },
+    "pt": {
+      "common_name": "Alocasia de folhas finas",
+      "description": "Alocasia scalprum é uma planta tropical rara com folhas estreitas de aspecto metálico. Prefere luz indireta brilhante e solo sempre úmido. A alta umidade ajuda no desenvolvimento adequado."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا سكالبـروم",
+      "description": "Alocasia scalprum نبات استوائي نادر بأوراق ضيقة ذات مظهر معدني. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة باستمرار. الرطوبة العالية ضرورية لنموه."
+    },
+    "hi": {
+      "common_name": "एलोकैसिया स्कैलप्रम",
+      "description": "Alocasia scalprum एक दुर्लभ उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ संकरी और धात्विक होती हैं। इसे तेज अप्रत्यक्ष रोशनी और लगातार नम मिट्टी चाहिए। उच्च आर्द्रता इसके लिए आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "细叶海芋",
+      "description": "Alocasia scalprum 是一种稀有的热带天南星科植物，叶片狭长且具有金属质感。它需要明亮的散射光和持续湿润的基质。高湿度有助于健康生长。"
+    },
+    "ja": {
+      "common_name": "アロカシア・スカルプラム",
+      "description": "Alocasia scalprum は細く金属質感の葉を持つ希少な熱帯植物です。明るい間接光と常に湿った土壌を好みます。高い湿度環境が必要です。"
+    },
+    "ko": {
+      "common_name": "알로카시아 스칼프럼",
+      "description": "Alocasia scalprum은 좁고 금속 질감의 잎을 가진 희귀한 열대 식물입니다. 밝은 간접광과 지속적으로 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.aroidpedia.com/journal/alocasia-scalprum",
+      "https://www.exoticrainforest.com/Alocasia%20scalprum%20pc.html",
+      "https://www.kew.org/plants/alocasia"
+    ]
+  }
+}

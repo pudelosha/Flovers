@@ -1,0 +1,238 @@
+{
+  "external_id": "anthurium_andraeanum",
+  "name": "Anthurium",
+  "latin": "Anthurium andraeanum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "anthurium_andraeanum.jpg",
+  "image_thumb": "anthurium_andraeanum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne światło",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "airy aroid mix",
+          "pl": "lekka mieszanka",
+          "de": "luftiges Substrat",
+          "fr": "substrat aéré",
+          "it": "terriccio arioso",
+          "es": "sustrato aireado",
+          "pt": "substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep evenly moist",
+          "pl": "umiarkowanie wilg.",
+          "de": "gleichmäßig feucht",
+          "fr": "humide régulier",
+          "it": "umido regolare",
+          "es": "humedad constante",
+          "pt": "úmido regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "保持湿润",
+          "ja": "適度に湿らす",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "średnia trudność",
+          "de": "mittlerer Aufwand",
+          "fr": "entretien moyen",
+          "it": "cura media",
+          "es": "cuidado medio",
+          "pt": "cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "forte humidité",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高い湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic to pets",
+          "pl": "trująca dla zw.",
+          "de": "giftig für Tiere",
+          "fr": "toxique animaux",
+          "it": "tossica animali",
+          "es": "tóxica mascotas",
+          "pt": "tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विष",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "upright clumping",
+          "pl": "kępowy wzrost",
+          "de": "horstig wachsend",
+          "fr": "port dressé",
+          "it": "crescita eretta",
+          "es": "crecimiento erguido",
+          "pt": "crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा गुच्छेदार",
+          "zh": "直立丛生",
+          "ja": "直立型",
+          "ko": "직립 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flamingo Flower",
+      "description": "Anthurium andraeanum is a tropical aroid known for its glossy leaves and colorful spathes. It grows best indoors with bright, indirect light and warm temperatures. Consistent moisture and high humidity support healthy flowering."
+    },
+    "pl": {
+      "common_name": "Anturium",
+      "description": "Anthurium andraeanum to tropikalna roślina ozdobna o błyszczących liściach i barwnych pochwach kwiatowych. Najlepiej rośnie w jasnym, rozproszonym świetle i ciepłym pomieszczeniu. Wymaga regularnego podlewania i wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Flamingoblume",
+      "description": "Anthurium andraeanum ist eine tropische Zimmerpflanze mit glänzenden Blättern und auffälligen Hochblättern. Sie bevorzugt helles, indirektes Licht und warme Temperaturen. Gleichmäßige Feuchtigkeit und hohe Luftfeuchte sind wichtig."
+    },
+    "fr": {
+      "common_name": "Anthurium",
+      "description": "Anthurium andraeanum est une plante tropicale appréciée pour ses feuilles brillantes et ses spathes colorées. Elle aime une lumière vive sans soleil direct et une ambiance chaude. Un arrosage régulier et une forte humidité sont recommandés."
+    },
+    "it": {
+      "common_name": "Anthurium",
+      "description": "Anthurium andraeanum è una pianta tropicale ornamentale con foglie lucide e spate colorate. Predilige luce intensa ma indiretta e temperature miti. Necessita di umidità elevata e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Anturio",
+      "description": "Anthurium andraeanum es una planta tropical conocida por sus hojas brillantes y espatas vistosas. Crece bien con luz indirecta brillante y calor constante. Requiere riego regular y alta humedad ambiental."
+    },
+    "pt": {
+      "common_name": "Antúrio",
+      "description": "Anthurium andraeanum é uma planta tropical ornamental com folhas lustrosas e espatas coloridas. Desenvolve-se melhor com luz indireta e temperaturas quentes. Aprecia regas regulares e alta umidade."
+    },
+    "ar": {
+      "common_name": "أنثوريوم",
+      "description": "أنثوريوم أندريانيوم نبات استوائي يتميز بأوراق لامعة وأغلفة زهرية ملونة. يفضل الضوء الساطع غير المباشر ودرجات الحرارة الدافئة. يحتاج إلى ري منتظم ورطوبة مرتفعة."
+    },
+    "hi": {
+      "common_name": "एन्थ्यूरियम",
+      "description": "Anthurium andraeanum एक उष्णकटिबंधीय पौधा है जो चमकदार पत्तियों और रंगीन फूलों के लिए जाना जाता है। यह तेज लेकिन अप्रत्यक्ष रोशनी और गर्म वातावरण में अच्छा बढ़ता है। नियमित पानी और अधिक नमी आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "红掌",
+      "description": "Anthurium andraeanum 是一种热带观赏植物，以光亮的叶片和鲜艳的佛焰苞著称。适合在明亮的散射光和温暖环境中生长。需要保持土壤湿润并提供较高湿度。"
+    },
+    "ja": {
+      "common_name": "アンスリウム",
+      "description": "アンスリウム・アンドレアナムは光沢のある葉と色鮮やかな仏炎苞が特徴の熱帯植物です。明るい間接光と暖かい環境を好みます。定期的な水やりと高湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "안스리움",
+      "description": "Anthurium andraeanum은 윤기 있는 잎과 화려한 꽃이 특징인 열대 식물입니다. 밝은 간접광과 따뜻한 온도에서 잘 자랍니다. 꾸준한 물주기와 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/anthurium/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/FP039",
+      "https://www.gardenersworld.com/plants/anthurium-andraeanum/"
+    ]
+  }
+}

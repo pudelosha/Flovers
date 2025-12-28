@@ -1,0 +1,237 @@
+{
+  "external_id": "aglaonema_rotundum",
+  "name": "Aglaonema Rotundum",
+  "latin": "Aglaonema rotundum",
+  "sun": "low",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "aglaonema_rotundum.jpg",
+  "image_thumb": "aglaonema_rotundum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low to medium light",
+          "pl": "Mało–średnie światło",
+          "de": "Wenig–mittleres Licht",
+          "fr": "Lumière faible-moy.",
+          "it": "Luce bassa-media",
+          "es": "Luz baja-media",
+          "pt": "Luz baixa-média",
+          "ar": "ضوء منخفض-متوسط",
+          "hi": "कम-मध्यम रोशनी",
+          "zh": "低到中等光照",
+          "ja": "弱〜中光",
+          "ko": "약~중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained aroid mix",
+          "pl": "Przepuszczalna ziemia",
+          "de": "Luftiges Aroid-Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "排水性の良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers high humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama l'umidità",
+          "es": "Prefiere humedad",
+          "pt": "Prefere umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "उच्च नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Round-leaf Chinese Evergreen",
+      "description": "Aglaonema rotundum is a tropical aroid valued for its dark green leaves with pink veins. It grows naturally on shaded rainforest floors. Indoors it prefers warm temperatures, stable moisture, and low light."
+    },
+    "pl": {
+      "common_name": "Aglaonema okrągłolistna",
+      "description": "Aglaonema rotundum to tropikalna roślina o ciemnych liściach z różowym unerwieniem. Naturalnie rośnie w cieniu lasów deszczowych. W domu wymaga ciepła, umiarkowanego podlewania i słabego światła."
+    },
+    "de": {
+      "common_name": "Rundblättriger Kolbenfaden",
+      "description": "Aglaonema rotundum ist eine tropische Blattpflanze mit dunklem Laub und rosa Adern. Sie wächst am Boden schattiger Regenwälder. Als Zimmerpflanze mag sie Wärme, gleichmäßige Feuchte und wenig Licht."
+    },
+    "fr": {
+      "common_name": "Aglaonéma à feuilles rondes",
+      "description": "Aglaonema rotundum est une plante tropicale appréciée pour son feuillage sombre nervuré de rose. Elle pousse naturellement dans les forêts humides ombragées. En intérieur elle préfère la chaleur et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Aglaonema a foglie rotonde",
+      "description": "Aglaonema rotundum è una pianta tropicale con foglie verde scuro e venature rosa. In natura cresce nei sottoboschi umidi. In casa necessita luce bassa, temperature calde e irrigazione regolare."
+    },
+    "es": {
+      "common_name": "Aglaonema de hoja redonda",
+      "description": "Aglaonema rotundum es una planta tropical conocida por sus hojas oscuras con venas rosadas. Crece en suelos húmedos y sombreados. En interior requiere calor, riego moderado y poca luz."
+    },
+    "pt": {
+      "common_name": "Aglaonema de folhas redondas",
+      "description": "Aglaonema rotundum é uma planta tropical de folhas verde-escuras com nervuras rosadas. Ocorre naturalmente em florestas úmidas e sombreadas. Dentro de casa prefere calor e rega moderada."
+    },
+    "ar": {
+      "common_name": "أجلونيما مستديرة الأوراق",
+      "description": "نبات Aglaonema rotundum استوائي يتميز بأوراق داكنة مع عروق وردية. ينمو طبيعياً في أرضيات الغابات المطيرة الظليلة. كنبات داخلي يحتاج دفئاً ورياً معتدلاً وضوءاً منخفضاً."
+    },
+    "hi": {
+      "common_name": "राउंड लीफ अग्लाओनेमा",
+      "description": "Aglaonema rotundum एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ गहरे रंग की और गुलाबी नसों वाली होती हैं। यह वर्षावनों की छायादार भूमि में उगता है। घर के अंदर इसे गर्मी और मध्यम सिंचाई चाहिए।"
+    },
+    "zh": {
+      "common_name": "圆叶粗肋草",
+      "description": "Aglaonema rotundum 是一种热带观叶植物，以深绿色和粉色叶脉著称。原生于阴湿雨林地面。室内养护需温暖环境、适度浇水和弱光。"
+    },
+    "ja": {
+      "common_name": "ロツンダムアグラオネマ",
+      "description": "Aglaonema rotundum は濃緑色の葉とピンクの葉脈が特徴の熱帯植物です。自然では熱帯雨林の林床に生育します。室内では低光量と適度な水分を好みます。"
+    },
+    "ko": {
+      "common_name": "아글라오네마 로툰둠",
+      "description": "Aglaonema rotundum은 짙은 녹색 잎과 분홍색 맥이 특징인 열대 식물입니다. 자연에서는 그늘진 우림 바닥에서 자랍니다. 실내에서는 따뜻함과 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/aglaonema-rotundum",
+      "https://edis.ifas.ufl.edu/publication/EP473",
+      "https://www.aos.org/orchids/orchid-care.aspx"
+    ]
+  }
+}

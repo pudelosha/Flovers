@@ -19,6 +19,18 @@
       "values": {
         "everyDays": "Every {{count}} days",
         "everyMonths": "Every {{count}} months"
+      },
+      "traits": {
+        "sun": "Sun exposure",
+        "water": "Watering",
+        "difficulty": "Difficulty",
+        "soil": "Soil",
+        "temperature": "Temperature",
+        "humidity": "Humidity",
+        "toxic": "Toxic?",
+        "growth": "Growth",
+        "light": "Light",
+        "fertilizer": "Fertilizer"
       }
     }
   }

@@ -1,0 +1,236 @@
+{
+  "external_id": "dahlia_pinnata",
+  "name": "Dahlia",
+  "latin": "Dahlia pinnata",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "dahlia_pinnata.jpg",
+  "image_thumb": "dahlia_pinnata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährreicher Boden",
+          "fr": "Sol riche",
+          "it": "Terreno fertile",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة خصبة",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular water",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "보통 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25 °C",
+          "pl": "15–25 °C",
+          "de": "15–25 °C",
+          "fr": "15–25 °C",
+          "it": "15–25 °C",
+          "es": "15–25 °C",
+          "pt": "15–25 °C",
+          "ar": "15–25°م",
+          "hi": "15–25 °C",
+          "zh": "15–25°C",
+          "ja": "15～25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tuberous perennial",
+          "pl": "Bylina bulwiasta",
+          "de": "Knollenpflanze",
+          "fr": "Vivace tubéreuse",
+          "it": "Perenne tuberosa",
+          "es": "Perenne tuberosa",
+          "pt": "Perene tuberosa",
+          "ar": "درنية معمرة",
+          "hi": "कंदीय बारहमासी",
+          "zh": "块根多年生",
+          "ja": "球根多年草",
+          "ko": "구근 다년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Garden dahlia",
+      "description": "Dahlia pinnata is a tuberous perennial known for its large, colorful flowers. It prefers full sun and fertile, well-drained soil. Regular watering and feeding support continuous blooming."
+    },
+    "pl": {
+      "common_name": "Dalia ogrodowa",
+      "description": "Dahlia pinnata to bylina bulwiasta o dużych, barwnych kwiatach. Wymaga pełnego słońca i żyznej, przepuszczalnej gleby. Regularne podlewanie sprzyja kwitnieniu."
+    },
+    "de": {
+      "common_name": "Gartendahlie",
+      "description": "Dahlia pinnata ist eine knollenbildende Staude mit auffälligen Blüten. Sie wächst am besten in voller Sonne und nährstoffreichem Boden. Gleichmäßiges Gießen fördert die Blüte."
+    },
+    "fr": {
+      "common_name": "Dahlia de jardin",
+      "description": "Dahlia pinnata est une plante vivace à tubercules aux fleurs décoratives. Elle apprécie le plein soleil et un sol riche et drainé. Un arrosage régulier est recommandé."
+    },
+    "it": {
+      "common_name": "Dalia da giardino",
+      "description": "Dahlia pinnata è una perenne tuberosa con fiori vistosi. Predilige pieno sole e terreno fertile e drenato. Annaffiature regolari favoriscono la fioritura."
+    },
+    "es": {
+      "common_name": "Dalia de jardín",
+      "description": "Dahlia pinnata es una planta perenne tuberosa de flores grandes. Necesita pleno sol y suelo fértil y drenado. El riego regular ayuda a mantener la floración."
+    },
+    "pt": {
+      "common_name": "Dália de jardim",
+      "description": "Dahlia pinnata é uma planta perene tuberosa com flores ornamentais. Prefere sol pleno e solo fértil e bem drenado. Rega regular favorece a floração."
+    },
+    "ar": {
+      "common_name": "داليا الحديقة",
+      "description": "Dahlia pinnata نبات معمر درني يتميز بأزهاره الكبيرة. يفضل الشمس الكاملة وتربة خصبة جيدة التصريف. الري المنتظم يساعد على الإزهار."
+    },
+    "hi": {
+      "common_name": "गार्डन डाहलिया",
+      "description": "Dahlia pinnata एक कंदीय बारहमासी पौधा है जिसके फूल बड़े होते हैं। इसे पूरा सूरज और उपजाऊ मिट्टी पसंद है। नियमित सिंचाई से फूल अच्छे आते हैं।"
+    },
+    "zh": {
+      "common_name": "大丽花",
+      "description": "Dahlia pinnata 是一种块根多年生植物，以花朵艳丽著称。适合全日照和肥沃、排水良好的土壤。定期浇水有助于开花。"
+    },
+    "ja": {
+      "common_name": "ダリア",
+      "description": "Dahlia pinnata は球根性の多年草で、大きな花が特徴です。日当たりと肥沃な土壌を好みます。定期的な水やりが開花を助けます。"
+    },
+    "ko": {
+      "common_name": "달리아",
+      "description": "Dahlia pinnata는 구근성 다년생 식물로 화려한 꽃이 특징입니다. 햇볕이 잘 들고 비옥한 토양을 선호합니다. 정기적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/dahlia/growing-guide",
+      "https://extension.umn.edu/flowers/growing-dahlias",
+      "https://www.britannica.com/plant/dahlia-plant"
+    ]
+  }
+}

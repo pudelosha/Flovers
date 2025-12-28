@@ -1,0 +1,237 @@
+{
+  "external_id": "achillea_millefolium",
+  "name": "Yarrow",
+  "latin": "Achillea millefolium",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "achillea_millefolium.jpg",
+  "image_thumb": "achillea_millefolium.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Mało wody",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Poca acqua",
+          "es": "Riego bajo",
+          "pt": "Pouca água",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "تتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性あり",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luft",
+          "fr": "Air normal",
+          "it": "Aria normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Lievemente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Staudenhorst",
+          "fr": "Vivace touffue",
+          "it": "Perenne cespitosa",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة متجمعة",
+          "hi": "गुच्छेदार बहुवर्षीय",
+          "zh": "丛生多年生",
+          "ja": "多年草群生",
+          "ko": "다년생 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Yarrow",
+      "description": "Achillea millefolium is a hardy perennial native to temperate regions. It prefers full sun and well-drained soil. Once established, it is drought tolerant and low maintenance."
+    },
+    "pl": {
+      "common_name": "Krwawnik pospolity",
+      "description": "Achillea millefolium to odporna bylina stref umiarkowanych. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Po ukorzenieniu wymaga niewielkiej ilości wody."
+    },
+    "de": {
+      "common_name": "Gemeine Schafgarbe",
+      "description": "Achillea millefolium ist eine robuste Staude aus gemäßigten Zonen. Sie wächst am besten in voller Sonne und durchlässigem Boden. Nach dem Anwachsen ist sie trockenheitsverträglich."
+    },
+    "fr": {
+      "common_name": "Achillée millefeuille",
+      "description": "Achillea millefolium est une vivace rustique des régions tempérées. Elle préfère le plein soleil et les sols bien drainés. Une fois installée, elle supporte la sécheresse."
+    },
+    "it": {
+      "common_name": "Achillea millefoglie",
+      "description": "Achillea millefolium è una perenne rustica delle zone temperate. Predilige pieno sole e terreni ben drenati. Da adulta richiede poca acqua."
+    },
+    "es": {
+      "common_name": "Milenrama",
+      "description": "Achillea millefolium es una planta perenne resistente de climas templados. Crece mejor a pleno sol y en suelos bien drenados. Es tolerante a la sequía."
+    },
+    "pt": {
+      "common_name": "Mil-folhas",
+      "description": "Achillea millefolium é uma perene resistente de regiões temperadas. Prefere sol pleno e solo bem drenado. Após estabelecida, necessita pouca rega."
+    },
+    "ar": {
+      "common_name": "الأخيلية",
+      "description": "Achillea millefolium نبات معمر قوي من المناطق المعتدلة. يفضل الشمس الكاملة والتربة جيدة الصرف. يتحمل الجفاف بعد التأسيس."
+    },
+    "hi": {
+      "common_name": "यारो",
+      "description": "Achillea millefolium समशीतोष्ण क्षेत्रों का एक मजबूत बहुवर्षीय पौधा है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। स्थापित होने पर कम पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "西洋蓍草",
+      "description": "Achillea millefolium 是一种原产温带地区的多年生植物。它喜全日照和排水良好的土壤。成株后具有耐旱性。"
+    },
+    "ja": {
+      "common_name": "セイヨウノコギリソウ",
+      "description": "Achillea millefolium は温帯原産の丈夫な多年草です。日当たりと水はけの良い土を好みます。定着後は乾燥に強いです。"
+    },
+    "ko": {
+      "common_name": "서양톱풀",
+      "description": "Achillea millefolium은 온대 지역 원산의 강한 다년생 식물입니다. 양지와 배수 좋은 토양을 선호합니다. 활착 후에는 건조에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/achillea/growing-guide",
+      "https://plants.ces.ncsu.edu/plants/achillea-millefolium/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a960"
+    ]
+  }
+}

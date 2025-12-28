@@ -1,0 +1,238 @@
+{
+  "external_id": "alocasia_lauterbachiana",
+  "name": "Purple Sword Alocasia",
+  "latin": "Alocasia lauterbachiana",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "alocasia_lauterbachiana.jpg",
+  "image_thumb": "alocasia_lauterbachiana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining aroid",
+          "pl": "Przepuszczalne",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Sempre umido",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطب باستمرار",
+          "hi": "समान नमी",
+          "zh": "保持湿润",
+          "ja": "均一に湿らす",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Kępiasty",
+          "de": "Aufrecht",
+          "fr": "Dressé",
+          "it": "Eretto",
+          "es": "Erecto",
+          "pt": "Ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा बढ़त",
+          "zh": "直立丛生",
+          "ja": "直立性",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Purple Sword Alocasia",
+      "description": "Alocasia lauterbachiana is a tropical aroid known for its long, narrow leaves with purple undersides. It prefers bright indirect light, warm temperatures, and consistently moist soil. This species is best grown indoors with good humidity."
+    },
+    "pl": {
+      "common_name": "Alokazja Purple Sword",
+      "description": "Alocasia lauterbachiana to tropikalna roślina o długich, wąskich liściach z purpurowym spodem. Wymaga jasnego, pośredniego światła, ciepła i stale lekko wilgotnego podłoża. Najlepiej rośnie w warunkach domowych o podwyższonej wilgotności."
+    },
+    "de": {
+      "common_name": "Purpurschwert-Alokasie",
+      "description": "Alocasia lauterbachiana ist eine tropische Aronstabpflanze mit langen, schmalen Blättern und violetter Unterseite. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Eine hohe Luftfeuchtigkeit fördert gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Alocasia épée pourpre",
+      "description": "Alocasia lauterbachiana est une plante tropicale aux feuilles longues et étroites, pourpres dessous. Elle apprécie une lumière vive indirecte et un substrat maintenu humide. Une atmosphère chaude et humide est idéale."
+    },
+    "it": {
+      "common_name": "Alocasia spada viola",
+      "description": "Alocasia lauterbachiana è una pianta tropicale con foglie lunghe e strette dal retro violaceo. Predilige luce intensa ma indiretta e terreno costantemente umido. Cresce bene in ambienti caldi con buona umidità."
+    },
+    "es": {
+      "common_name": "Alocasia espada púrpura",
+      "description": "Alocasia lauterbachiana es una planta tropical con hojas largas y estrechas de envés púrpura. Necesita luz indirecta brillante y riego regular. La humedad ambiental favorece su desarrollo."
+    },
+    "pt": {
+      "common_name": "Alocasia espada roxa",
+      "description": "Alocasia lauterbachiana é uma planta tropical com folhas longas e estreitas de verso arroxeado. Prefere luz indireta brilhante e solo sempre levemente úmido. Ambientes quentes e úmidos são ideais."
+    },
+    "ar": {
+      "common_name": "ألوكاسيا السيف الأرجواني",
+      "description": "ألوكاسيا لوترباخيانا نبات استوائي بأوراق طويلة وضيقة ذات لون أرجواني من الأسفل. تفضل الضوء الساطع غير المباشر والتربة الرطبة باستمرار. تنمو جيدًا في الأجواء الدافئة والرطبة."
+    },
+    "hi": {
+      "common_name": "पर्पल स्वॉर्ड एलोकैसिया",
+      "description": "Alocasia lauterbachiana एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ लंबी और संकरी होती हैं। इसे तेज लेकिन अप्रत्यक्ष रोशनी और लगातार नम मिट्टी पसंद है। गर्म और आर्द्र वातावरण में यह बेहतर बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "紫剑海芋",
+      "description": "Alocasia lauterbachiana 是一种热带观叶植物，叶片狭长，背面呈紫色。它适合明亮的散射光和持续湿润的土壤。较高的空气湿度有助于其生长。"
+    },
+    "ja": {
+      "common_name": "パープルソード・アロカシア",
+      "description": "アロカシア・ラウターバキアナは細長い葉と紫色の裏面が特徴の熱帯植物です。明るい間接光と適度に湿った用土を好みます。高温多湿の環境でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "퍼플 소드 알로카시아",
+      "description": "Alocasia lauterbachiana는 길고 좁은 잎과 보라색 잎뒷면이 특징인 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 습도가 높은 실내 환경이 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/alocasia-lauterbachiana",
+      "https://www.rhs.org.uk/plants/alocasia/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/EP499"
+    ]
+  }
+}
