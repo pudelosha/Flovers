@@ -7,7 +7,7 @@
       "searchPlaceholder": "Search plant",
       "popularPlants": "Popular plants",
       "errorSearch": "Failed to load plant list.",
-      "errorPopular": "Failed to load popular plants."
+      "errorPopular": "Failed to load popular plants"
     },
     "step02": {
       "title": "Plant profile",
@@ -39,7 +39,12 @@
         "toxic": "Toxic?",
         "growth": "Growth",
         "light": "Light",
-        "fertilizer": "Fertilizer"
+        "fertilizer": "Fertilizer",
+        "recognize": "Recognize plant",
+        "back": "Back",
+        "close": "Close",
+        "noResults": "No recognition results returned. Try a clearer photo.",
+        "failedRecognition": "Failed to recognize the plant."
       }
     }
   }

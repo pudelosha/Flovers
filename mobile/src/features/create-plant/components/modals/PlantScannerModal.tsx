@@ -1,4 +1,3 @@
-// components/modals/PlantScannerModal.tsx
 import React, { useState, useEffect, useMemo } from "react";
 import {
   View,
@@ -200,8 +199,8 @@ export default function PlantScannerModal({
       setCandidates(null);
       setError(
         e?.message ??
-          (e?.response?.data?.detail as string) ??
-          "Failed to recognize the plant."
+        (e?.response?.data?.detail as string) ??
+        "Failed to recognize the plant."
       );
     } finally {
       setIsRecognizing(false);
@@ -460,7 +459,6 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 16,
     paddingTop: 16,
-    // IMPORTANT: no extra bottom padding (prevents "empty bar" feeling)
     paddingBottom: 0,
   },
 
@@ -562,13 +560,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 
-  // Full-width bottom buttons row
   bottomRowFull: {
     marginTop: 14,
     flexDirection: "row",
     width: "100%",
     gap: 10,
-    paddingBottom: 12, // small breathing room
+    paddingBottom: 12,
   },
   bottomBtn: {
     alignItems: "center",
