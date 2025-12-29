@@ -1,10 +1,14 @@
 ﻿import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { View, Pressable, ActivityIndicator } from "react-native";
-import { Text } from "react-native-paper";
+import { 
+  View, 
+  Pressable, 
+  ActivityIndicator,
+  Text
+} from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next"; // Add i18n hook
+import { useTranslation } from "react-i18next";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -27,23 +31,14 @@ import {
 
 type Props = {
   onScrollToTop: () => void;
-
-  // open scanner modal at screen level
   onOpenScanner: () => void;
-
-  // register handler that receives recognized plant from modal
   onRegisterScanResultHandler: (fn: (plant: Suggestion) => void) => void;
 };
 
-// Backend returns display_name; older types use name.
-// This ensures we always get a real string.
 function pickName(item: any): string {
-  const v =
-    item?.name ??
-    item?.display_name ??
-    item?.displayName ??
-    item?.title ?? "";
-  return typeof v === "string" ? v : "";
+  if (!item) return "";
+  const v = item?.name ?? item?.display_name ?? item?.displayName ?? item?.title ?? "";
+  return typeof v === "string" ? v : String(v);
 }
 
 export default function Step01_SelectPlant({
@@ -51,8 +46,8 @@ export default function Step01_SelectPlant({
   onOpenScanner,
   onRegisterScanResultHandler,
 }: Props) {
-  const { t } = useTranslation(); // Initialize translation hook
-  const navigation = useNavigation<any>(); // kept in case used elsewhere
+  const { t, i18n } = useTranslation();
+  const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
   const initialQuery = useMemo(() => {
@@ -87,15 +82,8 @@ export default function Step01_SelectPlant({
         ]);
         if (!mounted) return;
 
-        // DEBUG: verify payload shape
-        console.log(
-          "[Step01] popularRes[0] =",
-          (popularRes as any)?.[0]
-        );
-        console.log(
-          "[Step01] searchRes[0] =",
-          (searchRes as any)?.[0]
-        );
+        console.log("[Step01] popularRes[0] =", (popularRes as any)?.[0]);
+        console.log("[Step01] searchRes[0] =", (searchRes as any)?.[0]);
 
         setPopular(popularRes as any);
         setSearchIndex(searchRes);
@@ -104,8 +92,8 @@ export default function Step01_SelectPlant({
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        setErrorPopular(e?.message ?? t('createPlant.step01.errorPopular')); // Translated error message
-        setErrorSearch(e?.message ?? t('createPlant.step01.errorSearch')); // Translated error message
+        setErrorPopular(e?.message ?? t('createPlant.step01.errorPopular'));
+        setErrorSearch(e?.message ?? t('createPlant.step01.errorSearch'));
       } finally {
         if (mounted) {
           setLoadingPopular(false);
@@ -116,7 +104,7 @@ export default function Step01_SelectPlant({
     return () => {
       mounted = false;
     };
-  }, [t]); // Add translation as dependency to re-trigger on language change
+  }, [t]);
 
   const onSelectFromSearch = (item: Suggestion) => {
     const name = pickName(item);
@@ -169,12 +157,10 @@ export default function Step01_SelectPlant({
     [actions, onScrollToTop]
   );
 
-  // register this handler with the parent (screen)
   useEffect(() => {
     onRegisterScanResultHandler(onScanPlantDetected);
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
 
-  // DEBUG: verify that query + wizard state actually update
   useEffect(() => {
     console.log("[Step01] query =", query);
   }, [query]);
@@ -185,7 +171,6 @@ export default function Step01_SelectPlant({
 
   return (
     <View style={wiz.cardWrap}>
-      {/* IMPORTANT: make the glass layer non-interactive so it can’t steal touches */}
       <View style={wiz.cardGlass} pointerEvents="none">
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -200,12 +185,11 @@ export default function Step01_SelectPlant({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>{t('createPlant.step01.title')}</Text> {/* Translated title */}
+        <Text style={wiz.title}>{t('createPlant.step01.title')}</Text>
         <Text style={wiz.subtitle}>
-          {t('createPlant.step01.subtitle')} {/* Translated subtitle */}
+          {t('createPlant.step01.subtitle')}
         </Text>
 
-        {/* Scan + Search row – both 64 high */}
         <View
           style={{
             flexDirection: "row",
@@ -215,7 +199,6 @@ export default function Step01_SelectPlant({
             marginBottom: 6,
           }}
         >
-          {/* Scan button */}
           <Pressable
             onPress={onOpenScanner}
             style={{
@@ -229,12 +212,11 @@ export default function Step01_SelectPlant({
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
-            accessibilityLabel={t('createPlant.step01.scanButton')} // Translated button label
+            accessibilityLabel={t('createPlant.step01.scanButton')}
           >
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
 
-          {/* Search field */}
           <View style={{ flex: 1 }}>
             <PlantSearchBox
               value={query}
@@ -248,20 +230,19 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
-              placeholder={t('createPlant.step01.searchPlaceholder')} // Translated placeholder
+              placeholder={t('createPlant.step01.searchPlaceholder')}
             />
           </View>
         </View>
 
-        {/* Popular plants */}
-        <Text style={wiz.sectionTitle}>{t('createPlant.step01.popularPlants')}</Text> {/* Translated popular plants */}
+        <Text style={wiz.sectionTitle}>{t('createPlant.step01.popularPlants')}</Text>
         {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
             <ActivityIndicator />
           </View>
         ) : errorPopular ? (
           <Text style={[wiz.subtitle, { color: "#ffdddd" }]}>{errorPopular}</Text>
-        ) : (
+        ) : popular.length > 0 ? (
           <View style={{ paddingTop: 6, paddingBottom: 6 }}>
             {popular.map((item, idx) => {
               const displayName = pickName(item);
@@ -280,7 +261,6 @@ export default function Step01_SelectPlant({
                         {(item as any).latin}
                       </Text>
 
-                      {/* 3 requirement icons + tiny labels */}
                       <View style={[wiz.tagRow, { gap: 12 }]}>
                         <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
                           <MaterialCommunityIcons
@@ -339,13 +319,17 @@ export default function Step01_SelectPlant({
               );
             })}
           </View>
+        ) : (
+          <Text style={[wiz.subtitle, { color: "rgba(255,255,255,0.7)" }]}>
+            {t('createPlant.step01.noPlantsAvailable')}
+          </Text>
         )}
 
-        {errorSearch && (
+        {errorSearch ? (
           <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>
             {errorSearch}
           </Text>
-        )}
+        ) : null}
       </View>
     </View>
   );

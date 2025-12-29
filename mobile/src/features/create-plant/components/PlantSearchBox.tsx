@@ -1,7 +1,13 @@
 ﻿import React, { useRef, useState, useMemo, useEffect } from "react";
-import { View, Pressable, Animated, ViewStyle } from "react-native";
+import { 
+  View, 
+  Pressable, 
+  Animated, 
+  ViewStyle,
+  Text  // ✅ Now importing Text from react-native
+} from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { Text, TextInput } from "react-native-paper";
+import { TextInput } from "react-native-paper"; // ✅ Only TextInput from paper
 import { wiz } from "../styles/wizard.styles";
 
 type Suggestion = { id: string; name: string; latin: string };
