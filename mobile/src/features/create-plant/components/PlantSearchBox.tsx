@@ -9,6 +9,7 @@ import {
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { TextInput } from "react-native-paper"; // ✅ Only TextInput from paper
 import { wiz } from "../styles/wizard.styles";
+import { useTranslation } from "react-i18next"; // Importing i18n
 
 type Suggestion = { id: string; name: string; latin: string };
 
@@ -33,10 +34,10 @@ export default function PlantSearchBox({
   compact = false,
   style,
 }: Props) {
-  // ✅ never allow undefined to flow into trim / input
+  const { t } = useTranslation();  // Accessing translation function
+
   const safeValue = typeof value === "string" ? value : "";
 
-  // filter suggestions locally
   const data = useMemo(
     () =>
       safeValue.trim().length === 0
@@ -50,7 +51,6 @@ export default function PlantSearchBox({
     [safeValue, suggestions]
   );
 
-  // ---- Animated floating label (Login-style) ----
   const [isFocused, setIsFocused] = useState(false);
   const animatedLabel = useRef(new Animated.Value(safeValue ? 1 : 0)).current;
 
@@ -62,14 +62,12 @@ export default function PlantSearchBox({
     }).start();
   };
 
-  // float label when value is set programmatically (popular list)
   useEffect(() => {
     if (safeValue && animatedLabel) {
       animateLabel(1);
     } else if (!isFocused) {
       animateLabel(0);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [safeValue, isFocused]);
 
   const handleFocus = () => {
@@ -89,7 +87,6 @@ export default function PlantSearchBox({
     onChange(next);
   };
 
-  // label animation values (tuned for 64px height)
   const labelTop = animatedLabel.interpolate({
     inputRange: [0, 1],
     outputRange: [22, 8],
@@ -103,7 +100,6 @@ export default function PlantSearchBox({
     outputRange: ["rgba(255,255,255,0.6)", "#FFFFFF"],
   });
 
-  // Container: flat, 64 high to match Login
   const containerStyle = [
     wiz.inputRow,
     {
@@ -115,11 +111,7 @@ export default function PlantSearchBox({
     style,
   ];
 
-  // Label left aligns with input text:
-  // paddingLeft(12) + icon(18) + gap(10) = 40
   const labelLeft = 12 + 18 + 10;
-
-  // dropdown below the 64px input
   const suggestTop = 64;
 
   return (
@@ -138,7 +130,7 @@ export default function PlantSearchBox({
             color: labelColor as any,
           }}
         >
-          Search plant
+          {t('createPlant.step01.searchPlaceholder')}  {/* Using translation here */}
         </Animated.Text>
 
         <TextInput
