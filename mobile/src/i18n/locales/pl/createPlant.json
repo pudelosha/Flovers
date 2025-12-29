@@ -1,5 +1,14 @@
 ﻿{
   "createPlant": {
+    "step01": {
+      "title": "Wybierz roślinę",
+      "subtitle": "Możesz przeszukać naszą pełną bibliotekę roślin, wybrać z popularnej listy lub zeskanować roślinę za pomocą kamery. Możesz również pominąć ten krok, ale wybór rośliny pozwoli nam automatycznie zasugerować zadania pielęgnacyjne, takie jak podlewanie.",
+      "scanButton": "Skanuj roślinę",
+      "searchPlaceholder": "Szukaj rośliny",
+      "popularPlants": "Popularne rośliny",
+      "errorSearch": "Nie udało się załadować listy roślin.",
+      "errorPopular": "Nie udało się załadować popularnych roślin."
+    },
     "step02": {
       "title": "Profil rośliny",
       "preferences": "Preferencje",

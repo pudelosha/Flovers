@@ -1,0 +1,237 @@
+{
+  "external_id": "freesia_refracta",
+  "name": "Freesia",
+  "latin": "Freesia refracta",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "freesia_refracta.jpg",
+  "image_thumb": "freesia_refracta.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Acqua moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10–20°م",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Seasonal bulb",
+          "pl": "Sezonowa cebula",
+          "de": "Saisonknolle",
+          "fr": "Bulbe saisonnier",
+          "it": "Bulbo stagionale",
+          "es": "Bulbo estacional",
+          "pt": "Bulbo sazonal",
+          "ar": "بصلي موسمي",
+          "hi": "मौसमी कंद",
+          "zh": "季节性球茎",
+          "ja": "季節性球根",
+          "ko": "계절성 구근"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Freesia",
+      "description": "Freesia refracta is a fragrant flowering bulb native to southern Africa. It grows from corms and blooms in cool seasons with bright light. After flowering, it enters a dry dormancy period."
+    },
+    "pl": {
+      "common_name": "Frezja",
+      "description": "Freesia refracta to pachnąca roślina cebulowa z południowej Afryki. Kwitnie w chłodniejszych porach przy jasnym świetle. Po kwitnieniu przechodzi okres spoczynku."
+    },
+    "de": {
+      "common_name": "Freesie",
+      "description": "Freesia refracta ist eine duftende Knollenpflanze aus dem südlichen Afrika. Sie blüht bei hellem Licht in kühleren Jahreszeiten. Nach der Blüte folgt eine Ruhephase."
+    },
+    "fr": {
+      "common_name": "Freesia",
+      "description": "Freesia refracta est une plante bulbeuse parfumée originaire d’Afrique australe. Elle fleurit en saison fraîche avec beaucoup de lumière. Après la floraison, elle entre en dormance."
+    },
+    "it": {
+      "common_name": "Fresia",
+      "description": "Freesia refracta è una pianta bulbosa profumata originaria dell’Africa australe. Fiorisce con luce intensa nei periodi freschi. Dopo la fioritura entra in dormienza."
+    },
+    "es": {
+      "common_name": "Fresia",
+      "description": "Freesia refracta es una planta bulbosa aromática del sur de África. Florece con buena luz en estaciones frescas. Tras la floración entra en reposo."
+    },
+    "pt": {
+      "common_name": "Frésia",
+      "description": "Freesia refracta é uma planta bulbosa perfumada da África Austral. Floresce com luz intensa em épocas mais frescas. Após a floração entra em dormência."
+    },
+    "ar": {
+      "common_name": "فريزيا",
+      "description": "Freesia refracta نبات بصلي عطري موطنه جنوب أفريقيا. يزهر في المواسم المعتدلة مع ضوء ساطع. بعد الإزهار يدخل في فترة سكون."
+    },
+    "hi": {
+      "common_name": "फ्रीसिया",
+      "description": "Freesia refracta दक्षिणी अफ्रीका का सुगंधित कंदीय पौधा है। यह ठंडे मौसम में तेज रोशनी में फूल देता है। फूलों के बाद यह सुप्त अवस्था में चला जाता है।"
+    },
+    "zh": {
+      "common_name": "小苍兰",
+      "description": "Freesia refracta 原产于非洲南部，是一种芳香球茎植物。它在凉爽季节和明亮光照下开花。花后进入休眠期。"
+    },
+    "ja": {
+      "common_name": "フリージア",
+      "description": "Freesia refracta は南アフリカ原産の香りのある球根植物です。涼しい季節に明るい光で開花します。開花後は休眠します。"
+    },
+    "ko": {
+      "common_name": "프리지아",
+      "description": "Freesia refracta는 남아프리카 원산의 향기로운 구근 식물입니다. 밝은 빛과 서늘한 계절에 꽃을 피웁니다. 개화 후 휴면기에 들어갑니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/freesia",
+      "https://www.rhs.org.uk/plants/freesia/growing-guide",
+      "https://extension.umn.edu/bulbs/freesia"
+    ]
+  }
+}

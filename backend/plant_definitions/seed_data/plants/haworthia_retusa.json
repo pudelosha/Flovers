@@ -1,0 +1,236 @@
+{
+  "external_id": "haworthia_retusa",
+  "name": "Haworthia retusa",
+  "latin": "Haworthia retusa",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "haworthia_retusa.jpg",
+  "image_thumb": "haworthia_retusa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining soil",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Window Haworthia",
+      "description": "Haworthia retusa is a small South African succulent with translucent leaf tips. It prefers bright indirect light and infrequent watering. Overwatering can easily cause root rot."
+    },
+    "pl": {
+      "common_name": "Haworcja okienkowa",
+      "description": "Haworthia retusa to mały sukulent z Afryki Południowej z półprzezroczystymi liśćmi. Lubi jasne, rozproszone światło i rzadkie podlewanie. Nadmiar wody prowadzi do gnicia korzeni."
+    },
+    "de": {
+      "common_name": "Fenster-Haworthie",
+      "description": "Haworthia retusa ist eine kleine Sukkulente aus Südafrika mit durchscheinenden Blattspitzen. Sie mag helles, indirektes Licht und wenig Wasser. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Haworthia vitrée",
+      "description": "Haworthia retusa est une petite plante succulente d’Afrique du Sud aux feuilles translucides. Elle préfère une lumière indirecte et des arrosages espacés. Un excès d’eau provoque la pourriture."
+    },
+    "it": {
+      "common_name": "Haworthia a finestra",
+      "description": "Haworthia retusa è una succulenta sudafricana con foglie traslucide. Predilige luce indiretta e annaffiature poco frequenti. Il ristagno d’acqua è dannoso."
+    },
+    "es": {
+      "common_name": "Haworthia ventana",
+      "description": "Haworthia retusa es una suculenta pequeña de Sudáfrica con hojas translúcidas. Necesita luz indirecta brillante y poco riego. El exceso de agua causa pudrición."
+    },
+    "pt": {
+      "common_name": "Haworthia janela",
+      "description": "Haworthia retusa é uma suculenta sul-africana de folhas translúcidas. Prefere luz indireta e regas espaçadas. O excesso de água pode apodrecer as raízes."
+    },
+    "ar": {
+      "common_name": "هاوورثيا ريتوسا",
+      "description": "نبات عصاري صغير من جنوب أفريقيا بأطراف أوراق شفافة. يفضل الضوء غير المباشر والري القليل. كثرة الماء تسبب تعفن الجذور."
+    },
+    "hi": {
+      "common_name": "हवोर्थिया",
+      "description": "हॉवर्थिया रेटूसा दक्षिण अफ्रीका का छोटा रसीला पौधा है जिसकी पत्तियाँ पारदर्शी होती हैं। इसे अप्रत्यक्ष रोशनी और कम पानी चाहिए। अधिक पानी नुकसानदायक है।"
+    },
+    "zh": {
+      "common_name": "玉露",
+      "description": "Haworthia retusa 是原产南非的小型多肉植物，叶端透明。适合明亮散射光和少量浇水。浇水过多容易烂根。"
+    },
+    "ja": {
+      "common_name": "ハオルチア",
+      "description": "ハオルチア・レツサは南アフリカ原産の小型多肉植物です。明るい間接光と控えめな水やりを好みます。過湿は根腐れの原因になります。"
+    },
+    "ko": {
+      "common_name": "하월시아",
+      "description": "하월시아 레투사는 남아프리카 원산의 소형 다육식물입니다. 밝은 간접광과 적은 물을 선호합니다. 과습하면 뿌리가 썩습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/7804/haworthia-retusa/details",
+      "https://www.kew.org/read-and-watch/haworthia-care-guide",
+      "https://www.succulentsandsunshine.com/types-of-succulents/haworthia/"
+    ]
+  }
+}

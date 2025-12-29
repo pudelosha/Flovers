@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_rufibarba",
+  "name": "Furry Feather Calathea",
+  "latin": "Goeppertia rufibarba",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "goeppertia_rufibarba.jpg",
+  "image_thumb": "goeppertia_rufibarba.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well draining",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainant",
+          "it": "Ricco drenante",
+          "es": "Rico drenante",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "疏松排水好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة باستمرار",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittel",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Port touffu",
+          "it": "Crescita a cespo",
+          "es": "Crecimiento denso",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كتلي",
+          "hi": "घना गुच्छा",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "포기형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Furry Feather Calathea",
+      "description": "Goeppertia rufibarba is a tropical foliage plant known for its long green leaves with purple undersides. It prefers bright indirect light, warm temperatures, and consistently moist soil. High humidity is important for healthy growth indoors."
+    },
+    "pl": {
+      "common_name": "Kalatea Rufibarba",
+      "description": "Goeppertia rufibarba to tropikalna roślina liściasta o zielonych liściach z purpurowym spodem. Lubi jasne, rozproszone światło, ciepło i stale wilgotne podłoże. Wysoka wilgotność powietrza wspiera jej wzrost."
+    },
+    "de": {
+      "common_name": "Rote Korbmarante",
+      "description": "Goeppertia rufibarba ist eine tropische Blattschmuckpflanze mit grünen Blättern und purpurner Unterseite. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit fördert ein gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Calathéa Rufibarba",
+      "description": "Goeppertia rufibarba est une plante tropicale appréciée pour son feuillage vert au revers pourpre. Elle préfère une lumière indirecte et un sol constamment humide. Une humidité élevée est recommandée."
+    },
+    "it": {
+      "common_name": "Calatea Rufibarba",
+      "description": "Goeppertia rufibarba è una pianta tropicale ornamentale con foglie verdi e pagina inferiore violacea. Cresce bene con luce indiretta e terreno umido. Richiede un'elevata umidità ambientale."
+    },
+    "es": {
+      "common_name": "Calatea Rufibarba",
+      "description": "Goeppertia rufibarba es una planta tropical de hojas verdes con el envés púrpura. Necesita luz indirecta brillante y suelo siempre húmedo. La alta humedad favorece su desarrollo."
+    },
+    "pt": {
+      "common_name": "Calatéia Rufibarba",
+      "description": "Goeppertia rufibarba é uma planta tropical de folhagem ornamental com folhas verdes e verso roxo. Prefere luz indireta e solo sempre úmido. Umidade alta é essencial para seu crescimento."
+    },
+    "ar": {
+      "common_name": "كالاثيا روفيباربا",
+      "description": "نبات استوائي يتميز بأوراق خضراء طويلة ذات أسفل أرجواني. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. الرطوبة العالية مهمة لنموه الصحي داخل المنزل."
+    },
+    "hi": {
+      "common_name": "फरी फेदर कैलाथिया",
+      "description": "Goeppertia rufibarba एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ हरी और नीचे से बैंगनी होती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक नमी इसके लिए लाभदायक होती है।"
+    },
+    "zh": {
+      "common_name": "绒毛竹芋",
+      "description": "Goeppertia rufibarba 是一种热带观叶植物，叶片绿色且背面呈紫色。适合明亮的散射光和持续湿润的土壤。高湿度有助于其健康生长。"
+    },
+    "ja": {
+      "common_name": "ルフィバルバ",
+      "description": "Goeppertia rufibarba は緑色の葉と紫色の裏面を持つ熱帯植物です。明るい間接光と湿った土を好みます。高い湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "루피바르바 칼라데아",
+      "description": "Goeppertia rufibarba는 잎 뒷면이 자주색인 열대 관엽식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/20309/goeppertia-rufibarba/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b464",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/"
+    ]
+  }
+}

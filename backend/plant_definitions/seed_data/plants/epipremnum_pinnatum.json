@@ -1,0 +1,238 @@
+{
+  "external_id": "epipremnum_pinnatum",
+  "name": "Dragon tail plant",
+  "latin": "Epipremnum pinnatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "epipremnum_pinnatum.jpg",
+  "image_thumb": "epipremnum_pinnatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid, well-drained",
+          "pl": "Przepuszczalna aroid",
+          "de": "Aroid, gut drain",
+          "fr": "Aroïde drainante",
+          "it": "Aroid ben drenante",
+          "es": "Aroide drenante",
+          "pt": "Aroide drenante",
+          "ar": "تربة أرويد جيدة الصرف",
+          "hi": "अरोइड, जलनिकास",
+          "zh": "排水好天南星土",
+          "ja": "排水良いアロイド土",
+          "ko": "배수 좋은 아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Dry top, then water",
+          "pl": "Podlej po przeschnięciu",
+          "de": "Gießen nach Antrocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco sopra",
+          "es": "Riega tras secar arriba",
+          "pt": "Regue ao secar em cima",
+          "ar": "اسقِ بعد جفاف السطح",
+          "hi": "ऊपरी मिट्टी सूखे तब",
+          "zh": "表土干了再浇",
+          "ja": "表土乾いてから",
+          "ko": "겉흙 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Med–high humidity",
+          "pl": "Śr.-wys. wilgotność",
+          "de": "Mittel-hohe Luftf.",
+          "fr": "Humidité moy.-haute",
+          "it": "Umidità medio-alta",
+          "es": "Humedad media-alta",
+          "pt": "Umidade média-alta",
+          "ar": "رطوبة متوسطة-عالية",
+          "hi": "मध्यम-उच्च नमी",
+          "zh": "中到高湿度",
+          "ja": "中〜高湿度",
+          "ko": "중~고 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast climbing vine",
+          "pl": "Szybko pnąca",
+          "de": "Schnell kletternd",
+          "fr": "Vigne grimpante rapide",
+          "it": "Rampicante veloce",
+          "es": "Trepadora rápida",
+          "pt": "Trepadeira rápida",
+          "ar": "متسلق سريع",
+          "hi": "तेजी से चढ़ने वाली",
+          "zh": "快速攀援藤",
+          "ja": "成長早いツル",
+          "ko": "빠른 덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dragon tail plant",
+      "description": "Epipremnum pinnatum is a tropical aroid vine grown indoors for its climbing or trailing foliage. Keep it in bright, indirect light and water when the top layer of mix dries. It is toxic if chewed or ingested."
+    },
+    "pl": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum to tropikalne pnącze z rodziny obrazkowatych uprawiane w domu dla liści. Lubi jasne, rozproszone światło i podlewanie, gdy wierzch podłoża przeschnie. Roślina jest toksyczna po pogryzieniu lub połknięciu."
+    },
+    "de": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum ist eine tropische Aronstabgewächs-Ranke für die Zimmerkultur. Stelle sie hell ohne direkte Sonne und gieße erst, wenn die Oberfläche abgetrocknet ist. Beim Kauen oder Verschlucken ist sie giftig."
+    },
+    "fr": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum est une liane tropicale d’aracées cultivée en intérieur pour son feuillage. Placez-la en lumière vive indirecte et arrosez quand le dessus du substrat a séché. La plante est toxique en cas d’ingestion."
+    },
+    "it": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum è una liana tropicale di Araceae coltivata in casa per il fogliame. Preferisce luce intensa indiretta e va annaffiata quando lo strato superiore del terriccio è asciutto. È tossica se masticata o ingerita."
+    },
+    "es": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum es una enredadera tropical de aráceas cultivada en interior por su follaje. Mantén luz brillante indirecta y riega cuando se seque la capa superior del sustrato. Es tóxica si se mastica o ingiere."
+    },
+    "pt": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum é uma trepadeira tropical de Araceae cultivada em interiores pela folhagem. Prefere luz forte indireta e rega quando a camada superior do substrato seca. É tóxica se mastigada ou ingerida."
+    },
+    "ar": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum كرمة استوائية من الفصيلة القلقاسية تُزرع داخل المنزل لأوراقها. توضع في ضوء ساطع غير مباشر وتُسقى عندما يجف سطح التربة. النبات سام عند المضغ أو الابتلاع."
+    },
+    "hi": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum एक उष्णकटिबंधीय अरोइड बेल है जिसे घर के अंदर पत्तियों के लिए उगाया जाता है। इसे तेज अप्रत्यक्ष रोशनी दें और जब ऊपर की मिट्टी सूख जाए तब पानी दें। चबाने या निगलने पर यह विषाक्त है।"
+    },
+    "zh": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum 是热带天南星科藤本，常作室内观叶植物。适合明亮散射光，表土变干后再浇水。误食或啃咬有毒。"
+    },
+    "ja": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum は熱帯性のサトイモ科のつる植物で、観葉として室内で育てられます。明るい間接光で管理し、表土が乾いてから水やりします。かじったり飲み込むと有毒です。"
+    },
+    "ko": {
+      "common_name": "Epipremnum pinnatum",
+      "description": "Epipremnum pinnatum은 열대성 천남성과 덩굴식물로 실내에서 잎을 감상합니다. 밝은 간접광에서 키우고 겉흙이 마르면 물을 주세요. 씹거나 섭취하면 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plants.ces.ncsu.edu/plants/epipremnum-pinnatum/",
+      "https://www.thespruce.com/epipremnum-pinnatum-care-guide-7555273",
+      "https://www.bhg.com/gardening/plant-dictionary/houseplant/pothos/",
+      "https://edis.ifas.ufl.edu/publication/EP639"
+    ]
+  }
+}

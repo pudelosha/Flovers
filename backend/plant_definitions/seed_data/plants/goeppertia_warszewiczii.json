@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_warszewiczii",
+  "name": "Jungle Velvet Calathea",
+  "latin": "Goeppertia warszewiczii",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_warszewiczii.jpg",
+  "image_thumb": "goeppertia_warszewiczii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "airy rich soil",
+          "pl": "lekka żyzna gleba",
+          "de": "luftige Erde",
+          "fr": "sol riche aéré",
+          "it": "terreno arioso",
+          "es": "suelo aireado",
+          "pt": "solo arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松肥沃土壤",
+          "ja": "通気性の土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep moist",
+          "pl": "utrzymuj wilgoć",
+          "de": "gleichmäßig feucht",
+          "fr": "garder humide",
+          "it": "sempre umido",
+          "es": "mantener húmedo",
+          "pt": "manter úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気を保つ",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "modérée",
+          "it": "media",
+          "es": "media",
+          "pt": "moderada",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "forte humidité",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietrująca",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "clumping foliage",
+          "pl": "kępowy wzrost",
+          "de": "horstbildend",
+          "fr": "port touffu",
+          "it": "crescita cesp.",
+          "es": "crecimiento en mata",
+          "pt": "crescimento em touceira",
+          "ar": "نمو كثيف",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "포기형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jungle Velvet Calathea",
+      "description": "Goeppertia warszewiczii is a tropical understory plant native to Central America. It is prized for its velvety, patterned leaves and requires consistently moist soil. Bright indirect light and high humidity help maintain healthy foliage."
+    },
+    "pl": {
+      "common_name": "Kalatea aksamitna",
+      "description": "Goeppertia warszewiczii to tropikalna roślina pochodząca z Ameryki Środkowej. Ceniona jest za aksamitne, dekoracyjne liście i wymaga stale wilgotnej gleby. Najlepiej rośnie w jasnym, rozproszonym świetle i wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Samt-Korbmarante",
+      "description": "Goeppertia warszewiczii stammt aus den tropischen Regenwäldern Mittelamerikas. Die Pflanze ist bekannt für ihre samtigen Blätter und benötigt gleichmäßig feuchte Erde. Indirektes Licht und hohe Luftfeuchtigkeit sind ideal."
+    },
+    "fr": {
+      "common_name": "Calathée velours",
+      "description": "Goeppertia warszewiczii est une plante tropicale originaire d’Amérique centrale. Elle se distingue par ses feuilles veloutées et demande un sol constamment humide. Une lumière indirecte et une forte humidité sont recommandées."
+    },
+    "it": {
+      "common_name": "Calatea vellutata",
+      "description": "Goeppertia warszewiczii è una pianta tropicale dell’America Centrale. È apprezzata per le foglie vellutate e necessita di terreno sempre leggermente umido. Predilige luce indiretta e umidità elevata."
+    },
+    "es": {
+      "common_name": "Calatea terciopelo",
+      "description": "Goeppertia warszewiczii es una planta tropical originaria de Centroamérica. Destaca por sus hojas aterciopeladas y requiere sustrato constantemente húmedo. La luz indirecta brillante y la alta humedad son ideales."
+    },
+    "pt": {
+      "common_name": "Calatheia veludo",
+      "description": "Goeppertia warszewiczii é uma planta tropical da América Central. É valorizada pelas folhas aveludadas e precisa de solo sempre úmido. Prefere luz indireta e alta umidade."
+    },
+    "ar": {
+      "common_name": "كالاثيا مخملية",
+      "description": "نبات Goeppertia warszewiczii موطنه المناطق الاستوائية في أمريكا الوسطى. يتميز بأوراقه المخملية ويحتاج إلى تربة رطبة باستمرار. يفضل الضوء غير المباشر والرطوبة العالية."
+    },
+    "hi": {
+      "common_name": "जंगल वेल्वेट कैलाथिया",
+      "description": "Goeppertia warszewiczii मध्य अमेरिका का एक उष्णकटिबंधीय पौधा है। इसकी मखमली पत्तियाँ इसे आकर्षक बनाती हैं और इसे लगातार नम मिट्टी की आवश्यकता होती है। अप्रत्यक्ष रोशनी और अधिक नमी उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "绒叶竹芋",
+      "description": "Goeppertia warszewiczii 原产于中美洲的热带地区。它以天鹅绒般的叶片著称，需要保持土壤湿润。明亮的散射光和较高的空气湿度最为适合。"
+    },
+    "ja": {
+      "common_name": "ビロードカラテア",
+      "description": "Goeppertia warszewiczii は中米原産の熱帯植物です。ビロード状の葉が特徴で、用土は常に湿り気を保つ必要があります。明るい間接光と高湿度を好みます。"
+    },
+    "ko": {
+      "common_name": "벨벳 칼라테아",
+      "description": "Goeppertia warszewiczii는 중미가 원산지인 열대 식물입니다. 벨벳 같은 잎이 특징이며 토양을 항상 촉촉하게 유지해야 합니다. 밝은 간접광과 높은 습도를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/19594/calathea-warszewiczii/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=285433",
+      "https://www.thespruce.com/grow-calathea-warscewiczii-5085257"
+    ]
+  }
+}

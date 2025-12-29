@@ -1,0 +1,239 @@
+{
+  "external_id": "calendula_officinalis",
+  "name": "Pot marigold",
+  "latin": "Calendula officinalis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 28,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "calendula_officinalis.jpg",
+  "image_thumb": "calendula_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Free-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "जलनिकासी वाली",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate; dry a bit",
+          "pl": "Umiark.; lekko prz.",
+          "de": "Mäßig; leicht ant.",
+          "fr": "Modéré; sécher un peu",
+          "it": "Moderata; asciuga",
+          "es": "Moder.; seca un poco",
+          "pt": "Moder.; secar um pouco",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度，略干再浇",
+          "ja": "適度 乾いたら",
+          "ko": "보통, 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "かんたん",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–21°C",
+          "pl": "10–21°C",
+          "de": "10–21°C",
+          "fr": "10–21°C",
+          "it": "10–21°C",
+          "es": "10–21°C",
+          "pt": "10–21°C",
+          "ar": "10–21°م",
+          "hi": "10–21°C",
+          "zh": "10–21°C",
+          "ja": "10–21°C",
+          "ko": "10–21°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Śr. wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna (zw.)",
+          "de": "Ungiftig (Haustiere)",
+          "fr": "Non toxique (anim.)",
+          "it": "Non tossica (anim.)",
+          "es": "No tóxica (masc.)",
+          "pt": "Não tóxica (pets)",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सुरक्षित",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast, bushy annual",
+          "pl": "Szybki, krzaczasty",
+          "de": "Schnell, buschig",
+          "fr": "Rapide, touffu",
+          "it": "Rapida, cespugliosa",
+          "es": "Rápida y tupida",
+          "pt": "Rápida e arbustiva",
+          "ar": "سريعة وكثيفة",
+          "hi": "तेज़, झाड़ीदार",
+          "zh": "生长快、丛生",
+          "ja": "早生でこんもり",
+          "ko": "빠름, 덤불형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pot marigold",
+      "description": "Calendula officinalis is an annual that flowers best in full sun and well-drained soil. Keep the potting mix lightly moist, letting the surface dry slightly between waterings. It prefers mild temperatures and can be grown in containers."
+    },
+    "pl": {
+      "common_name": "Nagietek lekarski",
+      "description": "Calendula officinalis to roślina jednoroczna, która najlepiej kwitnie w pełnym słońcu i w przepuszczalnej glebie. Podlewaj umiarkowanie, pozwalając, by wierzchnia warstwa podłoża lekko przeschła między podlewaniami. Lubi umiarkowane temperatury i nadaje się do uprawy w pojemnikach."
+    },
+    "de": {
+      "common_name": "Ringelblume",
+      "description": "Calendula officinalis ist eine einjährige Pflanze, die in voller Sonne und in gut durchlässigem Boden am besten blüht. Substrat leicht feucht halten und die Oberfläche zwischen den Wassergaben etwas abtrocknen lassen. Sie bevorzugt milde Temperaturen und wächst gut im Topf."
+    },
+    "fr": {
+      "common_name": "Souci officinal",
+      "description": "Calendula officinalis est une annuelle qui fleurit mieux au plein soleil dans un sol bien drainant. Arrosez modérément en laissant sécher légèrement la surface entre deux arrosages. Elle préfère des températures douces et se cultive bien en pot."
+    },
+    "it": {
+      "common_name": "Calendula",
+      "description": "Calendula officinalis è una pianta annuale che fiorisce meglio in pieno sole e in un terreno ben drenato. Mantieni il substrato leggermente umido e lascia asciugare un po’ la superficie tra un’annaffiatura e l’altra. Preferisce temperature miti ed è adatta alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Caléndula",
+      "description": "Calendula officinalis es una anual que florece mejor a pleno sol y en un sustrato bien drenado. Riega de forma moderada, dejando que la capa superior se seque un poco entre riegos. Prefiere temperaturas suaves y se puede cultivar en maceta."
+    },
+    "pt": {
+      "common_name": "Calêndula",
+      "description": "Calendula officinalis é uma planta anual que floresce melhor em sol pleno e em solo bem drenado. Regue moderadamente, deixando a superfície do substrato secar um pouco entre regas. Prefere temperaturas amenas e vai bem em vasos."
+    },
+    "ar": {
+      "common_name": "الأذريون الطبي",
+      "description": "Calendula officinalis نبات حولي يزهر أفضل في شمس كاملة وتربة جيدة الصرف. اسقِ باعتدال مع ترك سطح التربة يجف قليلًا بين الريات. يفضل درجات حرارة معتدلة ويمكن زراعته في الأصص."
+    },
+    "hi": {
+      "common_name": "पॉट मैरीगोल्ड",
+      "description": "Calendula officinalis एक वार्षिक पौधा है जो तेज धूप और अच्छी जल-निकासी वाली मिट्टी में बेहतर खिलता है। मिट्टी को हल्का नम रखें और पानी देने के बीच ऊपर की परत को थोड़ा सूखने दें। इसे मध्यम तापमान पसंद है और गमले में उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "金盏菊",
+      "description": "Calendula officinalis 为一年生植物，在全日照与排水良好的基质中开花更好。浇水保持微湿，浇前让表层略干再浇透。它喜欢温和的温度，适合盆栽种植。"
+    },
+    "ja": {
+      "common_name": "キンセンカ",
+      "description": "Calendula officinalis は一年草で、日当たりが良く水はけのよい土でよく咲きます。用土は軽く湿らせ、表土が少し乾いてから水やりします。穏やかな気温を好み、鉢植えにも向きます。"
+    },
+    "ko": {
+      "common_name": "금잔화",
+      "description": "Calendula officinalis 는 한해살이로, 햇빛이 충분하고 배수가 좋은 흙에서 꽃이 잘 핍니다. 겉흙이 약간 마른 뒤에 흠뻑 주는 방식으로 물을 줍니다. 온화한 기온을 선호하며 화분 재배가 가능합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a566",
+      "https://www.rhs.org.uk/plants/62350/calendula-officinalis/details",
+      "https://hort.extension.wisc.edu/articles/calendula-calendula-officinalis/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/holligold"
+    ]
+  }
+}

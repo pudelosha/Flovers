@@ -1,0 +1,238 @@
+{
+  "external_id": "foeniculum_vulgare",
+  "name": "Fennel",
+  "latin": "Foeniculum vulgare",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "foeniculum_vulgare.jpg",
+  "image_thumb": "foeniculum_vulgare.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Umiarkowane",
+          "de": "Regelmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Irrigazione media",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno-ciepło",
+          "de": "Mild warm",
+          "fr": "Doux à chaud",
+          "it": "Fresco-caldo",
+          "es": "Templado",
+          "pt": "Ameno",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "温和",
+          "ja": "温暖",
+          "ko": "온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Zwykła",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fennel",
+      "description": "Foeniculum vulgare is a hardy perennial herb grown for its aromatic leaves and seeds. It prefers full sun and well-drained soil. Regular watering supports steady growth."
+    },
+    "pl": {
+      "common_name": "Koper włoski",
+      "description": "Foeniculum vulgare to bylina uprawiana dla aromatycznych liści i nasion. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Wymaga regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Fenchel",
+      "description": "Foeniculum vulgare ist ein mehrjähriges Kraut mit aromatischen Blättern und Samen. Es wächst am besten in voller Sonne und gut durchlässigem Boden. Gleichmäßiges Gießen fördert das Wachstum."
+    },
+    "fr": {
+      "common_name": "Fenouil",
+      "description": "Foeniculum vulgare est une plante vivace aromatique cultivée pour ses feuilles et graines. Elle aime le plein soleil et un sol bien drainé. Un arrosage régulier est recommandé."
+    },
+    "it": {
+      "common_name": "Finocchio",
+      "description": "Foeniculum vulgare è un'erba perenne coltivata per foglie e semi aromatici. Preferisce pieno sole e terreno ben drenato. Annaffiature regolari favoriscono la crescita."
+    },
+    "es": {
+      "common_name": "Hinojo",
+      "description": "Foeniculum vulgare es una hierba perenne aromática. Crece mejor a pleno sol y en suelos bien drenados. Requiere riego regular para un buen desarrollo."
+    },
+    "pt": {
+      "common_name": "Funcho",
+      "description": "Foeniculum vulgare é uma erva perene aromática. Prefere sol pleno e solo bem drenado. A rega regular ajuda no crescimento saudável."
+    },
+    "ar": {
+      "common_name": "شمر",
+      "description": "Foeniculum vulgare نبات عشبي معمر عطري. ينمو جيدًا في الشمس الكاملة وتربة جيدة التصريف. الري المنتظم يدعم نموه."
+    },
+    "hi": {
+      "common_name": "सौंफ",
+      "description": "Foeniculum vulgare एक सुगंधित बहुवर्षीय जड़ी बूटी है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद है। नियमित सिंचाई से अच्छी वृद्धि होती है।"
+    },
+    "zh": {
+      "common_name": "茴香",
+      "description": "Foeniculum vulgare 是一种芳香的多年生草本植物。适合全日照和排水良好的土壤。定期浇水有助于生长。"
+    },
+    "ja": {
+      "common_name": "フェンネル",
+      "description": "Foeniculum vulgare は芳香のある多年草です。日当たりと水はけの良い土を好みます。定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "펜넬",
+      "description": "Foeniculum vulgare는 향기로운 다년생 허브입니다. 햇빛이 잘 들고 배수가 좋은 토양을 선호합니다. 규칙적인 물주기가 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/fennel/growing-guide",
+      "https://extension.umn.edu/vegetables/growing-fennel",
+      "https://www.gardenersworld.com/plants/foeniculum-vulgare/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "escallonia_rubra",
+  "name": "Escallonia rubra",
+  "latin": "Escallonia rubra",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "escallonia_rubra.jpg",
+  "image_thumb": "escallonia_rubra.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial to full sun",
+          "pl": "Półcień lub słońce",
+          "de": "Halb- bis Vollsonne",
+          "fr": "Mi-ombre à soleil",
+          "it": "Mezz'ombra o sole",
+          "es": "Sol o semisombra",
+          "pt": "Sol ou meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照至全日照",
+          "ja": "半日向〜日向",
+          "ko": "부분~직사광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut durchlässig",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Mild climates",
+          "pl": "Łagodny klimat",
+          "de": "Mildes Klima",
+          "fr": "Climat doux",
+          "it": "Clima mite",
+          "es": "Clima templado",
+          "pt": "Clima ameno",
+          "ar": "مناخ معتدل",
+          "hi": "मध्यम जलवायु",
+          "zh": "温和气候",
+          "ja": "温暖な気候",
+          "ko": "온화한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Evergreen shrub",
+          "pl": "Zimozielony krzew",
+          "de": "Immergrüner Strauch",
+          "fr": "Arbuste persistant",
+          "it": "Arbusto sempreverde",
+          "es": "Arbusto perenne",
+          "pt": "Arbusto perene",
+          "ar": "شجيرة دائمة",
+          "hi": "सदाबहार झाड़ी",
+          "zh": "常绿灌木",
+          "ja": "常緑低木",
+          "ko": "상록 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Red escallonia",
+      "description": "Escallonia rubra is an evergreen flowering shrub native to South America. It produces clusters of pink to red flowers and is commonly grown outdoors in mild climates. The plant prefers well-drained soil and regular watering."
+    },
+    "pl": {
+      "common_name": "Escallonia czerwona",
+      "description": "Escallonia rubra to zimozielony krzew kwitnący pochodzący z Ameryki Południowej. Tworzy różowo-czerwone kwiaty i najlepiej rośnie na zewnątrz w łagodnym klimacie. Wymaga przepuszczalnej gleby i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Rote Escallonie",
+      "description": "Escallonia rubra ist ein immergrüner Blütenstrauch aus Südamerika. Er trägt rosarote Blüten und wird meist im Freien in mildem Klima kultiviert. Die Pflanze benötigt gut durchlässigen Boden und regelmäßige Wassergaben."
+    },
+    "fr": {
+      "common_name": "Escallonia rouge",
+      "description": "Escallonia rubra est un arbuste persistant originaire d'Amérique du Sud. Il produit des fleurs rose à rouge et se cultive surtout en extérieur sous climat doux. Un sol bien drainé et des arrosages réguliers sont nécessaires."
+    },
+    "it": {
+      "common_name": "Escallonia rossa",
+      "description": "Escallonia rubra è un arbusto sempreverde originario del Sud America. Produce fiori rosa-rossi ed è coltivato soprattutto all'aperto in climi miti. Predilige terreno drenato e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Escallonia roja",
+      "description": "Escallonia rubra es un arbusto perenne originario de América del Sur. Presenta flores rosadas a rojas y se cultiva principalmente en exteriores de clima templado. Requiere suelo bien drenado y riego regular."
+    },
+    "pt": {
+      "common_name": "Escalônia-vermelha",
+      "description": "Escallonia rubra é um arbusto perene nativo da América do Sul. Produz flores rosadas a vermelhas e é cultivado ao ar livre em climas amenos. Necessita solo bem drenado e regas regulares."
+    },
+    "ar": {
+      "common_name": "إسكالونيا حمراء",
+      "description": "Escallonia rubra شجيرة دائمة الخضرة موطنها أمريكا الجنوبية. تنتج أزهارًا وردية إلى حمراء وتزرع غالبًا في الهواء الطلق بالمناخ المعتدل. تحتاج إلى تربة جيدة الصرف وري منتظم."
+    },
+    "hi": {
+      "common_name": "रेड एस्कालोनिया",
+      "description": "Escallonia rubra दक्षिण अमेरिका की एक सदाबहार झाड़ी है। इसमें गुलाबी से लाल फूल लगते हैं और यह हल्के जलवायु में बाहर उगाई जाती है। इसे अच्छी जल निकासी वाली मिट्टी और नियमित पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "红色埃斯卡隆木",
+      "description": "Escallonia rubra 是原产于南美洲的常绿灌木。它开粉红至红色花，通常在温和气候的室外种植。需要排水良好的土壤和定期浇水。"
+    },
+    "ja": {
+      "common_name": "エスカロニア・ルブラ",
+      "description": "Escallonia rubra は南米原産の常緑低木です。ピンクから赤色の花を咲かせ、温暖な気候の屋外で栽培されます。水はけの良い土と定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "에스칼로니아 루브라",
+      "description": "Escallonia rubra는 남아메리카 원산의 상록 관목입니다. 분홍색에서 붉은 꽃을 피우며 온화한 기후의 야외에서 주로 재배됩니다. 배수가 잘되는 토양과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/escallonia",
+      "https://www.gardenia.net/plant/escallonia-rubra",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281987"
+    ]
+  }
+}

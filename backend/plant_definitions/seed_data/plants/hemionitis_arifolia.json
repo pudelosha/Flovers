@@ -1,0 +1,236 @@
+{
+  "external_id": "hemionitis_arifolia",
+  "name": "Heart Fern",
+  "latin": "Hemionitis arifolia",
+  "sun": "low",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hemionitis_arifolia.jpg",
+  "image_thumb": "hemionitis_arifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Małe światło",
+          "de": "Wenig Licht",
+          "fr": "Faible lumière",
+          "it": "Poca luce",
+          "es": "Poca luz",
+          "pt": "Pouca luz",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光照",
+          "ja": "弱い光",
+          "ko": "약한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna ziemia",
+          "de": "Nährreich",
+          "fr": "Sol riche",
+          "it": "Terreno ricco",
+          "es": "Suelo rico",
+          "pt": "Solo rico",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Umido costante",
+          "es": "Húmedo regular",
+          "pt": "Úmido constante",
+          "ar": "رطوبة ثابتة",
+          "hi": "समान नमी",
+          "zh": "均匀湿润",
+          "ja": "均一な湿り",
+          "ko": "고른 습도"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgoć",
+          "de": "Hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Heart Fern",
+      "description": "Hemionitis arifolia is a tropical fern known for its heart-shaped leaves. It prefers low light, consistently moist soil, and high humidity. Often grown indoors, it requires stable conditions to thrive."
+    },
+    "pl": {
+      "common_name": "Paproć sercowata",
+      "description": "Hemionitis arifolia to tropikalna paproć o liściach w kształcie serca. Lubi słabe światło, stale wilgotne podłoże i wysoką wilgotność. Najlepiej rośnie w stabilnych warunkach domowych."
+    },
+    "de": {
+      "common_name": "Herzfarn",
+      "description": "Hemionitis arifolia ist ein tropischer Farn mit herzförmigen Blättern. Er bevorzugt wenig Licht, gleichmäßig feuchte Erde und hohe Luftfeuchtigkeit. Als Zimmerpflanze braucht er konstante Pflege."
+    },
+    "fr": {
+      "common_name": "Fougère cœur",
+      "description": "Hemionitis arifolia est une fougère tropicale aux feuilles en forme de cœur. Elle aime la faible lumière, un sol toujours humide et une forte humidité. Elle est surtout cultivée en intérieur."
+    },
+    "it": {
+      "common_name": "Felce a cuore",
+      "description": "Hemionitis arifolia è una felce tropicale con foglie a forma di cuore. Preferisce luce bassa, terreno costantemente umido e alta umidità. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Helecho corazón",
+      "description": "Hemionitis arifolia es un helecho tropical con hojas en forma de corazón. Necesita poca luz, suelo siempre húmedo y alta humedad ambiental. Se cultiva principalmente en interiores."
+    },
+    "pt": {
+      "common_name": "Samambaia-coração",
+      "description": "Hemionitis arifolia é uma samambaia tropical de folhas em forma de coração. Prefere pouca luz, solo sempre úmido e alta umidade. É comum como planta de interior."
+    },
+    "ar": {
+      "common_name": "سرخس القلب",
+      "description": "Hemionitis arifolia سرخس استوائي بأوراق على شكل قلب. يفضل الإضاءة الضعيفة والتربة الرطبة باستمرار والرطوبة العالية. يزرع غالبًا كنبات داخلي."
+    },
+    "hi": {
+      "common_name": "हार्ट फर्न",
+      "description": "Hemionitis arifolia एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ दिल के आकार की होती हैं। इसे कम रोशनी, लगातार नम मिट्टी और अधिक नमी पसंद है। यह घर के अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "心叶铁线蕨",
+      "description": "Hemionitis arifolia 是一种热带蕨类，具有心形叶片。它喜欢低光照、持续湿润的土壤和高湿度。通常作为室内植物栽培。"
+    },
+    "ja": {
+      "common_name": "ハートファーン",
+      "description": "Hemionitis arifolia はハート形の葉を持つ熱帯性シダです。弱い光と常に湿った土、高い湿度を好みます。主に室内で育てられます。"
+    },
+    "ko": {
+      "common_name": "하트 고사리",
+      "description": "Hemionitis arifolia는 하트 모양 잎을 가진 열대 고사리입니다. 약한 빛과 지속적으로 촉촉한 토양, 높은 습도를 선호합니다. 실내 식물로 주로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plants.ces.ncsu.edu/plants/hemionitis-arifolia/",
+      "https://www.rhs.org.uk/plants/hemionitis/arifolia/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a658"
+    ]
+  }
+}

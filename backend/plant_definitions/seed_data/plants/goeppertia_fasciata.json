@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_fasciata",
+  "name": "Striped Calathea",
+  "latin": "Goeppertia fasciata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_fasciata.jpg",
+  "image_thumb": "goeppertia_fasciata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-draining",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainant",
+          "it": "Ricco drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "उपजाऊ, जल निकास",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep soil moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Erde feucht halten",
+          "fr": "Sol humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持湿润",
+          "ja": "土を湿らせる",
+          "ko": "토양 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は遅い",
+          "ko": "느린 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Striped Calathea",
+      "description": "Goeppertia fasciata is a tropical foliage plant known for its bold, striped leaves. It prefers bright indirect light, consistently moist soil, and high humidity. Commonly grown indoors as an ornamental houseplant."
+    },
+    "pl": {
+      "common_name": "Kalatea pasiasta",
+      "description": "Goeppertia fasciata to tropikalna roślina ozdobna o wyraźnie pasiastych liściach. Wymaga jasnego, rozproszonego światła, wilgotnej gleby i wysokiej wilgotności. Często uprawiana jako roślina doniczkowa."
+    },
+    "de": {
+      "common_name": "Gestreifte Korbmarante",
+      "description": "Goeppertia fasciata ist eine tropische Blattschmuckpflanze mit markanten Streifen. Sie bevorzugt helles, indirektes Licht, feuchte Erde und hohe Luftfeuchtigkeit. Ideal als Zimmerpflanze."
+    },
+    "fr": {
+      "common_name": "Calathéa fasciée",
+      "description": "Goeppertia fasciata est une plante tropicale appréciée pour son feuillage rayé. Elle aime la lumière indirecte, un sol humide et une forte humidité. Cultivée principalement en intérieur."
+    },
+    "it": {
+      "common_name": "Calatea fasciata",
+      "description": "Goeppertia fasciata è una pianta tropicale ornamentale con foglie striate. Richiede luce indiretta, terreno costantemente umido e alta umidità. Diffusa come pianta da interno."
+    },
+    "es": {
+      "common_name": "Calatea rayada",
+      "description": "Goeppertia fasciata es una planta tropical conocida por sus hojas rayadas. Prefiere luz indirecta, suelo húmedo y alta humedad ambiental. Se cultiva comúnmente en interiores."
+    },
+    "pt": {
+      "common_name": "Calatéia listrada",
+      "description": "Goeppertia fasciata é uma planta tropical ornamental de folhas listradas. Gosta de luz indireta, solo sempre úmido e alta umidade. Muito usada como planta de interior."
+    },
+    "ar": {
+      "common_name": "كالاثيا مخططة",
+      "description": "نبات Goeppertia fasciata نبات استوائي يتميز بأوراق مخططة. يفضل الضوء غير المباشر والتربة الرطبة والرطوبة العالية. يزرع غالبًا كنبات داخلي."
+    },
+    "hi": {
+      "common_name": "धारीदार कैलाथिया",
+      "description": "Goeppertia fasciata एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ धारियों वाली होती हैं। इसे अप्रत्यक्ष रोशनी, नम मिट्टी और अधिक आर्द्रता पसंद है। आमतौर पर घर के अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "条纹竹芋",
+      "description": "Goeppertia fasciata 是一种热带观叶植物，以条纹叶片著称。喜明亮散射光、湿润土壤和高湿度。常作为室内观赏植物。"
+    },
+    "ja": {
+      "common_name": "シマカラテア",
+      "description": "Goeppertia fasciata は縞模様の葉が特徴の熱帯植物です。明るい間接光と湿った土、高い湿度を好みます。主に観葉植物として育てられます。"
+    },
+    "ko": {
+      "common_name": "스트라이프 칼라데아",
+      "description": "Goeppertia fasciata는 줄무늬 잎이 특징인 열대 식물입니다. 밝은 간접광과 촉촉한 토양, 높은 습도를 선호합니다. 실내 관엽식물로 많이 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/19945/goeppertia-fasciata/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/",
+      "https://plants.ces.ncsu.edu/plants/calathea-fasciata/"
+    ]
+  }
+}

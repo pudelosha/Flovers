@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_linearis",
+  "name": "Hoya Linearis",
+  "latin": "Hoya linearis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_linearis.jpg",
+  "image_thumb": "hoya_linearis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy, well-drained",
+          "pl": "Lekka, przepuszczalna",
+          "de": "Luftig, drainiert",
+          "fr": "Léger drainant",
+          "it": "Leggero drenante",
+          "es": "Ligero drenante",
+          "pt": "Leve drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "हवादार, निकास वाली",
+          "zh": "疏松排水好",
+          "ja": "通気性良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlew.",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgn.",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotn.",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing epiphyte",
+          "pl": "Zwisający epifit",
+          "de": "Hängender Epiphyt",
+          "fr": "Épiphyte retomb.",
+          "it": "Epifita ricad.",
+          "es": "Epífita colg.",
+          "pt": "Epífita pend.",
+          "ar": "نبات متدلٍ",
+          "hi": "लटकने वाला",
+          "zh": "下垂生长",
+          "ja": "垂れ下がる",
+          "ko": "늘어지는 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Linear-leaf hoya",
+      "description": "Hoya linearis is an epiphytic hoya with long, narrow trailing leaves. It prefers bright indirect light and evenly moist but well-drained substrate. The plant produces fragrant white star-shaped flowers under good conditions."
+    },
+    "pl": {
+      "common_name": "Hoja liniowa",
+      "description": "Hoya linearis to epifityczna hoja o długich, wąskich pędach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Przy odpowiednich warunkach kwitnie białymi, pachnącymi kwiatami."
+    },
+    "de": {
+      "common_name": "Lineare Wachsblume",
+      "description": "Hoya linearis ist eine epiphytische Hoya mit langen, schmalen Trieben. Sie mag helles, indirektes Licht und gleichmäßige Wassergaben. Unter guten Bedingungen erscheinen duftende weiße Blüten."
+    },
+    "fr": {
+      "common_name": "Hoya linéaire",
+      "description": "Hoya linearis est une plante épiphyte aux longues feuilles fines retombantes. Elle préfère une lumière vive indirecte et un arrosage modéré. Elle peut produire des fleurs blanches parfumées."
+    },
+    "it": {
+      "common_name": "Hoya linearis",
+      "description": "Hoya linearis è una hoya epifita dai lunghi fusti sottili. Richiede luce indiretta luminosa e irrigazioni regolari ma leggere. In buone condizioni fiorisce con fiori bianchi profumati."
+    },
+    "es": {
+      "common_name": "Hoya linearis",
+      "description": "Hoya linearis es una planta epífita con tallos largos y finos. Prefiere luz indirecta brillante y riego moderado. Con buenos cuidados produce flores blancas aromáticas."
+    },
+    "pt": {
+      "common_name": "Hoya linearis",
+      "description": "Hoya linearis é uma planta epífita de crescimento pendente. Gosta de luz indireta intensa e rega moderada. Em condições adequadas, produz flores brancas perfumadas."
+    },
+    "ar": {
+      "common_name": "هويا خطية",
+      "description": "Hoya linearis نبات هويا متدلي ينمو كنبات هوائي. يفضل الضوء الساطع غير المباشر والري المعتدل. يمكن أن ينتج أزهارًا بيضاء عطرة عند العناية الجيدة."
+    },
+    "hi": {
+      "common_name": "होया लाइनैरिस",
+      "description": "Hoya linearis एक लटकने वाला एपिफाइट पौधा है। इसे तेज अप्रत्यक्ष रोशनी और मध्यम सिंचाई पसंद है। अच्छी देखभाल पर इसमें सुगंधित सफेद फूल आते हैं।"
+    },
+    "zh": {
+      "common_name": "线叶球兰",
+      "description": "Hoya linearis 是一种下垂生长的附生球兰。它喜欢明亮的散射光和适度浇水。在良好条件下会开出芳香的白色花朵。"
+    },
+    "ja": {
+      "common_name": "ホヤ・リネアリス",
+      "description": "Hoya linearis は細長い葉を持つ着生性のホヤです。明るい間接光と適度な水やりを好みます。条件が良いと白い香りのある花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "호야 리네아리스",
+      "description": "Hoya linearis는 늘어지는 형태의 착생 호야입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 환경이 좋으면 향기로운 흰 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/387403/hoya-linearis/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
+      "https://plants.ces.ncsu.edu/plants/hoya/"
+    ]
+  }
+}

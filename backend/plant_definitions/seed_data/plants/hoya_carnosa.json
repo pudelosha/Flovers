@@ -1,0 +1,238 @@
+{
+  "external_id": "hoya_carnosa",
+  "name": "Hoya Carnosa",
+  "latin": "Hoya carnosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_carnosa.jpg",
+  "image_thumb": "hoya_carnosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy well draining",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "When top soil dry",
+          "pl": "Po przeschnięciu",
+          "de": "Nach Antrocknen",
+          "fr": "Sol sec en surface",
+          "it": "Terreno asciutto",
+          "es": "Sustrato seco",
+          "pt": "Solo seco",
+          "ar": "عند جفاف السطح",
+          "hi": "मिट्टी सूखने पर",
+          "zh": "表土干后",
+          "ja": "表土乾いたら",
+          "ko": "겉흙 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing vine",
+          "pl": "Pnącze",
+          "de": "Rankend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "متدلية",
+          "hi": "लटकती बेल",
+          "zh": "蔓生",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wax Plant",
+      "description": "Hoya carnosa is a tropical vining plant known for its thick waxy leaves and fragrant star shaped flowers. It prefers bright indirect light and well drained soil. Water only after the top layer dries."
+    },
+    "pl": {
+      "common_name": "Hoja woskownica",
+      "description": "Hoya carnosa to tropikalne pnącze o grubych woskowych liściach i pachnących kwiatach. Lubi jasne rozproszone światło i przepuszczalne podłoże. Podlewaj po przeschnięciu wierzchu ziemi."
+    },
+    "de": {
+      "common_name": "Wachsblume",
+      "description": "Hoya carnosa ist eine tropische Kletterpflanze mit dicken wachsartigen Blättern und duftenden Blüten. Sie bevorzugt helles indirektes Licht und gut drainierte Erde. Gießen erst bei trockener Oberfläche."
+    },
+    "fr": {
+      "common_name": "Fleur de porcelaine",
+      "description": "Hoya carnosa est une plante tropicale grimpante aux feuilles épaisses et cireuses. Elle apprécie une lumière vive indirecte et un substrat bien drainé. Arroser lorsque le dessus du sol est sec."
+    },
+    "it": {
+      "common_name": "Fiore di cera",
+      "description": "Hoya carnosa è una pianta tropicale rampicante con foglie spesse e cerose. Predilige luce indiretta intensa e terreno drenante. Annaffiare quando il terriccio è asciutto in superficie."
+    },
+    "es": {
+      "common_name": "Flor de cera",
+      "description": "Hoya carnosa es una planta tropical trepadora con hojas carnosas y cerosas. Prefiere luz brillante indirecta y sustrato bien drenado. Regar cuando la capa superior esté seca."
+    },
+    "pt": {
+      "common_name": "Flor de cera",
+      "description": "Hoya carnosa é uma planta tropical trepadeira com folhas grossas e cerosas. Gosta de luz indireta brilhante e solo bem drenado. Regue quando a superfície estiver seca."
+    },
+    "ar": {
+      "common_name": "نبات الشمع",
+      "description": "هويا كارنوزا نبات متسلق استوائي بأوراق سميكة شمعية وأزهار عطرية. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. يُسقى عند جفاف السطح."
+    },
+    "hi": {
+      "common_name": "वैक्स प्लांट",
+      "description": "होया कार्नोसा एक उष्णकटिबंधीय बेल वाला पौधा है जिसकी पत्तियाँ मोटी और मोमी होती हैं। इसे तेज अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद है। ऊपर की मिट्टी सूखने पर पानी दें।"
+    },
+    "zh": {
+      "common_name": "球兰",
+      "description": "球兰是一种热带藤本植物，叶片厚实有蜡质感。它喜欢明亮的散射光和良好排水的土壤。待表土干燥后再浇水。"
+    },
+    "ja": {
+      "common_name": "ホヤ",
+      "description": "ホヤ・カルノーサは厚い葉と芳香のある花を持つ熱帯性のつる植物です。明るい間接光と水はけの良い土を好みます。表土が乾いてから水やりします。"
+    },
+    "ko": {
+      "common_name": "호야",
+      "description": "호야 카르노사는 두꺼운 잎과 향기로운 꽃을 가진 열대 덩굴식물입니다. 밝은 간접광과 배수가 좋은 토양을 선호합니다. 겉흙이 마르면 물을 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/8979/hoya-carnosa/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
+      "https://extension.umn.edu/houseplants/hoya"
+    ]
+  }
+}

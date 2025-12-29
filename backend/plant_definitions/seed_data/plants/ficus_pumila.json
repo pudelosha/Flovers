@@ -1,0 +1,240 @@
+{
+  "external_id": "ficus_pumila",
+  "name": "Creeping fig",
+  "latin": "Ficus pumila",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_pumila.jpg",
+  "image_thumb": "ficus_pumila.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, well-drained",
+          "pl": "Wilgotna, przepuszcz.",
+          "de": "Feucht, durchlässig",
+          "fr": "Humide, drainé",
+          "it": "Umido e drenante",
+          "es": "Húmedo y drenante",
+          "pt": "Úmido e drenante",
+          "ar": "رطبة وجيدة الصرف",
+          "hi": "नम, जलनिकास अच्छा",
+          "zh": "湿润且排水好",
+          "ja": "湿り気と排水良",
+          "ko": "촉촉, 배수 좋게"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Utrzymuj lekko wilg.",
+          "de": "Leicht feucht halten",
+          "fr": "Garder légèrement humide",
+          "it": "Terriccio sempre umido",
+          "es": "Mantener ligeramente húmeda",
+          "pt": "Manter levemente úmida",
+          "ar": "حافظ على رطوبة خفيفة",
+          "hi": "हल्का नम रखें",
+          "zh": "保持微湿",
+          "ja": "軽く湿らせる",
+          "ko": "약간 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast trailing vine",
+          "pl": "Szybko płożąca",
+          "de": "Schnell rankend",
+          "fr": "Vigne rampante rapide",
+          "it": "Rampicante veloce",
+          "es": "Enredadera rápida",
+          "pt": "Trepadeira rápida",
+          "ar": "متسلق سريع",
+          "hi": "तेज़ लता",
+          "zh": "快速蔓生",
+          "ja": "生長早いツル",
+          "ko": "빠른 덩굴"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Creeping fig",
+      "description": "Ficus pumila is a fast-growing climbing or trailing fig with small juvenile leaves. Indoors it does best in bright, indirect light and evenly moist, well-drained soil. It prefers higher humidity and is considered toxic to cats and dogs."
+    },
+    "pl": {
+      "common_name": "Figowiec pnący",
+      "description": "Ficus pumila to szybko rosnące pnącze o drobnych, młodocianych liściach. W mieszkaniu najlepiej rośnie w jasnym, rozproszonym świetle oraz w stale lekko wilgotnym, przepuszczalnym podłożu. Lubi podwyższoną wilgotność powietrza i jest uznawany za toksyczny dla kotów i psów."
+    },
+    "de": {
+      "common_name": "Kletter-Feige",
+      "description": "Ficus pumila ist eine schnell wachsende Kletter- oder Hängefeige mit kleinen Jugendblättern. In Innenräumen gedeiht sie bei hellem, indirektem Licht und gleichmäßig leicht feuchter, gut drainierter Erde. Sie mag höhere Luftfeuchte und gilt als giftig für Katzen und Hunde."
+    },
+    "fr": {
+      "common_name": "Figuier rampant",
+      "description": "Ficus pumila est un ficus grimpant ou retombant à croissance rapide, aux petites feuilles juvéniles. En intérieur, il préfère une lumière vive indirecte et un substrat drainant maintenu légèrement humide. Il apprécie une humidité élevée et est considéré toxique pour les chats et les chiens."
+    },
+    "it": {
+      "common_name": "Fico rampicante",
+      "description": "Ficus pumila è un fico rampicante o ricadente a crescita rapida con piccole foglie giovanili. In casa cresce meglio con luce intensa indiretta e terriccio drenante mantenuto leggermente umido. Gradisce umidità più alta ed è considerato tossico per cani e gatti."
+    },
+    "es": {
+      "common_name": "Higuera rastrera",
+      "description": "Ficus pumila es un ficus trepador o colgante de crecimiento rápido con hojas juveniles pequeñas. En interior prefiere luz brillante indirecta y un sustrato bien drenado mantenido ligeramente húmedo. Agradece una humedad ambiental alta y se considera tóxico para gatos y perros."
+    },
+    "pt": {
+      "common_name": "Figueira-rasteira",
+      "description": "Ficus pumila é uma figueira trepadeira ou pendente de crescimento rápido, com folhas juvenis pequenas. Em ambientes internos, prefere luz forte indireta e substrato bem drenado mantido levemente úmido. Gosta de maior umidade do ar e é considerado tóxico para cães e gatos."
+    },
+    "ar": {
+      "common_name": "فيكس زاحف",
+      "description": "Ficus pumila نبات تين متسلق أو متدلٍ سريع النمو بأوراق صغيرة في مرحلة النمو المبكرة. داخل المنزل يفضل ضوءًا ساطعًا غير مباشر وتربة جيدة الصرف تبقى رطبة قليلًا. يفضل رطوبة أعلى ويُعد سامًا للقطط والكلاب."
+    },
+    "hi": {
+      "common_name": "क्रीपिंग फिग",
+      "description": "Ficus pumila एक तेज़ी से बढ़ने वाली चढ़ने/लटकने वाली अंजीर जाति है जिसकी किशोर पत्तियाँ छोटी होती हैं। घर के भीतर इसे तेज़ अप्रत्यक्ष रोशनी और हल्की नम, अच्छी जलनिकासी वाली मिट्टी में रखें। इसे अधिक आर्द्रता पसंद है और यह बिल्लियों व कुत्तों के लिए विषाक्त माना जाता है।"
+    },
+    "zh": {
+      "common_name": "爬墙榕",
+      "description": "Ficus pumila 是生长迅速的攀援或垂吊型榕属植物，幼叶较小。室内养护以明亮散射光和保持微湿、排水良好的基质为宜。它偏好较高湿度，并被认为对猫狗有毒。"
+    },
+    "ja": {
+      "common_name": "オオイタビ",
+      "description": "Ficus pumila は生長が早いツル性または垂れ下がるイチジクの仲間で、幼葉は小型です。室内では明るい間接光と、軽く湿った排水の良い用土が適します。湿度を好み、犬猫には有毒とされています。"
+    },
+    "ko": {
+      "common_name": "크리핑 피그",
+      "description": "Ficus pumila는 작은 유엽을 가진 빠르게 자라는 덩굴성(또는 늘어지는) 무화과류 식물입니다. 실내에서는 밝은 간접광과 배수가 잘되면서 약간 촉촉한 흙이 좋습니다. 높은 습도를 선호하며 반려묘·반려견에게 유독한 것으로 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/7210/ficus-pumila/details",
+      "https://plants.ces.ncsu.edu/plants/ficus-pumila/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b599",
+      "https://www.thespruce.com/grow-creeping-fig-indoors-1902441",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/fig"
+    ]
+  }
+}

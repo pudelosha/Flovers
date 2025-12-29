@@ -1,0 +1,238 @@
+{
+  "external_id": "fatsia_japonica",
+  "name": "Japanese aralia",
+  "latin": "Fatsia japonica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "fatsia_japonica.jpg",
+  "image_thumb": "fatsia_japonica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "明るい日陰",
+          "ko": "중간 밝기"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenato",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Podlewanie regularne",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24℃",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषैला नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrub",
+          "pl": "Krzew",
+          "de": "Strauch",
+          "fr": "Arbuste",
+          "it": "Arbusto",
+          "es": "Arbusto",
+          "pt": "Arbusto",
+          "ar": "شجيرة",
+          "hi": "झाड़ी",
+          "zh": "灌木",
+          "ja": "低木",
+          "ko": "관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Japanese aralia",
+      "description": "Fatsia japonica is an evergreen shrub native to Japan and Korea. It is valued for its large glossy leaves and tolerance of indoor conditions. The plant prefers bright indirect light and evenly moist soil."
+    },
+    "pl": {
+      "common_name": "Aralia japońska",
+      "description": "Fatsia japonica to zimozielony krzew pochodzący z Japonii i Korei. Ceniona jest za duże, błyszczące liście i dobrą tolerancję warunków domowych. Lubi jasne, rozproszone światło i umiarkowanie wilgotne podłoże."
+    },
+    "de": {
+      "common_name": "Japanische Aralie",
+      "description": "Fatsia japonica ist ein immergrüner Strauch aus Japan und Korea. Sie wird wegen ihrer großen glänzenden Blätter und Robustheit geschätzt. Die Pflanze bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Aralie du Japon",
+      "description": "Fatsia japonica est un arbuste persistant originaire du Japon et de Corée. Elle est appréciée pour ses grandes feuilles brillantes et sa facilité de culture. Elle préfère une lumière vive indirecte et un sol légèrement humide."
+    },
+    "it": {
+      "common_name": "Aralia giapponese",
+      "description": "Fatsia japonica è un arbusto sempreverde originario di Giappone e Corea. È apprezzato per le grandi foglie lucide e la buona adattabilità in casa. Predilige luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Aralia japonesa",
+      "description": "Fatsia japonica es un arbusto perenne originario de Japón y Corea. Destaca por sus hojas grandes y brillantes y su fácil cultivo en interiores. Prefiere luz indirecta brillante y riego regular."
+    },
+    "pt": {
+      "common_name": "Arália-japonesa",
+      "description": "Fatsia japonica é um arbusto perene nativo do Japão e da Coreia. É valorizado pelas folhas grandes e brilhantes e pela facilidade de cultivo. Prefere luz indireta e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "الأراليا اليابانية",
+      "description": "نبات فاتسيا جابونيكا شجيرة دائمة الخضرة موطنها اليابان وكوريا. تشتهر بأوراقها الكبيرة اللامعة وقدرتها على النمو داخل المنازل. تفضل ضوءًا غير مباشر وتربة رطبة باعتدال."
+    },
+    "hi": {
+      "common_name": "जापानी अरालिया",
+      "description": "फैट्सिया जैपोनिका जापान और कोरिया का सदाबहार झाड़ीदार पौधा है। इसकी बड़ी चमकदार पत्तियाँ इसे लोकप्रिय बनाती हैं। यह मध्यम रोशनी और नियमित सिंचाई पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "日本八角金盘",
+      "description": "日本八角金盘原产于日本和韩国，是常绿灌木。因其大而有光泽的叶片而广受欢迎。适合明亮散射光和保持土壤微湿。"
+    },
+    "ja": {
+      "common_name": "ヤツデ",
+      "description": "ヤツデは日本と韓国原産の常緑低木です。大きく光沢のある葉が特徴で、室内でも育てやすい植物です。明るい日陰と適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "야츠데",
+      "description": "파츠아 자포니카는 일본과 한국이 원산지인 상록 관목입니다. 크고 윤기 있는 잎으로 관상 가치가 높습니다. 밝은 간접광과 규칙적인 물주기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/7410/fatsia-japonica/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c860",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/fatsia"
+    ]
+  }
+}

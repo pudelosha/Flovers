@@ -1,0 +1,238 @@
+{
+  "external_id": "hippeastrum_reginae",
+  "name": "Royal Amaryllis",
+  "latin": "Hippeastrum reginae",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hippeastrum_reginae.jpg",
+  "image_thumb": "hippeastrum_reginae.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Bulb flowering",
+          "pl": "Cebulowa",
+          "de": "Zwiebelpflanze",
+          "fr": "Bulbe",
+          "it": "Bulbosa",
+          "es": "Bulbosa",
+          "pt": "Bulbosa",
+          "ar": "بصلية",
+          "hi": "कंदीय",
+          "zh": "球根植物",
+          "ja": "球根植物",
+          "ko": "구근식물"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Royal Amaryllis",
+      "description": "Hippeastrum reginae is a bulbous flowering plant known for its large red trumpet-shaped blooms. It grows best indoors in bright light and well-drained soil. The plant has a dormant period after flowering."
+    },
+    "pl": {
+      "common_name": "Amarylis królewski",
+      "description": "Hippeastrum reginae to roślina cebulowa o dużych czerwonych kwiatach. Najlepiej rośnie w jasnym miejscu i przepuszczalnym podłożu. Po kwitnieniu przechodzi okres spoczynku."
+    },
+    "de": {
+      "common_name": "Königs-Amaryllis",
+      "description": "Hippeastrum reginae ist eine Zwiebelpflanze mit großen roten Blüten. Sie bevorzugt helles Licht und gut durchlässige Erde. Nach der Blüte folgt eine Ruhephase."
+    },
+    "fr": {
+      "common_name": "Amaryllis royal",
+      "description": "Hippeastrum reginae est une plante bulbeuse aux grandes fleurs rouges. Elle aime une lumière vive et un sol bien drainé. Une période de repos suit la floraison."
+    },
+    "it": {
+      "common_name": "Amarillide reale",
+      "description": "Hippeastrum reginae è una pianta bulbosa con grandi fiori rossi. Cresce bene in luce intensa e terreno drenante. Dopo la fioritura entra in dormienza."
+    },
+    "es": {
+      "common_name": "Amarilis real",
+      "description": "Hippeastrum reginae es una planta bulbosa de grandes flores rojas. Prefiere luz brillante y suelo bien drenado. Presenta un período de reposo tras la floración."
+    },
+    "pt": {
+      "common_name": "Amarílis real",
+      "description": "Hippeastrum reginae é uma planta bulbosa com flores vermelhas grandes. Desenvolve-se bem em luz intensa e solo drenado. Após a floração entra em dormência."
+    },
+    "ar": {
+      "common_name": "أمارلس ملكي",
+      "description": "Hippeastrum reginae نبات بصلي ذو أزهار حمراء كبيرة. يفضل الضوء الساطع والتربة جيدة التصريف. يمر بفترة سكون بعد الإزهار."
+    },
+    "hi": {
+      "common_name": "रॉयल अमैरिलिस",
+      "description": "Hippeastrum reginae एक कंदीय पौधा है जिसमें बड़े लाल फूल होते हैं। यह तेज रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद करता है। फूल के बाद यह सुप्त अवस्था में जाता है।"
+    },
+    "zh": {
+      "common_name": "帝王朱顶红",
+      "description": "Hippeastrum reginae 是一种球根开花植物，具有大型红色花朵。适合在明亮环境和排水良好的土壤中生长。开花后会进入休眠期。"
+    },
+    "ja": {
+      "common_name": "ロイヤルアマリリス",
+      "description": "Hippeastrum reginae は大きな赤い花を咲かせる球根植物です。明るい光と水はけの良い土を好みます。開花後は休眠期に入ります。"
+    },
+    "ko": {
+      "common_name": "로열 아마릴리스",
+      "description": "Hippeastrum reginae 는 큰 붉은 꽃을 피우는 구근 식물입니다. 밝은 빛과 배수가 좋은 토양을 선호합니다. 개화 후 휴면기에 들어갑니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hippeastrum/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a838",
+      "https://extension.umn.edu/houseplants/amaryllis"
+    ]
+  }
+}

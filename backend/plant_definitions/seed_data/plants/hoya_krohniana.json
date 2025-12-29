@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_krohniana",
+  "name": "Hoya Krohniana",
+  "latin": "Hoya krohniana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_krohniana.jpg",
+  "image_thumb": "hoya_krohniana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy epiphyte mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार माध्यम",
+          "zh": "透气基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when partly dry",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen leicht trocken",
+          "fr": "Arroser après séchage",
+          "it": "Annaffiare a secco",
+          "es": "Regar tras secar",
+          "pt": "Regar ao secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "半干再浇水",
+          "ja": "乾いたら給水",
+          "ko": "마르면 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Entretien facile",
+          "it": "Facile da curare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "易于养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing vine",
+          "pl": "Pnącze zwisające",
+          "de": "Rankend wachsend",
+          "fr": "Plante retombante",
+          "it": "Rampicante",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "نبات متدلي",
+          "hi": "लटकती बेल",
+          "zh": "蔓生",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Krohn's Hoya",
+      "description": "Hoya krohniana is a compact epiphytic vine native to the Philippines. It has small heart-shaped leaves and produces clusters of fragrant, star-shaped flowers. It is well suited for indoor growing in bright, indirect light."
+    },
+    "pl": {
+      "common_name": "Hoja Krohna",
+      "description": "Hoya krohniana to epifityczne pnącze pochodzące z Filipin. Ma małe, sercowate liście i pachnące kwiaty w baldachimach. Dobrze rośnie w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Krohns Wachsblume",
+      "description": "Hoya krohniana ist eine epiphytische Kletterpflanze aus den Philippinen. Sie besitzt herzförmige Blätter und duftende Sternblüten. Ideal für helle Standorte ohne direkte Sonne."
+    },
+    "fr": {
+      "common_name": "Hoya de Krohn",
+      "description": "Hoya krohniana est une plante épiphyte originaire des Philippines. Elle porte de petites feuilles en forme de cœur et des fleurs étoilées parfumées. Elle s’adapte bien à la culture en intérieur lumineux."
+    },
+    "it": {
+      "common_name": "Hoya di Krohn",
+      "description": "Hoya krohniana è una pianta epifita delle Filippine. Ha foglie piccole a forma di cuore e fiori stellati profumati. Cresce bene in luce intensa ma indiretta."
+    },
+    "es": {
+      "common_name": "Hoya de Krohn",
+      "description": "Hoya krohniana es una enredadera epífita originaria de Filipinas. Presenta hojas pequeñas en forma de corazón y flores estrelladas aromáticas. Es adecuada para interiores bien iluminados."
+    },
+    "pt": {
+      "common_name": "Hoya Krohniana",
+      "description": "Hoya krohniana é uma planta epífita nativa das Filipinas. Possui folhas pequenas em formato de coração e flores estreladas perfumadas. Desenvolve-se bem em luz indireta brilhante."
+    },
+    "ar": {
+      "common_name": "هويا كرونيانا",
+      "description": "نبات Hoya krohniana نبات متسلق هوائي موطنه الفلبين. يتميز بأوراق قلبية صغيرة وأزهار نجمية عطرية. مناسب للزراعة الداخلية مع إضاءة غير مباشرة."
+    },
+    "hi": {
+      "common_name": "होया क्रोहनियाना",
+      "description": "Hoya krohniana फिलीपींस की एक एपिफाइट बेल है। इसकी पत्तियाँ दिल के आकार की होती हैं और फूल सुगंधित होते हैं। यह घर के अंदर अप्रत्यक्ष रोशनी में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "克罗恩球兰",
+      "description": "Hoya krohniana 原产于菲律宾，是一种附生藤本植物。叶片呈心形，花朵呈星形并带有香味。适合在明亮的室内散射光下生长。"
+    },
+    "ja": {
+      "common_name": "ホヤ・クロニアナ",
+      "description": "Hoya krohniana はフィリピン原産の着生植物です。小さなハート形の葉と芳香のある星形の花を持ちます。明るい間接光の室内でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "호야 크로니아나",
+      "description": "Hoya krohniana는 필리핀 원산의 착생 덩굴식물입니다. 하트 모양의 잎과 향기로운 별 모양 꽃이 특징입니다. 밝은 간접광의 실내 환경에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hoya/growing-guide",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya-houseplants/",
+      "https://www.kew.org/plants/hoya"
+    ]
+  }
+}

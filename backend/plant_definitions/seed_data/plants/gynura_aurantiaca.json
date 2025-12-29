@@ -1,0 +1,238 @@
+{
+  "external_id": "gynura_aurantiaca",
+  "name": "Purple velvet plant",
+  "latin": "Gynura aurantiaca",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "gynura_aurantiaca.jpg",
+  "image_thumb": "gynura_aurantiaca.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطبة قليلاً",
+          "hi": "हल्की नम",
+          "zh": "保持微湿",
+          "ja": "やや湿潤",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24 °C",
+          "hi": "18–24 °C",
+          "zh": "18–24 °C",
+          "ja": "18–24 °C",
+          "ko": "18–24 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدلة",
+          "hi": "मध्यम",
+          "zh": "中等湿度",
+          "ja": "中程度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast trailing growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Purple velvet plant",
+      "description": "Gynura aurantiaca is known for its deep purple, velvety leaves and trailing habit. It grows best in bright, indirect light with evenly moist soil. This tropical plant is commonly kept as an easy-care houseplant."
+    },
+    "pl": {
+      "common_name": "Ginura pomarańczowa",
+      "description": "Gynura aurantiaca wyróżnia się aksamitnymi, purpurowymi liśćmi. Najlepiej rośnie w jasnym, rozproszonym świetle i umiarkowanie wilgotnej glebie. Jest łatwa w uprawie jako roślina domowa."
+    },
+    "de": {
+      "common_name": "Purpur-Samtpflanze",
+      "description": "Gynura aurantiaca hat samtige, violette Blätter und einen überhängenden Wuchs. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze gilt als pflegeleicht im Innenbereich."
+    },
+    "fr": {
+      "common_name": "Plante velours violet",
+      "description": "Gynura aurantiaca est appréciée pour ses feuilles violettes et duveteuses. Elle pousse bien à la lumière indirecte avec un sol légèrement humide. C’est une plante d’intérieur facile à cultiver."
+    },
+    "it": {
+      "common_name": "Pianta di velluto viola",
+      "description": "La Gynura aurantiaca è nota per le sue foglie vellutate di colore viola. Preferisce luce indiretta e terreno moderatamente umido. È una pianta da interno semplice da mantenere."
+    },
+    "es": {
+      "common_name": "Planta terciopelo púrpura",
+      "description": "Gynura aurantiaca destaca por sus hojas púrpuras aterciopeladas. Crece mejor con luz indirecta brillante y riego regular. Es una planta de interior fácil de cuidar."
+    },
+    "pt": {
+      "common_name": "Planta veludo roxo",
+      "description": "A Gynura aurantiaca possui folhas roxas aveludadas muito decorativas. Prefere luz indireta e solo levemente úmido. É uma planta doméstica de fácil manutenção."
+    },
+    "ar": {
+      "common_name": "نبات المخمل الأرجواني",
+      "description": "تشتهر Gynura aurantiaca بأوراقها البنفسجية المخملية. تنمو جيدًا في ضوء ساطع غير مباشر مع تربة رطبة قليلاً. تُعد نباتًا منزليًا سهل العناية."
+    },
+    "hi": {
+      "common_name": "पर्पल वेलवेट पौधा",
+      "description": "Gynura aurantiaca अपने मखमली बैंगनी पत्तों के लिए जानी जाती है। यह तेज़ अप्रत्यक्ष रोशनी और हल्की नम मिट्टी में अच्छी बढ़ती है। इसे आसान घरेलू पौधा माना जाता है।"
+    },
+    "zh": {
+      "common_name": "紫绒叶",
+      "description": "Gynura aurantiaca 以其紫色绒毛状叶片而闻名。它适合明亮的散射光和保持微湿的土壤。常作为易养护的室内植物栽培。"
+    },
+    "ja": {
+      "common_name": "パープルベルベットプラント",
+      "description": "Gynura aurantiaca は紫色のビロード状の葉が特徴です。明るい間接光と適度に湿った土を好みます。育てやすい観葉植物です。"
+    },
+    "ko": {
+      "common_name": "퍼플 벨벳 식물",
+      "description": "Gynura aurantiaca는 보라색의 벨벳 같은 잎이 특징입니다. 밝은 간접광과 적당히 촉촉한 토양에서 잘 자랍니다. 관리가 쉬운 실내 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/8706/gynura-aurantiaca/details",
+      "https://edis.ifas.ufl.edu/publication/FP260",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/gynura-aurantiaca"
+    ]
+  }
+}

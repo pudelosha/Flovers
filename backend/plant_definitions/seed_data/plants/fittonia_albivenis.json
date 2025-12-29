@@ -1,0 +1,238 @@
+{
+  "external_id": "fittonia_albivenis",
+  "name": "Nerve Plant",
+  "latin": "Fittonia albivenis",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "fittonia_albivenis.jpg",
+  "image_thumb": "fittonia_albivenis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "rich well-drained",
+          "pl": "żyzna przepuszczalna",
+          "de": "nährstoffreich",
+          "fr": "riche drainé",
+          "it": "ricco drenato",
+          "es": "rico drenado",
+          "pt": "rico drenado",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水土",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep moist",
+          "pl": "stale wilgotne",
+          "de": "gleichmäßig feucht",
+          "fr": "toujours humide",
+          "it": "sempre umido",
+          "es": "siempre húmedo",
+          "pt": "sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気維持",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "modérée",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "humidité élevée",
+          "it": "alta umidità",
+          "es": "humedad alta",
+          "pt": "umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "low compact",
+          "pl": "niski zwarty",
+          "de": "kompakt",
+          "fr": "compact",
+          "it": "compatto",
+          "es": "compacto",
+          "pt": "compacto",
+          "ar": "نمو منخفض",
+          "hi": "घना छोटा",
+          "zh": "低矮紧凑",
+          "ja": "低く密",
+          "ko": "낮고 조밀"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Nerve Plant",
+      "description": "Fittonia albivenis is a tropical houseplant known for its striking veined leaves. It prefers bright indirect light and consistently moist soil. High humidity helps prevent leaf drop."
+    },
+    "pl": {
+      "common_name": "Fitonia",
+      "description": "Fittonia albivenis to tropikalna roślina doniczkowa o wyraźnie unerwionych liściach. Lubi jasne, rozproszone światło i stale wilgotne podłoże. Wysoka wilgotność powietrza jest bardzo ważna."
+    },
+    "de": {
+      "common_name": "Mosaikpflanze",
+      "description": "Fittonia albivenis ist eine tropische Zimmerpflanze mit dekorativen Blattadern. Sie benötigt helles, indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist vorteilhaft."
+    },
+    "fr": {
+      "common_name": "Plante mosaïque",
+      "description": "Fittonia albivenis est une plante tropicale appréciée pour ses feuilles nervurées. Elle aime une lumière indirecte et un sol constamment humide. Une forte humidité est recommandée."
+    },
+    "it": {
+      "common_name": "Fittonia",
+      "description": "Fittonia albivenis è una pianta tropicale ornamentale con foglie molto venate. Richiede luce indiretta e terreno sempre leggermente umido. L'umidità elevata favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Fitonia",
+      "description": "Fittonia albivenis es una planta tropical de interior con hojas muy decorativas. Prefiere luz indirecta brillante y sustrato húmedo. La humedad alta es esencial."
+    },
+    "pt": {
+      "common_name": "Fitônia",
+      "description": "Fittonia albivenis é uma planta tropical conhecida pelas nervuras das folhas. Gosta de luz indireta e solo sempre úmido. Alta umidade ajuda no seu desenvolvimento."
+    },
+    "ar": {
+      "common_name": "نبات العصب",
+      "description": "نبات فيتونيا ألبفينيس نبات استوائي يتميز بأوراقه المزخرفة. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. الرطوبة العالية ضرورية لصحة النبات."
+    },
+    "hi": {
+      "common_name": "नर्व प्लांट",
+      "description": "फिटोनिया एल्बिवेनिस एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ आकर्षक होती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक नमी लाभदायक होती है।"
+    },
+    "zh": {
+      "common_name": "网纹草",
+      "description": "Fittonia albivenis 是一种热带观叶植物，以叶脉明显著称。它喜欢明亮的散射光和湿润的土壤。高湿度环境有助于生长。"
+    },
+    "ja": {
+      "common_name": "フィットニア",
+      "description": "フィットニア・アルビウェニスは葉脈が美しい熱帯植物です。明るい間接光と湿った土を好みます。高い湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "피토니아",
+      "description": "피토니아 알비베니스는 잎맥이 돋보이는 열대 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다. 높은 습도가 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/fittonia/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/EP337",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a242"
+    ]
+  }
+}

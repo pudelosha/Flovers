@@ -1,0 +1,237 @@
+{
+  "external_id": "eryngium_planum",
+  "name": "Blue Eryngo",
+  "latin": "Eryngium planum",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "eryngium_planum.jpg",
+  "image_thumb": "eryngium_planum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Gleba przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Mało podlewania",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Poca acqua",
+          "es": "Riego bajo",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "تتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性あり",
+          "ko": "내한성 있음"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clump forming",
+          "pl": "Tworzy kępy",
+          "de": "Horstbildend",
+          "fr": "En touffe",
+          "it": "A cespi",
+          "es": "Forma matas",
+          "pt": "Forma touceiras",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Eryngo",
+      "description": "Eryngium planum is a hardy perennial native to Europe and Asia. It is valued for its blue, spiky flowers and drought tolerance. The plant thrives in full sun and poor, well-drained soils."
+    },
+    "pl": {
+      "common_name": "Mikołajek płaskolistny",
+      "description": "Eryngium planum to bylina pochodząca z Europy i Azji. Ceniona jest za niebieskie, kolczaste kwiaty i odporność na suszę. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Flachblättrige Mannstreu",
+      "description": "Eryngium planum ist eine winterharte Staude aus Europa und Asien. Sie zeichnet sich durch blaue, stachelige Blüten aus und ist trockenheitsverträglich. Bevorzugt volle Sonne und durchlässige Böden."
+    },
+    "fr": {
+      "common_name": "Panicaut à feuilles plates",
+      "description": "Eryngium planum est une plante vivace originaire d’Europe et d’Asie. Elle est appréciée pour ses fleurs bleues et sa tolérance à la sécheresse. Elle pousse mieux en plein soleil sur sol drainé."
+    },
+    "it": {
+      "common_name": "Eringio piatto",
+      "description": "Eryngium planum è una perenne rustica originaria di Europa e Asia. È apprezzata per i fiori blu spinosi e la resistenza alla siccità. Predilige pieno sole e terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Cardo azul",
+      "description": "Eryngium planum es una planta perenne originaria de Europa y Asia. Destaca por sus flores azules espinosas y su tolerancia a la sequía. Crece mejor a pleno sol y en suelos drenados."
+    },
+    "pt": {
+      "common_name": "Cardo-azul",
+      "description": "Eryngium planum é uma planta perene nativa da Europa e Ásia. É valorizada pelas flores azuis e pela resistência à seca. Desenvolve-se melhor em sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "إيرينجيوم أزرق",
+      "description": "نبات Eryngium planum معمر موطنه أوروبا وآسيا. يتميز بأزهاره الزرقاء الشوكية وتحمله للجفاف. يفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "ब्लू एरिंगियम",
+      "description": "Eryngium planum यूरोप और एशिया का बहुवर्षीय पौधा है। यह अपने नीले कांटेदार फूलों और सूखा सहनशीलता के लिए जाना जाता है। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "平叶刺芹",
+      "description": "Eryngium planum 原产于欧洲和亚洲，是一种多年生植物。它以蓝色刺状花序和耐旱性著称。适合全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "フラットリーフ・エリンギウム",
+      "description": "エリンギウム・プラヌムはヨーロッパとアジア原産の多年草です。青いとげ状の花と耐乾性が特徴です。日当たりと水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "블루 에린지움",
+      "description": "Eryngium planum은 유럽과 아시아 원산의 다년생 식물입니다. 푸른 가시 모양의 꽃과 건조에 강한 성질이 특징입니다. 햇빛이 풍부하고 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/eryngium/planum/details",
+      "https://plants.ces.ncsu.edu/plants/eryngium-planum/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a508"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "hydrangea_macrophylla",
+  "name": "Hydrangea",
+  "latin": "Hydrangea macrophylla",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hydrangea_macrophylla.jpg",
+  "image_thumb": "hydrangea_macrophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic rich soil",
+          "pl": "Kwaśna żyzna",
+          "de": "Saure Erde",
+          "fr": "Sol acide riche",
+          "it": "Terreno acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性の土",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة باستمرار",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–22°C",
+          "pl": "15–22°C",
+          "de": "15–22°C",
+          "fr": "15–22°C",
+          "it": "15–22°C",
+          "es": "15–22°C",
+          "pt": "15–22°C",
+          "ar": "15–22°م",
+          "hi": "15–22°C",
+          "zh": "15–22°C",
+          "ja": "15～22℃",
+          "ko": "15–22°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약간 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrub growth",
+          "pl": "Krzew",
+          "de": "Strauchwachstum",
+          "fr": "Port arbustif",
+          "it": "Crescita arbusto",
+          "es": "Crecimiento arbusto",
+          "pt": "Crescimento arbusto",
+          "ar": "نمو شجيري",
+          "hi": "झाड़ी रूप",
+          "zh": "灌木生长",
+          "ja": "低木状",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bigleaf hydrangea",
+      "description": "Hydrangea macrophylla is a flowering shrub known for its large, colorful blooms. Flower color varies with soil acidity. It prefers bright light and consistently moist soil."
+    },
+    "pl": {
+      "common_name": "Hortensja ogrodowa",
+      "description": "Hydrangea macrophylla to krzew o dużych, dekoracyjnych kwiatach. Barwa kwiatów zależy od pH gleby. Wymaga jasnego stanowiska i wilgotnej ziemi."
+    },
+    "de": {
+      "common_name": "Bauernhortensie",
+      "description": "Hydrangea macrophylla ist ein Zierstrauch mit großen Blüten. Die Blütenfarbe hängt vom pH-Wert des Bodens ab. Sie mag helles Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Hortensia à grandes feuilles",
+      "description": "Hydrangea macrophylla est un arbuste à fleurs décoratives. La couleur des fleurs dépend de l'acidité du sol. Elle aime la lumière vive et un sol humide."
+    },
+    "it": {
+      "common_name": "Ortensia",
+      "description": "Hydrangea macrophylla è un arbusto ornamentale con grandi fiori. Il colore varia in base al pH del terreno. Necessita luce intensa e terreno umido."
+    },
+    "es": {
+      "common_name": "Hortensia",
+      "description": "Hydrangea macrophylla es un arbusto ornamental de flores grandes. El color depende de la acidez del suelo. Prefiere luz brillante y riego regular."
+    },
+    "pt": {
+      "common_name": "Hortênsia",
+      "description": "Hydrangea macrophylla é um arbusto ornamental com flores grandes. A cor varia conforme o solo. Gosta de luz intensa e solo sempre úmido."
+    },
+    "ar": {
+      "common_name": "الكوبية",
+      "description": "Hydrangea macrophylla شجيرة مزهرة ذات أزهار كبيرة. يتغير لون الأزهار حسب حموضة التربة. تحتاج إلى ضوء جيد وتربة رطبة باستمرار."
+    },
+    "hi": {
+      "common_name": "हाइड्रेंजिया",
+      "description": "Hydrangea macrophylla एक सजावटी झाड़ी है जिसमें बड़े फूल होते हैं। फूलों का रंग मिट्टी की अम्लता पर निर्भर करता है। इसे उजली रोशनी और नम मिट्टी चाहिए।"
+    },
+    "zh": {
+      "common_name": "大叶绣球",
+      "description": "Hydrangea macrophylla 是一种观赏灌木，花朵硕大。花色取决于土壤酸碱度。喜欢明亮光照和湿润土壤。"
+    },
+    "ja": {
+      "common_name": "アジサイ",
+      "description": "Hydrangea macrophyllaは大きな花を持つ低木です。花色は土壌の酸性度で変わります。明るい場所と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "수국",
+      "description": "Hydrangea macrophylla는 큰 꽃이 특징인 관목입니다. 꽃 색은 토양 산도에 따라 달라집니다. 밝은 빛과 촉촉한 흙을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hydrangea/macrophylla",
+      "https://extension.umd.edu/resource/growing-hydrangeas",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c554"
+    ]
+  }
+}

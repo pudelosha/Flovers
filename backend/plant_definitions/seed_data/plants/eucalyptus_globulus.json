@@ -1,0 +1,237 @@
+{
+  "external_id": "eucalyptus_globulus",
+  "name": "Blue Gum Eucalyptus",
+  "latin": "Eucalyptus globulus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "eucalyptus_globulus.jpg",
+  "image_thumb": "eucalyptus_globulus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Suolo drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Irrigazione moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म जलवायु",
+          "zh": "温暖气候",
+          "ja": "暖かい気候",
+          "ko": "따뜻한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very fast growth",
+          "pl": "Bardzo szybki wzrost",
+          "de": "Sehr schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "बहुत तेज वृद्धि",
+          "zh": "生长很快",
+          "ja": "成長が速い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Gum Eucalyptus",
+      "description": "Eucalyptus globulus is a tall evergreen tree native to Australia. It is widely grown outdoors for timber and essential oil production. The plant requires full sun and ample space to grow."
+    },
+    "pl": {
+      "common_name": "Eukaliptus gałkowy",
+      "description": "Eucalyptus globulus to wysoka, zimozielona roślina pochodząca z Australii. Uprawiana jest głównie na zewnątrz ze względu na szybki wzrost. Wymaga pełnego słońca i dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Blauer Eukalyptus",
+      "description": "Eucalyptus globulus ist ein hoher immergrüner Baum aus Australien. Er wird im Freien kultiviert und wächst sehr schnell. Benötigt volle Sonne und durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Eucalyptus globuleux",
+      "description": "Eucalyptus globulus est un grand arbre persistant originaire d’Australie. Il est cultivé en extérieur pour son bois et ses huiles. Il a besoin de plein soleil et d’un sol drainé."
+    },
+    "it": {
+      "common_name": "Eucalipto globulo",
+      "description": "Eucalyptus globulus è un grande albero sempreverde originario dell’Australia. Cresce rapidamente all’aperto e necessita di molto sole. Richiede terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Eucalipto azul",
+      "description": "Eucalyptus globulus es un árbol perenne originario de Australia. Se cultiva en exteriores por su rápido crecimiento. Necesita pleno sol y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Eucalipto-azul",
+      "description": "Eucalyptus globulus é uma árvore perene nativa da Austrália. É cultivada ao ar livre e cresce rapidamente. Prefere sol pleno e solo drenado."
+    },
+    "ar": {
+      "common_name": "الأوكالبتوس الأزرق",
+      "description": "Eucalyptus globulus شجرة دائمة الخضرة موطنها أستراليا. تُزرع في الهواء الطلق بسبب حجمها الكبير. تحتاج إلى شمس كاملة وتربة جيدة الصرف."
+    },
+    "hi": {
+      "common_name": "ब्लू गम यूकेलिप्टस",
+      "description": "Eucalyptus globulus ऑस्ट्रेलिया का एक सदाबहार पेड़ है। यह बाहर उगाया जाता है और तेजी से बढ़ता है। इसे भरपूर धूप और अच्छी जल निकासी वाली मिट्टी चाहिए।"
+    },
+    "zh": {
+      "common_name": "蓝桉",
+      "description": "Eucalyptus globulus 原产于澳大利亚，是一种高大的常绿乔木。主要在户外种植，生长迅速。需要充足阳光和良好排水的土壤。"
+    },
+    "ja": {
+      "common_name": "ブルーガム",
+      "description": "Eucalyptus globulus はオーストラリア原産の常緑高木です。屋外で育てられ、成長が非常に早いです。十分な日光が必要です。"
+    },
+    "ko": {
+      "common_name": "블루검 유칼립투스",
+      "description": "Eucalyptus globulus는 호주 원산의 상록수입니다. 주로 야외에서 재배되며 성장 속도가 빠릅니다. 강한 햇빛과 배수 좋은 토양이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/eucalyptus-globulus",
+      "https://www.britannica.com/plant/blue-gum-eucalyptus",
+      "https://www.rhs.org.uk/plants/6974/eucalyptus-globulus/details"
+    ]
+  }
+}

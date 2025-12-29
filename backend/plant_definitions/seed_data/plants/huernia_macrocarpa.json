@@ -1,0 +1,239 @@
+{
+  "external_id": "huernia_macrocarpa",
+  "name": "Huernia macrocarpa",
+  "latin": "Huernia macrocarpa",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "huernia_macrocarpa.jpg",
+  "image_thumb": "huernia_macrocarpa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright light",
+          "pl": "jasne światło",
+          "de": "helles Licht",
+          "fr": "lumière vive",
+          "it": "luce intensa",
+          "es": "luz brillante",
+          "pt": "luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ प्रकाश",
+          "zh": "明亮光线",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining",
+          "pl": "drenażowa",
+          "de": "gut drainierend",
+          "fr": "bien drainant",
+          "it": "ben drenante",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी निस्सरण",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "sparse",
+          "pl": "rzadkie",
+          "de": "spärlich",
+          "fr": "rare",
+          "it": "scarso",
+          "es": "escaso",
+          "pt": "esparso",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "稀少",
+          "ja": "まばら",
+          "ko": "드문"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "cálido",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "温かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczny",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossico",
+          "es": "no tóxico",
+          "pt": "não tóxico",
+          "ar": "غير سام",
+          "hi": "अ-विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "compact",
+          "pl": "kompaktowy",
+          "de": "kompakt",
+          "fr": "compact",
+          "it": "compatto",
+          "es": "compacto",
+          "pt": "compacto",
+          "ar": "مضغوط",
+          "hi": "संकरा",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Starfish Flower",
+      "description": "Huernia macrocarpa is a succulent from Africa with fleshy stems and star-shaped blooms. It prefers bright light and minimal watering with well-draining soil. Allow the substrate to dry between waterings to avoid rot."
+    },
+    "pl": {
+      "common_name": "Kwiat Rozgwiazdy",
+      "description": "Huernia macrocarpa to sukulent z Afryki o mięsistych łodygach i gwiaździstych kwiatach. Preferuje jasne światło i umiarkowane podlewanie w dobrze przepuszczalnej glebie. Pozwól ziemi wyschnąć między podlewaniami."
+    },
+    "de": {
+      "common_name": "Seesternblume",
+      "description": "Huernia macrocarpa ist eine sukkulente afrikanische Pflanze mit fleischigen Stängeln und sternförmigen Blüten. Sie mag helles Licht und wenig Wasser in gut drainierter Erde. Lasse den Boden zwischen dem Gießen austrocknen."
+    },
+    "fr": {
+      "common_name": "Fleur Étoile",
+      "description": "Huernia macrocarpa est une succulente africaine aux tiges charnues et fleurs étoilées. Elle préfère une lumière vive et peu d'eau dans un sol bien drainant. Laisser le substrat sécher entre les arrosages."
+    },
+    "it": {
+      "common_name": "Fiore Stella",
+      "description": "Huernia macrocarpa è una succulenta africana con fusti carnosi e fiori a stella. Predilige luce intensa e poca acqua in terreno ben drenante. Lasciare asciugare il terreno tra un'annaffiatura e l'altra."
+    },
+    "es": {
+      "common_name": "Flor Estrella",
+      "description": "Huernia macrocarpa es una suculenta africana con tallos carnosos y flores estrelladas. Prefiere luz brillante y riego escaso con suelo bien drenado. Dejar secar el sustrato entre riegos."
+    },
+    "pt": {
+      "common_name": "Flor Estrela",
+      "description": "Huernia macrocarpa é uma suculenta africana com caules carnudos e flores em estrela. Prefere luz forte e pouca água em solo bem drenado. Deixe o substrato secar entre regas."
+    },
+    "ar": {
+      "common_name": "زهرة النجمة",
+      "description": "Huernia macrocarpa هو نبات عصاري أفريقي بأزهار على شكل نجمة وسيقان لحمية. يفضل ضوءًا ساطعًا وقليل الماء في تربة جيدة التصريف. اترك التربة تجف بين الري."
+    },
+    "hi": {
+      "common_name": "स्टारफिश फूल",
+      "description": "Huernia macrocarpa एक अफ़्रीकी सुकुलेंट है जिसमें मांसल तने और तारे जैसे फूल होते हैं। यह अच्छी नाली वाली मिट्टी में तेज़ रोशनी और कम पानी पसंद करता है। पानी के बीच मिट्टी को सूखने दें।"
+    },
+    "zh": {
+      "common_name": "海星花",
+      "description": "Huernia macrocarpa 是一种来自非洲的肉质植物，具有星形花朵和肉质茎。它喜欢明亮光线和少量浇水，并需良好排水土壤。在浇水之间让基质干燥。"
+    },
+    "ja": {
+      "common_name": "ヒュエルニア・マクロカルパ",
+      "description": "Huernia macrocarpa はアフリカ原産の多肉植物で肉厚の茎と星形の花を持ちます。排水の良い土で明るい光と控えめな水を好みます。水やりの間に土を乾燥させます。"
+    },
+    "ko": {
+      "common_name": "후에르니아 마크로카르파",
+      "description": "Huernia macrocarpa 는 아프리카 원산 다육식물로 육질 줄기와 별 모양 꽃이 있습니다. 배수가 좋은 흙에서 밝은 빛과 적은 물을 선호합니다. 물 주기 사이에 흙을 말리세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.forwardplant.com/plant-info/Huernia_macrocarpa/",
+      "https://worldofsucculents.com/how-to-grow-and-care-for-huernia/",
+      "https://plantsintropicalspaces.com/huernia-macrocarpa-how-to-care-for-and-propagate-it/",
+      "https://en.wikipedia.org/wiki/Huernia_macrocarpa"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "hoya_kerrii",
+  "name": "Hoya Kerrii",
+  "latin": "Hoya kerrii",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 18,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_kerrii.jpg",
+  "image_thumb": "hoya_kerrii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Very well draining",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Allow to dry",
+          "pl": "Pozwól wyschnąć",
+          "de": "Antrocknen lassen",
+          "fr": "Laisser sécher",
+          "it": "Lasciare asciugare",
+          "es": "Dejar secar",
+          "pt": "Deixar secar",
+          "ar": "اتركها تجف",
+          "hi": "सूखने दें",
+          "zh": "干后再浇",
+          "ja": "乾いてから給水",
+          "ko": "건조 후 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهلة العناية",
+          "hi": "आसान देखभाल",
+          "zh": "易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average home air",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing vine",
+          "pl": "Wolny pnącz",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweetheart Hoya",
+      "description": "Hoya kerrii is a slow-growing epiphytic vine with thick, heart-shaped leaves. It prefers bright indirect light and infrequent watering once the soil dries. The plant is commonly grown indoors and is easy to maintain."
+    },
+    "pl": {
+      "common_name": "Hoya sercowata",
+      "description": "Hoya kerrii to wolno rosnące pnącze epifityczne o grubych, sercowatych liściach. Najlepiej rośnie w jasnym, rozproszonym świetle i wymaga rzadkiego podlewania po wyschnięciu podłoża. Jest łatwa w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Herzblatt-Hoya",
+      "description": "Hoya kerrii ist eine langsam wachsende, epiphytische Kletterpflanze mit herzförmigen Blättern. Sie bevorzugt helles, indirektes Licht und sparsames Gießen. Die Pflanze ist gut für die Zimmerkultur geeignet."
+    },
+    "fr": {
+      "common_name": "Hoya cœur",
+      "description": "Hoya kerrii est une plante grimpante épiphyte à croissance lente avec des feuilles en forme de cœur. Elle aime une lumière vive indirecte et un arrosage modéré après séchage du substrat. Elle est facile à cultiver en intérieur."
+    },
+    "it": {
+      "common_name": "Hoya a cuore",
+      "description": "Hoya kerrii è una pianta epifita a crescita lenta con foglie a forma di cuore. Predilige luce intensa indiretta e annaffiature distanziate. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Hoya corazón",
+      "description": "Hoya kerrii es una enredadera epífita de crecimiento lento con hojas en forma de corazón. Prefiere luz indirecta brillante y riego solo cuando el sustrato se seca. Es una planta de interior fácil de cuidar."
+    },
+    "pt": {
+      "common_name": "Hoya coração",
+      "description": "Hoya kerrii é uma trepadeira epífita de crescimento lento com folhas em forma de coração. Prefere luz indireta brilhante e regas espaçadas. É adequada para cultivo em interiores."
+    },
+    "ar": {
+      "common_name": "هويا القلب",
+      "description": "هويا كيري نبات متسلق بطيء النمو بأوراق سميكة على شكل قلب. يفضل الضوء الساطع غير المباشر والري بعد جفاف التربة. مناسب للزراعة داخل المنازل."
+    },
+    "hi": {
+      "common_name": "हार्ट होया",
+      "description": "होया केरी एक धीमी गति से बढ़ने वाली बेल है जिसकी पत्तियाँ दिल के आकार की होती हैं। इसे तेज अप्रत्यक्ष रोशनी और सूखने पर पानी देना पसंद है। यह एक आसान इनडोर पौधा है।"
+    },
+    "zh": {
+      "common_name": "心叶球兰",
+      "description": "心叶球兰是一种生长缓慢的附生藤本植物，叶片呈心形。它喜欢明亮的散射光，土壤干燥后再浇水。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "ハートホヤ",
+      "description": "ホヤ・カーリーは心形の葉を持つ成長の遅い着生植物です。明るい間接光と乾いてからの水やりを好みます。室内向きで育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "하트 호야",
+      "description": "호야 케리는 하트 모양의 두꺼운 잎을 가진 느리게 자라는 착생 식물입니다. 밝은 간접광과 흙이 마른 후 물 주기를 선호합니다. 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9106/hoya-kerrii/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b768",
+      "https://extension.umn.edu/houseplants/hoya"
+    ]
+  }
+}

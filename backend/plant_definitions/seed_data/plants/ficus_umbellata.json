@@ -1,0 +1,238 @@
+{
+  "external_id": "ficus_umbellata",
+  "name": "Ficus Umbellata",
+  "latin": "Ficus umbellata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_umbellata.jpg",
+  "image_thumb": "ficus_umbellata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny–średni",
+          "de": "Langsam–mittel",
+          "fr": "Lente à moyen",
+          "it": "Lenta-media",
+          "es": "Lento-medio",
+          "pt": "Lento-médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम",
+          "zh": "缓慢到中等",
+          "ja": "緩やか",
+          "ko": "느림~중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Umbrella Fig",
+      "description": "Ficus umbellata is a tropical fig with large, heart-shaped leaves. It grows naturally in West Africa and adapts well to indoor conditions with stable warmth and light."
+    },
+    "pl": {
+      "common_name": "Figowiec parasolowy",
+      "description": "Ficus umbellata to tropikalny figowiec o dużych, sercowatych liściach. Pochodzi z Afryki Zachodniej i dobrze rośnie w warunkach domowych."
+    },
+    "de": {
+      "common_name": "Schirm-Feige",
+      "description": "Ficus umbellata ist eine tropische Feige mit großen, herzförmigen Blättern. Sie stammt aus Westafrika und eignet sich für helle Innenräume."
+    },
+    "fr": {
+      "common_name": "Figuier parapluie",
+      "description": "Ficus umbellata est un figuier tropical aux grandes feuilles en forme de cœur. Originaire d’Afrique de l’Ouest, il se cultive bien en intérieur lumineux."
+    },
+    "it": {
+      "common_name": "Fico ombrello",
+      "description": "Il Ficus umbellata è un fico tropicale con grandi foglie a forma di cuore. Proviene dall’Africa occidentale e si adatta agli ambienti interni."
+    },
+    "es": {
+      "common_name": "Higuera sombrilla",
+      "description": "Ficus umbellata es una higuera tropical de hojas grandes y acorazonadas. Es originaria de África occidental y se cultiva como planta de interior."
+    },
+    "pt": {
+      "common_name": "Figueira-umbela",
+      "description": "Ficus umbellata é uma figueira tropical com folhas grandes em forma de coração. É nativa da África Ocidental e adequada para interiores."
+    },
+    "ar": {
+      "common_name": "فيكس المظلة",
+      "description": "فيكس أومبيلياتا نبات استوائي بأوراق كبيرة على شكل قلب. موطنه غرب أفريقيا ويناسب الزراعة الداخلية."
+    },
+    "hi": {
+      "common_name": "अम्ब्रेला फाइकस",
+      "description": "फिकस अम्बेलाटा एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बड़ी और दिल के आकार की होती हैं। यह पश्चिमी अफ्रीका का मूल निवासी है।"
+    },
+    "zh": {
+      "common_name": "伞叶榕",
+      "description": "伞叶榕是一种热带榕树，具有大型心形叶片。原产于西非，适合室内明亮环境。"
+    },
+    "ja": {
+      "common_name": "アンブレラフィカス",
+      "description": "フィカス・ウンベラータは大きなハート形の葉を持つ熱帯性のイチジクです。西アフリカ原産で室内向きです。"
+    },
+    "ko": {
+      "common_name": "엄벨라타 고무나무",
+      "description": "피쿠스 움벨라타는 큰 하트 모양 잎을 가진 열대 식물입니다. 서아프리카 원산으로 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/ficus-umbellata",
+      "https://www.rhs.org.uk/plants/ficus",
+      "https://www.gbif.org/species/2984893"
+    ]
+  }
+}

@@ -1,5 +1,14 @@
 ﻿{
   "createPlant": {
+    "step01": {
+      "title": "Select a plant",
+      "subtitle": "You can search our full plant library, pick from the popular list, or scan a plant using your camera. You can also skip this step, but selecting a plant lets us automatically suggest care tasks like watering for you.",
+      "scanButton": "Scan Plant",
+      "searchPlaceholder": "Search plant",
+      "popularPlants": "Popular plants",
+      "errorSearch": "Failed to load plant list.",
+      "errorPopular": "Failed to load popular plants."
+    },
     "step02": {
       "title": "Plant profile",
       "preferences": "Preferences",

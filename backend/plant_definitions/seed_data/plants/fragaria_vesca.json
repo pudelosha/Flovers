@@ -1,0 +1,237 @@
+{
+  "external_id": "fragaria_vesca",
+  "name": "Wild Strawberry",
+  "latin": "Fragaria vesca",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 21,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "fragaria_vesca.jpg",
+  "image_thumb": "fragaria_vesca.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährreicher Boden",
+          "fr": "Sol riche",
+          "it": "Terreno fertile",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowana wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humidité régulière",
+          "it": "Umidità costante",
+          "es": "Humedad regular",
+          "pt": "Umidade regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "नियमित नमी",
+          "zh": "均匀湿润",
+          "ja": "適度な水分",
+          "ko": "고른 수분"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low spreading",
+          "pl": "Niska, płożąca",
+          "de": "Niedrig kriechend",
+          "fr": "Bas étalé",
+          "it": "Bassa espansa",
+          "es": "Bajo rastrero",
+          "pt": "Baixo rasteiro",
+          "ar": "منخفض ممتد",
+          "hi": "नीची फैलती",
+          "zh": "低矮蔓生",
+          "ja": "低く広がる",
+          "ko": "낮게 퍼짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wild Strawberry",
+      "description": "Fragaria vesca is a low-growing perennial native to Europe and parts of Asia. It produces small, aromatic red fruits and prefers sunny locations with fertile soil."
+    },
+    "pl": {
+      "common_name": "Poziomka pospolita",
+      "description": "Fragaria vesca to niska bylina pochodząca z Europy i Azji. Wytwarza małe, aromatyczne owoce i najlepiej rośnie w słońcu oraz żyznej glebie."
+    },
+    "de": {
+      "common_name": "Walderdbeere",
+      "description": "Fragaria vesca ist eine niedrig wachsende Staude aus Europa und Asien. Sie bildet kleine, aromatische Früchte und bevorzugt sonnige, nährstoffreiche Böden."
+    },
+    "fr": {
+      "common_name": "Fraisier des bois",
+      "description": "Fragaria vesca est une plante vivace basse originaire d’Europe et d’Asie. Elle produit de petits fruits parfumés et aime les sols riches au soleil."
+    },
+    "it": {
+      "common_name": "Fragolina di bosco",
+      "description": "Fragaria vesca è una pianta perenne bassa originaria dell’Europa e dell’Asia. Produce piccoli frutti aromatici e cresce bene in pieno sole con terreno fertile."
+    },
+    "es": {
+      "common_name": "Fresa silvestre",
+      "description": "Fragaria vesca es una planta perenne baja originaria de Europa y Asia. Da frutos pequeños y aromáticos y prefiere suelos fértiles y soleados."
+    },
+    "pt": {
+      "common_name": "Morango-silvestre",
+      "description": "Fragaria vesca é uma planta perene de baixo crescimento nativa da Europa e Ásia. Produz frutos pequenos e aromáticos e prefere sol pleno e solo fértil."
+    },
+    "ar": {
+      "common_name": "فراولة برية",
+      "description": "Fragaria vesca نبات معمر منخفض النمو موطنه أوروبا وأجزاء من آسيا. ينتج ثمارًا صغيرة عطرية ويفضل التربة الخصبة والمواقع المشمسة."
+    },
+    "hi": {
+      "common_name": "जंगली स्ट्रॉबेरी",
+      "description": "Fragaria vesca यूरोप और एशिया की मूल निवासी एक छोटी बहुवर्षीय पौधा है। यह छोटे सुगंधित फल देता है और धूप व उपजाऊ मिट्टी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "林地草莓",
+      "description": "Fragaria vesca 是原产于欧洲和亚洲的低矮多年生植物。它结出小而芳香的红色果实，适合在阳光充足和肥沃土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ノウゴウイチゴ",
+      "description": "Fragaria vesca はヨーロッパやアジア原産の多年草です。小さく香りの良い果実をつけ、日当たりと肥沃な土を好みます。"
+    },
+    "ko": {
+      "common_name": "야생딸기",
+      "description": "Fragaria vesca는 유럽과 아시아가 원산인 낮게 자라는 다년생 식물입니다. 향기로운 작은 열매를 맺으며 햇빛과 비옥한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/fragaria/vesca/details",
+      "https://plants.ces.ncsu.edu/plants/fragaria-vesca/",
+      "https://www.kew.org/plants/fragaria-vesca"
+    ]
+  }
+}

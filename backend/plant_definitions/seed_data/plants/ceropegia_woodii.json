@@ -1,0 +1,237 @@
+{
+  "external_id": "ceropegia_woodii",
+  "name": "String of Hearts",
+  "latin": "Ceropegia woodii",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ceropegia_woodii.jpg",
+  "image_thumb": "ceropegia_woodii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast-draining cactus",
+          "pl": "Lekka ziemia kakt.",
+          "de": "Kakteenerde, drain",
+          "fr": "Substrat cactus drain",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Substrato cactos",
+          "ar": "تربة صبار جيدة الصرف",
+          "hi": "कैक्टस मिट्टी, जलनिकास",
+          "zh": "排水好的仙人掌土",
+          "ja": "水はけ良い多肉土",
+          "ko": "배수 좋은 다육토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Dry out between",
+          "pl": "Podlej gdy przeschnie",
+          "de": "Gießen nach Trocknen",
+          "fr": "Arroser après séchage",
+          "it": "Annaffia a secco",
+          "es": "Riega tras secar",
+          "pt": "Regue após secar",
+          "ar": "اسقِ بعد جفاف التربة",
+          "hi": "मिट्टी सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "흙 마른 뒤 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C ideal",
+          "pl": "Najlepiej 18–24°C",
+          "de": "Ideal 18–24°C",
+          "fr": "Idéal 18–24°C",
+          "it": "Ideale 18–24°C",
+          "es": "Ideal 18–24°C",
+          "pt": "Ideal 18–24°C",
+          "ar": "مثالي 18–24°م",
+          "hi": "18–24°C उपयुक्त",
+          "zh": "适宜18–24°C",
+          "ja": "適温18–24°C",
+          "ko": "적정 18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor",
+          "pl": "Zwykła domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य घरेलू नमी",
+          "zh": "普通室内湿度",
+          "ja": "普通の室内湿度",
+          "ko": "보통 실내 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Ungiftig für Tiere",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica animali",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू हेतु गैर-विषाक्त",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing, slow",
+          "pl": "Zwieszająca, wolna",
+          "de": "Hängend, langsam",
+          "fr": "Retombant, lent",
+          "it": "Ricadente, lenta",
+          "es": "Colgante, lenta",
+          "pt": "Pendente, lenta",
+          "ar": "متدلٍّ وبطيء",
+          "hi": "लटकने वाली, धीमी",
+          "zh": "垂吊、缓慢",
+          "ja": "垂れ下がり・遅い",
+          "ko": "늘어짐·느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "String of Hearts",
+      "description": "A trailing, semi-succulent vine from southern Africa with small heart-shaped leaves. Give bright indirect light and a fast-draining cactus mix, and water only after the potting mix has nearly dried. It is reported as non-toxic to cats and dogs."
+    },
+    "pl": {
+      "common_name": "Sznur serc",
+      "description": "Zwieszająca się, półsukulenta z południowej Afryki o sercowatych liściach. Lubi jasne, rozproszone światło i przepuszczalne podłoże do kaktusów; podlewaj dopiero, gdy ziemia prawie całkiem przeschnie. Jest uznawana za nietoksyczną dla kotów i psów."
+    },
+    "de": {
+      "common_name": "Herzkette",
+      "description": "Eine hängende, halb-sukkulente Pflanze aus dem südlichen Afrika mit herzförmigen Blättern. Stelle sie hell, aber ohne harte Mittagssonne, in durchlässige Kakteenerde und gieße erst, wenn das Substrat fast trocken ist. Sie gilt als ungiftig für Katzen und Hunde."
+    },
+    "fr": {
+      "common_name": "Chaîne de cœurs",
+      "description": "Plante retombante semi-succulente d’Afrique australe aux petites feuilles en forme de cœur. Offrez une lumière vive indirecte et un substrat type cactus très drainant, puis arrosez quand le mélange est presque sec. Elle est indiquée comme non toxique pour les chats et les chiens."
+    },
+    "it": {
+      "common_name": "Catena di cuori",
+      "description": "Pianta ricadente semi-succulenta originaria dell’Africa australe con foglie a cuore. Preferisce luce intensa ma indiretta e un terriccio per cactus ben drenante; annaffia solo quando il substrato è quasi asciutto. È riportata come non tossica per cani e gatti."
+    },
+    "es": {
+      "common_name": "Cadena de corazones",
+      "description": "Enredadera colgante semi-suculenta del sur de África con hojas pequeñas en forma de corazón. Necesita luz brillante indirecta y sustrato para cactus muy drenante; riega cuando el sustrato esté casi seco. Se considera no tóxica para gatos y perros."
+    },
+    "pt": {
+      "common_name": "Coração-em-corrente",
+      "description": "Trepadeira pendente semi-suculenta da África Austral com folhas em forma de coração. Prefere luz brilhante indireta e substrato para cactos bem drenante; regue apenas quando o substrato estiver quase seco. É relatada como não tóxica para cães e gatos."
+    },
+    "ar": {
+      "common_name": "سلسلة القلوب",
+      "description": "نبات متدلٍّ شبه عصاري من جنوب أفريقيا بأوراق صغيرة على شكل قلب. يحتاج إلى ضوء ساطع غير مباشر وتربة صبار جيدة التصريف، ويُسقى فقط بعد أن تجف التربة تقريبًا. يُذكر أنه غير سام للقطط والكلاب."
+    },
+    "hi": {
+      "common_name": "स्ट्रिंग ऑफ हार्ट्स",
+      "description": "दक्षिणी अफ्रीका की लटकने वाली अर्ध-रसीली बेल, जिसकी पत्तियाँ दिल के आकार की होती हैं। तेज़ अप्रत्यक्ष रोशनी और अच्छी जलनिकासी वाली कैक्टस मिट्टी दें, और मिट्टी लगभग सूखने पर ही पानी दें। इसे बिल्लियों और कुत्तों के लिए गैर-विषाक्त बताया जाता है।"
+    },
+    "zh": {
+      "common_name": "爱之蔓",
+      "description": "原产南部非洲的垂吊型半多肉藤本，叶片呈心形。喜明亮散射光与排水良好的仙人掌土，盆土几乎干透后再浇水。资料称其对猫和狗无毒。"
+    },
+    "ja": {
+      "common_name": "ハートカズラ",
+      "description": "南部アフリカ原産の半多肉で、ハート形の葉をつける垂れ下がるツル植物です。明るい間接光と水はけの良い多肉・サボテン用土で育て、用土がほぼ乾いてから水やりします。犬猫に無毒とされています。"
+    },
+    "ko": {
+      "common_name": "하트덩굴",
+      "description": "남부 아프리카 원산의 반다육성 늘어지는 덩굴로, 하트 모양 잎이 특징입니다. 밝은 간접광과 배수 좋은 다육/선인장 흙을 사용하고, 흙이 거의 마른 뒤에 물을 주세요. 고양이와 개에 무독성으로 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhsplants.co.uk/plants/_/ceropegia-linearis-subsp-woodii/classid.2000034471/",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-and-care-for-a-string-of-hearts-house-plant/",
+      "https://www.thespruce.com/growing-string-of-heart-plants-5086828",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:95848-1"
+    ]
+  }
+}

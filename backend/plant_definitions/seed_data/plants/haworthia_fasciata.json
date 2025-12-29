@@ -1,0 +1,235 @@
+{
+  "external_id": "haworthia_fasciata",
+  "name": "Zebra Haworthia",
+  "latin": "Haworthia fasciata",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "haworthia_fasciata.jpg",
+  "image_thumb": "haworthia_fasciata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrig",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Zebra Haworthia",
+      "description": "Haworthia fasciata is a small succulent native to South Africa. It forms rosettes of dark green leaves with white bands. It is well suited to indoor growing with minimal care."
+    },
+    "pl": {
+      "common_name": "Haworcja pasiasta",
+      "description": "Haworthia fasciata to niewielki sukulent z Afryki Południowej. Tworzy rozety ciemnozielonych liści z białymi paskami. Dobrze rośnie w warunkach domowych przy małej pielęgnacji."
+    },
+    "de": {
+      "common_name": "Zebra-Haworthie",
+      "description": "Haworthia fasciata ist eine kleine Sukkulente aus Südafrika. Sie bildet Rosetten mit weißen Streifen. Sie eignet sich gut als pflegeleichte Zimmerpflanze."
+    },
+    "fr": {
+      "common_name": "Haworthia zébrée",
+      "description": "Haworthia fasciata est une petite plante succulente d’Afrique du Sud. Elle forme des rosettes striées de blanc. Elle est facile à cultiver en intérieur."
+    },
+    "it": {
+      "common_name": "Haworthia zebra",
+      "description": "Haworthia fasciata è una succulenta originaria del Sudafrica. Presenta rosette con strisce bianche. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Haworthia cebra",
+      "description": "Haworthia fasciata es una suculenta pequeña de Sudáfrica. Forma rosetas con bandas blancas. Es ideal para interiores con pocos cuidados."
+    },
+    "pt": {
+      "common_name": "Haworthia zebra",
+      "description": "Haworthia fasciata é uma suculenta originária da África do Sul. Possui folhas com listras brancas. É fácil de cuidar em ambientes internos."
+    },
+    "ar": {
+      "common_name": "هاوورثيا مخططة",
+      "description": "هاوورثيا فاسيّاتا نبات عصاري صغير من جنوب أفريقيا. يتميز بأوراق مخططة باللون الأبيض. مناسب للزراعة داخل المنازل."
+    },
+    "hi": {
+      "common_name": "ज़ेब्रा हॉवर्थिया",
+      "description": "हॉवर्थिया फास्सियाटा दक्षिण अफ्रीका का एक छोटा सक्युलेंट है। इसकी पत्तियों पर सफेद धारियां होती हैं। यह घर के अंदर आसानी से उगता है।"
+    },
+    "zh": {
+      "common_name": "条纹十二卷",
+      "description": "Haworthia fasciata 原产于南非，是一种小型多肉植物。叶片有明显白色条纹。适合室内低维护养护。"
+    },
+    "ja": {
+      "common_name": "シマ十二巻",
+      "description": "ハオルチア・ファスキアータは南アフリカ原産の多肉植物です。白い縞模様の葉を持ちます。室内で育てやすい植物です。"
+    },
+    "ko": {
+      "common_name": "제브라 하월시아",
+      "description": "하월시아 파시아타는 남아프리카 원산의 소형 다육식물입니다. 흰 줄무늬 잎이 특징입니다. 실내에서 키우기 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/haworthia",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a437"
+    ]
+  }
+}

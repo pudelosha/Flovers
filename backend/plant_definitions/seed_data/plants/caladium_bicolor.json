@@ -1,0 +1,240 @@
+{
+  "external_id": "caladium_bicolor",
+  "name": "Caladium",
+  "latin": "Caladium bicolor",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "caladium_bicolor.jpg",
+  "image_thumb": "caladium_bicolor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-draining",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Nährstoffreich locker",
+          "fr": "Riche drainant",
+          "it": "Ricco drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico e drenante",
+          "ar": "غنية جيدة الصرف",
+          "hi": "उपजाऊ जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥 배수좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol légèrement humide",
+          "it": "Terriccio umido",
+          "es": "Sustrato húmedo",
+          "pt": "Substrato úmido",
+          "ar": "حافظ على رطوبة",
+          "hi": "हल्की नमी रखें",
+          "zh": "保持微湿",
+          "ja": "やや湿らせる",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczne dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossico per animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico p/ animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतुओं के लिए विष",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tuberous dormancy",
+          "pl": "Bulwiaste spoczynek",
+          "de": "Knolle Ruhephase",
+          "fr": "Tubéreux dormance",
+          "it": "Tuberoso dormiente",
+          "es": "Tuberosa dormancia",
+          "pt": "Tuberosa dormência",
+          "ar": "درنات وسكون",
+          "hi": "कंदीय सुप्त",
+          "zh": "块茎 季节休眠",
+          "ja": "球根 季節休眠",
+          "ko": "구근 계절휴면"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fancy-leaf caladium",
+      "description": "A tuberous tropical grown for colorful, heart-shaped leaves and best kept in bright, indirect light. Keep the potting mix evenly moist while it is actively growing, then reduce or stop watering as it goes dormant. It prefers warm temperatures and higher humidity, and it is toxic if chewed or eaten."
+    },
+    "pl": {
+      "common_name": "Kaladium dwubarwne",
+      "description": "Tropikalna roślina bulwiasta uprawiana dla barwnych, sercowatych liści; najlepiej rośnie w jasnym, rozproszonym świetle. W okresie wzrostu utrzymuj podłoże równomiernie wilgotne, a gdy zamiera i przechodzi spoczynek, ogranicz lub wstrzymaj podlewanie. Lubi ciepło i wyższą wilgotność powietrza oraz jest toksyczna po pogryzieniu lub zjedzeniu."
+    },
+    "de": {
+      "common_name": "Buntwurz",
+      "description": "Eine tropische Knollenpflanze mit auffällig gemusterten, herzförmigen Blättern; am besten bei hellem, indirektem Licht. Während des Wachstums das Substrat gleichmäßig feucht halten und bei beginnender Ruhephase das Gießen stark reduzieren oder einstellen. Sie mag warme Temperaturen und höhere Luftfeuchte und ist giftig bei Verzehr."
+    },
+    "fr": {
+      "common_name": "Cœur de Jésus",
+      "description": "Plante tropicale à tubercule, cultivée pour ses grandes feuilles en forme de cœur, à placer en lumière vive indirecte. Gardez le substrat régulièrement humide en période de croissance, puis réduisez ou stoppez l’arrosage lors de la dormance. Elle apprécie la chaleur et une humidité élevée et elle est toxique en cas d’ingestion."
+    },
+    "it": {
+      "common_name": "Cuore di Gesù",
+      "description": "Pianta tropicale tuberosa coltivata per foglie grandi e colorate; preferisce luce intensa ma indiretta. Durante la crescita mantieni il terriccio uniformemente umido e riduci o sospendi l’acqua quando entra in dormienza. Ama temperature calde e buona umidità ed è tossica se ingerita."
+    },
+    "es": {
+      "common_name": "Caladio",
+      "description": "Planta tropical tuberosa apreciada por sus hojas grandes y coloridas; va mejor con luz brillante e indirecta. Mantén el sustrato uniformemente húmedo mientras crece y reduce o detén el riego cuando entre en dormancia. Prefiere calor y humedad alta, y es tóxica si se mastica o ingiere."
+    },
+    "pt": {
+      "common_name": "Caládio",
+      "description": "Planta tropical tuberosa cultivada pelas folhas grandes e coloridas; prefere luz forte indireta. Mantenha o substrato uniformemente úmido durante o crescimento e reduza ou interrompa a rega quando entrar em dormência. Gosta de calor e umidade alta e é tóxica se ingerida."
+    },
+    "ar": {
+      "common_name": "كالاديوم",
+      "description": "نبات استوائي درني يُزرع لأوراقه الكبيرة الملونة ويُفضّل الضوء الساطع غير المباشر. أبقِ التربة رطبة باعتدال أثناء النمو النشط ثم خفف أو أوقف الري عند الدخول في السكون. يحتاج لدفء ورطوبة أعلى وهو سام عند المضغ أو الابتلاع."
+    },
+    "hi": {
+      "common_name": "कैलाडियम",
+      "description": "यह एक कंदीय उष्णकटिबंधीय पौधा है जिसकी रंगीन, दिल-आकार पत्तियाँ होती हैं और इसे तेज़ अप्रत्यक्ष रोशनी में रखना बेहतर है। सक्रिय वृद्धि के समय मिट्टी को समान रूप से नम रखें और सुप्तावस्था में पानी कम या बंद करें। इसे गर्म तापमान और अधिक आर्द्रता पसंद है, और यह चबाने या खाने पर विषैला है।"
+    },
+    "zh": {
+      "common_name": "彩叶芋",
+      "description": "彩叶芋为块茎类热带观叶植物，适合明亮散射光。生长期保持基质均匀微湿，进入休眠后应减少或停止浇水。喜温暖和较高湿度，误食对人和宠物有毒。"
+    },
+    "ja": {
+      "common_name": "カラジウム",
+      "description": "カラジウムは塊茎性の熱帯観葉植物で、明るい間接光が適します。生育期は用土を均一に湿らせ、休眠に入ったら水やりを控えるか止めます。暖かさと高湿度を好み、口にすると有毒です。"
+    },
+    "ko": {
+      "common_name": "칼라디움",
+      "description": "칼라디움은 구근성 열대 관엽식물로 밝은 간접광에서 잘 자랍니다. 생장기에는 흙을 고르게 촉촉하게 유지하고 휴면기에 들어가면 물 주기를 크게 줄이거나 중단합니다. 따뜻함과 높은 습도를 좋아하며 섭취 시 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://hort.extension.wisc.edu/articles/caladiums/",
+      "https://hgic.clemson.edu/factsheet/caladium/",
+      "https://www.rhs.org.uk/plants/2601/caladium-bicolor-%28v%29/details",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/caladium",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-and-care-for-caladium/"
+    ]
+  }
+}

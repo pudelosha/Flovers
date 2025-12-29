@@ -1,0 +1,238 @@
+{
+  "external_id": "fuchsia_magellanica",
+  "name": "Hardy Fuchsia",
+  "latin": "Fuchsia magellanica",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 4,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "fuchsia_magellanica.jpg",
+  "image_thumb": "fuchsia_magellanica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezzombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährstoffreich",
+          "fr": "Riche, drainé",
+          "it": "Ricco, drenato",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で排水良",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol humide",
+          "it": "Sempre umido",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطب دائمًا",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気保つ",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgn.",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moy.",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "中程度湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby growth",
+          "pl": "Krzewiasta",
+          "de": "Strauchförmig",
+          "fr": "Arbustive",
+          "it": "Arbustiva",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "نمو شجيري",
+          "hi": "झाड़ीदार",
+          "zh": "灌木状",
+          "ja": "低木状",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Hardy Fuchsia",
+      "description": "Fuchsia magellanica is a deciduous flowering shrub native to southern South America. It produces distinctive red and purple pendulous flowers. Indoors it needs bright, indirect light and consistently moist soil."
+    },
+    "pl": {
+      "common_name": "Fuksja magellańska",
+      "description": "Fuchsia magellanica to krzew ozdobny pochodzący z Ameryki Południowej. Ma charakterystyczne czerwono-fioletowe kwiaty. W uprawie doniczkowej wymaga jasnego stanowiska i wilgotnej gleby."
+    },
+    "de": {
+      "common_name": "Magellan-Fuchsie",
+      "description": "Fuchsia magellanica ist ein laubabwerfender Zierstrauch aus Südamerika. Sie bildet auffällige rot-violette Blüten. In Töpfen braucht sie helles, indirektes Licht und feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Fuchsia de Magellan",
+      "description": "Fuchsia magellanica est un arbuste originaire d’Amérique du Sud. Il porte des fleurs pendantes rouges et violettes. En pot, il préfère une lumière vive sans soleil direct et un sol humide."
+    },
+    "it": {
+      "common_name": "Fucsia del Magellano",
+      "description": "Fuchsia magellanica è un arbusto ornamentale sudamericano. Produce fiori penduli rosso-violacei. Coltivata in vaso richiede luce intensa indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Fucsia de Magallanes",
+      "description": "Fuchsia magellanica es un arbusto originario de Sudamérica. Destaca por sus flores colgantes rojas y púrpuras. En maceta necesita luz brillante indirecta y riego regular."
+    },
+    "pt": {
+      "common_name": "Fúcsia-magelânica",
+      "description": "Fuchsia magellanica é um arbusto ornamental da América do Sul. Apresenta flores pendentes vermelhas e roxas. Em vasos prefere luz indireta e solo sempre levemente úmido."
+    },
+    "ar": {
+      "common_name": "فوشيا ماجلان",
+      "description": "فوشيا ماجلان نبات شجيري مزهر موطنه أمريكا الجنوبية. يتميز بأزهاره المتدلية الحمراء والبنفسجية. عند زراعته في أصيص يحتاج ضوءًا ساطعًا غير مباشر وتربة رطبة."
+    },
+    "hi": {
+      "common_name": "हार्डी फ्यूशिया",
+      "description": "Fuchsia magellanica दक्षिण अमेरिका का एक फूलदार झाड़ीदार पौधा है। इसमें लाल और बैंगनी लटकते फूल आते हैं। गमले में उगाने पर हल्की धूप और नम मिट्टी जरूरी है।"
+    },
+    "zh": {
+      "common_name": "麦哲伦倒挂金钟",
+      "description": "Fuchsia magellanica 原产于南美洲，是一种观赏灌木。花朵呈红紫色下垂状。盆栽时需要明亮散射光和持续湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "マゼランフクシア",
+      "description": "フクシア・マゼラニカは南米原産の落葉低木です。赤紫色の下向きの花を咲かせます。鉢植えでは明るい日陰と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "마젤란 후크시아",
+      "description": "Fuchsia magellanica는 남아메리카 원산의 관목 식물입니다. 붉고 보라색의 늘어진 꽃이 특징입니다. 화분에서는 밝은 간접광과 촉촉한 흙이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/fuchsia/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b464",
+      "https://www.gardenersworld.com/plants/fuchsia-magellanica/"
+    ]
+  }
+}

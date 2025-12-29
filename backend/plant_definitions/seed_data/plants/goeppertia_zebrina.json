@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_zebrina",
+  "name": "Zebra Plant",
+  "latin": "Goeppertia zebrina",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_zebrina.jpg",
+  "image_thumb": "goeppertia_zebrina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło pośrednie",
+          "de": "Helles indirektes Licht",
+          "fr": "Lumière indirecte vive",
+          "it": "Luce indiretta luminosa",
+          "es": "Luz indirecta brillante",
+          "pt": "Luz indireta brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮的散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining rich soil",
+          "pl": "Przepuszczalna żyzna gleba",
+          "de": "Gut drainierende Erde",
+          "fr": "Sol riche drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenável",
+          "ar": "تربة غنية جيدة التصريف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep soil evenly moist",
+          "pl": "Utrzymuj lekko wilgotną",
+          "de": "Gleichmäßig feucht halten",
+          "fr": "Sol toujours humide",
+          "it": "Terreno sempre umido",
+          "es": "Suelo siempre húmedo",
+          "pt": "Solo sempre úmido",
+          "ar": "حافظ على رطوبة التربة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持土壤湿润",
+          "ja": "土を湿らせる",
+          "ko": "흙을 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mäßig anspruchsvoll",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado moderado",
+          "pt": "Cuidado moderado",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Port en touffe",
+          "it": "Crescita cespitosa",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كثيف",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Zebra Plant",
+      "description": "Goeppertia zebrina is a tropical foliage plant known for its bold striped leaves. It prefers bright indirect light, high humidity, and consistently moist soil. It is commonly grown indoors as an ornamental houseplant."
+    },
+    "pl": {
+      "common_name": "Kalatea zebrina",
+      "description": "Goeppertia zebrina to tropikalna roślina ozdobna o pasiastych liściach. Wymaga jasnego, rozproszonego światła, wysokiej wilgotności i stale lekko wilgotnej gleby. Najczęściej uprawiana jest w pomieszczeniach."
+    },
+    "de": {
+      "common_name": "Zebrakorbmarante",
+      "description": "Goeppertia zebrina ist eine tropische Blattschmuckpflanze mit markanten Streifen. Sie bevorzugt helles indirektes Licht, hohe Luftfeuchtigkeit und gleichmäßig feuchte Erde. Sie wird meist als Zimmerpflanze kultiviert."
+    },
+    "fr": {
+      "common_name": "Plante zébrée",
+      "description": "Goeppertia zebrina est une plante tropicale appréciée pour ses feuilles rayées. Elle aime la lumière indirecte, une forte humidité et un sol constamment humide. Elle est surtout cultivée en intérieur."
+    },
+    "it": {
+      "common_name": "Calatea zebrata",
+      "description": "Goeppertia zebrina è una pianta tropicale ornamentale con foglie striate. Predilige luce indiretta, elevata umidità e terreno costantemente umido. È coltivata principalmente come pianta da interno."
+    },
+    "es": {
+      "common_name": "Planta cebra",
+      "description": "Goeppertia zebrina es una planta tropical conocida por sus hojas rayadas. Necesita luz indirecta brillante, alta humedad y suelo siempre húmedo. Se cultiva comúnmente en interiores."
+    },
+    "pt": {
+      "common_name": "Planta-zebra",
+      "description": "Goeppertia zebrina é uma planta tropical ornamental com folhas listradas. Prefere luz indireta, alta umidade e solo constantemente úmido. É muito usada como planta de interior."
+    },
+    "ar": {
+      "common_name": "نبات الحمار الوحشي",
+      "description": "Goeppertia zebrina نبات استوائي يتميز بأوراق مخططة. يفضل الضوء غير المباشر والرطوبة العالية وتربة رطبة باستمرار. يزرع غالبًا كنبات منزلي."
+    },
+    "hi": {
+      "common_name": "ज़ेब्रा प्लांट",
+      "description": "Goeppertia zebrina एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ धारियों वाली होती हैं। इसे अप्रत्यक्ष रोशनी, अधिक आर्द्रता और नम मिट्टी पसंद है। यह आमतौर पर घर के अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "斑马竹芋",
+      "description": "Goeppertia zebrina 是一种热带观叶植物，以条纹叶片著称。它喜欢明亮的散射光、高湿度和持续湿润的土壤。常作为室内植物栽培。"
+    },
+    "ja": {
+      "common_name": "ゼブラカラテア",
+      "description": "Goeppertia zebrina は縞模様の葉が特徴の熱帯植物です。明るい間接光と高湿度、常に湿った土を好みます。主に観葉植物として育てられます。"
+    },
+    "ko": {
+      "common_name": "제브라 칼라데아",
+      "description": "Goeppertia zebrina는 줄무늬 잎이 특징인 열대 식물입니다. 밝은 간접광과 높은 습도, 촉촉한 토양을 선호합니다. 주로 실내 관엽식물로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/23805/goeppertia-zebrina/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a328",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/"
+    ]
+  }
+}

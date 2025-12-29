@@ -1,0 +1,237 @@
+{
+  "external_id": "howea_forsteriana",
+  "name": "Kentia Palm",
+  "latin": "Howea forsteriana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "howea_forsteriana.jpg",
+  "image_thumb": "howea_forsteriana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor",
+          "pl": "Domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Kentia Palm",
+      "description": "Howea forsteriana is a slow-growing palm native to Lord Howe Island. It tolerates indoor conditions well and prefers bright, indirect light with moderate watering."
+    },
+    "pl": {
+      "common_name": "Kencja",
+      "description": "Howea forsteriana to wolno rosnąca palma z wyspy Lord Howe. Dobrze znosi warunki domowe i wymaga jasnego, rozproszonego światła oraz umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Kentia-Palme",
+      "description": "Howea forsteriana ist eine langsam wachsende Palme von der Lord-Howe-Insel. Sie eignet sich gut für Innenräume bei hellem, indirektem Licht und mäßigem Gießen."
+    },
+    "fr": {
+      "common_name": "Palmier Kentia",
+      "description": "Howea forsteriana est un palmier à croissance lente originaire de l’île Lord Howe. Il s’adapte bien à l’intérieur avec une lumière indirecte et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Palma Kentia",
+      "description": "Howea forsteriana è una palma a crescita lenta originaria dell’isola di Lord Howe. È adatta agli ambienti interni con luce indiretta e annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Palmera Kentia",
+      "description": "Howea forsteriana es una palmera de crecimiento lento originaria de la isla Lord Howe. Se adapta bien al interior con luz indirecta y riego moderado."
+    },
+    "pt": {
+      "common_name": "Palmeira Kentia",
+      "description": "Howea forsteriana é uma palmeira de crescimento lento nativa da Ilha Lord Howe. Desenvolve-se bem em interiores com luz indireta e rega moderada."
+    },
+    "ar": {
+      "common_name": "نخيل كنتيا",
+      "description": "نبات Howea forsteriana هو نخيل بطيء النمو موطنه جزيرة لورد هاو. يناسب الزراعة الداخلية مع ضوء غير مباشر وري معتدل."
+    },
+    "hi": {
+      "common_name": "केंटिया पाम",
+      "description": "Howea forsteriana एक धीमी गति से बढ़ने वाला ताड़ है जो लॉर्ड होवे द्वीप का मूल निवासी है। यह घर के अंदर अप्रत्यक्ष रोशनी और मध्यम पानी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "肯氏椰子",
+      "description": "Howea forsteriana 原产于豪勋爵岛，是一种生长缓慢的棕榈。适合室内种植，需明亮散射光和适度浇水。"
+    },
+    "ja": {
+      "common_name": "ケンチャヤシ",
+      "description": "Howea forsteriana はロードハウ島原産の成長が遅いヤシです。室内で育てやすく、明るい間接光と適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "켄차야자",
+      "description": "Howea forsteriana는 로드하우 섬 원산의 느리게 자라는 야자입니다. 실내 환경에 잘 적응하며 밝은 간접광과 적당한 물을 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/howea",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c775",
+      "https://plants.ces.ncsu.edu/plants/howea-forsteriana/"
+    ]
+  }
+}

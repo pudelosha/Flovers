@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_makoyana",
+  "name": "Peacock Plant",
+  "latin": "Goeppertia makoyana",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_makoyana.jpg",
+  "image_thumb": "goeppertia_makoyana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainant",
+          "it": "Ricco drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة مستمرة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstartig",
+          "fr": "Port touffu",
+          "it": "Crescita cespugliosa",
+          "es": "Crecimiento tupido",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peacock Plant",
+      "description": "Goeppertia makoyana is a tropical understory plant native to Brazil. It is valued for its patterned leaves and prefers warm temperatures, high humidity, and indirect light."
+    },
+    "pl": {
+      "common_name": "Kalatea pawia",
+      "description": "Goeppertia makoyana to tropikalna roślina z Brazylii. Wyróżnia się dekoracyjnymi liśćmi i wymaga ciepła, wilgoci oraz światła rozproszonego."
+    },
+    "de": {
+      "common_name": "Pfauen-Korbmarante",
+      "description": "Goeppertia makoyana stammt aus den Tropen Brasiliens. Sie schätzt hohe Luftfeuchtigkeit, gleichmäßige Feuchte und helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Plante paon",
+      "description": "Goeppertia makoyana est originaire du Brésil tropical. Elle apprécie l’humidité élevée, la chaleur et une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Pianta pavone",
+      "description": "Goeppertia makoyana è una pianta tropicale brasiliana. Cresce bene con elevata umidità, temperature calde e luce indiretta."
+    },
+    "es": {
+      "common_name": "Planta pavo real",
+      "description": "Goeppertia makoyana es nativa de Brasil tropical. Necesita humedad alta, riego regular y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Planta pavão",
+      "description": "Goeppertia makoyana é nativa do Brasil tropical. Prefere ambientes quentes, úmidos e luz indireta."
+    },
+    "ar": {
+      "common_name": "نبات الطاووس",
+      "description": "نبات جوبرتيـا ماكويانا موطنه البرازيل الاستوائية. يحتاج إلى رطوبة عالية وضوء غير مباشر وحرارة معتدلة."
+    },
+    "hi": {
+      "common_name": "पीकॉक प्लांट",
+      "description": "Goeppertia makoyana ब्राज़ील का उष्णकटिबंधीय पौधा है। इसे नमी, गर्म तापमान और अप्रत्यक्ष रोशनी पसंद है।"
+    },
+    "zh": {
+      "common_name": "孔雀竹芋",
+      "description": "Goeppertia makoyana 原产于巴西热带地区。它喜高湿度、温暖环境和明亮散射光。"
+    },
+    "ja": {
+      "common_name": "クジャクカラテア",
+      "description": "ゴエペルティア・マコヤナはブラジル原産の熱帯植物です。高湿度と間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "피콕 칼라테아",
+      "description": "Goeppertia makoyana는 브라질 원산의 열대 식물입니다. 높은 습도와 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/17413/calathea-makoyana/details",
+      "https://edis.ifas.ufl.edu/publication/EP285",
+      "https://www.gardenersworld.com/plants/calathea-makoyana/"
+    ]
+  }
+}

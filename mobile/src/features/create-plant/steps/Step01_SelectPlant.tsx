@@ -1,10 +1,10 @@
-﻿// steps/Step01_SelectPlant.tsx
-import React, { useEffect, useMemo, useState, useCallback } from "react";
+﻿import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { View, Pressable, ActivityIndicator } from "react-native";
 import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
+import { useTranslation } from "react-i18next"; // Add i18n hook
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -42,8 +42,7 @@ function pickName(item: any): string {
     item?.name ??
     item?.display_name ??
     item?.displayName ??
-    item?.title ??
-    "";
+    item?.title ?? "";
   return typeof v === "string" ? v : "";
 }
 
@@ -52,6 +51,7 @@ export default function Step01_SelectPlant({
   onOpenScanner,
   onRegisterScanResultHandler,
 }: Props) {
+  const { t } = useTranslation(); // Initialize translation hook
   const navigation = useNavigation<any>(); // kept in case used elsewhere
   const { state, actions } = useCreatePlantWizard();
 
@@ -104,8 +104,8 @@ export default function Step01_SelectPlant({
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        setErrorPopular(e?.message ?? "Failed to load popular plants.");
-        setErrorSearch(e?.message ?? "Failed to load plant list.");
+        setErrorPopular(e?.message ?? t('createPlant.step01.errorPopular')); // Translated error message
+        setErrorSearch(e?.message ?? t('createPlant.step01.errorSearch')); // Translated error message
       } finally {
         if (mounted) {
           setLoadingPopular(false);
@@ -116,7 +116,7 @@ export default function Step01_SelectPlant({
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [t]); // Add translation as dependency to re-trigger on language change
 
   const onSelectFromSearch = (item: Suggestion) => {
     const name = pickName(item);
@@ -200,11 +200,9 @@ export default function Step01_SelectPlant({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Select a plant</Text>
+        <Text style={wiz.title}>{t('createPlant.step01.title')}</Text> {/* Translated title */}
         <Text style={wiz.subtitle}>
-          You can search our full plant library, pick from the popular list, or scan a
-          plant using your camera. You can also skip this step, but selecting a plant
-          lets us automatically suggest care tasks like watering for you.
+          {t('createPlant.step01.subtitle')} {/* Translated subtitle */}
         </Text>
 
         {/* Scan + Search row – both 64 high */}
@@ -231,7 +229,7 @@ export default function Step01_SelectPlant({
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
-            accessibilityLabel="Scan Plant"
+            accessibilityLabel={t('createPlant.step01.scanButton')} // Translated button label
           >
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
@@ -250,12 +248,13 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
+              placeholder={t('createPlant.step01.searchPlaceholder')} // Translated placeholder
             />
           </View>
         </View>
 
         {/* Popular plants */}
-        <Text style={wiz.sectionTitle}>Popular plants</Text>
+        <Text style={wiz.sectionTitle}>{t('createPlant.step01.popularPlants')}</Text> {/* Translated popular plants */}
         {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
             <ActivityIndicator />

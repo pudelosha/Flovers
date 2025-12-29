@@ -1,0 +1,237 @@
+{
+  "external_id": "euphorbia_tithymaloides",
+  "name": "Devil’s Backbone",
+  "latin": "Euphorbia tithymaloides",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "euphorbia_tithymaloides.jpg",
+  "image_thumb": "euphorbia_tithymaloides.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "强光",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoor",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Zwykła",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic sap",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrub form",
+          "pl": "Krzew",
+          "de": "Strauch",
+          "fr": "Arbustive",
+          "it": "Arbusto",
+          "es": "Arbusto",
+          "pt": "Arbusto",
+          "ar": "شجيري",
+          "hi": "झाड़ी",
+          "zh": "灌木状",
+          "ja": "低木",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Devil’s Backbone",
+      "description": "Euphorbia tithymaloides is a tropical succulent shrub known for its zigzag stems and variegated leaves. It prefers bright light and infrequent watering. Milky sap is toxic and can irritate skin."
+    },
+    "pl": {
+      "common_name": "Diabelski kręgosłup",
+      "description": "Euphorbia tithymaloides to tropikalny sukulent o zygzakowatych pędach. Lubi jasne stanowiska i rzadkie podlewanie. Sok mleczny jest toksyczny."
+    },
+    "de": {
+      "common_name": "Teufelsrückgrat",
+      "description": "Euphorbia tithymaloides ist ein tropischer Sukkulent mit gezackten Trieben. Sie benötigt viel Licht und wenig Wasser. Der Milchsaft ist giftig."
+    },
+    "fr": {
+      "common_name": "Épine dorsale du diable",
+      "description": "Euphorbia tithymaloides est une plante succulente tropicale aux tiges en zigzag. Elle aime la lumière vive et peu d’arrosage. Le latex est toxique."
+    },
+    "it": {
+      "common_name": "Spina dorsale del diavolo",
+      "description": "Euphorbia tithymaloides è una succulenta tropicale dai fusti a zigzag. Richiede molta luce e poca acqua. Il lattice è tossico."
+    },
+    "es": {
+      "common_name": "Espina dorsal del diablo",
+      "description": "Euphorbia tithymaloides es una suculenta tropical con tallos en zigzag. Necesita mucha luz y riego escaso. Su savia es tóxica."
+    },
+    "pt": {
+      "common_name": "Espinha-do-diabo",
+      "description": "Euphorbia tithymaloides é uma suculenta tropical de caules em zigue-zague. Prefere luz intensa e pouca rega. A seiva é tóxica."
+    },
+    "ar": {
+      "common_name": "عمود الشيطان",
+      "description": "Euphorbia tithymaloides نبات عصاري استوائي ذو سيقان متعرجة. يحتاج إلى ضوء قوي وري قليل. العصارة اللبنية سامة."
+    },
+    "hi": {
+      "common_name": "डेविल्स बैकबोन",
+      "description": "Euphorbia tithymaloides एक उष्णकटिबंधीय सक्युलेंट पौधा है। इसे तेज रोशनी और कम पानी चाहिए। इसका दूधिया रस विषैला होता है।"
+    },
+    "zh": {
+      "common_name": "魔鬼脊柱",
+      "description": "Euphorbia tithymaloides 是一种热带多肉植物，具有锯齿状茎。需要充足光照和少量浇水。其乳白色汁液有毒。"
+    },
+    "ja": {
+      "common_name": "デビルズバックボーン",
+      "description": "Euphorbia tithymaloides は熱帯性の多肉植物です。明るい光と控えめな水やりを好みます。樹液には毒性があります。"
+    },
+    "ko": {
+      "common_name": "데블스 백본",
+      "description": "Euphorbia tithymaloides 는 열대성 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 유백색 수액은 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b280",
+      "https://www.rhs.org.uk/plants/7286/euphorbia-tithymaloides/details",
+      "https://edis.ifas.ufl.edu/publication/FP210"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_pubicalyx",
+  "name": "Hoya Pubicalyx",
+  "latin": "Hoya pubicalyx",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_pubicalyx.jpg",
+  "image_thumb": "hoya_pubicalyx.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy orchid mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when dry",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser après séchage",
+          "it": "Annaffiare a secco",
+          "es": "Regar al secarse",
+          "pt": "Regar ao secar",
+          "ar": "الري بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干后浇水",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26 °C",
+          "pl": "18–26 °C",
+          "de": "18–26 °C",
+          "fr": "18–26 °C",
+          "it": "18–26 °C",
+          "es": "18–26 °C",
+          "pt": "18–26 °C",
+          "ar": "18–26 °C",
+          "hi": "18–26 °C",
+          "zh": "18–26 °C",
+          "ja": "18–26 °C",
+          "ko": "18–26 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor air",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Raumluft",
+          "fr": "Air ambiant normal",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletterpflanze",
+          "fr": "Plante grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "चढ़ने वाली बेल",
+          "zh": "攀援生长",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wax Plant",
+      "description": "Hoya pubicalyx is a tropical climbing plant with thick, waxy leaves and fragrant star-shaped flowers. It prefers bright, indirect light and well-draining soil. Allow the substrate to dry slightly between waterings."
+    },
+    "pl": {
+      "common_name": "Hoja woskownica",
+      "description": "Hoya pubicalyx to tropikalne pnącze o grubych, woskowych liściach i pachnących kwiatach. Najlepiej rośnie w jasnym, rozproszonym świetle i przepuszczalnym podłożu. Podlewaj po lekkim przeschnięciu ziemi."
+    },
+    "de": {
+      "common_name": "Wachsblume",
+      "description": "Hoya pubicalyx ist eine tropische Kletterpflanze mit wachsartigen Blättern und duftenden Blüten. Sie bevorzugt helles, indirektes Licht und durchlässiges Substrat. Zwischen den Wassergaben leicht antrocknen lassen."
+    },
+    "fr": {
+      "common_name": "Fleur de cire",
+      "description": "Hoya pubicalyx est une plante tropicale grimpante aux feuilles épaisses et fleurs parfumées. Elle aime la lumière indirecte et un substrat drainant. Laisser sécher légèrement entre les arrosages."
+    },
+    "it": {
+      "common_name": "Fiore di cera",
+      "description": "Hoya pubicalyx è una pianta tropicale rampicante con foglie cerose e fiori profumati. Preferisce luce indiretta e substrato ben drenato. Annaffiare solo dopo parziale asciugatura."
+    },
+    "es": {
+      "common_name": "Flor de cera",
+      "description": "Hoya pubicalyx es una planta tropical trepadora con hojas cerosas y flores fragantes. Crece mejor con luz indirecta y sustrato drenante. Regar cuando el sustrato esté parcialmente seco."
+    },
+    "pt": {
+      "common_name": "Flor-de-cera",
+      "description": "Hoya pubicalyx é uma planta tropical trepadeira com folhas cerosas e flores perfumadas. Prefere luz indireta e substrato bem drenado. Regar após leve secagem do solo."
+    },
+    "ar": {
+      "common_name": "نبات الشمع",
+      "description": "هويا بوبكاليكس نبات استوائي متسلق بأوراق شمعية وأزهار عطرية. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. يُسقى بعد جفاف التربة جزئياً."
+    },
+    "hi": {
+      "common_name": "वैक्स प्लांट",
+      "description": "Hoya pubicalyx एक उष्णकटिबंधीय चढ़ने वाला पौधा है जिसमें मोटी मोमी पत्तियाँ और सुगंधित फूल होते हैं। इसे अप्रत्यक्ष रोशनी और अच्छी जल निकासी वाली मिट्टी पसंद है। मिट्टी सूखने पर ही पानी दें।"
+    },
+    "zh": {
+      "common_name": "球兰",
+      "description": "Hoya pubicalyx 是一种热带攀援植物，具有蜡质叶片和芳香花朵。适合明亮的散射光和排水良好的基质。浇水前让基质稍微干燥。"
+    },
+    "ja": {
+      "common_name": "ホヤ",
+      "description": "Hoya pubicalyx は厚い葉と芳香のある花を持つ熱帯性のつる植物です。明るい間接光と水はけの良い土を好みます。土が少し乾いてから水やりします。"
+    },
+    "ko": {
+      "common_name": "호야",
+      "description": "Hoya pubicalyx는 두꺼운 잎과 향기로운 꽃을 가진 열대 덩굴식물입니다. 밝은 간접광과 배수가 좋은 토양을 선호합니다. 흙이 약간 마른 후 물을 주세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9151/hoya-pubicalyx/details",
+      "https://edis.ifas.ufl.edu/publication/EP347",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/"
+    ]
+  }
+}

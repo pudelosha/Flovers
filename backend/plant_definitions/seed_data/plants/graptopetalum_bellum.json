@@ -1,0 +1,237 @@
+{
+  "external_id": "graptopetalum_bellum",
+  "name": "Chihuahua flower",
+  "latin": "Graptopetalum bellum",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "graptopetalum_bellum.jpg",
+  "image_thumb": "graptopetalum_bellum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright, indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz brilhante",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast-draining mix",
+          "pl": "Bardzo przepuszczalne",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जल्दी जलनिकासी मिट्टी",
+          "zh": "排水良好",
+          "ja": "水はけ良い用土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when dry",
+          "pl": "Podlewaj po wyschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser à sec",
+          "it": "Annaffia a secco",
+          "es": "Riega al secarse",
+          "pt": "Regue ao secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干透再浇",
+          "ja": "乾いてから水やり",
+          "ko": "마른 뒤 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C ideal",
+          "pl": "Opt. 18–24°C",
+          "de": "Ideal 18–24°C",
+          "fr": "Idéal 18–24°C",
+          "it": "Ideale 18–24°C",
+          "es": "Ideal 18–24°C",
+          "pt": "Ideal 18–24°C",
+          "ar": "المثلى 18–24°م",
+          "hi": "18–24°C उपयुक्त",
+          "zh": "适宜18–24°C",
+          "ja": "適温18–24°C",
+          "ko": "적정 18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Unknown toxicity",
+          "pl": "Toksyczność nieznana",
+          "de": "Toxizität unklar",
+          "fr": "Toxicité inconnue",
+          "it": "Tossicità ignota",
+          "es": "Toxicidad desconocida",
+          "pt": "Toxicidade incerta",
+          "ar": "سمّية غير معروفة",
+          "hi": "विषाक्तता अज्ञात",
+          "zh": "毒性未知",
+          "ja": "毒性不明",
+          "ko": "독성 불명"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow, clumping",
+          "pl": "Wolny, kępiasty",
+          "de": "Langsam, horstig",
+          "fr": "Lente, en touffes",
+          "it": "Lenta, cespitosa",
+          "es": "Lenta, en matas",
+          "pt": "Lento, em touceiras",
+          "ar": "نمو بطيء ومتكتل",
+          "hi": "धीमी, गुच्छेदार",
+          "zh": "缓慢丛生",
+          "ja": "ゆっくり群生",
+          "ko": "느리게 군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chihuahua flower",
+      "description": "A small rosette-forming succulent from northern Mexico with deep pink, star-shaped flowers in late spring to early summer. Give bright light with protection from harsh midday sun and a very fast-draining cactus mix. Water only after the mix dries fully (about every 2 weeks indoors), feed monthly in spring–summer, and keep much drier in winter."
+    },
+    "pl": {
+      "common_name": "Kwiat Chihuahua",
+      "description": "Niewielki sukulent rozetowy z północnego Meksyku, kwitnący na różowo wiosną i wczesnym latem. Wymaga jasnego stanowiska z ochroną przed ostrym słońcem oraz bardzo przepuszczalnego podłoża dla kaktusów. Podlewaj dopiero po całkowitym przeschnięciu (zwykle co ok. 2 tygodnie w domu), zasilaj raz w miesiącu wiosną i latem, a zimą ogranicz wodę."
+    },
+    "de": {
+      "common_name": "Chihuahua-Blume",
+      "description": "Eine kleine, rosettenbildende Sukkulente aus Nordmexiko mit tiefrosa, sternförmigen Blüten im späten Frühling bis Frühsommer. Stelle sie hell, aber vor starker Mittagssonne geschützt, und nutze ein sehr durchlässiges Kakteensubstrat. Gieße erst nach vollständigem Abtrocknen (drinnen oft etwa alle 2 Wochen), dünge monatlich im Frühjahr/Sommer und halte sie im Winter deutlich trockener."
+    },
+    "fr": {
+      "common_name": "Fleur de Chihuahua",
+      "description": "Petite succulente en rosette originaire du nord du Mexique, aux fleurs étoilées rose soutenu en fin de printemps et début d’été. Offrez une lumière vive avec protection du soleil de midi et un substrat pour cactus très drainant. Arrosez seulement une fois le mélange bien sec (souvent toutes les ~2 semaines en intérieur), fertilisez mensuellement au printemps–été et réduisez fortement l’arrosage en hiver."
+    },
+    "it": {
+      "common_name": "Fiore di Chihuahua",
+      "description": "Piccola succulenta a rosetta del nord del Messico con fiori stellati rosa intenso tra fine primavera e inizio estate. Preferisce luce intensa con protezione dal sole di mezzogiorno e un substrato per cactus molto drenante. Annaffia solo a terriccio completamente asciutto (in casa spesso circa ogni 2 settimane), concima mensilmente in primavera–estate e riduci molto l’acqua in inverno."
+    },
+    "es": {
+      "common_name": "Flor de Chihuahua",
+      "description": "Suculenta pequeña de roseta, nativa del norte de México, con flores estrelladas rosa intenso a finales de primavera y comienzos de verano. Dale luz brillante con protección del sol fuerte del mediodía y un sustrato para cactus muy drenante. Riega solo cuando el sustrato esté completamente seco (en interior suele ser cada ~2 semanas), abona una vez al mes en primavera–verano y reduce mucho el riego en invierno."
+    },
+    "pt": {
+      "common_name": "Flor de Chihuahua",
+      "description": "Suculenta pequena em roseta do norte do México, com flores estreladas rosa intenso no fim da primavera e início do verão. Precisa de luz brilhante com proteção do sol forte do meio-dia e substrato de cactos bem drenante. Regue apenas quando secar totalmente (em interior muitas vezes a cada ~2 semanas), adube mensalmente na primavera–verão e reduza bastante a água no inverno."
+    },
+    "ar": {
+      "common_name": "زهرة تشيهواهوا",
+      "description": "نبات عصاري صغير على شكل وردات من شمال المكسيك، يزهر بأزهار نجمية وردية داكنة في أواخر الربيع وبداية الصيف. يحتاج إلى ضوء ساطع مع حماية من شمس الظهيرة وتربة صبارات شديدة التصريف. اسقِ فقط بعد جفاف التربة تمامًا (غالبًا كل نحو أسبوعين داخل المنزل)، وسمِّد شهريًا في الربيع والصيف وقلّل الري كثيرًا في الشتاء."
+    },
+    "hi": {
+      "common_name": "चिहुआहुआ फूल",
+      "description": "उत्तरी मेक्सिको का छोटा रोसेट-आकार का सक्युलेंट, जो देर वसंत से शुरुआती गर्मियों में गहरे गुलाबी तारे जैसे फूल देता है। इसे तेज़ रोशनी दें, लेकिन दोपहर की तेज़ धूप से बचाएँ और बहुत अच्छी जलनिकासी वाला कैक्टस मिक्स रखें। मिट्टी पूरी तरह सूखने पर ही पानी दें (घर में अक्सर लगभग हर 2 सप्ताह), वसंत–गर्मियों में महीने में एक बार खाद दें और सर्दियों में पानी बहुत कम करें।"
+    },
+    "zh": {
+      "common_name": "奇瓦瓦花",
+      "description": "原产墨西哥北部的莲座状小型多肉，晚春到初夏开深粉色星形花。喜明亮光照但需避开正午强晒，并使用排水极佳的仙人掌土。基质完全干透后再浇水（室内通常约每2周一次），春夏每月施肥一次，冬季显著控水。"
+    },
+    "ja": {
+      "common_name": "チワワフラワー",
+      "description": "メキシコ北部原産の小型ロゼット状多肉で、晩春〜初夏に濃いピンクの星形花を咲かせます。明るい光を好みますが真昼の強光は避け、排水の良いサボテン用土に植えます。用土が完全に乾いてから水やり（室内では目安約2週間ごと）、春夏は月1回施肥し、冬は水を大幅に控えます。"
+    },
+    "ko": {
+      "common_name": "치와와 플라워",
+      "description": "멕시코 북부 원산의 작은 로제트형 다육으로, 늦봄~초여름에 진분홍 별모양 꽃이 핍니다. 밝은 빛을 좋아하지만 한낮 강한 직사광은 피하고 배수가 매우 좋은 선인장 흙을 사용하세요. 흙이 완전히 마른 뒤에만 물주기(실내 기준 대개 약 2주 간격), 봄·여름엔 한 달에 한 번 비료를 주고 겨울엔 물을 크게 줄입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:113302-2",
+      "https://www.rhs.org.uk/plants/74878/graptopetalum-bellum/details",
+      "https://mountaincrestgardens.com/graptopetalum-bellum/",
+      "https://worldofsucculents.com/tacitus-bellus-chihuahua-flower/"
+    ]
+  }
+}

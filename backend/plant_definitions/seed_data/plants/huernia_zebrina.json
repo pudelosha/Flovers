@@ -1,0 +1,236 @@
+{
+  "external_id": "huernia_zebrina",
+  "name": "Lifesaver Plant",
+  "latin": "Huernia zebrina",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "huernia_zebrina.jpg",
+  "image_thumb": "huernia_zebrina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect sun",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fast draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadko podlewać",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषरहित",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping succulent",
+          "pl": "Kępiasta",
+          "de": "Horstbildend",
+          "fr": "Touffue",
+          "it": "Cespugliosa",
+          "es": "En matas",
+          "pt": "Em touceira",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "群生",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lifesaver Plant",
+      "description": "Huernia zebrina is a small succulent known for its star-shaped, striped flowers. It prefers bright light and infrequent watering. Overwatering can cause root rot."
+    },
+    "pl": {
+      "common_name": "Huernia zebrina",
+      "description": "Huernia zebrina to sukulent o gwiaździstych kwiatach. Wymaga jasnego światła i rzadkiego podlewania. Nadmiar wody prowadzi do gnicia."
+    },
+    "de": {
+      "common_name": "Lifesaver-Pflanze",
+      "description": "Huernia zebrina ist eine sukkulente Pflanze mit auffälligen Blüten. Sie mag helles Licht und wenig Wasser. Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Plante bouée",
+      "description": "Huernia zebrina est une succulente aux fleurs étoilées. Elle aime la lumière vive et peu d’arrosage. Un sol drainant est essentiel."
+    },
+    "it": {
+      "common_name": "Pianta salvagente",
+      "description": "Huernia zebrina è una succulenta dai fiori decorativi. Richiede molta luce e annaffiature sporadiche. Teme i ristagni d’acqua."
+    },
+    "es": {
+      "common_name": "Planta salvavidas",
+      "description": "Huernia zebrina es una suculenta de flores llamativas. Necesita buena luz y riego escaso. El exceso de agua es perjudicial."
+    },
+    "pt": {
+      "common_name": "Planta salva-vidas",
+      "description": "Huernia zebrina é uma suculenta de flores estreladas. Prefere luz intensa e pouca água. Solo bem drenado é fundamental."
+    },
+    "ar": {
+      "common_name": "نبات هويرنيا",
+      "description": "هويرنيا زبرينا نبات عصاري بأزهار مميزة. يحتاج إلى ضوء قوي وري قليل. كثرة الماء تضر بالجذور."
+    },
+    "hi": {
+      "common_name": "लाइफसेवर पौधा",
+      "description": "Huernia zebrina एक रसीला पौधा है जिसमें अनोखे फूल होते हैं। इसे तेज रोशनी और कम पानी चाहिए। अधिक पानी हानिकारक है।"
+    },
+    "zh": {
+      "common_name": "救生圈花",
+      "description": "Huernia zebrina 是一种多肉植物，花朵呈星形。需要明亮光照和少量浇水。忌积水。"
+    },
+    "ja": {
+      "common_name": "ライフセーバープラント",
+      "description": "Huernia zebrina は星形の花を持つ多肉植物です。明るい光と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "라이프세이버 식물",
+      "description": "Huernia zebrina는 독특한 꽃을 가진 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 과습을 피하세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/huernia-zebrina",
+      "https://www.cactus-art.biz/schede/HUERNIA/Huernia_zebrina/Huernia_zebrina.htm",
+      "https://www.rhs.org.uk/plants/huernia"
+    ]
+  }
+}

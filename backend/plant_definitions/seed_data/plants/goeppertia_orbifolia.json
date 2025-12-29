@@ -1,0 +1,239 @@
+{
+  "external_id": "goeppertia_orbifolia",
+  "name": "Prayer Plant",
+  "latin": "Goeppertia orbifolia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_orbifolia.jpg",
+  "image_thumb": "goeppertia_orbifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenante",
+          "es": "Rico drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulière",
+          "it": "Umido costante",
+          "es": "Humedad constante",
+          "pt": "Úmido constante",
+          "ar": "رطوبة منتظمة",
+          "hi": "समान नमी",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Touffe dense",
+          "it": "Crescita a cespo",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Prayer Plant",
+      "description": "Goeppertia orbifolia is a tropical foliage plant known for its large, round, striped leaves. It prefers bright indirect light, warm temperatures, and consistently moist soil. High humidity helps keep the leaves healthy."
+    },
+    "pl": {
+      "common_name": "Kalatea orbifolia",
+      "description": "Goeppertia orbifolia to tropikalna roślina ozdobna o dużych, okrągłych liściach. Lubi jasne, rozproszone światło i stale lekko wilgotne podłoże. Wysoka wilgotność powietrza sprzyja jej kondycji."
+    },
+    "de": {
+      "common_name": "Korbmarante",
+      "description": "Goeppertia orbifolia ist eine tropische Blattpflanze mit großen, runden Blättern. Sie wächst am besten bei hellem, indirektem Licht und gleichmäßig feuchter Erde. Eine hohe Luftfeuchtigkeit ist wichtig."
+    },
+    "fr": {
+      "common_name": "Calathée orbifolia",
+      "description": "Goeppertia orbifolia est une plante tropicale appréciée pour son feuillage décoratif. Elle préfère une lumière indirecte et un sol légèrement humide en permanence. Une humidité élevée est recommandée."
+    },
+    "it": {
+      "common_name": "Calatea orbifolia",
+      "description": "Goeppertia orbifolia è una pianta tropicale con grandi foglie ornamentali. Cresce bene con luce indiretta e terreno costantemente umido. L’umidità elevata favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Calatea orbifolia",
+      "description": "Goeppertia orbifolia es una planta tropical valorada por sus hojas grandes y redondeadas. Requiere luz indirecta y riego regular para mantener el sustrato húmedo. Prefiere ambientes con alta humedad."
+    },
+    "pt": {
+      "common_name": "Calatéia orbifolia",
+      "description": "Goeppertia orbifolia é uma planta tropical ornamental de folhas largas. Prefere luz indireta e solo sempre levemente úmido. Alta umidade do ar ajuda no seu desenvolvimento."
+    },
+    "ar": {
+      "common_name": "كالاثيا أوربيفوليا",
+      "description": "نبات Goeppertia orbifolia نبات استوائي بأوراق كبيرة مزخرفة. يفضل الضوء غير المباشر والتربة الرطبة باستمرار. الرطوبة العالية مهمة لصحة الأوراق."
+    },
+    "hi": {
+      "common_name": "प्रेयर प्लांट",
+      "description": "Goeppertia orbifolia एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ बड़ी और आकर्षक होती हैं। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी पसंद है। अधिक आर्द्रता से पौधा स्वस्थ रहता है।"
+    },
+    "zh": {
+      "common_name": "圆叶竹芋",
+      "description": "Goeppertia orbifolia 是一种热带观叶植物，以宽大的圆形叶片著称。适合明亮的散射光和持续湿润的土壤。较高的空气湿度有助于生长。"
+    },
+    "ja": {
+      "common_name": "オルビフォリア",
+      "description": "Goeppertia orbifolia は大きな丸い葉が特徴の熱帯植物です。明るい間接光と適度に湿った土壌を好みます。高い湿度が葉の健康を保ちます。"
+    },
+    "ko": {
+      "common_name": "오르비폴리아",
+      "description": "Goeppertia orbifolia는 둥근 큰 잎이 매력적인 열대 식물입니다. 밝은 간접광과 항상 촉촉한 토양을 선호합니다. 높은 습도가 잎 건강에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a508",
+      "https://www.rhs.org.uk/plants/16613/calathea-orbifolia/details",
+      "https://edis.ifas.ufl.edu/publication/FP093",
+      "https://plants.ces.ncsu.edu/plants/goeppertia-orbifolia/"
+    ]
+  }
+}

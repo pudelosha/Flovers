@@ -1,0 +1,236 @@
+{
+  "external_id": "euphorbia_lactea",
+  "name": "Euphorbia lactea",
+  "latin": "Euphorbia lactea",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "euphorbia_lactea.jpg",
+  "image_thumb": "euphorbia_lactea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "强光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenável",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic sap",
+          "pl": "Toksyczny sok",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒汁液",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright, slow",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dragon Bones Tree",
+      "description": "Euphorbia lactea is a succulent shrub native to tropical Asia. It prefers bright light and minimal watering. The milky sap is toxic and should be handled with care."
+    },
+    "pl": {
+      "common_name": "Wilczomlecz mleczny",
+      "description": "Euphorbia lactea to sukulent pochodzący z Azji. Wymaga jasnego światła i oszczędnego podlewania. Sok rośliny jest toksyczny."
+    },
+    "de": {
+      "common_name": "Milchbusch",
+      "description": "Euphorbia lactea ist eine sukkulente Pflanze aus Asien. Sie mag helles Licht und wenig Wasser. Der Pflanzensaft ist giftig."
+    },
+    "fr": {
+      "common_name": "Euphorbe lactée",
+      "description": "Euphorbia lactea est une plante succulente asiatique. Elle demande beaucoup de lumière et peu d’arrosage. Sa sève est toxique."
+    },
+    "it": {
+      "common_name": "Euforbia lattiginosa",
+      "description": "Euphorbia lactea è una succulenta originaria dell’Asia. Cresce bene in luce intensa con poca acqua. Il lattice è tossico."
+    },
+    "es": {
+      "common_name": "Euforbia lactea",
+      "description": "Euphorbia lactea es una suculenta asiática. Necesita mucha luz y riego limitado. Su savia es tóxica."
+    },
+    "pt": {
+      "common_name": "Eufórbia-láctea",
+      "description": "Euphorbia lactea é uma suculenta da Ásia tropical. Prefere luz intensa e pouca água. A seiva é tóxica."
+    },
+    "ar": {
+      "common_name": "الفربيون اللبني",
+      "description": "الفربيون اللبني نبات عصاري من آسيا. يحتاج إلى ضوء ساطع وري قليل. العصارة سامة."
+    },
+    "hi": {
+      "common_name": "ड्रैगन बोन्स पौधा",
+      "description": "Euphorbia lactea एशिया का रसीला पौधा है। इसे तेज रोशनी और कम पानी चाहिए। इसका दूधिया रस विषैला होता है।"
+    },
+    "zh": {
+      "common_name": "龙骨木",
+      "description": "Euphorbia lactea 原产于亚洲的多肉植物。需要充足光照和少量浇水。其乳汁有毒。"
+    },
+    "ja": {
+      "common_name": "ユーフォルビア・ラクテア",
+      "description": "Euphorbia lactea はアジア原産の多肉植物です。明るい光と控えめな水やりを好みます。樹液は有毒です。"
+    },
+    "ko": {
+      "common_name": "유포르비아 락테아",
+      "description": "Euphorbia lactea는 아시아 원산의 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 수액은 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/7090/euphorbia-lactea/details",
+      "https://www.cactus-art.biz/schede/EUPHORBIA/Euphorbia_lactea/Euphorbia_lactea.htm",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-euphorbia-lactea/"
+    ]
+  }
+}

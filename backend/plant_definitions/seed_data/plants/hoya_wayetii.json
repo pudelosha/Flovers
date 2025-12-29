@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_wayetii",
+  "name": "Hoya Wayetii",
+  "latin": "Hoya wayetii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_wayetii.jpg",
+  "image_thumb": "hoya_wayetii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz brilhante",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Drainant",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing vine",
+          "pl": "Pnącze",
+          "de": "Rankend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "نبات متدل",
+          "hi": "लटकने वाली",
+          "zh": "蔓生",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wax Plant",
+      "description": "Hoya wayetii is a tropical epiphytic plant with narrow, waxy leaves. It prefers bright indirect light and well-draining soil. Allow the soil to dry slightly between waterings."
+    },
+    "pl": {
+      "common_name": "Hoja woskowa",
+      "description": "Hoya wayetii to tropikalna roślina epifityczna o wąskich liściach. Lubi jasne, rozproszone światło i przepuszczalne podłoże. Podlewaj po lekkim przeschnięciu ziemi."
+    },
+    "de": {
+      "common_name": "Wachsblume",
+      "description": "Hoya wayetii ist eine tropische Epiphyte mit schmalen Blättern. Sie mag helles, indirektes Licht und luftiges Substrat. Zwischen dem Gießen leicht antrocknen lassen."
+    },
+    "fr": {
+      "common_name": "Plante de cire",
+      "description": "Hoya wayetii est une plante tropicale épiphyte aux feuilles étroites. Elle préfère une lumière vive indirecte et un sol drainant. Laissez sécher légèrement entre les arrosages."
+    },
+    "it": {
+      "common_name": "Pianta di cera",
+      "description": "Hoya wayetii è una pianta tropicale epifita con foglie strette. Predilige luce intensa indiretta e substrato drenante. Lasciare asciugare leggermente tra le annaffiature."
+    },
+    "es": {
+      "common_name": "Planta de cera",
+      "description": "Hoya wayetii es una planta tropical epífita de hojas estrechas. Prefiere luz brillante indirecta y sustrato drenante. Dejar secar un poco entre riegos."
+    },
+    "pt": {
+      "common_name": "Planta de cera",
+      "description": "Hoya wayetii é uma planta tropical epífita com folhas estreitas. Gosta de luz indireta brilhante e solo bem drenado. Deixe secar levemente entre regas."
+    },
+    "ar": {
+      "common_name": "نبات الشمع",
+      "description": "هويا وايتي نبات استوائي هوائي بأوراق ضيقة. يفضل الضوء الساطع غير المباشر وتربة جيدة التصريف. اترك التربة تجف قليلاً بين الري."
+    },
+    "hi": {
+      "common_name": "वैक्स प्लांट",
+      "description": "होया वेयटी एक उष्णकटिबंधीय एपिफाइटिक पौधा है। इसे तेज परोक्ष रोशनी और अच्छी जलनिकासी वाली मिट्टी पसंद है। पानी देने से पहले मिट्टी को थोड़ा सूखने दें।"
+    },
+    "zh": {
+      "common_name": "蜡兰",
+      "description": "Hoya wayetii 是一种热带附生植物，叶片狭长。喜明亮的散射光和良好排水的基质。浇水前让基质稍微干燥。"
+    },
+    "ja": {
+      "common_name": "ホヤ・ワイエティ",
+      "description": "ホヤ・ワイエティは細い葉を持つ熱帯性の着生植物です。明るい間接光と水はけの良い用土を好みます。水やりは土が少し乾いてから行います。"
+    },
+    "ko": {
+      "common_name": "호야 웨이에티",
+      "description": "호야 웨이에티는 가는 잎을 가진 열대 착생 식물입니다. 밝은 간접광과 배수가 좋은 흙을 선호합니다. 물 주기 전 흙을 약간 말리세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hoya/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b889",
+      "https://plants.ces.ncsu.edu/plants/hoya-spp/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "fenestraria_rhopalophylla",
+  "name": "Baby Toes",
+  "latin": "Fenestraria rhopalophylla",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "fenestraria_rhopalophylla.jpg",
+  "image_thumb": "fenestraria_rhopalophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Very well draining",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega esparsa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm preferred",
+          "pl": "Lubi ciepło",
+          "de": "Warm bevorzugt",
+          "fr": "Chaud préféré",
+          "it": "Preferisce caldo",
+          "es": "Prefiere calor",
+          "pt": "Prefere calor",
+          "ar": "يفضل الدفء",
+          "hi": "गर्म पसंद",
+          "zh": "喜温暖",
+          "ja": "暖かさ好む",
+          "ko": "따뜻함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Baby Toes",
+      "description": "Fenestraria rhopalophylla is a small succulent native to Namibia. It grows mostly buried in sand, with translucent leaf tips that admit light. Indoors it needs strong light and very infrequent watering."
+    },
+    "pl": {
+      "common_name": "Paluszki dziecka",
+      "description": "Fenestraria rhopalophylla to niewielki sukulent z Namibii. Większość liści rośnie pod piaskiem i ma przezroczyste końcówki. W domu wymaga dużo światła i rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Babyzehen",
+      "description": "Fenestraria rhopalophylla ist eine kleine Sukkulente aus Namibia. Sie wächst fast vollständig im Sand mit lichtdurchlässigen Blattspitzen. In Innenräumen braucht sie viel Sonne und wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Doigts de bébé",
+      "description": "Fenestraria rhopalophylla est une petite plante succulente originaire de Namibie. Elle pousse en grande partie enfouie dans le sable avec des extrémités translucides. En intérieur, elle demande beaucoup de lumière et peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Dita di bambino",
+      "description": "Fenestraria rhopalophylla è una piccola succulenta della Namibia. Cresce quasi sepolta nella sabbia con apici traslucidi. In casa richiede luce intensa e annaffiature molto limitate."
+    },
+    "es": {
+      "common_name": "Deditos de bebé",
+      "description": "Fenestraria rhopalophylla es una suculenta pequeña originaria de Namibia. Crece enterrada en arena con puntas translúcidas. En interior necesita mucha luz y riego escaso."
+    },
+    "pt": {
+      "common_name": "Dedinhos de bebê",
+      "description": "Fenestraria rhopalophylla é uma suculenta pequena da Namíbia. Cresce quase enterrada na areia com pontas translúcidas. Em ambientes internos precisa de sol forte e pouca água."
+    },
+    "ar": {
+      "common_name": "أصابع الطفل",
+      "description": "نبات Fenestraria rhopalophylla عصاري صغير موطنه ناميبيا. ينمو مدفونًا في الرمال مع أطراف شفافة. داخل المنزل يحتاج ضوءًا قويًا وريًا قليلًا."
+    },
+    "hi": {
+      "common_name": "बेबी टोज़",
+      "description": "Fenestraria rhopalophylla नामीबिया का एक छोटा सक्यूलेंट है। यह रेत में दबा रहता है और पत्तियों के सिरे पारदर्शी होते हैं। घर के अंदर इसे तेज धूप और बहुत कम पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "婴儿脚趾",
+      "description": "Fenestraria rhopalophylla 是原产于纳米比亚的小型多肉植物。它大多埋在沙中，叶端半透明。室内养护需要充足阳光和少量浇水。"
+    },
+    "ja": {
+      "common_name": "ベビートゥ",
+      "description": "フェネストラリア・ロパロフィラはナミビア原産の小型多肉植物です。砂に埋もれて育ち、葉先が半透明です。室内では強い光と控えめな水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "베이비 토즈",
+      "description": "Fenestraria rhopalophylla는 나미비아 원산의 작은 다육식물입니다. 모래에 묻혀 자라며 잎 끝이 반투명합니다. 실내에서는 강한 빛과 적은 물이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/210833/fenestraria-rhopalophylla/details",
+      "https://llifle.com/Encyclopedia/SUCCULENTS/Family/Aizoaceae/11438/Fenestraria_rhopalophylla",
+      "https://www.cactus-art.biz/schede/FENESTRARIA/Fenestraria_rhopalophylla/Fenestraria_rhopalophylla.htm"
+    ]
+  }
+}

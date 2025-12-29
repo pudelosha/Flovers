@@ -1,0 +1,237 @@
+{
+  "external_id": "heliotropium_arborescens",
+  "name": "Heliotrope",
+  "latin": "Heliotropium arborescens",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "heliotropium_arborescens.jpg",
+  "image_thumb": "heliotropium_arborescens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "जल निकास वाली",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "جو دافئ",
+          "hi": "गरम जलवायु",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique ingérée",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica ingerida",
+          "pt": "Tóxica ingerida",
+          "ar": "سامة عند الأكل",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "摂取で有毒",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Bushy growth",
+          "pl": "Krzaczasty wzrost",
+          "de": "Buschiger Wuchs",
+          "fr": "Croissance buissonnante",
+          "it": "Crescita cespugliosa",
+          "es": "Crecimiento arbustivo",
+          "pt": "Crescimento arbustivo",
+          "ar": "نمو كثيف",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "灌木状生长",
+          "ja": "低木状成長",
+          "ko": "관목형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Garden heliotrope",
+      "description": "Heliotropium arborescens is a fragrant flowering plant known for its purple blooms. It prefers bright sun and evenly moist soil during growth."
+    },
+    "pl": {
+      "common_name": "Heliotrop peruwiański",
+      "description": "Heliotropium arborescens to pachnąca roślina o fioletowych kwiatach. Wymaga słońca i umiarkowanie wilgotnej gleby."
+    },
+    "de": {
+      "common_name": "Vanilleblume",
+      "description": "Heliotropium arborescens ist eine duftende Pflanze mit violetten Blüten. Sie braucht viel Sonne und gleichmäßige Feuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Héliotrope du Pérou",
+      "description": "Heliotropium arborescens est une plante parfumée aux fleurs violettes. Elle aime le soleil et un sol régulièrement humide."
+    },
+    "it": {
+      "common_name": "Eliotropio",
+      "description": "Heliotropium arborescens è noto per i suoi fiori profumati viola. Richiede pieno sole e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Heliotropo",
+      "description": "Heliotropium arborescens es una planta aromática de flores violetas. Necesita sol pleno y riego constante."
+    },
+    "pt": {
+      "common_name": "Heliotrópio",
+      "description": "Heliotropium arborescens possui flores roxas perfumadas. Prefere sol intenso e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "زهرة الهليوتروب",
+      "description": "نبات عطري بأزهار أرجوانية جميلة. يحتاج إلى شمس قوية وري منتظم."
+    },
+    "hi": {
+      "common_name": "हेलियोट्रोप",
+      "description": "यह सुगंधित पौधा बैंगनी फूलों के लिए जाना जाता है। इसे धूप और नियमित पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "香水花",
+      "description": "Heliotropium arborescens 以紫色芳香花朵著称。喜阳光充足和适度浇水。"
+    },
+    "ja": {
+      "common_name": "ニオイムラサキ",
+      "description": "芳香のある紫色の花を咲かせる植物です。日当たりと定期的な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "헬리오트로프",
+      "description": "보라색 향기로운 꽃이 특징입니다. 햇빛과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/heliotropium/arborescens/details",
+      "https://extension.umn.edu/annual-flowers/heliotrope"
+    ]
+  }
+}

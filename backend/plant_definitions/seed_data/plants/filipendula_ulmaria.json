@@ -1,0 +1,238 @@
+{
+  "external_id": "filipendula_ulmaria",
+  "name": "Meadowsweet",
+  "latin": "Filipendula ulmaria",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "clay"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "filipendula_ulmaria.jpg",
+  "image_thumb": "filipendula_ulmaria.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist loam",
+          "pl": "Wilgotna glina",
+          "de": "Feuchter Lehm",
+          "fr": "Sol humide",
+          "it": "Suolo umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润壤土",
+          "ja": "湿った土",
+          "ko": "습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent",
+          "pl": "Częste",
+          "de": "Häufig",
+          "fr": "Fréquent",
+          "it": "Frequente",
+          "es": "Frecuente",
+          "pt": "Frequente",
+          "ar": "متكرر",
+          "hi": "बार-बार",
+          "zh": "经常浇水",
+          "ja": "頻繁",
+          "ko": "잦은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Umiarkowana",
+          "de": "Gemäßigt",
+          "fr": "Tempéré",
+          "it": "Temperato",
+          "es": "Templado",
+          "pt": "Temperado",
+          "ar": "معتدل",
+          "hi": "समशीतोष्ण",
+          "zh": "温带",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفعة",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clump forming",
+          "pl": "Kępowa",
+          "de": "Horstbildend",
+          "fr": "Touffue",
+          "it": "A cespi",
+          "es": "En matas",
+          "pt": "Em touceiras",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Meadowsweet",
+      "description": "Filipendula ulmaria is a perennial herb native to Europe and western Asia. It naturally grows in damp meadows, riverbanks, and wetlands. The plant produces fragrant white flowers in early summer."
+    },
+    "pl": {
+      "common_name": "Więzówka błotna",
+      "description": "Filipendula ulmaria to bylina występująca w Europie i zachodniej Azji. Rośnie naturalnie na wilgotnych łąkach i brzegach rzek. Latem wytwarza pachnące białe kwiaty."
+    },
+    "de": {
+      "common_name": "Mädesüß",
+      "description": "Filipendula ulmaria ist eine ausdauernde Pflanze aus Europa und Westasien. Sie wächst bevorzugt an feuchten Wiesen und Gewässerrändern. Im Sommer erscheinen duftende weiße Blüten."
+    },
+    "fr": {
+      "common_name": "Reine-des-prés",
+      "description": "Filipendula ulmaria est une plante vivace originaire d’Europe et d’Asie occidentale. Elle pousse dans les prairies humides et les zones marécageuses. Elle fleurit en été avec des fleurs blanches parfumées."
+    },
+    "it": {
+      "common_name": "Olmaria",
+      "description": "Filipendula ulmaria è una pianta perenne diffusa in Europa e Asia occidentale. Cresce in ambienti umidi come prati e rive dei fiumi. Produce fiori bianchi profumati in estate."
+    },
+    "es": {
+      "common_name": "Reina de los prados",
+      "description": "Filipendula ulmaria es una planta perenne nativa de Europa y Asia occidental. Habita praderas húmedas y zonas ribereñas. Florece en verano con flores blancas aromáticas."
+    },
+    "pt": {
+      "common_name": "Rainha-dos-prados",
+      "description": "Filipendula ulmaria é uma planta perene da Europa e Ásia Ocidental. Desenvolve-se em prados húmidos e margens de rios. Produz flores brancas perfumadas no verão."
+    },
+    "ar": {
+      "common_name": "ملكة المروج",
+      "description": "نبات Filipendula ulmaria معمر موطنه أوروبا وغرب آسيا. ينمو في المروج الرطبة وضفاف الأنهار. يتميز بأزهار بيضاء عطرية في الصيف."
+    },
+    "hi": {
+      "common_name": "मीडोस्वीट",
+      "description": "Filipendula ulmaria यूरोप और पश्चिमी एशिया का बहुवर्षीय पौधा है। यह नम घास के मैदानों और नदी किनारों पर उगता है। गर्मियों में इसमें सफेद सुगंधित फूल आते हैं।"
+    },
+    "zh": {
+      "common_name": "绣线菊草",
+      "description": "Filipendula ulmaria 原产于欧洲和西亚，是多年生植物。常见于湿润草地和河岸。夏季开白色芳香花朵。"
+    },
+    "ja": {
+      "common_name": "セイヨウナツユキソウ",
+      "description": "Filipendula ulmaria はヨーロッパと西アジア原産の多年草です。湿った草地や川辺に自生します。夏に香りのある白い花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "메도스위트",
+      "description": "Filipendula ulmaria는 유럽과 서아시아 원산의 다년생 식물입니다. 습한 초지와 강가에서 자랍니다. 여름에 향기로운 흰 꽃이 핍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/filipendula-ulmaria",
+      "https://www.rhs.org.uk/plants/7546/filipendula-ulmaria/details",
+      "https://plants.usda.gov/home/plantProfile?symbol=FIUL2"
+    ]
+  }
+}

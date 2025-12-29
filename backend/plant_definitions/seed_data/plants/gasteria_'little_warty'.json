@@ -1,0 +1,237 @@
+{
+  "external_id": "gasteria_little_warty",
+  "name": "Little Warty Gasteria",
+  "latin": "Gasteria 'Little Warty'",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "gasteria_little_warty.jpg",
+  "image_thumb": "gasteria_little_warty.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Dobrze zdrenowana",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Oszczędne podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage léger",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水やり",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Little Warty Gasteria",
+      "description": "Gasteria 'Little Warty' is a compact succulent with thick, spotted leaves forming low rosettes. It prefers bright indirect light and infrequent watering. This plant is well suited to indoor growing."
+    },
+    "pl": {
+      "common_name": "Gasteria brodawkowata",
+      "description": "Gasteria 'Little Warty' to niewielki sukulent o grubych, plamistych liściach. Lubi jasne, rozproszone światło i rzadkie podlewanie. Dobrze sprawdza się w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Kleine Warzige Gasteria",
+      "description": "Gasteria 'Little Warty' ist eine kompakte Sukkulente mit dicken, gefleckten Blättern. Sie bevorzugt helles, indirektes Licht und wenig Wasser. Ideal für die Haltung in Innenräumen."
+    },
+    "fr": {
+      "common_name": "Gastérie verruqueuse",
+      "description": "Gasteria 'Little Warty' est une succulente compacte aux feuilles épaisses et tachetées. Elle aime la lumière indirecte et un arrosage limité. Elle convient bien à la culture en intérieur."
+    },
+    "it": {
+      "common_name": "Gasteria verrucosa",
+      "description": "Gasteria 'Little Warty' è una succulenta compatta con foglie spesse e maculate. Preferisce luce indiretta e poche annaffiature. Adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Gasteria verrugosa",
+      "description": "Gasteria 'Little Warty' es una suculenta compacta con hojas gruesas y moteadas. Prefiere luz indirecta y riego escaso. Es ideal para interiores."
+    },
+    "pt": {
+      "common_name": "Gasteria verrugosa",
+      "description": "Gasteria 'Little Warty' é uma suculenta compacta com folhas grossas e manchadas. Prefere luz indireta e pouca rega. Adequada para ambientes internos."
+    },
+    "ar": {
+      "common_name": "غاستيريا صغيرة",
+      "description": "نبات غاستيريا 'ليتل وارتي' عصاري صغير بأوراق سميكة منقطة. يفضل الضوء غير المباشر والري القليل. مناسب للزراعة داخل المنزل."
+    },
+    "hi": {
+      "common_name": "गैस्टेरिया लिटिल वार्टी",
+      "description": "गैस्टेरिया 'लिटिल वार्टी' मोटी धब्बेदार पत्तियों वाला छोटा रसीला पौधा है। इसे अप्रत्यक्ष रोशनी और कम पानी पसंद है। यह घर के अंदर उगाने के लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "小疣胃菜",
+      "description": "Gasteria 'Little Warty' 是一种紧凑型多肉植物，叶片厚实并带有斑点。它喜欢明亮的散射光和少量浇水。非常适合室内养护。"
+    },
+    "ja": {
+      "common_name": "ガステリア・リトルワーティ",
+      "description": "ガステリア・リトルワーティは斑点のある厚い葉を持つ小型多肉植物です。明るい間接光と控えめな水やりを好みます。室内栽培に適しています。"
+    },
+    "ko": {
+      "common_name": "가스테리아 리틀 워티",
+      "description": "가스테리아 '리틀 워티'는 두껍고 반점이 있는 잎을 가진 소형 다육식물입니다. 밝은 간접광과 적은 물을 선호합니다. 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/gasteria/growing-guide",
+      "https://www.smgrowers.com/products/plants/plantdisplay.asp?plant_id=3864",
+      "https://www.llifle.com/Encyclopedia/SUCCULENTS/Family/Aloaceae/Gasteria/"
+    ]
+  }
+}

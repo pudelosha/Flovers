@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_ornata",
+  "name": "Pinstripe Calathea",
+  "latin": "Goeppertia ornata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_ornata.jpg",
+  "image_thumb": "goeppertia_ornata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-drained",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Nährstoffreich locker",
+          "fr": "Riche drainant",
+          "it": "Ricco drenante",
+          "es": "Rico y drenante",
+          "pt": "Rico drenável",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep soil moist",
+          "pl": "Gleba lekko wilgotna",
+          "de": "Erde feucht halten",
+          "fr": "Sol légèrement humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持湿润",
+          "ja": "土を湿らせる",
+          "ko": "흙 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度管理",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright clumping",
+          "pl": "Kępiasty pokrój",
+          "de": "Horstbildend",
+          "fr": "Port touffu",
+          "it": "Crescita a cespo",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو كثيف",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pinstripe Calathea",
+      "description": "Goeppertia ornata is a tropical foliage plant native to South America. It is valued for its dark green leaves with fine pink stripes. The plant prefers stable warmth, high humidity, and indirect light indoors."
+    },
+    "pl": {
+      "common_name": "Kalatea pasiasta",
+      "description": "Goeppertia ornata to tropikalna roślina liściasta z Ameryki Południowej. Wyróżnia się ciemnozielonymi liśćmi z różowymi paskami. Najlepiej rośnie w wilgotnym powietrzu i jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Streifen-Korbmarante",
+      "description": "Goeppertia ornata ist eine tropische Blattschmuckpflanze aus Südamerika. Sie besitzt dunkelgrüne Blätter mit feinen rosa Streifen. Sie benötigt gleichmäßige Wärme, hohe Luftfeuchtigkeit und indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Calathéa à rayures",
+      "description": "Goeppertia ornata est une plante tropicale originaire d’Amérique du Sud. Elle est appréciée pour ses feuilles vert foncé striées de rose. Elle demande une humidité élevée et une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Calatea a strisce",
+      "description": "Goeppertia ornata è una pianta tropicale dell’America del Sud. È coltivata per le sue foglie verdi con sottili strisce rosa. Richiede umidità elevata e luce indiretta."
+    },
+    "es": {
+      "common_name": "Calatea de rayas",
+      "description": "Goeppertia ornata es una planta tropical de Sudamérica. Destaca por sus hojas verdes oscuras con líneas rosadas. Prefiere ambientes cálidos, húmedos y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Calatéia listrada",
+      "description": "Goeppertia ornata é uma planta tropical da América do Sul. É conhecida pelas folhas verdes com listras rosadas. Desenvolve-se melhor com alta umidade e luz indireta."
+    },
+    "ar": {
+      "common_name": "كالاتيا مخططة",
+      "description": "نبات Goeppertia ornata استوائي موطنه أمريكا الجنوبية. يتميز بأوراق خضراء داكنة مع خطوط وردية. يحتاج إلى رطوبة عالية وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "पिनस्ट्राइप कैलाथिया",
+      "description": "Goeppertia ornata दक्षिण अमेरिका का एक उष्णकटिबंधीय पौधा है। इसकी पत्तियों पर गुलाबी धारियाँ होती हैं। यह अप्रत्यक्ष रोशनी और अधिक नमी में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "条纹竹芋",
+      "description": "Goeppertia ornata 原产于南美洲的热带植物。其深绿色叶片带有粉色细条纹。适合在高湿度和明亮散射光下生长。"
+    },
+    "ja": {
+      "common_name": "ピンストライプカラテア",
+      "description": "Goeppertia ornataは南米原産の熱帯観葉植物です。濃い緑の葉にピンクの縞が入ります。高湿度と明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "핀스트라이프 칼라테아",
+      "description": "Goeppertia ornata는 남아메리카 원산의 열대 식물입니다. 짙은 녹색 잎에 분홍 줄무늬가 특징입니다. 높은 습도와 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/247246/goeppertia-ornata/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280792",
+      "https://plants.ces.ncsu.edu/plants/goeppertia-ornata/"
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "external_id": "callistemon_citrinus",
+  "name": "Crimson bottlebrush",
+  "latin": "Callistemon citrinus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "callistemon_citrinus.jpg",
+  "image_thumb": "callistemon_citrinus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, well-drained",
+          "pl": "Wilg., przepuszcz.",
+          "de": "Feucht, drainiert",
+          "fr": "Frais, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmedo, drenante",
+          "pt": "Úmido, drenado",
+          "ar": "رطب وجيد الصرف",
+          "hi": "नम, जल-निकासी",
+          "zh": "湿润且排水好",
+          "ja": "湿り・水はけ良",
+          "ko": "촉촉·배수 좋게"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "When top dries",
+          "pl": "Gdy przeschnie wierzch",
+          "de": "Wenn oben trocken",
+          "fr": "Quand surface sèche",
+          "it": "Quando asciuga sopra",
+          "es": "Cuando seque arriba",
+          "pt": "Quando secar em cima",
+          "ar": "عند جفاف السطح",
+          "hi": "ऊपर सूखे तब",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "ふつう",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Umiarkowana",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषैली नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Evergreen shrub",
+          "pl": "Zimozielony krzew",
+          "de": "Immergrüner Strauch",
+          "fr": "Arbuste persistant",
+          "it": "Arbusto sempreverde",
+          "es": "Arbusto perenne",
+          "pt": "Arbusto perene",
+          "ar": "شجيرة دائمة الخضرة",
+          "hi": "सदाबहार झाड़ी",
+          "zh": "常绿灌木",
+          "ja": "常緑低木",
+          "ko": "상록 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Crimson bottlebrush",
+      "description": "Evergreen Australian shrub with aromatic leaves and red, brush-like flower spikes. Grow in full sun in moist but well-drained, slightly acidic soil. In cooler climates it is often kept in a container and overwintered bright and frost-free."
+    },
+    "pl": {
+      "common_name": "Kuflik cytrynowy",
+      "description": "Zimozielony krzew z Australii o aromatycznych liściach i czerwonych kwiatostanach typu „szczotka”. Wymaga pełnego słońca oraz wilgotnego, ale przepuszczalnego, lekko kwaśnego podłoża. W chłodniejszym klimacie najlepiej uprawiać w pojemniku i zimować jasno, bez mrozu."
+    },
+    "de": {
+      "common_name": "Zitronen-Zylinderputzer",
+      "description": "Immergrüner Strauch aus Australien mit aromatischen Blättern und roten, bürstenartigen Blütenständen. In voller Sonne in feuchtem, gut drainiertem, leicht saurem Substrat kultivieren. In kühleren Regionen häufig im Kübel halten und hell sowie frostfrei überwintern."
+    },
+    "fr": {
+      "common_name": "Rince-bouteille citronné",
+      "description": "Arbuste persistant d’Australie aux feuilles aromatiques et aux épis rouges en forme de brosse. À cultiver au plein soleil dans un sol frais mais bien drainé, plutôt acide. En climat froid, il se cultive souvent en pot et se garde lumineux, hors gel en hiver."
+    },
+    "it": {
+      "common_name": "Scovolino rosso",
+      "description": "Arbusto sempreverde australiano con foglie aromatiche e infiorescenze rosse a forma di spazzola. Coltivare in pieno sole in substrato umido ma ben drenato e leggermente acido. Nei climi freddi si tiene spesso in vaso e si sverna in luogo luminoso e senza gelo."
+    },
+    "es": {
+      "common_name": "Limpiatubos rojo",
+      "description": "Arbusto perenne australiano con hojas aromáticas y espigas florales rojas tipo cepillo. Crece mejor a pleno sol en sustrato húmedo pero bien drenado y algo ácido. En climas fríos suele cultivarse en maceta y pasar el invierno en un lugar luminoso y sin heladas."
+    },
+    "pt": {
+      "common_name": "Escova-de-garrafa vermelha",
+      "description": "Arbusto perene australiano com folhas aromáticas e inflorescências vermelhas em forma de escova. Cultive em sol pleno, em substrato úmido porém bem drenado e levemente ácido. Em regiões frias, é comum manter em vaso e invernar em local claro e sem geada."
+    },
+    "ar": {
+      "common_name": "فرشاة الزجاجة القرمزية",
+      "description": "شجيرة دائمة الخضرة من أستراليا بأوراق عطرية ونورات حمراء تشبه الفرشاة. تُزرع في شمس كاملة وتربة رطبة جيدة الصرف ويميل أن تكون حمضية قليلًا. في المناطق الباردة تُربّى غالبًا في أصيص وتُشتّى في مكان مضيء وخالٍ من الصقيع."
+    },
+    "hi": {
+      "common_name": "क्रिमसन बॉटलब्रश",
+      "description": "ऑस्ट्रेलिया की सदाबहार झाड़ी, सुगंधित पत्तियों और लाल ब्रश जैसी पुष्प-मंजरी के लिए जानी जाती है। इसे पूरी धूप में, नम लेकिन अच्छी जल-निकासी वाली और थोड़ी अम्लीय मिट्टी में उगाएँ। ठंडे क्षेत्रों में इसे गमले में रखकर सर्दियों में उजाले में, पाला-मुक्त स्थान पर रखें।"
+    },
+    "zh": {
+      "common_name": "红千层",
+      "description": "澳大利亚常绿灌木，叶片具芳香，花序呈红色刷状。需全日照，基质保持微湿但排水良好，偏微酸更佳。寒冷地区多盆栽养护，冬季置于明亮无霜处。"
+    },
+    "ja": {
+      "common_name": "ブラシノキ",
+      "description": "オーストラリア原産の常緑低木で、芳香のある葉と赤いブラシ状の花穂が特徴です。日当たりのよい場所で、水はけのよい湿り気のある弱酸性用土に植えます。寒冷地では鉢植えにして冬は明るく霜の当たらない場所で管理します。"
+    },
+    "ko": {
+      "common_name": "병솔나무",
+      "description": "호주 원산의 상록 관목으로 향기로운 잎과 붉은 병솔 모양의 꽃이 특징입니다. 강한 햇빛과 촉촉하지만 배수가 좋은 약산성 토양을 선호합니다. 추운 지역에서는 화분으로 키우며 겨울에는 밝고 서리 없는 곳에 둡니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2687/callistemon-citrinus/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=282871",
+      "https://www.chicagobotanic.org/plant-collections/plant-finder/callistemon-citrinus-crimson-bottlebrush",
+      "https://www.anbg.gov.au/gnp/gnp2/callistemon-citrinus.html",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/callistemon-citrinus",
+      "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/baker/docs/pdf/horticulture/demonstration-gardens/Bottlebrush.pdf"
+    ]
+  }
+}

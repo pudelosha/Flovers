@@ -1,0 +1,238 @@
+{
+  "external_id": "ficus_elastica",
+  "name": "Rubber Plant",
+  "latin": "Ficus elastica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_elastica.jpg",
+  "image_thumb": "ficus_elastica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz brilhante",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright tree",
+          "pl": "Drzewiasty",
+          "de": "Baumartig",
+          "fr": "Port dressé",
+          "it": "Eretto",
+          "es": "Erguido",
+          "pt": "Ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधा बढ़ता",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rubber Plant",
+      "description": "Ficus elastica is a tropical evergreen tree native to Southeast Asia. It is widely grown indoors for its large, glossy leaves and tolerance of typical home conditions."
+    },
+    "pl": {
+      "common_name": "Figowiec sprężysty",
+      "description": "Ficus elastica to tropikalne, zimozielone drzewo pochodzące z Azji Południowo-Wschodniej. W uprawie domowej cenione jest za duże, błyszczące liście i łatwą pielęgnację."
+    },
+    "de": {
+      "common_name": "Gummibaum",
+      "description": "Ficus elastica ist ein immergrüner Baum aus Südostasien. Als Zimmerpflanze ist er wegen seiner großen, glänzenden Blätter und Robustheit beliebt."
+    },
+    "fr": {
+      "common_name": "Caoutchouc",
+      "description": "Ficus elastica est un arbre tropical persistant originaire d’Asie du Sud-Est. Il est cultivé en intérieur pour son feuillage épais et brillant."
+    },
+    "it": {
+      "common_name": "Fico elastico",
+      "description": "Ficus elastica è un albero tropicale sempreverde originario del Sud-Est asiatico. È apprezzato come pianta d’appartamento per le sue foglie grandi e lucide."
+    },
+    "es": {
+      "common_name": "Árbol del caucho",
+      "description": "Ficus elastica es un árbol tropical perenne originario del sudeste asiático. Se cultiva en interiores por sus hojas grandes y su fácil mantenimiento."
+    },
+    "pt": {
+      "common_name": "Figueira-borracha",
+      "description": "Ficus elastica é uma árvore tropical perene do Sudeste Asiático. É muito usada como planta de interior devido às suas folhas grandes e resistentes."
+    },
+    "ar": {
+      "common_name": "نبات المطاط",
+      "description": "فيكس إيلاستيكا شجرة استوائية دائمة الخضرة موطنها جنوب شرق آسيا. تُزرع كنبات داخلي لأوراقها الكبيرة اللامعة وسهولة العناية بها."
+    },
+    "hi": {
+      "common_name": "रबर प्लांट",
+      "description": "फाइकस इलास्टिका दक्षिण-पूर्व एशिया का एक सदाबहार उष्णकटिबंधीय पेड़ है। इसे घरों में इसकी बड़ी चमकदार पत्तियों के लिए उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "橡皮树",
+      "description": "橡皮树原产于东南亚，是一种常绿热带植物。因其厚实光亮的叶片而常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "ゴムの木",
+      "description": "フィカス・エラスティカは東南アジア原産の常緑熱帯樹です。光沢のある大きな葉を持ち、観葉植物として人気があります。"
+    },
+    "ko": {
+      "common_name": "고무나무",
+      "description": "피쿠스 엘라스티카는 동남아시아 원산의 상록 열대 식물입니다. 두껍고 윤기 있는 잎으로 실내 관엽식물로 널리 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ficus/elastica/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b567",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-rubber-plant-ficus-elastica/"
+    ]
+  }
+}

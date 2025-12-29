@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_picturata",
+  "name": "Peacock Plant",
+  "latin": "Goeppertia picturata",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_picturata.jpg",
+  "image_thumb": "goeppertia_picturata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "rich well-draining soil",
+          "pl": "żyzna przepuszczalna",
+          "de": "nährstoffreich locker",
+          "fr": "sol riche drainé",
+          "it": "terreno drenante",
+          "es": "suelo drenante",
+          "pt": "solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep evenly moist",
+          "pl": "umiarkowanie wilgotna",
+          "de": "gleichmäßig feucht",
+          "fr": "humide régulièrement",
+          "it": "sempre umido",
+          "es": "humedad constante",
+          "pt": "umidade constante",
+          "ar": "رطوبة منتظمة",
+          "hi": "लगातार नमी",
+          "zh": "保持湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "prefers high humidity",
+          "pl": "lubi wysoką wilg.",
+          "de": "hohe Luftfeuchte",
+          "fr": "humidité élevée",
+          "it": "alta umidità",
+          "es": "alta humedad",
+          "pt": "alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक आर्द्रता",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "clumping perennial",
+          "pl": "kępowa bylina",
+          "de": "horstig wachsend",
+          "fr": "vivace en touffe",
+          "it": "perenne cespitosa",
+          "es": "perenne en mata",
+          "pt": "perene em touceira",
+          "ar": "نمو متكتل",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peacock Plant",
+      "description": "Goeppertia picturata is a tropical understory plant known for its patterned leaves and purple undersides. It prefers bright indirect light, warm temperatures, and consistently moist soil indoors."
+    },
+    "pl": {
+      "common_name": "Kalatea pstra",
+      "description": "Goeppertia picturata to tropikalna roślina o dekoracyjnych liściach z purpurowym spodem. Najlepiej rośnie w jasnym, rozproszonym świetle i stale lekko wilgotnym podłożu."
+    },
+    "de": {
+      "common_name": "Pfauen-Korbmarante",
+      "description": "Goeppertia picturata ist eine tropische Blattpflanze mit auffälliger Zeichnung. Sie gedeiht bei hellem, indirektem Licht und gleichmäßig feuchter Erde."
+    },
+    "fr": {
+      "common_name": "Calathée peinte",
+      "description": "Goeppertia picturata est une plante tropicale appréciée pour son feuillage décoratif. Elle demande une lumière indirecte et un substrat régulièrement humide."
+    },
+    "it": {
+      "common_name": "Calatea dipinta",
+      "description": "Goeppertia picturata è una pianta tropicale con foglie ornamentali molto marcate. Cresce bene in luce indiretta e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Calatea pintada",
+      "description": "Goeppertia picturata es una planta tropical de hojas muy decorativas. Prefiere luz indirecta brillante y un sustrato siempre ligeramente húmedo."
+    },
+    "pt": {
+      "common_name": "Calatéia pintada",
+      "description": "Goeppertia picturata é uma planta tropical conhecida pelas folhas desenhadas. Necessita de luz indireta e solo mantido úmido."
+    },
+    "ar": {
+      "common_name": "نبات الطاووس",
+      "description": "Goeppertia picturata نبات استوائي يتميز بأوراق مزخرفة. يفضل الضوء غير المباشر والتربة الرطبة باستمرار داخل المنزل."
+    },
+    "hi": {
+      "common_name": "पीकॉक प्लांट",
+      "description": "Goeppertia picturata एक उष्णकटिबंधीय पौधा है जिसकी पत्तियाँ सजावटी होती हैं। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "孔雀竹芋",
+      "description": "Goeppertia picturata 是一种热带观叶植物，以花纹叶片著称。适合在明亮散射光和持续湿润的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "クジャクバショウ",
+      "description": "Goeppertia picturata は模様のある葉が特徴の熱帯植物です。明るい間接光と適度に湿った土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "피콕 칼라데아",
+      "description": "Goeppertia picturata는 무늬 있는 잎이 아름다운 열대 식물입니다. 밝은 간접광과 촉촉한 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/262646/goeppertia-picturata/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b611",
+      "https://plants.ces.ncsu.edu/plants/goeppertia-picturata/"
+    ]
+  }
+}

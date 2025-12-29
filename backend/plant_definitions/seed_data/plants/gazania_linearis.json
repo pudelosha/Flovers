@@ -1,0 +1,238 @@
+{
+  "external_id": "gazania_linearis",
+  "name": "Gazania",
+  "latin": "Gazania linearis",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "gazania_linearis.jpg",
+  "image_thumb": "gazania_linearis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature scarse",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水やり",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गरम मौसम",
+          "zh": "温暖气候",
+          "ja": "暖かい気候",
+          "ko": "따뜻한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low, spreading",
+          "pl": "Niska, rozłożysta",
+          "de": "Niedrig wachsend",
+          "fr": "Bas et étalé",
+          "it": "Bassa e espansa",
+          "es": "Bajo y extendido",
+          "pt": "Baixo e aberto",
+          "ar": "منخفضة الانتشار",
+          "hi": "नीची फैलावदार",
+          "zh": "低矮铺展",
+          "ja": "低く広がる",
+          "ko": "낮게 퍼짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Treasure flower",
+      "description": "Gazania linearis is a sun-loving ornamental plant native to southern Africa. It produces bright daisy-like flowers that open in full sunlight. It is drought tolerant and prefers well-drained soil."
+    },
+    "pl": {
+      "common_name": "Gazania",
+      "description": "Gazania linearis to roślina ozdobna pochodząca z południowej Afryki. Kwitnie intensywnie w pełnym słońcu, tworząc duże kwiaty. Dobrze znosi suszę i lekką glebę."
+    },
+    "de": {
+      "common_name": "Gazanie",
+      "description": "Gazania linearis ist eine Zierpflanze aus dem südlichen Afrika. Sie bildet auffällige Blüten, die sich bei Sonne öffnen. Die Pflanze ist trockenheitsverträglich."
+    },
+    "fr": {
+      "common_name": "Gazanie",
+      "description": "Gazania linearis est une plante ornementale originaire d’Afrique australe. Elle fleurit abondamment au soleil. Elle préfère les sols bien drainés et secs."
+    },
+    "it": {
+      "common_name": "Gazania",
+      "description": "Gazania linearis è una pianta ornamentale dell’Africa meridionale. Produce fiori vistosi che si aprono al sole. È resistente alla siccità."
+    },
+    "es": {
+      "common_name": "Gazania",
+      "description": "Gazania linearis es una planta ornamental originaria del sur de África. Sus flores se abren con el sol directo. Tolera bien la sequía."
+    },
+    "pt": {
+      "common_name": "Gazânia",
+      "description": "Gazania linearis é uma planta ornamental da África do Sul. Produz flores coloridas sob sol pleno. É tolerante à seca e solos pobres."
+    },
+    "ar": {
+      "common_name": "جازانيا",
+      "description": "Gazania linearis نبات زينة موطنه جنوب أفريقيا. يزهر بألوان زاهية تحت الشمس الكاملة. يتحمل الجفاف والتربة الجافة."
+    },
+    "hi": {
+      "common_name": "गज़ानिया",
+      "description": "Gazania linearis दक्षिण अफ्रीका का सजावटी पौधा है। यह तेज धूप में चमकीले फूल देता है। यह सूखे को सहन करता है।"
+    },
+    "zh": {
+      "common_name": "勋章菊",
+      "description": "Gazania linearis 原产于非洲南部。它在充足阳光下开出鲜艳花朵。耐旱，喜欢排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "ガザニア",
+      "description": "Gazania linearis は南アフリカ原産の観賞植物です。強い日差しで花が開きます。乾燥に強いです。"
+    },
+    "ko": {
+      "common_name": "가자니아",
+      "description": "Gazania linearis는 남아프리카 원산의 관상식물입니다. 강한 햇빛에서 꽃이 핍니다. 건조에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/gazania",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-gazania/",
+      "https://plants.ces.ncsu.edu/plants/gazania/"
+    ]
+  }
+}

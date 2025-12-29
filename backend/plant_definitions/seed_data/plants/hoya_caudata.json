@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_caudata",
+  "name": "Hoya Caudata",
+  "latin": "Hoya caudata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_caudata.jpg",
+  "image_thumb": "hoya_caudata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy epiphyte mix",
+          "pl": "Przepuszczalne",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "透气基质",
+          "ja": "通気性の良い土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Let dry slightly",
+          "pl": "Lekko przesuszyć",
+          "de": "Leicht antrocknen",
+          "fr": "Laisser sécher",
+          "it": "Asciugare un po'",
+          "es": "Secar un poco",
+          "pt": "Secar um pouco",
+          "ar": "اتركه يجف قليلاً",
+          "hi": "थोड़ा सूखने दें",
+          "zh": "稍干再浇",
+          "ja": "少し乾かす",
+          "ko": "약간 건조"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne–haute",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة–مرتفعة",
+          "hi": "मध्यम–उच्च",
+          "zh": "中高",
+          "ja": "中～高",
+          "ko": "중~높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vining epiphyte",
+          "pl": "Pnący epifit",
+          "de": "Rankender Epiphyt",
+          "fr": "Épiphyte grimpant",
+          "it": "Epifita rampicante",
+          "es": "Epífita trepadora",
+          "pt": "Epífita trepadora",
+          "ar": "نبات متسلق هوائي",
+          "hi": "लता एपिफाइट",
+          "zh": "攀援附生",
+          "ja": "つる性着生",
+          "ko": "덩굴성 착생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wax Plant",
+      "description": "Hoya caudata is a tropical epiphytic vine native to Southeast Asia. It is known for its textured leaves and fuzzy star-shaped flowers. The plant prefers bright indirect light and well-draining soil."
+    },
+    "pl": {
+      "common_name": "Hoja",
+      "description": "Hoya caudata to tropikalny epifityczny pnącz z Azji Południowo-Wschodniej. Ma ozdobne, fakturowane liście i gwiaździste kwiaty. Najlepiej rośnie w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Wachsblume",
+      "description": "Hoya caudata ist eine tropische epiphytische Kletterpflanze aus Südostasien. Sie besitzt strukturierte Blätter und sternförmige Blüten. Bevorzugt helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Plante de cire",
+      "description": "Hoya caudata est une plante tropicale épiphyte originaire d’Asie du Sud-Est. Elle se distingue par ses feuilles texturées et ses fleurs étoilées. Elle aime la lumière vive indirecte."
+    },
+    "it": {
+      "common_name": "Pianta di cera",
+      "description": "Hoya caudata è una pianta epifita tropicale del Sud-Est asiatico. Presenta foglie decorative e fiori a stella. Cresce bene con luce indiretta intensa."
+    },
+    "es": {
+      "common_name": "Planta de cera",
+      "description": "Hoya caudata es una enredadera epífita tropical del sudeste asiático. Tiene hojas texturizadas y flores estrelladas. Prefiere luz brillante indirecta."
+    },
+    "pt": {
+      "common_name": "Flor-de-cera",
+      "description": "Hoya caudata é uma planta epífita tropical do Sudeste Asiático. Destaca-se pelas folhas texturizadas e flores em forma de estrela. Gosta de luz indireta brilhante."
+    },
+    "ar": {
+      "common_name": "نبات الشمع",
+      "description": "هويا كوداتا نبات استوائي متسلق موطنه جنوب شرق آسيا. يتميز بأوراق مزخرفة وأزهار نجمية. يفضل الضوء الساطع غير المباشر."
+    },
+    "hi": {
+      "common_name": "वैक्स प्लांट",
+      "description": "होया काउडाटा दक्षिण पूर्व एशिया की एक उष्णकटिबंधीय लता है। इसकी पत्तियाँ बनावटदार और फूल तारे जैसे होते हैं। इसे अप्रत्यक्ष तेज़ रोशनी पसंद है।"
+    },
+    "zh": {
+      "common_name": "球兰",
+      "description": "Hoya caudata 是原产于东南亚的热带附生藤本植物。它以质感叶片和星形花朵著称。适合明亮的散射光环境。"
+    },
+    "ja": {
+      "common_name": "ホヤ",
+      "description": "ホヤ・カウダータは東南アジア原産の熱帯着生植物です。質感のある葉と星形の花が特徴です。明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "호야",
+      "description": "호야 카우다타는 동남아시아 원산의 열대 착생 덩굴식물입니다. 독특한 잎과 별 모양 꽃이 특징입니다. 밝은 간접광을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hoya",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a912",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/hoya"
+    ]
+  }
+}

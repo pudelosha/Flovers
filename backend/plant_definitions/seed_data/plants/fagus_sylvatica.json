@@ -1,0 +1,237 @@
+{
+  "external_id": "fagus_sylvatica",
+  "name": "European Beech",
+  "latin": "Fagus sylvatica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "fagus_sylvatica.jpg",
+  "image_thumb": "fagus_sylvatica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial to full sun",
+          "pl": "Półcień do słońca",
+          "de": "Halbschatten Sonne",
+          "fr": "Mi-ombre soleil",
+          "it": "Mezzombra sole",
+          "es": "Sol parcial pleno",
+          "pt": "Sol parcial pleno",
+          "ar": "شمس جزئية كاملة",
+          "hi": "आंशिक पूर्ण धूप",
+          "zh": "半日照到全日照",
+          "ja": "半日向から日向",
+          "ko": "부분에서 전일조"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Fertile well-drained",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Fruchtbar drainiert",
+          "fr": "Fertile drainé",
+          "it": "Fertile drenato",
+          "es": "Fértil drenado",
+          "pt": "Fértil drenado",
+          "ar": "تربة خصبة جيدة",
+          "hi": "उपजाऊ जल निकास",
+          "zh": "肥沃排水良好",
+          "ja": "肥沃で水はけ",
+          "ko": "비옥 배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular moderate",
+          "pl": "Umiarkowane",
+          "de": "Regelmäßig mäßig",
+          "fr": "Arrosage modéré",
+          "it": "Irrigazione media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "नियमित मध्यम",
+          "zh": "定期适量",
+          "ja": "定期中程度",
+          "ko": "정기적 중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Advanced care",
+          "pl": "Trudna uprawa",
+          "de": "Anspruchsvoll",
+          "fr": "Difficile",
+          "it": "Impegnativa",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "عناية صعبة",
+          "hi": "कठिन देखभाल",
+          "zh": "养护较难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Umiarkowany chłód",
+          "de": "Kühl gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل بارد",
+          "hi": "शीतोष्ण ठंडा",
+          "zh": "凉爽温带",
+          "ja": "冷涼な温帯",
+          "ko": "서늘한 온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average outdoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Seeds mildly toxic",
+          "pl": "Nasiona toksyczne",
+          "de": "Samen giftig",
+          "fr": "Graines toxiques",
+          "it": "Semi tossici",
+          "es": "Semillas tóxicas",
+          "pt": "Sementes tóxicas",
+          "ar": "بذور سامة",
+          "hi": "बीज विषैले",
+          "zh": "种子有毒",
+          "ja": "種子は有毒",
+          "ko": "씨앗 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Large slow tree",
+          "pl": "Duże wolne drzewo",
+          "de": "Großer Baum langsam",
+          "fr": "Grand arbre lent",
+          "it": "Grande albero lento",
+          "es": "Árbol grande lento",
+          "pt": "Árvore grande lenta",
+          "ar": "شجرة كبيرة بطيئة",
+          "hi": "बड़ा धीमा वृक्ष",
+          "zh": "大型慢生长",
+          "ja": "大型で遅い",
+          "ko": "큰 느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "European Beech",
+      "description": "Fagus sylvatica is a large deciduous tree native to Europe, commonly found in temperate forests. It prefers fertile, well-drained soils and moderate moisture. The species is long-lived and sensitive to drought."
+    },
+    "pl": {
+      "common_name": "Buk zwyczajny",
+      "description": "Fagus sylvatica to duże drzewo liściaste występujące naturalnie w Europie. Najlepiej rośnie na żyznych, przepuszczalnych glebach i przy umiarkowanej wilgotności. Jest wrażliwy na suszę."
+    },
+    "de": {
+      "common_name": "Rotbuche",
+      "description": "Fagus sylvatica ist ein großer laubabwerfender Baum Europas. Er wächst bevorzugt auf fruchtbaren, gut durchlässigen Böden mit gleichmäßiger Feuchte. Trockenheit wird schlecht vertragen."
+    },
+    "fr": {
+      "common_name": "Hêtre commun",
+      "description": "Fagus sylvatica est un grand arbre caduc d’Europe. Il apprécie les sols fertiles et bien drainés avec une humidité régulière. Il supporte mal la sécheresse prolongée."
+    },
+    "it": {
+      "common_name": "Faggio comune",
+      "description": "Fagus sylvatica è un grande albero deciduo europeo. Cresce meglio in terreni fertili e ben drenati con umidità moderata. È sensibile alla siccità."
+    },
+    "es": {
+      "common_name": "Haya europea",
+      "description": "Fagus sylvatica es un árbol caducifolio grande originario de Europa. Prefiere suelos fértiles y bien drenados con humedad constante. No tolera bien la sequía."
+    },
+    "pt": {
+      "common_name": "Faia-europeia",
+      "description": "Fagus sylvatica é uma grande árvore caducifólia da Europa. Desenvolve-se melhor em solos férteis e bem drenados com humidade moderada. É sensível à seca."
+    },
+    "ar": {
+      "common_name": "الزان الأوروبي",
+      "description": "Fagus sylvatica شجرة نفضية كبيرة موطنها أوروبا. تفضل التربة الخصبة جيدة التصريف مع رطوبة معتدلة. لا تتحمل الجفاف لفترات طويلة."
+    },
+    "hi": {
+      "common_name": "यूरोपीय बीच",
+      "description": "Fagus sylvatica यूरोप का एक बड़ा पर्णपाती वृक्ष है। यह उपजाऊ और अच्छी जल निकासी वाली मिट्टी में मध्यम नमी पसंद करता है। सूखे के प्रति संवेदनशील है।"
+    },
+    "zh": {
+      "common_name": "欧洲山毛榉",
+      "description": "Fagus sylvatica 是原产于欧洲的大型落叶乔木。喜肥沃、排水良好的土壤和稳定湿度。对干旱较为敏感。"
+    },
+    "ja": {
+      "common_name": "ヨーロッパブナ",
+      "description": "Fagus sylvatica はヨーロッパ原産の大型落葉樹です。肥沃で水はけの良い土壌と適度な湿度を好みます。乾燥に弱いです。"
+    },
+    "ko": {
+      "common_name": "유럽너도밤나무",
+      "description": "Fagus sylvatica는 유럽 원산의 큰 낙엽수입니다. 비옥하고 배수가 좋은 토양과 일정한 수분을 선호합니다. 건조에는 약합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295890-1",
+      "https://www.rhs.org.uk/plants/7213/fagus-sylvatica/details",
+      "https://extension.psu.edu/european-beech-fagus-sylvatica"
+    ]
+  }
+}

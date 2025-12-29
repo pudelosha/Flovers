@@ -1,0 +1,237 @@
+{
+  "external_id": "eschscholzia_californica",
+  "name": "California poppy",
+  "latin": "Eschscholzia californica",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "eschscholzia_californica.jpg",
+  "image_thumb": "eschscholzia_californica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Light watering",
+          "pl": "Lekkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage léger",
+          "it": "Poca acqua",
+          "es": "Riego ligero",
+          "pt": "Pouca rega",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno-ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉到温暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrig",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual",
+          "pl": "Szybki jednoroczny",
+          "de": "Schnell wachsend",
+          "fr": "Annuelle rapide",
+          "it": "Annuale rapida",
+          "es": "Anual rápido",
+          "pt": "Anual rápido",
+          "ar": "سنوي سريع",
+          "hi": "तेज़ वार्षिक",
+          "zh": "快速一年生",
+          "ja": "一年草早生",
+          "ko": "빠른 한해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "California poppy",
+      "description": "Eschscholzia californica is a fast-growing annual native to western North America. It thrives in full sun and poor, well-drained soils with minimal watering."
+    },
+    "pl": {
+      "common_name": "Pozłotka kalifornijska",
+      "description": "Eschscholzia californica to szybko rosnąca roślina jednoroczna z zachodniej Ameryki Północnej. Najlepiej rośnie w pełnym słońcu i lekkiej, przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Kalifornischer Mohn",
+      "description": "Eschscholzia californica ist eine einjährige Pflanze aus dem Westen Nordamerikas. Sie bevorzugt volle Sonne und trockene, gut drainierte Böden."
+    },
+    "fr": {
+      "common_name": "Pavot de Californie",
+      "description": "Eschscholzia californica est une plante annuelle originaire de l’ouest de l’Amérique du Nord. Elle pousse mieux en plein soleil avec peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Papavero della California",
+      "description": "Eschscholzia californica è una pianta annuale originaria del Nord America occidentale. Predilige pieno sole e terreni ben drenati e asciutti."
+    },
+    "es": {
+      "common_name": "Amapola de California",
+      "description": "Eschscholzia californica es una planta anual originaria del oeste de Norteamérica. Crece bien a pleno sol y con riego limitado."
+    },
+    "pt": {
+      "common_name": "Papoula-da-Califórnia",
+      "description": "Eschscholzia californica é uma planta anual nativa do oeste da América do Norte. Prefere sol pleno e solos bem drenados."
+    },
+    "ar": {
+      "common_name": "خشخاش كاليفورنيا",
+      "description": "نبات Eschscholzia californica نبات سنوي موطنه غرب أمريكا الشمالية. ينمو أفضل في الشمس الكاملة وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "कैलिफ़ोर्निया पॉपी",
+      "description": "Eschscholzia californica पश्चिमी उत्तरी अमेरिका की एक वार्षिक पौधा है। यह पूरी धूप और कम पानी में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "加州罂粟",
+      "description": "Eschscholzia californica 原产于北美西部，是一年生植物。喜全日照和排水良好的干燥土壤。"
+    },
+    "ja": {
+      "common_name": "カリフォルニアポピー",
+      "description": "エスコルチア・カリフォルニカは北米西部原産の一年草です。日当たりと水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "캘리포니아 포피",
+      "description": "Eschscholzia californica는 북미 서부 원산의 한해살이풀입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/eschscholzia-californica",
+      "https://plants.ces.ncsu.edu/plants/eschscholzia-californica/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b560"
+    ]
+  }
+}

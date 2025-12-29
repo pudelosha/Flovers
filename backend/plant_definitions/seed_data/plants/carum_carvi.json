@@ -1,0 +1,239 @@
+{
+  "external_id": "carum_carvi",
+  "name": "Caraway",
+  "latin": "Carum carvi",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "carum_carvi.jpg",
+  "image_thumb": "carum_carvi.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い土",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Umiarkowanie wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, pas détrem.",
+          "it": "Umido, non frad.",
+          "es": "Húmedo, no enchar.",
+          "pt": "Úmido, sem enchar.",
+          "ar": "رطوبة معتدلة",
+          "hi": "समान नमी",
+          "zh": "保持微湿",
+          "ja": "適度に湿らせる",
+          "ko": "촉촉하게 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool: 15–24°C",
+          "pl": "Chłodno: 15–24°C",
+          "de": "Kühl: 15–24°C",
+          "fr": "Frais: 15–24°C",
+          "it": "Fresco: 15–24°C",
+          "es": "Fresco: 15–24°C",
+          "pt": "Fresco: 15–24°C",
+          "ar": "معتدل: 15–24°C",
+          "hi": "ठंडा: 15–24°C",
+          "zh": "凉爽：15–24°C",
+          "ja": "涼しい: 15–24°C",
+          "ko": "서늘함: 15–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average home",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Ambiante",
+          "it": "Ambiente",
+          "es": "Ambiente",
+          "pt": "Ambiente",
+          "ar": "رطوبة منزلية",
+          "hi": "सामान्य",
+          "zh": "一般室内",
+          "ja": "標準的な室内",
+          "ko": "보통 실내"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zw.",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossico per animali",
+          "es": "Tóxico mascotas",
+          "pt": "Tóxico p/ animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू हेतु विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유해"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Biennial herb",
+          "pl": "Zioło dwuletnie",
+          "de": "Zweijähriges Kraut",
+          "fr": "Bisannuelle",
+          "it": "Biennale",
+          "es": "Bianual",
+          "pt": "Bienal",
+          "ar": "عشبة ثنائية الحول",
+          "hi": "द्विवर्षीय जड़ी",
+          "zh": "二年生草本",
+          "ja": "二年草",
+          "ko": "2년생 허브"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Caraway",
+      "description": "Caraway (Carum carvi) is a biennial herb grown for its aromatic seeds and foliage. It prefers full sun and fertile, well-drained soil kept uniformly moist in active growth. According to ASPCA, it can cause mild gastrointestinal upset in dogs and cats if ingested."
+    },
+    "pl": {
+      "common_name": "Kminek zwyczajny",
+      "description": "Kminek zwyczajny (Carum carvi) to dwuletnie zioło uprawiane dla aromatycznych nasion i liści. Lubi pełne słońce oraz żyzną, przepuszczalną glebę utrzymywaną równomiernie wilgotną w czasie wzrostu. Według ASPCA roślina może wywołać łagodne dolegliwości żołądkowe u psów i kotów po zjedzeniu."
+    },
+    "de": {
+      "common_name": "Kümmel",
+      "description": "Kümmel (Carum carvi) ist ein zweijähriges Gewürzkraut, das wegen seiner aromatischen Samen und Blätter kultiviert wird. Er wächst am besten in voller Sonne in einem fruchtbaren, gut drainierten Boden, der während des Wachstums gleichmäßig feucht bleibt. Laut ASPCA kann die Aufnahme bei Hunden und Katzen zu milden Magen-Darm-Beschwerden führen."
+    },
+    "fr": {
+      "common_name": "Carvi",
+      "description": "Le carvi (Carum carvi) est une herbe bisannuelle cultivée pour ses graines aromatiques et son feuillage. Il préfère le plein soleil et un sol fertile, bien drainé, maintenu régulièrement humide pendant la croissance. D’après l’ASPCA, l’ingestion peut provoquer de légers troubles digestifs chez les chiens et les chats."
+    },
+    "it": {
+      "common_name": "Carvi",
+      "description": "Il carvi (Carum carvi) è un’erba biennale coltivata per i semi aromatici e le foglie. Preferisce pieno sole e un terreno fertile e ben drenato, mantenuto uniformemente umido durante la crescita. Secondo l’ASPCA, l’ingestione può causare lievi disturbi gastrointestinali in cani e gatti."
+    },
+    "es": {
+      "common_name": "Alcaravea",
+      "description": "La alcaravea (Carum carvi) es una hierba bienal cultivada por sus semillas aromáticas y su follaje. Prefiere pleno sol y un sustrato fértil y bien drenado, con humedad uniforme durante el crecimiento. Según la ASPCA, su ingestión puede causar malestar gastrointestinal leve en perros y gatos."
+    },
+    "pt": {
+      "common_name": "Alcaravia",
+      "description": "A alcaravia (Carum carvi) é uma erva bienal cultivada pelas sementes aromáticas e pela folhagem. Prefere sol pleno e solo fértil, bem drenado, mantido uniformemente úmido durante o crescimento. Segundo a ASPCA, a ingestão pode causar desconforto gastrointestinal leve em cães e gatos."
+    },
+    "ar": {
+      "common_name": "الكراويا",
+      "description": "الكراويا (Carum carvi) عشبة ثنائية الحول تُزرع من أجل بذورها العطرية وأوراقها. تفضّل الشمس الكاملة وتربة خصبة جيدة الصرف تُحافَظ على رطوبتها بشكل متوازن أثناء النمو. وفقًا لـ ASPCA قد تسبب ابتلاعها اضطرابًا هضميًا خفيفًا لدى الكلاب والقطط."
+    },
+    "hi": {
+      "common_name": "शाही जीरा",
+      "description": "शाही जीरा (Carum carvi) एक द्विवर्षीय जड़ी है जिसे सुगंधित बीज और पत्तियों के लिए उगाया जाता है। इसे पूरी धूप और उपजाऊ, अच्छी जलनिकासी वाली मिट्टी पसंद है, जिसे वृद्धि के दौरान समान रूप से नम रखा जाए। ASPCA के अनुसार, इसे खाने पर कुत्तों और बिल्लियों में हल्की उल्टी या दस्त हो सकते हैं।"
+    },
+    "zh": {
+      "common_name": "葛缕子",
+      "description": "葛缕子（Carum carvi）为二年生草本，常为其芳香种子与叶片而栽培。它喜全日照与肥沃、排水良好的土壤，生长期间土壤保持均匀微湿。ASPCA 指出，宠物摄入可能引起轻微胃肠不适。"
+    },
+    "ja": {
+      "common_name": "キャラウェイ",
+      "description": "キャラウェイ（Carum carvi）は芳香のある種子と葉を利用する二年草です。日当たりの良い場所と、水はけの良い肥沃な土を好み、生育期は用土を適度に湿らせます。ASPCA によると、犬や猫が摂取すると軽い消化器症状を起こすことがあります。"
+    },
+    "ko": {
+      "common_name": "캐러웨이",
+      "description": "캐러웨이( Carum carvi )는 향기로운 씨앗과 잎을 위해 재배되는 2년생 허브입니다. 강한 햇빛과 배수가 좋은 비옥한 토양을 좋아하며, 생장기에는 흙이 고르게 촉촉하도록 관리합니다. ASPCA에 따르면 섭취 시 개와 고양이에서 가벼운 위장 장애가 나타날 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://extension.illinois.edu/herbs/caraway",
+      "https://www.rhs.org.uk/plants/3148/carum-carvi/details",
+      "https://gardenerspath.com/plants/herbs/grow-caraway-containers/",
+      "https://www.gardenia.net/plant/carum-carvi-caraway-grow-care-guide",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/caraway"
+    ]
+  }
+}

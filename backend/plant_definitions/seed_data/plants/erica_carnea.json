@@ -1,0 +1,236 @@
+{
+  "external_id": "erica_carnea",
+  "name": "Winter heath",
+  "latin": "Erica carnea",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "erica_carnea.jpg",
+  "image_thumb": "erica_carnea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Kwaśna gleba",
+          "de": "Saurer Boden",
+          "fr": "Sol acide",
+          "it": "Suolo acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Umiarkowane",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool hardy",
+          "pl": "Mrozoodporna",
+          "de": "Winterhart",
+          "fr": "Rustique",
+          "it": "Rustica",
+          "es": "Rústica",
+          "pt": "Rústica",
+          "ar": "مقاومة للبرد",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low shrub",
+          "pl": "Niski krzew",
+          "de": "Niedriger Strauch",
+          "fr": "Arbuste bas",
+          "it": "Arbusto basso",
+          "es": "Arbusto bajo",
+          "pt": "Arbusto baixo",
+          "ar": "شجيرة منخفضة",
+          "hi": "छोटी झाड़ी",
+          "zh": "低矮灌木",
+          "ja": "低木",
+          "ko": "관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Winter heath",
+      "description": "Erica carnea is a low-growing evergreen shrub native to alpine regions of Europe. It flowers in late winter to early spring and prefers acidic, well-drained soil. The plant is hardy and commonly grown outdoors."
+    },
+    "pl": {
+      "common_name": "Wrzosiec krwisty",
+      "description": "Erica carnea to zimozielony, niski krzew pochodzący z regionów alpejskich Europy. Kwitnie zimą i wczesną wiosną, najlepiej rośnie w kwaśnej, przepuszczalnej glebie. Jest rośliną odporną na mróz."
+    },
+    "de": {
+      "common_name": "Schneeheide",
+      "description": "Erica carnea ist ein immergrüner Zwergstrauch aus den Alpen Europas. Sie blüht im Winter bis Frühjahr und bevorzugt saure, gut durchlässige Böden. Die Pflanze ist sehr winterhart."
+    },
+    "fr": {
+      "common_name": "Bruyère des neiges",
+      "description": "Erica carnea est un petit arbuste persistant originaire des Alpes européennes. Elle fleurit de l’hiver au printemps et apprécie les sols acides et drainés. C’est une plante très rustique."
+    },
+    "it": {
+      "common_name": "Erica delle nevi",
+      "description": "Erica carnea è un arbusto sempreverde originario delle Alpi europee. Fiorisce tra l’inverno e la primavera e richiede terreni acidi e ben drenati. È molto resistente al freddo."
+    },
+    "es": {
+      "common_name": "Brezo de invierno",
+      "description": "Erica carnea es un arbusto perenne originario de las regiones alpinas de Europa. Florece desde el invierno hasta la primavera y necesita suelos ácidos y drenados. Es muy resistente al frío."
+    },
+    "pt": {
+      "common_name": "Urze-de-inverno",
+      "description": "Erica carnea é um arbusto perene originário das regiões alpinas da Europa. Floresce do inverno à primavera e prefere solos ácidos e bem drenados. É uma planta rústica."
+    },
+    "ar": {
+      "common_name": "خلنج الشتاء",
+      "description": "إريكا كارنيا شجيرة دائمة الخضرة موطنها المناطق الجبلية في أوروبا. تزهر من الشتاء حتى الربيع وتفضل التربة الحمضية جيدة التصريف. النبات مقاوم للبرد."
+    },
+    "hi": {
+      "common_name": "विंटर हीथ",
+      "description": "एरिका कार्निया यूरोप के अल्पाइन क्षेत्रों की एक सदाबहार झाड़ी है। यह सर्दियों से वसंत तक फूल देती है और अम्लीय, अच्छी जल निकासी वाली मिट्टी पसंद करती है। यह ठंड सहनशील पौधा है।"
+    },
+    "zh": {
+      "common_name": "冬石楠",
+      "description": "Erica carnea 是原产于欧洲高山地区的常绿矮灌木。它在冬末到春季开花，喜酸性、排水良好的土壤。具有很强的耐寒性。"
+    },
+    "ja": {
+      "common_name": "ウィンターヒース",
+      "description": "エリカ・カルネアはヨーロッパの高山地帯原産の常緑低木です。冬から春にかけて開花し、酸性で水はけの良い土を好みます。耐寒性があります。"
+    },
+    "ko": {
+      "common_name": "겨울히스",
+      "description": "에리카 카르네아는 유럽 알프스 지역 원산의 상록 관목입니다. 겨울에서 봄 사이에 꽃을 피우며 산성의 배수가 좋은 토양을 선호합니다. 추위에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/6769/erica-carnea/details",
+      "https://www.gardenersworld.com/plants/erica-carnea/",
+      "https://plants.ces.ncsu.edu/plants/erica-carnea/"
+    ]
+  }
+}

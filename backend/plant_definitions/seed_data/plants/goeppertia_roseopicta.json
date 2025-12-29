@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_roseopicta",
+  "name": "Rose-painted calathea",
+  "latin": "Goeppertia roseopicta",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_roseopicta.jpg",
+  "image_thumb": "goeppertia_roseopicta.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining soil",
+          "pl": "przepuszczalna",
+          "de": "durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep soil moist",
+          "pl": "gleba wilgotna",
+          "de": "gleichmäßig feucht",
+          "fr": "sol humide",
+          "it": "suolo umido",
+          "es": "suelo húmedo",
+          "pt": "solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "मिट्टी नम",
+          "zh": "保持湿润",
+          "ja": "湿り気を保つ",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "umiarkowana",
+          "de": "mittel",
+          "fr": "modérée",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high humidity",
+          "pl": "wysoka wilgotność",
+          "de": "hohe Luftfeuchte",
+          "fr": "humidité élevée",
+          "it": "alta umidità",
+          "es": "humedad alta",
+          "pt": "umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietrująca",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषरहित",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "clumping foliage",
+          "pl": "kępowy wzrost",
+          "de": "horstig",
+          "fr": "port touffu",
+          "it": "crescita cesp.",
+          "es": "crecimiento denso",
+          "pt": "crescimento denso",
+          "ar": "نمو كثيف",
+          "hi": "झाड़ीदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rose-painted calathea",
+      "description": "Goeppertia roseopicta is a tropical understory plant native to Brazil, valued for its patterned pink and green leaves. It prefers bright, indirect light, consistently moist soil, and high humidity indoors. Cold drafts and direct sun can damage the foliage."
+    },
+    "pl": {
+      "common_name": "Kalatea różowomalowana",
+      "description": "Goeppertia roseopicta to tropikalna roślina z Brazylii ceniona za dekoracyjne, różowo-zielone liście. Wymaga jasnego, rozproszonego światła, stale wilgotnej gleby i wysokiej wilgotności powietrza. Nie toleruje przeciągów ani bezpośredniego słońca."
+    },
+    "de": {
+      "common_name": "Rosen-Korbmarante",
+      "description": "Goeppertia roseopicta stammt aus den Tropen Brasiliens und ist für ihre gemusterten Blätter bekannt. Sie wächst am besten bei hellem, indirektem Licht, gleichmäßig feuchter Erde und hoher Luftfeuchte. Direkte Sonne und Kälte sollten vermieden werden."
+    },
+    "fr": {
+      "common_name": "Calathéa rose peint",
+      "description": "Goeppertia roseopicta est une plante tropicale brésilienne appréciée pour son feuillage rose et vert. Elle préfère une lumière vive indirecte, un sol humide et une forte humidité de l’air. Le soleil direct peut brûler les feuilles."
+    },
+    "it": {
+      "common_name": "Calatea rosa dipinta",
+      "description": "Goeppertia roseopicta è una pianta tropicale originaria del Brasile, coltivata per le sue foglie ornamentali. Richiede luce indiretta luminosa, terreno costantemente umido e alta umidità. Teme il freddo e il sole diretto."
+    },
+    "es": {
+      "common_name": "Calatea pintada de rosa",
+      "description": "Goeppertia roseopicta es una planta tropical de Brasil conocida por sus hojas decorativas. Necesita luz indirecta brillante, suelo húmedo y alta humedad ambiental. El sol directo puede dañar el follaje."
+    },
+    "pt": {
+      "common_name": "Calatéia rosa",
+      "description": "Goeppertia roseopicta é uma planta tropical brasileira valorizada por suas folhas coloridas. Prefere luz indireta brilhante, solo sempre úmido e alta umidade. Não tolera sol direto nem temperaturas baixas."
+    },
+    "ar": {
+      "common_name": "كالاثيا وردية",
+      "description": "نبات Goeppertia roseopicta موطنه المناطق الاستوائية في البرازيل ويشتهر بأوراقه المزخرفة. يحتاج إلى ضوء ساطع غير مباشر وتربة رطبة ورطوبة عالية. التعرض للشمس المباشرة قد يضر بالأوراق."
+    },
+    "hi": {
+      "common_name": "रोज़ पेंटेड कैलाथिया",
+      "description": "Goeppertia roseopicta ब्राज़ील का एक उष्णकटिबंधीय पौधा है जो अपनी सजावटी पत्तियों के लिए जाना जाता है। इसे तेज अप्रत्यक्ष रोशनी, नम मिट्टी और अधिक आर्द्रता की आवश्यकता होती है। सीधी धूप से पत्तियाँ खराब हो सकती हैं।"
+    },
+    "zh": {
+      "common_name": "玫瑰彩叶竹芋",
+      "description": "Goeppertia roseopicta 原产于巴西热带地区，以其粉绿相间的叶片著称。适合明亮的散射光、保持湿润的土壤和较高空气湿度。直射阳光容易灼伤叶片。"
+    },
+    "ja": {
+      "common_name": "ローズペイントカラテア",
+      "description": "Goeppertia roseopicta はブラジル原産の熱帯植物で、模様のある葉が特徴です。明るい間接光、湿った用土、高い湿度を好みます。直射日光は避けてください。"
+    },
+    "ko": {
+      "common_name": "로즈 페인티드 칼라데아",
+      "description": "Goeppertia roseopicta는 브라질 원산의 열대 식물로 장식적인 잎이 특징입니다. 밝은 간접광과 촉촉한 토양, 높은 습도를 선호합니다. 직사광선은 잎을 손상시킬 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=280444",
+      "https://plants.ces.ncsu.edu/plants/goeppertia-roseopicta/",
+      "https://www.rhs.org.uk/plants/171705/calathea-roseopicta/details"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "geranium_macrorrhizum",
+  "name": "Bigroot Geranium",
+  "latin": "Geranium macrorrhizum",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "geranium_macrorrhizum.jpg",
+  "image_thumb": "geranium_macrorrhizum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Mało wody",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Poca acqua",
+          "es": "Riego bajo",
+          "pt": "Pouca água",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool-temperate",
+          "pl": "Umiarkowana",
+          "de": "Gemäßigt",
+          "fr": "Tempérée",
+          "it": "Temperata",
+          "es": "Templada",
+          "pt": "Temperado",
+          "ar": "معتدل",
+          "hi": "समशीतोष्ण",
+          "zh": "温带",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Staude horstig",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespugliosa",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार बारहमासी",
+          "zh": "丛生多年生",
+          "ja": "株立ち多年草",
+          "ko": "군생 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bigroot Geranium",
+      "description": "Geranium macrorrhizum is a hardy perennial native to southeastern Europe. It forms aromatic foliage and pink flowers in spring. It is valued for groundcover use and low maintenance."
+    },
+    "pl": {
+      "common_name": "Bodziszek korzeniasty",
+      "description": "Geranium macrorrhizum to wytrzymała bylina pochodząca z południowo-wschodniej Europy. Tworzy pachnące liście i różowe kwiaty wiosną. Jest ceniona jako roślina okrywowa."
+    },
+    "de": {
+      "common_name": "Großwurzel-Storchschnabel",
+      "description": "Geranium macrorrhizum ist eine robuste Staude aus Südosteuropa. Sie bildet aromatische Blätter und rosa Blüten im Frühjahr. Sie eignet sich gut als pflegeleichter Bodendecker."
+    },
+    "fr": {
+      "common_name": "Géranium à grosses racines",
+      "description": "Geranium macrorrhizum est une vivace rustique originaire d'Europe du Sud-Est. Elle produit un feuillage aromatique et des fleurs roses au printemps. Elle est utilisée comme couvre-sol."
+    },
+    "it": {
+      "common_name": "Geranio macrorrizo",
+      "description": "Geranium macrorrhizum è una perenne rustica dell'Europa sudorientale. Ha foglie aromatiche e fiori rosa primaverili. È apprezzata come coprisuolo resistente."
+    },
+    "es": {
+      "common_name": "Geranio de raíz grande",
+      "description": "Geranium macrorrhizum es una planta perenne resistente originaria del sureste de Europa. Produce hojas aromáticas y flores rosadas en primavera. Se usa como cubresuelos."
+    },
+    "pt": {
+      "common_name": "Gerânio-de-raiz-grande",
+      "description": "Geranium macrorrhizum é uma perene resistente do sudeste da Europa. Possui folhas aromáticas e flores rosadas na primavera. É usada como planta de cobertura."
+    },
+    "ar": {
+      "common_name": "إبرة الراعي كبيرة الجذور",
+      "description": "نبات Geranium macrorrhizum معمر قوي موطنه جنوب شرق أوروبا. يتميز بأوراق عطرية وأزهار وردية في الربيع. يستخدم كنبات غطاء أرضي."
+    },
+    "hi": {
+      "common_name": "बिगरूट जेरेनियम",
+      "description": "Geranium macrorrhizum दक्षिण-पूर्वी यूरोप का एक मजबूत बहुवर्षीय पौधा है। इसमें सुगंधित पत्तियाँ और वसंत में गुलाबी फूल होते हैं। इसे ग्राउंडकवर के रूप में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "大根老鹳草",
+      "description": "Geranium macrorrhizum 原产于东南欧，是一种耐寒多年生植物。春季开粉色花，叶片芳香。常用作地被植物。"
+    },
+    "ja": {
+      "common_name": "オオネコノメソウ",
+      "description": "Geranium macrorrhizumは南東ヨーロッパ原産の丈夫な多年草です。春にピンクの花と香りのある葉を持ちます。グラウンドカバーとして利用されます。"
+    },
+    "ko": {
+      "common_name": "큰뿌리쥐손이풀",
+      "description": "Geranium macrorrhizum은 남동유럽 원산의 강건한 다년생 식물입니다. 봄에 분홍색 꽃과 향기로운 잎을 냅니다. 주로 지피식물로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/geranium-macrorrhizum/details",
+      "https://plants.ces.ncsu.edu/plants/geranium-macrorrhizum/",
+      "https://www.gardenersworld.com/plants/geranium-macrorrhizum/"
+    ]
+  }
+}

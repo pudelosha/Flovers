@@ -1,0 +1,237 @@
+{
+  "external_id": "gymnocalycium_baldianum",
+  "name": "Dwarf Chin Cactus",
+  "latin": "Gymnocalycium baldianum",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "gymnocalycium_baldianum.jpg",
+  "image_thumb": "gymnocalycium_baldianum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Helles Sonnenlicht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "强光照",
+          "ja": "明るい日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "जल निकास वाली मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm preferred",
+          "pl": "Ciepłolubny",
+          "de": "Warm bevorzugt",
+          "fr": "Chaud préféré",
+          "it": "Ama il caldo",
+          "es": "Prefiere calor",
+          "pt": "Prefere calor",
+          "ar": "يفضل الدفء",
+          "hi": "गर्म पसंद",
+          "zh": "喜温暖",
+          "ja": "暖かさ好む",
+          "ko": "따뜻함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrujący",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dwarf Chin Cactus",
+      "description": "Gymnocalycium baldianum is a small globular cactus native to Argentina. It thrives in bright sunlight and well-draining soil. Water sparingly and allow the soil to dry between waterings."
+    },
+    "pl": {
+      "common_name": "Gymnokalicjum Baldiana",
+      "description": "Gymnocalycium baldianum to niewielki kaktus pochodzący z Argentyny. Wymaga jasnego światła i dobrze przepuszczalnej gleby. Podlewać rzadko, pozwalając ziemi wyschnąć."
+    },
+    "de": {
+      "common_name": "Zwergkugelkaktus",
+      "description": "Gymnocalycium baldianum ist ein kleiner Kaktus aus Argentinien. Er bevorzugt helles Licht und gut durchlässiges Substrat. Sparsam gießen und Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Cactus nain",
+      "description": "Gymnocalycium baldianum est un petit cactus originaire d’Argentine. Il aime la lumière vive et un sol bien drainé. Arroser avec parcimonie."
+    },
+    "it": {
+      "common_name": "Cactus nano",
+      "description": "Gymnocalycium baldianum è un piccolo cactus originario dell’Argentina. Predilige luce intensa e terreno drenante. Annaffiare solo quando il terreno è asciutto."
+    },
+    "es": {
+      "common_name": "Cactus enano",
+      "description": "Gymnocalycium baldianum es un cactus pequeño originario de Argentina. Necesita mucha luz y suelo bien drenado. Regar con moderación."
+    },
+    "pt": {
+      "common_name": "Cacto anão",
+      "description": "Gymnocalycium baldianum é um pequeno cacto da Argentina. Gosta de luz intensa e solo bem drenado. Regar pouco e somente quando seco."
+    },
+    "ar": {
+      "common_name": "صبار قزم",
+      "description": "Gymnocalycium baldianum صبار صغير موطنه الأرجنتين. يحتاج إلى ضوء قوي وتربة جيدة التصريف. يُروى باعتدال."
+    },
+    "hi": {
+      "common_name": "ड्वार्फ कैक्टस",
+      "description": "Gymnocalycium baldianum अर्जेंटीना का छोटा कैक्टस है। इसे तेज रोशनी और अच्छी जल निकासी वाली मिट्टी चाहिए। कम पानी दें।"
+    },
+    "zh": {
+      "common_name": "矮球仙人掌",
+      "description": "Gymnocalycium baldianum 原产于阿根廷，是一种小型仙人掌。喜强光和良好排水的土壤。浇水要少。"
+    },
+    "ja": {
+      "common_name": "ギムノカリキウム",
+      "description": "Gymnocalycium baldianum はアルゼンチン原産の小型サボテンです。明るい光と水はけの良い土を好みます。水やりは控えめにします。"
+    },
+    "ko": {
+      "common_name": "드워프 선인장",
+      "description": "Gymnocalycium baldianum은 아르헨티나 원산의 작은 선인장입니다. 강한 빛과 배수가 좋은 토양을 선호하며 물은 적게 줍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/103996/gymnocalycium-baldianum/details",
+      "https://www.cactus-art.biz/schede/GYMNOCALYCIUM/Gymnocalycium_baldianum/Gymnocalycium_baldianum.htm",
+      "https://www.llifle.com/Encyclopedia/CACTI/Family/Cactaceae/12050/Gymnocalycium_baldianum"
+    ]
+  }
+}

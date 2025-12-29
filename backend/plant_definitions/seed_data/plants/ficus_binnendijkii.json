@@ -1,0 +1,238 @@
+{
+  "external_id": "ficus_binnendijkii",
+  "name": "Ficus Alii",
+  "latin": "Ficus binnendijkii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_binnendijkii.jpg",
+  "image_thumb": "ficus_binnendijkii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlew.",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgn.",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易于养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright tree",
+          "pl": "Pokrój drzew.",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento ergu.",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी बढ़त",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립형 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Alii Fig",
+      "description": "Ficus binnendijkii is a tropical fig tree with long, narrow leaves and an upright growth habit. It is commonly grown indoors for its tolerance of typical home conditions. Bright indirect light and consistent watering keep it healthy."
+    },
+    "pl": {
+      "common_name": "Figowiec Alii",
+      "description": "Ficus binnendijkii to tropikalne drzewo figowe o długich, wąskich liściach. Często uprawiany w pomieszczeniach ze względu na dobrą adaptację. Wymaga jasnego, rozproszonego światła i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Alii-Feige",
+      "description": "Ficus binnendijkii ist ein tropischer Feigenbaum mit schmalen, langen Blättern. Er eignet sich gut als Zimmerpflanze bei stabilen Bedingungen. Helles, indirektes Licht und gleichmäßiges Gießen sind wichtig."
+    },
+    "fr": {
+      "common_name": "Figuier Alii",
+      "description": "Ficus binnendijkii est un figuier tropical aux feuilles longues et étroites. Il est apprécié comme plante d’intérieur robuste. Une lumière indirecte et un arrosage régulier sont recommandés."
+    },
+    "it": {
+      "common_name": "Fico Alii",
+      "description": "Ficus binnendijkii è un fico tropicale con foglie lunghe e sottili. È coltivato come pianta da interno per la sua resistenza. Predilige luce indiretta e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Higuera Alii",
+      "description": "Ficus binnendijkii es una higuera tropical de hojas largas y estrechas. Se cultiva en interiores por su buena adaptabilidad. Necesita luz indirecta brillante y riego moderado."
+    },
+    "pt": {
+      "common_name": "Figueira Alii",
+      "description": "Ficus binnendijkii é uma figueira tropical com folhas longas e finas. Muito usada como planta de interior resistente. Prefere luz indireta e rega regular."
+    },
+    "ar": {
+      "common_name": "فيكس أليي",
+      "description": "فيكس بينينديكي شجرة تين استوائية بأوراق طويلة ورفيعة. تزرع كنبات داخلي لتحملها الجيد. تحتاج إلى ضوء غير مباشر وري منتظم."
+    },
+    "hi": {
+      "common_name": "अली फिग",
+      "description": "Ficus binnendijkii एक उष्णकटिबंधीय अंजीर पौधा है जिसकी पत्तियाँ लंबी होती हैं। इसे घर के अंदर आसानी से उगाया जाता है। अप्रत्यक्ष रोशनी और नियमित सिंचाई आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "长叶榕",
+      "description": "Ficus binnendijkii 是一种热带榕树，具有细长的叶片。常作为室内植物栽培，适应性强。需要明亮的散射光和稳定浇水。"
+    },
+    "ja": {
+      "common_name": "アリーゴム",
+      "description": "フィカス・ビネンディキーは細長い葉を持つ熱帯性のイチジクです。室内でも育てやすい観葉植物です。明るい間接光と定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "알리 고무나무",
+      "description": "Ficus binnendijkii는 길고 가는 잎을 가진 열대성 무화과입니다. 실내 환경에 잘 적응하는 관엽식물입니다. 밝은 간접광과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ficus/binnendijkii",
+      "https://edis.ifas.ufl.edu/publication/FP221",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a825"
+    ]
+  }
+}

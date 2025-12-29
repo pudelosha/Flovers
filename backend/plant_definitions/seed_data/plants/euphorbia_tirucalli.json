@@ -1,0 +1,237 @@
+{
+  "external_id": "euphorbia_tirucalli",
+  "name": "Pencil Tree",
+  "latin": "Euphorbia tirucalli",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "euphorbia_tirucalli.jpg",
+  "image_thumb": "euphorbia_tirucalli.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "High light",
+          "pl": "Dużo światła",
+          "de": "Viel Licht",
+          "fr": "Lumière forte",
+          "it": "Luce intensa",
+          "es": "Luz alta",
+          "pt": "Luz intensa",
+          "ar": "ضوء قوي",
+          "hi": "तेज रोशनी",
+          "zh": "强光",
+          "ja": "強い光",
+          "ko": "강한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained",
+          "pl": "Dobrze zdren.",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Skąpe",
+          "de": "Wenig",
+          "fr": "Peu d’eau",
+          "it": "Poca acqua",
+          "es": "Poco riego",
+          "pt": "Pouca água",
+          "ar": "قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic sap",
+          "pl": "Toksyczny sok",
+          "de": "Giftiger Saft",
+          "fr": "Sève toxique",
+          "it": "Linfa tossica",
+          "es": "Savia tóxica",
+          "pt": "Seiva tóxica",
+          "ar": "عصارة سامة",
+          "hi": "विषैला रस",
+          "zh": "有毒汁液",
+          "ja": "有毒な樹液",
+          "ko": "독성 수액"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast upright",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pencil Tree",
+      "description": "Euphorbia tirucalli is a succulent shrub or small tree native to Africa. It has thin, pencil-like green stems and stores water, making it drought tolerant. The milky sap is toxic and should be handled with care."
+    },
+    "pl": {
+      "common_name": "Wilczomlecz ołówkowy",
+      "description": "Euphorbia tirucalli to sukulentowy krzew lub małe drzewo pochodzące z Afryki. Posiada cienkie, zielone pędy magazynujące wodę. Mleczny sok jest toksyczny i wymaga ostrożności."
+    },
+    "de": {
+      "common_name": "Bleistiftbaum",
+      "description": "Euphorbia tirucalli ist ein sukkulenter Strauch oder kleiner Baum aus Afrika. Die dünnen grünen Triebe speichern Wasser und vertragen Trockenheit. Der Milchsaft ist giftig."
+    },
+    "fr": {
+      "common_name": "Euphorbe crayon",
+      "description": "Euphorbia tirucalli est un arbuste succulent originaire d’Afrique. Ses tiges vertes fines stockent l’eau et supportent la sécheresse. Sa sève laiteuse est toxique."
+    },
+    "it": {
+      "common_name": "Euforbia a matita",
+      "description": "Euphorbia tirucalli è un arbusto succulento originario dell’Africa. Ha fusti sottili verdi che accumulano acqua. La linfa lattiginosa è tossica."
+    },
+    "es": {
+      "common_name": "Árbol de lápiz",
+      "description": "Euphorbia tirucalli es un arbusto suculento originario de África. Sus tallos verdes y delgados almacenan agua y resisten la sequía. La savia es tóxica."
+    },
+    "pt": {
+      "common_name": "Árvore-lápis",
+      "description": "Euphorbia tirucalli é um arbusto suculento originário da África. Possui ramos verdes finos que armazenam água. A seiva leitosa é tóxica."
+    },
+    "ar": {
+      "common_name": "شجرة القلم",
+      "description": "نبات Euphorbia tirucalli شجيرة عصارية موطنها إفريقيا. تمتلك سيقانًا خضراء رفيعة تخزن الماء. العصارة اللبنية سامة."
+    },
+    "hi": {
+      "common_name": "पेंसिल ट्री",
+      "description": "Euphorbia tirucalli अफ्रीका का एक रसीला झाड़ीदार पौधा है। इसकी पतली हरी शाखाएँ पानी संग्रह करती हैं। इसका दूधिया रस विषैला होता है।"
+    },
+    "zh": {
+      "common_name": "铅笔树",
+      "description": "Euphorbia tirucalli 原产于非洲，是一种多肉灌木。细长的绿色枝条能储存水分。其乳白色汁液有毒。"
+    },
+    "ja": {
+      "common_name": "ペンシルツリー",
+      "description": "Euphorbia tirucalli はアフリカ原産の多肉低木です。細い緑色の枝に水分を蓄えます。乳白色の樹液は有毒です。"
+    },
+    "ko": {
+      "common_name": "연필나무",
+      "description": "Euphorbia tirucalli는 아프리카 원산의 다육 식물입니다. 가느다란 녹색 줄기에 수분을 저장합니다. 유액은 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/euphorbia-tirucalli",
+      "https://www.rhs.org.uk/plants/8063/euphorbia-tirucalli/details",
+      "https://extension.ifas.ufl.edu/publications/"
+    ]
+  }
+}

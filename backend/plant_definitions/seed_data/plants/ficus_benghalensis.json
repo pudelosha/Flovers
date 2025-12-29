@@ -1,0 +1,236 @@
+{
+  "external_id": "ficus_benghalensis",
+  "name": "Banyan Fig",
+  "latin": "Ficus benghalensis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_benghalensis.jpg",
+  "image_thumb": "ficus_benghalensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct sun",
+          "pl": "Jasne słońce",
+          "de": "Helles Sonnenlicht",
+          "fr": "Soleil intense",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "شمس قوية",
+          "hi": "तेज धूप",
+          "zh": "强光直射",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierte Erde",
+          "fr": "Sol bien drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard indoors",
+          "pl": "Trudna w domu",
+          "de": "Schwierig innen",
+          "fr": "Difficile en intérieur",
+          "it": "Difficile in casa",
+          "es": "Difícil en interior",
+          "pt": "Difícil em interior",
+          "ar": "صعبة داخليًا",
+          "hi": "घर में कठिन",
+          "zh": "室内较难",
+          "ja": "室内は難しい",
+          "ko": "실내에서 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm tropical",
+          "pl": "Ciepło tropikalne",
+          "de": "Warm tropisch",
+          "fr": "Chaud tropical",
+          "it": "Caldo tropicale",
+          "es": "Cálido tropical",
+          "pt": "Quente tropical",
+          "ar": "دافئة استوائية",
+          "hi": "उष्णकटिबंधीय गर्म",
+          "zh": "温暖热带",
+          "ja": "暖かい熱帯",
+          "ko": "따뜻한 열대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Sap mildly toxic",
+          "pl": "Sok lekko toksyczny",
+          "de": "Saft leicht giftig",
+          "fr": "Sève légèrement toxique",
+          "it": "Linfa tossica lieve",
+          "es": "Savia levemente tóxica",
+          "pt": "Seiva levemente tóxica",
+          "ar": "عصارة سامة قليلًا",
+          "hi": "रस हल्का विषैला",
+          "zh": "汁液轻微有毒",
+          "ja": "樹液は弱毒",
+          "ko": "수액 약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very large tree",
+          "pl": "Bardzo duże drzewo",
+          "de": "Sehr großer Baum",
+          "fr": "Arbre très grand",
+          "it": "Albero molto grande",
+          "es": "Árbol muy grande",
+          "pt": "Árvore muito grande",
+          "ar": "شجرة ضخمة جدًا",
+          "hi": "बहुत बड़ा पेड़",
+          "zh": "非常大的树",
+          "ja": "非常に大きい木",
+          "ko": "매우 큰 나무"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Banyan Tree",
+      "description": "Ficus benghalensis is a massive tropical fig tree native to the Indian subcontinent. It develops aerial roots and can spread widely outdoors, making it unsuitable for most indoor spaces."
+    },
+    "pl": {
+      "common_name": "Figowiec bengalski",
+      "description": "Ficus benghalensis to ogromne tropikalne drzewo figowe pochodzące z Indii. Wytwarza korzenie powietrzne i silnie się rozrasta, dlatego nie nadaje się do wnętrz."
+    },
+    "de": {
+      "common_name": "Banyanbaum",
+      "description": "Ficus benghalensis ist ein sehr großer tropischer Feigenbaum aus Indien. Er bildet Luftwurzeln und benötigt viel Platz, weshalb er kaum als Zimmerpflanze geeignet ist."
+    },
+    "fr": {
+      "common_name": "Banyan",
+      "description": "Ficus benghalensis est un figuier tropical géant originaire du sous-continent indien. Il développe des racines aériennes et demande beaucoup d’espace."
+    },
+    "it": {
+      "common_name": "Banyan",
+      "description": "Ficus benghalensis è un grande fico tropicale originario dell’India. Produce radici aeree e cresce enormemente, risultando inadatto alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Banyán",
+      "description": "Ficus benghalensis es un enorme árbol tropical originario de la India. Forma raíces aéreas y alcanza dimensiones muy grandes en exterior."
+    },
+    "pt": {
+      "common_name": "Banyan",
+      "description": "Ficus benghalensis é uma figueira tropical gigante nativa da Índia. Desenvolve raízes aéreas e cresce excessivamente para ambientes internos."
+    },
+    "ar": {
+      "common_name": "شجرة البانيان",
+      "description": "فيكس بنغالسنسيس شجرة تين استوائية ضخمة موطنها شبه القارة الهندية. تنمو بجذور هوائية وتحتاج مساحات واسعة."
+    },
+    "hi": {
+      "common_name": "बरगद",
+      "description": "Ficus benghalensis भारत की एक विशाल उष्णकटिबंधीय अंजीर प्रजाति है। यह हवाई जड़ें बनाता है और बहुत फैलता है।"
+    },
+    "zh": {
+      "common_name": "榕树",
+      "description": "Ficus benghalensis 是原产于印度次大陆的巨大热带无花果树。它会形成气生根，需要大量空间生长。"
+    },
+    "ja": {
+      "common_name": "ベンガルボダイジュ",
+      "description": "Ficus benghalensis はインド原産の非常に大きな熱帯性イチジクです。気根を出し、広い空間を必要とします。"
+    },
+    "ko": {
+      "common_name": "반얀나무",
+      "description": "Ficus benghalensis는 인도 아대륙 원산의 거대한 열대 무화과나무입니다. 공중뿌리를 내리며 매우 크게 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:853113-1",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=275747",
+      "https://www.britannica.com/plant/banyan-tree"
+    ]
+  }
+}

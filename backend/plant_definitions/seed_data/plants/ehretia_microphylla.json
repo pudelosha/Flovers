@@ -1,0 +1,237 @@
+{
+  "external_id": "ehretia_microphylla",
+  "name": "Fukien tea tree",
+  "latin": "Ehretia microphylla",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ehretia_microphylla.jpg",
+  "image_thumb": "ehretia_microphylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Boa drenagem",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dries",
+          "pl": "Gdy wierzch suchy",
+          "de": "Gießen wenn trocken",
+          "fr": "Quand surface sèche",
+          "it": "Quando asciuga sopra",
+          "es": "Cuando se seca arriba",
+          "pt": "Quando secar em cima",
+          "ar": "عند جفاف السطح",
+          "hi": "ऊपर सूखे तो पानी",
+          "zh": "表土干再浇水",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average–high",
+          "pl": "Średnia–wysoka",
+          "de": "Mittel–hoch",
+          "fr": "Moyenne–élevée",
+          "it": "Media–alta",
+          "es": "Media–alta",
+          "pt": "Média–alta",
+          "ar": "متوسطة–مرتفعة",
+          "hi": "मध्यम–उच्च",
+          "zh": "中等至偏高",
+          "ja": "普通〜高め",
+          "ko": "보통~높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Unknown; caution",
+          "pl": "Nieznane; ostrożnie",
+          "de": "Unklar; Vorsicht",
+          "fr": "Inconnu; prudence",
+          "it": "Incerto; cautela",
+          "es": "Desconocido; cuidado",
+          "pt": "Desconhecido; cuidado",
+          "ar": "غير معروف؛ حذر",
+          "hi": "अज्ञात; सावधानी",
+          "zh": "不明确；谨慎",
+          "ja": "不明；注意",
+          "ko": "불명; 주의"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow shrub/tree",
+          "pl": "Wolny krzew/drzewko",
+          "de": "Langsam, Strauch",
+          "fr": "Arbuste lent",
+          "it": "Arbusto lento",
+          "es": "Arbusto lento",
+          "pt": "Arbusto lento",
+          "ar": "شجيرة بطيئة",
+          "hi": "धीमी झाड़ी/पेड़",
+          "zh": "生长缓慢灌木",
+          "ja": "生長ゆっくり",
+          "ko": "느리게 자람"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fukien tea tree",
+      "description": "Ehretia microphylla is a tropical shrub or small tree often grown as indoor bonsai. Provide very bright light and water when the top of the substrate starts to dry. Keep it warm and feed lightly about monthly during active growth."
+    },
+    "pl": {
+      "common_name": "Drzewko herbaciane z Fukien",
+      "description": "Ehretia microphylla to tropikalny krzew lub małe drzewko, często uprawiane jako bonsai w domu. Zapewnij bardzo jasne światło i podlewaj, gdy przeschnie wierzchnia warstwa podłoża. Utrzymuj ciepło i nawoź lekko mniej więcej raz w miesiącu w okresie wzrostu."
+    },
+    "de": {
+      "common_name": "Fukien-Teebaum",
+      "description": "Ehretia microphylla ist ein tropischer Strauch bzw. kleiner Baum, der häufig als Indoor-Bonsai gehalten wird. Stelle ihn sehr hell und gieße, wenn die obere Substratschicht antrocknet. Warm halten und während des Wachstums etwa monatlich schwach düngen."
+    },
+    "fr": {
+      "common_name": "Arbre à thé du Fukien",
+      "description": "Ehretia microphylla est un arbuste ou petit arbre tropical souvent cultivé en bonsaï d’intérieur. Donnez une lumière très vive et arrosez quand la surface du substrat commence à sécher. Gardez-le au chaud et fertilisez légèrement environ une fois par mois en période de croissance."
+    },
+    "it": {
+      "common_name": "Albero del tè del Fujian",
+      "description": "Ehretia microphylla è un arbusto o piccolo albero tropicale spesso coltivato come bonsai da interno. Fornisci luce molto intensa e annaffia quando lo strato superiore del substrato inizia ad asciugare. Tienilo al caldo e concima leggermente circa una volta al mese durante la crescita attiva."
+    },
+    "es": {
+      "common_name": "Árbol de té de Fukien",
+      "description": "Ehretia microphylla es un arbusto o arbolito tropical, muy usado como bonsái de interior. Dale luz muy brillante y riega cuando la capa superior del sustrato empiece a secarse. Mantén temperaturas cálidas y abona suavemente примерно una vez al mes en temporada de crecimiento."
+    },
+    "pt": {
+      "common_name": "Árvore-do-chá de Fukien",
+      "description": "Ehretia microphylla é um arbusto ou pequena árvore tropical часто cultivada como bonsai de interior. Ofereça luz muito intensa e regue quando a camada superior do substrato começar a secar. Mantenha-a em ambiente quente e adube de forma leve примерно uma vez por mês durante o crescimento."
+    },
+    "ar": {
+      "common_name": "شجرة شاي فوكيان",
+      "description": "Ehretia microphylla شجيرة أو شجرة صغيرة استوائية تُزرع كثيرًا كبونساي داخل المنزل. وفّر ضوءًا ساطعًا جدًا واسقِ عند بدء جفاف سطح التربة. حافظ على الدفء وسمّد بجرعات خفيفة تقريبًا مرة كل شهر أثناء النمو."
+    },
+    "hi": {
+      "common_name": "फ़ुकीएन चाय वृक्ष",
+      "description": "Ehretia microphylla एक उष्णकटिबंधीय झाड़ी/छोटा पेड़ है जिसे अक्सर इनडोर बोन्साई के रूप में उगाया जाता है। बहुत तेज़ रोशनी दें और ऊपर की परत सूखने लगे तो पानी दें। इसे गर्म रखें और सक्रिय वृद्धि में लगभग महीने में एक बार हल्का खाद दें।"
+    },
+    "zh": {
+      "common_name": "福建茶",
+      "description": "Ehretia microphylla 为热带灌木或小乔木，常作室内盆景栽培。需要非常明亮的光照，表土开始变干后再浇水。保持温暖，生长季约每月少量施肥一次。"
+    },
+    "ja": {
+      "common_name": "フッケンチャ",
+      "description": "Ehretia microphylla は熱帯性の低木〜小高木で、室内盆栽として栽培されます。とても明るい場所に置き、用土の表面が乾き始めたら水やりします。暖かく保ち、生育期は月1回程度うすく施肥します。"
+    },
+    "ko": {
+      "common_name": "푸젠차나무",
+      "description": "Ehretia microphylla 는 열대성 관목 또는 작은 나무로, 실내 분재로 자주 키웁니다. 매우 밝은 빛을 주고 겉흙이 마르기 시작하면 물을 줍니다. 따뜻하게 유지하고 생장기에는 한 달에 한 번 정도 묽게 비료를 줍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:116079-1",
+      "https://www.nparks.gov.sg/florafaunaweb/flora/1/7/1784",
+      "https://www.bonsaiempire.com/tree-species/carmona",
+      "https://www.bonsaiboy.com/catalog/fukiencare.html"
+    ]
+  }
+}

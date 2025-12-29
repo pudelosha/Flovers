@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_bella",
+  "name": "Hoya bella",
+  "latin": "Hoya bella",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_bella.jpg",
+  "image_thumb": "hoya_bella.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy epiphyte mix",
+          "pl": "Przepuszczalne",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التصريف",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dries",
+          "pl": "Po przeschnięciu",
+          "de": "Gießen nach Antrocknen",
+          "fr": "Arroser sec en surface",
+          "it": "Annaffiare asciutto sopra",
+          "es": "Regar tras secarse",
+          "pt": "Regar após secar",
+          "ar": "عند جفاف السطح",
+          "hi": "सूखने पर पानी",
+          "zh": "表土干后浇水",
+          "ja": "表土乾いてから",
+          "ko": "겉흙 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Trailing vine",
+          "pl": "Pnąca",
+          "de": "Hängend",
+          "fr": "Retombante",
+          "it": "Ricadente",
+          "es": "Colgante",
+          "pt": "Pendente",
+          "ar": "متدلية",
+          "hi": "लटकने वाली",
+          "zh": "下垂生长",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Miniature wax plant",
+      "description": "Hoya bella is a small epiphytic vine native to Southeast Asia. It has trailing stems, narrow leaves, and fragrant star-shaped flowers. It grows well indoors in bright, indirect light."
+    },
+    "pl": {
+      "common_name": "Hoja piękna",
+      "description": "Hoya bella to niewielka epifityczna roślina pnąca z Azji Południowo-Wschodniej. Ma zwisające pędy i gwiaździste, pachnące kwiaty. Dobrze rośnie w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Schöne Wachsblume",
+      "description": "Hoya bella ist eine kleine epiphytische Kletterpflanze aus Südostasien. Sie bildet hängende Triebe und sternförmige, duftende Blüten. Sie eignet sich gut für helle Innenräume."
+    },
+    "fr": {
+      "common_name": "Hoya belle",
+      "description": "Hoya bella est une petite plante épiphyte originaire d’Asie du Sud-Est. Elle possède des tiges retombantes et des fleurs étoilées parfumées. Elle se cultive bien en intérieur lumineux."
+    },
+    "it": {
+      "common_name": "Hoya bella",
+      "description": "Hoya bella è una piccola pianta epifita originaria del Sud-Est asiatico. Presenta fusti ricadenti e fiori stellati profumati. È adatta alla coltivazione in casa con luce indiretta."
+    },
+    "es": {
+      "common_name": "Flor de cera bella",
+      "description": "Hoya bella es una planta epífita pequeña del sudeste asiático. Tiene tallos colgantes y flores estrelladas fragantes. Se adapta bien al cultivo en interiores luminosos."
+    },
+    "pt": {
+      "common_name": "Flor-de-cera-bela",
+      "description": "Hoya bella é uma planta epífita pequena do Sudeste Asiático. Possui ramos pendentes e flores estreladas perfumadas. Cresce bem em interiores com luz indireta."
+    },
+    "ar": {
+      "common_name": "هويا بيلا",
+      "description": "هويا بيلا نبات متسلق صغير موطنه جنوب شرق آسيا. يتميز بسيقان متدلية وأزهار نجمية عطرية. يناسب الزراعة داخل المنازل مع إضاءة غير مباشرة."
+    },
+    "hi": {
+      "common_name": "होया बेला",
+      "description": "होया बेला दक्षिण-पूर्व एशिया की एक छोटी एपिफाइटिक बेल है। इसमें लटकती टहनियाँ और सुगंधित तारे जैसे फूल होते हैं। यह घर के अंदर अच्छी तरह उगती है।"
+    },
+    "zh": {
+      "common_name": "美丽球兰",
+      "description": "Hoya bella 原产于东南亚，是一种小型附生藤本植物。它具有下垂的茎和芳香的星形花。适合在明亮的室内环境生长。"
+    },
+    "ja": {
+      "common_name": "ホヤ・ベラ",
+      "description": "ホヤ・ベラは東南アジア原産の小型着生植物です。垂れ下がる茎と香りのある星形の花を持ちます。明るい室内で育てやすいです。"
+    },
+    "ko": {
+      "common_name": "호야 벨라",
+      "description": "호야 벨라는 동남아시아 원산의 소형 착생 덩굴식물입니다. 늘어지는 줄기와 향기로운 별 모양 꽃이 특징입니다. 실내에서 키우기 좋습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/8387/hoya-bella/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281384",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98745-1"
+    ]
+  }
+}

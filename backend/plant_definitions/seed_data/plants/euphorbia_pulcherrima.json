@@ -1,0 +1,238 @@
+{
+  "external_id": "euphorbia_pulcherrima",
+  "name": "Poinsettia",
+  "latin": "Euphorbia pulcherrima",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "euphorbia_pulcherrima.jpg",
+  "image_thumb": "euphorbia_pulcherrima.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24°م",
+          "hi": "18–24 °C",
+          "zh": "18–24°C",
+          "ja": "18–24℃",
+          "ko": "18–24℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby growth",
+          "pl": "Krzewiasty",
+          "de": "Strauchförmig",
+          "fr": "Arbustive",
+          "it": "Arbustiva",
+          "es": "Arbustiva",
+          "pt": "Arbustiva",
+          "ar": "شجيري",
+          "hi": "झाड़ीदार",
+          "zh": "灌木状",
+          "ja": "低木状",
+          "ko": "관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia is a tropical shrub native to Mexico, widely grown as a decorative houseplant. It prefers bright indirect light and moderate watering. The plant is known for its colorful bracts during winter."
+    },
+    "pl": {
+      "common_name": "Wilczomlecz nadobny",
+      "description": "Wilczomlecz nadobny pochodzi z Meksyku i jest popularną rośliną doniczkową. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Charakterystyczne są jego barwne przykwiatki zimą."
+    },
+    "de": {
+      "common_name": "Weihnachtsstern",
+      "description": "Der Weihnachtsstern stammt aus Mexiko und wird häufig als Zimmerpflanze kultiviert. Er bevorzugt helles, indirektes Licht und mäßiges Gießen. Bekannt ist er für seine farbigen Hochblätter im Winter."
+    },
+    "fr": {
+      "common_name": "Poinsettia",
+      "description": "Le poinsettia est un arbuste tropical originaire du Mexique, cultivé comme plante d'intérieur. Il apprécie une lumière vive indirecte et un arrosage modéré. Ses bractées colorées apparaissent en hiver."
+    },
+    "it": {
+      "common_name": "Stella di Natale",
+      "description": "La stella di Natale è originaria del Messico ed è coltivata come pianta ornamentale. Predilige luce indiretta e annaffiature moderate. È famosa per le sue brattee colorate in inverno."
+    },
+    "es": {
+      "common_name": "Flor de Pascua",
+      "description": "La flor de Pascua es un arbusto tropical de México cultivado en interiores. Necesita luz indirecta brillante y riego moderado. Destaca por sus brácteas de colores en invierno."
+    },
+    "pt": {
+      "common_name": "Bico-de-papagaio",
+      "description": "O bico-de-papagaio é originário do México e cultivado como planta ornamental. Prefere luz indireta intensa e rega moderada. Suas brácteas coloridas aparecem no inverno."
+    },
+    "ar": {
+      "common_name": "بونسيتيا",
+      "description": "البونسيتيا نبات استوائي موطنه المكسيك ويزرع كنبات داخلي. يفضل الضوء غير المباشر والري المعتدل. يتميز بأوراقه الملونة في فصل الشتاء."
+    },
+    "hi": {
+      "common_name": "पॉइन्सेटिया",
+      "description": "पॉइन्सेटिया मेक्सिको का उष्णकटिबंधीय पौधा है जिसे घर के अंदर उगाया जाता है। इसे अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। सर्दियों में इसके रंगीन ब्रैक्ट्स प्रसिद्ध हैं।"
+    },
+    "zh": {
+      "common_name": "一品红",
+      "description": "一品红原产于墨西哥，是常见的室内观赏植物。它喜欢明亮的散射光和适量浇水。冬季会长出鲜艳的苞片。"
+    },
+    "ja": {
+      "common_name": "ポインセチア",
+      "description": "ポインセチアはメキシコ原産の観葉植物です。明るい間接光と適度な水やりを好みます。冬に色鮮やかな苞が特徴です。"
+    },
+    "ko": {
+      "common_name": "포인세티아",
+      "description": "포인세티아는 멕시코 원산의 열대 관엽식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 겨울에 화려한 포엽이 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/poinsettia/growing-guide",
+      "https://extension.umn.edu/houseplants/poinsettia",
+      "https://www.britannica.com/plant/poinsettia"
+    ]
+  }
+}

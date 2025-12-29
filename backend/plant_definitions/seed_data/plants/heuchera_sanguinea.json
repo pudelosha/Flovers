@@ -1,0 +1,236 @@
+{
+  "external_id": "heuchera_sanguinea",
+  "name": "Coral Bells",
+  "latin": "Heuchera sanguinea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "heuchera_sanguinea.jpg",
+  "image_thumb": "heuchera_sanguinea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sombra parcial",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlew.",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura reg.",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno-umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco a templ.",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा-मध्यम",
+          "zh": "凉爽到温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘~온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Durchschnitt",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "औसत",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Horstig",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cesp.",
+          "es": "Perenne en mata",
+          "pt": "Perene em touce",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार",
+          "zh": "丛生多年生",
+          "ja": "株立ち多年草",
+          "ko": "군생 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Coral Bells",
+      "description": "Heuchera sanguinea is a hardy perennial valued for its bell-shaped red flowers. It prefers partial shade and evenly moist, well-drained soil. Often grown outdoors, it also adapts well to containers."
+    },
+    "pl": {
+      "common_name": "Żurawka krwista",
+      "description": "Heuchera sanguinea to odporna bylina o czerwonych, dzwonkowatych kwiatach. Najlepiej rośnie w półcieniu i wilgotnej, przepuszczalnej glebie. Nadaje się do gruntu i pojemników."
+    },
+    "de": {
+      "common_name": "Purpurglöckchen",
+      "description": "Heuchera sanguinea ist eine robuste Staude mit roten, glockenförmigen Blüten. Sie wächst am besten im Halbschatten in gut durchlässigem Boden. Auch für Kübel geeignet."
+    },
+    "fr": {
+      "common_name": "Heuchère sanguine",
+      "description": "Heuchera sanguinea est une vivace rustique aux fleurs rouges en clochettes. Elle préfère la mi-ombre et un sol frais et drainé. Elle se cultive aussi en pot."
+    },
+    "it": {
+      "common_name": "Heuchera sanguigna",
+      "description": "Heuchera sanguinea è una perenne rustica con fiori rossi a campana. Predilige mezz'ombra e terreno ben drenato e umido. Adatta anche alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Campanillas de coral",
+      "description": "Heuchera sanguinea es una planta perenne resistente con flores rojas acampanadas. Prefiere sombra parcial y suelo húmedo y drenado. Puede cultivarse en maceta."
+    },
+    "pt": {
+      "common_name": "Sinos-de-coral",
+      "description": "Heuchera sanguinea é uma perene resistente com flores vermelhas em forma de sino. Gosta de meia-sombra e solo bem drenado e úmido. Também cresce bem em vasos."
+    },
+    "ar": {
+      "common_name": "أجراس المرجان",
+      "description": "نبات Heuchera sanguinea معمر قوي يتميز بأزهار حمراء جرسية. يفضل الظل الجزئي وتربة رطبة جيدة التصريف. يمكن زراعته في الأرض أو الأصص."
+    },
+    "hi": {
+      "common_name": "कोरल बेल्स",
+      "description": "Heuchera sanguinea एक मजबूत बहुवर्षीय पौधा है जिसमें लाल घंटी जैसे फूल होते हैं। इसे आंशिक छाया और अच्छी जल निकासी वाली नम मिट्टी पसंद है। गमलों में भी उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "珊瑚铃",
+      "description": "Heuchera sanguinea 是一种耐寒多年生植物，具有红色铃状花。适合半阴环境和湿润但排水良好的土壤。也可用于盆栽。"
+    },
+    "ja": {
+      "common_name": "ヒューケラ",
+      "description": "Heuchera sanguinea は赤い鐘形の花を咲かせる丈夫な多年草です。半日陰と水はけの良い湿った土を好みます。鉢植えにも適します。"
+    },
+    "ko": {
+      "common_name": "휴케라",
+      "description": "Heuchera sanguinea는 붉은 종 모양의 꽃을 피우는 강한 다년생 식물입니다. 반그늘과 배수가 좋은 촉촉한 토양을 선호합니다. 화분 재배도 가능합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/8243/heuchera-sanguinea/details",
+      "https://extension.umn.edu/flowers/growing-heuchera",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c741"
+    ]
+  }
+}

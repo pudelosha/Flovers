@@ -1,0 +1,237 @@
+{
+  "external_id": "hebe_andersonii",
+  "name": "Hebe Andersonii",
+  "latin": "Hebe × andersonii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hebe_andersonii.jpg",
+  "image_thumb": "hebe_andersonii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun to part",
+          "pl": "Słońce i półcień",
+          "de": "Sonne bis Halbschatten",
+          "fr": "Soleil à mi-ombre",
+          "it": "Sole o mezzombra",
+          "es": "Sol o semisombra",
+          "pt": "Sol ou meia-sombra",
+          "ar": "شمس أو ظل جزئي",
+          "hi": "धूप या आंशिक छाया",
+          "zh": "全日照或半阴",
+          "ja": "日向から半日陰",
+          "ko": "양지 또는 반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze zdrenowana",
+          "de": "Gut drainierter Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cuidar",
+          "pt": "Fácil de cuidar",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "易于养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Mild climates",
+          "pl": "Łagodny klimat",
+          "de": "Mildes Klima",
+          "fr": "Climat doux",
+          "it": "Clima mite",
+          "es": "Clima templado",
+          "pt": "Clima ameno",
+          "ar": "مناخ معتدل",
+          "hi": "समशीतोष्ण जलवायु",
+          "zh": "温和气候",
+          "ja": "温暖な気候",
+          "ko": "온화한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact shrub",
+          "pl": "Zwarty krzew",
+          "de": "Kompakter Strauch",
+          "fr": "Arbuste compact",
+          "it": "Arbusto compatto",
+          "es": "Arbusto compacto",
+          "pt": "Arbusto compacto",
+          "ar": "شجيرة مدمجة",
+          "hi": "सघन झाड़ी",
+          "zh": "紧凑灌木",
+          "ja": "コンパクト低木",
+          "ko": "콤팩트 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Shrubby veronica",
+      "description": "Hebe × andersonii is an evergreen ornamental shrub valued for its dense foliage and showy flower spikes. It grows best outdoors in mild climates with good drainage and regular watering. The plant is commonly used in borders and coastal gardens."
+    },
+    "pl": {
+      "common_name": "Hebe krzewiasta",
+      "description": "Hebe × andersonii to zimozielony krzew ozdobny o gęstym pokroju i dekoracyjnych kwiatach. Najlepiej rośnie na zewnątrz w łagodnym klimacie i przepuszczalnej glebie. Często sadzona jest w ogrodach przydomowych i rabatach."
+    },
+    "de": {
+      "common_name": "Strauchveronika",
+      "description": "Hebe × andersonii ist ein immergrüner Zierstrauch mit kompaktem Wuchs und auffälligen Blütenständen. Sie bevorzugt milde Klimazonen, gut durchlässigen Boden und regelmäßige Wassergaben. Häufig wird sie in Beeten und Küstengärten gepflanzt."
+    },
+    "fr": {
+      "common_name": "Véronique arbustive",
+      "description": "Hebe × andersonii est un arbuste ornemental persistant apprécié pour son feuillage dense et sa floraison. Elle se cultive en extérieur dans les climats doux avec un sol bien drainé. On l’utilise souvent en massifs et jardins côtiers."
+    },
+    "it": {
+      "common_name": "Veronica arbustiva",
+      "description": "Hebe × andersonii è un arbusto ornamentale sempreverde con portamento compatto e fiori decorativi. Predilige la coltivazione all’aperto in climi miti e terreni ben drenati. È molto usata nei giardini e nelle bordure."
+    },
+    "es": {
+      "common_name": "Verónica arbustiva",
+      "description": "Hebe × andersonii es un arbusto ornamental perenne con follaje denso y flores vistosas. Crece mejor al aire libre en climas templados y suelos bien drenados. Es común en jardines y parterres."
+    },
+    "pt": {
+      "common_name": "Verônica-arbustiva",
+      "description": "Hebe × andersonii é um arbusto ornamental perene com folhagem compacta e floração decorativa. Desenvolve-se bem ao ar livre em climas amenos e solos drenados. É muito usada em jardins e canteiros."
+    },
+    "ar": {
+      "common_name": "فيرونيكا شجيرية",
+      "description": "Hebe × andersonii شجيرة زينة دائمة الخضرة تتميز بأوراق كثيفة وأزهار جميلة. تنمو في الهواء الطلق في المناخات المعتدلة مع تربة جيدة الصرف. تُستخدم كثيرًا في الحدائق."
+    },
+    "hi": {
+      "common_name": "श्रबी वेरोनिका",
+      "description": "Hebe × andersonii एक सदाबहार सजावटी झाड़ी है जिसमें घना पर्ण और आकर्षक फूल होते हैं। यह हल्के जलवायु वाले क्षेत्रों में बाहर अच्छी तरह उगती है। बगीचों में इसका उपयोग आम है।"
+    },
+    "zh": {
+      "common_name": "灌木婆婆纳",
+      "description": "Hebe × andersonii 是一种常绿观赏灌木，具有致密的叶片和显眼的花序。适合在温和气候的户外种植，并需要良好排水的土壤。常用于花园和绿化带。"
+    },
+    "ja": {
+      "common_name": "ヘーベ",
+      "description": "Hebe × andersonii は密な葉と美しい花穂を持つ常緑低木です。温暖な気候の屋外で、水はけの良い土壌を好みます。庭園や花壇でよく利用されます。"
+    },
+    "ko": {
+      "common_name": "헤베",
+      "description": "Hebe × andersonii는 잎이 조밀하고 꽃이 아름다운 상록 관목입니다. 온화한 기후의 야외 환경과 배수가 좋은 토양에서 잘 자랍니다. 정원 식재로 흔히 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hebe",
+      "https://plants.ces.ncsu.edu/plants/hebe-x-andersonii/",
+      "https://www.gardenersworld.com/plants/hebe/"
+    ]
+  }
+}

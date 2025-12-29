@@ -1,0 +1,238 @@
+{
+  "external_id": "ficus_altissima",
+  "name": "Ficus Altissima",
+  "latin": "Ficus altissima",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_altissima.jpg",
+  "image_thumb": "ficus_altissima.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dries",
+          "pl": "Po przeschnięciu",
+          "de": "Gießen bei Trocken",
+          "fr": "Quand sec en haut",
+          "it": "Quando asciutto",
+          "es": "Al secarse arriba",
+          "pt": "Quando secar",
+          "ar": "عند جفاف السطح",
+          "hi": "ऊपर सूखने पर",
+          "zh": "表土干后浇水",
+          "ja": "表土乾いたら",
+          "ko": "겉흙 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnitt",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing tree",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Council Tree",
+      "description": "Ficus altissima is a tropical fig tree native to Southeast Asia. It is commonly grown indoors for its large, glossy leaves and tolerance of indoor conditions."
+    },
+    "pl": {
+      "common_name": "Figowiec wyniosły",
+      "description": "Ficus altissima to tropikalne drzewo figowe z Azji Południowo-Wschodniej. Uprawiany w domu ze względu na dekoracyjne liście i łatwą pielęgnację."
+    },
+    "de": {
+      "common_name": "Riesenfeige",
+      "description": "Ficus altissima ist ein tropischer Feigenbaum aus Südostasien. Er wird als Zimmerpflanze wegen seiner großen Blätter geschätzt."
+    },
+    "fr": {
+      "common_name": "Figuier géant",
+      "description": "Ficus altissima est un figuier tropical originaire d’Asie du Sud-Est. Il est cultivé en intérieur pour son feuillage décoratif."
+    },
+    "it": {
+      "common_name": "Fico gigante",
+      "description": "Ficus altissima è un albero tropicale originario del Sud-Est asiatico. È apprezzato come pianta da interno per le sue grandi foglie."
+    },
+    "es": {
+      "common_name": "Higuera gigante",
+      "description": "Ficus altissima es una higuera tropical del sudeste asiático. Se cultiva en interiores por sus hojas grandes y brillantes."
+    },
+    "pt": {
+      "common_name": "Figueira gigante",
+      "description": "Ficus altissima é uma figueira tropical do Sudeste Asiático. É cultivada em interiores pelo seu valor ornamental."
+    },
+    "ar": {
+      "common_name": "فيكس عملاق",
+      "description": "فيكس ألتيسيما شجرة تين استوائية موطنها جنوب شرق آسيا. تُزرع كنبات داخلي لأوراقها الكبيرة."
+    },
+    "hi": {
+      "common_name": "विशाल फाइकस",
+      "description": "फिकस अल्टिसिमा दक्षिण पूर्व एशिया का उष्णकटिबंधीय पेड़ है। इसे बड़े पत्तों के लिए घर में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "高榕",
+      "description": "高榕原产于东南亚的热带地区。因其大型光亮叶片而作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "アルティッシマゴムノキ",
+      "description": "フィカス・アルティッシマは東南アジア原産の熱帯性イチジクです。観葉植物として人気があります。"
+    },
+    "ko": {
+      "common_name": "알티시마 고무나무",
+      "description": "피쿠스 알티시마는 동남아시아 원산의 열대 무화과나무입니다. 실내 관엽식물로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123",
+      "https://www.rhs.org.uk/plants/ficus",
+      "https://edis.ifas.ufl.edu/publication/FP263"
+    ]
+  }
+}

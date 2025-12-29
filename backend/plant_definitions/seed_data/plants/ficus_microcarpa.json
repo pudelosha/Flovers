@@ -1,0 +1,238 @@
+{
+  "external_id": "ficus_microcarpa",
+  "name": "Chinese Banyan",
+  "latin": "Ficus microcarpa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ficus_microcarpa.jpg",
+  "image_thumb": "ficus_microcarpa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoor temps",
+          "pl": "Ciepłe",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖环境",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等湿度",
+          "ja": "普通",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Banyan",
+      "description": "Ficus microcarpa is a tropical evergreen tree often grown indoors as a bonsai or ornamental plant. It prefers bright indirect light and evenly moist soil. The species is known for its aerial roots and tolerance of pruning."
+    },
+    "pl": {
+      "common_name": "Figowiec drobnolistny",
+      "description": "Ficus microcarpa to tropikalne zimozielone drzewo często uprawiane w pomieszczeniach. Preferuje jasne, rozproszone światło i umiarkowane podlewanie. Dobrze znosi przycinanie i formowanie."
+    },
+    "de": {
+      "common_name": "Chinesische Feige",
+      "description": "Ficus microcarpa ist ein tropischer, immergrüner Baum für die Zimmerkultur. Er mag helles, indirektes Licht und gleichmäßig feuchte Erde. Die Pflanze ist schnittverträglich."
+    },
+    "fr": {
+      "common_name": "Figuier de Malaisie",
+      "description": "Ficus microcarpa est un arbre tropical persistant souvent cultivé en intérieur. Il apprécie une lumière vive indirecte et un arrosage modéré. Il supporte bien la taille."
+    },
+    "it": {
+      "common_name": "Fico cinese",
+      "description": "Ficus microcarpa è un albero tropicale sempreverde coltivato come pianta da interno. Richiede luce intensa indiretta e annaffiature regolari. Tollera bene la potatura."
+    },
+    "es": {
+      "common_name": "Banyan chino",
+      "description": "Ficus microcarpa es un árbol tropical perenne cultivado en interiores. Prefiere luz brillante indirecta y riego moderado. Es resistente a la poda."
+    },
+    "pt": {
+      "common_name": "Banyan chinês",
+      "description": "Ficus microcarpa é uma árvore tropical perene usada como planta ornamental. Gosta de luz indireta brilhante e rega moderada. Aceita bem podas."
+    },
+    "ar": {
+      "common_name": "التين الصيني",
+      "description": "فيكس ميكروكاربا شجرة استوائية دائمة الخضرة تزرع داخل المنازل. تفضل الضوء الساطع غير المباشر والري المعتدل. تتحمل التقليم جيدًا."
+    },
+    "hi": {
+      "common_name": "चीनी बरगद",
+      "description": "फाइकस माइक्रोकार्पा एक उष्णकटिबंधीय सदाबहार पौधा है। इसे तेज लेकिन अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। यह छंटाई सहन करता है।"
+    },
+    "zh": {
+      "common_name": "细叶榕",
+      "description": "细叶榕是一种热带常绿植物，常作为室内观赏植物。喜明亮散射光和适度浇水。耐修剪，适合造型。"
+    },
+    "ja": {
+      "common_name": "ガジュマル",
+      "description": "フィカス・ミクロカルパは室内で育てられる熱帯性常緑樹です。明るい間接光と適度な水やりを好みます。剪定に強い植物です。"
+    },
+    "ko": {
+      "common_name": "가주마루",
+      "description": "피쿠스 마이크로카르파는 실내에서 키우는 열대 상록수입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 가지치기에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ficus/microcarpa/details",
+      "https://edis.ifas.ufl.edu/publication/FP235",
+      "https://www.botanicgardens.org/ficus-care"
+    ]
+  }
+}

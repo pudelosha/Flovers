@@ -1,0 +1,239 @@
+{
+  "external_id": "buxus_sempervirens",
+  "name": "Common boxwood",
+  "latin": "Buxus sempervirens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "buxus_sempervirens.jpg",
+  "image_thumb": "buxus_sempervirens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Part shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszcz. glina",
+          "de": "Durchlässiger Lehm",
+          "fr": "Terre franche drain.",
+          "it": "Terriccio drenante",
+          "es": "Franco bien drenado",
+          "pt": "Franco bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好壤土",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiark. wilgotna",
+          "de": "Gleichm. feucht",
+          "fr": "Humide sans excès",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo sin encharcar",
+          "pt": "Úmido sem encharcar",
+          "ar": "رطبة دون غمر",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持微湿",
+          "ja": "適度に湿らせる",
+          "ko": "촉촉하게 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Typowa wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "一般湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierz.",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow evergreen shrub",
+          "pl": "Wolny krzew zimoz.",
+          "de": "Langsam, immergrün",
+          "fr": "Arbuste persistant lent",
+          "it": "Arbusto sempreverde lento",
+          "es": "Arbusto perenne lento",
+          "pt": "Arbusto perene lento",
+          "ar": "شجيرة دائمة بطيئة",
+          "hi": "धीमा सदाबहार झाड़",
+          "zh": "缓慢常绿灌木",
+          "ja": "成長遅い常緑低木",
+          "ko": "느리게 자라는 상록"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common boxwood",
+      "description": "Buxus sempervirens is an evergreen shrub widely used for hedges and topiary. It grows best in well-drained loam in sun to part shade. In containers, water to keep the mix evenly moist but not waterlogged, and note it is toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Bukszpan wieczniezielony",
+      "description": "Buxus sempervirens to zimozielony krzew często używany na żywopłoty i topiary. Najlepiej rośnie w przepuszczalnej glebie gliniastej w słońcu lub półcieniu. W donicy podlewaj tak, by podłoże było umiarkowanie wilgotne, bez zalewania, i pamiętaj, że roślina jest toksyczna po zjedzeniu."
+    },
+    "de": {
+      "common_name": "Gewöhnlicher Buchsbaum",
+      "description": "Buxus sempervirens ist ein immergrüner Strauch, der häufig für Hecken und Formschnitt genutzt wird. Er bevorzugt gut durchlässigen Lehmboden in Sonne bis Halbschatten. In Töpfen gleichmäßig feucht halten, aber Staunässe vermeiden; die Pflanze ist bei Aufnahme giftig."
+    },
+    "fr": {
+      "common_name": "Buis commun",
+      "description": "Buxus sempervirens est un arbuste persistant utilisé pour les haies et la taille topiaire. Il préfère un sol franc bien drainé au soleil ou à mi-ombre. En pot, maintenez le substrat légèrement humide sans excès d’eau, et sachez qu’il est toxique en cas d’ingestion."
+    },
+    "it": {
+      "common_name": "Bosso comune",
+      "description": "Buxus sempervirens è un arbusto sempreverde spesso usato per siepi e topiaria. Preferisce un terreno franco ben drenato in sole o mezz’ombra. In vaso, mantieni il substrato umido ma non fradicio e considera che è tossico se ingerito."
+    },
+    "es": {
+      "common_name": "Boj común",
+      "description": "Buxus sempervirens es un arbusto perenne muy usado en setos y topiaria. Crece mejor en suelo franco bien drenado con sol o semisombra. En maceta, mantén el sustrato uniformemente húmedo sin encharcar, y recuerda que es tóxico si se ingiere."
+    },
+    "pt": {
+      "common_name": "Buxo-comum",
+      "description": "Buxus sempervirens é um arbusto perene muito usado em sebes e topiaria. Prefere solo franco bem drenado em sol ou meia-sombra. Em vasos, mantenha o substrato uniformemente úmido sem encharcar, e lembre que é tóxico se ingerido."
+    },
+    "ar": {
+      "common_name": "البقس الشائع",
+      "description": "Buxus sempervirens شجيرة دائمة الخضرة تُستخدم كثيرًا في الأسيجة والتشكيل. تفضل تربة طميية جيدة التصريف مع شمس أو ظل جزئي. في الأصص اسقِ للحفاظ على رطوبة متوازنة دون غمر، وهي سامة عند الابتلاع."
+    },
+    "hi": {
+      "common_name": "कॉमन बॉक्सवुड",
+      "description": "Buxus sempervirens एक सदाबहार झाड़ी है, जिसे हेज और टोपियरी में उपयोग किया जाता है। यह अच्छी जल-निकासी वाली दोमट मिट्टी में धूप से आंशिक छाया में बेहतर बढ़ती है। गमले में मिट्टी को समान रूप से नम रखें लेकिन जलभराव न होने दें, और यह निगलने पर विषाक्त है।"
+    },
+    "zh": {
+      "common_name": "黄杨",
+      "description": "Buxus sempervirens 为常绿灌木，常用于绿篱与造型修剪。它适合排水良好的壤土，在日照或半阴处生长。盆栽时保持基质微湿但避免积水，且误食对宠物有毒。"
+    },
+    "ja": {
+      "common_name": "セイヨウツゲ",
+      "description": "Buxus sempervirens は常緑低木で、生け垣やトピアリーによく使われます。水はけのよい壌土で、日向〜半日陰が適します。鉢植えでは用土を適度に湿らせつつ過湿を避け、誤食すると有毒です。"
+    },
+    "ko": {
+      "common_name": "서양회양목",
+      "description": "Buxus sempervirens는 상록 관목으로 울타리와 토피어리에 흔히 쓰입니다. 배수가 좋은 양토에서 햇빛~반그늘을 선호합니다. 화분에서는 흙을 촉촉하게 유지하되 과습을 피하고, 섭취 시 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=243283",
+      "https://www.rhs.org.uk/plants/box/growing-guide",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/boxwood",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-box/"
+    ]
+  }
+}

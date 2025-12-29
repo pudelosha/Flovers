@@ -1,0 +1,238 @@
+{
+  "external_id": "goeppertia_kegeljanii",
+  "name": "Network Plant",
+  "latin": "Goeppertia kegeljanii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "goeppertia_kegeljanii.jpg",
+  "image_thumb": "goeppertia_kegeljanii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة متوازنة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "均一な湿り気",
+          "ko": "고르게 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度の管理",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26 °C",
+          "pl": "18–26 °C",
+          "de": "18–26 °C",
+          "fr": "18–26 °C",
+          "it": "18–26 °C",
+          "es": "18–26 °C",
+          "pt": "18–26 °C",
+          "ar": "18–26°م",
+          "hi": "18–26 °C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping foliage",
+          "pl": "Kępiasty wzrost",
+          "de": "Horstbildend",
+          "fr": "Croissance en touffe",
+          "it": "Crescita cespitosa",
+          "es": "Crecimiento en mata",
+          "pt": "Crescimento em touceira",
+          "ar": "نمو متكتل",
+          "hi": "गुच्छेदार वृद्धि",
+          "zh": "丛生生长",
+          "ja": "株立ち成長",
+          "ko": "군생 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Network Plant",
+      "description": "Goeppertia kegeljanii is a tropical understory plant known for its fine mosaic-patterned leaves. It prefers warm temperatures, high humidity, and consistently moist soil. Direct sun can scorch its foliage."
+    },
+    "pl": {
+      "common_name": "Kalatea mozaikowa",
+      "description": "Goeppertia kegeljanii to tropikalna roślina runa leśnego o mozaikowych liściach. Wymaga ciepła, wysokiej wilgotności i stale lekko wilgotnej gleby. Bezpośrednie słońce szkodzi liściom."
+    },
+    "de": {
+      "common_name": "Netzblatt-Korbmarante",
+      "description": "Goeppertia kegeljanii ist eine tropische Unterwuchspflanze mit netzartig gemusterten Blättern. Sie mag Wärme, hohe Luftfeuchte und gleichmäßig feuchte Erde. Direkte Sonne sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Calathée réseau",
+      "description": "Goeppertia kegeljanii est une plante tropicale au feuillage finement marbré. Elle apprécie la chaleur, une forte humidité et un sol légèrement humide en permanence. Le soleil direct abîme les feuilles."
+    },
+    "it": {
+      "common_name": "Calatea a rete",
+      "description": "Goeppertia kegeljanii è una pianta tropicale con foglie dal disegno a mosaico. Predilige ambienti caldi, umidi e un terreno costantemente umido. Il sole diretto va evitato."
+    },
+    "es": {
+      "common_name": "Calatea de red",
+      "description": "Goeppertia kegeljanii es una planta tropical con hojas de patrón en red. Necesita calor, alta humedad y suelo uniformemente húmedo. El sol directo puede dañar el follaje."
+    },
+    "pt": {
+      "common_name": "Calatéia de rede",
+      "description": "Goeppertia kegeljanii é uma planta tropical de folhas finamente padronizadas. Gosta de calor, alta umidade e solo sempre levemente úmido. O sol direto deve ser evitado."
+    },
+    "ar": {
+      "common_name": "نبات الشبكة",
+      "description": "Goeppertia kegeljanii نبات استوائي بأوراق مزخرفة بنمط شبكي. يحتاج إلى دفء ورطوبة عالية وتربة رطبة باستمرار. التعرض المباشر للشمس يضر بالأوراق."
+    },
+    "hi": {
+      "common_name": "नेटवर्क प्लांट",
+      "description": "Goeppertia kegeljanii एक उष्णकटिबंधीय पौधा है जिसकी पत्तियों पर जाल जैसा पैटर्न होता है। इसे गर्म तापमान, अधिक नमी और लगातार नम मिट्टी पसंद है। सीधी धूप हानिकारक है।"
+    },
+    "zh": {
+      "common_name": "网纹竹芋",
+      "description": "Goeppertia kegeljanii 是一种热带林下植物，以精细的网状叶纹著称。它需要温暖、高湿度和持续湿润的土壤。避免直射阳光。"
+    },
+    "ja": {
+      "common_name": "ネットワークプラント",
+      "description": "Goeppertia kegeljanii は網目状の葉模様を持つ熱帯植物です。暖かさと高い湿度、常に湿った用土を好みます。直射日光は避けてください。"
+    },
+    "ko": {
+      "common_name": "네트워크 플랜트",
+      "description": "Goeppertia kegeljanii는 잎에 그물 무늬가 있는 열대 식물입니다. 따뜻한 온도와 높은 습도, 촉촉한 토양을 선호합니다. 직사광선은 피해야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/273586/goeppertia-kegeljanii/details",
+      "https://plants.ces.ncsu.edu/plants/goeppertia-kegeljanii/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-calathea/"
+    ]
+  }
+}

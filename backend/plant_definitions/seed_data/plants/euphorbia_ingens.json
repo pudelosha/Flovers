@@ -1,0 +1,236 @@
+{
+  "external_id": "euphorbia_ingens",
+  "name": "Candelabra tree",
+  "latin": "Euphorbia ingens",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "euphorbia_ingens.jpg",
+  "image_thumb": "euphorbia_ingens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse",
+          "pl": "Skąpe",
+          "de": "Gering",
+          "fr": "Faible",
+          "it": "Raro",
+          "es": "Escaso",
+          "pt": "Pouco",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少量",
+          "ja": "控えめ",
+          "ko": "적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गरम",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic sap",
+          "pl": "Toksyczny sok",
+          "de": "Giftiger Saft",
+          "fr": "Sève toxique",
+          "it": "Linfa tossica",
+          "es": "Savia tóxica",
+          "pt": "Seiva tóxica",
+          "ar": "عصارة سامة",
+          "hi": "विषैला रस",
+          "zh": "有毒汁液",
+          "ja": "有毒な樹液",
+          "ko": "독성 수액"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tree-like",
+          "pl": "Drzewiasta",
+          "de": "Baumartig",
+          "fr": "Arborescente",
+          "it": "Arborea",
+          "es": "Arbórea",
+          "pt": "Arbórea",
+          "ar": "شجرية",
+          "hi": "वृक्षीय",
+          "zh": "树状",
+          "ja": "樹木状",
+          "ko": "나무형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Candelabra tree",
+      "description": "Euphorbia ingens is a large succulent tree native to southern Africa. It prefers bright sunlight and infrequent watering. The milky sap is toxic and should be handled with care."
+    },
+    "pl": {
+      "common_name": "Wilczomlecz olbrzymi",
+      "description": "Euphorbia ingens to duży, sukulentowy gatunek pochodzący z południowej Afryki. Wymaga dużo słońca i rzadkiego podlewania. Mleczny sok rośliny jest toksyczny."
+    },
+    "de": {
+      "common_name": "Kandelaberwolfsmilch",
+      "description": "Euphorbia ingens ist ein großer sukkulenter Baum aus dem südlichen Afrika. Sie benötigt viel Sonne und wenig Wasser. Der Milchsaft ist giftig."
+    },
+    "fr": {
+      "common_name": "Euphorbe candélabre",
+      "description": "Euphorbia ingens est une grande plante succulente originaire d’Afrique australe. Elle aime le plein soleil et des arrosages espacés. Sa sève laiteuse est toxique."
+    },
+    "it": {
+      "common_name": "Euforbia a candelabro",
+      "description": "Euphorbia ingens è una grande pianta succulenta originaria dell’Africa meridionale. Predilige sole intenso e poche annaffiature. La linfa lattiginosa è tossica."
+    },
+    "es": {
+      "common_name": "Árbol candelabro",
+      "description": "Euphorbia ingens es una suculenta arbórea del sur de África. Necesita mucho sol y riegos poco frecuentes. Su savia lechosa es tóxica."
+    },
+    "pt": {
+      "common_name": "Árvore-candelabro",
+      "description": "Euphorbia ingens é uma suculenta arbórea nativa do sul da África. Prefere sol pleno e regas espaçadas. A seiva leitosa é tóxica."
+    },
+    "ar": {
+      "common_name": "شجرة الشمعدان",
+      "description": "Euphorbia ingens نبات عصاري شجري موطنه جنوب أفريقيا. يحتاج إلى شمس قوية وري متباعد. العصارة اللبنية سامة."
+    },
+    "hi": {
+      "common_name": "कैंडेलाब्रा वृक्ष",
+      "description": "Euphorbia ingens दक्षिणी अफ्रीका का एक बड़ा रसीला पौधा है। इसे तेज धूप और कम पानी की आवश्यकता होती है। इसका दूधिया रस विषैला होता है।"
+    },
+    "zh": {
+      "common_name": "烛台大戟",
+      "description": "Euphorbia ingens 原产于非洲南部，是大型多肉植物。喜强光，耐干旱。其乳白色汁液有毒。"
+    },
+    "ja": {
+      "common_name": "キャンデラブラユーフォルビア",
+      "description": "Euphorbia ingens は南アフリカ原産の大型多肉植物です。強い日光と控えめな水やりを好みます。樹液には毒性があります。"
+    },
+    "ko": {
+      "common_name": "캔들라브라 유포르비아",
+      "description": "Euphorbia ingens는 남부 아프리카 원산의 큰 다육식물입니다. 강한 햇빛과 적은 물을 선호합니다. 수액은 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/euphorbia-ingens",
+      "https://www.rhs.org.uk/plants/6953/euphorbia-ingens/details",
+      "https://www.sanbi.org/animal-of-the-week/euphorbia-ingens"
+    ]
+  }
+}

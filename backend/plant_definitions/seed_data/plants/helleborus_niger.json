@@ -1,0 +1,237 @@
+{
+  "external_id": "helleborus_niger",
+  "name": "Christmas Rose",
+  "latin": "Helleborus niger",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "helleborus_niger.jpg",
+  "image_thumb": "helleborus_niger.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezzombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera frío",
+          "pt": "Tolera frio",
+          "ar": "يتحمل البرد",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Staudenhorst",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespugliosa",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة كتلية",
+          "hi": "गुच्छेदार बारहमासी",
+          "zh": "丛生多年生",
+          "ja": "株立ち多年草",
+          "ko": "군생 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Christmas Rose",
+      "description": "Helleborus niger is a hardy perennial known for its white winter flowers. It prefers partial shade and well-drained soil. All parts of the plant are toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Ciemiernik biały",
+      "description": "Helleborus niger to odporna bylina o białych kwiatach zimowych. Najlepiej rośnie w półcieniu i przepuszczalnej glebie. Roślina jest trująca."
+    },
+    "de": {
+      "common_name": "Christrose",
+      "description": "Helleborus niger ist eine winterblühende Staude mit weißen Blüten. Sie wächst bevorzugt im Halbschatten in durchlässigem Boden. Die Pflanze ist giftig."
+    },
+    "fr": {
+      "common_name": "Rose de Noël",
+      "description": "Helleborus niger est une vivace rustique à floraison hivernale blanche. Elle préfère la mi-ombre et un sol bien drainé. La plante est toxique."
+    },
+    "it": {
+      "common_name": "Elleboro nero",
+      "description": "Helleborus niger è una perenne resistente con fiori bianchi invernali. Predilige mezzombra e terreno ben drenato. È una pianta tossica."
+    },
+    "es": {
+      "common_name": "Rosa de Navidad",
+      "description": "Helleborus niger es una planta perenne resistente con flores blancas en invierno. Prefiere semisombra y suelo bien drenado. Es tóxica."
+    },
+    "pt": {
+      "common_name": "Rosa-do-Natal",
+      "description": "Helleborus niger é uma planta perene resistente com flores brancas no inverno. Prefere meia-sombra e solo bem drenado. É tóxica."
+    },
+    "ar": {
+      "common_name": "وردة الميلاد",
+      "description": "Helleborus niger نبات معمر قوي بأزهار بيضاء شتوية. يفضل الظل الجزئي وتربة جيدة التصريف. النبات سام."
+    },
+    "hi": {
+      "common_name": "क्रिसमस रोज़",
+      "description": "Helleborus niger एक मजबूत बारहमासी पौधा है जिसमें सर्दियों में सफेद फूल आते हैं। इसे आंशिक छाया और अच्छी जलनिकास वाली मिट्टी पसंद है। यह विषैला है।"
+    },
+    "zh": {
+      "common_name": "圣诞玫瑰",
+      "description": "Helleborus niger 是一种耐寒多年生植物，冬季开白花。喜半阴和排水良好的土壤。全株有毒。"
+    },
+    "ja": {
+      "common_name": "クリスマスローズ",
+      "description": "Helleborus niger は冬に白い花を咲かせる耐寒性多年草です。半日陰と水はけの良い土を好みます。有毒です。"
+    },
+    "ko": {
+      "common_name": "크리스마스로즈",
+      "description": "Helleborus niger는 겨울에 흰 꽃이 피는 내한성 다년초입니다. 반그늘과 배수 좋은 토양을 선호하며 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/helleborus",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a533",
+      "https://www.gardenersworld.com/plants/helleborus-niger/"
+    ]
+  }
+}
