@@ -1,5 +1,4 @@
-﻿// steps/Step04_Exposure.tsx
-import React, { useMemo } from "react";
+﻿import React, { useMemo } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,6 +8,7 @@ import { SegmentedButtons, useTheme } from "react-native-paper";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { ORIENTATIONS } from "../constants/create-plant.constants";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   measureUnit?: "metric" | "imperial";
@@ -19,6 +19,7 @@ export default function Step04_Exposure({
   measureUnit = "metric",
   onOpenMeasureModal,
 }: Props) {
+  const { t } = useTranslation();
   const { state, actions } = useCreatePlantWizard();
   const theme = useTheme();
 
@@ -53,18 +54,15 @@ export default function Step04_Exposure({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Exposure</Text>
-        <Text style={wiz.subtitle}>
-          Light exposure helps us tune watering schedules and care reminders. Tell us how much
-          light this spot gets and the window direction.
-        </Text>
+        <Text style={wiz.title}>{t('createPlant.step04.title')}</Text>
+        <Text style={wiz.subtitle}>{t('createPlant.step04.subtitle')}</Text>
 
         {/* Light level — slider with Low / High labels aligned with header */}
-        <Text style={wiz.sectionTitle}>Light level</Text>
+        <Text style={wiz.sectionTitle}>{t('createPlant.step04.lightLevel')}</Text>
         <View style={{ marginTop: 2, marginBottom: 6 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>Low</Text>
-            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>High</Text>
+            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>{t('createPlant.step04.low')}</Text>
+            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>{t('createPlant.step04.high')}</Text>
           </View>
           <Slider
             value={lightIndex}
@@ -80,7 +78,7 @@ export default function Step04_Exposure({
         </View>
 
         {/* Window direction — same height, keep selected fill; just remove the border */}
-        <Text style={wiz.sectionTitle}>Window direction</Text>
+        <Text style={wiz.sectionTitle}>{t('createPlant.step04.windowDirection')}</Text>
         <View
           style={{
             borderRadius: 12,
@@ -143,11 +141,11 @@ export default function Step04_Exposure({
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#FFFFFF" />
-          <Text style={wiz.actionText}>Measure light & direction</Text>
+          <Text style={wiz.actionText}>{t('createPlant.step04.measureLightDirection')}</Text>
         </Pressable>
 
         {/* Distance — Slider only; show only selected value */}
-        <Text style={wiz.sectionTitle}>Distance from window</Text>
+        <Text style={wiz.sectionTitle}>{t('createPlant.step04.distanceFromWindow')}</Text>
         <View style={{ marginTop: 6, marginBottom: 4 }}>
           <Text
             style={{

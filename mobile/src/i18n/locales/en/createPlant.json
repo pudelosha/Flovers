@@ -87,6 +87,16 @@
       "locationName": "Location name",
       "cancel": "Cancel",
       "quickSuggestions": "Quick suggestions"
+    },
+    "step04": {
+      "title": "Exposure",
+      "subtitle": "Light exposure helps us tune watering schedules and care reminders. Tell us how much light this spot gets and the window direction.",
+      "lightLevel": "Light level",
+      "low": "Low",
+      "high": "High",
+      "windowDirection": "Window direction",
+      "measureLightDirection": "Measure light & direction",
+      "distanceFromWindow": "Distance from window"
     }
   }
 }
