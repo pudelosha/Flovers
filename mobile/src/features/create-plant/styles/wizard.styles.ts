@@ -232,7 +232,7 @@ export const wiz = StyleSheet.create({
     justifyContent: "center",
   },
   segActive: { backgroundColor: "rgba(11,114,133,0.9)" },
-  segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
+  segText: { color: "#FFFFFF", fontWeight: "800", fontSize: 10 },
 
   /** Horizontal “chip” scrollers (unchanged) */
   hScroll: { paddingVertical: 2 },

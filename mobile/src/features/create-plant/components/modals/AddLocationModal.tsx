@@ -17,6 +17,7 @@ import { PREDEFINED_LOCATIONS } from "../../constants/create-plant.constants";
 
 // Reuse the modal shell from Reminders
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   visible: boolean;
@@ -33,6 +34,7 @@ export default function AddLocationModal({
   onClose,
   onCreate,
 }: Props) {
+  const { t } = useTranslation(); // Translation hook
   const insets = useSafeAreaInsets();
   const [name, setName] = useState(initialName ?? "");
   const [cat, setCat] = useState<LocationCategory>(initialCategory);
@@ -74,7 +76,6 @@ export default function AddLocationModal({
       <View style={remindersStyles.promptWrap}>
         <View style={remindersStyles.promptGlass}>
           <BlurView
-            // @ts-ignore
             style={{ position: "absolute", inset: 0 }}
             blurType="light"
             blurAmount={14}
@@ -82,8 +83,11 @@ export default function AddLocationModal({
           />
           <View
             pointerEvents="none"
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
           />
         </View>
 
@@ -95,12 +99,14 @@ export default function AddLocationModal({
             contentContainerStyle={[styles.scrollContent, { paddingBottom: 80 }]}
             showsVerticalScrollIndicator={false}
           >
-            <Text style={remindersStyles.promptTitle}>Create location</Text>
+            <Text style={remindersStyles.promptTitle}>
+              {t('createPlant.step03.createLocation')}
+            </Text>
 
             {/* Name input – reuse wizard’s flat 64px style */}
             <TextInput
               style={wiz.inputField}
-              placeholder="Location name"
+              placeholder={t('createPlant.step03.locationName')}
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={name}
               onChangeText={setName}
@@ -114,7 +120,9 @@ export default function AddLocationModal({
                   style={[wiz.segBtn, cat === k && wiz.segActive, { flex: 1 }]}
                   onPress={() => setCat(k)}
                 >
-                  <Text style={wiz.segText}>{k[0].toUpperCase() + k.slice(1)}</Text>
+                  <Text style={wiz.segText}>
+                    {t(`createPlant.step03.categories.${k}`)}
+                  </Text>
                 </Pressable>
               ))}
             </View>
@@ -128,7 +136,9 @@ export default function AddLocationModal({
                   onClose();
                 }}
               >
-                <Text style={remindersStyles.promptBtnText}>Cancel</Text>
+                <Text style={remindersStyles.promptBtnText}>
+                  {t('createPlant.step03.cancel')}
+                </Text>
               </Pressable>
               <Pressable
                 style={[remindersStyles.promptBtn, remindersStyles.promptPrimary]}
@@ -143,15 +153,19 @@ export default function AddLocationModal({
                     remindersStyles.promptPrimaryText,
                   ]}
                 >
-                  Create location
+                  {t('createPlant.step03.createLocation')}
                 </Text>
               </Pressable>
             </View>
 
             {/* Quick suggestions – same chips grid */}
-            <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>Quick suggestions</Text>
+            <Text style={[wiz.sectionTitle, { marginTop: 14 }]}>
+              {t('createPlant.step03.quickSuggestions')}
+            </Text>
 
-            <Text style={[wiz.locationCat, { marginBottom: 6 }]}>Indoor</Text>
+            <Text style={[wiz.locationCat, { marginBottom: 6 }]}>
+              {t('createPlant.step03.categories.indoor')}
+            </Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.indoor.slice(0, 9).map((label) => (
                 <Pressable
@@ -165,7 +179,7 @@ export default function AddLocationModal({
             </View>
 
             <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
-              Outdoor
+              {t('createPlant.step03.categories.outdoor')}
             </Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.outdoor.slice(0, 9).map((label) => (
@@ -180,7 +194,7 @@ export default function AddLocationModal({
             </View>
 
             <Text style={[wiz.locationCat, { marginTop: 12, marginBottom: 6 }]}>
-              Other
+              {t('createPlant.step03.categories.other')}
             </Text>
             <View style={styles.gridWrap}>
               {PREDEFINED_LOCATIONS.other.slice(0, 9).map((label) => (
@@ -215,5 +229,10 @@ const styles = StyleSheet.create({
     flexBasis: "48%",
     alignItems: "center",
     justifyContent: "center",
+  },
+    promptBtnText: {
+    color: "#FFFFFF", 
+    fontWeight: "600", 
+    fontSize: 12,
   },
 });

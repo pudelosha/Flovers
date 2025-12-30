@@ -83,7 +83,10 @@
         "other": "No other locations yet."
       },
       "locationExists": "Location with this name already exists.",
-      "errorCreatingLocation": "Could not create location."
+      "errorCreatingLocation": "Could not create location",
+      "locationName": "Location name",
+      "cancel": "Cancel",
+      "quickSuggestions": "Quick suggestions"
     }
   }
 }
