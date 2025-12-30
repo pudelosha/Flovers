@@ -14,6 +14,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
@@ -24,6 +25,7 @@ import {
 } from "../../../../api/services/plant-recognition.service";
 
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 
 type Props = {
   visible: boolean;
@@ -69,6 +71,8 @@ export default function PlantScannerModal({
   onClose,
   onPlantDetected,
 }: Props) {
+  const { settings } = useSettings();
+  const { t } = useTranslation();
   const insets = useSafeAreaInsets();
 
   const [photoUri, setPhotoUri] = useState<string | null>(null);
@@ -76,9 +80,7 @@ export default function PlantScannerModal({
   const [isRecognizing, setIsRecognizing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(
-    null
-  );
+  const [candidates, setCandidates] = useState<ApiRecognitionResult[] | null>(null);
 
   const busy = isPicking || isRecognizing;
 
@@ -113,8 +115,8 @@ export default function PlantScannerModal({
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
         Alert.alert(
-          "Permission required",
-          "Please grant camera and media permissions to take a photo."
+          t('createPlant.step01.cameraRequired'),
+          t('createPlant.step01.cameraPermissionMessage')
         );
         return;
       }
@@ -127,14 +129,14 @@ export default function PlantScannerModal({
 
       if (res.didCancel) return;
       if (res.errorCode) {
-        Alert.alert("Camera error", String(res.errorMessage));
+        Alert.alert(t('createPlant.step01.cameraError'), String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
     } catch {
-      setError("Failed to open camera.");
+      setError(t('createPlant.step01.cameraFailure'));
     } finally {
       setIsPicking(false);
     }
@@ -149,8 +151,8 @@ export default function PlantScannerModal({
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
         Alert.alert(
-          "Permission required",
-          "Please grant media permissions to pick a photo."
+          t('createPlant.step01.libraryRequired'),
+          t('createPlant.step01.libraryPermissionMessage')
         );
         return;
       }
@@ -164,14 +166,14 @@ export default function PlantScannerModal({
 
       if (res.didCancel) return;
       if (res.errorCode) {
-        Alert.alert("Picker error", String(res.errorMessage));
+        Alert.alert(t('createPlant.step01.libraryError'), String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
     } catch {
-      setError("Failed to open gallery.");
+      setError(t('createPlant.step01.libraryFailure'));
     } finally {
       setIsPicking(false);
     }
@@ -189,7 +191,7 @@ export default function PlantScannerModal({
 
       if (results.length === 0) {
         setCandidates(null);
-        setError("No results returned. Try a clearer photo.");
+        setError(t('createPlant.step01.noResults'));
         return;
       }
 
@@ -200,7 +202,7 @@ export default function PlantScannerModal({
       setError(
         e?.message ??
         (e?.response?.data?.detail as string) ??
-        "Failed to recognize the plant."
+        t('createPlant.step01.recognitionFailure')
       );
     } finally {
       setIsRecognizing(false);
@@ -246,15 +248,15 @@ export default function PlantScannerModal({
             contentContainerStyle={styles.scrollContent}
           >
             <Text style={[remindersStyles.promptTitle, { paddingHorizontal: 0 }]}>
-              {stage === "photo" ? "Scan plant" : "Select the detected plant"}
+              {stage === "photo" 
+                ? t('createPlant.step02.traits.recognize') 
+                : t('createPlant.step01.selectPlant')}
             </Text>
 
             {stage === "photo" ? (
               <>
                 <Text style={wiz.subtitle}>
-                  Take a photo or choose one from your gallery. Please use a clear,
-                  good-quality image that shows the plant’s leaf shape well, centered
-                  and not blocked by other plants or objects.
+                  {t('createPlant.step01.scanInstructions')}
                 </Text>
 
                 {/* Preview */}
@@ -272,7 +274,9 @@ export default function PlantScannerModal({
                         size={28}
                         color="#FFFFFF"
                       />
-                      <Text style={styles.previewText}>No photo selected</Text>
+                      <Text style={styles.previewText}>
+                        {t('createPlant.step01.noPhoto')}
+                      </Text>
                     </View>
                   )}
                 </View>
@@ -285,7 +289,9 @@ export default function PlantScannerModal({
                     onPress={doLaunchCamera}
                   >
                     <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
-                    <Text style={styles.actionLabel}>Take a photo</Text>
+                    <Text style={styles.actionLabel}>
+                      {t('createPlant.step01.takePhoto')}
+                    </Text>
                   </Pressable>
 
                   <Pressable
@@ -298,7 +304,9 @@ export default function PlantScannerModal({
                       size={24}
                       color="#FFFFFF"
                     />
-                    <Text style={styles.actionLabel}>From gallery</Text>
+                    <Text style={styles.actionLabel}>
+                      {t('createPlant.step01.fromGallery')}
+                    </Text>
                   </Pressable>
                 </View>
 
@@ -327,7 +335,7 @@ export default function PlantScannerModal({
                         style={{ opacity: !photoUri ? 0.55 : 1 }}
                       />
                       <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
-                        Recognize plant
+                        {t('createPlant.step01.recognize')}
                       </Text>
                     </>
                   )}
@@ -347,14 +355,16 @@ export default function PlantScannerModal({
                       if (!busy) onClose();
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>Close</Text>
+                    <Text style={styles.bottomBtnText}>
+                      {t('createPlant.step01.close')}
+                    </Text>
                   </Pressable>
                 </View>
               </>
             ) : (
               <>
                 <Text style={wiz.subtitle}>
-                  We found a few possible matches. Pick one to prefill plant details.
+                  {t('createPlant.step02.traits.recognize')}
                 </Text>
 
                 {/* Preview */}
@@ -373,7 +383,9 @@ export default function PlantScannerModal({
                           size={22}
                           color="#FFFFFF"
                         />
-                        <Text style={styles.previewText}>No photo</Text>
+                        <Text style={styles.previewText}>
+                          {t('createPlant.step01.noPhoto')}
+                        </Text>
                       </View>
                     )}
                   </View>
@@ -434,7 +446,9 @@ export default function PlantScannerModal({
                       setError(null);
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>Back</Text>
+                    <Text style={styles.bottomBtnText}>
+                      {t('createPlant.step01.back')}
+                    </Text>
                   </Pressable>
 
                   <Pressable
@@ -443,7 +457,9 @@ export default function PlantScannerModal({
                       if (!busy) onClose();
                     }}
                   >
-                    <Text style={styles.bottomBtnText}>Close</Text>
+                    <Text style={styles.bottomBtnText}>
+                      {t('createPlant.step01.close')}
+                    </Text>
                   </Pressable>
                 </View>
               </>
