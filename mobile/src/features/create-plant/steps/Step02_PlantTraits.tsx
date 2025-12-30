@@ -1,5 +1,4 @@
-﻿// steps/Step02_PlantTraits.tsx
-import React, { useEffect, useMemo, useRef, useState } from "react";
+﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -114,7 +113,7 @@ export default function Step02_PlantTraits() {
   // Keep i18n in sync with settings language
   useEffect(() => {
     if (preferredLang && i18n.language !== preferredLang) {
-      i18n.changeLanguage(preferredLang).catch(() => {});
+      i18n.changeLanguage(preferredLang).catch(() => {}); // Ensure language change is applied on first render
     }
   }, [preferredLang, i18n]);
 

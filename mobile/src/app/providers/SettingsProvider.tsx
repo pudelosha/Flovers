@@ -7,14 +7,10 @@ import React, {
   ReactNode,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
 import { useAuth } from "./useAuth";
-import {
-  fetchProfileSettings,
-  type ApiProfileSettings,
-} from "../../api/services/profile.service";
-
+import { fetchProfileSettings, type ApiProfileSettings } from "../../api/services/profile.service";
 import { DEFAULT_SETTINGS } from "../settings/settings.defaults";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 import type { AppSettings } from "../settings/settings.types";
 
 const SETTINGS_STORAGE_KEY = "app:settings:v1";
@@ -23,31 +19,16 @@ type SettingsContextValue = {
   settings: AppSettings;
   loading: boolean;
   error: string | null;
-  /**
-   * Apply settings coming directly from the server (ApiProfileSettings).
-   * Used after successful PATCH in ProfileScreen or initial load.
-   */
   applyServerSettings: (api: ApiProfileSettings) => void;
-  /**
-   * Update local settings (and persist) without hitting the server.
-   * Handy if some screen wants to optimistically tweak something.
-   */
   updateLocalSettings: (partial: Partial<AppSettings>) => void;
-  /**
-   * Force re-fetch from backend (e.g. after login, pull-to-refresh profile).
-   */
   reloadFromServer: () => Promise<void>;
 };
 
 const SettingsContext = createContext<SettingsContextValue | undefined>(undefined);
 
-/**
- * Ensure tile transparency is always a valid number between 0 and 0.6.
- * Handles numbers, strings (e.g. "0.12"), and bad values.
- */
+// Ensure tile transparency is always a valid number between 0 and 0.6.
 function normalizeTileTransparency(v: any): number {
   let n: number;
-
   if (typeof v === "number") {
     n = v;
   } else if (typeof v === "string") {
@@ -56,14 +37,11 @@ function normalizeTileTransparency(v: any): number {
   } else {
     n = DEFAULT_SETTINGS.tileTransparency;
   }
-
   if (!Number.isFinite(n)) {
     n = DEFAULT_SETTINGS.tileTransparency;
   }
-
   if (n < 0) n = 0;
   if (n > 0.6) n = 0.6;
-
   return n;
 }
 
@@ -73,7 +51,6 @@ function mapApiToAppSettings(api: ApiProfileSettings): AppSettings {
     dateFormat: api.date_format,
     temperatureUnit: api.temperature_unit,
     measureUnit: api.measure_unit,
-    // 👇 normalize, because backend sends Decimal as JSON string
     tileTransparency: normalizeTileTransparency((api as any).tile_transparency),
     tileMotive: api.tile_motive,
     background: api.background,
@@ -105,6 +82,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const { i18n } = useTranslation(); // Get i18n from useTranslation
 
   const applyServerSettings = useCallback((api: ApiProfileSettings) => {
     setSettings((prev) => {
@@ -204,6 +182,11 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
         setSettings(next);
         await persistSettings(next);
+
+        // Ensure language is updated in i18n once settings are applied
+        if (i18n.language !== next.language) {
+          i18n.changeLanguage(next.language).catch(() => {});
+        }
       } catch (e) {
         console.warn("Failed to fetch profile settings", e);
         if (!cancelled) {
@@ -221,7 +204,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [user]);
+  }, [user, i18n]); // Ensure the language update happens before rendering components
 
   const value: SettingsContextValue = {
     settings,
