@@ -64,6 +64,26 @@
         "noResults": "No recognition results returned. Try a clearer photo.",
         "failedRecognition": "Failed to recognize the plant."
       }
+    },
+    "step03": {
+      "title": "Choose a location",
+      "subtitle": "Optional but helpful: locations let you group plants and later sort or filter them.",
+      "errorLoadingLocations": "Failed to load locations.",
+      "createLocation": "Create new location",
+      "yourLocations": "Your locations",
+      "categories": {
+        "indoor": "Indoor",
+        "outdoor": "Outdoor",
+        "other": "Other"
+      },
+      "loading": "Loading...",
+      "noLocations": {
+        "indoor": "No indoor locations yet.",
+        "outdoor": "No outdoor locations yet.",
+        "other": "No other locations yet."
+      },
+      "locationExists": "Location with this name already exists.",
+      "errorCreatingLocation": "Could not create location."
     }
   }
 }

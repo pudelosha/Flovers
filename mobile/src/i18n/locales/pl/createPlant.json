@@ -64,6 +64,26 @@
         "noResults": "Brak wyników rozpoznawania. Spróbuj zrobić wyraźniejsze zdjęcie.",
         "failedRecognition": "Nie udało się rozpoznać rośliny."
       }
+    },
+    "step03": {
+      "title": "Wybierz lokalizację",
+      "subtitle": "Opcjonalnie, ale pomocne: lokalizacje pozwalają na grupowanie roślin i późniejsze sortowanie lub filtrowanie.",
+      "errorLoadingLocations": "Nie udało się załadować lokalizacji.",
+      "createLocation": "Utwórz nową lokalizację",
+      "yourLocations": "Twoje lokalizacje",
+      "categories": {
+        "indoor": "Wewnętrzne",
+        "outdoor": "Zewnętrzne",
+        "other": "Inne"
+      },
+      "loading": "Ładowanie...",
+      "noLocations": {
+        "indoor": "Brak lokalizacji wewnętrznych.",
+        "outdoor": "Brak lokalizacji zewnętrznych.",
+        "other": "Brak innych lokalizacji."
+      },
+      "locationExists": "Lokalizacja o tej nazwie już istnieje.",
+      "errorCreatingLocation": "Nie udało się utworzyć lokalizacji."
     }
   }
 }

@@ -2,6 +2,7 @@
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -17,6 +18,7 @@ export default function Step03_SelectLocation({
   onOpenAddLocation: () => void;
   onRegisterCreateHandler: (fn: (name: string, category: LocationCategory) => void) => void;
 }) {
+  const { t } = useTranslation(); // Use translation hook
   const { state, actions } = useCreatePlantWizard();
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -56,7 +58,7 @@ export default function Step03_SelectLocation({
         // Guarantee NONE is selected on initial load
         actions.selectLocation("");
       } catch (e: any) {
-        setErrorMsg(e?.message ?? "Failed to load locations.");
+        setErrorMsg(e?.message ?? t('createPlant.step03.errorLoadingLocations')); // Use translation for error
       } finally {
         mounted && setLoading(false);
       }
@@ -89,7 +91,7 @@ export default function Step03_SelectLocation({
 
       // local duplicate guard (case-insensitive)
       if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
-        setErrorMsg("Location with this name already exists.");
+        setErrorMsg(t('createPlant.step03.locationExists')); // Use translation for duplicate error
         return;
       }
 
@@ -118,10 +120,10 @@ export default function Step03_SelectLocation({
 
         onScrollTop?.();
       } catch (e: any) {
-        setErrorMsg(e?.message ?? "Could not create location.");
+        setErrorMsg(e?.message ?? t('createPlant.step03.errorCreatingLocation')); // Use translation for error
       }
     },
-    [actions, onScrollTop, state.locations]
+    [actions, onScrollTop, state.locations, t] // Ensure translation hook is included in dependency
   );
 
   // register create handler with parent (WizardBody)
@@ -150,9 +152,9 @@ export default function Step03_SelectLocation({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Choose a location</Text>
+        <Text style={wiz.title}>{t('createPlant.step03.title')}</Text>
         <Text style={wiz.smallMuted}>
-          Optional but helpful: locations let you group plants and later sort or filter them.
+          {t('createPlant.step03.subtitle')}
         </Text>
 
         {errorMsg && (
@@ -178,12 +180,12 @@ export default function Step03_SelectLocation({
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
-          <Text style={wiz.nextBtnText}>Create new location</Text>
+          <Text style={wiz.nextBtnText}>{t('createPlant.step03.createLocation')}</Text>
         </Pressable>
 
         {/* User-defined locations */}
         <Text style={[wiz.sectionTitle, { marginBottom: 12, marginTop: 18 }]}>
-          Your locations
+          {t('createPlant.step03.yourLocations')}
         </Text>
 
         {(["indoor", "outdoor", "other"] as LocationCategory[]).map((cat) => {
@@ -193,7 +195,7 @@ export default function Step03_SelectLocation({
               {/* Category header */}
               <View style={{ marginBottom: 5 }}>
                 <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
-                  {cat[0].toUpperCase() + cat.slice(1)}
+                  {t(`createPlant.step03.categories.${cat}`)} {/* Use translation for categories */}
                 </Text>
                 <View
                   style={{
@@ -206,7 +208,7 @@ export default function Step03_SelectLocation({
 
               {arr.length === 0 ? (
                 <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
-                  {loading ? "Loading…" : `No ${cat} locations yet.`}
+                  {loading ? t('createPlant.step03.loading') : t(`createPlant.step03.noLocations.${cat}`)} {/* Use translation for empty categories */}
                 </Text>
               ) : (
                 arr.map((l) => {
@@ -224,10 +226,7 @@ export default function Step03_SelectLocation({
                       ]}
                     >
                       <Text
-                        style={[
-                          wiz.locationName,
-                          { fontWeight: isSelected ? "900" : "500" },
-                        ]}
+                        style={[wiz.locationName, { fontWeight: isSelected ? "900" : "500" }]}
                       >
                         {l.name}
                       </Text>
