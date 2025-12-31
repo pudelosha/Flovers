@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "Wyślij ponownie aktywację",
+    "subtitle": "Wprowadź swój adres email, a wyślemy nowy link aktywacyjny.",
+    "email": "Email",
+    "sendButton": "Wyślij email aktywacyjny",
+    "backToLogin": "Powrót do logowania",
+    "errors": {
+      "emailRequired": "Proszę wprowadzić adres email.",
+      "generic": "Coś poszło nie tak. Spróbuj ponownie."
+    },
+    "success": {
+      "emailSent": "Jeśli Twoje konto wymaga aktywacji, email został wysłany."
+    }
+  }
+}

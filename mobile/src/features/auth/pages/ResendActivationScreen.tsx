@@ -6,6 +6,7 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { ApiError } from "../../../api/client";
 import { useAuth } from "../../../app/providers/useAuth";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const INPUT_HEIGHT = 64;
 
@@ -44,6 +45,7 @@ const AnimatedFloatingLabel = ({
 
 export default function ResendActivationScreen({ navigation }: any) {
   const { resendActivation } = useAuth() as any;
+  const { t } = useTranslation(); // Add translation hook
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -57,7 +59,7 @@ export default function ResendActivationScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!email.trim()) {
-      setToast({ visible: true, msg: "Please enter your email.", variant: "error" });
+      setToast({ visible: true, msg: t('resendActivation.errors.emailRequired'), variant: "error" });
       return;
     }
     setLoading(true);
@@ -65,11 +67,11 @@ export default function ResendActivationScreen({ navigation }: any) {
       if (typeof resendActivation === "function") await resendActivation({ email });
       setToast({
         visible: true,
-        msg: "If your account needs activation, an email is on the way.",
+        msg: t('resendActivation.success.emailSent'),
         variant: "success",
       });
     } catch (e: any) {
-      const msg = e instanceof ApiError ? e.body?.message || e.message : "Something went wrong. Try again.";
+      const msg = e instanceof ApiError ? e.body?.message || e.message : t('resendActivation.errors.generic');
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
@@ -79,21 +81,44 @@ export default function ResendActivationScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>Resend Activation</Text>
-        <Text style={s.subtitle}>Enter your email and we&apos;ll send a new activation link.</Text>
+        <Text variant="headlineMedium" style={s.title}>
+          {t('resendActivation.title')}
+        </Text>
+        <Text style={s.subtitle}>
+          {t('resendActivation.subtitle')}
+        </Text>
 
         <AnimatedFloatingLabel
-          label="Email" value={email} onChangeText={setEmail}
-          autoCapitalize="none" keyboardType="email-address" autoComplete="email"
-          returnKeyType="done" onSubmitEditing={onSubmit} inputRef={emailRef}
+          label={t('resendActivation.email')}
+          value={email}
+          onChangeText={setEmail}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          autoComplete="email"
+          returnKeyType="done"
+          onSubmitEditing={onSubmit}
+          inputRef={emailRef}
         />
 
-        <Button mode="contained" onPress={onSubmit} loading={loading} disabled={loading} style={s.button}>
-          Send activation email
+        <Button
+          mode="contained"
+          onPress={onSubmit}
+          loading={loading}
+          disabled={loading}
+          style={s.button}
+        >
+          {t('resendActivation.sendButton')}
         </Button>
 
-        <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>Back to Login</Text>
+        <Button
+          onPress={() => navigation.navigate("Login")}
+          accessibilityRole="link"
+          compact
+          style={s.linkButton}
+        >
+          <Text style={s.linkLabel}>
+            {t('resendActivation.backToLogin')}
+          </Text>
         </Button>
 
         {/* Shared top toast */}

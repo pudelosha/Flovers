@@ -9,6 +9,8 @@ import enLogin from "./locales/en/login.json";
 import plLogin from "./locales/pl/login.json";
 import enRegister from "./locales/en/register.json";
 import plRegister from "./locales/pl/register.json";
+import enResendActivation from "./locales/en/resendActivation.json";
+import plResendActivation from "./locales/pl/resendActivation.json";
 
 // IMPORTANT:
 // Only import languages that actually have files,
@@ -47,14 +49,16 @@ const resources = {
     translation: {
       ...enCreatePlant,
       ...enLogin,
-      ...enRegister
+      ...enRegister,
+      ...enResendActivation
     } 
   },
   pl: { 
     translation: {
       ...plCreatePlant,
       ...plLogin,
-      ...plRegister
+      ...plRegister,
+      ...plResendActivation
     } 
   },
   de: { translation: deCreatePlant },

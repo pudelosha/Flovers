@@ -1,0 +1,16 @@
+{
+  "resendActivation": {
+    "title": "Resend Activation",
+    "subtitle": "Enter your email and we'll send a new activation link.",
+    "email": "Email",
+    "sendButton": "Send activation email",
+    "backToLogin": "Back to Login",
+    "errors": {
+      "emailRequired": "Please enter your email.",
+      "generic": "Something went wrong. Try again."
+    },
+    "success": {
+      "emailSent": "If your account needs activation, an email is on the way."
+    }
+  }
+}
