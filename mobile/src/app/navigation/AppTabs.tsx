@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next"; // Add this import
 
 // Use gradient (with safe fallback if the lib isn't installed)
 let LinearGradientView: any = View;
@@ -95,6 +96,22 @@ const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 function GlassTabBar({ state, descriptors, navigation }: any) {
   const insets = useSafeAreaInsets();
+  const { t } = useTranslation(); // Add translation hook
+
+  // Helper function to get translated label with fallback
+  const getTranslatedLabel = (routeName: string) => {
+    try {
+      const translation = t(`navigation.tabs.${routeName}`, { defaultValue: routeName });
+      // If translation returns the key itself (no translation found), use the route name
+      if (translation === `navigation.tabs.${routeName}`) {
+        return routeName;
+      }
+      return translation;
+    } catch (error) {
+      console.log('Translation error for', routeName, ':', error);
+      return routeName;
+    }
+  };
 
   const getIcon = (name: string) => {
     switch (name) {
@@ -183,6 +200,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
             };
 
             const iconName = getIcon(route.name);
+            const translatedLabel = getTranslatedLabel(route.name);
 
             return (
               <Pressable
@@ -204,7 +222,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
                   style={[s.label, isFocused ? s.labelFocused : s.labelUnfocused]}
                   numberOfLines={1}
                 >
-                  {route.name}
+                  {translatedLabel}
                 </Text>
               </Pressable>
             );

@@ -15,6 +15,8 @@ import enConfirmEmail from "./locales/en/confirmEmail.json";
 import plConfirmEmail from "./locales/pl/confirmEmail.json";
 import enForgotPassword from "./locales/en/forgotPassword.json";
 import plForgotPassword from "./locales/pl/forgotPassword.json";
+import enNavigation from "./locales/en/navigation.json";
+import plNavigation from "./locales/pl/navigation.json";
 
 // IMPORTANT:
 // Only import languages that actually have files,
@@ -56,7 +58,8 @@ const resources = {
       ...enRegister,
       ...enResendActivation,
       ...enConfirmEmail,
-      ...enForgotPassword
+      ...enForgotPassword,
+      ...enNavigation
     } 
   },
   pl: { 
@@ -66,7 +69,8 @@ const resources = {
       ...plRegister,
       ...plResendActivation,
       ...plConfirmEmail,
-      ...plForgotPassword
+      ...plForgotPassword,
+      ...plNavigation
     } 
   },
   de: { translation: deCreatePlant },
