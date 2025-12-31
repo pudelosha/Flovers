@@ -13,6 +13,8 @@ import enResendActivation from "./locales/en/resendActivation.json";
 import plResendActivation from "./locales/pl/resendActivation.json";
 import enConfirmEmail from "./locales/en/confirmEmail.json";
 import plConfirmEmail from "./locales/pl/confirmEmail.json";
+import enForgotPassword from "./locales/en/forgotPassword.json";
+import plForgotPassword from "./locales/pl/forgotPassword.json";
 
 // IMPORTANT:
 // Only import languages that actually have files,
@@ -53,7 +55,8 @@ const resources = {
       ...enLogin,
       ...enRegister,
       ...enResendActivation,
-      ...enConfirmEmail
+      ...enConfirmEmail,
+      ...enForgotPassword
     } 
   },
   pl: { 
@@ -62,7 +65,8 @@ const resources = {
       ...plLogin,
       ...plRegister,
       ...plResendActivation,
-      ...plConfirmEmail
+      ...plConfirmEmail,
+      ...plForgotPassword
     } 
   },
   de: { translation: deCreatePlant },

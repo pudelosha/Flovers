@@ -6,6 +6,7 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { ApiError } from "../../../api/client";
 import { useAuth } from "../../../app/providers/useAuth";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const INPUT_HEIGHT = 64;
 
@@ -44,6 +45,7 @@ const AnimatedFloatingLabel = ({
 
 export default function ForgotPasswordScreen({ navigation }: any) {
   const { requestPasswordReset } = useAuth() as any;
+  const { t } = useTranslation(); // Add translation hook
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -57,7 +59,7 @@ export default function ForgotPasswordScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!email.trim()) {
-      setToast({ visible: true, msg: "Please enter your email.", variant: "error" });
+      setToast({ visible: true, msg: t('forgotPassword.errors.emailRequired'), variant: "error" });
       return;
     }
     setLoading(true);
@@ -65,11 +67,11 @@ export default function ForgotPasswordScreen({ navigation }: any) {
       if (typeof requestPasswordReset === "function") await requestPasswordReset({ email });
       setToast({
         visible: true,
-        msg: "If an account exists for that email, we’ll send a reset link.",
+        msg: t('forgotPassword.success.emailSent'),
         variant: "success",
       });
     } catch (e: any) {
-      const msg = e instanceof ApiError ? e.body?.message || e.message : "Something went wrong. Try again.";
+      const msg = e instanceof ApiError ? e.body?.message || e.message : t('forgotPassword.errors.generic');
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
@@ -79,21 +81,44 @@ export default function ForgotPasswordScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>Forgot Password</Text>
-        <Text style={s.subtitle}>Enter your email address and we&apos;ll send you a link to reset your password.</Text>
+        <Text variant="headlineMedium" style={s.title}>
+          {t('forgotPassword.title')}
+        </Text>
+        <Text style={s.subtitle}>
+          {t('forgotPassword.subtitle')}
+        </Text>
 
         <AnimatedFloatingLabel
-          label="Email" value={email} onChangeText={setEmail}
-          autoCapitalize="none" keyboardType="email-address" autoComplete="email"
-          returnKeyType="done" onSubmitEditing={onSubmit} inputRef={emailRef}
+          label={t('forgotPassword.email')}
+          value={email}
+          onChangeText={setEmail}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          autoComplete="email"
+          returnKeyType="done"
+          onSubmitEditing={onSubmit}
+          inputRef={emailRef}
         />
 
-        <Button mode="contained" onPress={onSubmit} loading={loading} disabled={loading} style={s.button}>
-          Send reset link
+        <Button
+          mode="contained"
+          onPress={onSubmit}
+          loading={loading}
+          disabled={loading}
+          style={s.button}
+        >
+          {t('forgotPassword.sendButton')}
         </Button>
 
-        <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>Back to Login</Text>
+        <Button
+          onPress={() => navigation.navigate("Login")}
+          accessibilityRole="link"
+          compact
+          style={s.linkButton}
+        >
+          <Text style={s.linkLabel}>
+            {t('forgotPassword.backToLogin')}
+          </Text>
         </Button>
 
         {/* Shared top toast */}
