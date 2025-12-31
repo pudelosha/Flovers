@@ -4,7 +4,6 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Slider from "@react-native-community/slider";
 import { SegmentedButtons, useTheme } from "react-native-paper";
-
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { ORIENTATIONS } from "../constants/create-plant.constants";
@@ -104,7 +103,7 @@ export default function Step04_Exposure({
             onValueChange={(v) => actions.setOrientation(v as any)}
             buttons={ORIENTATIONS.map(({ key, label }) => ({
               value: key,
-              label,
+              label: t(`createPlant.step04.orientations.${key}`), // Translating the orientation
               style: {
                 flex: 1,
                 minWidth: 0,

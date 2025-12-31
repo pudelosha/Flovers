@@ -14,10 +14,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { wiz } from "../../styles/wizard.styles";
 import type { LocationCategory } from "../../types/create-plant.types";
 import { PREDEFINED_LOCATIONS } from "../../constants/create-plant.constants";
+import { useTranslation } from "react-i18next";
 
 // Reuse the modal shell from Reminders
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
-import { useTranslation } from "react-i18next";
 
 type Props = {
   visible: boolean;
@@ -103,7 +103,7 @@ export default function AddLocationModal({
               {t('createPlant.step03.createLocation')}
             </Text>
 
-            {/* Name input – reuse wizard’s flat 64px style */}
+            {/* Name input – reuse wizard's flat 64px style */}
             <TextInput
               style={wiz.inputField}
               placeholder={t('createPlant.step03.locationName')}
@@ -171,9 +171,14 @@ export default function AddLocationModal({
                 <Pressable
                   key={`ind-${label}`}
                   style={[wiz.chip, styles.gridChip]}
-                  onPress={() => pickSuggestion(label, "indoor")}
+                  onPress={() => pickSuggestion(
+                    t(`createPlant.step03.predefinedLocations.indoor.${label}`), 
+                    "indoor"
+                  )}
                 >
-                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
+                    {t(`createPlant.step03.predefinedLocations.indoor.${label}`)}
+                  </Text>
                 </Pressable>
               ))}
             </View>
@@ -186,9 +191,14 @@ export default function AddLocationModal({
                 <Pressable
                   key={`out-${label}`}
                   style={[wiz.chip, styles.gridChip]}
-                  onPress={() => pickSuggestion(label, "outdoor")}
+                  onPress={() => pickSuggestion(
+                    t(`createPlant.step03.predefinedLocations.outdoor.${label}`), 
+                    "outdoor"
+                  )}
                 >
-                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
+                    {t(`createPlant.step03.predefinedLocations.outdoor.${label}`)}
+                  </Text>
                 </Pressable>
               ))}
             </View>
@@ -201,9 +211,14 @@ export default function AddLocationModal({
                 <Pressable
                   key={`oth-${label}`}
                   style={[wiz.chip, styles.gridChip]}
-                  onPress={() => pickSuggestion(label, "other")}
+                  onPress={() => pickSuggestion(
+                    t(`createPlant.step03.predefinedLocations.other.${label}`), 
+                    "other"
+                  )}
                 >
-                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>{label}</Text>
+                  <Text style={[wiz.chipText, { color: "#FFFFFF" }]}>
+                    {t(`createPlant.step03.predefinedLocations.other.${label}`)}
+                  </Text>
                 </Pressable>
               ))}
             </View>
@@ -230,9 +245,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-    promptBtnText: {
-    color: "#FFFFFF", 
-    fontWeight: "600", 
+  promptBtnText: {
+    color: "#FFFFFF",
+    fontWeight: "600",
     fontSize: 12,
   },
 });

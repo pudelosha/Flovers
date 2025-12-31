@@ -1,5 +1,4 @@
-﻿// constants/create-plant.constants.ts
-import type { PopularPlant, Suggestion } from "../types/create-plant.types";
+﻿import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import type { SunRequirement, WaterRequirement, DifficultyLevel } from "../types/create-plant.types";
 
 // Header tint (consistent with your app)
@@ -114,9 +113,9 @@ export const TRAIT_LABEL_BY_KEY: Record<string, string> = {
 
 // ---------- Step 3 predefined location suggestions ----------
 export const PREDEFINED_LOCATIONS = {
-  indoor: ["Living room", "Kitchen", "Dining room", "Bedroom", "Bathroom", "Hallway", "Office", "Kids room"],
-  outdoor: ["Balcony", "Terrace", "Patio", "Garden", "Front yard", "Backyard", "Porch", "Greenhouse"],
-  other: ["Staircase", "Garage", "Basement", "Lobby", "Sunroom", "Workshop", "Studio", "Attic"],
+  indoor: ["livingRoom", "kitchen", "diningRoom", "bedroom", "bathroom", "hallway", "office", "kidsRoom"],
+  outdoor: ["balcony", "terrace", "patio", "garden", "frontYard", "backyard", "porch", "greenhouse"],
+  other: ["staircase", "garage", "basement", "lobby", "sunroom", "workshop", "studio", "attic"],
 } as const;
 
 // ---------- 🔵 Step 4 exposure options ----------
@@ -194,59 +193,6 @@ export const POT_MATERIALS: readonly PotMaterialOption[] = [
   { key: "self-watering", label: "Self-watering", description: "Reservoir with wicking; evens out watering schedule." },
 ] as const;
 
-export type SoilMixKey =
-  | "all-purpose"
-  | "peat-based"
-  | "peat-free"
-  | "coco-coir"
-  | "succulent-cactus"
-  | "orchid-bark"
-  | "bonsai"
-  | "african-violet"
-  | "carnivorous"
-  | "seed-starting"
-  | "loam"
-  | "sandy"
-  | "sandy-loam"
-  | "silt"
-  | "clay-heavy"
-  | "perlite-blend"
-  | "pumice-blend"
-  | "vermiculite-blend"
-  | "bioactive"
-  | "hydroponic-leca"
-  | "self-mixed";
-
-type SoilMixOption = Readonly<{
-  key: SoilMixKey;
-  label: string;
-  description: string;
-}>;
-
-export const SOIL_MIXES: readonly SoilMixOption[] = [
-  { key: "all-purpose", label: "All-purpose potting mix", description: "Balanced mix for most houseplants; retains moisture with good aeration." },
-  { key: "peat-based", label: "Peat-based mix", description: "Moisture-retentive; common in many commercial potting mixes." },
-  { key: "peat-free", label: "Peat-free mix", description: "Eco-friendlier alternative; often coir-based with composted materials." },
-  { key: "coco-coir", label: "Coco coir mix", description: "Holds water well; resists compaction; good peat alternative." },
-  { key: "succulent-cactus", label: "Succulent / cactus mix", description: "Very fast draining; high mineral content (sand/pumice/perlite)." },
-  { key: "orchid-bark", label: "Orchid bark mix", description: "Chunky bark + perlite/charcoal; excellent aeration for epiphytes." },
-  { key: "bonsai", label: "Bonsai mix", description: "Inorganic, very free-draining; akadama/pumice/lava blends." },
-  { key: "african-violet", label: "African violet mix", description: "Light, airy, moisture-retentive; fine texture." },
-  { key: "carnivorous", label: "Carnivorous plant mix", description: "Nutrient-poor peat/coir + sand; no fertilizers." },
-  { key: "seed-starting", label: "Seed-starting mix", description: "Sterile, very fine and airy; supports germination." },
-  { key: "loam", label: "Loam (garden)", description: "Balanced sand/silt/clay; add perlite/organic matter for pots." },
-  { key: "sandy", label: "Sandy", description: "Fast drainage; low water retention; add organic matter to enrich." },
-  { key: "sandy-loam", label: "Sandy loam", description: "Nice balance; drains well; good for many container plants." },
-  { key: "silt", label: "Silty", description: "Fertile but compacts; mix with perlite/bark for aeration in pots." },
-  { key: "clay-heavy", label: "Clay-heavy", description: "Holds water; tends to compact; lighten with perlite/pumice/bark." },
-  { key: "perlite-blend", label: "Perlite-rich blend", description: "Boosts aeration and drainage in standard mixes." },
-  { key: "pumice-blend", label: "Pumice-rich blend", description: "Like perlite but heavier; improves drainage and structure." },
-  { key: "vermiculite-blend", label: "Vermiculite-rich blend", description: "Holds moisture and nutrients; good in seed-starting." },
-  { key: "bioactive", label: "Bioactive / worm castings", description: "Living soil with compost and microbes; slow-release nutrition." },
-  { key: "hydroponic-leca", label: "LECA / semi-hydro", description: "Inert clay balls; water reservoir feeding; great root aeration." },
-  { key: "self-mixed", label: "Custom self-mixed", description: "Your own recipe — note the ingredients you use." },
-] as const;
-
 /** 🔵 Step 6 – Auto tasks dropdown options */
 export const LAST_WATERED_OPTIONS = [
   { key: "today", label: "Today" },
@@ -254,7 +200,7 @@ export const LAST_WATERED_OPTIONS = [
   { key: "three-four-days", label: "3–4 days ago" },
   { key: "one-week", label: "A week ago" },
   { key: "two-weeks", label: "2 weeks ago" },
-  { key: "unknown", label: "I don’t remember" },
+  { key: "unknown", label: "I don't remember" },
 ] as const;
 
 export const LAST_REPOTTED_OPTIONS = [
@@ -262,5 +208,5 @@ export const LAST_REPOTTED_OPTIONS = [
   { key: "one-week-ago", label: "1 week ago" },
   { key: "two-weeks-ago", label: "2 weeks ago" },
   { key: "one-month-ago", label: "1 month ago" },
-  { key: "unknown", label: "I don’t remember" },
+  { key: "unknown", label: "I don't remember" },
 ] as const;
