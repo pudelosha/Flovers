@@ -1,5 +1,4 @@
-﻿// C:\Projekty\Python\Flovers\mobile\src\i18n\index.ts
-import i18n from "i18next";
+﻿import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Static imports so Metro can bundle them
@@ -17,6 +16,8 @@ import enForgotPassword from "./locales/en/forgotPassword.json";
 import plForgotPassword from "./locales/pl/forgotPassword.json";
 import enNavigation from "./locales/en/navigation.json";
 import plNavigation from "./locales/pl/navigation.json";
+import enResetPassword from "./locales/en/resetPassword.json";
+import plResetPassword from "./locales/pl/resetPassword.json";
 
 // IMPORTANT:
 // Only import languages that actually have files,
@@ -48,8 +49,6 @@ export const LANGS = [
   "ko",
 ] as const;
 
-// FIX: register JSON under the default "translation" namespace
-// We need to merge multiple JSON files for each language
 const resources = {
   en: { 
     translation: {
@@ -59,7 +58,8 @@ const resources = {
       ...enResendActivation,
       ...enConfirmEmail,
       ...enForgotPassword,
-      ...enNavigation
+      ...enNavigation,
+      ...enResetPassword
     } 
   },
   pl: { 
@@ -70,7 +70,8 @@ const resources = {
       ...plResendActivation,
       ...plConfirmEmail,
       ...plForgotPassword,
-      ...plNavigation
+      ...plNavigation,
+      ...plResetPassword
     } 
   },
   de: { translation: deCreatePlant },

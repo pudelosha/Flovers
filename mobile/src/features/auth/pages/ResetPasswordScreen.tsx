@@ -12,6 +12,7 @@ import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const INPUT_HEIGHT = 64;
 
@@ -52,9 +53,7 @@ const AnimatedFloatingLabel = ({
 
   return (
     <View style={s.inputContainer}>
-      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>
-        {label}
-      </Animated.Text>
+      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>{label}</Animated.Text>
       <TextInput
         mode="flat"
         value={value}
@@ -103,6 +102,7 @@ function parseQuery(url: string): Record<string, string> {
 export default function ResetPasswordScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
   const { resetPassword } = useAuth() as any; // rename to your actual method, e.g. confirmPasswordReset
+  const { t } = useTranslation(); // Add translation hook
 
   const params = route.params || {};
   const derived = useMemo(() => {
@@ -140,10 +140,10 @@ export default function ResetPasswordScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!formValid) {
-      let msg = "Please complete the form.";
-      if (!derived.token || !derived.uid) msg = "Invalid or missing reset link.";
-      else if (!passwordValid) msg = "Password should be at least 6 characters.";
-      else if (!passwordsMatch) msg = "Passwords do not match.";
+      let msg = t("resetPassword.error");
+      if (!derived.token || !derived.uid) msg = t("resetPassword.invalidLink");
+      else if (!passwordValid) msg = t("resetPassword.passwordTooShort");
+      else if (!passwordsMatch) msg = t("resetPassword.passwordsDoNotMatch");
       setToast({ visible: true, msg, variant: "error" });
       return;
     }
@@ -153,28 +153,26 @@ export default function ResetPasswordScreen({ navigation }: any) {
       if (typeof resetPassword === "function") {
         await resetPassword({ token: derived.token, uid: derived.uid, password: pwd });
       } else {
-        // Temporary fake success to let you test the flow without backend
         await new Promise((r) => setTimeout(r, 500));
       }
-      setToast({ visible: true, msg: "Password changed. Please log in.", variant: "success" });
+      setToast({ visible: true, msg: t("resetPassword.success"), variant: "success" });
       navigation.navigate("Login");
     } catch (e: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
-          : "Could not reset password. The link may be invalid or expired.";
+          : t("resetPassword.error");
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
     }
   }
 
-  // If no token/uid in params, show a quick guidance toast after mount
   useEffect(() => {
     if (!derived.token || !derived.uid) {
       setToast({
         visible: true,
-        msg: "Open this page via the reset link from your email.",
+        msg: t("resetPassword.invalidLink"),
         variant: "default",
       });
     }
@@ -184,11 +182,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
         <Text variant="headlineMedium" style={s.title}>
-          Reset Password
+          {t("resetPassword.resetPassword")}
         </Text>
 
         <AnimatedFloatingLabel
-          label="New Password"
+          label={t("resetPassword.newPassword")}
           value={pwd}
           onChangeText={setPwd}
           secureTextEntry={!showPwd}
@@ -207,7 +205,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label="Confirm Password"
+          label={t("resetPassword.confirmPassword")}
           value={pwd2}
           onChangeText={setPwd2}
           secureTextEntry={!showPwd2}
@@ -232,14 +230,13 @@ export default function ResetPasswordScreen({ navigation }: any) {
           disabled={loading || !formValid}
           style={s.button}
         >
-          Change password
+          {t("resetPassword.changePassword")}
         </Button>
 
         <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>Back to Login</Text>
+          <Text style={s.linkLabel}>{t("resetPassword.backToLogin")}</Text>
         </Button>
 
-        {/* Top-aligned shared toast */}
         <TopSnackbar
           visible={toast.visible}
           message={toast.msg}
@@ -254,23 +251,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
   title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
-
-  // Animated input styles
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
-  flat: {
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderRadius: 14,
-    height: INPUT_HEIGHT,
-    paddingHorizontal: 12,
-  },
+  flat: { backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 14, height: INPUT_HEIGHT, paddingHorizontal: 12 },
   contentStyle: { paddingTop: 20, paddingBottom: 8 },
-
   button: { marginTop: 8 },
   linkButton: { alignSelf: "center" },
   linkLabel: { fontSize: 14, color: "#FFFFFF" },
-
-  // (old bottom Snackbar styles kept for reference; not used now)
-  snackWrapper: { position: "absolute", left: 0, right: 0, alignItems: "center" },
-  snack: { backgroundColor: "#0a5161", borderRadius: 24 },
 });
