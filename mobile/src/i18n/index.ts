@@ -5,6 +5,10 @@ import { initReactI18next } from "react-i18next";
 // Static imports so Metro can bundle them
 import enCreatePlant from "./locales/en/createPlant.json";
 import plCreatePlant from "./locales/pl/createPlant.json";
+import enLogin from "./locales/en/login.json";
+import plLogin from "./locales/pl/login.json";
+import enRegister from "./locales/en/register.json";
+import plRegister from "./locales/pl/register.json";
 
 // IMPORTANT:
 // Only import languages that actually have files,
@@ -37,9 +41,22 @@ export const LANGS = [
 ] as const;
 
 // FIX: register JSON under the default "translation" namespace
+// We need to merge multiple JSON files for each language
 const resources = {
-  en: { translation: enCreatePlant },
-  pl: { translation: plCreatePlant },
+  en: { 
+    translation: {
+      ...enCreatePlant,
+      ...enLogin,
+      ...enRegister
+    } 
+  },
+  pl: { 
+    translation: {
+      ...plCreatePlant,
+      ...plLogin,
+      ...plRegister
+    } 
+  },
   de: { translation: deCreatePlant },
   it: { translation: itCreatePlant },
   fr: { translation: frCreatePlant },

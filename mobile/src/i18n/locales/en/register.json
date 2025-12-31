@@ -1,0 +1,25 @@
+{
+  "register": {
+    "title": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "termsAgreement": "I agree to the",
+    "termsLink": "Terms & Conditions",
+    "signUpButton": "Register",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Login",
+    "errors": {
+      "invalidEmail": "Enter a valid email.",
+      "shortPassword": "Password should be at least 6 characters.",
+      "passwordsMismatch": "Passwords do not match.",
+      "termsRequired": "You must agree to the Terms & Conditions.",
+      "incompleteForm": "Please complete the form.",
+      "registrationFailed": "Registration failed. Please try again.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "success": {
+      "accountCreated": "Account created. Welcome!"
+    }
+  }
+}

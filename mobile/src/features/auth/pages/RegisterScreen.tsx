@@ -19,6 +19,7 @@ import {
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const INPUT_HEIGHT = 64;
 
@@ -123,6 +124,7 @@ const AnimatedFloatingLabel = ({
 
 export default function RegisterScreen({ navigation }: any) {
   const { register } = useAuth() as any;
+  const { t } = useTranslation(); // Add translation hook
 
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
@@ -148,11 +150,11 @@ export default function RegisterScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!formValid) {
-      let msg = "Please complete the form.";
-      if (!emailValid) msg = "Enter a valid email.";
-      else if (!passwordValid) msg = "Password should be at least 6 characters.";
-      else if (!passwordsMatch) msg = "Passwords do not match.";
-      else if (!agree) msg = "You must agree to the Terms & Conditions.";
+      let msg = t('register.errors.incompleteForm');
+      if (!emailValid) msg = t('register.errors.invalidEmail');
+      else if (!passwordValid) msg = t('register.errors.shortPassword');
+      else if (!passwordsMatch) msg = t('register.errors.passwordsMismatch');
+      else if (!agree) msg = t('register.errors.termsRequired');
       setToast({ visible: true, msg });
       return;
     }
@@ -162,12 +164,12 @@ export default function RegisterScreen({ navigation }: any) {
       if (typeof register === "function") {
         await register({ email, password: pwd });
       }
-      setToast({ visible: true, msg: "Account created. Welcome!" });
+      setToast({ visible: true, msg: t('register.success.accountCreated') });
     } catch (e: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
-          : "Registration failed. Please try again.";
+          : t('register.errors.registrationFailed');
       setToast({ visible: true, msg });
     } finally {
       setLoading(false);
@@ -178,11 +180,11 @@ export default function RegisterScreen({ navigation }: any) {
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
         <Text variant="headlineMedium" style={s.title}>
-          Register
+          {t('register.title')}
         </Text>
 
         <AnimatedFloatingLabel
-          label="Email"
+          label={t('register.email')}
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -194,7 +196,7 @@ export default function RegisterScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label="Password"
+          label={t('register.password')}
           value={pwd}
           onChangeText={setPwd}
           secureTextEntry={!showPwd}
@@ -213,7 +215,7 @@ export default function RegisterScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label="Confirm Password"
+          label={t('register.confirmPassword')}
           value={pwd2}
           onChangeText={setPwd2}
           secureTextEntry={!showPwd2}
@@ -248,14 +250,14 @@ export default function RegisterScreen({ navigation }: any) {
               style={s.checkbox}
             />
             <Text style={s.agreeText}>
-              I agree to the{" "}
+              {t('register.termsAgreement')}{" "}
               <Text
                 style={[s.agreeText, s.linkBold, s.linkUnderline]}
                 onPress={() => {
                   // navigation.navigate("Terms") or Linking.openURL("https://example.com/terms")
                 }}
               >
-                Terms & Conditions
+                {t('register.termsLink')}
               </Text>
             </Text>
           </View>
@@ -268,7 +270,7 @@ export default function RegisterScreen({ navigation }: any) {
           disabled={loading || !formValid}
           style={s.button}
         >
-          Register
+          {t('register.signUpButton')}
         </Button>
 
         {/* Already have an account? Login */}
@@ -279,8 +281,10 @@ export default function RegisterScreen({ navigation }: any) {
           style={s.linkButton}
         >
           <Text style={s.linkLabel}>
-            Already have an account?{" "}
-            <Text style={[s.linkLabel, s.linkBold]}>Login</Text>
+            {t('register.haveAccount')}{" "}
+            <Text style={[s.linkLabel, s.linkBold]}>
+              {t('register.loginLink')}
+            </Text>
           </Text>
         </Button>
 

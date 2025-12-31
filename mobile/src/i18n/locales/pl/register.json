@@ -1,0 +1,25 @@
+{
+  "register": {
+    "title": "Rejestracja",
+    "email": "Email",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "termsAgreement": "Akceptuję",
+    "termsLink": "Regulamin",
+    "signUpButton": "Zarejestruj się",
+    "haveAccount": "Masz już konto?",
+    "loginLink": "Zaloguj się",
+    "errors": {
+      "invalidEmail": "Wprowadź poprawny adres email.",
+      "shortPassword": "Hasło powinno mieć co najmniej 6 znaków.",
+      "passwordsMismatch": "Hasła nie są identyczne.",
+      "termsRequired": "Musisz zaakceptować regulamin.",
+      "incompleteForm": "Proszę uzupełnić formularz.",
+      "registrationFailed": "Rejestracja nie powiodła się. Spróbuj ponownie.",
+      "generic": "Coś poszło nie tak. Spróbuj ponownie."
+    },
+    "success": {
+      "accountCreated": "Konto utworzone. Witamy!"
+    }
+  }
+}

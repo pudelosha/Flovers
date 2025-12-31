@@ -11,6 +11,7 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 const INPUT_HEIGHT = 64;
 
@@ -54,6 +55,7 @@ const AnimatedFloatingLabel = ({
 
 export default function LoginScreen({ navigation }: any) {
   const { login } = useAuth();
+  const { t } = useTranslation(); // Add translation hook
 
   const [email, setEmail] = useState(""); const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false); const [loading, setLoading] = useState(false);
@@ -70,9 +72,9 @@ export default function LoginScreen({ navigation }: any) {
     try {
       await login({ email, password });
       // Optional success toast:
-      // setToast({ visible: true, msg: "Welcome back!", variant: "success" });
+      // setToast({ visible: true, msg: t('login.success.welcome'), variant: "success" });
     } catch (e: any) {
-      const msg = e instanceof ApiError ? e.body?.message || e.message : "Invalid email or password.";
+      const msg = e instanceof ApiError ? e.body?.message || e.message : t('login.errors.invalidCredentials');
       setToast({ visible: true, msg, variant: "error" });
     } finally { setLoading(false); }
   }
@@ -80,36 +82,81 @@ export default function LoginScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>Login</Text>
+        <Text variant="headlineMedium" style={s.title}>
+          {t('login.title')}
+        </Text>
 
         <AnimatedFloatingLabel
-          label="Email" value={email} onChangeText={setEmail}
-          autoCapitalize="none" keyboardType="email-address" autoComplete="email"
-          returnKeyType="next" onSubmitEditing={() => pwdRef.current?.focus()} inputRef={emailRef}
+          label={t('login.email')}
+          value={email}
+          onChangeText={setEmail}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          autoComplete="email"
+          returnKeyType="next"
+          onSubmitEditing={() => pwdRef.current?.focus()}
+          inputRef={emailRef}
         />
 
         <AnimatedFloatingLabel
-          label="Password" value={password} onChangeText={setPassword}
-          secureTextEntry={!showPwd} autoComplete="password" returnKeyType="done"
-          onSubmitEditing={onSubmit} inputRef={pwdRef}
+          label={t('login.password')}
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry={!showPwd}
+          autoComplete="password"
+          returnKeyType="done"
+          onSubmitEditing={onSubmit}
+          inputRef={pwdRef}
           right={
-            <TextInput.Icon icon={showPwd ? "eye-off" : "eye"} onPress={() => setShowPwd(v => !v)}
-              forceTextInputFocus={false} color="rgba(255,255,255,0.95)" />
+            <TextInput.Icon
+              icon={showPwd ? "eye-off" : "eye"}
+              onPress={() => setShowPwd(v => !v)}
+              forceTextInputFocus={false}
+              color="rgba(255,255,255,0.95)"
+            />
           }
         />
 
-        <Button mode="contained" onPress={onSubmit} loading={loading} disabled={loading} style={s.button}>Sign in</Button>
-
-        <Button onPress={() => navigation.navigate("ForgotPassword")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>Forgot password?</Text>
+        <Button
+          mode="contained"
+          onPress={onSubmit}
+          loading={loading}
+          disabled={loading}
+          style={s.button}
+        >
+          {t('login.signIn')}
         </Button>
 
-        <Button onPress={() => navigation.navigate("ResendActivation")} accessibilityRole="link" compact style={[s.linkButton, s.linkTight]}>
-          <Text style={s.linkLabel}>Didn&apos;t receive an activation email?</Text>
+        <Button
+          onPress={() => navigation.navigate("ForgotPassword")}
+          accessibilityRole="link"
+          compact
+          style={s.linkButton}
+        >
+          <Text style={s.linkLabel}>{t('login.forgotPassword')}</Text>
         </Button>
 
-        <Button onPress={() => navigation.navigate("Register")} accessibilityRole="link" compact style={[s.linkButton, s.linkTight]}>
-          <Text style={s.linkLabel}>Don&apos;t have an account? <Text style={[s.linkLabel, s.linkBold]}>Sign Up</Text></Text>
+        <Button
+          onPress={() => navigation.navigate("ResendActivation")}
+          accessibilityRole="link"
+          compact
+          style={[s.linkButton, s.linkTight]}
+        >
+          <Text style={s.linkLabel}>{t('login.resendActivation')}</Text>
+        </Button>
+
+        <Button
+          onPress={() => navigation.navigate("Register")}
+          accessibilityRole="link"
+          compact
+          style={[s.linkButton, s.linkTight]}
+        >
+          <Text style={s.linkLabel}>
+            {t('login.noAccount')}{" "}
+            <Text style={[s.linkLabel, s.linkBold]}>
+              {t('login.signUp')}
+            </Text>
+          </Text>
         </Button>
 
         {/* Top toast (shared UI) */}
