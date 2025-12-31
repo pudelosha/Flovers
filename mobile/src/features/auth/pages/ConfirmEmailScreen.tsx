@@ -11,6 +11,7 @@ import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
+import { useTranslation } from "react-i18next"; // Add this import
 
 type ConfirmParams = {
   token?: string;
@@ -43,10 +44,11 @@ function parseQuery(url: string): Record<string, string> {
 export default function ConfirmEmailScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ConfirmEmail">>();
   const { confirmEmail } = useAuth() as any; // rename if your hook uses another name
+  const { t } = useTranslation(); // Add translation hook
 
   const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState<boolean | null>(null);
-  const [message, setMessage] = useState<string>("Confirming your email...");
+  const [message, setMessage] = useState<string>(t('confirmEmail.confirming'));
   const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
     visible: false,
     msg: "",
@@ -78,7 +80,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
 
       if (!token || !uid) {
         setOk(false);
-        setMessage("Invalid or missing activation link.");
+        setMessage(t('confirmEmail.invalidLink'));
         setLoading(false);
         return;
       }
@@ -87,17 +89,17 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         if (typeof confirmEmail === "function") {
           await confirmEmail({ token, uid });
         } else {
-          // If backend/hook isn’t wired yet, pretend the call succeeded so you can test flow
+          // If backend/hook isn't wired yet, pretend the call succeeded so you can test flow
           await new Promise((r) => setTimeout(r, 500));
         }
         if (!cancelled) {
           setOk(true);
-          setMessage("Your account has been activated. You can log in now.");
+          setMessage(t('confirmEmail.success'));
         }
       } catch (e: any) {
         if (!cancelled) {
           const msg =
-            e instanceof ApiError ? e.body?.message || e.message : "Activation failed. The link may be invalid or expired.";
+            e instanceof ApiError ? e.body?.message || e.message : t('confirmEmail.activationFailed');
           setOk(false);
           setMessage(msg);
           setToast({ visible: true, msg, variant: "error" });
@@ -108,17 +110,13 @@ export default function ConfirmEmailScreen({ navigation }: any) {
     }
 
     run();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [confirmEmail, derived]);
+  }, [confirmEmail, derived, t]);
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
         <Text variant="headlineMedium" style={s.title}>
-          Confirm Email
+          {t('confirmEmail.title')}
         </Text>
 
         <View style={s.resultBox}>
@@ -136,8 +134,12 @@ export default function ConfirmEmailScreen({ navigation }: any) {
 
         {/* Primary CTA depends on result */}
         {!loading && ok === true && (
-          <Button mode="contained" onPress={() => navigation.navigate("Login")} style={s.button}>
-            Go to Login
+          <Button
+            mode="contained"
+            onPress={() => navigation.navigate("Login")}
+            style={s.button}
+          >
+            {t('confirmEmail.goToLogin')}
           </Button>
         )}
 
@@ -147,7 +149,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
             onPress={() => navigation.navigate("ResendActivation", { email: derived.email })}
             style={s.button}
           >
-            Resend activation email
+            {t('confirmEmail.resendActivation')}
           </Button>
         )}
 
@@ -158,7 +160,9 @@ export default function ConfirmEmailScreen({ navigation }: any) {
           compact
           style={s.linkButton}
         >
-          <Text style={s.linkLabel}>Back to Login</Text>
+          <Text style={s.linkLabel}>
+            {t('confirmEmail.backToLogin')}
+          </Text>
         </Button>
 
         {/* Shared top toast */}
