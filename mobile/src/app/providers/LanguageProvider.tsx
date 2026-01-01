@@ -1,12 +1,12 @@
-// C:\Projekty\Python\Flovers\mobile\src\app\providers\LanguageProvider.tsx
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { changeLanguage, LANGS } from "../../i18n";
+import i18n from "../../i18n"; // Import i18n directly
+import { LANGS, changeLanguage } from "../../i18n";
 
 interface LanguageContextType {
   currentLanguage: string;
   availableLanguages: readonly string[];
   changeLanguage: (lang: string) => Promise<boolean>;
+  isReady: boolean; // Add readiness flag
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -20,10 +20,22 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
+    // Check if i18n is already initialized
+    if (i18n.isInitialized) {
+      setIsReady(true);
+      setCurrentLanguage(i18n.language);
+    } else {
+      // Wait for initialization
+      i18n.on("initialized", () => {
+        setIsReady(true);
+        setCurrentLanguage(i18n.language);
+      });
+    }
+
     const handleLanguageChanged = (lng: string) => {
       setCurrentLanguage(lng);
     };
@@ -32,8 +44,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
     return () => {
       i18n.off("languageChanged", handleLanguageChanged);
+      i18n.off("initialized");
     };
-  }, [i18n]);
+  }, []);
 
   const handleChangeLanguage = async (lang: string) => {
     const success = await changeLanguage(lang);
@@ -43,12 +56,18 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return success;
   };
 
+  // Optional: Show loading while i18n initializes
+  if (!isReady) {
+    return null; // or a loading indicator
+  }
+
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage,
         availableLanguages: LANGS,
         changeLanguage: handleChangeLanguage,
+        isReady,
       }}
     >
       {children}

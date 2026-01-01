@@ -11,7 +11,8 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { useTranslation } from "react-i18next"; // Use translation hook
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 const INPUT_HEIGHT = 64;
 
@@ -38,7 +39,9 @@ const AnimatedFloatingLabel = ({
 
   return (
     <View style={s.inputContainer}>
-      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>{label}</Animated.Text>
+      <Animated.Text style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}>
+        {label}
+      </Animated.Text>
       <TextInput
         mode="flat" value={value} onChangeText={handleChangeText}
         onFocus={handleFocus} onBlur={handleBlur}
@@ -53,41 +56,80 @@ const AnimatedFloatingLabel = ({
   );
 };
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style }: { tKey: string, children?: any, style?: any }) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  // This ensures the text updates immediately
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    return <Text style={style}>{tKey.split('.').pop()}</Text>;
+  }
+};
+
 export default function LoginScreen({ navigation }: any) {
   const { login } = useAuth();
-  const { t } = useTranslation(); // Use translation hook
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage();
 
-  const [email, setEmail] = useState(""); const [password, setPassword] = useState("");
-  const [showPwd, setShowPwd] = useState(false); const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState("");
+  const [showPwd, setShowPwd] = useState(false); 
+  const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
     visible: false,
     msg: "",
     variant: "default",
   });
 
-  const pwdRef = useRef<RNTextInput | null>(null); const emailRef = useRef<RNTextInput | null>(null);
+  const pwdRef = useRef<RNTextInput | null>(null); 
+  const emailRef = useRef<RNTextInput | null>(null);
+
+  // Safe translation function that uses both hooks
+  const getTranslation = React.useCallback((key: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
 
   async function onSubmit() {
     setLoading(true);
     try {
       await login({ email, password });
-      // Optional success toast:
-      // setToast({ visible: true, msg: t('login.success.welcome'), variant: "success" });
     } catch (e: any) {
-      const msg = e instanceof ApiError ? e.body?.message || e.message : t('login.errors.invalidCredentials');
+      const msg = e instanceof ApiError ? e.body?.message || e.message : getTranslation('login.errors.invalidCredentials');
       setToast({ visible: true, msg, variant: "error" });
-    } finally { setLoading(false); }
+    } finally { 
+      setLoading(false); 
+    }
   }
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    console.log('LoginScreen rendering with language:', currentLanguage);
+  }, [currentLanguage]);
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>
-          {t('login.title')}
-        </Text>
+        {/* Use the safe translation wrapper for the title */}
+        <TranslatedText tKey="login.title" style={s.title} />
 
         <AnimatedFloatingLabel
-          label={t('login.email')}
+          label={getTranslation('login.email')}
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -99,7 +141,7 @@ export default function LoginScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label={t('login.password')}
+          label={getTranslation('login.password')}
           value={password}
           onChangeText={setPassword}
           secureTextEntry={!showPwd}
@@ -124,7 +166,7 @@ export default function LoginScreen({ navigation }: any) {
           disabled={loading}
           style={s.button}
         >
-          {t('login.signIn')}
+          {getTranslation('login.signIn')}
         </Button>
 
         <Button
@@ -133,7 +175,7 @@ export default function LoginScreen({ navigation }: any) {
           compact
           style={s.linkButton}
         >
-          <Text style={s.linkLabel}>{t('login.forgotPassword')}</Text>
+          <Text style={s.linkLabel}>{getTranslation('login.forgotPassword')}</Text>
         </Button>
 
         <Button
@@ -142,7 +184,7 @@ export default function LoginScreen({ navigation }: any) {
           compact
           style={[s.linkButton, s.linkTight]}
         >
-          <Text style={s.linkLabel}>{t('login.resendActivation')}</Text>
+          <Text style={s.linkLabel}>{getTranslation('login.resendActivation')}</Text>
         </Button>
 
         <Button
@@ -152,9 +194,9 @@ export default function LoginScreen({ navigation }: any) {
           style={[s.linkButton, s.linkTight]}
         >
           <Text style={s.linkLabel}>
-            {t('login.noAccount')}{" "}
+            {getTranslation('login.noAccount')}{" "}
             <Text style={[s.linkLabel, s.linkBold]}>
-              {t('login.signUp')}
+              {getTranslation('login.signUp')}
             </Text>
           </Text>
         </Button>
@@ -173,7 +215,14 @@ export default function LoginScreen({ navigation }: any) {
 
 const s = StyleSheet.create({
   container: { gap: 14, paddingHorizontal: 16 },
-  title: { color: "#fff", textAlign: "center", marginBottom: 6, fontWeight: "800", marginTop: 20 },
+  title: { 
+    color: "#fff", 
+    textAlign: "center", 
+    marginBottom: 6, 
+    fontWeight: "800", 
+    marginTop: 20,
+    fontSize: 24 // Added explicit font size
+  },
   inputContainer: { position: "relative" },
   floatingLabel: { position: "absolute", left: 16, zIndex: 10, fontWeight: "500" },
   flat: { backgroundColor: "rgba(255,255,255,0.12)", borderRadius: 14, height: INPUT_HEIGHT, paddingHorizontal: 12 },
