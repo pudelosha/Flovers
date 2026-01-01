@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import {
   View,
   StyleSheet,
@@ -11,7 +11,8 @@ import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 type ConfirmParams = {
   token?: string;
@@ -41,19 +42,72 @@ function parseQuery(url: string): Record<string, string> {
   }
 }
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    if (variant) {
+      return <Text variant={variant} style={style}>{text}</Text>;
+    }
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    if (variant) {
+      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+    }
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
+
 export default function ConfirmEmailScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ConfirmEmail">>();
-  const { confirmEmail } = useAuth() as any; // rename if your hook uses another name
-  const { t } = useTranslation(); // Add translation hook
+  const { confirmEmail } = useAuth() as any;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
 
   const [loading, setLoading] = useState(true);
   const [ok, setOk] = useState<boolean | null>(null);
-  const [message, setMessage] = useState<string>(t('confirmEmail.confirming'));
+  const [message, setMessage] = useState<string>("");
   const [toast, setToast] = useState<{ visible: boolean; msg: string; variant?: "default" | "success" | "error" }>({
     visible: false,
     msg: "",
     variant: "default",
   });
+
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    console.log('ConfirmEmailScreen rendering with language:', currentLanguage);
+  }, [currentLanguage]);
+
+  // Initialize message with translation
+  useEffect(() => {
+    setMessage(getTranslation('confirmEmail.confirming', 'Confirming...'));
+  }, [getTranslation]);
 
   // Gather params from either route params or a full URL
   const params = route.params || {};
@@ -80,7 +134,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
 
       if (!token || !uid) {
         setOk(false);
-        setMessage(t('confirmEmail.invalidLink'));
+        setMessage(getTranslation('confirmEmail.invalidLink', 'Invalid or expired confirmation link.'));
         setLoading(false);
         return;
       }
@@ -94,12 +148,12 @@ export default function ConfirmEmailScreen({ navigation }: any) {
         }
         if (!cancelled) {
           setOk(true);
-          setMessage(t('confirmEmail.success'));
+          setMessage(getTranslation('confirmEmail.success', 'Your email has been confirmed successfully!'));
         }
       } catch (e: any) {
         if (!cancelled) {
           const msg =
-            e instanceof ApiError ? e.body?.message || e.message : t('confirmEmail.activationFailed');
+            e instanceof ApiError ? e.body?.message || e.message : getTranslation('confirmEmail.activationFailed', 'Activation failed. Please try again.');
           setOk(false);
           setMessage(msg);
           setToast({ visible: true, msg, variant: "error" });
@@ -110,14 +164,17 @@ export default function ConfirmEmailScreen({ navigation }: any) {
     }
 
     run();
-  }, [confirmEmail, derived, t]);
+  }, [confirmEmail, derived, getTranslation]);
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>
-          {t('confirmEmail.title')}
-        </Text>
+        {/* Use the safe translation wrapper for the title */}
+        <TranslatedText 
+          tKey="confirmEmail.title" 
+          variant="headlineMedium"
+          style={s.title} 
+        />
 
         <View style={s.resultBox}>
           {loading ? (
@@ -139,7 +196,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
             onPress={() => navigation.navigate("Login")}
             style={s.button}
           >
-            {t('confirmEmail.goToLogin')}
+            {getTranslation('confirmEmail.goToLogin', 'Go to Login')}
           </Button>
         )}
 
@@ -149,7 +206,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
             onPress={() => navigation.navigate("ResendActivation", { email: derived.email })}
             style={s.button}
           >
-            {t('confirmEmail.resendActivation')}
+            {getTranslation('confirmEmail.resendActivation', 'Resend Activation Email')}
           </Button>
         )}
 
@@ -161,7 +218,7 @@ export default function ConfirmEmailScreen({ navigation }: any) {
           style={s.linkButton}
         >
           <Text style={s.linkLabel}>
-            {t('confirmEmail.backToLogin')}
+            {getTranslation('confirmEmail.backToLogin', 'Back to Login')}
           </Text>
         </Button>
 
