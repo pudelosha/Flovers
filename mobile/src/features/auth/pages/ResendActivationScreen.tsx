@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import {
   View, StyleSheet, KeyboardAvoidingView, Platform, Animated, TextInput as RNTextInput,
 } from "react-native";
@@ -6,7 +6,8 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { ApiError } from "../../../api/client";
 import { useAuth } from "../../../app/providers/useAuth";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 const INPUT_HEIGHT = 64;
 
@@ -43,9 +44,39 @@ const AnimatedFloatingLabel = ({
   );
 };
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    if (variant) {
+      return <Text variant={variant} style={style}>{text}</Text>;
+    }
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    if (variant) {
+      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+    }
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
+
 export default function ResendActivationScreen({ navigation }: any) {
   const { resendActivation } = useAuth() as any;
-  const { t } = useTranslation(); // Add translation hook
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -57,9 +88,31 @@ export default function ResendActivationScreen({ navigation }: any) {
 
   const emailRef = useRef<RNTextInput | null>(null);
 
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    console.log('ResendActivationScreen rendering with language:', currentLanguage);
+  }, [currentLanguage]);
+
   async function onSubmit() {
     if (!email.trim()) {
-      setToast({ visible: true, msg: t('resendActivation.errors.emailRequired'), variant: "error" });
+      setToast({ 
+        visible: true, 
+        msg: getTranslation('resendActivation.errors.emailRequired', 'Email is required'), 
+        variant: "error" 
+      });
       return;
     }
     setLoading(true);
@@ -67,11 +120,11 @@ export default function ResendActivationScreen({ navigation }: any) {
       if (typeof resendActivation === "function") await resendActivation({ email });
       setToast({
         visible: true,
-        msg: t('resendActivation.success.emailSent'),
+        msg: getTranslation('resendActivation.success.emailSent', 'Activation email sent. Please check your inbox.'),
         variant: "success",
       });
     } catch (e: any) {
-      const msg = e instanceof ApiError ? e.body?.message || e.message : t('resendActivation.errors.generic');
+      const msg = e instanceof ApiError ? e.body?.message || e.message : getTranslation('resendActivation.errors.generic', 'Something went wrong. Please try again.');
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
@@ -81,15 +134,21 @@ export default function ResendActivationScreen({ navigation }: any) {
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>
-          {t('resendActivation.title')}
-        </Text>
-        <Text style={s.subtitle}>
-          {t('resendActivation.subtitle')}
-        </Text>
+        {/* Use the safe translation wrapper for the title */}
+        <TranslatedText 
+          tKey="resendActivation.title" 
+          variant="headlineMedium"
+          style={s.title} 
+        />
+        
+        {/* Use the safe translation wrapper for the subtitle */}
+        <TranslatedText 
+          tKey="resendActivation.subtitle" 
+          style={s.subtitle} 
+        />
 
         <AnimatedFloatingLabel
-          label={t('resendActivation.email')}
+          label={getTranslation('resendActivation.email', 'Email')}
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
@@ -107,7 +166,7 @@ export default function ResendActivationScreen({ navigation }: any) {
           disabled={loading}
           style={s.button}
         >
-          {t('resendActivation.sendButton')}
+          {getTranslation('resendActivation.sendButton', 'Resend Activation Email')}
         </Button>
 
         <Button
@@ -117,7 +176,7 @@ export default function ResendActivationScreen({ navigation }: any) {
           style={s.linkButton}
         >
           <Text style={s.linkLabel}>
-            {t('resendActivation.backToLogin')}
+            {getTranslation('resendActivation.backToLogin', 'Back to Login')}
           </Text>
         </Button>
 
