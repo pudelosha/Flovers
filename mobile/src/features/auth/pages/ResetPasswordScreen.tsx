@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState, useEffect } from "react";
+import React, { useMemo, useRef, useState, useEffect, useCallback } from "react";
 import {
   View,
   StyleSheet,
@@ -12,7 +12,8 @@ import { useRoute, RouteProp } from "@react-navigation/native";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 const INPUT_HEIGHT = 64;
 
@@ -82,6 +83,35 @@ const AnimatedFloatingLabel = ({
   );
 };
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "headlineMedium" | "bodyMedium" | "bodySmall" 
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    if (variant) {
+      return <Text variant={variant} style={style}>{text}</Text>;
+    }
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    if (variant) {
+      return <Text variant={variant} style={style}>{fallbackText}</Text>;
+    }
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
+
 type ResetParams = { token?: string; uid?: string; email?: string; url?: string };
 type AuthStackParamList = { ResetPassword: ResetParams };
 
@@ -101,8 +131,9 @@ function parseQuery(url: string): Record<string, string> {
 
 export default function ResetPasswordScreen({ navigation }: any) {
   const route = useRoute<RouteProp<AuthStackParamList, "ResetPassword">>();
-  const { resetPassword } = useAuth() as any; // rename to your actual method, e.g. confirmPasswordReset
-  const { t } = useTranslation(); // Add translation hook
+  const { resetPassword } = useAuth() as any;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
 
   const params = route.params || {};
   const derived = useMemo(() => {
@@ -138,12 +169,30 @@ export default function ResetPasswordScreen({ navigation }: any) {
   const passwordsMatch = pwd && pwd === pwd2;
   const formValid = passwordValid && passwordsMatch && !!derived.token && !!derived.uid;
 
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    console.log('ResetPasswordScreen rendering with language:', currentLanguage);
+  }, [currentLanguage]);
+
   async function onSubmit() {
     if (!formValid) {
-      let msg = t("resetPassword.error");
-      if (!derived.token || !derived.uid) msg = t("resetPassword.invalidLink");
-      else if (!passwordValid) msg = t("resetPassword.passwordTooShort");
-      else if (!passwordsMatch) msg = t("resetPassword.passwordsDoNotMatch");
+      let msg = getTranslation("resetPassword.error", "Please fix the errors below");
+      if (!derived.token || !derived.uid) msg = getTranslation("resetPassword.invalidLink", "Invalid or expired reset link");
+      else if (!passwordValid) msg = getTranslation("resetPassword.passwordTooShort", "Password must be at least 6 characters");
+      else if (!passwordsMatch) msg = getTranslation("resetPassword.passwordsDoNotMatch", "Passwords do not match");
       setToast({ visible: true, msg, variant: "error" });
       return;
     }
@@ -155,13 +204,13 @@ export default function ResetPasswordScreen({ navigation }: any) {
       } else {
         await new Promise((r) => setTimeout(r, 500));
       }
-      setToast({ visible: true, msg: t("resetPassword.success"), variant: "success" });
+      setToast({ visible: true, msg: getTranslation("resetPassword.success", "Password reset successfully"), variant: "success" });
       navigation.navigate("Login");
     } catch (e: any) {
       const msg =
         e instanceof ApiError
           ? e.body?.message || e.message
-          : t("resetPassword.error");
+          : getTranslation("resetPassword.error", "Something went wrong. Please try again.");
       setToast({ visible: true, msg, variant: "error" });
     } finally {
       setLoading(false);
@@ -172,21 +221,24 @@ export default function ResetPasswordScreen({ navigation }: any) {
     if (!derived.token || !derived.uid) {
       setToast({
         visible: true,
-        msg: t("resetPassword.invalidLink"),
+        msg: getTranslation("resetPassword.invalidLink", "Invalid or expired reset link"),
         variant: "default",
       });
     }
-  }, [derived]);
+  }, [derived, getTranslation]);
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : undefined}>
       <View style={s.container}>
-        <Text variant="headlineMedium" style={s.title}>
-          {t("resetPassword.resetPassword")}
-        </Text>
+        {/* Use the safe translation wrapper for the title */}
+        <TranslatedText 
+          tKey="resetPassword.resetPassword" 
+          variant="headlineMedium"
+          style={s.title} 
+        />
 
         <AnimatedFloatingLabel
-          label={t("resetPassword.newPassword")}
+          label={getTranslation("resetPassword.newPassword", "New Password")}
           value={pwd}
           onChangeText={setPwd}
           secureTextEntry={!showPwd}
@@ -205,7 +257,7 @@ export default function ResetPasswordScreen({ navigation }: any) {
         />
 
         <AnimatedFloatingLabel
-          label={t("resetPassword.confirmPassword")}
+          label={getTranslation("resetPassword.confirmPassword", "Confirm Password")}
           value={pwd2}
           onChangeText={setPwd2}
           secureTextEntry={!showPwd2}
@@ -230,11 +282,11 @@ export default function ResetPasswordScreen({ navigation }: any) {
           disabled={loading || !formValid}
           style={s.button}
         >
-          {t("resetPassword.changePassword")}
+          {getTranslation("resetPassword.changePassword", "Change Password")}
         </Button>
 
         <Button onPress={() => navigation.navigate("Login")} accessibilityRole="link" compact style={s.linkButton}>
-          <Text style={s.linkLabel}>{t("resetPassword.backToLogin")}</Text>
+          <Text style={s.linkLabel}>{getTranslation("resetPassword.backToLogin", "Back to Login")}</Text>
         </Button>
 
         <TopSnackbar
