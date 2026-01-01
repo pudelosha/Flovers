@@ -1,4 +1,3 @@
-// src/screens/auth/RegisterScreen.tsx
 import React, { useRef, useState } from "react";
 import {
   View,
@@ -15,7 +14,7 @@ import {
   Checkbox,
   TouchableRipple,
 } from "react-native-paper";
-// removed useSafeAreaInsets + Portal/Snackbar (replaced with shared TopSnackbar)
+// Removed useSafeAreaInsets + Portal/Snackbar (replaced with shared TopSnackbar)
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
@@ -86,10 +85,7 @@ const AnimatedFloatingLabel = ({
   return (
     <View style={s.inputContainer}>
       <Animated.Text
-        style={[
-          s.floatingLabel,
-          { top: labelTop, fontSize: labelFontSize, color: labelColor },
-        ]}
+        style={[s.floatingLabel, { top: labelTop, fontSize: labelFontSize, color: labelColor }]}
       >
         {label}
       </Animated.Text>
