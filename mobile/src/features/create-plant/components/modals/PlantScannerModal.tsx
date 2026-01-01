@@ -197,7 +197,6 @@ export default function PlantScannerModal({
 
       setCandidates(results);
     } catch (e: any) {
-      console.log("Recognition error", e);
       setCandidates(null);
       setError(
         e?.message ??

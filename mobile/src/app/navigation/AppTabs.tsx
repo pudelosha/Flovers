@@ -108,7 +108,6 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
       }
       return translation;
     } catch (error) {
-      console.log('Translation error for', routeName, ':', error);
       return routeName;
     }
   };

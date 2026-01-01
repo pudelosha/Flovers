@@ -11,7 +11,7 @@ import { Text, TextInput, Button } from "react-native-paper";
 import { useAuth } from "../../../app/providers/useAuth";
 import { ApiError } from "../../../api/client";
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useTranslation } from "react-i18next"; // Use translation hook
 
 const INPUT_HEIGHT = 64;
 
@@ -55,7 +55,7 @@ const AnimatedFloatingLabel = ({
 
 export default function LoginScreen({ navigation }: any) {
   const { login } = useAuth();
-  const { t } = useTranslation(); // Add translation hook
+  const { t } = useTranslation(); // Use translation hook
 
   const [email, setEmail] = useState(""); const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false); const [loading, setLoading] = useState(false);

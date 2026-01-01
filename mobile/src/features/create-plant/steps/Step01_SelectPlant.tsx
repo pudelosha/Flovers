@@ -82,9 +82,6 @@ export default function Step01_SelectPlant({
         ]);
         if (!mounted) return;
 
-        console.log("[Step01] popularRes[0] =", (popularRes as any)?.[0]);
-        console.log("[Step01] searchRes[0] =", (searchRes as any)?.[0]);
-
         setPopular(popularRes as any);
         setSearchIndex(searchRes);
 
@@ -108,7 +105,6 @@ export default function Step01_SelectPlant({
 
   const onSelectFromSearch = (item: Suggestion) => {
     const name = pickName(item);
-    console.log("[Step01] onSelectFromSearch", { id: item?.id, name, latin: item?.latin });
 
     setQuery(name);
     setShowSuggestions(false);
@@ -122,11 +118,6 @@ export default function Step01_SelectPlant({
 
   const onPickPopular = (item: PopularPlant) => {
     const name = pickName(item);
-    console.log("[Step01] onPickPopular", {
-      id: (item as any)?.id,
-      name,
-      latin: (item as any)?.latin,
-    });
 
     setQuery(name);
     setShowSuggestions(false);
@@ -142,7 +133,6 @@ export default function Step01_SelectPlant({
   const onScanPlantDetected = useCallback(
     (item: Suggestion) => {
       const name = pickName(item);
-      console.log("[Step01] onScanPlantDetected", { id: item?.id, name, latin: item?.latin });
 
       setQuery(name);
       setShowSuggestions(false);
@@ -162,11 +152,9 @@ export default function Step01_SelectPlant({
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
 
   useEffect(() => {
-    console.log("[Step01] query =", query);
   }, [query]);
 
   useEffect(() => {
-    console.log("[Step01] selectedPlant =", (state as any)?.selectedPlant);
   }, [(state as any)?.selectedPlant]);
 
   return (

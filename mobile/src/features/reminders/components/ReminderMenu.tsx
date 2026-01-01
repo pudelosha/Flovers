@@ -18,7 +18,6 @@ export default function ReminderMenu({ onEdit, onDelete }: Props) {
         icon="trash-can-outline"
         danger
         onPress={() => {
-          console.log("[ReminderMenu] Delete pressed");
           onDelete();
         }}
       />

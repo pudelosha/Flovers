@@ -324,7 +324,6 @@ export default function ReadingsHistoryScreen() {
         // 🔍 RAW error output for debugging
         if (__DEV__) {
           // eslint-disable-next-line no-console
-          console.log("fetchReadingsHistory RAW error", e);
         }
 
         // Try to show the backend payload directly; fallback to message / generic
