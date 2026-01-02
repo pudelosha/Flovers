@@ -1,25 +1,47 @@
-﻿// steps/Step09_Creating.tsx
-import React, { useEffect, useRef, useState } from "react";
+﻿import React, { useEffect, useRef, useState, useCallback } from "react";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 // Lottie (optional)
 let LottieView: any = null;
-try { LottieView = require("lottie-react-native").default; } catch {}
+try {
+  LottieView = require("lottie-react-native").default;
+} catch {}
 let ANIM: any = null;
-try { ANIM = require("../../../../assets/lottie/lottie-creating-plant.json"); } catch {}
+try {
+  ANIM = require("../../../../assets/lottie/lottie-creating-plant.json");
+} catch {}
 
 const PLANTS_ROUTE_NAME = "Plants"; // <-- Tab route name
 
 export default function Step09_Creating() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { state, actions } = useCreatePlantWizard();
   const navigation = useNavigation<any>();
   const [status, setStatus] = useState<"creating" | "success">("creating");
   const lottieRef = useRef<any>(null);
+
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        const _lang = currentLanguage; // force dependency
+        const txt = t(key);
+        const isMissing = !txt || txt === key;
+        return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      } catch {
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
   // one-shot guard to prevent multiple POSTs even if the effect re-runs
   const startedRef = useRef(false);
@@ -48,7 +70,9 @@ export default function Step09_Creating() {
     };
 
     run();
-    return () => { mounted = false; };
+    return () => {
+      mounted = false;
+    };
   }, [actions, navigation]);
 
   // Fixed card height (tweak to taste)
@@ -90,12 +114,16 @@ export default function Step09_Creating() {
 
           {/* Status text */}
           <Text style={[wiz.title, { marginTop: 8, textAlign: "center" }]}>
-            {status === "creating" ? "creating new plant" : "plant created successfully"}
+            {status === "creating"
+              ? getTranslation("createPlant.step09.creating", "creating new plant")
+              : getTranslation("createPlant.step09.success", "plant created successfully")}
           </Text>
 
           {/* Reserve space for ID line so height never changes */}
           <Text style={[wiz.smallMuted, { textAlign: "center", minHeight: 20, marginTop: 4 }]}>
-            {status === "success" && state.createdPlantId ? `ID: ${state.createdPlantId}` : "\u00A0"}
+            {status === "success" && state.createdPlantId
+              ? `${getTranslation("createPlant.step09.idPrefix", "ID")}: ${state.createdPlantId}`
+              : "\u00A0"}
           </Text>
         </View>
       </View>

@@ -1,0 +1,21 @@
+{
+  "createPlant": {
+    "step08": {
+      "title": "Name & notes",
+      "subtitle": "Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age.",
+      "displayNameLabel": "Display name",
+      "placeholderName": "e.g. Living room Monstera",
+      "notesLabel": "Notes",
+      "notesPlaceholder": "Care tips, issues, where you bought it…",
+      "purchaseDateLabel": "Purchase date (optional)",
+      "notSet": "Not set",
+      "done": "Done",
+      "setPurchaseDateTitle": "Set purchase date",
+      "datePlaceholder": "YYYY-MM-DD",
+      "cancel": "Cancel",
+      "set": "Set",
+      "invalidDateTitle": "Invalid date",
+      "invalidDateMessage": "Please enter a valid date in the format YYYY-MM-DD."
+    }
+  }
+}

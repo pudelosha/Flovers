@@ -21,6 +21,10 @@ import enCreatePlantStep06 from "./locales/en/createPlantStep06.json";
 import plCreatePlantStep06 from "./locales/pl/createPlantStep06.json";
 import enCreatePlantStep07 from "./locales/en/createPlantStep07.json";
 import plCreatePlantStep07 from "./locales/pl/createPlantStep07.json";
+import enCreatePlantStep08 from "./locales/en/createPlantStep08.json";
+import plCreatePlantStep08 from "./locales/pl/createPlantStep08.json";
+import enCreatePlantStep09 from "./locales/en/createPlantStep09.json";
+import plCreatePlantStep09 from "./locales/pl/createPlantStep09.json";
 
 // Other feature bundles
 import enLogin from "./locales/en/login.json";
@@ -92,6 +96,8 @@ function buildTranslation(
   step05: AnyObj,
   step06: AnyObj,
   step07: AnyObj,
+  step08: AnyObj,
+  step09: AnyObj,
   others: AnyObj[]
 ): AnyObj {
   return {
@@ -104,12 +110,25 @@ function buildTranslation(
     ...stripCreatePlant(step05),
     ...stripCreatePlant(step06),
     ...stripCreatePlant(step07),
+    ...stripCreatePlant(step08),
+    ...stripCreatePlant(step09),
 
     // prevent "others" from overwriting createPlant accidentally
     ...Object.assign({}, ...others.map(stripCreatePlant)),
 
     // deep-merge the createPlant subtree so steps don't overwrite each other
-    ...mergeCreatePlant(base, step01, step02, step03, step04, step05, step06, step07),
+    ...mergeCreatePlant(
+      base,
+      step01,
+      step02,
+      step03,
+      step04,
+      step05,
+      step06,
+      step07,
+      step08,
+      step09
+    ),
   };
 }
 
@@ -124,6 +143,8 @@ const resources = {
       enCreatePlantStep05 as AnyObj,
       enCreatePlantStep06 as AnyObj,
       enCreatePlantStep07 as AnyObj,
+      enCreatePlantStep08 as AnyObj,
+      enCreatePlantStep09 as AnyObj,
       [
         enLogin,
         enRegister,
@@ -145,6 +166,8 @@ const resources = {
       plCreatePlantStep05 as AnyObj,
       plCreatePlantStep06 as AnyObj,
       plCreatePlantStep07 as AnyObj,
+      plCreatePlantStep08 as AnyObj,
+      plCreatePlantStep09 as AnyObj,
       [
         plLogin,
         plRegister,

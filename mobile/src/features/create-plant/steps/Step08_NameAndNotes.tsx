@@ -1,10 +1,11 @@
-﻿// steps/Step08_NameAndNotes.tsx
-import React, { useMemo, useState } from "react";
+﻿import React, { useMemo, useState, useCallback } from "react";
 import { View, Text, Pressable, TextInput, Platform, Alert } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 let DateTimePicker: any = null;
 try {
@@ -27,21 +28,40 @@ function parseISODate(s: string): Date | null {
 }
 
 export default function Step08_NameAndNotes() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { state, actions } = useCreatePlantWizard();
   const [showPicker, setShowPicker] = useState(false);
   const [fallbackOpen, setFallbackOpen] = useState(false);
   const [fallbackDate, setFallbackDate] = useState(state.purchaseDateISO ?? "");
 
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        const _lang = currentLanguage; // force dependency
+        const txt = t(key);
+        const isMissing = !txt || txt === key;
+        return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      } catch {
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
+
   const placeholderName = useMemo(() => {
     return state.displayName && state.displayName.length > 0
       ? undefined
-      : state.selectedPlant?.name ?? "e.g. Living room Monstera";
-  }, [state.displayName, state.selectedPlant?.name]);
+      : state.selectedPlant?.name ??
+          getTranslation("createPlant.step08.placeholderName", "e.g. Living room Monstera");
+  }, [state.displayName, state.selectedPlant?.name, getTranslation]);
 
   const onChangeDateNative = (_: any, date?: Date) => {
     if (Platform.OS === "android") setShowPicker(false);
     if (date) actions.setPurchaseDateISO(toISODate(date));
   };
+
   const openPurchaseDate = () => {
     if (DateTimePicker) setShowPicker(true);
     else {
@@ -49,6 +69,7 @@ export default function Step08_NameAndNotes() {
       setFallbackOpen(true);
     }
   };
+
   const onFallbackSave = () => {
     if (!fallbackDate) {
       actions.setPurchaseDateISO(undefined);
@@ -57,7 +78,13 @@ export default function Step08_NameAndNotes() {
     }
     const dt = parseISODate(fallbackDate.trim());
     if (!dt) {
-      Alert.alert("Invalid date", "Please enter a valid date in the format YYYY-MM-DD.");
+      Alert.alert(
+        getTranslation("createPlant.step08.invalidDateTitle", "Invalid date"),
+        getTranslation(
+          "createPlant.step08.invalidDateMessage",
+          "Please enter a valid date in the format YYYY-MM-DD."
+        )
+      );
       return;
     }
     actions.setPurchaseDateISO(toISODate(dt));
@@ -83,13 +110,20 @@ export default function Step08_NameAndNotes() {
 
         {/* content */}
         <View style={[wiz.cardInner, { paddingBottom: 48 }]}>
-          <Text style={wiz.title}>Name & notes</Text>
-          <Text style={wiz.subtitle}>
-            Give your plant a display name, add any notes, and (optionally) set the purchase date so we
-            can estimate its age.
+          <Text style={wiz.title}>
+            {getTranslation("createPlant.step08.title", "Name & notes")}
           </Text>
 
-          <Text style={wiz.sectionTitle}>Display name</Text>
+          <Text style={wiz.subtitle}>
+            {getTranslation(
+              "createPlant.step08.subtitle",
+              "Give your plant a display name, add any notes, and (optionally) set the purchase date so we can estimate its age."
+            )}
+          </Text>
+
+          <Text style={wiz.sectionTitle}>
+            {getTranslation("createPlant.step08.displayNameLabel", "Display name")}
+          </Text>
           <TextInput
             placeholderTextColor="rgba(255,255,255,0.6)"
             placeholder={placeholderName}
@@ -98,23 +132,32 @@ export default function Step08_NameAndNotes() {
             style={wiz.inputField}
           />
 
-          <Text style={wiz.sectionTitle}>Notes</Text>
+          <Text style={wiz.sectionTitle}>
+            {getTranslation("createPlant.step08.notesLabel", "Notes")}
+          </Text>
           <TextInput
             placeholderTextColor="rgba(255,255,255,0.6)"
-            placeholder="Care tips, issues, where you bought it…"
+            placeholder={getTranslation(
+              "createPlant.step08.notesPlaceholder",
+              "Care tips, issues, where you bought it…"
+            )}
             value={state.notes}
             onChangeText={actions.setNotes}
             style={[wiz.inputField, { minHeight: 96, textAlignVertical: "top" }]}
             multiline
           />
 
-          <Text style={wiz.sectionTitle}>Purchase date (optional)</Text>
+          <Text style={wiz.sectionTitle}>
+            {getTranslation("createPlant.step08.purchaseDateLabel", "Purchase date (optional)")}
+          </Text>
           <Pressable
             style={[wiz.selectField, { borderWidth: 0 }]}
             onPress={openPurchaseDate}
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
-            <Text style={wiz.selectValue}>{state.purchaseDateISO ?? "Not set"}</Text>
+            <Text style={wiz.selectValue}>
+              {state.purchaseDateISO ?? getTranslation("createPlant.step08.notSet", "Not set")}
+            </Text>
             <View style={wiz.selectChevronPad}>
               <MaterialCommunityIcons name="calendar" size={20} color="#FFFFFF" />
             </View>
@@ -152,7 +195,9 @@ export default function Step08_NameAndNotes() {
                     ]}
                     android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                   >
-                    <Text style={wiz.nextBtnText}>Done</Text>
+                    <Text style={wiz.nextBtnText}>
+                      {getTranslation("createPlant.step08.done", "Done")}
+                    </Text>
                   </Pressable>
                 </View>
               )}
@@ -177,9 +222,11 @@ export default function Step08_NameAndNotes() {
                   </View>
 
                   <View style={wiz.promptScroll}>
-                    <Text style={wiz.promptTitle}>Set purchase date</Text>
+                    <Text style={wiz.promptTitle}>
+                      {getTranslation("createPlant.step08.setPurchaseDateTitle", "Set purchase date")}
+                    </Text>
                     <TextInput
-                      placeholder="YYYY-MM-DD"
+                      placeholder={getTranslation("createPlant.step08.datePlaceholder", "YYYY-MM-DD")}
                       placeholderTextColor="rgba(255,255,255,0.6)"
                       value={fallbackDate}
                       onChangeText={setFallbackDate}
@@ -199,7 +246,9 @@ export default function Step08_NameAndNotes() {
                         ]}
                         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                       >
-                        <Text style={wiz.nextBtnText}>Cancel</Text>
+                        <Text style={wiz.nextBtnText}>
+                          {getTranslation("createPlant.step08.cancel", "Cancel")}
+                        </Text>
                       </Pressable>
                       <Pressable
                         onPress={onFallbackSave}
@@ -214,7 +263,9 @@ export default function Step08_NameAndNotes() {
                         ]}
                         android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                       >
-                        <Text style={wiz.nextBtnText}>Set</Text>
+                        <Text style={wiz.nextBtnText}>
+                          {getTranslation("createPlant.step08.set", "Set")}
+                        </Text>
                       </Pressable>
                     </View>
                   </View>
