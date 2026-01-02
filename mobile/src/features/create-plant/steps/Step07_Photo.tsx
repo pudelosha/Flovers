@@ -1,5 +1,4 @@
-﻿// steps/Step07_Photo.tsx
-import React from "react";
+﻿import React, { useCallback } from "react";
 import {
   View,
   Text,
@@ -19,6 +18,8 @@ import {
   type CameraOptions,
   type ImageLibraryOptions,
 } from "react-native-image-picker";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   if (Platform.OS !== "android") return true;
@@ -39,14 +40,35 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
 }
 
 export default function Step07_Photo() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { state, actions } = useCreatePlantWizard();
 
-  const doLaunchCamera = async () => {
+  // Safe translation (treat key-echo as missing)
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        const _lang = currentLanguage; // force dependency for rerender
+        const txt = t(key);
+        const isMissing = !txt || txt === key;
+        return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      } catch {
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
+
+  const doLaunchCamera = useCallback(async () => {
     const ok = await ensureAndroidPermissionCameraAndRead();
     if (!ok) {
       Alert.alert(
-        "Permission required",
-        "Please grant camera and media permissions to take a photo."
+        getTranslation("createPlant.step07.permissionRequiredTitle", "Permission required"),
+        getTranslation(
+          "createPlant.step07.permissionCameraAndMedia",
+          "Please grant camera and media permissions to take a photo."
+        )
       );
       return;
     }
@@ -60,19 +82,25 @@ export default function Step07_Photo() {
     const res = await launchCamera(opts);
     if (res.didCancel) return;
     if (res.errorCode) {
-      Alert.alert("Camera error", String(res.errorMessage || res.errorCode));
+      Alert.alert(
+        getTranslation("createPlant.step07.cameraErrorTitle", "Camera error"),
+        String(res.errorMessage || res.errorCode)
+      );
       return;
     }
     const uri = res.assets?.[0]?.uri;
     if (uri) actions.setPhotoUri(uri);
-  };
+  }, [actions, getTranslation]);
 
-  const doLaunchLibrary = async () => {
+  const doLaunchLibrary = useCallback(async () => {
     const ok = await ensureAndroidPermissionCameraAndRead();
     if (!ok) {
       Alert.alert(
-        "Permission required",
-        "Please grant media permission to pick a photo."
+        getTranslation("createPlant.step07.permissionRequiredTitle", "Permission required"),
+        getTranslation(
+          "createPlant.step07.permissionMedia",
+          "Please grant media permission to pick a photo."
+        )
       );
       return;
     }
@@ -86,12 +114,15 @@ export default function Step07_Photo() {
     const res = await launchImageLibrary(opts);
     if (res.didCancel) return;
     if (res.errorCode) {
-      Alert.alert("Picker error", String(res.errorMessage || res.errorCode));
+      Alert.alert(
+        getTranslation("createPlant.step07.pickerErrorTitle", "Picker error"),
+        String(res.errorMessage || res.errorCode)
+      );
       return;
     }
     const uri = res.assets?.[0]?.uri;
     if (uri) actions.setPhotoUri(uri);
-  };
+  }, [actions, getTranslation]);
 
   const removePhoto = () => actions.clearPhoto();
 
@@ -111,12 +142,19 @@ export default function Step07_Photo() {
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Add a photo</Text>
+        <Text style={wiz.title}>
+          {getTranslation("createPlant.step07.title", "Add a photo")}
+        </Text>
+
         <Text style={wiz.subtitle}>
-          Photograph your plant so you can spot it faster. The picture is saved
-          locally on your device (app storage) and is{" "}
-          <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>not uploaded</Text>{" "}
-          to our servers.
+          {getTranslation(
+            "createPlant.step07.subtitlePrefix",
+            "Photograph your plant so you can spot it faster. The picture is saved locally on your device (app storage) and is "
+          )}
+          <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
+            {getTranslation("createPlant.step07.notUploaded", "not uploaded")}
+          </Text>{" "}
+          {getTranslation("createPlant.step07.subtitleSuffix", "to our servers.")}
         </Text>
 
         {/* Preview frame */}
@@ -151,7 +189,7 @@ export default function Step07_Photo() {
                   marginTop: 8,
                 }}
               >
-                No photo selected
+                {getTranslation("createPlant.step07.noPhotoSelected", "No photo selected")}
               </Text>
             </View>
           )}
@@ -165,7 +203,9 @@ export default function Step07_Photo() {
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <MaterialCommunityIcons name="camera" size={18} color="#FFFFFF" />
-            <Text style={wiz.actionText}>Take a photo</Text>
+            <Text style={wiz.actionText}>
+              {getTranslation("createPlant.step07.takePhoto", "Take a photo")}
+            </Text>
           </Pressable>
 
           <Pressable
@@ -174,7 +214,9 @@ export default function Step07_Photo() {
             android_ripple={{ color: "rgba(255,255,255,0.12)" }}
           >
             <MaterialCommunityIcons name="image-multiple" size={18} color="#FFFFFF" />
-            <Text style={wiz.actionText}>Choose from gallery</Text>
+            <Text style={wiz.actionText}>
+              {getTranslation("createPlant.step07.chooseFromGallery", "Choose from gallery")}
+            </Text>
           </Pressable>
 
           {state.photoUri && (
@@ -183,16 +225,13 @@ export default function Step07_Photo() {
               onPress={removePhoto}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <MaterialCommunityIcons
-                name="trash-can-outline"
-                size={18}
-                color="#FFFFFF"
-              />
-              <Text style={wiz.actionText}>Remove photo</Text>
+              <MaterialCommunityIcons name="trash-can-outline" size={18} color="#FFFFFF" />
+              <Text style={wiz.actionText}>
+                {getTranslation("createPlant.step07.removePhoto", "Remove photo")}
+              </Text>
             </Pressable>
           )}
         </View>
-
       </View>
     </View>
   );

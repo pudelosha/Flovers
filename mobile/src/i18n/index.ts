@@ -19,6 +19,8 @@ import enCreatePlantStep05 from "./locales/en/createPlantStep05.json";
 import plCreatePlantStep05 from "./locales/pl/createPlantStep05.json";
 import enCreatePlantStep06 from "./locales/en/createPlantStep06.json";
 import plCreatePlantStep06 from "./locales/pl/createPlantStep06.json";
+import enCreatePlantStep07 from "./locales/en/createPlantStep07.json";
+import plCreatePlantStep07 from "./locales/pl/createPlantStep07.json";
 
 // Other feature bundles
 import enLogin from "./locales/en/login.json";
@@ -89,6 +91,7 @@ function buildTranslation(
   step04: AnyObj,
   step05: AnyObj,
   step06: AnyObj,
+  step07: AnyObj,
   others: AnyObj[]
 ): AnyObj {
   return {
@@ -100,12 +103,13 @@ function buildTranslation(
     ...stripCreatePlant(step04),
     ...stripCreatePlant(step05),
     ...stripCreatePlant(step06),
+    ...stripCreatePlant(step07),
 
     // prevent "others" from overwriting createPlant accidentally
     ...Object.assign({}, ...others.map(stripCreatePlant)),
 
     // deep-merge the createPlant subtree so steps don't overwrite each other
-    ...mergeCreatePlant(base, step01, step02, step03, step04, step05, step06),
+    ...mergeCreatePlant(base, step01, step02, step03, step04, step05, step06, step07),
   };
 }
 
@@ -119,6 +123,7 @@ const resources = {
       enCreatePlantStep04 as AnyObj,
       enCreatePlantStep05 as AnyObj,
       enCreatePlantStep06 as AnyObj,
+      enCreatePlantStep07 as AnyObj,
       [
         enLogin,
         enRegister,
@@ -139,6 +144,7 @@ const resources = {
       plCreatePlantStep04 as AnyObj,
       plCreatePlantStep05 as AnyObj,
       plCreatePlantStep06 as AnyObj,
+      plCreatePlantStep07 as AnyObj,
       [
         plLogin,
         plRegister,

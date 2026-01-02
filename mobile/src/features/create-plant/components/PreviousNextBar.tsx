@@ -50,7 +50,7 @@ export default function PreviousNextBar({
 
   const step = state.step as StepKey;
 
-  // ✅ A plant is "selected" if it exists (regardless of predefined/scanned)
+  // A plant is "selected" if it exists (regardless of predefined/scanned)
   const hasSelectedPlant = !!state.selectedPlant?.id;
 
   const defaults = useMemo(() => {
@@ -78,7 +78,7 @@ export default function PreviousNextBar({
 
   const nextHandler = () => {
     if (step === "selectPlant") {
-      // ✅ If any plant selected -> go to traits (Step 2), else skip to location (Step 3)
+      // If any plant selected -> go to traits (Step 2), else skip to location (Step 3)
       if (hasSelectedPlant) actions.goNext(); // traits
       else actions.goTo("location"); // skip traits
       return;
@@ -95,7 +95,7 @@ export default function PreviousNextBar({
   const handlePrev = onPrev || prevHandler;
   const handleNext = onNext || nextHandler;
 
-  // ⬇️ Disable Next on Step 3 until a location is selected
+  // Disable Next on Step 3 until a location is selected
   const blockNextBecauseOfStep = step === "location" && !state.selectedLocationId;
 
   const isPrevDisabled = !!prevDisabled || defaults.hidePrev;

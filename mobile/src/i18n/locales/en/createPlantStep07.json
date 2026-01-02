@@ -1,0 +1,19 @@
+{
+  "createPlant": {
+    "step07": {
+      "title": "Add a photo",
+      "subtitlePrefix": "Photograph your plant so you can spot it faster. The picture is saved locally on your device (app storage) and is ",
+      "notUploaded": "not uploaded",
+      "subtitleSuffix": " to our servers.",
+      "noPhotoSelected": "No photo selected",
+      "takePhoto": "Take a photo",
+      "chooseFromGallery": "Choose from gallery",
+      "removePhoto": "Remove photo",
+      "permissionRequiredTitle": "Permission required",
+      "permissionCameraAndMedia": "Please grant camera and media permissions to take a photo.",
+      "permissionMedia": "Please grant media permission to pick a photo.",
+      "cameraErrorTitle": "Camera error",
+      "pickerErrorTitle": "Picker error"
+    }
+  }
+}
