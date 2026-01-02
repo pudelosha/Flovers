@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import {
   View,
   Pressable,
@@ -15,6 +15,7 @@ import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
@@ -66,6 +67,29 @@ function toSuggestion(item: ApiRecognitionResult): Suggestion {
   } as Suggestion;
 }
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "title" | "subtitle" | "body"
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
+
 export default function PlantScannerModal({
   visible,
   onClose,
@@ -73,6 +97,7 @@ export default function PlantScannerModal({
 }: Props) {
   const { settings } = useSettings();
   const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
   const insets = useSafeAreaInsets();
 
   const [photoUri, setPhotoUri] = useState<string | null>(null);
@@ -88,6 +113,26 @@ export default function PlantScannerModal({
     () => (candidates && candidates.length > 0 ? "results" : "photo"),
     [candidates]
   );
+
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    if (visible) {
+      console.log('PlantScannerModal rendering with language:', currentLanguage);
+    }
+  }, [currentLanguage, visible]);
 
   useEffect(() => {
     if (visible) {
@@ -115,8 +160,8 @@ export default function PlantScannerModal({
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
         Alert.alert(
-          t('createPlant.step01.cameraRequired'),
-          t('createPlant.step01.cameraPermissionMessage')
+          getTranslation('createPlant.step01.cameraRequired', 'Camera Required'),
+          getTranslation('createPlant.step01.cameraPermissionMessage', 'Camera and storage permissions are required to take photos.')
         );
         return;
       }
@@ -129,14 +174,14 @@ export default function PlantScannerModal({
 
       if (res.didCancel) return;
       if (res.errorCode) {
-        Alert.alert(t('createPlant.step01.cameraError'), String(res.errorMessage));
+        Alert.alert(getTranslation('createPlant.step01.cameraError', 'Camera Error'), String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
     } catch {
-      setError(t('createPlant.step01.cameraFailure'));
+      setError(getTranslation('createPlant.step01.cameraFailure', 'Failed to access camera'));
     } finally {
       setIsPicking(false);
     }
@@ -151,8 +196,8 @@ export default function PlantScannerModal({
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
         Alert.alert(
-          t('createPlant.step01.libraryRequired'),
-          t('createPlant.step01.libraryPermissionMessage')
+          getTranslation('createPlant.step01.libraryRequired', 'Gallery Access Required'),
+          getTranslation('createPlant.step01.libraryPermissionMessage', 'Storage permission is required to access photos.')
         );
         return;
       }
@@ -166,14 +211,14 @@ export default function PlantScannerModal({
 
       if (res.didCancel) return;
       if (res.errorCode) {
-        Alert.alert(t('createPlant.step01.libraryError'), String(res.errorMessage));
+        Alert.alert(getTranslation('createPlant.step01.libraryError', 'Gallery Error'), String(res.errorMessage));
         return;
       }
 
       const uri = res.assets?.[0]?.uri;
       if (uri) setPhotoUri(uri);
     } catch {
-      setError(t('createPlant.step01.libraryFailure'));
+      setError(getTranslation('createPlant.step01.libraryFailure', 'Failed to access gallery'));
     } finally {
       setIsPicking(false);
     }
@@ -191,7 +236,7 @@ export default function PlantScannerModal({
 
       if (results.length === 0) {
         setCandidates(null);
-        setError(t('createPlant.step01.noResults'));
+        setError(getTranslation('createPlant.step01.noResults', 'No plants recognized. Try a clearer photo.'));
         return;
       }
 
@@ -201,12 +246,15 @@ export default function PlantScannerModal({
       setError(
         e?.message ??
         (e?.response?.data?.detail as string) ??
-        t('createPlant.step01.recognitionFailure')
+        getTranslation('createPlant.step01.recognitionFailure', 'Recognition failed. Please try again.')
       );
     } finally {
       setIsRecognizing(false);
     }
   };
+
+  // Don't render anything if not visible
+  if (!visible) return null;
 
   return (
     <>
@@ -246,17 +294,20 @@ export default function PlantScannerModal({
             keyboardShouldPersistTaps="handled"
             contentContainerStyle={styles.scrollContent}
           >
+            {/* Title - Using getTranslation for dynamic title based on stage */}
             <Text style={[remindersStyles.promptTitle, { paddingHorizontal: 0 }]}>
               {stage === "photo" 
-                ? t('createPlant.step02.traits.recognize') 
-                : t('createPlant.step01.selectPlant')}
+                ? getTranslation('createPlant.step02.traits.recognize', 'Recognize Plant') 
+                : getTranslation('createPlant.step01.selectPlant', 'Select Plant')}
             </Text>
 
             {stage === "photo" ? (
               <>
-                <Text style={wiz.subtitle}>
-                  {t('createPlant.step01.scanInstructions')}
-                </Text>
+                {/* Subtitle - Using TranslatedText component */}
+                <TranslatedText 
+                  tKey="createPlant.step01.scanInstructions" 
+                  style={wiz.subtitle}
+                />
 
                 {/* Preview */}
                 <View style={[wiz.hero, styles.previewFrame]}>
@@ -274,7 +325,7 @@ export default function PlantScannerModal({
                         color="#FFFFFF"
                       />
                       <Text style={styles.previewText}>
-                        {t('createPlant.step01.noPhoto')}
+                        {getTranslation('createPlant.step01.noPhoto', 'No photo selected')}
                       </Text>
                     </View>
                   )}
@@ -289,7 +340,7 @@ export default function PlantScannerModal({
                   >
                     <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
                     <Text style={styles.actionLabel}>
-                      {t('createPlant.step01.takePhoto')}
+                      {getTranslation('createPlant.step01.takePhoto', 'Take Photo')}
                     </Text>
                   </Pressable>
 
@@ -304,12 +355,12 @@ export default function PlantScannerModal({
                       color="#FFFFFF"
                     />
                     <Text style={styles.actionLabel}>
-                      {t('createPlant.step01.fromGallery')}
+                      {getTranslation('createPlant.step01.fromGallery', 'From Gallery')}
                     </Text>
                   </Pressable>
                 </View>
 
-                {/* Recognize */}
+                {/* Recognize button */}
                 <Pressable
                   disabled={!photoUri || isRecognizing}
                   onPress={handleRecognize}
@@ -334,7 +385,7 @@ export default function PlantScannerModal({
                         style={{ opacity: !photoUri ? 0.55 : 1 }}
                       />
                       <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
-                        {t('createPlant.step01.recognize')}
+                        {getTranslation('createPlant.step01.recognize', 'Recognize Plant')}
                       </Text>
                     </>
                   )}
@@ -346,7 +397,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Close */}
+                {/* Close button */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -355,18 +406,20 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {t('createPlant.step01.close')}
+                      {getTranslation('createPlant.step01.close', 'Close')}
                     </Text>
                   </Pressable>
                 </View>
               </>
             ) : (
               <>
-                <Text style={wiz.subtitle}>
-                  {t('createPlant.step02.traits.recognize')}
-                </Text>
+                {/* Results view subtitle */}
+                <TranslatedText 
+                  tKey="createPlant.step02.traits.recognize" 
+                  style={wiz.subtitle}
+                />
 
-                {/* Preview */}
+                {/* Preview mini */}
                 <View style={styles.previewMiniWrap}>
                   <View style={styles.previewMiniFrame}>
                     {photoUri ? (
@@ -383,14 +436,14 @@ export default function PlantScannerModal({
                           color="#FFFFFF"
                         />
                         <Text style={styles.previewText}>
-                          {t('createPlant.step01.noPhoto')}
+                          {getTranslation('createPlant.step01.noPhoto', 'No photo selected')}
                         </Text>
                       </View>
                     )}
                   </View>
                 </View>
 
-                {/* Candidates */}
+                {/* Candidates list */}
                 <View style={{ marginTop: 12, gap: 10 }}>
                   {(candidates ?? []).slice(0, 3).map((item, idx) => {
                     const pct = toPercent(item.probability ?? item.confidence);
@@ -435,7 +488,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Bottom buttons: Back + Close (50/50, full width) */}
+                {/* Bottom buttons: Back + Close */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -446,7 +499,7 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {t('createPlant.step01.back')}
+                      {getTranslation('createPlant.step01.back', 'Back')}
                     </Text>
                   </Pressable>
 
@@ -457,7 +510,7 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {t('createPlant.step01.close')}
+                      {getTranslation('createPlant.step01.close', 'Close')}
                     </Text>
                   </Pressable>
                 </View>
