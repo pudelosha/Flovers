@@ -1,27 +1,51 @@
-﻿import React, { useRef, useState, useMemo, useEffect } from "react";
+﻿import React, { useRef, useState, useMemo, useEffect, useCallback } from "react";
 import { 
   View, 
   Pressable, 
   Animated, 
   ViewStyle,
-  Text  // ✅ Now importing Text from react-native
+  Text
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { TextInput } from "react-native-paper"; // ✅ Only TextInput from paper
+import { TextInput } from "react-native-paper";
 import { wiz } from "../styles/wizard.styles";
-import { useTranslation } from "react-i18next"; // Importing i18n
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 type Suggestion = { id: string; name: string; latin: string };
 
 type Props = {
-  value?: string; // ✅ allow undefined safely
+  value?: string;
   onChange: (t: string) => void;
   showSuggestions: boolean;
   setShowSuggestions: (v: boolean) => void;
   onSelectSuggestion: (item: Suggestion) => void;
   suggestions: Suggestion[];
-  compact?: boolean; // not used for height: fixed 64 to match Login
+  compact?: boolean;
   style?: ViewStyle;
+  placeholder?: string; // Add placeholder prop for flexibility
+};
+
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any 
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = t(tKey);
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    return <Text style={style}>{fallbackText}</Text>;
+  }
 };
 
 export default function PlantSearchBox({
@@ -33,8 +57,10 @@ export default function PlantSearchBox({
   suggestions,
   compact = false,
   style,
+  placeholder,
 }: Props) {
-  const { t } = useTranslation();  // Accessing translation function
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
 
   const safeValue = typeof value === "string" ? value : "";
 
@@ -69,6 +95,24 @@ export default function PlantSearchBox({
       animateLabel(0);
     }
   }, [safeValue, isFocused]);
+
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  React.useEffect(() => {
+    console.log('PlantSearchBox rendering with language:', currentLanguage);
+  }, [currentLanguage]);
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -114,6 +158,9 @@ export default function PlantSearchBox({
   const labelLeft = 12 + 18 + 10;
   const suggestTop = 64;
 
+  // Determine placeholder text
+  const placeholderText = placeholder || getTranslation('createPlant.step01.searchPlaceholder', 'Search for a plant...');
+
   return (
     <View style={{ marginTop: 0, marginBottom: 0 }}>
       <View style={containerStyle}>
@@ -130,7 +177,7 @@ export default function PlantSearchBox({
             color: labelColor as any,
           }}
         >
-          {t('createPlant.step01.searchPlaceholder')}  {/* Using translation here */}
+          {placeholderText}
         </Animated.Text>
 
         <TextInput

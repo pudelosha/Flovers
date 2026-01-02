@@ -40,7 +40,9 @@ export const wiz = StyleSheet.create({
   title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18 },
   subtitle: {
     color: "rgba(255,255,255,0.92)",
-    fontWeight: "600",
+    fontSize: 13, 
+    fontWeight: "300",
+    textAlign: "justify",
     marginTop: 6,
     marginBottom: 8,
     lineHeight: 18,
