@@ -176,7 +176,7 @@ export const wiz = StyleSheet.create({
     borderWidth: 0,  // flat
   },
   actionText: { color: "#FFFFFF", fontWeight: "800" },
-  smallMuted: { color: "rgba(255,255,255,0.92)", fontWeight: "600", marginTop: 6, marginBottom: 8 },
+  smallMuted: { color: "rgba(255,255,255,0.92)", fontWeight: "300", fontSize: 13, marginTop: 8, marginBottom: 16, lineHeight: 18, textAlign: "justify" },
 
   locationRow: {
     flexDirection: "row",

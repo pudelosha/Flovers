@@ -3,7 +3,7 @@ import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -11,25 +11,30 @@ import type { LocationCategory } from "../types/create-plant.types";
 import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
 
 // Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style, variant, values }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any,
-  variant?: "title" | "subtitle" | "body",
-  values?: any
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+  variant,
+  values,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
+  variant?: "title" | "subtitle" | "body";
+  values?: any;
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
+
   // Use currentLanguage to force re-render when language changes
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = values ? t(tKey, values) : t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
 };
@@ -44,67 +49,81 @@ export default function Step03_SelectLocation({
   onRegisterCreateHandler: (fn: (name: string, category: LocationCategory) => void) => void;
 }) {
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
+
+  // ✅ guard: locations may be undefined during initial boot
+  const locations = (state as any)?.locations ?? [];
+
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   // Keep a ref of the latest locations so we can reliably find the new one after add
-  const locationsRef = useRef(state.locations);
+  const locationsRef = useRef(locations);
   useEffect(() => {
-    locationsRef.current = state.locations;
-  }, [state.locations]);
+    locationsRef.current = locations;
+  }, [locations]);
 
   // Safe translation function that uses both hooks
-  const getTranslation = useCallback((key: string, fallback?: string, values?: any): string => {
-    try {
-      // Force dependency on currentLanguage to ensure updates
-      const lang = currentLanguage;
-      const translation = values ? t(key, values) : t(key);
-      return translation || fallback || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
-    }
-  }, [t, currentLanguage]);
+  const getTranslation = useCallback(
+    (key: string, fallback?: string, values?: any): string => {
+      try {
+        // Force dependency on currentLanguage to ensure updates
+        const lang = currentLanguage;
+
+        const translation = values ? t(key, values) : t(key);
+        return translation || fallback || key.split(".").pop() || key;
+      } catch (error) {
+        console.warn("Translation error for key:", key, error);
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
   // Debug: Log when component renders with current language
   useEffect(() => {
-    console.log('Step03_SelectLocation rendering with language:', currentLanguage);
+    console.log("Step03_SelectLocation rendering with language:", currentLanguage);
   }, [currentLanguage]);
 
   // Ensure nothing is pre-selected when arriving at Step 3
   useEffect(() => {
-    actions.selectLocation(""); // clear any previous selection
+    actions.selectLocation("");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Load user locations from backend when this page is shown
   useEffect(() => {
     let mounted = true;
+
     (async () => {
       try {
         setLoading(true);
         setErrorMsg(null);
+
         const remote = await fetchUserLocations({ auth: true });
 
-        // Merge into wizard state without duplicates (case-insensitive by name)
-        const existing = new Map(
-          state.locations.map((l) => [l.name.trim().toLowerCase(), l])
-        );
-        remote.forEach((r) => {
-          const key = r.name.trim().toLowerCase();
+        // ✅ use guarded locations, not state.locations directly
+        const existing = new Map(locations.map((l: any) => [l.name.trim().toLowerCase(), l]));
+
+        remote.forEach((r: any) => {
+          const key = String(r?.name ?? "").trim().toLowerCase();
+          if (!key) return;
+
           if (!existing.has(key)) {
-            actions.addLocation(r.name, r.category as LocationCategory, String(r.id));
+            actions.addLocation(String(r.name), r.category as LocationCategory, String(r.id));
+            existing.set(key, r);
           }
         });
 
-        // Guarantee NONE is selected on initial load
         actions.selectLocation("");
       } catch (e: any) {
-        setErrorMsg(e?.message ?? getTranslation('createPlant.step03.errorLoadingLocations', 'Failed to load locations'));
+        setErrorMsg(
+          e?.message ??
+            getTranslation("createPlant.step03.errorLoadingLocations", "Failed to load locations")
+        );
       } finally {
-        mounted && setLoading(false);
+        if (mounted) setLoading(false);
       }
     })();
 
@@ -112,15 +131,15 @@ export default function Step03_SelectLocation({
       mounted = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, []); // keep as-is
 
   const grouped = useMemo(() => {
     return {
-      indoor: state.locations.filter((l) => l.category === "indoor"),
-      outdoor: state.locations.filter((l) => l.category === "outdoor"),
-      other: state.locations.filter((l) => l.category === "other"),
+      indoor: locations.filter((l: any) => l.category === "indoor"),
+      outdoor: locations.filter((l: any) => l.category === "outdoor"),
+      other: locations.filter((l: any) => l.category === "other"),
     };
-  }, [state.locations]);
+  }, [locations]);
 
   const openCreate = () => {
     setErrorMsg(null);
@@ -131,43 +150,43 @@ export default function Step03_SelectLocation({
   // Create on backend first, then mirror into wizard state (avoids duplicates)
   const onCreate = useCallback(
     async (name: string, cat: LocationCategory) => {
-      const norm = name.trim().toLowerCase();
+      const trimmed = name.trim();
+      const norm = trimmed.toLowerCase();
+
+      if (!trimmed) return;
 
       // local duplicate guard (case-insensitive)
-      if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
-        setErrorMsg(getTranslation('createPlant.step03.locationExists', 'Location already exists'));
+      if (locations.some((l: any) => l.name.trim().toLowerCase() === norm)) {
+        setErrorMsg(getTranslation("createPlant.step03.locationExists", "Location already exists"));
         return;
       }
 
       try {
         setErrorMsg(null);
-        const created = await createLocation({ name, category: cat }, { auth: true });
+        const created: any = await createLocation({ name: trimmed, category: cat }, { auth: true });
 
         // Add into wizard state
-        actions.addLocation(
-          created.name,
-          created.category as LocationCategory,
-          String(created.id)
-        );
+        actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
 
         // Robust auto-select
         setTimeout(() => {
           const match = locationsRef.current.find(
-            (l) =>
-              l.name.trim().toLowerCase() === created.name.trim().toLowerCase() &&
+            (l: any) =>
+              l.name.trim().toLowerCase() === String(created.name).trim().toLowerCase() &&
               l.category === created.category
           );
-          if (match?.id) {
-            actions.selectLocation(String(match.id));
-          }
+          if (match?.id) actions.selectLocation(String(match.id));
         }, 0);
 
         onScrollTop?.();
       } catch (e: any) {
-        setErrorMsg(e?.message ?? getTranslation('createPlant.step03.errorCreatingLocation', 'Failed to create location'));
+        setErrorMsg(
+          e?.message ??
+            getTranslation("createPlant.step03.errorCreatingLocation", "Failed to create location")
+        );
       }
     },
-    [actions, onScrollTop, state.locations, getTranslation]
+    [actions, onScrollTop, locations, getTranslation]
   );
 
   // register create handler with parent (WizardBody)
@@ -176,13 +195,12 @@ export default function Step03_SelectLocation({
   }, [onRegisterCreateHandler, onCreate]);
 
   const onPickExisting = (id: string | number) => {
-    actions.selectLocation(String(id)); // normalize
+    actions.selectLocation(String(id));
     onScrollTop?.();
   };
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass frame — match Step 1: Blur + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -196,17 +214,8 @@ export default function Step03_SelectLocation({
       </View>
 
       <View style={wiz.cardInner}>
-        {/* Use TranslatedText component for title */}
-        <TranslatedText 
-          tKey="createPlant.step03.title" 
-          style={wiz.title} 
-        />
-        
-        {/* Use TranslatedText component for subtitle */}
-        <TranslatedText 
-          tKey="createPlant.step03.subtitle" 
-          style={wiz.smallMuted} 
-        />
+        <TranslatedText tKey="createPlant.step03.title" style={wiz.title} />
+        <TranslatedText tKey="createPlant.step03.subtitle" style={wiz.smallMuted} />
 
         {errorMsg && (
           <Text style={{ color: "#ffdddd", fontWeight: "700", marginBottom: 6 }}>
@@ -214,7 +223,6 @@ export default function Step03_SelectLocation({
           </Text>
         )}
 
-        {/* Create new location — flat button (same container as Step 1/2), no border */}
         <Pressable
           onPress={openCreate}
           disabled={loading}
@@ -232,23 +240,24 @@ export default function Step03_SelectLocation({
         >
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
           <Text style={wiz.nextBtnText}>
-            {getTranslation('createPlant.step03.createLocation', 'Create New Location')}
+            {getTranslation("createPlant.step03.createLocation", "Create new location")}
           </Text>
         </Pressable>
 
-        {/* User-defined locations */}
         <Text style={[wiz.sectionTitle, { marginBottom: 12, marginTop: 18 }]}>
-          {getTranslation('createPlant.step03.yourLocations', 'Your Locations')}
+          {getTranslation("createPlant.step03.yourLocations", "Your locations")}
         </Text>
 
         {(["indoor", "outdoor", "other"] as LocationCategory[]).map((cat) => {
-          const arr = grouped[cat];
+          const arr = (grouped as any)[cat] as any[];
           return (
             <View key={cat} style={{ marginBottom: 8 }}>
-              {/* Category header */}
               <View style={{ marginBottom: 5 }}>
                 <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
-                  {getTranslation(`createPlant.step03.categories.${cat}`, cat.charAt(0).toUpperCase() + cat.slice(1))}
+                  {getTranslation(
+                    `createPlant.step03.categories.${cat}`,
+                    cat.charAt(0).toUpperCase() + cat.slice(1)
+                  )}
                 </Text>
                 <View
                   style={{
@@ -261,26 +270,23 @@ export default function Step03_SelectLocation({
 
               {arr.length === 0 ? (
                 <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
-                  {loading ? getTranslation('createPlant.step03.loading', 'Loading...') : getTranslation(`createPlant.step03.noLocations.${cat}`, `No ${cat} locations`)}
+                  {loading
+                    ? getTranslation("createPlant.step03.loading", "Loading...")
+                    : getTranslation(
+                        `createPlant.step03.noLocations.${cat}`,
+                        `No ${cat} locations`
+                      )}
                 </Text>
               ) : (
-                arr.map((l) => {
-                  const isSelected = String(state.selectedLocationId) === String(l.id);
+                arr.map((l: any) => {
+                  const isSelected = String((state as any).selectedLocationId) === String(l.id);
                   return (
                     <Pressable
                       key={String(l.id)}
                       onPress={() => onPickExisting(l.id)}
-                      style={[
-                        wiz.locationRow,
-                        {
-                          borderBottomWidth: 0,
-                          paddingVertical: 6,
-                        },
-                      ]}
+                      style={[wiz.locationRow, { borderBottomWidth: 0, paddingVertical: 6 }]}
                     >
-                      <Text
-                        style={[wiz.locationName, { fontWeight: isSelected ? "900" : "500" }]}
-                      >
+                      <Text style={[wiz.locationName, { fontWeight: isSelected ? "900" : "500" }]}>
                         {l.name}
                       </Text>
                       {isSelected && (

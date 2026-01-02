@@ -1,6 +1,7 @@
 {
   "createPlant": {
     "step03": {
+      "loading": "Loading...",
       "title": "Choose a location",
       "subtitle": "Optional but helpful: locations let you group plants and later sort or filter them.",
       "errorLoadingLocations": "Failed to load locations.",
