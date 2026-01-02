@@ -1,0 +1,60 @@
+{
+  "createPlant": {
+    "step06": {
+      "title": "Automatic tasks",
+      "subtitle": "We can auto-create reminders (watering, repotting, moisture, fertilising, care) based on your plant profile.",
+      "createAutoTasks": "Create auto tasks for this plant",
+      "requiresPredefined": "This requires a predefined plant.",
+
+      "sections": {
+        "watering": "Watering",
+        "moisture": "Moisture / misting",
+        "fertilising": "Fertilising",
+        "care": "Care / trimming",
+        "repotting": "Repotting"
+      },
+
+      "labels": {
+        "generateWateringTask": "Generate watering task",
+        "generateMoistureTask": "Generate moisture task",
+        "generateFertilisingTask": "Generate fertilising task",
+        "generateCareTask": "Generate care task",
+        "generateRepottingTask": "Generate repotting task"
+      },
+
+      "prompts": {
+        "lastWatered": "When was it last watered?",
+        "selectIntervalDays": "Select interval (days)",
+        "recommendedInterval": "Recommended interval",
+        "lastRepotted": "When was it last repotted?"
+      },
+
+      "notSpecified": "Not specified",
+      "notSpecifiedDesc": "Skip if you’re not sure.",
+
+      "units": {
+        "day": "day",
+        "days": "days",
+        "month": "month",
+        "months": "months"
+      },
+
+      "lastWatered": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "three-four-days": "3–4 days ago",
+        "one-week": "A week ago",
+        "two-weeks": "2 weeks ago",
+        "unknown": "I don't remember"
+      },
+
+      "lastRepotted": {
+        "this-week": "This week",
+        "one-week-ago": "1 week ago",
+        "two-weeks-ago": "2 weeks ago",
+        "one-month-ago": "1 month ago",
+        "unknown": "I don't remember"
+      }
+    }
+  }
+}

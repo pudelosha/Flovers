@@ -1,8 +1,10 @@
 ﻿// steps/Step06_AutoTasks.tsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -66,13 +68,17 @@ function InlineDropdown<T extends string>({
   options,
   onSelect,
   showNotSpecified = true,
+  notSpecifiedLabel = "Not specified",
+  notSpecifiedDesc = "Skip if you’re not sure.",
 }: {
   open: boolean;
   valueLabel: string;
   onToggle: () => void;
-  options: readonly { key: T; label: string }[];
+  options: readonly { key: T; label?: string }[];
   onSelect: (k?: T) => void;
   showNotSpecified?: boolean;
+  notSpecifiedLabel?: string;
+  notSpecifiedDesc?: string;
 }) {
   return (
     <>
@@ -99,12 +105,9 @@ function InlineDropdown<T extends string>({
             nestedScrollEnabled
           >
             {showNotSpecified && (
-              <Pressable
-                style={wiz.dropdownItem}
-                onPress={() => onSelect(undefined)}
-              >
-                <Text style={wiz.dropdownItemText}>Not specified</Text>
-                <Text style={wiz.dropdownItemDesc}>Skip if you’re not sure.</Text>
+              <Pressable style={wiz.dropdownItem} onPress={() => onSelect(undefined)}>
+                <Text style={wiz.dropdownItemText}>{notSpecifiedLabel}</Text>
+                <Text style={wiz.dropdownItemDesc}>{notSpecifiedDesc}</Text>
               </Pressable>
             )}
 
@@ -114,7 +117,7 @@ function InlineDropdown<T extends string>({
                 style={wiz.dropdownItem}
                 onPress={() => onSelect(opt.key)}
               >
-                <Text style={wiz.dropdownItemText}>{opt.label}</Text>
+                <Text style={wiz.dropdownItemText}>{opt.label ?? String(opt.key)}</Text>
               </Pressable>
             ))}
           </ScrollView>
@@ -129,11 +132,15 @@ function DaysSlider({
   onChange,
   min = 1,
   max = 30,
+  dayLabel = "day",
+  daysLabel = "days",
 }: {
   value: number | undefined;
   onChange: (d: number) => void;
   min?: number;
   max?: number;
+  dayLabel?: string;
+  daysLabel?: string;
 }) {
   const v = Math.max(min, Math.min(max, value ?? min));
 
@@ -147,7 +154,7 @@ function DaysSlider({
           marginBottom: 4,
         }}
       >
-        {v} {v === 1 ? "day" : "days"}
+        {v} {v === 1 ? dayLabel : daysLabel}
       </Text>
 
       {SliderView !== View ? (
@@ -184,11 +191,15 @@ function MonthsSlider({
   onChange,
   min = 1,
   max = 12,
+  monthLabel = "month",
+  monthsLabel = "months",
 }: {
   value: number | undefined;
   onChange: (m: number) => void;
   min?: number;
   max?: number;
+  monthLabel?: string;
+  monthsLabel?: string;
 }) {
   const v = Math.max(min, Math.min(max, value ?? min));
 
@@ -202,7 +213,7 @@ function MonthsSlider({
           marginBottom: 4,
         }}
       >
-        {v} {v === 1 ? "month" : "months"}
+        {v} {v === 1 ? monthLabel : monthsLabel}
       </Text>
 
       {SliderView !== View ? (
@@ -239,10 +250,28 @@ function MonthsSlider({
 /* ------------------------------------------------------------------ */
 
 export default function Step06_AutoTasks() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { state, actions } = useCreatePlantWizard();
   const [openWhich, setOpenWhich] = useState<"watered" | "repotted" | null>(null);
 
   const canAutoCreate = !!state.selectedPlant?.predefined;
+
+  // Safe translation (treat key-echo as missing)
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        const _lang = currentLanguage; // force dependency for rerender
+        const txt = t(key);
+        const isMissing = !txt || txt === key;
+        return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      } catch {
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
   /**
    * 🔁 Auto-prefill from plant definition
@@ -291,20 +320,31 @@ export default function Step06_AutoTasks() {
   }, [canAutoCreate, state, actions]);
 
   const wateredLabel = useMemo(() => {
-    if (!state.lastWatered) return "Not specified";
+    if (!state.lastWatered) return getTranslation("createPlant.step06.notSpecified", "Not specified");
+    const opt = LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered);
     return (
-      LAST_WATERED_OPTIONS.find((o) => o.key === state.lastWatered)?.label ??
-      "Not specified"
+      getTranslation(
+        `createPlant.step06.lastWatered.${String(opt?.key)}`,
+        (opt as any)?.label
+      ) || getTranslation("createPlant.step06.notSpecified", "Not specified")
     );
-  }, [state.lastWatered]);
+  }, [state.lastWatered, getTranslation]);
 
   const repottedLabel = useMemo(() => {
-    if (!state.lastRepotted) return "Not specified";
+    if (!state.lastRepotted) return getTranslation("createPlant.step06.notSpecified", "Not specified");
+    const opt = LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted);
     return (
-      LAST_REPOTTED_OPTIONS.find((o) => o.key === state.lastRepotted)?.label ??
-      "Not specified"
+      getTranslation(
+        `createPlant.step06.lastRepotted.${String(opt?.key)}`,
+        (opt as any)?.label
+      ) || getTranslation("createPlant.step06.notSpecified", "Not specified")
     );
-  }, [state.lastRepotted]);
+  }, [state.lastRepotted, getTranslation]);
+
+  const dayLabel = getTranslation("createPlant.step06.units.day", "day");
+  const daysLabel = getTranslation("createPlant.step06.units.days", "days");
+  const monthLabel = getTranslation("createPlant.step06.units.month", "month");
+  const monthsLabel = getTranslation("createPlant.step06.units.months", "months");
 
   return (
     <View style={wiz.cardWrap}>
@@ -321,10 +361,14 @@ export default function Step06_AutoTasks() {
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Automatic tasks</Text>
+        <Text style={wiz.title}>
+          {getTranslation("createPlant.step06.title", "Automatic tasks")}
+        </Text>
         <Text style={wiz.subtitle}>
-          We can auto-create reminders (watering, repotting, moisture, fertilising,
-          care) based on your plant profile.
+          {getTranslation(
+            "createPlant.step06.subtitle",
+            "We can auto-create reminders (watering, repotting, moisture, fertilising, care) based on your plant profile."
+          )}
         </Text>
 
         <SectionCheckbox
@@ -332,136 +376,201 @@ export default function Step06_AutoTasks() {
           onToggle={() =>
             canAutoCreate && actions.setCreateAutoTasks(!state.createAutoTasks)
           }
-          label="Create auto tasks for this plant"
+          label={getTranslation(
+            "createPlant.step06.createAutoTasks",
+            "Create auto tasks for this plant"
+          )}
           disabled={!canAutoCreate}
         />
 
         {!canAutoCreate && (
           <Text style={wiz.smallMuted}>
-            This requires a predefined plant.
+            {getTranslation(
+              "createPlant.step06.requiresPredefined",
+              "This requires a predefined plant."
+            )}
           </Text>
         )}
 
         {canAutoCreate && state.createAutoTasks && (
           <>
             {/* WATERING */}
-            <Text style={wiz.sectionTitle}>Watering</Text>
+            <Text style={wiz.sectionTitle}>
+              {getTranslation("createPlant.step06.sections.watering", "Watering")}
+            </Text>
             <SectionCheckbox
               checked={!!state.waterTaskEnabled}
-              onToggle={() =>
-                actions.setWaterTaskEnabled(!state.waterTaskEnabled)
-              }
-              label="Generate watering task"
+              onToggle={() => actions.setWaterTaskEnabled(!state.waterTaskEnabled)}
+              label={getTranslation(
+                "createPlant.step06.labels.generateWateringTask",
+                "Generate watering task"
+              )}
             />
 
             {state.waterTaskEnabled && (
               <>
-                <Text style={wiz.smallMuted}>When was it last watered?</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation(
+                    "createPlant.step06.prompts.lastWatered",
+                    "When was it last watered?"
+                  )}
+                </Text>
                 <InlineDropdown<LastWatered>
                   open={openWhich === "watered"}
                   valueLabel={wateredLabel}
                   onToggle={() =>
                     setOpenWhich(openWhich === "watered" ? null : "watered")
                   }
-                  options={LAST_WATERED_OPTIONS}
+                  options={LAST_WATERED_OPTIONS as any}
                   onSelect={(k) => {
                     actions.setLastWatered(k as LastWatered | undefined);
                     setOpenWhich(null);
                   }}
+                  notSpecifiedLabel={getTranslation(
+                    "createPlant.step06.notSpecified",
+                    "Not specified"
+                  )}
+                  notSpecifiedDesc={getTranslation(
+                    "createPlant.step06.notSpecifiedDesc",
+                    "Skip if you’re not sure."
+                  )}
                 />
               </>
             )}
 
             {/* MOISTURE */}
-            <Text style={wiz.sectionTitle}>Moisture / misting</Text>
+            <Text style={wiz.sectionTitle}>
+              {getTranslation("createPlant.step06.sections.moisture", "Moisture / misting")}
+            </Text>
             <SectionCheckbox
               checked={!!state.moistureRequired}
-              onToggle={() =>
-                actions.setMoistureRequired(!state.moistureRequired)
-              }
-              label="Generate moisture task"
+              onToggle={() => actions.setMoistureRequired(!state.moistureRequired)}
+              label={getTranslation(
+                "createPlant.step06.labels.generateMoistureTask",
+                "Generate moisture task"
+              )}
             />
 
             {state.moistureRequired && (
               <>
-                <Text style={wiz.smallMuted}>Select interval (days)</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                </Text>
                 <DaysSlider
                   value={state.moistureIntervalDays}
                   onChange={(d) => actions.setMoistureInterval(d)}
+                  dayLabel={dayLabel}
+                  daysLabel={daysLabel}
                 />
               </>
             )}
 
             {/* FERTILISING */}
-            <Text style={wiz.sectionTitle}>Fertilising</Text>
+            <Text style={wiz.sectionTitle}>
+              {getTranslation("createPlant.step06.sections.fertilising", "Fertilising")}
+            </Text>
             <SectionCheckbox
               checked={!!state.fertilizeRequired}
-              onToggle={() =>
-                actions.setFertilizeRequired(!state.fertilizeRequired)
-              }
-              label="Generate fertilising task"
+              onToggle={() => actions.setFertilizeRequired(!state.fertilizeRequired)}
+              label={getTranslation(
+                "createPlant.step06.labels.generateFertilisingTask",
+                "Generate fertilising task"
+              )}
             />
 
             {state.fertilizeRequired && (
               <>
-                <Text style={wiz.smallMuted}>Select interval (days)</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                </Text>
                 <DaysSlider
                   value={state.fertilizeIntervalDays}
                   onChange={(d) => actions.setFertilizeInterval(d)}
                   max={60}
+                  dayLabel={dayLabel}
+                  daysLabel={daysLabel}
                 />
               </>
             )}
 
             {/* CARE */}
-            <Text style={wiz.sectionTitle}>Care / trimming</Text>
+            <Text style={wiz.sectionTitle}>
+              {getTranslation("createPlant.step06.sections.care", "Care / trimming")}
+            </Text>
             <SectionCheckbox
               checked={!!state.careRequired}
               onToggle={() => actions.setCareRequired(!state.careRequired)}
-              label="Generate care task"
+              label={getTranslation(
+                "createPlant.step06.labels.generateCareTask",
+                "Generate care task"
+              )}
             />
 
             {state.careRequired && (
               <>
-                <Text style={wiz.smallMuted}>Select interval (days)</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation("createPlant.step06.prompts.selectIntervalDays", "Select interval (days)")}
+                </Text>
                 <DaysSlider
                   value={state.careIntervalDays}
                   onChange={(d) => actions.setCareInterval(d)}
                   max={60}
+                  dayLabel={dayLabel}
+                  daysLabel={daysLabel}
                 />
               </>
             )}
 
             {/* REPOTTING */}
-            <Text style={wiz.sectionTitle}>Repotting</Text>
+            <Text style={wiz.sectionTitle}>
+              {getTranslation("createPlant.step06.sections.repotting", "Repotting")}
+            </Text>
             <SectionCheckbox
               checked={!!state.repotTaskEnabled}
-              onToggle={() =>
-                actions.setRepotTaskEnabled(!state.repotTaskEnabled)
-              }
-              label="Generate repotting task"
+              onToggle={() => actions.setRepotTaskEnabled(!state.repotTaskEnabled)}
+              label={getTranslation(
+                "createPlant.step06.labels.generateRepottingTask",
+                "Generate repotting task"
+              )}
             />
 
             {state.repotTaskEnabled && (
               <>
-                <Text style={wiz.smallMuted}>Recommended interval</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation("createPlant.step06.prompts.recommendedInterval", "Recommended interval")}
+                </Text>
                 <MonthsSlider
                   value={state.repotIntervalMonths}
                   onChange={(m) => actions.setRepotIntervalMonths(m)}
+                  monthLabel={monthLabel}
+                  monthsLabel={monthsLabel}
                 />
 
-                <Text style={wiz.smallMuted}>When was it last repotted?</Text>
+                <Text style={wiz.smallMuted}>
+                  {getTranslation(
+                    "createPlant.step06.prompts.lastRepotted",
+                    "When was it last repotted?"
+                  )}
+                </Text>
                 <InlineDropdown<LastRepotted>
                   open={openWhich === "repotted"}
                   valueLabel={repottedLabel}
                   onToggle={() =>
                     setOpenWhich(openWhich === "repotted" ? null : "repotted")
                   }
-                  options={LAST_REPOTTED_OPTIONS}
+                  options={LAST_REPOTTED_OPTIONS as any}
                   onSelect={(k) => {
                     actions.setLastRepotted(k as LastRepotted | undefined);
                     setOpenWhich(null);
                   }}
+                  notSpecifiedLabel={getTranslation(
+                    "createPlant.step06.notSpecified",
+                    "Not specified"
+                  )}
+                  notSpecifiedDesc={getTranslation(
+                    "createPlant.step06.notSpecifiedDesc",
+                    "Skip if you’re not sure."
+                  )}
                 />
               </>
             )}

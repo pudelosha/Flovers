@@ -118,7 +118,7 @@ export const PREDEFINED_LOCATIONS = {
   other: ["staircase", "garage", "basement", "lobby", "sunroom", "workshop", "studio", "attic"],
 } as const;
 
-// ---------- 🔵 Step 4 exposure options ----------
+// ---------- Step 4 exposure options ----------
 export const LIGHT_LEVELS = [
   { key: "bright-direct", label: "Bright direct" },
   { key: "bright-indirect", label: "Bright indirect" },
@@ -135,7 +135,7 @@ export const ORIENTATIONS = [
 ] as const;
 
 // ===================================================================
-// 🔵 Step 5 – Container & Soil constants
+// Step 5 – Container & Soil constants
 // ===================================================================
 
 export type PotMaterialKey =
@@ -217,7 +217,7 @@ export const SOIL_MIXES: readonly SoilMixOption[] = [
   { key: "peat-free" },
 ] as const;
 
-/** 🔵 Step 6 – Auto tasks dropdown options */
+/** Step 6 – Auto tasks dropdown options */
 export const LAST_WATERED_OPTIONS = [
   { key: "today", label: "Today" },
   { key: "yesterday", label: "Yesterday" },
@@ -234,3 +234,4 @@ export const LAST_REPOTTED_OPTIONS = [
   { key: "one-month-ago", label: "1 month ago" },
   { key: "unknown", label: "I don't remember" },
 ] as const;
+
