@@ -1,8 +1,9 @@
-﻿import React, { useEffect, useMemo, useRef, useState } from "react";
+﻿import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -12,7 +13,7 @@ import SafeImage from "../../../shared/ui/SafeImage";
 // Read global settings (same provider used in HomeScreen)
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
-// Call API with explicit lang param (so we don’t depend on device Accept-Language yet)
+// Call API with explicit lang param (so we don't depend on device Accept-Language yet)
 import { request } from "../../../api/client";
 import {
   serializePlantProfile,
@@ -102,8 +103,33 @@ function normalizeTraitKey(raw: string): string {
   return map[k] ?? k;
 }
 
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant, values }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "title" | "subtitle" | "body",
+  values?: any
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = values ? t(tKey, values) : t(tKey);
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
+
 export default function Step02_PlantTraits() {
   const { t, i18n } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
   const { state, actions } = useCreatePlantWizard();
   const { settings } = useSettings();
 
@@ -113,9 +139,14 @@ export default function Step02_PlantTraits() {
   // Keep i18n in sync with settings language
   useEffect(() => {
     if (preferredLang && i18n.language !== preferredLang) {
-      i18n.changeLanguage(preferredLang).catch(() => {}); // Ensure language change is applied on first render
+      i18n.changeLanguage(preferredLang).catch(() => {});
     }
   }, [preferredLang, i18n]);
+
+  // Debug: Log when component renders with current language
+  useEffect(() => {
+    console.log('Step02_PlantTraits rendering with language:', currentLanguage, 'preferredLang:', preferredLang);
+  }, [currentLanguage, preferredLang]);
 
   // keep stable ref to avoid effect re-run loops if actions identity changes
   const actionsRef = useRef(actions);
@@ -130,6 +161,19 @@ export default function Step02_PlantTraits() {
   const [profile, setProfile] = useState<PlantProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string, values?: any): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = values ? t(key, values) : t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
 
   // helper: persist profile in wizard memory if supported
   const persistProfile = (p: PlantProfile) => {
@@ -207,7 +251,7 @@ export default function Step02_PlantTraits() {
         setProfile(null);
       } catch (e: any) {
         if (!alive) return;
-        setError(e?.message ?? t("createPlant.step02.errorProfile"));
+        setError(e?.message ?? getTranslation("createPlant.step02.errorProfile", "Failed to load plant profile"));
       } finally {
         if (alive) setLoading(false);
       }
@@ -217,12 +261,12 @@ export default function Step02_PlantTraits() {
     return () => {
       alive = false;
     };
-  }, [selectedId, selectedName, selected?.latin, preferredLang, t]);
+  }, [selectedId, selectedName, selected?.latin, preferredLang, getTranslation]);
 
   // label resolver: i18n -> constants fallback -> prettified key
   const getLabelForKey = (key: string) => {
     const i18nKey = `createPlant.step02.traits.${key}`;
-    const localized = t(i18nKey);
+    const localized = getTranslation(i18nKey);
     if (localized && localized !== i18nKey) return localized;
 
     const constant = (TRAIT_LABEL_BY_KEY as any)[key];
@@ -283,7 +327,7 @@ export default function Step02_PlantTraits() {
       if (v.length) {
         out.push({
           key: "recommended_pot_materials",
-          label: t("createPlant.step02.labels.potMaterials"),
+          label: getTranslation("createPlant.step02.labels.potMaterials", "Recommended Pot Materials"),
           icon: "cup-outline",
           value: v.join(", "),
         });
@@ -296,7 +340,7 @@ export default function Step02_PlantTraits() {
       if (v.length) {
         out.push({
           key: "recommended_soil_mixes",
-          label: t("createPlant.step02.labels.soilMixes"),
+          label: getTranslation("createPlant.step02.labels.soilMixes", "Recommended Soil Mixes"),
           icon: "shovel",
           value: v.join(", "),
         });
@@ -307,41 +351,41 @@ export default function Step02_PlantTraits() {
     if (p?.water_required && p?.water_interval_days != null) {
       out.push({
         key: "water_interval_days",
-        label: t("createPlant.step02.labels.wateringInterval"),
+        label: getTranslation("createPlant.step02.labels.wateringInterval", "Watering"),
         icon: "watering-can",
-        value: t("createPlant.step02.values.everyDays", { count: p.water_interval_days }),
+        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", { count: p.water_interval_days }),
       });
     }
 
     if (p?.moisture_required && p?.moisture_interval_days != null) {
       out.push({
         key: "moisture_interval_days",
-        label: t("createPlant.step02.labels.moistureInterval"),
+        label: getTranslation("createPlant.step02.labels.moistureInterval", "Moisture Check"),
         icon: "water-percent",
-        value: t("createPlant.step02.values.everyDays", { count: p.moisture_interval_days }),
+        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", { count: p.moisture_interval_days }),
       });
     }
 
     if (p?.fertilize_required && p?.fertilize_interval_days != null) {
       out.push({
         key: "fertilize_interval_days",
-        label: t("createPlant.step02.labels.fertilizeInterval"),
+        label: getTranslation("createPlant.step02.labels.fertilizeInterval", "Fertilizing"),
         icon: "sprout",
-        value: t("createPlant.step02.values.everyDays", { count: p.fertilize_interval_days }),
+        value: getTranslation("createPlant.step02.values.everyDays", "Every {{count}} days", { count: p.fertilize_interval_days }),
       });
     }
 
     if (p?.repot_required && p?.repot_interval_months != null) {
       out.push({
         key: "repot_interval_months",
-        label: t("createPlant.step02.labels.repotInterval"),
+        label: getTranslation("createPlant.step02.labels.repotInterval", "Repotting"),
         icon: "flower-pot",
-        value: t("createPlant.step02.values.everyMonths", { count: p.repot_interval_months }),
+        value: getTranslation("createPlant.step02.values.everyMonths", "Every {{count}} months", { count: p.repot_interval_months }),
       });
     }
 
     return out;
-  }, [profile, preferredLang, t]);
+  }, [profile, preferredLang, getTranslation]);
 
   return (
     <View style={wiz.cardWrap}>
@@ -361,7 +405,7 @@ export default function Step02_PlantTraits() {
 
       <View style={wiz.cardInner}>
         <Text style={[wiz.title, { marginBottom: 6 }]}>
-          {selectedName ? `${selectedName}` : t("createPlant.step02.title")}
+          {selectedName ? `${selectedName}` : getTranslation("createPlant.step02.title", "Plant Traits")}
         </Text>
 
         {loading && !profile ? (
@@ -380,7 +424,11 @@ export default function Step02_PlantTraits() {
 
         {!!profile && (
           <>
-            <Text style={wiz.sectionTitle}>{t("createPlant.step02.preferences")}</Text>
+            {/* Use TranslatedText component for section title */}
+            <TranslatedText 
+              tKey="createPlant.step02.preferences" 
+              style={wiz.sectionTitle}
+            />
             <View style={wiz.prefsGrid}>
               {preferences.map((row) => (
                 <View key={row.key} style={wiz.prefRow}>
