@@ -16,7 +16,7 @@ import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
@@ -89,13 +89,12 @@ const TranslatedText = ({
   try {
     const text = t(tKey);
 
-    // ✅ Treat "key echo" as missing translation
+    // Treat "key echo" as missing translation
     const isMissing = !text || text === tKey;
     const fallbackText = tKey.split(".").pop() || tKey;
 
     return <Text style={style}>{isMissing ? fallbackText : text}</Text>;
-  } catch (error) {
-    // Fallback to key if translation fails
+  } catch {
     const fallbackText = tKey.split(".").pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
@@ -108,7 +107,7 @@ export default function PlantScannerModal({
 }: Props) {
   const { settings } = useSettings();
   const { t } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { currentLanguage } = useLanguage();
   const insets = useSafeAreaInsets();
 
   const [photoUri, setPhotoUri] = useState<string | null>(null);
@@ -127,16 +126,11 @@ export default function PlantScannerModal({
     [candidates]
   );
 
-  // Safe translation function that uses both hooks
+  // Safe translation function that treats key-echo as missing
   const getTranslation = useCallback(
     (key: string, fallback?: string): string => {
       try {
-        // Force dependency on currentLanguage to ensure updates
-        const lang = currentLanguage;
-
         const translation = t(key);
-
-        // ✅ i18next returns the key itself when missing -> treat as missing
         const isMissing = !translation || translation === key;
 
         return (
@@ -145,8 +139,8 @@ export default function PlantScannerModal({
           key.split(".").pop() ||
           key
         );
-      } catch (error) {
-        console.warn("Translation error for key:", key, error);
+      } catch (err) {
+        console.warn("Translation error for key:", key, err);
         return fallback || key.split(".").pop() || key;
       }
     },
@@ -186,10 +180,13 @@ export default function PlantScannerModal({
       const ok = await ensureAndroidPermissionCameraAndRead();
       if (!ok) {
         Alert.alert(
-          getTranslation("createPlant.scannerModal.cameraRequired", "Camera Required"),
+          getTranslation(
+            "createPlant.scannerModal.cameraRequired",
+            "Permission required"
+          ),
           getTranslation(
             "createPlant.scannerModal.cameraPermissionMessage",
-            "Camera and storage permissions are required to take photos."
+            "Please grant camera and media permissions to take a photo."
           )
         );
         return;
@@ -204,7 +201,7 @@ export default function PlantScannerModal({
       if (res.didCancel) return;
       if (res.errorCode) {
         Alert.alert(
-          getTranslation("createPlant.scannerModal.cameraError", "Camera Error"),
+          getTranslation("createPlant.scannerModal.cameraError", "Camera error"),
           String(res.errorMessage)
         );
         return;
@@ -214,7 +211,10 @@ export default function PlantScannerModal({
       if (uri) setPhotoUri(uri);
     } catch {
       setError(
-        getTranslation("createPlant.scannerModal.cameraFailure", "Failed to access camera")
+        getTranslation(
+          "createPlant.scannerModal.cameraFailure",
+          "Failed to open camera."
+        )
       );
     } finally {
       setIsPicking(false);
@@ -232,11 +232,11 @@ export default function PlantScannerModal({
         Alert.alert(
           getTranslation(
             "createPlant.scannerModal.libraryRequired",
-            "Gallery Access Required"
+            "Permission required"
           ),
           getTranslation(
             "createPlant.scannerModal.libraryPermissionMessage",
-            "Storage permission is required to access photos."
+            "Please grant media permissions to pick a photo."
           )
         );
         return;
@@ -252,7 +252,7 @@ export default function PlantScannerModal({
       if (res.didCancel) return;
       if (res.errorCode) {
         Alert.alert(
-          getTranslation("createPlant.scannerModal.libraryError", "Gallery Error"),
+          getTranslation("createPlant.scannerModal.libraryError", "Picker error"),
           String(res.errorMessage)
         );
         return;
@@ -262,7 +262,10 @@ export default function PlantScannerModal({
       if (uri) setPhotoUri(uri);
     } catch {
       setError(
-        getTranslation("createPlant.scannerModal.libraryFailure", "Failed to access gallery")
+        getTranslation(
+          "createPlant.scannerModal.libraryFailure",
+          "Failed to open gallery."
+        )
       );
     } finally {
       setIsPicking(false);
@@ -284,7 +287,7 @@ export default function PlantScannerModal({
         setError(
           getTranslation(
             "createPlant.scannerModal.noResults",
-            "No plants recognized. Try a clearer photo."
+            "No results returned. Try a clearer photo."
           )
         );
         return;
@@ -298,16 +301,13 @@ export default function PlantScannerModal({
           (e?.response?.data?.detail as string) ??
           getTranslation(
             "createPlant.scannerModal.recognitionFailure",
-            "Recognition failed. Please try again."
+            "Failed to recognize the plant."
           )
       );
     } finally {
       setIsRecognizing(false);
     }
   };
-
-  // Don't render anything if not visible
-  if (!visible) return null;
 
   return (
     <>
@@ -347,16 +347,19 @@ export default function PlantScannerModal({
             keyboardShouldPersistTaps="handled"
             contentContainerStyle={styles.scrollContent}
           >
-            {/* Title - UPDATED with scannerModal keys */}
+            {/* Title */}
             <Text style={[remindersStyles.promptTitle, { paddingHorizontal: 0 }]}>
               {stage === "photo"
                 ? getTranslation("createPlant.scannerModal.title", "Scan Plant")
-                : getTranslation("createPlant.scannerModal.selectPlant", "Select Plant")}
+                : getTranslation(
+                    "createPlant.scannerModal.selectPlant",
+                    "Select the detected plant"
+                  )}
             </Text>
 
             {stage === "photo" ? (
               <>
-                {/* Subtitle - UPDATED with scannerModal key */}
+                {/* Subtitle */}
                 <TranslatedText
                   tKey="createPlant.scannerModal.scanInstructions"
                   style={wiz.subtitle}
@@ -372,9 +375,16 @@ export default function PlantScannerModal({
                     />
                   ) : (
                     <View style={styles.previewPlaceholder}>
-                      <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
+                      <MaterialCommunityIcons
+                        name="image-plus"
+                        size={28}
+                        color="#FFFFFF"
+                      />
                       <Text style={styles.previewText}>
-                        {getTranslation("createPlant.scannerModal.noPhoto", "No photo selected")}
+                        {getTranslation(
+                          "createPlant.scannerModal.noPhoto",
+                          "No photo selected"
+                        )}
                       </Text>
                     </View>
                   )}
@@ -389,7 +399,7 @@ export default function PlantScannerModal({
                   >
                     <MaterialCommunityIcons name="camera" size={24} color="#FFFFFF" />
                     <Text style={styles.actionLabel}>
-                      {getTranslation("createPlant.scannerModal.takePhoto", "Take Photo")}
+                      {getTranslation("createPlant.scannerModal.takePhoto", "Take a photo")}
                     </Text>
                   </Pressable>
 
@@ -398,9 +408,13 @@ export default function PlantScannerModal({
                     style={[styles.actionCard, busy && { opacity: 0.6 }]}
                     onPress={doLaunchLibrary}
                   >
-                    <MaterialCommunityIcons name="image-multiple" size={24} color="#FFFFFF" />
+                    <MaterialCommunityIcons
+                      name="image-multiple"
+                      size={24}
+                      color="#FFFFFF"
+                    />
                     <Text style={styles.actionLabel}>
-                      {getTranslation("createPlant.scannerModal.fromGallery", "From Gallery")}
+                      {getTranslation("createPlant.scannerModal.fromGallery", "From gallery")}
                     </Text>
                   </Pressable>
                 </View>
@@ -430,7 +444,7 @@ export default function PlantScannerModal({
                         style={{ opacity: !photoUri ? 0.55 : 1 }}
                       />
                       <Text style={[wiz.actionText, { opacity: !photoUri ? 0.55 : 1 }]}>
-                        {getTranslation("createPlant.scannerModal.recognize", "Recognize Plant")}
+                        {getTranslation("createPlant.scannerModal.recognize", "Recognize plant")}
                       </Text>
                     </>
                   )}
@@ -442,7 +456,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Close button */}
+                {/* Close button (✅ no common) */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -451,14 +465,14 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.common.close", "Close")}
+                      {getTranslation("createPlant.scannerModal.close", "Close")}
                     </Text>
                   </Pressable>
                 </View>
               </>
             ) : (
               <>
-                {/* Results view subtitle - UPDATED with scannerModal key */}
+                {/* Results view subtitle */}
                 <TranslatedText
                   tKey="createPlant.scannerModal.selectPlant"
                   style={wiz.subtitle}
@@ -475,9 +489,16 @@ export default function PlantScannerModal({
                       />
                     ) : (
                       <View style={styles.previewPlaceholder}>
-                        <MaterialCommunityIcons name="image-plus" size={22} color="#FFFFFF" />
+                        <MaterialCommunityIcons
+                          name="image-plus"
+                          size={22}
+                          color="#FFFFFF"
+                        />
                         <Text style={styles.previewText}>
-                          {getTranslation("createPlant.scannerModal.noPhoto", "No photo selected")}
+                          {getTranslation(
+                            "createPlant.scannerModal.noPhoto",
+                            "No photo selected"
+                          )}
                         </Text>
                       </View>
                     )}
@@ -529,7 +550,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Bottom buttons: Back + Close */}
+                {/* Bottom buttons: Back + Close (✅ no common) */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -540,7 +561,7 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.common.back", "Back")}
+                      {getTranslation("createPlant.scannerModal.back", "Back")}
                     </Text>
                   </Pressable>
 
@@ -551,7 +572,7 @@ export default function PlantScannerModal({
                     }}
                   >
                     <Text style={styles.bottomBtnText}>
-                      {getTranslation("createPlant.common.close", "Close")}
+                      {getTranslation("createPlant.scannerModal.close", "Close")}
                     </Text>
                   </Pressable>
                 </View>

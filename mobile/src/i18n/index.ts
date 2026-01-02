@@ -2,14 +2,17 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-// Static imports so Metro can bundle them
+// Base bundles
 import enCreatePlant from "./locales/en/createPlant.json";
 import plCreatePlant from "./locales/pl/createPlant.json";
 
-// ✅ ADD: Step-specific files (Step01)
+// Step bundles
 import enCreatePlantStep01 from "./locales/en/createPlantStep01.json";
 import plCreatePlantStep01 from "./locales/pl/createPlantStep01.json";
+import enCreatePlantStep02 from "./locales/en/createPlantStep02.json";
+import plCreatePlantStep02 from "./locales/pl/createPlantStep02.json";
 
+// Other feature bundles
 import enLogin from "./locales/en/login.json";
 import plLogin from "./locales/pl/login.json";
 import enRegister from "./locales/en/register.json";
@@ -25,10 +28,7 @@ import plNavigation from "./locales/pl/navigation.json";
 import enResetPassword from "./locales/en/resetPassword.json";
 import plResetPassword from "./locales/pl/resetPassword.json";
 
-// IMPORTANT:
-// Only import languages that actually have files,
-// OR create empty JSON files for the rest.
-// (If you haven't created these files yet, comment these imports out.)
+// Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
 import itCreatePlant from "./locales/it/createPlant.json";
 import frCreatePlant from "./locales/fr/createPlant.json";
@@ -55,44 +55,57 @@ export const LANGS = [
   "ko",
 ] as const;
 
+type AnyObj = Record<string, any>;
+
+function stripCreatePlant(obj: AnyObj): AnyObj {
+  if (!obj || typeof obj !== "object") return {};
+  const { createPlant, ...rest } = obj;
+  return rest;
+}
+
+function mergeCreatePlant(...objs: AnyObj[]): AnyObj {
+  return {
+    createPlant: objs.reduce((acc, o) => {
+      const cp = o?.createPlant;
+      if (cp && typeof cp === "object") return { ...acc, ...cp };
+      return acc;
+    }, {} as AnyObj),
+  };
+}
+
+function buildTranslation(base: AnyObj, step01: AnyObj, step02: AnyObj, others: AnyObj[]): AnyObj {
+  return {
+    // keep other top-level keys from each bundle
+    ...stripCreatePlant(base),
+    ...stripCreatePlant(step01),
+    ...stripCreatePlant(step02),
+
+    // ✅ deep-merge the createPlant subtree so step01 and step02 don't overwrite each other
+    ...mergeCreatePlant(base, step01, step02),
+
+    // other feature bundles
+    ...Object.assign({}, ...others),
+  };
+}
+
 const resources = {
   en: {
-    translation: {
-      // Base createPlant (common etc.)
-      ...enCreatePlant,
-
-      // ✅ ADD: Step01 strings
-      ...enCreatePlantStep01,
-
-      // Other feature bundles
-      ...enLogin,
-      ...enRegister,
-      ...enResendActivation,
-      ...enConfirmEmail,
-      ...enForgotPassword,
-      ...enNavigation,
-      ...enResetPassword,
-    },
+    translation: buildTranslation(
+      enCreatePlant as AnyObj,
+      enCreatePlantStep01 as AnyObj,
+      enCreatePlantStep02 as AnyObj,
+      [enLogin, enRegister, enResendActivation, enConfirmEmail, enForgotPassword, enNavigation, enResetPassword] as AnyObj[]
+    ),
   },
   pl: {
-    translation: {
-      ...plCreatePlant,
-
-      // ✅ ADD: Step01 strings
-      ...plCreatePlantStep01,
-
-      ...plLogin,
-      ...plRegister,
-      ...plResendActivation,
-      ...plConfirmEmail,
-      ...plForgotPassword,
-      ...plNavigation,
-      ...plResetPassword,
-    },
+    translation: buildTranslation(
+      plCreatePlant as AnyObj,
+      plCreatePlantStep01 as AnyObj,
+      plCreatePlantStep02 as AnyObj,
+      [plLogin, plRegister, plResendActivation, plConfirmEmail, plForgotPassword, plNavigation, plResetPassword] as AnyObj[]
+    ),
   },
 
-  // NOTE: these remain as-is; if you later create step-specific files for them,
-  // you must import + merge them the same way as en/pl.
   de: { translation: deCreatePlant },
   it: { translation: itCreatePlant },
   fr: { translation: frCreatePlant },
@@ -108,21 +121,13 @@ const resources = {
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
     resources: resources as any,
-
     lng: "en",
     fallbackLng: "en",
-
-    // default namespace used by t("...") calls
     defaultNS: "translation",
     ns: ["translation"],
-
     compatibilityJSON: "v3",
-    interpolation: {
-      escapeValue: false,
-    },
-    react: {
-      useSuspense: false,
-    },
+    interpolation: { escapeValue: false },
+    react: { useSuspense: false },
   });
 }
 
