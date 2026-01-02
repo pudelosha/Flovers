@@ -1,0 +1,136 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Container & soil",
+      "subtitle": "These details are optional. Choose the pot/container material and soil or potting mix — or leave them as “Not specified” and continue.",
+      "containerMaterial": "Container material",
+      "soilMix": "Soil / potting mix",
+      "notSpecified": "Not specified",
+      "notSpecifiedDesc": "Skip this if you’re not sure.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plastic",
+          "description": "Lightweight, retains moisture longer; inexpensive and versatile."
+        },
+        "ceramic": {
+          "label": "Ceramic (glazed)",
+          "description": "Heavier; retains moisture; decorative glazed finish."
+        },
+        "terracotta": {
+          "label": "Terracotta",
+          "description": "Porous clay; wicks moisture; great for succulents/cacti."
+        },
+        "clay": {
+          "label": "Clay (unglazed)",
+          "description": "Similar to terracotta; breathable, faster drying."
+        },
+        "cement": {
+          "label": "Cement",
+          "description": "Very heavy; modern look; retains moisture quite well."
+        },
+        "concrete": {
+          "label": "Concrete",
+          "description": "Durable and heavy; stable outdoors; retains moisture."
+        },
+        "metal": {
+          "label": "Metal (generic)",
+          "description": "Can heat quickly in sun; usually needs inner liner/pot."
+        },
+        "stainless": {
+          "label": "Stainless steel",
+          "description": "Modern look; corrosion-resistant; may heat up in sun."
+        },
+        "aluminum": {
+          "label": "Aluminum",
+          "description": "Light, conductive; watch for overheating in bright sun."
+        },
+        "iron": {
+          "label": "Iron / steel",
+          "description": "Very durable; can rust; may require liners."
+        },
+        "copper": {
+          "label": "Copper / brass",
+          "description": "Decorative; may react with soil; typically as a cachepot."
+        },
+        "wood": {
+          "label": "Wood",
+          "description": "Natural look; may need liner; can rot if constantly wet."
+        },
+        "bamboo": {
+          "label": "Bamboo",
+          "description": "Light, sustainable; usually lined; indoor use preferred."
+        },
+        "rattan": {
+          "label": "Rattan / wicker",
+          "description": "Decorative cachepots; use a plastic nursery pot inside."
+        },
+        "glass": {
+          "label": "Glass",
+          "description": "Great for terrariums; no drainage; watch moisture."
+        },
+        "stone": {
+          "label": "Stone / marble",
+          "description": "Very heavy and stable; retains cool temperature."
+        },
+        "resin": {
+          "label": "Resin",
+          "description": "Lightweight, durable; good outdoor choice; insulates roots."
+        },
+        "fiberglass": {
+          "label": "Fiberglass",
+          "description": "Light, strong; outdoor friendly; good insulation."
+        },
+        "biodegradable": {
+          "label": "Biodegradable",
+          "description": "Coconut coir, peat, etc.; starter pots; decompose over time."
+        },
+        "fabric": {
+          "label": "Fabric planter",
+          "description": "Air-prunes roots; fast drying; good for vegetables."
+        },
+        "grow-bag": {
+          "label": "Grow bag",
+          "description": "Fabric bag; portable; drains fast; needs frequent watering."
+        },
+        "self-watering": {
+          "label": "Self-watering",
+          "description": "Reservoir with wicking; evens out watering schedule."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "All-purpose potting mix",
+          "description": "A good default for most houseplants."
+        },
+        "cactus-succulent": {
+          "label": "Cactus / succulent mix",
+          "description": "Fast-draining; ideal for succulents and cacti."
+        },
+        "orchid": {
+          "label": "Orchid mix",
+          "description": "Chunky bark-based mix for air flow around roots."
+        },
+        "aroid": {
+          "label": "Aroid mix",
+          "description": "Very airy mix (bark/perlite) for aroids like Monstera/Philodendron."
+        },
+        "seed-starting": {
+          "label": "Seed-starting mix",
+          "description": "Fine texture; good for propagation and seedlings."
+        },
+        "bonsai": {
+          "label": "Bonsai mix",
+          "description": "Gritty, well-draining mix that resists compaction."
+        },
+        "herbs-vegetables": {
+          "label": "Herbs & vegetables mix",
+          "description": "Nutrient-rich mix suitable for edibles."
+        },
+        "peat-free": {
+          "label": "Peat-free mix",
+          "description": "More sustainable option; composition varies by brand."
+        }
+      }
+    }
+  }
+}

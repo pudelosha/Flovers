@@ -164,33 +164,57 @@ export type PotMaterialKey =
 
 type PotMaterialOption = Readonly<{
   key: PotMaterialKey;
-  label: string;
-  description: string;
+  // optional legacy fields (safe if something else still reads them)
+  label?: string;
+  description?: string;
 }>;
 
+// Keep keys stable; labels/descriptions come from i18n now.
 export const POT_MATERIALS: readonly PotMaterialOption[] = [
-  { key: "plastic", label: "Plastic", description: "Lightweight, retains moisture longer; inexpensive and versatile." },
-  { key: "ceramic", label: "Ceramic (glazed)", description: "Heavier; retains moisture; decorative glazed finish." },
-  { key: "terracotta", label: "Terracotta", description: "Porous clay; wicks moisture; great for succulents/cacti." },
-  { key: "clay", label: "Clay (unglazed)", description: "Similar to terracotta; breathable, faster drying." },
-  { key: "cement", label: "Cement", description: "Very heavy; modern look; retains moisture quite well." },
-  { key: "concrete", label: "Concrete", description: "Durable and heavy; stable outdoors; retains moisture." },
-  { key: "metal", label: "Metal (generic)", description: "Can heat quickly in sun; usually needs inner liner/pot." },
-  { key: "stainless", label: "Stainless steel", description: "Modern look; corrosion-resistant; may heat up in sun." },
-  { key: "aluminum", label: "Aluminum", description: "Light, conductive; watch for overheating in bright sun." },
-  { key: "iron", label: "Iron / steel", description: "Very durable; can rust; may require liners." },
-  { key: "copper", label: "Copper / brass", description: "Decorative; may react with soil; typically as cachepot." },
-  { key: "wood", label: "Wood", description: "Natural look; may need liner; can rot if constantly wet." },
-  { key: "bamboo", label: "Bamboo", description: "Light, sustainable; usually lined; indoor use preferred." },
-  { key: "rattan", label: "Rattan / wicker", description: "Decorative cachepots; use a plastic nursery pot inside." },
-  { key: "glass", label: "Glass", description: "Great for terrariums; no drainage; watch moisture." },
-  { key: "stone", label: "Stone / marble", description: "Very heavy and stable; retains cool temperature." },
-  { key: "resin", label: "Resin", description: "Lightweight, durable; good outdoor choice; insulates roots." },
-  { key: "fiberglass", label: "Fiberglass", description: "Light, strong; outdoor friendly; good insulation." },
-  { key: "biodegradable", label: "Biodegradable", description: "Coconut coir, peat, etc.; starter pots; decompose over time." },
-  { key: "fabric", label: "Fabric planter", description: "Air-prunes roots; fast drying; good for vegetables." },
-  { key: "grow-bag", label: "Grow bag", description: "Fabric bag; portable; drains fast; needs frequent watering." },
-  { key: "self-watering", label: "Self-watering", description: "Reservoir with wicking; evens out watering schedule." },
+  { key: "plastic" },
+  { key: "ceramic" },
+  { key: "terracotta" },
+  { key: "clay" },
+  { key: "cement" },
+  { key: "concrete" },
+  { key: "metal" },
+  { key: "stainless" },
+  { key: "aluminum" },
+  { key: "iron" },
+  { key: "copper" },
+  { key: "wood" },
+  { key: "bamboo" },
+  { key: "rattan" },
+  { key: "glass" },
+  { key: "stone" },
+  { key: "resin" },
+  { key: "fiberglass" },
+  { key: "biodegradable" },
+  { key: "fabric" },
+  { key: "grow-bag" },
+  { key: "self-watering" },
+] as const;
+
+// Soil: keep it permissive so backend can send new keys without TS breaking.
+export type SoilMixKey = string;
+
+type SoilMixOption = Readonly<{
+  key: SoilMixKey;
+  // optional legacy fields
+  label?: string;
+  description?: string;
+}>;
+
+// Keys you translate in createPlantStep05.json
+export const SOIL_MIXES: readonly SoilMixOption[] = [
+  { key: "all-purpose" },
+  { key: "cactus-succulent" },
+  { key: "orchid" },
+  { key: "aroid" },
+  { key: "seed-starting" },
+  { key: "bonsai" },
+  { key: "herbs-vegetables" },
+  { key: "peat-free" },
 ] as const;
 
 /** 🔵 Step 6 – Auto tasks dropdown options */

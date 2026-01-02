@@ -1,8 +1,10 @@
 ﻿// steps/Step05_ContainerAndSoil.tsx
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -14,9 +16,28 @@ import {
 } from "../constants/create-plant.constants";
 
 export default function Step05_ContainerAndSoil() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { state, actions } = useCreatePlantWizard();
 
   const [openWhich, setOpenWhich] = useState<"material" | "soil" | null>(null);
+
+  // Safe translation (treat key-echo as missing)
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        // force rerender dependency
+        const _lang = currentLanguage;
+        const txt = t(key);
+        const isMissing = !txt || txt === key;
+        return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+      } catch {
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
   /**
    * Auto-prefill from plant definition
@@ -45,16 +66,26 @@ export default function Step05_ContainerAndSoil() {
   }, [state, actions]);
 
   const materialLabel = useMemo(() => {
-    if (!state.potMaterial) return "Not specified";
+    if (!state.potMaterial) return getTranslation("createPlant.step05.notSpecified", "Not specified");
     const f = POT_MATERIALS.find((p) => p.key === state.potMaterial);
-    return f?.label ?? "Not specified";
-  }, [state.potMaterial]);
+    if (!f) return getTranslation("createPlant.step05.notSpecified", "Not specified");
+
+    return getTranslation(
+      `createPlant.step05.potMaterials.${f.key}.label`,
+      (f as any).label || String(f.key)
+    );
+  }, [state.potMaterial, getTranslation]);
 
   const soilLabel = useMemo(() => {
-    if (!state.soilMix) return "Not specified";
+    if (!state.soilMix) return getTranslation("createPlant.step05.notSpecified", "Not specified");
     const f = SOIL_MIXES.find((s) => s.key === state.soilMix);
-    return f?.label ?? "Not specified";
-  }, [state.soilMix]);
+    if (!f) return getTranslation("createPlant.step05.notSpecified", "Not specified");
+
+    return getTranslation(
+      `createPlant.step05.soilMixes.${f.key}.label`,
+      (f as any).label || String(f.key)
+    );
+  }, [state.soilMix, getTranslation]);
 
   const toggleMenu = (which: "material" | "soil") =>
     setOpenWhich((curr) => (curr === which ? null : which));
@@ -77,14 +108,18 @@ export default function Step05_ContainerAndSoil() {
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>Container & soil</Text>
+        <Text style={wiz.title}>{getTranslation("createPlant.step05.title", "Container & soil")}</Text>
         <Text style={wiz.subtitle}>
-          These details are optional. Choose the pot/container material and soil or
-          potting mix — or leave them as “Not specified” and continue.
+          {getTranslation(
+            "createPlant.step05.subtitle",
+            "These details are optional. Choose the pot/container material and soil or potting mix — or leave them as “Not specified” and continue."
+          )}
         </Text>
 
         {/* Container material */}
-        <Text style={wiz.sectionTitle}>Container material</Text>
+        <Text style={wiz.sectionTitle}>
+          {getTranslation("createPlant.step05.containerMaterial", "Container material")}
+        </Text>
         <Pressable
           style={[wiz.selectField, { borderWidth: 0 }]}
           onPress={() => toggleMenu("material")}
@@ -115,9 +150,11 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                <Text style={wiz.dropdownItemText}>Not specified</Text>
+                <Text style={wiz.dropdownItemText}>
+                  {getTranslation("createPlant.step05.notSpecified", "Not specified")}
+                </Text>
                 <Text style={wiz.dropdownItemDesc}>
-                  Skip this if you’re not sure.
+                  {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
                 </Text>
               </Pressable>
 
@@ -130,12 +167,18 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  <Text style={wiz.dropdownItemText}>{opt.label}</Text>
-                  {!!opt.description && (
-                    <Text style={wiz.dropdownItemDesc}>
-                      {opt.description}
-                    </Text>
-                  )}
+                  <Text style={wiz.dropdownItemText}>
+                    {getTranslation(
+                      `createPlant.step05.potMaterials.${opt.key}.label`,
+                      (opt as any).label || String(opt.key)
+                    )}
+                  </Text>
+                  <Text style={wiz.dropdownItemDesc}>
+                    {getTranslation(
+                      `createPlant.step05.potMaterials.${opt.key}.description`,
+                      (opt as any).description || ""
+                    )}
+                  </Text>
                 </Pressable>
               ))}
             </ScrollView>
@@ -143,7 +186,9 @@ export default function Step05_ContainerAndSoil() {
         )}
 
         {/* Soil */}
-        <Text style={wiz.sectionTitle}>Soil / potting mix</Text>
+        <Text style={wiz.sectionTitle}>
+          {getTranslation("createPlant.step05.soilMix", "Soil / potting mix")}
+        </Text>
         <Pressable
           style={[wiz.selectField, { borderWidth: 0 }]}
           onPress={() => toggleMenu("soil")}
@@ -174,9 +219,11 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                <Text style={wiz.dropdownItemText}>Not specified</Text>
+                <Text style={wiz.dropdownItemText}>
+                  {getTranslation("createPlant.step05.notSpecified", "Not specified")}
+                </Text>
                 <Text style={wiz.dropdownItemDesc}>
-                  Skip this if you’re not sure.
+                  {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
                 </Text>
               </Pressable>
 
@@ -189,12 +236,18 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  <Text style={wiz.dropdownItemText}>{opt.label}</Text>
-                  {!!opt.description && (
-                    <Text style={wiz.dropdownItemDesc}>
-                      {opt.description}
-                    </Text>
-                  )}
+                  <Text style={wiz.dropdownItemText}>
+                    {getTranslation(
+                      `createPlant.step05.soilMixes.${opt.key}.label`,
+                      (opt as any).label || String(opt.key)
+                    )}
+                  </Text>
+                  <Text style={wiz.dropdownItemDesc}>
+                    {getTranslation(
+                      `createPlant.step05.soilMixes.${opt.key}.description`,
+                      (opt as any).description || ""
+                    )}
+                  </Text>
                 </Pressable>
               ))}
             </ScrollView>

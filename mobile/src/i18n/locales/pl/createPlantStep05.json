@@ -1,0 +1,136 @@
+{
+  "createPlant": {
+    "step05": {
+      "title": "Doniczka i podłoże",
+      "subtitle": "Te informacje są opcjonalne. Wybierz materiał doniczki/pojemnika oraz podłoże — albo zostaw „Nie określono” i przejdź dalej.",
+      "containerMaterial": "Materiał doniczki",
+      "soilMix": "Podłoże / mieszanka",
+      "notSpecified": "Nie określono",
+      "notSpecifiedDesc": "Pomiń, jeśli nie jesteś pewien.",
+      "potMaterials": {
+        "plastic": {
+          "label": "Plastik",
+          "description": "Lekki; dłużej trzyma wilgoć; tani i uniwersalny."
+        },
+        "ceramic": {
+          "label": "Ceramika (szkliwiona)",
+          "description": "Cięższa; dobrze trzyma wilgoć; dekoracyjne wykończenie."
+        },
+        "terracotta": {
+          "label": "Terakota",
+          "description": "Porowata; odprowadza wilgoć; świetna dla sukulentów i kaktusów."
+        },
+        "clay": {
+          "label": "Glina (nieszkliwiona)",
+          "description": "Podobna do terakoty; „oddycha”, szybciej przesycha."
+        },
+        "cement": {
+          "label": "Cement",
+          "description": "Bardzo ciężki; nowoczesny wygląd; dość dobrze trzyma wilgoć."
+        },
+        "concrete": {
+          "label": "Beton",
+          "description": "Trwały i ciężki; stabilny na zewnątrz; trzyma wilgoć."
+        },
+        "metal": {
+          "label": "Metal (ogólnie)",
+          "description": "Szybko się nagrzewa na słońcu; często potrzebna osłonka/wkład."
+        },
+        "stainless": {
+          "label": "Stal nierdzewna",
+          "description": "Nowoczesna; odporna na korozję; może się nagrzewać."
+        },
+        "aluminum": {
+          "label": "Aluminium",
+          "description": "Lekkie; przewodzi ciepło; uważaj na przegrzewanie w słońcu."
+        },
+        "iron": {
+          "label": "Żelazo / stal",
+          "description": "Bardzo trwałe; może rdzewieć; czasem wymaga wkładu."
+        },
+        "copper": {
+          "label": "Miedź / mosiądz",
+          "description": "Dekoracyjne; może reagować z podłożem; zwykle jako osłonka."
+        },
+        "wood": {
+          "label": "Drewno",
+          "description": "Naturalny wygląd; może wymagać wkładu; może gnić przy stałej wilgoci."
+        },
+        "bamboo": {
+          "label": "Bambus",
+          "description": "Lekki i zrównoważony; zwykle z wkładem; lepiej do wnętrz."
+        },
+        "rattan": {
+          "label": "Rattan / wiklina",
+          "description": "Dekoracyjne osłonki; w środku trzymaj doniczkę produkcyjną."
+        },
+        "glass": {
+          "label": "Szkło",
+          "description": "Dobre do terrariów; brak odpływu; kontroluj wilgoć."
+        },
+        "stone": {
+          "label": "Kamień / marmur",
+          "description": "Bardzo ciężkie i stabilne; dłużej utrzymuje chłód."
+        },
+        "resin": {
+          "label": "Żywica",
+          "description": "Lekka i trwała; dobra na zewnątrz; izoluje korzenie."
+        },
+        "fiberglass": {
+          "label": "Włókno szklane",
+          "description": "Lekkie i wytrzymałe; dobre na zewnątrz; izoluje."
+        },
+        "biodegradable": {
+          "label": "Biodegradowalne",
+          "description": "Np. włókno kokosowe/torf; doniczki startowe; z czasem się rozkładają."
+        },
+        "fabric": {
+          "label": "Donica materiałowa",
+          "description": "Napowietrza korzenie; szybko przesycha; dobra do warzyw."
+        },
+        "grow-bag": {
+          "label": "Worek uprawowy",
+          "description": "Materiałowy worek; przenośny; szybko odprowadza wodę; częstsze podlewanie."
+        },
+        "self-watering": {
+          "label": "Samopodlewanie",
+          "description": "Zbiornik z knotem; ułatwia utrzymanie regularnego podlewania."
+        }
+      },
+      "soilMixes": {
+        "all-purpose": {
+          "label": "Uniwersalne podłoże",
+          "description": "Dobra opcja startowa dla większości roślin domowych."
+        },
+        "cactus-succulent": {
+          "label": "Podłoże do kaktusów i sukulentów",
+          "description": "Bardzo przepuszczalne; idealne dla sukulentów i kaktusów."
+        },
+        "orchid": {
+          "label": "Podłoże do storczyków",
+          "description": "Grube, na bazie kory; zapewnia dużo powietrza przy korzeniach."
+        },
+        "aroid": {
+          "label": "Mieszanka dla aroidów",
+          "description": "Bardzo przewiewna (kora/perlit) dla Monstery/Filodendronów."
+        },
+        "seed-starting": {
+          "label": "Podłoże do wysiewu",
+          "description": "Drobne; dobre do ukorzeniania i siewek."
+        },
+        "bonsai": {
+          "label": "Podłoże do bonsai",
+          "description": "Gryzowe i przepuszczalne; mniej się zbija."
+        },
+        "herbs-vegetables": {
+          "label": "Podłoże do ziół i warzyw",
+          "description": "Bardziej zasobne; odpowiednie dla roślin jadalnych."
+        },
+        "peat-free": {
+          "label": "Podłoże bez torfu",
+          "description": "Bardziej zrównoważone; skład zależy od producenta."
+        }
+      }
+    }
+  }
+}
