@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Plant profile",
+      "preferences": "Preferences",
+      "errorProfile": "Failed to load plant profile.",
+      "labels": {
+        "sun": "Sun exposure",
+        "water": "Watering",
+        "difficulty": "Difficulty",
+        "potMaterials": "Pot materials",
+        "soilMixes": "Soil mixes",
+        "wateringInterval": "Watering",
+        "moistureInterval": "Moisture check",
+        "fertilizeInterval": "Fertilize",
+        "repotInterval": "Repot"
+      },
+      "values": {
+        "everyDays": "Every {{count}} days",
+        "everyMonths": "Every {{count}} months"
+      },
+      "traits": {
+        "sun": "Sun exposure",
+        "water": "Watering",
+        "difficulty": "Difficulty",
+        "soil": "Soil",
+        "temperature": "Temperature",
+        "humidity": "Humidity",
+        "toxic": "Toxic?",
+        "growth": "Growth",
+        "light": "Light",
+        "fertilizer": "Fertilizer",
+        "recognize": "Recognize plant"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "createPlant": {
+    "step03": {
+      "title": "Wybierz lokalizację",
+      "subtitle": "Opcjonalnie, ale pomocne: lokalizacje pozwalają na grupowanie roślin i późniejsze sortowanie lub filtrowanie.",
+      "errorLoadingLocations": "Nie udało się załadować lokalizacji.",
+      "createLocation": "Utwórz nową lokalizację",
+      "yourLocations": "Twoje lokalizacje",
+      "categories": {
+        "indoor": "Wewnętrzne",
+        "outdoor": "Zewnętrzne",
+        "other": "Inne"
+      },
+      "noLocations": {
+        "indoor": "Brak lokalizacji wewnętrznych.",
+        "outdoor": "Brak lokalizacji zewnętrznych.",
+        "other": "Brak innych lokalizacji."
+      },
+      "locationExists": "Lokalizacja o tej nazwie już istnieje.",
+      "errorCreatingLocation": "Nie udało się utworzyć lokalizacji",
+      "quickSuggestions": "Szybkie sugestie"
+    },
+    "locationModal": {
+      "title": "Nowa lokalizacja",
+      "locationName": "Nazwa lokalizacji",
+      "category": "Kategoria",
+      "indoor": "Wewnętrzna",
+      "outdoor": "Zewnętrzna",
+      "other": "Inna",
+      "create": "Utwórz",
+      "cancel": "Anuluj",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salon",
+          "kitchen": "Kuchnia",
+          "diningRoom": "Jadalnia",
+          "bedroom": "Sypialnia",
+          "bathroom": "Łazienka",
+          "hallway": "Korytarz",
+          "office": "Biuro",
+          "kidsRoom": "Pokój dziecięcy"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Taras",
+          "patio": "Patio",
+          "garden": "Ogród",
+          "frontYard": "Przedni ogród",
+          "backyard": "Tylni ogród",
+          "porch": "Weranda",
+          "greenhouse": "Szklarnia"
+        },
+        "other": {
+          "staircase": "Schody",
+          "garage": "Garaż",
+          "basement": "Piwnica",
+          "lobby": "Hol",
+          "sunroom": "Weranda",
+          "workshop": "Warsztat",
+          "studio": "Studio",
+          "attic": "Poddasze"
+        }
+      }
+    }
+  }
+}

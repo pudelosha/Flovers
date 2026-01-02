@@ -158,8 +158,8 @@ export default function PlantSearchBox({
   const labelLeft = 12 + 18 + 10;
   const suggestTop = 64;
 
-  // Determine placeholder text
-  const placeholderText = placeholder || getTranslation('createPlant.step01.searchPlaceholder', 'Search for a plant...');
+  // Determine placeholder text - UPDATED to match your JSON
+  const placeholderText = placeholder || getTranslation('createPlant.step01.searchPlaceholder', 'Search plant');
 
   return (
     <View style={{ marginTop: 0, marginBottom: 0 }}>

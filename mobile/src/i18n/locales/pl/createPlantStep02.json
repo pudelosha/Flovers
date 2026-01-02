@@ -1,0 +1,37 @@
+{
+  "createPlant": {
+    "step02": {
+      "title": "Profil rośliny",
+      "preferences": "Preferencje",
+      "errorProfile": "Nie udało się pobrać profilu rośliny.",
+      "labels": {
+        "sun": "Nasłonecznienie",
+        "water": "Podlewanie",
+        "difficulty": "Trudność",
+        "potMaterials": "Materiały doniczki",
+        "soilMixes": "Mieszanki ziemi",
+        "wateringInterval": "Podlewanie",
+        "moistureInterval": "Kontrola wilgotności",
+        "fertilizeInterval": "Nawożenie",
+        "repotInterval": "Przesadzanie"
+      },
+      "values": {
+        "everyDays": "Co {{count}} dni",
+        "everyMonths": "Co {{count}} miesięcy"
+      },
+      "traits": {
+        "sun": "Nasłonecznienie",
+        "water": "Podlewanie",
+        "difficulty": "Trudność",
+        "soil": "Ziemia",
+        "temperature": "Temperatura",
+        "humidity": "Wilgotność",
+        "toxic": "Toksyczna?",
+        "growth": "Wzrost",
+        "light": "Światło",
+        "fertilizer": "Nawożenie",
+        "recognize": "Rozpoznaj roślinę"
+      }
+    }
+  }
+}

@@ -3,11 +3,36 @@ import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { LocationCategory } from "../types/create-plant.types";
 import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
+
+// Create a wrapper component that ensures translations are ready
+const TranslatedText = ({ tKey, children, style, variant, values }: { 
+  tKey: string, 
+  children?: any, 
+  style?: any,
+  variant?: "title" | "subtitle" | "body",
+  values?: any
+}) => {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+  
+  // Use currentLanguage to force re-render when language changes
+  React.useMemo(() => {}, [currentLanguage]);
+  
+  try {
+    const text = values ? t(tKey, values) : t(tKey);
+    return <Text style={style}>{text}</Text>;
+  } catch (error) {
+    // Fallback to key if translation fails
+    const fallbackText = tKey.split('.').pop() || tKey;
+    return <Text style={style}>{fallbackText}</Text>;
+  }
+};
 
 export default function Step03_SelectLocation({
   onScrollTop,
@@ -18,7 +43,8 @@ export default function Step03_SelectLocation({
   onOpenAddLocation: () => void;
   onRegisterCreateHandler: (fn: (name: string, category: LocationCategory) => void) => void;
 }) {
-  const { t } = useTranslation(); // Use translation hook
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
   const { state, actions } = useCreatePlantWizard();
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -28,6 +54,24 @@ export default function Step03_SelectLocation({
   useEffect(() => {
     locationsRef.current = state.locations;
   }, [state.locations]);
+
+  // Safe translation function that uses both hooks
+  const getTranslation = useCallback((key: string, fallback?: string, values?: any): string => {
+    try {
+      // Force dependency on currentLanguage to ensure updates
+      const lang = currentLanguage;
+      const translation = values ? t(key, values) : t(key);
+      return translation || fallback || key.split('.').pop() || key;
+    } catch (error) {
+      console.warn('Translation error for key:', key, error);
+      return fallback || key.split('.').pop() || key;
+    }
+  }, [t, currentLanguage]);
+
+  // Debug: Log when component renders with current language
+  useEffect(() => {
+    console.log('Step03_SelectLocation rendering with language:', currentLanguage);
+  }, [currentLanguage]);
 
   // Ensure nothing is pre-selected when arriving at Step 3
   useEffect(() => {
@@ -58,7 +102,7 @@ export default function Step03_SelectLocation({
         // Guarantee NONE is selected on initial load
         actions.selectLocation("");
       } catch (e: any) {
-        setErrorMsg(e?.message ?? t('createPlant.step03.errorLoadingLocations')); // Use translation for error
+        setErrorMsg(e?.message ?? getTranslation('createPlant.step03.errorLoadingLocations', 'Failed to load locations'));
       } finally {
         mounted && setLoading(false);
       }
@@ -91,7 +135,7 @@ export default function Step03_SelectLocation({
 
       // local duplicate guard (case-insensitive)
       if (state.locations.some((l) => l.name.trim().toLowerCase() === norm)) {
-        setErrorMsg(t('createPlant.step03.locationExists')); // Use translation for duplicate error
+        setErrorMsg(getTranslation('createPlant.step03.locationExists', 'Location already exists'));
         return;
       }
 
@@ -120,10 +164,10 @@ export default function Step03_SelectLocation({
 
         onScrollTop?.();
       } catch (e: any) {
-        setErrorMsg(e?.message ?? t('createPlant.step03.errorCreatingLocation')); // Use translation for error
+        setErrorMsg(e?.message ?? getTranslation('createPlant.step03.errorCreatingLocation', 'Failed to create location'));
       }
     },
-    [actions, onScrollTop, state.locations, t] // Ensure translation hook is included in dependency
+    [actions, onScrollTop, state.locations, getTranslation]
   );
 
   // register create handler with parent (WizardBody)
@@ -152,10 +196,17 @@ export default function Step03_SelectLocation({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>{t('createPlant.step03.title')}</Text>
-        <Text style={wiz.smallMuted}>
-          {t('createPlant.step03.subtitle')}
-        </Text>
+        {/* Use TranslatedText component for title */}
+        <TranslatedText 
+          tKey="createPlant.step03.title" 
+          style={wiz.title} 
+        />
+        
+        {/* Use TranslatedText component for subtitle */}
+        <TranslatedText 
+          tKey="createPlant.step03.subtitle" 
+          style={wiz.smallMuted} 
+        />
 
         {errorMsg && (
           <Text style={{ color: "#ffdddd", fontWeight: "700", marginBottom: 6 }}>
@@ -180,12 +231,14 @@ export default function Step03_SelectLocation({
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="map-marker-plus-outline" size={18} color="#FFFFFF" />
-          <Text style={wiz.nextBtnText}>{t('createPlant.step03.createLocation')}</Text>
+          <Text style={wiz.nextBtnText}>
+            {getTranslation('createPlant.step03.createLocation', 'Create New Location')}
+          </Text>
         </Pressable>
 
         {/* User-defined locations */}
         <Text style={[wiz.sectionTitle, { marginBottom: 12, marginTop: 18 }]}>
-          {t('createPlant.step03.yourLocations')}
+          {getTranslation('createPlant.step03.yourLocations', 'Your Locations')}
         </Text>
 
         {(["indoor", "outdoor", "other"] as LocationCategory[]).map((cat) => {
@@ -195,7 +248,7 @@ export default function Step03_SelectLocation({
               {/* Category header */}
               <View style={{ marginBottom: 5 }}>
                 <Text style={[wiz.locationCat, { fontWeight: "800", fontStyle: "italic" }]}>
-                  {t(`createPlant.step03.categories.${cat}`)} {/* Use translation for categories */}
+                  {getTranslation(`createPlant.step03.categories.${cat}`, cat.charAt(0).toUpperCase() + cat.slice(1))}
                 </Text>
                 <View
                   style={{
@@ -208,7 +261,7 @@ export default function Step03_SelectLocation({
 
               {arr.length === 0 ? (
                 <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
-                  {loading ? t('createPlant.step03.loading') : t(`createPlant.step03.noLocations.${cat}`)} {/* Use translation for empty categories */}
+                  {loading ? getTranslation('createPlant.step03.loading', 'Loading...') : getTranslation(`createPlant.step03.noLocations.${cat}`, `No ${cat} locations`)}
                 </Text>
               ) : (
                 arr.map((l) => {

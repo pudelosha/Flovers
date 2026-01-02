@@ -1,140 +1,15 @@
 ﻿{
   "createPlant": {
-    "step01": {
-      "title": "Select a plant",
-      "subtitle": "You can search our full plant library, pick from the popular list, or scan a plant using your camera. You can also skip this step, but selecting a plant lets us automatically suggest care tasks like watering for you.",
-      "scanButton": "Scan Plant",
-      "searchPlaceholder": "Search plant",
-      "popularPlants": "Popular plants",
-      "errorSearch": "Failed to load plant list.",
-      "errorPopular": "Failed to load popular plants",
-      "scanInstructions": "Take a photo or choose one from your gallery. Please use a clear, good-quality image that shows the plant's leaf shape well, centered and not blocked by other plants or objects.",
-      "noPhoto": "No photo selected",
-      "takePhoto": "Take a photo",
-      "fromGallery": "From gallery",
-      "recognize": "Recognize plant",
-      "close": "Close",
-      "selectPlant": "Select the detected plant",
+    "common": {
+      "loading": "Loading...",
+      "error": "An error occurred",
       "back": "Back",
-      "cameraRequired": "Permission required",
-      "cameraPermissionMessage": "Please grant camera and media permissions to take a photo.",
-      "libraryRequired": "Permission required",
-      "libraryPermissionMessage": "Please grant media permissions to pick a photo.",
-      "cameraError": "Camera error",
-      "libraryError": "Picker error",
-      "cameraFailure": "Failed to open camera.",
-      "libraryFailure": "Failed to open gallery.",
-      "recognitionFailure": "Failed to recognize the plant.",
-      "noResults": "No results returned. Try a clearer photo."
-    },
-    "step02": {
-      "title": "Plant profile",
-      "preferences": "Preferences",
-      "loading": "Loading...",
-      "errorProfile": "Failed to load plant profile.",
-      "labels": {
-        "sun": "Sun exposure",
-        "water": "Watering",
-        "difficulty": "Difficulty",
-        "potMaterials": "Pot materials",
-        "soilMixes": "Soil mixes",
-        "wateringInterval": "Watering",
-        "moistureInterval": "Moisture check",
-        "fertilizeInterval": "Fertilize",
-        "repotInterval": "Repot"
-      },
-      "values": {
-        "everyDays": "Every {{count}} days",
-        "everyMonths": "Every {{count}} months"
-      },
-      "traits": {
-        "sun": "Sun exposure",
-        "water": "Watering",
-        "difficulty": "Difficulty",
-        "soil": "Soil",
-        "temperature": "Temperature",
-        "humidity": "Humidity",
-        "toxic": "Toxic?",
-        "growth": "Growth",
-        "light": "Light",
-        "fertilizer": "Fertilizer",
-        "recognize": "Recognize plant",
-        "back": "Back",
-        "close": "Close",
-        "noResults": "No recognition results returned. Try a clearer photo.",
-        "failedRecognition": "Failed to recognize the plant."
-      }
-    },
-    "step03": {
-      "title": "Choose a location",
-      "subtitle": "Optional but helpful: locations let you group plants and later sort or filter them.",
-      "errorLoadingLocations": "Failed to load locations.",
-      "createLocation": "Create new location",
-      "yourLocations": "Your locations",
-      "categories": {
-        "indoor": "Indoor",
-        "outdoor": "Outdoor",
-        "other": "Other"
-      },
-      "loading": "Loading...",
-      "noLocations": {
-        "indoor": "No indoor locations yet.",
-        "outdoor": "No outdoor locations yet.",
-        "other": "No other locations yet."
-      },
-      "locationExists": "Location with this name already exists.",
-      "errorCreatingLocation": "Could not create location",
-      "locationName": "Location name",
+      "close": "Close",
       "cancel": "Cancel",
-      "quickSuggestions": "Quick suggestions",
-      "predefinedLocations": {
-        "indoor": {
-          "livingRoom": "Living room",
-          "kitchen": "Kitchen",
-          "diningRoom": "Dining room",
-          "bedroom": "Bedroom",
-          "bathroom": "Bathroom",
-          "hallway": "Hallway",
-          "office": "Office",
-          "kidsRoom": "Kids room"
-        },
-        "outdoor": {
-          "balcony": "Balcony",
-          "terrace": "Terrace",
-          "patio": "Patio",
-          "garden": "Garden",
-          "frontYard": "Front yard",
-          "backyard": "Backyard",
-          "porch": "Porch",
-          "greenhouse": "Greenhouse"
-        },
-        "other": {
-          "staircase": "Staircase",
-          "garage": "Garage",
-          "basement": "Basement",
-          "lobby": "Lobby",
-          "sunroom": "Sunroom",
-          "workshop": "Workshop",
-          "studio": "Studio",
-          "attic": "Attic"
-        }
-      }
-    },
-    "step04": {
-      "title": "Exposure",
-      "subtitle": "Light exposure helps us tune watering schedules and care reminders. Tell us how much light this spot gets and the window direction.",
-      "lightLevel": "Light level",
-      "low": "Low",
-      "high": "High",
-      "windowDirection": "Window direction",
-      "measureLightDirection": "Measure light & direction",
-      "distanceFromWindow": "Distance from window",
-      "orientations": {
-        "S": "South",
-        "E": "East",
-        "W": "West",
-        "N": "North"
-      }
+      "save": "Save",
+      "next": "Next",
+      "previous": "Previous",
+      "skip": "Skip"
     }
   }
 }

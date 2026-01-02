@@ -1,140 +1,15 @@
 ﻿{
   "createPlant": {
-    "step01": {
-      "title": "Wybierz roślinę",
-      "subtitle": "Możesz przeszukać naszą pełną bibliotekę roślin, wybrać z popularnej listy lub zeskanować roślinę za pomocą kamery. Możesz również pominąć ten krok, ale wybór rośliny pozwoli nam automatycznie zasugerować zadania pielęgnacyjne, takie jak podlewanie.",
-      "scanButton": "Skanuj roślinę",
-      "searchPlaceholder": "Szukaj rośliny",
-      "popularPlants": "Popularne rośliny",
-      "errorSearch": "Nie udało się załadować listy roślin.",
-      "errorPopular": "Nie udało się załadować popularnych roślin.",
-      "scanInstructions": "Zrób zdjęcie lub wybierz jedno z galerii. Użyj wyraźnego, dobrej jakości zdjęcia, które dobrze pokazuje kształt liści rośliny, wyśrodkowane i niezablokowane przez inne rośliny lub przedmioty.",
-      "noPhoto": "Brak zdjęcia",
-      "takePhoto": "Zrób zdjęcie",
-      "fromGallery": "Z galerii",
-      "recognize": "Rozpoznaj roślinę",
-      "close": "Zamknij",
-      "selectPlant": "Wybierz wykrytą roślinę",
+    "common": {
+      "loading": "Ładowanie...",
+      "error": "Wystąpił błąd",
       "back": "Wstecz",
-      "cameraRequired": "Wymagana zgoda",
-      "cameraPermissionMessage": "Proszę przyznać uprawnienia do kamery i mediów, aby zrobić zdjęcie.",
-      "libraryRequired": "Wymagana zgoda",
-      "libraryPermissionMessage": "Proszę przyznać uprawnienia do mediów, aby wybrać zdjęcie.",
-      "cameraError": "Błąd kamery",
-      "libraryError": "Błąd wybierania",
-      "cameraFailure": "Nie udało się otworzyć kamery.",
-      "libraryFailure": "Nie udało się otworzyć galerii.",
-      "recognitionFailure": "Nie udało się rozpoznać rośliny.",
-      "noResults": "Brak wyników. Spróbuj zrobić wyraźniejsze zdjęcie."
-    },
-    "step02": {
-      "title": "Profil rośliny",
-      "preferences": "Preferencje",
-      "loading": "Ładowanie...",
-      "errorProfile": "Nie udało się pobrać profilu rośliny.",
-      "labels": {
-        "sun": "Nasłonecznienie",
-        "water": "Podlewanie",
-        "difficulty": "Trudność",
-        "potMaterials": "Materiały doniczki",
-        "soilMixes": "Mieszanki ziemi",
-        "wateringInterval": "Podlewanie",
-        "moistureInterval": "Kontrola wilgotności",
-        "fertilizeInterval": "Nawożenie",
-        "repotInterval": "Przesadzanie"
-      },
-      "values": {
-        "everyDays": "Co {{count}} dni",
-        "everyMonths": "Co {{count}} miesięcy"
-      },
-      "traits": {
-        "sun": "Nasłonecznienie",
-        "water": "Podlewanie",
-        "difficulty": "Trudność",
-        "soil": "Ziemia",
-        "temperature": "Temperatura",
-        "humidity": "Wilgotność",
-        "toxic": "Toksyczna?",
-        "growth": "Wzrost",
-        "light": "Światło",
-        "fertilizer": "Nawożenie",
-        "recognize": "Rozpoznaj roślinę",
-        "back": "Wstecz",
-        "close": "Zamknij",
-        "noResults": "Brak wyników rozpoznawania. Spróbuj zrobić wyraźniejsze zdjęcie.",
-        "failedRecognition": "Nie udało się rozpoznać rośliny."
-      }
-    },
-    "step03": {
-      "title": "Wybierz lokalizację",
-      "subtitle": "Opcjonalnie, ale pomocne: lokalizacje pozwalają na grupowanie roślin i późniejsze sortowanie lub filtrowanie.",
-      "errorLoadingLocations": "Nie udało się załadować lokalizacji.",
-      "createLocation": "Utwórz nową lokalizację",
-      "yourLocations": "Twoje lokalizacje",
-      "categories": {
-        "indoor": "Wewnętrzne",
-        "outdoor": "Zewnętrzne",
-        "other": "Inne"
-      },
-      "loading": "Ładowanie...",
-      "noLocations": {
-        "indoor": "Brak lokalizacji wewnętrznych.",
-        "outdoor": "Brak lokalizacji zewnętrznych.",
-        "other": "Brak innych lokalizacji."
-      },
-      "locationExists": "Lokalizacja o tej nazwie już istnieje.",
-      "errorCreatingLocation": "Nie udało się utworzyć lokalizacji",
-      "locationName": "Nazwa lokalizacji",
+      "close": "Zamknij",
       "cancel": "Anuluj",
-      "quickSuggestions": "Szybkie sugestie",
-      "predefinedLocations": {
-        "indoor": {
-          "livingRoom": "Salon",
-          "kitchen": "Kuchnia",
-          "diningRoom": "Jadalnia",
-          "bedroom": "Sypialnia",
-          "bathroom": "Łazienka",
-          "hallway": "Korytarz",
-          "office": "Biuro",
-          "kidsRoom": "Pokój dziecięcy"
-        },
-        "outdoor": {
-          "balcony": "Balkon",
-          "terrace": "Taras",
-          "patio": "Patio",
-          "garden": "Ogród",
-          "frontYard": "Przedni ogród",
-          "backyard": "Tylni ogród",
-          "porch": "Weranda",
-          "greenhouse": "Szklarnia"
-        },
-        "other": {
-          "staircase": "Schody",
-          "garage": "Garaż",
-          "basement": "Piwnica",
-          "lobby": "Hol",
-          "sunroom": "Weranda",
-          "workshop": "Warsztat",
-          "studio": "Studio",
-          "attic": "Poddasze"
-        }
-      }
-    },
-    "step04": {
-      "title": "Nasłonecznienie",
-      "subtitle": "Nasłonecznienie pomaga nam dostosować harmonogramy podlewania i przypomnienia o pielęgnacji. Powiedz nam, ile światła dociera do tego miejsca oraz w którą stronę jest okno.",
-      "lightLevel": "Poziom światła",
-      "low": "Niskie",
-      "high": "Wysokie",
-      "windowDirection": "Kierunek okna",
-      "measureLightDirection": "Zmierz światło i kierunek",
-      "distanceFromWindow": "Odległość od okna",
-      "orientations": {
-        "S": "Płd",
-        "E": "Wsch",
-        "W": "Zach",
-        "N": "Płn"
-      }
+      "save": "Zapisz",
+      "next": "Dalej",
+      "previous": "Wstecz",
+      "skip": "Pomiń"
     }
   }
 }

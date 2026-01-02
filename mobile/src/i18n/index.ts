@@ -1,9 +1,15 @@
-﻿import i18n from "i18next";
+﻿// C:\Projekty\Python\Flovers\mobile\src\i18n\index.ts
+import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Static imports so Metro can bundle them
 import enCreatePlant from "./locales/en/createPlant.json";
 import plCreatePlant from "./locales/pl/createPlant.json";
+
+// ✅ ADD: Step-specific files (Step01)
+import enCreatePlantStep01 from "./locales/en/createPlantStep01.json";
+import plCreatePlantStep01 from "./locales/pl/createPlantStep01.json";
+
 import enLogin from "./locales/en/login.json";
 import plLogin from "./locales/pl/login.json";
 import enRegister from "./locales/en/register.json";
@@ -50,30 +56,43 @@ export const LANGS = [
 ] as const;
 
 const resources = {
-  en: { 
+  en: {
     translation: {
+      // Base createPlant (common etc.)
       ...enCreatePlant,
+
+      // ✅ ADD: Step01 strings
+      ...enCreatePlantStep01,
+
+      // Other feature bundles
       ...enLogin,
       ...enRegister,
       ...enResendActivation,
       ...enConfirmEmail,
       ...enForgotPassword,
       ...enNavigation,
-      ...enResetPassword
-    } 
+      ...enResetPassword,
+    },
   },
-  pl: { 
+  pl: {
     translation: {
       ...plCreatePlant,
+
+      // ✅ ADD: Step01 strings
+      ...plCreatePlantStep01,
+
       ...plLogin,
       ...plRegister,
       ...plResendActivation,
       ...plConfirmEmail,
       ...plForgotPassword,
       ...plNavigation,
-      ...plResetPassword
-    } 
+      ...plResetPassword,
+    },
   },
+
+  // NOTE: these remain as-is; if you later create step-specific files for them,
+  // you must import + merge them the same way as en/pl.
   de: { translation: deCreatePlant },
   it: { translation: itCreatePlant },
   fr: { translation: frCreatePlant },

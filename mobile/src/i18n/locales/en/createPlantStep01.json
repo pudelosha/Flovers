@@ -1,0 +1,33 @@
+{
+  "createPlant": {
+    "step01": {
+      "title": "Select a plant",
+      "subtitle": "You can search our full plant library, pick from the popular list, or scan a plant using your camera. You can also skip this step, but selecting a plant lets us automatically suggest care tasks like watering for you.",
+      "scanButton": "Scan Plant",
+      "searchPlaceholder": "Search plant",
+      "popularPlants": "Popular plants",
+      "noPlantsAvailable": "No plants available",
+      "errorSearch": "Failed to load plant list.",
+      "errorPopular": "Failed to load popular plants"
+    },
+    "scannerModal": {
+      "title": "Scan Plant",
+      "selectPlant": "Select the detected plant",
+      "scanInstructions": "Take a photo or choose one from your gallery. Please use a clear, good-quality image that shows the plant's leaf shape well, centered and not blocked by other plants or objects.",
+      "noPhoto": "No photo selected",
+      "takePhoto": "Take a photo",
+      "fromGallery": "From gallery",
+      "recognize": "Recognize plant",
+      "cameraRequired": "Permission required",
+      "cameraPermissionMessage": "Please grant camera and media permissions to take a photo.",
+      "libraryRequired": "Permission required",
+      "libraryPermissionMessage": "Please grant media permissions to pick a photo.",
+      "cameraError": "Camera error",
+      "libraryError": "Picker error",
+      "cameraFailure": "Failed to open camera.",
+      "libraryFailure": "Failed to open gallery.",
+      "recognitionFailure": "Failed to recognize the plant.",
+      "noResults": "No results returned. Try a clearer photo."
+    }
+  }
+}

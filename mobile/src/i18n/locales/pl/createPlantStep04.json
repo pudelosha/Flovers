@@ -1,0 +1,20 @@
+{
+  "createPlant": {
+    "step04": {
+      "title": "Nasłonecznienie",
+      "subtitle": "Nasłonecznienie pomaga nam dostosować harmonogramy podlewania i przypomnienia o pielęgnacji. Powiedz nam, ile światła dociera do tego miejsca oraz w którą stronę jest okno.",
+      "lightLevel": "Poziom światła",
+      "low": "Niskie",
+      "high": "Wysokie",
+      "windowDirection": "Kierunek okna",
+      "measureLightDirection": "Zmierz światło i kierunek",
+      "distanceFromWindow": "Odległość od okna",
+      "orientations": {
+        "S": "Płd",
+        "E": "Wsch",
+        "W": "Zach",
+        "N": "Płn"
+      }
+    }
+  }
+}
