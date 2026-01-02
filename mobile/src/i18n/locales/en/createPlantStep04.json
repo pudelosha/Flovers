@@ -14,6 +14,33 @@
         "E": "East",
         "W": "West",
         "N": "North"
+      },
+      "modal": {
+        "title": "Measure light & direction",
+        "instructions": "Hold the phone horizontally (screen up), with the top edge pointing toward the window. Move/scan slowly near the window, then tap Measure to run a 5-second test.",
+        "ambientLive": "Ambient light (live)",
+        "headingLive": "Heading (live)",
+        "testLabel": "5-second measurement",
+        "running": "(running…)",
+        "last": "(last)",
+        "done": "done",
+        "bestLight": "Light (best in 5s):",
+        "meanDirection": "Direction (mean in 5s):",
+        "close": "Close",
+        "measure5s": "Measure (5s)",
+        "measuring": "Measuring…",
+        "apply": "Apply",
+        "tip": "Tip: On many phones the ambient light sensor sits near the earpiece at the top. Keep the phone flat and point the top edge toward the window to find the brightest reading.",
+        "notAvailable": "Not available",
+        "noSensor": "No sensor",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Bright direct",
+          "brightIndirect": "Bright indirect",
+          "medium": "Medium / dappled",
+          "low": "Low light",
+          "veryLow": "Very low"
+        }
       }
     }
   }

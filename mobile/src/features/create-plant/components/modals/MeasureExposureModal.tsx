@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\components\modals\MeasureExposureModal.tsx
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
@@ -12,11 +13,12 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { wiz } from "../../styles/wizard.styles";
 import type { LightLevel, Orientation } from "../../types/create-plant.types";
 import { Sensors } from "../../services/Sensors";
-// Reuse the modal shell from Reminders
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
 
 /** ---------- Light helpers ---------- */
@@ -28,38 +30,16 @@ function luxToLightLevel(lux: number | null): LightLevel | null {
   if (lux >= 200) return "low";
   return "very-low";
 }
-function lightLevelLabel(level: LightLevel | null): string {
-  switch (level) {
-    case "bright-direct":
-      return "Bright direct";
-    case "bright-indirect":
-      return "Bright indirect";
-    case "medium":
-      return "Medium / dappled";
-    case "low":
-      return "Low light";
-    case "very-low":
-      return "Very low";
-    default:
-      return "—";
-  }
-}
 
-/** ---------- Cardinal bucketing ----------
- * N: 315–360 or 0–45
- * E: 45–135
- * S: 135–225
- * W: 225–315
- */
+/** ---------- Cardinal bucketing ---------- */
 function headingToOrientation45(deg: number | null): Orientation | null {
   if (deg == null) return null;
   if (deg >= 315 || deg < 45) return "N";
   if (deg >= 45 && deg < 135) return "E";
   if (deg >= 135 && deg < 225) return "S";
-  return "W"; // 225–315
+  return "W";
 }
 
-/** Circular EMA for heading (extra-smooth on top of native smoothing) */
 function smoothHeading(prev: number | null, next: number | null, alpha = 0.2): number | null {
   if (next == null) return prev;
   if (prev == null) return Math.round(next);
@@ -81,8 +61,20 @@ export default function MeasureExposureModal({
   onClose: () => void;
   onApply: (vals: { light?: LightLevel | null; orientation?: Orientation | null }) => void;
 }) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const insets = useSafeAreaInsets();
   const appState = useRef<AppStateStatus>(AppState.currentState);
+
+  const tr = useCallback(
+    (key: string, fallback?: string) => {
+      void currentLanguage;
+      const txt = t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
 
   // Live sensors
   const [lux, setLux] = useState<number | null>(null);
@@ -101,15 +93,33 @@ export default function MeasureExposureModal({
   const [finalLuxMax, setFinalLuxMax] = useState<number | null>(null);
   const [finalOrientation, setFinalOrientation] = useState<Orientation | null>(null);
 
-  // Optional extra JS smoothing (native already smooths)
+  // Optional extra smoothing
   const [headingSmooth, setHeadingSmooth] = useState<number | null>(null);
   useEffect(() => {
     setHeadingSmooth((prev) => smoothHeading(prev, headingDeg, 0.25));
   }, [headingDeg]);
 
-  /** Start sensors: native compass + ambient light */
+  const lightLevelLabel = useCallback(
+    (level: LightLevel | null): string => {
+      switch (level) {
+        case "bright-direct":
+          return tr("createPlant.step04.modal.levels.brightDirect", "Bright direct");
+        case "bright-indirect":
+          return tr("createPlant.step04.modal.levels.brightIndirect", "Bright indirect");
+        case "medium":
+          return tr("createPlant.step04.modal.levels.medium", "Medium / dappled");
+        case "low":
+          return tr("createPlant.step04.modal.levels.low", "Low light");
+        case "very-low":
+          return tr("createPlant.step04.modal.levels.veryLow", "Very low");
+        default:
+          return tr("createPlant.step04.modal.dash", "—");
+      }
+    },
+    [tr]
+  );
+
   const startSensors = useCallback(async () => {
-    // Light
     try {
       const sub = await Sensors.startLight?.((lx: number | null) => {
         setLux(typeof lx === "number" ? lx : null);
@@ -126,7 +136,6 @@ export default function MeasureExposureModal({
       lightCleanupRef.current = null;
     }
 
-    // Heading (tilt-invariant via native on Android), JS smoothing on top
     try {
       const sub = await Sensors.startHeading((deg: number) => {
         setHeadingDeg((prev) => {
@@ -165,7 +174,6 @@ export default function MeasureExposureModal({
     lightCleanupRef.current = null;
   }, []);
 
-  /** Appstate + visibility */
   useEffect(() => {
     const sub = AppState.addEventListener("change", (next) => {
       if (appState.current.match(/inactive|background/) && next === "active") {
@@ -188,6 +196,8 @@ export default function MeasureExposureModal({
       setRemainMs(0);
       testMaxLuxRef.current = null;
       testHeadingsRef.current = [];
+      setFinalLuxMax(null);
+      setFinalOrientation(null);
       return;
     }
     startSensors();
@@ -195,7 +205,6 @@ export default function MeasureExposureModal({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
-  /** 5-second test */
   const endTest = useCallback(() => {
     setIsTestRunning(false);
     if (timerRef.current != null) {
@@ -243,7 +252,6 @@ export default function MeasureExposureModal({
     }, 100) as unknown as number;
   }, [endTest, isTestRunning]);
 
-  // Feed buffers during test
   useEffect(() => {
     if (!isTestRunning) return;
     if (typeof lux === "number") {
@@ -256,16 +264,12 @@ export default function MeasureExposureModal({
   useEffect(() => {
     if (!isTestRunning) return;
     const d = typeof headingSmooth === "number" ? headingSmooth : headingDeg;
-    if (typeof d === "number" && !isNaN(d)) {
-      testHeadingsRef.current.push(d);
-    }
+    if (typeof d === "number" && !isNaN(d)) testHeadingsRef.current.push(d);
   }, [headingSmooth, headingDeg, isTestRunning]);
 
-  /** Apply */
   const apply = () => {
     const chosenLux = finalLuxMax ?? lux;
     const chosenLight = luxToLightLevel(chosenLux ?? null);
-
     const liveBucket = headingToOrientation45(headingSmooth ?? headingDeg);
     const chosenOrientation = finalOrientation ?? liveBucket ?? null;
 
@@ -273,57 +277,52 @@ export default function MeasureExposureModal({
     onClose();
   };
 
-  /** Labels */
   const lightLabelLive = useMemo(() => {
-    if (Platform.OS !== "android") return "Not available";
-    if (lux == null) return "No sensor";
+    if (Platform.OS !== "android") return tr("createPlant.step04.modal.notAvailable", "Not available");
+    if (lux == null) return tr("createPlant.step04.modal.noSensor", "No sensor");
     return `${Math.round(lux)} lx`;
-  }, [lux]);
+  }, [lux, tr]);
 
   const lightLabelFinal = useMemo(() => {
-    if (finalLuxMax == null) return "—";
+    if (finalLuxMax == null) return tr("createPlant.step04.modal.dash", "—");
     const lvl = luxToLightLevel(finalLuxMax);
     return `${Math.round(finalLuxMax)} lx • ${lightLevelLabel(lvl)}`;
-  }, [finalLuxMax]);
+  }, [finalLuxMax, lightLevelLabel, tr]);
 
   const orientationLabelLive = useMemo(() => {
     const d = headingSmooth ?? headingDeg;
-    if (d == null) return "Not available";
+    if (d == null) return tr("createPlant.step04.modal.notAvailable", "Not available");
     const o = headingToOrientation45(d) ?? "—";
     return `${o} (${Math.round(d)}°)`;
-  }, [headingSmooth, headingDeg]);
-
-  const orientationLabelFinal = useMemo(() => {
-    if (!finalOrientation) return "—";
-    return finalOrientation;
-  }, [finalOrientation]);
+  }, [headingSmooth, headingDeg, tr]);
 
   if (!visible) return null;
   const countdownSec = Math.ceil(remainMs / 1000);
 
+  const canApply =
+    finalLuxMax != null ||
+    finalOrientation != null ||
+    headingToOrientation45(headingSmooth ?? headingDeg) != null ||
+    (Platform.OS === "android" && lux != null);
+
   return (
     <>
-      {/* Backdrop (matches Reminders / AddLocationModal) */}
       <Pressable style={remindersStyles.promptBackdrop} onPress={onClose} />
 
-      {/* Centered glass card wrapper (same shell as AddLocationModal) */}
       <View style={remindersStyles.promptWrap}>
         <View style={remindersStyles.promptGlass}>
           <BlurView
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0 }}
+            style={{ position: "absolute", inset: 0 } as any}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
           <View
             pointerEvents="none"
-            // @ts-ignore
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
           />
         </View>
 
-        {/* Sheet — full width; scrollable with capped height (like AddLocationModal) */}
         <View style={[remindersStyles.promptInner, { maxHeight: "86%" }]}>
           <ScrollView
             keyboardShouldPersistTaps="handled"
@@ -333,112 +332,93 @@ export default function MeasureExposureModal({
             ]}
             showsVerticalScrollIndicator={false}
           >
-            <Text style={wiz.promptTitle}>Measure light & direction</Text>
-
-            <Text style={{ color: "#FFFFFF", fontWeight: "600", marginBottom: 10 }}>
-              Hold the phone <Text style={{ fontWeight: "800" }}>horizontally (screen up)</Text>,
-              with the <Text style={{ fontWeight: "800" }}>top edge</Text> pointing toward the
-              window. Move/scan slowly near the window to record the brightest spot and direction.
-              Then tap <Text style={{ fontWeight: "800" }}>Measure</Text> to run a 5-second test.
+            <Text style={wiz.promptTitle}>
+              {tr("createPlant.step04.modal.title", "Measure light & direction")}
             </Text>
 
-            {/* Live readouts */}
+            <Text style={{ color: "#FFFFFF", fontWeight: "600", marginBottom: 10 }}>
+              {tr(
+                "createPlant.step04.modal.instructions",
+                "Hold the phone horizontally (screen up), with the top edge pointing toward the window. Move/scan slowly near the window, then tap Measure to run a 5-second test."
+              )}
+            </Text>
+
             <View style={{ gap: 10 }}>
               <View style={rowStyle}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons
-                    name="white-balance-sunny"
-                    size={18}
-                    color="#FFFFFF"
-                  />
-                  <Text style={rowTitle}>Ambient light (live)</Text>
+                  <MaterialCommunityIcons name="white-balance-sunny" size={18} color="#FFFFFF" />
+                  <Text style={rowTitle}>
+                    {tr("createPlant.step04.modal.ambientLive", "Ambient light (live)")}
+                  </Text>
                 </View>
                 <Text style={rowVal}>{lightLabelLive}</Text>
               </View>
 
               <View style={rowStyle}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons
-                    name="compass-outline"
-                    size={18}
-                    color="#FFFFFF"
-                  />
-                  <Text style={rowTitle}>Heading (live)</Text>
+                  <MaterialCommunityIcons name="compass-outline" size={18} color="#FFFFFF" />
+                  <Text style={rowTitle}>
+                    {tr("createPlant.step04.modal.headingLive", "Heading (live)")}
+                  </Text>
                 </View>
                 <Text style={rowVal}>{orientationLabelLive}</Text>
               </View>
 
-              {/* 5s measurement summary */}
               <View style={[rowStyle, { borderBottomWidth: 0 }]}>
                 <View style={rowLeft}>
-                  <MaterialCommunityIcons
-                    name="timer-sand"
-                    size={18}
-                    color="#FFFFFF"
-                  />
+                  <MaterialCommunityIcons name="timer-sand" size={18} color="#FFFFFF" />
                   <Text style={rowTitle}>
-                    5-second measurement {isTestRunning ? "(running…)" : "(last)"}
+                    {tr("createPlant.step04.modal.testLabel", "5-second measurement")}{" "}
+                    {isTestRunning
+                      ? tr("createPlant.step04.modal.running", "(running…)") 
+                      : tr("createPlant.step04.modal.last", "(last)")}
                   </Text>
                 </View>
-                <Text style={rowVal}>{isTestRunning ? `~${countdownSec}s` : "done"}</Text>
+                <Text style={rowVal}>{isTestRunning ? `~${countdownSec}s` : tr("createPlant.step04.modal.done", "done")}</Text>
               </View>
 
               <View style={{ paddingVertical: 2 }}>
                 <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
-                  Light (best in 5s): {lightLabelFinal}
+                  {tr("createPlant.step04.modal.bestLight", "Light (best in 5s)")} {lightLabelFinal}
                 </Text>
                 <Text style={{ color: "#FFFFFF", fontWeight: "800", marginTop: 4 }}>
-                  Direction (mean in 5s): {finalOrientation ?? "—"}
+                  {tr("createPlant.step04.modal.meanDirection", "Direction (mean in 5s)")}{" "}
+                  {finalOrientation ?? tr("createPlant.step04.modal.dash", "—")}
                 </Text>
               </View>
             </View>
 
-            {/* Actions */}
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "flex-end",
-                gap: 10,
-                marginTop: 12,
-              }}
-            >
+            <View style={{ flexDirection: "row", justifyContent: "flex-end", gap: 10, marginTop: 12 }}>
               <Pressable style={wiz.btn} onPress={onClose}>
-                <Text style={wiz.btnText}>Close</Text>
+                <Text style={wiz.btnText}>{tr("createPlant.step04.modal.close", "Close")}</Text>
               </Pressable>
+
               <Pressable
-                style={[
-                  wiz.btn,
-                  { minWidth: 110 },
-                  isTestRunning ? { opacity: 0.9 } : undefined,
-                ]}
+                style={[wiz.btn, { minWidth: 110 }, isTestRunning ? { opacity: 0.9 } : undefined]}
                 onPress={isTestRunning ? undefined : start5sTest}
                 disabled={isTestRunning}
               >
                 <Text style={wiz.btnText}>
-                  {isTestRunning ? "Measuring…" : "Measure (5s)"}
+                  {isTestRunning
+                    ? tr("createPlant.step04.modal.measuring", "Measuring…")
+                    : tr("createPlant.step04.modal.measure5s", "Measure (5s)")}
                 </Text>
               </Pressable>
+
               <Pressable
-                style={[wiz.btn, wiz.btnPrimary]}
+                style={[wiz.btn, wiz.btnPrimary, !canApply ? { opacity: 0.5 } : undefined]}
                 onPress={apply}
-                disabled={
-                  !(
-                    finalLuxMax != null ||
-                    finalOrientation ||
-                    headingToOrientation45(headingSmooth ?? headingDeg) ||
-                    (Platform.OS === "android" && lux != null)
-                  )
-                }
+                disabled={!canApply}
               >
-                <Text style={wiz.btnText}>Apply</Text>
+                <Text style={wiz.btnText}>{tr("createPlant.step04.modal.apply", "Apply")}</Text>
               </Pressable>
             </View>
 
             <Text style={{ color: "rgba(255,255,255,0.82)", marginTop: 10 }}>
-              Tip: On many phones the ambient light sensor sits near the earpiece at the top. Keep
-              the phone flat, point the top edge toward the window, and slowly move it to find the
-              brightest reading. The test picks the highest lux over 5 seconds and averages the
-              compass to decide between N/E/S/W (±45° buckets).
+              {tr(
+                "createPlant.step04.modal.tip",
+                "Tip: On many phones the ambient light sensor sits near the earpiece at the top. Keep the phone flat and point the top edge toward the window to find the brightest reading."
+              )}
             </Text>
           </ScrollView>
         </View>
@@ -447,7 +427,6 @@ export default function MeasureExposureModal({
   );
 }
 
-/** Row styles */
 const rowStyle = {
   flexDirection: "row" as const,
   alignItems: "center" as const,

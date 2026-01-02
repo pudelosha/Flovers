@@ -1,13 +1,17 @@
-﻿import React, { useMemo } from "react";
+﻿import React, { useMemo, useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Slider from "@react-native-community/slider";
 import { SegmentedButtons, useTheme } from "react-native-paper";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
+
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import { ORIENTATIONS } from "../constants/create-plant.constants";
-import { useTranslation } from "react-i18next";
+
+// We only need keys; labels come from i18n
+const ORIENTATION_KEYS = ["S", "E", "W", "N"] as const;
 
 type Props = {
   measureUnit?: "metric" | "imperial";
@@ -19,19 +23,32 @@ export default function Step04_Exposure({
   onOpenMeasureModal,
 }: Props) {
   const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
   const theme = useTheme();
+
+  const tr = useCallback(
+    (key: string, fallback?: string) => {
+      void currentLanguage; // force rerender
+      const txt = t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
 
   const toDisplay = (cm: number) =>
     measureUnit === "imperial" ? `${Math.round(cm / 2.54)} in` : `${cm} cm`;
 
   // Map slider index <-> LightLevel
-  const lightOrder: Array<"very-low" | "low" | "medium" | "bright-indirect" | "bright-direct"> =
-    useMemo(
-      () => ["very-low", "low", "medium", "bright-indirect", "bright-direct"],
-      []
-    );
+  const lightOrder = useMemo(
+    () =>
+      ["very-low", "low", "medium", "bright-indirect", "bright-direct"] as const,
+    []
+  );
+
   const lightIndex = Math.max(0, lightOrder.indexOf(state.lightLevel as any));
+
   const onLightChange = (v: number) => {
     const idx = Math.max(0, Math.min(4, Math.round(v)));
     actions.setLightLevel(lightOrder[idx] as any);
@@ -39,7 +56,6 @@ export default function Step04_Exposure({
 
   return (
     <View style={wiz.cardWrap}>
-      {/* glass frame — match Steps 1 & 3: Blur + white tint + thin border */}
       <View style={wiz.cardGlass}>
         <BlurView
           style={{ position: "absolute", inset: 0 } as any}
@@ -53,16 +69,28 @@ export default function Step04_Exposure({
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>{t('createPlant.step04.title')}</Text>
-        <Text style={wiz.subtitle}>{t('createPlant.step04.subtitle')}</Text>
+        <Text style={wiz.title}>{tr("createPlant.step04.title", "Exposure")}</Text>
+        <Text style={wiz.subtitle}>
+          {tr(
+            "createPlant.step04.subtitle",
+            "Tell us how much light this spot gets and the window direction."
+          )}
+        </Text>
 
-        {/* Light level — slider with Low / High labels aligned with header */}
-        <Text style={wiz.sectionTitle}>{t('createPlant.step04.lightLevel')}</Text>
+        <Text style={wiz.sectionTitle}>
+          {tr("createPlant.step04.lightLevel", "Light level")}
+        </Text>
+
         <View style={{ marginTop: 2, marginBottom: 6 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>{t('createPlant.step04.low')}</Text>
-            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>{t('createPlant.step04.high')}</Text>
+            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
+              {tr("createPlant.step04.low", "Low")}
+            </Text>
+            <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
+              {tr("createPlant.step04.high", "High")}
+            </Text>
           </View>
+
           <Slider
             value={lightIndex}
             onValueChange={onLightChange}
@@ -76,17 +104,18 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Window direction — same height, keep selected fill; just remove the border */}
-        <Text style={wiz.sectionTitle}>{t('createPlant.step04.windowDirection')}</Text>
+        <Text style={wiz.sectionTitle}>
+          {tr("createPlant.step04.windowDirection", "Window direction")}
+        </Text>
+
         <View
           style={{
             borderRadius: 12,
-            borderWidth: 0, // borderless container
+            borderWidth: 0,
             backgroundColor: "rgba(255,255,255,0.12)",
             overflow: "hidden",
           }}
         >
-          {/* subtle glare */}
           <View
             pointerEvents="none"
             style={{
@@ -101,9 +130,9 @@ export default function Step04_Exposure({
           <SegmentedButtons
             value={state.orientation}
             onValueChange={(v) => actions.setOrientation(v as any)}
-            buttons={ORIENTATIONS.map(({ key, label }) => ({
+            buttons={ORIENTATION_KEYS.map((key) => ({
               value: key,
-              label: t(`createPlant.step04.orientations.${key}`), // Translating the orientation
+              label: tr(`createPlant.step04.orientations.${key}`, key),
               style: {
                 flex: 1,
                 minWidth: 0,
@@ -120,7 +149,6 @@ export default function Step04_Exposure({
               marginHorizontal: -6,
               marginVertical: -6,
             }}
-            labelStyle={{ fontSize: 11, fontWeight: "800", color: "#FFFFFF" }}
             theme={{
               colors: {
                 secondaryContainer: "rgba(11,114,133,0.9)",
@@ -133,18 +161,21 @@ export default function Step04_Exposure({
           />
         </View>
 
-        {/* Measure */}
         <Pressable
           style={[wiz.actionFull, { marginTop: 10, marginBottom: 10 }]}
           onPress={onOpenMeasureModal}
           android_ripple={{ color: "rgba(255,255,255,0.12)" }}
         >
           <MaterialCommunityIcons name="lightbulb-on-outline" size={18} color="#FFFFFF" />
-          <Text style={wiz.actionText}>{t('createPlant.step04.measureLightDirection')}</Text>
+          <Text style={wiz.actionText}>
+            {tr("createPlant.step04.measureLightDirection", "Measure light & direction")}
+          </Text>
         </Pressable>
 
-        {/* Distance — Slider only; show only selected value */}
-        <Text style={wiz.sectionTitle}>{t('createPlant.step04.distanceFromWindow')}</Text>
+        <Text style={wiz.sectionTitle}>
+          {tr("createPlant.step04.distanceFromWindow", "Distance from window")}
+        </Text>
+
         <View style={{ marginTop: 6, marginBottom: 4 }}>
           <Text
             style={{
@@ -156,6 +187,7 @@ export default function Step04_Exposure({
           >
             {toDisplay(state.distanceCm)}
           </Text>
+
           <Slider
             value={state.distanceCm}
             onValueChange={(v) => actions.setDistanceCm(Math.round(v))}

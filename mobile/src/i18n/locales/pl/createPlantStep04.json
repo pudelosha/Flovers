@@ -14,6 +14,33 @@
         "E": "Wsch",
         "W": "Zach",
         "N": "Płn"
+      },
+      "modal": {
+        "title": "Pomiar światła i kierunku",
+        "instructions": "Trzymaj telefon poziomo (ekran do góry), a górną krawędź skieruj w stronę okna. Przesuwaj telefon powoli w pobliżu okna, a następnie naciśnij Pomiar, aby uruchomić test 5-sekundowy.",
+        "ambientLive": "Światło (na żywo)",
+        "headingLive": "Kierunek (na żywo)",
+        "testLabel": "Pomiar 5-sekundowy",
+        "running": "(trwa…)",
+        "last": "(ostatni)",
+        "done": "gotowe",
+        "bestLight": "Światło (najlepsze w 5 s):",
+        "meanDirection": "Kierunek (średnia z 5 s):",
+        "close": "Zamknij",
+        "measure5s": "Pomiar (5 s)",
+        "measuring": "Mierzenie…",
+        "apply": "Zastosuj",
+        "tip": "Wskazówka: w wielu telefonach czujnik światła jest przy górnej krawędzi (przy głośniku). Trzymaj telefon płasko i kieruj górną krawędź w stronę okna, aby znaleźć najwyższy odczyt.",
+        "notAvailable": "Niedostępne",
+        "noSensor": "Brak czujnika",
+        "dash": "—",
+        "levels": {
+          "brightDirect": "Jasne, bezpośrednie",
+          "brightIndirect": "Jasne, rozproszone",
+          "medium": "Średnie / półcień",
+          "low": "Mało światła",
+          "veryLow": "Bardzo mało"
+        }
       }
     }
   }
