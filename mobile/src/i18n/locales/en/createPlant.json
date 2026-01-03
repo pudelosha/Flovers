@@ -1,15 +1,21 @@
 ﻿{
   "createPlant": {
+    "header": {
+      "title": "Create plant"
+    },
+
+    "fallbackStep": {
+      "title": "Step “{{step}}”",
+      "subtitle": "This step will be implemented next."
+    },
+
     "common": {
-      "loading": "Loading...",
-      "error": "An error occurred",
-      "back": "Back",
-      "close": "Close",
-      "cancel": "Cancel",
-      "save": "Save",
-      "next": "Next",
       "previous": "Previous",
-      "skip": "Skip"
+      "next": "Next",
+      "create": "Create",
+      "cancel": "Cancel",
+      "done": "Done",
+      "notSpecified": "Not specified"
     }
   }
 }

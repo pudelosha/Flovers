@@ -1,15 +1,21 @@
 ﻿{
   "createPlant": {
+    "header": {
+      "title": "Utwórz roślinę"
+    },
+
+    "fallbackStep": {
+      "title": "Krok „{{step}}”",
+      "subtitle": "Ten krok zostanie zaimplementowany wkrótce."
+    },
+
     "common": {
-      "loading": "Ładowanie...",
-      "error": "Wystąpił błąd",
-      "back": "Wstecz",
-      "close": "Zamknij",
-      "cancel": "Anuluj",
-      "save": "Zapisz",
-      "next": "Dalej",
       "previous": "Wstecz",
-      "skip": "Pomiń"
+      "next": "Dalej",
+      "create": "Utwórz",
+      "cancel": "Anuluj",
+      "done": "Gotowe",
+      "notSpecified": "Nie określono"
     }
   }
 }

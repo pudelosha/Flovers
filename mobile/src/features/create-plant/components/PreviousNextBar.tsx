@@ -4,6 +4,8 @@ import { View, Pressable } from "react-native";
 import { Text } from "react-native-paper";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -45,6 +47,11 @@ export default function PreviousNextBar({
 }: Props) {
   const insets = useSafeAreaInsets();
   const { state, actions } = useCreatePlantWizard();
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  // Force re-render on language change (pattern used in other steps)
+  React.useMemo(() => {}, [currentLanguage]);
 
   if (hidden || !state?.step) return null;
 
@@ -58,10 +65,10 @@ export default function PreviousNextBar({
     const isCreateStep = step === "name";
     return {
       hidePrev,
-      prevLabel: "Previous",
-      nextLabel: isCreateStep ? "Create" : "Next",
+      prevLabel: t("createPlant.common.previous"),
+      nextLabel: isCreateStep ? t("createPlant.common.create") : t("createPlant.common.next"),
     };
-  }, [step]);
+  }, [step, t, currentLanguage]);
 
   const prevHandler = () => {
     if (step === "selectPlant") return;
