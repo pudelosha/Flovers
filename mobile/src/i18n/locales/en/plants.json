@@ -1,0 +1,43 @@
+{
+  "plants": {
+    "header": {
+      "title": "Plants"
+    },
+    "list": {
+      "unnamed": "Unnamed plant"
+    },
+    "empty": {
+      "title": "No plants yet",
+      "desc1": "Tap the “+” button in the bottom-right corner to add your first plant.",
+      "desc2": "The Create Plant Wizard will help you set up your plant and specify its parameters, as well as schedule reminders."
+    },
+    "fab": {
+      "create": "Create plant",
+      "sort": "Sort",
+      "filter": "Filter",
+      "clearFilter": "Clear filter",
+      "locations": "Locations"
+    },
+    "menu": {
+      "edit": "Edit plant",
+      "reminders": "Show reminders",
+      "showQr": "Show QR code",
+      "delete": "Delete plant"
+    },
+    "toast": {
+      "loadFailed": "Failed to load plants",
+      "updated": "Plant updated",
+      "deleted": "Plant deleted",
+      "qrSaved": "QR code saved to your gallery.",
+      "qrEmailed": "An email with this QR code will be sent to your account address."
+    },
+    "alert": {
+      "loadFailedTitle": "Load failed",
+      "loadFailedMsg": "Could not load plant details.",
+      "updateFailedTitle": "Update failed",
+      "updateFailedMsg": "Could not update this plant.",
+      "deleteFailedTitle": "Delete failed",
+      "deleteFailedMsg": "Could not delete this plant."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "plants": {
+    "header": {
+      "title": "Rośliny"
+    },
+    "list": {
+      "unnamed": "Roślina bez nazwy"
+    },
+    "empty": {
+      "title": "Brak roślin",
+      "desc1": "Stuknij przycisk „+” w prawym dolnym rogu, aby dodać pierwszą roślinę.",
+      "desc2": "Kreator dodawania rośliny pomoże Ci skonfigurować roślinę, ustawić jej parametry oraz zaplanować przypomnienia."
+    },
+    "fab": {
+      "create": "Dodaj roślinę",
+      "sort": "Sortuj",
+      "filter": "Filtruj",
+      "clearFilter": "Wyczyść filtr",
+      "locations": "Lokalizacje"
+    },
+    "menu": {
+      "edit": "Edytuj roślinę",
+      "reminders": "Pokaż przypomnienia",
+      "showQr": "Pokaż kod QR",
+      "delete": "Usuń roślinę"
+    },
+    "toast": {
+      "loadFailed": "Nie udało się wczytać roślin",
+      "updated": "Zaktualizowano roślinę",
+      "deleted": "Usunięto roślinę",
+      "qrSaved": "Kod QR zapisano w galerii.",
+      "qrEmailed": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
+    },
+    "alert": {
+      "loadFailedTitle": "Błąd wczytywania",
+      "loadFailedMsg": "Nie udało się wczytać szczegółów rośliny.",
+      "updateFailedTitle": "Błąd aktualizacji",
+      "updateFailedMsg": "Nie udało się zaktualizować tej rośliny.",
+      "deleteFailedTitle": "Błąd usuwania",
+      "deleteFailedMsg": "Nie udało się usunąć tej rośliny."
+    }
+  }
+}

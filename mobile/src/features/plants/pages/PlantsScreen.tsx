@@ -1,4 +1,4 @@
-// src/features/plants/screens/PlantsScreen.tsx
+// C:\Projekty\Python\Flovers\mobile\src\features\plants\pages\PlantsScreen.tsx
 import React, {
   useCallback,
   useMemo,
@@ -19,6 +19,8 @@ import {
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -58,11 +60,11 @@ type LightLevel5 =
   | "bright-direct";
 
 /** Map API list item -> UI Plant shape used by PlantTile */
-function mapApiToPlant(item: ApiPlantInstanceListItem): Plant {
+function mapApiToPlant(item: ApiPlantInstanceListItem, unnamedFallback: string): Plant {
   const name =
     item.display_name?.trim() ||
     item.plant_definition?.name?.trim() ||
-    "Unnamed plant";
+    unnamedFallback;
 
   const latin = item.plant_definition?.latin || undefined;
   const location = item.location?.name || undefined;
@@ -81,7 +83,10 @@ function norm(v?: string) {
 }
 
 export default function PlantsScreen() {
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
+
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage(); // ensure rerender on language change
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
@@ -153,16 +158,24 @@ export default function PlantsScreen() {
     }, [])
   );
 
+  const unnamedFallback = useMemo(
+    () => t("plants.list.unnamed", { defaultValue: "Unnamed plant" }),
+    [t, currentLanguage]
+  );
+
   // MAIN LOAD
   const load = useCallback(async () => {
     try {
       const data = await fetchPlantInstances({ auth: true });
-      setPlants(data.map(mapApiToPlant));
+      setPlants(data.map((it) => mapApiToPlant(it, unnamedFallback)));
     } catch (e: any) {
-      showToast(e?.message || "Failed to load plants", "error");
+      showToast(
+        e?.message || t("plants.toast.loadFailed", { defaultValue: "Failed to load plants" }),
+        "error"
+      );
       setPlants([]);
     }
-  }, []);
+  }, [t, currentLanguage, unnamedFallback]);
 
   useFocusEffect(
     useCallback(() => {
@@ -193,7 +206,7 @@ export default function PlantsScreen() {
 
   const openCreatePlantWizard = () => {
     setMenuOpenId(null);
-    nav.navigate("CreatePlantWizard" as never);
+    nav.navigate("CreatePlantWizard");
   };
 
   // EDIT MODAL open
@@ -236,7 +249,11 @@ export default function PlantsScreen() {
 
       setEditOpen(true);
     } catch (e: any) {
-      Alert.alert("Load failed", e?.message || "Could not load plant details.");
+      Alert.alert(
+        t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
+        e?.message ||
+          t("plants.alert.loadFailedMsg", { defaultValue: "Could not load plant details." })
+      );
     } finally {
       setEditLoading(false);
     }
@@ -268,13 +285,19 @@ export default function PlantsScreen() {
       );
 
       setPlants((prev) =>
-        prev.map((p) => (p.id === editingId ? mapApiToPlant(updatedListItem) : p))
+        prev.map((p) =>
+          p.id === editingId ? mapApiToPlant(updatedListItem, unnamedFallback) : p
+        )
       );
 
       closeEdit();
-      showToast("Plant updated", "success");
+      showToast(t("plants.toast.updated", { defaultValue: "Plant updated" }), "success");
     } catch (e: any) {
-      Alert.alert("Update failed", e?.message || "Could not update this plant.");
+      Alert.alert(
+        t("plants.alert.updateFailedTitle", { defaultValue: "Update failed" }),
+        e?.message ||
+          t("plants.alert.updateFailedMsg", { defaultValue: "Could not update this plant." })
+      );
     } finally {
       setSaving(false);
     }
@@ -295,9 +318,13 @@ export default function PlantsScreen() {
     try {
       await deletePlantInstance(Number(confirmDeleteId), { auth: true });
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
-      showToast("Plant deleted", "success");
+      showToast(t("plants.toast.deleted", { defaultValue: "Plant deleted" }), "success");
     } catch (e: any) {
-      Alert.alert("Delete failed", e?.message || "Could not delete this plant.");
+      Alert.alert(
+        t("plants.alert.deleteFailedTitle", { defaultValue: "Delete failed" }),
+        e?.message ||
+          t("plants.alert.deleteFailedMsg", { defaultValue: "Could not delete this plant." })
+      );
     } finally {
       setConfirmDeleteId(null);
       setConfirmDeleteName("");
@@ -431,11 +458,11 @@ export default function PlantsScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title="Plants"
+          title={t("plants.header.title", { defaultValue: "Plants" })}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           rightIconName="qrcode-scan"
-          onPressRight={() => nav.navigate("Scanner" as never)}
+          onPressRight={() => nav.navigate("Scanner")}
           showSeparator={false}
         />
         <CenteredSpinner size={56} color="#FFFFFF" />
@@ -446,19 +473,16 @@ export default function PlantsScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title="Plants"
+        title={t("plants.header.title", { defaultValue: "Plants" })}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         rightIconName="qrcode-scan"
-        onPressRight={() => nav.navigate("Scanner" as never)}
+        onPressRight={() => nav.navigate("Scanner")}
         showSeparator={false}
       />
 
       {menuOpenId && (
-        <Pressable
-          onPress={() => setMenuOpenId(null)}
-          style={s.backdrop}
-        />
+        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} />
       )}
 
       <Animated.FlatList
@@ -483,7 +507,7 @@ export default function PlantsScreen() {
             <Animated.View
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
-                // 🔑 wrapper raised like on Home so menu floats above next tiles
+                // wrapper raised so menu floats above next tiles
                 isOpen && { zIndex: 50, elevation: 50 },
               ]}
             >
@@ -491,17 +515,17 @@ export default function PlantsScreen() {
                 plant={item}
                 isMenuOpen={isOpen}
                 onPressBody={() =>
-                  nav.navigate("PlantDetails" as never, { id: item.id } as never)
+                  nav.navigate("PlantDetails", { id: item.id })
                 }
                 onPressMenu={() =>
                   setMenuOpenId((curr) => (curr === item.id ? null : item.id))
                 }
                 onEdit={() => openEditModal(item)}
                 onReminders={() =>
-                  nav.navigate(
-                    "Reminders" as never,
-                    { plantId: item.id, plantName: item.name } as never
-                  )
+                  nav.navigate("Reminders", {
+                    plantId: item.id,
+                    plantName: item.name,
+                  })
                 }
                 onDelete={() => askDelete(item)}
                 onShowQr={() => openShowQr(item)}
@@ -529,7 +553,7 @@ export default function PlantsScreen() {
               },
             ]}
           >
-            <View className="" style={s.emptyGlass}>
+            <View style={s.emptyGlass}>
               <BlurView
                 style={StyleSheet.absoluteFill}
                 blurType="light"
@@ -537,14 +561,8 @@ export default function PlantsScreen() {
                 overlayColor="transparent"
                 reducedTransparencyFallbackColor="transparent"
               />
-              <View
-                pointerEvents="none"
-                style={s.emptyTint}
-              />
-              <View
-                pointerEvents="none"
-                style={s.emptyBorder}
-              />
+              <View pointerEvents="none" style={s.emptyTint} />
+              <View pointerEvents="none" style={s.emptyBorder} />
 
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
@@ -553,13 +571,20 @@ export default function PlantsScreen() {
                   color="#FFFFFF"
                   style={{ marginBottom: 10 }}
                 />
-                <Text style={s.emptyTitle}>No plants yet</Text>
+                <Text style={s.emptyTitle}>
+                  {t("plants.empty.title", { defaultValue: "No plants yet" })}
+                </Text>
                 <View style={s.emptyDescBox}>
                   <Text style={s.emptyText}>
-                    Tap the <Text style={s.inlineBold}>“+” button</Text> in the
-                    bottom-right corner to add your first plant. The Create Plant Wizard will help
-                    you set up your plant and specify its parameters, as well as schedule
-                    reminders.{"\n\n"}
+                    {t("plants.empty.desc1", {
+                      defaultValue:
+                        'Tap the “+” button in the bottom-right corner to add your first plant.',
+                    })}{" "}
+                    {t("plants.empty.desc2", {
+                      defaultValue:
+                        "The Create Plant Wizard will help you set up your plant and specify its parameters, as well as schedule reminders.",
+                    })}
+                    {"\n\n"}
                   </Text>
                 </View>
               </View>
@@ -576,26 +601,28 @@ export default function PlantsScreen() {
             {
               key: "create",
               icon: "plus",
-              label: "Create plant",
+              label: t("plants.fab.create", { defaultValue: "Create plant" }),
               onPress: openCreatePlantWizard,
             },
             {
               key: "sort",
               icon: "sort",
-              label: "Sort",
+              label: t("plants.fab.sort", { defaultValue: "Sort" }),
               onPress: () => setSortOpen(true),
             },
             {
               key: "filter",
               icon: "filter-variant",
-              label: "Filter",
+              label: t("plants.fab.filter", { defaultValue: "Filter" }),
               onPress: () => setFilterOpen(true),
             },
             ...(isFilterActive
               ? [
                   {
                     key: "clearFilter",
-                    label: "Clear filter",
+                    label: t("plants.fab.clearFilter", {
+                      defaultValue: "Clear filter",
+                    }),
                     icon: "filter-remove",
                     onPress: () => setFilters({}),
                   } as const,
@@ -604,17 +631,17 @@ export default function PlantsScreen() {
             {
               key: "locations",
               icon: "map-marker-outline",
-              label: "Locations",
+              label: t("plants.fab.locations", { defaultValue: "Locations" }),
               onPress: () => {
                 setMenuOpenId(null);
-                nav.navigate("PlantLocations" as never);
+                nav.navigate("PlantLocations");
               },
             },
           ]}
         />
       )}
 
-      {/* Modals */}
+      {/* Modals (translate later) */}
       <EditPlantModal
         visible={editOpen}
         latinCatalog={latinOptions}
@@ -699,12 +726,16 @@ export default function PlantsScreen() {
         qrValue={qrValue}
         onClose={() => setQrVisible(false)}
         onPressSave={() => {
-          // hook real implementation later
-          showToast("QR code saved to your gallery.", "default");
+          showToast(
+            t("plants.toast.qrSaved", { defaultValue: "QR code saved to your gallery." }),
+            "default"
+          );
         }}
         onPressEmail={() => {
           showToast(
-            "An email with this QR code will be sent to your account address.",
+            t("plants.toast.qrEmailed", {
+              defaultValue: "An email with this QR code will be sent to your account address.",
+            }),
             "default"
           );
         }}
