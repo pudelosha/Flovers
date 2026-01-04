@@ -33,7 +33,7 @@ const STEPS_ORDER = [
   "creating",
 ] as const;
 
-type StepKey = typeof STEPS_ORDER[number];
+type StepKey = (typeof STEPS_ORDER)[number];
 
 export default function PreviousNextBar({
   onPrev,
@@ -50,25 +50,28 @@ export default function PreviousNextBar({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  // Force re-render on language change (pattern used in other steps)
-  React.useMemo(() => {}, [currentLanguage]);
-
-  if (hidden || !state?.step) return null;
-
-  const step = state.step as StepKey;
+  // IMPORTANT: compute step safely, but DO NOT early-return before hooks below
+  const hasStep = !!state?.step;
+  const step = ((state?.step as StepKey) ?? "selectPlant") as StepKey;
 
   // A plant is "selected" if it exists (regardless of predefined/scanned)
-  const hasSelectedPlant = !!state.selectedPlant?.id;
+  const hasSelectedPlant = !!state?.selectedPlant?.id;
 
+  // IMPORTANT: this hook must run on every render (even when hidden)
   const defaults = useMemo(() => {
     const hidePrev = step === "selectPlant";
     const isCreateStep = step === "name";
     return {
       hidePrev,
       prevLabel: t("createPlant.common.previous"),
-      nextLabel: isCreateStep ? t("createPlant.common.create") : t("createPlant.common.next"),
+      nextLabel: isCreateStep
+        ? t("createPlant.common.create")
+        : t("createPlant.common.next"),
     };
   }, [step, t, currentLanguage]);
+
+  // Now it's safe to return early (after all hooks are called consistently)
+  if (hidden || !hasStep) return null;
 
   const prevHandler = () => {
     if (step === "selectPlant") return;
@@ -103,7 +106,7 @@ export default function PreviousNextBar({
   const handleNext = onNext || nextHandler;
 
   // Disable Next on Step 3 until a location is selected
-  const blockNextBecauseOfStep = step === "location" && !state.selectedLocationId;
+  const blockNextBecauseOfStep = step === "location" && !state?.selectedLocationId;
 
   const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
   const isNextDisabled = !!nextDisabled || blockNextBecauseOfStep;
