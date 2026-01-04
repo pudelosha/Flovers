@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Skaner"
+    },
+    "howItWorks": {
+      "title": "Jak to działa"
+    },
+    "instruction": "Skieruj aparat na kod QR rośliny. Gdy zostanie rozpoznany, aplikacja automatycznie otworzy szczegóły tej rośliny.",
+    "hint1": "Każda roślina ma swój własny kod QR. Możesz go zapisać, wydrukować jako małą etykietę, przykleić do doniczki i zeskanować tutaj, aby natychmiast otworzyć roślinę.",
+    "qrAvailableIn": "Kody QR są dostępne w:",
+    "qrPath1": "Rośliny → stuknij roślinę → Szczegóły rośliny",
+    "qrPath2": "Rośliny → menu kafelka → Pokaż kod QR",
+    "permissionRequired": "Wymagane uprawnienie do aparatu",
+    "permissionHint": "Włącz dostęp do aparatu w ustawieniach systemu, aby skanować kody QR.",
+    "openSettings": "Otwórz ustawienia",
+    "initializingCamera": "Inicjalizacja aparatu…"
+  }
+}

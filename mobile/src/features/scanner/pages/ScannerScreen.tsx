@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\scanner\pages\ScannerScreen.tsx
 import React, { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import {
   View,
@@ -19,6 +20,9 @@ import {
   useCameraPermission,
   useCodeScanner,
 } from "react-native-vision-camera";
+
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import {
@@ -46,6 +50,9 @@ function extractToken(raw: string): string {
 }
 
 export default function ScannerScreen() {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
   const { height: screenHeight } = useWindowDimensions();
   const isFocused = useIsFocused();
   const navigation = useNavigation<any>();
@@ -59,7 +66,11 @@ export default function ScannerScreen() {
   const [infoHeight, setInfoHeight] = useState(0);
 
   const device = useCameraDevice("back");
-  const instructionText = useMemo(() => SCANNER_INSTRUCTION, []);
+
+  // Keep memo stable but also refresh when language changes
+  const instructionText = useMemo(() => {
+    return t("scanner.instruction", { defaultValue: SCANNER_INSTRUCTION });
+  }, [t, currentLanguage]);
 
   useEffect(() => {
     (async () => {
@@ -145,7 +156,7 @@ export default function ScannerScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title="Scanner"
+        title={t("scanner.header.title", { defaultValue: "Scanner" })}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -174,33 +185,32 @@ export default function ScannerScreen() {
             <View pointerEvents="none" style={styles.frameBorder} />
 
             <View style={styles.infoInner}>
-              <Text style={styles.infoTitle}>How it works</Text>
-              <Text style={styles.infoText}>{instructionText}</Text>
-
-              <Text
-                style={[
-                  styles.infoHint,
-                  { marginTop: 8, color: "#FFFFFF" },
-                ]}
-              >
-                Each plant has its own QR code. You can save it, print it as a small label,
-                attach it to the pot, and scan it here to open the plant instantly.
+              <Text style={styles.infoTitle}>
+                {t("scanner.howItWorks.title", { defaultValue: "How it works" })}
               </Text>
 
-              <Text
-                style={[
-                  styles.infoHint,
-                  { marginTop: 8, color: "#FFFFFF" },
-                ]}
-              >
-                QR codes are available in:
+              <Text style={styles.infoText}>{instructionText}</Text>
+
+              <Text style={[styles.infoHint, { marginTop: 8, color: "#FFFFFF", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" }]}>
+                {t("scanner.hint1", {
+                  defaultValue:
+                    "Each plant has its own QR code. You can save it, print it as a small label, attach it to the pot, and scan it here to open the plant instantly.",
+                })}
+              </Text>
+
+              <Text style={[styles.infoHint, { marginTop: 8, color: "#FFFFFF", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" }]}>
+                {t("scanner.qrAvailableIn", { defaultValue: "QR codes are available in:" })}
                 {"\n"}•{" "}
                 <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
-                  Plants → tap a plant → Plant Details
+                  {t("scanner.qrPath1", {
+                    defaultValue: "Plants → tap a plant → Plant Details",
+                  })}
                 </Text>
                 {"\n"}•{" "}
                 <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
-                  Plants → tile menu → Show QR code
+                  {t("scanner.qrPath2", {
+                    defaultValue: "Plants → tile menu → Show QR code",
+                  })}
                 </Text>
               </Text>
             </View>
@@ -241,9 +251,16 @@ export default function ScannerScreen() {
                   />
                   {!hasPermission ? (
                     <>
-                      <Text style={styles.placeholderText}>Camera permission required</Text>
+                      <Text style={styles.placeholderText}>
+                        {t("scanner.permissionRequired", {
+                          defaultValue: "Camera permission required",
+                        })}
+                      </Text>
                       <Text style={styles.placeholderHint}>
-                        Enable camera access in system settings to scan QR codes.
+                        {t("scanner.permissionHint", {
+                          defaultValue:
+                            "Enable camera access in system settings to scan QR codes.",
+                        })}
                       </Text>
                       <Pressable onPress={openSettings} style={{ marginTop: 12 }}>
                         <Text
@@ -252,12 +269,16 @@ export default function ScannerScreen() {
                             { textDecorationLine: "underline" },
                           ]}
                         >
-                          Open Settings
+                          {t("scanner.openSettings", { defaultValue: "Open Settings" })}
                         </Text>
                       </Pressable>
                     </>
                   ) : (
-                    <Text style={styles.placeholderText}>Initializing camera…</Text>
+                    <Text style={styles.placeholderText}>
+                      {t("scanner.initializingCamera", {
+                        defaultValue: "Initializing camera…",
+                      })}
+                    </Text>
                   )}
                 </View>
               )}

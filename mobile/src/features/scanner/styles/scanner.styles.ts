@@ -28,7 +28,7 @@ export const scannerStyles = StyleSheet.create({
 
   infoInner: { padding: 16, zIndex: 3 },
   infoTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 6 },
-  infoText: { color: "rgba(255,255,255,0.95)", fontWeight: "200", lineHeight: 18 },
+  infoText: { color: "rgba(255,255,255,0.95)", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" },
   exampleRow: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: 10 },
   exampleUrl: { color: "#FFFFFF", fontWeight: "800", flexShrink: 1 },
   infoHint: { color: "rgba(255,255,255,0.9)", fontWeight: "200", marginTop: 8 },

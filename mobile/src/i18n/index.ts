@@ -42,6 +42,10 @@ import plNavigation from "./locales/pl/navigation.json";
 import enResetPassword from "./locales/en/resetPassword.json";
 import plResetPassword from "./locales/pl/resetPassword.json";
 
+// Scanner bundles (NEW)
+import enScanner from "./locales/en/scanner.json";
+import plScanner from "./locales/pl/scanner.json";
+
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
 import itCreatePlant from "./locales/it/createPlant.json";
@@ -153,6 +157,7 @@ const resources = {
         enForgotPassword,
         enNavigation,
         enResetPassword,
+        enScanner // NEW
       ] as AnyObj[]
     ),
   },
@@ -176,6 +181,7 @@ const resources = {
         plForgotPassword,
         plNavigation,
         plResetPassword,
+        plScanner // NEW
       ] as AnyObj[]
     ),
   },

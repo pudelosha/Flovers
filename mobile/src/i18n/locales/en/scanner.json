@@ -1,0 +1,19 @@
+{
+  "scanner": {
+    "header": {
+      "title": "Scanner"
+    },
+    "howItWorks": {
+      "title": "How it works"
+    },
+    "instruction": "Point your camera at a plant QR code. When it’s recognized, the app will open that plant automatically.",
+    "hint1": "Each plant has its own QR code. You can save it, print it as a small label, attach it to the pot, and scan it here to open the plant instantly.",
+    "qrAvailableIn": "QR codes are available in:",
+    "qrPath1": "Plants → tap a plant → Plant Details",
+    "qrPath2": "Plants → tile menu → Show QR code",
+    "permissionRequired": "Camera permission required",
+    "permissionHint": "Enable camera access in system settings to scan QR codes.",
+    "openSettings": "Open Settings",
+    "initializingCamera": "Initializing camera…"
+  }
+}
