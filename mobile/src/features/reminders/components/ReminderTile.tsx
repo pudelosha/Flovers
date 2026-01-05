@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
@@ -6,6 +6,9 @@ import { s } from "../styles/reminders.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import type { Reminder } from "../types/reminders.types";
 import ReminderMenu from "./ReminderMenu";
+
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 // --- helpers (mirrors your earlier code) ---
 function toDisplayType(t?: string) {
@@ -23,7 +26,7 @@ function hexToRgba(hex?: string, alpha = 1) {
   let h = hex.trim();
   if (!h.startsWith("#")) h = `#${h}`;
   h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map(c => c + c).join("");
+  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
   if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
@@ -45,8 +48,10 @@ function daysUntil(d?: Date | string): number | null {
   if (!d) return null;
   const date = typeof d === "string" ? new Date(d) : d;
   if (!(date instanceof Date) || isNaN(+date)) return null;
-  const start = new Date(); start.setHours(0,0,0,0);
-  const end   = new Date(date); end.setHours(0,0,0,0);
+  const start = new Date();
+  start.setHours(0, 0, 0, 0);
+  const end = new Date(date);
+  end.setHours(0, 0, 0, 0);
   const diffMs = end.getTime() - start.getTime();
   return Math.round(diffMs / (1000 * 60 * 60 * 24));
 }
@@ -61,28 +66,64 @@ type Props = {
 };
 
 export default function ReminderTile({
-  reminder, isMenuOpen, onToggleMenu, onPressBody, onEdit, onDelete,
+  reminder,
+  isMenuOpen,
+  onToggleMenu,
+  onPressBody,
+  onEdit,
+  onDelete,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   const displayType = toDisplayType(reminder.type as any);
-  const accent = ACCENT_BY_TYPE[displayType];
-  const icon = ICON_BY_TYPE[displayType] ?? "calendar";
+  const accent = ACCENT_BY_TYPE[displayType as any];
+  const icon = ICON_BY_TYPE[displayType as any] ?? "calendar";
 
-  const everyStr =
-    reminder.intervalValue && reminder.intervalUnit
-      ? `Reoccurs every ${reminder.intervalValue} ${reminder.intervalUnit === "months" ? "months" : "days"}`
-      : "";
+  const typeLabel = tr(
+    `reminders.types.${displayType}`,
+    displayType === "fertilising"
+      ? "Fertilising"
+      : displayType.charAt(0).toUpperCase() + displayType.slice(1)
+  );
 
-  const dueDays = daysUntil(reminder.dueDate);
-  const duePrefix =
-    dueDays === null ? "" :
-    dueDays === 0   ? "Due today" :
-    dueDays === 1   ? "Due in 1 day" :
-                      `Due in ${dueDays} days`;
-  const dueLine = reminder.dueDate ? `${duePrefix} on ${formatDate(reminder.dueDate)}` : "";
+  const unitKey = reminder.intervalUnit === "months" ? "months" : "days";
+  const unitLabel = tr(`reminders.units.${unitKey}`, unitKey);
+
+  const everyStr = useMemo(() => {
+    if (!reminder.intervalValue || !reminder.intervalUnit) return "";
+    // “Repeats every N …” (localized)
+    return tr("reminders.tile.repeatsEvery", "Repeats every {{count}} {{unit}}", {
+      count: reminder.intervalValue,
+      unit: unitLabel,
+    });
+  }, [reminder.intervalValue, reminder.intervalUnit, tr, unitLabel]);
+
+  const dueLine = useMemo(() => {
+    const dueDays = daysUntil(reminder.dueDate);
+    const dateStr = reminder.dueDate ? formatDate(reminder.dueDate) : "";
+    if (dueDays === null || !dateStr) return "";
+
+    let prefix = "";
+    if (dueDays === 0) prefix = tr("reminders.tile.dueToday", "Due today");
+    else if (dueDays === 1) prefix = tr("reminders.tile.dueInOneDay", "Due in 1 day");
+    else prefix = tr("reminders.tile.dueInDays", "Due in {{count}} days", { count: dueDays });
+
+    return tr("reminders.tile.dueLine", "{{prefix}} on {{date}}", { prefix, date: dateStr });
+  }, [reminder.dueDate, tr]);
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass stack: Blur + white tint + single thin border + subtle accent tint */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -93,27 +134,42 @@ export default function ReminderTile({
         />
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
-        <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 }]} />
+        <View
+          pointerEvents="none"
+          style={[
+            StyleSheet.absoluteFill,
+            { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 },
+          ]}
+        />
       </View>
 
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
-        {/* Left */}
         <View style={s.leftCol}>
           <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
-          <Text style={[s.leftCaption, { color: accent }]}>{displayType.toUpperCase()}</Text>
+          <Text style={[s.leftCaption, { color: accent }]}>{typeLabel.toUpperCase()}</Text>
         </View>
 
-        {/* Body */}
         <Pressable style={s.centerCol} onPress={onPressBody}>
-          <Text style={s.plantName} numberOfLines={1}>{reminder.plant}</Text>
-          <Text style={s.location} numberOfLines={1}>{reminder.location}</Text>
-          {!!everyStr && <Text style={styles.metaCompact} numberOfLines={1}>{everyStr}</Text>}
-          {!!dueLine &&  <Text style={styles.metaCompact} numberOfLines={1}>{dueLine}</Text>}
+          <Text style={s.plantName} numberOfLines={1}>
+            {reminder.plant}
+          </Text>
+          <Text style={s.location} numberOfLines={1}>
+            {reminder.location}
+          </Text>
+          {!!everyStr && (
+            <Text style={styles.metaCompact} numberOfLines={1}>
+              {everyStr}
+            </Text>
+          )}
+          {!!dueLine && (
+            <Text style={styles.metaCompact} numberOfLines={1}>
+              {dueLine}
+            </Text>
+          )}
         </Pressable>
 
-        {/* Right (menu) */}
         <View style={s.rightCol}>
           <Pressable
             onPress={onToggleMenu}
@@ -126,12 +182,7 @@ export default function ReminderTile({
         </View>
       </View>
 
-      {isMenuOpen && (
-        <ReminderMenu
-          onEdit={onEdit}
-          onDelete={onDelete}
-        />
-      )}
+      {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
     </View>
   );
 }

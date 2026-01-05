@@ -1,0 +1,69 @@
+{
+  "reminders": {
+    "headerTitle": "Reminders",
+
+    "common": {
+      "unnamedPlant": "Unnamed plant",
+      "everyN": "every {{count}} {{unit}}"
+    },
+
+    "units": {
+      "days": "days",
+      "months": "months"
+    },
+
+    "types": {
+      "watering": "Watering",
+      "moisture": "Moisture",
+      "fertilising": "Fertilising",
+      "care": "Care",
+      "repot": "Repot"
+    },
+
+    "fab": {
+      "add": "Add reminder",
+      "calendar": "Calendar",
+      "list": "List",
+      "sort": "Sort",
+      "filter": "Filter",
+      "clearFilter": "Clear filter"
+    },
+
+    "empty": {
+      "title": "No reminders yet",
+      "description": "Reminders are associated with specific plants. Please make sure you have at least one plant created first.\n\nTap the “+” button to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, moisture, fertilising, care, or repot), set the first due date, and define how often it should repeat."
+    },
+
+    "menu": {
+      "edit": "Edit reminder",
+      "delete": "Delete reminder"
+    },
+
+    "tile": {
+      "repeatsEvery": "Repeats every {{count}} {{unit}}",
+      "dueToday": "Due today",
+      "dueInOneDay": "Due in 1 day",
+      "dueInDays": "Due in {{count}} days",
+      "dueLine": "{{prefix}} on {{date}}"
+    },
+
+    "calendar": {
+      "scheduledOn": "Scheduled on {{date}}",
+      "noItems": "No reminders for this day."
+    },
+
+    "toast": {
+      "loadFailed": "Failed to load reminders",
+      "deleted": "Reminder deleted",
+      "deleteFailed": "Delete failed",
+      "deleteFailedWithReason": "Delete failed: {{reason}}",
+      "duplicateType": "This plant already has a reminder of that type.",
+      "created": "Reminder created",
+      "updated": "Reminder updated",
+      "createFailed": "Create failed",
+      "createFailedWithReason": "Create failed: {{reason}}",
+      "updateFailed": "Update failed",
+      "updateFailedWithReason": "Update failed: {{reason}}"
+    }
+  }
+}

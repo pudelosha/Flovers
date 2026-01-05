@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useCallback } from "react";
 import { View, Text, ScrollView } from "react-native";
 // Import subpath to avoid Agenda + missing velocityTracker
 import Calendar from "react-native-calendars/src/calendar";
@@ -10,9 +10,12 @@ import { ACCENT_BY_TYPE } from "../constants/reminders.constants";
 import ReminderMiniTile from "./ReminderMiniTile";
 import { s } from "../styles/reminders.styles";
 
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
+
 type Props = {
   reminders: UIReminder[];
-  selectedDate: string;                 // YYYY-MM-DD
+  selectedDate: string; // YYYY-MM-DD
   onSelectDate: (isoDate: string) => void;
 
   // reused callbacks for actions
@@ -39,7 +42,6 @@ function monthYearLabel(input: any) {
     (input && typeof input?.toDate === "function" && input.toDate()) ||
     (input instanceof Date ? input : new Date(input));
   const raw = d.toLocaleString(undefined, { month: "long", year: "numeric" });
-  // ensure leading uppercase in locales that start with lowercase
   return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
 }
 
@@ -52,6 +54,19 @@ export default function RemindersCalendar({
   onEdit,
   onDelete,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   // multi-dot marks
   const dotsByDate = useMemo(() => {
     const acc: Record<string, { key: string; color: string }[]> = {};
@@ -67,8 +82,8 @@ export default function RemindersCalendar({
     Object.keys(acc).forEach((k) => {
       acc[k].sort(
         (a, b) =>
-          ORDER.findIndex((t) => a.key.startsWith(t)) -
-          ORDER.findIndex((t) => b.key.startsWith(t))
+          ORDER.findIndex((tt) => a.key.startsWith(tt)) -
+          ORDER.findIndex((tt) => b.key.startsWith(tt))
       );
     });
     return acc;
@@ -93,6 +108,8 @@ export default function RemindersCalendar({
     [reminders, selectedDate]
   );
 
+  const typeLabel = (tt: ReminderType) => tr(`reminders.types.${tt}`, tt === "fertilising" ? "Fertilising" : tt.charAt(0).toUpperCase() + tt.slice(1));
+
   return (
     <ScrollView
       style={s.calendarWrap}
@@ -100,7 +117,6 @@ export default function RemindersCalendar({
       showsVerticalScrollIndicator={false}
       onScrollBeginDrag={() => onToggleMenu("")}
     >
-      {/* Main blurry frame — match AuthCard/GlassCard: blur 20, white tint, thin border, radius 28 */}
       <View style={s.calendarCard}>
         <BlurView
           style={s.calendarGlass}
@@ -134,33 +150,36 @@ export default function RemindersCalendar({
             </View>
           )}
           renderArrow={(direction) => (
-            <Icon name={direction === "left" ? "chevron-left" : "chevron-right"} size={20} color="#FFFFFF" />
+            <Icon
+              name={direction === "left" ? "chevron-left" : "chevron-right"}
+              size={20}
+              color="#FFFFFF"
+            />
           )}
         />
 
-        {/* Legend — one row (horizontal scroll), keeps your dot/label look */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
           style={s.calendarLegendHScroll}
           contentContainerStyle={s.calendarLegendRow}
         >
-          {ORDER.map((t) => (
-            <View key={t} style={s.legendItem}>
-              <View style={[s.legendDotSmall, { backgroundColor: ACCENT_BY_TYPE[t] }]} />
-              <Text style={s.legendLabelSmall}>
-                {t === "fertilising" ? "Fertilising" : t.charAt(0).toUpperCase() + t.slice(1)}
-              </Text>
+          {ORDER.map((tt) => (
+            <View key={tt} style={s.legendItem}>
+              <View style={[s.legendDotSmall, { backgroundColor: ACCENT_BY_TYPE[tt] }]} />
+              <Text style={s.legendLabelSmall}>{typeLabel(tt)}</Text>
             </View>
           ))}
         </ScrollView>
 
-        {/* Subheading */}
-        <Text style={s.calendarSubheading}>Scheduled on {selectedDate}</Text>
+        <Text style={s.calendarSubheading}>
+          {tr("reminders.calendar.scheduledOn", "Scheduled on {{date}}", { date: selectedDate })}
+        </Text>
 
-        {/* Inside-frame list (plain View to avoid nested VirtualizedList warnings) */}
         {remindersForSelected.length === 0 ? (
-          <Text style={s.calendarNoItems}>No reminders for this day.</Text>
+          <Text style={s.calendarNoItems}>
+            {tr("reminders.calendar.noItems", "No reminders for this day.")}
+          </Text>
         ) : (
           <View style={s.calendarListBox}>
             {remindersForSelected.map((item) => (
@@ -176,7 +195,6 @@ export default function RemindersCalendar({
         )}
       </View>
 
-      {/* Spacer so the whole frame can scroll above the FAB */}
       <View style={{ height: 140 }} />
     </ScrollView>
   );

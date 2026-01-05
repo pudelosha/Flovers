@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Pressable, Text, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/reminders.styles";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 type Props = {
   onEdit: () => void;
@@ -9,12 +11,28 @@ type Props = {
 };
 
 export default function ReminderMenu({ onEdit, onDelete }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   return (
     <View style={s.menuSheet} pointerEvents="auto">
-      <MenuItem label="Edit reminder" icon="calendar-edit" onPress={onEdit} />
-      {/* DEBUG: log before delegating to parent onDelete */}
       <MenuItem
-        label="Delete reminder"
+        label={tr("reminders.menu.edit", "Edit reminder")}
+        icon="calendar-edit"
+        onPress={onEdit}
+      />
+      <MenuItem
+        label={tr("reminders.menu.delete", "Delete reminder")}
         icon="trash-can-outline"
         danger
         onPress={() => {

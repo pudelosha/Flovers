@@ -1,5 +1,4 @@
-﻿// C:\Projekty\Python\Flovers\mobile\src\i18n\index.ts
-import i18n from "i18next";
+﻿import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Base bundles
@@ -62,9 +61,13 @@ import plLocations from "./locales/pl/locations.json";
 import enLocationsModals from "./locales/en/locationsModals.json";
 import plLocationsModals from "./locales/pl/locationsModals.json";
 
-// Plant Details bundles (NEW)
+// Plant Details bundles
 import enPlantDetails from "./locales/en/plantDetails.json";
 import plPlantDetails from "./locales/pl/plantDetails.json";
+
+// Reminders bundles (NEW)
+import enReminders from "./locales/en/reminders.json";
+import plReminders from "./locales/pl/reminders.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -179,7 +182,8 @@ const resources = {
         enPlantsModals,
         enLocations,
         enLocationsModals,
-        enPlantDetails // NEW
+        enPlantDetails,
+        enReminders,
       ] as AnyObj[]
     ),
   },
@@ -208,7 +212,8 @@ const resources = {
         plPlantsModals,
         plLocations,
         plLocationsModals,
-        plPlantDetails // NEW
+        plPlantDetails,
+        plReminders,
       ] as AnyObj[]
     ),
   },

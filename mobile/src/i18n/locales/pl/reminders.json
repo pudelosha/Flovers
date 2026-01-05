@@ -1,0 +1,69 @@
+{
+  "reminders": {
+    "headerTitle": "Przypomnienia",
+
+    "common": {
+      "unnamedPlant": "Roślina bez nazwy",
+      "everyN": "co {{count}} {{unit}}"
+    },
+
+    "units": {
+      "days": "dni",
+      "months": "mies."
+    },
+
+    "types": {
+      "watering": "Podlewanie",
+      "moisture": "Wilgotność",
+      "fertilising": "Nawożenie",
+      "care": "Pielęgnacja",
+      "repot": "Przesadzanie"
+    },
+
+    "fab": {
+      "add": "Dodaj przypomnienie",
+      "calendar": "Kalendarz",
+      "list": "Lista",
+      "sort": "Sortuj",
+      "filter": "Filtruj",
+      "clearFilter": "Wyczyść filtr"
+    },
+
+    "empty": {
+      "title": "Brak przypomnień",
+      "description": "Przypomnienia są powiązane z konkretnymi roślinami. Upewnij się, że masz utworzoną przynajmniej jedną roślinę.\n\nDotknij przycisku „+”, aby dodać przypomnienie. W oknie wybierzesz roślinę, typ (podlewanie, wilgotność, nawożenie, pielęgnacja lub przesadzanie), ustawisz pierwszą datę oraz częstotliwość powtarzania."
+    },
+
+    "menu": {
+      "edit": "Edytuj przypomnienie",
+      "delete": "Usuń przypomnienie"
+    },
+
+    "tile": {
+      "repeatsEvery": "Powtarza się {{count}} {{unit}}",
+      "dueToday": "Dziś termin",
+      "dueInOneDay": "Termin za 1 dzień",
+      "dueInDays": "Termin za {{count}} dni",
+      "dueLine": "{{prefix}} ({{date}})"
+    },
+
+    "calendar": {
+      "scheduledOn": "Zaplanowane na {{date}}",
+      "noItems": "Brak przypomnień na ten dzień."
+    },
+
+    "toast": {
+      "loadFailed": "Nie udało się wczytać przypomnień",
+      "deleted": "Usunięto przypomnienie",
+      "deleteFailed": "Nie udało się usunąć",
+      "deleteFailedWithReason": "Nie udało się usunąć: {{reason}}",
+      "duplicateType": "Ta roślina ma już przypomnienie tego typu.",
+      "created": "Utworzono przypomnienie",
+      "updated": "Zaktualizowano przypomnienie",
+      "createFailed": "Nie udało się utworzyć",
+      "createFailedWithReason": "Nie udało się utworzyć: {{reason}}",
+      "updateFailed": "Nie udało się zaktualizować",
+      "updateFailedWithReason": "Nie udało się zaktualizować: {{reason}}"
+    }
+  }
+}

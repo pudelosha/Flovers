@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -15,6 +14,9 @@ import {
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -64,13 +66,13 @@ function todayISO() {
   return `${Y}-${M}-${D}`;
 }
 
-function mapPlantOptions(apiPlants: any[]): PlantOption[] {
+function mapPlantOptions(apiPlants: any[], unnamedFallback: string): PlantOption[] {
   return (apiPlants || []).map((p) => ({
     id: String(p.id),
     name:
       p.display_name?.trim() ||
       p.plant_definition?.name?.trim() ||
-      "Unnamed plant",
+      unnamedFallback,
     location: p.location?.name || undefined,
   }));
 }
@@ -99,6 +101,20 @@ const INITIAL_FILTERS: Filters = {
 export default function RemindersScreen() {
   const nav = useNavigation();
   const route = useRoute<any>();
+
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  // Safe t() (treat key-echo as missing)
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
@@ -149,9 +165,9 @@ export default function RemindersScreen() {
     setToastVisible(true);
   };
 
-  const uiTypeToApi = (t: "watering" | "moisture" | "fertilising" | "care" | "repot"):
+  const uiTypeToApi = (tt: "watering" | "moisture" | "fertilising" | "care" | "repot"):
     "water" | "moisture" | "fertilize" | "care" | "repot" =>
-    t === "watering" ? "water" : t === "fertilising" ? "fertilize" : t;
+    tt === "watering" ? "water" : tt === "fertilising" ? "fertilize" : tt;
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -164,19 +180,20 @@ export default function RemindersScreen() {
       ]);
       const ui = buildUIReminders(tasks, reminders, plants);
       setUiReminders(ui);
-      setPlantOptions(mapPlantOptions(plants));
+      setPlantOptions(mapPlantOptions(plants, tr("reminders.common.unnamedPlant", "Unnamed plant")));
       setHasLoadedOnce(true);
     } catch (e: any) {
-      setError(e?.message || "Failed to load reminders");
+      const msg = e?.message || tr("reminders.toast.loadFailed", "Failed to load reminders");
+      setError(msg);
       setUiReminders([]);
       setPlantOptions([]);
       setHasLoadedOnce(true);
-      // 🔴 show toast on unauthorized / any load error
-      showToast(e?.message || "Failed to load reminders", "error");
+      // toast on unauthorized / any load error
+      showToast(msg, "error");
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [tr]);
 
   /** Keep existing data refresh on focus, but clear stale tiles immediately so none are visible */
   useFocusEffect(
@@ -261,9 +278,10 @@ export default function RemindersScreen() {
       openEditModal(target);
       pendingEditIdRef.current = null;
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, uiReminders]);
 
-  // ⬅️ dedicated pull-to-refresh handler
+  // pull-to-refresh handler
   const onPullRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -314,7 +332,9 @@ export default function RemindersScreen() {
     try {
       await completeReminderTask(idNum, { auth: true });
       await load();
-    } catch {}
+    } catch {
+      // no-op
+    }
   };
 
   // --- DELETE FLOW ---
@@ -334,11 +354,16 @@ export default function RemindersScreen() {
       setConfirmDeleteReminderId(null);
       setConfirmDeleteName("");
       await load();
-      showToast("Reminder deleted", "success");
+      showToast(tr("reminders.toast.deleted", "Reminder deleted"), "success");
     } catch (e: any) {
       setConfirmDeleteReminderId(null);
       setConfirmDeleteName("");
-      showToast(e?.message ? `Delete failed: ${e.message}` : "Delete failed", "error");
+      showToast(
+        e?.message
+          ? tr("reminders.toast.deleteFailedWithReason", "Delete failed: {{reason}}", { reason: e.message })
+          : tr("reminders.toast.deleteFailed", "Delete failed"),
+        "error"
+      );
     }
   };
 
@@ -377,17 +402,14 @@ export default function RemindersScreen() {
 
     // DUPLICATE CHECK: only one reminder of a given type per plant
     const hasDuplicate = uiReminders.some((r) => {
-      // same plant
       const samePlant = r.plantId === fPlantId;
-      // same type
       const sameType = r.type === fType;
-      // if editing, ignore the reminder we’re currently editing
       const isSameReminder = !isCreate && r.reminderId === editingId;
       return samePlant && sameType && !isSameReminder;
     });
 
     if (hasDuplicate) {
-      showToast("This plant already has a reminder of that type.", "error");
+      showToast(tr("reminders.toast.duplicateType", "This plant already has a reminder of that type."), "error");
       return;
     }
 
@@ -408,13 +430,22 @@ export default function RemindersScreen() {
 
       setEditOpen(false);
       await load();
-      showToast(isCreate ? "Reminder created" : "Reminder updated", "success");
+      showToast(
+        isCreate
+          ? tr("reminders.toast.created", "Reminder created")
+          : tr("reminders.toast.updated", "Reminder updated"),
+        "success"
+      );
     } catch (e: any) {
       setEditOpen(false);
       showToast(
         isCreate
-          ? e?.message ? `Create failed: ${e.message}` : "Create failed"
-          : e?.message ? `Update failed: ${e.message}` : "Update failed",
+          ? e?.message
+            ? tr("reminders.toast.createFailedWithReason", "Create failed: {{reason}}", { reason: e.message })
+            : tr("reminders.toast.createFailed", "Create failed")
+          : e?.message
+            ? tr("reminders.toast.updateFailedWithReason", "Update failed: {{reason}}", { reason: e.message })
+            : tr("reminders.toast.updateFailed", "Update failed"),
         "error"
       );
     }
@@ -471,7 +502,7 @@ export default function RemindersScreen() {
     return sorted;
   }, [uiReminders, filters, sortKey, sortDir, plantOptions]);
 
-  // ➕ Determine if any filter is active (to show "Clear filter" action)
+  // Determine if any filter is active (to show "Clear filter" action)
   const isFilterActive = useMemo(() => {
     return Boolean(
       filters.plantId ||
@@ -484,7 +515,7 @@ export default function RemindersScreen() {
 
   const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
-  // ---------- ✨ ENTRANCE ANIMATION (staggered fade/translate for list items) ----------
+  // ---------- ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -523,7 +554,7 @@ export default function RemindersScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, viewMode, derivedReminders.length]);
 
-  // ---------- ✨ EMPTY-STATE FRAME ANIMATION (for "No reminders yet") ----------
+  // ---------- EMPTY-STATE ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -555,12 +586,12 @@ export default function RemindersScreen() {
   });
   const emptyOpacity = emptyAnim;
 
-  // ---------- EXACTLY LIKE PLANTS: EARLY RETURN WHILE LOADING ----------
+  // ---------- EARLY RETURN WHILE LOADING ----------
   if (loading) {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title="Reminders"
+          title={tr("reminders.headerTitle", "Reminders")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
@@ -572,14 +603,19 @@ export default function RemindersScreen() {
     );
   }
 
-  // ---------- FAB ACTIONS (conditional List/Calendar) ----------
+  // ---------- FAB ACTIONS ----------
   const fabActions = [
-    { key: "add", label: "Add reminder", icon: "plus", onPress: openAddReminder },
+    {
+      key: "add",
+      label: tr("reminders.fab.add", "Add reminder"),
+      icon: "plus",
+      onPress: openAddReminder,
+    },
     ...(viewMode === "list"
       ? [
           {
             key: "calendar",
-            label: "Calendar",
+            label: tr("reminders.fab.calendar", "Calendar"),
             icon: "calendar-month",
             onPress: openCalendar,
           },
@@ -587,18 +623,28 @@ export default function RemindersScreen() {
       : [
           {
             key: "list",
-            label: "List",
+            label: tr("reminders.fab.list", "List"),
             icon: "view-list",
             onPress: openList,
           },
         ]),
-    { key: "sort", label: "Sort", onPress: () => setSortOpen(true), icon: "sort" },
-    { key: "filter", label: "Filter", onPress: () => setFilterOpen(true), icon: "filter-variant" },
+    {
+      key: "sort",
+      label: tr("reminders.fab.sort", "Sort"),
+      onPress: () => setSortOpen(true),
+      icon: "sort",
+    },
+    {
+      key: "filter",
+      label: tr("reminders.fab.filter", "Filter"),
+      onPress: () => setFilterOpen(true),
+      icon: "filter-variant",
+    },
     ...(isFilterActive
       ? [
           {
             key: "clearFilter",
-            label: "Clear filter",
+            label: tr("reminders.fab.clearFilter", "Clear filter"),
             icon: "filter-remove",
             onPress: () => setFilters(INITIAL_FILTERS),
           } as const,
@@ -609,7 +655,7 @@ export default function RemindersScreen() {
   return (
     <View style={{ flex: 1 }} {...panResponder.panHandlers}>
       <GlassHeader
-        title="Reminders"
+        title={tr("reminders.headerTitle", "Reminders")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -662,7 +708,6 @@ export default function RemindersScreen() {
                   },
                 ]}
               >
-                {/* Single glass frame — no duplicate borders/backgrounds */}
                 <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
                   <BlurView
                     style={StyleSheet.absoluteFill}
@@ -682,21 +727,24 @@ export default function RemindersScreen() {
                       { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
                     ]}
                   />
+
                   <View style={s.emptyInner}>
-                    {/* Centered header (icon + title) */}
                     <MaterialCommunityIcons
                       name="bell-outline"
                       size={26}
                       color="#FFFFFF"
                       style={{ marginBottom: 10 }}
                     />
-                    <Text style={s.emptyTitle}>No reminders yet</Text>
+                    <Text style={s.emptyTitle}>
+                      {tr("reminders.empty.title", "No reminders yet")}
+                    </Text>
 
-                    {/* Left-aligned description */}
                     <View style={s.emptyDescBox}>
                       <Text style={s.emptyText}>
-                        Reminders are associated with specific plants. Please make sure you have at least one plant created first.{"\n\n"}
-                        Tap the <Text style={s.inlineBold}>“+” button</Text> to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, moisture, fertilising, care, or repot), set the first due date, and define how often it should repeat.
+                        {tr(
+                          "reminders.empty.description",
+                          "Reminders are associated with specific plants. Please make sure you have at least one plant created first.\n\nTap the “+” button to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, moisture, fertilising, care, or repot), set the first due date, and define how often it should repeat."
+                        )}
                       </Text>
                     </View>
                   </View>
@@ -779,7 +827,6 @@ export default function RemindersScreen() {
         }}
       />
 
-      {/* Top Snackbar (toast) */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
