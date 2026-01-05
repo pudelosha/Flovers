@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { View, Text, Pressable, TextInput, Keyboard, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../../styles/reminders.styles";
 
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
+
 export type ReminderType = "watering" | "moisture" | "fertilising" | "care" | "repot";
 
 // Optional datetime picker (same pattern you mentioned)
 let DateTimePicker: any = null;
-try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
+try {
+  DateTimePicker = require("@react-native-community/datetimepicker").default;
+} catch {}
 
 type PlantOption = { id: string; name: string; location?: string };
 
@@ -69,13 +74,32 @@ export default function EditReminderModal(props: Props) {
     visible,
     mode = "edit",
     plants,
-    fType, setFType,
-    fPlantId, setFPlantId,
-    fDueDate, setFDueDate,
-    fIntervalValue, setFIntervalValue,
-    fIntervalUnit, setFIntervalUnit,
-    onCancel, onSave,
+    fType,
+    setFType,
+    fPlantId,
+    setFPlantId,
+    fDueDate,
+    setFDueDate,
+    fIntervalValue,
+    setFIntervalValue,
+    fIntervalUnit,
+    setFIntervalUnit,
+    onCancel,
+    onSave,
   } = props;
+
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
 
   const [typeOpen, setTypeOpen] = useState(false);
   const [plantOpen, setPlantOpen] = useState(false);
@@ -99,6 +123,11 @@ export default function EditReminderModal(props: Props) {
     fIntervalValue > 0;
 
   if (!visible) return null;
+
+  const typeLabel = (rt: ReminderType) =>
+    tr(`reminders.types.${rt}`, rt === "fertilising" ? "Fertilising" : rt.charAt(0).toUpperCase() + rt.slice(1));
+
+  const unitLabel = (u: "days" | "months") => tr(`reminders.units.${u}`, u);
 
   return (
     <>
@@ -126,10 +155,16 @@ export default function EditReminderModal(props: Props) {
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>{mode === "create" ? "Add reminder" : "Edit reminder"}</Text>
+          <Text style={s.promptTitle}>
+            {mode === "create"
+              ? tr("remindersModals.edit.titleCreate", "Add reminder")
+              : tr("remindersModals.edit.titleEdit", "Edit reminder")}
+          </Text>
 
           {/* Type */}
-          <Text style={s.inputLabel}>Type</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.edit.typeLabel", "Type")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -139,8 +174,12 @@ export default function EditReminderModal(props: Props) {
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{fType}</Text>
-              <MaterialCommunityIcons name={typeOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <Text style={s.dropdownValue}>{typeLabel(fType)}</Text>
+              <MaterialCommunityIcons
+                name={typeOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
             {typeOpen && (
               <View style={s.dropdownList}>
@@ -153,7 +192,7 @@ export default function EditReminderModal(props: Props) {
                       setTypeOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>{opt}</Text>
+                    <Text style={s.dropdownItemText}>{typeLabel(opt)}</Text>
                     {fType === opt && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                   </Pressable>
                 ))}
@@ -162,7 +201,9 @@ export default function EditReminderModal(props: Props) {
           </View>
 
           {/* Plant */}
-          <Text style={s.inputLabel}>Plant</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.edit.plantLabel", "Plant")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -172,8 +213,16 @@ export default function EditReminderModal(props: Props) {
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{selectedPlant ? selectedPlant.name : "Select plant"}</Text>
-              <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <Text style={s.dropdownValue}>
+                {selectedPlant
+                  ? selectedPlant.name
+                  : tr("remindersModals.edit.selectPlant", "Select plant")}
+              </Text>
+              <MaterialCommunityIcons
+                name={plantOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
             {plantOpen && (
               <View style={s.dropdownList}>
@@ -195,24 +244,25 @@ export default function EditReminderModal(props: Props) {
           </View>
 
           {/* Location (read-only) */}
-          <Text style={s.inputLabel}>Location</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.edit.locationLabel", "Location")}
+          </Text>
           <TextInput
             style={[s.input, { opacity: 0.85 }]}
-            placeholder="Location"
+            placeholder={tr("remindersModals.edit.locationPlaceholder", "Location")}
             placeholderTextColor="rgba(255,255,255,0.7)"
             value={location || ""}
             editable={false}
           />
 
           {/* Due date with DatePicker */}
-          <Text style={s.inputLabel}>Due date</Text>
-          <Pressable
-            onPress={() => setShowDatePicker(true)}
-            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-          >
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.edit.dueDateLabel", "Due date")}
+          </Text>
+          <Pressable onPress={() => setShowDatePicker(true)} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
             <TextInput
               style={s.input}
-              placeholder="YYYY-MM-DD"
+              placeholder={tr("remindersModals.edit.datePlaceholder", "YYYY-MM-DD")}
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={fDueDate}
               editable={false}
@@ -224,7 +274,6 @@ export default function EditReminderModal(props: Props) {
             <DateTimePicker
               value={(() => {
                 const d = isValidDateYYYYMMDD(fDueDate) ? new Date(fDueDate) : new Date();
-                // normalize to local date (avoid TZ shift)
                 return new Date(d.getFullYear(), d.getMonth(), d.getDate());
               })()}
               mode="date"
@@ -233,22 +282,23 @@ export default function EditReminderModal(props: Props) {
                 if (Platform.OS === "android") setShowDatePicker(false);
                 if (date) setFDueDate(toYYYYMMDD(date));
               }}
-              // iOS inline picker stays visible; you can add a close button if you prefer
             />
           )}
 
           {/* Interval */}
-          <Text style={s.inputLabel}>Interval</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.edit.intervalLabel", "Interval")}
+          </Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
               <TextInput
                 style={[s.input, s.inputInline]}
-                placeholder="Value"
+                placeholder={tr("remindersModals.edit.intervalValuePlaceholder", "Value")}
                 placeholderTextColor="rgba(255,255,255,0.7)"
                 value={String(typeof fIntervalValue === "number" ? fIntervalValue : "")}
-                onChangeText={(t) => {
-                  const n = Number(t.replace(/[^\d]/g, ""));
-                  if (!t) setFIntervalValue(undefined);
+                onChangeText={(txt) => {
+                  const n = Number(txt.replace(/[^\d]/g, ""));
+                  if (!txt) setFIntervalValue(undefined);
                   else if (!Number.isNaN(n)) setFIntervalValue(n);
                 }}
                 keyboardType="number-pad"
@@ -257,7 +307,7 @@ export default function EditReminderModal(props: Props) {
             <View style={s.inlineHalfRight}>
               <TextInput
                 style={[s.input, s.inputInline, { opacity: 0.85 }]}
-                value={fIntervalUnit}
+                value={unitLabel(fIntervalUnit)}
                 editable={false}
               />
             </View>
@@ -271,8 +321,11 @@ export default function EditReminderModal(props: Props) {
                 onCancel();
               }}
             >
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("remindersModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
+
             <Pressable
               style={[s.promptBtn, s.promptPrimary, !canSave && { opacity: 0.5 }]}
               disabled={!canSave}
@@ -282,7 +335,9 @@ export default function EditReminderModal(props: Props) {
               }}
             >
               <Text style={[s.promptBtnText, s.promptPrimaryText]}>
-                {mode === "create" ? "Create" : "Update"}
+                {mode === "create"
+                  ? tr("remindersModals.common.create", "Create")
+                  : tr("remindersModals.common.update", "Update")}
               </Text>
             </Pressable>
           </View>

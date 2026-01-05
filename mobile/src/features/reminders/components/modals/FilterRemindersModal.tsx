@@ -6,18 +6,23 @@ import { s } from "../../styles/reminders.styles";
 import type { ReminderType } from "../../types/reminders.types";
 import { ACCENT_BY_TYPE } from "../../constants/reminders.constants";
 
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
+
 // Optional datetime picker (same pattern as EditReminderModal)
 let DateTimePicker: any = null;
-try { DateTimePicker = require("@react-native-community/datetimepicker").default; } catch {}
+try {
+  DateTimePicker = require("@react-native-community/datetimepicker").default;
+} catch {}
 
 type PlantOption = { id: string; name: string; location?: string };
 
 type Filters = {
-  plantId?: string;       // specific plant or undefined for Any
-  location?: string;      // specific location or undefined for Any
+  plantId?: string; // specific plant or undefined for Any
+  location?: string; // specific location or undefined for Any
   types?: ReminderType[]; // multi
-  dueFrom?: string;       // "YYYY-MM-DD"
-  dueTo?: string;         // "YYYY-MM-DD"
+  dueFrom?: string; // "YYYY-MM-DD"
+  dueTo?: string; // "YYYY-MM-DD"
 };
 
 type Props = {
@@ -46,15 +51,13 @@ function toYYYYMMDD(d: Date) {
   const D = String(d.getDate()).padStart(2, "0");
   return `${Y}-${M}-${D}`;
 }
-
-// tiny helper for tinted backgrounds
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(255,255,255,${alpha})`;
   if (!hex || typeof hex !== "string") return fallback;
   let h = hex.trim();
   if (!h.startsWith("#")) h = `#${h}`;
   h = h.replace("#", "");
-  if (h.length === 3) h = h.split("").map(c => c + c).join("");
+  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
   if (h.length !== 6) return fallback;
   const bigint = parseInt(h, 16);
   if (Number.isNaN(bigint)) return fallback;
@@ -73,6 +76,19 @@ export default function FilterRemindersModal({
   onApply,
   onClearAll,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = React.useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
   const [types, setTypes] = React.useState<ReminderType[]>(filters.types || []);
@@ -97,9 +113,12 @@ export default function FilterRemindersModal({
     }
   }, [visible, filters]);
 
-  const toggleType = (t: ReminderType) => {
-    setTypes((curr) => (curr.includes(t) ? curr.filter((x) => x !== t) : [...curr, t]));
+  const toggleType = (tt: ReminderType) => {
+    setTypes((curr) => (curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]));
   };
+
+  const typeLabel = (tt: ReminderType) =>
+    tr(`reminders.types.${tt}`, tt === "fertilising" ? "Fertilising" : tt.charAt(0).toUpperCase() + tt.slice(1));
 
   if (!visible) return null;
 
@@ -124,10 +143,14 @@ export default function FilterRemindersModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Filter reminders</Text>
+          <Text style={s.promptTitle}>
+            {tr("remindersModals.filter.title", "Filter reminders")}
+          </Text>
 
           {/* Plant dropdown */}
-          <Text style={s.inputLabel}>Plant</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.filter.plantLabel", "Plant")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -138,10 +161,14 @@ export default function FilterRemindersModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {plantId ? (plants.find((p) => p.id === plantId)?.name || "Select plant") : "Any plant"}
+                {plantId
+                  ? plants.find((p) => p.id === plantId)?.name ||
+                    tr("remindersModals.filter.selectPlant", "Select plant")
+                  : tr("remindersModals.filter.anyPlant", "Any plant")}
               </Text>
               <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
+
             {plantOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -152,9 +179,12 @@ export default function FilterRemindersModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any plant</Text>
+                  <Text style={s.dropdownItemText}>
+                    {tr("remindersModals.filter.anyPlant", "Any plant")}
+                  </Text>
                   {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
+
                 {plants.map((p) => (
                   <Pressable
                     key={p.id}
@@ -173,7 +203,9 @@ export default function FilterRemindersModal({
           </View>
 
           {/* Location dropdown */}
-          <Text style={s.inputLabel}>Location</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.filter.locationLabel", "Location")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -183,9 +215,12 @@ export default function FilterRemindersModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{location ? location : "Any location"}</Text>
+              <Text style={s.dropdownValue}>
+                {location ? location : tr("remindersModals.filter.anyLocation", "Any location")}
+              </Text>
               <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
+
             {locOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -196,9 +231,12 @@ export default function FilterRemindersModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any location</Text>
+                  <Text style={s.dropdownItemText}>
+                    {tr("remindersModals.filter.anyLocation", "Any location")}
+                  </Text>
                   {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
+
                 {locations.map((loc) => (
                   <Pressable
                     key={loc}
@@ -216,48 +254,52 @@ export default function FilterRemindersModal({
             )}
           </View>
 
-          {/* Types (chips) — borderless & tinted; fills width and wraps to two rows */}
-          <Text style={s.inputLabel}>Task types</Text>
+          {/* Types */}
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.filter.taskTypesLabel", "Task types")}
+          </Text>
           <View style={s.chipRow}>
-            {TYPE_OPTIONS.map((t) => {
-              const selected = types.includes(t);
-              const tint = ACCENT_BY_TYPE[t];
+            {TYPE_OPTIONS.map((tt) => {
+              const selected = types.includes(tt);
+              const tint = ACCENT_BY_TYPE[tt];
               return (
                 <Pressable
-                  key={t}
-                  onPress={() => toggleType(t)}
+                  key={tt}
+                  onPress={() => toggleType(tt)}
                   style={[
                     s.chip,
                     {
-                      // borderless & glazed
                       backgroundColor: selected ? hexToRgba(tint, 0.22) : "rgba(255,255,255,0.12)",
                     },
                   ]}
                 >
-                  <Text style={s.chipText}>{t.toUpperCase()}</Text>
+                  <Text style={s.chipText}>{typeLabel(tt).toUpperCase()}</Text>
                 </Pressable>
               );
             })}
           </View>
 
-          {/* Due date range (50/50 and full width) */}
-          <Text style={s.inputLabel}>Due date range</Text>
+          {/* Due date range */}
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.filter.dueDateRangeLabel", "Due date range")}
+          </Text>
+
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
-              <Text style={s.inputLabel}>From</Text>
-              <Pressable
-                onPress={() => setShowFromPicker(true)}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
+              <Text style={s.inputLabel}>
+                {tr("remindersModals.filter.fromLabel", "From")}
+              </Text>
+              <Pressable onPress={() => setShowFromPicker(true)} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={tr("remindersModals.filter.datePlaceholder", "YYYY-MM-DD")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueFrom}
                   editable={false}
                   pointerEvents="none"
                 />
               </Pressable>
+
               {DateTimePicker && showFromPicker && (
                 <DateTimePicker
                   value={(() => {
@@ -275,20 +317,20 @@ export default function FilterRemindersModal({
             </View>
 
             <View style={s.inlineHalfRight}>
-              <Text style={s.inputLabel}>To</Text>
-              <Pressable
-                onPress={() => setShowToPicker(true)}
-                android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-              >
+              <Text style={s.inputLabel}>
+                {tr("remindersModals.filter.toLabel", "To")}
+              </Text>
+              <Pressable onPress={() => setShowToPicker(true)} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={tr("remindersModals.filter.datePlaceholder", "YYYY-MM-DD")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueTo}
                   editable={false}
                   pointerEvents="none"
                 />
               </Pressable>
+
               {DateTimePicker && showToPicker && (
                 <DateTimePicker
                   value={(() => {
@@ -308,11 +350,17 @@ export default function FilterRemindersModal({
 
           <View style={s.promptButtonsRow}>
             <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                {tr("remindersModals.common.clear", "Clear")}
+              </Text>
             </Pressable>
+
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("remindersModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
+
             <Pressable
               onPress={() =>
                 onApply({
@@ -325,7 +373,9 @@ export default function FilterRemindersModal({
               }
               style={[s.promptBtn, s.promptPrimary]}
             >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>
+                {tr("remindersModals.common.apply", "Apply")}
+              </Text>
             </Pressable>
           </View>
         </View>

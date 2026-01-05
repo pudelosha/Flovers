@@ -1,0 +1,63 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Cancel",
+      "apply": "Apply",
+      "clear": "Clear",
+      "delete": "Delete",
+      "create": "Create",
+      "update": "Update",
+      "reset": "Reset"
+    },
+
+    "confirmDelete": {
+      "title": "Delete reminder",
+      "areYouSurePrefix": "Are you sure you want to delete",
+      "areYouSureSuffix": "? This action cannot be undone."
+    },
+
+    "edit": {
+      "titleCreate": "Add reminder",
+      "titleEdit": "Edit reminder",
+
+      "typeLabel": "Type",
+      "plantLabel": "Plant",
+      "selectPlant": "Select plant",
+      "locationLabel": "Location",
+      "locationPlaceholder": "Location",
+      "dueDateLabel": "Due date",
+      "datePlaceholder": "YYYY-MM-DD",
+      "intervalLabel": "Interval",
+      "intervalValuePlaceholder": "Value"
+    },
+
+    "filter": {
+      "title": "Filter reminders",
+      "plantLabel": "Plant",
+      "selectPlant": "Select plant",
+      "anyPlant": "Any plant",
+      "locationLabel": "Location",
+      "anyLocation": "Any location",
+      "taskTypesLabel": "Task types",
+      "dueDateRangeLabel": "Due date range",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+
+    "sort": {
+      "title": "Sort reminders",
+      "sortByLabel": "Sort by",
+      "directionLabel": "Direction",
+      "keys": {
+        "dueDate": "Due date",
+        "plant": "Plant name",
+        "location": "Location"
+      },
+      "directions": {
+        "asc": "Ascending",
+        "desc": "Descending"
+      }
+    }
+  }
+}

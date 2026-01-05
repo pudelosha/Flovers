@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../../styles/reminders.styles";
+
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 type Props = {
   visible: boolean;
@@ -10,7 +13,25 @@ type Props = {
   onConfirm: () => void;
 };
 
-export default function ConfirmDeleteReminderModal({ visible, name, onCancel, onConfirm }: Props) {
+export default function ConfirmDeleteReminderModal({
+  visible,
+  name,
+  onCancel,
+  onConfirm,
+}: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   if (!visible) return null;
 
   return (
@@ -33,18 +54,27 @@ export default function ConfirmDeleteReminderModal({ visible, name, onCancel, on
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Delete reminder</Text>
+          <Text style={s.promptTitle}>
+            {tr("remindersModals.confirmDelete.title", "Delete reminder")}
+          </Text>
+
           <Text style={s.confirmText}>
-            Are you sure you want to delete{" "}
-            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>? This action cannot be undone.
+            {tr("remindersModals.confirmDelete.areYouSurePrefix", "Are you sure you want to delete")}{" "}
+            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
+            {tr("remindersModals.confirmDelete.areYouSureSuffix", "? This action cannot be undone.")}
           </Text>
 
           <View style={s.promptButtonsRow}>
             <Pressable style={s.promptBtn} onPress={onCancel}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("remindersModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
+
             <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Delete</Text>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                {tr("remindersModals.common.delete", "Delete")}
+              </Text>
             </Pressable>
           </View>
         </View>

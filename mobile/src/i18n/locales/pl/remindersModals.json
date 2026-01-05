@@ -1,0 +1,63 @@
+{
+  "remindersModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "apply": "Zastosuj",
+      "clear": "Wyczyść",
+      "delete": "Usuń",
+      "create": "Utwórz",
+      "update": "Zapisz",
+      "reset": "Reset"
+    },
+
+    "confirmDelete": {
+      "title": "Usuń przypomnienie",
+      "areYouSurePrefix": "Czy na pewno chcesz usunąć",
+      "areYouSureSuffix": "? Tej operacji nie można cofnąć."
+    },
+
+    "edit": {
+      "titleCreate": "Dodaj przypomnienie",
+      "titleEdit": "Edytuj przypomnienie",
+
+      "typeLabel": "Typ",
+      "plantLabel": "Roślina",
+      "selectPlant": "Wybierz roślinę",
+      "locationLabel": "Lokalizacja",
+      "locationPlaceholder": "Lokalizacja",
+      "dueDateLabel": "Termin",
+      "datePlaceholder": "RRRR-MM-DD",
+      "intervalLabel": "Częstotliwość",
+      "intervalValuePlaceholder": "Wartość"
+    },
+
+    "filter": {
+      "title": "Filtruj przypomnienia",
+      "plantLabel": "Roślina",
+      "selectPlant": "Wybierz roślinę",
+      "anyPlant": "Dowolna roślina",
+      "locationLabel": "Lokalizacja",
+      "anyLocation": "Dowolna lokalizacja",
+      "taskTypesLabel": "Typy zadań",
+      "dueDateRangeLabel": "Zakres terminu",
+      "fromLabel": "Od",
+      "toLabel": "Do",
+      "datePlaceholder": "RRRR-MM-DD"
+    },
+
+    "sort": {
+      "title": "Sortuj przypomnienia",
+      "sortByLabel": "Sortuj wg",
+      "directionLabel": "Kierunek",
+      "keys": {
+        "dueDate": "Termin",
+        "plant": "Nazwa rośliny",
+        "location": "Lokalizacja"
+      },
+      "directions": {
+        "asc": "Rosnąco",
+        "desc": "Malejąco"
+      }
+    }
+  }
+}

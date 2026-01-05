@@ -1,9 +1,11 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\SortRemindersModal.tsx
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../../styles/reminders.styles";
+
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 type SortKey = "dueDate" | "plant" | "location";
 type SortDir = "asc" | "desc";
@@ -25,6 +27,19 @@ export default function SortRemindersModal({
   onApply,
   onReset,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = React.useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
   const [k, setK] = React.useState<SortKey>(sortKey);
@@ -40,6 +55,18 @@ export default function SortRemindersModal({
   }, [visible, sortKey, sortDir]);
 
   if (!visible) return null;
+
+  const sortKeyLabel = (kk: SortKey) =>
+    kk === "dueDate"
+      ? tr("remindersModals.sort.keys.dueDate", "Due date")
+      : kk === "plant"
+      ? tr("remindersModals.sort.keys.plant", "Plant name")
+      : tr("remindersModals.sort.keys.location", "Location");
+
+  const sortDirLabel = (dd: SortDir) =>
+    dd === "asc"
+      ? tr("remindersModals.sort.directions.asc", "Ascending")
+      : tr("remindersModals.sort.directions.desc", "Descending");
 
   return (
     <>
@@ -62,10 +89,14 @@ export default function SortRemindersModal({
         </View>
 
         <View style={[s.promptInner, styles.promptInner28]}>
-          <Text style={s.promptTitle}>Sort reminders</Text>
+          <Text style={s.promptTitle}>
+            {tr("remindersModals.sort.title", "Sort reminders")}
+          </Text>
 
           {/* Sort key dropdown */}
-          <Text style={s.inputLabel}>Sort by</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.sort.sortByLabel", "Sort by")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -75,18 +106,16 @@ export default function SortRemindersModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>
-                {k === "dueDate" ? "Due date" : k === "plant" ? "Plant name" : "Location"}
-              </Text>
+              <Text style={s.dropdownValue}>{sortKeyLabel(k)}</Text>
               <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
 
             {keyOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "dueDate", label: "Due date" },
-                  { key: "plant", label: "Plant name" },
-                  { key: "location", label: "Location" },
+                  { key: "dueDate", label: sortKeyLabel("dueDate") },
+                  { key: "plant", label: sortKeyLabel("plant") },
+                  { key: "location", label: sortKeyLabel("location") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -105,7 +134,9 @@ export default function SortRemindersModal({
           </View>
 
           {/* Direction dropdown */}
-          <Text style={s.inputLabel}>Direction</Text>
+          <Text style={s.inputLabel}>
+            {tr("remindersModals.sort.directionLabel", "Direction")}
+          </Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -115,15 +146,15 @@ export default function SortRemindersModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
+              <Text style={s.dropdownValue}>{sortDirLabel(d)}</Text>
               <MaterialCommunityIcons name={dirOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
 
             {dirOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "asc", label: "Ascending" },
-                  { key: "desc", label: "Descending" },
+                  { key: "asc", label: sortDirLabel("asc") },
+                  { key: "desc", label: sortDirLabel("desc") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -144,14 +175,22 @@ export default function SortRemindersModal({
           <View style={s.promptButtonsRow}>
             {onReset ? (
               <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
-                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
+                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                  {tr("remindersModals.common.reset", "Reset")}
+                </Text>
               </Pressable>
             ) : null}
+
             <Pressable onPress={onCancel} style={[styles.btnBase]}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("remindersModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
+
             <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>
+                {tr("remindersModals.common.apply", "Apply")}
+              </Text>
             </Pressable>
           </View>
         </View>
