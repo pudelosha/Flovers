@@ -73,13 +73,12 @@ export default function PreviousNextBar({
     return {
       hidePrev,
       prevLabel: t("createPlant.common.previous"),
-      nextLabel: isCreateStep
-        ? t("createPlant.common.create")
-        : t("createPlant.common.next"),
+      nextLabel: isCreateStep ? t("createPlant.common.create") : t("createPlant.common.next"),
     };
   }, [step, t, currentLanguage]);
 
-  if (hidden || !hasStep) return null;
+  // Hide bar on Step09 (creating/confirmation) + if wizard isn't ready
+  if (hidden || !hasStep || step === "creating") return null;
 
   const prevHandler = () => {
     if (step === "selectPlant") return;
@@ -99,15 +98,12 @@ export default function PreviousNextBar({
       return;
     }
 
-    // VALIDATION: plant name required
+    // VALIDATION: plant name required (Step08 uses displayName)
     if (step === "name") {
-      const name = String(state?.name || "").trim();
-      if (!name) {
+      const displayName = String((state as any)?.displayName ?? "").trim();
+      if (!displayName) {
         showToast(
-          t(
-            "createPlant.step08.nameRequired",
-            "Plant name is required to create a plant."
-          )
+          t("createPlant.step08.nameRequired", "Plant name is required to create a plant.")
         );
         return;
       }
@@ -122,8 +118,7 @@ export default function PreviousNextBar({
   const handlePrev = onPrev || prevHandler;
   const handleNext = onNext || nextHandler;
 
-  const blockNextBecauseOfStep =
-    step === "location" && !state?.selectedLocationId;
+  const blockNextBecauseOfStep = step === "location" && !state?.selectedLocationId;
 
   const isPrevDisabled = !!prevDisabled || defaults.hidePrev;
   const isNextDisabled = !!nextDisabled || blockNextBecauseOfStep;
@@ -167,14 +162,8 @@ export default function PreviousNextBar({
               android_ripple={{ color: "rgba(255,255,255,0.15)" }}
             >
               <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-                <MaterialCommunityIcons
-                  name="chevron-left"
-                  size={18}
-                  color="#FFFFFF"
-                />
-                <Text style={wiz.nextBtnText}>
-                  {prevLabel ?? defaults.prevLabel}
-                </Text>
+                <MaterialCommunityIcons name="chevron-left" size={18} color="#FFFFFF" />
+                <Text style={wiz.nextBtnText}>{prevLabel ?? defaults.prevLabel}</Text>
               </View>
             </Pressable>
           )}
@@ -203,9 +192,7 @@ export default function PreviousNextBar({
                 width: "100%",
               }}
             >
-              <Text style={wiz.nextBtnText}>
-                {nextLabel ?? defaults.nextLabel}
-              </Text>
+              <Text style={wiz.nextBtnText}>{nextLabel ?? defaults.nextLabel}</Text>
               <MaterialCommunityIcons
                 name={step === "name" ? "check" : "chevron-right"}
                 size={18}
@@ -216,7 +203,6 @@ export default function PreviousNextBar({
         </View>
       </View>
 
-      {/* Shared toast */}
       <TopSnackbar
         visible={toastVisible}
         message={toastMsg}
