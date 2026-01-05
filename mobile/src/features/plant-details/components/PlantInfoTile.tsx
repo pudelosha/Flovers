@@ -1,7 +1,9 @@
 // C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\PlantInfoTile.tsx
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
@@ -9,14 +11,82 @@ type Props = {
   plant: ApiPlantInstanceDetailFull;
 };
 
+function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
+  if (!v) return null;
+  const raw = String(v).trim().toUpperCase();
+
+  // Most common backend variants
+  if (raw === "N" || raw === "NORTH") return "N";
+  if (raw === "E" || raw === "EAST") return "E";
+  if (raw === "S" || raw === "SOUTH") return "S";
+  if (raw === "W" || raw === "WEST") return "W";
+
+  return null;
+}
+
 export default function PlantInfoTile({ plant }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+    },
+    [t, currentLanguage]
+  );
+
   const title =
     plant.display_name ||
     plant.plant_definition?.name ||
-    `Plant #${plant.id}`;
+    tr("plantDetails.info.fallbackTitle", `Plant #${plant.id}`, { id: plant.id });
 
   const latin = plant.plant_definition?.latin || "";
   const locationName = plant.location?.name || "";
+
+  // Values that can be translated when they are key-like
+  const lightValue = plant.light_level
+    ? tr(
+        `createPlant.step04.lightLevels.${String(plant.light_level)}.label`,
+        String(plant.light_level)
+      )
+    : tr("plantDetails.common.dash", "—");
+
+  // ✅ Orientation translated from plantDetails.json (reliable + local)
+  const oKey = normalizeOrientationKey(plant.orientation);
+  const orientationValue = oKey
+    ? tr(
+        `plantDetails.info.orientations.${oKey}`,
+        // secondary attempt (optional): if your Step04 has it, it will still work
+        tr(
+          `createPlant.step04.orientations.${oKey}.label`,
+          oKey
+        )
+      )
+    : tr("plantDetails.common.dash", "—");
+
+  const potValue = plant.pot_material
+    ? tr(
+        `createPlant.step05.potMaterials.${String(plant.pot_material)}.label`,
+        String(plant.pot_material)
+      )
+    : tr("plantDetails.common.dash", "—");
+
+  const soilValue = plant.soil_mix
+    ? tr(
+        `createPlant.step05.soilMixes.${String(plant.soil_mix)}.label`,
+        String(plant.soil_mix)
+      )
+    : tr("plantDetails.common.dash", "—");
+
+  const purchaseValue = plant.purchase_date || tr("plantDetails.common.dash", "—");
+  const notesValue = plant.notes || tr("plantDetails.common.dash", "—");
+
+  const distanceValue =
+    (plant.distance_cm ?? tr("plantDetails.common.dash", "—")) +
+    (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
 
   return (
     <View>
@@ -30,41 +100,38 @@ export default function PlantInfoTile({ plant }: Props) {
         {[
           {
             icon: "calendar",
-            label: "Purchased",
-            value: plant.purchase_date || "—",
+            label: tr("plantDetails.info.purchased", "Purchased"),
+            value: purchaseValue,
           },
           {
             icon: "note-edit-outline",
-            label: "Notes",
-            value: plant.notes || "—",
+            label: tr("plantDetails.info.notes", "Notes"),
+            value: notesValue,
           },
           {
             icon: "white-balance-sunny",
-            label: "Light",
-            value: plant.light_level || "—",
+            label: tr("plantDetails.info.light", "Light"),
+            value: lightValue,
           },
           {
             icon: "compass-outline",
-            label: "Orientation",
-            value: plant.orientation || "—",
+            label: tr("plantDetails.info.orientation", "Orientation"),
+            value: orientationValue,
           },
           {
             icon: "tape-measure",
-            label: "Distance",
-            value:
-              (plant.distance_cm ?? "—") +
-              (plant.distance_cm != null ? " cm" : ""),
+            label: tr("plantDetails.info.distance", "Distance"),
+            value: distanceValue,
           },
-          // 🔹 Split Pot and Soil into two rows
           {
             icon: "pot-outline",
-            label: "Pot",
-            value: plant.pot_material || "—",
+            label: tr("plantDetails.info.pot", "Pot"),
+            value: potValue,
           },
           {
             icon: "shovel",
-            label: "Soil",
-            value: plant.soil_mix || "—",
+            label: tr("plantDetails.info.soil", "Soil"),
+            value: soilValue,
           },
         ].map((it, i) => (
           <View key={i} style={styles.infoRow}>

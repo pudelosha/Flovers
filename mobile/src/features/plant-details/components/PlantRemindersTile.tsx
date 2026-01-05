@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { s } from "../styles/plant-details.styles";
 import { TILE_BLUR } from "../constants/plant-details.constants";
 import type { PlantReminderSummary } from "../types/plant-details.types";
 
-import {
-  ACCENT_BY_TYPE,
-  ICON_BY_TYPE,
-} from "../../reminders/constants/reminders.constants";
-
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../reminders/constants/reminders.constants";
 import PlantReminderMenu from "./PlantReminderMenu";
 
 /* ----- helpers (mirrors Reminders tile) ----- */
 function toDisplayType(t?: string) {
   const x = (t || "").toLowerCase();
   if (x === "water" || x === "watering") return "watering";
-  if (x === "fertilize" || x === "fertilising" || x === "fertilizing")
-    return "fertilising";
+  if (x === "fertilize" || x === "fertilising" || x === "fertilizing") return "fertilising";
   if (x === "moisture" || x === "misting") return "moisture";
   if (x === "care") return "care";
   if (x === "repot" || x === "repotting") return "repot";
@@ -56,13 +53,9 @@ function formatDate(d: string | Date | null | undefined): string {
 
 type Props = {
   reminders: PlantReminderSummary[];
-
-  // navigation / actions
   onMarkComplete: (reminderId: string) => void;
   onEditReminder: (reminderId: string) => void;
   onShowHistory: () => void;
-
-  /** Tick value from parent used to collapse any open 3-dot menu on scroll */
   collapseMenusSignal?: number;
 };
 
@@ -73,13 +66,25 @@ export default function PlantRemindersTile({
   onShowHistory,
   collapseMenusSignal,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+    },
+    [t, currentLanguage]
+  );
+
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
 
   const toggleMenu = (id: string) => {
     setMenuOpenId((curr) => (curr === id ? null : id));
   };
 
-  // Close any open menu whenever parent bumps the signal (e.g. on scroll)
   useEffect(() => {
     setMenuOpenId(null);
   }, [collapseMenusSignal]);
@@ -91,13 +96,7 @@ export default function PlantRemindersTile({
   const anyMenuOpen = !!menuOpenId;
 
   return (
-    <View
-      style={[
-        styles.cardWrap,
-        anyMenuOpen && styles.cardWrapRaised, // keep menu above other tiles
-      ]}
-    >
-      {/* Glass background */}
+    <View style={[styles.cardWrap, anyMenuOpen && styles.cardWrapRaised]}>
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -111,43 +110,27 @@ export default function PlantRemindersTile({
       </View>
 
       <View style={styles.inner}>
-        {/* Header */}
-        <Text style={styles.title}>Reminders</Text>
+        <Text style={styles.title}>{tr("plantDetails.reminders.title", "Reminders")}</Text>
 
-        {/* Reminder rows */}
         {reminders.map((r) => {
           const displayType = toDisplayType(r.type);
           const accent = ACCENT_BY_TYPE[displayType] || "#7DE2A7";
           const icon = ICON_BY_TYPE[displayType] ?? "calendar";
 
           const isOpen = menuOpenId === r.id;
-
           const dateSuffix = r.dueDate ? `     ${formatDate(r.dueDate)}` : "";
 
+          const typeLabel = tr(`plantDetails.reminders.type.${displayType}`, displayType);
+
           return (
-            <View
-              key={r.id}
-              style={[styles.row, isOpen && styles.rowRaised]}
-            >
+            <View key={r.id} style={[styles.row, isOpen && styles.rowRaised]}>
               <View style={styles.left}>
-                <View
-                  style={[
-                    styles.iconBubble,
-                    { backgroundColor: hexToRgba("#000", 0.15) },
-                  ]}
-                >
-                  <MaterialCommunityIcons
-                    name={icon}
-                    size={20}
-                    color={accent}
-                  />
+                <View style={[styles.iconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+                  <MaterialCommunityIcons name={icon} size={20} color={accent} />
                 </View>
                 <View style={{ flex: 1 }}>
-                  <Text
-                    style={[styles.typeText, { color: accent }]}
-                    numberOfLines={1}
-                  >
-                    {displayType.toUpperCase()}
+                  <Text style={[styles.typeText, { color: accent }]} numberOfLines={1}>
+                    {String(typeLabel).toUpperCase()}
                   </Text>
                   <Text style={styles.whenText} numberOfLines={1}>
                     {r.when}
@@ -156,26 +139,17 @@ export default function PlantRemindersTile({
                 </View>
               </View>
 
-              {/* Right: 3-dot menu button */}
               <View style={styles.right}>
                 <Pressable
                   onPress={() => toggleMenu(r.id)}
                   style={styles.menuBtn}
-                  android_ripple={{
-                    color: "rgba(255,255,255,0.16)",
-                    borderless: true,
-                  }}
+                  android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
                   hitSlop={8}
                 >
-                  <MaterialCommunityIcons
-                    name="dots-horizontal"
-                    size={20}
-                    color="#FFFFFF"
-                  />
+                  <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
                 </Pressable>
               </View>
 
-              {/* Floating menu – positioned relative to the row */}
               {isOpen && (
                 <PlantReminderMenu
                   onMarkComplete={() => {
@@ -212,19 +186,9 @@ const styles = StyleSheet.create({
     elevation: 8,
     marginBottom: 14,
   },
-  cardWrapRaised: {
-    zIndex: 40,
-    elevation: 40,
-  },
-  inner: {
-    padding: 16,
-  },
-  title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 16,
-    marginBottom: 8,
-  },
+  cardWrapRaised: { zIndex: 40, elevation: 40 },
+  inner: { padding: 16 },
+  title: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 8 },
   row: {
     position: "relative",
     overflow: "visible",
@@ -234,42 +198,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: "rgba(255,255,255,0.15)",
   },
-  rowRaised: {
-    zIndex: 30,
-    elevation: 30,
-  },
-  left: {
-    flexDirection: "row",
-    alignItems: "center",
-    flex: 1,
-    columnGap: 10,
-  },
-  right: {
-    justifyContent: "center",
-    alignItems: "flex-end",
-  },
-  iconBubble: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  typeText: {
-    fontWeight: "800",
-    fontSize: 13,
-  },
+  rowRaised: { zIndex: 30, elevation: 30 },
+  left: { flexDirection: "row", alignItems: "center", flex: 1, columnGap: 10 },
+  right: { justifyContent: "center", alignItems: "flex-end" },
+  iconBubble: { width: 32, height: 32, borderRadius: 16, alignItems: "center", justifyContent: "center" },
+  typeText: { fontWeight: "800", fontSize: 13 },
   whenText: {
     color: "rgba(255,255,255,0.9)",
     fontWeight: "600",
     fontSize: 12,
     marginTop: 2,
   },
-  menuBtn: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+  menuBtn: { width: 32, height: 32, borderRadius: 16, alignItems: "center", justifyContent: "center" },
 });

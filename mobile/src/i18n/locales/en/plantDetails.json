@@ -1,0 +1,94 @@
+{
+  "plantDetails": {
+    "headerTitle": "Plant details",
+    "common": {
+      "dash": "—",
+      "plant": "Plant"
+    },
+    "errors": {
+      "noId": "No plant id or QR code provided.",
+      "failedToLoad": "Failed to load plant."
+    },
+    "states": {
+      "error": { "title": "Error" },
+      "notFound": { "title": "Not found", "msg": "We couldn’t load this plant." }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Complete failed",
+        "msg": "Could not complete this reminder."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Reminder marked as complete.",
+      "qrSaved": "QR code saved to your gallery.",
+      "qrSaveFailed": "Failed to save QR code.",
+      "qrEmailPlaceholder": "An email with this QR code will be sent to your account address."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Storage permission",
+        "message": "We need access to save the QR code to your gallery.",
+        "ok": "OK",
+        "denied": "Storage permission denied."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "QR renderer not ready."
+    },
+    "info": {
+      "fallbackTitle": "Plant #{{id}}",
+      "purchased": "Purchased",
+      "notes": "Notes",
+      "light": "Light",
+      "orientation": "Orientation",
+      "distance": "Distance",
+      "pot": "Pot",
+      "soil": "Soil",
+      "cm": "cm",
+      "orientations": {
+        "N": "North",
+        "E": "East",
+        "S": "South",
+        "W": "West"
+      }
+    },
+    "latestReadings": {
+      "title": "Latest readings",
+      "lastRead": {
+        "empty": "Last read: —",
+        "value": "Last read: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "QR Code",
+      "scanner": "Scanner",
+      "saveWord": "save",
+      "emailWord": "email",
+      "desc": {
+        "part1": "Each plant has its own unique QR code. When you scan this code in the",
+        "part2": "view, the app opens this plant's details instantly.",
+        "part3a": "You can",
+        "part3b": "the QR image on your phone or",
+        "part3c": "it to yourself, then print it and attach it to the plant pot. Next time you want to check on this plant, just scan the tag instead of searching manually."
+      },
+      "saveBtn": "Save QR code",
+      "emailBtn": "Email QR code"
+    },
+    "reminders": {
+      "title": "Reminders",
+      "menu": {
+        "markComplete": "Mark as complete",
+        "editReminder": "Edit reminder",
+        "showHistory": "Show history"
+      },
+      "type": {
+        "watering": "Watering",
+        "fertilising": "Fertilising",
+        "moisture": "Moisture",
+        "care": "Care",
+        "repot": "Repot"
+      }
+    }
+  }
+}

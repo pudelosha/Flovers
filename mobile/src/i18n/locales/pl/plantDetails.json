@@ -1,0 +1,94 @@
+{
+  "plantDetails": {
+    "headerTitle": "Szczegóły rośliny",
+    "common": {
+      "dash": "—",
+      "plant": "Roślina"
+    },
+    "errors": {
+      "noId": "Nie podano identyfikatora rośliny ani kodu QR.",
+      "failedToLoad": "Nie udało się wczytać rośliny."
+    },
+    "states": {
+      "error": { "title": "Błąd" },
+      "notFound": { "title": "Nie znaleziono", "msg": "Nie udało się wczytać tej rośliny." }
+    },
+    "alerts": {
+      "completeFailed": {
+        "title": "Nie udało się zakończyć",
+        "msg": "Nie udało się oznaczyć przypomnienia jako wykonane."
+      }
+    },
+    "toasts": {
+      "reminderCompleted": "Przypomnienie oznaczono jako wykonane.",
+      "qrSaved": "Kod QR zapisano w galerii.",
+      "qrSaveFailed": "Nie udało się zapisać kodu QR.",
+      "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
+    },
+    "permissions": {
+      "storage": {
+        "title": "Uprawnienia do pamięci",
+        "message": "Potrzebujemy dostępu, aby zapisać kod QR w galerii.",
+        "ok": "OK",
+        "denied": "Odmówiono uprawnień do pamięci."
+      }
+    },
+    "qrErrors": {
+      "rendererNotReady": "Generator QR nie jest gotowy."
+    },
+    "info": {
+      "fallbackTitle": "Roślina #{{id}}",
+      "purchased": "Zakup",
+      "notes": "Notatki",
+      "light": "Światło",
+      "orientation": "Kierunek",
+      "distance": "Odległość",
+      "pot": "Doniczka",
+      "soil": "Podłoże",
+      "cm": "cm",
+      "orientations": {
+        "N": "Północ",
+        "E": "Wschód",
+        "S": "Południe",
+        "W": "Zachód"
+      }
+    },
+    "latestReadings": {
+      "title": "Ostatnie odczyty",
+      "lastRead": {
+        "empty": "Ostatni odczyt: —",
+        "value": "Ostatni odczyt: {{date}} {{time}}"
+      }
+    },
+    "qr": {
+      "title": "Kod QR",
+      "scanner": "Skaner",
+      "saveWord": "zapisać",
+      "emailWord": "wysłać e-mailem",
+      "desc": {
+        "part1": "Każda roślina ma swój unikalny kod QR. Gdy zeskanujesz ten kod w widoku",
+        "part2": "aplikacja od razu otworzy szczegóły tej rośliny.",
+        "part3a": "Możesz",
+        "part3b": "obraz kodu QR na telefonie albo",
+        "part3c": "go do siebie, wydrukować i przymocować do doniczki. Następnym razem po prostu zeskanuj etykietę zamiast szukać rośliny ręcznie."
+      },
+      "saveBtn": "Zapisz kod QR",
+      "emailBtn": "Wyślij kod QR"
+    },
+    "reminders": {
+      "title": "Przypomnienia",
+      "menu": {
+        "markComplete": "Oznacz jako wykonane",
+        "editReminder": "Edytuj przypomnienie",
+        "showHistory": "Pokaż historię"
+      },
+      "type": {
+        "watering": "Podlewanie",
+        "fertilising": "Nawożenie",
+        "moisture": "Zraszanie",
+        "care": "Pielęgnacja",
+        "repot": "Przesadzanie"
+      }
+    }
+  }
+}

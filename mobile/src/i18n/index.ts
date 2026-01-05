@@ -54,13 +54,17 @@ import plPlants from "./locales/pl/plants.json";
 import enPlantsModals from "./locales/en/plantsModals.json";
 import plPlantsModals from "./locales/pl/plantsModals.json";
 
-// Locations bundles (NEW)
+// Locations bundles
 import enLocations from "./locales/en/locations.json";
 import plLocations from "./locales/pl/locations.json";
 
-// Locations modals bundles (NEW)
+// Locations modals bundles
 import enLocationsModals from "./locales/en/locationsModals.json";
 import plLocationsModals from "./locales/pl/locationsModals.json";
+
+// Plant Details bundles (NEW)
+import enPlantDetails from "./locales/en/plantDetails.json";
+import plPlantDetails from "./locales/pl/plantDetails.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -121,7 +125,6 @@ function buildTranslation(
   others: AnyObj[]
 ): AnyObj {
   return {
-    // keep other top-level keys from each bundle
     ...stripCreatePlant(base),
     ...stripCreatePlant(step01),
     ...stripCreatePlant(step02),
@@ -133,10 +136,8 @@ function buildTranslation(
     ...stripCreatePlant(step08),
     ...stripCreatePlant(step09),
 
-    // prevent "others" from overwriting createPlant accidentally
     ...Object.assign({}, ...others.map(stripCreatePlant)),
 
-    // deep-merge the createPlant subtree so steps don't overwrite each other
     ...mergeCreatePlant(
       base,
       step01,
@@ -176,8 +177,9 @@ const resources = {
         enScanner,
         enPlants,
         enPlantsModals,
-        enLocations, // NEW
-        enLocationsModals, // NEW
+        enLocations,
+        enLocationsModals,
+        enPlantDetails // NEW
       ] as AnyObj[]
     ),
   },
@@ -204,8 +206,9 @@ const resources = {
         plScanner,
         plPlants,
         plPlantsModals,
-        plLocations, // NEW
-        plLocationsModals, // NEW
+        plLocations,
+        plLocationsModals,
+        plPlantDetails // NEW
       ] as AnyObj[]
     ),
   },

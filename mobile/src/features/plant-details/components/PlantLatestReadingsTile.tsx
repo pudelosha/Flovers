@@ -1,12 +1,9 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-} from "react-native";
+import React, { useCallback, useMemo } from "react";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { s } from "../styles/plant-details.styles";
 import { TILE_BLUR } from "../constants/plant-details.constants";
@@ -17,31 +14,14 @@ import type {
   PlantSensorsConfig,
 } from "../types/plant-details.types";
 
-// Reuse icon colors + units from readings feature to stay consistent
-import {
-  ICON_BG,
-  METRIC_UNITS,
-} from "../../readings/constants/readings.constants";
+import { ICON_BG, METRIC_UNITS } from "../../readings/constants/readings.constants";
 
 type Props = {
   latestReadings: LatestReadings;
   sensors?: PlantSensorsConfig;
-
-  // Called when the whole tile is pressed (generic history)
   onTilePress: () => void;
-
-  // Called when a specific metric is pressed (history focused on that metric)
   onMetricPress: (metric: PlantMetricKey) => void;
 };
-
-function lastReadText(d?: string | null) {
-  if (!d) return "Last read: —";
-  const dt = new Date(d);
-  return `Last read: ${dt.toLocaleDateString()} ${dt.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  })}`;
-}
 
 function MetricColPressable({
   icon,
@@ -78,15 +58,34 @@ export default function PlantLatestReadingsTile({
   onTilePress,
   onMetricPress,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
+    },
+    [t, currentLanguage]
+  );
+
   const { temperature, humidity, light, moisture, tsISO } = latestReadings;
 
-  // Decide which metrics to show; default: show all
   const showTemp = sensors ? !!sensors.temperature : true;
   const showHum = sensors ? !!sensors.humidity : true;
   const showLight = sensors ? !!sensors.light : true;
   const showMoist = sensors ? !!sensors.moisture : true;
 
-  const lastText = lastReadText(tsISO);
+  const lastText = useMemo(() => {
+    if (!tsISO) return tr("plantDetails.latestReadings.lastRead.empty", "Last read: —");
+    const dt = new Date(tsISO);
+    return tr("plantDetails.latestReadings.lastRead.value", "Last read: {{date}} {{time}}", {
+      date: dt.toLocaleDateString(),
+      time: dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    });
+  }, [tsISO, tr]);
 
   return (
     <Pressable
@@ -94,7 +93,6 @@ export default function PlantLatestReadingsTile({
       onPress={onTilePress}
       android_ripple={{ color: "rgba(255,255,255,0.08)" }}
     >
-      {/* Glass background (same as Plant Details tiles) */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -108,12 +106,12 @@ export default function PlantLatestReadingsTile({
       </View>
 
       <View style={styles.inner}>
-        {/* Header */}
         <View style={styles.topRow}>
-          <Text style={styles.title}>Latest readings</Text>
+          <Text style={styles.title}>
+            {tr("plantDetails.latestReadings.title", "Latest readings")}
+          </Text>
         </View>
 
-        {/* Metrics row – dynamic number of columns */}
         <View style={styles.metricsRow}>
           {showTemp && (
             <MetricColPressable
@@ -153,7 +151,6 @@ export default function PlantLatestReadingsTile({
           )}
         </View>
 
-        {/* Last read */}
         <View style={styles.lastRow}>
           <Text style={styles.lastText}>{lastText}</Text>
         </View>
@@ -174,19 +171,13 @@ const styles = StyleSheet.create({
     elevation: 8,
     marginBottom: 14,
   },
-  inner: {
-    padding: 16,
-  },
+  inner: { padding: 16 },
   topRow: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 8,
   },
-  title: {
-    color: "#FFFFFF",
-    fontWeight: "800",
-    fontSize: 16,
-  },
+  title: { color: "#FFFFFF", fontWeight: "800", fontSize: 16 },
   metricsRow: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -195,10 +186,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 4,
   },
-  col: {
-    flex: 1,
-    alignItems: "center",
-  },
+  col: { flex: 1, alignItems: "center" },
   iconCircle: {
     width: 38,
     height: 38,
@@ -212,9 +200,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 6,
   },
-  lastRow: {
-    marginTop: 6,
-  },
+  lastRow: { marginTop: 6 },
   lastText: {
     color: "rgba(255,255,255,0.85)",
     fontWeight: "600",
