@@ -50,9 +50,17 @@ import plScanner from "./locales/pl/scanner.json";
 import enPlants from "./locales/en/plants.json";
 import plPlants from "./locales/pl/plants.json";
 
-// Plants modals bundles (NEW)
+// Plants modals bundles
 import enPlantsModals from "./locales/en/plantsModals.json";
 import plPlantsModals from "./locales/pl/plantsModals.json";
+
+// Locations bundles (NEW)
+import enLocations from "./locales/en/locations.json";
+import plLocations from "./locales/pl/locations.json";
+
+// Locations modals bundles (NEW)
+import enLocationsModals from "./locales/en/locationsModals.json";
+import plLocationsModals from "./locales/pl/locationsModals.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -167,7 +175,9 @@ const resources = {
         enResetPassword,
         enScanner,
         enPlants,
-        enPlantsModals // NEW
+        enPlantsModals,
+        enLocations, // NEW
+        enLocationsModals, // NEW
       ] as AnyObj[]
     ),
   },
@@ -193,7 +203,9 @@ const resources = {
         plResetPassword,
         plScanner,
         plPlants,
-        plPlantsModals // NEW
+        plPlantsModals,
+        plLocations, // NEW
+        plLocationsModals, // NEW
       ] as AnyObj[]
     ),
   },

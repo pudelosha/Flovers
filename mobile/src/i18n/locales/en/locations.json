@@ -1,0 +1,32 @@
+{
+  "locations": {
+    "headerTitle": "Locations",
+    "empty": {
+      "title": "No locations yet",
+      "description": "Locations appear automatically when you assign them to your plants.\n\nEdit a plant and set its location to start grouping plants by rooms or areas."
+    },
+    "fab": {
+      "add": "Add location",
+      "sort": "Sort"
+    },
+    "menu": {
+      "edit": "Edit location",
+      "delete": "Delete location"
+    },
+    "plantCount": {
+      "one": "1 plant",
+      "other": "{{count}} plants"
+    },
+    "toast": {
+      "loadFailed": "Failed to load locations",
+      "added": "Location added",
+      "deleted": "Location deleted",
+      "updatedLocal": "Location updated (local only)",
+      "saveFailed": "Could not save location",
+      "deleteFailed": "Could not delete this location."
+    },
+    "alert": {
+      "deleteFailedTitle": "Delete failed"
+    }
+  }
+}

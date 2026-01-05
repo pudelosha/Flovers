@@ -1,7 +1,8 @@
-// src/features/locations/components/ConfirmDeleteLocationModal.tsx
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { locStyles as s } from "../../styles/locations.styles";
 
@@ -18,6 +19,19 @@ export default function ConfirmDeleteLocationModal({
   onCancel,
   onConfirm,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   if (!visible) return null;
 
   return (
@@ -44,27 +58,26 @@ export default function ConfirmDeleteLocationModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Delete location</Text>
-          <Text style={s.confirmText}>
-            Are you sure you want to delete{" "}
-            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>?
-            This action cannot be undone.
+          <Text style={s.promptTitle}>
+            {tr("locationsModals.confirmDelete.title", "Delete location")}
           </Text>
+
+          <Text style={s.confirmText}>
+            {tr("locationsModals.confirmDelete.messagePrefix", "Are you sure you want to delete")}{" "}
+            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
+            {tr("locationsModals.confirmDelete.messageSuffix", "? This action cannot be undone.")}
+          </Text>
+
           <View style={s.promptButtonsRow}>
             <Pressable style={s.promptBtn} onPress={onCancel}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("locationsModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
-            <Pressable
-              style={[s.promptBtn, s.promptDanger]}
-              onPress={onConfirm}
-            >
-              <Text
-                style={[
-                  s.promptBtnText,
-                  { color: "#FF6B6B", fontWeight: "800" },
-                ]}
-              >
-                Delete
+
+            <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                {tr("locationsModals.common.delete", "Delete")}
               </Text>
             </Pressable>
           </View>

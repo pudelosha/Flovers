@@ -1,0 +1,69 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "delete": "Usuń",
+      "create": "Utwórz",
+      "save": "Zapisz",
+      "apply": "Zastosuj",
+      "reset": "Resetuj"
+    },
+    "confirmDelete": {
+      "title": "Usuń lokalizację",
+      "messagePrefix": "Czy na pewno chcesz usunąć",
+      "messageSuffix": "? Tej operacji nie można cofnąć."
+    },
+    "edit": {
+      "titleCreate": "Dodaj lokalizację",
+      "titleEdit": "Edytuj lokalizację",
+      "nameLabel": "Nazwa lokalizacji",
+      "namePlaceholder": "np. Salon, Półka w kuchni",
+      "categoryLabel": "Kategoria",
+      "categories": {
+        "indoor": "Wewnętrzne",
+        "outdoor": "Zewnętrzne",
+        "other": "Inne"
+      },
+      "quickSuggestions": "Szybkie propozycje",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Salon",
+          "kitchen": "Kuchnia",
+          "diningRoom": "Jadalnia",
+          "bedroom": "Sypialnia",
+          "bathroom": "Łazienka",
+          "hallway": "Przedpokój",
+          "office": "Biuro",
+          "kidsRoom": "Pokój dziecka"
+        },
+        "outdoor": {
+          "balcony": "Balkon",
+          "terrace": "Taras",
+          "patio": "Patio",
+          "garden": "Ogród",
+          "frontYard": "Przedni ogródek",
+          "backyard": "Tylny ogród",
+          "porch": "Ganek",
+          "greenhouse": "Szklarnia"
+        },
+        "other": {
+          "staircase": "Klatka schodowa",
+          "garage": "Garaż",
+          "basement": "Piwnica",
+          "lobby": "Hol",
+          "sunroom": "Ogród zimowy",
+          "workshop": "Warsztat",
+          "studio": "Studio",
+          "attic": "Strych"
+        }
+      }
+    },
+    "sort": {
+      "title": "Sortuj lokalizacje",
+      "keyName": "Nazwa lokalizacji",
+      "keyCount": "Liczba roślin",
+      "dirAsc": "Rosnąco",
+      "dirDesc": "Malejąco"
+    }
+  }
+}

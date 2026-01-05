@@ -1,8 +1,9 @@
-// src/features/locations/components/SortLocationsModal.tsx
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { locStyles as s } from "../../styles/locations.styles";
 
@@ -26,6 +27,19 @@ export default function SortLocationsModal({
   onApply,
   onReset,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string, values?: any) => {
+      void currentLanguage;
+      const txt = values ? t(key, values) : t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
   const [k, setK] = React.useState<SortKey>(sortKey);
@@ -54,7 +68,6 @@ export default function SortLocationsModal({
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          {/* Dark overlay — no white tint, no border */}
           <View
             pointerEvents="none"
             style={
@@ -68,7 +81,9 @@ export default function SortLocationsModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Sort locations</Text>
+          <Text style={s.promptTitle}>
+            {tr("locationsModals.sort.title", "Sort locations")}
+          </Text>
 
           {/* Sort key */}
           <View style={s.dropdown}>
@@ -81,7 +96,9 @@ export default function SortLocationsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {k === "name" ? "Location name" : "Plant count"}
+                {k === "name"
+                  ? tr("locationsModals.sort.keyName", "Location name")
+                  : tr("locationsModals.sort.keyCount", "Plant count")}
               </Text>
               <MaterialCommunityIcons
                 name={keyOpen ? "chevron-up" : "chevron-down"}
@@ -89,11 +106,12 @@ export default function SortLocationsModal({
                 color="#FFFFFF"
               />
             </Pressable>
+
             {keyOpen && (
               <View style={s.dropdownList}>
                 {([
-                  { key: "name", label: "Location name" },
-                  { key: "count", label: "Plant count" },
+                  { key: "name", labelKey: "locationsModals.sort.keyName", fallback: "Location name" },
+                  { key: "count", labelKey: "locationsModals.sort.keyCount", fallback: "Plant count" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -103,13 +121,11 @@ export default function SortLocationsModal({
                       setKeyOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>{opt.label}</Text>
+                    <Text style={s.dropdownItemText}>
+                      {tr(opt.labelKey, opt.fallback)}
+                    </Text>
                     {k === opt.key && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
                 ))}
@@ -128,7 +144,9 @@ export default function SortLocationsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {d === "asc" ? "Ascending" : "Descending"}
+                {d === "asc"
+                  ? tr("locationsModals.sort.dirAsc", "Ascending")
+                  : tr("locationsModals.sort.dirDesc", "Descending")}
               </Text>
               <MaterialCommunityIcons
                 name={dirOpen ? "chevron-up" : "chevron-down"}
@@ -136,11 +154,12 @@ export default function SortLocationsModal({
                 color="#FFFFFF"
               />
             </Pressable>
+
             {dirOpen && (
               <View style={s.dropdownList}>
                 {([
-                  { key: "asc", label: "Ascending" },
-                  { key: "desc", label: "Descending" },
+                  { key: "asc", labelKey: "locationsModals.sort.dirAsc", fallback: "Ascending" },
+                  { key: "desc", labelKey: "locationsModals.sort.dirDesc", fallback: "Descending" },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -150,13 +169,11 @@ export default function SortLocationsModal({
                       setDirOpen(false);
                     }}
                   >
-                    <Text style={s.dropdownItemText}>{opt.label}</Text>
+                    <Text style={s.dropdownItemText}>
+                      {tr(opt.labelKey, opt.fallback)}
+                    </Text>
                     {d === opt.key && (
-                      <MaterialCommunityIcons
-                        name="check"
-                        size={18}
-                        color="#FFFFFF"
-                      />
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
                 ))}
@@ -166,28 +183,23 @@ export default function SortLocationsModal({
 
           <View style={s.promptButtonsRow}>
             {onReset ? (
-              <Pressable
-                onPress={onReset}
-                style={[s.promptBtn, s.promptDanger]}
-              >
-                <Text
-                  style={[
-                    s.promptBtnText,
-                    { color: "#FF6B6B", fontWeight: "800" },
-                  ]}
-                >
-                  Reset
+              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
+                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                  {tr("locationsModals.common.reset", "Reset")}
                 </Text>
               </Pressable>
             ) : null}
+
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("locationsModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
-            <Pressable
-              onPress={() => onApply(k, d)}
-              style={[s.promptBtn, s.promptPrimary]}
-            >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+
+            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
+              <Text style={s.promptPrimaryText}>
+                {tr("locationsModals.common.apply", "Apply")}
+              </Text>
             </Pressable>
           </View>
         </View>

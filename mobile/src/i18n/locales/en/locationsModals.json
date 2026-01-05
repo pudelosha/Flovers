@@ -1,0 +1,69 @@
+{
+  "locationsModals": {
+    "common": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "create": "Create",
+      "save": "Save",
+      "apply": "Apply",
+      "reset": "Reset"
+    },
+    "confirmDelete": {
+      "title": "Delete location",
+      "messagePrefix": "Are you sure you want to delete",
+      "messageSuffix": "? This action cannot be undone."
+    },
+    "edit": {
+      "titleCreate": "Add location",
+      "titleEdit": "Edit location",
+      "nameLabel": "Location name",
+      "namePlaceholder": "e.g. Living room, Kitchen shelf",
+      "categoryLabel": "Category",
+      "categories": {
+        "indoor": "Indoor",
+        "outdoor": "Outdoor",
+        "other": "Other"
+      },
+      "quickSuggestions": "Quick suggestions",
+      "predefinedLocations": {
+        "indoor": {
+          "livingRoom": "Living room",
+          "kitchen": "Kitchen",
+          "diningRoom": "Dining room",
+          "bedroom": "Bedroom",
+          "bathroom": "Bathroom",
+          "hallway": "Hallway",
+          "office": "Office",
+          "kidsRoom": "Kids room"
+        },
+        "outdoor": {
+          "balcony": "Balcony",
+          "terrace": "Terrace",
+          "patio": "Patio",
+          "garden": "Garden",
+          "frontYard": "Front yard",
+          "backyard": "Backyard",
+          "porch": "Porch",
+          "greenhouse": "Greenhouse"
+        },
+        "other": {
+          "staircase": "Staircase",
+          "garage": "Garage",
+          "basement": "Basement",
+          "lobby": "Lobby",
+          "sunroom": "Sunroom",
+          "workshop": "Workshop",
+          "studio": "Studio",
+          "attic": "Attic"
+        }
+      }
+    },
+    "sort": {
+      "title": "Sort locations",
+      "keyName": "Location name",
+      "keyCount": "Plant count",
+      "dirAsc": "Ascending",
+      "dirDesc": "Descending"
+    }
+  }
+}

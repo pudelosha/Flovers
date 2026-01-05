@@ -1,0 +1,33 @@
+{
+  "locations": {
+    "headerTitle": "Lokalizacje",
+    "empty": {
+      "title": "Brak lokalizacji",
+      "description": "Lokalizacje pojawią się automatycznie, gdy przypiszesz je do roślin.\n\nEdytuj roślinę i ustaw jej lokalizację, aby zacząć grupować rośliny według pomieszczeń lub stref."
+    },
+    "fab": {
+      "add": "Dodaj lokalizację",
+      "sort": "Sortuj"
+    },
+    "menu": {
+      "edit": "Edytuj lokalizację",
+      "delete": "Usuń lokalizację"
+    },
+    "plantCount": {
+      "one": "1 roślina",
+      "few": "{{count}} rośliny",
+      "many": "{{count}} roślin"
+    },
+    "toast": {
+      "loadFailed": "Nie udało się wczytać lokalizacji",
+      "added": "Dodano lokalizację",
+      "deleted": "Usunięto lokalizację",
+      "updatedLocal": "Zaktualizowano lokalizację (tylko lokalnie)",
+      "saveFailed": "Nie udało się zapisać lokalizacji",
+      "deleteFailed": "Nie udało się usunąć tej lokalizacji."
+    },
+    "alert": {
+      "deleteFailedTitle": "Usuwanie nie powiodło się"
+    }
+  }
+}
