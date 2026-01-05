@@ -1,9 +1,11 @@
-// src/features/plants/components/PlantQrModal.tsx
-import React from "react";
+// C:\Projekty\Python\Flovers\mobile\src\features\plants\components\modals\PlantQrModal.tsx
+import React, { useCallback } from "react";
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import QRCode from "react-native-qrcode-svg";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { s } from "../../styles/plants.styles";
 
@@ -24,14 +26,25 @@ export default function PlantQrModal({
   onPressSave,
   onPressEmail,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string) => {
+      void currentLanguage;
+      const txt = t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   if (!visible) return null;
 
   return (
     <>
-      {/* Backdrop */}
       <Pressable style={s.promptBackdrop} onPress={onClose} />
 
-      {/* Modal wrapper */}
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
@@ -53,23 +66,40 @@ export default function PlantQrModal({
         <View style={[s.promptInner, { maxHeight: "86%" }]}>
           <ScrollView
             keyboardShouldPersistTaps="handled"
-            // 🔧 match EditPlantModal: give more breathing room at the bottom
             contentContainerStyle={{ paddingBottom: 80 }}
             showsVerticalScrollIndicator={false}
           >
-            <Text style={s.promptTitle}>Plant QR code</Text>
+            <Text style={s.promptTitle}>
+              {tr("plantsModals.qr.title", "Plant QR code")}
+            </Text>
 
             <Text style={[s.confirmText, { marginBottom: 12 }]}>
-              Each plant has a unique QR code that encodes its identifier. When
-              you scan this code with the in-app scanner, you’ll be redirected
-              straight to the details screen of this plant{" "}
-              <Text style={{ fontWeight: "800" }}>({plantName})</Text>.{"\n\n"}
-              You can:
-              {"\n"}• save the QR image to your phone or email it, then print it for labeling,{" "}
-              {"\n"}• attach the printed label directly to the pot so the code is always
-              easy to access,
-              {"\n"}• let anyone in your household scan the label to quickly
-              open this plant in the app.
+              {tr(
+                "plantsModals.qr.p1",
+                "Each plant has a unique QR code that encodes its identifier."
+              )}{" "}
+              {tr(
+                "plantsModals.qr.p2",
+                "When you scan this code with the in-app scanner, you’ll be redirected straight to the details screen of this plant"
+              )}{" "}
+              <Text style={{ fontWeight: "800" }}>({plantName})</Text>.
+              {"\n\n"}
+              {tr("plantsModals.qr.youCan", "You can:")}
+              {"\n"}•{" "}
+              {tr(
+                "plantsModals.qr.b1",
+                "save the QR image to your phone or email it, then print it for labeling,"
+              )}
+              {"\n"}•{" "}
+              {tr(
+                "plantsModals.qr.b2",
+                "attach the printed label directly to the pot so the code is always easy to access,"
+              )}
+              {"\n"}•{" "}
+              {tr(
+                "plantsModals.qr.b3",
+                "let anyone in your household scan the label to quickly open this plant in the app."
+              )}
             </Text>
 
             <View
@@ -83,13 +113,7 @@ export default function PlantQrModal({
               <QRCode value={qrValue} size={220} />
             </View>
 
-            {/* Buttons row */}
-            <View
-              style={[
-                s.promptButtonsRow,
-                { justifyContent: "space-between" },
-              ]}
-            >
+            <View style={[s.promptButtonsRow, { justifyContent: "space-between" }]}>
               <Pressable
                 style={[
                   s.promptBtn,
@@ -110,7 +134,9 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
-                <Text style={s.promptBtnText}>Save QR code</Text>
+                <Text style={s.promptBtnText}>
+                  {tr("plantsModals.qr.save", "Save QR code")}
+                </Text>
               </Pressable>
 
               <Pressable
@@ -133,20 +159,21 @@ export default function PlantQrModal({
                   color="#FFFFFF"
                   style={{ marginRight: 6 }}
                 />
-                <Text style={s.promptBtnText}>Email QR code</Text>
+                <Text style={s.promptBtnText}>
+                  {tr("plantsModals.qr.email", "Email QR code")}
+                </Text>
               </Pressable>
             </View>
 
-            {/* Close button */}
-            <View
-              style={[s.promptButtonsRow, { justifyContent: "flex-end" }]}
-            >
+            <View style={[s.promptButtonsRow, { justifyContent: "flex-end" }]}>
               <Pressable
                 style={s.promptBtn}
                 android_ripple={{ color: "rgba(255,255,255,0.16)" }}
                 onPress={onClose}
               >
-                <Text style={s.promptBtnText}>Close</Text>
+                <Text style={s.promptBtnText}>
+                  {tr("plantsModals.common.close", "Close")}
+                </Text>
               </Pressable>
             </View>
           </ScrollView>

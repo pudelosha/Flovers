@@ -46,9 +46,13 @@ import plResetPassword from "./locales/pl/resetPassword.json";
 import enScanner from "./locales/en/scanner.json";
 import plScanner from "./locales/pl/scanner.json";
 
-// Plants bundles (NEW)
+// Plants bundles
 import enPlants from "./locales/en/plants.json";
 import plPlants from "./locales/pl/plants.json";
+
+// Plants modals bundles (NEW)
+import enPlantsModals from "./locales/en/plantsModals.json";
+import plPlantsModals from "./locales/pl/plantsModals.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -162,7 +166,8 @@ const resources = {
         enNavigation,
         enResetPassword,
         enScanner,
-        enPlants // NEW
+        enPlants,
+        enPlantsModals // NEW
       ] as AnyObj[]
     ),
   },
@@ -187,7 +192,8 @@ const resources = {
         plNavigation,
         plResetPassword,
         plScanner,
-        plPlants // NEW
+        plPlants,
+        plPlantsModals // NEW
       ] as AnyObj[]
     ),
   },

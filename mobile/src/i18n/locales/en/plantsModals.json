@@ -1,0 +1,72 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "clear": "Clear",
+      "apply": "Apply",
+      "reset": "Reset",
+      "close": "Close",
+      "done": "Done"
+    },
+    "confirmDelete": {
+      "title": "Delete plant",
+      "messagePrefix": "Are you sure you want to delete",
+      "messageSuffix": "? This action cannot be undone."
+    },
+    "filter": {
+      "title": "Filter plants",
+      "anyLocation": "Any location",
+      "anyLatin": "Any latin/type"
+    },
+    "sort": {
+      "title": "Sort plants",
+      "keyPlant": "Plant name",
+      "keyLocation": "Location",
+      "dirAsc": "Ascending",
+      "dirDesc": "Descending"
+    },
+    "qr": {
+      "title": "Plant QR code",
+      "p1": "Each plant has a unique QR code that encodes its identifier.",
+      "p2": "When you scan this code with the in-app scanner, you’ll be redirected straight to the details screen of this plant",
+      "youCan": "You can:",
+      "b1": "save the QR image to your phone or email it, then print it for labeling,",
+      "b2": "attach the printed label directly to the pot so the code is always easy to access,",
+      "b3": "let anyone in your household scan the label to quickly open this plant in the app.",
+      "save": "Save QR code",
+      "email": "Email QR code"
+    },
+    "edit": {
+      "title": "Edit plant",
+      "namePlaceholder": "Plant name (required)",
+      "latinPlaceholder": "Latin name (search)…",
+      "locationOptional": "Select location (optional)",
+      "none": "— None —",
+      "notesPlaceholder": "Notes… (optional)",
+      "purchaseDateLabel": "Purchase date",
+      "notSet": "Not set",
+      "fallbackDateTitle": "Set purchase date (YYYY-MM-DD)",
+      "fallbackDatePlaceholder": "YYYY-MM-DD",
+      "invalidDateTitle": "Invalid date",
+      "invalidDateMsg": "Use format YYYY-MM-DD",
+      "set": "Set",
+      "lightLevelLabel": "Light level",
+      "low": "Low",
+      "high": "High",
+      "windowDirectionLabel": "Window direction",
+      "orientations": {
+        "S": "South",
+        "E": "East",
+        "W": "West",
+        "N": "North"
+      },
+      "measureBtn": "Measure light & direction",
+      "distanceLabel": "Distance from window",
+      "cm": "cm",
+      "containerMaterialLabel": "Container material",
+      "soilMixLabel": "Soil / potting mix",
+      "update": "Update"
+    }
+  }
+}

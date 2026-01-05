@@ -1,0 +1,72 @@
+{
+  "plantsModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "delete": "Usuń",
+      "clear": "Wyczyść",
+      "apply": "Zastosuj",
+      "reset": "Resetuj",
+      "close": "Zamknij",
+      "done": "Gotowe"
+    },
+    "confirmDelete": {
+      "title": "Usuń roślinę",
+      "messagePrefix": "Czy na pewno chcesz usunąć",
+      "messageSuffix": "? Tej operacji nie można cofnąć."
+    },
+    "filter": {
+      "title": "Filtruj rośliny",
+      "anyLocation": "Dowolna lokalizacja",
+      "anyLatin": "Dowolna łacińska/nazwa"
+    },
+    "sort": {
+      "title": "Sortuj rośliny",
+      "keyPlant": "Nazwa rośliny",
+      "keyLocation": "Lokalizacja",
+      "dirAsc": "Rosnąco",
+      "dirDesc": "Malejąco"
+    },
+    "qr": {
+      "title": "Kod QR rośliny",
+      "p1": "Każda roślina ma unikalny kod QR, który zawiera jej identyfikator.",
+      "p2": "Gdy zeskanujesz ten kod w skanerze w aplikacji, zostaniesz przekierowany bezpośrednio do ekranu szczegółów tej rośliny",
+      "youCan": "Możesz:",
+      "b1": "zapisać obraz kodu QR w telefonie lub wysłać go e-mailem, a następnie wydrukować do etykietowania,",
+      "b2": "przymocować wydrukowaną etykietę bezpośrednio do doniczki, aby kod był zawsze pod ręką,",
+      "b3": "pozwolić domownikom zeskanować etykietę, aby szybko otworzyć tę roślinę w aplikacji.",
+      "save": "Zapisz kod QR",
+      "email": "Wyślij kod QR e-mailem"
+    },
+    "edit": {
+      "title": "Edytuj roślinę",
+      "namePlaceholder": "Nazwa rośliny (wymagana)",
+      "latinPlaceholder": "Nazwa łacińska (wyszukaj)…",
+      "locationOptional": "Wybierz lokalizację (opcjonalnie)",
+      "none": "— Brak —",
+      "notesPlaceholder": "Notatki… (opcjonalnie)",
+      "purchaseDateLabel": "Data zakupu",
+      "notSet": "Nie ustawiono",
+      "fallbackDateTitle": "Ustaw datę zakupu (RRRR-MM-DD)",
+      "fallbackDatePlaceholder": "RRRR-MM-DD",
+      "invalidDateTitle": "Nieprawidłowa data",
+      "invalidDateMsg": "Użyj formatu RRRR-MM-DD",
+      "set": "Ustaw",
+      "lightLevelLabel": "Poziom światła",
+      "low": "Niski",
+      "high": "Wysoki",
+      "windowDirectionLabel": "Kierunek okna",
+      "orientations": {
+        "S": "Płn",
+        "E": "Wsch",
+        "W": "Zach",
+        "N": "Płd"
+      },
+      "measureBtn": "Zmierz światło i kierunek",
+      "distanceLabel": "Odległość od okna",
+      "cm": "cm",
+      "containerMaterialLabel": "Materiał doniczki",
+      "soilMixLabel": "Podłoże / mieszanka",
+      "update": "Zapisz"
+    }
+  }
+}

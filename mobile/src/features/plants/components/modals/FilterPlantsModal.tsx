@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { s } from "../../styles/plants.styles";
 
 type Props = {
@@ -23,6 +25,19 @@ export default function FilterPlantsModal({
   onApply,
   onClearAll,
 }: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string) => {
+      void currentLanguage;
+      const txt = t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   const [locOpen, setLocOpen] = React.useState(false);
   const [latinOpen, setLatinOpen] = React.useState(false);
 
@@ -47,21 +62,25 @@ export default function FilterPlantsModal({
       <View style={s.promptWrap}>
         <View style={s.promptGlass}>
           <BlurView
-            style={{ position: "absolute", inset: 0 } as any
-            }
+            style={{ position: "absolute", inset: 0 } as any}
             blurType="light"
             blurAmount={14}
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-          {/* Dark overlay — no white tint, no border */}
           <View
             pointerEvents="none"
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            } as any}
           />
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Filter plants</Text>
+          <Text style={s.promptTitle}>
+            {tr("plantsModals.filter.title", "Filter plants")}
+          </Text>
 
           {/* Location */}
           <View style={s.dropdown}>
@@ -73,9 +92,16 @@ export default function FilterPlantsModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{location || "Any location"}</Text>
-              <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <Text style={s.dropdownValue}>
+                {location || tr("plantsModals.filter.anyLocation", "Any location")}
+              </Text>
+              <MaterialCommunityIcons
+                name={locOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
+
             {locOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -86,9 +112,14 @@ export default function FilterPlantsModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any location</Text>
-                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  <Text style={s.dropdownItemText}>
+                    {tr("plantsModals.filter.anyLocation", "Any location")}
+                  </Text>
+                  {!location && (
+                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                  )}
                 </Pressable>
+
                 {locations.map((loc) => (
                   <Pressable
                     key={loc}
@@ -99,7 +130,9 @@ export default function FilterPlantsModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{loc}</Text>
-                    {location === loc && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {location === loc && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -116,9 +149,16 @@ export default function FilterPlantsModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{latin || "Any latin/type"}</Text>
-              <MaterialCommunityIcons name={latinOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
+              <Text style={s.dropdownValue}>
+                {latin || tr("plantsModals.filter.anyLatin", "Any latin/type")}
+              </Text>
+              <MaterialCommunityIcons
+                name={latinOpen ? "chevron-up" : "chevron-down"}
+                size={20}
+                color="#FFFFFF"
+              />
             </Pressable>
+
             {latinOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -129,9 +169,14 @@ export default function FilterPlantsModal({
                     setLatinOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any latin/type</Text>
-                  {!latin && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  <Text style={s.dropdownItemText}>
+                    {tr("plantsModals.filter.anyLatin", "Any latin/type")}
+                  </Text>
+                  {!latin && (
+                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                  )}
                 </Pressable>
+
                 {latinOptions.map((ln) => (
                   <Pressable
                     key={ln}
@@ -142,7 +187,9 @@ export default function FilterPlantsModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{ln}</Text>
-                    {latin === ln && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {latin === ln && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -151,13 +198,24 @@ export default function FilterPlantsModal({
 
           <View style={s.promptButtonsRow}>
             <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                {tr("plantsModals.common.clear", "Clear")}
+              </Text>
             </Pressable>
+
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("plantsModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
-            <Pressable onPress={() => onApply({ location, latin })} style={[s.promptBtn, s.promptPrimary]}>
-              <Text style={s.promptPrimaryText}>Apply</Text>
+
+            <Pressable
+              onPress={() => onApply({ location, latin })}
+              style={[s.promptBtn, s.promptPrimary]}
+            >
+              <Text style={s.promptPrimaryText}>
+                {tr("plantsModals.common.apply", "Apply")}
+              </Text>
             </Pressable>
           </View>
         </View>

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../app/providers/LanguageProvider";
 import { s } from "../../styles/plants.styles";
 
 type Props = {
@@ -10,7 +12,25 @@ type Props = {
   onConfirm: () => void;
 };
 
-export default function ConfirmDeleteModal({ visible, name, onCancel, onConfirm }: Props) {
+export default function ConfirmDeleteModal({
+  visible,
+  name,
+  onCancel,
+  onConfirm,
+}: Props) {
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
+
+  const tr = useCallback(
+    (key: string, fallback?: string) => {
+      void currentLanguage;
+      const txt = t(key);
+      const isMissing = !txt || txt === key;
+      return isMissing ? fallback ?? key.split(".").pop() ?? key : txt;
+    },
+    [t, currentLanguage]
+  );
+
   if (!visible) return null;
 
   return (
@@ -26,24 +46,35 @@ export default function ConfirmDeleteModal({ visible, name, onCancel, onConfirm 
           />
           <View
             pointerEvents="none"
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" } as any}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            } as any}
           />
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Delete plant</Text>
-          <Text style={s.confirmText}>
-            Are you sure you want to delete{" "}
-            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>? This action cannot
-            be undone.
+          <Text style={s.promptTitle}>
+            {tr("plantsModals.confirmDelete.title", "Delete plant")}
           </Text>
+
+          <Text style={s.confirmText}>
+            {tr("plantsModals.confirmDelete.messagePrefix", "Are you sure you want to delete")}{" "}
+            <Text style={{ fontWeight: "800", color: "#fff" }}>{name}</Text>
+            {tr("plantsModals.confirmDelete.messageSuffix", "? This action cannot be undone.")}
+          </Text>
+
           <View style={s.promptButtonsRow}>
             <Pressable style={s.promptBtn} onPress={onCancel}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>
+                {tr("plantsModals.common.cancel", "Cancel")}
+              </Text>
             </Pressable>
+
             <Pressable style={[s.promptBtn, s.promptDanger]} onPress={onConfirm}>
               <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                Delete
+                {tr("plantsModals.common.delete", "Delete")}
               </Text>
             </Pressable>
           </View>
