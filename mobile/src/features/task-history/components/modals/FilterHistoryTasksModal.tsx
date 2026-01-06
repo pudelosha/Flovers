@@ -41,7 +41,11 @@ function isValidDateYYYYMMDD(v?: string) {
   const d = new Date(v);
   if (isNaN(+d)) return false;
   const [Y, M, D] = v.split("-").map(Number);
-  return d.getUTCFullYear() === Y && d.getUTCMonth() + 1 === M && d.getUTCDate() === D;
+  return (
+    d.getUTCFullYear() === Y &&
+    d.getUTCMonth() + 1 === M &&
+    d.getUTCDate() === D
+  );
 }
 function toYYYYMMDD(d: Date) {
   const Y = d.getFullYear();
@@ -99,13 +103,17 @@ export default function FilterHistoryTasksModal({
       setLocation(filters.location);
       setCompletedFrom(filters.completedFrom || "");
       setCompletedTo(filters.completedTo || "");
+      setShowFromPicker(false);
+      setShowToPicker(false);
     }
   }, [visible, filters]);
 
   if (!visible) return null;
 
   const toggleType = (tt: TaskType) => {
-    setTypes((curr) => (curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]));
+    setTypes((curr) =>
+      curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]
+    );
   };
 
   const handleClearAll = () => {
@@ -133,7 +141,11 @@ export default function FilterHistoryTasksModal({
           <View
             pointerEvents="none"
             // @ts-ignore
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
           />
         </View>
 
@@ -153,7 +165,8 @@ export default function FilterHistoryTasksModal({
             >
               <Text style={s.dropdownValue}>
                 {plantId
-                  ? plants.find((p) => p.id === plantId)?.name || t("taskHistoryModals.common.selectPlant")
+                  ? plants.find((p) => p.id === plantId)?.name ||
+                    t("taskHistoryModals.common.selectPlant")
                   : t("taskHistoryModals.filter.anyPlant")}
               </Text>
               <MaterialCommunityIcons
@@ -162,6 +175,7 @@ export default function FilterHistoryTasksModal({
                 color="#FFFFFF"
               />
             </Pressable>
+
             {plantOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -172,9 +186,14 @@ export default function FilterHistoryTasksModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>{t("taskHistoryModals.filter.anyPlant")}</Text>
-                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  <Text style={s.dropdownItemText}>
+                    {t("taskHistoryModals.filter.anyPlant")}
+                  </Text>
+                  {!plantId && (
+                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                  )}
                 </Pressable>
+
                 {plants.map((p) => (
                   <Pressable
                     key={p.id}
@@ -214,6 +233,7 @@ export default function FilterHistoryTasksModal({
                 color="#FFFFFF"
               />
             </Pressable>
+
             {locOpen && (
               <View style={s.dropdownList}>
                 <Pressable
@@ -224,9 +244,14 @@ export default function FilterHistoryTasksModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>{t("taskHistoryModals.filter.anyLocation")}</Text>
-                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                  <Text style={s.dropdownItemText}>
+                    {t("taskHistoryModals.filter.anyLocation")}
+                  </Text>
+                  {!location && (
+                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                  )}
                 </Pressable>
+
                 {locations.map((loc) => (
                   <Pressable
                     key={loc}
@@ -237,19 +262,26 @@ export default function FilterHistoryTasksModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{loc}</Text>
-                    {location === loc && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {location === loc && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
             )}
           </View>
 
-          {/* Task type chips (same glazed behaviour as Reminders) */}
+          {/* Task type chips */}
           <Text style={s.inputLabel}>{t("taskHistoryModals.filter.taskTypesLabel")}</Text>
           <View style={s.chipRow}>
             {TYPE_OPTIONS.map((tt) => {
               const selected = types.includes(tt);
               const tint = ACCENT_BY_TYPE[tt];
+
+              const typeLabel = t(`taskHistoryModals.common.taskTypes.${tt}`, {
+                defaultValue: tt,
+              });
+
               return (
                 <Pressable
                   key={tt}
@@ -263,14 +295,16 @@ export default function FilterHistoryTasksModal({
                     },
                   ]}
                 >
-                  <Text style={s.chipText}>{tt.toUpperCase()}</Text>
+                  <Text style={s.chipText}>{String(typeLabel).toUpperCase()}</Text>
                 </Pressable>
               );
             })}
           </View>
 
           {/* Completed date range */}
-          <Text style={s.inputLabel}>{t("taskHistoryModals.filter.completedDateRangeLabel")}</Text>
+          <Text style={s.inputLabel}>
+            {t("taskHistoryModals.filter.completedDateRangeLabel")}
+          </Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
               <Text style={s.inputLabel}>{t("taskHistoryModals.filter.fromLabel")}</Text>

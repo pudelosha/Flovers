@@ -6,7 +6,14 @@
       "delete": "Usuń",
       "selectPlant": "Wybierz roślinę",
       "selectLocation": "Wybierz lokalizację",
-      "datePlaceholder": "RRRR-MM-DD"
+      "datePlaceholder": "RRRR-MM-DD",
+      "taskTypes": {
+        "watering": "Podlewanie",
+        "moisture": "Wilgotność",
+        "fertilising": "Nawożenie",
+        "care": "Pielęgnacja",
+        "repot": "Przesadzanie"
+      }
     },
     "delete": {
       "title": "Usuń historię",
