@@ -89,9 +89,13 @@ import plReadingsHistory from "./locales/pl/readingsHistory.json";
 import enProfile from "./locales/en/profile.json";
 import plProfile from "./locales/pl/profile.json";
 
-// Home bundles (NEW)
+// Home bundles
 import enHome from "./locales/en/home.json";
 import plHome from "./locales/pl/home.json";
+
+// Home modals bundles (NEW)
+import enHomeModals from "./locales/en/homeModals.json";
+import plHomeModals from "./locales/pl/homeModals.json";
 
 // Task history bundles
 import enTaskHistory from "./locales/en/taskHistory.json";
@@ -221,7 +225,8 @@ const resources = {
         enReadingsModals,
         enReadingsHistory,
         enProfile,
-        enHome, // NEW
+        enHome,
+        enHomeModals, // NEW
         enTaskHistory,
         enTaskHistoryModals,
       ] as AnyObj[]
@@ -259,7 +264,8 @@ const resources = {
         plReadingsModals,
         plReadingsHistory,
         plProfile,
-        plHome, // NEW
+        plHome,
+        plHomeModals, // NEW
         plTaskHistory,
         plTaskHistoryModals,
       ] as AnyObj[]

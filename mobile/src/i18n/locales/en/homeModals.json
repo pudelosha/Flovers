@@ -1,0 +1,43 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Cancel",
+      "apply": "Apply",
+      "reset": "Reset"
+    },
+    "complete": {
+      "title": "Mark task as complete",
+      "noteLabel": "Note (optional)",
+      "notePlaceholder": "You can add a short note about what you did, observations, etc.",
+      "confirm": "Mark as complete"
+    },
+    "filter": {
+      "title": "Filter tasks",
+      "plantLabel": "Plant",
+      "locationLabel": "Location",
+      "taskTypesLabel": "Task types",
+      "dueDateRangeLabel": "Due date range",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "anyPlant": "Any plant",
+      "selectPlant": "Select plant",
+      "anyLocation": "Any location",
+      "datePlaceholder": "YYYY-MM-DD",
+      "clear": "Clear"
+    },
+    "sort": {
+      "title": "Sort tasks",
+      "sortByLabel": "Sort by",
+      "directionLabel": "Direction",
+      "keys": {
+        "dueDate": "Due date",
+        "plant": "Plant name",
+        "location": "Location"
+      },
+      "directions": {
+        "asc": "Ascending",
+        "desc": "Descending"
+      }
+    }
+  }
+}

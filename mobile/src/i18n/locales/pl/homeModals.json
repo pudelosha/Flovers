@@ -1,0 +1,43 @@
+{
+  "homeModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "apply": "Zastosuj",
+      "reset": "Resetuj"
+    },
+    "complete": {
+      "title": "Oznacz zadanie jako wykonane",
+      "noteLabel": "Notatka (opcjonalnie)",
+      "notePlaceholder": "Możesz dodać krótką notatkę o tym co zrobiłeś/aś, obserwacje itp.",
+      "confirm": "Oznacz jako wykonane"
+    },
+    "filter": {
+      "title": "Filtruj zadania",
+      "plantLabel": "Roślina",
+      "locationLabel": "Lokalizacja",
+      "taskTypesLabel": "Typy zadań",
+      "dueDateRangeLabel": "Zakres dat wykonania",
+      "fromLabel": "Od",
+      "toLabel": "Do",
+      "anyPlant": "Dowolna roślina",
+      "selectPlant": "Wybierz roślinę",
+      "anyLocation": "Dowolna lokalizacja",
+      "datePlaceholder": "RRRR-MM-DD",
+      "clear": "Wyczyść"
+    },
+    "sort": {
+      "title": "Sortuj zadania",
+      "sortByLabel": "Sortuj według",
+      "directionLabel": "Kierunek",
+      "keys": {
+        "dueDate": "Data",
+        "plant": "Nazwa rośliny",
+        "location": "Lokalizacja"
+      },
+      "directions": {
+        "asc": "Rosnąco",
+        "desc": "Malejąco"
+      }
+    }
+  }
+}

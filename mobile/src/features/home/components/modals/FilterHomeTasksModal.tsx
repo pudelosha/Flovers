@@ -5,8 +5,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { s } from "../../styles/home.styles";
 import type { TaskType } from "../../types/home.types";
 import { ACCENT_BY_TYPE } from "../../constants/home.constants";
+import { useTranslation } from "react-i18next";
 
-// Optional datetime picker (same pattern as Reminders)
 let DateTimePicker: any = null;
 try {
   DateTimePicker = require("@react-native-community/datetimepicker").default;
@@ -75,6 +75,8 @@ export default function FilterHomeTasksModal({
   onApply,
   onClearAll,
 }: Props) {
+  const { t } = useTranslation();
+
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
   const [types, setTypes] = React.useState<TaskType[]>(filters.types || []);
@@ -99,8 +101,8 @@ export default function FilterHomeTasksModal({
     }
   }, [visible, filters]);
 
-  const toggleType = (t: TaskType) => {
-    setTypes((curr) => (curr.includes(t) ? curr.filter((x) => x !== t) : [...curr, t]));
+  const toggleType = (t0: TaskType) => {
+    setTypes((curr) => (curr.includes(t0) ? curr.filter((x) => x !== t0) : [...curr, t0]));
   };
 
   if (!visible) return null;
@@ -126,10 +128,10 @@ export default function FilterHomeTasksModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Filter tasks</Text>
+          <Text style={s.promptTitle}>{t("homeModals.filter.title")}</Text>
 
           {/* Plant dropdown */}
-          <Text style={s.inputLabel}>Plant</Text>
+          <Text style={s.inputLabel}>{t("homeModals.filter.plantLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -141,8 +143,8 @@ export default function FilterHomeTasksModal({
             >
               <Text style={s.dropdownValue}>
                 {plantId
-                  ? plants.find((p) => p.id === plantId)?.name || "Select plant"
-                  : "Any plant"}
+                  ? plants.find((p) => p.id === plantId)?.name || t("homeModals.filter.selectPlant")
+                  : t("homeModals.filter.anyPlant")}
               </Text>
               <MaterialCommunityIcons
                 name={plantOpen ? "chevron-up" : "chevron-down"}
@@ -160,7 +162,7 @@ export default function FilterHomeTasksModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any plant</Text>
+                  <Text style={s.dropdownItemText}>{t("homeModals.filter.anyPlant")}</Text>
                   {!plantId && (
                     <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                   )}
@@ -185,7 +187,7 @@ export default function FilterHomeTasksModal({
           </View>
 
           {/* Location dropdown */}
-          <Text style={s.inputLabel}>Location</Text>
+          <Text style={s.inputLabel}>{t("homeModals.filter.locationLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -195,7 +197,9 @@ export default function FilterHomeTasksModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{location ? location : "Any location"}</Text>
+              <Text style={s.dropdownValue}>
+                {location ? location : t("homeModals.filter.anyLocation")}
+              </Text>
               <MaterialCommunityIcons
                 name={locOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -212,7 +216,7 @@ export default function FilterHomeTasksModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any location</Text>
+                  <Text style={s.dropdownItemText}>{t("homeModals.filter.anyLocation")}</Text>
                   {!location && (
                     <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                   )}
@@ -237,15 +241,15 @@ export default function FilterHomeTasksModal({
           </View>
 
           {/* Types (chips) */}
-          <Text style={s.inputLabel}>Task types</Text>
+          <Text style={s.inputLabel}>{t("homeModals.filter.taskTypesLabel")}</Text>
           <View style={s.chipRow}>
-            {TYPE_OPTIONS.map((t) => {
-              const selected = types.includes(t);
-              const tint = ACCENT_BY_TYPE[t];
+            {TYPE_OPTIONS.map((tt) => {
+              const selected = types.includes(tt);
+              const tint = ACCENT_BY_TYPE[tt];
               return (
                 <Pressable
-                  key={t}
-                  onPress={() => toggleType(t)}
+                  key={tt}
+                  onPress={() => toggleType(tt)}
                   style={[
                     s.chip,
                     {
@@ -255,24 +259,26 @@ export default function FilterHomeTasksModal({
                     },
                   ]}
                 >
-                  <Text style={s.chipText}>{t.toUpperCase()}</Text>
+                  <Text style={s.chipText}>
+                    {t(`home.taskTypes.${tt}`)}
+                  </Text>
                 </Pressable>
               );
             })}
           </View>
 
           {/* Due date range */}
-          <Text style={s.inputLabel}>Due date range</Text>
+          <Text style={s.inputLabel}>{t("homeModals.filter.dueDateRangeLabel")}</Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
-              <Text style={s.inputLabel}>From</Text>
+              <Text style={s.inputLabel}>{t("homeModals.filter.fromLabel")}</Text>
               <Pressable
                 onPress={() => setShowFromPicker(true)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={t("homeModals.filter.datePlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueFrom}
                   editable={false}
@@ -282,8 +288,8 @@ export default function FilterHomeTasksModal({
               {DateTimePicker && showFromPicker && (
                 <DateTimePicker
                   value={(() => {
-                    const d = isValidDateYYYYMMDD(dueFrom) ? new Date(dueFrom) : new Date();
-                    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+                    const d0 = isValidDateYYYYMMDD(dueFrom) ? new Date(dueFrom) : new Date();
+                    return new Date(d0.getFullYear(), d0.getMonth(), d0.getDate());
                   })()}
                   mode="date"
                   display={Platform.OS === "ios" ? "inline" : "default"}
@@ -296,14 +302,14 @@ export default function FilterHomeTasksModal({
             </View>
 
             <View style={s.inlineHalfRight}>
-              <Text style={s.inputLabel}>To</Text>
+              <Text style={s.inputLabel}>{t("homeModals.filter.toLabel")}</Text>
               <Pressable
                 onPress={() => setShowToPicker(true)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={t("homeModals.filter.datePlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={dueTo}
                   editable={false}
@@ -313,8 +319,8 @@ export default function FilterHomeTasksModal({
               {DateTimePicker && showToPicker && (
                 <DateTimePicker
                   value={(() => {
-                    const d = isValidDateYYYYMMDD(dueTo) ? new Date(dueTo) : new Date();
-                    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+                    const d0 = isValidDateYYYYMMDD(dueTo) ? new Date(dueTo) : new Date();
+                    return new Date(d0.getFullYear(), d0.getMonth(), d0.getDate());
                   })()}
                   mode="date"
                   display={Platform.OS === "ios" ? "inline" : "default"}
@@ -330,11 +336,11 @@ export default function FilterHomeTasksModal({
           <View style={s.promptButtonsRow}>
             <Pressable onPress={onClearAll} style={[s.promptBtn, s.promptDanger]}>
               <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                Clear
+                {t("homeModals.filter.clear")}
               </Text>
             </Pressable>
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("homeModals.common.cancel")}</Text>
             </Pressable>
             <Pressable
               onPress={() =>
@@ -348,7 +354,7 @@ export default function FilterHomeTasksModal({
               }
               style={[s.promptBtn, s.promptPrimary]}
             >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>{t("homeModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

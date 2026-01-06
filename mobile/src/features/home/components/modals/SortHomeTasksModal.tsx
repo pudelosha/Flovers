@@ -3,6 +3,7 @@ import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../../styles/home.styles";
+import { useTranslation } from "react-i18next";
 
 export type HomeSortKey = "dueDate" | "plant" | "location";
 export type HomeSortDir = "asc" | "desc";
@@ -24,6 +25,8 @@ export default function SortHomeTasksModal({
   onApply,
   onReset,
 }: Props) {
+  const { t } = useTranslation();
+
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
   const [k, setK] = React.useState<HomeSortKey>(sortKey);
@@ -61,10 +64,10 @@ export default function SortHomeTasksModal({
         </View>
 
         <View style={[s.promptInner, styles.promptInner28]}>
-          <Text style={s.promptTitle}>Sort tasks</Text>
+          <Text style={s.promptTitle}>{t("homeModals.sort.title")}</Text>
 
           {/* Sort key dropdown */}
-          <Text style={s.inputLabel}>Sort by</Text>
+          <Text style={s.inputLabel}>{t("homeModals.sort.sortByLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -75,7 +78,11 @@ export default function SortHomeTasksModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {k === "dueDate" ? "Due date" : k === "plant" ? "Plant name" : "Location"}
+                {k === "dueDate"
+                  ? t("homeModals.sort.keys.dueDate")
+                  : k === "plant"
+                  ? t("homeModals.sort.keys.plant")
+                  : t("homeModals.sort.keys.location")}
               </Text>
               <MaterialCommunityIcons
                 name={keyOpen ? "chevron-up" : "chevron-down"}
@@ -87,9 +94,9 @@ export default function SortHomeTasksModal({
             {keyOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "dueDate", label: "Due date" },
-                  { key: "plant", label: "Plant name" },
-                  { key: "location", label: "Location" },
+                  { key: "dueDate", label: t("homeModals.sort.keys.dueDate") },
+                  { key: "plant", label: t("homeModals.sort.keys.plant") },
+                  { key: "location", label: t("homeModals.sort.keys.location") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -110,7 +117,7 @@ export default function SortHomeTasksModal({
           </View>
 
           {/* Direction dropdown */}
-          <Text style={s.inputLabel}>Direction</Text>
+          <Text style={s.inputLabel}>{t("homeModals.sort.directionLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -120,7 +127,11 @@ export default function SortHomeTasksModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
+              <Text style={s.dropdownValue}>
+                {d === "asc"
+                  ? t("homeModals.sort.directions.asc")
+                  : t("homeModals.sort.directions.desc")}
+              </Text>
               <MaterialCommunityIcons
                 name={dirOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -131,8 +142,8 @@ export default function SortHomeTasksModal({
             {dirOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "asc", label: "Ascending" },
-                  { key: "desc", label: "Descending" },
+                  { key: "asc", label: t("homeModals.sort.directions.asc") },
+                  { key: "desc", label: t("homeModals.sort.directions.desc") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -156,18 +167,18 @@ export default function SortHomeTasksModal({
             {onReset ? (
               <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                  Reset
+                  {t("homeModals.common.reset")}
                 </Text>
               </Pressable>
             ) : null}
             <Pressable onPress={onCancel} style={[styles.btnBase]}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("homeModals.common.cancel")}</Text>
             </Pressable>
             <Pressable
               onPress={() => onApply(k, d)}
               style={[styles.btnBase, styles.btnPrimary]}
             >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>{t("homeModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

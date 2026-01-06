@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\components\CompleteTaskModal.tsx
 import React from "react";
 import {
   View,
@@ -9,6 +8,7 @@ import {
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../../styles/home.styles";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   visible: boolean;
@@ -25,6 +25,8 @@ export default function CompleteTaskModal({
   onCancel,
   onConfirm,
 }: Props) {
+  const { t } = useTranslation();
+
   if (!visible) return null;
 
   return (
@@ -60,10 +62,10 @@ export default function CompleteTaskModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Mark task as complete</Text>
+          <Text style={s.promptTitle}>{t("homeModals.complete.title")}</Text>
 
           {/* Note input */}
-          <Text style={s.inputLabel}>Note (optional)</Text>
+          <Text style={s.inputLabel}>{t("homeModals.complete.noteLabel")}</Text>
           <TextInput
             style={[
               s.input,
@@ -73,7 +75,7 @@ export default function CompleteTaskModal({
               },
             ]}
             multiline
-            placeholder="You can add a short note about what you did, observations, etc."
+            placeholder={t("homeModals.complete.notePlaceholder")}
             placeholderTextColor="rgba(255,255,255,0.7)"
             value={note}
             onChangeText={onChangeNote}
@@ -94,7 +96,7 @@ export default function CompleteTaskModal({
                 onCancel();
               }}
             >
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("homeModals.common.cancel")}</Text>
             </Pressable>
 
             <Pressable
@@ -105,7 +107,7 @@ export default function CompleteTaskModal({
               }}
             >
               <Text style={[s.promptBtnText, s.promptPrimaryText]}>
-                Mark as complete
+                {t("homeModals.complete.confirm")}
               </Text>
             </Pressable>
           </View>
