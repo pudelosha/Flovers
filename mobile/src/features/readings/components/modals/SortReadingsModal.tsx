@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 // Reuse Reminders modal look & feel
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -26,6 +27,8 @@ export default function SortReadingsModal({
   onApply,
   onReset,
 }: Props) {
+  const { t } = useTranslation();
+
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
   const [k, setK] = React.useState<SortKey>(sortKey);
@@ -63,10 +66,10 @@ export default function SortReadingsModal({
         </View>
 
         <View style={[s.promptInner, styles.promptInner28]}>
-          <Text style={s.promptTitle}>Sort readings</Text>
+          <Text style={s.promptTitle}>{t("readingsModals.sort.title")}</Text>
 
           {/* Sort key dropdown */}
-          <Text style={s.inputLabel}>Sort by</Text>
+          <Text style={s.inputLabel}>{t("readingsModals.sort.sortBy")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -77,7 +80,11 @@ export default function SortReadingsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {k === "name" ? "Plant name" : k === "location" ? "Location" : "Last read"}
+                {k === "name"
+                  ? t("readingsModals.sort.keyPlantName")
+                  : k === "location"
+                  ? t("readingsModals.sort.keyLocation")
+                  : t("readingsModals.sort.keyLastRead")}
               </Text>
               <MaterialCommunityIcons name={keyOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
@@ -85,9 +92,9 @@ export default function SortReadingsModal({
             {keyOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "name", label: "Plant name" },
-                  { key: "location", label: "Location" },
-                  { key: "lastRead", label: "Last read" },
+                  { key: "name", label: t("readingsModals.sort.keyPlantName") },
+                  { key: "location", label: t("readingsModals.sort.keyLocation") },
+                  { key: "lastRead", label: t("readingsModals.sort.keyLastRead") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -106,7 +113,7 @@ export default function SortReadingsModal({
           </View>
 
           {/* Direction dropdown */}
-          <Text style={s.inputLabel}>Direction</Text>
+          <Text style={s.inputLabel}>{t("readingsModals.sort.direction")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, styles.ddHeaderFlat]}
@@ -116,15 +123,17 @@ export default function SortReadingsModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
+              <Text style={s.dropdownValue}>
+                {d === "asc" ? t("readingsModals.sort.ascending") : t("readingsModals.sort.descending")}
+              </Text>
               <MaterialCommunityIcons name={dirOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
 
             {dirOpen && (
               <View style={[s.dropdownList, styles.ddListFlat]}>
                 {([
-                  { key: "asc", label: "Ascending" },
-                  { key: "desc", label: "Descending" },
+                  { key: "asc", label: t("readingsModals.sort.ascending") },
+                  { key: "desc", label: t("readingsModals.sort.descending") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -145,14 +154,16 @@ export default function SortReadingsModal({
           <View style={s.promptButtonsRow}>
             {onReset ? (
               <Pressable onPress={onReset} style={[styles.btnBase, styles.btnDanger]}>
-                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Reset</Text>
+                <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                  {t("readingsModals.common.reset")}
+                </Text>
               </Pressable>
             ) : null}
             <Pressable onPress={onCancel} style={[styles.btnBase]}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
             </Pressable>
             <Pressable onPress={() => onApply(k, d)} style={[styles.btnBase, styles.btnPrimary]}>
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>{t("readingsModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

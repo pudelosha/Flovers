@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "apply": "Apply",
+      "clear": "Clear",
+      "close": "Close",
+      "reset": "Reset",
+      "save": "Save",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Delete reading",
+      "messageBefore": "Are you sure you want to delete",
+      "messageAfter": "? This action cannot be undone."
+    },
+    "deviceSetup": {
+      "title": "Device setup",
+      "httpEndpoints": "HTTP endpoints",
+      "addReadingPost": "Add reading (POST)",
+      "readReadingsGetPost": "Read readings (GET/POST)",
+      "samplePayloads": "Sample payloads",
+      "addReadingBody": "Add reading body",
+      "readRequestBody": "Read request body",
+      "currentAuthSecret": "Current auth secret",
+      "showAuthSecret": "Show auth secret",
+      "hideAuthSecret": "Hide auth secret",
+      "generateNewSecret": "Generate new secret",
+      "downloadPdfDocumentation": "Download PDF documentation",
+      "rotateConfirmTitle": "Rotate secret?",
+      "rotateConfirmText": "Generating a new secret will invalidate the current one. Update your device configuration afterwards.",
+      "rotate": "Rotate"
+    },
+    "filter": {
+      "title": "Filter readings",
+      "plantLabel": "Plant",
+      "locationLabel": "Location",
+      "statusLabel": "Status",
+      "selectPlant": "Select plant",
+      "anyPlant": "Any plant",
+      "anyLocation": "Any location",
+      "anyStatus": "Any status",
+      "statusEnabled": "Enabled",
+      "statusDisabled": "Disabled"
+    },
+    "sort": {
+      "title": "Sort readings",
+      "sortBy": "Sort by",
+      "direction": "Direction",
+      "keyPlantName": "Plant name",
+      "keyLocation": "Location",
+      "keyLastRead": "Last read",
+      "ascending": "Ascending",
+      "descending": "Descending"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Link device",
+      "editDeviceTitle": "Edit device",
+      "noPlantsText": "You don’t have any plants yet. Please add a plant first to link a device.",
+      "selectPlant": "Select plant",
+      "locationPlaceholder": "Location",
+      "deviceNameRequired": "Device name (required)",
+      "sensors": "Sensors",
+      "sensorTemperature": "Temperature",
+      "sensorHumidity": "Humidity",
+      "sensorLight": "Light",
+      "sensorSoilMoisture": "Soil moisture",
+      "moistAlertLabel": "Send alerts when soil moisture is beneath threshold",
+      "thresholdLabel": "Threshold:",
+      "samplingInterval": "Sampling interval",
+      "everyXHours": "Every {{count}} hour",
+      "authSecret": "Auth secret",
+      "deviceKey": "Device key",
+      "sendCodeViaEmail": "Send code via email",
+      "saveCodeAsText": "Save code as text",
+      "enabled": "Enabled",
+      "ingestReadingsFromDevice": "Ingest readings from this device",
+      "notesOptional": "Notes… (optional)"
+    }
+  }
+}

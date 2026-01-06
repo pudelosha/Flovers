@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, TextInput, ScrollView, Switch } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 // Match the Edit Plant modal styling:
 import { s as sp } from "../../../plants/styles/plants.styles";        // dropdown / inputs styles
@@ -93,6 +94,8 @@ export default function UpsertReadingDeviceModal({
   onSendCodeByEmail,
   onSaveCodeAsText,
 }: Props) {
+  const { t } = useTranslation();
+
   // ---- hooks (always run) ----
   const [plantOpen, setPlantOpen] = React.useState(false);
 
@@ -225,13 +228,13 @@ export default function UpsertReadingDeviceModal({
           </View>
           <View style={[pr.promptInner, { maxHeight: "86%" }]}>
             <ScrollView contentContainerStyle={{ paddingBottom: 24 }}>
-              <Text style={pr.promptTitle}>Link device</Text>
+              <Text style={pr.promptTitle}>{t("readingsModals.upsert.linkDeviceTitle")}</Text>
               <Text style={{ color: "rgba(255,255,255,0.95)", paddingHorizontal: 16 }}>
-                You don’t have any plants yet. Please add a plant first to link a device.
+                {t("readingsModals.upsert.noPlantsText")}
               </Text>
               <View style={[pr.promptButtonsRow, { marginTop: 12 }]}>
                 <Pressable style={pr.promptBtn} onPress={onCancel}>
-                  <Text style={pr.promptBtnText}>Close</Text>
+                  <Text style={pr.promptBtnText}>{t("readingsModals.common.close")}</Text>
                 </Pressable>
               </View>
             </ScrollView>
@@ -241,7 +244,7 @@ export default function UpsertReadingDeviceModal({
     );
   }
 
-  const title = mode === "add" ? "Link device" : "Edit device";
+  const title = mode === "add" ? t("readingsModals.upsert.linkDeviceTitle") : t("readingsModals.upsert.editDeviceTitle");
 
   return (
     <>
@@ -264,7 +267,7 @@ export default function UpsertReadingDeviceModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <Text style={sp.dropdownValue}>
-                  {selectedPlant ? selectedPlant.name : "Select plant"}
+                  {selectedPlant ? selectedPlant.name : t("readingsModals.upsert.selectPlant")}
                 </Text>
                 <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
               </Pressable>
@@ -292,7 +295,7 @@ export default function UpsertReadingDeviceModal({
             <TextInput
               style={pr.input}
               value={selectedPlant?.location ?? ""}
-              placeholder="Location"
+              placeholder={t("readingsModals.upsert.locationPlaceholder")}
               placeholderTextColor="rgba(255,255,255,0.7)"
               editable={false}
               pointerEvents="none"
@@ -301,25 +304,27 @@ export default function UpsertReadingDeviceModal({
             {/* 3) Device name (mandatory) */}
             <TextInput
               style={pr.input}
-              placeholder="Device name (required)"
+              placeholder={t("readingsModals.upsert.deviceNameRequired")}
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={name}
               onChangeText={setName}
             />
 
             {/* Sensors */}
-            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 8 }]}>Sensors</Text>
+            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 8 }]}>
+              {t("readingsModals.upsert.sensors")}
+            </Text>
             <View style={{ gap: 10, marginHorizontal: 16, marginTop: 6 }}>
-              <RowSwitch label="Temperature" value={sensorTemp} onValueChange={setSensorTemp} weight="600" />
-              <RowSwitch label="Humidity" value={sensorHum} onValueChange={setSensorHum} weight="600" />
-              <RowSwitch label="Light" value={sensorLight} onValueChange={setSensorLight} weight="600" />
-              <RowSwitch label="Soil moisture" value={sensorMoist} onValueChange={setSensorMoist} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorTemperature")} value={sensorTemp} onValueChange={setSensorTemp} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorHumidity")} value={sensorHum} onValueChange={setSensorHum} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorLight")} value={sensorLight} onValueChange={setSensorLight} weight="600" />
+              <RowSwitch label={t("readingsModals.upsert.sensorSoilMoisture")} value={sensorMoist} onValueChange={setSensorMoist} weight="600" />
 
               {/* Soil moisture alert controls */}
               {sensorMoist && (
                 <View style={{ marginLeft: 8, gap: 10 }}>
                   <CheckRow
-                    label="Send alerts when soil moisture is beneath threshold"
+                    label={t("readingsModals.upsert.moistAlertLabel")}
                     checked={moistAlertEnabled}
                     onToggle={() => setMoistAlertEnabled((v) => !v)}
                   />
@@ -331,7 +336,8 @@ export default function UpsertReadingDeviceModal({
                           { fontWeight: "600", fontSize: 12, opacity: 0.9, marginBottom: 6 }
                         ]}
                       >
-                        Threshold: <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}%</Text>
+                        {t("readingsModals.upsert.thresholdLabel")}{" "}
+                        <Text style={{ fontWeight: "800", color: "#fff" }}>{moistAlertPct}%</Text>
                       </Text>
                       {Slider ? (
                         <Slider
@@ -347,8 +353,8 @@ export default function UpsertReadingDeviceModal({
                           style={pr.input}
                           keyboardType="numeric"
                           value={String(moistAlertPct)}
-                          onChangeText={(t) => {
-                            const n = parseInt(t.replace(/[^\d]/g, ""), 10);
+                          onChangeText={(t2) => {
+                            const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
                             const v = Number.isFinite(n) ? n : 30;
                             setMoistAlertPct(Math.max(0, Math.min(100, v)));
                           }}
@@ -363,14 +369,16 @@ export default function UpsertReadingDeviceModal({
             </View>
 
             {/* Sampling interval */}
-            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>Sampling interval</Text>
+            <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>
+              {t("readingsModals.upsert.samplingInterval")}
+            </Text>
             <Text
               style={[
                 sp.dropdownItemText,
                 { marginHorizontal: 16, marginTop: 4, fontWeight: "600", fontSize: 12, opacity: 0.9 }
               ]}
             >
-              Every <Text style={{ fontWeight: "800", color: "#fff" }}>{intervalHours}</Text> hour{intervalHours === 1 ? "" : "s"}
+              {t("readingsModals.upsert.everyXHours", { count: intervalHours })}
             </Text>
             <View style={{ marginTop: 6, marginHorizontal: 16 }}>
               {Slider ? (
@@ -387,8 +395,8 @@ export default function UpsertReadingDeviceModal({
                   style={pr.input}
                   keyboardType="numeric"
                   value={String(intervalHours)}
-                  onChangeText={(t) => {
-                    const n = parseInt(t.replace(/[^\d]/g, ""), 10);
+                  onChangeText={(t2) => {
+                    const n = parseInt(t2.replace(/[^\d]/g, ""), 10);
                     const v = Number.isFinite(n) ? n : 5;
                     const clamped = Math.max(1, Math.min(24, v));
                     setIntervalHours(clamped);
@@ -403,7 +411,7 @@ export default function UpsertReadingDeviceModal({
             {mode === "edit" && (
               <>
                 <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16, marginBottom: 6 }]}>
-                  Auth secret
+                  {t("readingsModals.upsert.authSecret")}
                 </Text>
                 <View
                   style={{
@@ -417,10 +425,19 @@ export default function UpsertReadingDeviceModal({
                   }}
                 >
                   <Text style={sp.dropdownValue} selectable={showSecret}>
-                    {authSecret ? (showSecret ? authSecret : "••••••••••••••") : "—"}
+                    {authSecret ? (showSecret ? authSecret : "••••••••••••••") : t("readingsModals.common.dash")}
                   </Text>
                   {authSecret ? (
-                    <Pressable onPress={() => setShowSecret((v) => !v)} hitSlop={8}>
+                    <Pressable
+                      onPress={() => setShowSecret((v) => !v)}
+                      hitSlop={8}
+                      accessibilityRole="button"
+                      accessibilityLabel={
+                        showSecret
+                          ? t("readingsModals.deviceSetup.hideAuthSecret")
+                          : t("readingsModals.deviceSetup.showAuthSecret")
+                      }
+                    >
                       <MaterialCommunityIcons
                         name={showSecret ? "eye-off-outline" : "eye-outline"}
                         size={20}
@@ -431,25 +448,36 @@ export default function UpsertReadingDeviceModal({
                 </View>
 
                 <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 10, marginBottom: 6 }]}>
-                  Device key
+                  {t("readingsModals.upsert.deviceKey")}
                 </Text>
                 <View style={{ marginHorizontal: 16, padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
-                  <Text style={sp.dropdownValue}>{deviceKey ? deviceKey : "—"}</Text>
+                  <Text style={sp.dropdownValue}>{deviceKey ? deviceKey : t("readingsModals.common.dash")}</Text>
                 </View>
 
                 <View style={{ flexDirection: "row", gap: 10, marginHorizontal: 16, marginTop: 12 }}>
                   {/* Make these primary (blue) to match Save */}
                   <Pressable onPress={onSendCodeByEmail} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Send code via email</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("readingsModals.upsert.sendCodeViaEmail")}
+                    </Text>
                   </Pressable>
                   <Pressable onPress={onSaveCodeAsText} style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}>
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Save code as text</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("readingsModals.upsert.saveCodeAsText")}
+                    </Text>
                   </Pressable>
                 </View>
 
-                <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>Enabled</Text>
+                <Text style={[sp.dropdownValue, { marginHorizontal: 16, marginTop: 16 }]}>
+                  {t("readingsModals.upsert.enabled")}
+                </Text>
                 <View style={{ marginHorizontal: 16 }}>
-                  <RowSwitch label="Ingest readings from this device" value={enabled} onValueChange={setEnabled} weight="600" />
+                  <RowSwitch
+                    label={t("readingsModals.upsert.ingestReadingsFromDevice")}
+                    value={enabled}
+                    onValueChange={setEnabled}
+                    weight="600"
+                  />
                 </View>
               </>
             )}
@@ -457,7 +485,7 @@ export default function UpsertReadingDeviceModal({
             {/* Notes */}
             <TextInput
               style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
-              placeholder="Notes… (optional)"
+              placeholder={t("readingsModals.upsert.notesOptional")}
               placeholderTextColor="rgba(255,255,255,0.7)"
               value={notes}
               onChangeText={setNotes}
@@ -467,14 +495,14 @@ export default function UpsertReadingDeviceModal({
             {/* Footer */}
             <View style={pr.promptButtonsRow}>
               <Pressable style={pr.promptBtn} onPress={onCancel}>
-                <Text style={pr.promptBtnText}>Cancel</Text>
+                <Text style={pr.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
               </Pressable>
               <Pressable
                 style={[pr.promptBtn, pr.promptPrimary, (!canSave ? { opacity: 0.5 } : null)]}
                 disabled={!canSave}
                 onPress={handleSave}
               >
-                <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Save</Text>
+                <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>{t("readingsModals.common.save")}</Text>
               </Pressable>
             </View>
           </ScrollView>

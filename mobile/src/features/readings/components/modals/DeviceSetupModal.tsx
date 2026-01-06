@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, ScrollView, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 // Reuse Reminders modal styles
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -30,6 +31,8 @@ export default function DeviceSetupModal({
   onRotateSecret,
   onDownloadPdf,
 }: Props) {
+  const { t } = useTranslation();
+
   const [showConfirmRotate, setShowConfirmRotate] = React.useState(false);
   const [revealSecret, setRevealSecret] = React.useState(false);
 
@@ -84,32 +87,44 @@ export default function DeviceSetupModal({
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{ paddingBottom: 80, gap: 12 }}
           >
-            <Text style={s.promptTitle}>Device setup</Text>
+            <Text style={s.promptTitle}>{t("readingsModals.deviceSetup.title")}</Text>
 
             {/* Endpoints */}
-            <Text style={s.inputLabel}>HTTP endpoints</Text>
+            <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.httpEndpoints")}</Text>
 
-            <InfoRow icon="cloud-upload-outline" label="Add reading (POST)" value={writeEndpoint} />
-            <InfoRow icon="cloud-download-outline" label="Read readings (GET/POST)" value={readEndpoint} />
+            <InfoRow
+              icon="cloud-upload-outline"
+              label={t("readingsModals.deviceSetup.addReadingPost")}
+              value={writeEndpoint}
+            />
+            <InfoRow
+              icon="cloud-download-outline"
+              label={t("readingsModals.deviceSetup.readReadingsGetPost")}
+              value={readEndpoint}
+            />
 
             {/* Sample payloads */}
-            <Text style={s.inputLabel}>Sample payloads</Text>
+            <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.samplePayloads")}</Text>
 
-            <Block label="Add reading body">
+            <Block label={t("readingsModals.deviceSetup.addReadingBody")}>
               <CodeBlock text={sampleWritePayload} />
             </Block>
 
-            <Block label="Read request body">
+            <Block label={t("readingsModals.deviceSetup.readRequestBody")}>
               <CodeBlock text={sampleReadQuery} />
             </Block>
 
             {/* Current secret + rotate */}
             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-              <Text style={s.inputLabel}>Current auth secret</Text>
+              <Text style={s.inputLabel}>{t("readingsModals.deviceSetup.currentAuthSecret")}</Text>
               <Pressable
                 onPress={() => setRevealSecret((v) => !v)}
                 accessibilityRole="button"
-                accessibilityLabel={revealSecret ? "Hide auth secret" : "Show auth secret"}
+                accessibilityLabel={
+                  revealSecret
+                    ? t("readingsModals.deviceSetup.hideAuthSecret")
+                    : t("readingsModals.deviceSetup.showAuthSecret")
+                }
                 hitSlop={10}
                 style={{ padding: 4 }}
               >
@@ -147,7 +162,7 @@ export default function DeviceSetupModal({
                 alignItems: "center",
               }}
             >
-              <Text style={s.promptBtnText}>Generate new secret</Text>
+              <Text style={s.promptBtnText}>{t("readingsModals.deviceSetup.generateNewSecret")}</Text>
             </Pressable>
 
             {/* Download PDF doc */}
@@ -161,13 +176,13 @@ export default function DeviceSetupModal({
                 alignItems: "center",
               }}
             >
-              <Text style={s.promptPrimaryText}>Download PDF documentation</Text>
+              <Text style={s.promptPrimaryText}>{t("readingsModals.deviceSetup.downloadPdfDocumentation")}</Text>
             </Pressable>
 
             {/* Footer buttons (inside scroll, like EditPlantModal) */}
             <View style={s.promptButtonsRow}>
               <Pressable style={s.promptBtn} onPress={onClose}>
-                <Text style={s.promptBtnText}>Close</Text>
+                <Text style={s.promptBtnText}>{t("readingsModals.common.close")}</Text>
               </Pressable>
             </View>
           </ScrollView>
@@ -195,14 +210,12 @@ export default function DeviceSetupModal({
             </View>
 
             <View style={s.promptInner}>
-              <Text style={s.promptTitle}>Rotate secret?</Text>
-              <Text style={s.confirmText}>
-                Generating a new secret will invalidate the current one. Update your device configuration afterwards.
-              </Text>
+              <Text style={s.promptTitle}>{t("readingsModals.deviceSetup.rotateConfirmTitle")}</Text>
+              <Text style={s.confirmText}>{t("readingsModals.deviceSetup.rotateConfirmText")}</Text>
 
               <View style={s.promptButtonsRow}>
                 <Pressable style={s.promptBtn} onPress={() => setShowConfirmRotate(false)}>
-                  <Text style={s.promptBtnText}>Cancel</Text>
+                  <Text style={s.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
                 </Pressable>
                 <Pressable
                   style={[s.promptBtn, s.promptPrimary]}
@@ -215,7 +228,7 @@ export default function DeviceSetupModal({
                     }
                   }}
                 >
-                  <Text style={s.promptPrimaryText}>Rotate</Text>
+                  <Text style={s.promptPrimaryText}>{t("readingsModals.deviceSetup.rotate")}</Text>
                 </Pressable>
               </View>
             </View>

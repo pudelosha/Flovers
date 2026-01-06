@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 // Reuse Reminders modal look & feel
 import { s } from "../../../reminders/styles/reminders.styles";
@@ -34,6 +35,8 @@ export default function FilterReadingsModal({
   onApply,
   onClearAll,
 }: Props) {
+  const { t } = useTranslation();
+
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
   const [statusOpen, setStatusOpen] = React.useState(false);
@@ -76,10 +79,10 @@ export default function FilterReadingsModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>Filter readings</Text>
+          <Text style={s.promptTitle}>{t("readingsModals.filter.title")}</Text>
 
           {/* Plant dropdown */}
-          <Text style={s.inputLabel}>Plant</Text>
+          <Text style={s.inputLabel}>{t("readingsModals.filter.plantLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -91,7 +94,9 @@ export default function FilterReadingsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {plantId ? (plants.find((p) => p.id === plantId)?.name || "Select plant") : "Any plant"}
+                {plantId
+                  ? plants.find((p) => p.id === plantId)?.name || t("readingsModals.filter.selectPlant")
+                  : t("readingsModals.filter.anyPlant")}
               </Text>
               <MaterialCommunityIcons name={plantOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
@@ -105,7 +110,7 @@ export default function FilterReadingsModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any plant</Text>
+                  <Text style={s.dropdownItemText}>{t("readingsModals.filter.anyPlant")}</Text>
                   {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {plants.map((p) => (
@@ -126,7 +131,7 @@ export default function FilterReadingsModal({
           </View>
 
           {/* Location dropdown */}
-          <Text style={s.inputLabel}>Location</Text>
+          <Text style={s.inputLabel}>{t("readingsModals.filter.locationLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -137,7 +142,9 @@ export default function FilterReadingsModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{location ? location : "Any location"}</Text>
+              <Text style={s.dropdownValue}>
+                {location ? location : t("readingsModals.filter.anyLocation")}
+              </Text>
               <MaterialCommunityIcons name={locOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {locOpen && (
@@ -150,7 +157,7 @@ export default function FilterReadingsModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any location</Text>
+                  <Text style={s.dropdownItemText}>{t("readingsModals.filter.anyLocation")}</Text>
                   {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {locations.map((loc) => (
@@ -171,7 +178,7 @@ export default function FilterReadingsModal({
           </View>
 
           {/* Status dropdown */}
-          <Text style={s.inputLabel}>Status</Text>
+          <Text style={s.inputLabel}>{t("readingsModals.filter.statusLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -183,28 +190,36 @@ export default function FilterReadingsModal({
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
               <Text style={s.dropdownValue}>
-                {status === "enabled" ? "Enabled" : status === "disabled" ? "Disabled" : "Any status"}
+                {status === "enabled"
+                  ? t("readingsModals.filter.statusEnabled")
+                  : status === "disabled"
+                  ? t("readingsModals.filter.statusDisabled")
+                  : t("readingsModals.filter.anyStatus")}
               </Text>
               <MaterialCommunityIcons name={statusOpen ? "chevron-up" : "chevron-down"} size={20} color="#FFFFFF" />
             </Pressable>
             {statusOpen && (
               <View style={s.dropdownList}>
                 {[
-                  { key: undefined, label: "Any status" },
-                  { key: "enabled", label: "Enabled" },
-                  { key: "disabled", label: "Disabled" },
+                  { key: undefined, label: t("readingsModals.filter.anyStatus") },
+                  { key: "enabled", label: t("readingsModals.filter.statusEnabled") },
+                  { key: "disabled", label: t("readingsModals.filter.statusDisabled") },
                 ].map((opt) => (
                   <Pressable
-                    key={`${opt.key ?? "any"}`}
+                    key={`${(opt as any).key ?? "any"}`}
                     style={s.dropdownItem}
                     onPress={() => {
-                      setStatus(opt.key as Status | undefined);
+                      setStatus((opt as any).key as Status | undefined);
                       setStatusOpen(false);
                     }}
                   >
                     <Text style={s.dropdownItemText}>{opt.label}</Text>
-                    {status === opt.key && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
-                    {opt.key === undefined && status === undefined && (
+
+                    {status === (opt as any).key && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
+
+                    {(opt as any).key === undefined && status === undefined && (
                       <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                     )}
                   </Pressable>
@@ -218,10 +233,12 @@ export default function FilterReadingsModal({
               onPress={onClearAll}
               style={[s.promptBtn, { backgroundColor: "rgba(255,107,107,0.22)" }]}
             >
-              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>Clear</Text>
+              <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
+                {t("readingsModals.common.clear")}
+              </Text>
             </Pressable>
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("readingsModals.common.cancel")}</Text>
             </Pressable>
             <Pressable
               onPress={() =>
@@ -233,7 +250,7 @@ export default function FilterReadingsModal({
               }
               style={[s.promptBtn, s.promptPrimary]}
             >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>{t("readingsModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

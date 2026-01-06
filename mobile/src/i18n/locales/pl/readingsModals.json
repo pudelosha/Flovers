@@ -1,0 +1,82 @@
+{
+  "readingsModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "delete": "Usuń",
+      "apply": "Zastosuj",
+      "clear": "Wyczyść",
+      "close": "Zamknij",
+      "reset": "Resetuj",
+      "save": "Zapisz",
+      "dash": "—"
+    },
+    "confirmDelete": {
+      "title": "Usuń odczyt",
+      "messageBefore": "Czy na pewno chcesz usunąć",
+      "messageAfter": "? Tej operacji nie można cofnąć."
+    },
+    "deviceSetup": {
+      "title": "Konfiguracja urządzenia",
+      "httpEndpoints": "Endpointy HTTP",
+      "addReadingPost": "Dodaj odczyt (POST)",
+      "readReadingsGetPost": "Pobierz odczyty (GET/POST)",
+      "samplePayloads": "Przykładowe payloady",
+      "addReadingBody": "Treść żądania dodania odczytu",
+      "readRequestBody": "Treść żądania pobrania odczytów",
+      "currentAuthSecret": "Aktualny sekret autoryzacji",
+      "showAuthSecret": "Pokaż sekret autoryzacji",
+      "hideAuthSecret": "Ukryj sekret autoryzacji",
+      "generateNewSecret": "Wygeneruj nowy sekret",
+      "downloadPdfDocumentation": "Pobierz dokumentację PDF",
+      "rotateConfirmTitle": "Zrotować sekret?",
+      "rotateConfirmText": "Wygenerowanie nowego sekretu unieważni obecny. Następnie zaktualizuj konfigurację urządzenia.",
+      "rotate": "Rotuj"
+    },
+    "filter": {
+      "title": "Filtruj odczyty",
+      "plantLabel": "Roślina",
+      "locationLabel": "Lokalizacja",
+      "statusLabel": "Status",
+      "selectPlant": "Wybierz roślinę",
+      "anyPlant": "Dowolna roślina",
+      "anyLocation": "Dowolna lokalizacja",
+      "anyStatus": "Dowolny status",
+      "statusEnabled": "Włączone",
+      "statusDisabled": "Wyłączone"
+    },
+    "sort": {
+      "title": "Sortuj odczyty",
+      "sortBy": "Sortuj według",
+      "direction": "Kierunek",
+      "keyPlantName": "Nazwa rośliny",
+      "keyLocation": "Lokalizacja",
+      "keyLastRead": "Ostatni odczyt",
+      "ascending": "Rosnąco",
+      "descending": "Malejąco"
+    },
+    "upsert": {
+      "linkDeviceTitle": "Połącz urządzenie",
+      "editDeviceTitle": "Edytuj urządzenie",
+      "noPlantsText": "Nie masz jeszcze żadnych roślin. Dodaj najpierw roślinę, aby połączyć urządzenie.",
+      "selectPlant": "Wybierz roślinę",
+      "locationPlaceholder": "Lokalizacja",
+      "deviceNameRequired": "Nazwa urządzenia (wymagana)",
+      "sensors": "Czujniki",
+      "sensorTemperature": "Temperatura",
+      "sensorHumidity": "Wilgotność",
+      "sensorLight": "Światło",
+      "sensorSoilMoisture": "Wilgotność gleby",
+      "moistAlertLabel": "Wyślij alerty, gdy wilgotność gleby spadnie poniżej progu",
+      "thresholdLabel": "Próg:",
+      "samplingInterval": "Interwał próbkowania",
+      "everyXHours": "Co {{count}} godz.",
+      "authSecret": "Sekret autoryzacji",
+      "deviceKey": "Klucz urządzenia",
+      "sendCodeViaEmail": "Wyślij kod e-mailem",
+      "saveCodeAsText": "Zapisz kod jako tekst",
+      "enabled": "Włączone",
+      "ingestReadingsFromDevice": "Pobieraj odczyty z tego urządzenia",
+      "notesOptional": "Notatki… (opcjonalnie)"
+    }
+  }
+}

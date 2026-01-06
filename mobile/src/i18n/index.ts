@@ -73,9 +73,13 @@ import plReminders from "./locales/pl/reminders.json";
 import enRemindersModals from "./locales/en/remindersModals.json";
 import plRemindersModals from "./locales/pl/remindersModals.json";
 
-// Readings bundles (NEW)
+// Readings bundles
 import enReadings from "./locales/en/readings.json";
 import plReadings from "./locales/pl/readings.json";
+
+// Readings modals bundles (NEW)
+import enReadingsModals from "./locales/en/readingsModals.json";
+import plReadingsModals from "./locales/pl/readingsModals.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -193,7 +197,8 @@ const resources = {
         enPlantDetails,
         enReminders,
         enRemindersModals,
-        enReadings, // NEW
+        enReadings,
+        enReadingsModals, // NEW
       ] as AnyObj[]
     ),
   },
@@ -225,7 +230,8 @@ const resources = {
         plPlantDetails,
         plReminders,
         plRemindersModals,
-        plReadings, // NEW
+        plReadings,
+        plReadingsModals, // NEW
       ] as AnyObj[]
     ),
   },
