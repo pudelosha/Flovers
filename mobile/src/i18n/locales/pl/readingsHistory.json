@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Historia odczytów",
+    "plantFallback": "Roślina",
+    "noDevicesFound": "Nie znaleziono urządzeń.",
+    "unauthorized": "Brak autoryzacji. Zaloguj się ponownie.",
+    "failedLoadDevices": "Nie udało się wczytać urządzeń.",
+    "failedLoadHistory": "Nie udało się wczytać historii.",
+    "segment": {
+      "day": "DZIEŃ",
+      "week": "TYDZ",
+      "month": "MIES"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Wilg",
+      "lightShort": "Światło",
+      "moistureShort": "Gleba"
+    }
+  }
+}

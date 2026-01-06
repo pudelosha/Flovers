@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Pressable, Text } from "react-native";
+import { useTranslation } from "react-i18next";
 import { s } from "../styles/readings-history.styles";
 import type { MetricKey } from "../types/readings-history.types";
 import { METRIC_LABELS } from "../constants/readings-history.constants";
@@ -10,11 +11,13 @@ type Props = {
 };
 
 export default function MetricPills({ value, onChange }: Props) {
+  const { t } = useTranslation();
+
   const items: { key: MetricKey; label: string }[] = [
-    { key: "temperature", label: METRIC_LABELS.temperature },
-    { key: "humidity",    label: METRIC_LABELS.humidity },
-    { key: "light",       label: METRIC_LABELS.light },
-    { key: "moisture",    label: METRIC_LABELS.moisture },
+    { key: "temperature", label: t("readingsHistory.metric.temperatureShort") },
+    { key: "humidity", label: t("readingsHistory.metric.humidityShort") },
+    { key: "light", label: t("readingsHistory.metric.lightShort") },
+    { key: "moisture", label: t("readingsHistory.metric.moistureShort") },
   ];
 
   return (

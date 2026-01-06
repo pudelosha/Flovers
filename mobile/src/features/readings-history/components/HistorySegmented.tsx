@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Pressable, Text } from "react-native";
+import { useTranslation } from "react-i18next";
 import { s } from "../styles/readings-history.styles";
 import type { HistoryRange } from "../types/readings-history.types";
 
@@ -9,6 +10,8 @@ type Props = {
 };
 
 export default function HistorySegmented({ value, onChange }: Props) {
+  const { t } = useTranslation();
+
   return (
     <View style={s.segRow}>
       {(["day", "week", "month"] as const).map((v) => {
@@ -25,7 +28,13 @@ export default function HistorySegmented({ value, onChange }: Props) {
             onPress={() => onChange(v)}
             // no android_ripple here
           >
-            <Text style={s.segText}>{v.toUpperCase()}</Text>
+            <Text style={s.segText}>
+              {v === "day"
+                ? t("readingsHistory.segment.day")
+                : v === "week"
+                ? t("readingsHistory.segment.week")
+                : t("readingsHistory.segment.month")}
+            </Text>
           </Pressable>
         );
       })}

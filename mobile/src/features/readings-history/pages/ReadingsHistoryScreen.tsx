@@ -12,6 +12,7 @@ import { BlurView } from "@react-native-community/blur";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
+import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -97,6 +98,8 @@ function isUnauthorizedError(e: any): boolean {
 type RouteParams = Partial<{ metric: MetricKey; range: HistoryRange; id: string; name?: string }>;
 
 export default function ReadingsHistoryScreen() {
+  const { t } = useTranslation();
+
   const nav = useNavigation();
   const route = useRoute<any>();
   const params: RouteParams = (route?.params || {}) as RouteParams;
@@ -111,7 +114,7 @@ export default function ReadingsHistoryScreen() {
   >(null);
 
   // selected plant (display name)
-  const plantName = params?.name || device?.plant_name || "Plant";
+  const plantName = params?.name || device?.plant_name || t("readingsHistory.plantFallback");
 
   // date anchor (center for current range)
   const [anchor, setAnchor] = useState<Date>(new Date());
@@ -269,15 +272,15 @@ export default function ReadingsHistoryScreen() {
           });
         } else {
           setDevice(null);
-          showToast("No devices found.", "error");
+          showToast(t("readingsHistory.noDevicesFound"), "error");
         }
       } catch (e: any) {
         if (!mounted) return;
         setDevice(null);
         if (isUnauthorizedError(e)) {
-          showToast("Unauthorized. Please log in again.", "error");
+          showToast(t("readingsHistory.unauthorized"), "error");
         } else {
-          showToast(e?.message || "Failed to load devices.", "error");
+          showToast(e?.message || t("readingsHistory.failedLoadDevices"), "error");
         }
       } finally {
         if (mounted) setLoadingDevice(false);
@@ -287,7 +290,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [params.id, showToast]);
+  }, [params.id, showToast, t]);
 
   // fetch history whenever device/range/metric/anchor changes
   useEffect(() => {
@@ -327,7 +330,7 @@ export default function ReadingsHistoryScreen() {
         }
 
         // Try to show the backend payload directly; fallback to message / generic
-        let msg = "Failed to load history.";
+        let msg = t("readingsHistory.failedLoadHistory");
         if (e?.response?.data) {
           try {
             msg = JSON.stringify(e.response.data);
@@ -351,7 +354,7 @@ export default function ReadingsHistoryScreen() {
     return () => {
       mounted = false;
     };
-  }, [device, range, metric, anchor, showToast]);
+  }, [device, range, metric, anchor, showToast, t]);
 
   const navTo = useCallback(
     (name: string) => {
@@ -428,7 +431,7 @@ export default function ReadingsHistoryScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title="Readings History"
+          title={t("readingsHistory.headerTitle")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           rightIconName="qrcode-scan"
@@ -451,7 +454,7 @@ export default function ReadingsHistoryScreen() {
       {/* measure header height */}
       <View onLayout={onHeaderLayout}>
         <GlassHeader
-          title="Readings History"
+          title={t("readingsHistory.headerTitle")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           rightIconName="qrcode-scan"

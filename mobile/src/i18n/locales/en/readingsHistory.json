@@ -1,0 +1,21 @@
+{
+  "readingsHistory": {
+    "headerTitle": "Readings History",
+    "plantFallback": "Plant",
+    "noDevicesFound": "No devices found.",
+    "unauthorized": "Unauthorized. Please log in again.",
+    "failedLoadDevices": "Failed to load devices.",
+    "failedLoadHistory": "Failed to load history.",
+    "segment": {
+      "day": "DAY",
+      "week": "WEEK",
+      "month": "MONTH"
+    },
+    "metric": {
+      "temperatureShort": "Temp",
+      "humidityShort": "Hum",
+      "lightShort": "Light",
+      "moistureShort": "Moist"
+    }
+  }
+}
