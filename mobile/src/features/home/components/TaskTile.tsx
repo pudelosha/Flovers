@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\components\TaskTile.tsx
 import React from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -8,6 +7,7 @@ import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/home.constants";
 import type { Task } from "../types/home.types";
 import TaskMenu from "./TaskMenu";
 import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   task: Task;
@@ -29,6 +29,8 @@ export default function TaskTile({
   onGoToPlant,
   onShowHistory,
 }: Props) {
+  const { t } = useTranslation();
+
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
@@ -66,7 +68,7 @@ export default function TaskTile({
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
           <Text style={[s.leftCaption, { color: accent }]}>
-            {task.type.toUpperCase()}
+            {t(`home.taskTypes.${task.type}`)}
           </Text>
         </View>
 

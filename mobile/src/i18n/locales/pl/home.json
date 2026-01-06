@@ -1,0 +1,67 @@
+{
+  "home": {
+    "header": {
+      "title": "Strona główna"
+    },
+    "fab": {
+      "showOverdue": "Pokaż zaległe",
+      "showDueToday": "Pokaż na dziś",
+      "showAllTasks": "Pokaż wszystkie",
+      "sort": "Sortuj",
+      "filter": "Filtruj",
+      "clearFilter": "Wyczyść filtr",
+      "history": "Historia"
+    },
+    "menu": {
+      "markAsComplete": "Oznacz jako wykonane",
+      "editReminder": "Edytuj przypomnienie",
+      "goToPlant": "Przejdź do rośliny",
+      "showHistory": "Pokaż historię",
+      "delete": "Usuń"
+    },
+    "taskTypes": {
+      "watering": "PODLEWANIE",
+      "moisture": "ZRASZANIE",
+      "fertilising": "NAWOŻENIE",
+      "care": "PIELĘGNACJA",
+      "repot": "PRZESADZANIE"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Nie udało się wczytać zadań",
+      "taskCompleted": "Zadanie ukończone",
+      "completeFailed": "Nie udało się ukończyć",
+      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną."
+    },
+    "empty": {
+      "all": {
+        "title": "Brak zadań",
+        "introPrefix": "Ta strona pokazuje Twoje nadchodzące",
+        "introBold": "zadania pielęgnacji roślin",
+        "introSuffix": "— podlewanie, nawożenie, przesadzanie i inne.",
+        "toGetStarted": "Aby zacząć:",
+        "bullets": {
+          "createPlantsBold": "Dodaj rośliny",
+          "createPlantsSuffix": "w zakładce",
+          "plantsTabBold": "Rośliny",
+          "addRemindersPrefix": "Dodaj",
+          "remindersBold": "przypomnienia",
+          "addRemindersSuffix": "dla każdej rośliny, aby pojawiły się tutaj jako zadania.",
+          "optionallyConnectPrefix": "Opcjonalnie połącz",
+          "iotBold": "urządzenia IoT (płytki Arduino)",
+          "optionallyConnectMiddle": "w zakładce",
+          "readingsTabBold": "Odczyty",
+          "optionallyConnectSuffix": "aby śledzić temperaturę, wilgotność, światło i wilgotność gleby w czasie rzeczywistym."
+        },
+        "outro": "Gdy to skonfigurujesz, Strona główna stanie się Twoim centrum do sprawdzania, czego potrzebuje każda roślina."
+      },
+      "overdue": {
+        "title": "Brak zaległych zadań",
+        "body": "Nie masz teraz żadnych zaległych zadań.\n\nWszystko jest na bieżąco — użyj w FAB opcji „Pokaż wszystkie”, aby zobaczyć całą listę, albo przełącz filtry, żeby podejrzeć nadchodzące zadania."
+      },
+      "today": {
+        "title": "Brak zadań na dziś",
+        "body": "Nie masz dziś żadnych zadań.\n\nUżyj w FAB opcji „Pokaż wszystkie”, aby zobaczyć nadchodzące przypomnienia, albo zmień harmonogramy przypomnień na roślinach."
+      }
+    }
+  }
+}

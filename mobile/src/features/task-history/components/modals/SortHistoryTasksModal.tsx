@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 import { s } from "../../styles/task-history.styles";
 
 export type HistorySortKey = "completedAt" | "plant" | "location";
@@ -24,6 +25,8 @@ export default function SortHistoryTasksModal({
   onApply,
   onReset,
 }: Props) {
+  const { t } = useTranslation();
+
   const [keyOpen, setKeyOpen] = React.useState(false);
   const [dirOpen, setDirOpen] = React.useState(false);
   const [k, setK] = React.useState<HistorySortKey>(sortKey);
@@ -41,7 +44,11 @@ export default function SortHistoryTasksModal({
   if (!visible) return null;
 
   const sortKeyLabel =
-    k === "completedAt" ? "Completed date" : k === "plant" ? "Plant name" : "Location";
+    k === "completedAt"
+      ? t("taskHistoryModals.sort.keys.completedAt")
+      : k === "plant"
+        ? t("taskHistoryModals.sort.keys.plant")
+        : t("taskHistoryModals.sort.keys.location");
 
   return (
     <>
@@ -64,10 +71,10 @@ export default function SortHistoryTasksModal({
         </View>
 
         <View style={[s.promptInner, s.promptInner28]}>
-          <Text style={s.promptTitle}>Sort history</Text>
+          <Text style={s.promptTitle}>{t("taskHistoryModals.sort.title")}</Text>
 
           {/* Sort key dropdown */}
-          <Text style={s.inputLabel}>Sort by</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.sort.sortByLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, s.flatDropdownHeader]}
@@ -88,9 +95,9 @@ export default function SortHistoryTasksModal({
             {keyOpen && (
               <View style={[s.dropdownList, s.flatDropdownList]}>
                 {([
-                  { key: "completedAt", label: "Completed date" },
-                  { key: "plant", label: "Plant name" },
-                  { key: "location", label: "Location" },
+                  { key: "completedAt", label: t("taskHistoryModals.sort.keys.completedAt") },
+                  { key: "plant", label: t("taskHistoryModals.sort.keys.plant") },
+                  { key: "location", label: t("taskHistoryModals.sort.keys.location") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -111,7 +118,7 @@ export default function SortHistoryTasksModal({
           </View>
 
           {/* Direction dropdown */}
-          <Text style={s.inputLabel}>Direction</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.sort.directionLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={[s.dropdownHeader, s.flatDropdownHeader]}
@@ -121,7 +128,11 @@ export default function SortHistoryTasksModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{d === "asc" ? "Ascending" : "Descending"}</Text>
+              <Text style={s.dropdownValue}>
+                {d === "asc"
+                  ? t("taskHistoryModals.sort.directions.asc")
+                  : t("taskHistoryModals.sort.directions.desc")}
+              </Text>
               <MaterialCommunityIcons
                 name={dirOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -132,8 +143,8 @@ export default function SortHistoryTasksModal({
             {dirOpen && (
               <View style={[s.dropdownList, s.flatDropdownList]}>
                 {([
-                  { key: "asc", label: "Ascending" },
-                  { key: "desc", label: "Descending" },
+                  { key: "asc", label: t("taskHistoryModals.sort.directions.asc") },
+                  { key: "desc", label: t("taskHistoryModals.sort.directions.desc") },
                 ] as const).map((opt) => (
                   <Pressable
                     key={opt.key}
@@ -155,23 +166,17 @@ export default function SortHistoryTasksModal({
 
           <View style={s.promptButtonsRow}>
             {onReset ? (
-              <Pressable
-                onPress={onReset}
-                style={[s.promptBtn, s.promptDanger]}
-              >
+              <Pressable onPress={onReset} style={[s.promptBtn, s.promptDanger]}>
                 <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                  Reset
+                  {t("taskHistoryModals.sort.reset")}
                 </Text>
               </Pressable>
             ) : null}
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("taskHistoryModals.common.cancel")}</Text>
             </Pressable>
-            <Pressable
-              onPress={() => onApply(k, d)}
-              style={[s.promptBtn, s.promptPrimary]}
-            >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+            <Pressable onPress={() => onApply(k, d)} style={[s.promptBtn, s.promptPrimary]}>
+              <Text style={s.promptPrimaryText}>{t("taskHistoryModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

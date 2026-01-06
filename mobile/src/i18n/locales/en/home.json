@@ -1,0 +1,67 @@
+{
+  "home": {
+    "header": {
+      "title": "Home"
+    },
+    "fab": {
+      "showOverdue": "Show overdue",
+      "showDueToday": "Show due today",
+      "showAllTasks": "Show all tasks",
+      "sort": "Sort",
+      "filter": "Filter",
+      "clearFilter": "Clear filter",
+      "history": "History"
+    },
+    "menu": {
+      "markAsComplete": "Mark as complete",
+      "editReminder": "Edit reminder",
+      "goToPlant": "Go to plant",
+      "showHistory": "Show history",
+      "delete": "Delete"
+    },
+    "taskTypes": {
+      "watering": "WATERING",
+      "moisture": "MOISTURE",
+      "fertilising": "FERTILISING",
+      "care": "CARE",
+      "repot": "REPOT"
+    },
+    "toasts": {
+      "failedToLoadTasks": "Failed to load tasks",
+      "taskCompleted": "Task completed",
+      "completeFailed": "Complete failed",
+      "taskNotLinkedToPlant": "This task is not linked to a plant."
+    },
+    "empty": {
+      "all": {
+        "title": "No tasks yet",
+        "introPrefix": "This page shows your upcoming",
+        "introBold": "plant care reminders",
+        "introSuffix": "— watering, fertilizing, repotting, and more.",
+        "toGetStarted": "To get started:",
+        "bullets": {
+          "createPlantsBold": "Create your plants",
+          "createPlantsSuffix": "in the",
+          "plantsTabBold": "Plants",
+          "addRemindersPrefix": "Add",
+          "remindersBold": "reminders",
+          "addRemindersSuffix": "for each plant so they appear here as tasks.",
+          "optionallyConnectPrefix": "Optionally connect",
+          "iotBold": "IoT devices (Arduino boards)",
+          "optionallyConnectMiddle": "in the",
+          "readingsTabBold": "Readings",
+          "optionallyConnectSuffix": "tab to track temperature, humidity, light and soil moisture in real time."
+        },
+        "outro": "Once you’ve set those up, your Home screen will become your central place to see what each plant needs today."
+      },
+      "overdue": {
+        "title": "No overdue tasks",
+        "body": "You don't have any overdue tasks right now.\n\nYou're all caught up — use \"Show all tasks\" from the FAB to see everything, or switch filters to explore upcoming tasks."
+      },
+      "today": {
+        "title": "No tasks due today",
+        "body": "You don't have any tasks due today.\n\nUse \"Show all tasks\" from the FAB to see upcoming reminders, or adjust your reminder schedules on your plants."
+      }
+    }
+  }
+}

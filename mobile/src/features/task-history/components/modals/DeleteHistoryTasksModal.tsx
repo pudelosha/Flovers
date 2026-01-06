@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 import { s } from "../../styles/task-history.styles";
 import type { TaskType } from "../../../home/types/home.types";
 import { ACCENT_BY_TYPE } from "../../../home/constants/home.constants";
@@ -51,6 +52,8 @@ export default function DeleteHistoryTasksModal({
   onCancel,
   onConfirm,
 }: Props) {
+  const { t } = useTranslation();
+
   const [mode, setMode] = React.useState<HistoryDeleteMode>("plant");
 
   const [plantDropdownOpen, setPlantDropdownOpen] = React.useState(false);
@@ -81,9 +84,9 @@ export default function DeleteHistoryTasksModal({
   const hasPlantScope = plantOptions.length > 0;
   const hasLocationScope = locationOptions.length > 0;
 
-  const toggleType = (t: TaskType) => {
+  const toggleType = (tt: TaskType) => {
     setSelectedTypes((curr) =>
-      curr.includes(t) ? curr.filter((x) => x !== t) : [...curr, t]
+      curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]
     );
   };
 
@@ -128,9 +131,9 @@ export default function DeleteHistoryTasksModal({
         </View>
 
         <View style={[s.promptInner, s.promptInner28]}>
-          <Text style={s.promptTitle}>Delete history</Text>
+          <Text style={s.promptTitle}>{t("taskHistoryModals.delete.title")}</Text>
 
-          <Text style={s.inputLabel}>Scope</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.delete.scopeLabel")}</Text>
 
           {/* Delete for selected plant */}
           <Pressable
@@ -145,10 +148,10 @@ export default function DeleteHistoryTasksModal({
               {mode === "plant" && hasPlantScope && <View style={s.radioInner} />}
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={s.emptyText}>Delete for selected plant</Text>
+              <Text style={s.emptyText}>{t("taskHistoryModals.delete.modes.plant")}</Text>
               {!hasPlantScope && (
                 <Text style={styles.helperText}>
-                  You don't have any plants in history yet.
+                  {t("taskHistoryModals.delete.noPlantsHint")}
                 </Text>
               )}
             </View>
@@ -164,8 +167,8 @@ export default function DeleteHistoryTasksModal({
                 <Text style={s.dropdownValue}>
                   {selectedPlantId
                     ? plantOptions.find((p) => p.id === selectedPlantId)?.name ||
-                      "Select plant"
-                    : "Select plant"}
+                      t("taskHistoryModals.common.selectPlant")
+                    : t("taskHistoryModals.common.selectPlant")}
                 </Text>
                 <MaterialCommunityIcons
                   name={plantDropdownOpen ? "chevron-up" : "chevron-down"}
@@ -187,11 +190,7 @@ export default function DeleteHistoryTasksModal({
                     >
                       <Text style={s.dropdownItemText}>{p.name}</Text>
                       {selectedPlantId === p.id && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                       )}
                     </Pressable>
                   ))}
@@ -213,10 +212,10 @@ export default function DeleteHistoryTasksModal({
               {mode === "location" && hasLocationScope && <View style={s.radioInner} />}
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={s.emptyText}>Delete for selected location</Text>
+              <Text style={s.emptyText}>{t("taskHistoryModals.delete.modes.location")}</Text>
               {!hasLocationScope && (
                 <Text style={styles.helperText}>
-                  You don't have any locations in history yet.
+                  {t("taskHistoryModals.delete.noLocationsHint")}
                 </Text>
               )}
             </View>
@@ -230,7 +229,7 @@ export default function DeleteHistoryTasksModal({
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <Text style={s.dropdownValue}>
-                  {selectedLocation || "Select location"}
+                  {selectedLocation || t("taskHistoryModals.common.selectLocation")}
                 </Text>
                 <MaterialCommunityIcons
                   name={locationDropdownOpen ? "chevron-up" : "chevron-down"}
@@ -252,11 +251,7 @@ export default function DeleteHistoryTasksModal({
                     >
                       <Text style={s.dropdownItemText}>{loc}</Text>
                       {selectedLocation === loc && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                       )}
                     </Pressable>
                   ))}
@@ -266,25 +261,20 @@ export default function DeleteHistoryTasksModal({
           )}
 
           {/* Delete tasks of particular type(s) */}
-          <Pressable
-            style={s.radioRow}
-            onPress={() => setMode("types")}
-          >
-            <View style={s.radioOuter}>
-              {mode === "types" && <View style={s.radioInner} />}
-            </View>
-            <Text style={s.emptyText}>Delete tasks of type</Text>
+          <Pressable style={s.radioRow} onPress={() => setMode("types")}>
+            <View style={s.radioOuter}>{mode === "types" && <View style={s.radioInner} />}</View>
+            <Text style={s.emptyText}>{t("taskHistoryModals.delete.modes.types")}</Text>
           </Pressable>
 
           {mode === "types" && (
             <View style={[s.chipRow, { marginTop: 4 }]}>
-              {TYPE_OPTIONS.map((t) => {
-                const selected = selectedTypes.includes(t);
-                const tint = ACCENT_BY_TYPE[t];
+              {TYPE_OPTIONS.map((tt) => {
+                const selected = selectedTypes.includes(tt);
+                const tint = ACCENT_BY_TYPE[tt];
                 return (
                   <Pressable
-                    key={t}
-                    onPress={() => toggleType(t)}
+                    key={tt}
+                    onPress={() => toggleType(tt)}
                     style={[
                       s.chip,
                       {
@@ -294,7 +284,7 @@ export default function DeleteHistoryTasksModal({
                       },
                     ]}
                   >
-                    <Text style={s.chipText}>{t.toUpperCase()}</Text>
+                    <Text style={s.chipText}>{tt.toUpperCase()}</Text>
                   </Pressable>
                 );
               })}
@@ -302,14 +292,11 @@ export default function DeleteHistoryTasksModal({
           )}
 
           {/* Delete older than */}
-          <Pressable
-            style={s.radioRow}
-            onPress={() => setMode("olderThan")}
-          >
+          <Pressable style={s.radioRow} onPress={() => setMode("olderThan")}>
             <View style={s.radioOuter}>
               {mode === "olderThan" && <View style={s.radioInner} />}
             </View>
-            <Text style={s.emptyText}>Delete tasks older than</Text>
+            <Text style={s.emptyText}>{t("taskHistoryModals.delete.modes.olderThan")}</Text>
           </Pressable>
 
           {/* Days dropdown – only when "olderThan" is active */}
@@ -320,7 +307,9 @@ export default function DeleteHistoryTasksModal({
                 onPress={() => setDaysOpen((o) => !o)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
-                <Text style={s.dropdownValue}>{days} days</Text>
+                <Text style={s.dropdownValue}>
+                  {t("taskHistoryModals.delete.daysValue", { days })}
+                </Text>
                 <MaterialCommunityIcons
                   name={daysOpen ? "chevron-up" : "chevron-down"}
                   size={20}
@@ -339,13 +328,11 @@ export default function DeleteHistoryTasksModal({
                         setDaysOpen(false);
                       }}
                     >
-                      <Text style={s.dropdownItemText}>{opt} days</Text>
+                      <Text style={s.dropdownItemText}>
+                        {t("taskHistoryModals.delete.daysValue", { days: opt })}
+                      </Text>
                       {days === opt && (
-                        <MaterialCommunityIcons
-                          name="check"
-                          size={18}
-                          color="#FFFFFF"
-                        />
+                        <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
                       )}
                     </Pressable>
                   ))}
@@ -356,7 +343,7 @@ export default function DeleteHistoryTasksModal({
 
           <View style={[s.promptButtonsRow, { marginTop: 18 }]}>
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("taskHistoryModals.common.cancel")}</Text>
             </Pressable>
             <Pressable
               onPress={handleConfirm}
@@ -368,7 +355,7 @@ export default function DeleteHistoryTasksModal({
               disabled={!canConfirm}
             >
               <Text style={[s.promptPrimaryText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                Delete
+                {t("taskHistoryModals.common.delete")}
               </Text>
             </Pressable>
           </View>

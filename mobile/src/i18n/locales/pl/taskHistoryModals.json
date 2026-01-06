@@ -1,0 +1,52 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Anuluj",
+      "apply": "Zastosuj",
+      "delete": "Usuń",
+      "selectPlant": "Wybierz roślinę",
+      "selectLocation": "Wybierz lokalizację",
+      "datePlaceholder": "RRRR-MM-DD"
+    },
+    "delete": {
+      "title": "Usuń historię",
+      "scopeLabel": "Zakres",
+      "modes": {
+        "plant": "Usuń dla wybranej rośliny",
+        "location": "Usuń dla wybranej lokalizacji",
+        "types": "Usuń zadania typu",
+        "olderThan": "Usuń zadania starsze niż"
+      },
+      "noPlantsHint": "Nie masz jeszcze żadnych roślin w historii.",
+      "noLocationsHint": "Nie masz jeszcze żadnych lokalizacji w historii.",
+      "daysValue": "{{days}} dni"
+    },
+    "filter": {
+      "title": "Filtruj historię",
+      "plantLabel": "Roślina",
+      "locationLabel": "Lokalizacja",
+      "taskTypesLabel": "Typy zadań",
+      "completedDateRangeLabel": "Zakres dat ukończenia",
+      "fromLabel": "Od",
+      "toLabel": "Do",
+      "anyPlant": "Dowolna roślina",
+      "anyLocation": "Dowolna lokalizacja",
+      "clear": "Wyczyść"
+    },
+    "sort": {
+      "title": "Sortuj historię",
+      "sortByLabel": "Sortuj wg",
+      "directionLabel": "Kierunek",
+      "keys": {
+        "completedAt": "Data ukończenia",
+        "plant": "Nazwa rośliny",
+        "location": "Lokalizacja"
+      },
+      "directions": {
+        "asc": "Rosnąco",
+        "desc": "Malejąco"
+      },
+      "reset": "Resetuj"
+    }
+  }
+}

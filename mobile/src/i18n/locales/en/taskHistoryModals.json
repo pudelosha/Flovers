@@ -1,0 +1,52 @@
+{
+  "taskHistoryModals": {
+    "common": {
+      "cancel": "Cancel",
+      "apply": "Apply",
+      "delete": "Delete",
+      "selectPlant": "Select plant",
+      "selectLocation": "Select location",
+      "datePlaceholder": "YYYY-MM-DD"
+    },
+    "delete": {
+      "title": "Delete history",
+      "scopeLabel": "Scope",
+      "modes": {
+        "plant": "Delete for selected plant",
+        "location": "Delete for selected location",
+        "types": "Delete tasks of type",
+        "olderThan": "Delete tasks older than"
+      },
+      "noPlantsHint": "You don't have any plants in history yet.",
+      "noLocationsHint": "You don't have any locations in history yet.",
+      "daysValue": "{{days}} days"
+    },
+    "filter": {
+      "title": "Filter history",
+      "plantLabel": "Plant",
+      "locationLabel": "Location",
+      "taskTypesLabel": "Task types",
+      "completedDateRangeLabel": "Completed date range",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "anyPlant": "Any plant",
+      "anyLocation": "Any location",
+      "clear": "Clear"
+    },
+    "sort": {
+      "title": "Sort history",
+      "sortByLabel": "Sort by",
+      "directionLabel": "Direction",
+      "keys": {
+        "completedAt": "Completed date",
+        "plant": "Plant name",
+        "location": "Location"
+      },
+      "directions": {
+        "asc": "Ascending",
+        "desc": "Descending"
+      },
+      "reset": "Reset"
+    }
+  }
+}

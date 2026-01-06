@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\pages\HomeScreen.tsx
 import React, { useCallback, useMemo, useRef, useState, useEffect } from "react";
 import {
   View,
@@ -12,6 +11,7 @@ import {
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -66,6 +66,8 @@ function parseISODate(d?: string): Date | null {
 }
 
 export default function HomeScreen() {
+  const { t } = useTranslation();
+
   const nav = useNavigation();
   const { settings } = useSettings(); // 👈 NEW
 
@@ -116,13 +118,13 @@ export default function HomeScreen() {
       setTasks(data);
       setHasLoadedOnce(true);
     } catch (e: any) {
-      showToast(e?.message || "Failed to load tasks", "error");
+      showToast(e?.message || t("home.toasts.failedToLoadTasks"), "error");
       setTasks([]);
       setHasLoadedOnce(true);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   // Refresh data when the screen is focused, but do NOT show stale tiles first.
   useFocusEffect(
@@ -188,9 +190,9 @@ export default function HomeScreen() {
   // Derive plant + location options from current tasks
   const plantOptions: PlantOption[] = useMemo(() => {
     const byId = new Map<string, string>();
-    for (const t of tasks) {
-      if (t.plantId) {
-        if (!byId.has(t.plantId)) byId.set(t.plantId, t.plant);
+    for (const tsk of tasks) {
+      if (tsk.plantId) {
+        if (!byId.has(tsk.plantId)) byId.set(tsk.plantId, tsk.plant);
       }
     }
     return Array.from(byId.entries()).map(([id, name]) => ({ id, name }));
@@ -198,8 +200,8 @@ export default function HomeScreen() {
 
   const locationOptions: string[] = useMemo(() => {
     const set = new Set<string>();
-    for (const t of tasks) {
-      if (t.location) set.add(t.location);
+    for (const tsk of tasks) {
+      if (tsk.location) set.add(tsk.location);
     }
     return Array.from(set).sort((a, b) =>
       normalizeStr(a).localeCompare(normalizeStr(b))
@@ -226,14 +228,14 @@ export default function HomeScreen() {
     const base = (() => {
       if (viewFilter === "all") return tasks;
       if (viewFilter === "overdue") {
-        return tasks.filter((t) => {
-          const ms = normDateMs((t as any).dueDate);
+        return tasks.filter((tsk) => {
+          const ms = normDateMs((tsk as any).dueDate);
           return Number.isFinite(ms) && ms < start;
         });
       }
       // viewFilter === "today"
-      return tasks.filter((t) => {
-        const ms = normDateMs((t as any).dueDate);
+      return tasks.filter((tsk) => {
+        const ms = normDateMs((tsk as any).dueDate);
         return Number.isFinite(ms) && ms >= start && ms <= end;
       });
     })();
@@ -243,17 +245,17 @@ export default function HomeScreen() {
     const from = parseISODate(filters.dueFrom);
     const to = parseISODate(filters.dueTo);
 
-    const filtered = base.filter((t) => {
-      if (filters.plantId && t.plantId !== filters.plantId) return false;
+    const filtered = base.filter((tsk) => {
+      if (filters.plantId && tsk.plantId !== filters.plantId) return false;
       if (
         filters.location &&
-        normalizeStr(t.location) !== normalizeStr(filters.location)
+        normalizeStr(tsk.location) !== normalizeStr(filters.location)
       )
         return false;
-      if (typesSet.size > 0 && !typesSet.has(t.type)) return false;
+      if (typesSet.size > 0 && !typesSet.has(tsk.type)) return false;
 
       if (from || to) {
-        const td = new Date(t.dueDate);
+        const td = new Date(tsk.dueDate);
         td.setHours(0, 0, 0, 0);
         if (from && td < from) return false;
         if (to && td > to) return false;
@@ -315,7 +317,7 @@ export default function HomeScreen() {
 
   useEffect(() => {
     if (loading) return;
-    const ids = derivedTasks.map((t) => t.id);
+    const ids = derivedTasks.map((tsk) => tsk.id);
     primeAnimations(ids);
     const id = requestAnimationFrame(() => runStaggerIn(ids));
     return () => cancelAnimationFrame(id);
@@ -349,7 +351,7 @@ export default function HomeScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title="Home"
+          title={t("home.header.title")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
@@ -406,12 +408,14 @@ export default function HomeScreen() {
       // Reload from backend so cloned/next task appears
       await load(); // load() will setLoading(false) in its finally
 
-      showToast("Task completed", "success");
+      showToast(t("home.toasts.taskCompleted"), "success");
     } catch (e: any) {
       closeCompleteModal();
       setLoading(false); // in case load() was not reached
       showToast(
-        e?.message ? `Complete failed: ${e.message}` : "Complete failed",
+        e?.message
+          ? `${t("home.toasts.completeFailed")}: ${e.message}`
+          : t("home.toasts.completeFailed"),
         "error"
       );
     }
@@ -421,7 +425,7 @@ export default function HomeScreen() {
   const baseFabActions = [
     {
       key: "sort",
-      label: "Sort",
+      label: t("home.fab.sort"),
       icon: "sort",
       onPress: () => {
         setMenuOpenId(null);
@@ -430,7 +434,7 @@ export default function HomeScreen() {
     },
     {
       key: "filter",
-      label: "Filter",
+      label: t("home.fab.filter"),
       icon: "filter-variant",
       onPress: () => {
         setMenuOpenId(null);
@@ -441,7 +445,7 @@ export default function HomeScreen() {
       ? [
           {
             key: "clearFilter",
-            label: "Clear filter",
+            label: t("home.fab.clearFilter"),
             icon: "filter-remove",
             onPress: () => {
               setMenuOpenId(null);
@@ -452,7 +456,7 @@ export default function HomeScreen() {
       : []),
     {
       key: "history",
-      label: "History",
+      label: t("home.fab.history"),
       icon: "history",
       onPress: () => {
         setMenuOpenId(null);
@@ -466,7 +470,7 @@ export default function HomeScreen() {
       ? [
           {
             key: "overdue",
-            label: "Show overdue",
+            label: t("home.fab.showOverdue"),
             icon: "alert-circle-outline",
             onPress: () => {
               setMenuOpenId(null);
@@ -478,7 +482,7 @@ export default function HomeScreen() {
           },
           {
             key: "dueToday",
-            label: "Show due today",
+            label: t("home.fab.showDueToday"),
             icon: "calendar-today",
             onPress: () => {
               setMenuOpenId(null);
@@ -494,7 +498,7 @@ export default function HomeScreen() {
           // 🔼 Put "Show all tasks" at the top when a view filter is active
           {
             key: "clearViewFilter",
-            label: "Show all tasks",
+            label: t("home.fab.showAllTasks"),
             icon: "filter-remove",
             onPress: () => {
               setMenuOpenId(null);
@@ -510,7 +514,7 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title="Home"
+        title={t("home.header.title")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -531,7 +535,7 @@ export default function HomeScreen() {
         ref={listRef}
         style={{ flex: 1 }}
         data={derivedTasks}
-        keyExtractor={(t) => t.id}
+        keyExtractor={(tsk) => tsk.id}
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
           const translateY = v.interpolate({
@@ -580,7 +584,7 @@ export default function HomeScreen() {
 
                   if (!plantId) {
                     console.warn("[HomeScreen] Task has no plantId:", item);
-                    showToast("This task is not linked to a plant.", "error");
+                    showToast(t("home.toasts.taskNotLinkedToPlant"), "error");
                     return;
                   }
 
@@ -608,7 +612,6 @@ export default function HomeScreen() {
         ListHeaderComponent={<View style={{ height: 0 }} />}
         ListFooterComponent={<View style={{ height: 140 }} />}
         contentContainerStyle={[s.listContent, { paddingBottom: 80 }]}
-
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
@@ -649,24 +652,30 @@ export default function HomeScreen() {
                       color="#FFFFFF"
                       style={{ marginBottom: 10 }}
                     />
-                    <Text style={s.emptyTitle}>No tasks yet</Text>
+                    <Text style={s.emptyTitle}>{t("home.empty.all.title")}</Text>
                     <View style={s.emptyDescBox}>
                       <Text style={s.emptyText}>
-                        This page shows your upcoming{" "}
-                        <Text style={s.inlineBold}>plant care reminders</Text> — watering,
-                        fertilizing, repotting, and more.{"\n\n"}
-                        To get started:
+                        {t("home.empty.all.introPrefix")}{" "}
+                        <Text style={s.inlineBold}>{t("home.empty.all.introBold")}</Text>{" "}
+                        {t("home.empty.all.introSuffix")}
                         {"\n\n"}
-                        • <Text style={s.inlineBold}>Create your plants</Text> in the{" "}
-                        <Text style={s.inlineBold}>Plants</Text> tab.{"\n"}
-                        • Add <Text style={s.inlineBold}>reminders</Text> for each plant so
-                        they appear here as tasks.{"\n"}
-                        • Optionally connect{" "}
-                        <Text style={s.inlineBold}>IoT devices (Arduino boards)</Text> in the{" "}
-                        <Text style={s.inlineBold}>Readings</Text> tab to track temperature,
-                        humidity, light and soil moisture in real time.{"\n\n"}
-                        Once you’ve set those up, your Home screen will become your central
-                        place to see what each plant needs today.
+                        {t("home.empty.all.toGetStarted")}
+                        {"\n\n"}
+                        • <Text style={s.inlineBold}>{t("home.empty.all.bullets.createPlantsBold")}</Text>{" "}
+                        {t("home.empty.all.bullets.createPlantsSuffix")}{" "}
+                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.plantsTabBold")}</Text>.
+                        {"\n"}
+                        • {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
+                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.remindersBold")}</Text>{" "}
+                        {t("home.empty.all.bullets.addRemindersSuffix")}
+                        {"\n"}
+                        • {t("home.empty.all.bullets.optionallyConnectPrefix")}{" "}
+                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.iotBold")}</Text>{" "}
+                        {t("home.empty.all.bullets.optionallyConnectMiddle")}{" "}
+                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.readingsTabBold")}</Text>{" "}
+                        {t("home.empty.all.bullets.optionallyConnectSuffix")}
+                        {"\n\n"}
+                        {t("home.empty.all.outro")}
                       </Text>
                     </View>
                   </View>
@@ -677,14 +686,16 @@ export default function HomeScreen() {
 
           // For "overdue" / "today" view filters, show a filter-specific frame
           const isOverdue = viewFilter === "overdue";
-          const title = isOverdue ? "No overdue tasks" : "No tasks due today";
+          const title = isOverdue
+            ? t("home.empty.overdue.title")
+            : t("home.empty.today.title");
           const iconName = isOverdue
             ? "calendar-remove-outline"
             : "calendar-today";
 
           const bodyText = isOverdue
-            ? "You don't have any overdue tasks right now.\n\nYou're all caught up — use \"Show all tasks\" from the FAB to see everything, or switch filters to explore upcoming tasks."
-            : "You don't have any tasks due today.\n\nUse \"Show all tasks\" from the FAB to see upcoming reminders, or adjust your reminder schedules on your plants.";
+            ? t("home.empty.overdue.body")
+            : t("home.empty.today.body");
 
           return (
             <Animated.View

@@ -1,8 +1,8 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\components\TaskMenu.tsx
 import React from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../styles/home.styles";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   onMarkComplete: () => void;
@@ -31,6 +31,8 @@ export default function TaskMenu({
   onDelete,
   showDelete,
 }: Props) {
+  const { t } = useTranslation();
+
   const shouldShowDelete =
     showDelete === true || (showDelete === undefined && typeof onDelete === "function");
 
@@ -47,7 +49,7 @@ export default function TaskMenu({
           color="#FFFFFF"
           style={{ marginRight: 8 }}
         />
-        <Text style={s.menuItemText}>Mark as complete</Text>
+        <Text style={s.menuItemText}>{t("home.menu.markAsComplete")}</Text>
       </Pressable>
 
       <Pressable
@@ -61,7 +63,7 @@ export default function TaskMenu({
           color="#FFFFFF"
           style={{ marginRight: 8 }}
         />
-        <Text style={s.menuItemText}>Edit reminder</Text>
+        <Text style={s.menuItemText}>{t("home.menu.editReminder")}</Text>
       </Pressable>
 
       <Pressable
@@ -75,7 +77,7 @@ export default function TaskMenu({
           color="#FFFFFF"
           style={{ marginRight: 8 }}
         />
-        <Text style={s.menuItemText}>Go to plant</Text>
+        <Text style={s.menuItemText}>{t("home.menu.goToPlant")}</Text>
       </Pressable>
 
       {onShowHistory && (
@@ -90,7 +92,7 @@ export default function TaskMenu({
             color="#FFFFFF"
             style={{ marginRight: 8 }}
           />
-          <Text style={s.menuItemText}>Show history</Text>
+          <Text style={s.menuItemText}>{t("home.menu.showHistory")}</Text>
         </Pressable>
       )}
 
@@ -106,7 +108,7 @@ export default function TaskMenu({
             color="#FF6B6B"
             style={{ marginRight: 8 }}
           />
-          <Text style={[s.menuItemText, { color: "#FF6B6B" }]}>Delete</Text>
+          <Text style={[s.menuItemText, { color: "#FF6B6B" }]}>{t("home.menu.delete")}</Text>
         </Pressable>
       )}
     </View>

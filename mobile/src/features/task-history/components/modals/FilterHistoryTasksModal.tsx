@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Pressable, TextInput, Platform } from "react-native";
 import { BlurView } from "@react-native-community/blur";
+import { useTranslation } from "react-i18next";
 import { s } from "../../styles/task-history.styles";
 import type { TaskType } from "../../../home/types/home.types";
 import { ACCENT_BY_TYPE } from "../../../home/constants/home.constants";
@@ -19,7 +20,7 @@ export type HistoryFilters = {
   location?: string;
   types?: TaskType[];
   completedFrom?: string; // "YYYY-MM-DD"
-  completedTo?: string;   // "YYYY-MM-DD"
+  completedTo?: string; // "YYYY-MM-DD"
 };
 
 type Props = {
@@ -75,6 +76,8 @@ export default function FilterHistoryTasksModal({
   onApply,
   onClearAll,
 }: Props) {
+  const { t } = useTranslation();
+
   const [plantOpen, setPlantOpen] = React.useState(false);
   const [locOpen, setLocOpen] = React.useState(false);
   const [types, setTypes] = React.useState<TaskType[]>(filters.types || []);
@@ -101,8 +104,8 @@ export default function FilterHistoryTasksModal({
 
   if (!visible) return null;
 
-  const toggleType = (t: TaskType) => {
-    setTypes((curr) => (curr.includes(t) ? curr.filter((x) => x !== t) : [...curr, t]));
+  const toggleType = (tt: TaskType) => {
+    setTypes((curr) => (curr.includes(tt) ? curr.filter((x) => x !== tt) : [...curr, tt]));
   };
 
   const handleClearAll = () => {
@@ -135,10 +138,10 @@ export default function FilterHistoryTasksModal({
         </View>
 
         <View style={[s.promptInner, s.promptInner28]}>
-          <Text style={s.promptTitle}>Filter history</Text>
+          <Text style={s.promptTitle}>{t("taskHistoryModals.filter.title")}</Text>
 
           {/* Plant dropdown (by plant name) */}
-          <Text style={s.inputLabel}>Plant</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.filter.plantLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -150,8 +153,8 @@ export default function FilterHistoryTasksModal({
             >
               <Text style={s.dropdownValue}>
                 {plantId
-                  ? plants.find((p) => p.id === plantId)?.name || "Select plant"
-                  : "Any plant"}
+                  ? plants.find((p) => p.id === plantId)?.name || t("taskHistoryModals.common.selectPlant")
+                  : t("taskHistoryModals.filter.anyPlant")}
               </Text>
               <MaterialCommunityIcons
                 name={plantOpen ? "chevron-up" : "chevron-down"}
@@ -169,10 +172,8 @@ export default function FilterHistoryTasksModal({
                     setPlantOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any plant</Text>
-                  {!plantId && (
-                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                  )}
+                  <Text style={s.dropdownItemText}>{t("taskHistoryModals.filter.anyPlant")}</Text>
+                  {!plantId && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {plants.map((p) => (
                   <Pressable
@@ -194,7 +195,7 @@ export default function FilterHistoryTasksModal({
           </View>
 
           {/* Location dropdown */}
-          <Text style={s.inputLabel}>Location</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.filter.locationLabel")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -204,7 +205,9 @@ export default function FilterHistoryTasksModal({
               }}
               android_ripple={{ color: "rgba(255,255,255,0.12)" }}
             >
-              <Text style={s.dropdownValue}>{location ? location : "Any location"}</Text>
+              <Text style={s.dropdownValue}>
+                {location ? location : t("taskHistoryModals.filter.anyLocation")}
+              </Text>
               <MaterialCommunityIcons
                 name={locOpen ? "chevron-up" : "chevron-down"}
                 size={20}
@@ -221,10 +224,8 @@ export default function FilterHistoryTasksModal({
                     setLocOpen(false);
                   }}
                 >
-                  <Text style={s.dropdownItemText}>Any location</Text>
-                  {!location && (
-                    <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                  )}
+                  <Text style={s.dropdownItemText}>{t("taskHistoryModals.filter.anyLocation")}</Text>
+                  {!location && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                 </Pressable>
                 {locations.map((loc) => (
                   <Pressable
@@ -236,9 +237,7 @@ export default function FilterHistoryTasksModal({
                     }}
                   >
                     <Text style={s.dropdownItemText}>{loc}</Text>
-                    {location === loc && (
-                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
-                    )}
+                    {location === loc && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
                   </Pressable>
                 ))}
               </View>
@@ -246,15 +245,15 @@ export default function FilterHistoryTasksModal({
           </View>
 
           {/* Task type chips (same glazed behaviour as Reminders) */}
-          <Text style={s.inputLabel}>Task types</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.filter.taskTypesLabel")}</Text>
           <View style={s.chipRow}>
-            {TYPE_OPTIONS.map((t) => {
-              const selected = types.includes(t);
-              const tint = ACCENT_BY_TYPE[t];
+            {TYPE_OPTIONS.map((tt) => {
+              const selected = types.includes(tt);
+              const tint = ACCENT_BY_TYPE[tt];
               return (
                 <Pressable
-                  key={t}
-                  onPress={() => toggleType(t)}
+                  key={tt}
+                  onPress={() => toggleType(tt)}
                   style={[
                     s.chip,
                     {
@@ -264,24 +263,24 @@ export default function FilterHistoryTasksModal({
                     },
                   ]}
                 >
-                  <Text style={s.chipText}>{t.toUpperCase()}</Text>
+                  <Text style={s.chipText}>{tt.toUpperCase()}</Text>
                 </Pressable>
               );
             })}
           </View>
 
           {/* Completed date range */}
-          <Text style={s.inputLabel}>Completed date range</Text>
+          <Text style={s.inputLabel}>{t("taskHistoryModals.filter.completedDateRangeLabel")}</Text>
           <View style={s.inlineRow}>
             <View style={s.inlineHalfLeft}>
-              <Text style={s.inputLabel}>From</Text>
+              <Text style={s.inputLabel}>{t("taskHistoryModals.filter.fromLabel")}</Text>
               <Pressable
                 onPress={() => setShowFromPicker(true)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={t("taskHistoryModals.common.datePlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={completedFrom}
                   editable={false}
@@ -307,14 +306,14 @@ export default function FilterHistoryTasksModal({
             </View>
 
             <View style={s.inlineHalfRight}>
-              <Text style={s.inputLabel}>To</Text>
+              <Text style={s.inputLabel}>{t("taskHistoryModals.filter.toLabel")}</Text>
               <Pressable
                 onPress={() => setShowToPicker(true)}
                 android_ripple={{ color: "rgba(255,255,255,0.12)" }}
               >
                 <TextInput
                   style={[s.input, s.inputInline]}
-                  placeholder="YYYY-MM-DD"
+                  placeholder={t("taskHistoryModals.common.datePlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={completedTo}
                   editable={false}
@@ -343,11 +342,11 @@ export default function FilterHistoryTasksModal({
           <View style={s.promptButtonsRow}>
             <Pressable onPress={handleClearAll} style={[s.promptBtn, s.promptDanger]}>
               <Text style={[s.promptBtnText, { color: "#FF6B6B", fontWeight: "800" }]}>
-                Clear
+                {t("taskHistoryModals.filter.clear")}
               </Text>
             </Pressable>
             <Pressable onPress={onCancel} style={s.promptBtn}>
-              <Text style={s.promptBtnText}>Cancel</Text>
+              <Text style={s.promptBtnText}>{t("taskHistoryModals.common.cancel")}</Text>
             </Pressable>
             <Pressable
               onPress={() =>
@@ -361,7 +360,7 @@ export default function FilterHistoryTasksModal({
               }
               style={[s.promptBtn, s.promptPrimary]}
             >
-              <Text style={s.promptPrimaryText}>Apply</Text>
+              <Text style={s.promptPrimaryText}>{t("taskHistoryModals.common.apply")}</Text>
             </Pressable>
           </View>
         </View>

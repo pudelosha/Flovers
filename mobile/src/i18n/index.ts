@@ -89,9 +89,17 @@ import plReadingsHistory from "./locales/pl/readingsHistory.json";
 import enProfile from "./locales/en/profile.json";
 import plProfile from "./locales/pl/profile.json";
 
-// Task history bundles (NEW)
+// Home bundles (NEW)
+import enHome from "./locales/en/home.json";
+import plHome from "./locales/pl/home.json";
+
+// Task history bundles
 import enTaskHistory from "./locales/en/taskHistory.json";
 import plTaskHistory from "./locales/pl/taskHistory.json";
+
+// Task history modals bundles
+import enTaskHistoryModals from "./locales/en/taskHistoryModals.json";
+import plTaskHistoryModals from "./locales/pl/taskHistoryModals.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -213,7 +221,9 @@ const resources = {
         enReadingsModals,
         enReadingsHistory,
         enProfile,
-        enTaskHistory, // NEW
+        enHome, // NEW
+        enTaskHistory,
+        enTaskHistoryModals,
       ] as AnyObj[]
     ),
   },
@@ -249,7 +259,9 @@ const resources = {
         plReadingsModals,
         plReadingsHistory,
         plProfile,
-        plTaskHistory, // NEW
+        plHome, // NEW
+        plTaskHistory,
+        plTaskHistoryModals,
       ] as AnyObj[]
     ),
   },
