@@ -63,6 +63,12 @@ export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
   const { settings, loading: settingsLoading, applyServerSettings } = useSettings(); // 👈 NEW
 
+  // ✅ Keep Profile always scrolled to top when coming back
+  const scrollRef = useRef<ScrollView | null>(null);
+  const scrollToTop = useCallback(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, []);
+
   // PROMPTS
   const [prompt, setPrompt] = useState<PromptKey | "contact" | null>(null);
 
@@ -334,6 +340,9 @@ export default function ProfileScreen() {
 
   useFocusEffect(
     useCallback(() => {
+      // ✅ ensure top of the page whenever returning to Profile
+      scrollToTop();
+
       // animate in on focus
       Animated.timing(entry, {
         toValue: 1,
@@ -351,7 +360,7 @@ export default function ProfileScreen() {
           useNativeDriver: true,
         }).start();
       };
-    }, [entry])
+    }, [entry, scrollToTop])
   );
 
   const showLoadingOverlay = loading || settingsLoading || !formInitialized; // 👈 NEW
@@ -375,7 +384,9 @@ export default function ProfileScreen() {
         }}
       >
         <ScrollView
+          ref={scrollRef}
           contentContainerStyle={[ly.content, { paddingBottom: insets.bottom + 120 }]}
+          showsVerticalScrollIndicator={false}
         >
           <AccountCard
             email={user?.email}
@@ -504,10 +515,7 @@ export default function ProfileScreen() {
                   >
                     <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
-                  <Pressable
-                    style={[pr.promptBtn, pr.promptPrimary]}
-                    onPress={handleChangeEmail}
-                  >
+                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangeEmail}>
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
                       {t("profile.common.change")}
                     </Text>
@@ -553,10 +561,7 @@ export default function ProfileScreen() {
                   >
                     <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
-                  <Pressable
-                    style={[pr.promptBtn, pr.promptPrimary]}
-                    onPress={handleChangePassword}
-                  >
+                  <Pressable style={[pr.promptBtn, pr.promptPrimary]} onPress={handleChangePassword}>
                     <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
                       {t("profile.prompts.changePassword.update")}
                     </Text>
@@ -568,9 +573,7 @@ export default function ProfileScreen() {
             {prompt === "delete" && (
               <View style={pr.promptInner}>
                 <Text style={pr.promptTitle}>{t("profile.prompts.deleteAccount.title")}</Text>
-                <Text style={pr.warningText}>
-                  {t("profile.prompts.deleteAccount.warning")}
-                </Text>
+                <Text style={pr.warningText}>{t("profile.prompts.deleteAccount.warning")}</Text>
                 <TextInput
                   style={pr.input}
                   placeholder={t("profile.prompts.deleteAccount.passwordPlaceholder")}
