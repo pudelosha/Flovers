@@ -10,8 +10,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuth } from "./useAuth";
 import { fetchProfileSettings, type ApiProfileSettings } from "../../api/services/profile.service";
 import { DEFAULT_SETTINGS } from "../settings/settings.defaults";
-import { useTranslation } from "react-i18next"; // Import useTranslation
 import type { AppSettings } from "../settings/settings.types";
+
+// ✅ We use i18n ONLY to listen to language changes
+import i18n from "../../i18n";
+
+// ✅ Primary source of truth for changing language
+import { useLanguage } from "./LanguageProvider";
 
 const SETTINGS_STORAGE_KEY = "app:settings:v1";
 
@@ -82,7 +87,9 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const { i18n } = useTranslation(); // Get i18n from useTranslation
+
+  // ✅ Use LanguageProvider to apply language (single source of truth)
+  const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
 
   const applyServerSettings = useCallback((api: ApiProfileSettings) => {
     setSettings((prev) => {
@@ -121,13 +128,36 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     try {
       const api = await fetchProfileSettings({ auth: true });
       applyServerSettings(api);
+
+      // ✅ Apply server language via LanguageProvider (not i18n directly)
+      if (api.language && api.language !== currentLanguage) {
+        await changeAppLanguage(api.language);
+      }
     } catch (e) {
       console.warn("Failed to reload profile settings", e);
       setError("Failed to reload settings.");
     } finally {
       setLoading(false);
     }
-  }, [user, applyServerSettings]);
+  }, [user, applyServerSettings, changeAppLanguage, currentLanguage]);
+
+  // ✅ Mirror any i18n language changes into settings + persistence
+  // This makes FAB changes persist even when SettingsProvider is mounted.
+  useEffect(() => {
+    const handleLanguageChanged = (lng: string) => {
+      setSettings((prev) => {
+        if (prev.language === lng) return prev;
+        const next = { ...prev, language: lng };
+        persistSettings(next);
+        return next;
+      });
+    };
+
+    i18n.on("languageChanged", handleLanguageChanged);
+    return () => {
+      i18n.off("languageChanged", handleLanguageChanged);
+    };
+  }, []);
 
   // Initial hydrate + react to auth changes
   useEffect(() => {
@@ -183,9 +213,9 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
         setSettings(next);
         await persistSettings(next);
 
-        // Ensure language is updated in i18n once settings are applied
-        if (i18n.language !== next.language) {
-          i18n.changeLanguage(next.language).catch(() => {});
+        // ✅ Apply server language via LanguageProvider
+        if (next.language && next.language !== currentLanguage) {
+          await changeAppLanguage(next.language);
         }
       } catch (e) {
         console.warn("Failed to fetch profile settings", e);
@@ -204,7 +234,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [user, i18n]); // Ensure the language update happens before rendering components
+  }, [user, changeAppLanguage, currentLanguage]);
 
   const value: SettingsContextValue = {
     settings,

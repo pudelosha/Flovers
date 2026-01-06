@@ -1,9 +1,11 @@
 {
-  "tabs": {
-    "home": "Główna",
-    "plants": "Rośliny",
-    "calendar": "Kalendarz",
-    "tasks": "Zadania",
-    "profile": "Profil"
+  "navigation": {
+    "tabs": {
+      "Home": "Start",
+      "Plants": "Rośliny",
+      "Reminders": "Przypomnienia",
+      "Readings": "Odczyty",
+      "Profile": "Profil"
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import i18n from "../../i18n"; // Import i18n directly
-import { LANGS, changeLanguage } from "../../i18n";
+import { LANGS } from "../../i18n";
 
 interface LanguageContextType {
   currentLanguage: string;
@@ -19,21 +19,22 @@ export const useLanguage = () => {
   return context;
 };
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Check if i18n is already initialized
-    if (i18n.isInitialized) {
+    const onInitialized = () => {
       setIsReady(true);
       setCurrentLanguage(i18n.language);
+    };
+
+    if (i18n.isInitialized) {
+      onInitialized();
     } else {
-      // Wait for initialization
-      i18n.on("initialized", () => {
-        setIsReady(true);
-        setCurrentLanguage(i18n.language);
-      });
+      i18n.on("initialized", onInitialized);
     }
 
     const handleLanguageChanged = (lng: string) => {
@@ -44,16 +45,24 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
     return () => {
       i18n.off("languageChanged", handleLanguageChanged);
-      i18n.off("initialized");
+      i18n.off("initialized", onInitialized as any);
     };
   }, []);
 
   const handleChangeLanguage = async (lang: string) => {
-    const success = await changeLanguage(lang);
-    if (success) {
-      setCurrentLanguage(lang);
+    try {
+      // ✅ This is what actually triggers react-i18next updates
+      await i18n.changeLanguage(lang);
+
+      // Ensure state matches the final i18n language (including fallbacks)
+      setCurrentLanguage(i18n.language);
+
+      // If i18n accepted a fallback (e.g. "pl-PL" -> "pl"), still treat as success
+      return i18n.language === lang || i18n.language?.split("-")?.[0] === lang;
+    } catch (e) {
+      console.warn("LanguageProvider: i18n.changeLanguage failed", e);
+      return false;
     }
-    return success;
   };
 
   // Optional: Show loading while i18n initializes

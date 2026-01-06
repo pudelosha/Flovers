@@ -1,4 +1,3 @@
-// src/features/profile/pages/ProfileScreen.tsx
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { View, Text, ScrollView, TextInput, Pressable, Animated, Easing } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -8,7 +7,8 @@ import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { layout as ly, prompts as pr } from "../styles/profile.styles";
 import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/profile.constants";
@@ -61,9 +61,12 @@ export default function ProfileScreen() {
 
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
-  const { settings, loading: settingsLoading, applyServerSettings } = useSettings(); // 👈 NEW
+  const { settings, loading: settingsLoading, applyServerSettings } = useSettings();
 
-  // ✅ Keep Profile always scrolled to top when coming back
+  // LanguageProvider (source of truth)
+  const { changeLanguage: changeAppLanguage, currentLanguage } = useLanguage();
+
+  // Keep Profile always scrolled to top when coming back
   const scrollRef = useRef<ScrollView | null>(null);
   const scrollToTop = useCallback(() => {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
@@ -247,8 +250,15 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      // 👇 NEW: sync global settings with what backend returned
+
+      // sync global settings with what backend returned
       applyServerSettings(res);
+
+      // apply language via LanguageProvider (immediate translations update)
+      if (language && language !== currentLanguage) {
+        await changeAppLanguage(language);
+      }
+
       showToast(t("profile.toasts.settingsUpdated"), "success");
     } catch (e: any) {
       console.warn("Failed to save settings", e);

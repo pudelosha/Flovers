@@ -24,11 +24,11 @@ export default function App() {
       <PaperProvider theme={theme}>
         <I18nextProvider i18n={i18n}>
           <AuthProvider>
-            <SettingsProvider>
-              <LanguageProvider>
+            <LanguageProvider>
+              <SettingsProvider>
                 <RootNavigator />
-              </LanguageProvider>
-            </SettingsProvider>
+              </SettingsProvider>
+            </LanguageProvider>
           </AuthProvider>
         </I18nextProvider>
       </PaperProvider>

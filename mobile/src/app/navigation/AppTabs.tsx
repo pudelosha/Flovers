@@ -1,11 +1,10 @@
-// C:\Projekty\Python\Flovers\mobile\src\app\navigation\AppTabs.tsx
 import React from "react";
 import { View, Pressable, StyleSheet, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
-import { useTranslation } from "react-i18next"; // Add this import
+import { useTranslation } from "react-i18next";
 
 // Use gradient (with safe fallback if the lib isn't installed)
 let LinearGradientView: any = View;
@@ -96,21 +95,10 @@ const TAB_SOLID_FALLBACK = "rgba(10,51,40,0.70)";
 
 function GlassTabBar({ state, descriptors, navigation }: any) {
   const insets = useSafeAreaInsets();
-  const { t } = useTranslation(); // Add translation hook
+  const { t } = useTranslation();
 
-  // Helper function to get translated label with fallback
-  const getTranslatedLabel = (routeName: string) => {
-    try {
-      const translation = t(`navigation.tabs.${routeName}`, { defaultValue: routeName });
-      // If translation returns the key itself (no translation found), use the route name
-      if (translation === `navigation.tabs.${routeName}`) {
-        return routeName;
-      }
-      return translation;
-    } catch (error) {
-      return routeName;
-    }
-  };
+  const getTranslatedLabel = (routeName: string) =>
+    t(`navigation.tabs.${routeName}`, { defaultValue: routeName });
 
   const getIcon = (name: string) => {
     switch (name) {
@@ -156,12 +144,7 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
 
   return (
     <View pointerEvents="box-none" style={StyleSheet.absoluteFill}>
-      <View
-        style={[
-          s.tabWrap,
-          { paddingBottom: Math.max(insets.bottom, 10) },
-        ]}
-      >
+      <View style={[s.tabWrap, { paddingBottom: Math.max(insets.bottom, 10) }]}>
         {/* Blur behind gradient */}
         <BlurView
           style={StyleSheet.absoluteFill}

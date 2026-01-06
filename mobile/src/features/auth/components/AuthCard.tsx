@@ -1,9 +1,12 @@
-// src/components/AuthCard.tsx
 import React, { PropsWithChildren, useEffect, useRef } from "react";
 import { Image, View, StyleSheet, Platform, Animated } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PanGestureHandler, State as GHState } from "react-native-gesture-handler";
+
+// NEW: language FAB shown on all auth screens
+import LanguageFAB from "../../../shared/ui/LanguageFAB";
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 const drops = require("../../../../assets/drops.png");
 
@@ -14,6 +17,9 @@ const ACTIVATE = 6;     // drag threshold before panning starts
 
 export default function AuthCard({ children, showDrops = false }: Props) {
   const insets = useSafeAreaInsets();
+
+  // NEW: language state (available on all auth screens)
+  const { currentLanguage, changeLanguage } = useLanguage();
 
   // mount-in effect
   const opacity = useRef(new Animated.Value(0)).current;
@@ -69,6 +75,19 @@ export default function AuthCard({ children, showDrops = false }: Props) {
         { paddingTop: insets.top + 24, paddingBottom: insets.bottom + 24 },
       ]}
     >
+      {/* NEW: fixed FAB (outside the pan handler so it doesn't drift with the card) */}
+      <LanguageFAB
+        currentLanguage={currentLanguage}
+        changeLanguage={changeLanguage}
+        position="right"
+        // Let LanguageFAB defaults match FAB.tsx:
+        // rightOffset=16, bottomOffset=92 (safe for Android navbar/gesture)
+        options={[
+          { code: "en", label: "English", flag: "🇬🇧" },
+          { code: "pl", label: "Polski", flag: "🇵🇱" },
+        ]}
+      />
+
       {/* Pan handler wraps the card; pan activates only after small drag */}
       <PanGestureHandler
         onGestureEvent={onPan}
