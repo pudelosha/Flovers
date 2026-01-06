@@ -85,6 +85,10 @@ import plReadingsModals from "./locales/pl/readingsModals.json";
 import enReadingsHistory from "./locales/en/readingsHistory.json";
 import plReadingsHistory from "./locales/pl/readingsHistory.json";
 
+// Profile bundles (NEW)
+import enProfile from "./locales/en/profile.json";
+import plProfile from "./locales/pl/profile.json";
+
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
 import itCreatePlant from "./locales/it/createPlant.json";
@@ -203,7 +207,8 @@ const resources = {
         enRemindersModals,
         enReadings,
         enReadingsModals,
-        enReadingsHistory, // NEW
+        enReadingsHistory,
+        enProfile, // NEW
       ] as AnyObj[]
     ),
   },
@@ -237,7 +242,8 @@ const resources = {
         plRemindersModals,
         plReadings,
         plReadingsModals,
-        plReadingsHistory, // NEW
+        plReadingsHistory,
+        plProfile, // NEW
       ] as AnyObj[]
     ),
   },

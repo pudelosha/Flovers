@@ -1,0 +1,128 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profil"
+    },
+    "common": {
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "change": "Zmień",
+      "delete": "Usuń",
+      "send": "Wyślij"
+    },
+    "account": {
+      "title": "Konto",
+      "emailLabel": "Email",
+      "createdLabel": "Utworzono",
+      "changeEmail": "Zmień email",
+      "changePassword": "Zmień hasło",
+      "deleteAccount": "Usuń konto",
+      "logout": "Wyloguj"
+    },
+    "notifications": {
+      "title": "Powiadomienia",
+      "emailSection": "Email",
+      "emailDailyLabel": "Dzienne podsumowanie zadań na dziś",
+      "emailDailyHint": "Jedna wiadomość dziennie z podsumowaniem zadań na dziś.",
+      "sendAt": "Wyślij o",
+      "email24hLabel": "Wyślij przypomnienie po 24 godzinach",
+      "email24hHint": "Jeśli zadania na dziś pozostaną nieukończone, wyślij przypomnienie jutro.",
+      "mobileSection": "Telefon",
+      "pushDailyLabel": "Dzienne powiadomienie na telefonie",
+      "pushDailyHint": "Jedno powiadomienie systemowe z podsumowaniem zadań na dziś.",
+      "notifyAt": "Powiadom o",
+      "push24hLabel": "Powiadomienie po 24 godzinach",
+      "push24hHint": "Jeśli zadania pozostaną zaległe, wyślij powiadomienie następnego dnia."
+    },
+    "settings": {
+      "title": "Ustawienia",
+      "language": "Język",
+      "dateTimeFormat": "Format daty / czasu",
+      "temperatureUnits": "Jednostki temperatury",
+      "measurementUnits": "Jednostki miary",
+      "fabPosition": "Pozycja FAB",
+      "background": "Tło",
+      "tileMotive": "Motyw kafelków",
+      "tilesTransparency": "Przezroczystość kafelków",
+      "level": "Poziom",
+      "temperatureOptions": {
+        "C": "°C (Celsjusz)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Metryczne (cm / m)",
+        "imperial": "Imperialne (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Prawa",
+        "left": "Lewa"
+      },
+      "backgroundOptions": {
+        "bg1": "Tło 1",
+        "bg2": "Tło 2",
+        "bg3": "Tło 3",
+        "bg4": "Tło 4"
+      },
+      "tileMotiveOptions": {
+        "light": "Jasny",
+        "dark": "Ciemny"
+      }
+    },
+    "support": {
+      "title": "Wsparcie",
+      "contactUs": "Skontaktuj się z nami",
+      "reportBug": "Zgłoś błąd",
+      "aboutTitle": "O aplikacji",
+      "versionLabel": "Wersja",
+      "releaseDateLabel": "Data wydania",
+      "contactLabel": "Kontakt"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Zmień email",
+        "newEmailPlaceholder": "Nowy email",
+        "currentPasswordPlaceholder": "Aktualne hasło"
+      },
+      "changePassword": {
+        "title": "Zmień hasło",
+        "currentPasswordPlaceholder": "Aktualne hasło",
+        "newPasswordPlaceholder": "Nowe hasło",
+        "confirmNewPasswordPlaceholder": "Potwierdź nowe hasło",
+        "update": "Aktualizuj"
+      },
+      "deleteAccount": {
+        "title": "Usuń konto",
+        "warning": "To działanie jest nieodwracalne. Jeśli kontynuujesz, Twoje konto i dane zostaną trwale usunięte.",
+        "passwordPlaceholder": "Wpisz hasło, aby potwierdzić"
+      },
+      "reportBug": {
+        "title": "Zgłoś błąd",
+        "subjectPlaceholder": "Temat",
+        "descriptionPlaceholder": "Opisz problem…"
+      },
+      "contactUs": {
+        "title": "Skontaktuj się z nami",
+        "subjectPlaceholder": "Temat",
+        "messagePlaceholder": "Jak możemy pomóc?"
+      }
+    },
+    "toasts": {
+      "unauthorized": "Brak autoryzacji",
+      "unauthorizedLoginAgain": "Brak autoryzacji. Zaloguj się ponownie.",
+      "failedToLoadPreferences": "Nie udało się wczytać ustawień profilu. Spróbuj ponownie.",
+      "notificationsUpdated": "Zaktualizowano ustawienia powiadomień.",
+      "couldNotSaveNotifications": "Nie udało się zapisać ustawień powiadomień.",
+      "settingsUpdated": "Zaktualizowano ustawienia.",
+      "couldNotSaveSettings": "Nie udało się zapisać ustawień.",
+      "enterNewEmail": "Wpisz nowy adres email.",
+      "enterCurrentPassword": "Wpisz aktualne hasło.",
+      "emailUpdated": "Email został zaktualizowany.",
+      "couldNotChangeEmail": "Nie udało się zmienić emaila. Sprawdź hasło i spróbuj ponownie.",
+      "enterNewPassword": "Wpisz nowe hasło.",
+      "passwordsDoNotMatch": "Nowe hasła nie są zgodne.",
+      "passwordUpdated": "Hasło zostało zaktualizowane.",
+      "couldNotChangePassword": "Nie udało się zmienić hasła. Sprawdź aktualne hasło i spróbuj ponownie."
+    }
+  }
+}

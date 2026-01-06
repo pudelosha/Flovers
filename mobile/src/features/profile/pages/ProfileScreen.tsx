@@ -4,6 +4,7 @@ import { View, Text, ScrollView, TextInput, Pressable, Animated, Easing } from "
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
+import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import { useAuth } from "../../../app/providers/useAuth";
@@ -56,6 +57,8 @@ function isUnauthorizedError(e: any): boolean {
 }
 
 export default function ProfileScreen() {
+  const { t } = useTranslation();
+
   const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
   const { settings, loading: settingsLoading, applyServerSettings } = useSettings(); // 👈 NEW
@@ -163,9 +166,9 @@ export default function ProfileScreen() {
       } catch (e: any) {
         console.warn("Failed to load profile notifications", e);
         if (isUnauthorizedError(e)) {
-          showToast("Unauthorized", "error");
+          showToast(t("profile.toasts.unauthorized"), "error");
         } else {
-          showToast("Failed to load Profile preferences. Please try again.", "error");
+          showToast(t("profile.toasts.failedToLoadPreferences"), "error");
         }
       } finally {
         if (isMounted) setLoading(false);
@@ -174,7 +177,7 @@ export default function ProfileScreen() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [t]);
 
   // ---------- Initialize local settings form from global settings ----------
   useEffect(() => {
@@ -209,13 +212,13 @@ export default function ProfileScreen() {
         },
         { auth: true }
       );
-      showToast("Notification preferences updated.", "success");
+      showToast(t("profile.toasts.notificationsUpdated"), "success");
     } catch (e: any) {
       console.warn("Failed to save notifications", e);
       if (isUnauthorizedError(e)) {
-        showToast("Unauthorized", "error");
+        showToast(t("profile.toasts.unauthorized"), "error");
       } else {
-        showToast("Could not save notification preferences.", "error");
+        showToast(t("profile.toasts.couldNotSaveNotifications"), "error");
       }
     } finally {
       setSavingNotif(false);
@@ -240,13 +243,13 @@ export default function ProfileScreen() {
       );
       // 👇 NEW: sync global settings with what backend returned
       applyServerSettings(res);
-      showToast("Settings updated.", "success");
+      showToast(t("profile.toasts.settingsUpdated"), "success");
     } catch (e: any) {
       console.warn("Failed to save settings", e);
       if (isUnauthorizedError(e)) {
-        showToast("Unauthorized", "error");
+        showToast(t("profile.toasts.unauthorized"), "error");
       } else {
-        showToast("Could not save settings.", "error");
+        showToast(t("profile.toasts.couldNotSaveSettings"), "error");
       }
     } finally {
       setSavingSettings(false);
@@ -255,11 +258,11 @@ export default function ProfileScreen() {
 
   const handleChangeEmail = async () => {
     if (!newEmail.trim()) {
-      showToast("Please enter the new email.", "error");
+      showToast(t("profile.toasts.enterNewEmail"), "error");
       return;
     }
     if (!emailCurrentPassword) {
-      showToast("Please enter your current password.", "error");
+      showToast(t("profile.toasts.enterCurrentPassword"), "error");
       return;
     }
     try {
@@ -268,15 +271,15 @@ export default function ProfileScreen() {
         { new_email: newEmail.trim(), password: emailCurrentPassword },
         { auth: true }
       );
-      showToast(res?.message || "Email updated successfully.", "success");
+      showToast(res?.message || t("profile.toasts.emailUpdated"), "success");
       resetEmailPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change email failed", e);
       if (isUnauthorizedError(e)) {
-        showToast("Unauthorized. Please log in again.", "error");
+        showToast(t("profile.toasts.unauthorizedLoginAgain"), "error");
       } else {
-        showToast("Could not change email. Check your password and try again.", "error");
+        showToast(t("profile.toasts.couldNotChangeEmail"), "error");
       }
     } finally {
       setSavingChangeEmail(false);
@@ -285,15 +288,15 @@ export default function ProfileScreen() {
 
   const handleChangePassword = async () => {
     if (!currentPassword) {
-      showToast("Please enter your current password.", "error");
+      showToast(t("profile.toasts.enterCurrentPassword"), "error");
       return;
     }
     if (!newPassword) {
-      showToast("Please enter a new password.", "error");
+      showToast(t("profile.toasts.enterNewPassword"), "error");
       return;
     }
     if (newPassword !== confirmNewPassword) {
-      showToast("New passwords do not match.", "error");
+      showToast(t("profile.toasts.passwordsDoNotMatch"), "error");
       return;
     }
     try {
@@ -302,18 +305,15 @@ export default function ProfileScreen() {
         { current_password: currentPassword, new_password: newPassword },
         { auth: true }
       );
-      showToast(res?.message || "Password updated successfully.", "success");
+      showToast(res?.message || t("profile.toasts.passwordUpdated"), "success");
       resetPasswordPrompt();
       setPrompt(null);
     } catch (e: any) {
       console.warn("Change password failed", e);
       if (isUnauthorizedError(e)) {
-        showToast("Unauthorized. Please log in again.", "error");
+        showToast(t("profile.toasts.unauthorizedLoginAgain"), "error");
       } else {
-        showToast(
-          "Could not change password. Check your current password and try again.",
-          "error"
-        );
+        showToast(t("profile.toasts.couldNotChangePassword"), "error");
       }
     } finally {
       setSavingChangePassword(false);
@@ -360,7 +360,7 @@ export default function ProfileScreen() {
     <View style={{ flex: 1 }}>
       {/* HEADER (no submenu, no right icon) */}
       <GlassHeader
-        title="Profile"
+        title={t("profile.header.title")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -476,10 +476,10 @@ export default function ProfileScreen() {
 
             {prompt === "email" && (
               <View style={pr.promptInner}>
-                <Text style={pr.promptTitle}>Change email</Text>
+                <Text style={pr.promptTitle}>{t("profile.prompts.changeEmail.title")}</Text>
                 <TextInput
                   style={pr.input}
-                  placeholder="New email"
+                  placeholder={t("profile.prompts.changeEmail.newEmailPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   value={newEmail}
                   onChangeText={setNewEmail}
@@ -488,7 +488,7 @@ export default function ProfileScreen() {
                 />
                 <TextInput
                   style={pr.input}
-                  placeholder="Current password"
+                  placeholder={t("profile.prompts.changeEmail.currentPasswordPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   secureTextEntry
                   value={emailCurrentPassword}
@@ -502,13 +502,15 @@ export default function ProfileScreen() {
                       setPrompt(null);
                     }}
                   >
-                    <Text style={pr.promptBtnText}>Cancel</Text>
+                    <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
                   <Pressable
                     style={[pr.promptBtn, pr.promptPrimary]}
                     onPress={handleChangeEmail}
                   >
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Change</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("profile.common.change")}
+                    </Text>
                   </Pressable>
                 </View>
               </View>
@@ -516,10 +518,10 @@ export default function ProfileScreen() {
 
             {prompt === "password" && (
               <View style={pr.promptInner}>
-                <Text style={pr.promptTitle}>Change password</Text>
+                <Text style={pr.promptTitle}>{t("profile.prompts.changePassword.title")}</Text>
                 <TextInput
                   style={pr.input}
-                  placeholder="Current password"
+                  placeholder={t("profile.prompts.changePassword.currentPasswordPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   secureTextEntry
                   value={currentPassword}
@@ -527,7 +529,7 @@ export default function ProfileScreen() {
                 />
                 <TextInput
                   style={pr.input}
-                  placeholder="New password"
+                  placeholder={t("profile.prompts.changePassword.newPasswordPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   secureTextEntry
                   value={newPassword}
@@ -535,7 +537,7 @@ export default function ProfileScreen() {
                 />
                 <TextInput
                   style={pr.input}
-                  placeholder="Confirm new password"
+                  placeholder={t("profile.prompts.changePassword.confirmNewPasswordPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   secureTextEntry
                   value={confirmNewPassword}
@@ -549,13 +551,15 @@ export default function ProfileScreen() {
                       setPrompt(null);
                     }}
                   >
-                    <Text style={pr.promptBtnText}>Cancel</Text>
+                    <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
                   <Pressable
                     style={[pr.promptBtn, pr.promptPrimary]}
                     onPress={handleChangePassword}
                   >
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Update</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("profile.prompts.changePassword.update")}
+                    </Text>
                   </Pressable>
                 </View>
               </View>
@@ -563,23 +567,24 @@ export default function ProfileScreen() {
 
             {prompt === "delete" && (
               <View style={pr.promptInner}>
-                <Text style={pr.promptTitle}>Delete account</Text>
+                <Text style={pr.promptTitle}>{t("profile.prompts.deleteAccount.title")}</Text>
                 <Text style={pr.warningText}>
-                  This action is irreversible. If you proceed, your account and data will be
-                  permanently deleted.
+                  {t("profile.prompts.deleteAccount.warning")}
                 </Text>
                 <TextInput
                   style={pr.input}
-                  placeholder="Enter password to confirm"
+                  placeholder={t("profile.prompts.deleteAccount.passwordPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   secureTextEntry
                 />
                 <View style={pr.promptButtonsRow}>
                   <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
-                    <Text style={pr.promptBtnText}>Cancel</Text>
+                    <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
                   <Pressable style={[pr.promptBtn, pr.promptDanger]}>
-                    <Text style={[pr.promptBtnText, pr.promptDangerText]}>Delete</Text>
+                    <Text style={[pr.promptBtnText, pr.promptDangerText]}>
+                      {t("profile.common.delete")}
+                    </Text>
                   </Pressable>
                 </View>
               </View>
@@ -587,24 +592,26 @@ export default function ProfileScreen() {
 
             {prompt === "bug" && (
               <View style={pr.promptInner}>
-                <Text style={pr.promptTitle}>Report a bug</Text>
+                <Text style={pr.promptTitle}>{t("profile.prompts.reportBug.title")}</Text>
                 <TextInput
                   style={pr.input}
-                  placeholder="Subject"
+                  placeholder={t("profile.prompts.reportBug.subjectPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                 />
                 <TextInput
                   style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
-                  placeholder="Describe the issue…"
+                  placeholder={t("profile.prompts.reportBug.descriptionPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   multiline
                 />
                 <View style={pr.promptButtonsRow}>
                   <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
-                    <Text style={pr.promptBtnText}>Cancel</Text>
+                    <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
                   <Pressable style={[pr.promptBtn, pr.promptPrimary]}>
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Send</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("profile.common.send")}
+                    </Text>
                   </Pressable>
                 </View>
               </View>
@@ -612,24 +619,26 @@ export default function ProfileScreen() {
 
             {prompt === "contact" && (
               <View style={pr.promptInner}>
-                <Text style={pr.promptTitle}>Contact us</Text>
+                <Text style={pr.promptTitle}>{t("profile.prompts.contactUs.title")}</Text>
                 <TextInput
                   style={pr.input}
-                  placeholder="Subject"
+                  placeholder={t("profile.prompts.contactUs.subjectPlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                 />
                 <TextInput
                   style={[pr.input, { height: 120, textAlignVertical: "top", paddingTop: 10 }]}
-                  placeholder="How can we help?"
+                  placeholder={t("profile.prompts.contactUs.messagePlaceholder")}
                   placeholderTextColor="rgba(255,255,255,0.7)"
                   multiline
                 />
                 <View style={pr.promptButtonsRow}>
                   <Pressable style={pr.promptBtn} onPress={() => setPrompt(null)}>
-                    <Text style={pr.promptBtnText}>Cancel</Text>
+                    <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
                   </Pressable>
                   <Pressable style={[pr.promptBtn, pr.promptPrimary]}>
-                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>Send</Text>
+                    <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                      {t("profile.common.send")}
+                    </Text>
                   </Pressable>
                 </View>
               </View>

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 import GlassCard from "./../components/GlassCard";
 import Dropdown from "./../components/Dropdown";
 import { card, controls } from "../styles/profile.styles";
@@ -13,23 +14,6 @@ try { SliderView = require("@react-native-community/slider").default; } catch {}
 
 type TempUnit = "C" | "F" | "K";
 type MeasureUnit = "metric" | "imperial";
-
-const TEMP_OPTIONS: { key: TempUnit; label: string }[] = [
-  { key: "C", label: "°C (Celsius)" },
-  { key: "F", label: "°F (Fahrenheit)" },
-  { key: "K", label: "K (Kelvin)" },
-];
-
-const MEASURE_OPTIONS: { key: MeasureUnit; label: string }[] = [
-  { key: "metric", label: "Metric (cm / m)" },
-  { key: "imperial", label: "Imperial (in / ft)" },
-];
-
-// NEW: Tile motive options
-const TILE_MOTIVE_OPTIONS: { key: TileMotive; label: string }[] = [
-  { key: "light", label: "Light" },
-  { key: "dark", label: "Dark" },
-];
 
 export default function SettingsCard({
   language, setLanguage, langOpen, setLangOpen,
@@ -69,14 +53,47 @@ export default function SettingsCard({
 
   onSave: () => void;
 }) {
+  const { t } = useTranslation();
   const currentLang = LANG_OPTIONS.find(l => l.code === language);
+
+  const TEMP_OPTIONS: { key: TempUnit; label: string }[] = [
+    { key: "C", label: t("profile.settings.temperatureOptions.C") },
+    { key: "F", label: t("profile.settings.temperatureOptions.F") },
+    { key: "K", label: t("profile.settings.temperatureOptions.K") },
+  ];
+
+  const MEASURE_OPTIONS: { key: MeasureUnit; label: string }[] = [
+    { key: "metric", label: t("profile.settings.measureOptions.metric") },
+    { key: "imperial", label: t("profile.settings.measureOptions.imperial") },
+  ];
+
+  // Tile motive options
+  const TILE_MOTIVE_OPTIONS: { key: TileMotive; label: string }[] = [
+    { key: "light", label: t("profile.settings.tileMotiveOptions.light") },
+    { key: "dark", label: t("profile.settings.tileMotiveOptions.dark") },
+  ];
+
+  const bgLabel = (k: BackgroundKey) => {
+    if (k === "bg1") return t("profile.settings.backgroundOptions.bg1");
+    if (k === "bg2") return t("profile.settings.backgroundOptions.bg2");
+    if (k === "bg3") return t("profile.settings.backgroundOptions.bg3");
+    return t("profile.settings.backgroundOptions.bg4");
+  };
+
+  const fabLabel = (k: "left" | "right") => {
+    return k === "left"
+      ? t("profile.settings.fabPositionOptions.left")
+      : t("profile.settings.fabPositionOptions.right");
+  };
 
   return (
     <GlassCard>
-      <Text style={card.cardTitle}>Settings</Text>
+      <Text style={card.cardTitle}>{t("profile.settings.title")}</Text>
 
       {/* LANGUAGE */}
-      <Text style={[controls.sectionTitle, controls.sectionTitleFirst]}>Language</Text>
+      <Text style={[controls.sectionTitle, controls.sectionTitleFirst]}>
+        {t("profile.settings.language")}
+      </Text>
       <Dropdown
         open={langOpen}
         valueText={`${currentLang?.flag ?? ""} ${currentLang?.label ?? ""}`}
@@ -90,7 +107,7 @@ export default function SettingsCard({
       />
 
       {/* DATE/TIME FORMAT */}
-      <Text style={controls.sectionTitle}>Date / Time format</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.dateTimeFormat")}</Text>
       <Dropdown
         open={dateOpen}
         valueText={dateFormat}
@@ -104,10 +121,10 @@ export default function SettingsCard({
       />
 
       {/* TEMPERATURE UNITS */}
-      <Text style={controls.sectionTitle}>Temperature units</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.temperatureUnits")}</Text>
       <Dropdown
         open={tempOpen}
-        valueText={TEMP_OPTIONS.find(t => t.key === temperatureUnit)?.label ?? "°C (Celsius)"}
+        valueText={TEMP_OPTIONS.find(tu => tu.key === temperatureUnit)?.label ?? t("profile.settings.temperatureOptions.C")}
         onToggle={() => setTempOpen((o: boolean) => !o)}
         items={TEMP_OPTIONS.map(opt => ({
           key: opt.key,
@@ -118,10 +135,10 @@ export default function SettingsCard({
       />
 
       {/* MEASUREMENT UNITS */}
-      <Text style={controls.sectionTitle}>Measurement units</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.measurementUnits")}</Text>
       <Dropdown
         open={measureOpen}
-        valueText={MEASURE_OPTIONS.find(m => m.key === measureUnit)?.label ?? "Metric (cm / m)"}
+        valueText={MEASURE_OPTIONS.find(m => m.key === measureUnit)?.label ?? t("profile.settings.measureOptions.metric")}
         onToggle={() => setMeasureOpen((o: boolean) => !o)}
         items={MEASURE_OPTIONS.map(opt => ({
           key: opt.key,
@@ -132,40 +149,38 @@ export default function SettingsCard({
       />
 
       {/* NEW: FAB POSITION */}
-      <Text style={controls.sectionTitle}>FAB position</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.fabPosition")}</Text>
       <Dropdown
         open={fabOpen}
-        valueText={FAB_POSITION_OPTIONS.find(f => f.key === fabPosition)?.label ?? "Right"}
+        valueText={fabLabel(FAB_POSITION_OPTIONS.find(f => f.key === fabPosition)?.key ?? "right")}
         onToggle={() => setFabOpen((o: boolean) => !o)}
         items={FAB_POSITION_OPTIONS.map(opt => ({
           key: opt.key,
-          text: opt.label,
+          text: fabLabel(opt.key),
           selected: fabPosition === opt.key,
           onPress: () => { setFabPosition(opt.key as FabPosition); setFabOpen(false); },
         }))}
       />
 
       {/* NEW: BACKGROUND (placed above Tiles transparency) */}
-      <Text style={controls.sectionTitle}>Background</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.background")}</Text>
       <Dropdown
         open={bgOpen}
-        valueText={BACKGROUND_OPTIONS.find(b => b.key === background)?.label ?? "Background 1"}
+        valueText={bgLabel(BACKGROUND_OPTIONS.find(b => b.key === background)?.key ?? "bg1")}
         onToggle={() => setBgOpen((o: boolean) => !o)}
         items={BACKGROUND_OPTIONS.map(opt => ({
           key: opt.key,
-          text: opt.label,
+          text: bgLabel(opt.key),
           selected: background === opt.key,
           onPress: () => { setBackground(opt.key as BackgroundKey); setBgOpen(false); },
         }))}
       />
 
       {/* NEW: TILE MOTIVE */}
-      <Text style={controls.sectionTitle}>Tile motive</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.tileMotive")}</Text>
       <Dropdown
         open={tileMotiveOpen}
-        valueText={
-          TILE_MOTIVE_OPTIONS.find(t => t.key === tileMotive)?.label ?? "Light"
-        }
+        valueText={TILE_MOTIVE_OPTIONS.find(ti => ti.key === tileMotive)?.label ?? t("profile.settings.tileMotiveOptions.light")}
         onToggle={() => setTileMotiveOpen((o: boolean) => !o)}
         items={TILE_MOTIVE_OPTIONS.map(opt => ({
           key: opt.key,
@@ -176,7 +191,7 @@ export default function SettingsCard({
       />
 
       {/* TILE TRANSPARENCY */}
-      <Text style={controls.sectionTitle}>Tiles transparency</Text>
+      <Text style={controls.sectionTitle}>{t("profile.settings.tilesTransparency")}</Text>
       {SliderView !== View ? (
         <View style={controls.sliderRow}>
           <SliderView
@@ -194,7 +209,7 @@ export default function SettingsCard({
         </View>
       ) : (
         <View style={controls.stepperRow}>
-          <Text style={controls.stepperLabel}>Level</Text>
+          <Text style={controls.stepperLabel}>{t("profile.settings.level")}</Text>
           <View style={controls.stepper}>
             <Pressable
               onPress={() => setTileTransparency((v: number) => Math.max(0, +(v - 0.01).toFixed(2)))}
@@ -217,7 +232,7 @@ export default function SettingsCard({
 
       <Pressable style={controls.saveBtn} onPress={onSave}>
         <MaterialCommunityIcons name="content-save" size={18} color="#FFFFFF" />
-        <Text style={controls.saveBtnText}>Save</Text>
+        <Text style={controls.saveBtnText}>{t("profile.common.save")}</Text>
       </Pressable>
     </GlassCard>
   );

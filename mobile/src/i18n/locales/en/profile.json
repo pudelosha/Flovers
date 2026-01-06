@@ -1,0 +1,128 @@
+{
+  "profile": {
+    "header": {
+      "title": "Profile"
+    },
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "change": "Change",
+      "delete": "Delete",
+      "send": "Send"
+    },
+    "account": {
+      "title": "Account",
+      "emailLabel": "Email",
+      "createdLabel": "Created",
+      "changeEmail": "Change email",
+      "changePassword": "Change password",
+      "deleteAccount": "Delete account",
+      "logout": "Log out"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "emailSection": "Email",
+      "emailDailyLabel": "Daily summary for today’s due tasks",
+      "emailDailyHint": "One email per day summarizing all tasks due today.",
+      "sendAt": "Send at",
+      "email24hLabel": "Send a reminder after 24 hours",
+      "email24hHint": "If tasks due today remain incomplete, send a follow-up email tomorrow.",
+      "mobileSection": "Mobile",
+      "pushDailyLabel": "Daily phone notification",
+      "pushDailyHint": "A single system notification summarizing today’s due tasks.",
+      "notifyAt": "Notify at",
+      "push24hLabel": "24-hour follow-up notification",
+      "push24hHint": "If tasks stay pending, send a notification the next day."
+    },
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "dateTimeFormat": "Date / Time format",
+      "temperatureUnits": "Temperature units",
+      "measurementUnits": "Measurement units",
+      "fabPosition": "FAB position",
+      "background": "Background",
+      "tileMotive": "Tile motive",
+      "tilesTransparency": "Tiles transparency",
+      "level": "Level",
+      "temperatureOptions": {
+        "C": "°C (Celsius)",
+        "F": "°F (Fahrenheit)",
+        "K": "K (Kelvin)"
+      },
+      "measureOptions": {
+        "metric": "Metric (cm / m)",
+        "imperial": "Imperial (in / ft)"
+      },
+      "fabPositionOptions": {
+        "right": "Right",
+        "left": "Left"
+      },
+      "backgroundOptions": {
+        "bg1": "Background 1",
+        "bg2": "Background 2",
+        "bg3": "Background 3",
+        "bg4": "Background 4"
+      },
+      "tileMotiveOptions": {
+        "light": "Light",
+        "dark": "Dark"
+      }
+    },
+    "support": {
+      "title": "Support",
+      "contactUs": "Contact us",
+      "reportBug": "Report a bug",
+      "aboutTitle": "About the app",
+      "versionLabel": "Version",
+      "releaseDateLabel": "Release date",
+      "contactLabel": "Contact"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Change email",
+        "newEmailPlaceholder": "New email",
+        "currentPasswordPlaceholder": "Current password"
+      },
+      "changePassword": {
+        "title": "Change password",
+        "currentPasswordPlaceholder": "Current password",
+        "newPasswordPlaceholder": "New password",
+        "confirmNewPasswordPlaceholder": "Confirm new password",
+        "update": "Update"
+      },
+      "deleteAccount": {
+        "title": "Delete account",
+        "warning": "This action is irreversible. If you proceed, your account and data will be permanently deleted.",
+        "passwordPlaceholder": "Enter password to confirm"
+      },
+      "reportBug": {
+        "title": "Report a bug",
+        "subjectPlaceholder": "Subject",
+        "descriptionPlaceholder": "Describe the issue…"
+      },
+      "contactUs": {
+        "title": "Contact us",
+        "subjectPlaceholder": "Subject",
+        "messagePlaceholder": "How can we help?"
+      }
+    },
+    "toasts": {
+      "unauthorized": "Unauthorized",
+      "unauthorizedLoginAgain": "Unauthorized. Please log in again.",
+      "failedToLoadPreferences": "Failed to load Profile preferences. Please try again.",
+      "notificationsUpdated": "Notification preferences updated.",
+      "couldNotSaveNotifications": "Could not save notification preferences.",
+      "settingsUpdated": "Settings updated.",
+      "couldNotSaveSettings": "Could not save settings.",
+      "enterNewEmail": "Please enter the new email.",
+      "enterCurrentPassword": "Please enter your current password.",
+      "emailUpdated": "Email updated successfully.",
+      "couldNotChangeEmail": "Could not change email. Check your password and try again.",
+      "enterNewPassword": "Please enter a new password.",
+      "passwordsDoNotMatch": "New passwords do not match.",
+      "passwordUpdated": "Password updated successfully.",
+      "couldNotChangePassword": "Could not change password. Check your current password and try again."
+    }
+  }
+}
