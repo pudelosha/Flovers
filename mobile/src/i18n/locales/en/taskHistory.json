@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Task history"
+    },
+    "fab": {
+      "sort": "Sort",
+      "filter": "Filter",
+      "delete": "Delete",
+      "clearFilter": "Clear filter",
+      "showAllHistory": "Show all history"
+    },
+    "common": {
+      "unnamedPlant": "Unnamed plant"
+    },
+    "toasts": {
+      "failedToLoad": "Failed to load task history",
+      "historyDeleted": "History deleted",
+      "failedToDeleteHistory": "Failed to delete history",
+      "historyTaskDeleted": "History task deleted",
+      "failedToDeleteHistoryTask": "Failed to delete history task",
+      "taskNotLinkedToPlant": "This task is not linked to a plant."
+    },
+    "empty": {
+      "title": "No completed tasks yet",
+      "descBeforeBold": "This screen shows",
+      "bold": "closed reminder tasks",
+      "descAfterBold": "from your Home page (pending tasks are not shown).",
+      "filteredToPlantId": "Currently filtered to plant id {{plantId}}.",
+      "openFromTaskHint": "Open it from a specific task to see history just for that plant."
+    },
+    "tile": {
+      "completedOn": "Completed on {{date}}",
+      "noteLabel": "Note"
+    },
+    "menu": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "editReminder": "Edit reminder",
+      "goToPlant": "Go to plant",
+      "deleteTask": "Delete task"
+    },
+    "types": {
+      "watering": "watering",
+      "fertilising": "fertilising",
+      "moisture": "moisture",
+      "care": "care",
+      "repot": "repot"
+    }
+  }
+}

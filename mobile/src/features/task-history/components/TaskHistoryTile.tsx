@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\task-history\components\TaskHistoryTile.tsx
 import React, { useState, useMemo, useRef } from "react";
 import {
   View,
@@ -10,6 +9,7 @@ import {
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";
 import type { TaskHistoryItem } from "../types/task-history.types";
@@ -79,6 +79,8 @@ export default function TaskHistoryTile({
   onEditReminder,
   onGoToPlant,
 }: Props) {
+  const { t } = useTranslation();
+
   const [expanded, setExpanded] = useState(false);
   const [noteHeight, setNoteHeight] = useState(0);
   const anim = useRef(new Animated.Value(0)).current; // 0 = collapsed, 1 = expanded
@@ -169,6 +171,8 @@ export default function TaskHistoryTile({
     if (onGoToPlant) onGoToPlant(item);
   };
 
+  const typeLabel = t(`taskHistory.types.${displayType}`, { defaultValue: displayType });
+
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       {/* Glass stack: identical to Reminders tiles */}
@@ -209,7 +213,7 @@ export default function TaskHistoryTile({
               <MaterialCommunityIcons name={icon} size={20} color={accent} />
             </View>
             <Text style={[s.leftCaption, { color: accent }]}>
-              {displayType.toUpperCase()}
+              {typeLabel.toUpperCase()}
             </Text>
           </View>
 
@@ -225,7 +229,7 @@ export default function TaskHistoryTile({
             )}
             {!!completedLabel && (
               <Text style={s.metaCompact} numberOfLines={1}>
-                Completed on {completedLabel}
+                {t("taskHistory.tile.completedOn", { date: completedLabel })}
               </Text>
             )}
 
@@ -243,7 +247,7 @@ export default function TaskHistoryTile({
                   }}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>Note</Text>
+                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </View>
@@ -260,7 +264,7 @@ export default function TaskHistoryTile({
                   ]}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>Note</Text>
+                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </Animated.View>
@@ -298,7 +302,7 @@ export default function TaskHistoryTile({
                 color="#FFFFFF"
                 style={{ marginRight: 8 }}
               />
-              <Text style={s.menuItemText}>Expand</Text>
+              <Text style={s.menuItemText}>{t("taskHistory.menu.expand")}</Text>
             </Pressable>
           )}
 
@@ -310,7 +314,7 @@ export default function TaskHistoryTile({
                 color="#FFFFFF"
                 style={{ marginRight: 8 }}
               />
-              <Text style={s.menuItemText}>Collapse</Text>
+              <Text style={s.menuItemText}>{t("taskHistory.menu.collapse")}</Text>
             </Pressable>
           )}
 
@@ -322,7 +326,7 @@ export default function TaskHistoryTile({
               color="#FFFFFF"
               style={{ marginRight: 8 }}
             />
-            <Text style={s.menuItemText}>Edit reminder</Text>
+            <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
           </Pressable>
 
           {/* Go to plant */}
@@ -333,7 +337,7 @@ export default function TaskHistoryTile({
               color="#FFFFFF"
               style={{ marginRight: 8 }}
             />
-            <Text style={s.menuItemText}>Go to plant</Text>
+            <Text style={s.menuItemText}>{t("taskHistory.menu.goToPlant")}</Text>
           </Pressable>
 
           {/* Delete – last & red (like Reminders) */}
@@ -350,7 +354,7 @@ export default function TaskHistoryTile({
                 { color: "#FF6B6B", fontWeight: "800" },
               ]}
             >
-              Delete task
+              {t("taskHistory.menu.deleteTask")}
             </Text>
           </Pressable>
         </View>

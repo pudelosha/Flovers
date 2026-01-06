@@ -1,0 +1,51 @@
+{
+  "taskHistory": {
+    "header": {
+      "title": "Historia zadań"
+    },
+    "fab": {
+      "sort": "Sortuj",
+      "filter": "Filtruj",
+      "delete": "Usuń",
+      "clearFilter": "Wyczyść filtr",
+      "showAllHistory": "Pokaż całą historię"
+    },
+    "common": {
+      "unnamedPlant": "Nienazwana roślina"
+    },
+    "toasts": {
+      "failedToLoad": "Nie udało się wczytać historii zadań",
+      "historyDeleted": "Historia została usunięta",
+      "failedToDeleteHistory": "Nie udało się usunąć historii",
+      "historyTaskDeleted": "Wpis historii został usunięty",
+      "failedToDeleteHistoryTask": "Nie udało się usunąć wpisu historii",
+      "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną."
+    },
+    "empty": {
+      "title": "Brak ukończonych zadań",
+      "descBeforeBold": "Ten ekran pokazuje",
+      "bold": "zamknięte zadania z przypomnień",
+      "descAfterBold": "z Twojej strony głównej (zadania oczekujące nie są tu widoczne).",
+      "filteredToPlantId": "Aktualnie przefiltrowano po id rośliny {{plantId}}.",
+      "openFromTaskHint": "Otwórz historię z konkretnego zadania, aby zobaczyć historię tylko dla tej rośliny."
+    },
+    "tile": {
+      "completedOn": "Ukończono: {{date}}",
+      "noteLabel": "Notatka"
+    },
+    "menu": {
+      "expand": "Rozwiń",
+      "collapse": "Zwiń",
+      "editReminder": "Edytuj przypomnienie",
+      "goToPlant": "Przejdź do rośliny",
+      "deleteTask": "Usuń zadanie"
+    },
+    "types": {
+      "watering": "podlewanie",
+      "fertilising": "nawożenie",
+      "moisture": "zraszanie",
+      "care": "pielęgnacja",
+      "repot": "przesadzanie"
+    }
+  }
+}

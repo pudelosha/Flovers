@@ -81,13 +81,17 @@ import plReadings from "./locales/pl/readings.json";
 import enReadingsModals from "./locales/en/readingsModals.json";
 import plReadingsModals from "./locales/pl/readingsModals.json";
 
-// Readings history bundles (NEW)
+// Readings history bundles
 import enReadingsHistory from "./locales/en/readingsHistory.json";
 import plReadingsHistory from "./locales/pl/readingsHistory.json";
 
-// Profile bundles (NEW)
+// Profile bundles
 import enProfile from "./locales/en/profile.json";
 import plProfile from "./locales/pl/profile.json";
+
+// Task history bundles (NEW)
+import enTaskHistory from "./locales/en/taskHistory.json";
+import plTaskHistory from "./locales/pl/taskHistory.json";
 
 // Other languages unchanged
 import deCreatePlant from "./locales/de/createPlant.json";
@@ -208,7 +212,8 @@ const resources = {
         enReadings,
         enReadingsModals,
         enReadingsHistory,
-        enProfile, // NEW
+        enProfile,
+        enTaskHistory, // NEW
       ] as AnyObj[]
     ),
   },
@@ -243,7 +248,8 @@ const resources = {
         plReadings,
         plReadingsModals,
         plReadingsHistory,
-        plProfile, // NEW
+        plProfile,
+        plTaskHistory, // NEW
       ] as AnyObj[]
     ),
   },

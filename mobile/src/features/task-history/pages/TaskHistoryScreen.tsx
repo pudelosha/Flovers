@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\task-history\pages\TaskHistoryScreen.tsx
 import React, {
   useCallback,
   useState,
@@ -16,6 +15,7 @@ import {
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -62,6 +62,8 @@ const INITIAL_FILTERS: HistoryFilters = {
 };
 
 export default function TaskHistoryScreen() {
+  const { t } = useTranslation();
+
   const nav = useNavigation();
   const route = useRoute<any>();
   const params = (route?.params || {}) as RouteParams;
@@ -126,12 +128,12 @@ export default function TaskHistoryScreen() {
 
       setItems(filteredByPlant);
     } catch (e: any) {
-      showToast(e?.message || "Failed to load task history", "error");
+      showToast(e?.message || t("taskHistory.toasts.failedToLoad"), "error");
       setItems([]);
     } finally {
       setLoading(false);
     }
-  }, [plantIdFilter]);
+  }, [plantIdFilter, t]);
 
   // Refresh on focus (clear stale list first) + reset UI state
   useFocusEffect(
@@ -178,11 +180,11 @@ export default function TaskHistoryScreen() {
     items.forEach((item) => {
       const pid = (item as any).plantId as string | undefined;
       if (pid && !map.has(pid)) {
-        map.set(pid, item.plant || "Unnamed plant");
+        map.set(pid, item.plant || t("taskHistory.common.unnamedPlant"));
       }
     });
     return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-  }, [items]);
+  }, [items, t]);
 
   const locationOptions = useMemo(() => {
     const set = new Set<string>();
@@ -322,19 +324,19 @@ export default function TaskHistoryScreen() {
   const baseFabActions = [
     {
       key: "sort",
-      label: "Sort",
+      label: t("taskHistory.fab.sort"),
       icon: "sort",
       onPress: () => setSortOpen(true),
     },
     {
       key: "filter",
-      label: "Filter",
+      label: t("taskHistory.fab.filter"),
       icon: "filter-variant",
       onPress: () => setFilterOpen(true),
     },
     {
       key: "delete",
-      label: "Delete",
+      label: t("taskHistory.fab.delete"),
       icon: "delete-outline",
       onPress: () => setDeleteOpen(true),
     },
@@ -342,7 +344,7 @@ export default function TaskHistoryScreen() {
       ? [
           {
             key: "clearFilter",
-            label: "Clear filter",
+            label: t("taskHistory.fab.clearFilter"),
             icon: "filter-remove",
             onPress: () => setFilters(INITIAL_FILTERS),
           } as const,
@@ -356,7 +358,7 @@ export default function TaskHistoryScreen() {
       ? [
           {
             key: "showAllHistory",
-            label: "Show all history",
+            label: t("taskHistory.fab.showAllHistory"),
             icon: "filter-remove",
             onPress: () => {
               // clear any in-screen filters and remove the route-level plant filter
@@ -379,10 +381,10 @@ export default function TaskHistoryScreen() {
       // Shape matches the expected union in bulkDeleteHistoryEntries
       await bulkDeleteHistoryEntries(payload as any);
       await load();
-      showToast("History deleted", "success");
+      showToast(t("taskHistory.toasts.historyDeleted"), "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(e?.message || "Failed to delete history", "error");
+      showToast(e?.message || t("taskHistory.toasts.failedToDeleteHistory"), "error");
     }
   };
 
@@ -394,10 +396,10 @@ export default function TaskHistoryScreen() {
       setItems([]);
       await deleteHistoryEntry(item.id);
       await load();
-      showToast("History task deleted", "success");
+      showToast(t("taskHistory.toasts.historyTaskDeleted"), "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(e?.message || "Failed to delete history task", "error");
+      showToast(e?.message || t("taskHistory.toasts.failedToDeleteHistoryTask"), "error");
     }
   };
 
@@ -420,7 +422,7 @@ export default function TaskHistoryScreen() {
 
     const plantId = item.plantId;
     if (!plantId) {
-      showToast("This task is not linked to a plant.", "error");
+      showToast(t("taskHistory.toasts.taskNotLinkedToPlant"), "error");
       return;
     }
 
@@ -435,7 +437,7 @@ export default function TaskHistoryScreen() {
     return (
       <View style={{ flex: 1 }}>
         <GlassHeader
-          title="Task history"
+          title={t("taskHistory.header.title")}
           gradientColors={HEADER_GRADIENT_TINT}
           solidFallback={HEADER_SOLID_FALLBACK}
           showSeparator={false}
@@ -450,7 +452,7 @@ export default function TaskHistoryScreen() {
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
-        title="Task history"
+        title={t("taskHistory.header.title")}
         gradientColors={HEADER_GRADIENT_TINT}
         solidFallback={HEADER_SOLID_FALLBACK}
         showSeparator={false}
@@ -574,16 +576,20 @@ export default function TaskHistoryScreen() {
                     color="#FFFFFF"
                     style={{ marginBottom: 10 }}
                   />
-                  <Text style={s.emptyTitle}>No completed tasks yet</Text>
+                  <Text style={s.emptyTitle}>
+                    {t("taskHistory.empty.title")}
+                  </Text>
                   <View style={s.emptyDescBox}>
                     <Text style={s.emptyText}>
-                      This screen shows{" "}
-                      <Text style={s.inlineBold}>closed reminder tasks</Text>{" "}
-                      from your Home page (pending tasks are not shown).
+                      {t("taskHistory.empty.descBeforeBold")}{" "}
+                      <Text style={s.inlineBold}>
+                        {t("taskHistory.empty.bold")}
+                      </Text>{" "}
+                      {t("taskHistory.empty.descAfterBold")}
                       {"\n\n"}
                       {plantIdFilter
-                        ? `Currently filtered to plant id ${plantIdFilter}.`
-                        : "Open it from a specific task to see history just for that plant."}
+                        ? t("taskHistory.empty.filteredToPlantId", { plantId: plantIdFilter })
+                        : t("taskHistory.empty.openFromTaskHint")}
                     </Text>
                   </View>
                 </View>

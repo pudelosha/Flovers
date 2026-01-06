@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";
 
@@ -10,6 +11,8 @@ type Props = {
 };
 
 export default function TaskHistoryEmptyState({ plantIdFilter }: Props) {
+  const { t } = useTranslation();
+
   return (
     <View
       style={{
@@ -50,16 +53,16 @@ export default function TaskHistoryEmptyState({ plantIdFilter }: Props) {
           color="#FFFFFF"
           style={{ marginBottom: 10 }}
         />
-        <Text style={s.emptyTitle}>No completed tasks yet</Text>
+        <Text style={s.emptyTitle}>{t("taskHistory.empty.title")}</Text>
         <View style={s.emptyDescBox}>
           <Text style={s.emptyText}>
-            This screen shows{" "}
-            <Text style={s.inlineBold}>closed reminder tasks</Text> from
-            your Home page (pending tasks are not shown).
+            {t("taskHistory.empty.descBeforeBold")}{" "}
+            <Text style={s.inlineBold}>{t("taskHistory.empty.bold")}</Text>{" "}
+            {t("taskHistory.empty.descAfterBold")}
             {"\n\n"}
             {plantIdFilter
-              ? `Currently filtered to plant id ${plantIdFilter}.`
-              : "Open it from a specific task to see history just for that plant."}
+              ? t("taskHistory.empty.filteredToPlantId", { plantId: plantIdFilter })
+              : t("taskHistory.empty.openFromTaskHint")}
           </Text>
         </View>
       </View>
