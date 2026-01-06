@@ -22,7 +22,10 @@ import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
 import CompleteTaskModal from "../components/modals/CompleteTaskModal"; // NEW
 import type { Task, TaskType } from "../types/home.types";
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/home.constants";
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+} from "../constants/home.constants";
 
 // Reminders-backed home service
 import {
@@ -127,10 +130,12 @@ export default function HomeScreen() {
   }, [t]);
 
   // Refresh data when the screen is focused, but do NOT show stale tiles first.
+  // ✅ Adjustment: on entry (focus), always reset viewFilter to "all" so Home opens unfiltered.
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
       (async () => {
+        setViewFilter("all"); // 👈 NEW: always show all tasks on Home entry
         setLoading(true);
         setTasks([]); // clear stale tiles right away to avoid flash
         try {
@@ -628,7 +633,10 @@ export default function HomeScreen() {
                   s.emptyWrap,
                   {
                     opacity: emptyOpacity,
-                    transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                    transform: [
+                      { translateY: emptyTranslateY },
+                      { scale: emptyScale },
+                    ],
                   },
                 ]}
               >
@@ -656,23 +664,34 @@ export default function HomeScreen() {
                     <View style={s.emptyDescBox}>
                       <Text style={s.emptyText}>
                         {t("home.empty.all.introPrefix")}{" "}
-                        <Text style={s.inlineBold}>{t("home.empty.all.introBold")}</Text>{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.introBold")}
+                        </Text>{" "}
                         {t("home.empty.all.introSuffix")}
                         {"\n\n"}
                         {t("home.empty.all.toGetStarted")}
-                        {"\n\n"}
-                        • <Text style={s.inlineBold}>{t("home.empty.all.bullets.createPlantsBold")}</Text>{" "}
+                        {"\n\n"}•{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.bullets.createPlantsBold")}
+                        </Text>{" "}
                         {t("home.empty.all.bullets.createPlantsSuffix")}{" "}
-                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.plantsTabBold")}</Text>.
-                        {"\n"}
-                        • {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
-                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.remindersBold")}</Text>{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.bullets.plantsTabBold")}
+                        </Text>
+                        .{"\n"}• {t("home.empty.all.bullets.addRemindersPrefix")}{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.bullets.remindersBold")}
+                        </Text>{" "}
                         {t("home.empty.all.bullets.addRemindersSuffix")}
-                        {"\n"}
-                        • {t("home.empty.all.bullets.optionallyConnectPrefix")}{" "}
-                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.iotBold")}</Text>{" "}
+                        {"\n"}•{" "}
+                        {t("home.empty.all.bullets.optionallyConnectPrefix")}{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.bullets.iotBold")}
+                        </Text>{" "}
                         {t("home.empty.all.bullets.optionallyConnectMiddle")}{" "}
-                        <Text style={s.inlineBold}>{t("home.empty.all.bullets.readingsTabBold")}</Text>{" "}
+                        <Text style={s.inlineBold}>
+                          {t("home.empty.all.bullets.readingsTabBold")}
+                        </Text>{" "}
                         {t("home.empty.all.bullets.optionallyConnectSuffix")}
                         {"\n\n"}
                         {t("home.empty.all.outro")}
@@ -703,7 +722,10 @@ export default function HomeScreen() {
                 s.emptyWrap,
                 {
                   opacity: emptyOpacity,
-                  transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                  transform: [
+                    { translateY: emptyTranslateY },
+                    { scale: emptyScale },
+                  ],
                 },
               ]}
             >
