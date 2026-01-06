@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Odczyty"
+    },
+    "defaults": {
+      "thisDevice": "to urządzenie"
+    },
+    "tile": {
+      "lastReadPrefix": "Ostatni odczyt"
+    },
+    "menu": {
+      "history": "Historia odczytów",
+      "plantDetails": "Szczegóły rośliny",
+      "editDevice": "Edytuj urządzenie",
+      "deleteDevice": "Usuń urządzenie"
+    },
+    "fab": {
+      "linkDevice": "Połącz urządzenie",
+      "deviceSetup": "Konfiguracja urządzenia",
+      "sort": "Sortuj",
+      "filter": "Filtruj",
+      "clearFilter": "Wyczyść filtr"
+    },
+    "empty": {
+      "title": "Brak urządzeń",
+      "description": "Urządzenia pozwalają zapisywać odczyty temperatury, wilgotności, natężenia światła oraz wilgotności gleby dla rośliny.\n\nDotknij akcji „+ Połącz urządzenie”, aby dodać nowe. Wybierz roślinę, nazwij urządzenie, zaznacz czujniki i ustaw interwał próbkowania. Następnie otwórz Konfigurację urządzenia, aby podejrzeć sekret konta, odświeżyć go oraz wysłać gotowy szkic Arduino/ESP do wklejenia."
+    },
+    "toasts": {
+      "unauthorized": "Brak autoryzacji. Zaloguj się ponownie.",
+      "loadFailed": "Nie udało się wczytać urządzeń",
+      "deviceDeleted": "Urządzenie usunięte",
+      "deleteFailed": "Nie udało się usunąć",
+      "deleteFailedPrefix": "Nie udało się usunąć",
+      "deviceAdded": "Urządzenie dodane",
+      "deviceUpdated": "Urządzenie zaktualizowane",
+      "addFailed": "Nie udało się dodać",
+      "addFailedPrefix": "Nie udało się dodać",
+      "updateFailed": "Nie udało się zaktualizować",
+      "updateFailedPrefix": "Nie udało się zaktualizować",
+      "setupLoadFailed": "Nie udało się wczytać konfiguracji",
+      "setupLoadFailedPrefix": "Nie udało się wczytać konfiguracji",
+      "secretRotated": "Sekret odświeżony",
+      "rotateFailed": "Nie udało się odświeżyć sekretu",
+      "rotateFailedPrefix": "Nie udało się odświeżyć sekretu"
+    }
+  }
+}

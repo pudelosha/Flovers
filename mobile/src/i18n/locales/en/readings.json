@@ -1,0 +1,48 @@
+{
+  "readings": {
+    "header": {
+      "title": "Readings"
+    },
+    "defaults": {
+      "thisDevice": "this device"
+    },
+    "tile": {
+      "lastReadPrefix": "Last read"
+    },
+    "menu": {
+      "history": "Readings history",
+      "plantDetails": "Plant details",
+      "editDevice": "Edit device",
+      "deleteDevice": "Delete device"
+    },
+    "fab": {
+      "linkDevice": "Link device",
+      "deviceSetup": "Device setup",
+      "sort": "Sort",
+      "filter": "Filter",
+      "clearFilter": "Clear filter"
+    },
+    "empty": {
+      "title": "No devices yet",
+      "description": "Devices let you ingest temperature, humidity, light, and soil moisture readings for a plant.\n\nTap the “+ Link device” action to add one. Pick a plant, name the device, choose sensors, and set a sampling interval. You can then open Device setup to view your account secret, rotate it, and email a ready-to-paste Arduino/ESP sketch."
+    },
+    "toasts": {
+      "unauthorized": "Unauthorized. Please log in again.",
+      "loadFailed": "Failed to load devices",
+      "deviceDeleted": "Device deleted",
+      "deleteFailed": "Delete failed",
+      "deleteFailedPrefix": "Delete failed",
+      "deviceAdded": "Device added",
+      "deviceUpdated": "Device updated",
+      "addFailed": "Add failed",
+      "addFailedPrefix": "Add failed",
+      "updateFailed": "Update failed",
+      "updateFailedPrefix": "Update failed",
+      "setupLoadFailed": "Failed to load setup",
+      "setupLoadFailedPrefix": "Failed to load setup",
+      "secretRotated": "Secret rotated",
+      "rotateFailed": "Rotate failed",
+      "rotateFailedPrefix": "Rotate failed"
+    }
+  }
+}
