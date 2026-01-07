@@ -8,9 +8,8 @@ from .models import PlantInstance
 from .serializers import (
     PlantInstanceSerializer,
     PlantInstanceListSerializer,
-    PlantInstanceDetailSerializer,  # NEW
+    PlantInstanceDetailSerializer,
 )
-
 
 class PlantInstanceListCreateView(ListCreateAPIView):
     """
@@ -34,8 +33,8 @@ class PlantInstanceListCreateView(ListCreateAPIView):
 
     def list(self, request, *args, **kwargs):
         qs = self.get_queryset()
-        data = self.get_serializer(qs, many=True).data
-        return Response(data)
+        ser = self.get_serializer(qs, many=True, context={"request": request})
+        return Response(ser.data)
 
     def create(self, request, *args, **kwargs):
         ser = self.get_serializer(data=request.data, context={"request": request})

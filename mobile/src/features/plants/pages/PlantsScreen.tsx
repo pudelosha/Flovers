@@ -72,12 +72,19 @@ function mapApiToPlant(
   const latin = item.plant_definition?.latin || undefined;
   const location = item.location?.name || undefined;
 
+  const imageUrl =
+    item.plant_definition?.image_thumb ||
+    item.plant_definition?.image ||
+    undefined;
+
   return {
     id: String(item.id),
     name,
     latin,
     location,
     notes: item.notes || "",
+    imageUrl,
+    qrCode: item.qr_code ?? undefined,
   };
 }
 
@@ -370,9 +377,12 @@ export default function PlantsScreen() {
   // QR modal open
   const openShowQr = (p: Plant) => {
     setMenuOpenId(null);
+
+    const code = p.qrCode || p.id; // fallback if missing
     const value = `https://flovers.app/api/plant-instances/by-qr/?code=${encodeURIComponent(
-      p.id
+      code
     )}`;
+
     setQrPlantName(p.name);
     setQrValue(value);
     setQrVisible(true);

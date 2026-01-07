@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Pressable, Text, StyleSheet } from "react-native";
+import { View, Pressable, Text, StyleSheet, Image } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -15,7 +15,7 @@ type Props = {
   onPressMenu: () => void;
   onEdit: () => void;
   onReminders: () => void;
-  onJournal: () => void; // NEW
+  onJournal: () => void;
   onDelete: () => void;
   onShowQr: () => void;
 };
@@ -31,6 +31,8 @@ export default function PlantTile({
   onDelete,
   onShowQr,
 }: Props) {
+  const imgUri = plant.imageUrl || "https://picsum.photos/seed/plant/120/120";
+
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
       <View style={s.cardGlass}>
@@ -47,23 +49,38 @@ export default function PlantTile({
 
       <View style={s.cardRow}>
         <Pressable
-          style={{ flex: 1, paddingRight: 8 }}
+          style={{
+            flex: 1,
+            paddingRight: 8,
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 12,
+          }}
           onPress={onPressBody}
           android_ripple={{ color: "rgba(255,255,255,0.08)" }}
         >
-          <Text style={s.plantName} numberOfLines={1}>
-            {plant.name}
-          </Text>
-          {!!plant.latin && (
-            <Text style={s.latin} numberOfLines={1}>
-              {plant.latin}
+          <Image
+            source={{ uri: imgUri }}
+            style={{ width: 60, height: 60, borderRadius: 15 }}
+          />
+
+          <View style={{ flex: 1 }}>
+            <Text style={s.plantName} numberOfLines={1}>
+              {plant.name}
             </Text>
-          )}
-          {!!plant.location && (
-            <Text style={s.location} numberOfLines={1}>
-              {plant.location}
-            </Text>
-          )}
+
+            {!!plant.latin && (
+              <Text style={s.latin} numberOfLines={1}>
+                {plant.latin}
+              </Text>
+            )}
+
+            {!!plant.location && (
+              <Text style={s.location} numberOfLines={1}>
+                {plant.location}
+              </Text>
+            )}
+          </View>
         </Pressable>
 
         <Pressable
@@ -72,7 +89,11 @@ export default function PlantTile({
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
           hitSlop={8}
         >
-          <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+          <MaterialCommunityIcons
+            name="dots-horizontal"
+            size={20}
+            color="#FFFFFF"
+          />
         </Pressable>
       </View>
 
@@ -80,7 +101,7 @@ export default function PlantTile({
         <PlantMenu
           onEdit={onEdit}
           onReminders={onReminders}
-          onJournal={onJournal}   // NEW
+          onJournal={onJournal}
           onDelete={onDelete}
           onShowQr={onShowQr}
         />

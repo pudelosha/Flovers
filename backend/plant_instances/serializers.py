@@ -5,7 +5,7 @@ from .models import PlantInstance
 from locations.models import Location
 from plant_definitions.models import PlantDefinition
 from reminders.models import Reminder
-
+from plant_definitions.serializers import _abs_media_url
 
 class PlantInstanceSerializer(serializers.ModelSerializer):
     # incoming payload uses these simple ids
@@ -150,12 +150,24 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
     def get_plant_definition(self, obj):
         if not obj.plant_definition_id:
             return None
+
+        request = self.context.get("request")
+
+        thumb = None
+        hero = None
+        if obj.plant_definition:
+            if obj.plant_definition.image_thumb:
+                thumb = _abs_media_url(request, obj.plant_definition.image_thumb)
+            if obj.plant_definition.image_hero:
+                hero = _abs_media_url(request, obj.plant_definition.image_hero)
+
         return {
             "id": obj.plant_definition_id,
             "name": obj.plant_definition.name,
             "latin": obj.plant_definition.latin,
+            "image_thumb": thumb,  # preferred
+            "image": hero,         # optional fallback
         }
-
 
 # NEW: detail serializer for GET /api/plant-instances/<id>/
 # returns the full editable payload + nested read bits
@@ -229,8 +241,21 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
     def get_plant_definition(self, obj):
         if not obj.plant_definition_id:
             return None
+
+        request = self.context.get("request")
+
+        thumb = None
+        hero = None
+        if obj.plant_definition:
+            if obj.plant_definition.image_thumb:
+                thumb = _abs_media_url(request, obj.plant_definition.image_thumb)
+            if obj.plant_definition.image_hero:
+                hero = _abs_media_url(request, obj.plant_definition.image_hero)
+
         return {
             "id": obj.plant_definition_id,
             "name": obj.plant_definition.name,
             "latin": obj.plant_definition.latin,
+            "image_thumb": thumb,
+            "image": hero,
         }

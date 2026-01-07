@@ -55,23 +55,46 @@ export type ApiPlantInstance = {
 };
 
 /** LIST item */
+export type ApiPlantDefinitionMini = {
+  id: number;
+  name: string;
+  latin: string;
+  image_thumb?: string | null; // added
+  image?: string | null;       // optional fallback
+};
+
 export type ApiPlantInstanceListItem = {
   id: number;
-  display_name: string;
-  notes: string;
-  location?: { id: number; name: string; category: "indoor" | "outdoor" | "other" } | null;
-  plant_definition?: { id: number; name: string; latin: string } | null;
-  qr_code: string;
-  created_at: string;
-  updated_at: string;
+  display_name?: string;
+  notes?: string;
+  location?: { id: number; name: string; category?: string } | null;
+  plant_definition?: ApiPlantDefinitionMini | null; // now includes image fields
+  qr_code?: string | null;
+  created_at?: string;
+  updated_at?: string;
 };
 
 /** DETAIL (full) for editing */
 export type ApiPlantInstanceDetailFull = {
   id: number;
 
-  plant_definition?: { id: number; name: string; latin?: string | null } | null;
-  location?: { id: number; name: string; category: "indoor" | "outdoor" | "other" } | null;
+  plant_definition?:
+    | {
+        id: number;
+        name: string;
+        latin?: string | null;
+        image_thumb?: string | null; // added
+        image?: string | null;       // optional fallback
+      }
+    | null;
+
+  location?:
+    | { id: number; name: string; category: "indoor" | "outdoor" | "other" }
+    | null;
+
+  // ids (read-only in backend, but useful on client if you ever add them)
+  plant_definition_id?: number | null;
+  location_id?: number | null;
 
   display_name?: string | null;
   notes?: string | null;
@@ -137,3 +160,14 @@ export type PlantEditForm = {
   care_interval_days?: number | null;
   repot_interval_months?: number | null;
 };
+
+export type Plant = {
+  id: string;
+  name: string;
+  latin?: string;
+  location?: string;
+  notes: string;
+  imageUrl?: string;
+  qrCode?: string;
+};
+
