@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\ReminderMiniTile.tsx
 import React, { useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -7,6 +8,7 @@ import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 type Props = {
   reminder: UIReminder;
@@ -18,16 +20,44 @@ type Props = {
 function toTypeKey(t: string) {
   const x = (t || "").toLowerCase();
   if (x === "watering" || x === "water") return "watering";
-  if (x === "fertilising" || x === "fertilize" || x === "fertilizing") return "fertilising";
+  if (x === "fertilising" || x === "fertilize" || x === "fertilizing")
+    return "fertilising";
   if (x === "moisture" || x === "misting") return "moisture";
   if (x === "repot" || x === "repotting") return "repot";
   if (x === "care") return "care";
   return "care";
 }
 
-export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }: Props) {
+function formatISOForLabel(iso: string, settings?: any) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) return iso;
+  const yyyy = m[1];
+  const mm = m[2];
+  const dd = m[3];
+
+  const fmt = settings?.dateFormat;
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  return `${dd}.${mm}.${yyyy}`;
+}
+
+export default function ReminderMiniTile({
+  reminder,
+  onPress,
+  onEdit,
+  onDelete,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -42,18 +72,31 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
   const typeKey = toTypeKey(reminder.type);
   const color = ACCENT_BY_TYPE[typeKey as any];
   const typeLabel =
-    tr(`reminders.types.${typeKey}`, typeKey === "fertilising" ? "Fertilising" : typeKey.charAt(0).toUpperCase() + typeKey.slice(1));
+    tr(
+      `reminders.types.${typeKey}`,
+      typeKey === "fertilising"
+        ? "Fertilising"
+        : typeKey.charAt(0).toUpperCase() + typeKey.slice(1)
+    );
 
   const unitKey = reminder.intervalUnit === "months" ? "months" : "days";
   const unitLabel = tr(`reminders.units.${unitKey}`, unitKey);
 
-  const intervalPart =
-    reminder.intervalValue
-      ? tr("reminders.common.everyN", "every {{count}} {{unit}}", {
-          count: reminder.intervalValue,
-          unit: unitLabel,
-        })
-      : "";
+  const intervalPart = reminder.intervalValue
+    ? tr("reminders.common.everyN", "every {{count}} {{unit}}", {
+        count: reminder.intervalValue,
+        unit: unitLabel,
+      })
+    : "";
+
+  const iso = (() => {
+    const d = reminder.dueDate ? new Date(reminder.dueDate as any) : null;
+    if (!d || isNaN(+d)) return "";
+    const Y = d.getFullYear();
+    const M = String(d.getMonth() + 1).padStart(2, "0");
+    const D = String(d.getDate()).padStart(2, "0");
+    return `${Y}-${M}-${D}`;
+  })();
 
   return (
     <Pressable onPress={onPress} style={styles.wrap}>
@@ -66,7 +109,12 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
       />
       <View pointerEvents="none" style={styles.tint} />
 
-      <View style={[s.miniIconBubble, { backgroundColor: color + "22", borderColor: color + "66" }]}>
+      <View
+        style={[
+          s.miniIconBubble,
+          { backgroundColor: color + "22", borderColor: color + "66" },
+        ]}
+      >
         <Icon name={ICON_BY_TYPE[typeKey as any]} size={16} color={color} />
       </View>
 
@@ -84,6 +132,7 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
         <Text style={s.miniTag} numberOfLines={1}>
           {typeLabel.toUpperCase()}
           {intervalPart ? ` • ${intervalPart}` : ""}
+          {iso ? ` • ${formatISOForLabel(iso, settings)}` : ""}
         </Text>
       </View>
 
@@ -94,7 +143,11 @@ export default function ReminderMiniTile({ reminder, onPress, onEdit, onDelete }
           </Pressable>
         ) : null}
         {onDelete ? (
-          <Pressable onPress={onDelete} hitSlop={8} style={[s.miniActionBtn, { marginLeft: 6 }]}>
+          <Pressable
+            onPress={onDelete}
+            hitSlop={8}
+            style={[s.miniActionBtn, { marginLeft: 6 }]}
+          >
             <Icon name="trash-can-outline" size={16} color="#FFFFFF" />
           </Pressable>
         ) : null}

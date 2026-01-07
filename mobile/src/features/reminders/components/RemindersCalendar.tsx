@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\RemindersCalendar.tsx
 import React, { useMemo, useCallback } from "react";
 import { View, Text, ScrollView } from "react-native";
 // Import subpath to avoid Agenda + missing velocityTracker
@@ -12,6 +13,7 @@ import { s } from "../styles/reminders.styles";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 type Props = {
   reminders: UIReminder[];
@@ -37,12 +39,39 @@ function toISODateOnly(d?: Date | string): string {
 
 const ORDER: ReminderType[] = ["watering", "moisture", "fertilising", "care", "repot"];
 
-function monthYearLabel(input: any) {
+function monthYearLabel(input: any, settings?: any) {
   const d: Date =
     (input && typeof input?.toDate === "function" && input.toDate()) ||
     (input instanceof Date ? input : new Date(input));
-  const raw = d.toLocaleString(undefined, { month: "long", year: "numeric" });
+
+  const rawLocale = settings?.locale || undefined;
+  const raw = d.toLocaleString(rawLocale, { month: "long", year: "numeric" });
   return raw.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
+}
+
+function formatISOForLabel(iso: string, settings?: any) {
+  // iso is YYYY-MM-DD
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) return iso;
+  const yyyy = m[1];
+  const mm = m[2];
+  const dd = m[3];
+
+  const fmt = settings?.dateFormat;
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  // default: dd.mm.yyyy
+  return `${dd}.${mm}.${yyyy}`;
 }
 
 export default function RemindersCalendar({
@@ -56,6 +85,7 @@ export default function RemindersCalendar({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -108,7 +138,11 @@ export default function RemindersCalendar({
     [reminders, selectedDate]
   );
 
-  const typeLabel = (tt: ReminderType) => tr(`reminders.types.${tt}`, tt === "fertilising" ? "Fertilising" : tt.charAt(0).toUpperCase() + tt.slice(1));
+  const typeLabel = (tt: ReminderType) =>
+    tr(
+      `reminders.types.${tt}`,
+      tt === "fertilising" ? "Fertilising" : tt.charAt(0).toUpperCase() + tt.slice(1)
+    );
 
   return (
     <ScrollView
@@ -146,7 +180,7 @@ export default function RemindersCalendar({
           }}
           renderHeader={(dateObj) => (
             <View style={s.calHeaderRow}>
-              <Text style={s.calHeaderTitle}>{monthYearLabel(dateObj)}</Text>
+              <Text style={s.calHeaderTitle}>{monthYearLabel(dateObj, settings)}</Text>
             </View>
           )}
           renderArrow={(direction) => (
@@ -173,7 +207,9 @@ export default function RemindersCalendar({
         </ScrollView>
 
         <Text style={s.calendarSubheading}>
-          {tr("reminders.calendar.scheduledOn", "Scheduled on {{date}}", { date: selectedDate })}
+          {tr("reminders.calendar.scheduledOn", "Scheduled on {{date}}", {
+            date: formatISOForLabel(selectedDate, settings),
+          })}
         </Text>
 
         {remindersForSelected.length === 0 ? (

@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,
@@ -11,12 +12,17 @@ import {
   Animated,
   Easing,
 } from "react-native";
-import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
+import {
+  useNavigation,
+  useFocusEffect,
+  useRoute,
+} from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -25,8 +31,14 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import { s } from "../styles/reminders.styles";
 import ReminderTile from "../components/ReminderTile";
 import RemindersCalendar from "../components/RemindersCalendar";
-import type { Reminder as UIReminder, ReminderType } from "../types/reminders.types";
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/reminders.constants";
+import type {
+  Reminder as UIReminder,
+  ReminderType,
+} from "../types/reminders.types";
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+} from "../constants/reminders.constants";
 import {
   listReminders,
   listReminderTasks,
@@ -50,11 +62,11 @@ type SortDir = "asc" | "desc";
 
 /** Filters kept local; reset on screen focus per your request */
 type Filters = {
-  plantId?: string;          // selected plant id (or undefined for Any)
-  location?: string;         // selected location string (or undefined for Any)
-  types?: ReminderType[];    // selected types (multi)
-  dueFrom?: string;          // ISO yyyy-mm-dd
-  dueTo?: string;            // ISO yyyy-mm-dd
+  plantId?: string; // selected plant id (or undefined for Any)
+  location?: string; // selected location string (or undefined for Any)
+  types?: ReminderType[]; // selected types (multi)
+  dueFrom?: string; // ISO yyyy-mm-dd
+  dueTo?: string; // ISO yyyy-mm-dd
 };
 
 // small helper
@@ -104,6 +116,7 @@ export default function RemindersScreen() {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   // Safe t() (treat key-echo as missing)
   const tr = useCallback(
@@ -131,21 +144,29 @@ export default function RemindersScreen() {
     const set = new Set<string>();
     for (const p of plantOptions) if (p.location) set.add(p.location);
     for (const r of uiReminders) if (r.location) set.add(r.location);
-    return Array.from(set).sort((a, b) => normalizeStr(a).localeCompare(normalizeStr(b)));
+    return Array.from(set).sort((a, b) =>
+      normalizeStr(a).localeCompare(normalizeStr(b))
+    );
   }, [plantOptions, uiReminders]);
 
   // --- DELETE CONFIRMATION MODAL state ---
-  const [confirmDeleteReminderId, setConfirmDeleteReminderId] = useState<string | null>(null);
+  const [confirmDeleteReminderId, setConfirmDeleteReminderId] = useState<
+    string | null
+  >(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
 
   // --- EDIT/CREATE MODAL state ---
   const [editOpen, setEditOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null); // null => CREATE mode
 
-  const [fType, setFType] = useState<"watering" | "moisture" | "fertilising" | "care" | "repot">("watering");
+  const [fType, setFType] = useState<
+    "watering" | "moisture" | "fertilising" | "care" | "repot"
+  >("watering");
   const [fPlantId, setFPlantId] = useState<string | undefined>(undefined);
   const [fDueDate, setFDueDate] = useState<string>("");
-  const [fIntervalValue, setFIntervalValue] = useState<number | undefined>(undefined);
+  const [fIntervalValue, setFIntervalValue] = useState<number | undefined>(
+    undefined
+  );
   const [fIntervalUnit, setFIntervalUnit] = useState<"days" | "months">("days");
 
   // --- SORT / FILTER UI STATE ---
@@ -158,15 +179,21 @@ export default function RemindersScreen() {
   // --- TOAST / SNACKBAR STATE ---
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
-  const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
+  const [toastVariant, setToastVariant] = useState<
+    "default" | "success" | "error"
+  >("default");
+  const showToast = (
+    message: string,
+    variant: "default" | "success" | "error" = "default"
+  ) => {
     setToastMsg(message);
     setToastVariant(variant);
     setToastVisible(true);
   };
 
-  const uiTypeToApi = (tt: "watering" | "moisture" | "fertilising" | "care" | "repot"):
-    "water" | "moisture" | "fertilize" | "care" | "repot" =>
+  const uiTypeToApi = (
+    tt: "watering" | "moisture" | "fertilising" | "care" | "repot"
+  ): "water" | "moisture" | "fertilize" | "care" | "repot" =>
     tt === "watering" ? "water" : tt === "fertilising" ? "fertilize" : tt;
 
   const load = useCallback(async () => {
@@ -180,10 +207,16 @@ export default function RemindersScreen() {
       ]);
       const ui = buildUIReminders(tasks, reminders, plants);
       setUiReminders(ui);
-      setPlantOptions(mapPlantOptions(plants, tr("reminders.common.unnamedPlant", "Unnamed plant")));
+      setPlantOptions(
+        mapPlantOptions(
+          plants,
+          tr("reminders.common.unnamedPlant", "Unnamed plant")
+        )
+      );
       setHasLoadedOnce(true);
     } catch (e: any) {
-      const msg = e?.message || tr("reminders.toast.loadFailed", "Failed to load reminders");
+      const msg =
+        e?.message || tr("reminders.toast.loadFailed", "Failed to load reminders");
       setError(msg);
       setUiReminders([]);
       setPlantOptions([]);
@@ -221,7 +254,9 @@ export default function RemindersScreen() {
   useFocusEffect(
     useCallback(() => {
       const params = (route as any)?.params;
-      const plantIdFromRoute = params?.plantId ? String(params.plantId) : undefined;
+      const plantIdFromRoute = params?.plantId
+        ? String(params.plantId)
+        : undefined;
 
       setFilters(() => {
         if (plantIdFromRoute) {
@@ -291,7 +326,8 @@ export default function RemindersScreen() {
     }
   }, [load]);
 
-  const onToggleMenu = (id: string) => setMenuOpenId((curr) => (curr === id ? null : id));
+  const onToggleMenu = (id: string) =>
+    setMenuOpenId((curr) => (curr === id ? null : id));
   const openList = () => setViewMode("list");
   const openCalendar = () => setViewMode("calendar");
 
@@ -299,7 +335,10 @@ export default function RemindersScreen() {
   const panResponder = useMemo(
     () =>
       PanResponder.create({
-        onMoveShouldSetPanResponder: (_e: GestureResponderEvent, g: PanResponderGestureState) => {
+        onMoveShouldSetPanResponder: (
+          _e: GestureResponderEvent,
+          g: PanResponderGestureState
+        ) => {
           const dx = Math.abs(g.dx);
           const dy = Math.abs(g.dy);
           return dx > 24 && dx > dy * 1.5;
@@ -360,7 +399,9 @@ export default function RemindersScreen() {
       setConfirmDeleteName("");
       showToast(
         e?.message
-          ? tr("reminders.toast.deleteFailedWithReason", "Delete failed: {{reason}}", { reason: e.message })
+          ? tr("reminders.toast.deleteFailedWithReason", "Delete failed: {{reason}}", {
+              reason: e.message,
+            })
           : tr("reminders.toast.deleteFailed", "Delete failed"),
         "error"
       );
@@ -374,16 +415,19 @@ export default function RemindersScreen() {
     if (r.plantId) {
       setFPlantId(r.plantId);
     } else {
-      const match = plantOptions.find((p) => p.id === r.plantId || p.name === r.plant);
+      const match = plantOptions.find(
+        (p) => p.id === r.plantId || p.name === r.plant
+      );
       setFPlantId(match?.id);
     }
 
     const d = r.dueDate ? new Date(r.dueDate) : null;
     const iso =
       d && !isNaN(+d)
-        ? `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(
-            d.getUTCDate()
-          ).padStart(2, "0")}`
+        ? `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(
+            2,
+            "0"
+          )}-${String(d.getUTCDate()).padStart(2, "0")}`
         : "";
     setFDueDate(iso);
     setFIntervalValue(r.intervalValue);
@@ -409,7 +453,13 @@ export default function RemindersScreen() {
     });
 
     if (hasDuplicate) {
-      showToast(tr("reminders.toast.duplicateType", "This plant already has a reminder of that type."), "error");
+      showToast(
+        tr(
+          "reminders.toast.duplicateType",
+          "This plant already has a reminder of that type."
+        ),
+        "error"
+      );
       return;
     }
 
@@ -441,11 +491,19 @@ export default function RemindersScreen() {
       showToast(
         isCreate
           ? e?.message
-            ? tr("reminders.toast.createFailedWithReason", "Create failed: {{reason}}", { reason: e.message })
+            ? tr(
+                "reminders.toast.createFailedWithReason",
+                "Create failed: {{reason}}",
+                { reason: e.message }
+              )
             : tr("reminders.toast.createFailed", "Create failed")
           : e?.message
-            ? tr("reminders.toast.updateFailedWithReason", "Update failed: {{reason}}", { reason: e.message })
-            : tr("reminders.toast.updateFailed", "Update failed"),
+          ? tr(
+              "reminders.toast.updateFailedWithReason",
+              "Update failed: {{reason}}",
+              { reason: e.message }
+            )
+          : tr("reminders.toast.updateFailed", "Update failed"),
         "error"
       );
     }
@@ -463,15 +521,25 @@ export default function RemindersScreen() {
           if (r.plantId !== filters.plantId) return false;
         } else {
           const plant = plantOptions.find((p) => p.id === filters.plantId);
-          if (plant && normalizeStr(r.plant) !== normalizeStr(plant.name)) return false;
+          if (
+            plant &&
+            normalizeStr(r.plant) !== normalizeStr(plant.name)
+          )
+            return false;
         }
       }
-      if (filters.location && normalizeStr(r.location) !== normalizeStr(filters.location)) return false;
+      if (
+        filters.location &&
+        normalizeStr(r.location) !== normalizeStr(filters.location)
+      )
+        return false;
       if (typesSet.size > 0 && !typesSet.has(r.type)) return false;
 
       if (from || to) {
         const rd = parseISODate(
-          typeof r.dueDate === "string" || r.dueDate instanceof Date ? r.dueDate : undefined
+          typeof r.dueDate === "string" || r.dueDate instanceof Date
+            ? (r.dueDate as any)
+            : undefined
         );
         if (!rd) return false;
         if (from && rd < from) return false;
@@ -506,10 +574,10 @@ export default function RemindersScreen() {
   const isFilterActive = useMemo(() => {
     return Boolean(
       filters.plantId ||
-      filters.location ||
-      (filters.types && filters.types.length > 0) ||
-      (filters.dueFrom && filters.dueFrom.trim()) ||
-      (filters.dueTo && filters.dueTo.trim())
+        filters.location ||
+        (filters.types && filters.types.length > 0) ||
+        (filters.dueFrom && filters.dueFrom.trim()) ||
+        (filters.dueTo && filters.dueTo.trim())
     );
   }, [filters]);
 
@@ -664,7 +732,11 @@ export default function RemindersScreen() {
       />
 
       {menuOpenId && (
-        <Pressable onPress={() => setMenuOpenId(null)} style={s.backdrop} pointerEvents="auto" />
+        <Pressable
+          onPress={() => setMenuOpenId(null)}
+          style={s.backdrop}
+          pointerEvents="auto"
+        />
       )}
 
       {viewMode === "list" ? (
@@ -673,8 +745,14 @@ export default function RemindersScreen() {
           keyExtractor={(r) => r.id}
           renderItem={({ item }) => {
             const v = getAnimForId(item.id);
-            const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
-            const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+            const translateY = v.interpolate({
+              inputRange: [0, 1],
+              outputRange: [14, 0],
+            });
+            const scale = v.interpolate({
+              inputRange: [0, 1],
+              outputRange: [0.98, 1],
+            });
             const opacity = v;
 
             return (
@@ -696,7 +774,9 @@ export default function RemindersScreen() {
           ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
           showsVerticalScrollIndicator={false}
           onScrollBeginDrag={() => setMenuOpenId(null)}
-          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onPullRefresh} />
+          }
           ListEmptyComponent={
             !loading ? (
               <Animated.View
@@ -704,7 +784,10 @@ export default function RemindersScreen() {
                   s.emptyWrap,
                   {
                     opacity: emptyOpacity,
-                    transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                    transform: [
+                      { translateY: emptyTranslateY },
+                      { scale: emptyScale },
+                    ],
                   },
                 ]}
               >
@@ -718,13 +801,20 @@ export default function RemindersScreen() {
                   />
                   <View
                     pointerEvents="none"
-                    style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
+                    style={[
+                      StyleSheet.absoluteFill,
+                      { backgroundColor: "rgba(255,255,255,0.20)" },
+                    ]}
                   />
                   <View
                     pointerEvents="none"
                     style={[
                       StyleSheet.absoluteFill,
-                      { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                      {
+                        borderRadius: 28,
+                        borderWidth: 1,
+                        borderColor: "rgba(255,255,255,0.20)",
+                      },
                     ]}
                   />
 
@@ -762,13 +852,25 @@ export default function RemindersScreen() {
             setMenuOpenId(null);
           }}
           menuOpenId={menuOpenId}
-          onToggleMenu={(id) => setMenuOpenId((curr) => (curr === id || id === "" ? null : id))}
+          onToggleMenu={(id) =>
+            setMenuOpenId((curr) => (curr === id || id === "" ? null : id))
+          }
           onEdit={openEditModal}
           onDelete={askDelete}
         />
       )}
 
-      {showFAB && <FAB actions={fabActions} />}
+      {/* Capture taps on the FAB (including the main button) to hide any open tile menu */}
+      {showFAB && (
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setMenuOpenId(null);
+            return false;
+          }}
+        >
+          <FAB actions={fabActions} position={settings.fabPosition} />
+        </View>
+      )}
 
       <ConfirmDeleteReminderModal
         visible={!!confirmDeleteReminderId}

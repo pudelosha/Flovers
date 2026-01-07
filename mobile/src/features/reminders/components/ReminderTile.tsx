@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\ReminderTile.tsx
 import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -9,12 +10,14 @@ import ReminderMenu from "./ReminderMenu";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 // --- helpers (mirrors your earlier code) ---
 function toDisplayType(t?: string) {
   const x = (t || "").toLowerCase();
   if (x === "water" || x === "watering") return "watering";
-  if (x === "fertilize" || x === "fertilising" || x === "fertilizing") return "fertilising";
+  if (x === "fertilize" || x === "fertilising" || x === "fertilizing")
+    return "fertilising";
   if (x === "moisture" || x === "misting") return "moisture";
   if (x === "care") return "care";
   if (x === "repot" || x === "repotting") return "repot";
@@ -35,15 +38,41 @@ function hexToRgba(hex?: string, alpha = 1) {
   const b = bigint & 255;
   return `rgba(${r},${g},${b},${alpha})`;
 }
-function formatDate(d?: Date | string) {
+
+/**
+ * Format date based on SettingsProvider.
+ * - If settings are missing/unknown, fall back to dd.mm.yyyy (previous behavior).
+ */
+function formatDateWithSettings(d: Date, settings: any) {
+  const dd = String(d.getDate()).padStart(2, "0");
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const yyyy = d.getFullYear();
+
+  const fmt = settings?.dateFormat;
+
+  // Support common "DMY/MDY/YMD" + common format strings.
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  // default: dmy / DD.MM.YYYY
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+  return `${dd}.${mm}.${yyyy}`;
+}
+
+function formatDate(d?: Date | string, settings?: any) {
   if (!d) return "";
   const date = typeof d === "string" ? new Date(d) : d;
   if (!(date instanceof Date) || isNaN(+date)) return "";
-  const dd = String(date.getDate()).padStart(2, "0");
-  const mm = String(date.getMonth() + 1).padStart(2, "0");
-  const yyyy = date.getFullYear();
-  return `${dd}.${mm}.${yyyy}`;
+  return formatDateWithSettings(date, settings);
 }
+
 function daysUntil(d?: Date | string): number | null {
   if (!d) return null;
   const date = typeof d === "string" ? new Date(d) : d;
@@ -75,6 +104,7 @@ export default function ReminderTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -111,7 +141,7 @@ export default function ReminderTile({
 
   const dueLine = useMemo(() => {
     const dueDays = daysUntil(reminder.dueDate);
-    const dateStr = reminder.dueDate ? formatDate(reminder.dueDate) : "";
+    const dateStr = reminder.dueDate ? formatDate(reminder.dueDate, settings) : "";
     if (dueDays === null || !dateStr) return "";
 
     let prefix = "";
@@ -119,8 +149,11 @@ export default function ReminderTile({
     else if (dueDays === 1) prefix = tr("reminders.tile.dueInOneDay", "Due in 1 day");
     else prefix = tr("reminders.tile.dueInDays", "Due in {{count}} days", { count: dueDays });
 
-    return tr("reminders.tile.dueLine", "{{prefix}} on {{date}}", { prefix, date: dateStr });
-  }, [reminder.dueDate, tr]);
+    return tr("reminders.tile.dueLine", "{{prefix}} on {{date}}", {
+      prefix,
+      date: dateStr,
+    });
+  }, [reminder.dueDate, tr, settings]);
 
   return (
     <View style={s.cardWrap}>
