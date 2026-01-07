@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\pages\PlantsScreen.tsx
 import React, {
   useCallback,
   useMemo,
@@ -21,7 +20,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -60,7 +59,6 @@ type LightLevel5 =
   | "bright-indirect"
   | "bright-direct";
 
-/** Map API list item -> UI Plant shape used by PlantTile */
 function mapApiToPlant(
   item: ApiPlantInstanceListItem,
   unnamedFallback: string
@@ -90,8 +88,8 @@ export default function PlantsScreen() {
   const nav = useNavigation<any>();
 
   const { t } = useTranslation();
-  const { currentLanguage } = useLanguage(); // ensure rerender on language change
-  const { settings } = useSettings(); // 👈 NEW
+  const { currentLanguage } = useLanguage();
+  const { settings } = useSettings();
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);

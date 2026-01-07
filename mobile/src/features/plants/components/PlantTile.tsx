@@ -1,4 +1,3 @@
-// src/features/plants/components/PlantTile.tsx
 import React from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";

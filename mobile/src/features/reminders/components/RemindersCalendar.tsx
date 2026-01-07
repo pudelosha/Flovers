@@ -1,7 +1,5 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\RemindersCalendar.tsx
 import React, { useMemo, useCallback } from "react";
 import { View, Text, ScrollView } from "react-native";
-// Import subpath to avoid Agenda + missing velocityTracker
 import Calendar from "react-native-calendars/src/calendar";
 import { BlurView } from "@react-native-community/blur";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -13,14 +11,12 @@ import { s } from "../styles/reminders.styles";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type Props = {
   reminders: UIReminder[];
-  selectedDate: string; // YYYY-MM-DD
+  selectedDate: string;
   onSelectDate: (isoDate: string) => void;
-
-  // reused callbacks for actions
   menuOpenId: string | null;
   onToggleMenu: (id: string) => void;
   onEdit: (r: UIReminder) => void;
@@ -70,7 +66,6 @@ function formatISOForLabel(iso: string, settings?: any) {
   if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
   if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
 
-  // default: dd.mm.yyyy
   return `${dd}.${mm}.${yyyy}`;
 }
 
@@ -85,7 +80,7 @@ export default function RemindersCalendar({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {

@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\ReminderMiniTile.tsx
 import React, { useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";
@@ -8,7 +7,7 @@ import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type Props = {
   reminder: UIReminder;
@@ -57,7 +56,7 @@ export default function ReminderMiniTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {

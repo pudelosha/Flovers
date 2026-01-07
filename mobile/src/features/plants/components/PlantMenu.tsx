@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plants\components\PlantMenu.tsx
 import React from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";

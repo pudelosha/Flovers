@@ -20,14 +20,13 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 
 import { s } from "../styles/home.styles";
 import TaskTile from "../components/TaskTile";
-import CompleteTaskModal from "../components/modals/CompleteTaskModal"; // NEW
+import CompleteTaskModal from "../components/modals/CompleteTaskModal";
 import type { Task, TaskType } from "../types/home.types";
 import {
   HEADER_GRADIENT_TINT,
   HEADER_SOLID_FALLBACK,
 } from "../constants/home.constants";
 
-// Reminders-backed home service
 import {
   fetchHomeTasks,
   markHomeTaskComplete,
@@ -42,7 +41,7 @@ import SortHomeTasksModal, {
 import FilterHomeTasksModal, {
   type HomeFilters,
 } from "../components/modals/FilterHomeTasksModal";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type ViewFilter = "all" | "overdue" | "today";
 
@@ -72,7 +71,7 @@ export default function HomeScreen() {
   const { t } = useTranslation();
 
   const nav = useNavigation();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const [menuOpenId, setMenuOpenId] = useState<string | null>(null);
   const [tasks, setTasks] = useState<HomeTask[]>([]);
@@ -130,12 +129,12 @@ export default function HomeScreen() {
   }, [t]);
 
   // Refresh data when the screen is focused, but do NOT show stale tiles first.
-  // ✅ Adjustment: on entry (focus), always reset viewFilter to "all" so Home opens unfiltered.
+  // Adjustment: on entry (focus), always reset viewFilter to "all" so Home opens unfiltered.
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
       (async () => {
-        setViewFilter("all"); // 👈 NEW: always show all tasks on Home entry
+        setViewFilter("all");
         setLoading(true);
         setTasks([]); // clear stale tiles right away to avoid flash
         try {
@@ -291,7 +290,7 @@ export default function HomeScreen() {
     return sorted;
   }, [tasks, viewFilter, filters, sortKey, sortDir]);
 
-  // ---------- ✨ ENTRANCE ANIMATION (per-task tiles) ----------
+  // ---------- ENTRANCE ANIMATION (per-task tiles) ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
   const getAnimForId = (id: string) => {
     const m = animMapRef.current;
@@ -500,7 +499,7 @@ export default function HomeScreen() {
           ...baseFabActions,
         ]
       : [
-          // 🔼 Put "Show all tasks" at the top when a view filter is active
+          // Put "Show all tasks" at the top when a view filter is active
           {
             key: "clearViewFilter",
             label: t("home.fab.showAllTasks"),

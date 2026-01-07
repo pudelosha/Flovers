@@ -9,6 +9,7 @@ import ReadingMenu from "./ReadingMenu";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
@@ -36,6 +37,29 @@ type Props = {
     moisture?: boolean;
   };
 };
+
+function formatDateBySettings(d: Date, settings?: any) {
+  const dd = String(d.getDate()).padStart(2, "0");
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const yyyy = String(d.getFullYear());
+
+  const fmt = settings?.dateFormat;
+
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  // default: DMY with dots (matches your current UI style)
+  return `${dd}.${mm}.${yyyy}`;
+}
 
 function MetricColPressable({
   icon,
@@ -75,6 +99,7 @@ export default function ReadingTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -90,10 +115,10 @@ export default function ReadingTile({
 
   const lastText = useMemo(() => {
     if (!dt) return `${tr("readings.tile.lastReadPrefix", "Last read")}: —`;
-    const date = dt.toLocaleDateString();
+    const date = formatDateBySettings(dt, settings);
     const time = dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
     return `${tr("readings.tile.lastReadPrefix", "Last read")}: ${date} ${time}`;
-  }, [dt, tr]);
+  }, [dt, tr, settings]);
 
   // Decide which metrics to show:
   // - If sensors not provided → keep existing behavior (show all).

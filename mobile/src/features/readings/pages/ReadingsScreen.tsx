@@ -41,6 +41,7 @@ import { fetchPlantInstances, type ApiPlantInstanceListItem } from "../../../api
 // i18n
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 // ===== Extend the reading model locally (non-breaking) =====
 type Status = "enabled" | "disabled";
@@ -61,6 +62,7 @@ export default function ReadingsScreen() {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -336,7 +338,13 @@ export default function ReadingsScreen() {
 
   // Keep FAB visible even when a 3-dot tile menu is open
   const showFAB =
-    !sortSheetOpen && !filterSheetOpen && !sortModalVisible && !filterModalVisible && !deleteVisible && !deviceSetupVisible && !upsertVisible;
+    !sortSheetOpen &&
+    !filterSheetOpen &&
+    !sortModalVisible &&
+    !filterModalVisible &&
+    !deleteVisible &&
+    !deviceSetupVisible &&
+    !upsertVisible;
 
   // ---- Delete handlers ----
   const openDeleteFor = useCallback(
@@ -358,7 +366,9 @@ export default function ReadingsScreen() {
       showToast(tr("readings.toasts.deviceDeleted", "Device deleted"), "success");
     } catch (e: any) {
       showToast(
-        e?.message ? `${tr("readings.toasts.deleteFailedPrefix", "Delete failed")}: ${e.message}` : tr("readings.toasts.deleteFailed", "Delete failed"),
+        e?.message
+          ? `${tr("readings.toasts.deleteFailedPrefix", "Delete failed")}: ${e.message}`
+          : tr("readings.toasts.deleteFailed", "Delete failed"),
         "error"
       );
     } finally {
@@ -459,7 +469,10 @@ export default function ReadingsScreen() {
 
         setUpsertVisible(false);
         await load(); // refresh devices + plant instances
-        showToast(tr(isCreate ? "readings.toasts.deviceAdded" : "readings.toasts.deviceUpdated", isCreate ? "Device added" : "Device updated"), "success");
+        showToast(
+          tr(isCreate ? "readings.toasts.deviceAdded" : "readings.toasts.deviceUpdated", isCreate ? "Device added" : "Device updated"),
+          "success"
+        );
       } catch (e: any) {
         setUpsertVisible(false);
         showToast(
@@ -487,7 +500,9 @@ export default function ReadingsScreen() {
     } catch (e: any) {
       // keep modal usable even if fetch fails
       showToast(
-        e?.message ? `${tr("readings.toasts.setupLoadFailedPrefix", "Failed to load setup")}: ${e.message}` : tr("readings.toasts.setupLoadFailed", "Failed to load setup"),
+        e?.message
+          ? `${tr("readings.toasts.setupLoadFailedPrefix", "Failed to load setup")}: ${e.message}`
+          : tr("readings.toasts.setupLoadFailed", "Failed to load setup"),
         "error"
       );
       setSetupSecret(null);
@@ -635,54 +650,62 @@ export default function ReadingsScreen() {
       />
 
       {showFAB && (
-        <FAB
-          bottomOffset={92}
-          actions={[
-            {
-              key: "link-device",
-              icon: "link-variant",
-              label: tr("readings.fab.linkDevice", "Link device"),
-              onPress: openAddDevice,
-            },
-            {
-              key: "device-setup",
-              icon: "key-variant",
-              label: tr("readings.fab.deviceSetup", "Device setup"),
-              onPress: openDeviceSetup,
-            },
-            {
-              key: "sort",
-              icon: "sort",
-              label: tr("readings.fab.sort", "Sort"),
-              onPress: () => {
-                setSortSheetOpen(true);
-                setSortModalVisible(true);
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setMenuOpenId(null);
+            return false;
+          }}
+        >
+          <FAB
+            bottomOffset={92}
+            position={settings.fabPosition} // 👈 NEW (left/right)
+            actions={[
+              {
+                key: "link-device",
+                icon: "link-variant",
+                label: tr("readings.fab.linkDevice", "Link device"),
+                onPress: openAddDevice,
               },
-            },
-            {
-              key: "filter",
-              icon: "filter-variant",
-              label: tr("readings.fab.filter", "Filter"),
-              onPress: () => {
-                setFilterSheetOpen(true);
-                setFilterModalVisible(true);
+              {
+                key: "device-setup",
+                icon: "key-variant",
+                label: tr("readings.fab.deviceSetup", "Device setup"),
+                onPress: openDeviceSetup,
               },
-            },
-            ...(isFilterActive
-              ? [
-                  {
-                    key: "clear-filter",
-                    icon: "filter-remove",
-                    label: tr("readings.fab.clearFilter", "Clear filter"),
-                    onPress: () => {
-                      setFilters({});
-                      setFilterQuery("");
-                    },
-                  } as const,
-                ]
-              : []),
-          ]}
-        />
+              {
+                key: "sort",
+                icon: "sort",
+                label: tr("readings.fab.sort", "Sort"),
+                onPress: () => {
+                  setSortSheetOpen(true);
+                  setSortModalVisible(true);
+                },
+              },
+              {
+                key: "filter",
+                icon: "filter-variant",
+                label: tr("readings.fab.filter", "Filter"),
+                onPress: () => {
+                  setFilterSheetOpen(true);
+                  setFilterModalVisible(true);
+                },
+              },
+              ...(isFilterActive
+                ? [
+                    {
+                      key: "clear-filter",
+                      icon: "filter-remove",
+                      label: tr("readings.fab.clearFilter", "Clear filter"),
+                      onPress: () => {
+                        setFilters({});
+                        setFilterQuery("");
+                      },
+                    } as const,
+                  ]
+                : []),
+            ]}
+          />
+        </View>
       )}
 
       {/* Delete modal */}
@@ -711,7 +734,9 @@ export default function ReadingsScreen() {
             showToast(tr("readings.toasts.secretRotated", "Secret rotated"), "success");
           } catch (e: any) {
             showToast(
-              e?.message ? `${tr("readings.toasts.rotateFailedPrefix", "Rotate failed")}: ${e.message}` : tr("readings.toasts.rotateFailed", "Rotate failed"),
+              e?.message
+                ? `${tr("readings.toasts.rotateFailedPrefix", "Rotate failed")}: ${e.message}`
+                : tr("readings.toasts.rotateFailed", "Rotate failed"),
               "error"
             );
           }

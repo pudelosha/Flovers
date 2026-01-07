@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\pages\RemindersScreen.tsx
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import {
   View,

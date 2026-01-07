@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\ReminderTile.tsx
 import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -10,9 +9,8 @@ import ReminderMenu from "./ReminderMenu";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
-// --- helpers (mirrors your earlier code) ---
 function toDisplayType(t?: string) {
   const x = (t || "").toLowerCase();
   if (x === "water" || x === "watering") return "watering";
@@ -39,10 +37,6 @@ function hexToRgba(hex?: string, alpha = 1) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-/**
- * Format date based on SettingsProvider.
- * - If settings are missing/unknown, fall back to dd.mm.yyyy (previous behavior).
- */
 function formatDateWithSettings(d: Date, settings: any) {
   const dd = String(d.getDate()).padStart(2, "0");
   const mm = String(d.getMonth() + 1).padStart(2, "0");
@@ -50,7 +44,6 @@ function formatDateWithSettings(d: Date, settings: any) {
 
   const fmt = settings?.dateFormat;
 
-  // Support common "DMY/MDY/YMD" + common format strings.
   if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
     const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
     return `${mm}${sep}${dd}${sep}${yyyy}`;
@@ -104,7 +97,7 @@ export default function ReminderTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {

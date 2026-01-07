@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\modals\EditReminderModal.tsx
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import {
   View,
@@ -14,7 +13,7 @@ import { s } from "../../styles/reminders.styles";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../../app/providers/SettingsProvider";
 
 export type ReminderType =
   | "watering"
@@ -23,7 +22,6 @@ export type ReminderType =
   | "care"
   | "repot";
 
-// Optional datetime picker (same pattern you mentioned)
 let DateTimePicker: any = null;
 try {
   DateTimePicker = require("@react-native-community/datetimepicker").default;
@@ -56,7 +54,6 @@ type Props = {
 
   onCancel: () => void;
 
-  /** kept for compatibility (RemindersScreen already uses onSave) */
   onSave: () => void;
 };
 
@@ -143,7 +140,7 @@ export default function EditReminderModal(props: Props) {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -159,7 +156,6 @@ export default function EditReminderModal(props: Props) {
   const [plantOpen, setPlantOpen] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  // keep unit in sync with type
   useEffect(() => {
     const u = unitForType(fType);
     if (u !== fIntervalUnit) setFIntervalUnit(u);
