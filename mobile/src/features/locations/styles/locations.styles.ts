@@ -252,6 +252,7 @@ export const locStyles = StyleSheet.create({
   segText: {
     color: "#FFFFFF",
     fontWeight: "700",
+    fontSize: 12,
   },
 
   sectionTitle: {

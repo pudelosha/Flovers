@@ -10,7 +10,7 @@ from django.core.management.base import BaseCommand, CommandError
 from plant_definitions.models import PlantDefinition, PlantDefinitionTranslation
 
 LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
-MAX_TRAIT_TEXT_LEN = 35
+MAX_TRAIT_TEXT_LEN = 40
 
 # ---- Trait key normalization (consistency) ----
 # Keep one canonical key per concept across your whole dataset.
