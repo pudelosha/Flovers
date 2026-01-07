@@ -31,6 +31,7 @@ import PlantTile from "../components/PlantTile";
 import EditPlantModal from "../components/modals/EditPlantModal";
 import ConfirmDeleteModal from "../components/modals/ConfirmDeleteModal";
 import PlantQrModal from "../components/modals/PlantQrModal";
+import PlantJournalModal from "../components/modals/PlantJournalModal";
 
 import SortPlantsModal, {
   SortDir,
@@ -150,6 +151,10 @@ export default function PlantsScreen() {
   const [qrValue, setQrValue] = useState("");
   const [qrPlantName, setQrPlantName] = useState("");
 
+  // JOURNAL MODAL
+  const [journalVisible, setJournalVisible] = useState(false);
+  const [journalPlantName, setJournalPlantName] = useState("");
+
   // Hide modals/menus on focus
   useFocusEffect(
     useCallback(() => {
@@ -157,6 +162,11 @@ export default function PlantsScreen() {
       setEditingId(null);
       setMenuOpenId(null);
       setQrVisible(false);
+
+      // also reset journal
+      setJournalVisible(false);
+      setJournalPlantName("");
+
       return undefined;
     }, [])
   );
@@ -213,6 +223,13 @@ export default function PlantsScreen() {
   const openCreatePlantWizard = () => {
     setMenuOpenId(null);
     nav.navigate("CreatePlantWizard");
+  };
+
+  // Journal open
+  const openJournal = (p: Plant) => {
+    setMenuOpenId(null);
+    setJournalPlantName(p.name);
+    setJournalVisible(true);
   };
 
   // EDIT MODAL open
@@ -399,7 +416,7 @@ export default function PlantsScreen() {
   );
 
   const showFAB =
-    !editOpen && !confirmDeleteId && !sortOpen && !filterOpen && !qrVisible;
+    !editOpen && !confirmDeleteId && !sortOpen && !filterOpen && !qrVisible && !journalVisible;
 
   // animations for tiles
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -523,7 +540,6 @@ export default function PlantsScreen() {
             <Animated.View
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
-                // wrapper raised so menu floats above next tiles
                 isOpen && { zIndex: 50, elevation: 50 },
               ]}
             >
@@ -541,6 +557,7 @@ export default function PlantsScreen() {
                     plantName: item.name,
                   })
                 }
+                onJournal={() => openJournal(item)}
                 onDelete={() => askDelete(item)}
                 onShowQr={() => openShowQr(item)}
               />
@@ -620,7 +637,7 @@ export default function PlantsScreen() {
         >
           <FAB
             bottomOffset={92}
-            position={settings.fabPosition} // 👈 NEW: left/right from settings
+            position={settings.fabPosition}
             actions={[
               {
                 key: "create",
@@ -666,7 +683,7 @@ export default function PlantsScreen() {
         </View>
       )}
 
-      {/* Modals (translate later) */}
+      {/* Modals */}
       <EditPlantModal
         visible={editOpen}
         latinCatalog={latinOptions}
@@ -766,6 +783,16 @@ export default function PlantsScreen() {
             }),
             "default"
           );
+        }}
+      />
+
+      {/* Journal modal render */}
+      <PlantJournalModal
+        visible={journalVisible}
+        plantName={journalPlantName}
+        onClose={() => {
+          setJournalVisible(false);
+          setJournalPlantName("");
         }}
       />
 

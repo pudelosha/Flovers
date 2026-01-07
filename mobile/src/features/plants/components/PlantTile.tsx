@@ -15,6 +15,7 @@ type Props = {
   onPressMenu: () => void;
   onEdit: () => void;
   onReminders: () => void;
+  onJournal: () => void; // NEW
   onDelete: () => void;
   onShowQr: () => void;
 };
@@ -26,12 +27,12 @@ export default function PlantTile({
   onPressMenu,
   onEdit,
   onReminders,
+  onJournal,
   onDelete,
   onShowQr,
 }: Props) {
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass: blur + tint + border */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -71,11 +72,7 @@ export default function PlantTile({
           android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
           hitSlop={8}
         >
-          <MaterialCommunityIcons
-            name="dots-horizontal"
-            size={20}
-            color="#FFFFFF"
-          />
+          <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
         </Pressable>
       </View>
 
@@ -83,6 +80,7 @@ export default function PlantTile({
         <PlantMenu
           onEdit={onEdit}
           onReminders={onReminders}
+          onJournal={onJournal}   // NEW
           onDelete={onDelete}
           onShowQr={onShowQr}
         />
