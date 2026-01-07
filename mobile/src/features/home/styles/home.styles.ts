@@ -216,6 +216,15 @@ export const s = StyleSheet.create({
     letterSpacing: 0.2,
     fontSize: 12,
   },
+  inputHint: {
+    color: "rgba(255,255,255,0.92)",
+    fontSize: 13, 
+    fontWeight: "300",
+    marginTop: 0,
+    marginBottom: 16,
+    lineHeight: 18,
+    marginHorizontal: 16,
+  },
   input: {
     marginHorizontal: 16,
     marginBottom: 10,

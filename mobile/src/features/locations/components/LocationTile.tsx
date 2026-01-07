@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\locations\components\LocationTile.tsx
 import React, { useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { BlurView } from "@react-native-community/blur";

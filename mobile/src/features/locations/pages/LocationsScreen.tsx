@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\locations\pages\LocationsScreen.tsx
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
@@ -14,6 +15,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -61,6 +63,7 @@ export default function LocationsScreen() {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   // Safe t() (treat key-echo as missing)
   const tr = useCallback(
@@ -470,23 +473,31 @@ export default function LocationsScreen() {
       />
 
       {showFAB && (
-        <FAB
-          bottomOffset={92}
-          actions={[
-            {
-              key: "add",
-              icon: "plus",
-              label: tr("locations.fab.add", "Add location"),
-              onPress: openAddLocation,
-            },
-            {
-              key: "sort",
-              icon: "sort",
-              label: tr("locations.fab.sort", "Sort"),
-              onPress: openSortModal,
-            },
-          ]}
-        />
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setMenuOpenId(null);
+            return false;
+          }}
+        >
+          <FAB
+            bottomOffset={92}
+            position={settings.fabPosition} // 👈 NEW
+            actions={[
+              {
+                key: "add",
+                icon: "plus",
+                label: tr("locations.fab.add", "Add location"),
+                onPress: openAddLocation,
+              },
+              {
+                key: "sort",
+                icon: "sort",
+                label: tr("locations.fab.sort", "Sort"),
+                onPress: openSortModal,
+              },
+            ]}
+          />
+        </View>
       )}
 
       <EditLocationModal

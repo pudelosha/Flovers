@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  TextInput,
-  Keyboard,
-} from "react-native";
+import { View, Text, Pressable, TextInput, Keyboard } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { s } from "../../styles/home.styles";
 import { useTranslation } from "react-i18next";
@@ -66,6 +60,10 @@ export default function CompleteTaskModal({
 
           {/* Note input */}
           <Text style={s.inputLabel}>{t("homeModals.complete.noteLabel")}</Text>
+
+          {/* NEW: helper text */}
+          <Text style={s.inputHint}>{t("homeModals.complete.noteHint")}</Text>
+
           <TextInput
             style={[
               s.input,
