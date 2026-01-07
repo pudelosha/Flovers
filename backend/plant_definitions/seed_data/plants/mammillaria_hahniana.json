@@ -1,0 +1,237 @@
+{
+  "external_id": "mammillaria_hahniana",
+  "name": "Old Lady Cactus",
+  "latin": "Mammillaria hahniana",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "mammillaria_hahniana.jpg",
+  "image_thumb": "mammillaria_hahniana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Old Lady Cactus",
+      "description": "Mammillaria hahniana is a small, globular cactus covered in white spines. It produces a ring of pink flowers in spring. It is native to central Mexico."
+    },
+    "pl": {
+      "common_name": "Kaktus Staruszka",
+      "description": "Mammillaria hahniana to mały, kulisty kaktus pokryty białymi cierniami. Wiosną tworzy różowe kwiaty w pierścieniu. Pochodzi z Meksyku."
+    },
+    "de": {
+      "common_name": "Greisenkaktus",
+      "description": "Mammillaria hahniana ist ein kleiner, kugeliger Kaktus mit weißen Dornen. Im Frühjahr erscheinen rosa Blüten. Die Art stammt aus Mexiko."
+    },
+    "fr": {
+      "common_name": "Cactus vieille dame",
+      "description": "Mammillaria hahniana est un cactus globuleux couvert d’épines blanches. Il fleurit au printemps avec des fleurs roses. Originaire du Mexique."
+    },
+    "it": {
+      "common_name": "Cactus vecchietta",
+      "description": "Mammillaria hahniana è un piccolo cactus globoso con spine bianche. In primavera produce fiori rosa. È originario del Messico."
+    },
+    "es": {
+      "common_name": "Cactus viejita",
+      "description": "Mammillaria hahniana es un cactus pequeño y globoso con espinas blancas. Florece en primavera con flores rosadas. Es originario de México."
+    },
+    "pt": {
+      "common_name": "Cacto velhinha",
+      "description": "Mammillaria hahniana é um pequeno cacto globoso coberto por espinhos brancos. Floresce na primavera com flores rosas. É nativo do México."
+    },
+    "ar": {
+      "common_name": "صبار العجوز",
+      "description": "ماميلاريا هانيانا صبار صغير كروي مغطى بأشواك بيضاء. يزهر في الربيع بأزهار وردية. موطنه الأصلي المكسيك."
+    },
+    "hi": {
+      "common_name": "ओल्ड लेडी कैक्टस",
+      "description": "मेमिलेरिया हानियाना एक छोटा गोलाकार कैक्टस है। इसमें सफेद कांटे और गुलाबी फूल होते हैं। यह मेक्सिको का मूल निवासी है।"
+    },
+    "zh": {
+      "common_name": "老妇人仙人掌",
+      "description": "乳突球属哈尼亚纳是一种小型球状仙人掌。表面覆盖白色刺，春季开粉色花。原产于墨西哥。"
+    },
+    "ja": {
+      "common_name": "オールドレディカクタス",
+      "description": "マミラリア・ハニアナは白い棘に覆われた小型の球状サボテンです。春にピンクの花を咲かせます。原産地はメキシコです。"
+    },
+    "ko": {
+      "common_name": "올드 레이디 선인장",
+      "description": "마밀라리아 하니아나는 흰 가시로 덮인 작은 구형 선인장입니다. 봄에 분홍색 꽃을 피웁니다. 멕시코 원산입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10516/mammillaria-hahniana/details",
+      "https://www.cactus-art.biz/schede/MAMMILLARIA/Mammillaria_hahniana/Mammillaria_hahniana.htm",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:133536-1"
+    ]
+  }
+}

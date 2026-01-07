@@ -1,0 +1,237 @@
+{
+  "external_id": "salvia_rosmarinus",
+  "name": "Rosemary",
+  "latin": "Salvia rosmarinus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "salvia_rosmarinus.jpg",
+  "image_thumb": "salvia_rosmarinus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sunlight",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczający",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水性の良い",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rosemary",
+      "description": "Rosemary is a fragrant herb native to the Mediterranean. It thrives in full sunlight and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Rozmaryn",
+      "description": "Rozmaryn to aromatyczna roślina pochodząca z rejonu Morza Śródziemnego. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Rosmarin",
+      "description": "Rosmarin ist ein duftendes Kraut, das im Mittelmeerraum heimisch ist. Es gedeiht in voller Sonne und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Romarin",
+      "description": "Le romarin est une herbe parfumée originaire de la Méditerranée. Il prospère sous un soleil plein et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Rosmarino",
+      "description": "Il rosmarino è un'erba aromatica originaria del Mediterraneo. Cresce meglio al sole e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Romero",
+      "description": "El romero es una hierba aromática originaria de la región mediterránea. Crece bien a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Alecrim",
+      "description": "O alecrim é uma erva aromática nativa da região mediterrânea. Cresce bem sob luz solar direta e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "إكليل الجبل",
+      "description": "إكليل الجبل هو عشب عطري نشأ في منطقة البحر الأبيض المتوسط. ينمو جيدًا في ضوء الشمس الكامل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "Rosemary",
+      "description": "Rosemary एक खुशबूदार जड़ी-बूटी है जो भूमध्यसागरीय क्षेत्र की मूल निवासी है। यह पूर्ण सूर्य और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "迷迭香",
+      "description": "迷迭香是一种原产于地中海的芳香草本植物。它在充足阳光和排水良好的土壤中生长得最好。"
+    },
+    "ja": {
+      "common_name": "ローズマリー",
+      "description": "ローズマリーは地中海原産の香り高いハーブです。完全な日光と良好な排水の土壌でよく成長します。"
+    },
+    "ko": {
+      "common_name": "로즈마리",
+      "description": "로즈마리는 지중해 지역이 원산지인 향기로운 허브입니다. 완전한 햇볕과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=506",
+      "https://www.gardenersworld.com/plants/rosemary/"
+    ]
+  }
+}

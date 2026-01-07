@@ -1,0 +1,237 @@
+{
+  "external_id": "sinningia_muscicola",
+  "name": "Moss Sinningia",
+  "latin": "Sinningia muscicola",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "sinningia_muscicola.jpg",
+  "image_thumb": "sinningia_muscicola.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácida",
+          "pt": "ácido",
+          "ar": "حمضي",
+          "hi": "क्षारीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Moss Sinningia",
+      "description": "Sinningia muscicola is a small perennial from the Gesneriaceae family, found in mossy environments. It thrives in shaded, humid locations with moderate watering."
+    },
+    "pl": {
+      "common_name": "Moss Sinningia",
+      "description": "Sinningia muscicola to mała roślina bylinowa z rodziny Gesneriaceae, występująca w wilgotnych, zacienionych miejscach. Rośnie w miejscach o umiarkowanym podlewaniu."
+    },
+    "de": {
+      "common_name": "Moos Sinningia",
+      "description": "Sinningia muscicola ist eine kleine Staude aus der Familie der Gesneriaceae, die in moosigen Umgebungen wächst. Sie bevorzugt schattige, feuchte Standorte mit mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Sinningia muscicola",
+      "description": "Sinningia muscicola est une petite plante vivace de la famille des Gesneriaceae, qui pousse dans des environnements moussus. Elle préfère des endroits ombragés et humides avec un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Sinningia muscicola",
+      "description": "Sinningia muscicola è una piccola pianta perenne della famiglia Gesneriaceae, che cresce in ambienti muschiosi. Preferisce luoghi ombreggiati e umidi con annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Sinningia muscicola",
+      "description": "Sinningia muscicola es una pequeña planta perenne de la familia Gesneriaceae, que crece en ambientes musgosos. Prefiere lugares sombreados y húmedos con riego moderado."
+    },
+    "pt": {
+      "common_name": "Sinningia muscicola",
+      "description": "Sinningia muscicola é uma pequena planta perene da família Gesneriaceae, que cresce em ambientes musgosos. Prefere locais sombreados e úmidos com rega moderada."
+    },
+    "ar": {
+      "common_name": "سينيغيا موسيكولا",
+      "description": "سينيغيا موسيكولا هي نبات دائم صغير من عائلة جيسنرياسي، ينمو في بيئات مغطاة بالطحالب. يفضل الأماكن المظلمة والرطبة مع الري المعتدل."
+    },
+    "hi": {
+      "common_name": "सिनिंगिया मुस्किकोला",
+      "description": "सिनिंगिया मुस्किकोला एक छोटा बारहमासी पौधा है जो गेस्नेरियासी परिवार से है, जो काई वाले स्थानों में पाया जाता है। यह छायादार, आर्द्र स्थानों में और मध्यम सिंचाई के साथ उगता है।"
+    },
+    "zh": {
+      "common_name": "苔藓辛宁花",
+      "description": "苔藓辛宁花（Sinningia muscicola）是一种来自景天科的小型多年生植物，生长在苔藓环境中。它喜欢阴凉、潮湿的地方，需要适度的浇水。"
+    },
+    "ja": {
+      "common_name": "モスシンニンギア",
+      "description": "モスシンニンギア（Sinningia muscicola）は、コケの生えた環境で見られる小さな多年生植物です。陰湿な場所で、中程度の水やりで育ちます。"
+    },
+    "ko": {
+      "common_name": "이끼신닝기아",
+      "description": "이끼신닝기아(Sinningia muscicola)는 이끼 환경에서 자라는 작은 다년생 식물입니다. 그늘지고 습한 곳에서 자라며 중간 정도의 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/details?plantid=3701",
+      "https://www.botanicalgarden.ubc.ca"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "melocactus_matanzus",
+  "name": "Matanzas Melocactus",
+  "latin": "Melocactus matanzus",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "melocactus_matanzus.jpg",
+  "image_thumb": "melocactus_matanzus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysta",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेतीला",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "25–30°C",
+          "pl": "25–30°C",
+          "de": "25–30°C",
+          "fr": "25–30°C",
+          "it": "25–30°C",
+          "es": "25–30°C",
+          "pt": "25–30°C",
+          "ar": "25–30°C",
+          "hi": "25–30°C",
+          "zh": "25–30°C",
+          "ja": "25–30°C",
+          "ko": "25–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "powolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Matanzas Melocactus",
+      "description": "Melocactus matanzus is a slow-growing cactus native to Cuba. It requires high light and medium watering intervals."
+    },
+    "pl": {
+      "common_name": "Melokaktus Matanzas",
+      "description": "Melocactus matanzus to wolno rosnący kaktus pochodzący z Kuby. Wymaga wysokiego nasłonecznienia i średnich odstępów w podlewaniu."
+    },
+    "de": {
+      "common_name": "Matanzas-Melocactus",
+      "description": "Melocactus matanzus ist ein langsam wachsender Kaktus aus Kuba. Er benötigt viel Licht und mittlere Bewässerungsintervalle."
+    },
+    "fr": {
+      "common_name": "Melocactus de Matanzas",
+      "description": "Le Melocactus matanzus est un cactus à croissance lente originaire de Cuba. Il nécessite une lumière intense et des intervalles d'arrosage moyens."
+    },
+    "it": {
+      "common_name": "Melocactus di Matanzas",
+      "description": "Il Melocactus matanzus è un cactus a crescita lenta originario di Cuba. Richiede una forte illuminazione e intervalli di annaffiatura medi."
+    },
+    "es": {
+      "common_name": "Melocactus de Matanzas",
+      "description": "El Melocactus matanzus es un cactus de crecimiento lento originario de Cuba. Requiere luz intensa e intervalos de riego medios."
+    },
+    "pt": {
+      "common_name": "Melocactus de Matanzas",
+      "description": "Melocactus matanzus é um cacto de crescimento lento originário de Cuba. Exige luz alta e intervalos de rega médios."
+    },
+    "ar": {
+      "common_name": "ميلوككتوس ماتانزاس",
+      "description": "Melocactus matanzus هو صبار بطيء النمو موطنه كوبا. يتطلب ضوءًا عاليًا وفترات سقي متوسطة."
+    },
+    "hi": {
+      "common_name": "मैटांज़ास मेलोकैक्टस",
+      "description": "Melocactus matanzus एक धीमी गति से बढ़ने वाला कैक्टस है जो क्यूबा का मूल निवासी है। इसे उच्च रोशनी और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "马坦萨斯美洲柱",
+      "description": "Melocactus matanzus 是一种生长缓慢的仙人掌，原产于古巴。它需要高强度的光照和中等的浇水间隔。"
+    },
+    "ja": {
+      "common_name": "マタンザス・メロカクタス",
+      "description": "Melocactus matanzusはキューバ原産の成長が遅いサボテンです。高い光と中程度の水やりの間隔が必要です。"
+    },
+    "ko": {
+      "common_name": "마탄자스 멜로카쿠투스",
+      "description": "Melocactus matanzus는 쿠바 원산지의 느리게 자라는 선인장입니다. 높은 햇빛과 중간 정도의 물 주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/melocactus-matanzus-care",
+      "https://www.cactus-society.org/melocactus-matanzus"
+    ]
+  }
+}

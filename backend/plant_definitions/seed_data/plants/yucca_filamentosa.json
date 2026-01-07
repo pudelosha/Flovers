@@ -1,0 +1,237 @@
+{
+  "external_id": "yucca_filamentosa",
+  "name": "Adam's needle",
+  "latin": "Yucca filamentosa",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "yucca_filamentosa.jpg",
+  "image_thumb": "yucca_filamentosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "volle Sonne",
+          "fr": "plein soleil",
+          "it": "pieno sole",
+          "es": "sol pleno",
+          "pt": "sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well drained",
+          "pl": "dobrze przepuszczalna",
+          "de": "gut durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수가 잘되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low water",
+          "pl": "mało wody",
+          "de": "wenig Wasser",
+          "fr": "peu d'eau",
+          "it": "poca acqua",
+          "es": "poca agua",
+          "pt": "pouca água",
+          "ar": "ماء قليل",
+          "hi": "कम पानी",
+          "zh": "少量水分",
+          "ja": "少なめ水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "tolerant wide range",
+          "pl": "szeroki zakres",
+          "de": "breite Spanne",
+          "fr": "large gamme",
+          "it": "ampia gamma",
+          "es": "amplio rango",
+          "pt": "ampla faixa",
+          "ar": "نطاق واسع",
+          "hi": "विस्तृत श्रेणी",
+          "zh": "宽温度范围",
+          "ja": "広い範囲",
+          "ko": "넓은 범위"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low humidity",
+          "pl": "niska wilgotność",
+          "de": "niedrige Luftfeucht.",
+          "fr": "faible humidité",
+          "it": "bassa umidità",
+          "es": "baja humedad",
+          "pt": "baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic pets",
+          "pl": "toksyczny dla zwierząt",
+          "de": "giftig für Haustiere",
+          "fr": "toxique animaux",
+          "it": "tossico per animali",
+          "es": "tóxico mascotas",
+          "pt": "tóxico animais",
+          "ar": "سام للحيوانات",
+          "hi": "पशुओं के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow upright",
+          "pl": "powolny pionowy",
+          "de": "langsam aufrecht",
+          "fr": "lent et droit",
+          "it": "lento eretto",
+          "es": "lento erguido",
+          "pt": "lento ereto",
+          "ar": "نمو بطيء",
+          "hi": "धीमी ऊर्ध्वाधर",
+          "zh": "生长缓慢直立",
+          "ja": "ゆっくり直立",
+          "ko": "느리게 직립"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Adam's needle",
+      "description": "Yucca filamentosa is a drought-tolerant evergreen shrub. It prefers full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Igła Adama",
+      "description": "Yucca filamentosa jest sucholubnym zimozielonym krzewem. Woli pełne słońce i przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Adamsspieß",
+      "description": "Yucca filamentosa ist ein dürretoleranter immergrüner Strauch. Sie bevorzugt volle Sonne und gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Yucca d’Adam",
+      "description": "Yucca filamentosa est un arbuste persistant tolérant à la sécheresse. Il préfère le plein soleil et un sol drainé."
+    },
+    "it": {
+      "common_name": "Ago di Adam",
+      "description": "Yucca filamentosa è un arbusto sempreverde tollerante alla siccità. Preferisce pieno sole e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Aguja de Adam",
+      "description": "Yucca filamentosa es un arbusto perenne tolerante a la sequía. Prefiere sol pleno y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Agulha de Adam",
+      "description": "Yucca filamentosa é um arbusto perene tolerante à seca. Prefere sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "إبرة آدم",
+      "description": "Yucca filamentosa شجيرة دائمة تتحمل الجفاف. تفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "एडम की सुई",
+      "description": "Yucca filamentosa drought सहनशील सदाबहार झाड़ी है। यह पूर्ण धूप और अच्छी जलनिकासी वाली मिट्टी पसंद करती है।"
+    },
+    "zh": {
+      "common_name": "亚当针",
+      "description": "Yucca filamentosa 是耐旱常绿灌木。 它喜欢全日照和良好排水的土壤。"
+    },
+    "ja": {
+      "common_name": "アダムの針",
+      "description": "Yucca filamentosa は耐乾性常緑低木です。 直射日光と排水良好な土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "아담의 바늘",
+      "description": "Yucca filamentosa 는 내건성 항상녹색 관목입니다. 햇빛과 배수 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Yucca_filamentosa",
+      "https://www.gardenersworld.com/plants/yucca-filamentosa/"
+    ]
+  }
+}

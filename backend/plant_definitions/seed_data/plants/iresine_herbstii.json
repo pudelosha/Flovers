@@ -1,0 +1,239 @@
+{
+  "external_id": "iresine_herbstii",
+  "name": "Herbst's Bloodleaf",
+  "latin": "Iresine herbstii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "iresine_herbstii.jpg",
+  "image_thumb": "iresine_herbstii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "إضاءة غير مباشرة",
+          "hi": "प्रकाश अप्रत्यक्ष",
+          "zh": "间接明亮光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-draining",
+          "pl": "drenażowa",
+          "de": "gut drainierend",
+          "fr": "bien drainant",
+          "it": "ben drenante",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep evenly moist",
+          "pl": "umiarkowanie wilgotna",
+          "de": "gleichmäßig feucht",
+          "fr": "uniformément humide",
+          "it": "uniformemente umido",
+          "es": "mantener húmeda",
+          "pt": "manter húmido",
+          "ar": "رطب بشكل متساوٍ",
+          "hi": "समान रूप से नम",
+          "zh": "保持均匀湿润",
+          "ja": "均一な湿り気",
+          "ko": "고르게 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18〜27°C",
+          "ko": "18-27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium-high",
+          "pl": "średnio-wysoka",
+          "de": "mittel-hoch",
+          "fr": "moyenne-haute",
+          "it": "medio-alta",
+          "es": "media-alta",
+          "pt": "médio-alta",
+          "ar": "متوسطة-عالية",
+          "hi": "मध्यम-उच्च",
+          "zh": "中高",
+          "ja": "中〜高",
+          "ko": "중-높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossico",
+          "es": "no tóxico",
+          "pt": "não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "bushy medium",
+          "pl": "średnio krzaczasty",
+          "de": "buschig mittel",
+          "fr": "buissonnant moyen",
+          "it": "cespuglioso medio",
+          "es": "arbustivo medio",
+          "pt": "arbustivo médio",
+          "ar": "متوسط الكثافة",
+          "hi": "मध्यम झाड़ी",
+          "zh": "中等灌木状",
+          "ja": "中程度の茂り",
+          "ko": "중간 관목형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bloodleaf",
+      "description": "Herbst's Bloodleaf is a tropical foliage plant with striking red leaves. It prefers bright, indirect light and consistently moist soil, and benefits from regular feeding."
+    },
+    "pl": {
+      "common_name": "Iresine krwista",
+      "description": "Iresine herbstii to tropikalna roślina ozdobna o czerwonych liściach. Wymaga jasnego światła pośredniego i wilgotnej gleby oraz korzyści z regularnego nawożenia."
+    },
+    "de": {
+      "common_name": "Blutblatt",
+      "description": "Iresine herbstii ist eine tropische Zierpflanze mit roten Blättern. Sie bevorzugt helles indirektes Licht und gleichmäßig feuchte Erde sowie regelmäßige Düngung."
+    },
+    "fr": {
+      "common_name": "Feuille de sang",
+      "description": "Iresine herbstii est une plante tropicale à feuilles rouges. Elle préfère une lumière indirecte vive et un sol uniformément humide avec engrais régulier."
+    },
+    "it": {
+      "common_name": "Foglia di sangue",
+      "description": "Iresine herbstii è una pianta tropicale con foglie rosse. Predilige luce indiretta brillante e terreno umido con concimazioni regolari."
+    },
+    "es": {
+      "common_name": "Hoja de sangre",
+      "description": "Iresine herbstii es una planta tropical de hojas rojas. Prefiere luz indirecta brillante y suelo húmedo con fertilización regular."
+    },
+    "pt": {
+      "common_name": "Folha de sangue",
+      "description": "Iresine herbstii é uma planta tropical de folhas vermelhas. Prefere luz indireta brilhante e solo úmido com adubação regular."
+    },
+    "ar": {
+      "common_name": "ورقة دم",
+      "description": "Iresine herbstii هي نبتة استوائية بأوراق حمراء. تفضل ضوءًا غير مباشر مشرق وتربة رطبة مع تغذية منتظمة."
+    },
+    "hi": {
+      "common_name": "ब्लडलीफ",
+      "description": "Iresine herbstii एक उष्णकटिबंधीय लाल पत्तों वाला पौधा है। यह उज्ज्वल अप्रत्यक्ष प्रकाश और नम मिट्टी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "血叶草",
+      "description": "Iresine herbstii 是一种热带红叶植物。喜明亮间接光和保持湿润的土壤，定期施肥有益。"
+    },
+    "ja": {
+      "common_name": "ブラッドリーフ",
+      "description": "Iresine herbstii は赤い葉の熱帯植物です。明るい間接光と湿った土を好み、定期的な施肥が有益です。"
+    },
+    "ko": {
+      "common_name": "블러드리프",
+      "description": "Iresine herbstii 는 빨간 잎의 열대 식물입니다. 밝은 간접광과 촉촉한 흙을 좋아하며 정기 비료가 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://terrariumtribe.com/terrarium-plants/iresine-herbstii-bloodleaf-plant/",
+      "https://plnts.com/en/care/houseplants-family/iresine",
+      "https://www.rhs.org.uk/plants/96921/iresine-herbstii/details",
+      "https://www.healthyhouseplants.com/indoor-houseplants/blood-leaf-iresine-herbstii-care-guide-types-and-growing-tips/"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "orchis_anthropophora",
+  "name": "Man Orchid",
+  "latin": "Orchis anthropophora",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_anthropophora.jpg",
+  "image_thumb": "orchis_anthropophora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, orchid mix",
+          "pl": "Kwasne, mieszanka orchidei",
+          "de": "Saure, Orchideen-Mischung",
+          "fr": "Acide, mélange orchidée",
+          "it": "Acido, mix orchidee",
+          "es": "Ácido, mezcla para orquídeas",
+          "pt": "Ácido, mistura de orquídeas",
+          "ar": "حمضي، خليط أوركيد",
+          "hi": "अम्लीय, आर्किड मिश्रण",
+          "zh": "酸性，兰花混合土",
+          "ja": "酸性、ラン科混合土",
+          "ko": "산성, 난초 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "مياه متوسطة",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水",
+          "ko": "중간 정도의 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Up to 50 cm",
+          "pl": "Do 50 cm",
+          "de": "Bis zu 50 cm",
+          "fr": "Jusqu'à 50 cm",
+          "it": "Fino a 50 cm",
+          "es": "Hasta 50 cm",
+          "pt": "Até 50 cm",
+          "ar": "حتى 50 سم",
+          "hi": "50 सेंटीमीटर तक",
+          "zh": "最多50厘米",
+          "ja": "最大50cm",
+          "ko": "최대 50cm"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Man Orchid",
+      "description": "The Man Orchid is a unique plant with human-shaped flowers. It thrives in temperate regions, typically found in grassy meadows and woodlands."
+    },
+    "pl": {
+      "common_name": "Orkidea ludzka",
+      "description": "Orkidea ludzka to unikalna roślina o kwiatach w kształcie ludzkich postaci. Rośnie w umiarkowanych regionach, głównie na łąkach i w lasach."
+    },
+    "de": {
+      "common_name": "Mannorchidee",
+      "description": "Die Mannorchidee ist eine einzigartige Pflanze mit menschenähnlichen Blüten. Sie wächst in gemäßigten Regionen, hauptsächlich auf Wiesen und in Wäldern."
+    },
+    "fr": {
+      "common_name": "Orchidée homme",
+      "description": "L'Orchidée homme est une plante unique avec des fleurs en forme d'humain. Elle prospère dans les régions tempérées, souvent trouvée dans les prairies et les forêts."
+    },
+    "it": {
+      "common_name": "Orchidea uomo",
+      "description": "L'Orchidea uomo è una pianta unica con fiori a forma umana. Cresce nelle regioni temperate, solitamente in prati e boschi."
+    },
+    "es": {
+      "common_name": "Orquídea hombre",
+      "description": "La Orquídea hombre es una planta única con flores en forma de figura humana. Crece en regiones templadas, comúnmente encontrada en praderas y bosques."
+    },
+    "pt": {
+      "common_name": "Orquídea homem",
+      "description": "A Orquídea homem é uma planta única com flores em forma humana. Cresce em regiões temperadas, sendo encontrada principalmente em pradarias e bosques."
+    },
+    "ar": {
+      "common_name": "زهرة الأوركيد البشرية",
+      "description": "زهرة الأوركيد البشرية هي نبات فريد من نوعه بزهور على شكل إنسان. تنمو في المناطق المعتدلة، وتوجد عادة في المروج والغابات."
+    },
+    "hi": {
+      "common_name": "मान ओर्किड",
+      "description": "मान ओर्किड एक अनोखा पौधा है, जिसकी फूल मानव के आकार के होते हैं। यह समशीतोष्ण क्षेत्रों में उगता है, आमतौर पर घास के मैदानों और जंगलों में पाया जाता है।"
+    },
+    "zh": {
+      "common_name": "人形兰",
+      "description": "人形兰是一种独特的植物，具有类人形的花朵。它生长在温带地区，通常出现在草地和森林中。"
+    },
+    "ja": {
+      "common_name": "人形ラン",
+      "description": "人形ランは人間の形をした花を持つ独特な植物です。温帯地域に生息し、主に草地や森林で見られます。"
+    },
+    "ko": {
+      "common_name": "인간 모양 난초",
+      "description": "인간 모양 난초는 인간 모양의 꽃을 가진 독특한 식물입니다. 온대 지역에서 자생하며 주로 풀밭과 숲에서 자주 발견됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/orchis-anthropophora",
+      "https://www.royalhorticulturalsociety.org.uk/plants-orchid-care"
+    ]
+  }
+}

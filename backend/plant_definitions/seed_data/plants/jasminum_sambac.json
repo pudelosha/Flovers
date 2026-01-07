@@ -1,0 +1,238 @@
+{
+  "external_id": "jasminum_sambac",
+  "name": "Arabian jasmine",
+  "latin": "Jasminum sambac",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "jasminum_sambac.jpg",
+  "image_thumb": "jasminum_sambac.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "充足阳光",
+          "ja": "強い日差し",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Umiarkowana",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby climber",
+          "pl": "Krzew pnący",
+          "de": "Kletterstrauch",
+          "fr": "Grimpant",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "شجيرة متسلقة",
+          "hi": "चढ़ने वाली",
+          "zh": "灌木攀援",
+          "ja": "つる性低木",
+          "ko": "덩굴 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Arabian jasmine",
+      "description": "Jasminum sambac is a tropical evergreen shrub valued for its highly fragrant white flowers. It prefers bright sunlight and evenly moist soil during active growth. Commonly grown indoors or in warm outdoor climates."
+    },
+    "pl": {
+      "common_name": "Jaśmin arabski",
+      "description": "Jasminum sambac to tropikalny zimozielony krzew o silnie pachnących białych kwiatach. Wymaga jasnego stanowiska i regularnego podlewania. Uprawiany w domu lub w ciepłym klimacie."
+    },
+    "de": {
+      "common_name": "Arabischer Jasmin",
+      "description": "Jasminum sambac ist ein tropischer, immergrüner Strauch mit stark duftenden weißen Blüten. Er benötigt viel Licht und gleichmäßige Wassergaben. Geeignet für Innenräume oder warme Regionen."
+    },
+    "fr": {
+      "common_name": "Jasmin d’Arabie",
+      "description": "Jasminum sambac est un arbuste tropical persistant aux fleurs blanches très parfumées. Il aime la lumière vive et un sol modérément humide. Cultivé en intérieur ou en climat chaud."
+    },
+    "it": {
+      "common_name": "Gelsomino d’Arabia",
+      "description": "Jasminum sambac è un arbusto tropicale sempreverde con fiori bianchi molto profumati. Richiede luce intensa e annaffiature regolari. Adatto a interni o climi caldi."
+    },
+    "es": {
+      "common_name": "Jazmín árabe",
+      "description": "Jasminum sambac es un arbusto tropical de hoja perenne con flores blancas muy fragantes. Prefiere sol brillante y riego regular. Se cultiva en interiores o zonas cálidas."
+    },
+    "pt": {
+      "common_name": "Jasmim-árabe",
+      "description": "Jasminum sambac é um arbusto tropical perene com flores brancas muito perfumadas. Gosta de sol intenso e rega regular. Cultivado em interiores ou climas quentes."
+    },
+    "ar": {
+      "common_name": "الياسمين العربي",
+      "description": "نبات Jasminum sambac شجيرة استوائية دائمة الخضرة ذات أزهار بيضاء عطرية. يفضل الضوء القوي والري المنتظم. يزرع داخل المنازل أو في المناخات الدافئة."
+    },
+    "hi": {
+      "common_name": "अरबी चमेली",
+      "description": "Jasminum sambac एक उष्णकटिबंधीय सदाबहार झाड़ी है जिसके सफेद फूल बहुत सुगंधित होते हैं। इसे तेज रोशनी और नियमित पानी की आवश्यकता होती है। इसे घर के अंदर या गर्म जलवायु में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "阿拉伯茉莉",
+      "description": "Jasminum sambac 是一种热带常绿灌木，以芳香的白色花朵著称。喜欢充足阳光和均匀湿润的土壤。常作为室内或温暖地区植物栽培。"
+    },
+    "ja": {
+      "common_name": "アラビアジャスミン",
+      "description": "Jasminum sambac は香り高い白花を咲かせる熱帯性常緑低木です。明るい日光と定期的な水やりを好みます。室内や暖かい地域で栽培されます。"
+    },
+    "ko": {
+      "common_name": "아라비아자스민",
+      "description": "Jasminum sambac은 향기로운 흰 꽃을 피우는 열대성 상록 관목입니다. 밝은 햇빛과 규칙적인 물주기가 필요합니다. 실내나 따뜻한 지역에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a549",
+      "https://www.rhs.org.uk/plants/9609/jasminum-sambac/details",
+      "https://edis.ifas.ufl.edu/publication/FP297"
+    ]
+  }
+}

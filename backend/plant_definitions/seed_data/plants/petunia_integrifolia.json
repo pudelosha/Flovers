@@ -1,0 +1,237 @@
+{
+  "external_id": "petunia_integrifolia",
+  "name": "Petunia integrifolia",
+  "latin": "Petunia integrifolia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "petunia_integrifolia.jpg",
+  "image_thumb": "petunia_integrifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "보편적"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Trailing Petunia",
+      "description": "Petunia integrifolia is a perennial flowering plant native to South America. It features vibrant, funnel-shaped flowers in various colors, thriving in full sun with moderate watering."
+    },
+    "pl": {
+      "common_name": "Petunia zwisła",
+      "description": "Petunia integrifolia to wieloletnia roślina kwitnąca pochodząca z Ameryki Południowej. Ma żywe, lejkowate kwiaty w różnych kolorach, preferuje pełne nasłonecznienie i umiarkowane podlewanie."
+    },
+    "de": {
+      "common_name": "Hängende Petunie",
+      "description": "Petunia integrifolia ist eine mehrjährige Blühpflanze aus Südamerika. Sie zeichnet sich durch lebendige, trichterförmige Blüten in verschiedenen Farben aus und gedeiht bei voller Sonne und mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Pétunia retombant",
+      "description": "Le Petunia integrifolia est une plante vivace à fleurs originaire d'Amérique du Sud. Il possède des fleurs vibrantes en forme de cornet dans diverses couleurs et préfère un ensoleillement total avec un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Petunia strisciante",
+      "description": "Petunia integrifolia è una pianta perenne originaria del Sud America. Ha fiori vibranti a forma di imbuto di vari colori e cresce al sole pieno con annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Petunia rastrera",
+      "description": "Petunia integrifolia es una planta perenne originaria de Sudamérica. Presenta flores vibrantes en forma de embudo de varios colores, prosperando a pleno sol con riego moderado."
+    },
+    "pt": {
+      "common_name": "Petúnia rasteira",
+      "description": "Petunia integrifolia é uma planta perene nativa da América do Sul. Apresenta flores vibrantes em forma de funil em várias cores, crescendo sob luz solar total com rega moderada."
+    },
+    "ar": {
+      "common_name": "بتونيا زاحفة",
+      "description": "بتونيا إنتجريفوليا هي نبات مزهر معمر من أمريكا الجنوبية. تتميز بزهور ساطعة على شكل قمع بألوان متنوعة، وتزدهر في الشمس الكاملة مع ري معتدل."
+    },
+    "hi": {
+      "common_name": "पेटुनिया व्रुक्ष",
+      "description": "पेटुनिया इंटेग्रिफोलिया एक बारहमासी फूलवाला पौधा है जो दक्षिण अमेरिका का मूल निवासी है। यह विभिन्न रंगों में चमकीले, शंकु के आकार के फूलों के साथ होता है, और पूर्ण सूर्य में मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "蔓生天竺葵",
+      "description": "Petunia integrifolia 是一种原产于南美的多年生开花植物。它有着鲜艳的漏斗形花朵，颜色多样，喜全日照且需要适量浇水。"
+    },
+    "ja": {
+      "common_name": "トレリスペチュニア",
+      "description": "ペチュニア・インテグリフォリアは南アメリカ原産の多年草で、鮮やかな漏斗状の花を特徴とします。完全な日光を好み、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "뿌리펄스 펫유니아",
+      "description": "페튜니아 인테그리폴리아는 남미 원산지의 다년생 꽃식물입니다. 다양한 색상의 생동감 있는 깔때기 모양의 꽃을 가지고 있으며, 완전한 햇빛을 좋아하고 적당한 물을 요구합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/17934/Petunia-integrifolia/Details",
+      "https://www.gardeningknowhow.com/plant-problems/environmental/petunia-plant-care.htm"
+    ]
+  }
+}

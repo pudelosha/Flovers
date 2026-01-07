@@ -1,0 +1,238 @@
+{
+  "external_id": "sempervivum_tectorum",
+  "name": "Houseleek",
+  "latin": "Sempervivum tectorum",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sempervivum_tectorum.jpg",
+  "image_thumb": "sempervivum_tectorum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysta",
+          "de": "sandig",
+          "fr": "sablonneux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملية",
+          "hi": "रेत",
+          "zh": "沙质",
+          "ja": "砂地",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwe",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-24°C",
+          "pl": "10-24°C",
+          "de": "10-24°C",
+          "fr": "10-24°C",
+          "it": "10-24°C",
+          "es": "10-24°C",
+          "pt": "10-24°C",
+          "ar": "10-24°C",
+          "hi": "10-24°C",
+          "zh": "10-24°C",
+          "ja": "10-24°C",
+          "ko": "10-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Houseleek",
+      "description": "Sempervivum tectorum, or houseleek, is a hardy succulent native to Europe. It thrives in rocky, well-drained soil and full sun."
+    },
+    "pl": {
+      "common_name": "Juka",
+      "description": "Sempervivum tectorum, czyli juka, to wytrzymała roślina sukulentna pochodząca z Europy. Rośnie na kamienistych, dobrze przepuszczających wodę glebach i w pełnym słońcu."
+    },
+    "de": {
+      "common_name": "Hauswurz",
+      "description": "Sempervivum tectorum, auch Hauswurz genannt, ist eine robuste Sukkulente aus Europa. Sie gedeiht in steinigen, gut durchlässigen Böden und in voller Sonne."
+    },
+    "fr": {
+      "common_name": "Sempervivum",
+      "description": "Sempervivum tectorum, ou joubarbe, est une plante succulente résistante originaire d'Europe. Elle prospère dans des sols rocheux et bien drainés sous plein soleil."
+    },
+    "it": {
+      "common_name": "Sempervivum",
+      "description": "Sempervivum tectorum, o sempervivo, è una pianta succulenta resistente originaria dell'Europa. Cresce su terreni rocciosi e ben drenati e sotto il pieno sole."
+    },
+    "es": {
+      "common_name": "Sempervivum",
+      "description": "Sempervivum tectorum, o sempervivo, es una planta suculenta resistente originaria de Europa. Crece en suelos rocosos y bien drenados a pleno sol."
+    },
+    "pt": {
+      "common_name": "Sempervivum",
+      "description": "Sempervivum tectorum, ou sempervivo, é uma planta suculenta resistente nativa da Europa. Cresce em solos rochosos e bem drenados sob sol pleno."
+    },
+    "ar": {
+      "common_name": "السمبرفيفوم",
+      "description": "Sempervivum tectorum، أو بيت الطيور، هو نبات عصاري قوي موطنه أوروبا. ينمو في التربة الصخرية جيدة التصريف وتحت أشعة الشمس الكاملة."
+    },
+    "hi": {
+      "common_name": "हाउसलीक",
+      "description": "Sempervivum tectorum, या हाउसलीक, एक कठोर पौधा है जो यूरोप का मूल निवासी है। यह चट्टानी, अच्छी तरह से जल निकासी वाली मिट्टी और पूर्ण सूर्य में उगता है।"
+    },
+    "zh": {
+      "common_name": "屋顶植物",
+      "description": "Sempervivum tectorum，或屋顶植物，是一种耐寒的多肉植物，原产于欧洲。它在岩石、排水良好的土壤和充足的阳光下生长。"
+    },
+    "ja": {
+      "common_name": "セムペルビブム",
+      "description": "Sempervivum tectorum、またはハウスリークは、ヨーロッパ原産の丈夫な多肉植物です。岩の多い、水はけの良い土壌と完全な日光の下で育ちます。"
+    },
+    "ko": {
+      "common_name": "하우스리크",
+      "description": "Sempervivum tectorum, 또는 하우스리크는 유럽 원산의 강한 다육 식물입니다. 바위와 잘 배수되는 토양, 그리고 완전한 햇빛 아래에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/sempervivum-tectorum",
+      "https://www.gardenia.net/plant/sempervivum-tectorum",
+      "https://www.bhg.com/gardening/pests-insects-diseases/houseleek/"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "hoya_serpens",
+  "name": "Himalayan wax plant",
+  "latin": "Hoya serpens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 21,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_serpens.jpg",
+  "image_thumb": "hoya_serpens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell, indirekt",
+          "fr": "Lumineux indirect",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy orchid mix",
+          "pl": "Przewiewna orchid",
+          "de": "Luftiges Orchideens.",
+          "fr": "Mélange orchidée",
+          "it": "Substrato orchidea",
+          "es": "Sustrato orquídea",
+          "pt": "Substrato orquídea",
+          "ar": "خليط أوركيد جيد التهوية",
+          "hi": "हवादार ऑर्किड मिक्स",
+          "zh": "透气兰花基质",
+          "ja": "通気性ラン用土",
+          "ko": "통기성 난초 배합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Let mix almost dry",
+          "pl": "Prawie przeschnąć",
+          "de": "Fast abtrocknen",
+          "fr": "Laisser sécher un peu",
+          "it": "Lascia quasi asciug.",
+          "es": "Deja secar un poco",
+          "pt": "Deixe secar um pouco",
+          "ar": "اتركها تجف قليلاً",
+          "hi": "लगभग सूखने दें",
+          "zh": "微干再浇",
+          "ja": "乾き気味に水やり",
+          "ko": "거의 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "16–24°C",
+          "pl": "16–24°C",
+          "de": "16–24°C",
+          "fr": "16–24°C",
+          "it": "16–24°C",
+          "es": "16–24°C",
+          "pt": "16–24°C",
+          "ar": "16–24°م",
+          "hi": "16–24°C",
+          "zh": "16–24°C",
+          "ja": "16–24°C",
+          "ko": "16–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Higher humidity",
+          "pl": "Wyższa wilgotność",
+          "de": "Höhere Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità più alta",
+          "es": "Humedad alta",
+          "pt": "Humidade alta",
+          "ar": "رطوبة أعلى",
+          "hi": "अधिक आर्द्रता",
+          "zh": "较高湿度",
+          "ja": "高めの湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic to pets",
+          "pl": "Nietoksyczna dla zw.",
+          "de": "Haustierfreundlich",
+          "fr": "Non toxique animaux",
+          "it": "Non tossica animali",
+          "es": "No tóxica mascotas",
+          "pt": "Não tóxica pets",
+          "ar": "غير سامة للحيوانات",
+          "hi": "पालतू-सेफ",
+          "zh": "对宠物无毒",
+          "ja": "ペットに無毒",
+          "ko": "반려동물 무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow trailing vine",
+          "pl": "Wolno płożąca",
+          "de": "Langsam hängend",
+          "fr": "Lente retombante",
+          "it": "Lenta ricadente",
+          "es": "Lenta colgante",
+          "pt": "Lenta pendente",
+          "ar": "متدلية بطيئة",
+          "hi": "धीमी लटकती बेल",
+          "zh": "缓慢垂藤",
+          "ja": "ゆっくり垂れる",
+          "ko": "느리게 늘어짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Himalayan wax plant",
+      "description": "Hoya serpens is a small-leaved, trailing epiphytic hoya native to the Himalayas and the Andaman Islands. Grow it in bright, indirect light in a very airy mix and water when the medium is fairly dry but not bone-dry. Average indoor warmth suits it, and higher humidity can help steady growth."
+    },
+    "pl": {
+      "common_name": "hoja himalajska",
+      "description": "Hoya serpens to drobnolistna, zwisająca hoja epifityczna pochodząca z Himalajów i Wysp Andamańskich. Uprawiaj ją w jasnym, rozproszonym świetle w bardzo przewiewnym podłożu i podlewaj, gdy podłoże wyraźnie przeschnie, ale nie całkowicie. Ciepło domowe zwykle wystarcza, a wyższa wilgotność sprzyja wzrostowi."
+    },
+    "de": {
+      "common_name": "Himalaya-Wachsblume",
+      "description": "Hoya serpens ist eine kleinblättrige, hängende epiphytische Hoya aus dem Himalaya und den Andamanen. Stelle sie hell, aber ohne direkte Sonne, in ein sehr luftiges Substrat und gieße, wenn das Medium ziemlich trocken ist, jedoch nicht völlig austrocknet. Normale Zimmertemperaturen passen, und höhere Luftfeuchte unterstützt das Wachstum."
+    },
+    "fr": {
+      "common_name": "hoya serpens",
+      "description": "Hoya serpens est un hoya épiphyte retombant à petites feuilles, originaire de l’Himalaya et des îles Andaman. Placez-le en lumière vive indirecte dans un substrat très aéré et arrosez quand le mélange est assez sec sans le laisser sécher complètement. Une humidité plus élevée peut favoriser une croissance régulière."
+    },
+    "it": {
+      "common_name": "hoya serpens",
+      "description": "Hoya serpens è una Hoya epifita ricadente a foglie piccole, originaria dell’Himalaya e delle Isole Andamane. Coltivala con luce intensa ma indiretta in un substrato molto arioso e annaffia quando il mix è quasi asciutto, senza farlo seccare del tutto. Temperature domestiche medie vanno bene e un’umidità più alta può aiutare la crescita."
+    },
+    "es": {
+      "common_name": "hoya serpens",
+      "description": "Hoya serpens es una hoya epífita colgante de hojas pequeñas, nativa del Himalaya y de las islas Andamán. Dale luz brillante e indirecta, usa un sustrato muy aireado y riega cuando el medio esté bastante seco, sin dejar que se seque por completo. Una humedad más alta puede favorecer un crecimiento constante."
+    },
+    "pt": {
+      "common_name": "hoya serpens",
+      "description": "Hoya serpens é uma hoya epífita pendente de folhas pequenas, nativa do Himalaia e das Ilhas Andamão. Mantenha em luz forte indireta, em substrato muito arejado, e regue quando o meio estiver bem seco, sem deixar secar totalmente. Maior humidade pode ajudar no crescimento."
+    },
+    "ar": {
+      "common_name": "هويا سيربنس",
+      "description": "Hoya serpens هويا نباتية صغيرة الأوراق ومتدلية وتنمو كإيبيفايت، موطنها جبال الهيمالايا وجزر أندامان. توضع في ضوء ساطع غير مباشر مع تربة جيدة التهوية جدًا، وتُسقى عندما يجف الوسط إلى حد كبير دون أن يجف تمامًا. الرطوبة الأعلى قد تساعد على نمو أكثر ثباتًا."
+    },
+    "hi": {
+      "common_name": "होया सर्पेन्स",
+      "description": "Hoya serpens छोटे पत्तों वाली, लटकने वाली एपिफाइट होया है, जो हिमालय और अंडमान द्वीपों की मूल निवासी है. इसे तेज अप्रत्यक्ष रोशनी में बहुत हवादार माध्यम में उगाएँ और तब पानी दें जब माध्यम काफी सूख जाए, पर पूरी तरह न सूखे. सामान्य कमरे का तापमान ठीक रहता है और अधिक आर्द्रता से वृद्धि में मदद मिल सकती है."
+    },
+    "zh": {
+      "common_name": "蛇纹球兰",
+      "description": "Hoya serpens 是小叶、垂生的附生球兰，原产喜马拉雅地区及安达曼群岛。置于明亮散射光下，使用非常疏松透气的基质，待介质较干后再浇水，但不要完全干透。较高空气湿度有助于稳定生长。"
+    },
+    "ja": {
+      "common_name": "ホヤ・セルペンス",
+      "description": "Hoya serpens は小さな葉の垂れ下がる着生ホヤで、ヒマラヤ地域とアンダマン諸島が原産です。明るい間接光と通気性の高い用土で育て、用土がかなり乾いてから水やりしますが、完全に乾かし切らないようにします。湿度が高めだと生育が安定しやすいです。"
+    },
+    "ko": {
+      "common_name": "호야 세르펜스",
+      "description": "Hoya serpens 는 작은 잎이 촘촘한 덩굴성 착생 호야로, 히말라야 지역과 안다만 제도가 원산입니다. 밝은 간접광과 통기성 좋은 배합토에서 키우고, 배지가 거의 마르면 물을 주되 완전히 바싹 마르게 두지 않습니다. 비교적 높은 습도가 안정적인 생장에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98692-1",
+      "https://www.rhs.org.uk/plants/8863/hoya-serpens/details",
+      "https://www.rhs.org.uk/plants/hoya/how-to-grow",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276833",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/wax-plant"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "parthenocissus_tricuspidata",
+  "name": "Boston Ivy",
+  "latin": "Parthenocissus tricuspidata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "parthenocissus_tricuspidata.jpg",
+  "image_thumb": "parthenocissus_tricuspidata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "التربة الطينية",
+          "hi": "मिट्टी वाली मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土壌",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "16-24°C",
+          "pl": "16-24°C",
+          "de": "16-24°C",
+          "fr": "16-24°C",
+          "it": "16-24°C",
+          "es": "16-24°C",
+          "pt": "16-24°C",
+          "ar": "16-24 درجة مئوية",
+          "hi": "16-24°C",
+          "zh": "16-24°C",
+          "ja": "16-24°C",
+          "ko": "16-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط الرطوبة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असामान्य नहीं",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vigorous",
+          "pl": "Silny",
+          "de": "Kraftvoll",
+          "fr": "Vigoureux",
+          "it": "Vigoroso",
+          "es": "Vigoroso",
+          "pt": "Vigoroso",
+          "ar": "نمو قوي",
+          "hi": "तेज़ी से बढ़ना",
+          "zh": "旺盛的生长",
+          "ja": "活発な成長",
+          "ko": "강한 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Boston Ivy",
+      "description": "Parthenocissus tricuspidata, also known as Boston Ivy, is a vigorous, fast-growing vine that thrives in medium light. It is commonly seen climbing on walls and trellises, offering vibrant green foliage."
+    },
+    "pl": {
+      "common_name": "Bluszcz Bostoński",
+      "description": "Parthenocissus tricuspidata, znany również jako bluszcz bostoński, to energicznie rosnący pnącz, który dobrze rośnie w średnim świetle. Często widoczny wspinający się po ścianach i treliażach, oferując intensywnie zieloną roślinność."
+    },
+    "de": {
+      "common_name": "Boston-Efeu",
+      "description": "Parthenocissus tricuspidata, auch als Boston-Efeu bekannt, ist eine kräftige, schnell wachsende Kletterpflanze, die bei mittlerem Licht gedeiht. Häufig an Wänden und Spalieren zu finden, bietet sie lebendige grüne Blätter."
+    },
+    "fr": {
+      "common_name": "Lierre de Boston",
+      "description": "Parthenocissus tricuspidata, également connu sous le nom de lierre de Boston, est une vigne vigoureuse et à croissance rapide qui prospère sous une lumière moyenne. On la trouve souvent en train de grimper sur des murs et des treillis, offrant un feuillage vert vibrant."
+    },
+    "it": {
+      "common_name": "Edera di Boston",
+      "description": "Parthenocissus tricuspidata, conosciuta anche come edera di Boston, è una pianta rampicante vigorosa e a crescita rapida che prospera in luce media. Viene comunemente vista arrampicarsi su muri e tralicci, offrendo fogliame verde vibrante."
+    },
+    "es": {
+      "common_name": "Hiedra de Boston",
+      "description": "Parthenocissus tricuspidata, también conocida como hiedra de Boston, es una enredadera vigorosa y de rápido crecimiento que prospera en luz media. Se ve comúnmente trepando por muros y enrejados, ofreciendo un follaje verde vibrante."
+    },
+    "pt": {
+      "common_name": "Hera de Boston",
+      "description": "Parthenocissus tricuspidata, também conhecida como hera de Boston, é uma planta trepadeira vigorosa e de crescimento rápido que prospera sob luz média. Comumente vista subindo em paredes e treliças, oferecendo um folhagem verde vibrante."
+    },
+    "ar": {
+      "common_name": "اللبلاب بوسطن",
+      "description": "Parthenocissus tricuspidata، المعروف أيضًا باسم اللبلاب بوسطن، هو نبات متسلق نشط سريع النمو يزدهر في الضوء المتوسط. غالبًا ما يُرى يتسلق الجدران والتعريشات، مما يقدم أوراق خضراء نابضة بالحياة."
+    },
+    "hi": {
+      "common_name": "बॉस्टन आइवी",
+      "description": "Parthenocissus tricuspidata, जिसे बॉस्टन आइवी भी कहा जाता है, एक जीवंत और तेज़ी से बढ़ने वाला लता है जो मध्यम प्रकाश में पनपता है। इसे आमतौर पर दीवारों और ट्रेलिस पर चढ़ते हुए देखा जाता है, जिसमें हरा पत्तियां होती हैं।"
+    },
+    "zh": {
+      "common_name": "波士顿常春藤",
+      "description": "Parthenocissus tricuspidata，也被称为波士顿常春藤，是一种生长旺盛的藤本植物，适应中等光照。通常可见其爬满墙壁和架子，展现出绿色的叶片。"
+    },
+    "ja": {
+      "common_name": "ボストンアイビー",
+      "description": "Parthenocissus tricuspidata、ボストンアイビーとしても知られるこの植物は、活発に成長するつる植物で、適度な光の中で繁茂します。壁やトレリスを登る姿が一般的で、鮮やかな緑の葉を提供します。"
+    },
+    "ko": {
+      "common_name": "보스턴 아이비",
+      "description": "Parthenocissus tricuspidata, 보스턴 아이비로도 알려진 이 식물은 활발하게 자라는 덩굴식물로 중간 정도의 빛에서 잘 자랍니다. 일반적으로 벽과 트렐리스에 오르는 모습을 볼 수 있으며, 생기 넘치는 초록색 잎을 제공합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1268/Parthenocissus-tricuspidata/Details",
+      "https://www.bhg.com/gardening/pests-insects-diseases/boston-ivy-care/"
+    ]
+  }
+}

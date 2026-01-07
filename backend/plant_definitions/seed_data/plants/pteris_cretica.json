@@ -1,0 +1,237 @@
+{
+  "external_id": "pteris_cretica",
+  "name": "Cretan Brake Fern",
+  "latin": "Pteris cretica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pteris_cretica.jpg",
+  "image_thumb": "pteris_cretica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lösem Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepły",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haut taux d'humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cretan Brake Fern",
+      "description": "Pteris cretica is a fern native to tropical regions. It thrives in moderate light and humid environments."
+    },
+    "pl": {
+      "common_name": "Paproć Kreta",
+      "description": "Pteris cretica to paproć pochodząca z tropikalnych regionów. Wymaga umiarkowanego światła i wilgotnego środowiska."
+    },
+    "de": {
+      "common_name": "Kretische Schwertfarn",
+      "description": "Pteris cretica ist ein Farn, der in tropischen Regionen beheimatet ist. Er gedeiht bei mäßigem Licht und hoher Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Fougère de Crète",
+      "description": "Pteris cretica est une fougère originaire des régions tropicales. Elle prospère dans des environnements à lumière modérée et à forte humidité."
+    },
+    "it": {
+      "common_name": "Felce di Creta",
+      "description": "Pteris cretica è una felce originaria delle regioni tropicali. Cresce in ambienti con luce moderata e umidità elevata."
+    },
+    "es": {
+      "common_name": "Helecho de Creta",
+      "description": "Pteris cretica es un helecho originario de regiones tropicales. Crece en ambientes de luz moderada y alta humedad."
+    },
+    "pt": {
+      "common_name": "Samambaia de Creta",
+      "description": "Pteris cretica é uma samambaia originária de regiões tropicais. Ela cresce em ambientes de luz moderada e alta umidade."
+    },
+    "ar": {
+      "common_name": "سرخس كريت",
+      "description": "Pteris cretica هو سرخس موطنه المناطق الاستوائية. ينمو في بيئات ذات إضاءة معتدلة ورطوبة عالية."
+    },
+    "hi": {
+      "common_name": "क्रीट ब्रेक फर्न",
+      "description": "Pteris cretica एक फर्न है जो उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह मध्यम रोशनी और उच्च आर्द्रता वाले वातावरण में उगता है।"
+    },
+    "zh": {
+      "common_name": "克里特岛蕨",
+      "description": "Pteris cretica 是一种原产于热带地区的蕨类植物。它在中等光照和高湿度的环境中生长。"
+    },
+    "ja": {
+      "common_name": "クレタ島のブレークシダ",
+      "description": "Pteris cretica は熱帯地域に自生するシダ植物です。中程度の光と高い湿度の環境で育ちます。"
+    },
+    "ko": {
+      "common_name": "크레타 브레이크 고사리",
+      "description": "Pteris cretica는 열대 지역 원산의 고사리입니다. 중간 정도의 빛과 높은 습도의 환경에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=412",
+      "https://www.gardenia.net/plant/pteris-cretica"
+    ]
+  }
+}

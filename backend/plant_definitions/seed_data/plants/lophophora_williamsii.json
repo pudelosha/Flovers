@@ -1,0 +1,237 @@
+{
+  "external_id": "lophophora_williamsii",
+  "name": "Peyote",
+  "latin": "Lophophora williamsii",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 36,
+  "image_hero": "lophophora_williamsii.jpg",
+  "image_thumb": "lophophora_williamsii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol pleno",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Cactus soil",
+          "pl": "Gleba kaktusowa",
+          "de": "Kakteenerde",
+          "fr": "Sol cactus",
+          "it": "Terriccio cactus",
+          "es": "Sustrato cactus",
+          "pt": "Solo cactus",
+          "ar": "تربة صبار",
+          "hi": "कैक्टस मिट्टी",
+          "zh": "仙人掌土",
+          "ja": "サボテン用土",
+          "ko": "선인장 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり少なめ",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging",
+          "pl": "Trudna",
+          "de": "Anspruchsvoll",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "较难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm 15–30°C",
+          "pl": "Ciepło 15–30°C",
+          "de": "Warm 15–30°C",
+          "fr": "Chaud 15–30°C",
+          "it": "Caldo 15–30°C",
+          "es": "Cálido 15–30°C",
+          "pt": "Quente 15–30°C",
+          "ar": "دافئ 15–30°م",
+          "hi": "गरम 15–30°C",
+          "zh": "温暖15–30°C",
+          "ja": "温暖15–30°C",
+          "ko": "따뜻함 15–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrig",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very slow",
+          "pl": "Bardzo wolny",
+          "de": "Sehr langsam",
+          "fr": "Très lent",
+          "it": "Molto lenta",
+          "es": "Muy lento",
+          "pt": "Muito lento",
+          "ar": "بطيء جدًا",
+          "hi": "बहुत धीमा",
+          "zh": "极慢",
+          "ja": "非常に遅い",
+          "ko": "매우 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peyote",
+      "description": "Lophophora williamsii is a small, spineless cactus native to northern Mexico and southern Texas. It grows very slowly and requires bright sun and excellent drainage. Overwatering or cold temperatures can quickly damage the plant."
+    },
+    "pl": {
+      "common_name": "Peyotl",
+      "description": "Lophophora williamsii to mały, bezkolcowy kaktus pochodzący z północnego Meksyku i południowego Teksasu. Rośnie bardzo wolno i wymaga dużo słońca oraz doskonałego drenażu. Nadmiar wody lub chłód łatwo prowadzą do gnicia."
+    },
+    "de": {
+      "common_name": "Peyote",
+      "description": "Lophophora williamsii ist ein kleiner, dornenloser Kaktus aus Nordmexiko und Südtexas. Er wächst sehr langsam und benötigt viel Sonne sowie ein stark durchlässiges Substrat. Staunässe und Kälte schaden der Pflanze."
+    },
+    "fr": {
+      "common_name": "Peyotl",
+      "description": "Lophophora williamsii est un petit cactus sans épines originaire du nord du Mexique et du sud du Texas. Sa croissance est très lente et il demande beaucoup de lumière et un sol très drainant. Un excès d’eau ou le froid peuvent l’endommager."
+    },
+    "it": {
+      "common_name": "Peyote",
+      "description": "Lophophora williamsii è un piccolo cactus senza spine originario del Messico settentrionale e del Texas meridionale. Cresce molto lentamente e richiede pieno sole e terreno ben drenato. L’eccesso d’acqua o il freddo causano facilmente marciumi."
+    },
+    "es": {
+      "common_name": "Peyote",
+      "description": "Lophophora williamsii es un cactus pequeño y sin espinas originario del norte de México y el sur de Texas. Su crecimiento es muy lento y necesita sol intenso y un sustrato muy drenante. El riego excesivo o el frío pueden dañarlo."
+    },
+    "pt": {
+      "common_name": "Peyote",
+      "description": "Lophophora williamsii é um pequeno cacto sem espinhos nativo do norte do México e do sul do Texas. Cresce muito lentamente e exige sol pleno e solo bem drenado. Excesso de água ou baixas temperaturas prejudicam a planta."
+    },
+    "ar": {
+      "common_name": "بيوتي",
+      "description": "نبات Lophophora williamsii صبار صغير بلا أشواك موطنه شمال المكسيك وجنوب تكساس. نموه بطيء جدًا ويحتاج إلى شمس قوية وتربة جيدة التصريف. الإفراط في الري أو البرودة قد يسببان تلفه."
+    },
+    "hi": {
+      "common_name": "पेयोते",
+      "description": "Lophophora williamsii एक छोटा, बिना कांटों वाला कैक्टस है जो उत्तरी मेक्सिको और दक्षिणी टेक्सास का मूल निवासी है। इसकी वृद्धि बहुत धीमी होती है और इसे तेज़ धूप व अच्छी जल निकासी चाहिए। अधिक पानी या ठंड से पौधा खराब हो सकता है।"
+    },
+    "zh": {
+      "common_name": "佩奥特",
+      "description": "Lophophora williamsii 是原产于墨西哥北部和美国德州南部的小型无刺仙人掌。生长极其缓慢，需要强光和良好排水的土壤。浇水过多或低温都会造成损害。"
+    },
+    "ja": {
+      "common_name": "ペヨーテ",
+      "description": "Lophophora williamsii はメキシコ北部とテキサス南部原産の小型で棘のないサボテンです。成長は非常に遅く、強い日光と排水性の高い用土を必要とします。過湿や低温は株を傷めます。"
+    },
+    "ko": {
+      "common_name": "페요테",
+      "description": "Lophophora williamsii는 멕시코 북부와 미국 텍사스 남부 원산의 작은 무가시 선인장입니다. 생장이 매우 느리며 강한 햇빛과 배수가 좋은 토양이 필요합니다. 과습이나 저온은 식물에 해롭습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:135232-1",
+      "https://www.rhs.org.uk/plants/10416/lophophora-williamsii/details",
+      "https://www.desertmuseum.org/books/nhsd_lophophora.php"
+    ]
+  }
+}

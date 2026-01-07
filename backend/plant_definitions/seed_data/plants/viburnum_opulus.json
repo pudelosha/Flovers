@@ -1,0 +1,237 @@
+{
+  "external_id": "viburnum_opulus",
+  "name": "Guelder rose",
+  "latin": "Viburnum opulus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "viburnum_opulus.jpg",
+  "image_thumb": "viburnum_opulus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun to part shade",
+          "pl": "Słońce lub półcień",
+          "de": "Sonne bis Halbschatten",
+          "fr": "Soleil à mi-ombre",
+          "it": "Sole o mezz’ombra",
+          "es": "Sol o semisombra",
+          "pt": "Sol ou meia-sombra",
+          "ar": "شمس إلى ظل جزئي",
+          "hi": "धूप या आंशिक छाया",
+          "zh": "全日照至半阴",
+          "ja": "日向から半日陰",
+          "ko": "양지~반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, fertile loam",
+          "pl": "Wilgotna żyzna gleba",
+          "de": "Feuchter fruchtbarer Boden",
+          "fr": "Sol fertile humide",
+          "it": "Terreno fertile umido",
+          "es": "Suelo fértil húmedo",
+          "pt": "Solo fértil úmido",
+          "ar": "تربة خصبة رطبة",
+          "hi": "उपजाऊ नम मिट्टी",
+          "zh": "湿润肥沃土壤",
+          "ja": "湿った肥沃土",
+          "ko": "비옥한 습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित सिंचाई",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cold hardy",
+          "pl": "Mrozoodporna",
+          "de": "Winterhart",
+          "fr": "Rustique",
+          "it": "Resistente al freddo",
+          "es": "Resistente al frío",
+          "pt": "Resistente ao frio",
+          "ar": "مقاوم للبرد",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic berries",
+          "pl": "Lekko trujące owoce",
+          "de": "Beeren leicht giftig",
+          "fr": "Baies légèrement toxiques",
+          "it": "Bacche leggermente tossiche",
+          "es": "Bayas levemente tóxicas",
+          "pt": "Bagas levemente tóxicas",
+          "ar": "ثمار سامة قليلاً",
+          "hi": "फल हल्के विषैले",
+          "zh": "浆果微毒",
+          "ja": "果実は軽い毒性",
+          "ko": "열매 약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Deciduous shrub",
+          "pl": "Krzew liściasty",
+          "de": "Laubabwerfender Strauch",
+          "fr": "Arbuste caduc",
+          "it": "Arbusto deciduo",
+          "es": "Arbusto caduco",
+          "pt": "Arbusto caducifólio",
+          "ar": "شجيرة متساقطة",
+          "hi": "पर्णपाती झाड़ी",
+          "zh": "落叶灌木",
+          "ja": "落葉低木",
+          "ko": "낙엽 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Guelder rose",
+      "description": "Viburnum opulus is a deciduous shrub native to Europe and parts of Asia. It produces white spring flowers and red berries in autumn. It is commonly grown outdoors in gardens and hedges."
+    },
+    "pl": {
+      "common_name": "Kalina koralowa",
+      "description": "Kalina koralowa to liściasty krzew pochodzący z Europy i Azji. Wiosną tworzy białe kwiaty, a jesienią czerwone owoce. Jest często sadzona w ogrodach i parkach."
+    },
+    "de": {
+      "common_name": "Gemeiner Schneeball",
+      "description": "Der Gemeine Schneeball ist ein laubabwerfender Strauch aus Europa und Asien. Er blüht im Frühjahr weiß und bildet im Herbst rote Beeren. Er wird häufig im Gartenbau verwendet."
+    },
+    "fr": {
+      "common_name": "Viorne obier",
+      "description": "La viorne obier est un arbuste caduc originaire d’Europe et d’Asie. Elle porte des fleurs blanches au printemps et des baies rouges en automne. Elle est cultivée en extérieur."
+    },
+    "it": {
+      "common_name": "Viburno palla di neve",
+      "description": "Il Viburnum opulus è un arbusto deciduo originario di Europa e Asia. Fiorisce in primavera con fiori bianchi e produce bacche rosse in autunno. È adatto alla coltivazione all’aperto."
+    },
+    "es": {
+      "common_name": "Bola de nieve",
+      "description": "Viburnum opulus es un arbusto caducifolio originario de Europa y Asia. Produce flores blancas en primavera y bayas rojas en otoño. Se cultiva principalmente en exteriores."
+    },
+    "pt": {
+      "common_name": "Bola-de-neve-europeia",
+      "description": "Viburnum opulus é um arbusto caducifólio nativo da Europa e da Ásia. Apresenta flores brancas na primavera e frutos vermelhos no outono. É cultivado ao ar livre."
+    },
+    "ar": {
+      "common_name": "الفيبورنوم الأوروبي",
+      "description": "فيبورنوم أوبولوس شجيرة متساقطة موطنها أوروبا وآسيا. تزهر بأزهار بيضاء في الربيع وتنتج ثمارًا حمراء في الخريف. تزرع عادة في الحدائق الخارجية."
+    },
+    "hi": {
+      "common_name": "गुएल्डर रोज़",
+      "description": "विबर्नम ओपुलस यूरोप और एशिया का पर्णपाती झाड़ी है। इसमें वसंत में सफेद फूल और शरद ऋतु में लाल फल लगते हैं। यह सामान्यतः बाहर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "欧洲荚蒾",
+      "description": "欧洲荚蒾是一种原产于欧洲和亚洲的落叶灌木。春季开白花，秋季结红色果实。多用于室外种植。"
+    },
+    "ja": {
+      "common_name": "セイヨウカンボク",
+      "description": "セイヨウカンボクはヨーロッパとアジア原産の落葉低木です。春に白い花を咲かせ、秋に赤い実を付けます。屋外で栽培されます。"
+    },
+    "ko": {
+      "common_name": "겔더 로즈",
+      "description": "비버넘 오풀루스는 유럽과 아시아 원산의 낙엽 관목입니다. 봄에 흰 꽃이 피고 가을에 붉은 열매가 맺힙니다. 주로 야외에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/19010/viburnum-opulus/details",
+      "https://plants.ces.ncsu.edu/plants/viburnum-opulus/",
+      "https://www.britannica.com/plant/guelder-rose"
+    ]
+  }
+}

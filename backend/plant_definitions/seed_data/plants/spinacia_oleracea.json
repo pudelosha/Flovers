@@ -1,0 +1,237 @@
+{
+  "external_id": "spinacia_oleracea",
+  "name": "Spinach",
+  "latin": "Spinacia oleracea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "spinacia_oleracea.jpg",
+  "image_thumb": "spinacia_oleracea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwe",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool",
+          "pl": "chłodne",
+          "de": "kühl",
+          "fr": "frais",
+          "it": "fresco",
+          "es": "fresco",
+          "pt": "fresco",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "시원한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spinach",
+      "description": "Spinach is a fast-growing, leafy vegetable. It thrives in cooler climates with moderate sunlight."
+    },
+    "pl": {
+      "common_name": "Szpinak",
+      "description": "Szpinak to szybko rosnąca roślina liściasta. Dobrze rośnie w chłodniejszych klimatach z umiarkowanym nasłonecznieniem."
+    },
+    "de": {
+      "common_name": "Spinat",
+      "description": "Spinat ist ein schnell wachsendes, blättriges Gemüse. Er gedeiht in kühleren Klimazonen mit mäßigem Sonnenlicht."
+    },
+    "fr": {
+      "common_name": "Épinard",
+      "description": "L'épinard est une plante à feuilles qui pousse rapidement. Il prospère dans les climats plus frais avec un ensoleillement modéré."
+    },
+    "it": {
+      "common_name": "Spinaci",
+      "description": "Gli spinaci sono una pianta a crescita rapida e a foglia. Crescono bene nei climi più freschi con luce solare moderata."
+    },
+    "es": {
+      "common_name": "Espinaca",
+      "description": "La espinaca es una planta de rápido crecimiento y con hojas. Crece bien en climas frescos con luz solar moderada."
+    },
+    "pt": {
+      "common_name": "Espinafre",
+      "description": "O espinafre é uma planta de crescimento rápido e com folhas. Cresce bem em climas mais frescos com luz solar moderada."
+    },
+    "ar": {
+      "common_name": "السبانخ",
+      "description": "السبانخ هو نبات سريع النمو ذو أوراق. ينمو جيدًا في المناخات الباردة مع ضوء الشمس المعتدل."
+    },
+    "hi": {
+      "common_name": "पालक",
+      "description": "पालक एक तेजी से बढ़ने वाली पत्तेदार सब्जी है। यह ठंडी जलवायु में मध्यम धूप में अच्छी तरह से उगता है।"
+    },
+    "zh": {
+      "common_name": "菠菜",
+      "description": "菠菜是一种快速生长的叶菜类植物。它在凉爽的气候中，适度的阳光下生长良好。"
+    },
+    "ja": {
+      "common_name": "ほうれん草",
+      "description": "ほうれん草は成長が早い葉物野菜です。涼しい気候と適度な日光でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "시금치",
+      "description": "시금치는 빠르게 자라는 잎채소입니다. 서늘한 기후에서 적당한 햇빛을 받으며 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pests-insects-diseases/how-to-grow-spinach/",
+      "https://www.gardenersworld.com/plants/how-to-grow-spinach/"
+    ]
+  }
+}

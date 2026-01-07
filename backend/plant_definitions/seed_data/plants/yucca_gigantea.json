@@ -1,0 +1,237 @@
+{
+  "external_id": "yucca_gigantea",
+  "name": "Giant Yucca",
+  "latin": "Yucca gigantea",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "yucca_gigantea.jpg",
+  "image_thumb": "yucca_gigantea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "强光照",
+          "ja": "明るい光",
+          "ko": "강한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining soil",
+          "pl": "Dobrze zdrenowana",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Infrequent watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Rega rara",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy care",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جداً",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27℃",
+          "ja": "18–27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal indoor",
+          "pl": "Zwykła domowa",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Humidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trująca dla zw.",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium",
+          "pl": "Wolny wzrost",
+          "de": "Langsam-mittel",
+          "fr": "Lente à moyen",
+          "it": "Lenta-media",
+          "es": "Lento-medio",
+          "pt": "Lento-médio",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長ゆっくり",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Giant yucca",
+      "description": "Yucca gigantea is a tree-like yucca native to Central America. It is valued as an indoor plant for its tolerance of drought and bright light. With proper drainage, it requires minimal care."
+    },
+    "pl": {
+      "common_name": "Jukka olbrzymia",
+      "description": "Yucca gigantea to drzewiasta jukka pochodząca z Ameryki Środkowej. Jest ceniona jako roślina domowa ze względu na odporność na suszę. Wymaga jasnego stanowiska i dobrego drenażu."
+    },
+    "de": {
+      "common_name": "Riesen-Palmlilie",
+      "description": "Yucca gigantea ist eine baumartige Yucca aus Mittelamerika. Sie ist als Zimmerpflanze sehr beliebt und trockenheitsverträglich. Helles Licht und durchlässige Erde sind wichtig."
+    },
+    "fr": {
+      "common_name": "Yucca géant",
+      "description": "Yucca gigantea est un yucca arborescent originaire d’Amérique centrale. Elle est appréciée en intérieur pour sa robustesse et sa tolérance à la sécheresse. Un sol drainant est essentiel."
+    },
+    "it": {
+      "common_name": "Yucca gigantea",
+      "description": "Yucca gigantea è una pianta arborea originaria dell’America Centrale. È molto coltivata in casa per la sua resistenza e il basso fabbisogno idrico. Necessita di molta luce."
+    },
+    "es": {
+      "common_name": "Yuca gigante",
+      "description": "Yucca gigantea es una yuca arbórea nativa de Centroamérica. Se cultiva ampliamente como planta de interior por su fácil mantenimiento. Prefiere luz intensa y riego moderado."
+    },
+    "pt": {
+      "common_name": "Iúca-gigante",
+      "description": "Yucca gigantea é uma planta arbórea da América Central. É popular como planta de interior devido à sua resistência à seca. Requer boa iluminação e solo drenado."
+    },
+    "ar": {
+      "common_name": "يوكا عملاقة",
+      "description": "يوكا جيغانتيا نبات شجري موطنه أمريكا الوسطى. يزرع كنبات داخلي لقلة حاجته للماء. يحتاج إلى ضوء ساطع وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "जायंट युक्का",
+      "description": "Yucca gigantea मध्य अमेरिका की एक वृक्षनुमा युक्का है। इसे घर के अंदर इसकी सूखा सहनशीलता के लिए उगाया जाता है। अच्छी रोशनी और जल निकास आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "巨型丝兰",
+      "description": "Yucca gigantea 原产于中美洲，是一种木质丝兰。因耐旱、易养护而常作室内植物。需要充足光照和良好排水。"
+    },
+    "ja": {
+      "common_name": "ユッカ・ギガンテア",
+      "description": "ユッカ・ギガンテアは中米原産の木立性ユッカです。乾燥に強く観葉植物として人気があります。明るい光と水はけが必要です。"
+    },
+    "ko": {
+      "common_name": "유카 기간테아",
+      "description": "Yucca gigantea는 중앙아메리카 원산의 목본성 유카입니다. 건조에 강해 실내 식물로 널리 재배됩니다. 밝은 빛과 배수가 중요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/yucca/gigantea/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a781",
+      "https://www.gardenersworld.com/plants/yucca-gigantea/"
+    ]
+  }
+}

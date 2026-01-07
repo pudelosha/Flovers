@@ -1,0 +1,237 @@
+{
+  "external_id": "sedum_pachyphyllum",
+  "name": "Jelly Bean Plant",
+  "latin": "Sedum pachyphyllum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sedum_pachyphyllum.jpg",
+  "image_thumb": "sedum_pachyphyllum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol directo",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "完全日光",
+          "ko": "완전한 햇볕"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असामान्य",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jelly Bean Plant",
+      "description": "Sedum pachyphyllum, or Jelly Bean Plant, is a succulent native to Mexico. Its thick, fleshy, blue-green leaves are tipped with reddish-pink."
+    },
+    "pl": {
+      "common_name": "Roślina Żelki",
+      "description": "Sedum pachyphyllum, znana jako Roślina Żelki, to sukulent pochodzący z Meksyku. Jej grube, mięsiste, niebiesko-zielone liście mają różowawo-czerwone końce."
+    },
+    "de": {
+      "common_name": "Gummibärchenpflanze",
+      "description": "Sedum pachyphyllum, auch Gummibärchenpflanze genannt, ist ein Sukkulent aus Mexiko. Die dicken, fleischigen, blau-grünen Blätter sind an den Spitzen rötlich-pink."
+    },
+    "fr": {
+      "common_name": "Plante Jelly Bean",
+      "description": "Sedum pachyphyllum, aussi appelée Plante Jelly Bean, est une succulente originaire du Mexique. Ses feuilles épaisses et charnues sont bleu-vert avec des pointes rougeâtres."
+    },
+    "it": {
+      "common_name": "Pianta Jelly Bean",
+      "description": "Sedum pachyphyllum, o Pianta Jelly Bean, è una succulenta originaria del Messico. Le sue foglie spesse e carnose sono verdi-blu con punte rosse."
+    },
+    "es": {
+      "common_name": "Planta Jelly Bean",
+      "description": "Sedum pachyphyllum, o Planta Jelly Bean, es una suculenta originaria de México. Sus hojas gruesas y carnosas son de color verde-azul con puntas rojizas."
+    },
+    "pt": {
+      "common_name": "Planta Jelly Bean",
+      "description": "Sedum pachyphyllum, também conhecida como Planta Jelly Bean, é uma suculenta nativa do México. Suas folhas espessas e carnudas são verde-azul com pontas avermelhadas."
+    },
+    "ar": {
+      "common_name": "نبات جيلي بين",
+      "description": "Sedum pachyphyllum، والمعروف أيضًا باسم نبات جيلي بين، هو نبات عصاري أصلي من المكسيك. أوراقه السميكة والعصارية ذات اللون الأزرق-الأخضر مع أطراف حمراء."
+    },
+    "hi": {
+      "common_name": "जेली बीन पौधा",
+      "description": "Sedum pachyphyllum, जिसे जेली बीन पौधा भी कहा जाता है, मेक्सिको का एक मांसल पौधा है। इसके मोटे, मांसल, नीले-हरे पत्ते लाल-गुलाबी टिप्स के साथ होते हैं।"
+    },
+    "zh": {
+      "common_name": "果冻豆植物",
+      "description": "Sedum pachyphyllum，或果冻豆植物，是一种原产于墨西哥的多肉植物。它的厚实肉质叶子是蓝绿色的，叶尖带有红色。"
+    },
+    "ja": {
+      "common_name": "ジェリービーンプラント",
+      "description": "Sedum pachyphyllum、またはジェリービーンプラントは、メキシコ原産の多肉植物です。その厚く肉厚な青緑色の葉は、赤みを帯びたピンク色の先端を持っています。"
+    },
+    "ko": {
+      "common_name": "젤리빈 식물",
+      "description": "Sedum pachyphyllum, 또는 젤리빈 식물은 멕시코 원산지의 다육 식물입니다. 그 두껍고 육즙이 많은 청록색 잎은 붉은색 끝이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/102727/Sedum-pachyphyllum/Details",
+      "https://www.gardenia.net/plant/sedum-pachyphyllum"
+    ]
+  }
+}

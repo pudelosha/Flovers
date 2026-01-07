@@ -1,0 +1,237 @@
+{
+  "external_id": "rubus_idaeus",
+  "name": "Raspberry",
+  "latin": "Rubus idaeus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "rubus_idaeus.jpg",
+  "image_thumb": "rubus_idaeus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lößboden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia woda",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等水量",
+          "ja": "中程度の水",
+          "ko": "중간 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Froid à chaud",
+          "it": "Freddo a caldo",
+          "es": "Frío a cálido",
+          "pt": "Frio a morno",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "冷到温暖",
+          "ja": "涼しいから暖かい",
+          "ko": "차가운 것에서 따뜻한 것까지"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज बढ़ता हुआ",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Raspberry",
+      "description": "Raspberry is a popular fruit-bearing plant grown for its edible berries. It thrives in temperate climates and needs medium water and sunlight."
+    },
+    "pl": {
+      "common_name": "Malina",
+      "description": "Malina to popularna roślina owocująca, uprawiana dla swoich jadalnych jagód. Rośnie w klimacie umiarkowanym, potrzebuje średniego podlewania i światła słonecznego."
+    },
+    "de": {
+      "common_name": "Himbeere",
+      "description": "Die Himbeere ist eine beliebte Fruchtpflanze, die wegen ihrer essbaren Beeren angebaut wird. Sie gedeiht in gemäßigten Klimazonen und benötigt mittlere Bewässerung und Sonnenlicht."
+    },
+    "fr": {
+      "common_name": "Framboise",
+      "description": "La framboise est une plante fruitière populaire cultivée pour ses baies comestibles. Elle prospère dans les climats tempérés et nécessite un arrosage et de la lumière moyenne."
+    },
+    "it": {
+      "common_name": "Lampone",
+      "description": "Il lampone è una pianta da frutto popolare coltivata per le sue bacche commestibili. Cresce nei climi temperati e ha bisogno di acqua e luce solare medie."
+    },
+    "es": {
+      "common_name": "Frambuesa",
+      "description": "La frambuesa es una planta frutal popular cultivada por sus bayas comestibles. Se desarrolla en climas templados y necesita riego y luz solar moderados."
+    },
+    "pt": {
+      "common_name": "Framboesa",
+      "description": "A framboesa é uma planta frutífera popular cultivada pelas suas bagas comestíveis. Ela cresce em climas temperados e precisa de rega e luz solar moderados."
+    },
+    "ar": {
+      "common_name": "توت العليق",
+      "description": "التوت العليق هو نبات فاكهة شائع يُزرع من أجل ثماره الصالحة للأكل. ينمو في المناخات المعتدلة ويحتاج إلى ري وضوء شمس متوسط."
+    },
+    "hi": {
+      "common_name": "रास्पबेरी",
+      "description": "रास्पबेरी एक लोकप्रिय फल देने वाली पौधा है, जिसे इसके खाने योग्य फल के लिए उगाया जाता है। यह समशीतोष्ण जलवायु में पनपता है और इसे मध्यम पानी और धूप की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "覆盆子",
+      "description": "覆盆子是一种受欢迎的水果植物，因其可食用的浆果而被栽培。它在温带气候中茁壮成长，需要中等水量和阳光。"
+    },
+    "ja": {
+      "common_name": "ラズベリー",
+      "description": "ラズベリーはその食用のベリーのために栽培される人気の果物植物です。温帯気候で育ち、適度な水と日光が必要です。"
+    },
+    "ko": {
+      "common_name": "라즈베리",
+      "description": "라즈베리는 먹을 수 있는 베리를 위해 재배되는 인기 있는 과일 식물입니다. 온대 기후에서 자라며, 중간 정도의 물과 햇빛이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=818",
+      "https://www.gardeningknowhow.com/edible/fruits/raspberry/raspberry-plant-care.htm"
+    ]
+  }
+}

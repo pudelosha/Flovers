@@ -1,0 +1,237 @@
+{
+  "external_id": "ruscus_aculeatus",
+  "name": "Butcher's Broom",
+  "latin": "Ruscus aculeatus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ruscus_aculeatus.jpg",
+  "image_thumb": "ruscus_aculeatus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol limoneux",
+          "it": "Terreno limoso",
+          "es": "Suelo limoso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "लवणयुक्त मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适中",
+          "ja": "適度な",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to medium",
+          "pl": "Niskie do średnie",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyenne",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低到中等",
+          "ja": "低〜中",
+          "ko": "낮음에서 중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमे",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Butcher's Broom",
+      "description": "Ruscus aculeatus, or butcher's broom, is a spiny shrub native to Europe. It is often used for medicinal purposes and has distinctive red berries."
+    },
+    "pl": {
+      "common_name": "Miotła rzeźnicza",
+      "description": "Ruscus aculeatus, czyli miotła rzeźnicza, to kolczasty krzew pochodzący z Europy. Jest często wykorzystywany w celach leczniczych, a jego cechą charakterystyczną są czerwone jagody."
+    },
+    "de": {
+      "common_name": "Pfrüchtiger Bärentraube",
+      "description": "Ruscus aculeatus, auch als Pfrüchtige Bärentraube bekannt, ist ein stacheliger Strauch aus Europa. Er wird oft zu medizinischen Zwecken verwendet und hat auffällige rote Beeren."
+    },
+    "fr": {
+      "common_name": "Balai du boucher",
+      "description": "Ruscus aculeatus, ou balai du boucher, est un buisson épineux originaire d'Europe. Il est souvent utilisé à des fins médicinales et possède des baies rouges caractéristiques."
+    },
+    "it": {
+      "common_name": "Scopa del macellaio",
+      "description": "Ruscus aculeatus, noto anche come scopa del macellaio, è un cespuglio spinoso originario dell'Europa. È spesso utilizzato per scopi medicinali e ha bacche rosse caratteristiche."
+    },
+    "es": {
+      "common_name": "Escoba del carnicero",
+      "description": "Ruscus aculeatus, o escoba del carnicero, es un arbusto espinoso originario de Europa. A menudo se utiliza con fines medicinales y tiene bayas rojas distintivas."
+    },
+    "pt": {
+      "common_name": "Vassoura do açougueiro",
+      "description": "Ruscus aculeatus, ou vassoura do açougueiro, é um arbusto espinhoso originário da Europa. É frequentemente utilizado para fins medicinais e possui bagas vermelhas características."
+    },
+    "ar": {
+      "common_name": "مقشة الجزار",
+      "description": "Ruscus aculeatus، أو مقشة الجزار، هو شجيرة شوكية موطنها أوروبا. غالبًا ما يتم استخدامه لأغراض طبية وله توت أحمر مميز."
+    },
+    "hi": {
+      "common_name": "बटलर का झाड़ू",
+      "description": "Ruscus aculeatus, या बटलर का झाड़ू, यूरोप का एक कांटेदार झाड़ू है। इसका उपयोग अक्सर औषधीय उद्देश्यों के लिए किया जाता है और इसमें लाल बेर होते हैं।"
+    },
+    "zh": {
+      "common_name": "屠夫扫帚",
+      "description": "Ruscus aculeatus，或屠夫扫帚，是一种原产于欧洲的有刺灌木。它常用于药用，具有显著的红色浆果。"
+    },
+    "ja": {
+      "common_name": "肉屋のほうき",
+      "description": "Ruscus aculeatus、または肉屋のほうきは、ヨーロッパ原産の棘のある低木です。薬用目的でよく使用され、特徴的な赤いベリーがあります。"
+    },
+    "ko": {
+      "common_name": "정육점 빗자루",
+      "description": "Ruscus aculeatus, 또는 정육점 빗자루는 유럽 원산지의 가시가 있는 관목입니다. 약용으로 자주 사용되며 특징적인 빨간 열매를 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10086/ruscus-aculeatus",
+      "https://www.gardenia.net/plant/ruscus-aculeatus-butcher-s-broom"
+    ]
+  }
+}

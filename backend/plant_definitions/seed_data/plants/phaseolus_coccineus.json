@@ -1,0 +1,237 @@
+{
+  "external_id": "phaseolus_coccineus",
+  "name": "Scarlet Runner Bean",
+  "latin": "Phaseolus coccineus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "phaseolus_coccineus.jpg",
+  "image_thumb": "phaseolus_coccineus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Światło średnie",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम सूर्य",
+          "zh": "中等阳光",
+          "ja": "中程度の太陽光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري لدرجة معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vining plant",
+          "pl": "Roślina pnąca",
+          "de": "Rankpflanze",
+          "fr": "Plante grimpante",
+          "it": "Pianta rampicante",
+          "es": "Planta trepadora",
+          "pt": "Planta trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "वाइंडिंग पौधा",
+          "zh": "藤本植物",
+          "ja": "つる植物",
+          "ko": "덩굴 식물"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Scarlet Runner Bean",
+      "description": "The Scarlet Runner Bean is a vigorous climber with red flowers and edible beans. It thrives in moderate sunlight and well-draining soil."
+    },
+    "pl": {
+      "common_name": "Fasola czerwona",
+      "description": "Fasola czerwona to silnie rosnąca roślina pnąca z czerwonymi kwiatami i jadalnymi nasionami. Wymaga umiarkowanego światła i dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Scharlachbohne",
+      "description": "Die Scharlachbohne ist eine kräftige Kletterpflanze mit roten Blüten und essbaren Bohnen. Sie gedeiht bei mäßigem Sonnenlicht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Haricot d'Espagne",
+      "description": "Le Haricot d'Espagne est une plante grimpante vigoureuse avec des fleurs rouges et des haricots comestibles. Il prospère sous une lumière modérée et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Fagiolo rampicante",
+      "description": "Il fagiolo rampicante è una pianta vigorosa con fiori rossi e fagioli commestibili. Cresce bene alla luce moderata e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Frijol escarlata",
+      "description": "El frijol escarlata es una planta trepadora vigorosa con flores rojas y frijoles comestibles. Crece bien con luz moderada y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Feijão escarlate",
+      "description": "O feijão escarlate é uma planta trepadora vigorosa com flores vermelhas e feijões comestíveis. Cresce bem sob luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "فاصوليا حمراء متسلقة",
+      "description": "الفاصوليا الحمراء المتسلقة هي نبات سريع النمو مع أزهار حمراء وفاصوليا صالحة للأكل. تنمو جيدًا تحت ضوء الشمس المعتدل وفي التربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "लाल चढ़ाई फलियाँ",
+      "description": "लाल चढ़ाई फलियाँ एक तेज़ी से बढ़ने वाली बेल होती है जिसमें लाल फूल और खाने योग्य फलियाँ होती हैं। यह मध्यम सूर्य के प्रकाश में और अच्छे जल निकासी वाली मिट्टी में अच्छी तरह बढ़ती है।"
+    },
+    "zh": {
+      "common_name": "红色爬豆",
+      "description": "红色爬豆是一种生长旺盛的藤本植物，具有红色的花朵和可食用的豆类。它在适度的阳光下和排水良好的土壤中茁壮成长。"
+    },
+    "ja": {
+      "common_name": "スカーレットランナービーン",
+      "description": "スカーレットランナービーンは赤い花と食用の豆を持つ旺盛な蔓植物です。適度な日光と良好な排水性の土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "주홍 등나무 콩",
+      "description": "주홍 등나무 콩은 빨간 꽃과 먹을 수 있는 콩을 가진 강한 덩굴식물입니다. 적당한 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/phaseolus-coccineus-scarlet-runner-bean/",
+      "https://www.rhs.org.uk/plants/phaseolus-coccineus"
+    ]
+  }
+}

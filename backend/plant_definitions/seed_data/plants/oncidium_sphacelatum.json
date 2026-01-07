@@ -1,0 +1,237 @@
+{
+  "external_id": "oncidium_sphacelatum",
+  "name": "Oncidium sphacelatum",
+  "latin": "Oncidium sphacelatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "oncidium_sphacelatum.jpg",
+  "image_thumb": "oncidium_sphacelatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid",
+          "pl": "orchidea",
+          "de": "orchidee",
+          "fr": "orchidée",
+          "it": "orchidea",
+          "es": "orquídea",
+          "pt": "orquídea",
+          "ar": "أوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "ラン科",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaleur",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Oncidium orchid",
+      "description": "Oncidium sphacelatum is a species of orchid native to tropical America. It is commonly found growing as an epiphyte in rainforests."
+    },
+    "pl": {
+      "common_name": "Orchidea Oncidium",
+      "description": "Oncidium sphacelatum to gatunek storczyka pochodzący z tropikalnej Ameryki. Rośnie głównie jako epifit w lasach deszczowych."
+    },
+    "de": {
+      "common_name": "Oncidium-Orchidee",
+      "description": "Oncidium sphacelatum ist eine Orchideenart, die in tropischem Amerika beheimatet ist. Es wächst hauptsächlich als Epiphyt in Regenwäldern."
+    },
+    "fr": {
+      "common_name": "Orchidée Oncidium",
+      "description": "Oncidium sphacelatum est une espèce d'orchidée originaire d'Amérique tropicale. Elle pousse principalement en tant qu'épiphyte dans les forêts tropicales."
+    },
+    "it": {
+      "common_name": "Orchidea Oncidium",
+      "description": "Oncidium sphacelatum è una specie di orchidea originaria dell'America tropicale. Cresce principalmente come epifita nelle foreste pluviali."
+    },
+    "es": {
+      "common_name": "Orquídea Oncidium",
+      "description": "Oncidium sphacelatum es una especie de orquídea originaria de América tropical. Se encuentra principalmente como epífita en los bosques lluviosos."
+    },
+    "pt": {
+      "common_name": "Orquídea Oncidium",
+      "description": "Oncidium sphacelatum é uma espécie de orquídea nativa da América tropical. Cresce principalmente como epífita em florestas tropicais."
+    },
+    "ar": {
+      "common_name": "زهرة الأوركيد أونسيديام",
+      "description": "Oncidium sphacelatum هي نوع من الأوركيد موطنها أمريكا الاستوائية. تنمو عادة كنوع من النباتات الطفيلية في الغابات الاستوائية."
+    },
+    "hi": {
+      "common_name": "ऑन्सिडियम ऑर्किड",
+      "description": "ऑन्सिडियम स्पैसलेटीम एक ऑर्किड प्रजाति है जो उष्णकटिबंधीय अमेरिका का मूल निवासी है। यह सामान्यत: वर्षावनों में एपिफाइट के रूप में पाया जाता है।"
+    },
+    "zh": {
+      "common_name": "Oncidium兰花",
+      "description": "Oncidium sphacelatum是一种原产于热带美洲的兰花。它主要作为附生植物生长在热带雨林中。"
+    },
+    "ja": {
+      "common_name": "オンシディウム蘭",
+      "description": "Oncidium sphacelatumは熱帯アメリカに自生するランの一種です。主に熱帯雨林で着生植物として生育します。"
+    },
+    "ko": {
+      "common_name": "온시디움 난초",
+      "description": "Oncidium sphacelatum은 열대 아메리카 원산의 난초 종입니다. 주로 열대 우림에서 착생 식물로 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.abc-orchids.com/oncidium-sphacelatum-care",
+      "https://www.orchidcareguide.com/oncidium-orchids"
+    ]
+  }
+}

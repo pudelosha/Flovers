@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_spitzelii",
+  "name": "Spitzel's Orchid",
+  "latin": "Orchis spitzelii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_spitzelii.jpg",
+  "image_thumb": "orchis_spitzelii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Światło średnie",
+          "de": "Mittlere Sonneneinstrahlung",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम सूर्य",
+          "zh": "中等阳光",
+          "ja": "中程度の光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, orchid mix",
+          "pl": "Kwasowy, mix orchidei",
+          "de": "Saure, Orchideenmischung",
+          "fr": "Sol acide, mélange pour orchidées",
+          "it": "Terreno acido, miscela per orchidee",
+          "es": "Sustrato ácido",
+          "pt": "Solo ácido, mistura para orquídeas",
+          "ar": "تربة حمضية، خليط للزهور الأوركيدية",
+          "hi": "क्षारीय, ऑर्किड मिश्रण",
+          "zh": "酸性，兰花混合土",
+          "ja": "酸性、蘭の土",
+          "ko": "산성, 난초 혼합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to moderate",
+          "pl": "Chłodny do umiarkowanego",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Fresco a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽到适中",
+          "ja": "涼しいから中程度",
+          "ko": "시원함에서 적당함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate growth",
+          "pl": "Wolny do umiarkowanego wzrostu",
+          "de": "Langsame bis mäßige Wachstum",
+          "fr": "Croissance lente à modérée",
+          "it": "Crescita lenta a moderata",
+          "es": "Crecimiento lento a moderado",
+          "pt": "Crescimento lento a moderado",
+          "ar": "نمو بطيء إلى معتدل",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢到适中",
+          "ja": "遅いから中程度の成長",
+          "ko": "느리게에서 중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spitzel's Orchid",
+      "description": "Orchis spitzelii is a beautiful alpine orchid with striking purple flowers. It thrives in cool to moderate temperatures and requires medium watering and humidity."
+    },
+    "pl": {
+      "common_name": "Orchidea Spitzela",
+      "description": "Orchis spitzelii to piękna górska orchidea z uderzającymi fioletowymi kwiatami. Rośnie najlepiej w chłodnych lub umiarkowanych temperaturach i potrzebuje średniego podlewania oraz wilgotności."
+    },
+    "de": {
+      "common_name": "Spitzels Orchidee",
+      "description": "Orchis spitzelii ist eine wunderschöne Alpenorchidee mit auffälligen violetten Blüten. Sie gedeiht bei kühlen bis mäßigen Temperaturen und benötigt mäßiges Gießen und Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Orchidée de Spitzel",
+      "description": "Orchis spitzelii est une belle orchidée alpine avec des fleurs violettes frappantes. Elle prospère à des températures fraîches à modérées et nécessite un arrosage et une humidité modérés."
+    },
+    "it": {
+      "common_name": "Orchidea di Spitzel",
+      "description": "Orchis spitzelii è una bellissima orchidea alpina con fiori viola sorprendenti. Cresce bene in temperature fresche o moderate e richiede annaffiature e umidità moderate."
+    },
+    "es": {
+      "common_name": "Orquídea de Spitzel",
+      "description": "Orchis spitzelii es una hermosa orquídea alpina con flores moradas llamativas. Crece mejor en temperaturas frescas o moderadas y requiere riego y humedad moderados."
+    },
+    "pt": {
+      "common_name": "Orquídea de Spitzel",
+      "description": "Orchis spitzelii é uma linda orquídea alpina com flores roxas impressionantes. Ela prospera em temperaturas frescas a moderadas e requer rega e umidade moderadas."
+    },
+    "ar": {
+      "common_name": "زهرة سبتيزل",
+      "description": "Orchis spitzelii هي زهرة أوركيد جبلية جميلة ذات أزهار بنفسجية لافتة. تزدهر في درجات حرارة باردة إلى معتدلة وتتطلب ري ورطوبة متوسطة."
+    },
+    "hi": {
+      "common_name": "स्पिट्जल की आर्किड",
+      "description": "Orchis spitzelii एक सुंदर पर्वतीय आर्किड है जिसकी आकर्षक बैंगनी रंग की कलियाँ होती हैं। यह ठंडी से मध्यम तापमान में उगता है और इसके लिए मध्यम पानी और आर्द्रता की आवश्यकता होती है."
+    },
+    "zh": {
+      "common_name": "斯皮策尔兰花",
+      "description": "Orchis spitzelii 是一种美丽的高山兰花，具有引人注目的紫色花朵。它在凉爽到适中的温度下生长，需要适量的浇水和湿度。"
+    },
+    "ja": {
+      "common_name": "スピッツエルの蘭",
+      "description": "Orchis spitzeliiは、魅力的な紫色の花を持つ美しい高山ランです。涼しいから中程度の温度で繁栄し、中程度の水やりと湿度が必要です。"
+    },
+    "ko": {
+      "common_name": "스피첼의 난초",
+      "description": "Orchis spitzelii는 눈에 띄는 보라색 꽃을 가진 아름다운 고산지대 난초입니다. 차가운 온도에서 중간 정도의 물주기와 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgarden.edu/care-guide",
+      "https://www.horticulturalreference.com/spitzel-orchid"
+    ]
+  }
+}

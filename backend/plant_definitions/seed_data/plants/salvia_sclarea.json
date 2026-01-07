@@ -1,0 +1,237 @@
+{
+  "external_id": "salvia_sclarea",
+  "name": "Clary Sage",
+  "latin": "Salvia sclarea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "salvia_sclarea.jpg",
+  "image_thumb": "salvia_sclarea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loam",
+          "pl": "Urodzajna gleba",
+          "de": "Lehm",
+          "fr": "Terre argileuse",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "中くらいの水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à modéré",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "नम आर्द्रता",
+          "zh": "低到中等湿度",
+          "ja": "低から中程度の湿度",
+          "ko": "낮은 습도에서 중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Clary Sage",
+      "description": "Clary Sage is a biennial plant native to Europe. It thrives in moderate light and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Szałwia muszkatołowa",
+      "description": "Szałwia muszkatołowa to dwuletnia roślina pochodząca z Europy. Rośnie najlepiej w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Muskateller-Salbei",
+      "description": "Muskateller-Salbei ist eine zweijährige Pflanze aus Europa. Sie gedeiht in mäßigem Licht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Sauge sclarée",
+      "description": "La sauge sclarée est une plante bisannuelle originaire d'Europe. Elle préfère une lumière modérée et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Salvia sclarea",
+      "description": "La Salvia sclarea è una pianta biennale originaria dell'Europa. Cresce bene in luce moderata e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Salvia clara",
+      "description": "La salvia clara es una planta bianual originaria de Europa. Crece bien con luz moderada y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Sálvia clara",
+      "description": "A sálvia clara é uma planta bienal nativa da Europa. Prefere luz moderada e solos bem drenados."
+    },
+    "ar": {
+      "common_name": "المريمية الواضحة",
+      "description": "المريمية الواضحة هي نبات ثنائي السن أصله من أوروبا. ينمو بشكل جيد في الضوء المعتدل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "क्लैरी सैज",
+      "description": "क्लैरी सैज एक द्विवार्षिक पौधा है जो यूरोप का मूल निवासी है। यह मध्यम रोशनी और अच्छी जल निकासी वाली मिट्टी में अच्छा उगता है।"
+    },
+    "zh": {
+      "common_name": "克拉里鼠尾草",
+      "description": "克拉里鼠尾草是一种二年生植物，原产于欧洲。它喜欢适中的光照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "クラリーセージ",
+      "description": "クラリーセージはヨーロッパ原産の二年草です。適度な光と排水の良い土壌でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "클래리 세이지",
+      "description": "클래리 세이지는 유럽 원산의 2년생 식물입니다. 중간 정도의 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1213/salvia-sclarea/details",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/growing-clary-sage/"
+    ]
+  }
+}

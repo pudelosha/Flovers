@@ -1,0 +1,237 @@
+{
+  "external_id": "scaevola_aemula",
+  "name": "Fan flower",
+  "latin": "Scaevola aemula",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "scaevola_aemula.jpg",
+  "image_thumb": "scaevola_aemula.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "よく排水された",
+          "ko": "배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fan flower",
+      "description": "Scaevola aemula, or fan flower, is a native Australian plant known for its purple, fan-shaped blooms. It thrives in full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Kwiat wachlarzowy",
+      "description": "Scaevola aemula, znana również jako kwiat wachlarzowy, to roślina pochodząca z Australii, znana z purpurowych kwiatów w kształcie wachlarza. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Fächerblume",
+      "description": "Scaevola aemula, auch Fächerblume genannt, ist eine aus Australien stammende Pflanze, die für ihre lila, fächerförmigen Blüten bekannt ist. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Fleur éventail",
+      "description": "Scaevola aemula, ou fleur éventail, est une plante originaire d'Australie, connue pour ses fleurs violettes en forme d'éventail. Elle prospère en plein soleil et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Fiore a ventaglio",
+      "description": "Scaevola aemula, o fiore a ventaglio, è una pianta originaria dell'Australia, conosciuta per i suoi fiori viola a forma di ventaglio. Cresce meglio al sole pieno e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Flor abanico",
+      "description": "Scaevola aemula, o flor abanico, es una planta originaria de Australia, conocida por sus flores moradas en forma de abanico. Crece mejor a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Flor em leque",
+      "description": "Scaevola aemula, ou flor em leque, é uma planta nativa da Austrália, conhecida por suas flores roxas em forma de leque. Cresce bem ao sol pleno e em solo bem drenado."
+    },
+    "ar": {
+      "common_name": "زهرة المروحة",
+      "description": "Scaevola aemula، أو زهرة المروحة، هي نبات أصلي في أستراليا يعرف بأزهارها البنفسجية على شكل مروحة. تنمو بشكل جيد في الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "पंखी फूल",
+      "description": "Scaevola aemula, या पंखी फूल, एक ऑस्ट्रेलियाई पौधा है जो अपने बैंगनी पंखी आकार के फूलों के लिए जाना जाता है। यह पूर्ण सूर्य और अच्छे जल निकासी वाली मिट्टी में उगता है।"
+    },
+    "zh": {
+      "common_name": "扇形花",
+      "description": "Scaevola aemula，或扇形花，是一种原产于澳大利亚的植物，以其紫色的扇形花朵而闻名。它在充足的阳光和排水良好的土壤中生长得最好。"
+    },
+    "ja": {
+      "common_name": "ファンフラワー",
+      "description": "Scaevola aemula、またはファンフラワーは、オーストラリア原産の植物で、紫色の扇形の花が特徴です。日当たりの良い場所と排水の良い土壌でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "팬 꽃",
+      "description": "Scaevola aemula, 또는 팬 꽃은 호주 원산의 식물로 보라색의 부채꼴 꽃으로 유명합니다. 이 식물은 햇빛이 잘 드는 곳과 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/26914/Scaevola-aemula/Details",
+      "https://www.gardenia.net/plant/scaevola-aemula"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "lithops_lesliei",
+  "name": "Lithops Lesliei",
+  "latin": "Lithops lesliei",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 365,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "lithops_lesliei.jpg",
+  "image_thumb": "lithops_lesliei.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Very well-drained",
+          "pl": "Bardzo przepuszczalna",
+          "de": "Sehr durchlässig",
+          "fr": "Très drainant",
+          "it": "Molto drenante",
+          "es": "Muy drenante",
+          "pt": "Muito drenante",
+          "ar": "تصريف ممتاز",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Challenging",
+          "pl": "Trudna",
+          "de": "Anspruchsvoll",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "较难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30°C",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very slow",
+          "pl": "Bardzo wolny",
+          "de": "Sehr langsam",
+          "fr": "Très lente",
+          "it": "Molto lenta",
+          "es": "Muy lento",
+          "pt": "Muito lento",
+          "ar": "بطيء جدًا",
+          "hi": "बहुत धीमी",
+          "zh": "生长缓慢",
+          "ja": "非常に遅い",
+          "ko": "매우 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Living stone",
+      "description": "Lithops lesliei is a small succulent native to southern Africa that mimics stones to avoid grazing. It requires strong light, very little water, and excellent drainage. Overwatering is the most common cause of failure."
+    },
+    "pl": {
+      "common_name": "Żywy kamień",
+      "description": "Lithops lesliei to mały sukulent z południowej Afryki, który przypomina kamienie. Wymaga dużo światła, bardzo mało wody i doskonałego drenażu. Nadmierne podlewanie jest głównym zagrożeniem."
+    },
+    "de": {
+      "common_name": "Lebender Stein",
+      "description": "Lithops lesliei ist eine kleine Sukkulente aus dem südlichen Afrika, die Steinen ähnelt. Sie benötigt viel Licht, sehr wenig Wasser und ein stark durchlässiges Substrat. Zu viel Wasser führt häufig zum Absterben."
+    },
+    "fr": {
+      "common_name": "Plante caillou",
+      "description": "Lithops lesliei est une petite plante succulente d’Afrique australe qui imite les pierres. Elle demande beaucoup de lumière, très peu d’eau et un sol parfaitement drainé. L’excès d’arrosage est la principale erreur."
+    },
+    "it": {
+      "common_name": "Pietra viva",
+      "description": "Lithops lesliei è una succulenta originaria dell’Africa australe che assomiglia a un sasso. Necessita di luce intensa, pochissima acqua e terreno molto drenante. L’irrigazione eccessiva è il rischio maggiore."
+    },
+    "es": {
+      "common_name": "Piedra viva",
+      "description": "Lithops lesliei es una suculenta del sur de África que imita piedras. Requiere mucha luz, riego mínimo y sustrato muy drenante. El exceso de agua provoca fácilmente pudrición."
+    },
+    "pt": {
+      "common_name": "Pedra viva",
+      "description": "Lithops lesliei é uma suculenta do sul da África que se camufla como pedra. Precisa de luz intensa, pouca água e solo bem drenado. O excesso de rega é a principal causa de perda."
+    },
+    "ar": {
+      "common_name": "حجر حي",
+      "description": "ليثوبس ليزلي نبات عصاري صغير من جنوب أفريقيا يشبه الحجارة. يحتاج إلى ضوء قوي وماء قليل جدًا وتربة جيدة التصريف. الإفراط في الري هو الخطأ الأكثر شيوعًا."
+    },
+    "hi": {
+      "common_name": "लिविंग स्टोन",
+      "description": "Lithops lesliei दक्षिणी अफ्रीका का एक छोटा रसीला पौधा है जो पत्थरों जैसा दिखता है। इसे तेज धूप, बहुत कम पानी और अच्छी जल निकासी चाहिए। अधिक पानी देना नुकसानदायक है।"
+    },
+    "zh": {
+      "common_name": "生石花",
+      "description": "Lithops lesliei 原产于南部非洲，是一种外形像石头的多肉植物。它需要强光、极少浇水和良好排水的土壤。浇水过多最容易导致失败。"
+    },
+    "ja": {
+      "common_name": "リトープス",
+      "description": "Lithops lesliei は南部アフリカ原産の小型多肉植物で、石のような姿が特徴です。強い光とごく少ない水、排水性の高い用土が必要です。水の与えすぎは禁物です。"
+    },
+    "ko": {
+      "common_name": "리톱스",
+      "description": "Lithops lesliei는 남부 아프리카 원산의 작은 다육식물로 돌처럼 보입니다. 강한 빛과 매우 적은 물, 배수가 좋은 토양이 필요합니다. 과습은 치명적입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/lithops/growing-guide",
+      "https://www.cactus-art.biz/note-book/Dictionary/Dictionary_L/lithops.htm",
+      "https://worldofsucculents.com/lithops-lesliei/"
+    ]
+  }
+}

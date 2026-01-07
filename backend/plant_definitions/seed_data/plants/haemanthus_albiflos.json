@@ -1,0 +1,237 @@
+{
+  "external_id": "haemanthus_albiflos",
+  "name": "Paintbrush Lily",
+  "latin": "Haemanthus albiflos",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "haemanthus_albiflos.jpg",
+  "image_thumb": "haemanthus_albiflos.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained soil",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage léger",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान देखभाल",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "관리 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–25 °C",
+          "pl": "18–25 °C",
+          "de": "18–25 °C",
+          "fr": "18–25 °C",
+          "it": "18–25 °C",
+          "es": "18–25 °C",
+          "pt": "18–25 °C",
+          "ar": "18–25 °C",
+          "hi": "18–25 °C",
+          "zh": "18–25 °C",
+          "ja": "18–25 °C",
+          "ko": "18–25 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal room air",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微毒性",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "성장 느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Paintbrush Lily",
+      "description": "Haemanthus albiflos is a bulbous plant native to southern Africa. It has thick evergreen leaves and distinctive white brush-like flowers. It is commonly grown as a houseplant due to its tolerance of indoor conditions."
+    },
+    "pl": {
+      "common_name": "Haemanthus biały",
+      "description": "Haemanthus albiflos to roślina cebulowa pochodząca z południowej Afryki. Ma grube, zimozielone liście i charakterystyczne białe kwiaty. Dobrze nadaje się do uprawy w domu."
+    },
+    "de": {
+      "common_name": "Weiße Pinselblume",
+      "description": "Haemanthus albiflos stammt aus dem südlichen Afrika und wächst aus Zwiebeln. Die Pflanze hat dicke, immergrüne Blätter und weiße Blüten. Sie eignet sich gut für die Zimmerkultur."
+    },
+    "fr": {
+      "common_name": "Lis blanc",
+      "description": "Haemanthus albiflos est une plante bulbeuse originaire d’Afrique australe. Elle possède des feuilles épaisses et persistantes ainsi que des fleurs blanches. Elle est appréciée comme plante d’intérieur."
+    },
+    "it": {
+      "common_name": "Giglio pennello",
+      "description": "Haemanthus albiflos è una pianta bulbosa dell’Africa meridionale. Presenta foglie carnose sempreverdi e fiori bianchi particolari. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Lirio pincel",
+      "description": "Haemanthus albiflos es una planta bulbosa originaria del sur de África. Tiene hojas gruesas y flores blancas en forma de pincel. Se cultiva fácilmente en interiores."
+    },
+    "pt": {
+      "common_name": "Lírio pincel",
+      "description": "Haemanthus albiflos é uma planta bulbosa do sul da África. Possui folhas espessas e flores brancas vistosas. É comum como planta de interior."
+    },
+    "ar": {
+      "common_name": "زنبق الفرشاة",
+      "description": "نبات Haemanthus albiflos بصلي موطنه جنوب أفريقيا. يتميز بأوراق سميكة وأزهار بيضاء مميزة. يزرع غالبًا كنبات منزلي."
+    },
+    "hi": {
+      "common_name": "पेंटब्रश लिली",
+      "description": "Haemanthus albiflos दक्षिणी अफ्रीका का एक बल्ब वाला पौधा है। इसमें मोटी सदाबहार पत्तियाँ और सफेद फूल होते हैं। यह घर के अंदर उगाने के लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "白血花",
+      "description": "Haemanthus albiflos 原产于非洲南部，是一种球根植物。它有厚实的常绿叶和白色花序。常作为室内观赏植物栽培。"
+    },
+    "ja": {
+      "common_name": "ハエマンサス",
+      "description": "ハエマンサス・アルビフロスは南部アフリカ原産の球根植物です。肉厚な常緑葉と白い花が特徴です。室内植物として育てられます。"
+    },
+    "ko": {
+      "common_name": "하에만투스",
+      "description": "Haemanthus albiflos는 남아프리카 원산의 구근 식물입니다. 두꺼운 상록 잎과 흰 꽃이 특징입니다. 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/haemanthus-albiflos",
+      "https://www.rhs.org.uk/plants/haemanthus/albiflos/details",
+      "https://www.gardenersworld.com/plants/haemanthus-albiflos/"
+    ]
+  }
+}

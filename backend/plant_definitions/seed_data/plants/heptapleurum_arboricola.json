@@ -1,0 +1,238 @@
+{
+  "external_id": "heptapleurum_arboricola",
+  "name": "Dwarf umbrella tree",
+  "latin": "Heptapleurum arboricola",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "heptapleurum_arboricola.jpg",
+  "image_thumb": "heptapleurum_arboricola.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Indirektlicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Durchlässige Erde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好土",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "When top dries",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Gießen, wenn trocken",
+          "fr": "Quand le dessus sèche",
+          "it": "Quando asciuga sopra",
+          "es": "Cuando se seque arriba",
+          "pt": "Quando secar em cima",
+          "ar": "اسقِ بعد جفاف السطح",
+          "hi": "ऊपर सूखे तब पानी",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average home",
+          "pl": "Typowa domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Humidade normal",
+          "ar": "رطوبة منزلية عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通室内湿度",
+          "ja": "普通の湿度",
+          "ko": "일반 실내 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतुओं के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiger Wuchs",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dwarf umbrella tree",
+      "description": "An evergreen houseplant (often sold as Schefflera arboricola) that grows best in bright, indirect light. Water moderately by letting the top of the potting mix dry before soaking and draining. Feed about monthly during active growth, keep above roughly 12°C, and note it is toxic to cats and dogs."
+    },
+    "pl": {
+      "common_name": "Szeflera drzewkowata",
+      "description": "Zimozielona roślina doniczkowa (często sprzedawana jako Schefflera arboricola), najlepiej rośnie w jasnym, rozproszonym świetle. Podlewaj umiarkowanie: pozwól przeschnąć wierzchniej warstwie podłoża, potem podlej obficie i odlej nadmiar. Nawoź mniej więcej co miesiąc w okresie wzrostu, utrzymuj temperaturę powyżej ok. 12°C i pamiętaj, że jest toksyczna dla psów i kotów."
+    },
+    "de": {
+      "common_name": "Zwergstrahlenaralie",
+      "description": "Immergrüne Zimmerpflanze (häufig als Schefflera arboricola im Handel), die helles, indirektes Licht bevorzugt. Mäßig gießen: erst wenn die obere Erdschicht abgetrocknet ist, dann durchdringend wässern und abtropfen lassen. Während des Wachstums etwa monatlich düngen, über ca. 12°C halten und beachten, dass sie für Katzen und Hunde giftig ist."
+    },
+    "fr": {
+      "common_name": "Schefflera nain",
+      "description": "Plante d’intérieur persistante (souvent vendue comme Schefflera arboricola) qui préfère une lumière vive mais indirecte. Arrosez modérément en laissant sécher la surface du substrat avant d’arroser à fond et de laisser s’égoutter. Fertilisez environ une fois par mois en période de croissance, gardez-la au-dessus d’environ 12°C et sachez qu’elle est toxique pour les chats et les chiens."
+    },
+    "it": {
+      "common_name": "Schefflera nana",
+      "description": "Pianta da appartamento sempreverde (spesso venduta come Schefflera arboricola) che preferisce luce intensa ma indiretta. Annaffia moderatamente lasciando asciugare lo strato superiore del terriccio, poi irriga a fondo e fai drenare. Concima circa una volta al mese durante la crescita, mantieni sopra circa 12°C e considera che è tossica per cani e gatti."
+    },
+    "es": {
+      "common_name": "Árbol paraguas enano",
+      "description": "Planta de interior perenne (a menudo vendida como Schefflera arboricola) que va mejor con luz brillante e indirecta. Riega de forma moderada dejando secar la capa superior del sustrato y luego riega a fondo y deja escurrir. Abona aproximadamente una vez al mes en época de crecimiento, mantenla por encima de ~12°C y ten en cuenta que es tóxica para perros y gatos."
+    },
+    "pt": {
+      "common_name": "Árvore-umbela-anã",
+      "description": "Planta de interior perene (frequentemente vendida como Schefflera arboricola) que prefere luz brilhante e indireta. Regue moderadamente deixando a camada superior do substrato secar e depois regue bem e deixe drenar. Fertilize cerca de uma vez por mês no período de crescimento, mantenha acima de ~12°C e lembre que é tóxica para cães e gatos."
+    },
+    "ar": {
+      "common_name": "شيفليرا قزمية",
+      "description": "نبات منزلي دائم الخضرة (يُباع كثيرًا باسم Schefflera arboricola) ويفضّل الضوء الساطع غير المباشر. اسقِ باعتدال بعد أن تجف الطبقة العلوية من التربة ثم اسقِ بعمق واترك الماء الزائد يتصرف. سمّد تقريبًا مرة شهريًا أثناء النمو، واحفظه فوق نحو 12°م، وهو سام للقطط والكلاب."
+    },
+    "hi": {
+      "common_name": "बौना अम्ब्रेला पौधा",
+      "description": "यह एक सदाबहार हाउसप्लांट है (अक्सर Schefflera arboricola नाम से मिलता है) जो तेज़ लेकिन अप्रत्यक्ष रोशनी में बेहतर रहता है। ऊपर की मिट्टी सूखने पर मध्यम मात्रा में पानी दें, फिर अच्छी तरह भिगोकर अतिरिक्त पानी निकलने दें। बढ़त के समय लगभग महीने में एक बार खाद दें, तापमान लगभग 12°C से ऊपर रखें, और यह कुत्तों व बिल्लियों के लिए विषाक्त है।"
+    },
+    "zh": {
+      "common_name": "鹅掌柴",
+      "description": "常绿室内植物（市面上常以 Schefflera arboricola 销售），适合明亮的散射光。浇水宜适中：表土干后再浇透并让多余水分排出。生长期约每月施一次均衡肥，温度尽量保持在约 12°C 以上，并且对猫狗有毒。"
+    },
+    "ja": {
+      "common_name": "カポック",
+      "description": "常緑の観葉植物（流通では Schefflera arboricola として扱われることがあります）で、明るい間接光を好みます。土の表面が乾いてからたっぷり与え、余分な水は捨てる程度の「適度な水やり」が基本です。生育期は月1回程度の施肥、温度はおおむね 12°C 以上を保ち、犬猫に有毒です。"
+    },
+    "ko": {
+      "common_name": "홍콩야자",
+      "description": "상록성 실내식물로(유통에서는 Schefflera arboricola로도 판매됨) 밝은 간접광에서 잘 자랍니다. 겉흙이 마르면 흠뻑 주고 배수되게 하는 방식으로 적당히 물을 주세요. 생장기에는 대략 한 달에 한 번 비료를 주고, 약 12°C 이상을 유지하며, 반려견·반려묘에게 유독합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/187874/heptapleurum-arboricola/details",
+      "https://plants.ces.ncsu.edu/plants/heptapleurum-arboricola/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/schefflera",
+      "https://www.rhs.org.uk/plants/16794/schefflera/details"
+    ]
+  }
+}

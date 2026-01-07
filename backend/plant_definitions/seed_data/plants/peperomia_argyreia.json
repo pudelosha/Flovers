@@ -1,0 +1,237 @@
+{
+  "external_id": "peperomia_argyreia",
+  "name": "Watermelon Peperomia",
+  "latin": "Peperomia argyreia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "peperomia_argyreia.jpg",
+  "image_thumb": "peperomia_argyreia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidowa",
+          "de": "Aroid Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "خليط أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "Aroid混合土",
+          "ja": "アロイド混合土",
+          "ko": "아로이드 혼합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "कॉम्पैक्ट",
+          "zh": "紧凑型",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Watermelon Peperomia",
+      "description": "A compact, easy-to-care-for plant with striking green and silver leaves. Native to tropical regions, it thrives in moderate light and humidity."
+    },
+    "pl": {
+      "common_name": "Pepromia Argyreia",
+      "description": "Kompaktowa roślina o wyróżniających się zielono-srebrnych liściach. Pochodzi z tropikalnych regionów i najlepiej rośnie w umiarkowanym świetle i wilgotności."
+    },
+    "de": {
+      "common_name": "Wassermelonen-Peperomie",
+      "description": "Eine kompakte, pflegeleichte Pflanze mit auffälligen grünen und silbernen Blättern. Sie gedeiht bei mäßigem Licht und Feuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Peperomia Pastèque",
+      "description": "Une plante compacte et facile à entretenir avec des feuilles vertes et argentées remarquables. Elle prospère dans une lumière modérée et une humidité moyenne."
+    },
+    "it": {
+      "common_name": "Peperomia Anguria",
+      "description": "Una pianta compatta e facile da curare con foglie verdi e argentate evidenti. Cresce bene in luce moderata e umidità media."
+    },
+    "es": {
+      "common_name": "Peperomia Sandía",
+      "description": "Una planta compacta y fácil de cuidar con hojas verdes y plateadas llamativas. Prosperan con luz moderada y humedad media."
+    },
+    "pt": {
+      "common_name": "Peperomia Melancia",
+      "description": "Uma planta compacta e fácil de cuidar, com folhas verdes e prateadas marcantes. Desenvolve-se em luz moderada e umidade média."
+    },
+    "ar": {
+      "common_name": "بيبروميا بطيخ",
+      "description": "نبات مدمج وسهل العناية مع أوراق خضراء وفضية لامعة. يزدهر في الضوء المعتدل والرطوبة المتوسطة."
+    },
+    "hi": {
+      "common_name": "वॉटरमेलन पेपरोमिया",
+      "description": "एक संकुचित और देखभाल में आसान पौधा जिसमें हरे और चांदी के पत्ते होते हैं। यह मध्यम रोशनी और आर्द्रता में अच्छे से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "西瓜椒草",
+      "description": "一种紧凑且易于护理的植物，具有显眼的绿色和银色叶子。适合中等光照和湿度条件。"
+    },
+    "ja": {
+      "common_name": "ウォーターメロンペペロミア",
+      "description": "コンパクトで世話が簡単な植物で、印象的な緑と銀色の葉を持っています。中程度の光と湿度で育ちます。"
+    },
+    "ko": {
+      "common_name": "수박 페페로미아",
+      "description": "인상적인 초록색과 은색 잎을 가진 컴팩트하고 관리가 쉬운 식물입니다. 중간 정도의 빛과 습도에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/peperomia-argyreia/",
+      "https://www.rhs.org.uk/plants/peperomia-argyreia"
+    ]
+  }
+}

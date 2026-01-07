@@ -1,0 +1,237 @@
+{
+  "external_id": "saponaria_officinalis",
+  "name": "Soapwort",
+  "latin": "Saponaria officinalis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "saponaria_officinalis.jpg",
+  "image_thumb": "saponaria_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광도"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "दोमट मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clump-forming",
+          "pl": "Tworzący kępy",
+          "de": "Haufenbildend",
+          "fr": "Forme en touffes",
+          "it": "Forma a ciuffo",
+          "es": "Formación en mata",
+          "pt": "Formador de tufos",
+          "ar": "يشكل كتل",
+          "hi": "झाड़ीदार रूप में वृद्धि",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "덩어리 형성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Soapwort",
+      "description": "Soapwort is a hardy perennial plant, known for its ability to produce a soap-like lather from its roots. It grows best in loamy soil and enjoys medium sunlight and watering."
+    },
+    "pl": {
+      "common_name": "Mydlnica lekarska",
+      "description": "Mydlnica lekarska to odporna roślina wieloletnia, znana ze swojej zdolności do wytwarzania piany podobnej do mydła z korzeni. Najlepiej rośnie w glebie próchniczej i lubi średnie nasłonecznienie oraz podlewanie."
+    },
+    "de": {
+      "common_name": "Seifenpflanze",
+      "description": "Die Seifenpflanze ist eine robuste mehrjährige Pflanze, die für ihre Fähigkeit bekannt ist, mit ihren Wurzeln einen seifenähnlichen Schaum zu erzeugen. Sie wächst am besten in lehmigem Boden und mag mittleres Sonnenlicht und Bewässerung."
+    },
+    "fr": {
+      "common_name": "Saponaire",
+      "description": "La saponaire est une plante vivace robuste, connue pour sa capacité à produire une mousse semblable au savon à partir de ses racines. Elle pousse mieux dans un sol argileux et préfère une lumière et un arrosage modérés."
+    },
+    "it": {
+      "common_name": "Saponaria",
+      "description": "La saponaria è una pianta perenne resistente, nota per la sua capacità di produrre una schiuma simile al sapone dalle sue radici. Cresce meglio in terreni argillosi e predilige una luce e un'irrigazione moderate."
+    },
+    "es": {
+      "common_name": "Saponaria",
+      "description": "La saponaria es una planta perenne resistente, conocida por su capacidad para producir una espuma similar al jabón a partir de sus raíces. Crece mejor en suelos arcillosos y prefiere luz y riego moderados."
+    },
+    "pt": {
+      "common_name": "Saboneteira",
+      "description": "A saboneteira é uma planta perene resistente, conhecida pela sua capacidade de produzir uma espuma semelhante ao sabão a partir das suas raízes. Cresce melhor em solos argilosos e prefere luz e rega moderadas."
+    },
+    "ar": {
+      "common_name": "الصابون البري",
+      "description": "الصابون البري هو نبات معمر قوي، معروف بقدرته على إنتاج رغوة تشبه الصابون من جذوره. ينمو بشكل أفضل في التربة الطينية ويفضل الضوء المتوسط والري المعتدل."
+    },
+    "hi": {
+      "common_name": "सोपवर्ट",
+      "description": "सोपवर्ट एक मजबूत पौधा है, जो अपनी जड़ों से साबुन जैसी झाग पैदा करने की क्षमता के लिए जाना जाता है। यह दोमट मिट्टी में सबसे अच्छा उगता है और मध्यम प्रकाश और पानी को पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "肥皂草",
+      "description": "肥皂草是一种耐寒的多年生植物，因其根部能产生类似肥皂的泡沫而闻名。它在粘土土壤中生长最好，并喜欢中等光照和浇水。"
+    },
+    "ja": {
+      "common_name": "サポナリア",
+      "description": "サポナリアは耐寒性の多年草で、その根から石鹸のような泡を生成する能力で知られています。粘土質の土壌で最適に育ち、中程度の光と水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "비누풀",
+      "description": "비누풀은 뿌리에서 비누와 유사한 거품을 생성하는 능력으로 알려진 다년생 강건한 식물입니다. 점토 토양에서 잘 자라며 중간 정도의 햇빛과 물주기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bgci.org/garden.php?id=946",
+      "https://www.rhs.org.uk/plants/details?plantid=2341"
+    ]
+  }
+}

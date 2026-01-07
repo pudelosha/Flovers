@@ -1,0 +1,237 @@
+{
+  "external_id": "plumbago_auriculata",
+  "name": "Cape Plumbago",
+  "latin": "Plumbago auriculata",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "plumbago_auriculata.jpg",
+  "image_thumb": "plumbago_auriculata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full Sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "温暖",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średni",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cape Plumbago",
+      "description": "Plumbago auriculata is a flowering shrub with vibrant blue flowers. It thrives in full sun and well-drained soil, requiring moderate watering."
+    },
+    "pl": {
+      "common_name": "Plumbago Przylądkowy",
+      "description": "Plumbago auriculata to krzew o niebieskich kwiatach. Wymaga pełnego słońca i dobrze przepuszczalnej gleby, umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Kap-Plumbago",
+      "description": "Plumbago auriculata ist ein Strauch mit lebhaften blauen Blüten. Es gedeiht in voller Sonne und gut durchlässigem Boden und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Plumbago de Cap",
+      "description": "Plumbago auriculata est un arbuste à fleurs bleues vibrantes. Il prospère en plein soleil et dans un sol bien drainé, nécessitant un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Plumbago del Capo",
+      "description": "Plumbago auriculata è un arbusto con fiori blu vivaci. Cresce al sole pieno e in terreni ben drenati, richiedendo un'irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Plumbago del Cabo",
+      "description": "Plumbago auriculata es un arbusto con flores azules brillantes. Prosperan al sol pleno y en suelos bien drenados, con un riego moderado."
+    },
+    "pt": {
+      "common_name": "Plumbago do Cabo",
+      "description": "Plumbago auriculata é um arbusto com flores azuis vibrantes. Cresce ao sol pleno e em solo bem drenado, necessitando de rega moderada."
+    },
+    "ar": {
+      "common_name": "بلومباجو كيب",
+      "description": "بلومباجو أوريسولاتا هو شجيرة ذات أزهار زرقاء زاهية. ينمو في الشمس الكاملة والتربة جيدة التصريف، ويتطلب ري معتدل."
+    },
+    "hi": {
+      "common_name": "केप प्लंबैगो",
+      "description": "प्लंबैगो औरिकुलेटा एक फूलों वाली झाड़ी है जिसमें नीले रंग के चमकदार फूल होते हैं। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में बढ़ता है, और इसे मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "开普普拉布戈",
+      "description": "Plumbago auriculata 是一种开蓝花的灌木。它在全日照和排水良好的土壤中生长，需要适度浇水。"
+    },
+    "ja": {
+      "common_name": "ケーププランバゴ",
+      "description": "Plumbago auriculata は鮮やかな青い花を咲かせる低木です。完全な日光と排水性の良い土壌で育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "케이프 플럼바고",
+      "description": "Plumbago auriculata는 생동감 있는 파란색 꽃을 가진 관목입니다. 이 식물은 햇빛이 잘 드는 곳과 배수가 좋은 토양에서 잘 자라며, 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/plumbago-auriculata",
+      "https://www.gardenia.net/plant/plumbago-auriculata"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "rhapis_excelsa",
+  "name": "Lady Palm",
+  "latin": "Rhapis excelsa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rhapis_excelsa.jpg",
+  "image_thumb": "rhapis_excelsa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "दोमट मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土質の土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري المدى المتوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषेकी",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lady Palm",
+      "description": "The Rhapis excelsa, or Lady Palm, is a small, attractive palm native to tropical Asia. It is commonly grown indoors due to its adaptability to low light conditions."
+    },
+    "pl": {
+      "common_name": "Palma Pani",
+      "description": "Rhapis excelsa, znana jako palma Pani, to niewielka, atrakcyjna palma pochodząca z tropikalnej Azji. Jest powszechnie uprawiana w pomieszczeniach z powodu swojej odporności na słabe światło."
+    },
+    "de": {
+      "common_name": "Damenpalme",
+      "description": "Rhapis excelsa, oder Damenpalme, ist eine kleine, attraktive Palme, die in den tropischen Regionen Asiens heimisch ist. Sie wird häufig in Innenräumen gezüchtet, da sie sich gut an schwaches Licht anpasst."
+    },
+    "fr": {
+      "common_name": "Palmier de dame",
+      "description": "Rhapis excelsa, ou palmier de dame, est un petit palmier attrayant originaire des régions tropicales d'Asie. Il est couramment cultivé à l'intérieur en raison de son adaptabilité à des conditions de faible luminosité."
+    },
+    "it": {
+      "common_name": "Palma della signora",
+      "description": "La Rhapis excelsa, o palma della signora, è una piccola e attraente palma originaria delle regioni tropicali asiatiche. È comunemente coltivata all'interno grazie alla sua adattabilità a condizioni di scarsa illuminazione."
+    },
+    "es": {
+      "common_name": "Palmera dama",
+      "description": "Rhapis excelsa, o palmera dama, es una pequeña y atractiva palmera originaria de las regiones tropicales de Asia. Se cultiva comúnmente en interiores debido a su adaptabilidad a condiciones de poca luz."
+    },
+    "pt": {
+      "common_name": "Palmeira-dama",
+      "description": "A Rhapis excelsa, ou palmeira-dama, é uma pequena e atraente palmeira nativa das regiões tropicais da Ásia. É comumente cultivada em ambientes internos devido à sua adaptabilidade a condições de pouca luz."
+    },
+    "ar": {
+      "common_name": "نخيل السيدة",
+      "description": "Rhapis excelsa، أو نخيل السيدة، هو نوع صغير وجميل من النخيل الذي ينمو في المناطق الاستوائية في آسيا. يُزرع عادة في الأماكن المغلقة بسبب تكيفه مع الظروف ذات الإضاءة المنخفضة."
+    },
+    "hi": {
+      "common_name": "लेडी पाम",
+      "description": "Rhapis excelsa, या लेडी पाम, एक छोटा, आकर्षक ताड़ का पेड़ है जो उष्णकटिबंधीय एशिया में पाया जाता है। यह सामान्य रूप से कम रोशनी की परिस्थितियों में अनुकूलता के कारण इनडोर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "女士棕榈",
+      "description": "Rhapis excelsa，或称女士棕榈，是一种原产于亚洲热带地区的小巧迷人的棕榈植物。由于其适应低光条件，常常作为室内植物栽培。"
+    },
+    "ja": {
+      "common_name": "レディパーム",
+      "description": "Rhapis excelsa、またはレディパームは、アジアの熱帯地域原産の小さく魅力的なヤシの木です。低光条件に適応するため、一般的に室内で栽培されます。"
+    },
+    "ko": {
+      "common_name": "레이디 팜",
+      "description": "Rhapis excelsa 또는 레이디 팜은 아시아 열대 지역 원산의 작은 매력적인 야자수입니다. 낮은 빛 조건에 잘 적응하여 일반적으로 실내에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/rhapis-excelsa",
+      "https://www.gardenia.net/plant/rhapis-excelsa"
+    ]
+  }
+}

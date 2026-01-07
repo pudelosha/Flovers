@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_purpurea",
+  "name": "Lady Orchid",
+  "latin": "Orchis purpurea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_purpurea.jpg",
+  "image_thumb": "orchis_purpurea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácido",
+          "pt": "ácido",
+          "ar": "حمضي",
+          "hi": "अम्लीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lady Orchid",
+      "description": "The Lady Orchid (Orchis purpurea) is a perennial orchid known for its striking purple flowers. It is native to Mediterranean regions and thrives in calcareous soil and woodland environments."
+    },
+    "pl": {
+      "common_name": "Orchidea Pani",
+      "description": "Orchidea Pani (Orchis purpurea) to bylinna orchidea o charakterystycznych fioletowych kwiatach. Jest rodzimym gatunkiem w regionach Morza Śródziemnego, preferującym wapienną glebę i środowisko leśne."
+    },
+    "de": {
+      "common_name": "Damen Orchidee",
+      "description": "Die Damen Orchidee (Orchis purpurea) ist eine mehrjährige Orchidee, die für ihre auffälligen violetten Blüten bekannt ist. Sie stammt aus den Mittelmeerländern und wächst bevorzugt in kalkhaltigen Böden und Wäldern."
+    },
+    "fr": {
+      "common_name": "Orchidée Dame",
+      "description": "L'Orchidée Dame (Orchis purpurea) est une orchidée vivace, connue pour ses fleurs violettes frappantes. Elle est originaire des régions méditerranéennes et préfère les sols calcaires et les environnements forestiers."
+    },
+    "it": {
+      "common_name": "Orchidea della Signora",
+      "description": "L'Orchidea della Signora (Orchis purpurea) è un'orchidea perenne con fiori viola vivaci. È originaria delle regioni mediterranee e cresce preferibilmente in terreni calcarei e ambienti boschivi."
+    },
+    "es": {
+      "common_name": "Orquídea de la Dama",
+      "description": "La Orquídea de la Dama (Orchis purpurea) es una orquídea perenne conocida por sus llamativas flores moradas. Es originaria de las regiones mediterráneas y crece preferentemente en suelos calcáreos y en entornos boscosos."
+    },
+    "pt": {
+      "common_name": "Orquídea da Senhora",
+      "description": "A Orquídea da Senhora (Orchis purpurea) é uma orquídea perene conhecida pelas suas flores roxas impressionantes. É nativa das regiões mediterrâneas e cresce preferencialmente em solos calcários e ambientes florestais."
+    },
+    "ar": {
+      "common_name": "أوركيد السيدة",
+      "description": "أوركيد السيدة (Orchis purpurea) هو نوع دائم الخضرة معروف بأزهاره البنفسجية اللافتة. وهو أصلي في مناطق البحر الأبيض المتوسط ويزدهر في التربة الكلسية والبيئات الغابية."
+    },
+    "hi": {
+      "common_name": "लेडी ऑर्किड",
+      "description": "लेडी ऑर्किड (Orchis purpurea) एक बहुवर्षीय ऑर्किड है, जो अपनी आकर्षक बैंगनी फूलों के लिए जाना जाता है। यह भूमध्यसागरीय क्षेत्रों का मूल निवासी है और कैल्शियम-समृद्ध मिट्टी और वन्य परिवेश में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "女士兰",
+      "description": "女士兰（Orchis purpurea）是一种多年生兰花，以其引人注目的紫色花朵而闻名。它原产于地中海地区，喜欢生长在石灰质土壤和森林环境中。"
+    },
+    "ja": {
+      "common_name": "レディオーキッド",
+      "description": "レディオーキッド（Orchis purpurea）は、紫色の花で知られる多年生のランです。地中海地域が原産で、カルシウムを含んだ土壌と森林環境を好みます。"
+    },
+    "ko": {
+      "common_name": "레이디 오키드",
+      "description": "레이디 오키드(Orchis purpurea)는 눈에 띄는 보라색 꽃으로 알려진 다년생 난초입니다. 지중해 지역이 원산지이며, 석회질 토양과 숲 환경에서 자라기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/orchis_purpurea",
+      "https://www.plantsociety.org/orchis_purpurea"
+    ]
+  }
+}

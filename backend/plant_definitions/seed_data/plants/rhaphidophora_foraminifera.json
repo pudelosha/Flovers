@@ -1,0 +1,237 @@
+{
+  "external_id": "rhaphidophora_foraminifera",
+  "name": "Rhaphidophora foraminifera",
+  "latin": "Rhaphidophora foraminifera",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rhaphidophora_foraminifera.jpg",
+  "image_thumb": "rhaphidophora_foraminifera.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Erde",
+          "fr": "Mélange pour Aroids",
+          "it": "Miscela per Aroidi",
+          "es": "Mezcla para Aroides",
+          "pt": "Mistura para Aroides",
+          "ar": "مزيج للأرويد",
+          "hi": "एरॉइड मिश्रण",
+          "zh": "Aroid混合土",
+          "ja": "アロイド用土",
+          "ko": "아로이드 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperature",
+          "pl": "Ciepła temperatura",
+          "de": "Warme Temperatur",
+          "fr": "Température chaude",
+          "it": "Temperatura calda",
+          "es": "Temperatura cálida",
+          "pt": "Temperatura quente",
+          "ar": "درجة حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖的温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Hygrométrie élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnąca winorośl",
+          "de": "Kletternde Pflanze",
+          "fr": "Plante grimpante",
+          "it": "Vite rampicante",
+          "es": "Planta trepadora",
+          "pt": "Planta trepadeira",
+          "ar": "نبتة متسلقة",
+          "hi": "चढ़ने वाली बेल",
+          "zh": "攀缘植物",
+          "ja": "ツル植物",
+          "ko": "덩굴식물"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Foraminifera Rhaphidophora",
+      "description": "Rhaphidophora foraminifera is a tropical climbing vine native to rainforests. It is known for its large, fenestrated leaves and aerial roots."
+    },
+    "pl": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera to tropikalna roślina pnąca, która pochodzi z lasów deszczowych. Jest znana z dużych, dziurkowanych liści i korzeni powietrznych."
+    },
+    "de": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera ist eine tropische Kletterpflanze, die in Regenwäldern beheimatet ist. Sie ist bekannt für ihre großen, durchlöcherten Blätter und Luftwurzeln."
+    },
+    "fr": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera est une plante grimpante tropicale originaire des forêts tropicales. Elle est connue pour ses grandes feuilles perforées et ses racines aériennes."
+    },
+    "it": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera è una pianta rampicante tropicale originaria delle foreste pluviali. È conosciuta per le sue grandi foglie perforate e le radici aeree."
+    },
+    "es": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera es una planta trepadora tropical originaria de las selvas tropicales. Es conocida por sus grandes hojas perforadas y sus raíces aéreas."
+    },
+    "pt": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera é uma planta trepadeira tropical nativa das florestas tropicais. É conhecida por suas grandes folhas perforadas e raízes aéreas."
+    },
+    "ar": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera هي نبتة متسلقة استوائية موطنها الغابات المطيرة. تشتهر بأوراقها الكبيرة المثقوبة وجذورها الهوائية."
+    },
+    "hi": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera एक उष्णकटिबंधीय चढ़ने वाली बेल है, जो वर्षावनों में पाई जाती है। यह अपनी बड़ी, छिद्रित पत्तियों और हवाई जड़ों के लिए जानी जाती है।"
+    },
+    "zh": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera 是一种热带攀缘植物，原产于雨林。以其大的、带孔的叶子和气生根而闻名。"
+    },
+    "ja": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminiferaは熱帯のツル植物で、熱帯雨林に自生しています。大きな孔があいた葉と気根で知られています。"
+    },
+    "ko": {
+      "common_name": "Rhaphidophora foraminifera",
+      "description": "Rhaphidophora foraminifera는 열대 우림에서 자생하는 덩굴 식물입니다. 큰 구멍이 있는 잎과 공기 뿌리로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/240037/rhaphidophora-foraminifera",
+      "https://www.tropicos.org/name/35185463"
+    ]
+  }
+}

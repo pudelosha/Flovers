@@ -1,0 +1,237 @@
+{
+  "external_id": "rosa_chinensis",
+  "name": "Chinese Rose",
+  "latin": "Rosa chinensis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "rosa_chinensis.jpg",
+  "image_thumb": "rosa_chinensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie nasłonecznienie",
+          "de": "Mittlere Sonneneinstrahlung",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम सूर्य",
+          "zh": "中等阳光",
+          "ja": "中程度の光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderate Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "適度な成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Rose",
+      "description": "Rosa chinensis, commonly known as the Chinese rose, is a flowering plant native to China. It features vibrant pink blooms and is widely cultivated for ornamental purposes."
+    },
+    "pl": {
+      "common_name": "Róża chińska",
+      "description": "Róża chińska, znana jako Rosa chinensis, to roślina ozdobna pochodząca z Chin. Charakteryzuje się różowymi kwiatami i jest uprawiana w celach ozdobnych."
+    },
+    "de": {
+      "common_name": "Chinesische Rose",
+      "description": "Die Chinesische Rose, bekannt als Rosa chinensis, ist eine blühende Pflanze aus China. Sie hat lebendige rosa Blüten und wird häufig als Zierpflanze kultiviert."
+    },
+    "fr": {
+      "common_name": "Rose de Chine",
+      "description": "La Rose de Chine, ou Rosa chinensis, est une plante à fleurs originaire de Chine. Elle possède des fleurs roses vives et est cultivée pour des raisons ornementales."
+    },
+    "it": {
+      "common_name": "Rosa Cinese",
+      "description": "La Rosa Cinese, o Rosa chinensis, è una pianta da fiore originaria della Cina. Ha fiori rosa vivaci ed è coltivata per scopi ornamentali."
+    },
+    "es": {
+      "common_name": "Rosa China",
+      "description": "La Rosa China, conocida como Rosa chinensis, es una planta con flores originaria de China. Presenta flores rosadas brillantes y se cultiva ampliamente como planta ornamental."
+    },
+    "pt": {
+      "common_name": "Rosa Chinesa",
+      "description": "A Rosa Chinesa, conhecida como Rosa chinensis, é uma planta ornamental nativa da China. Apresenta flores rosadas e é amplamente cultivada."
+    },
+    "ar": {
+      "common_name": "ورد صيني",
+      "description": "الورد الصيني، المعروف باسم روزا شينينسيس، هو نبات مزهر أصلي من الصين. يتميز بأزهار وردية ويزرع بشكل واسع لأغراض الزينة."
+    },
+    "hi": {
+      "common_name": "चाइनीज़ गुलाब",
+      "description": "चाइनीज़ गुलाब, जिसे रोजा चीनीसिस के नाम से भी जाना जाता है, एक फूलों वाला पौधा है जो चीन का मूल निवासी है। इसमें गुलाबी रंग के फूल होते हैं और यह सजावटी उद्देश्यों के लिए उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "中国玫瑰",
+      "description": "中国玫瑰，也称为Rosa chinensis，是一种原产于中国的开花植物。它具有鲜艳的粉色花朵，广泛种植作为观赏植物。"
+    },
+    "ja": {
+      "common_name": "中国ローズ",
+      "description": "中国ローズ、またはRosa chinensisは中国原産の花を持つ植物です。鮮やかなピンクの花を持ち、観賞用として広く栽培されています。"
+    },
+    "ko": {
+      "common_name": "중국 장미",
+      "description": "중국 장미, 또는 Rosa chinensis는 중국 원산의 꽃을 가진 식물입니다. 선명한 분홍색 꽃을 가지고 있으며, 장식용으로 널리 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/rosa-chinensis",
+      "https://www.gardenia.net/plant/Rosa-chinensis"
+    ]
+  }
+}

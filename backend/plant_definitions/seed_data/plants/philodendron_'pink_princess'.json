@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_pink_princess",
+  "name": "Pink Princess",
+  "latin": "Philodendron 'Pink Princess'",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "philodendron_pink_princess.jpg",
+  "image_thumb": "philodendron_pink_princess.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange pour aroides",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "مزيج أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイド混合土",
+          "ko": "아로이드 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pink Princess",
+      "description": "Philodendron 'Pink Princess' is a beautiful variegated plant with dark green leaves and vibrant pink patches. It thrives in bright indirect light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Różowa Księżniczka",
+      "description": "Philodendron 'Pink Princess' to piękna roślina z ciemnozielonymi liśćmi i jasnoróżowymi plamami. Lubi jasne, pośrednie światło i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Pink Princess",
+      "description": "Der Philodendron 'Pink Princess' ist eine wunderschöne, buntblättrige Pflanze mit dunkelgrünen Blättern und lebendigen rosa Flecken. Er gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Princesse Rose",
+      "description": "Le Philodendron 'Pink Princess' est une plante magnifique avec des feuilles vertes foncées et des taches roses vives. Il prospère à la lumière indirecte vive et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Principessa Rosa",
+      "description": "Il Philodendron 'Pink Princess' è una pianta variegata con foglie verde scuro e macchie rosa vivaci. Cresce bene in luce indiretta brillante e richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Princesa Rosa",
+      "description": "El Philodendron 'Pink Princess' es una planta preciosa con hojas verdes oscuras y manchas rosas vibrantes. Crece bien con luz indirecta brillante y necesita un riego moderado."
+    },
+    "pt": {
+      "common_name": "Princesa Rosa",
+      "description": "O Philodendron 'Pink Princess' é uma planta lindamente variegada com folhas verde-escuras e manchas rosas vibrantes. Cresce bem em luz indireta e requer rega moderada."
+    },
+    "ar": {
+      "common_name": "الأميرة الوردية",
+      "description": "الفيلودندرون 'الأميرة الوردية' هو نبات مزخرف رائع بأوراق خضراء داكنة وبقع وردية زاهية. ينمو جيدًا في الضوء غير المباشر الساطع ويحتاج إلى سقاية معتدلة."
+    },
+    "hi": {
+      "common_name": "पिंक प्रिंसेस",
+      "description": "फिलोडेंड्रोन 'पिंक प्रिंसेस' एक सुंदर पत्तेदार पौधा है जिसमें गहरे हरे पत्ते और गुलाबी धब्बे होते हैं। यह चमकीली अप्रत्यक्ष रोशनी में अच्छा बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "粉红公主",
+      "description": "Philodendron 'Pink Princess' 是一种美丽的彩叶植物，拥有深绿色的叶子和鲜艳的粉红色斑点。它在明亮的间接光下生长良好，需要适度浇水。"
+    },
+    "ja": {
+      "common_name": "ピンクプリンセス",
+      "description": "Philodendron 'Pink Princess' は、濃い緑の葉と鮮やかなピンクの斑点が特徴的な美しい植物です。明るい間接光で元気に育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "핑크 프린세스",
+      "description": "Philodendron 'Pink Princess'는 어두운 녹색 잎과 생동감 있는 분홍색 얼룩을 가진 아름다운 변종 식물입니다. 밝은 간접광에서 잘 자라며, 적당한 물을 요구합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.jungseed.com/products/philodendron-pink-princess",
+      "https://www.gardenia.net/plant/philodendron-pink-princess"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "senecio_articulatus",
+  "name": "Candle Plant",
+  "latin": "Senecio articulatus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "senecio_articulatus.jpg",
+  "image_thumb": "senecio_articulatus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy mix",
+          "pl": "Mieszanka piaszczysta",
+          "de": "Sandiger Mix",
+          "fr": "Mélange sableux",
+          "it": "Miscela sabbiosa",
+          "es": "Mezcla arenosa",
+          "pt": "Mistura arenosa",
+          "ar": "خليط رملي",
+          "hi": "रेत मिश्रण",
+          "zh": "沙质混合土",
+          "ja": "砂のミックス",
+          "ko": "모래 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Baja",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سام",
+          "hi": "विषैले",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Candle Plant",
+      "description": "Senecio articulatus, also known as the Candle Plant, is a succulent native to South Africa. It is characterized by segmented, pale green stems that resemble linked sausages, topped with clusters of small yellow flowers."
+    },
+    "pl": {
+      "common_name": "Roślina świecowa",
+      "description": "Senecio articulatus, znany również jako roślina świecowa, to sukulent pochodzący z Południowej Afryki. Charakteryzuje się segmentowanymi, bladymi zielonymi łodygami przypominającymi połączone kiełbaski, zakończonymi małymi żółtymi kwiatami."
+    },
+    "de": {
+      "common_name": "Kerzenpflanze",
+      "description": "Senecio articulatus, auch als Kerzenpflanze bekannt, ist eine sukkulente Pflanze aus Südafrika. Sie hat segmentierte, blassgrüne Stängel, die an verbundene Würstchen erinnern, und trägt kleine gelbe Blüten."
+    },
+    "fr": {
+      "common_name": "Plante bougie",
+      "description": "Senecio articulatus, également appelée plante bougie, est une plante succulente originaire d'Afrique du Sud. Elle se caractérise par des tiges segmentées, vert pâle, ressemblant à des saucisses reliées, surmontées de petites fleurs jaunes."
+    },
+    "it": {
+      "common_name": "Pianta candela",
+      "description": "Senecio articulatus, conosciuta anche come pianta candela, è una succulenta originaria del Sudafrica. Ha steli segmentati, di colore verde pallido, che ricordano salsicce collegate, e porta piccoli fiori gialli."
+    },
+    "es": {
+      "common_name": "Planta vela",
+      "description": "Senecio articulatus, también conocida como planta vela, es una suculenta originaria de Sudáfrica. Se caracteriza por tallos segmentados de color verde pálido que parecen salchichas enlazadas, con pequeñas flores amarillas."
+    },
+    "pt": {
+      "common_name": "Planta vela",
+      "description": "Senecio articulatus, também conhecida como planta vela, é uma suculenta nativa da África do Sul. Apresenta caules segmentados, de cor verde pálido, que se assemelham a salsichas ligadas, e pequenas flores amarelas."
+    },
+    "ar": {
+      "common_name": "نبات الشمعة",
+      "description": "Senecio articulatus، المعروف أيضًا بنبات الشمعة، هو نبات عصاري موطنه جنوب إفريقيا. يتميز بسيقان مجزأة ذات لون أخضر باهت تشبه السجق المتصل، ويعلوها أزهار صغيرة صفراء."
+    },
+    "hi": {
+      "common_name": "मोमबत्ती पौधा",
+      "description": "Senecio articulatus, जिसे मोमबत्ती पौधा भी कहा जाता है, दक्षिण अफ्रीका का एक सुस्कलेंट है। इसके खंडित, हल्के हरे तने लिंक्ड सॉसेज के जैसे होते हैं और इनमें छोटे पीले फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "蜡烛植物",
+      "description": "Senecio articulatus，亦称为蜡烛植物，是一种原产于南非的多肉植物。它的茎分段，淡绿色，像连接的香肠，顶部有小黄花。"
+    },
+    "ja": {
+      "common_name": "キャンドルプラント",
+      "description": "Senecio articulatus、別名キャンドルプラントは南アフリカ原産の多肉植物です。セグメント化された淡緑色の茎が連結されたソーセージのようで、上部には小さな黄色の花があります。"
+    },
+    "ko": {
+      "common_name": "촛불 식물",
+      "description": "Senecio articulatus, 또는 촛불 식물은 남아프리카 원산의 다육 식물입니다. 분절된 연한 녹색 줄기가 연결된 소시지처럼 보이며, 그 위에 작은 노란 꽃이 핍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11949/senecio-articulatus/details",
+      "https://www.gardenia.net/plant/senecio-articulatus"
+    ]
+  }
+}

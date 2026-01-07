@@ -1,0 +1,237 @@
+{
+  "external_id": "sinningia_speciosa",
+  "name": "Gloxinia",
+  "latin": "Sinningia speciosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "sinningia_speciosa.jpg",
+  "image_thumb": "sinningia_speciosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittlere Sonneneinstrahlung",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, well-drained",
+          "pl": "Kwasowy, dobrze przepuszczalny",
+          "de": "Sauer, gut durchlässig",
+          "fr": "Acide, bien drainé",
+          "it": "Acido, ben drenato",
+          "es": "Ácido, bien drenado",
+          "pt": "Ácido, bem drenado",
+          "ar": "حمضي، جيد الصرف",
+          "hi": "अम्लीय, अच्छी जल निकासी",
+          "zh": "酸性，排水良好",
+          "ja": "酸性、良好な排水",
+          "ko": "산성, 배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जल देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषैला नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa is a popular ornamental plant known for its large, velvety purple flowers. It thrives in moderate sunlight and needs regular watering with well-drained, acidic soil."
+    },
+    "pl": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa to popularna roślina ozdobna, znana ze swoich dużych, aksamitnych fioletowych kwiatów. Rośnie najlepiej w umiarkowanym świetle i wymaga regularnego podlewania w dobrze przepuszczalnej, kwaśnej glebie."
+    },
+    "de": {
+      "common_name": "Gloxinie",
+      "description": "Sinningia speciosa ist eine beliebte Zierpflanze, die für ihre großen, samtigen, lila Blüten bekannt ist. Sie gedeiht bei mäßigem Sonnenlicht und benötigt regelmäßiges Gießen mit gut durchlässigem, saurem Boden."
+    },
+    "fr": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa est une plante ornementale populaire, connue pour ses grandes fleurs violettes et veloutées. Elle pousse bien à la lumière modérée et nécessite un arrosage régulier avec un sol acide et bien drainé."
+    },
+    "it": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa è una pianta ornamentale popolare, conosciuta per i suoi grandi fiori viola e vellutati. Cresce bene alla luce moderata e necessita di annaffiature regolari con terriccio ben drenato e acido."
+    },
+    "es": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa es una planta ornamental popular, conocida por sus grandes flores moradas y aterciopeladas. Crece bien con luz moderada y requiere riego regular con suelo ácido y bien drenado."
+    },
+    "pt": {
+      "common_name": "Gloxinia",
+      "description": "Sinningia speciosa é uma planta ornamental popular, conhecida por suas grandes flores roxas e aveludadas. Ela cresce bem com luz moderada e precisa de rega regular com solo ácido e bem drenado."
+    },
+    "ar": {
+      "common_name": "جلوكسينيا",
+      "description": "Sinningia speciosa هي نبتة زينة شهيرة معروفة بأزهارها البنفسجية الكبيرة والحريرية. تنمو جيدًا في الضوء المعتدل وتحتاج إلى سقاية منتظمة مع تربة حمضية وجيدة التصريف."
+    },
+    "hi": {
+      "common_name": "ग्लोक्सिनिया",
+      "description": "Sinningia speciosa एक लोकप्रिय सजावटी पौधा है, जो अपने बड़े, मखमली बैंगनी फूलों के लिए जाना जाता है। यह मध्यम धूप में अच्छी तरह से बढ़ता है और इसे नियमित रूप से पानी देने की आवश्यकता होती है, साथ ही अच्छी जल निकासी वाली अम्लीय मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "格洛克西亚",
+      "description": "Sinningia speciosa 是一种流行的观赏植物，以其大型、天鹅绒般的紫色花朵而闻名。它在适中的阳光下生长良好，需要定期浇水，并且需要排水良好的酸性土壤。"
+    },
+    "ja": {
+      "common_name": "グロキシニア",
+      "description": "Sinningia speciosa はその大きくてベルベットのような紫色の花で知られている人気のある観賞植物です。中程度の日光でよく育ち、適切な排水の効いた酸性土壌で定期的に水やりを必要とします。"
+    },
+    "ko": {
+      "common_name": "글록시니아",
+      "description": "Sinningia speciosa는 큰 벨벳 같은 보라색 꽃으로 유명한 인기 있는 관상 식물입니다. 이 식물은 적당한 햇빛에서 잘 자라며, 잘 배수되는 산성 토양에서 정기적으로 물을 주어야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/details?plantid=2922",
+      "https://www.gardenia.net/plant/sinningia-speciosa-gloxinia"
+    ]
+  }
+}

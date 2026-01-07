@@ -1,0 +1,237 @@
+{
+  "external_id": "stapelia_gigantea",
+  "name": "Giant Cactus Flower",
+  "latin": "Stapelia gigantea",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stapelia_gigantea.jpg",
+  "image_thumb": "stapelia_gigantea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaskowy",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملية",
+          "hi": "बालू",
+          "zh": "沙质",
+          "ja": "砂地",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Giant Cactus Flower",
+      "description": "Stapelia gigantea is a succulent known for its large, star-shaped flowers with a characteristic odor. It thrives in warm climates and requires minimal water, making it ideal for desert-like environments."
+    },
+    "pl": {
+      "common_name": "Wielka Kwiatowa Kaktus",
+      "description": "Stapelia gigantea to sukulent znany ze swoich dużych, gwiazdkowatych kwiatów o charakterystycznym zapachu. Rośnie w ciepłych klimatach i wymaga minimalnego podlewania, co sprawia, że idealnie nadaje się do środowisk pustynnych."
+    },
+    "de": {
+      "common_name": "Riesige Kaktusblume",
+      "description": "Stapelia gigantea ist eine Sukkulente, die für ihre großen, sternförmigen Blumen mit charakteristischem Geruch bekannt ist. Sie gedeiht in warmen Klimazonen und benötigt nur wenig Wasser, was sie ideal für wüstenähnliche Umgebungen macht."
+    },
+    "fr": {
+      "common_name": "Fleur de Cactus Géant",
+      "description": "Stapelia gigantea est une plante succulente connue pour ses grandes fleurs en forme d'étoile au parfum caractéristique. Elle prospère dans des climats chauds et nécessite peu d'eau, ce qui la rend idéale pour les environnements désertiques."
+    },
+    "it": {
+      "common_name": "Fiore di Cactus Gigante",
+      "description": "Stapelia gigantea è una succulenta nota per i suoi grandi fiori a forma di stella con un odore caratteristico. Cresce in climi caldi e richiede poca acqua, rendendola ideale per ambienti desertici."
+    },
+    "es": {
+      "common_name": "Flor de Cactus Gigante",
+      "description": "Stapelia gigantea es una suculenta conocida por sus grandes flores en forma de estrella con un olor característico. Crece en climas cálidos y requiere poca agua, lo que la hace ideal para entornos desérticos."
+    },
+    "pt": {
+      "common_name": "Flor de Cacto Gigante",
+      "description": "Stapelia gigantea é uma suculenta conhecida por suas grandes flores em forma de estrela com um cheiro característico. Ela prospera em climas quentes e requer pouca água, tornando-a ideal para ambientes desérticos."
+    },
+    "ar": {
+      "common_name": "زهرة صبار عملاقة",
+      "description": "Stapelia gigantea هي نبتة عصارية معروفة بزهورها الكبيرة ذات الشكل النجمي ورائحتها المميزة. تنمو في المناخات الدافئة وتتطلب القليل من الماء، مما يجعلها مثالية للبيئات الصحراوية."
+    },
+    "hi": {
+      "common_name": "विशाल कैक्टस फूल",
+      "description": "Stapelia gigantea एक शाकीय पौधा है जो अपनी बड़ी, तारा आकार की फूलों के लिए जाना जाता है, जिसमें एक विशिष्ट गंध होती है। यह गर्म जलवायु में बढ़ता है और न्यूनतम पानी की आवश्यकता होती है, जो इसे रेगिस्तानी जैसे वातावरण के लिए आदर्श बनाता है।"
+    },
+    "zh": {
+      "common_name": "巨型仙人掌花",
+      "description": "Stapelia gigantea 是一种多肉植物，以其大型的星形花朵和特有的气味而闻名。它适应温暖气候，水需求较少，适合沙漠类环境。"
+    },
+    "ja": {
+      "common_name": "巨大なサボテンの花",
+      "description": "Stapelia giganteaは、特有の香りを持つ大きな星形の花で知られる多肉植物です。暖かい気候で成長し、最小限の水分を必要とし、砂漠のような環境に最適です。"
+    },
+    "ko": {
+      "common_name": "거대한 선인장 꽃",
+      "description": "Stapelia gigantea는 특징적인 향을 가진 큰 별 모양의 꽃으로 알려진 다육식물입니다. 따뜻한 기후에서 잘 자라며 물이 적게 필요해 사막 같은 환경에 이상적입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/Stapelia-gigantea",
+      "https://www.gardenia.net/plant/stapelia-gigantea"
+    ]
+  }
+}

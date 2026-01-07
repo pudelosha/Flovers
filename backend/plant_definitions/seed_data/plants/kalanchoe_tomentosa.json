@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_tomentosa",
+  "name": "Panda Plant",
+  "latin": "Kalanchoe tomentosa",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_tomentosa.jpg",
+  "image_thumb": "kalanchoe_tomentosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobra drenaż",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoors",
+          "pl": "Ciepłe wnętrza",
+          "de": "Warm innen",
+          "fr": "Chaud intérieur",
+          "it": "Caldo interno",
+          "es": "Interior cálido",
+          "pt": "Interior quente",
+          "ar": "دافئ داخلي",
+          "hi": "गर्म वातावरण",
+          "zh": "温暖环境",
+          "ja": "暖かい室内",
+          "ko": "따뜻한 실내"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luft",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Panda Plant",
+      "description": "Kalanchoe tomentosa is a small succulent with fuzzy, silvery leaves edged in brown. It is drought tolerant and well suited to bright indoor locations."
+    },
+    "pl": {
+      "common_name": "Kalanchoe filcowate",
+      "description": "Kalanchoe tomentosa to sukulent o miękkich, omszonych liściach z brązowymi krawędziami. Dobrze rośnie w jasnych wnętrzach i wymaga rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Pandapflanze",
+      "description": "Kalanchoe tomentosa ist eine sukkulente Pflanze mit filzigen Blättern und braunen Rändern. Sie bevorzugt helles Licht und wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Plante panda",
+      "description": "Kalanchoe tomentosa est une plante succulente aux feuilles duveteuses bordées de brun. Elle demande beaucoup de lumière et peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Pianta panda",
+      "description": "Kalanchoe tomentosa è una succulenta con foglie vellutate e margini marroni. È resistente alla siccità e adatta agli interni luminosi."
+    },
+    "es": {
+      "common_name": "Planta panda",
+      "description": "Kalanchoe tomentosa es una suculenta de hojas aterciopeladas con bordes marrones. Necesita mucha luz y riego poco frecuente."
+    },
+    "pt": {
+      "common_name": "Planta panda",
+      "description": "Kalanchoe tomentosa é uma suculenta com folhas aveludadas e bordas marrons. Prefere ambientes claros e pouca água."
+    },
+    "ar": {
+      "common_name": "نبات الباندا",
+      "description": "كالانشو تومينتوسا نبات عصاري بأوراق مخملية وحواف بنية. يحتاج إلى ضوء جيد وري قليل."
+    },
+    "hi": {
+      "common_name": "पांडा पौधा",
+      "description": "कैलान्को टोमेंटोसा एक रसीला पौधा है जिसकी पत्तियाँ मुलायम होती हैं। इसे तेज रोशनी और कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "熊猫植物",
+      "description": "Kalanchoe tomentosa 是一种多肉植物，叶片柔软且边缘呈褐色。适合明亮环境并且耐旱。"
+    },
+    "ja": {
+      "common_name": "パンダプラント",
+      "description": "カランコエ・トメントサは産毛のある葉を持つ多肉植物です。明るい場所と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "판다 식물",
+      "description": "Kalanchoe tomentosa는 잎이 부드럽고 가장자리가 갈색인 다육식물입니다. 밝은 빛과 적은 물을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9636/kalanchoe-tomentosa/details",
+      "https://extension.umn.edu/houseplants/kalanchoe",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a586"
+    ]
+  }
+}

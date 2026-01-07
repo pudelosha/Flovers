@@ -1,0 +1,237 @@
+{
+  "external_id": "rhaphidophora_megasperma",
+  "name": "Rhaphidophora megasperma",
+  "latin": "Rhaphidophora megasperma",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rhaphidophora_megasperma.jpg",
+  "image_thumb": "rhaphidophora_megasperma.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange d'aroïde",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "خليط أرويد",
+          "hi": "एरॉयड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पेट्स के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vigorous climber",
+          "pl": "Silny pnącz",
+          "de": "Kräftiger Kletterer",
+          "fr": "Grimpant vigoureux",
+          "it": "Rampicante vigoroso",
+          "es": "Trepador vigoroso",
+          "pt": "Crescimento vigoroso",
+          "ar": "متسلق قوي",
+          "hi": "प्रबल चढ़ाई करने वाला",
+          "zh": "生长强劲的攀缘植物",
+          "ja": "力強い登攀者",
+          "ko": "강한 기어오르는 식물"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Giant Rhaphidophora",
+      "description": "Rhaphidophora megasperma is a vigorous tropical climber, native to Southeast Asia. It thrives in medium light and high humidity, making it ideal for indoor spaces."
+    },
+    "pl": {
+      "common_name": "Wielki Rhaphidophora",
+      "description": "Rhaphidophora megasperma to energiczne pnącze tropikalne, pochodzące z Azji Południowo-Wschodniej. Rośnie w średnim świetle i wysokiej wilgotności, idealne do wnętrz."
+    },
+    "de": {
+      "common_name": "Riesige Rhaphidophora",
+      "description": "Rhaphidophora megasperma ist ein kräftiger Kletterpflanze aus Südostasien. Es gedeiht bei mittlerem Licht und hoher Luftfeuchtigkeit, ideal für Innenräume."
+    },
+    "fr": {
+      "common_name": "Rhaphidophora géant",
+      "description": "Rhaphidophora megasperma est une plante grimpante vigoureuse, originaire du sud-est asiatique. Elle prospère sous une lumière moyenne et une humidité élevée, idéale pour les espaces intérieurs."
+    },
+    "it": {
+      "common_name": "Rhaphidophora gigantea",
+      "description": "Rhaphidophora megasperma è una pianta rampicante vigorosa, originaria del sud-est asiatico. Cresce con luce media e umidità elevata, ideale per ambienti interni."
+    },
+    "es": {
+      "common_name": "Rhaphidophora gigante",
+      "description": "Rhaphidophora megasperma es una planta trepadora vigorosa, originaria del sudeste asiático. Crece con luz media y alta humedad, ideal para interiores."
+    },
+    "pt": {
+      "common_name": "Rhaphidophora gigante",
+      "description": "Rhaphidophora megasperma é uma planta trepadeira vigorosa, nativa do sudeste asiático. Ela cresce com luz média e alta umidade, ideal para ambientes internos."
+    },
+    "ar": {
+      "common_name": "رافعيدوفورا عملاقة",
+      "description": "رافعيدوفورا ميجاسبيرما هي نبات متسلق قوي، أصلي من جنوب شرق آسيا. ينمو في الضوء المتوسط والرطوبة العالية، مما يجعله مثاليًا للفضاءات الداخلية."
+    },
+    "hi": {
+      "common_name": "विशाल रफिडोफोरा",
+      "description": "रफिडोफोरा मेगास्पेर्मा एक मजबूत उगने वाला पौधा है, जो दक्षिण-पूर्व एशिया का मूल निवासी है। यह मध्यम प्रकाश और उच्च आर्द्रता में उगता है, जो इसे इनडोर स्पेस के लिए आदर्श बनाता है।"
+    },
+    "zh": {
+      "common_name": "巨型拉菲多福拉",
+      "description": "Rhaphidophora megasperma 是一种强劲的攀缘植物，原产于东南亚。它在中等光照和高湿度下生长，非常适合室内环境。"
+    },
+    "ja": {
+      "common_name": "ジャイアントラフィドフォラ",
+      "description": "Rhaphidophora megaspermaは、東南アジア原産の力強い登攀植物です。中程度の光と高湿度で育ち、屋内スペースに最適です。"
+    },
+    "ko": {
+      "common_name": "거대 라피도포라",
+      "description": "Rhaphidophora megasperma는 동남아시아 원산의 강한 등반 식물입니다. 중간 정도의 빛과 높은 습도에서 잘 자라며 실내 공간에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants",
+      "https://www.gardeningknowhow.com"
+    ]
+  }
+}

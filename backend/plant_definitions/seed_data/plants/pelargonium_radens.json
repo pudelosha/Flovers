@@ -1,0 +1,237 @@
+{
+  "external_id": "pelargonium_radens",
+  "name": "Raden's Scented Geranium",
+  "latin": "Pelargonium radens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pelargonium_radens.jpg",
+  "image_thumb": "pelargonium_radens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "क्ले",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "compact",
+          "pl": "zwarty",
+          "de": "kompakt",
+          "fr": "compact",
+          "it": "compatto",
+          "es": "compacto",
+          "pt": "compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Raden's Scented Geranium",
+      "description": "Pelargonium radens, also known as Raden's scented geranium, is a fragrant plant native to South Africa. It is known for its aromatic foliage and delicate pink flowers."
+    },
+    "pl": {
+      "common_name": "Pelargonium Raden",
+      "description": "Pelargonium radens, znany również jako pelargonia zapachowa Raden, to roślina pochodząca z RPA. Znana jest z aromatycznych liści i delikatnych różowych kwiatów."
+    },
+    "de": {
+      "common_name": "Raden Duftgeranie",
+      "description": "Pelargonium radens, auch bekannt als Raden Duftgeranie, ist eine duftende Pflanze aus Südafrika. Sie ist bekannt für ihr aromatisches Laub und zarte rosa Blüten."
+    },
+    "fr": {
+      "common_name": "Géranium parfumé de Raden",
+      "description": "Le Pelargonium radens, également connu sous le nom de géranium parfumé de Raden, est une plante aromatique originaire d'Afrique du Sud. Elle est appréciée pour son feuillage parfumé et ses délicates fleurs roses."
+    },
+    "it": {
+      "common_name": "Geranio profumato di Raden",
+      "description": "Il Pelargonium radens, noto anche come geranio profumato di Raden, è una pianta fragrante originaria del Sud Africa. È conosciuta per il suo fogliame aromatico e i delicati fiori rosa."
+    },
+    "es": {
+      "common_name": "Geranio aromático de Raden",
+      "description": "El Pelargonium radens, también conocido como geranio aromático de Raden, es una planta aromática originaria de Sudáfrica. Es conocida por su follaje aromático y sus delicadas flores rosadas."
+    },
+    "pt": {
+      "common_name": "Gerânio perfumado de Raden",
+      "description": "O Pelargonium radens, também conhecido como gerânio perfumado de Raden, é uma planta aromática nativa da África do Sul. É conhecida por sua folhagem aromática e suas delicadas flores rosas."
+    },
+    "ar": {
+      "common_name": "الجيرانيوم المعطر من رادن",
+      "description": "بيلارغونيوم رادينس، المعروف أيضًا بالجيراينيوم المعطر من رادن، هو نبات عطري موطنه جنوب أفريقيا. يشتهر بأوراقه العطرية وزهورها الوردية الدقيقة."
+    },
+    "hi": {
+      "common_name": "राडन की सुगंधित जेरेनियम",
+      "description": "पेलार्गोनियम राडेंस, जिसे राडन की सुगंधित जेरेनियम भी कहा जाता है, दक्षिण अफ्रीका का एक सुगंधित पौधा है। यह अपनी सुगंधित पत्तियों और नाजुक गुलाबी फूलों के लिए जाना जाता है."
+    },
+    "zh": {
+      "common_name": "拉登香叶天竺葵",
+      "description": "拉登香叶天竺葵（Pelargonium radens）是南非的香草植物。它以其芳香的叶子和精致的粉色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "ラデンの香りゼラニウム",
+      "description": "ラデンの香りゼラニウム（Pelargonium radens）は、南アフリカ原産の香りの良い植物です。その芳香のある葉と繊細なピンクの花が特徴です。"
+    },
+    "ko": {
+      "common_name": "라덴 향기 제라늄",
+      "description": "Pelargonium radens, 라덴 향기 제라늄은 남아프리카 원산의 향기로운 식물입니다. 향기로운 잎과 섬세한 분홍색 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/pelargonium-radens",
+      "https://www.gardeningknowhow.com/plant-care/soil/pelargonium-care.htm"
+    ]
+  }
+}

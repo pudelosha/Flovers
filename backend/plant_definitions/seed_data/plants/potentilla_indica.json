@@ -1,0 +1,235 @@
+{
+  "external_id": "potentilla_indica",
+  "name": "Mock Strawberry",
+  "latin": "Potentilla indica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "potentilla_indica.jpg",
+  "image_thumb": "potentilla_indica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Ground cover",
+          "pl": "Pokrywa gruntu",
+          "de": "Bodenbedecker",
+          "fr": "Couverture du sol",
+          "it": "Copertura del suolo",
+          "es": "Cobertura del suelo",
+          "pt": "Cobertura do solo",
+          "ar": "تغطية الأرض",
+          "hi": "भूमि कवर",
+          "zh": "地面覆盖",
+          "ja": "地面カバー",
+          "ko": "지면 덮개"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mock Strawberry",
+      "description": "Potentilla indica, commonly known as mock strawberry, is a low-growing herbaceous plant. It is often found in temperate regions and resembles a strawberry plant with small, red, non-edible fruit."
+    },
+    "pl": {
+      "common_name": "Fałszywa truskawka",
+      "description": "Potentilla indica, znana jako fałszywa truskawka, to niska roślina zielna. Występuje w regionach umiarkowanych, przypomina roślinę truskawkową, z małymi, czerwonymi, niejadalnymi owocami."
+    },
+    "de": {
+      "common_name": "Scheinerdbeere",
+      "description": "Potentilla indica, auch als Scheinerdbeere bekannt, ist eine niedrig wachsende krautige Pflanze. Sie kommt in gemäßigten Regionen vor und ähnelt einer Erdbeerpflanze mit kleinen, roten, nicht essbaren Früchten."
+    },
+    "fr": {
+      "common_name": "Fausse fraise",
+      "description": "Potentilla indica, communément appelée fausse fraise, est une plante herbacée à faible croissance. Elle est souvent trouvée dans les régions tempérées et ressemble à une plante de fraise avec de petits fruits rouges non comestibles."
+    },
+    "it": {
+      "common_name": "Falsa fragola",
+      "description": "Potentilla indica, conosciuta come falsa fragola, è una pianta erbacea a crescita bassa. Viene trovata nelle regioni temperate e somiglia a una pianta di fragola con piccoli frutti rossi non commestibili."
+    },
+    "es": {
+      "common_name": "Falsa fresa",
+      "description": "Potentilla indica, comúnmente conocida como falsa fresa, es una planta herbácea de bajo crecimiento. Se encuentra a menudo en regiones templadas y se parece a una planta de fresa con pequeños frutos rojos no comestibles."
+    },
+    "pt": {
+      "common_name": "Morango falso",
+      "description": "Potentilla indica, comumente conhecida como morango falso, é uma planta herbácea de baixo crescimento. É frequentemente encontrada em regiões temperadas e se assemelha a uma planta de morango com pequenos frutos vermelhos não comestíveis."
+    },
+    "ar": {
+      "common_name": "الفراولة المزيفة",
+      "description": "بوتنتيلا إنديك، المعروفة أيضًا بالفراولة المزيفة، هي نبات عشبي منخفض النمو. غالبًا ما توجد في المناطق المعتدلة وتشبه نبات الفراولة مع فواكه حمراء صغيرة غير صالحة للأكل."
+    },
+    "hi": {
+      "common_name": "नकली स्ट्रॉबेरी",
+      "description": "पोटेंटिला इंडिका, जिसे नकली स्ट्रॉबेरी के नाम से जाना जाता है, एक कम ऊँचाई वाली पौधा है। यह अक्सर उष्णकटिबंधीय क्षेत्रों में पाया जाता है और स्ट्रॉबेरी पौधे की तरह दिखता है जिसमें छोटे, लाल, अव्याहृत फल होते हैं।"
+    },
+    "zh": {
+      "common_name": "假草莓",
+      "description": "Potentilla indica，通常被称为假草莓，是一种低生长的草本植物。它通常生长在温带地区，类似于草莓植物，果实小而红，不可食用。"
+    },
+    "ja": {
+      "common_name": "擬似イチゴ",
+      "description": "Potentilla indica、一般に擬似イチゴとして知られる低成長の草本植物です。温帯地域でよく見られ、赤い小さな食用でない果実を持つイチゴ植物に似ています。"
+    },
+    "ko": {
+      "common_name": "가짜 딸기",
+      "description": "Potentilla indica, 일반적으로 가짜 딸기로 알려진 이 식물은 낮게 자라는 풀입니다. 온대 지역에서 자주 발견되며 작은 빨간 비식용 열매를 가진 딸기 식물처럼 보입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/potentilla-indica",
+      "https://www.bhg.com/gardening/potentilla-indica-care/"
+    ]
+  }
+}

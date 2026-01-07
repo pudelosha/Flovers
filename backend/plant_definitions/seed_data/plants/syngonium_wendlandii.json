@@ -1,0 +1,237 @@
+{
+  "external_id": "syngonium_wendlandii",
+  "name": "Syngonium Wendlandii",
+  "latin": "Syngonium wendlandii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "syngonium_wendlandii.jpg",
+  "image_thumb": "syngonium_wendlandii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Erde",
+          "fr": "Mélange aroid",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "خليط أرويد",
+          "hi": "एरॉयड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 믹스"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "보통 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Arrowhead Vine",
+      "description": "Syngonium wendlandii is a beautiful tropical vine. It is known for its lush, heart-shaped leaves with striking white veins."
+    },
+    "pl": {
+      "common_name": "Winorośl strzałkowa",
+      "description": "Syngonium wendlandii to piękna tropikalna winorośl. Znana jest z bujnych, sercowatych liści z wyrazistymi białymi żyłkami."
+    },
+    "de": {
+      "common_name": "Pfeilblattrebe",
+      "description": "Syngonium wendlandii ist eine wunderschöne tropische Kletterpflanze. Sie ist bekannt für ihre üppigen, herzförmigen Blätter mit markanten weißen Adern."
+    },
+    "fr": {
+      "common_name": "Vigne à flèche",
+      "description": "Syngonium wendlandii est une belle vigne tropicale. Elle est connue pour ses feuilles en forme de cœur, avec de belles nervures blanches."
+    },
+    "it": {
+      "common_name": "Vite a freccia",
+      "description": "Syngonium wendlandii è una bellissima vite tropicale. È nota per le sue lussureggianti foglie a forma di cuore con venature bianche."
+    },
+    "es": {
+      "common_name": "Vid de flecha",
+      "description": "Syngonium wendlandii es una hermosa vid tropical. Es conocida por sus hojas en forma de corazón con venas blancas marcadas."
+    },
+    "pt": {
+      "common_name": "Videira de flecha",
+      "description": "Syngonium wendlandii é uma bela videira tropical. É conhecida por suas folhas em forma de coração com veios brancos marcantes."
+    },
+    "ar": {
+      "common_name": "عنقود السهم",
+      "description": "Syngonium wendlandii هي كرمة استوائية جميلة. معروفة بأوراقها على شكل قلب مع عروق بيضاء مميزة."
+    },
+    "hi": {
+      "common_name": "तीर बेल",
+      "description": "Syngonium wendlandii एक सुंदर उष्णकटिबंधीय बेल है। यह अपनी हृदय के आकार की पत्तियों और सफेद नसों के लिए जानी जाती है।"
+    },
+    "zh": {
+      "common_name": "箭头藤",
+      "description": "Syngonium wendlandii 是一种美丽的热带藤本植物。它以其心形的叶子和显著的白色脉络而闻名。"
+    },
+    "ja": {
+      "common_name": "矢印のつる植物",
+      "description": "Syngonium wendlandii は美しい熱帯性のツル植物です。ハート型の葉と特徴的な白い脈が特徴です。"
+    },
+    "ko": {
+      "common_name": "화살표 덩굴",
+      "description": "Syngonium wendlandii는 아름다운 열대 덩굴 식물입니다. 그것은 하트 모양의 잎과 눈에 띄는 흰색 정맥으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/70697/syngonium-wendlandii",
+      "https://www.botanicgarden.ox.ac.uk/plant/syngonium-wendlandii"
+    ]
+  }
+}

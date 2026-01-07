@@ -1,0 +1,237 @@
+{
+  "external_id": "senecio_serpens",
+  "name": "Blue Chalksticks",
+  "latin": "Senecio serpens",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "senecio_serpens.jpg",
+  "image_thumb": "senecio_serpens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "햇빛이 잘 드는 곳"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Infrequent",
+          "pl": "Rzadkie",
+          "de": "Selten",
+          "fr": "Peu fréquent",
+          "it": "Raro",
+          "es": "Poco frecuente",
+          "pt": "Raro",
+          "ar": "نادراً",
+          "hi": "कभी-कभी",
+          "zh": "不常",
+          "ja": "まれに",
+          "ko": "드물게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Caliente",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Chalksticks",
+      "description": "Blue Chalksticks is a succulent plant native to South Africa, characterized by its striking blue-green, fleshy leaves. It thrives in full sun and requires infrequent watering."
+    },
+    "pl": {
+      "common_name": "Niebieski kamień kredowy",
+      "description": "Niebieski kamień kredowy to roślina sukulentna pochodząca z Południowej Afryki, charakteryzująca się niebieskawozielonymi, mięsistymi liśćmi. Rośnie w pełnym słońcu i wymaga rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Blauer Kalkstein",
+      "description": "Blauer Kalkstein ist eine Sukkulente aus Südafrika, die durch ihre auffälligen blau-grünen, fleischigen Blätter besticht. Sie gedeiht in voller Sonne und benötigt nur selten Wasser."
+    },
+    "fr": {
+      "common_name": "Bâtons de craie bleus",
+      "description": "Les bâtons de craie bleus sont une plante succulente originaire d'Afrique du Sud, caractérisée par ses feuilles charnues de couleur bleu-vert. Elle préfère le plein soleil et nécessite peu d'eau."
+    },
+    "it": {
+      "common_name": "Stecco di gesso blu",
+      "description": "Lo stecco di gesso blu è una pianta succulenta originaria del Sud Africa, caratterizzata dalle sue foglie carnose blu-verdi. Cresce al sole pieno e richiede annaffiature poco frequenti."
+    },
+    "es": {
+      "common_name": "Palillos de tiza azules",
+      "description": "Los palillos de tiza azules son una planta suculenta originaria de Sudáfrica, caracterizada por sus hojas carnosas de color azul-verde. Prefiere la luz solar directa y requiere poca agua."
+    },
+    "pt": {
+      "common_name": "Palitos de giz azuis",
+      "description": "Os palitos de giz azuis são uma planta suculenta nativa da África do Sul, caracterizada por suas folhas carnudas azul-esverdeadas. Ela prefere sol pleno e necessita de pouca água."
+    },
+    "ar": {
+      "common_name": "عصا الطباشير الزرقاء",
+      "description": "عصا الطباشير الزرقاء هي نبات عصاري موطنه جنوب أفريقيا، يتميز بأوراقه اللحمية ذات اللون الأزرق-الأخضر. ينمو في الشمس الكاملة ويحتاج إلى الري بشكل نادر."
+    },
+    "hi": {
+      "common_name": "नीला चाक स्टिक",
+      "description": "नीला चाक स्टिक दक्षिण अफ्रीका का एक रसीला पौधा है, जो अपनी नीली-हरे रंग की मांसल पत्तियों के लिए जाना जाता है। यह पूरी धूप में उगता है और बहुत कम पानी की आवश्यकता होती है."
+    },
+    "zh": {
+      "common_name": "蓝色粉笔棒",
+      "description": "蓝色粉笔棒是原产于南非的多肉植物，具有引人注目的蓝绿色肉质叶子。它在充足阳光下生长，并且需要很少的水分。"
+    },
+    "ja": {
+      "common_name": "青いチョークスティック",
+      "description": "青いチョークスティックは南アフリカ原産の多肉植物で、特徴的な青緑色の肉質の葉を持っています。直射日光を好み、少ない水分で育ちます。"
+    },
+    "ko": {
+      "common_name": "블루 초크스틱",
+      "description": "블루 초크스틱은 남아프리카 원산의 다육 식물로, 파란색과 녹색의 두꺼운 잎이 특징입니다. 직사광선 아래에서 자라며 물을 자주 주지 않아도 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11847/senecio-serpens",
+      "https://www.gardeningknowhow.com/ornamental/cacti-succulents/senecio-serpens-care.htm"
+    ]
+  }
+}

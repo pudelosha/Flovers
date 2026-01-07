@@ -1,0 +1,237 @@
+{
+  "external_id": "parodia_lenninghausii",
+  "name": "Golden Ball Cactus",
+  "latin": "Parodia lenninghausii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "parodia_lenninghausii.jpg",
+  "image_thumb": "parodia_lenninghausii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sablonneux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂質土壌",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "नमीयता कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "저습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "विषाक्त नहीं",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstums",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Golden Ball Cactus",
+      "description": "Parodia lenninghausii, commonly known as the Golden Ball Cactus, is a slow-growing, spherical cactus with golden spines. It thrives in well-drained sandy soils and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Złota kula kaktusa",
+      "description": "Parodia lenninghausii, znana jako Złota kula kaktusa, to wolno rosnący, kulisty kaktus o złotych kolcach. Rośnie w dobrze przepuszczalnych piaskowych glebach i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Goldene Kugel Kaktus",
+      "description": "Parodia lenninghausii, auch bekannt als der Goldene Kugelkaktus, ist ein langsam wachsender, kugelförmiger Kaktus mit goldenen Stacheln. Er gedeiht in gut durchlässigen sandigen Böden und benötigt mäßige Bewässerung."
+    },
+    "fr": {
+      "common_name": "Cactus boule dorée",
+      "description": "Parodia lenninghausii, communément appelé cactus boule dorée, est un cactus à croissance lente en forme de boule avec des épines dorées. Il préfère les sols sablonneux bien drainés et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Cactus palla dorata",
+      "description": "Parodia lenninghausii, conosciuto come il cactus palla dorata, è un cactus a crescita lenta, di forma sferica con spine dorate. Cresce bene in terreni sabbiosi ben drenati e richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Cactus bola dorada",
+      "description": "Parodia lenninghausii, comúnmente conocido como el cactus bola dorada, es un cactus de crecimiento lento, esférico, con espinas doradas. Crece bien en suelos arenosos bien drenados y necesita riego moderado."
+    },
+    "pt": {
+      "common_name": "Cacto bola dourada",
+      "description": "Parodia lenninghausii, conhecido como o cacto bola dourada, é um cacto de crescimento lento, esférico, com espinhos dourados. Ele cresce bem em solos arenosos bem drenados e requer rega moderada."
+    },
+    "ar": {
+      "common_name": "صبار الكرة الذهبية",
+      "description": "Parodia lenninghausii، والمعروف باسم صبار الكرة الذهبية، هو صبار بطيء النمو كروي الشكل مع أشواك ذهبية. ينمو في التربة الرملية جيدة التصريف ويتطلب سقاية معتدلة."
+    },
+    "hi": {
+      "common_name": "गोल्डन बॉल कैक्टस",
+      "description": "Parodia lenninghausii, जिसे गोल्डन बॉल कैक्टस के नाम से जाना जाता है, यह एक धीमी गति से बढ़ने वाला गोलाकार कैक्टस है, जिसकी कांटें सोने जैसी होती हैं। यह अच्छे जल निकासी वाली रेतीली मिट्टी में उगता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "金球仙人掌",
+      "description": "Parodia lenninghausii，也称为金球仙人掌，是一种生长缓慢、球形的仙人掌，具有金色的刺。它在排水良好的沙质土壤中生长，并需要适量的浇水。"
+    },
+    "ja": {
+      "common_name": "ゴールデンボールサボテン",
+      "description": "Parodia lenninghausii、通称ゴールデンボールサボテンは、金色の棘を持つ球形の遅い成長をするサボテンです。良好な排水性を持つ砂質土壌で育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "골든볼 선인장",
+      "description": "Parodia lenninghausii, 일반적으로 골든볼 선인장으로 알려진 이 선인장은 금색 가시를 가진 둥근 형태의 느리게 자라는 선인장입니다. 배수가 좋은 모래 토양에서 잘 자라며 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/261658/Parodia-lenninghausii/Details",
+      "https://www.gardenia.net/plant/parodia-lenninghausii"
+    ]
+  }
+}

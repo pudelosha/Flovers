@@ -1,0 +1,237 @@
+{
+  "external_id": "tabernaemontana_divaricata",
+  "name": "Pinwheel Jasmine",
+  "latin": "Tabernaemontana divaricata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tabernaemontana_divaricata.jpg",
+  "image_thumb": "tabernaemontana_divaricata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lößboden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "क्ले मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中等成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pinwheel Jasmine",
+      "description": "Tabernaemontana divaricata, also known as Pinwheel Jasmine, is a small shrub with fragrant white flowers. It thrives in moderate light and requires regular watering."
+    },
+    "pl": {
+      "common_name": "Jaśmin wiatraczny",
+      "description": "Tabernaemontana divaricata, znana również jako jaśmin wiatraczny, to mały krzew z pachnącymi białymi kwiatami. Rośnie najlepiej w umiarkowanym świetle i wymaga regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Windrad-Jasmin",
+      "description": "Tabernaemontana divaricata, auch als Windrad-Jasmin bekannt, ist ein kleiner Strauch mit duftenden weißen Blüten. Er gedeiht bei mäßigem Licht und benötigt regelmäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Jasmin moulinet",
+      "description": "Tabernaemontana divaricata, aussi appelé Jasmin moulinet, est un petit arbuste aux fleurs blanches parfumées. Il pousse bien à la lumière modérée et nécessite un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Gelsomino ruota",
+      "description": "Tabernaemontana divaricata, noto anche come gelsomino ruota, è un piccolo arbusto con fiori bianchi profumati. Cresce bene in luce moderata e necessita di annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Jazmín molino",
+      "description": "Tabernaemontana divaricata, también conocido como jazmín molino, es un arbusto pequeño con flores blancas fragantes. Crece bien con luz moderada y requiere riego regular."
+    },
+    "pt": {
+      "common_name": "Jasmim moinho",
+      "description": "Tabernaemontana divaricata, também conhecido como jasmim moinho, é um pequeno arbusto com flores brancas perfumadas. Cresce bem com luz moderada e precisa de rega regular."
+    },
+    "ar": {
+      "common_name": "ياسمين عجلة الرياح",
+      "description": "تابيرنيمونتانا ديفاريكاتا، المعروف أيضًا باسم ياسمين عجلة الرياح، هو شجيرة صغيرة ذات زهور بيضاء عطرية. ينمو في الضوء المعتدل ويتطلب الري المنتظم."
+    },
+    "hi": {
+      "common_name": "पिनव्हील जैस्मिन",
+      "description": "टैबर्नीमोंटाना डिवारीकेटा, जिसे पिनव्हील जैस्मिन भी कहा जाता है, एक छोटा झाड़ी है जिसमें खुशबूदार सफेद फूल होते हैं। यह मध्यम रोशनी में अच्छा उगता है और नियमित पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "风车茉莉",
+      "description": "Tabernaemontana divaricata，通常被称为风车茉莉，是一种具有香气的白色花朵的小灌木。它在中等光照下生长良好，并需要定期浇水。"
+    },
+    "ja": {
+      "common_name": "風車ジャスミン",
+      "description": "Tabernaemontana divaricata、別名風車ジャスミンは、香り高い白い花を持つ小さな低木です。中程度の光でよく育ち、定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "풍차 자스민",
+      "description": "Tabernaemontana divaricata, 풍차 자스민으로도 알려진 이 식물은 향기로운 흰 꽃을 가진 작은 관목입니다. 중간 정도의 빛에서 잘 자라며 정기적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/tabernaemontana-divaricata",
+      "https://www.horticulture.com/pinwheel-jasmine-care"
+    ]
+  }
+}

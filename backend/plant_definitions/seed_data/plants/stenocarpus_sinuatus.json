@@ -1,0 +1,236 @@
+{
+  "external_id": "stenocarpus_sinuatus",
+  "name": "Firewheel Tree",
+  "latin": "Stenocarpus sinuatus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stenocarpus_sinuatus.jpg",
+  "image_thumb": "stenocarpus_sinuatus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Firewheel Tree",
+      "description": "Stenocarpus sinuatus, known as the Firewheel Tree, is native to Australia. It is famous for its striking red-orange flowers."
+    },
+    "pl": {
+      "common_name": "Drzewo Ogniskowe",
+      "description": "Stenocarpus sinuatus, znany jako Drzewo Ogniskowe, pochodzi z Australii. Słynie ze swoich uderzających czerwono-pomarańczowych kwiatów."
+    },
+    "de": {
+      "common_name": "Feuerradbaum",
+      "description": "Stenocarpus sinuatus, auch als Feuerradbaum bekannt, stammt aus Australien. Berühmt ist er für seine auffälligen rot-orangenen Blüten."
+    },
+    "fr": {
+      "common_name": "Arbre Roue de Feu",
+      "description": "Stenocarpus sinuatus, connu sous le nom d'Arbre Roue de Feu, est originaire d'Australie. Il est célèbre pour ses fleurs rouges-orangées éclatantes."
+    },
+    "it": {
+      "common_name": "Albero Ruota di Fuoco",
+      "description": "Stenocarpus sinuatus, noto come Albero Ruota di Fuoco, è originario dell'Australia. È famoso per i suoi fiori rosso-arancioni."
+    },
+    "es": {
+      "common_name": "Árbol Rueda de Fuego",
+      "description": "Stenocarpus sinuatus, conocido como Árbol Rueda de Fuego, es originario de Australia. Es famoso por sus flores rojas-anaranjadas."
+    },
+    "pt": {
+      "common_name": "Árvore Roda de Fogo",
+      "description": "Stenocarpus sinuatus, conhecido como Árvore Roda de Fogo, é nativo da Austrália. É famoso por suas flores vermelhas e laranja."
+    },
+    "ar": {
+      "common_name": "شجرة عجلة النار",
+      "description": "Stenocarpus sinuatus، المعروف بشجرة عجلة النار، موطنه أستراليا. إنه مشهور بزهوره الحمراء والبرتقالية."
+    },
+    "hi": {
+      "common_name": "आग व्हील वृक्ष",
+      "description": "Stenocarpus sinuatus, जिसे आग व्हील वृक्ष कहा जाता है, ऑस्ट्रेलिया का मूल निवासी है। यह अपनी लाल-नारंगी फूलों के लिए प्रसिद्ध है।"
+    },
+    "zh": {
+      "common_name": "火轮树",
+      "description": "Stenocarpus sinuatus, 被称为火轮树，原产于澳大利亚。以其鲜艳的红橙色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "ファイヤーホイールツリー",
+      "description": "Stenocarpus sinuatus、ファイヤーホイールツリーとして知られるこの植物はオーストラリア原産です。鮮やかな赤橙色の花が特徴です。"
+    },
+    "ko": {
+      "common_name": "파이어휠트리",
+      "description": "Stenocarpus sinuatus, 파이어휠트리로 알려진 이 식물은 호주가 원산지입니다. 선명한 빨간색과 주황색 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bgci.org",
+      "https://www.rhs.org.uk",
+      "https://www.botanicgardens.gov.au"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "tillandsia_usneoides",
+  "name": "Spanish Moss",
+  "latin": "Tillandsia usneoides",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tillandsia_usneoides.jpg",
+  "image_thumb": "tillandsia_usneoides.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid",
+          "pl": "orchidea",
+          "de": "Orchidee",
+          "fr": "orchidée",
+          "it": "orchidea",
+          "es": "orquídea",
+          "pt": "orquídea",
+          "ar": "أوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "ラン",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spanish Moss",
+      "description": "Tillandsia usneoides, or Spanish moss, is a type of epiphytic bromeliad native to the southern United States. It thrives in humid, shaded environments, often hanging from trees in swamps and forests."
+    },
+    "pl": {
+      "common_name": "Hiszpańska Mch",
+      "description": "Tillandsia usneoides, czyli hiszpańska mchu, to epifityczny bromeliad, który pochodzi z południowych Stanów Zjednoczonych. Rośnie w wilgotnych, zacienionych środowiskach, często zwisając z drzew w bagnach i lasach."
+    },
+    "de": {
+      "common_name": "Spanisches Moos",
+      "description": "Tillandsia usneoides, oder spanisches Moos, ist eine epiphytische Bromelie, die aus den südlichen Vereinigten Staaten stammt. Es wächst in feuchten, schattigen Umgebungen und hängt oft von Bäumen in Sümpfen und Wäldern."
+    },
+    "fr": {
+      "common_name": "Mousse Espagnole",
+      "description": "Tillandsia usneoides, ou mousse espagnole, est un broméliacée épiphyte originaire du sud des États-Unis. Il pousse dans des environnements humides et ombragés, suspendu aux arbres des marais et des forêts."
+    },
+    "it": {
+      "common_name": "Muschio Spagnolo",
+      "description": "Tillandsia usneoides, o muschio spagnolo, è una bromeliacea epifita originaria del sud degli Stati Uniti. Cresce in ambienti umidi e ombrosi, spesso appeso agli alberi in paludi e foreste."
+    },
+    "es": {
+      "common_name": "Musgo Español",
+      "description": "Tillandsia usneoides, o musgo español, es una bromelia epífita originaria del sur de los Estados Unidos. Crece en ambientes húmedos y sombreados, a menudo colgando de los árboles en pantanos y bosques."
+    },
+    "pt": {
+      "common_name": "Musgo Espanhol",
+      "description": "Tillandsia usneoides, ou musgo espanhol, é uma bromélia epífita nativa do sul dos Estados Unidos. Cresce em ambientes úmidos e sombreados, frequentemente pendurado em árvores em pântanos e florestas."
+    },
+    "ar": {
+      "common_name": "الطحلب الإسباني",
+      "description": "تيلاندسيا يوسنوييدس، أو الطحلب الإسباني، هو نوع من البروميليا الهوائية الذي ينمو في جنوب الولايات المتحدة. ينمو في البيئات الرطبة والمظللة، وغالبًا ما يتدلى من الأشجار في المستنقعات والغابات."
+    },
+    "hi": {
+      "common_name": "स्पैनिश मॉस",
+      "description": "टिलैंडसिया उस्नोएड्स, या स्पैनिश मॉस, दक्षिणी संयुक्त राज्य से उत्पन्न एक एपिफाइटिक ब्रोमेलीएड है। यह आर्द्र, छायादार वातावरण में पनपता है, अक्सर दलदल और जंगलों में पेड़ों से लटकते हुए।"
+    },
+    "zh": {
+      "common_name": "西班牙苔藓",
+      "description": "Tillandsia usneoides，或称西班牙苔藓，是一种原产于美国南部的气生凤梨。它在湿润、阴凉的环境中生长，常常悬挂在沼泽和森林中的树木上。"
+    },
+    "ja": {
+      "common_name": "スペインモス",
+      "description": "Tillandsia usneoides、またはスペインモスは、アメリカ南部原産の着生植物です。湿気が多く、陰の多い環境で成長し、沼地や森林の木々にぶら下がっていることがよくあります。"
+    },
+    "ko": {
+      "common_name": "스페인 이끼",
+      "description": "Tillandsia usneoides, 또는 스페인 이끼는 미국 남부 원산지의 공생성 브로멜리아입니다. 습하고 그늘진 환경에서 자라며, 종종 습지와 숲 속 나무에 걸쳐 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/spanishmoss",
+      "https://www.universityextensions.com/tillandsia-usneoides"
+    ]
+  }
+}

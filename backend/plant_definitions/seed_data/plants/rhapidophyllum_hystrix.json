@@ -1,0 +1,237 @@
+{
+  "external_id": "rapidophyllum_hystrix",
+  "name": "Needle Palm",
+  "latin": "Rhapidophyllum hystrix",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rapidophyllum_hystrix.jpg",
+  "image_thumb": "rapidophyllum_hystrix.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysta",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملية",
+          "hi": "रेत",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Needle Palm",
+      "description": "Rhapidophyllum hystrix is a slow-growing, hardy palm native to the southeastern United States. It is characterized by its fan-shaped leaves and spiny trunk."
+    },
+    "pl": {
+      "common_name": "Palmowiec iglasty",
+      "description": "Rhapidophyllum hystrix to powolnie rosnąca, odporna palma, pochodząca z południowo-wschodnich Stanów Zjednoczonych. Charakteryzuje się wachlarzowatymi liśćmi i kolczastym pniem."
+    },
+    "de": {
+      "common_name": "Nadelpalme",
+      "description": "Rhapidophyllum hystrix ist eine langsam wachsende, robuste Palme aus dem Südosten der Vereinigten Staaten. Sie zeichnet sich durch ihre fächerförmigen Blätter und den stacheligen Stamm aus."
+    },
+    "fr": {
+      "common_name": "Palmier à aiguilles",
+      "description": "Rhapidophyllum hystrix est un palmier à croissance lente, originaire du sud-est des États-Unis. Il se caractérise par ses feuilles en forme de palme et son tronc épineux."
+    },
+    "it": {
+      "common_name": "Palma a aghi",
+      "description": "Rhapidophyllum hystrix è una palma a crescita lenta, originaria del sud-est degli Stati Uniti. È caratterizzata da foglie a forma di ventaglio e un tronco spinoso."
+    },
+    "es": {
+      "common_name": "Palma de agujas",
+      "description": "Rhapidophyllum hystrix es una palma de crecimiento lento, originaria del sureste de los Estados Unidos. Se caracteriza por sus hojas en forma de abanico y su tronco espinoso."
+    },
+    "pt": {
+      "common_name": "Palmeira de agulhas",
+      "description": "Rhapidophyllum hystrix é uma palma de crescimento lento, nativa do sudeste dos Estados Unidos. É caracterizada por suas folhas em forma de leque e tronco espinhoso."
+    },
+    "ar": {
+      "common_name": "نخيل الإبر",
+      "description": "Rhapidophyllum hystrix هو نوع من أشجار النخيل ذات النمو البطيء، وهو موطنه الأصلي في جنوب شرق الولايات المتحدة. يتميز بأوراقه على شكل مروحة وجذعه الشوكي."
+    },
+    "hi": {
+      "common_name": "सुई की हथेली",
+      "description": "Rhapidophyllum hystrix एक धीमी गति से बढ़ने वाली, दृढ़ हथेली है जो दक्षिण-पूर्वी संयुक्त राज्य अमेरिका का मूल है। यह अपनी पंखुड़ी जैसी पत्तियों और कांटेदार तने के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "针叶棕榈",
+      "description": "Rhapidophyllum hystrix 是一种生长缓慢、耐寒的棕榈，原产于美国东南部。它的特点是扇形叶和多刺的树干。"
+    },
+    "ja": {
+      "common_name": "針葉ヤシ",
+      "description": "Rhapidophyllum hystrixは、アメリカ南東部原産の成長が遅い丈夫なヤシです。扇形の葉ととげのある幹が特徴です。"
+    },
+    "ko": {
+      "common_name": "바늘야자",
+      "description": "Rhapidophyllum hystrix는 미국 남동부가 원산지인 느리게 자라는 강한 야자입니다. 팬 모양의 잎과 가시가 있는 줄기가 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/raphidophyllum-hystrix",
+      "https://www.missouribotanicalgarden.org/plantfinder/plantfindersearch.aspx?taxonid=285906"
+    ]
+  }
+}

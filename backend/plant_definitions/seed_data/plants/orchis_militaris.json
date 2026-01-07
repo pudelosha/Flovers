@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_militaris",
+  "name": "Military Orchid",
+  "latin": "Orchis militaris",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_militaris.jpg",
+  "image_thumb": "orchis_militaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Kwasowa gleba",
+          "de": "Saurer Boden",
+          "fr": "Sol acide",
+          "it": "Terreno acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "क्षारीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土壌",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Powolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Military Orchid",
+      "description": "Orchis militaris is a rare orchid found in temperate regions of Europe and Asia. It thrives in acidic soils with moderate light and watering needs."
+    },
+    "pl": {
+      "common_name": "Storczyk wojskowy",
+      "description": "Orchis militaris to rzadki storczyk występujący w umiarkowanych rejonach Europy i Azji. Rośnie w kwaśnych glebach, wymagających umiarkowanego światła i podlewania."
+    },
+    "de": {
+      "common_name": "Militär-Orchidee",
+      "description": "Orchis militaris ist eine seltene Orchidee, die in gemäßigten Regionen Europas und Asiens vorkommt. Sie gedeiht in sauren Böden mit mäßigem Licht- und Wasserbedarf."
+    },
+    "fr": {
+      "common_name": "Orchidée militaire",
+      "description": "Orchis militaris est une orchidée rare trouvée dans les régions tempérées d'Europe et d'Asie. Elle pousse dans des sols acides avec des besoins modérés en lumière et en eau."
+    },
+    "it": {
+      "common_name": "Orchidea militare",
+      "description": "Orchis militaris è un'orchidea rara che si trova nelle regioni temperate d'Europa e Asia. Cresce in terreni acidi con necessità moderate di luce e irrigazione."
+    },
+    "es": {
+      "common_name": "Orquídea militar",
+      "description": "Orchis militaris es una orquídea rara que se encuentra en las regiones templadas de Europa y Asia. Crece en suelos ácidos con necesidades moderadas de luz y riego."
+    },
+    "pt": {
+      "common_name": "Orquídea militar",
+      "description": "Orchis militaris é uma orquídea rara encontrada nas regiões temperadas da Europa e Ásia. Ela cresce em solos ácidos com necessidades moderadas de luz e rega."
+    },
+    "ar": {
+      "common_name": "أوركيدية عسكرية",
+      "description": "Orchis militaris هي زهرة نادرة توجد في المناطق المعتدلة من أوروبا وآسيا. تنمو في التربة الحمضية مع احتياجات معتدلة من الضوء والمياه."
+    },
+    "hi": {
+      "common_name": "मिलिटरी ऑर्किड",
+      "description": "Orchis militaris एक दुर्लभ ऑर्किड है जो यूरोप और एशिया के उष्णकटिबंधीय क्षेत्रों में पाया जाता है। यह अम्लीय मिट्टी में मध्यम प्रकाश और पानी की जरूरतों के साथ बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "军事兰花",
+      "description": "Orchis militaris 是一种稀有的兰花，生长在欧洲和亚洲的温带地区。它在酸性土壤中生长，对光照和水分需求适中。"
+    },
+    "ja": {
+      "common_name": "ミリタリーオーキッド",
+      "description": "Orchis militarisは、ヨーロッパとアジアの温帯地域に生息する珍しいランの一種です。酸性土壌で、適度な光と水分を必要とします。"
+    },
+    "ko": {
+      "common_name": "군사 난초",
+      "description": "Orchis militaris는 유럽과 아시아의 온대 지역에서 자생하는 희귀 난초입니다. 산성 토양에서 자라며 적당한 빛과 물이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/99089/orchis-militaris",
+      "https://www.gardenia.net/plant/orchis-militaris"
+    ]
+  }
+}

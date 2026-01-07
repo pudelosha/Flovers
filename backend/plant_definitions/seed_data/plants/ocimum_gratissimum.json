@@ -1,0 +1,237 @@
+{
+  "external_id": "ocimum_gratissimum",
+  "name": "African Basil",
+  "latin": "Ocimum gratissimum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "ocimum_gratissimum.jpg",
+  "image_thumb": "ocimum_gratissimum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "terreno",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "로암"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwe",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "25-30°C",
+          "pl": "25-30°C",
+          "de": "25-30°C",
+          "fr": "25-30°C",
+          "it": "25-30°C",
+          "es": "25-30°C",
+          "pt": "25-30°C",
+          "ar": "25-30°C",
+          "hi": "25-30°C",
+          "zh": "25-30°C",
+          "ja": "25-30°C",
+          "ko": "25-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczny",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossico",
+          "es": "no tóxico",
+          "pt": "não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "African Basil",
+      "description": "Ocimum gratissimum, also known as African basil, is a perennial herb native to tropical regions. It is commonly used in cooking and traditional medicine."
+    },
+    "pl": {
+      "common_name": "Bazylia afrykańska",
+      "description": "Ocimum gratissimum, znane również jako bazylia afrykańska, to wieloletnia roślina zielna pochodząca z tropikalnych regionów. Jest powszechnie stosowana w kuchni i tradycyjnej medycynie."
+    },
+    "de": {
+      "common_name": "Afrikanisches Basilikum",
+      "description": "Ocimum gratissimum, auch bekannt als afrikanisches Basilikum, ist ein mehrjähriges Kraut, das in tropischen Regionen beheimatet ist. Es wird häufig in der Küche und in der traditionellen Medizin verwendet."
+    },
+    "fr": {
+      "common_name": "Basilic africain",
+      "description": "Ocimum gratissimum, également connu sous le nom de basilic africain, est une plante vivace originaire des régions tropicales. Elle est couramment utilisée en cuisine et en médecine traditionnelle."
+    },
+    "it": {
+      "common_name": "Basilico africano",
+      "description": "Ocimum gratissimum, noto anche come basilico africano, è un'erba perenne originaria delle regioni tropicali. Viene comunemente utilizzato in cucina e nella medicina tradizionale."
+    },
+    "es": {
+      "common_name": "Albahaca africana",
+      "description": "Ocimum gratissimum, también conocida como albahaca africana, es una hierba perenne originaria de las regiones tropicales. Se utiliza comúnmente en la cocina y la medicina tradicional."
+    },
+    "pt": {
+      "common_name": "Manjericão africano",
+      "description": "Ocimum gratissimum, também conhecido como manjericão africano, é uma erva perene nativa das regiões tropicais. É comumente usado na culinária e na medicina tradicional."
+    },
+    "ar": {
+      "common_name": "ريحان أفريقي",
+      "description": "Ocimum gratissimum، المعروف أيضًا بالريحان الأفريقي، هو نبات معمر موطنه المناطق الاستوائية. يتم استخدامه عادة في الطهي والطب التقليدي."
+    },
+    "hi": {
+      "common_name": "अफ्रीकी तुलसी",
+      "description": "Ocimum gratissimum, जिसे अफ्रीकी तुलसी के नाम से भी जाना जाता है, एक बारहमासी पौधा है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसका उपयोग आमतौर पर खाना पकाने और पारंपरिक चिकित्सा में किया जाता है।"
+    },
+    "zh": {
+      "common_name": "非洲罗勒",
+      "description": "Ocimum gratissimum，也称为非洲罗勒，是一种多年生草本植物，原产于热带地区。它通常用于烹饪和传统医学。"
+    },
+    "ja": {
+      "common_name": "アフリカバジル",
+      "description": "Ocimum gratissimum、アフリカバジルとしても知られるこの植物は、熱帯地域に自生する多年草です。料理や伝統医学で一般的に使用されます。"
+    },
+    "ko": {
+      "common_name": "아프리카 바질",
+      "description": "Ocimum gratissimum, 아프리카 바질로도 알려진 이 식물은 열대 지역이 원산지인 다년생 풀입니다. 주로 요리와 전통 의학에 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=478",
+      "https://www.gardenia.net/plant/ocimum-gratissimum"
+    ]
+  }
+}

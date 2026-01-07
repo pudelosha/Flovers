@@ -1,0 +1,237 @@
+{
+  "external_id": "thaumatophyllum_bipinnatifidum",
+  "name": "Split-leaf Philodendron",
+  "latin": "Thaumatophyllum bipinnatifidum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "thaumatophyllum_bipinnatifidum.jpg",
+  "image_thumb": "thaumatophyllum_bipinnatifidum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange pour aroides",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "مزيج للآرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "天南星混合土",
+          "ja": "アロイド用土",
+          "ko": "아로이드 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम जलसेचन",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 정도의 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 정도의 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-26°C",
+          "pl": "18-26°C",
+          "de": "18-26°C",
+          "fr": "18-26°C",
+          "it": "18-26°C",
+          "es": "18-26°C",
+          "pt": "18-26°C",
+          "ar": "18-26°C",
+          "hi": "18-26°C",
+          "zh": "18-26°C",
+          "ja": "18-26°C",
+          "ko": "18-26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长速度",
+          "ja": "中程度の成長",
+          "ko": "중간 성장 속도"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Split-leaf Philodendron",
+      "description": "This tropical plant is known for its large, deeply lobed leaves and is commonly grown as a houseplant. It thrives in bright, indirect light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Filodendron z podzielonymi liśćmi",
+      "description": "Roślina tropikalna znana z dużych, głęboko podzielonych liści, często uprawiana jako roślina pokojowa. Wymaga średniego podlewania i rośnie w jasnym, pośrednim świetle."
+    },
+    "de": {
+      "common_name": "Gefiederter Philodendron",
+      "description": "Diese tropische Pflanze ist für ihre großen, tief eingeschnittenen Blätter bekannt und wird häufig als Zimmerpflanze kultiviert. Sie benötigt mäßiges Gießen und wächst bei indirekter, heller Beleuchtung."
+    },
+    "fr": {
+      "common_name": "Philodendron à feuilles divisées",
+      "description": "Cette plante tropicale est connue pour ses grandes feuilles profondément lobées, souvent cultivées comme plante d'intérieur. Elle préfère la lumière indirecte et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Philodendron a foglie divise",
+      "description": "Questa pianta tropicale è conosciuta per le sue grandi foglie lobate e viene comunemente coltivata come pianta d'appartamento. Preferisce luce indiretta e richiede un'irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Filodendro de hojas divididas",
+      "description": "Esta planta tropical es conocida por sus grandes hojas profundamente lobuladas, y se cultiva comúnmente como planta de interior. Requiere riego moderado y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Filodendro de folhas divididas",
+      "description": "Planta tropical conhecida por suas grandes folhas profundamente divididas, comumente cultivada como planta de interior. Requer rega moderada e luz indireta."
+    },
+    "ar": {
+      "common_name": "فيلوديندرون ذو الأوراق المقسمة",
+      "description": "النبات الاستوائي المعروف بأوراقه الكبيرة العميقة التقسيم، ويزرع عادة كنبات داخلي. يحتاج إلى سقي معتدل وينمو في ضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "विभाजित पत्तों वाला फिलोडेंड्रोन",
+      "description": "यह उष्णकटिबंधीय पौधा अपनी बड़ी और गहरी जड़ी पत्तियों के लिए जाना जाता है और इसे आमतौर पर एक इनडोर पौधे के रूप में उगाया जाता है। इसे मध्यम पानी की आवश्यकता होती है और यह अप्रत्यक्ष, उज्ज्वल प्रकाश में उगता है।"
+    },
+    "zh": {
+      "common_name": "分叶铁树",
+      "description": "这种热带植物因其大型、深裂的叶片而闻名，通常作为室内植物种植。它需要适度的浇水，并且在间接的明亮光照下生长。"
+    },
+    "ja": {
+      "common_name": "分裂葉フィロデンドロン",
+      "description": "この熱帯植物は、大きくて深く切れ込んだ葉で知られ、一般的に室内植物として育てられます。適度な水やりが必要で、間接的な明るい光で育ちます。"
+    },
+    "ko": {
+      "common_name": "분할 잎 필로덴드론",
+      "description": "이 열대 식물은 크고 깊게 갈라진 잎으로 유명하며 일반적으로 실내 식물로 재배됩니다. 적당한 물주기가 필요하고 간접적인 밝은 빛에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/philodendron-bipinnatifidum",
+      "https://www.gardenia.net/plant/philodendron-bipinnatifidum"
+    ]
+  }
+}

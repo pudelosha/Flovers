@@ -1,0 +1,237 @@
+{
+  "external_id": "tradescantia_sillamontana",
+  "name": "Cobweb Spiderwort",
+  "latin": "Tradescantia sillamontana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tradescantia_sillamontana.jpg",
+  "image_thumb": "tradescantia_sillamontana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "よく排水された土壌",
+          "ko": "잘 배수된 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis mittel",
+          "fr": "Lent à moyen",
+          "it": "Lento a medio",
+          "es": "Lento a medio",
+          "pt": "Lento a médio",
+          "ar": "بطيء إلى متوسط",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅いから中くらい",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cobweb Spiderwort",
+      "description": "Tradescantia sillamontana is a low-growing perennial native to Mexico. It has silvery-green leaves covered in soft white hairs and produces pinkish-purple flowers."
+    },
+    "pl": {
+      "common_name": "Pająkowiec pokryty włoskami",
+      "description": "Tradescantia sillamontana to niskorosnąca roślina wieloletnia pochodząca z Meksyku. Ma srebrzysto-zielone liście pokryte miękkimi białymi włoskami i wytwarza różowo-fioletowe kwiaty."
+    },
+    "de": {
+      "common_name": "Spinnweb-Spinnenpflanze",
+      "description": "Tradescantia sillamontana ist eine niedrig wachsende Staude, die in Mexiko beheimatet ist. Sie hat silbrig-grüne Blätter, die mit weichen weißen Haaren bedeckt sind, und produziert rosa-lila Blüten."
+    },
+    "fr": {
+      "common_name": "Tradescantia sillamontana",
+      "description": "Tradescantia sillamontana est une plante vivace basse originaire du Mexique. Elle a des feuilles vertes argentées couvertes de poils blancs doux et produit des fleurs rose-violet."
+    },
+    "it": {
+      "common_name": "Tradescantia sillamontana",
+      "description": "Tradescantia sillamontana è una pianta perenne a bassa crescita originaria del Messico. Ha foglie verde argento coperte da morbidi peli bianchi e produce fiori rosa-viola."
+    },
+    "es": {
+      "common_name": "Tradescantia sillamontana",
+      "description": "Tradescantia sillamontana es una planta perenne de bajo crecimiento originaria de México. Tiene hojas verde plateadas cubiertas de suaves pelos blancos y produce flores rosa-lilas."
+    },
+    "pt": {
+      "common_name": "Tradescantia sillamontana",
+      "description": "Tradescantia sillamontana é uma planta perene de baixo crescimento originária do México. Possui folhas verde prateadas cobertas por pelos brancos suaves e produz flores rosa-roxas."
+    },
+    "ar": {
+      "common_name": "تراديشانتيا سيلامونتانا",
+      "description": "تراديشانتيا سيلامونتانا هي نبات معمر منخفض النمو أصلي من المكسيك. لها أوراق خضراء فضية مغطاة بشعيرات بيضاء ناعمة وتنتج زهورًا وردية بنفسجية."
+    },
+    "hi": {
+      "common_name": "ट्रेडस्कैंटिया सिल्लामोंटाना",
+      "description": "ट्रेडस्कैंटिया सिल्लामोंटाना एक निम्न-वृद्धि वाली बारहमासी पौधा है जो मेक्सिको का मूल निवासी है। इसके पास चांदी-हरे पत्ते होते हैं जो मुलायम सफेद बालों से ढके होते हैं और यह गुलाबी-बैंगनी फूल उगता है।"
+    },
+    "zh": {
+      "common_name": "蛛网草",
+      "description": "Tradescantia sillamontana 是一种原产于墨西哥的低矮多年生植物。它有银绿色的叶子，覆盖着柔软的白色毛发，并开出粉紫色的花朵。"
+    },
+    "ja": {
+      "common_name": "トレディスカンティア・シラモンタナ",
+      "description": "トレディスカンティア・シラモンタナはメキシコ原産の低成長の多年草です。銀緑色の葉には柔らかい白い毛が生えており、ピンク紫色の花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "트레디스칸티아 실라몬타나",
+      "description": "트레디스칸티아 실라몬타나는 멕시코 원산지의 저성장 다년생 식물입니다. 은회색의 잎은 부드러운 흰 털로 덮여 있으며, 분홍-보라색 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/62308/i-tradescantia-sillamontana-i/Details",
+      "https://www.gardenia.net/plant/Tradescantia-sillamontana"
+    ]
+  }
+}

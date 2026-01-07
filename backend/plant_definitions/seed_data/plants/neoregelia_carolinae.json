@@ -1,0 +1,237 @@
+{
+  "external_id": "neoregelia_carolinae",
+  "name": "Blushing Bromeliad",
+  "latin": "Neoregelia carolinae",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "neoregelia_carolinae.jpg",
+  "image_thumb": "neoregelia_carolinae.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect",
+          "pl": "jasne pośrednie",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "airy bark mix",
+          "pl": "przewiewne podłoże",
+          "de": "luftiges Substrat",
+          "fr": "substrat aéré",
+          "it": "substrato arioso",
+          "es": "sustrato aireado",
+          "pt": "substrato arejado",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार माध्यम",
+          "zh": "透气基质",
+          "ja": "通気性用土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep cup filled",
+          "pl": "woda w rozecie",
+          "de": "Trichter füllen",
+          "fr": "garder rosette",
+          "it": "rosetta piena",
+          "es": "roseta con agua",
+          "pt": "roseta com água",
+          "ar": "ماء في الوردة",
+          "hi": "रोसेट में पानी",
+          "zh": "叶杯存水",
+          "ja": "筒に水",
+          "ko": "로제트 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "leicht",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "prefers humid",
+          "pl": "lubi wilgoć",
+          "de": "mag Feuchte",
+          "fr": "aime humidité",
+          "it": "ama umidità",
+          "es": "prefiere humedad",
+          "pt": "gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度好み",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow clumping",
+          "pl": "wolno rosnąca",
+          "de": "langsam wachsend",
+          "fr": "croissance lente",
+          "it": "crescita lenta",
+          "es": "crecimiento lento",
+          "pt": "crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長ゆっくり",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blushing Bromeliad",
+      "description": "Neoregelia carolinae is a tropical bromeliad grown for its colorful leaf rosette. It collects water in its central cup and prefers bright, indirect light indoors."
+    },
+    "pl": {
+      "common_name": "Neoregelia rumieniąca",
+      "description": "Neoregelia carolinae to tropikalna bromelia ceniona za barwną rozetę liści. Gromadzi wodę w środku i najlepiej rośnie w jasnym, rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Rötliche Bromelie",
+      "description": "Neoregelia carolinae ist eine tropische Bromelie mit farbiger Blattrosette. Sie sammelt Wasser im Trichter und mag helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Broméliacée rougeoyante",
+      "description": "Neoregelia carolinae est une broméliacée tropicale appréciée pour sa rosette colorée. Elle retient l’eau au centre et préfère une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Bromelia arrossata",
+      "description": "Neoregelia carolinae è una bromelia tropicale coltivata per la rosetta colorata. Raccoglie acqua al centro e ama la luce indiretta."
+    },
+    "es": {
+      "common_name": "Bromelia ruborizada",
+      "description": "Neoregelia carolinae es una bromelia tropical apreciada por su roseta colorida. Acumula agua en el centro y prefiere luz indirecta."
+    },
+    "pt": {
+      "common_name": "Bromélia ruborizada",
+      "description": "Neoregelia carolinae é uma bromélia tropical conhecida pela roseta colorida. Mantém água no centro e prefere luz indireta."
+    },
+    "ar": {
+      "common_name": "بروميليا محمرة",
+      "description": "Neoregelia carolinae نبات بروميليا استوائي يتميز بوردة أوراق ملونة. يحتفظ بالماء في مركزه ويفضل الضوء غير المباشر."
+    },
+    "hi": {
+      "common_name": "ब्लशिंग ब्रोमेलियाड",
+      "description": "Neoregelia carolinae एक उष्णकटिबंधीय ब्रोमेलियाड है जिसकी पत्तियों की रोसेट रंगीन होती है। यह बीच में पानी जमा करता है और अप्रत्यक्ष रोशनी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "红心凤梨",
+      "description": "Neoregelia carolinae 是一种热带凤梨科植物，以彩色莲座叶著称。它在中心蓄水，适合明亮的散射光。"
+    },
+    "ja": {
+      "common_name": "ネオレゲリア",
+      "description": "ネオレゲリア・カロリナエは葉のロゼットが美しい熱帯性ブロメリアです。中央に水をため、明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "네오레겔리아",
+      "description": "Neoregelia carolinae는 화려한 로제트 잎이 특징인 열대 브로멜리아입니다. 중앙에 물을 모으며 밝은 간접광을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11254/neoregelia-carolinae/details",
+      "https://edis.ifas.ufl.edu/publication/FP397",
+      "https://www.bromeliads.info/neoregelia-care/"
+    ]
+  }
+}

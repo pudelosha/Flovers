@@ -1,0 +1,235 @@
+{
+  "external_id": "nasturtium_officinale",
+  "name": "Watercress",
+  "latin": "Nasturtium officinale",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 2,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "nasturtium_officinale.jpg",
+  "image_thumb": "nasturtium_officinale.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Part sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Wet, rich soil",
+          "pl": "Mokra gleba",
+          "de": "Nasser Boden",
+          "fr": "Sol humide",
+          "it": "Suolo umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "गीली मिट्टी",
+          "zh": "湿润土壤",
+          "ja": "湿った土",
+          "ko": "젖은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Very frequent",
+          "pl": "Bardzo często",
+          "de": "Sehr häufig",
+          "fr": "Très fréquent",
+          "it": "Molto frequente",
+          "es": "Muy frecuente",
+          "pt": "Muito frequente",
+          "ar": "متكرر جدًا",
+          "hi": "बहुत बार",
+          "zh": "非常频繁",
+          "ja": "非常に頻繁",
+          "ko": "매우 자주"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10–20°م",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفعة",
+          "hi": "अधिक",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast grower",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Watercress",
+      "description": "Watercress is a fast-growing aquatic or semi-aquatic plant native to Europe and Asia. It thrives in cool, flowing water and is commonly grown for its edible leaves."
+    },
+    "pl": {
+      "common_name": "Rzeżucha wodna",
+      "description": "Rzeżucha wodna to szybko rosnąca roślina wodna lub bagienna. Preferuje chłodną, czystą wodę i jest uprawiana jako roślina jadalna."
+    },
+    "de": {
+      "common_name": "Brunnenkresse",
+      "description": "Brunnenkresse ist eine schnell wachsende Wasserpflanze. Sie wächst in kühlen, fließenden Gewässern und wird als Blattgemüse genutzt."
+    },
+    "fr": {
+      "common_name": "Cresson de fontaine",
+      "description": "Le cresson de fontaine est une plante aquatique à croissance rapide. Il pousse dans une eau fraîche et propre et est consommé comme légume-feuille."
+    },
+    "it": {
+      "common_name": "Crescione d'acqua",
+      "description": "Il crescione d'acqua è una pianta acquatica a crescita rapida. Predilige acque fresche ed è coltivato per le sue foglie commestibili."
+    },
+    "es": {
+      "common_name": "Berro",
+      "description": "El berro es una planta acuática de rápido crecimiento. Se desarrolla en aguas frescas y limpias y se consume como verdura."
+    },
+    "pt": {
+      "common_name": "Agrião",
+      "description": "O agrião é uma planta aquática de crescimento rápido. Prefere água corrente fresca e é cultivado como hortaliça."
+    },
+    "ar": {
+      "common_name": "الجرجير المائي",
+      "description": "الجرجير المائي نبات مائي سريع النمو. ينمو في مياه باردة ونظيفة ويُستخدم كخضار ورقي."
+    },
+    "hi": {
+      "common_name": "वॉटरक्रेस",
+      "description": "वॉटरक्रेस एक तेज़ी से बढ़ने वाला जलीय पौधा है। यह ठंडे और स्वच्छ पानी में उगता है और खाने योग्य होता है।"
+    },
+    "zh": {
+      "common_name": "西洋菜",
+      "description": "西洋菜是一种快速生长的水生植物。它生长在清凉的流水中，常作为蔬菜食用。"
+    },
+    "ja": {
+      "common_name": "オランダガラシ",
+      "description": "オランダガラシは成長の早い水生植物です。冷たくきれいな水で育ち、食用にされます。"
+    },
+    "ko": {
+      "common_name": "워터크레스",
+      "description": "워터크레스는 빠르게 자라는 수생 식물입니다. 서늘하고 깨끗한 물에서 자라며 식용으로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/12210/nasturtium-officinale/details",
+      "https://plants.usda.gov/home/plantProfile?symbol=NAOF"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "tilia_cordata",
+  "name": "Littleleaf Linden",
+  "latin": "Tilia cordata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tilia_cordata.jpg",
+  "image_thumb": "tilia_cordata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lösem Boden",
+          "fr": "Sol limoneux",
+          "it": "Suolo argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "壌土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Littleleaf Linden",
+      "description": "Tilia cordata is a deciduous tree native to Europe. It is known for its heart-shaped leaves and fragrant yellow flowers."
+    },
+    "pl": {
+      "common_name": "Lipa drobnolistna",
+      "description": "Tilia cordata to drzewo liściaste pochodzące z Europy. Znane jest z sercowatych liści i pachnących żółtych kwiatów."
+    },
+    "de": {
+      "common_name": "Winterlinde",
+      "description": "Tilia cordata ist ein Laubbaum aus Europa. Er ist bekannt für seine herzförmigen Blätter und duftenden gelben Blüten."
+    },
+    "fr": {
+      "common_name": "Tilleul à petites feuilles",
+      "description": "Tilia cordata est un arbre caduc originaire d'Europe. Il est connu pour ses feuilles en forme de cœur et ses fleurs jaunes parfumées."
+    },
+    "it": {
+      "common_name": "Lime a foglia piccola",
+      "description": "Tilia cordata è un albero deciduo originario dell'Europa. È conosciuto per le sue foglie a forma di cuore e i fiori gialli profumati."
+    },
+    "es": {
+      "common_name": "Linden de hojas pequeñas",
+      "description": "Tilia cordata es un árbol caducifolio originario de Europa. Se caracteriza por sus hojas en forma de corazón y sus flores amarillas fragantes."
+    },
+    "pt": {
+      "common_name": "Lima de folhas pequenas",
+      "description": "Tilia cordata é uma árvore caducifólia nativa da Europa. É conhecida por suas folhas em forma de coração e flores amarelas perfumadas."
+    },
+    "ar": {
+      "common_name": "الزهره الصغيرة",
+      "description": "تيلاء كورداتا هي شجرة نفضية موطنها الأصلي أوروبا. تشتهر بأوراقها على شكل قلب وزهورها الصفراء العطرية."
+    },
+    "hi": {
+      "common_name": "लिटलिफ़ लिंडन",
+      "description": "टिलिया कॉर्डाटा एक पर्णपाती पेड़ है जो यूरोप का मूल निवासी है। यह अपने दिल के आकार के पत्तों और खुशबूदार पीले फूलों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "小叶椴",
+      "description": "小叶椴是原产于欧洲的落叶树。它因其心形的叶子和芬芳的黄色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "リトルリーフリンデン",
+      "description": "ティリア・コルダタはヨーロッパ原産の落葉樹です。ハート型の葉と香りの良い黄色い花で知られています。"
+    },
+    "ko": {
+      "common_name": "작은잎 린든",
+      "description": "Tilia cordata는 유럽 원산지의 낙엽수입니다. 심장 모양의 잎과 향기로운 노란 꽃으로 잘 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/details?plantid=1266",
+      "https://www.bhg.com/gardening/pests-insects-diseases/linden-tree-guide/"
+    ]
+  }
+}

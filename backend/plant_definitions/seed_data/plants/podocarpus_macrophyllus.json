@@ -1,0 +1,237 @@
+{
+  "external_id": "podocarpus_macrophyllus",
+  "name": "Podocarpus macrophyllus",
+  "latin": "Podocarpus macrophyllus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "podocarpus_macrophyllus.jpg",
+  "image_thumb": "podocarpus_macrophyllus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Japanese Yew",
+      "description": "Podocarpus macrophyllus, commonly known as the Japanese Yew, is an evergreen shrub native to East Asia. It features dark green, needle-like leaves and grows slowly, thriving in medium light conditions."
+    },
+    "pl": {
+      "common_name": "Cis japoński",
+      "description": "Podocarpus macrophyllus, znany jako cis japoński, to zimozielony krzew pochodzący z Azji Wschodniej. Charakteryzuje się ciemnozielonymi, iglastymi liśćmi i rośnie powoli, preferując średnie nasłonecznienie."
+    },
+    "de": {
+      "common_name": "Japanische Eibe",
+      "description": "Podocarpus macrophyllus, auch als japanische Eibe bekannt, ist ein immergrüner Strauch aus Ostasien. Er hat dunkelgrüne, nadelartige Blätter und wächst langsam, bevorzugt mittleres Licht."
+    },
+    "fr": {
+      "common_name": "If du Japon",
+      "description": "Podocarpus macrophyllus, connu sous le nom d'if du Japon, est un arbuste à feuilles persistantes originaire d'Asie de l'Est. Il possède des feuilles en forme d'aiguilles de couleur vert foncé et croît lentement, préférant la lumière modérée."
+    },
+    "it": {
+      "common_name": "Tasso giapponese",
+      "description": "Podocarpus macrophyllus, noto come tasso giapponese, è un arbusto sempreverde originario dell'Asia orientale. Ha foglie verde scuro, simili a aghi, e cresce lentamente, preferendo condizioni di luce media."
+    },
+    "es": {
+      "common_name": "Tejo japonés",
+      "description": "Podocarpus macrophyllus, conocido como tejo japonés, es un arbusto perenne originario del este de Asia. Presenta hojas verdes oscuras en forma de aguja y crece lentamente, prefiriendo condiciones de luz media."
+    },
+    "pt": {
+      "common_name": "Teixo japonês",
+      "description": "Podocarpus macrophyllus, conhecido como teixo japonês, é um arbusto perene nativo do leste da Ásia. Apresenta folhas escuras, semelhantes a agulhas, e cresce lentamente, preferindo luz moderada."
+    },
+    "ar": {
+      "common_name": "العرعر الياباني",
+      "description": "Podocarpus macrophyllus، المعروف بالعرعر الياباني، هو شجيرة دائمة الخضرة من شرق آسيا. يتميز بأوراقه الخضراء الداكنة الشبيهة بالإبر وينمو ببطء، مفضلًا الإضاءة المتوسطة."
+    },
+    "hi": {
+      "common_name": "जापानी देवदार",
+      "description": "Podocarpus macrophyllus, जिसे जापानी देवदार कहा जाता है, एक सदाबहार झाड़ी है जो पूर्वी एशिया से है। इसमें गहरे हरे रंग की सुई जैसी पत्तियाँ होती हैं और यह धीमी गति से बढ़ता है, मध्य रोशनी की स्थितियों में पनपता है।"
+    },
+    "zh": {
+      "common_name": "日本红豆杉",
+      "description": "Podocarpus macrophyllus，通常称为日本红豆杉，是一种原产于东亚的常绿灌木。它具有深绿色的针状叶子，生长缓慢，适合中等光照条件。"
+    },
+    "ja": {
+      "common_name": "日本のイチイ",
+      "description": "Podocarpus macrophyllus、一般的に日本のイチイとして知られるこの植物は、東アジア原産の常緑低木です。暗緑色の針のような葉を持ち、遅い成長をし、適度な光条件を好みます。"
+    },
+    "ko": {
+      "common_name": "일본 측백나무",
+      "description": "Podocarpus macrophyllus, 일본 측백나무로 알려진 이 식물은 동아시아 원산의 상록수입니다. 어두운 녹색의 바늘 같은 잎을 가지고 있으며 느리게 자라며, 중간 정도의 햇빛 조건에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/16302/podocarpus-macrophyllus",
+      "https://www.gardenia.net/plant/podocarpus-macrophyllus"
+    ]
+  }
+}

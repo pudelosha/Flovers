@@ -1,0 +1,237 @@
+{
+  "external_id": "poinsettia_heterophylla",
+  "name": "Poinsettia heterophylla",
+  "latin": "Poinsettia heterophylla",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "poinsettia_heterophylla.jpg",
+  "image_thumb": "poinsettia_heterophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Suolo argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी का मृदा",
+          "zh": "粘土土壤",
+          "ja": "粘土質土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia ilość wody",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Acqua media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等水分",
+          "ja": "中程度の水やり",
+          "ko": "중간 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 유독한"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia heterophylla is a small shrub native to Mexico. It is known for its striking red bracts and green leaves."
+    },
+    "pl": {
+      "common_name": "Poinsecja",
+      "description": "Poinsettia heterophylla to mały krzew rodzimy w Meksyku. Jest znana z wyrazistych czerwonych przylistków i zielonych liści."
+    },
+    "de": {
+      "common_name": "Poinsettie",
+      "description": "Poinsettia heterophylla ist ein kleiner Strauch aus Mexiko. Sie ist bekannt für ihre auffälligen roten Hochblätter und grünen Blätter."
+    },
+    "fr": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia heterophylla est un petit arbuste originaire du Mexique. Il est connu pour ses bractées rouges frappantes et ses feuilles vertes."
+    },
+    "it": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia heterophylla è un piccolo arbusto originario del Messico. È conosciuto per le sue bratte rosse vivaci e le foglie verdi."
+    },
+    "es": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia heterophylla es un pequeño arbusto originario de México. Es conocido por sus brácteas rojas y hojas verdes."
+    },
+    "pt": {
+      "common_name": "Poinsettia",
+      "description": "Poinsettia heterophylla é um pequeno arbusto nativo do México. É conhecido por suas brácteas vermelhas e folhas verdes."
+    },
+    "ar": {
+      "common_name": "بونسيتيا",
+      "description": "Poinsettia heterophylla هي شجيرة صغيرة موطنها المكسيك. تشتهر بحوافها الحمراء الزاهية وأوراقها الخضراء."
+    },
+    "hi": {
+      "common_name": "पॉइनसेटिया",
+      "description": "Poinsettia heterophylla एक छोटा झाड़ीनुमा पौधा है जो मेक्सिको का मूल निवासी है। यह अपनी चमकदार लाल ब्रैक्ट और हरी पत्तियों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "一品红",
+      "description": "Poinsettia heterophylla 是一种原产于墨西哥的小灌木。它因鲜艳的红色苞片和绿色叶子而闻名。"
+    },
+    "ja": {
+      "common_name": "ポインセチア",
+      "description": "Poinsettia heterophylla はメキシコ原産の小さな低木です。鮮やかな赤い苞葉と緑の葉が特徴です。"
+    },
+    "ko": {
+      "common_name": "포인세티아",
+      "description": "Poinsettia heterophylla는 멕시코 원산의 작은 관목입니다. 선명한 빨간 색조와 녹색 잎으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/poinsettia-heterophylla",
+      "https://www.gardenia.net/plant/poinsettia-heterophylla"
+    ]
+  }
+}

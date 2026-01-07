@@ -1,0 +1,237 @@
+{
+  "external_id": "peperomia_serpens",
+  "name": "Peperomia serpens",
+  "latin": "Peperomia serpens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "peperomia_serpens.jpg",
+  "image_thumb": "peperomia_serpens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroidowy",
+          "de": "Aroid",
+          "fr": "aroïde",
+          "it": "aroide",
+          "es": "aroide",
+          "pt": "aroide",
+          "ar": "أرويدي",
+          "hi": "एरोइड",
+          "zh": "阿罗伊德",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnio",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Creeping Peperomia",
+      "description": "Peperomia serpens is a low-growing, creeping plant known for its heart-shaped, glossy green leaves with white margins. It thrives in medium light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Peperomia pełzająca",
+      "description": "Peperomia serpens to roślina o niskim wzroście, pełzająca, charakteryzująca się sercowatymi, błyszczącymi zielonymi liśćmi z białymi brzegami. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Kriechende Peperomie",
+      "description": "Peperomia serpens ist eine niedrig wachsende, kriechende Pflanze, die für ihre herzförmigen, glänzend grünen Blätter mit weißen Rändern bekannt ist. Sie gedeiht bei mittlerem Licht und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Peperomia rampante",
+      "description": "Peperomia serpens est une plante rampante à faible croissance, connue pour ses feuilles vertes en forme de cœur avec des bords blancs. Elle préfère la lumière moyenne et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Peperomia strisciante",
+      "description": "Peperomia serpens è una pianta a crescita bassa e strisciante, con foglie verdi a forma di cuore e bordi bianchi. Cresce bene in luce media e richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Peperomia rastrera",
+      "description": "Peperomia serpens es una planta rastrera de bajo crecimiento, conocida por sus hojas en forma de corazón de color verde brillante con márgenes blancos. Crece mejor con luz media y requiere riego moderado."
+    },
+    "pt": {
+      "common_name": "Peperomia rasteira",
+      "description": "Peperomia serpens é uma planta rasteira de baixo crescimento, conhecida por suas folhas em forma de coração com bordas brancas. Prefere luz média e necessita de rega moderada."
+    },
+    "ar": {
+      "common_name": "بيبيروميا زاحفة",
+      "description": "Peperomia serpens هي نبات زاحف منخفض النمو يتميز بأوراقها على شكل قلب باللون الأخضر اللامع مع حواف بيضاء. ينمو بشكل جيد في الضوء المتوسط ويتطلب ريًا معتدلًا."
+    },
+    "hi": {
+      "common_name": "पीपेरोमिया सरपेंस",
+      "description": "Peperomia serpens एक धीमी गति से बढ़ने वाली, फैलने वाली पौधा है जिसमें हृदय के आकार की, चमकदार हरी पत्तियाँ होती हैं जिनके किनारे सफेद होते हैं। यह मध्यम रोशनी में अच्छे से बढ़ता है और मध्यम सिंचाई की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "爬行胡椒草",
+      "description": "Peperomia serpens 是一种低矮的爬行植物，因其心形的绿色光滑叶片和白色边缘而闻名。它在中等光照下生长良好，且需要适度浇水。"
+    },
+    "ja": {
+      "common_name": "クレーピング・ペペロミア",
+      "description": "Peperomia serpens は低く成長する這う植物で、ハート型の光沢のある緑色の葉と白い縁が特徴です。中程度の光で育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "크리핑 페페로미아",
+      "description": "Peperomia serpens는 낮게 자라는 풀로, 하트 모양의 광택이 나는 초록색 잎과 흰색 테두리가 특징입니다. 중간 정도의 햇빛에서 잘 자라며, 적당한 물을 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/peperomia-serpens",
+      "https://www.gardenia.net/plant/peperomia-serpens"
+    ]
+  }
+}

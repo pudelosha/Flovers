@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_mascula",
+  "name": "Early Purple Orchid",
+  "latin": "Orchis mascula",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_mascula.jpg",
+  "image_thumb": "orchis_mascula.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba ilasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Suolo limoso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점질토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia ilość wody",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "مياه متوسطة",
+          "hi": "मध्यम पानी",
+          "zh": "适中水量",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अक्षारी",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Early Purple Orchid",
+      "description": "Orchis mascula is a hardy orchid native to Europe and Asia. It thrives in temperate woodlands with moderate sunlight and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Wczesny orchidei purpurowy",
+      "description": "Orchis mascula to wytrzymała orchidea występująca w Europie i Azji. Rośnie w umiarkowanych lasach o średnim nasłonecznieniu i dobrze odwodnionych glebach."
+    },
+    "de": {
+      "common_name": "Frühpurpur-Orchidee",
+      "description": "Orchis mascula ist eine robuste Orchidee, die in Europa und Asien heimisch ist. Sie wächst in gemäßigten Wäldern mit mäßigem Sonnenlicht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Orchidée pourpre précoce",
+      "description": "Orchis mascula est une orchidée robuste originaire d'Europe et d'Asie. Elle prospère dans les forêts tempérées avec une lumière modérée et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Orchidea viola precoce",
+      "description": "Orchis mascula è un'orchidea resistente originaria dell'Europa e dell'Asia. Cresce nelle foreste temperate con luce moderata e terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Orquídea morada temprana",
+      "description": "Orchis mascula es una orquídea resistente originaria de Europa y Asia. Crece en bosques templados con luz moderada y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Orquídea roxa precoce",
+      "description": "Orchis mascula é uma orquídea resistente originária da Europa e Ásia. Cresce em florestas temperadas com luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "زهرة الأوركيد الأرجوانية المبكرة",
+      "description": "Orchis mascula هو نوع من الأوركيد الصلب الأصلي في أوروبا وآسيا. ينمو في الغابات المعتدلة مع ضوء معتدل وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "प्रारंभिक बैंगनी आर्किड",
+      "description": "Orchis mascula एक मजबूत आर्किड है जो यूरोप और एशिया का मूल निवासी है। यह ठंडी जंगलों में उगता है, जहाँ मध्यम सूरज की रोशनी और अच्छी जल निकासी वाली मिट्टी होती है।"
+    },
+    "zh": {
+      "common_name": "早紫兰",
+      "description": "Orchis mascula 是一种耐寒的兰花，原产于欧洲和亚洲。它在温带森林中生长，享受适度的阳光和良好排水的土壤。"
+    },
+    "ja": {
+      "common_name": "早紫色のラン",
+      "description": "Orchis masculaはヨーロッパとアジアに自生する耐寒性のランです。適度な日光と良好な排水性土壌の温帯林で育ちます。"
+    },
+    "ko": {
+      "common_name": "조기 자주난초",
+      "description": "Orchis mascula는 유럽과 아시아 원산의 내한성이 강한 난초입니다. 적당한 햇빛과 잘 배수되는 토양을 갖춘 온대 숲에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=360",
+      "https://www.bgci.org/garden_search.php?action=Find&garden=204"
+    ]
+  }
+}

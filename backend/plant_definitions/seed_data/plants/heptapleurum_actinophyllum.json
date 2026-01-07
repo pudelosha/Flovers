@@ -1,0 +1,238 @@
+{
+  "external_id": "heptapleurum_actinophyllum",
+  "name": "Umbrella tree",
+  "latin": "Heptapleurum actinophyllum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "heptapleurum_actinophyllum.jpg",
+  "image_thumb": "heptapleurum_actinophyllum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalne podłoże",
+          "de": "Gut drainierende Erde",
+          "fr": "Substrat drainant",
+          "it": "Terriccio drenante",
+          "es": "Sustrato drenante",
+          "pt": "Substrato drenante",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल-निकासी मिट्टी",
+          "zh": "排水良好基质",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "When top dries",
+          "pl": "Gdy wierzch przeschnie",
+          "de": "Gießen wenn oben trocken",
+          "fr": "Arroser si sec dessus",
+          "it": "Quando asciuga sopra",
+          "es": "Cuando se seque arriba",
+          "pt": "Quando secar em cima",
+          "ar": "عند جفاف السطح",
+          "hi": "ऊपर सूखने पर पानी",
+          "zh": "表土干再浇",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–29°C",
+          "pl": "18–29°C",
+          "de": "18–29°C",
+          "fr": "18–29°C",
+          "it": "18–29°C",
+          "es": "18–29°C",
+          "pt": "18–29°C",
+          "ar": "18–29°م",
+          "hi": "18–29°C",
+          "zh": "18–29°C",
+          "ja": "18–29°C",
+          "ko": "18–29°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Avg to higher",
+          "pl": "Średnia lub wyższa",
+          "de": "Normal bis höher",
+          "fr": "Moyenne à élevée",
+          "it": "Media o alta",
+          "es": "Media a alta",
+          "pt": "Média a alta",
+          "ar": "متوسطة إلى عالية",
+          "hi": "सामान्य से अधिक",
+          "zh": "中等到较高",
+          "ja": "普通〜高め",
+          "ko": "보통~높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतुओं के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright tree",
+          "pl": "Pokrój drzewkowaty",
+          "de": "Aufrechter Wuchs",
+          "fr": "Port arborescent",
+          "it": "Crescita arborea",
+          "es": "Porte arbóreo",
+          "pt": "Porte arbóreo",
+          "ar": "نمو شجري قائم",
+          "hi": "सीधा झाड़ी/पेड़",
+          "zh": "直立木本",
+          "ja": "直立する木立ち",
+          "ko": "직립 수형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Umbrella tree",
+      "description": "Heptapleurum actinophyllum (often sold as Schefflera actinophylla) is a tropical tree from northern Australia and New Guinea. Indoors it prefers bright, indirect light and a well-draining potting mix; water when the surface dries, typically about every 10 days. It is toxic to cats and dogs if chewed."
+    },
+    "pl": {
+      "common_name": "Szeflera promienista",
+      "description": "Heptapleurum actinophyllum (często sprzedawana jako Schefflera actinophylla) to tropikalne drzewko z północnej Australii i Nowej Gwinei. W domu lubi jasne, rozproszone światło i przepuszczalne podłoże; podlewaj, gdy przeschnie wierzch, zwykle co ok. 10 dni. Roślina jest toksyczna dla psów i kotów po pogryzieniu."
+    },
+    "de": {
+      "common_name": "Strahlenaralie",
+      "description": "Heptapleurum actinophyllum (oft als Schefflera actinophylla verkauft) ist ein tropischer Baum aus Nordaustralien und Neuguinea. In Zimmerkultur mag sie helles, indirektes Licht und ein gut drainierendes Substrat; gegossen wird, wenn die Oberfläche abgetrocknet ist, meist etwa alle 10 Tage. Für Katzen und Hunde ist sie giftig."
+    },
+    "fr": {
+      "common_name": "Arbre ombrelle",
+      "description": "Heptapleurum actinophyllum (souvent vendu sous Schefflera actinophylla) est un arbre tropical d’Australie du Nord et de Nouvelle-Guinée. En intérieur, donnez une lumière vive indirecte et un terreau bien drainant; arrosez quand la surface sèche, en général tous les 10 jours. La plante est toxique pour les chats et les chiens."
+    },
+    "it": {
+      "common_name": "Albero ombrello",
+      "description": "Heptapleurum actinophyllum (spesso venduto come Schefflera actinophylla) è un albero tropicale del nord Australia e della Nuova Guinea. In casa preferisce luce intensa indiretta e un terriccio ben drenante; annaffia quando lo strato superiore è asciutto, di solito ogni 10 giorni. È tossica per cani e gatti se masticata."
+    },
+    "es": {
+      "common_name": "Árbol paraguas",
+      "description": "Heptapleurum actinophyllum (a menudo vendido como Schefflera actinophylla) es un árbol tropical del norte de Australia y Nueva Guinea. En interior prefiere luz brillante e indirecta y un sustrato con buen drenaje; riega cuando se seque la superficie, normalmente cada 10 días. Es tóxica para perros y gatos si la mastican."
+    },
+    "pt": {
+      "common_name": "Árvore-umbrela",
+      "description": "Heptapleurum actinophyllum (frequentemente vendido como Schefflera actinophylla) é uma árvore tropical do norte da Austrália e da Nova Guiné. Em interiores, prefere luz forte indireta e substrato bem drenado; regue quando a superfície secar, geralmente a cada 10 dias. É tóxica para cães e gatos se ingerida."
+    },
+    "ar": {
+      "common_name": "شجرة المظلة الأسترالية",
+      "description": "Heptapleurum actinophyllum (تُباع كثيرًا باسم Schefflera actinophylla) شجرة استوائية من شمال أستراليا وغينيا الجديدة. داخل المنزل تفضّل ضوءًا ساطعًا غير مباشر وتربة جيدة التصريف؛ اسقِ عندما يجف سطح التربة، عادةً كل 10 أيام. النبات سام للقطط والكلاب عند القضم."
+    },
+    "hi": {
+      "common_name": "अम्ब्रेला ट्री",
+      "description": "Heptapleurum actinophyllum (अक्सर Schefflera actinophylla नाम से बिकता है) उत्तरी ऑस्ट्रेलिया और न्यू गिनी का उष्णकटिबंधीय पौधा है। घर के अंदर इसे तेज़ अप्रत्यक्ष रोशनी और अच्छी जल-निकासी वाला पॉटिंग मिक्स दें; जब ऊपर की सतह सूख जाए तब पानी दें, आम तौर पर लगभग हर 10 दिन। पालतू जानवरों के लिए यह विषाक्त है।"
+    },
+    "zh": {
+      "common_name": "澳洲伞树",
+      "description": "Heptapleurum actinophyllum（常以 Schefflera actinophylla 销售）原产北澳大利亚与新几内亚的热带木本植物。室内宜放在明亮散射光处并使用排水良好的基质；表土干后再浇水，通常约每 10 天一次。对猫狗有毒，勿让啃咬。"
+    },
+    "ja": {
+      "common_name": "オーストラリアン・アンブレラツリー",
+      "description": "Heptapleurum actinophyllum（流通名は Schefflera actinophylla が多い）は北オーストラリア〜ニューギニア原産の熱帯性の木本です。室内では明るい間接光と水はけの良い用土にし、表土が乾いてから水やり（目安は約10日ごと）。猫や犬には有毒です。"
+    },
+    "ko": {
+      "common_name": "우산나무",
+      "description": "Heptapleurum actinophyllum(유통명 Schefflera actinophylla가 흔함)은 북호주와 뉴기니 원산의 열대 목본 식물입니다. 실내에서는 밝은 간접광과 배수 좋은 흙을 사용하고, 겉흙이 마르면 물을 주며 보통 약 10일 간격입니다. 고양이와 개에 유독합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77213393-1",
+      "https://www.rhs.org.uk/plants/516846/heptapleurum-actinophyllum-amate/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=276615",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/schefflera"
+    ]
+  }
+}

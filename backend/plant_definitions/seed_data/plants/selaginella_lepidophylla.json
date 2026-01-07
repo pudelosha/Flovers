@@ -1,0 +1,237 @@
+{
+  "external_id": "selaginella_lepidophylla",
+  "name": "Resurrection Plant",
+  "latin": "Selaginella lepidophylla",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "selaginella_lepidophylla.jpg",
+  "image_thumb": "selaginella_lepidophylla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光线",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-drained",
+          "pl": "Piaszczysta, dobrze przepuszczalna",
+          "de": "Sandig, gut durchlässig",
+          "fr": "Sableux, bien drainé",
+          "it": "Sabbioso, ben drenato",
+          "es": "Arenoso, bien drenado",
+          "pt": "Arenoso, bem drenado",
+          "ar": "رملية، جيدة التصريف",
+          "hi": "रेतीला, अच्छी तरह से जल निकासी",
+          "zh": "沙质，排水良好",
+          "ja": "砂質、排水良好",
+          "ko": "모래, 배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Resurrection Plant",
+      "description": "Selaginella lepidophylla, also known as the resurrection plant, is a drought-tolerant fern. It can survive extreme dehydration and revive when exposed to moisture."
+    },
+    "pl": {
+      "common_name": "Roślinka Zmartwychwstania",
+      "description": "Selaginella lepidophylla, znana również jako roślinka zmartwychwstania, to roślina tolerująca suszę. Może przeżyć skrajne odwodnienie i ożyć po nawilżeniu."
+    },
+    "de": {
+      "common_name": "Auferstehungs Pflanze",
+      "description": "Selaginella lepidophylla, auch bekannt als Auferstehungs Pflanze, ist ein dürretolerantes Farn. Es kann extreme Dehydrierung überstehen und sich bei Feuchtigkeit wiederbeleben."
+    },
+    "fr": {
+      "common_name": "Plante Résurrection",
+      "description": "Selaginella lepidophylla, également connue sous le nom de plante résurrection, est une fougère tolérante à la sécheresse. Elle peut survivre à une déshydratation extrême et se réanimer lorsqu'elle est exposée à l'humidité."
+    },
+    "it": {
+      "common_name": "Pianta della Resurrezione",
+      "description": "Selaginella lepidophylla, conosciuta anche come pianta della resurrezione, è una felce tollerante alla siccità. Può sopravvivere a disidratazioni estreme e rivivere quando esposta all'umidità."
+    },
+    "es": {
+      "common_name": "Planta Resurrección",
+      "description": "Selaginella lepidophylla, también conocida como planta resurrección, es una helecho tolerante a la sequía. Puede sobrevivir a una deshidratación extrema y revivir cuando se expone a la humedad."
+    },
+    "pt": {
+      "common_name": "Planta Ressurreição",
+      "description": "Selaginella lepidophylla, também conhecida como planta ressurreição, é uma samambaia tolerante à seca. Pode sobreviver a uma desidratação extrema e reviver quando exposta à umidade."
+    },
+    "ar": {
+      "common_name": "نبات القيامة",
+      "description": "Selaginella lepidophylla ، المعروفة أيضًا بنبات القيامة ، هي نبات سرخسي يتحمل الجفاف. يمكنه البقاء على قيد الحياة في الجفاف الشديد والانتعاش عند تعرضه للرطوبة."
+    },
+    "hi": {
+      "common_name": "पुनरुत्थान पौधा",
+      "description": "Selaginella lepidophylla, जिसे पुनरुत्थान पौधा भी कहा जाता है, एक सूखा सहनशील फर्न है। यह अत्यधिक निर्जलीकरण से बच सकता है और नमी मिलने पर पुनर्जीवित हो सकता है।"
+    },
+    "zh": {
+      "common_name": "复活草",
+      "description": "Selaginella lepidophylla，也称为复活草，是一种耐旱的蕨类植物。它能够在极端脱水的情况下存活，并在接触到水分时复苏。"
+    },
+    "ja": {
+      "common_name": "復活植物",
+      "description": "Selaginella lepidophyllaは、復活植物としても知られる乾燥耐性のあるシダ植物です。極端な脱水状態でも生き残り、湿気に触れると復活します。"
+    },
+    "ko": {
+      "common_name": "부활식물",
+      "description": "Selaginella lepidophylla, 부활식물로 알려진 이 식물은 건조에 강한 양치식물입니다. 극단적인 탈수 상태에서도 살아남을 수 있으며, 수분을 흡수하면 다시 살아납니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=181",
+      "https://www.botanicalgarden.ubc.ca/selaginella-lepidophylla/"
+    ]
+  }
+}

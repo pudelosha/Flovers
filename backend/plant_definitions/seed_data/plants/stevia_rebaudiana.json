@@ -1,0 +1,237 @@
+{
+  "external_id": "stevia_rebaudiana",
+  "name": "Stevia",
+  "latin": "Stevia rebaudiana",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "stevia_rebaudiana.jpg",
+  "image_thumb": "stevia_rebaudiana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "बलुआ",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中くらい",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22–30°C",
+          "pl": "22–30°C",
+          "de": "22–30°C",
+          "fr": "22–30°C",
+          "it": "22–30°C",
+          "es": "22–30°C",
+          "pt": "22–30°C",
+          "ar": "22–30°C",
+          "hi": "22–30°C",
+          "zh": "22–30°C",
+          "ja": "22–30°C",
+          "ko": "22–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "كاذب",
+          "hi": "झूठा",
+          "zh": "假",
+          "ja": "偽",
+          "ko": "거짓"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana is a perennial plant native to South America. Known for its sweet leaves, it is used as a natural sugar substitute."
+    },
+    "pl": {
+      "common_name": "Stewia",
+      "description": "Stevia rebaudiana to roślina wieloletnia pochodząca z Ameryki Południowej. Znana z słodkich liści, wykorzystywana jako naturalny zamiennik cukru."
+    },
+    "de": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana ist eine mehrjährige Pflanze, die in Südamerika beheimatet ist. Ihre süßen Blätter werden als natürlicher Zuckerersatz verwendet."
+    },
+    "fr": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana est une plante vivace originaire d'Amérique du Sud. Ses feuilles sucrées sont utilisées comme substitut naturel du sucre."
+    },
+    "it": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana è una pianta perenne originaria del Sud America. Conosciuta per le sue foglie dolci, è utilizzata come sostituto naturale dello zucchero."
+    },
+    "es": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana es una planta perenne originaria de América del Sur. Sus hojas dulces se utilizan como sustituto natural del azúcar."
+    },
+    "pt": {
+      "common_name": "Stevia",
+      "description": "Stevia rebaudiana é uma planta perene originária da América do Sul. Suas folhas doces são usadas como substituto natural do açúcar."
+    },
+    "ar": {
+      "common_name": "ستيفيا",
+      "description": "ستيفيا ريبوديان هي نبات معمر أصلي من أمريكا الجنوبية. أوراقها الحلوة تستخدم كبديل طبيعي للسكر."
+    },
+    "hi": {
+      "common_name": "स्टीविया",
+      "description": "स्टीविया रेबाउडियाना एक बहुवर्षीय पौधा है जो दक्षिण अमेरिका का मूल निवासी है। इसकी मीठी पत्तियाँ प्राकृतिक चीनी विकल्प के रूप में उपयोग की जाती हैं।"
+    },
+    "zh": {
+      "common_name": "甜叶菊",
+      "description": "甜叶菊（Stevia rebaudiana）是一种原产于南美的多年生植物。其甜美的叶子被用作天然的糖替代品。"
+    },
+    "ja": {
+      "common_name": "ステビア",
+      "description": "ステビア・リボウディアナは南アメリカ原産の多年生植物です。甘い葉が天然の砂糖代用品として使用されます。"
+    },
+    "ko": {
+      "common_name": "스테비아",
+      "description": "스테비아 레바우디아나는 남미 원산의 다년생 식물입니다. 달콤한 잎은 천연 설탕 대체제로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/stevia-plant-care/",
+      "https://www.gardeningknowhow.com/edible/herbs/stevia/stevia-plant-care.htm"
+    ]
+  }
+}

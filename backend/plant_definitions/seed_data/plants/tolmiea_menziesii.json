@@ -1,0 +1,237 @@
+{
+  "external_id": "tolmiea_menziesii",
+  "name": "Piggyback Plant",
+  "latin": "Tolmiea menziesii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tolmiea_menziesii.jpg",
+  "image_thumb": "tolmiea_menziesii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loam-based",
+          "pl": "Na bazie gleby próchniczej",
+          "de": "Auf Lehmbasis",
+          "fr": "Basé sur de la terre franche",
+          "it": "Basato su terriccio",
+          "es": "Basado en tierra arcillosa",
+          "pt": "Baseado em solo argiloso",
+          "ar": "مبني على التربة الطينية",
+          "hi": "मिट्टी पर आधारित",
+          "zh": "基于壤土",
+          "ja": "ロームベース",
+          "ko": "로암 기반"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Zimno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Froid à chaud",
+          "it": "Freddo a caldo",
+          "es": "Frío a cálido",
+          "pt": "Frio a quente",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "从凉爽到温暖",
+          "ja": "涼しいから暖かい",
+          "ko": "차가운 것에서 따뜻한 것까지"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping",
+          "pl": "Kępowy",
+          "de": "Buschig",
+          "fr": "En touffe",
+          "it": "A cespuglio",
+          "es": "Agrupado",
+          "pt": "Agrupado",
+          "ar": "مجموع",
+          "hi": "समूह में बढ़ना",
+          "zh": "丛生",
+          "ja": "群生",
+          "ko": "덩어리 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Piggyback Plant",
+      "description": "Tolmiea menziesii is a perennial ground cover plant with heart-shaped leaves and small flowers. It thrives in moderate light and moist, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Roślina przyczepna",
+      "description": "Tolmiea menziesii to wieloletnia roślina okrywowa o sercowatych liściach i małych kwiatach. Rośnie w średnim świetle i wilgotnej, dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Piggyback Pflanze",
+      "description": "Tolmiea menziesii ist eine mehrjährige Bodendeckerpflanze mit herzförmigen Blättern und kleinen Blüten. Sie gedeiht bei mittlerem Licht und feuchtem, gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Plante porteuse",
+      "description": "Tolmiea menziesii est une plante vivace couvre-sol avec des feuilles en forme de cœur et de petites fleurs. Elle prospère à la lumière modérée et dans un sol bien drainé et humide."
+    },
+    "it": {
+      "common_name": "Pianta piggyback",
+      "description": "Tolmiea menziesii è una pianta perenne tappezzante con foglie a forma di cuore e fiori piccoli. Cresce in luce moderata e terreno ben drenato e umido."
+    },
+    "es": {
+      "common_name": "Planta piggyback",
+      "description": "Tolmiea menziesii es una planta perenne cubresuelo con hojas en forma de corazón y flores pequeñas. Crece con luz moderada y suelos bien drenados y húmedos."
+    },
+    "pt": {
+      "common_name": "Planta piggyback",
+      "description": "Tolmiea menziesii é uma planta perene rasteira com folhas em forma de coração e flores pequenas. Cresce sob luz moderada e solo bem drenado e úmido."
+    },
+    "ar": {
+      "common_name": "نبات بيجيباك",
+      "description": "تولميا مينزيسيا هي نبات معمر يغطي الأرض بأوراق على شكل قلب وزهور صغيرة. تزدهر في الضوء المعتدل والتربة الرطبة ذات التصريف الجيد."
+    },
+    "hi": {
+      "common_name": "पिगीबैक पौधा",
+      "description": "टोलमिया मेन्जेसिया एक स्थायी मिट्टी कवर पौधा है जिसमें दिल के आकार के पत्ते और छोटे फूल होते हैं। यह मध्यम प्रकाश और नम, अच्छी जलनिकासी वाली मिट्टी में पनपता है।"
+    },
+    "zh": {
+      "common_name": "背背植物",
+      "description": "Tolmiea menziesii 是一种多年生地面覆盖植物，具有心形叶子和小花。它在中等光照和湿润、排水良好的土壤中茁壮成长。"
+    },
+    "ja": {
+      "common_name": "ピギーバックプラント",
+      "description": "Tolmiea menziesii はハート型の葉と小さな花を持つ多年生の地被植物です。中程度の光と湿ったよく排水された土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "피기백 식물",
+      "description": "Tolmiea menziesii는 심장 모양의 잎과 작은 꽃을 가진 다년생 땅 덮개 식물입니다. 중간 정도의 빛과 습한 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/12627/Tolmiea-menziesii/Details",
+      "https://www.bhg.com/gardening/pests-insects-diseases/piggyback-plant/"
+    ]
+  }
+}

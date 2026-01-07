@@ -1,0 +1,237 @@
+{
+  "external_id": "stephania_pierrei",
+  "name": "Stephania pierrei",
+  "latin": "Stephania pierrei",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stephania_pierrei.jpg",
+  "image_thumb": "stephania_pierrei.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroid",
+          "de": "aroid",
+          "fr": "aroïde",
+          "it": "aroide",
+          "es": "aroide",
+          "pt": "aroide",
+          "ar": "أرويد",
+          "hi": "अरोइड",
+          "zh": "阿罗伊德",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "ない",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średni",
+          "de": "moderat",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei is a tropical plant native to Southeast Asia. It is known for its unique round leaves and tuberous caudex."
+    },
+    "pl": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei to tropikalna roślina pochodząca z Azji Południowo-Wschodniej. Znana jest ze swoich okrągłych liści i korzeniowego kłącza."
+    },
+    "de": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei ist eine tropische Pflanze aus Südostasien. Sie ist bekannt für ihre runden Blätter und das knollige Caudex."
+    },
+    "fr": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei est une plante tropicale originaire d'Asie du Sud-Est. Elle est connue pour ses feuilles rondes et son caudex tubéreux."
+    },
+    "it": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei è una pianta tropicale originaria del Sud-est asiatico. È nota per le sue foglie rotonde e il caudice tuberoso."
+    },
+    "es": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei es una planta tropical originaria del sudeste asiático. Es conocida por sus hojas redondas y su caudex tuberoso."
+    },
+    "pt": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei é uma planta tropical originária do Sudeste Asiático. É conhecida por suas folhas redondas e seu caudex tuberoso."
+    },
+    "ar": {
+      "common_name": "Stephania pierrei",
+      "description": "ستيفانيا بيريري هي نبتة استوائية موطنها جنوب شرق آسيا. تشتهر بأوراقها الدائرية وعمودها السميك."
+    },
+    "hi": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei एक उष्णकटिबंधीय पौधा है जो दक्षिण-पूर्वी एशिया का मूल निवासी है। यह अपनी गोल पत्तियों और गांठदार कैडक्स के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei 是一种原产于东南亚的热带植物。它以其圆形的叶子和块茎状的根茎闻名。"
+    },
+    "ja": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei は東南アジア原産の熱帯植物です。その特徴的な丸い葉と塊茎のような根茎で知られています。"
+    },
+    "ko": {
+      "common_name": "Stephania pierrei",
+      "description": "Stephania pierrei는 동남아시아 원산의 열대 식물입니다. 독특한 둥근 잎과 덩어리 모양의 뿌리줄기로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/87793/Stephania-pierrei/Details",
+      "https://www.botanicalgarden.ubc.ca/plant-names/stephania-pierrei/"
+    ]
+  }
+}

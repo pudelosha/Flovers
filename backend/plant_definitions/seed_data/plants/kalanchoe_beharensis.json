@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_beharensis",
+  "name": "Felt Bush",
+  "latin": "Kalanchoe beharensis",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_beharensis.jpg",
+  "image_thumb": "kalanchoe_beharensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Helles Sonnenlicht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光",
+          "ja": "明るい日光",
+          "ko": "밝은 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega pouco",
+          "ar": "ري نادر",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30℃",
+          "ko": "10–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "有毒",
+          "ko": "독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow, shrubby",
+          "pl": "Wolny wzrost",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Felt Bush",
+      "description": "Kalanchoe beharensis is a shrubby succulent native to Madagascar with large velvety leaves. It prefers bright light, minimal watering, and well-drained soil. The plant is drought tolerant and suitable for indoor growing."
+    },
+    "pl": {
+      "common_name": "Kalanchoe filcowe",
+      "description": "Kalanchoe beharensis to sukulent krzewiasty z Madagaskaru o filcowatych liściach. Lubi jasne stanowiska i rzadkie podlewanie. Dobrze rośnie w przepuszczalnym podłożu."
+    },
+    "de": {
+      "common_name": "Filz-Kalanchoe",
+      "description": "Kalanchoe beharensis ist eine sukkulente Pflanze aus Madagaskar mit samtigen Blättern. Sie benötigt viel Licht und wenig Wasser. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Kalanchoé feutré",
+      "description": "Kalanchoe beharensis est une succulente arbustive de Madagascar aux feuilles duveteuses. Elle apprécie une lumière vive et peu d’arrosage. Un sol bien drainé est essentiel."
+    },
+    "it": {
+      "common_name": "Kalanchoe feltro",
+      "description": "Kalanchoe beharensis è una succulenta originaria del Madagascar con foglie vellutate. Richiede molta luce e annaffiature limitate. Ideale come pianta da interno."
+    },
+    "es": {
+      "common_name": "Kalanchoe de fieltro",
+      "description": "Kalanchoe beharensis es una suculenta arbustiva de Madagascar con hojas aterciopeladas. Necesita luz intensa y riego escaso. Es resistente a la sequía."
+    },
+    "pt": {
+      "common_name": "Kalanchoe de feltro",
+      "description": "Kalanchoe beharensis é uma suculenta arbustiva de Madagascar com folhas aveludadas. Prefere luz forte e pouca água. Tolera bem ambientes secos."
+    },
+    "ar": {
+      "common_name": "كالانشو مخملي",
+      "description": "نبات كالانشو بيهارينسيس عصاري موطنه مدغشقر بأوراق مخملية كبيرة. يحتاج إلى ضوء قوي وري قليل. مناسب للزراعة الداخلية."
+    },
+    "hi": {
+      "common_name": "फेल्ट कलानचो",
+      "description": "कैलान्कोए बेहारेन्सिस मेडागास्कर का एक रसीला पौधा है। इसे तेज रोशनी और कम पानी की आवश्यकता होती है। यह सूखा सहनशील है।"
+    },
+    "zh": {
+      "common_name": "绒叶伽蓝菜",
+      "description": "Kalanchoe beharensis 原产于马达加斯加，叶片厚实柔软。喜欢强光和少量浇水。适合室内种植。"
+    },
+    "ja": {
+      "common_name": "フェルトカランコエ",
+      "description": "カランコエ・ベハレンシスはマダガスカル原産の多肉植物です。明るい光と控えめな水やりを好みます。室内向きです。"
+    },
+    "ko": {
+      "common_name": "펠트 칼랑코에",
+      "description": "칼랑코에 베하렌시스는 마다가스카르 원산의 다육식물입니다. 밝은 빛과 적은 물을 선호합니다. 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9699/kalanchoe-beharensis/details",
+      "https://plants.ces.ncsu.edu/plants/kalanchoe-beharensis/",
+      "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/kalanchoe"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "lycium_barbarum",
+  "name": "Goji berry",
+  "latin": "Lycium barbarum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 30,
+  "image_hero": "lycium_barbarum.jpg",
+  "image_thumb": "lycium_barbarum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Weekly deep water",
+          "pl": "Podlewaj co tydz.",
+          "de": "Wöchentlich gießen",
+          "fr": "Arrosage hebdo",
+          "it": "Irriga settiman.",
+          "es": "Riego semanal",
+          "pt": "Rega semanal",
+          "ar": "ري أسبوعي",
+          "hi": "साप्ताहिक पानी",
+          "zh": "每周浇透",
+          "ja": "週1回たっぷり",
+          "ko": "주 1회 듬뿍"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Hardy, cool-tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kälteverträglich",
+          "fr": "Rustique au froid",
+          "it": "Resiste al freddo",
+          "es": "Resiste al frío",
+          "pt": "Resiste ao frio",
+          "ar": "يتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性あり",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotn.",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Not known toxic",
+          "pl": "Brak danych o toks.",
+          "de": "Nicht giftig bekannt",
+          "fr": "Non toxique connu",
+          "it": "Non noto tossico",
+          "es": "No tóxica conocida",
+          "pt": "Não tóxica conhecida",
+          "ar": "غير معروف سام",
+          "hi": "विषैला ज्ञात नहीं",
+          "zh": "无已知毒性",
+          "ja": "毒性は不明",
+          "ko": "독성 보고 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Deciduous shrub",
+          "pl": "Krzew zrzucający",
+          "de": "Laubabwerf. Strauch",
+          "fr": "Arbuste caduc",
+          "it": "Arbusto deciduo",
+          "es": "Arbusto caduco",
+          "pt": "Arbusto caduco",
+          "ar": "شجيرة متساقطة",
+          "hi": "पर्णपाती झाड़ी",
+          "zh": "落叶灌木",
+          "ja": "落葉低木",
+          "ko": "낙엽 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Goji berry",
+      "description": "Lycium barbarum is a deciduous shrub grown for its orange-red berries. It fruits best in full sun and well-drained, neutral to slightly alkaline soil. In containers, keep watering consistent and avoid waterlogging."
+    },
+    "pl": {
+      "common_name": "Kolcowój pospolity",
+      "description": "Lycium barbarum to krzew zrzucający liście, uprawiany dla pomarańczowo-czerwonych owoców. Najlepiej owocuje w pełnym słońcu i w przepuszczalnej, obojętnej do lekko zasadowej glebie. W pojemniku podlewaj regularnie i nie dopuszczaj do zastoin wody."
+    },
+    "de": {
+      "common_name": "Bocksdorn",
+      "description": "Lycium barbarum ist ein laubabwerfender Strauch mit orange-roten Beeren. Er trägt am besten in voller Sonne und in gut drainiertem, neutral bis leicht alkalischem Boden. In Töpfen gleichmäßig wässern und Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Goji",
+      "description": "Lycium barbarum est un arbuste caduc cultivé pour ses baies orange-rouge. Il fructifie mieux en plein soleil et dans un sol bien drainé, neutre à légèrement alcalin. En pot, arrosez régulièrement sans détremper le substrat."
+    },
+    "it": {
+      "common_name": "Goji",
+      "description": "Lycium barbarum è un arbusto deciduo coltivato per le bacche rosso-arancioni. Fruttifica meglio in pieno sole e in un terreno ben drenato, da neutro a leggermente alcalino. In vaso, mantieni irrigazioni regolari evitando ristagni."
+    },
+    "es": {
+      "common_name": "Goji",
+      "description": "Lycium barbarum es un arbusto caduco cultivado por sus bayas anaranjadas y rojas. Produce mejor a pleno sol y en suelo bien drenado, de neutro a ligeramente alcalino. En maceta, riega con regularidad y evita el encharcamiento."
+    },
+    "pt": {
+      "common_name": "Goji",
+      "description": "Lycium barbarum é um arbusto caducifólio cultivado pelas bagas laranja-avermelhadas. Frutifica melhor em sol pleno e em solo bem drenado, neutro a ligeiramente alcalino. Em vaso, regue de forma consistente e evite encharcamento."
+    },
+    "ar": {
+      "common_name": "توت الغوجي",
+      "description": "Lycium barbarum شجيرة متساقطة الأوراق تُزرع لثمارها البرتقالية-الحمراء. تعطي أفضل إنتاج في شمس كاملة وتربة جيدة الصرف تميل للمتعادل إلى القلوي قليلاً. عند زراعتها في أصيص، حافظ على ري منتظم وتجنب تشبع التربة بالماء."
+    },
+    "hi": {
+      "common_name": "गोजी बेरी",
+      "description": "Lycium barbarum एक पर्णपाती झाड़ी है जिसे नारंगी-लाल फलों के लिए उगाया जाता है। यह पूरी धूप और अच्छी जलनिकासी वाली, तटस्थ से हल्की क्षारीय मिट्टी में बेहतर फल देता है। गमले में नियमित पानी दें और जलभराव से बचें।"
+    },
+    "zh": {
+      "common_name": "枸杞",
+      "description": "Lycium barbarum 为落叶灌木，以橙红色浆果著称。全日照和排水良好、近中性至微碱性的土壤更利于结果。盆栽时需规律浇水，但避免积水烂根。"
+    },
+    "ja": {
+      "common_name": "クコ",
+      "description": "Lycium barbarum は橙赤色の実をつける落葉低木です。日当たりの良い場所と、水はけの良い中性〜弱アルカリ性の土でよく育ちます。鉢植えでは乾かし過ぎず、過湿（根腐れ）を避けて管理します。"
+    },
+    "ko": {
+      "common_name": "구기자나무",
+      "description": "Lycium barbarum 은 주황빛 붉은 열매를 맺는 낙엽 관목입니다. 양지와 배수가 좋은 중성~약알칼리성 토양에서 결실이 좋습니다. 화분 재배 시 물은 규칙적으로 주되 과습과 배수 불량은 피하세요."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/fruit/goji-berries/grow-your-own",
+      "https://extension.usu.edu/yardandgarden/research/goji-in-the-garden",
+      "https://www.pvamu.edu/cafnr/wp-content/uploads/sites/27/Fact-Sheets-Goji-Berry.pdf",
+      "https://www.groworganic.com/blogs/articles/how-to-grow-goji-berries-aka-wolfberries"
+    ]
+  }
+}

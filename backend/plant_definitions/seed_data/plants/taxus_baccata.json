@@ -1,0 +1,237 @@
+{
+  "external_id": "taxus_baccata",
+  "name": "European Yew",
+  "latin": "Taxus baccata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "taxus_baccata.jpg",
+  "image_thumb": "taxus_baccata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, loamy",
+          "pl": "Kwaśna, próchnicza",
+          "de": "Saures, lockeres",
+          "fr": "Acide, limoneuse",
+          "it": "Acido, argilloso",
+          "es": "Ácido, arcilloso",
+          "pt": "Ácido, argiloso",
+          "ar": "حمضي، طيني",
+          "hi": "खट्टा, दोमट",
+          "zh": "酸性，壤土",
+          "ja": "酸性、粘土質",
+          "ko": "산성, 점토질"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "नमीयत कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "European Yew",
+      "description": "The European Yew is a conifer native to Europe, known for its evergreen needles and red berries. It grows slowly and prefers shaded environments."
+    },
+    "pl": {
+      "common_name": "Cis pospolity",
+      "description": "Cis pospolity to iglak rodzimy w Europie, znany z wiecznie zielonych igieł i czerwonych jagód. Rośnie powoli i preferuje zacienione miejsca."
+    },
+    "de": {
+      "common_name": "Europäische Eibe",
+      "description": "Die Europäische Eibe ist ein Nadelbaum, der in Europa heimisch ist. Sie ist bekannt für ihre immergrünen Nadeln und roten Beeren. Sie wächst langsam und bevorzugt schattige Standorte."
+    },
+    "fr": {
+      "common_name": "If commun",
+      "description": "L'If commun est un conifère originaire d'Europe, connu pour ses aiguilles persistantes et ses baies rouges. Il pousse lentement et préfère les environnements ombragés."
+    },
+    "it": {
+      "common_name": "Tasso europeo",
+      "description": "Il Tasso europeo è una conifera originaria dell'Europa, conosciuta per le sue foglie sempreverdi e le bacche rosse. Cresce lentamente e preferisce ambienti ombreggiati."
+    },
+    "es": {
+      "common_name": "Tejo europeo",
+      "description": "El Tejo europeo es un árbol de hoja perenne originario de Europa, conocido por sus agujas verdes y bayas rojas. Crece lentamente y prefiere ambientes sombreados."
+    },
+    "pt": {
+      "common_name": "Teixo europeu",
+      "description": "O Teixo europeu é uma conífera nativa da Europa, conhecida por suas agulhas perenes e bagas vermelhas. Cresce lentamente e prefere ambientes sombreados."
+    },
+    "ar": {
+      "common_name": "شجرة التاكسوس الأوروبية",
+      "description": "التاكسوس الأوروبية هي شجرة مخروطية موطنها الأصلي في أوروبا، معروفة بإبرها الخضراء الدائمة وبذورها الحمراء. تنمو ببطء وتفضل البيئات المظللة."
+    },
+    "hi": {
+      "common_name": "यूरोपीय यू",
+      "description": "यूरोपीय यू एक शंकुधारी पौधा है जो यूरोप का मूल निवासी है, यह अपनी हरे रंग की पत्तियों और लाल जामुन के लिए जाना जाता है। यह धीरे-धीरे बढ़ता है और छायादार वातावरण पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "欧洲红豆杉",
+      "description": "欧洲红豆杉是一种原产于欧洲的针叶树，因其常绿的针叶和红色的浆果而闻名。它生长缓慢，喜欢阴凉的环境。"
+    },
+    "ja": {
+      "common_name": "ヨーロッパイチイ",
+      "description": "ヨーロッパイチイはヨーロッパ原産の針葉樹で、常緑の葉と赤い実が特徴です。ゆっくり成長し、陰の多い場所を好みます。"
+    },
+    "ko": {
+      "common_name": "유럽주목",
+      "description": "유럽주목은 유럽 원산지의 침엽수로, 항상 푸른 잎과 붉은 열매로 유명합니다. 서서히 자라며 그늘이 많은 환경을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=113",
+      "https://www.bhg.com/gardening/pests-diseases-conditions/yew-tree-care/"
+    ]
+  }
+}

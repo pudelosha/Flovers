@@ -1,0 +1,237 @@
+{
+  "external_id": "sedum_morganianum",
+  "name": "Burro's Tail",
+  "latin": "Sedum morganianum",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sedum_morganianum.jpg",
+  "image_thumb": "sedum_morganianum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sableux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂質土",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage léger",
+          "it": "Annaffiatura bassa",
+          "es": "Riego bajo",
+          "pt": "Rega baixa",
+          "ar": "سقي منخفض",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "少なめの水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-26°C",
+          "pl": "15-26°C",
+          "de": "15-26°C",
+          "fr": "15-26°C",
+          "it": "15-26°C",
+          "es": "15-26°C",
+          "pt": "15-26°C",
+          "ar": "15-26°C",
+          "hi": "15-26°C",
+          "zh": "15-26°C",
+          "ja": "15-26°C",
+          "ko": "15-26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Burro's Tail",
+      "description": "Sedum morganianum is a low-maintenance succulent that grows long, trailing stems of fleshy, bead-like leaves. Ideal for hanging baskets, it thrives in bright, indirect light."
+    },
+    "pl": {
+      "common_name": "Ogonek Burro",
+      "description": "Sedum morganianum to łatwy w uprawie sukulent, który rośnie na długich, zwisających pędach z mięsistymi, kulistymi liśćmi. Doskonały do wiszących doniczek, rośnie w jasnym, pośrednim świetle."
+    },
+    "de": {
+      "common_name": "Bockschwanz",
+      "description": "Sedum morganianum ist eine pflegeleichte Sukkulente mit langen, hängenden Stängeln aus fleischigen, perlenartigen Blättern. Ideal für Hängekörbe, es gedeiht in hellem, indirektem Licht."
+    },
+    "fr": {
+      "common_name": "Queue de burro",
+      "description": "Sedum morganianum est une plante succulente facile à entretenir qui produit des tiges longues et pendantes de feuilles charnues en forme de perles. Idéale pour les paniers suspendus, elle prospère dans une lumière indirecte brillante."
+    },
+    "it": {
+      "common_name": "Coda di Burro",
+      "description": "Sedum morganianum è una pianta succulenta facile da curare che cresce con steli lunghi e pendenti di foglie carnose a forma di perla. Ideale per cestini appesi, cresce in luce indiretta brillante."
+    },
+    "es": {
+      "common_name": "Cola de burro",
+      "description": "Sedum morganianum es una suculenta fácil de cuidar que crece con tallos largos y colgantes de hojas carnosas en forma de perlas. Ideal para cestas colgantes, prospera con luz indirecta brillante."
+    },
+    "pt": {
+      "common_name": "Cauda de burro",
+      "description": "Sedum morganianum é uma suculenta de fácil cuidado que cresce com caules longos e pendentes de folhas carnudas em forma de pérolas. Ideal para cestas suspensas, prospera em luz indireta brilhante."
+    },
+    "ar": {
+      "common_name": "ذيل البقرة",
+      "description": "Sedum morganianum هو نبات عصاري سهل العناية ينمو بسيقان طويلة ومتدلية من الأوراق اللحمية على شكل خرز. مثالي للسلّات المعلقة، ينمو في ضوء غير مباشر ساطع."
+    },
+    "hi": {
+      "common_name": "बुर्रो की पूंछ",
+      "description": "Sedum morganianum एक कम रखरखाव वाला रसीला पौधा है जो मांसल, मोती जैसे पत्तों वाली लंबी, लटकी हुई शाखाएँ उगाता है। यह झूलते हुए बास्केट के लिए आदर्श है और इसे हल्के, अप्रत्यक्ष प्रकाश में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "驴尾草",
+      "description": "Sedum morganianum 是一种易于养护的多肉植物，生长出长而下垂的茎，茎上布满肉质的珍珠状叶片。它非常适合悬挂篮子，喜欢明亮的间接光。"
+    },
+    "ja": {
+      "common_name": "バロンズテール",
+      "description": "Sedum morganianumは、肉質のビーズのような葉を持つ長く垂れ下がる茎を持つ、手間のかからない多肉植物です。吊り鉢に最適で、明るい間接光で成長します。"
+    },
+    "ko": {
+      "common_name": "부로의 꼬리",
+      "description": "Sedum morganianum은 육질의 구슬처럼 생긴 잎이 달린 긴 가지를 자라는 손쉬운 관리가 가능한 다육 식물입니다. 걸이식 화분에 이상적이며 밝은 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/sedum-morganianum-burros-tail/",
+      "https://www.rhs.org.uk/plants/sedum-morganianum"
+    ]
+  }
+}

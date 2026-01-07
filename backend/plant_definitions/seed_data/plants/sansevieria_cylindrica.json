@@ -1,0 +1,237 @@
+{
+  "external_id": "sansevieria_cylindrica",
+  "name": "Cylindrical Snake Plant",
+  "latin": "Sansevieria cylindrica",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sansevieria_cylindrica.jpg",
+  "image_thumb": "sansevieria_cylindrica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Niska podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Bassa irrigazione",
+          "es": "Riego bajo",
+          "pt": "Rega baixa",
+          "ar": "سقي منخفض",
+          "hi": "कम पानी देना",
+          "zh": "少量浇水",
+          "ja": "少ない水やり",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-27°C",
+          "pl": "18-27°C",
+          "de": "18-27°C",
+          "fr": "18-27°C",
+          "it": "18-27°C",
+          "es": "18-27°C",
+          "pt": "18-27°C",
+          "ar": "18-27°C",
+          "hi": "18-27°C",
+          "zh": "18-27°C",
+          "ja": "18-27°C",
+          "ko": "18-27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trujące dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완동물에게 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cylindrical Snake Plant",
+      "description": "Sansevieria cylindrica, or cylindrical snake plant, is known for its striking, upright leaves. It thrives in bright indirect light and requires minimal watering."
+    },
+    "pl": {
+      "common_name": "Wężownik cylindryczny",
+      "description": "Sansevieria cylindrica to roślina o charakterystycznych, wyprostowanych liściach. Wymaga umiarkowanego światła i minimalnego podlewania."
+    },
+    "de": {
+      "common_name": "Zylindrische Schlangenpflanze",
+      "description": "Sansevieria cylindrica ist bekannt für seine auffälligen, aufrechten Blätter. Sie gedeiht bei indirektem Licht und benötigt wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Plante serpent cylindrique",
+      "description": "Sansevieria cylindrica, ou plante serpent cylindrique, est connue pour ses feuilles droites et imposantes. Elle prospère dans une lumière indirecte et nécessite peu d'eau."
+    },
+    "it": {
+      "common_name": "Pianta serpente cilindrica",
+      "description": "Sansevieria cylindrica, o pianta serpente cilindrica, è nota per le sue foglie dritte e imponenti. Cresce bene in luce indiretta e necessita di poca acqua."
+    },
+    "es": {
+      "common_name": "Planta serpiente cilíndrica",
+      "description": "Sansevieria cylindrica, o planta serpiente cilíndrica, es conocida por sus hojas verticales y llamativas. Prosperará en luz indirecta y requiere poco riego."
+    },
+    "pt": {
+      "common_name": "Planta serpente cilíndrica",
+      "description": "Sansevieria cylindrica é conhecida por suas folhas verticais e impressionantes. Ela cresce bem com luz indireta e requer pouca água."
+    },
+    "ar": {
+      "common_name": "نبات الأفعى الأسطواني",
+      "description": "Sansevieria cylindrica، أو نبات الأفعى الأسطواني، معروف بأوراقه الشاهقة والمستقيمة. ينمو في الضوء غير المباشر ويتطلب الحد الأدنى من الري."
+    },
+    "hi": {
+      "common_name": "लंबा साँप पौधा",
+      "description": "Sansevieria cylindrica, या लंबा साँप पौधा, अपनी सीधी पत्तियों के लिए जाना जाता है। यह अप्रत्यक्ष प्रकाश में बढ़ता है और कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "圆柱蛇形植物",
+      "description": "Sansevieria cylindrica, 或圆柱蛇形植物，以其直立的叶片而著名。它在间接光下生长，并且需要较少的水分。"
+    },
+    "ja": {
+      "common_name": "円筒型ヘビの植物",
+      "description": "Sansevieria cylindrica、または円筒型ヘビの植物は、その直立した葉で知られています。間接光で育ち、最小限の水分が必要です。"
+    },
+    "ko": {
+      "common_name": "원통형 뱀 식물",
+      "description": "Sansevieria cylindrica 또는 원통형 뱀 식물은 똑바로 자라는 잎으로 유명합니다. 간접광에서 자라며 최소한의 물이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11674/Sansevieria-cylindrica/Details",
+      "https://www.bhg.com/gardening/pests-insects-diseases/sansevieria-cylindrica-care/"
+    ]
+  }
+}

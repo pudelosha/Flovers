@@ -1,0 +1,237 @@
+{
+  "external_id": "primula_vulgaris",
+  "name": "Primrose",
+  "latin": "Primula vulgaris",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "primula_vulgaris.jpg",
+  "image_thumb": "primula_vulgaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool",
+          "pl": "chłodny",
+          "de": "kühl",
+          "fr": "frais",
+          "it": "fresco",
+          "es": "fresco",
+          "pt": "fresco",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Primrose",
+      "description": "Primula vulgaris, commonly known as primrose, is a perennial plant native to Europe and parts of Asia. It prefers cool climates and well-drained loamy soil."
+    },
+    "pl": {
+      "common_name": "Pierwiosnek",
+      "description": "Primula vulgaris, znana jako pierwiosnek, to roślina wieloletnia pochodząca z Europy i części Azji. Preferuje chłodny klimat i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Primel",
+      "description": "Primula vulgaris, allgemein als Primel bekannt, ist eine mehrjährige Pflanze, die in Europa und Teilen Asiens heimisch ist. Sie bevorzugt kühle Klimazonen und gut durchlässigen Lehmboden."
+    },
+    "fr": {
+      "common_name": "Primevère",
+      "description": "Primula vulgaris, communément appelée primevère, est une plante vivace originaire d'Europe et de certaines parties de l'Asie. Elle préfère les climats frais et un sol limoneux bien drainé."
+    },
+    "it": {
+      "common_name": "Primula",
+      "description": "Primula vulgaris, comunemente conosciuta come primula, è una pianta perenne originaria dell'Europa e di alcune parti dell'Asia. Preferisce climi freschi e suoli limosi ben drenati."
+    },
+    "es": {
+      "common_name": "Prímula",
+      "description": "Primula vulgaris, conocida como prímula, es una planta perenne originaria de Europa y partes de Asia. Prefiere climas frescos y suelos arcillosos bien drenados."
+    },
+    "pt": {
+      "common_name": "Prímula",
+      "description": "Primula vulgaris, conhecida como prímula, é uma planta perene nativa da Europa e de partes da Ásia. Prefere climas frescos e solos argilosos bem drenados."
+    },
+    "ar": {
+      "common_name": "بريموالي",
+      "description": "Primula vulgaris، المعروفة باسم بريموالي، هي نبات معمر أصلي في أوروبا وأجزاء من آسيا. تفضل المناخات الباردة والتربة الطينية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "प्रिमुला",
+      "description": "Primula vulgaris, जिसे प्रिमुला के नाम से जाना जाता है, एक बहुवर्षीय पौधा है जो यूरोप और एशिया के कुछ हिस्सों का मूल है। यह ठंडे जलवायु और अच्छी तरह से जल निकासी वाली बलुई मिट्टी को पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "报春花",
+      "description": "Primula vulgaris，常称为报春花，是一种多年生植物，原产于欧洲和亚洲部分地区。它喜欢凉爽的气候和排水良好的壤土。"
+    },
+    "ja": {
+      "common_name": "サクラソウ",
+      "description": "Primula vulgaris、一般的にサクラソウとして知られるこの植物は、ヨーロッパおよびアジアの一部に自生しています。涼しい気候とよく排水される粘土質の土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "프리무라",
+      "description": "Primula vulgaris, 일반적으로 프리무라로 알려진 이 식물은 유럽과 아시아 일부 지역이 원산지입니다. 시원한 기후와 잘 배수되는 점토질 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/primula-vulgaris",
+      "https://www.gardenia.net/plant/primula-vulgaris"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "solanum_lycopersicum",
+  "name": "Tomato",
+  "latin": "Solanum lycopersicum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "solanum_lycopersicum.jpg",
+  "image_thumb": "solanum_lycopersicum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "कादर",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tomato",
+      "description": "The tomato (Solanum lycopersicum) is a popular fruit-bearing plant native to western South America. It thrives in sunny locations and well-drained loamy soil."
+    },
+    "pl": {
+      "common_name": "Pomidor",
+      "description": "Pomidor (Solanum lycopersicum) to popularna roślina owocowa pochodząca z zachodniej Ameryki Południowej. Rośnie najlepiej w słonecznych miejscach i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Tomate",
+      "description": "Die Tomate (Solanum lycopersicum) ist eine beliebte fruchttragende Pflanze, die in West-Südamerika beheimatet ist. Sie gedeiht an sonnigen Standorten und in gut durchlässigem, lehmigem Boden."
+    },
+    "fr": {
+      "common_name": "Tomate",
+      "description": "La tomate (Solanum lycopersicum) est une plante fruitière populaire originaire de l'ouest de l'Amérique du Sud. Elle préfère les endroits ensoleillés et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Pomodoro",
+      "description": "Il pomodoro (Solanum lycopersicum) è una pianta fruttifera popolare originaria dell'ovest del Sud America. Cresce meglio in luoghi soleggiati e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Tomate",
+      "description": "El tomate (Solanum lycopersicum) es una planta frutal popular originaria del oeste de América del Sur. Se desarrolla mejor en lugares soleados y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Tomate",
+      "description": "O tomate (Solanum lycopersicum) é uma planta frutífera popular nativa do oeste da América do Sul. Prefere locais ensolarados e solos bem drenados."
+    },
+    "ar": {
+      "common_name": "طماطم",
+      "description": "الطماطم (Solanum lycopersicum) هي نبتة مثمرة شائعة موطنها غرب أمريكا الجنوبية. تنمو بشكل أفضل في الأماكن المشمسة وفي التربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "टमाटर",
+      "description": "टमाटर (Solanum lycopersicum) एक लोकप्रिय फलदार पौधा है, जो पश्चिमी दक्षिण अमेरिका का मूल निवासी है। यह धूप वाले स्थानों और अच्छी जल निकासी वाली मिट्टी में सबसे अच्छा उगता है।"
+    },
+    "zh": {
+      "common_name": "番茄",
+      "description": "番茄（Solanum lycopersicum）是一种受欢迎的果实植物，原产于南美洲西部。它在阳光充足且排水良好的土壤中生长最佳。"
+    },
+    "ja": {
+      "common_name": "トマト",
+      "description": "トマト（Solanum lycopersicum）は西南アメリカ原産の人気の果実を持つ植物です。日当たりの良い場所と排水性の良い土壌で最適に育ちます。"
+    },
+    "ko": {
+      "common_name": "토마토",
+      "description": "토마토(Solanum lycopersicum)는 서남 아메리카 원산의 인기 있는 과일 식물입니다. 햇볕이 잘 드는 장소와 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/tomato-solanum-lycopersicum/",
+      "https://www.rhs.org.uk/advice/profile?pid=107"
+    ]
+  }
+}

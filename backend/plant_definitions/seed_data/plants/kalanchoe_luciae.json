@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_luciae",
+  "name": "Flapjack Plant",
+  "latin": "Kalanchoe luciae",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_luciae.jpg",
+  "image_thumb": "kalanchoe_luciae.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poche annaffiature",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長ゆっくり",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flapjack Plant",
+      "description": "Kalanchoe luciae is a succulent with large, flat, paddle-shaped leaves that redden in strong sun. It is drought tolerant and well suited to bright indoor locations. Overwatering should be avoided."
+    },
+    "pl": {
+      "common_name": "Kalanchoe łopatkowate",
+      "description": "Kalanchoe luciae to sukulent o dużych, płaskich liściach, które czerwienieją w słońcu. Jest odporny na suszę i łatwy w uprawie domowej. Nie toleruje nadmiaru wody."
+    },
+    "de": {
+      "common_name": "Flapjack-Pflanze",
+      "description": "Kalanchoe luciae ist eine sukkulente Pflanze mit flachen, runden Blättern. Bei viel Sonne färben sich die Blätter rot. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Plante à palettes",
+      "description": "Kalanchoe luciae est une plante succulente aux grandes feuilles plates. Une forte lumière accentue la coloration rouge. Elle demande peu d’arrosage."
+    },
+    "it": {
+      "common_name": "Pianta pala",
+      "description": "Kalanchoe luciae è una succulenta con foglie larghe e piatte. Il sole intenso rende i bordi rossastri. Richiede annaffiature molto moderate."
+    },
+    "es": {
+      "common_name": "Planta paleta",
+      "description": "Kalanchoe luciae es una suculenta de hojas planas y carnosas. Con mucho sol desarrolla tonos rojos. Necesita riego escaso."
+    },
+    "pt": {
+      "common_name": "Planta paleta",
+      "description": "Kalanchoe luciae é uma suculenta de folhas largas e achatadas. A luz intensa realça a cor avermelhada. Deve ser regada com moderação."
+    },
+    "ar": {
+      "common_name": "نبات كالانشو",
+      "description": "كالانشو لوسياي نبات عصاري بأوراق مسطحة كبيرة. يتحول لونها إلى الأحمر مع الشمس القوية. يحتاج إلى ري قليل."
+    },
+    "hi": {
+      "common_name": "फ्लैपजैक पौधा",
+      "description": "Kalanchoe luciae एक रसीला पौधा है जिसकी पत्तियाँ चपटी होती हैं। तेज धूप में पत्तियाँ लाल हो जाती हैं। इसे कम पानी चाहिए।"
+    },
+    "zh": {
+      "common_name": "扇叶伽蓝菜",
+      "description": "Kalanchoe luciae 是一种多肉植物，叶片宽大扁平。强光下叶缘会变红。适合少量浇水养护。"
+    },
+    "ja": {
+      "common_name": "カランコエ・ルキアエ",
+      "description": "カランコエ・ルキアエは平たい葉を持つ多肉植物です。強い日光で赤く色づきます。水やりは控えめにします。"
+    },
+    "ko": {
+      "common_name": "플랩잭 다육식물",
+      "description": "Kalanchoe luciae는 넓고 평평한 잎을 가진 다육식물입니다. 강한 햇빛에서 붉은 색을 띱니다. 물은 적게 줍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10242/kalanchoe-luciae/details",
+      "https://garden.org/plants/view/78880/Kalanchoe-luciae/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b456"
+    ]
+  }
+}

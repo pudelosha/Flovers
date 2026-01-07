@@ -1,0 +1,239 @@
+{
+  "external_id": "lavandula_angustifolia",
+  "name": "English lavender",
+  "latin": "Lavandula angustifolia",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "lavandula_angustifolia.jpg",
+  "image_thumb": "lavandula_angustifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Sandig, drainiert",
+          "fr": "Drainant, sableux",
+          "it": "Drenante, sabbioso",
+          "es": "Arenoso, drenante",
+          "pt": "Arenoso, drenante",
+          "ar": "تربة جيدة الصرف",
+          "hi": "रेतीली, जलनिकासी",
+          "zh": "沙质排水好",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when dry",
+          "pl": "Podlewaj po wysch.",
+          "de": "Gießen bei Trockenh.",
+          "fr": "Arroser si sec",
+          "it": "Annaffia da asciutto",
+          "es": "Riega al secarse",
+          "pt": "Regue ao secar",
+          "ar": "اسقِ بعد الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "土干再浇",
+          "ja": "乾いたら水",
+          "ko": "흙 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°م",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Feuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zw.",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سام للحيوانات",
+          "hi": "पालतू को विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Woody shrub",
+          "pl": "Krzew zdrewniały",
+          "de": "Halbstrauch",
+          "fr": "Arbrisseau",
+          "it": "Arbusto legnoso",
+          "es": "Arbusto leñoso",
+          "pt": "Arbusto lenhoso",
+          "ar": "شجيرة خشبية",
+          "hi": "झाड़ी",
+          "zh": "木质灌木",
+          "ja": "低木",
+          "ko": "목본 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "English lavender",
+      "description": "A fragrant Mediterranean shrub with narrow gray-green leaves and purple flower spikes. Give it the brightest sun you can and very fast-draining, sandy soil. Let the potting mix dry well between waterings; it is considered toxic to pets if ingested."
+    },
+    "pl": {
+      "common_name": "Lawenda wąskolistna",
+      "description": "Aromatyczny krzew śródziemnomorski o wąskich, szarozielonych liściach i fioletowych kwiatostanach. Wymaga bardzo jasnego słońca i lekkiego, silnie przepuszczalnego podłoża. Podlewaj dopiero po wyraźnym przeschnięciu; jest uznawana za toksyczną dla zwierząt po spożyciu."
+    },
+    "de": {
+      "common_name": "Echter Lavendel",
+      "description": "Duftender mediterraner Halbstrauch mit schmalen graugrünen Blättern und violetten Blütenähren. Sehr heller Standort in voller Sonne und stark durchlässiges, sandiges Substrat sind wichtig. Zwischen den Wassergaben gut abtrocknen lassen; gilt bei Aufnahme als giftig für Haustiere."
+    },
+    "fr": {
+      "common_name": "Lavande vraie",
+      "description": "Sous-arbrisseau méditerranéen parfumé aux feuilles étroites gris-vert et aux épis de fleurs violettes. Placez-le au soleil direct et dans un substrat très drainant, plutôt sableux. Laissez bien sécher entre deux arrosages; la plante est considérée toxique pour les animaux si ingérée."
+    },
+    "it": {
+      "common_name": "Lavanda vera",
+      "description": "Arbusto mediterraneo profumato con foglie strette grigio-verdi e spighe di fiori viola. Richiede molto sole e un terriccio molto drenante e sabbioso. Lascia asciugare bene tra un’annaffiatura e l’altra; è considerata tossica per gli animali domestici se ingerita."
+    },
+    "es": {
+      "common_name": "Lavanda inglesa",
+      "description": "Arbusto mediterráneo aromático con hojas estrechas gris verdosas y espigas de flores púrpuras. Necesita sol directo y un sustrato muy drenante, preferiblemente arenoso. Deja secar bien entre riegos; se considera tóxica para mascotas si se ingiere."
+    },
+    "pt": {
+      "common_name": "Lavanda-inglesa",
+      "description": "Arbusto mediterrânico aromático com folhas estreitas verde-acinzentadas e espigas de flores roxas. Precisa de sol direto e substrato muito bem drenado e mais arenoso. Deixe secar bem entre regas; é considerada tóxica para animais de estimação se ingerida."
+    },
+    "ar": {
+      "common_name": "الخزامى الإنجليزي",
+      "description": "شجيرة متوسطية عطرية بأوراق ضيقة رمادية-خضراء وسنابل أزهار بنفسجية. تحتاج إلى شمس مباشرة وتربة شديدة التصريف تميل للرملية. اترك التربة تجف جيدًا بين الريّات؛ وتُعد سامة للحيوانات الأليفة إذا ابتُلعت."
+    },
+    "hi": {
+      "common_name": "अंग्रेज़ी लैवेंडर",
+      "description": "यह सुगंधित भूमध्यसागरीय झाड़ी है जिसकी संकरी धूसर-हरी पत्तियाँ और बैंगनी फूलों की बालियाँ होती हैं। इसे तेज धूप और बहुत अच्छी जलनिकासी वाली, रेतीली मिट्टी चाहिए। पानी तभी दें जब मिट्टी अच्छी तरह सूख जाए; पालतू जानवरों द्वारा खाने पर यह विषैली मानी जाती है।"
+    },
+    "zh": {
+      "common_name": "狭叶薰衣草",
+      "description": "一种芳香的地中海灌木，叶片狭窄呈灰绿色，开紫色穗状花。需要充足直射光和排水极佳的偏沙质基质。每次浇水前让盆土明显干透；误食对宠物有毒。"
+    },
+    "ja": {
+      "common_name": "イングリッシュラベンダー",
+      "description": "地中海原産の芳香性低木で、灰緑色の細い葉と紫の花穂をつけます。強い日光と水はけの良い砂質寄りの用土が必要です。用土がしっかり乾いてから水やりし、ペットが食べると有毒とされています。"
+    },
+    "ko": {
+      "common_name": "잉글리시 라벤더",
+      "description": "지중해 원산의 향기로운 관목으로, 회녹색의 가는 잎과 보라색 꽃 이삭이 특징입니다. 강한 직사광과 배수가 매우 좋은 모래성 흙이 필요합니다. 흙이 충분히 마른 뒤 물을 주며, 섭취 시 반려동물에 유독한 것으로 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/91398/lavandula-angustifolia/details",
+      "https://www.rhs.org.uk/plants/lavender/growing-guide",
+      "https://www.missouribotanicalgarden.org/plantfinder/PlantFinderDetails.aspx?taxonid=281393",
+      "https://www.torontomastergardeners.ca/askagardener/indoor-lavender-plant/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lavender"
+    ]
+  }
+}

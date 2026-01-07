@@ -1,0 +1,237 @@
+{
+  "external_id": "nepenthes_alata",
+  "name": "Nepenthes Alata",
+  "latin": "Nepenthes alata",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 4,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "nepenthes_alata.jpg",
+  "image_thumb": "nepenthes_alata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic airy mix",
+          "pl": "Kwaśne lekkie",
+          "de": "Saures Substrat",
+          "fr": "Substrat acide",
+          "it": "Substrato acido",
+          "es": "Sustrato ácido",
+          "pt": "Substrato ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性透气土",
+          "ja": "酸性用土",
+          "ko": "산성 배합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotne",
+          "de": "Feucht halten",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائماً",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Luftf.",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Lente",
+          "it": "Lenta",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tropical Pitcher Plant",
+      "description": "Nepenthes alata is a tropical carnivorous plant native to the Philippines. It grows climbing stems with hanging pitchers that trap insects. It requires high humidity, pure water, and bright indirect light indoors."
+    },
+    "pl": {
+      "common_name": "Dzbanecznik",
+      "description": "Nepenthes alata to tropikalna roślina owadożerna z Filipin. Wytwarza dzbanki chwytające owady na pnących pędach. Wymaga wysokiej wilgotności i jasnego, rozproszonego światła."
+    },
+    "de": {
+      "common_name": "Kannenpflanze",
+      "description": "Nepenthes alata ist eine tropische fleischfressende Pflanze aus den Philippinen. Sie bildet hängende Kannen zum Insektenfang. Sie benötigt hohe Luftfeuchtigkeit und helles, indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Plante carnivore",
+      "description": "Nepenthes alata est une plante carnivore tropicale originaire des Philippines. Elle produit des urnes suspendues pour piéger les insectes. Elle demande une forte humidité et une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Pianta carnivora",
+      "description": "Nepenthes alata è una pianta carnivora tropicale delle Filippine. Produce ascidi pendenti che catturano insetti. Necessita di elevata umidità e luce indiretta."
+    },
+    "es": {
+      "common_name": "Planta jarra",
+      "description": "Nepenthes alata es una planta carnívora tropical de Filipinas. Desarrolla jarras colgantes para atrapar insectos. Requiere alta humedad y luz indirecta brillante."
+    },
+    "pt": {
+      "common_name": "Planta jarro",
+      "description": "Nepenthes alata é uma planta carnívora tropical das Filipinas. Produz jarros pendentes que capturam insetos. Precisa de alta umidade e luz indireta."
+    },
+    "ar": {
+      "common_name": "نبات إبريق",
+      "description": "نيبنتس ألاتا نبات لاحم استوائي موطنه الفلبين. ينتج أباريق معلقة لاصطياد الحشرات. يحتاج إلى رطوبة عالية وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "घड़ा पौधा",
+      "description": "नेपेंथेस एलाटा फिलीपींस का उष्णकटिबंधीय मांसाहारी पौधा है। यह कीट पकड़ने वाले लटकते घड़े बनाता है। इसे अधिक नमी और अप्रत्यक्ष रोशनी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "猪笼草",
+      "description": "Nepenthes alata 是原产菲律宾的热带食虫植物。它生长出悬挂的捕虫囊。室内栽培需要高湿度和明亮散射光。"
+    },
+    "ja": {
+      "common_name": "ウツボカズラ",
+      "description": "ネペンテス・アラタはフィリピン原産の熱帯食虫植物です。昆虫を捕らえる袋状の捕虫器を形成します。高湿度と明るい間接光を必要とします。"
+    },
+    "ko": {
+      "common_name": "네펜데스",
+      "description": "Nepenthes alata는 필리핀 원산의 열대 식충식물입니다. 곤충을 포획하는 주머니를 형성합니다. 높은 습도와 밝은 간접광이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rbg.ca/plant/nepenthes-alata/",
+      "https://www.carnivorousplants.org/grow/guides/Nepenthes",
+      "https://extension.umn.edu/houseplants/pitcher-plants"
+    ]
+  }
+}

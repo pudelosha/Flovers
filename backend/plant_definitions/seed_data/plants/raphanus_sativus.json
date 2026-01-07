@@ -1,0 +1,237 @@
+{
+  "external_id": "raphanus_sativus",
+  "name": "Radish",
+  "latin": "Raphanus sativus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "raphanus_sativus.jpg",
+  "image_thumb": "raphanus_sativus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittlere Beleuchtung",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmboden",
+          "fr": "Sol limoneux",
+          "it": "Terreno argilloso",
+          "es": "Suelo franco",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土壌",
+          "ko": "로미 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodny do ciepłego",
+          "de": "Kühl bis warm",
+          "fr": "Froid à chaud",
+          "it": "Freddo a caldo",
+          "es": "Frío a cálido",
+          "pt": "Frio a morno",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "从凉爽到温暖",
+          "ja": "涼しいから暖かい",
+          "ko": "차가운에서 따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ता है",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Radish",
+      "description": "Raphanus sativus is a fast-growing, cool-weather crop widely cultivated for its edible roots. It thrives in well-drained loamy soil and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Rzodkiew",
+      "description": "Raphanus sativus to szybko rosnąca roślina uprawna w chłodnym klimacie, szeroko uprawiana dla jadalnych korzeni. Rośnie najlepiej w dobrze przepuszczalnej glebie próchniczej i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Radieschen",
+      "description": "Raphanus sativus ist eine schnell wachsende Pflanze, die in kühlen Klimazonen für ihre essbaren Wurzeln weit verbreitet ist. Sie gedeiht in gut durchlässigem, lehmigem Boden und benötigt mäßige Bewässerung."
+    },
+    "fr": {
+      "common_name": "Radis",
+      "description": "Raphanus sativus est une plante à croissance rapide, cultivée dans les climats frais pour ses racines comestibles. Elle prospère dans un sol limoneux bien drainé et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Ravanello",
+      "description": "Raphanus sativus è una pianta a crescita rapida coltivata in climi freschi per le sue radici commestibili. Cresce meglio in terreni sabbiosi ben drenati e richiede irrigazioni moderate."
+    },
+    "es": {
+      "common_name": "Rábano",
+      "description": "Raphanus sativus es una planta de crecimiento rápido cultivada en climas frescos por sus raíces comestibles. Prefiere suelos limosos bien drenados y necesita riego moderado."
+    },
+    "pt": {
+      "common_name": "Rabanete",
+      "description": "Raphanus sativus é uma planta de crescimento rápido cultivada em climas frescos por suas raízes comestíveis. Cresce bem em solos argilosos bem drenados e requer rega moderada."
+    },
+    "ar": {
+      "common_name": "الفجل",
+      "description": "Raphanus sativus هو نبات سريع النمو يُزرع في المناخات الباردة من أجل جذوره الصالحة للأكل. يزدهر في التربة الطينية جيدة التصريف ويحتاج إلى ري معتدل."
+    },
+    "hi": {
+      "common_name": "मूली",
+      "description": "Raphanus sativus एक तेज़ी से बढ़ने वाली, ठंडी जलवायु में उगने वाली फसल है, जिसे इसके खाने योग्य जड़ों के लिए उगाया जाता है। यह अच्छे जल निकासी वाली मिट्टी में उगता है और इसे मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "小根菜",
+      "description": "Raphanus sativus是一种快速生长的作物，广泛种植于寒冷气候地区，主要用于食用根部。它在排水良好的壤土中生长，并需要适量的浇水。"
+    },
+    "ja": {
+      "common_name": "ラディッシュ",
+      "description": "Raphanus sativusは、食用の根を得るために広く栽培される、速く成長する冷涼気候の作物です。よく排水されたローム土壌で育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "무",
+      "description": "Raphanus sativus는 식용 뿌리를 위해 널리 재배되는 빠르게 자라는 기후의 식물입니다. 잘 배수되는 토양에서 자라며 중간 정도의 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeners.com/how-to/growing-radishes/7371.html",
+      "https://www.rhs.org.uk/advice/profile?pid=290"
+    ]
+  }
+}

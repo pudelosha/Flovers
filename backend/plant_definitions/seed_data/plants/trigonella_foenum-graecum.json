@@ -1,0 +1,238 @@
+{
+  "external_id": "trigonella_foenum_graecum",
+  "name": "Fenugreek",
+  "latin": "Trigonella foenum-graecum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "trigonella_foenum_graecum.jpg",
+  "image_thumb": "trigonella_foenum_graecum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainé",
+          "it": "Drenante",
+          "es": "Drenado",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual",
+          "pl": "Szybkoroczna",
+          "de": "Schnelljährig",
+          "fr": "Annuelle rapide",
+          "it": "Annuale rapida",
+          "es": "Anual rápida",
+          "pt": "Anual rápida",
+          "ar": "سنوية سريعة",
+          "hi": "तेज़ वार्षिक",
+          "zh": "快速一年生",
+          "ja": "一年草",
+          "ko": "빠른 한해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fenugreek",
+      "description": "Fenugreek is an annual herb commonly grown for its aromatic leaves and seeds. It prefers full sun and well-drained soil with regular watering. The plant is easy to grow and often harvested within a few months."
+    },
+    "pl": {
+      "common_name": "Kozieradka",
+      "description": "Kozieradka to jednoroczna roślina zielna uprawiana dla liści i nasion. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Jest łatwa w uprawie i szybko dojrzewa."
+    },
+    "de": {
+      "common_name": "Bockshornklee",
+      "description": "Bockshornklee ist eine einjährige Kräuterpflanze, die für Blätter und Samen genutzt wird. Er wächst am besten in voller Sonne und durchlässigem Boden. Die Pflanze ist pflegeleicht und schnell erntereif."
+    },
+    "fr": {
+      "common_name": "Fenugrec",
+      "description": "Le fenugrec est une plante annuelle cultivée pour ses feuilles et ses graines. Il apprécie le plein soleil et un sol bien drainé. Sa culture est simple et rapide."
+    },
+    "it": {
+      "common_name": "Fieno greco",
+      "description": "Il fieno greco è una pianta annuale coltivata per foglie e semi. Cresce bene in pieno sole e terreno drenante. È facile da coltivare e a crescita rapida."
+    },
+    "es": {
+      "common_name": "Fenogreco",
+      "description": "El fenogreco es una hierba anual cultivada por sus hojas y semillas. Prefiere pleno sol y suelo bien drenado. Es fácil de cultivar y de crecimiento rápido."
+    },
+    "pt": {
+      "common_name": "Feno-grego",
+      "description": "O feno-grego é uma planta anual cultivada pelas folhas e sementes. Desenvolve-se bem em sol pleno e solo drenado. É fácil de cuidar e cresce rapidamente."
+    },
+    "ar": {
+      "common_name": "الحلبة",
+      "description": "الحلبة نبات عشبي سنوي يزرع من أجل أوراقه وبذوره. يفضل الشمس الكاملة والتربة جيدة التصريف. سهل الزراعة وسريع النمو."
+    },
+    "hi": {
+      "common_name": "मेथी",
+      "description": "मेथी एक वार्षिक जड़ी-बूटी है जिसे पत्तियों और बीजों के लिए उगाया जाता है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। यह उगाने में आसान और तेजी से बढ़ती है।"
+    },
+    "zh": {
+      "common_name": "胡芦巴",
+      "description": "胡芦巴是一年生草本植物，常为叶和种子栽培。它需要充足阳光和良好排水的土壤。生长迅速，易于管理。"
+    },
+    "ja": {
+      "common_name": "フェヌグリーク",
+      "description": "フェヌグリークは葉と種子を利用する一年草です。日当たりと水はけの良い土を好みます。育てやすく成長が早い植物です。"
+    },
+    "ko": {
+      "common_name": "페뉴그릭",
+      "description": "페뉴그릭은 잎과 씨앗을 위해 재배되는 한해살이 허브입니다. 충분한 햇빛과 배수가 좋은 토양을 선호합니다. 키우기 쉽고 성장 속도가 빠릅니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/herbs/fenugreek/grow-your-own",
+      "https://extension.umn.edu/herbs/fenugreek",
+      "https://www.britannica.com/plant/fenugreek"
+    ]
+  }
+}

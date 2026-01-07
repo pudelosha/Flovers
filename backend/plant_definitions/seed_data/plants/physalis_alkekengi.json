@@ -1,0 +1,237 @@
+{
+  "external_id": "physalis_alkekengi",
+  "name": "Chinese Lantern",
+  "latin": "Physalis alkekengi",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "physalis_alkekengi.jpg",
+  "image_thumb": "physalis_alkekengi.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium light",
+          "pl": "średnie światło",
+          "de": "mittleres Licht",
+          "fr": "lumière moyenne",
+          "it": "luce media",
+          "es": "luz media",
+          "pt": "luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loamy soil",
+          "pl": "gleba próchnicza",
+          "de": "humoser Boden",
+          "fr": "sol argileux",
+          "it": "terreno argilloso",
+          "es": "suelo arcilloso",
+          "pt": "solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "दोमट मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土質土",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium watering",
+          "pl": "średnie podlewanie",
+          "de": "mittlere Bewässerung",
+          "fr": "arrosage moyen",
+          "it": "irrigazione media",
+          "es": "riego medio",
+          "pt": "rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "नमीयत कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमे",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Lantern",
+      "description": "Physalis alkekengi, known for its vibrant orange husks, is a perennial plant native to Asia and parts of Europe. It grows in well-drained loamy soil and requires medium sunlight."
+    },
+    "pl": {
+      "common_name": "Lampion chiński",
+      "description": "Physalis alkekengi, znana ze swoich jaskrawych pomarańczowych osłon, jest rośliną wieloletnią pochodzącą z Azji i części Europy. Rośnie w dobrze odwodnionej glebie próchniczej i wymaga średniego nasłonecznienia."
+    },
+    "de": {
+      "common_name": "Chinesische Laterne",
+      "description": "Physalis alkekengi, bekannt für ihre leuchtend orangefarbenen Hüllen, ist eine mehrjährige Pflanze, die in Asien und Teilen Europas heimisch ist. Sie wächst in gut durchlässigem, lehmigem Boden und benötigt mittlere Sonneneinstrahlung."
+    },
+    "fr": {
+      "common_name": "Lanternes chinoises",
+      "description": "Physalis alkekengi, connu pour ses enveloppes orange vif, est une plante vivace originaire d'Asie et de certaines régions d'Europe. Elle pousse dans un sol loameux bien drainé et nécessite une lumière modérée."
+    },
+    "it": {
+      "common_name": "Lanterna cinese",
+      "description": "Physalis alkekengi, nota per i suoi involucri arancioni vivaci, è una pianta perenne originaria dell'Asia e di alcune regioni d'Europa. Cresce in terreni ben drenati e necessita di luce media."
+    },
+    "es": {
+      "common_name": "Linterna china",
+      "description": "Physalis alkekengi, conocida por su envoltura naranja brillante, es una planta perenne originaria de Asia y algunas partes de Europa. Crece en suelos bien drenados y necesita luz media."
+    },
+    "pt": {
+      "common_name": "Lanterna chinesa",
+      "description": "Physalis alkekengi, conhecida por suas cascas laranja vibrantes, é uma planta perene nativa da Ásia e de partes da Europa. Cresce em solos bem drenados e requer luz média."
+    },
+    "ar": {
+      "common_name": "الفانوس الصيني",
+      "description": "Physalis alkekengi، المعروفة بغلافها البرتقالي الزاهي، هي نبات معمر موطنه آسيا وبعض أجزاء أوروبا. ينمو في التربة الطينية جيدة التصريف ويتطلب ضوءًا متوسطًا."
+    },
+    "hi": {
+      "common_name": "चीनी लालटेन",
+      "description": "Physalis alkekengi, जिसे इसके चमकीले नारंगी आवरण के लिए जाना जाता है, एक बहुवर्षीय पौधा है जो एशिया और यूरोप के कुछ हिस्सों का मूल है। यह अच्छी तरह से नालियों वाली मिट्टी में बढ़ता है और इसे मध्यम धूप की आवश्यकता होती है."
+    },
+    "zh": {
+      "common_name": "灯笼草",
+      "description": "Physalis alkekengi，以其鲜艳的橙色外壳而闻名，是一种多年生植物，原产于亚洲和欧洲的一些地区。它生长在排水良好的壤土中，且需要中等的阳光。"
+    },
+    "ja": {
+      "common_name": "チャイニーズランタン",
+      "description": "Physalis alkekengiは、その鮮やかなオレンジ色の殻で知られる多年生植物で、アジアとヨーロッパの一部が原産地です。排水の良い壌土で育ち、中程度の日光が必要です。"
+    },
+    "ko": {
+      "common_name": "중국 등롱",
+      "description": "Physalis alkekengi는 밝은 오렌지색 외피로 유명한 다년생 식물로, 아시아와 유럽 일부 지역이 원산지입니다. 배수가 좋은 점토토양에서 자라며 중간 정도의 햇빛을 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=682",
+      "https://www.gardeningknowhow.com/ornamental/flowers/chinese-lantern.htm"
+    ]
+  }
+}

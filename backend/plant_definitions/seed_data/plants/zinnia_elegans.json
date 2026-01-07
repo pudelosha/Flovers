@@ -1,0 +1,236 @@
+{
+  "external_id": "zinnia_elegans",
+  "name": "Common Zinnia",
+  "latin": "Zinnia elegans",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "zinnia_elegans.jpg",
+  "image_thumb": "zinnia_elegans.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "volle Sonne",
+          "fr": "plein soleil",
+          "it": "pieno sole",
+          "es": "sol pleno",
+          "pt": "sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "充足阳光",
+          "ja": "日光充足",
+          "ko": "충분한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained soil",
+          "pl": "gleba dobrze przepuszczalna",
+          "de": "gut durchlässiger Boden",
+          "fr": "sol bien drainé",
+          "it": "terreno ben drenato",
+          "es": "suelo bien drenado",
+          "pt": "solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土壌",
+          "ko": "배수가 잘 되는 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate watering",
+          "pl": "umiarkowane podlewanie",
+          "de": "mäßiges Gießen",
+          "fr": "arrosage modéré",
+          "it": "innaffiatura moderata",
+          "es": "riego moderado",
+          "pt": "rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm temps",
+          "pl": "ciepłe temp.",
+          "de": "warme Temperaturen",
+          "fr": "températures chaudes",
+          "it": "temperature calde",
+          "es": "temperaturas cálidas",
+          "pt": "temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖温度",
+          "ja": "暖かい気温",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low humidity",
+          "pl": "niska wilgotność",
+          "de": "niedrige Luftfeuchte",
+          "fr": "faible humidité",
+          "it": "bassa umidità",
+          "es": "baja humedad",
+          "pt": "baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietoksyczna",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "annual flower",
+          "pl": "roślina jednoroczna",
+          "de": "einjährige Blume",
+          "fr": "fleur annuelle",
+          "it": "fiore annuale",
+          "es": "flor anual",
+          "pt": "flor anual",
+          "ar": "زهرة سنوية",
+          "hi": "वार्षिक फूल",
+          "zh": "一年生花",
+          "ja": "一年草",
+          "ko": "일년생 꽃"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Zinnia",
+      "description": "Zinnia elegans is an easy summer annual that blooms in full sun and well-drained soil. It thrives with moderate watering and produces colorful flowers loved by pollinators."
+    },
+    "pl": {
+      "common_name": "Zinia pospolita",
+      "description": "Zinnia elegans to łatwa roślina jednoroczna kwitnąca w pełnym słońcu i przepuszczalnej glebie. Wymaga umiarkowanego podlewania i przyciąga owady zapylające."
+    },
+    "de": {
+      "common_name": "Gewöhnliche Zinnie",
+      "description": "Zinnia elegans ist eine einfache einjährige Blume, die in voller Sonne und gutem Boden blüht. Sie bevorzugt mäßiges Gießen und zieht Bestäuber an."
+    },
+    "fr": {
+      "common_name": "Zinnia commun",
+      "description": "Zinnia elegans est une fleur annuelle facile qui fleurit au plein soleil dans un sol bien drainé. Elle a besoin d\\u2019arrosage mod\\u00e9r\\u00e9 et attire les pollinisateurs."
+    },
+    "it": {
+      "common_name": "Zinnia comune",
+      "description": "Zinnia elegans è un fiore annuale facile che fiorisce al pieno sole in terreno ben drenato. Richiede annaffiature moderate e attira gli impollinatori."
+    },
+    "es": {
+      "common_name": "Zinnia común",
+      "description": "Zinnia elegans es una flor anual fácil que florece con sol pleno y suelo bien drenado. Necesita riego moderado y atrae polinizadores."
+    },
+    "pt": {
+      "common_name": "Zínia comum",
+      "description": "Zinnia elegans é uma flor anual fácil que floresce ao sol pleno em solo bem drenado. Requer rega moderada e atrai polinizadores."
+    },
+    "ar": {
+      "common_name": "زينية شائعة",
+      "description": "زينية Zinnia elegans هي خصرى سنوية تزهر فى أشعة شمس وتصريح جيد. تحتاج رياً معدلاً وجذوبة الزهرات."
+    },
+    "hi": {
+      "common_name": "ß  Zinnia",
+      "description": "Zinnia elegans के सामान टिक्व क्ष्म युवा सुर्य के सातह हैं. इसके मयदाम्य प्रवायजन का वात करता जाता है."
+    },
+    "zh": {
+      "common_name": "普通尾氏花",
+      "description": "Zinnia elegans 是一种早期生長的一年生粉花，在充足阳光和流通土壤中闪花不耐。"
+    },
+    "ja": {
+      "common_name": "ジニア",
+      "description": "Zinnia elegansは全焼しの陽光で絶対的な花を重要として起こされる一年生赤花です。"
+    },
+    "ko": {
+      "common_name": "ジニア",
+      "description": "Zinnia elegans가 充구阳가条件과 가근과 구과결과 가구구 결과가 구과과결 가 구과과결 가 구구과결 구과결 가구과결 가구과결"
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/genus/zinnia-elegans-common-zinnia",
+      "https://hgic.clemson.edu/factsheet/how-to-grow-zinnias-the-best-varieties-care-tips/"
+    ]
+  }
+}

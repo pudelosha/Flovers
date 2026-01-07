@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_xanadu",
+  "name": "Philodendron Xanadu",
+  "latin": "Philodendron xanadu",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "philodendron_xanadu.jpg",
+  "image_thumb": "philodendron_xanadu.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "유니버설"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-25°C",
+          "pl": "18-25°C",
+          "de": "18-25°C",
+          "fr": "18-25°C",
+          "it": "18-25°C",
+          "es": "18-25°C",
+          "pt": "18-25°C",
+          "ar": "18-25°C",
+          "hi": "18-25°C",
+          "zh": "18-25°C",
+          "ja": "18-25°C",
+          "ko": "18-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średni",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu is a tropical plant known for its glossy, deeply lobed leaves. It thrives in medium light and moderate watering conditions."
+    },
+    "pl": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu to tropikalna roślina, znana ze swoich błyszczących, głęboko wciętych liści. Rośnie w średnim świetle i umiarkowanym podlewaniu."
+    },
+    "de": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu ist eine tropische Pflanze, die für ihre glänzenden, tief eingeschnittenen Blätter bekannt ist. Sie gedeiht bei mittlerem Licht und mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Le Philodendron xanadu est une plante tropicale connue pour ses feuilles lustrées et profondément lobées. Elle prospère dans une lumière moyenne et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu è una pianta tropicale nota per le sue foglie lucide e profondamente lobate. Cresce in luce media e con annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu es una planta tropical conocida por sus hojas brillantes y profundamente lobuladas. Crece con luz media y riego moderado."
+    },
+    "pt": {
+      "common_name": "Philodendron Xanadu",
+      "description": "Philodendron xanadu é uma planta tropical conhecida por suas folhas brilhantes e profundamente lobadas. Ela cresce sob luz média e rega moderada."
+    },
+    "ar": {
+      "common_name": "فيلوديندرون زانادو",
+      "description": "فيلوديندرون زانادو هو نبات استوائي معروف بأوراقه اللامعة والعميقة. ينمو في ضوء متوسط وظروف سقي معتدلة."
+    },
+    "hi": {
+      "common_name": "फिलोडेंड्रोन ज़ानाडू",
+      "description": "फिलोडेंड्रोन ज़ानाडू एक उष्णकटिबंधीय पौधा है जो अपनी चमकदार, गहरी कटे हुई पत्तियों के लिए जाना जाता है। यह मध्यम प्रकाश और मध्यम पानी की शर्तों में पनपता है।"
+    },
+    "zh": {
+      "common_name": "天堂鸟藤",
+      "description": "天堂鸟藤是一种热带植物，以其光滑的、深裂的叶子而闻名。它在中等光照和适度浇水条件下生长。"
+    },
+    "ja": {
+      "common_name": "フィロデンドロン・ザナドゥ",
+      "description": "フィロデンドロン・ザナドゥは光沢のある深く切れ込んだ葉を持つ熱帯植物です。中程度の光と適度な水やり条件で成長します。"
+    },
+    "ko": {
+      "common_name": "필로덴드론 자나두",
+      "description": "필로덴드론 자나두는 광택이 나는 깊게 갈라진 잎으로 알려진 열대 식물입니다. 중간 정도의 빛과 적당한 물주기 조건에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/philodendron-xanadu",
+      "https://www.rhs.org.uk/plants/philodendron-xanadu"
+    ]
+  }
+}

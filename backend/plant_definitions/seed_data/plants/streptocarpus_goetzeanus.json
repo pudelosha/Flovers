@@ -1,0 +1,237 @@
+{
+  "external_id": "streptocarpus_goetzeanus",
+  "name": "Goetze's Streptocarpus",
+  "latin": "Streptocarpus goetzeanus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "streptocarpus_goetzeanus.jpg",
+  "image_thumb": "streptocarpus_goetzeanus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "powolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Goetze's Streptocarpus",
+      "description": "Streptocarpus goetzeanus is a perennial plant native to Eastern Africa. It thrives in shaded environments and requires moderate care, including regular watering."
+    },
+    "pl": {
+      "common_name": "Streptocarpus Goetze'a",
+      "description": "Streptocarpus goetzeanus to roślina wieloletnia pochodząca z Wschodniej Afryki. Rośnie w zacienionych miejscach i wymaga umiarkowanej pielęgnacji, w tym regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Goetzes Streptocarpus",
+      "description": "Streptocarpus goetzeanus ist eine mehrjährige Pflanze aus Ostafrika. Sie gedeiht in schattigen Umgebungen und benötigt eine moderate Pflege, einschließlich regelmäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Streptocarpus de Goetze",
+      "description": "Streptocarpus goetzeanus est une plante vivace originaire d'Afrique de l'Est. Elle prospère dans des environnements ombragés et nécessite des soins modérés, y compris un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Streptocarpus di Goetze",
+      "description": "Streptocarpus goetzeanus è una pianta perenne originaria dell'Africa orientale. Cresce in ambienti ombreggiati e richiede una cura moderata, inclusa l'irrigazione regolare."
+    },
+    "es": {
+      "common_name": "Streptocarpus de Goetze",
+      "description": "Streptocarpus goetzeanus es una planta perenne originaria del este de África. Crece en ambientes sombreados y requiere cuidados moderados, incluida el riego regular."
+    },
+    "pt": {
+      "common_name": "Streptocarpus de Goetze",
+      "description": "Streptocarpus goetzeanus é uma planta perene nativa do leste da África. Cresce em ambientes sombreados e necessita de cuidados moderados, incluindo rega regular."
+    },
+    "ar": {
+      "common_name": "ستربتوكاربوس جوتز",
+      "description": "ستربتوكاربوس جوتز هو نبات معمر أصلي من شرق إفريقيا. ينمو في بيئات مظللة ويتطلب رعاية معتدلة بما في ذلك الري المنتظم."
+    },
+    "hi": {
+      "common_name": "गोएट्ज़ का स्ट्रेप्टोकारपस",
+      "description": "Streptocarpus goetzeanus एक बहुवर्षीय पौधा है जो पूर्वी अफ्रीका का मूल निवासी है। यह छायादार वातावरण में बढ़ता है और नियमित पानी देने सहित मध्यम देखभाल की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "戈茨的紫萼草",
+      "description": "Streptocarpus goetzeanus 是一种来自东非的多年生植物。它在阴暗的环境中生长，需要适度的护理，包括定期浇水。"
+    },
+    "ja": {
+      "common_name": "ゴエツェのストレプトカーパス",
+      "description": "Streptocarpus goetzeanus は東アフリカ原産の多年草です。日陰の環境で育ち、定期的な水やりを含む中程度のケアが必要です。"
+    },
+    "ko": {
+      "common_name": "고에츠 스트렙토카르푸스",
+      "description": "Streptocarpus goetzeanus는 동부 아프리카 원산의 다년생 식물입니다. 그늘에서 자라며 정기적인 물주기를 포함한 적당한 관리가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgarden.edu/strep_goetzeanus",
+      "https://www.horticulturecare.com/strep-goetzeanus"
+    ]
+  }
+}

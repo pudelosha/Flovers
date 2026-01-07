@@ -1,0 +1,237 @@
+{
+  "external_id": "solanum_melongena",
+  "name": "Eggplant",
+  "latin": "Solanum melongena",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "solanum_melongena.jpg",
+  "image_thumb": "solanum_melongena.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "완전한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy, well-drained",
+          "pl": "Glinaste, dobrze osuszone",
+          "de": "Lehmig, gut drainiert",
+          "fr": "Argileux, bien drainé",
+          "it": "Limoso, ben drenato",
+          "es": "Franco, bien drenado",
+          "pt": "Argiloso, bem drenado",
+          "ar": "طيني، جيد التصريف",
+          "hi": "मिट्टी, अच्छी जल निकासी",
+          "zh": "壤土，排水良好",
+          "ja": "粘土質で排水性良好",
+          "ko": "점토, 배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßige Bewässerung",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित जल देना",
+          "zh": "定期浇水",
+          "ja": "定期的に水やり",
+          "ko": "정기적인 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm (21-27°C)",
+          "pl": "Ciepło (21-27°C)",
+          "de": "Warm (21-27°C)",
+          "fr": "Chaud (21-27°C)",
+          "it": "Caldo (21-27°C)",
+          "es": "Caliente (21-27°C)",
+          "pt": "Quente (21-27°C)",
+          "ar": "دافئ (21-27°C)",
+          "hi": "गर्म (21-27°C)",
+          "zh": "温暖 (21-27°C)",
+          "ja": "暖かい (21-27°C)",
+          "ko": "따뜻한 (21-27°C)"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium growth rate",
+          "pl": "Średni tempo wzrostu",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Croissance moyenne",
+          "it": "Velocità di crescita media",
+          "es": "Tasa de crecimiento media",
+          "pt": "Taxa de crescimento média",
+          "ar": "معدل نمو متوسط",
+          "hi": "मध्यम वृद्धि दर",
+          "zh": "中等生长速度",
+          "ja": "中程度の成長速度",
+          "ko": "중간 성장 속도"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Eggplant",
+      "description": "Solanum melongena, also known as eggplant, is a warm-season crop in the nightshade family. It requires full sun and well-drained loamy soil."
+    },
+    "pl": {
+      "common_name": "Bakłażan",
+      "description": "Solanum melongena, znany jako bakłażan, to roślina sezonu ciepłego z rodziny psiankowatych. Wymaga pełnego słońca i dobrze osuszonej gleby."
+    },
+    "de": {
+      "common_name": "Aubergine",
+      "description": "Solanum melongena, auch als Aubergine bekannt, ist eine wärmeliebende Pflanze aus der Familie der Nachtschattengewächse. Sie benötigt volle Sonne und gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Aubergine",
+      "description": "Solanum melongena, également connue sous le nom d'aubergine, est une plante de saison chaude de la famille des Solanacées. Elle nécessite un ensoleillement complet et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Melanzana",
+      "description": "Solanum melongena, noto anche come melanzana, è una coltura di stagione calda della famiglia delle Solanacee. Richiede pieno sole e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Berenjena",
+      "description": "Solanum melongena, también conocida como berenjena, es un cultivo de temporada cálida de la familia de las solanáceas. Requiere pleno sol y un suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Berinjela",
+      "description": "Solanum melongena, também conhecida como berinjela, é uma planta de estação quente da família das solanáceas. Requer pleno sol e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "الباذنجان",
+      "description": "سولانوم ميلونغينا، والمعروفة أيضًا بالباذنجان، هي نبات موسمي دافئ من عائلة الباذنجانيات. يتطلب الشمس الكاملة وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "बैंगन",
+      "description": "सोलानम मेलोंगेना, जिसे बैंगन के नाम से भी जाना जाता है, एक गर्म-सीजन की फसल है जो सोलनस परिवार से है। इसे पूर्ण सूरज और अच्छी तरह से जल निकासी वाली मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "茄子",
+      "description": "茄子（学名：Solanum melongena）是一种温暖季节的作物，属于茄科。它需要全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "ナス",
+      "description": "ソラナム・メロンゲナ（学名：Solanum melongena）はナス科の温暖期作物です。直射日光と排水性の良い土壌を必要とします。"
+    },
+    "ko": {
+      "common_name": "가지",
+      "description": "Solanum melongena, 또는 가지는 밤shade과에 속하는 따뜻한 계절 작물입니다. 완전한 햇빛과 잘 배수되는 토양이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/vegetables/eggplants/",
+      "https://www.rhs.org.uk/advice/profile?pid=578"
+    ]
+  }
+}

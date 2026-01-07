@@ -1,0 +1,238 @@
+{
+  "external_id": "lysimachia_nummularia",
+  "name": "Creeping Jenny",
+  "latin": "Lysimachia nummularia",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "lysimachia_nummularia.jpg",
+  "image_thumb": "lysimachia_nummularia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "ضوء متوسط",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist loam",
+          "pl": "Wilgotna gleba",
+          "de": "Feuchter Boden",
+          "fr": "Sol humide",
+          "it": "Suolo umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润土壤",
+          "ja": "湿った土",
+          "ko": "습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotna",
+          "de": "Feucht halten",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気維持",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast spreading",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ता",
+          "zh": "快速蔓延",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Creeping Jenny",
+      "description": "Lysimachia nummularia is a low-growing perennial groundcover with trailing stems and round leaves. It prefers consistently moist soil and partial sun. Often used outdoors, it can be grown in containers."
+    },
+    "pl": {
+      "common_name": "Tojeść rozesłana",
+      "description": "Lysimachia nummularia to niska bylina okrywowa o płożących pędach i okrągłych liściach. Lubi stale wilgotną glebę i półcień. Może być uprawiana w pojemnikach."
+    },
+    "de": {
+      "common_name": "Pfennigkraut",
+      "description": "Lysimachia nummularia ist eine niedrig wachsende, kriechende Staude mit runden Blättern. Sie bevorzugt feuchten Boden und Halbschatten. Geeignet für Beete und Töpfe."
+    },
+    "fr": {
+      "common_name": "Lysimaque nummulaire",
+      "description": "Lysimachia nummularia est une plante couvre-sol à tiges rampantes et feuilles rondes. Elle aime les sols humides et la mi-ombre. Elle peut aussi pousser en pot."
+    },
+    "it": {
+      "common_name": "Lisimachia strisciante",
+      "description": "Lysimachia nummularia è una perenne tappezzante con fusti striscianti e foglie tonde. Predilige terreni umidi e mezz'ombra. Adatta anche alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Lisimachia rastrera",
+      "description": "Lysimachia nummularia es una planta perenne rastrera con tallos colgantes y hojas redondeadas. Prefiere suelos húmedos y semisombra. Puede cultivarse en macetas."
+    },
+    "pt": {
+      "common_name": "Lisimáquia-rasteira",
+      "description": "Lysimachia nummularia é uma planta perene rasteira com caules longos e folhas redondas. Gosta de solo úmido e meia-sombra. Pode ser cultivada em vasos."
+    },
+    "ar": {
+      "common_name": "ليسيماكيا زاحفة",
+      "description": "نبات Lysimachia nummularia نبات غطائي منخفض النمو بأوراق مستديرة. يفضل التربة الرطبة والضوء المتوسط. يمكن زراعته في أوعية."
+    },
+    "hi": {
+      "common_name": "क्रीपिंग जेनी",
+      "description": "Lysimachia nummularia एक फैलने वाला बारहमासी पौधा है जिसकी पत्तियाँ गोल होती हैं। इसे नम मिट्टी और आंशिक धूप पसंद है। गमलों में भी उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "匍匐珍珠菜",
+      "description": "Lysimachia nummularia 是一种低矮蔓生的多年生植物，叶片圆形。喜欢湿润土壤和半日照。也可盆栽种植。"
+    },
+    "ja": {
+      "common_name": "クリーピングジェニー",
+      "description": "Lysimachia nummularia は丸い葉を持つ匍匐性の多年草です。湿った土と半日陰を好みます。鉢植えでも育てられます。"
+    },
+    "ko": {
+      "common_name": "크리핑 제니",
+      "description": "Lysimachia nummularia는 둥근 잎을 가진 포복성 다년초입니다. 촉촉한 토양과 반그늘을 선호합니다. 화분에서도 재배할 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10162/lysimachia-nummularia/details",
+      "https://plants.ces.ncsu.edu/plants/lysimachia-nummularia/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=275548"
+    ]
+  }
+}

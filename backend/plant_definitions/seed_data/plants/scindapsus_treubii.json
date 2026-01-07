@@ -1,0 +1,237 @@
+{
+  "external_id": "scindapsus_treubii",
+  "name": "Scindapsus treubii",
+  "latin": "Scindapsus treubii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "scindapsus_treubii.jpg",
+  "image_thumb": "scindapsus_treubii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Erde",
+          "fr": "Mélange pour Aroides",
+          "it": "Miscela per Aroidi",
+          "es": "Mezcla para Aroides",
+          "pt": "Mistura para Aroides",
+          "ar": "خليط أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "艾罗伊德混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中くらい",
+          "ko": "적당히"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Treubii Pothos",
+      "description": "Scindapsus treubii is an epiphytic plant native to Southeast Asia. It is known for its striking dark green leaves with silver streaks."
+    },
+    "pl": {
+      "common_name": "Pothos Treubii",
+      "description": "Scindapsus treubii to epifitczna roślina pochodząca z Azji Południowo-Wschodniej. Charakteryzuje się ciemnozielonymi liśćmi z srebrnymi smugami."
+    },
+    "de": {
+      "common_name": "Treubii Efeu",
+      "description": "Scindapsus treubii ist eine epiphytische Pflanze aus Südostasien. Sie ist bekannt für ihre dunklen grünen Blätter mit silbernen Streifen."
+    },
+    "fr": {
+      "common_name": "Pothos de Treubii",
+      "description": "Scindapsus treubii est une plante épiphyte originaire du sud-est asiatique. Elle est connue pour ses feuilles vertes foncées avec des rayures argentées."
+    },
+    "it": {
+      "common_name": "Pothos di Treubii",
+      "description": "Scindapsus treubii è una pianta epifita originaria del Sud-Est asiatico. È conosciuta per le sue foglie verde scuro con strisce argentate."
+    },
+    "es": {
+      "common_name": "Pothos de Treubii",
+      "description": "Scindapsus treubii es una planta epífita originaria del sudeste asiático. Es conocida por sus hojas verde oscuras con rayas plateadas."
+    },
+    "pt": {
+      "common_name": "Pothos Treubii",
+      "description": "Scindapsus treubii é uma planta epífita nativa do Sudeste Asiático. É conhecida por suas folhas verdes escuras com listras prateadas."
+    },
+    "ar": {
+      "common_name": "بوثوس تريوبي",
+      "description": "Scindapsus treubii هو نبات ميثي موطنه جنوب شرق آسيا. ويشتهر بأوراقه الخضراء الداكنة ذات الخطوط الفضية."
+    },
+    "hi": {
+      "common_name": "ट्रेबुई पोटहोस",
+      "description": "Scindapsus treubii एक एपिफाइटिक पौधा है जो दक्षिण-पूर्व एशिया का मूल निवासी है। इसके गहरे हरे पत्तों पर चांदी की धारियाँ होती हैं।"
+    },
+    "zh": {
+      "common_name": "特鲁比金钱树",
+      "description": "Scindapsus treubii 是一种原产于东南亚的附生植物。以其深绿色的叶子和银色条纹而闻名。"
+    },
+    "ja": {
+      "common_name": "トレウビイポトス",
+      "description": "Scindapsus treubii は東南アジア原産の着生植物です。濃い緑色の葉に銀色のストライプが特徴です。"
+    },
+    "ko": {
+      "common_name": "트레우비 포토스",
+      "description": "Scindapsus treubii는 동남아시아 원산의 기생 식물입니다. 짙은 녹색의 잎과 은색 줄무늬로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/scindapsus-treubii",
+      "https://www.gardenia.net/plant/scindapsus-treubii"
+    ]
+  }
+}

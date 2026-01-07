@@ -1,0 +1,238 @@
+{
+  "external_id": "hypericum_perforatum",
+  "name": "St John's wort",
+  "latin": "Hypericum perforatum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hypericum_perforatum.jpg",
+  "image_thumb": "hypericum_perforatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained sandy",
+          "pl": "Przepuszczalna, pias.",
+          "de": "Durchlässig, sandig",
+          "fr": "Drainant, sableux",
+          "it": "Drenante, sabbioso",
+          "es": "Drenante, arenoso",
+          "pt": "Drenante, arenoso",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल-निकासी",
+          "zh": "排水良好的沙土",
+          "ja": "水はけ良い砂質",
+          "ko": "배수 좋은 모래흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dries",
+          "pl": "Podlej po przeschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser si sec",
+          "it": "Annaffia quando asciuga",
+          "es": "Riega si seca arriba",
+          "pt": "Regue ao secar em cima",
+          "ar": "اسقِ عند جفاف السطح",
+          "hi": "ऊपरी मिट्टी सूखे तो",
+          "zh": "表土干再浇水",
+          "ja": "表土が乾いたら",
+          "ko": "겉흙 마르면 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°م",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Umiarkowana",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य",
+          "zh": "普通湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica para mascotas",
+          "pt": "Tóxica p/ animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Perennial herb",
+          "pl": "Bylina",
+          "de": "Mehrjährige Staude",
+          "fr": "Vivace",
+          "it": "Perenne",
+          "es": "Perenne",
+          "pt": "Perene",
+          "ar": "عشبة معمّرة",
+          "hi": "बहुवर्षीय जड़ी",
+          "zh": "多年生草本",
+          "ja": "多年草",
+          "ko": "여러해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "St John's wort",
+      "description": "Hypericum perforatum is a perennial herb with yellow flowers that grows best in full sun and well-drained soil. In pots, water when the surface dries and avoid waterlogging. It contains hypericin and is considered toxic to pets."
+    },
+    "pl": {
+      "common_name": "Dziurawiec zwyczajny",
+      "description": "Hypericum perforatum to bylina o żółtych kwiatach, najlepiej rosnąca w pełnym słońcu i w przepuszczalnej glebie. W donicy podlewaj po przeschnięciu wierzchniej warstwy i unikaj zalewania. Zawiera hiperycynę i jest uznawany za roślinę toksyczną dla zwierząt domowych."
+    },
+    "de": {
+      "common_name": "Echtes Johanniskraut",
+      "description": "Hypericum perforatum ist eine mehrjährige, gelb blühende Pflanze und gedeiht am besten in voller Sonne und gut drainiertem Boden. Im Topf gießen, wenn die Oberfläche abgetrocknet ist, und Staunässe vermeiden. Es enthält Hypericin und gilt als giftig für Haustiere."
+    },
+    "fr": {
+      "common_name": "Millepertuis perforé",
+      "description": "Hypericum perforatum est une vivace à fleurs jaunes qui préfère le plein soleil et un sol bien drainé. En pot, arroser lorsque la surface du substrat sèche et éviter l’excès d’eau. Elle contient de l’hypericine et est considérée toxique pour les animaux."
+    },
+    "it": {
+      "common_name": "Iperico perforato",
+      "description": "Hypericum perforatum è una perenne con fiori gialli che cresce meglio in pieno sole e in terreno ben drenante. In vaso, annaffia quando lo strato superiore asciuga ed evita i ristagni. Contiene ipericina ed è considerata tossica per gli animali domestici."
+    },
+    "es": {
+      "common_name": "Hierba de San Juan",
+      "description": "Hypericum perforatum es una herbácea perenne de flores amarillas que prefiere pleno sol y suelo bien drenado. En maceta, riega cuando se seque la capa superior y evita el encharcamiento. Contiene hipericina y se considera tóxica para mascotas."
+    },
+    "pt": {
+      "common_name": "Erva-de-São-João",
+      "description": "Hypericum perforatum é uma planta perene de flores amarelas que prefere sol pleno e solo bem drenado. Em vaso, regue quando a camada superior secar e evite encharcamento. Contém hipericina e é considerada tóxica para animais de estimação."
+    },
+    "ar": {
+      "common_name": "عشبة القديس يوحنا",
+      "description": "Hypericum perforatum نبات عشبي معمّر ذو أزهار صفراء ويفضّل الشمس الكاملة وتربة جيدة الصرف. في الأصص اسقِ عند جفاف السطح وتجنب تشبّع التربة بالماء. يحتوي على الهيبيريسين ويُعد سامًا للحيوانات الأليفة."
+    },
+    "hi": {
+      "common_name": "सेंट जॉन्स वॉर्ट",
+      "description": "Hypericum perforatum पीले फूलों वाली बहुवर्षीय जड़ी है, जो पूरी धूप और अच्छी जल-निकासी वाली मिट्टी में बेहतर बढ़ती है। गमले में ऊपर की मिट्टी सूखने पर पानी दें और जलभराव से बचें। इसमें हाइपेरिसिन होता है और इसे पालतू जानवरों के लिए विषाक्त माना जाता है।"
+    },
+    "zh": {
+      "common_name": "贯叶连翘",
+      "description": "Hypericum perforatum 是开黄色花的多年生草本，适合全日照与排水良好的土壤。盆栽时表土干再浇水，避免积水。其含有金丝桃素，被认为对宠物有毒。"
+    },
+    "ja": {
+      "common_name": "セイヨウオトギリソウ",
+      "description": "Hypericum perforatum は黄色い花をつける多年草で、日当たりと水はけの良い土を好みます。鉢植えでは表土が乾いてから水やりし、過湿を避けます。ヒペリシンを含み、ペットに有毒とされています。"
+    },
+    "ko": {
+      "common_name": "서양고추나물",
+      "description": "Hypericum perforatum는 노란 꽃이 피는 여러해살이풀로, 강한 햇빛과 배수 좋은 흙을 선호합니다. 화분에서는 겉흙이 마르면 물을 주고 과습을 피하세요. 하이페리신을 함유해 반려동물에 유독한 식물로 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=e198",
+      "https://www.rhs.org.uk/plants/9021/hypericum-perforatum/details",
+      "https://plants.ces.ncsu.edu/plants/hypericum-perforatum/",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/st-johns-wort"
+    ]
+  }
+}

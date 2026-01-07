@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_camposportoanum",
+  "name": "Camposport's Philodendron",
+  "latin": "Philodendron camposportoanum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "philodendron_camposportoanum.jpg",
+  "image_thumb": "philodendron_camposportoanum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroid",
+          "de": "aroid",
+          "fr": "aroïde",
+          "it": "aroide",
+          "es": "aroide",
+          "pt": "aroide",
+          "ar": "أرويد",
+          "hi": "एरोइड",
+          "zh": "阿罗伊",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "温かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Camposport's Philodendron",
+      "description": "Philodendron camposportoanum is a tropical plant with striking, velvety leaves. It thrives in warm, humid conditions and requires moderate care."
+    },
+    "pl": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum to tropikalna roślina o uderzających, aksamitnych liściach. Rośnie w ciepłych, wilgotnych warunkach i wymaga umiarkowanej opieki."
+    },
+    "de": {
+      "common_name": "Camposport's Philodendron",
+      "description": "Philodendron camposportoanum ist eine tropische Pflanze mit auffälligen, samtigen Blättern. Sie gedeiht unter warmen, feuchten Bedingungen und benötigt mäßige Pflege."
+    },
+    "fr": {
+      "common_name": "Philodendron de Camposport",
+      "description": "Philodendron camposportoanum est une plante tropicale aux feuilles veloutées et frappantes. Elle pousse dans des conditions chaudes et humides et nécessite des soins modérés."
+    },
+    "it": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum è una pianta tropicale con foglie vellutate e sorprendenti. Cresce in condizioni calde e umide e richiede cure moderate."
+    },
+    "es": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum es una planta tropical con hojas aterciopeladas y llamativas. Crece en condiciones cálidas y húmedas y requiere cuidados moderados."
+    },
+    "pt": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum é uma planta tropical com folhas aveludadas e impressionantes. Cresce em condições quentes e úmidas e requer cuidados moderados."
+    },
+    "ar": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum هو نبات استوائي ذو أوراق مخملية لامعة. ينمو في ظروف دافئة ورطبة ويحتاج إلى رعاية معتدلة."
+    },
+    "hi": {
+      "common_name": "Philodendron Camposport",
+      "description": "Philodendron camposportoanum एक उष्णकटिबंधीय पौधा है जिसकी मुलायम पत्तियाँ आकर्षक होती हैं। यह गर्म, नम परिस्थितियों में बढ़ता है और इसे मध्यम देखभाल की आवश्यकता होती है."
+    },
+    "zh": {
+      "common_name": "Camposport's Philodendron",
+      "description": "Philodendron camposportoanum 是一种热带植物，具有引人注目的天鹅绒叶片。它在温暖、潮湿的环境中生长，需要中等护理。"
+    },
+    "ja": {
+      "common_name": "フィロデンドロン・カンポスポルト",
+      "description": "フィロデンドロン・カンポスポルトは、魅力的なビロード状の葉を持つ熱帯植物です。温暖で湿度の高い環境で育ち、適度な手入れが必要です。"
+    },
+    "ko": {
+      "common_name": "캄포스포트 필로덴드론",
+      "description": "Philodendron camposportoanum은 부드럽고 매력적인 잎을 가진 열대 식물입니다. 따뜻하고 습한 환경에서 자라며 적당한 관리가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/philodendron-camposportoanum",
+      "https://www.treesandshrubs.org/plant/philodendron-camposportoanum/"
+    ]
+  }
+}

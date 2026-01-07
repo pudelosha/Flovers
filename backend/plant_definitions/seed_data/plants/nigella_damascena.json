@@ -1,0 +1,237 @@
+{
+  "external_id": "nigella_damascena",
+  "name": "Love-in-a-mist",
+  "latin": "Nigella damascena",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "nigella_damascena.jpg",
+  "image_thumb": "nigella_damascena.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Gleba przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno–ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽至温暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Durchschnitt",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Annual herb",
+          "pl": "Roczna roślina",
+          "de": "Einjährig",
+          "fr": "Annuelle",
+          "it": "Annuale",
+          "es": "Anual",
+          "pt": "Anual",
+          "ar": "حولية",
+          "hi": "वार्षिक",
+          "zh": "一年生",
+          "ja": "一年草",
+          "ko": "한해살이"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Love-in-a-mist",
+      "description": "Nigella damascena is an annual flowering plant native to southern Europe and North Africa. It is known for its blue flowers and fine, feathery foliage. It grows best outdoors in full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Czarnuszka damasceńska",
+      "description": "Nigella damascena to jednoroczna roślina kwitnąca pochodząca z Europy Południowej i Afryki Północnej. Ma niebieskie kwiaty i delikatne, pierzaste liście. Najlepiej rośnie na zewnątrz w pełnym słońcu."
+    },
+    "de": {
+      "common_name": "Jungfer im Grünen",
+      "description": "Nigella damascena ist eine einjährige Blütenpflanze aus Südeuropa und Nordafrika. Sie hat blaue Blüten und feines, fiedriges Laub. Sie gedeiht am besten im Freien in voller Sonne."
+    },
+    "fr": {
+      "common_name": "Nigelle de Damas",
+      "description": "Nigella damascena est une plante annuelle originaire d’Europe du Sud et d’Afrique du Nord. Elle produit des fleurs bleues et un feuillage très fin. Elle préfère le plein soleil et un sol drainé."
+    },
+    "it": {
+      "common_name": "Nigella di Damasco",
+      "description": "Nigella damascena è una pianta annuale originaria dell’Europa meridionale e del Nord Africa. Ha fiori blu e foglie leggere e filiformi. Cresce meglio all’aperto in pieno sole."
+    },
+    "es": {
+      "common_name": "Amor en la niebla",
+      "description": "Nigella damascena es una planta anual originaria del sur de Europa y el norte de África. Presenta flores azules y follaje fino. Prefiere pleno sol y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Amor-em-névoa",
+      "description": "Nigella damascena é uma planta anual nativa do sul da Europa e do norte da África. Possui flores azuis e folhagem delicada. Desenvolve-se melhor ao ar livre em sol pleno."
+    },
+    "ar": {
+      "common_name": "حبة البركة الزينة",
+      "description": "نبات Nigella damascena حولي موطنه جنوب أوروبا وشمال إفريقيا. يتميز بأزهاره الزرقاء وأوراقه الدقيقة. يفضل النمو في الشمس الكاملة وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "लव-इन-अ-मिस्ट",
+      "description": "Nigella damascena एक वार्षिक पुष्पीय पौधा है जो दक्षिणी यूरोप और उत्तरी अफ्रीका का मूल निवासी है। इसमें नीले फूल और महीन पत्तियाँ होती हैं। यह बाहर धूप में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "大马士革黑种草",
+      "description": "Nigella damascena 是一种一年生开花植物，原产于南欧和北非。它具有蓝色花朵和细密的叶片。适合在全日照和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ニゲラ",
+      "description": "ニゲラ・ダマスケナは南ヨーロッパと北アフリカ原産の一年草です。青い花と繊細な葉が特徴です。日当たりの良い屋外でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "니겔라",
+      "description": "Nigella damascena는 남유럽과 북아프리카가 원산지인 한해살이 식물입니다. 파란 꽃과 섬세한 잎을 가지고 있습니다. 햇볕이 잘 드는 야외에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11803/nigella-damascena/details",
+      "https://www.gardenersworld.com/plants/nigella-damascena/",
+      "https://extension.umn.edu/flowers/nigella"
+    ]
+  }
+}

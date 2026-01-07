@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_tortum",
+  "name": "Philodendron tortum",
+  "latin": "Philodendron tortum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "philodendron_tortum.jpg",
+  "image_thumb": "philodendron_tortum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange pour aroides",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "مزيج الأرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊德混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia ilość wody",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum is a unique species of climbing plant native to tropical regions. It is known for its decorative, deeply lobed leaves and is a popular houseplant."
+    },
+    "pl": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum to wyjątkowy gatunek pnącza pochodzący z tropikalnych regionów. Znany jest z ozdobnych, głęboko wciętych liści i jest popularną rośliną doniczkową."
+    },
+    "de": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum ist eine einzigartige Kletterpflanze, die in tropischen Regionen heimisch ist. Sie ist bekannt für ihre dekorativen, tief eingeschnittenen Blätter und ist eine beliebte Zimmerpflanze."
+    },
+    "fr": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum est une plante grimpante unique originaire des régions tropicales. Elle est connue pour ses feuilles profondément lobées et est une plante d'intérieur populaire."
+    },
+    "it": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum è una pianta rampicante unica, originaria delle regioni tropicali. È nota per le sue foglie profondamente lobate ed è una pianta d'appartamento popolare."
+    },
+    "es": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum es una planta trepadora única originaria de las regiones tropicales. Es conocida por sus hojas profundamente lobuladas y es una planta popular de interior."
+    },
+    "pt": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum é uma planta trepadeira única nativa das regiões tropicais. É conhecida por suas folhas profundamente lobadas e é uma planta de interior popular."
+    },
+    "ar": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum هو نوع فريد من النباتات المتسلقة موطنه المناطق الاستوائية. وهو معروف بأوراقه المقطوعة بعمق وهو نبات داخلي شائع."
+    },
+    "hi": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum एक अद्वितीय बेल वाली पौधा है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसे अपनी गहरे कटे हुए पत्तियों के लिए जाना जाता है और यह एक लोकप्रिय इनडोर पौधा है।"
+    },
+    "zh": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum 是一种独特的攀缘植物，原产于热带地区。它以其深裂的叶子而闻名，是一种受欢迎的室内植物。"
+    },
+    "ja": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum は熱帯地域原産のユニークなつる植物です。その装飾的で深く裂けた葉で知られ、人気のある室内植物です。"
+    },
+    "ko": {
+      "common_name": "Philodendron tortum",
+      "description": "Philodendron tortum은 열대 지역 원산지의 독특한 덩굴식물입니다. 깊게 갈라진 장식적인 잎으로 유명하며, 인기 있는 실내 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/philodendron-tortum",
+      "https://www.gardeningknowhow.com/houseplants/philodendron/philodendron-care.htm"
+    ]
+  }
+}

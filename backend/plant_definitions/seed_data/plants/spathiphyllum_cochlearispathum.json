@@ -1,0 +1,237 @@
+{
+  "external_id": "spathiphyllum_cochlearispathum",
+  "name": "Peace Lily",
+  "latin": "Spathiphyllum cochlearispathum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "spathiphyllum_cochlearispathum.jpg",
+  "image_thumb": "spathiphyllum_cochlearispathum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroidowy",
+          "de": "Aroid",
+          "fr": "aroïde",
+          "it": "aroide",
+          "es": "aroide",
+          "pt": "aroide",
+          "ar": "أرويدي",
+          "hi": "एरोइड",
+          "zh": "阿罗伊德",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peace Lily",
+      "description": "Spathiphyllum cochlearispathum is a tropical plant with glossy green leaves and elegant white flowers. It thrives in medium sunlight and moderate humidity."
+    },
+    "pl": {
+      "common_name": "Lilia Pokoju",
+      "description": "Spathiphyllum cochlearispathum to tropikalna roślina o błyszczących zielonych liściach i eleganckich białych kwiatach. Rośnie w średnim świetle słonecznym i umiarkowanej wilgotności."
+    },
+    "de": {
+      "common_name": "Friedenslilie",
+      "description": "Spathiphyllum cochlearispathum ist eine tropische Pflanze mit glänzend grünen Blättern und eleganten weißen Blumen. Sie gedeiht bei mittlerem Sonnenlicht und moderater Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Lys de la paix",
+      "description": "Spathiphyllum cochlearispathum est une plante tropicale avec des feuilles vertes brillantes et des fleurs blanches élégantes. Elle pousse sous une lumière solaire modérée et une humidité modérée."
+    },
+    "it": {
+      "common_name": "Lilium della Pace",
+      "description": "Spathiphyllum cochlearispathum è una pianta tropicale con foglie verdi lucide e fiori bianchi eleganti. Cresce in luce solare media e umidità moderata."
+    },
+    "es": {
+      "common_name": "Lirio de la paz",
+      "description": "Spathiphyllum cochlearispathum es una planta tropical con hojas verdes brillantes y flores blancas elegantes. Crece con luz solar moderada y humedad moderada."
+    },
+    "pt": {
+      "common_name": "Lírio da Paz",
+      "description": "Spathiphyllum cochlearispathum é uma planta tropical com folhas verdes brilhantes e flores brancas elegantes. Cresce com luz solar moderada e umidade moderada."
+    },
+    "ar": {
+      "common_name": "زنبق السلام",
+      "description": "Spathiphyllum cochlearispathum هو نبات استوائي بأوراق خضراء لامعة وزهور بيضاء أنيقة. ينمو في ضوء الشمس المعتدل والرطوبة المعتدلة."
+    },
+    "hi": {
+      "common_name": "शांति लिली",
+      "description": "Spathiphyllum cochlearispathum एक उष्णकटिबंधीय पौधा है जिसमें हरे पत्ते और सफेद फूल होते हैं। यह मध्यम धूप और संयमित आर्द्रता में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "和平百合",
+      "description": "Spathiphyllum cochlearispathum 是一种热带植物，具有光滑的绿色叶子和优雅的白色花朵。它在中等阳光和适度的湿度下生长。"
+    },
+    "ja": {
+      "common_name": "平和のユリ",
+      "description": "Spathiphyllum cochlearispathumは光沢のある緑の葉と優雅な白い花を持つ熱帯植物です。中程度の光と適度な湿度で育ちます。"
+    },
+    "ko": {
+      "common_name": "평화 백합",
+      "description": "Spathiphyllum cochlearispathum은 광택이 나는 녹색 잎과 우아한 흰 꽃을 가진 열대 식물입니다. 중간 정도의 햇빛과 적당한 습도에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/speace-lily",
+      "https://www.botanicus.org/speace-lily-care"
+    ]
+  }
+}

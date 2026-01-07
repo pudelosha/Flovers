@@ -1,0 +1,237 @@
+{
+  "external_id": "ulmus_minor",
+  "name": "Field Elm",
+  "latin": "Ulmus minor",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "clay"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "ulmus_minor.jpg",
+  "image_thumb": "ulmus_minor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "volle Sonne",
+          "fr": "plein soleil",
+          "it": "sole pieno",
+          "es": "sol pleno",
+          "pt": "sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूरज",
+          "zh": "充足阳光",
+          "ja": "日当たり良好",
+          "ko": "충분한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "moist loam",
+          "pl": "wilgotna gleba",
+          "de": "feuchte Lehmboden",
+          "fr": "sol limoneux humide",
+          "it": "terreno limoso umido",
+          "es": "suelo limoso húmedo",
+          "pt": "solo limoso húmido",
+          "ar": "تربة طينية رطبة",
+          "hi": "गीला दोम मिट्टी",
+          "zh": "湿润壤土",
+          "ja": "湿ったローム土",
+          "ko": "습한 양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowane",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyen",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "tolerates frost",
+          "pl": "toleruje mróz",
+          "de": "frosttolerant",
+          "fr": "tolère le gel",
+          "it": "tollera gelo",
+          "es": "tolera heladas",
+          "pt": "tolera geada",
+          "ar": "يتحمل الصقيع",
+          "hi": "ठंढ सहन",
+          "zh": "耐霜冻",
+          "ja": "霜に強い",
+          "ko": "서리를 견딤"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "normal",
+          "pl": "normalna",
+          "de": "normal",
+          "fr": "normale",
+          "it": "normale",
+          "es": "normal",
+          "pt": "normal",
+          "ar": "عادي",
+          "hi": "साधारण",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non toxic",
+          "pl": "nietoksyczny",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossico",
+          "es": "no tóxico",
+          "pt": "não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast growing",
+          "pl": "szybko rośnie",
+          "de": "schnell wachsend",
+          "fr": "croissance rapide",
+          "it": "crescita rapida",
+          "es": "crecimiento rápido",
+          "pt": "crescimento rápido",
+          "ar": "ينمو بسرعة",
+          "hi": "तेजी से बढ़ता",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Field Elm",
+      "description": "Ulmus minor is a deciduous tree native to Europe. It prefers full sun and moist fertile soils with good drainage. It often grows along rivers and supports diverse wildlife."
+    },
+    "pl": {
+      "common_name": "Wiąz polny",
+      "description": "Ulmus minor to drzewo liściaste występujące w Europie. Lubi pełne słońce i wilgotne, żyzne gleby. Często rośnie nad rzekami i wspiera różnorodne życie dzikich zwierząt."
+    },
+    "de": {
+      "common_name": "Feldulme",
+      "description": "Ulmus minor ist ein Laubbaum, der in Europa heimisch ist. Er bevorzugt volle Sonne und feuchte, fruchtbare Böden. Er wächst oft an Flussufern und unterstützt vielfältige Tierwelt."
+    },
+    "fr": {
+      "common_name": "Orme champêtre",
+      "description": "Ulmus minor est un arbre à feuilles caduques originaire d'Europe. Il préfère le plein soleil et les sols fertiles et humides. Il pousse souvent le long des rivières et soutient la faune."
+    },
+    "it": {
+      "common_name": "Olmo campestre",
+      "description": "Ulmus minor è un albero deciduo originario dell'Europa. Preferisce pieno sole e suoli fertili e umidi. Cresce spesso lungo i fiumi e supporta molte specie faunistiche."
+    },
+    "es": {
+      "common_name": "Olmo menor",
+      "description": "Ulmus minor es un árbol caducifolio originario de Europa. Prefiere pleno sol y suelos húmedos y fértiles. Crece a menudo junto a ríos y apoya fauna diversa."
+    },
+    "pt": {
+      "common_name": "Olmo-comum",
+      "description": "Ulmus minor é uma árvore decídua nativa da Europa. Prefere sol pleno e solos férteis e húmidos. Frequentemente cresce junto a rios e apoia vida selvagem."
+    },
+    "ar": {
+      "common_name": "العلْف البري",
+      "description": "Ulmus minor شجرة نفضية موطنها أوروبا. تفضل الشمس الكاملة والترب الرطبة الخصبة. غالبًا ما تنمو على ضفاف الأنهار وتدعم الحياة البرية."
+    },
+    "hi": {
+      "common_name": "मैदान वर्म",
+      "description": "Ulmus minor यूरोप का पर्णपाती वृक्ष है। यह पूर्ण धूप और नम उपजाऊ मिट्टी पसंद करता है। यह अक्सर नदियों के किनारे बढ़ता है और वन्यजीवन का समर्थन करता है।"
+    },
+    "zh": {
+      "common_name": "野生榆",
+      "description": "Ulmus minor 是原产于欧洲的落叶树。它喜欢充足阳光和湿润肥沃的土壤。它常沿河流生长并支持多样的野生动物。"
+    },
+    "ja": {
+      "common_name": "ヨーロッパニレ",
+      "description": "Ulmus minor はヨーロッパ原産の落葉樹です。十分な日光と湿った肥沃な土壌を好みます。川沿いに生育し、多様な野生生物を支えます。"
+    },
+    "ko": {
+      "common_name": "들버드나무",
+      "description": "Ulmus minor 는 유럽이 원산인 낙엽수입니다. 충분한 햇빛과 습한 비옥한 토양을 선호합니다. 강가에서 자라며 다양한 야생생물을 지원합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/164598/ulmus-minor/details",
+      "https://plants.ces.ncsu.edu/plants/ulmus-minor/"
+    ]
+  }
+}

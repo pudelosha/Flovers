@@ -1,0 +1,237 @@
+{
+  "external_id": "sarracenia_purpurea",
+  "name": "Purple Pitcher Plant",
+  "latin": "Sarracenia purpurea",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sarracenia_purpurea.jpg",
+  "image_thumb": "sarracenia_purpurea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácido",
+          "pt": "ácido",
+          "ar": "حمضي",
+          "hi": "अम्लीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°C",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Purple Pitcher Plant",
+      "description": "Sarracenia purpurea is a carnivorous plant native to North America. It thrives in acidic, wetland soils and catches prey in its tubular leaves."
+    },
+    "pl": {
+      "common_name": "Różowa roślina dzbaneczkowa",
+      "description": "Sarracenia purpurea to roślina mięsożerna pochodząca z Ameryki Północnej. Rośnie w kwaśnych, wilgotnych glebach i łapie ofiary w swoich rurkowatych liściach."
+    },
+    "de": {
+      "common_name": "Purpurroter Schlauchpflanze",
+      "description": "Sarracenia purpurea ist eine fleischfressende Pflanze, die in Nordamerika heimisch ist. Sie gedeiht in sauren, feuchten Böden und fängt Beute in ihren röhrenförmigen Blättern."
+    },
+    "fr": {
+      "common_name": "Plante à urne pourpre",
+      "description": "Sarracenia purpurea est une plante carnivore originaire d'Amérique du Nord. Elle prospère dans des sols acides et capturent des proies avec ses feuilles tubulaires."
+    },
+    "it": {
+      "common_name": "Pianta a brocca viola",
+      "description": "Sarracenia purpurea è una pianta carnivora originaria del Nord America. Cresce in suoli acidi e cattura prede con le sue foglie tubolari."
+    },
+    "es": {
+      "common_name": "Planta jarra púrpura",
+      "description": "Sarracenia purpurea es una planta carnívora originaria de América del Norte. Crece en suelos ácidos y captura presas con sus hojas tubulares."
+    },
+    "pt": {
+      "common_name": "Planta jarra roxa",
+      "description": "Sarracenia purpurea é uma planta carnívora nativa da América do Norte. Cresce em solos ácidos e captura presas com suas folhas tubulares."
+    },
+    "ar": {
+      "common_name": "نبات الجرة الأرجوانية",
+      "description": "Sarracenia purpurea هي نبات آكل لحوم النباتات الأصلي في أمريكا الشمالية. تنمو في التربة الحمضية وتلتقط الفرائس باستخدام أوراقها الأنبوبيّة."
+    },
+    "hi": {
+      "common_name": "बैंगनी पात्र पौधा",
+      "description": "Sarracenia purpurea एक मांसाहारी पौधा है जो उत्तरी अमेरिका का मूल निवासी है। यह अम्लीय मिट्टी में बढ़ता है और अपनी ट्यूब जैसी पत्तियों में शिकार करता है।"
+    },
+    "zh": {
+      "common_name": "紫色瓶子植物",
+      "description": "Sarracenia purpurea 是一种原产于北美的食肉植物。它生长在酸性土壤中，并通过其管状叶子捕捉猎物。"
+    },
+    "ja": {
+      "common_name": "紫のピッチャープラント",
+      "description": "Sarracenia purpureaは北アメリカ原産の肉食植物です。酸性土壌で育ち、管状の葉で獲物を捕らえます。"
+    },
+    "ko": {
+      "common_name": "자주색 피처 식물",
+      "description": "Sarracenia purpurea는 북미 원산의 육식 식물입니다. 산성 토양에서 자라며 튜브 모양의 잎으로 먹이를 잡습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pests-insects-diseases/pitcher-plant-care/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3641840/"
+    ]
+  }
+}

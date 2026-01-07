@@ -1,0 +1,237 @@
+{
+  "external_id": "ocimum_basilicum",
+  "name": "Basil",
+  "latin": "Ocimum basilicum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "ocimum_basilicum.jpg",
+  "image_thumb": "ocimum_basilicum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Luz solar directa",
+          "pt": "Sol pleno",
+          "ar": "شمس ساطعة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水が良い",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowana",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "De rápido crecimiento",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速く成長",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Basil",
+      "description": "Basil is an aromatic herb commonly used in cooking. It thrives in warm, sunny environments and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Bazylia",
+      "description": "Bazylia to zioło o intensywnym zapachu, powszechnie stosowane w kuchni. Rośnie najlepiej w ciepłych, słonecznych miejscach i w dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Basilikum",
+      "description": "Basilikum ist ein aromatisches Kraut, das häufig in der Küche verwendet wird. Es gedeiht am besten in warmen, sonnigen Umgebungen und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Basilic",
+      "description": "Le basilic est une herbe aromatique couramment utilisée en cuisine. Il prospère dans des environnements chauds et ensoleillés, et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Basilico",
+      "description": "Il basilico è un'erba aromatica usata comunemente in cucina. Cresce bene in ambienti caldi e soleggiati e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Albahaca",
+      "description": "La albahaca es una hierba aromática utilizada comúnmente en la cocina. Crece bien en ambientes cálidos y soleados, en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Manjericão",
+      "description": "O manjericão é uma erva aromática comumente utilizada na culinária. Ela cresce bem em ambientes quentes e ensolarados, em solo bem drenado."
+    },
+    "ar": {
+      "common_name": "ريحان",
+      "description": "الريحان هو نبات عطري يستخدم عادة في الطهي. يزدهر في البيئات الدافئة والمشمسة وفي التربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "तुलसी",
+      "description": "तुलसी एक सुगंधित पौधा है जिसका उपयोग सामान्यतः रसोई में किया जाता है। यह गर्म, धूप वाले वातावरण और अच्छे जल निकासी वाली मिट्टी में अच्छे से उगता है।"
+    },
+    "zh": {
+      "common_name": "罗勒",
+      "description": "罗勒是一种常用于烹饪的芳香草本植物。它在温暖、阳光充足的环境中以及排水良好的土壤中生长良好。"
+    },
+    "ja": {
+      "common_name": "バジル",
+      "description": "バジルは料理でよく使われる香り高いハーブです。暖かく日当たりの良い環境と良好な排水性の土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "바질",
+      "description": "바질은 요리에 자주 사용되는 향기로운 허브입니다. 따뜻하고 햇볕이 잘 드는 환경과 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/basil/",
+      "https://www.rhs.org.uk/advice/profile?pid=313"
+    ]
+  }
+}

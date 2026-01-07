@@ -1,0 +1,237 @@
+{
+  "external_id": "monstera_dubia",
+  "name": "Monstera Dubia",
+  "latin": "Monstera dubia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "monstera_dubia.jpg",
+  "image_thumb": "monstera_dubia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przepuszczalne",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Umiarkowane",
+          "de": "Mäßig feucht",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等难度",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Likes humidity",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità",
+          "es": "Le gusta humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润空气",
+          "ja": "高湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विष",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletternd",
+          "fr": "Plante grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "चढ़ने वाला",
+          "zh": "攀援生长",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Shingle plant",
+      "description": "Monstera dubia is a tropical climbing aroid native to Central and South America. Juvenile leaves lie flat against surfaces, while mature plants develop larger foliage when allowed to climb."
+    },
+    "pl": {
+      "common_name": "Monstera dachówkowata",
+      "description": "Monstera dubia to tropikalne pnącze pochodzące z Ameryki Środkowej i Południowej. Młode liście przylegają do podpór, a starsze rosną większe przy wspinaniu."
+    },
+    "de": {
+      "common_name": "Schindelblatt",
+      "description": "Monstera dubia ist eine tropische Kletterpflanze aus Mittel- und Südamerika. Junge Blätter liegen flach an, ältere entwickeln sich größer beim Klettern."
+    },
+    "fr": {
+      "common_name": "Monstera en bardeaux",
+      "description": "Monstera dubia est une plante grimpante tropicale d’Amérique centrale et du Sud. Les jeunes feuilles plaquent au support avant de devenir plus grandes."
+    },
+    "it": {
+      "common_name": "Monstera a scandole",
+      "description": "Monstera dubia è una pianta tropicale rampicante originaria dell’America Centrale e Meridionale. Le foglie giovani aderiscono ai supporti."
+    },
+    "es": {
+      "common_name": "Monstera teja",
+      "description": "Monstera dubia es una planta tropical trepadora de América Central y del Sur. Las hojas jóvenes crecen pegadas a superficies."
+    },
+    "pt": {
+      "common_name": "Monstera telhada",
+      "description": "Monstera dubia é uma planta tropical trepadeira da América Central e do Sul. As folhas jovens aderem aos suportes."
+    },
+    "ar": {
+      "common_name": "مونستيرا دوبيا",
+      "description": "Monstera dubia نبات استوائي متسلق من أمريكا الوسطى والجنوبية. الأوراق الصغيرة تنمو ملاصقة للدعامات."
+    },
+    "hi": {
+      "common_name": "शिंगल प्लांट",
+      "description": "Monstera dubia मध्य और दक्षिण अमेरिका का उष्णकटिबंधीय चढ़ने वाला पौधा है। इसकी युवा पत्तियाँ सतह से चिपकी रहती हैं।"
+    },
+    "zh": {
+      "common_name": "瓦片龟背竹",
+      "description": "Monstera dubia 原产于中南美洲的热带攀援植物。幼叶贴附生长，成熟后叶片变大。"
+    },
+    "ja": {
+      "common_name": "シングルプラント",
+      "description": "Monstera dubia は中南米原産の熱帯性つる植物です。幼葉は面に密着して成長します。"
+    },
+    "ko": {
+      "common_name": "신글 몬스테라",
+      "description": "Monstera dubia는 중남미 원산의 열대성 덩굴식물입니다. 어린 잎은 표면에 밀착해 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a123",
+      "https://www.rhs.org.uk/plants/monstera",
+      "https://plants.ces.ncsu.edu/plants/monstera/"
+    ]
+  }
+}

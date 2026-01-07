@@ -1,0 +1,236 @@
+{
+  "external_id": "monstera_obliqua",
+  "name": "Monstera obliqua",
+  "latin": "Monstera obliqua",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "monstera_obliqua.jpg",
+  "image_thumb": "monstera_obliqua.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy aroid mix",
+          "pl": "Przewiewne podłoże",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Substrato arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "透气基质",
+          "ja": "通気性の土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide en continu",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة مستمرة",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very demanding",
+          "pl": "Bardzo wymagająca",
+          "de": "Sehr anspruchsvoll",
+          "fr": "Très exigeante",
+          "it": "Molto esigente",
+          "es": "Muy exigente",
+          "pt": "Muito exigente",
+          "ar": "صعبة العناية",
+          "hi": "अत्यंत कठिन",
+          "zh": "养护困难",
+          "ja": "管理が難しい",
+          "ko": "관리 어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20–28°C",
+          "pl": "20–28°C",
+          "de": "20–28°C",
+          "fr": "20–28°C",
+          "it": "20–28°C",
+          "es": "20–28°C",
+          "pt": "20–28°C",
+          "ar": "20–28°م",
+          "hi": "20–28°C",
+          "zh": "20–28°C",
+          "ja": "20–28℃",
+          "ko": "20–28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Very high",
+          "pl": "Bardzo wysoka",
+          "de": "Sehr hoch",
+          "fr": "Très élevée",
+          "it": "Molto alta",
+          "es": "Muy alta",
+          "pt": "Muito alta",
+          "ar": "مرتفعة جدا",
+          "hi": "बहुत अधिक",
+          "zh": "非常高",
+          "ja": "非常に高い",
+          "ko": "매우 높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow climbing",
+          "pl": "Wolno pnąca",
+          "de": "Langsam kletternd",
+          "fr": "Grimpante lente",
+          "it": "Rampicante lenta",
+          "es": "Trepadora lenta",
+          "pt": "Trepadeira lenta",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長は遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua is a rare tropical aroid native to Central and South American rainforests. It requires very high humidity, warm temperatures, and consistent moisture to survive indoors."
+    },
+    "pl": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua to bardzo rzadka roślina tropikalna z lasów deszczowych Ameryki Środkowej i Południowej. Wymaga wysokiej wilgotności, ciepła i stale wilgotnego podłoża."
+    },
+    "de": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua ist eine sehr seltene tropische Aronstabpflanze aus Mittel- und Südamerika. Sie benötigt hohe Luftfeuchtigkeit, Wärme und gleichmäßige Feuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua est une plante tropicale rare originaire des forêts humides d’Amérique centrale et du Sud. Elle demande une humidité élevée et des conditions très stables."
+    },
+    "it": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua è una rara pianta tropicale delle foreste dell’America Centrale e Meridionale. Necessita di elevata umidità, calore e irrigazione costante."
+    },
+    "es": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua es una planta tropical muy rara de las selvas de América Central y del Sur. Requiere alta humedad, temperaturas cálidas y riego regular."
+    },
+    "pt": {
+      "common_name": "Monstera obliqua",
+      "description": "Monstera obliqua é uma planta tropical rara das florestas da América Central e do Sul. Precisa de alta umidade, calor constante e solo sempre úmido."
+    },
+    "ar": {
+      "common_name": "مونستيرا أوبليكوا",
+      "description": "مونستيرا أوبليكوا نبات استوائي نادر من غابات أمريكا الوسطى والجنوبية. يحتاج إلى رطوبة عالية وحرارة ثابتة وري منتظم."
+    },
+    "hi": {
+      "common_name": "मॉन्स्टेरा ओब्लिक्वा",
+      "description": "मॉन्स्टेरा ओब्लिक्वा मध्य और दक्षिण अमेरिका के वर्षावनों का एक दुर्लभ उष्णकटिबंधीय पौधा है। इसे अधिक नमी, गर्म तापमान और नियमित पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "斜叶龟背竹",
+      "description": "斜叶龟背竹是一种原产于中南美洲雨林的稀有热带植物。它在室内需要极高的湿度和稳定的养护条件。"
+    },
+    "ja": {
+      "common_name": "モンステラ・オブリクア",
+      "description": "モンステラ・オブリクアは中南米の熱帯雨林原産の非常に希少な植物です。高湿度と安定した環境が必要です。"
+    },
+    "ko": {
+      "common_name": "몬스테라 오블리쿠아",
+      "description": "몬스테라 오블리쿠아는 중남미 열대우림 원산의 매우 희귀한 식물입니다. 높은 습도와 일정한 관리가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/monstera-obliqua",
+      "https://www.aroids.org/aroid-plant-database/monstera",
+      "https://www.rhs.org.uk/plants/monstera/growing-guide"
+    ]
+  }
+}

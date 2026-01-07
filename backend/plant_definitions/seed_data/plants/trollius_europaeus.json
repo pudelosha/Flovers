@@ -1,0 +1,237 @@
+{
+  "external_id": "trollius_europaeus",
+  "name": "Globeflower",
+  "latin": "Trollius europaeus",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 90,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "trollius_europaeus.jpg",
+  "image_thumb": "trollius_europaeus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "part to full shade",
+          "pl": "cieniste do półcien",
+          "de": "Halbschatten bis Schatten",
+          "fr": "ombre partielle",
+          "it": "mezza ombra",
+          "es": "sombra parcial",
+          "pt": "meia sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "部分阴影",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "moist loam soil",
+          "pl": "wilgotna gleba",
+          "de": "feuchter Lehmboden",
+          "fr": "sol humide",
+          "it": "terreno umido",
+          "es": "suelo húmedo",
+          "pt": "solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "गीली मिट्टी",
+          "zh": "潮湿壤土",
+          "ja": "湿った土壌",
+          "ko": "습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "keep moist",
+          "pl": "utrzymuj wilgotność",
+          "de": "feucht halten",
+          "fr": "garder humide",
+          "it": "mantenere umido",
+          "es": "mantener húmedo",
+          "pt": "manter úmido",
+          "ar": "احتفظ بالرطوبة",
+          "hi": "गीला रखें",
+          "zh": "保持湿润",
+          "ja": "湿らせる",
+          "ko": "촉촉하게 유지"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyen",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool climates",
+          "pl": "chłodny klimat",
+          "de": "kühles Klima",
+          "fr": "climat frais",
+          "it": "clima fresco",
+          "es": "clima fresco",
+          "pt": "clima fresco",
+          "ar": "مناخ بارد",
+          "hi": "ठंडा जलवायु",
+          "zh": "凉爽气候",
+          "ja": "涼しい気候",
+          "ko": "시원한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowana",
+          "de": "mäßig",
+          "fr": "modérée",
+          "it": "moderata",
+          "es": "moderada",
+          "pt": "moderada",
+          "ar": "معتدلة",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "poisonous",
+          "pl": "trujący",
+          "de": "giftig",
+          "fr": "toxique",
+          "it": "velenoso",
+          "es": "tóxico",
+          "pt": "tóxico",
+          "ar": "سامة",
+          "hi": "जहरीला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "perennial",
+          "pl": "bylina",
+          "de": "mehrjährig",
+          "fr": "vivace",
+          "it": "perenne",
+          "es": "perenne",
+          "pt": "perene",
+          "ar": "معمر",
+          "hi": "स्थानिक",
+          "zh": "多年生",
+          "ja": "多年生",
+          "ko": "다년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Globeflower",
+      "description": "Trollius europaeus is a perennial wildflower from moist meadows in Europe. It prefers moist, cool conditions and part shade to full shade."
+    },
+    "pl": {
+      "common_name": "Kulisty kwiat",
+      "description": "Trollius europaeus to bylina z wilgotnych łąk Europy. Preferuje wilgotne, chłodne warunki i półcień do cienia."
+    },
+    "de": {
+      "common_name": "Kugelblume",
+      "description": "Trollius europaeus ist eine mehrjährige Wildblume aus feuchten Wiesen Europas. Sie bevorzugt kühle, feuchte Standorte im Halbschatten."
+    },
+    "fr": {
+      "common_name": "Trollius",
+      "description": "Trollius europaeus est une vivace des prairies humides d'Europe. Elle préfère les sols frais et humide et une ombre partielle."
+    },
+    "it": {
+      "common_name": "Fiore sferico",
+      "description": "Trollius europaeus è un perenne dei prati umidi europei. Preferisce condizioni fresche e umide e mezzombra."
+    },
+    "es": {
+      "common_name": "Flor esfera",
+      "description": "Trollius europaeus es una perenne de praderas húmedas europeas. Prefiere condiciones frescas y húmedas y sombra parcial."
+    },
+    "pt": {
+      "common_name": "Flor globular",
+      "description": "Trollius europaeus é uma perene de prados húmidos da Europa. Prefere condições frescas e húmidas e sombra parcial."
+    },
+    "ar": {
+      "common_name": "زهرة كروية",
+      "description": "Trollius europaeus نبات معمر من المروج الرطبة في أوروبا. يفضل الظروف الباردة والرطبة والظل الجزئي."
+    },
+    "hi": {
+      "common_name": "ग्लोबफ्लावर",
+      "description": "Trollius europaeus यूरोप के नम मैदानी हिस्सों का एक पौधा है। यह ठंडी और नम स्थितियों में आंशिक छाया पसंद करता है."
+    },
+    "zh": {
+      "common_name": "地球花",
+      "description": "Trollius europaeus 是来自欧洲潮湿草地的多年生植物。它喜欢凉爽湿润的环境和部分阴影。"
+    },
+    "ja": {
+      "common_name": "グローブフラワー",
+      "description": "Trollius europaeus はヨーロッパの湿った草地の多年草です。 涼しく湿った条件と半日陰を好みます。"
+    },
+    "ko": {
+      "common_name": "구형꽃",
+      "description": "Trollius europaeus 는 유럽 습지 초원의 다년생 식물입니다. 시원하고 습한 환경과 반그늘을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=254050",
+      "https://pfaf.org/user/Plant.aspx?LatinName=Trollius+europaeus"
+    ]
+  }
+}

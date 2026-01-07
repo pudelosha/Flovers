@@ -1,0 +1,237 @@
+{
+  "external_id": "syringa_vulgaris",
+  "name": "Lilac",
+  "latin": "Syringa vulgaris",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "syringa_vulgaris.jpg",
+  "image_thumb": "syringa_vulgaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "बालू-मिट्टी मिश्रित मिट्टी",
+          "zh": "壤土",
+          "ja": "壌土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "중간급 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lilac",
+      "description": "Syringa vulgaris is a deciduous shrub known for its fragrant purple flowers. It thrives in temperate climates and is commonly used as an ornamental garden plant."
+    },
+    "pl": {
+      "common_name": "Bez",
+      "description": "Syringa vulgaris to krzew liściasty, znany ze swoich pachnących fioletowych kwiatów. Rośnie w klimacie umiarkowanym i jest powszechnie stosowany jako roślina ozdobna."
+    },
+    "de": {
+      "common_name": "Flieder",
+      "description": "Syringa vulgaris ist ein laubabwerfender Strauch, der für seine duftenden, violetten Blüten bekannt ist. Er gedeiht in gemäßigten Klimazonen und wird häufig als Zierpflanze verwendet."
+    },
+    "fr": {
+      "common_name": "Lilas",
+      "description": "Syringa vulgaris est un arbuste à feuilles caduques connu pour ses fleurs violettes parfumées. Il prospère dans les climats tempérés et est souvent utilisé comme plante ornementale."
+    },
+    "it": {
+      "common_name": "Lillà",
+      "description": "Syringa vulgaris è un arbusto deciduo noto per i suoi fiori viola profumati. Cresce nei climi temperati ed è spesso utilizzato come pianta ornamentale."
+    },
+    "es": {
+      "common_name": "Lila",
+      "description": "Syringa vulgaris es un arbusto caducifolio conocido por sus flores moradas fragantes. Crece en climas templados y se usa comúnmente como planta ornamental."
+    },
+    "pt": {
+      "common_name": "Lilás",
+      "description": "Syringa vulgaris é um arbusto caducifólio conhecido por suas flores roxas e perfumadas. Cresce em climas temperados e é comumente utilizado como planta ornamental."
+    },
+    "ar": {
+      "common_name": "اللافندر",
+      "description": "Syringa vulgaris هو شجيرة نفضية معروفة بأزهارها الأرجوانية المعطرة. تنمو في المناخات المعتدلة وغالبًا ما تستخدم كنبات زينة."
+    },
+    "hi": {
+      "common_name": "लिलैक",
+      "description": "Syringa vulgaris एक पर्णपाती झाड़ी है जो अपनी सुगंधित बैंगनी फूलों के लिए जानी जाती है। यह समशीतोष्ण जलवायु में उगती है और आमतौर पर सजावटी पौधे के रूप में उपयोग की जाती है।"
+    },
+    "zh": {
+      "common_name": "丁香",
+      "description": "Syringa vulgaris 是一种落叶灌木，以其芳香的紫色花朵而闻名。它生长在温带气候中，常被用作观赏植物。"
+    },
+    "ja": {
+      "common_name": "ライラック",
+      "description": "Syringa vulgaris は香り高い紫色の花で知られる落葉性の低木です。温帯気候で育ち、観賞用植物として一般的に使用されます。"
+    },
+    "ko": {
+      "common_name": "라일락",
+      "description": "Syringa vulgaris는 향기로운 보라색 꽃으로 유명한 낙엽관목입니다. 온대 기후에서 자라며 장식용 식물로 일반적으로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/syringa-vulgaris",
+      "https://www.bhg.com/gardening/pests-diseases-harms/lilac-care/"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "orchis_provincialis",
+  "name": "Provincial Orchid",
+  "latin": "Orchis provincialis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_provincialis.jpg",
+  "image_thumb": "orchis_provincialis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácido",
+          "pt": "ácido",
+          "ar": "حمضي",
+          "hi": "अम्लीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "كاذب",
+          "hi": "झूठा",
+          "zh": "错误",
+          "ja": "偽",
+          "ko": "거짓"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Provincial Orchid",
+      "description": "A wild orchid native to Europe, known for its pale yellow flowers with red spots. It thrives in forested areas and is typically found in temperate climates."
+    },
+    "pl": {
+      "common_name": "Orchidea prowincjonalna",
+      "description": "Orchidea dzika występująca w Europie, znana ze swoich jasnoniebieskich kwiatów z czerwonymi plamkami. Rośnie w lasach, występuje w klimacie umiarkowanym."
+    },
+    "de": {
+      "common_name": "Provincial Orchidee",
+      "description": "Eine wilde Orchidee, die in Europa heimisch ist und für ihre hellgelben Blüten mit roten Flecken bekannt ist. Sie gedeiht in bewaldeten Gebieten in gemäßigten Klimazonen."
+    },
+    "fr": {
+      "common_name": "Orchidée provinciale",
+      "description": "Une orchidée sauvage originaire d'Europe, connue pour ses fleurs jaunes pâles avec des taches rouges. Elle pousse dans les zones forestières et est généralement trouvée dans des climats tempérés."
+    },
+    "it": {
+      "common_name": "Orchidea provinciale",
+      "description": "Un'orchidea selvatica originaria dell'Europa, nota per i suoi fiori giallo pallido con macchie rosse. Cresce in zone forestali e si trova tipicamente in climi temperati."
+    },
+    "es": {
+      "common_name": "Orquídea provincial",
+      "description": "Una orquídea silvestre originaria de Europa, conocida por sus flores amarillas pálidas con manchas rojas. Crece en áreas boscosas y se encuentra típicamente en climas templados."
+    },
+    "pt": {
+      "common_name": "Orquídea provincial",
+      "description": "Uma orquídea selvagem nativa da Europa, conhecida pelas suas flores amarelas pálidas com manchas vermelhas. Cresce em áreas florestais e é geralmente encontrada em climas temperados."
+    },
+    "ar": {
+      "common_name": "أوركيده إقليمية",
+      "description": "زهرة أوركيدية برية موطنها أوروبا، معروفة بأزهارها الصفراء الفاتحة مع بقع حمراء. تنمو في المناطق الغابية وتوجد عادة في المناخات المعتدلة."
+    },
+    "hi": {
+      "common_name": "प्रांतीय ऑर्किड",
+      "description": "यूरोप की एक जंगली ऑर्किड जो अपनी पीली फूलों के साथ लाल धब्बों के लिए जानी जाती है। यह जंगलों में पाई जाती है और सामान्यत: तापमान वाले क्षेत्रों में पाई जाती है।"
+    },
+    "zh": {
+      "common_name": "省级兰花",
+      "description": "一种原产于欧洲的野生兰花，因其淡黄色的花瓣和红色斑点而闻名。它生长在森林中，通常出现在温带气候地区。"
+    },
+    "ja": {
+      "common_name": "地方オーキッド",
+      "description": "ヨーロッパ原産の野生のランで、赤い斑点がある淡い黄色の花で知られています。森林地帯に生息し、温帯気候の地域に一般的に見られます。"
+    },
+    "ko": {
+      "common_name": "지방 난초",
+      "description": "유럽 원산의 야생 난초로, 붉은 반점이 있는 연한 노란색 꽃으로 알려져 있습니다. 숲속 지역에서 자주 자생하며, 온대 기후에서 자주 발견됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/Orchis-provincialis",
+      "https://www.botanicgardens.org/plant-care-guide/orchis-provincialis"
+    ]
+  }
+}

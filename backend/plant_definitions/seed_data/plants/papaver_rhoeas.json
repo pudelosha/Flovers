@@ -1,0 +1,237 @@
+{
+  "external_id": "papaver_rhoeas",
+  "name": "Poppy",
+  "latin": "Papaver rhoeas",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "papaver_rhoeas.jpg",
+  "image_thumb": "papaver_rhoeas.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "完全な日光",
+          "ko": "완전한 햇볕"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी तरह से निथरित",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodne do ciepłe",
+          "de": "Kühl bis warm",
+          "fr": "Froid à chaud",
+          "it": "Freddo a caldo",
+          "es": "Frío a cálido",
+          "pt": "Frio a quente",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "从凉爽到温暖",
+          "ja": "冷暖適温",
+          "ko": "시원한 온도에서 따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Poppy",
+      "description": "Papaver rhoeas, commonly known as the red poppy, is a flowering plant in the Papaveraceae family. It thrives in full sunlight and well-drained soils."
+    },
+    "pl": {
+      "common_name": "Mak polny",
+      "description": "Papaver rhoeas, znany jako mak polny, to roślina kwitnąca z rodziny makowatych. Rośnie najlepiej w pełnym słońcu i dobrze przepuszczalnych glebach."
+    },
+    "de": {
+      "common_name": "Klatschmohn",
+      "description": "Papaver rhoeas, auch als Klatschmohn bekannt, ist eine blühende Pflanze aus der Familie der Mohngewächse. Sie gedeiht am besten in voller Sonne und gut durchlässigen Böden."
+    },
+    "fr": {
+      "common_name": "Coquelicot",
+      "description": "Papaver rhoeas, communément appelé coquelicot, est une plante à fleurs de la famille des papavéracées. Il prospère en plein soleil et dans des sols bien drainés."
+    },
+    "it": {
+      "common_name": "Papavero rosso",
+      "description": "Papaver rhoeas, noto come papavero rosso, è una pianta da fiore della famiglia delle Papaveraceae. Cresce meglio alla luce diretta del sole e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Amapola",
+      "description": "Papaver rhoeas, conocida como amapola roja, es una planta con flores de la familia Papaveraceae. Se desarrolla mejor a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Papoila",
+      "description": "Papaver rhoeas, conhecida como papoila vermelha, é uma planta da família Papaveraceae. Prefere luz solar plena e solos bem drenados."
+    },
+    "ar": {
+      "common_name": "الخشخاش الأحمر",
+      "description": "Papaver rhoeas، المعروف بالخيشخاش الأحمر، هو نبات مزهر من عائلة الخشخاش. يزدهر في ضوء الشمس الكامل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "लाल खसखस",
+      "description": "Papaver rhoeas, जिसे लाल खसखस के नाम से जाना जाता है, एक फूलों वाला पौधा है जो पॉपवीरेसी परिवार का है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "红罂粟",
+      "description": "Papaver rhoeas，通常被称为红罂粟，是罂粟科的一种开花植物。它在充足的阳光和良好的排水土壤中生长良好。"
+    },
+    "ja": {
+      "common_name": "ケシ",
+      "description": "Papaver rhoeas、一般的にケシとして知られるこの植物は、ケシ科の開花植物です。完全な日光と良好な排水の土壌でよく成長します。"
+    },
+    "ko": {
+      "common_name": "붉은 양귀비",
+      "description": "Papaver rhoeas, 일반적으로 붉은 양귀비로 알려진 이 식물은 양귀비과에 속하는 꽃 식물입니다. 완전한 햇볕과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=486",
+      "https://www.gardenersworld.com/plants/papaver-rhoeas/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "tradescantia_zebrina",
+  "name": "Wandering Jew",
+  "latin": "Tradescantia zebrina",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tradescantia_zebrina.jpg",
+  "image_thumb": "tradescantia_zebrina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep lightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "やや湿らせる",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جداً",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "매우 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average room",
+          "pl": "Pokojowa",
+          "de": "Zimmerniveau",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Lievemente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast trailing",
+          "pl": "Szybko zwisająca",
+          "de": "Schnell hängend",
+          "fr": "Rapide retombante",
+          "it": "Ricadente rapida",
+          "es": "Colgante rápida",
+          "pt": "Pendente rápida",
+          "ar": "نمو متدلي سريع",
+          "hi": "तेज़ लटकती",
+          "zh": "快速蔓生",
+          "ja": "成長が早い",
+          "ko": "빠른 늘어짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wandering Jew",
+      "description": "Tradescantia zebrina is a fast-growing trailing houseplant known for its striped purple and silver leaves. It prefers bright indirect light and evenly moist soil. It is commonly grown in hanging pots indoors."
+    },
+    "pl": {
+      "common_name": "Trzykrotka pasiasta",
+      "description": "Tradescantia zebrina to szybko rosnąca roślina o zwisającym pokroju i pasiastych liściach. Lubi jasne, pośrednie światło i umiarkowanie wilgotne podłoże. Często uprawiana jest w mieszkaniach."
+    },
+    "de": {
+      "common_name": "Zebrakraut",
+      "description": "Tradescantia zebrina ist eine schnell wachsende Hängepflanze mit gestreiften Blättern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Sie wird häufig als Zimmerpflanze gehalten."
+    },
+    "fr": {
+      "common_name": "Misère zébrée",
+      "description": "Tradescantia zebrina est une plante retombante à croissance rapide aux feuilles rayées. Elle apprécie une lumière indirecte vive et un sol légèrement humide. Elle est courante en intérieur."
+    },
+    "it": {
+      "common_name": "Miseria zebrina",
+      "description": "Tradescantia zebrina è una pianta ricadente a crescita rapida con foglie striate. Predilige luce indiretta e terreno leggermente umido. È molto diffusa come pianta da interno."
+    },
+    "es": {
+      "common_name": "Amor de hombre",
+      "description": "Tradescantia zebrina es una planta colgante de crecimiento rápido con hojas rayadas. Prefiere luz indirecta brillante y riego regular. Se cultiva comúnmente en interiores."
+    },
+    "pt": {
+      "common_name": "Trapoeraba-roxa",
+      "description": "Tradescantia zebrina é uma planta pendente de crescimento rápido e folhas listradas. Gosta de luz indireta brilhante e solo levemente úmido. É comum em ambientes internos."
+    },
+    "ar": {
+      "common_name": "تراديسكانتيا مخططة",
+      "description": "Tradescantia zebrina نبات منزلي سريع النمو بأوراق مخططة. يفضل الضوء غير المباشر والتربة الرطبة باعتدال. يُزرع غالبًا داخل المنازل."
+    },
+    "hi": {
+      "common_name": "वांडरिंग ज्यू",
+      "description": "Tradescantia zebrina एक तेजी से बढ़ने वाला लटकने वाला पौधा है। इसे अप्रत्यक्ष रोशनी और हल्की नमी पसंद है। यह घरों में आम तौर पर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "斑叶吊竹梅",
+      "description": "Tradescantia zebrina 是一种生长迅速的垂吊植物，叶片具条纹。它喜欢明亮的散射光和微湿的土壤。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "ムラサキツユクサ",
+      "description": "Tradescantia zebrina は成長が早い垂れ下がる観葉植物です。明るい間接光と適度な水分を好みます。室内でよく育てられます。"
+    },
+    "ko": {
+      "common_name": "제브리나 트라데스칸티아",
+      "description": "Tradescantia zebrina는 빠르게 자라는 늘어지는 식물입니다. 밝은 간접광과 촉촉한 흙을 선호합니다. 실내 식물로 널리 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/tradescantia",
+      "https://edis.ifas.ufl.edu/publication/FP610",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a564"
+    ]
+  }
+}

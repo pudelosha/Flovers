@@ -1,0 +1,236 @@
+{
+  "external_id": "opuntia_humifusa",
+  "name": "Eastern Prickly Pear",
+  "latin": "Opuntia humifusa",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "opuntia_humifusa.jpg",
+  "image_thumb": "opuntia_humifusa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sablonneux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेत वाली मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂地",
+          "ko": "모래 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Niska wilgotność",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "قليل من الماء",
+          "hi": "कम पानी",
+          "zh": "少水",
+          "ja": "少量の水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "16-26°C",
+          "pl": "16-26°C",
+          "de": "16-26°C",
+          "fr": "16-26°C",
+          "it": "16-26°C",
+          "es": "16-26°C",
+          "pt": "16-26°C",
+          "ar": "16-26°C",
+          "hi": "16-26°C",
+          "zh": "16-26°C",
+          "ja": "16-26°C",
+          "ko": "16-26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低湿",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Eastern Prickly Pear",
+      "description": "Opuntia humifusa is a low-growing cactus native to the eastern U.S. It produces bright yellow flowers and is drought-tolerant."
+    },
+    "pl": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa to niskopienne kaktusy występujące wschodnich Stanach Zjednoczonych. Wytwarzają jaskrawe żółte kwiaty i tolerują suszę."
+    },
+    "de": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa ist ein niedrig wachsender Kaktus aus dem Osten der USA. Er produziert leuchtend gelbe Blüten und ist dürretolerant."
+    },
+    "fr": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa est un cactus bas originaire de l'est des États-Unis. Il produit de brillantes fleurs jaunes et tolère la sécheresse."
+    },
+    "it": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa è un cactus a crescita bassa originario dell'est degli Stati Uniti. Produce fiori gialli brillanti ed è resistente alla siccità."
+    },
+    "es": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa es un cactus de crecimiento bajo originario del este de los EE. UU. Produce flores amarillas brillantes y tolera la sequía."
+    },
+    "pt": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa é um cacto de crescimento baixo nativo do leste dos EUA. Produz flores amarelas brilhantes e é tolerante à seca."
+    },
+    "ar": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa هو نوع من الصبار منخفض النمو من شرق الولايات المتحدة. ينتج أزهارًا صفراء زاهية ويتحمل الجفاف."
+    },
+    "hi": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa एक कम ऊँचाई वाला कैक्टस है जो संयुक्त राज्य अमेरिका के पूर्वी भाग का मूल निवासी है। यह चमकीले पीले फूल उगता है और सूखा सहनशील है।"
+    },
+    "zh": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa 是一种低生长的仙人掌，原产于美国东部。它产生明亮的黄色花朵，并耐旱。"
+    },
+    "ja": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusaはアメリカ東部原産の低成長型サボテンで、鮮やかな黄色の花を咲かせ、乾燥に強いです。"
+    },
+    "ko": {
+      "common_name": "Opuntia humifusa",
+      "description": "Opuntia humifusa는 미국 동부 원산지의 저성장 선인장으로, 밝은 노란색 꽃을 피우고 가뭄에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicus.org/opuntia-humifusa",
+      "https://www.cactus.com/opuntia-humifusa-care"
+    ]
+  }
+}

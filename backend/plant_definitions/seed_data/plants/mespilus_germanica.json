@@ -1,0 +1,236 @@
+{
+  "external_id": "mespilus_germanica",
+  "name": "Medlar",
+  "latin": "Mespilus germanica",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "mespilus_germanica.jpg",
+  "image_thumb": "mespilus_germanica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी मिट्टी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage moyen",
+          "it": "Annaffio medio",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水",
+          "ko": "보통 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Umiarkowana",
+          "de": "Gemäßigt",
+          "fr": "Tempérée",
+          "it": "Temperata",
+          "es": "Templada",
+          "pt": "Temperada",
+          "ar": "معتدلة",
+          "hi": "समशीतोष्ण",
+          "zh": "温带",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Small tree",
+          "pl": "Małe drzewo",
+          "de": "Kleiner Baum",
+          "fr": "Petit arbre",
+          "it": "Piccolo albero",
+          "es": "Árbol pequeño",
+          "pt": "Árvore pequena",
+          "ar": "شجرة صغيرة",
+          "hi": "छोटा पेड़",
+          "zh": "小乔木",
+          "ja": "小高木",
+          "ko": "소교목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Medlar",
+      "description": "Mespilus germanica is a small deciduous tree native to Europe and Western Asia. It produces distinctive brown fruits that ripen late in autumn. The plant prefers full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Nieszpułka",
+      "description": "Mespilus germanica to niewielkie drzewo liściaste pochodzące z Europy i Azji Zachodniej. Wytwarza charakterystyczne owoce dojrzewające późną jesienią. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Mispel",
+      "description": "Mespilus germanica ist ein kleiner Laubbaum aus Europa und Westasien. Er trägt braune Früchte, die spät im Herbst reifen. Die Pflanze bevorzugt volle Sonne und gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Néflier",
+      "description": "Mespilus germanica est un petit arbre caduc originaire d’Europe et d’Asie occidentale. Il produit des fruits bruns qui mûrissent tard en automne. Il aime le plein soleil et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Nespolo comune",
+      "description": "Mespilus germanica è un piccolo albero deciduo originario dell’Europa e dell’Asia occidentale. Produce frutti bruni che maturano a fine autunno. Predilige pieno sole e terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Níspero europeo",
+      "description": "Mespilus germanica es un árbol pequeño originario de Europa y Asia occidental. Produce frutos marrones que maduran a finales de otoño. Prefiere pleno sol y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Nespereira",
+      "description": "Mespilus germanica é uma pequena árvore caducifólia da Europa e da Ásia Ocidental. Produz frutos castanhos que amadurecem no fim do outono. Prefere sol pleno e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "بشملة أوروبية",
+      "description": "Mespilus germanica شجرة صغيرة موطنها أوروبا وغرب آسيا. تنتج ثمارًا بنية تنضج في أواخر الخريف. تفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "मेडलर",
+      "description": "Mespilus germanica यूरोप और पश्चिमी एशिया का एक छोटा पर्णपाती वृक्ष है। इसमें भूरे फल लगते हैं जो देर शरद ऋतु में पकते हैं। इसे पूरी धूप और अच्छी जल निकास वाली मिट्टी पसंद है।"
+    },
+    "zh": {
+      "common_name": "欧楂",
+      "description": "Mespilus germanica 是原产于欧洲和西亚的小型落叶乔木。果实呈褐色，秋末成熟。喜全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "セイヨウカリン",
+      "description": "Mespilus germanica はヨーロッパと西アジア原産の小型落葉樹です。秋の終わりに熟す褐色の果実をつけます。日当たりと水はけの良い土を好みます。"
+    },
+    "ko": {
+      "common_name": "서양모과",
+      "description": "Mespilus germanica는 유럽과 서아시아 원산의 작은 낙엽수입니다. 늦가을에 익는 갈색 열매를 맺습니다. 햇빛이 잘 들고 배수가 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/mespilus/germanica/details",
+      "https://plants.ces.ncsu.edu/plants/mespilus-germanica/",
+      "https://www.gbif.org/species/3006749"
+    ]
+  }
+}

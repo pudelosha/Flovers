@@ -1,0 +1,238 @@
+{
+  "external_id": "yucca_elephantipes",
+  "name": "Spineless Yucca",
+  "latin": "Yucca elephantipes",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "yucca_elephantipes.jpg",
+  "image_thumb": "yucca_elephantipes.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء قوي",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "매우 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crec. lenta",
+          "pt": "Lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spineless Yucca",
+      "description": "Yucca elephantipes is a hardy evergreen plant native to Central America. It tolerates bright sun, dry air, and infrequent watering, making it suitable for indoor environments."
+    },
+    "pl": {
+      "common_name": "Jukka bezkolcowa",
+      "description": "Yucca elephantipes to wytrzymała roślina pochodząca z Ameryki Środkowej. Dobrze znosi jasne światło, suche powietrze i rzadkie podlewanie."
+    },
+    "de": {
+      "common_name": "Riesen-Palmlilie",
+      "description": "Yucca elephantipes stammt aus Mittelamerika und ist sehr robust. Sie benötigt viel Licht, wenig Wasser und ist pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Yucca pied d’éléphant",
+      "description": "Yucca elephantipes est originaire d’Amérique centrale. Elle supporte bien la lumière vive, l’air sec et des arrosages espacés."
+    },
+    "it": {
+      "common_name": "Yucca senza spine",
+      "description": "Yucca elephantipes è una pianta resistente dell’America Centrale. Predilige luce intensa e annaffiature poco frequenti."
+    },
+    "es": {
+      "common_name": "Yuca sin espinas",
+      "description": "Yucca elephantipes es originaria de América Central. Tolera bien la luz intensa, el aire seco y el riego escaso."
+    },
+    "pt": {
+      "common_name": "Iúca sem espinhos",
+      "description": "Yucca elephantipes é uma planta robusta da América Central. Cresce bem com luz forte e pouca água."
+    },
+    "ar": {
+      "common_name": "يوكا بدون أشواك",
+      "description": "نبات يوكا إيليفانتبيس موطنه أمريكا الوسطى. يتحمل الضوء القوي والري القليل والهواء الجاف."
+    },
+    "hi": {
+      "common_name": "स्पाइनलेस युक्का",
+      "description": "युक्का एलीफैनटाइप्स मध्य अमेरिका का पौधा है। यह तेज रोशनी, कम पानी और शुष्क हवा में अच्छा रहता है।"
+    },
+    "zh": {
+      "common_name": "无刺丝兰",
+      "description": "Yucca elephantipes 原产于中美洲。它耐强光、干燥空气和少量浇水，适合室内种植。"
+    },
+    "ja": {
+      "common_name": "スピンレスユッカ",
+      "description": "ユッカ・エレファンティペスは中米原産の丈夫な植物です。明るい光と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "무가시 유카",
+      "description": "Yucca elephantipes는 중앙아메리카 원산의 강한 식물입니다. 밝은 빛과 적은 물에서도 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/yucca/growing-guide",
+      "https://edis.ifas.ufl.edu/publication/FP657",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a935"
+    ]
+  }
+}

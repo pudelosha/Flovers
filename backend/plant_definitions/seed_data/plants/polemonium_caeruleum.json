@@ -1,0 +1,237 @@
+{
+  "external_id": "polemonium_caeruleum",
+  "name": "Jacob's Ladder",
+  "latin": "Polemonium caeruleum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "polemonium_caeruleum.jpg",
+  "image_thumb": "polemonium_caeruleum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lössiger Boden",
+          "fr": "Sol argileux",
+          "it": "Suolo argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "점토질 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to moderate",
+          "pl": "Chłodne do umiarkowanego",
+          "de": "Kühl bis mäßig",
+          "fr": "Froid à modéré",
+          "it": "Fresco a moderato",
+          "es": "Frío a moderado",
+          "pt": "Frio a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至适中",
+          "ja": "涼しいから適度",
+          "ko": "시원한에서 적당한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中くらい",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jacob's Ladder",
+      "description": "Polemonium caeruleum, commonly known as Jacob's Ladder, is a perennial plant that produces clusters of blue flowers with yellow centers. It is native to North America and thrives in moist, well-drained soils."
+    },
+    "pl": {
+      "common_name": "Drabina Jakuba",
+      "description": "Polemonium caeruleum, znany jako Drabina Jakuba, to roślina wieloletnia, która wytwarza kwiaty w odcieniach niebieskiego z żółtymi środkami. Jest rodzimy w Ameryce Północnej i preferuje wilgotne, dobrze przepuszczalne gleby."
+    },
+    "de": {
+      "common_name": "Jakobsleiter",
+      "description": "Polemonium caeruleum, auch Jakobsleiter genannt, ist eine mehrjährige Pflanze, die blau-violette Blüten mit gelben Zentren hervorbringt. Sie ist in Nordamerika beheimatet und gedeiht in feuchten, gut durchlässigen Böden."
+    },
+    "fr": {
+      "common_name": "Échelle de Jacob",
+      "description": "Polemonium caeruleum, couramment appelé Échelle de Jacob, est une plante vivace produisant des grappes de fleurs bleues avec des centres jaunes. Originaire d'Amérique du Nord, elle pousse dans des sols bien drainés et humides."
+    },
+    "it": {
+      "common_name": "Scala di Giacobbe",
+      "description": "Polemonium caeruleum, noto anche come Scala di Giacobbe, è una pianta perenne che produce grappoli di fiori blu con centri gialli. È originaria del Nord America e cresce in terreni umidi e ben drenati."
+    },
+    "es": {
+      "common_name": "Escalera de Jacob",
+      "description": "Polemonium caeruleum, conocido como Escalera de Jacob, es una planta perenne que produce racimos de flores azules con centros amarillos. Es originaria de América del Norte y prospera en suelos bien drenados y húmedos."
+    },
+    "pt": {
+      "common_name": "Escada de Jacó",
+      "description": "Polemonium caeruleum, comumente conhecida como Escada de Jacó, é uma planta perene que produz cachos de flores azuis com centros amarelos. É nativa da América do Norte e prospera em solos bem drenados e úmidos."
+    },
+    "ar": {
+      "common_name": "سلم يعقوب",
+      "description": "بوليمونيوم كايروليوم، المعروف أيضًا باسم سلم يعقوب، هو نبات معمر ينتج مجموعات من الزهور الزرقاء ذات مراكز صفراء. إنه موطنه الأصلي أمريكا الشمالية وينمو في التربة الرطبة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "याकूब की सीढ़ी",
+      "description": "पोलिमोनियम कैरुलेम, जिसे याकूब की सीढ़ी के नाम से भी जाना जाता है, एक बारहमासी पौधा है जो नीले रंग के फूलों के गुच्छे और पीले केंद्रों के साथ उगता है। यह उत्तरी अमेरिका का मूल निवासी है और गीली, अच्छी जल निकासी वाली मिट्टी में पनपता है।"
+    },
+    "zh": {
+      "common_name": "雅各布梯子",
+      "description": "波勒莫纽姆·凯鲁勒姆，通常称为雅各布梯子，是一种多年生植物，产生蓝色的花簇，花心为黄色。它原产于北美，并在湿润且排水良好的土壤中茁壮成长。"
+    },
+    "ja": {
+      "common_name": "ヤコブの梯子",
+      "description": "ポレモニウム・カエルレウム、通称ヤコブの梯子は、青い花を束ねた黄色い中心の花を咲かせる多年生植物です。北アメリカ原産で、湿った排水の良い土壌でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "야코브의 사다리",
+      "description": "폴레모니움 카에룰리움, 일반적으로 야코브의 사다리로 알려진 이 식물은 파란색 꽃송이와 노란색 중심을 가진 꽃을 만듭니다. 북미 원산지로 습기 있고 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/polemonium-caeruleum",
+      "https://www.gardenersworld.com/plants/polemonium-caeruleum"
+    ]
+  }
+}

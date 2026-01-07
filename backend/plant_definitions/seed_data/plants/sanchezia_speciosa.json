@@ -1,0 +1,237 @@
+{
+  "external_id": "sanchezia_speciosa",
+  "name": "Sanchezia speciosa",
+  "latin": "Sanchezia speciosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sanchezia_speciosa.jpg",
+  "image_thumb": "sanchezia_speciosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عام",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "범용"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-28°C",
+          "pl": "20-28°C",
+          "de": "20-28°C",
+          "fr": "20-28°C",
+          "it": "20-28°C",
+          "es": "20-28°C",
+          "pt": "20-28°C",
+          "ar": "20-28°C",
+          "hi": "20-28°C",
+          "zh": "20-28°C",
+          "ja": "20-28°C",
+          "ko": "20-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa is a tropical plant native to Central and South America. It features dark green, glossy leaves with bright yellow veins and clusters of yellow flowers."
+    },
+    "pl": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa to roślina tropikalna pochodząca z Ameryki Środkowej i Południowej. Ma ciemnozielone, błyszczące liście z jasnożółtymi żyłkami oraz żółte kwiaty."
+    },
+    "de": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa ist eine tropische Pflanze aus Mittel- und Südamerika. Sie hat dunkelgrüne, glänzende Blätter mit leuchtend gelben Adern und gelbe Blüten."
+    },
+    "fr": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa est une plante tropicale originaire d'Amérique centrale et du Sud. Elle possède des feuilles vert foncé et brillantes avec des nervures jaunes et des fleurs jaunes."
+    },
+    "it": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa è una pianta tropicale originaria dell'America Centrale e Meridionale. Ha foglie verde scuro e lucide con venature gialle e fiori gialli."
+    },
+    "es": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa es una planta tropical originaria de Centro y Sudamérica. Tiene hojas verde oscuro brillantes con venas amarillas y flores amarillas."
+    },
+    "pt": {
+      "common_name": "Sanchezia",
+      "description": "Sanchezia speciosa é uma planta tropical nativa da América Central e do Sul. Possui folhas verde-escuras e brilhantes com veios amarelos e flores amarelas."
+    },
+    "ar": {
+      "common_name": "سانشيزيا",
+      "description": "Sanchezia speciosa هي نبات استوائي موطنه أمريكا الوسطى والجنوبية. تتميز بأوراق خضراء داكنة لامعة مع عروق صفراء وزهور صفراء."
+    },
+    "hi": {
+      "common_name": "संचेज़िया",
+      "description": "Sanchezia speciosa एक उष्णकटिबंधीय पौधा है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसमें गहरे हरे रंग के चमकदार पत्ते होते हैं जिनमें पीली नसें और पीले फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "桑奇西亚",
+      "description": "Sanchezia speciosa 是一种热带植物，原产于中美洲和南美洲。它具有深绿色的光泽叶子，带有明亮的黄色脉络，并且开黄色花。"
+    },
+    "ja": {
+      "common_name": "サンケジア",
+      "description": "Sanchezia speciosa は中南米原産の熱帯植物です。光沢のある深緑色の葉に鮮やかな黄色の脈があり、黄色い花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "산케지아",
+      "description": "Sanchezia speciosa는 중남미가 원산지인 열대 식물입니다. 어두운 녹색의 윤기 나는 잎과 선명한 노란색 줄기를 가지고 있으며, 노란 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/91019/sanchezia-speciosa/details",
+      "https://www.gardenia.net/plant/sanchezia-speciosa"
+    ]
+  }
+}

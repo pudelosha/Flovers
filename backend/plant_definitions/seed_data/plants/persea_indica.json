@@ -1,0 +1,237 @@
+{
+  "external_id": "persea_indica",
+  "name": "Canary Laurel",
+  "latin": "Persea indica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "persea_indica.jpg",
+  "image_thumb": "persea_indica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universell",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "유니버설"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Canary Laurel",
+      "description": "Persea indica, also known as the Canary Laurel, is a small tree native to the Canary Islands. It features glossy dark green leaves and small yellow-green flowers."
+    },
+    "pl": {
+      "common_name": "Laurier Canarien",
+      "description": "Persea indica, znany również jako laurier Canarien, to małe drzewo pochodzące z Wysp Kanaryjskich. Charakteryzuje się błyszczącymi, ciemnozielonymi liśćmi i małymi, żółto-zielonymi kwiatami."
+    },
+    "de": {
+      "common_name": "Kanarische Lorbeer",
+      "description": "Persea indica, auch bekannt als Kanarischer Lorbeer, ist ein kleiner Baum, der auf den Kanarischen Inseln heimisch ist. Er hat glänzende, dunkelgrüne Blätter und kleine, gelb-grüne Blüten."
+    },
+    "fr": {
+      "common_name": "Laurier des Canaries",
+      "description": "Persea indica, également connu sous le nom de Laurier des Canaries, est un petit arbre originaire des îles Canaries. Il possède des feuilles vert foncé brillantes et de petites fleurs jaune-vert."
+    },
+    "it": {
+      "common_name": "Alloro delle Canarie",
+      "description": "Persea indica, noto anche come alloro delle Canarie, è un piccolo albero originario delle Isole Canarie. Presenta foglie verde scuro lucide e piccoli fiori giallo-verdi."
+    },
+    "es": {
+      "common_name": "Laurel de Canarias",
+      "description": "Persea indica, también conocido como el laurel de Canarias, es un pequeño árbol originario de las Islas Canarias. Tiene hojas de color verde oscuro brillante y pequeñas flores amarillo-verde."
+    },
+    "pt": {
+      "common_name": "Loureiro das Canárias",
+      "description": "Persea indica, também conhecido como Loureiro das Canárias, é uma pequena árvore nativa das Ilhas Canárias. Possui folhas verdes escuras e brilhantes e pequenas flores amarelo-verde."
+    },
+    "ar": {
+      "common_name": "لوريل الكناري",
+      "description": "بيرسيا إنديكا، المعروف أيضًا باسم لوريل الكناري، هو شجرة صغيرة موطنها جزر الكناري. يتميز بأوراقه الخضراء الداكنة اللامعة وأزهاره الصغيرة ذات اللون الأصفر-الأخضر."
+    },
+    "hi": {
+      "common_name": "कैनरी लॉरेल",
+      "description": "Persea indica, जिसे कैनरी लॉरेल के नाम से भी जाना जाता है, एक छोटा पेड़ है जो कैनरी द्वीप समूह का मूल निवासी है। इसमें चमकदार गहरे हरे पत्ते और छोटे पीले-हरे फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "加那利月桂",
+      "description": "Persea indica，也被称为加那利月桂，是一种原产于加那利群岛的小树。它具有光亮的深绿色叶子和小型黄绿色花朵。"
+    },
+    "ja": {
+      "common_name": "カナリア月桂樹",
+      "description": "Persea indica、別名カナリア月桂樹は、カナリア諸島原産の小さな木です。光沢のある深緑色の葉と小さな黄色がかった緑色の花を特徴としています。"
+    },
+    "ko": {
+      "common_name": "카나리 월계수",
+      "description": "Persea indica, 또한 카나리 월계수로 알려진 이 나무는 카나리 제도의 원산지인 작은 나무입니다. 광택이 나는 진한 녹색 잎과 작은 노란-녹색 꽃을 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/121170/persea-indica",
+      "https://www.gardenia.net/plant/persea-indica"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "ligustrum_vulgare",
+  "name": "Common privet",
+  "latin": "Ligustrum vulgare",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ligustrum_vulgare.jpg",
+  "image_thumb": "ligustrum_vulgare.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "직사광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainé",
+          "it": "Drenante",
+          "es": "Drenado",
+          "pt": "Drenado",
+          "ar": "جيدة الصرف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Umiarkowane",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期的",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Hardy",
+          "pl": "Mrozoodporna",
+          "de": "Winterhart",
+          "fr": "Rustique",
+          "it": "Rustica",
+          "es": "Rústica",
+          "pt": "Rústica",
+          "ar": "قوية",
+          "hi": "सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic berries",
+          "pl": "Toksyczne owoce",
+          "de": "Giftige Beeren",
+          "fr": "Baies toxiques",
+          "it": "Bacche tossiche",
+          "es": "Bayas tóxicas",
+          "pt": "Bagas tóxicas",
+          "ar": "ثمار سامة",
+          "hi": "विषैले फल",
+          "zh": "果实有毒",
+          "ja": "果実有毒",
+          "ko": "열매 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast shrub",
+          "pl": "Szybki krzew",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common privet",
+      "description": "Ligustrum vulgare is a deciduous to semi-evergreen shrub native to Europe and western Asia. It is commonly used for hedges due to its dense growth and tolerance of pruning."
+    },
+    "pl": {
+      "common_name": "Ligustr pospolity",
+      "description": "Ligustrum vulgare to krzew liściasty lub półzimozielony pochodzący z Europy. Jest często sadzony na żywopłoty ze względu na szybki wzrost."
+    },
+    "de": {
+      "common_name": "Gewöhnlicher Liguster",
+      "description": "Ligustrum vulgare ist ein laubabwerfender Strauch aus Europa. Er wird häufig als Heckenpflanze verwendet und ist sehr schnittverträglich."
+    },
+    "fr": {
+      "common_name": "Troène commun",
+      "description": "Ligustrum vulgare est un arbuste originaire d’Europe. Il est apprécié pour les haies grâce à sa croissance dense et rapide."
+    },
+    "it": {
+      "common_name": "Ligustro comune",
+      "description": "Ligustrum vulgare è un arbusto europeo molto resistente. Viene spesso usato come siepe ornamentale."
+    },
+    "es": {
+      "common_name": "Aligustre común",
+      "description": "Ligustrum vulgare es un arbusto originario de Europa. Se utiliza ampliamente en setos por su rápido crecimiento."
+    },
+    "pt": {
+      "common_name": "Alfeneiro-comum",
+      "description": "Ligustrum vulgare é um arbusto europeu resistente. É muito usado em sebes devido à sua densidade."
+    },
+    "ar": {
+      "common_name": "الليغستروم الشائع",
+      "description": "Ligustrum vulgare شجيرة أصلها أوروبا. تُستخدم غالبًا في الأسيجة لقوتها وسرعة نموها."
+    },
+    "hi": {
+      "common_name": "कॉमन प्रिवेट",
+      "description": "Ligustrum vulgare यूरोप का एक झाड़ीदार पौधा है। इसे अक्सर बाड़ के रूप में लगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "欧洲女贞",
+      "description": "Ligustrum vulgare 原产于欧洲，是一种常见的绿篱灌木。它生长快且耐修剪。"
+    },
+    "ja": {
+      "common_name": "セイヨウイボタ",
+      "description": "Ligustrum vulgareはヨーロッパ原産の低木です。生垣としてよく利用されます。"
+    },
+    "ko": {
+      "common_name": "서양쥐똥나무",
+      "description": "Ligustrum vulgare는 유럽 원산의 관목입니다. 생울타리로 널리 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ligustrum/vulgare/details",
+      "https://plants.ces.ncsu.edu/plants/ligustrum-vulgare/",
+      "https://www.gbif.org/species/2926187"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "pteris_ensiformis",
+  "name": "Pteris ensiformis",
+  "latin": "Pteris ensiformis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pteris_ensiformis.jpg",
+  "image_thumb": "pteris_ensiformis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "로암"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sword Fern",
+      "description": "Pteris ensiformis, or sword fern, is a tropical fern native to Southeast Asia. It thrives in shaded, humid environments and has long, arching fronds."
+    },
+    "pl": {
+      "common_name": "Paproć mieczowa",
+      "description": "Pteris ensiformis, znana jako paproć mieczowa, jest rośliną tropikalną pochodzącą z Azji Południowo-Wschodniej. Rośnie w cienistych, wilgotnych miejscach, ma długie, łukowate liście."
+    },
+    "de": {
+      "common_name": "Schwertfarn",
+      "description": "Pteris ensiformis, auch Schwertfarn genannt, ist ein tropischer Farn aus Südostasien. Er wächst in schattigen, feuchten Umgebungen und hat lange, bogenförmige Wedel."
+    },
+    "fr": {
+      "common_name": "Fougère épée",
+      "description": "Pteris ensiformis, ou fougère épée, est une fougère tropicale originaire d'Asie du Sud-Est. Elle prospère dans des environnements ombragés et humides et possède des frondes longues et arquées."
+    },
+    "it": {
+      "common_name": "Felce spada",
+      "description": "Pteris ensiformis, o felce spada, è una felce tropicale originaria del sud-est asiatico. Cresce in ambienti ombreggiati e umidi con fronde lunghe e arcuate."
+    },
+    "es": {
+      "common_name": "Helecho espada",
+      "description": "Pteris ensiformis, o helecho espada, es una especie de helecho tropical originaria del sudeste asiático. Crece en ambientes sombreados y húmedos, con frondas largas y arqueadas."
+    },
+    "pt": {
+      "common_name": "Samambaia espada",
+      "description": "Pteris ensiformis, ou samambaia espada, é uma samambaia tropical nativa do Sudeste Asiático. Cresce em ambientes sombreados e úmidos, com frondes longas e arqueadas."
+    },
+    "ar": {
+      "common_name": "سرخس السيف",
+      "description": "Pteris ensiformis، أو سرخس السيف، هو سرخس استوائي موطنه جنوب شرق آسيا. ينمو في البيئات المظللة والرطبة وله أوراق طويلة منحنية."
+    },
+    "hi": {
+      "common_name": "तलवार की शैवाल",
+      "description": "Pteris ensiformis, जिसे तलवार की शैवाल कहा जाता है, एक उष्णकटिबंधीय शैवाल है जो दक्षिण-पूर्व एशिया का मूल निवासी है। यह छायादार और नम वातावरण में बढ़ता है और इसके लंबे, वक्रित पत्ते होते हैं।"
+    },
+    "zh": {
+      "common_name": "剑蕨",
+      "description": "Pteris ensiformis，或剑蕨，是一种原产于东南亚的热带蕨类植物。它在阴凉潮湿的环境中生长，具有长而弯曲的叶片。"
+    },
+    "ja": {
+      "common_name": "剣シダ",
+      "description": "Pteris ensiformis、またの名を剣シダは、東南アジア原産の熱帯性シダです。日陰の湿った環境で育ち、長くアーチ状の葉を持ちます。"
+    },
+    "ko": {
+      "common_name": "검은 양치식물",
+      "description": "Pteris ensiformis, 또는 검은 양치식물은 동남아시아 원산의 열대 양치식물입니다. 그늘지고 습한 환경에서 자라며 길고 아치형의 잎을 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=498",
+      "https://www.gardenia.net/plant/Pteris-ensiformis-Sword-Fern"
+    ]
+  }
+}

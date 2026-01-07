@@ -1,0 +1,236 @@
+{
+  "external_id": "orchis_simia",
+  "name": "Monkey Orchid",
+  "latin": "Orchis simia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_simia.jpg",
+  "image_thumb": "orchis_simia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie nasłonecznienie",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中くらいの太陽光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Kwasna gleba",
+          "de": "Saure Boden",
+          "fr": "Sol acide",
+          "it": "Suolo acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "क्षारीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土壌",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnia ilość wody",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "مياه متوسطة",
+          "hi": "मध्यम पानी",
+          "zh": "中等水量",
+          "ja": "中くらいの水",
+          "ko": "중간 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中くらいの湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Up to 30 cm",
+          "pl": "Do 30 cm",
+          "de": "Bis zu 30 cm",
+          "fr": "Jusqu'à 30 cm",
+          "it": "Fino a 30 cm",
+          "es": "Hasta 30 cm",
+          "pt": "Até 30 cm",
+          "ar": "حتى 30 سم",
+          "hi": "30 सेंटीमीटर तक",
+          "zh": "最多30厘米",
+          "ja": "最大30cm",
+          "ko": "최대 30cm"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Monkey Orchid",
+      "description": "The Monkey Orchid, also known as Orchis simia, is native to Southern Europe. It is characterized by unique flowers resembling monkeys."
+    },
+    "pl": {
+      "common_name": "Orchidea małpia",
+      "description": "Orchidea małpia, znana również jako Orchis simia, pochodzi z południowej Europy. Charakteryzuje się kwiatami przypominającymi małpy."
+    },
+    "de": {
+      "common_name": "Affen-Orchidee",
+      "description": "Die Affen-Orchidee, auch bekannt als Orchis simia, ist in Südeuropa beheimatet. Ihre Blumen ähneln kleinen Affen."
+    },
+    "fr": {
+      "common_name": "Orchidée Singe",
+      "description": "L'Orchidée Singe, également connue sous le nom d'Orchis simia, est originaire du sud de l'Europe. Ses fleurs ressemblent à de petits singes."
+    },
+    "it": {
+      "common_name": "Orchidea scimmia",
+      "description": "L'Orchidea scimmia, conosciuta anche come Orchis simia, è originaria dell'Europa meridionale. I suoi fiori assomigliano a piccole scimmie."
+    },
+    "es": {
+      "common_name": "Orquídea Mono",
+      "description": "La Orquídea Mono, también conocida como Orchis simia, es originaria del sur de Europa. Sus flores se asemejan a pequeños monos."
+    },
+    "pt": {
+      "common_name": "Orquídea Macaco",
+      "description": "A Orquídea Macaco, também conhecida como Orchis simia, é nativa do sul da Europa. Suas flores se parecem com pequenos macacos."
+    },
+    "ar": {
+      "common_name": "زهرة الأوركيد القرد",
+      "description": "زهرة الأوركيد القرد، المعروفة أيضًا باسم Orchis simia، موطنها جنوب أوروبا. تتميز بزهورها التي تشبه القردة الصغيرة."
+    },
+    "hi": {
+      "common_name": "बंदर ऑर्किड",
+      "description": "बंदर ऑर्किड, जिसे Orchis simia भी कहा जाता है, दक्षिणी यूरोप का मूल निवासी है। इसके फूल छोटे बंदरों की तरह दिखते हैं।"
+    },
+    "zh": {
+      "common_name": "猴子兰",
+      "description": "猴子兰，也叫Orchis simia，原产于南欧。它的花朵像小猴子。"
+    },
+    "ja": {
+      "common_name": "サルラン",
+      "description": "サルラン、またはOrchis simiaは南ヨーロッパ原産です。その花は小さなサルに似ています。"
+    },
+    "ko": {
+      "common_name": "원숭이 난초",
+      "description": "원숭이 난초, 또는 Orchis simia는 남유럽 원산입니다. 이 꽃은 작은 원숭이를 닮았습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanikgarten.de/orchis-simia",
+      "https://www.orchidsociety.org/monkey-orchid-care"
+    ]
+  }
+}

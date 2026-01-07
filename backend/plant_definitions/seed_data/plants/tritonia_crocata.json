@@ -1,0 +1,237 @@
+{
+  "external_id": "tritonia_crocata",
+  "name": "Tritonia crocata",
+  "latin": "Tritonia crocata",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 21,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tritonia_crocata.jpg",
+  "image_thumb": "tritonia_crocata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Suolo drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–20°C",
+          "pl": "10–20°C",
+          "de": "10–20°C",
+          "fr": "10–20°C",
+          "it": "10–20°C",
+          "es": "10–20°C",
+          "pt": "10–20°C",
+          "ar": "10–20°م",
+          "hi": "10–20°C",
+          "zh": "10–20°C",
+          "ja": "10–20°C",
+          "ko": "10–20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Seasonal growth",
+          "pl": "Wzrost sezonowy",
+          "de": "Saisonal",
+          "fr": "Croissance saisonnière",
+          "it": "Crescita stagionale",
+          "es": "Crecimiento estacional",
+          "pt": "Crescimento sazonal",
+          "ar": "نمو موسمي",
+          "hi": "मौसमी वृद्धि",
+          "zh": "季节性生长",
+          "ja": "季節成長",
+          "ko": "계절 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "African cornflag",
+      "description": "Tritonia crocata is a corm-forming perennial native to South Africa. It produces bright orange flowers in winter and spring. The plant requires a dry rest period after flowering."
+    },
+    "pl": {
+      "common_name": "Trytonia krokoszowa",
+      "description": "Tritonia crocata to bulwiasta bylina pochodząca z Afryki Południowej. Kwitnie na pomarańczowo zimą i wiosną. Po kwitnieniu wymaga okresu spoczynku na sucho."
+    },
+    "de": {
+      "common_name": "Afrikanische Tritonie",
+      "description": "Tritonia crocata ist eine knollenbildende Pflanze aus Südafrika. Sie blüht im Winter und Frühling orange. Nach der Blüte benötigt sie eine Trockenruhe."
+    },
+    "fr": {
+      "common_name": "Tritonie safranée",
+      "description": "Tritonia crocata est une plante à corme originaire d’Afrique du Sud. Elle fleurit en orange en hiver et au printemps. Une période de repos sec est nécessaire après la floraison."
+    },
+    "it": {
+      "common_name": "Tritonia arancione",
+      "description": "Tritonia crocata è una perenne a cormi del Sudafrica. Fiorisce in arancione tra inverno e primavera. Dopo la fioritura richiede un periodo secco."
+    },
+    "es": {
+      "common_name": "Tritonia naranja",
+      "description": "Tritonia crocata es una planta bulbosa de Sudáfrica. Florece en color naranja en invierno y primavera. Necesita reposo seco tras la floración."
+    },
+    "pt": {
+      "common_name": "Trítonia-laranja",
+      "description": "Tritonia crocata é uma planta de cormo da África do Sul. Produz flores laranja no inverno e primavera. Precisa de repouso seco após a floração."
+    },
+    "ar": {
+      "common_name": "تريتونية برتقالية",
+      "description": "تريتونية كروكاتا نبات بصلي من جنوب أفريقيا. يزهر باللون البرتقالي في الشتاء والربيع. يحتاج إلى فترة جفاف بعد الإزهار."
+    },
+    "hi": {
+      "common_name": "अफ्रीकी कॉर्नफ्लैग",
+      "description": "ट्रिटोनिया क्रोकाटा दक्षिण अफ्रीका का कंदीय पौधा है। यह सर्दियों और वसंत में नारंगी फूल देता है। फूलों के बाद सूखा विश्राम आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "非洲鸢尾",
+      "description": "Tritonia crocata 原产于南非，为球茎植物。冬春季开橙色花。花后需要干燥休眠期。"
+    },
+    "ja": {
+      "common_name": "トリトニア",
+      "description": "トリトニア・クロカタは南アフリカ原産の球茎植物です。冬から春に橙色の花を咲かせます。開花後は乾燥休眠が必要です。"
+    },
+    "ko": {
+      "common_name": "트리토니아",
+      "description": "트리토니아 크로카타는 남아프리카 원산의 구근 식물입니다. 겨울과 봄에 주황색 꽃이 피며 개화 후 건조 휴면기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/18490/tritonia-crocata/details",
+      "https://www.sanbi.org/plants/tritonia-crocata/",
+      "https://pfaf.org/user/Plant.aspx?LatinName=Tritonia+crocata"
+    ]
+  }
+}

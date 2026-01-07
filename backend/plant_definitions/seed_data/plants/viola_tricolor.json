@@ -1,0 +1,237 @@
+{
+  "external_id": "viola_tricolor",
+  "name": "Wild pansy",
+  "latin": "Viola tricolor",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "viola_tricolor.jpg",
+  "image_thumb": "viola_tricolor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-soleil",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日向",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Podlewanie",
+          "de": "Regelmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Irrigazione",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "معتدل",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low, spreading",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम फैलाव",
+          "zh": "低矮",
+          "ja": "低成長",
+          "ko": "낮게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wild pansy",
+      "description": "Viola tricolor is a small flowering plant native to Europe. It prefers cool temperatures, partial sun, and evenly moist soil."
+    },
+    "pl": {
+      "common_name": "Bratek polny",
+      "description": "Viola tricolor to niewielka roślina kwitnąca pochodząca z Europy. Najlepiej rośnie w chłodnych warunkach i półcieniu."
+    },
+    "de": {
+      "common_name": "Wildes Stiefmütterchen",
+      "description": "Viola tricolor ist eine kleine Blütenpflanze aus Europa. Sie mag kühle Temperaturen und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Pensée sauvage",
+      "description": "Viola tricolor est une petite plante fleurie originaire d’Europe. Elle apprécie les climats frais et un sol humide."
+    },
+    "it": {
+      "common_name": "Viola del pensiero",
+      "description": "Viola tricolor è una piccola pianta fiorita europea. Cresce bene in climi freschi con luce moderata."
+    },
+    "es": {
+      "common_name": "Pensamiento silvestre",
+      "description": "Viola tricolor es una planta pequeña originaria de Europa. Prefiere temperaturas frescas y riego regular."
+    },
+    "pt": {
+      "common_name": "Amor-perfeito-silvestre",
+      "description": "Viola tricolor é uma planta florida europeia. Desenvolve-se melhor em clima fresco e solo úmido."
+    },
+    "ar": {
+      "common_name": "البنفسج البري",
+      "description": "نبات Viola tricolor مزهر صغير موطنه أوروبا. يفضل الطقس المعتدل والتربة الرطبة."
+    },
+    "hi": {
+      "common_name": "जंगली पैंसी",
+      "description": "Viola tricolor यूरोप का छोटा फूलदार पौधा है। यह ठंडे मौसम और नियमित सिंचाई को पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "三色堇",
+      "description": "Viola tricolor 原产于欧洲，是一种小型开花植物。适合凉爽气候和湿润土壤。"
+    },
+    "ja": {
+      "common_name": "ビオラ・トリカラー",
+      "description": "Viola tricolor はヨーロッパ原産の小型植物です。涼しい環境と適度な水分を好みます。"
+    },
+    "ko": {
+      "common_name": "야생 팬지",
+      "description": "Viola tricolor는 유럽 원산의 작은 개화 식물입니다. 서늘한 기온과 적당한 물을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/viola",
+      "https://www.gardenersworld.com/plants/viola-tricolor/"
+    ]
+  }
+}

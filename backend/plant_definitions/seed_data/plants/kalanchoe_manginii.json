@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_manginii",
+  "name": "Kalanchoe Manginii",
+  "latin": "Kalanchoe manginii",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_manginii.jpg",
+  "image_thumb": "kalanchoe_manginii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–25°C",
+          "pl": "18–25°C",
+          "de": "18–25°C",
+          "fr": "18–25°C",
+          "it": "18–25°C",
+          "es": "18–25°C",
+          "pt": "18–25°C",
+          "ar": "18–25°م",
+          "hi": "18–25°C",
+          "zh": "18–25°C",
+          "ja": "18–25°C",
+          "ko": "18–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू हेतु विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chandelier Plant",
+      "description": "Kalanchoe manginii is a succulent from Madagascar known for its hanging bell-shaped flowers. It thrives indoors with bright light and minimal watering. Overwatering can cause root rot."
+    },
+    "pl": {
+      "common_name": "Kalanchoe zwisające",
+      "description": "Kalanchoe manginii to sukulent z Madagaskaru o zwisających kwiatach. Dobrze rośnie w jasnym miejscu i wymaga rzadkiego podlewania. Nadmiar wody szkodzi korzeniom."
+    },
+    "de": {
+      "common_name": "Glocken-Kalanchoe",
+      "description": "Kalanchoe manginii stammt aus Madagaskar und hat hängende Blüten. Sie benötigt viel Licht und wenig Wasser. Staunässe vermeiden."
+    },
+    "fr": {
+      "common_name": "Kalanchoé manginii",
+      "description": "Kalanchoe manginii est une plante succulente de Madagascar. Elle préfère une lumière vive et un arrosage limité. Un sol bien drainé est essentiel."
+    },
+    "it": {
+      "common_name": "Kalanchoe pendente",
+      "description": "Kalanchoe manginii è una succulenta del Madagascar con fiori pendenti. Ama la luce intensa e poca acqua. Evitare ristagni."
+    },
+    "es": {
+      "common_name": "Kalanchoe colgante",
+      "description": "Kalanchoe manginii es una suculenta de Madagascar. Necesita mucha luz y riego escaso. El exceso de agua provoca pudrición."
+    },
+    "pt": {
+      "common_name": "Kalanchoe pendente",
+      "description": "Kalanchoe manginii é uma suculenta de Madagascar. Cresce bem com luz intensa e pouca água. O solo deve drenar bem."
+    },
+    "ar": {
+      "common_name": "كالانشو متدلي",
+      "description": "نبات كالانشو مانجيني عصاري من مدغشقر. يحتاج إلى ضوء ساطع وري قليل. التربة الجيدة التصريف ضرورية."
+    },
+    "hi": {
+      "common_name": "झूलता कैलेंको",
+      "description": "कैलेंको मैंगिनी मेडागास्कर का एक रसीला पौधा है। इसे तेज रोशनी और कम पानी चाहिए। अधिक पानी से नुकसान होता है।"
+    },
+    "zh": {
+      "common_name": "垂吊伽蓝菜",
+      "description": "伽蓝菜原产马达加斯加，为多肉植物。喜欢明亮光照和少量浇水。需良好排水土壤。"
+    },
+    "ja": {
+      "common_name": "カランコエ・マンギニー",
+      "description": "カランコエ・マンギニーはマダガスカル原産の多肉植物です。明るい光と控えめな水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "칼랑코에 만기니",
+      "description": "칼랑코에 만기니는 마다가스카르 원산의 다육식물입니다. 밝은 빛과 적은 물을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9409/kalanchoe-manginii/details",
+      "https://plants.ces.ncsu.edu/plants/kalanchoe-manginii/",
+      "https://www.gardenersworld.com/plants/kalanchoe-manginii/"
+    ]
+  }
+}

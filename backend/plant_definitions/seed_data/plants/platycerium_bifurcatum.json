@@ -1,0 +1,237 @@
+{
+  "external_id": "platycerium_bifurcatum",
+  "name": "Staghorn Fern",
+  "latin": "Platycerium bifurcatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "platycerium_bifurcatum.jpg",
+  "image_thumb": "platycerium_bifurcatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, orchid mix",
+          "pl": "Kwaśna, mieszanka orchidei",
+          "de": "Saurer, Orchideenmix",
+          "fr": "Mélange acide, orchidée",
+          "it": "Acido, miscela per orchidee",
+          "es": "Acídico, mezcla de orquídeas",
+          "pt": "Ácido, mistura para orquídeas",
+          "ar": "حمضي، خليط للأوركيد",
+          "hi": "अम्लीय, ऑर्किड मिश्रण",
+          "zh": "酸性, 兰花混合土",
+          "ja": "酸性、蘭の土壌混合物",
+          "ko": "산성, 난초 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis moderat",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢至中等",
+          "ja": "遅いから中程度",
+          "ko": "느리게부터 중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Staghorn Fern",
+      "description": "The Staghorn Fern is an epiphytic plant with large, bifurcated fronds. It thrives in warm, humid environments and is often found growing on tree trunks."
+    },
+    "pl": {
+      "common_name": "Pterygium jelenie",
+      "description": "Pterygium jelenie to epifityczna roślina z dużymi, rozgałęzionymi liśćmi. Rośnie w ciepłych, wilgotnych warunkach, często na pniach drzew."
+    },
+    "de": {
+      "common_name": "Hirschhornfarn",
+      "description": "Der Hirschhornfarn ist eine epiphytische Pflanze mit großen, verzweigten Blättern. Er gedeiht in warmen, feuchten Umgebungen und wächst oft auf Baumstämmen."
+    },
+    "fr": {
+      "common_name": "Fougère cerf",
+      "description": "La fougère cerf est une plante épiphyte avec de grandes frondes bifurquées. Elle prospère dans des environnements chauds et humides, souvent sur les troncs d'arbres."
+    },
+    "it": {
+      "common_name": "Felce corna di cervo",
+      "description": "La felce corna di cervo è una pianta epifita con grandi fronde biforcate. Cresce in ambienti caldi e umidi, spesso sui tronchi degli alberi."
+    },
+    "es": {
+      "common_name": "Helecho cuerno de alce",
+      "description": "El helecho cuerno de alce es una planta epífita con grandes frondas bifurcadas. Crece en ambientes cálidos y húmedos, a menudo sobre los troncos de los árboles."
+    },
+    "pt": {
+      "common_name": "Samambaia chifre de alce",
+      "description": "A samambaia chifre de alce é uma planta epífita com grandes frondes bifurcadas. Cresce em ambientes quentes e úmidos, frequentemente sobre troncos de árvores."
+    },
+    "ar": {
+      "common_name": "سرخس قرن الأيل",
+      "description": "سرخس قرن الأيل هو نبات إبيفيتي ذو أوراق متفرعة كبيرة. ينمو في بيئات دافئة ورطبة وغالبًا ما ينمو على جذوع الأشجار."
+    },
+    "hi": {
+      "common_name": "गांठ फर्न",
+      "description": "गांठ फर्न एक एपिफाइटिक पौधा है जिसकी बड़ी, bifurcated पत्तियां होती हैं। यह गर्म, आर्द्र वातावरण में पनपता है और अक्सर वृक्षों की छाल पर उगता है।"
+    },
+    "zh": {
+      "common_name": "鹿角蕨",
+      "description": "鹿角蕨是一种附生植物，具有大型分叉的叶子。它在温暖湿润的环境中生长，通常生长在树干上。"
+    },
+    "ja": {
+      "common_name": "鹿角シダ",
+      "description": "鹿角シダは大きな分岐した葉を持つ着生植物です。温暖で湿度の高い環境で繁茂し、しばしば木の幹に生えています。"
+    },
+    "ko": {
+      "common_name": "사슴뿔고사리",
+      "description": "사슴뿔고사리는 큰 갈라진 잎을 가진 착생 식물입니다. 따뜻하고 습한 환경에서 자라며 종종 나무의 줄기에 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=825",
+      "https://www.bhg.com/gardening/pests-diseases/insects-diseases-pests/staghorn-fern-care/"
+    ]
+  }
+}

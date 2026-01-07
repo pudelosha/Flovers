@@ -1,0 +1,238 @@
+{
+  "external_id": "ipomoea_batatas",
+  "name": "Sweet Potato Vine",
+  "latin": "Ipomoea batatas",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "ipomoea_batatas.jpg",
+  "image_thumb": "ipomoea_batatas.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loose fertile soil",
+          "pl": "Luźna gleba",
+          "de": "Lockerer Boden",
+          "fr": "Sol meuble",
+          "it": "Terreno sciolto",
+          "es": "Suelo suelto",
+          "pt": "Solo solto",
+          "ar": "تربة خفيفة",
+          "hi": "ढीली मिट्टी",
+          "zh": "疏松土壤",
+          "ja": "水はけ土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing vine",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweet Potato",
+      "description": "Ipomoea batatas is a warm-season vine grown for its edible tubers and ornamental foliage. It needs strong light and consistent watering. Indoors it is usually grown as a foliage plant rather than for harvest."
+    },
+    "pl": {
+      "common_name": "Bataty",
+      "description": "Ipomoea batatas to ciepłolubne pnącze uprawiane dla jadalnych bulw i liści. Wymaga dużo światła i regularnego podlewania. W domu pełni głównie funkcję ozdobną."
+    },
+    "de": {
+      "common_name": "Süßkartoffel",
+      "description": "Ipomoea batatas ist eine wärmeliebende Pflanze mit rankendem Wuchs. Sie benötigt viel Licht und gleichmäßige Wassergaben. In Innenräumen wird sie meist als Zierpflanze gehalten."
+    },
+    "fr": {
+      "common_name": "Patate douce",
+      "description": "Ipomoea batatas est une plante tropicale cultivée pour ses tubercules et son feuillage. Elle demande une forte luminosité et un arrosage régulier. En intérieur, elle est surtout décorative."
+    },
+    "it": {
+      "common_name": "Patata dolce",
+      "description": "Ipomoea batatas è una pianta rampicante amante del caldo. Richiede molta luce e annaffiature regolari. In casa viene coltivata soprattutto per le foglie."
+    },
+    "es": {
+      "common_name": "Batata",
+      "description": "Ipomoea batatas es una planta tropical de crecimiento rápido. Necesita sol intenso y riego constante. En interior se cultiva principalmente como ornamental."
+    },
+    "pt": {
+      "common_name": "Batata-doce",
+      "description": "Ipomoea batatas é uma planta de clima quente cultivada pelos seus tubérculos. Precisa de muita luz e rega regular. Em ambientes internos é usada como ornamental."
+    },
+    "ar": {
+      "common_name": "البطاطا الحلوة",
+      "description": "Ipomoea batatas نبات محب للحرارة ينمو كمتسلق. يحتاج إلى ضوء قوي وري منتظم. يزرع داخليًا غالبًا لأوراقه."
+    },
+    "hi": {
+      "common_name": "शकरकंद",
+      "description": "Ipomoea batatas एक गर्म जलवायु की बेल है। इसे तेज़ रोशनी और नियमित पानी की आवश्यकता होती है। घर के अंदर इसे सजावटी रूप में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "红薯",
+      "description": "Ipomoea batatas 是喜温植物，生长迅速。需要充足光照和规律浇水。室内多作为观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "サツマイモ",
+      "description": "Ipomoea batatas は暖かい環境を好むつる性植物です。強い光と定期的な水やりが必要です。室内では観葉目的で育てられます。"
+    },
+    "ko": {
+      "common_name": "고구마",
+      "description": "Ipomoea batatas 는 따뜻한 기후를 좋아하는 덩굴식물입니다. 밝은 빛과 규칙적인 물주기가 필요합니다. 실내에서는 관엽용으로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://edis.ifas.ufl.edu/publication/HS1310",
+      "https://www.rhs.org.uk/plants/9176/ipomoea-batatas/details",
+      "https://plants.ces.ncsu.edu/plants/ipomoea-batatas/"
+    ]
+  }
+}

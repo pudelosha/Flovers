@@ -1,0 +1,236 @@
+{
+  "external_id": "pleiospilos_nelii",
+  "name": "Pleiospilos nelii",
+  "latin": "Pleiospilos nelii",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pleiospilos_nelii.jpg",
+  "image_thumb": "pleiospilos_nelii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysta",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेतीला",
+          "zh": "沙土",
+          "ja": "砂地",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "低い",
+          "ko": "적은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Split Rock",
+      "description": "Pleiospilos nelii, also known as the Split Rock, is a hardy succulent native to southern Africa. It features unique, rounded leaves that split to reveal striking orange flowers."
+    },
+    "pl": {
+      "common_name": "Rozdarty Kamień",
+      "description": "Pleiospilos nelii, znany również jako Rozdarty Kamień, to wytrzymały sukulent pochodzący z południowej Afryki. Charakteryzuje się unikalnymi, okrągłymi liśćmi, które pękają, odsłaniając jaskrawe pomarańczowe kwiaty."
+    },
+    "de": {
+      "common_name": "Spaltstein",
+      "description": "Pleiospilos nelii, auch bekannt als Spaltstein, ist eine robuste Sukkulente aus Südafrika. Sie hat einzigartige, runde Blätter, die sich spalten und leuchtend orange Blumen enthüllen."
+    },
+    "fr": {
+      "common_name": "Pierre Fendue",
+      "description": "Pleiospilos nelii, également connu sous le nom de Pierre Fendue, est une succulente robuste originaire d'Afrique du Sud. Ses feuilles arrondies se fendent pour révéler de magnifiques fleurs oranges."
+    },
+    "it": {
+      "common_name": "Pietra Divisa",
+      "description": "Pleiospilos nelii, conosciuta anche come Pietra Divisa, è una succulenta resistente originaria del Sud Africa. Le sue foglie arrotondate si dividono per rivelare fiori arancioni brillanti."
+    },
+    "es": {
+      "common_name": "Roca Dividida",
+      "description": "Pleiospilos nelii, también conocida como Roca Dividida, es una suculenta resistente originaria de Sudáfrica. Presenta hojas redondeadas que se abren para revelar flores naranjas brillantes."
+    },
+    "pt": {
+      "common_name": "Pedra Fendida",
+      "description": "Pleiospilos nelii, também conhecida como Pedra Fendida, é uma suculenta resistente originária da África do Sul. Suas folhas arredondadas se dividem para revelar flores laranjas brilhantes."
+    },
+    "ar": {
+      "common_name": "الصخرة المشقوقة",
+      "description": "Pleiospilos nelii، والمعروفة أيضًا باسم الصخرة المشقوقة، هي نبتة عصارية قاسية موطنها جنوب إفريقيا. تتميز بأوراق دائرية تنشق لتكشف عن زهور برتقالية لامعة."
+    },
+    "hi": {
+      "common_name": "स्प्लिट रॉक",
+      "description": "Pleiospilos nelii, जिसे स्प्लिट रॉक के नाम से भी जाना जाता है, दक्षिण अफ्रीका का एक कठोर पौधा है। इसकी गोल पत्तियाँ फटती हैं और चमकदार नारंगी फूल दिखाई देते हैं।"
+    },
+    "zh": {
+      "common_name": "裂石",
+      "description": "Pleiospilos nelii，也叫裂石，是一种坚韧的多肉植物，原产于南非。它的圆形叶片裂开，露出鲜艳的橙色花朵。"
+    },
+    "ja": {
+      "common_name": "スプリットロック",
+      "description": "Pleiospilos nelii、またはスプリットロックは、南アフリカ原産の頑強な多肉植物です。その丸い葉が割れて鮮やかなオレンジ色の花を見せます。"
+    },
+    "ko": {
+      "common_name": "스플릿 록",
+      "description": "Pleiospilos nelii, 또는 스플릿 록은 남아프리카 원산지의 튼튼한 다육식물입니다. 그 원형의 잎이 갈라져 선명한 주황색 꽃을 드러냅니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.succulentguide.com/pleiospilos-nelii-care",
+      "https://www.botanicgardens.com/plant-care/pleiospilos-nelii"
+    ]
+  }
+}

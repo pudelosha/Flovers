@@ -1,0 +1,237 @@
+{
+  "external_id": "pleione_formosana",
+  "name": "Pleione formosana",
+  "latin": "Pleione formosana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "pleione_formosana.jpg",
+  "image_thumb": "pleione_formosana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácido",
+          "pt": "ácido",
+          "ar": "حمضي",
+          "hi": "अम्लीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Formosan Pleione",
+      "description": "Pleione formosana is an orchid species native to Taiwan, known for its attractive pink and white flowers. It grows best in shaded environments with moist, acidic soil."
+    },
+    "pl": {
+      "common_name": "Pleione formosana",
+      "description": "Pleione formosana to gatunek storczyka pochodzący z Tajwanu, znany ze swoich atrakcyjnych różowych i białych kwiatów. Rośnie najlepiej w zacienionych miejscach z wilgotną, kwaśną glebą."
+    },
+    "de": {
+      "common_name": "Formosanische Pleione",
+      "description": "Pleione formosana ist eine Orchideenart aus Taiwan, bekannt für ihre attraktiven rosa-weißen Blüten. Sie gedeiht am besten in schattigen Umgebungen mit feuchtem, saurem Boden."
+    },
+    "fr": {
+      "common_name": "Pleione de Formose",
+      "description": "La Pleione formosana est une espèce d'orchidée originaire de Taïwan, connue pour ses fleurs roses et blanches attrayantes. Elle pousse mieux dans des environnements ombragés avec un sol acide et humide."
+    },
+    "it": {
+      "common_name": "Pleione di Formosa",
+      "description": "Pleione formosana è una specie di orchidea originaria di Taiwan, conosciuta per i suoi fiori rosa e bianchi attraenti. Cresce meglio in ambienti ombreggiati con terreno acido e umido."
+    },
+    "es": {
+      "common_name": "Pleione de Formosa",
+      "description": "La Pleione formosana es una especie de orquídea originaria de Taiwán, conocida por sus atractivas flores rosadas y blancas. Crece mejor en ambientes sombreados con suelo ácido y húmedo."
+    },
+    "pt": {
+      "common_name": "Pleione de Formosa",
+      "description": "A Pleione formosana é uma espécie de orquídea nativa de Taiwan, conhecida por suas flores atraentes de cor rosa e branca. Cresce melhor em ambientes sombreados com solo ácido e úmido."
+    },
+    "ar": {
+      "common_name": "بليوني فورموسانا",
+      "description": "بليوني فورموسانا هي نوع من الأوركيد موطنها تايوان، وتشتهر بزهورها الجذابة ذات اللون الوردي والأبيض. تنمو بشكل أفضل في البيئات المظللة مع تربة حمضية ورطبة."
+    },
+    "hi": {
+      "common_name": "फॉर्मोसा प्लीओन",
+      "description": "प्लीओन फॉर्मोसा एक ऑर्किड प्रजाति है जो ताइवान से उत्पन्न होती है, जो अपनी आकर्षक गुलाबी और सफेद फूलों के लिए जानी जाती है। यह सबसे अच्छा छायादार वातावरण में नम, अम्लीय मिट्टी में उगती है।"
+    },
+    "zh": {
+      "common_name": "福尔摩沙兰花",
+      "description": "福尔摩沙兰花是原产于台湾的兰花种类，以其迷人的粉红色和白色花朵而闻名。它在阴凉的环境中与湿润的酸性土壤中生长最佳。"
+    },
+    "ja": {
+      "common_name": "フォルモサのプレイオネ",
+      "description": "プレイオネ・フォルモサは台湾原産のラン科の植物で、魅力的なピンクと白の花で知られています。湿った酸性土壌で日陰の環境で最良に育ちます。"
+    },
+    "ko": {
+      "common_name": "포모사 플레이오네",
+      "description": "플레이오네 포모사 는 대만 원산의 난초로, 매력적인 분홍색과 흰색 꽃으로 유명합니다. 그늘이 진 환경에서 습하고 산성인 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.orchidaceae.com/pleione-formosana",
+      "https://www.botanicalgardens.org/pleione-care"
+    ]
+  }
+}

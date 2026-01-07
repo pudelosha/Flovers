@@ -1,0 +1,239 @@
+{
+  "external_id": "humata_tyermanii",
+  "name": "Rabbit's foot fern",
+  "latin": "Humata tyermanii",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "humata_tyermanii.jpg",
+  "image_thumb": "humata_tyermanii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles, indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist, well-drained",
+          "pl": "Wilgotne, przepuszcz",
+          "de": "Feucht, durchlässig",
+          "fr": "Humide, drainant",
+          "it": "Umido, drenante",
+          "es": "Húmedo y drenante",
+          "pt": "Úmido e drenante",
+          "ar": "رطب وجيد الصرف",
+          "hi": "नम, अच्छा जलनिकास",
+          "zh": "湿润且排水好",
+          "ja": "湿り気と排水",
+          "ko": "촉촉 배수 좋게"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale lekko wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Garder humide",
+          "it": "Sempre leggermente umido",
+          "es": "Mantener húmedo",
+          "pt": "Manter úmido",
+          "ar": "حافظ على رطوبة",
+          "hi": "सदा हल्की नमी",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर-विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolno rosnąca",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "ゆっくり成長",
+          "ko": "느리게 자람"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rabbit's foot fern",
+      "description": "Humata tyermanii is an epiphytic fern with furry creeping rhizomes that often grow over the pot rim. It prefers bright, filtered light and consistently moist but well-drained substrate. Provide warm temperatures and higher humidity for best frond quality."
+    },
+    "pl": {
+      "common_name": "Paproć królicza łapka",
+      "description": "Humata tyermanii to paproć epifityczna z owłosionymi, płożącymi kłączami, które często przerastają przez brzeg doniczki. Lubi jasne, rozproszone światło oraz stale lekko wilgotne, ale przepuszczalne podłoże. Najlepiej rośnie w cieple i przy podwyższonej wilgotności powietrza."
+    },
+    "de": {
+      "common_name": "Kaninchenpfotenfarn",
+      "description": "Humata tyermanii ist ein epiphytischer Farn mit behaarten, kriechenden Rhizomen, die oft über den Topfrand wachsen. Er mag helles, gefiltertes Licht und gleichmäßig feuchtes, gut drainiertes Substrat. Warme Temperaturen und höhere Luftfeuchte unterstützen gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Fougère patte de lapin",
+      "description": "Humata tyermanii est une fougère épiphyte aux rhizomes duveteux qui rampent souvent sur le bord du pot. Elle préfère une lumière vive indirecte et un substrat constamment humide mais drainant. Une température douce et une humidité élevée améliorent la qualité du feuillage."
+    },
+    "it": {
+      "common_name": "Felce zampa di coniglio",
+      "description": "Humata tyermanii è una felce epifita con rizomi pelosi e striscianti che spesso ricadono dal vaso. Preferisce luce intensa indiretta e un substrato sempre leggermente umido ma ben drenante. Temperature calde e umidità alta favoriscono fronde sane."
+    },
+    "es": {
+      "common_name": "Helecho pata de conejo",
+      "description": "Humata tyermanii es un helecho epífito con rizomas peludos y rastreros que a menudo sobresalen por el borde de la maceta. Prefiere luz brillante indirecta y un sustrato constantemente húmedo pero bien drenado. Mantén temperaturas cálidas y humedad alta para un follaje de mejor calidad."
+    },
+    "pt": {
+      "common_name": "Samambaia-pé-de-coelho",
+      "description": "Humata tyermanii é uma samambaia epífita com rizomas felpudos e rastejantes que costumam passar pela borda do vaso. Prefere luz indireta brilhante e substrato sempre úmido, porém bem drenado. Temperaturas amenas a quentes e umidade alta ajudam a manter as frondes bonitas."
+    },
+    "ar": {
+      "common_name": "سرخس قدم الأرنب",
+      "description": "Humata tyermanii سرخس هوائي ذو جذامير زاحفة مكسوّة بزغب غالبًا ما تمتد فوق حافة الأصيص. يفضّل ضوءًا ساطعًا غير مباشر وتربة رطبة باستمرار مع تصريف جيد. الحرارة الدافئة والرطوبة العالية تساعدان على نمو أوراق صحية."
+    },
+    "hi": {
+      "common_name": "खरगोश-पैर फर्न",
+      "description": "Humata tyermanii एक एपिफाइटिक फर्न है जिसकी रोएँदार राइजोम अक्सर गमले के किनारे पर फैलती हैं। इसे तेज़ अप्रत्यक्ष रोशनी और हमेशा हल्की नमी वाली, अच्छी जलनिकासी वाली मिट्टी पसंद है। गरम तापमान और अधिक आर्द्रता से पत्तियाँ बेहतर रहती हैं।"
+    },
+    "zh": {
+      "common_name": "兔脚蕨",
+      "description": "Humata tyermanii 为附生蕨类，具绒毛状匍匐根茎，常沿盆缘外伸。喜明亮散射光，基质需保持均匀湿润但排水良好。温暖环境与较高湿度有助于叶片健康。"
+    },
+    "ja": {
+      "common_name": "ウサギノアシシダ",
+      "description": "Humata tyermanii は鉢縁に這い出る毛のある根茎が特徴の着生シダです。明るい間接光で、用土は排水を確保しつつ均一に湿らせます。暖かさと高湿度が葉の状態を良くします。"
+    },
+    "ko": {
+      "common_name": "토끼발 고사리",
+      "description": "Humata tyermanii 는 화분 가장자리로 뻗는 털이 많은 뿌리줄기가 특징인 착생 양치식물입니다. 밝은 간접광과 배수가 좋으면서도 고르게 촉촉한 흙을 좋아합니다. 따뜻한 온도와 높은 습도가 잎 상태를 개선합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/377822/humata-tyermanii/details",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:17120770-1",
+      "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/rabbits-foot-fern",
+      "https://www.thespruce.com/grow-davallia-species-indoors-1902720"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "sedum_rupestre",
+  "name": "Reflexed Stonecrop",
+  "latin": "Sedum rupestre",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sedum_rupestre.jpg",
+  "image_thumb": "sedum_rupestre.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Voller Sonnenschein",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sableux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂質土壌",
+          "ko": "모래토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
+          "de": "Geringes Wässern",
+          "fr": "Arrosage faible",
+          "it": "Annaffiatura bassa",
+          "es": "Riego bajo",
+          "pt": "Rega baixa",
+          "ar": "ري منخفض",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "少ない水やり",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow-growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीरे-धीरे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "遅い成長",
+          "ko": "느리게 자라는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre is a small, drought-tolerant succulent. It has needle-like blue-green leaves and thrives in rocky, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre to mała, odporna na suszę roślina sukulentowa. Ma igiełkowate, niebiesko-zielone liście i rośnie w skalistych, dobrze przepuszczających wodę glebach."
+    },
+    "de": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre ist eine kleine, dürretolerante Sukkulente. Sie hat nadelartige, blaugrüne Blätter und gedeiht in felsigem, gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre est une petite plante succulente résistante à la sécheresse. Elle a des feuilles en forme d'aiguilles de couleur bleu-vert et prospère dans un sol rocheux et bien drainé."
+    },
+    "it": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre è una piccola pianta succulenta resistente alla siccità. Ha foglie sottili di colore verde-blu e cresce in terreni rocciosi e ben drenati."
+    },
+    "es": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre es una pequeña suculenta tolerante a la sequía. Tiene hojas en forma de aguja de color verde azulado y prospera en suelos rocosos y bien drenados."
+    },
+    "pt": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre é uma pequena planta suculenta resistente à seca. Tem folhas em forma de agulha de cor azul-esverdeada e cresce em solos rochosos e bem drenados."
+    },
+    "ar": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre هي نبتة عصارية صغيرة مقاومة للجفاف. تحتوي على أوراق إبرية باللون الأزرق-الأخضر وتزدهر في التربة الصخرية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre एक छोटी, सूखा सहन करने वाली मांसल पौधा है। इसके पास नीले-हरे रंग के सुई जैसे पत्ते होते हैं और यह चट्टानी, अच्छी तरह से जल निकासी वाली मिट्टी में उगता है।"
+    },
+    "zh": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre 是一种小型的耐旱多肉植物。它具有蓝绿色的针状叶子，并在岩石和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre は小さな乾燥に強い多肉植物です。針のような青緑色の葉を持ち、岩だらけの排水性の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "Reflexed Stonecrop",
+      "description": "Sedum rupestre는 작은 내건성 다육 식물입니다. 파란색-녹색의 바늘 모양의 잎을 가지고 있으며, 바위가 많은 배수성이 좋은 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/13780/Sedum-rupestre/Details",
+      "https://www.gardenia.net/plant/sedum-rupestre"
+    ]
+  }
+}

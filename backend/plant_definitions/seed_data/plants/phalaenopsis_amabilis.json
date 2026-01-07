@@ -1,0 +1,237 @@
+{
+  "external_id": "phalaenopsis_amabilis",
+  "name": "Moth Orchid",
+  "latin": "Phalaenopsis amabilis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "phalaenopsis_amabilis.jpg",
+  "image_thumb": "phalaenopsis_amabilis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Orchid",
+          "pl": "Orchidea",
+          "de": "Orchidee",
+          "fr": "Orchidée",
+          "it": "Orchidea",
+          "es": "Orquídea",
+          "pt": "Orquídea",
+          "ar": "زهرة الأوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "ラン",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnio",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Moth Orchid",
+      "description": "Phalaenopsis amabilis, also known as the Moth Orchid, is a tropical epiphytic orchid native to Southeast Asia. It is popular for its large, showy white flowers and is commonly grown indoors as an ornamental plant."
+    },
+    "pl": {
+      "common_name": "Orchidea Moth",
+      "description": "Phalaenopsis amabilis, znana jako Orchidea Moth, jest tropikalną epifityczną orchideą pochodzącą z Azji Południowo-Wschodniej. Cieszy się popularnością ze względu na duże, efektowne białe kwiaty i jest często hodowana w pomieszczeniach jako roślina ozdobna."
+    },
+    "de": {
+      "common_name": "Mottorchidee",
+      "description": "Phalaenopsis amabilis, auch bekannt als Mottorchidee, ist eine tropische epiphytische Orchidee aus Südostasien. Sie ist aufgrund ihrer großen, auffälligen weißen Blüten sehr beliebt und wird häufig als Zierpflanze in Innenräumen gezüchtet."
+    },
+    "fr": {
+      "common_name": "Orchidée Papillon",
+      "description": "Phalaenopsis amabilis, également connue sous le nom d'Orchidée Papillon, est une orchidée épiphyte tropicale originaire d'Asie du Sud-Est. Elle est populaire pour ses grandes fleurs blanches spectaculaires et est couramment cultivée en intérieur comme plante ornementale."
+    },
+    "it": {
+      "common_name": "Orchidea Falena",
+      "description": "Phalaenopsis amabilis, conosciuta anche come Orchidea Falena, è un'orchidea epifita tropicale originaria del Sud-est asiatico. È apprezzata per i suoi grandi fiori bianchi e viene comunemente coltivata in ambienti chiusi come pianta ornamentale."
+    },
+    "es": {
+      "common_name": "Orquídea Polilla",
+      "description": "Phalaenopsis amabilis, también conocida como Orquídea Polilla, es una orquídea epifita tropical originaria del sudeste asiático. Es popular por sus grandes flores blancas y se cultiva comúnmente en interiores como planta ornamental."
+    },
+    "pt": {
+      "common_name": "Orquídea Moth",
+      "description": "Phalaenopsis amabilis, também conhecida como Orquídea Moth, é uma orquídea epífita tropical originária do sudeste asiático. É popular por suas grandes flores brancas e é comumente cultivada em ambientes internos como planta ornamental."
+    },
+    "ar": {
+      "common_name": "زهرة الفراشة",
+      "description": "Phalaenopsis amabilis، والمعروفة أيضًا باسم زهرة الفراشة، هي أوركيدية استوائية إبفيتية نشأت في جنوب شرق آسيا. تشتهر بزهورها البيضاء الكبيرة، وغالبًا ما تزرع كزهرة زينة في الأماكن الداخلية."
+    },
+    "hi": {
+      "common_name": "मथ ऑर्किड",
+      "description": "फालानेप्सिस अमाबिलिस, जिसे मथ ऑर्किड भी कहा जाता है, दक्षिण-पूर्वी एशिया का एक उष्णकटिबंधीय एपिफाइटिक ऑर्किड है। इसके बड़े सफेद फूलों के लिए प्रसिद्ध है और इसे आमतौर पर सजावटी पौधे के रूप में अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "飞蛾兰",
+      "description": "Phalaenopsis amabilis，又名飞蛾兰，是一种原产于东南亚的热带附生兰花。因其大型白色花朵而受欢迎，通常作为观赏植物在室内栽培。"
+    },
+    "ja": {
+      "common_name": "モスオーキッド",
+      "description": "Phalaenopsis amabilis（モスオーキッド）は、東南アジア原産の熱帯性の着生ランです。大きな白い花が特徴で、観賞用植物として室内で栽培されています。"
+    },
+    "ko": {
+      "common_name": "나방 난초",
+      "description": "Phalaenopsis amabilis, 또는 나방 난초는 동남아시아 원산의 열대 착생 난초입니다. 큰 흰색 꽃이 특징이며, 주로 실내에서 장식용 식물로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/phalaenopsis-amabilis",
+      "https://www.bhg.com/gardening/pests/insects-diseases-and-pests/phalaenopsis-orchids-care/"
+    ]
+  }
+}

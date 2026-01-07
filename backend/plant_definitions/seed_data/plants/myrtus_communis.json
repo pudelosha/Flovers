@@ -1,0 +1,237 @@
+{
+  "external_id": "myrtus_communis",
+  "name": "Common myrtle",
+  "latin": "Myrtus communis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "myrtus_communis.jpg",
+  "image_thumb": "myrtus_communis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "شمس ساطعة",
+          "hi": "तेज धूप",
+          "zh": "强光",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well drained",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–25°C",
+          "pl": "10–25°C",
+          "de": "10–25°C",
+          "fr": "10–25°C",
+          "it": "10–25°C",
+          "es": "10–25°C",
+          "pt": "10–25°C",
+          "ar": "10–25°م",
+          "hi": "10–25°C",
+          "zh": "10–25°C",
+          "ja": "10–25°C",
+          "ko": "10–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Woody shrub",
+          "pl": "Krzew",
+          "de": "Strauch",
+          "fr": "Arbuste",
+          "it": "Arbusto",
+          "es": "Arbusto",
+          "pt": "Arbusto",
+          "ar": "شجيرة",
+          "hi": "झाड़ी",
+          "zh": "灌木",
+          "ja": "低木",
+          "ko": "관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common myrtle",
+      "description": "Myrtus communis is an evergreen shrub native to the Mediterranean region. It prefers bright sunlight and well-drained soil. Indoors, it grows slowly and benefits from regular pruning."
+    },
+    "pl": {
+      "common_name": "Mirt zwyczajny",
+      "description": "Myrtus communis to zimozielony krzew pochodzący z regionu śródziemnomorskiego. Lubi jasne stanowiska i przepuszczalną glebę. W uprawie domowej rośnie wolno."
+    },
+    "de": {
+      "common_name": "Echte Myrte",
+      "description": "Myrtus communis ist ein immergrüner Strauch aus dem Mittelmeerraum. Er benötigt viel Licht und gut durchlässigen Boden. In Innenräumen wächst er eher langsam."
+    },
+    "fr": {
+      "common_name": "Myrte commune",
+      "description": "Myrtus communis est un arbuste persistant originaire du bassin méditerranéen. Il apprécie le plein soleil et un sol bien drainé. Sa croissance en intérieur est modérée."
+    },
+    "it": {
+      "common_name": "Mirto comune",
+      "description": "Myrtus communis è un arbusto sempreverde originario del Mediterraneo. Predilige luce intensa e terreni ben drenati. In vaso cresce lentamente."
+    },
+    "es": {
+      "common_name": "Mirto común",
+      "description": "Myrtus communis es un arbusto perenne originario del Mediterráneo. Requiere mucha luz y suelo bien drenado. En interior su crecimiento es lento."
+    },
+    "pt": {
+      "common_name": "Murta-comum",
+      "description": "Myrtus communis é um arbusto perene nativo da região mediterrânea. Prefere sol pleno e solo bem drenado. Em ambientes internos cresce de forma moderada."
+    },
+    "ar": {
+      "common_name": "الآس الشائع",
+      "description": "نبات Myrtus communis شجيرة دائمة الخضرة موطنها منطقة البحر المتوسط. تحتاج إلى ضوء قوي وتربة جيدة التصريف. نموها داخليًا معتدل."
+    },
+    "hi": {
+      "common_name": "मर्टल",
+      "description": "Myrtus communis भूमध्यसागरीय क्षेत्र की सदाबहार झाड़ी है। इसे तेज धूप और अच्छी जल निकास वाली मिट्टी पसंद है। घर के अंदर इसकी वृद्धि धीमी होती है।"
+    },
+    "zh": {
+      "common_name": "香桃木",
+      "description": "Myrtus communis 是原产于地中海地区的常绿灌木。它需要充足的阳光和良好排水的土壤。室内生长速度较慢。"
+    },
+    "ja": {
+      "common_name": "ギンバイカ",
+      "description": "Myrtus communis は地中海原産の常緑低木です。強い日光と水はけの良い土を好みます。室内では成長は緩やかです。"
+    },
+    "ko": {
+      "common_name": "머틀",
+      "description": "Myrtus communis는 지중해 지역 원산의 상록 관목입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 실내에서는 천천히 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11408/myrtus-communis/details",
+      "https://www.gardenia.net/plant/myrtus-communis-common-myrtle",
+      "https://plants.ces.ncsu.edu/plants/myrtus-communis/"
+    ]
+  }
+}

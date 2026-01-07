@@ -1,0 +1,237 @@
+{
+  "external_id": "strelitzia_alba",
+  "name": "White Bird of Paradise",
+  "latin": "Strelitzia alba",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "strelitzia_alba.jpg",
+  "image_thumb": "strelitzia_alba.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "काली मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "White Bird of Paradise",
+      "description": "Strelitzia alba is a striking tropical plant native to South Africa. It features large, glossy leaves and white flowers with delicate pale pink hues."
+    },
+    "pl": {
+      "common_name": "Biała ptasia radość",
+      "description": "Strelitzia alba to uderzająca roślina tropikalna pochodząca z Południowej Afryki. Charakteryzuje się dużymi, błyszczącymi liśćmi i białymi kwiatami o delikatnych odcieniach różu."
+    },
+    "de": {
+      "common_name": "Weiße Paradiesvogelblume",
+      "description": "Strelitzia alba ist eine auffällige tropische Pflanze aus Südafrika. Sie zeichnet sich durch große, glänzende Blätter und weiße Blumen mit zarten rosa Tönen aus."
+    },
+    "fr": {
+      "common_name": "Oiseau de paradis blanc",
+      "description": "Strelitzia alba est une plante tropicale frappante originaire d'Afrique du Sud. Elle possède de grandes feuilles brillantes et des fleurs blanches avec des nuances de rose pâle."
+    },
+    "it": {
+      "common_name": "Uccello del Paradiso Bianco",
+      "description": "Strelitzia alba è una pianta tropicale sorprendente originaria del Sudafrica. Ha grandi foglie lucide e fiori bianchi con delicate sfumature di rosa."
+    },
+    "es": {
+      "common_name": "Ave del Paraíso Blanca",
+      "description": "Strelitzia alba es una planta tropical llamativa originaria de Sudáfrica. Presenta grandes hojas brillantes y flores blancas con delicados tonos rosados."
+    },
+    "pt": {
+      "common_name": "Ave do Paraíso Branca",
+      "description": "Strelitzia alba é uma planta tropical impressionante originária da África do Sul. Apresenta grandes folhas brilhantes e flores brancas com delicadas tonalidades de rosa."
+    },
+    "ar": {
+      "common_name": "طائر الجنة الأبيض",
+      "description": "Strelitzia alba هو نبات استوائي لافت للنظر من جنوب أفريقيا. يتميز بأوراق كبيرة لامعة وزهور بيضاء مع ظلال دقيقة من الوردي."
+    },
+    "hi": {
+      "common_name": "सफेद स्वर्ग का पक्षी",
+      "description": "Strelitzia alba एक आकर्षक उष्णकटिबंधीय पौधा है जो दक्षिण अफ्रीका का मूल निवासी है। इसमें बड़े, चमकदार पत्ते और हलके गुलाबी रंग के साथ सफेद फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "白色天堂鸟",
+      "description": "Strelitzia alba 是一种引人注目的热带植物，原产于南非。它具有大型光亮的叶子和带有淡粉色调的白色花朵。"
+    },
+    "ja": {
+      "common_name": "白い楽園の鳥",
+      "description": "Strelitzia alba は南アフリカ原産の目を引く熱帯植物です。大きな光沢のある葉と淡いピンク色の花を特徴としています。"
+    },
+    "ko": {
+      "common_name": "흰색 천국의 새",
+      "description": "Strelitzia alba는 남아프리카에서 유래한 눈에 띄는 열대 식물입니다. 큰 광택이 나는 잎과 연한 분홍색이 섞인 흰색 꽃을 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/163517/strelitzia-alba",
+      "https://www.gardenia.net/plant/Strelitzia-alba"
+    ]
+  }
+}

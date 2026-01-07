@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_daigremontiana",
+  "name": "Mother of Thousands",
+  "latin": "Kalanchoe daigremontiana",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_daigremontiana.jpg",
+  "image_thumb": "kalanchoe_daigremontiana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenante",
+          "pt": "Drenante",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffio rado",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Trująca",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast clumping",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "早い",
+          "ko": "빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mother of Thousands",
+      "description": "Kalanchoe daigremontiana is a succulent native to Madagascar known for plantlets forming along leaf edges. It thrives in bright light and dry conditions indoors. The species spreads rapidly and can become invasive if unmanaged."
+    },
+    "pl": {
+      "common_name": "Żyworódka Daigremonta",
+      "description": "Kalanchoe daigremontiana to sukulent z Madagaskaru, który tworzy liczne rozmnóżki na liściach. Lubi jasne stanowiska i rzadkie podlewanie w domu. Roślina szybko się rozrasta i wymaga kontroli."
+    },
+    "de": {
+      "common_name": "Brutblatt",
+      "description": "Kalanchoe daigremontiana ist eine sukkulente Pflanze aus Madagaskar mit kleinen Brutpflanzen an den Blatträndern. Sie bevorzugt helles Licht und wenig Wasser. Bei guter Pflege wächst sie sehr schnell."
+    },
+    "fr": {
+      "common_name": "Mère de milliers",
+      "description": "Kalanchoe daigremontiana est une plante succulente originaire de Madagascar, célèbre pour ses plantules sur les feuilles. Elle demande beaucoup de lumière et peu d’arrosage. Sa croissance est rapide en intérieur."
+    },
+    "it": {
+      "common_name": "Madre di migliaia",
+      "description": "Kalanchoe daigremontiana è una succulenta del Madagascar che produce numerose piantine sui margini fogliari. Predilige luce intensa e annaffiature scarse. Cresce rapidamente se ben curata."
+    },
+    "es": {
+      "common_name": "Madre de miles",
+      "description": "Kalanchoe daigremontiana es una suculenta originaria de Madagascar con plántulas en los bordes de las hojas. Necesita mucha luz y riego escaso en interiores. Su crecimiento es rápido y vigoroso."
+    },
+    "pt": {
+      "common_name": "Mãe de milhares",
+      "description": "Kalanchoe daigremontiana é uma suculenta de Madagascar conhecida por brotos nas folhas. Prefere luz intensa e pouca água dentro de casa. Pode crescer e se espalhar rapidamente."
+    },
+    "ar": {
+      "common_name": "أم الآلاف",
+      "description": "نبات كالانشو دايجرمونتيانا نبات عصاري من مدغشقر يتميز بنباتات صغيرة على حواف الأوراق. يحتاج إلى ضوء قوي وري قليل. ينمو بسرعة في البيئات الداخلية."
+    },
+    "hi": {
+      "common_name": "मदर ऑफ थाउज़ेंड्स",
+      "description": "कलानचो डाइग्रामोंटियाना मेडागास्कर का एक रसीला पौधा है जिसकी पत्तियों पर छोटे पौधे बनते हैं। इसे तेज रोशनी और कम पानी की आवश्यकता होती है। यह घर के अंदर तेजी से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "落地生根",
+      "description": "Kalanchoe daigremontiana 原产于马达加斯加，是一种多肉植物，叶缘会长出小植株。它适合明亮光照和少量浇水。室内环境下生长迅速。"
+    },
+    "ja": {
+      "common_name": "マザーオブサウザンズ",
+      "description": "カランコエ・ダイグレモンティアナはマダガスカル原産の多肉植物で、葉の縁に子株を作ります。明るい光と控えめな水やりを好みます。成長がとても早いです。"
+    },
+    "ko": {
+      "common_name": "마더 오브 사우전즈",
+      "description": "칼랑코에 다이그레몬티아나는 마다가스카르 원산의 다육식물로 잎 가장자리에 새끼 식물이 생깁니다. 밝은 빛과 적은 물을 선호합니다. 실내에서 빠르게 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9036/kalanchoe-daigremontiana/details",
+      "https://www.gardenersworld.com/plants/kalanchoe-daigremontiana/",
+      "https://edis.ifas.ufl.edu/publication/FP329"
+    ]
+  }
+}

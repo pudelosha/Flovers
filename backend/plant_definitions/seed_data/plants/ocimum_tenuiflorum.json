@@ -1,0 +1,237 @@
+{
+  "external_id": "ocimum_tenuiflorum",
+  "name": "Holy Basil",
+  "latin": "Ocimum tenuiflorum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "ocimum_tenuiflorum.jpg",
+  "image_thumb": "ocimum_tenuiflorum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "壌土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-30°C",
+          "pl": "22-30°C",
+          "de": "22-30°C",
+          "fr": "22-30°C",
+          "it": "22-30°C",
+          "es": "22-30°C",
+          "pt": "22-30°C",
+          "ar": "22-30°C",
+          "hi": "22-30°C",
+          "zh": "22-30°C",
+          "ja": "22-30°C",
+          "ko": "22-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Holy Basil",
+      "description": "Ocimum tenuiflorum, commonly known as Holy Basil or Tulsi, is a fragrant herb native to India. It is revered in many cultures for its medicinal properties and is often used in herbal teas."
+    },
+    "pl": {
+      "common_name": "Bazylia święta",
+      "description": "Ocimum tenuiflorum, znana również jako Bazylia Święta lub Tulsi, to pachnąca roślina pochodząca z Indii. Jest ceniona w wielu kulturach za swoje właściwości lecznicze i często stosowana w herbatkach ziołowych."
+    },
+    "de": {
+      "common_name": "Heilige Basilikum",
+      "description": "Ocimum tenuiflorum, auch bekannt als Heiliges Basilikum oder Tulsi, ist ein duftendes Kraut, das in Indien heimisch ist. Es wird in vielen Kulturen für seine heilenden Eigenschaften geschätzt und oft in Kräutertees verwendet."
+    },
+    "fr": {
+      "common_name": "Basilic Sacré",
+      "description": "Ocimum tenuiflorum, connu sous le nom de Basilic Sacré ou Tulsi, est une herbe parfumée originaire d'Inde. Elle est vénérée dans de nombreuses cultures pour ses propriétés médicinales et est souvent utilisée dans les tisanes."
+    },
+    "it": {
+      "common_name": "Basilico Sacro",
+      "description": "Ocimum tenuiflorum, conosciuto come Basilico Sacro o Tulsi, è una pianta aromatica originaria dell'India. È venerata in molte culture per le sue proprietà medicinali ed è spesso utilizzata nelle tisane."
+    },
+    "es": {
+      "common_name": "Albahaca Sagrada",
+      "description": "Ocimum tenuiflorum, conocida como Albahaca Sagrada o Tulsi, es una planta fragante originaria de la India. Es venerada en muchas culturas por sus propiedades medicinales y se utiliza comúnmente en tés herbales."
+    },
+    "pt": {
+      "common_name": "Manjericão Sagrado",
+      "description": "Ocimum tenuiflorum, conhecido como Manjericão Sagrado ou Tulsi, é uma planta aromática nativa da Índia. É venerado em muitas culturas por suas propriedades medicinais e é frequentemente utilizado em chás de ervas."
+    },
+    "ar": {
+      "common_name": "ريحان مقدس",
+      "description": "Ocimum tenuiflorum، المعروف بالريحان المقدس أو التولسي، هو نبات عطري موطنه الهند. يُعتبر مقدسًا في العديد من الثقافات بسبب خصائصه الطبية وغالبًا ما يستخدم في شاي الأعشاب."
+    },
+    "hi": {
+      "common_name": "तुलसी",
+      "description": "Ocimum tenuiflorum, जिसे तुलसी के नाम से भी जाना जाता है, भारत का एक सुगंधित पौधा है। यह अपनी औषधीय गुणों के लिए कई संस्कृतियों में पूज्य है और अक्सर हर्बल चाय में उपयोग किया जाता है."
+    },
+    "zh": {
+      "common_name": "神圣罗勒",
+      "description": "Ocimum tenuiflorum，通常称为神圣罗勒或图尔西，是一种原产于印度的芳香草本植物。它因其药用价值而在许多文化中受到尊敬，常用于草药茶中。"
+    },
+    "ja": {
+      "common_name": "ホーリーバジル",
+      "description": "Ocimum tenuiflorum、一般にホーリーバジルまたはトゥルシと呼ばれるこの植物は、インド原産の芳香植物です。多くの文化で薬用効果が評価され、ハーブティーにしばしば使用されます。"
+    },
+    "ko": {
+      "common_name": "성스러운 바질",
+      "description": "Ocimum tenuiflorum, 일반적으로 성스러운 바질 또는 툴시라고 알려진 이 식물은 인도 원산의 향기로운 풀입니다. 그 약용 효과로 많은 문화에서 존경받으며, 허브 차에 자주 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com",
+      "https://www.herbalists.com"
+    ]
+  }
+}

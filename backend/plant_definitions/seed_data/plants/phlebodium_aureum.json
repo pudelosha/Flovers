@@ -1,0 +1,237 @@
+{
+  "external_id": "phlebodium_aureum",
+  "name": "Blue Star Fern",
+  "latin": "Phlebodium aureum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "phlebodium_aureum.jpg",
+  "image_thumb": "phlebodium_aureum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20–25°C",
+          "pl": "20–25°C",
+          "de": "20–25°C",
+          "fr": "20–25°C",
+          "it": "20–25°C",
+          "es": "20–25°C",
+          "pt": "20–25°C",
+          "ar": "20–25°C",
+          "hi": "20–25°C",
+          "zh": "20–25°C",
+          "ja": "20–25°C",
+          "ko": "20–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "كاذب",
+          "hi": "गलत",
+          "zh": "错误",
+          "ja": "偽",
+          "ko": "거짓"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Star Fern",
+      "description": "Phlebodium aureum is a tropical fern known for its distinctive blue-green, wavy fronds. It thrives in shaded, humid environments."
+    },
+    "pl": {
+      "common_name": "Paproć niebieska gwiazda",
+      "description": "Phlebodium aureum to tropikalna paproć, znana z charakterystycznych niebiesko-zielonych, falistych liści. Rośnie w zacienionych, wilgotnych środowiskach."
+    },
+    "de": {
+      "common_name": "Blaue Sternfarn",
+      "description": "Phlebodium aureum ist ein tropischer Farn, bekannt für seine auffälligen blau-grünen, gewellten Wedel. Er gedeiht in schattigen, feuchten Umgebungen."
+    },
+    "fr": {
+      "common_name": "Fougère étoile bleue",
+      "description": "Phlebodium aureum est une fougère tropicale connue pour ses frondes bleu-vert ondulées. Elle prospère dans des environnements ombragés et humides."
+    },
+    "it": {
+      "common_name": "Felce stella blu",
+      "description": "Phlebodium aureum è una felce tropicale nota per le sue fronde ondulate di colore blu-verde. Cresce in ambienti ombreggiati e umidi."
+    },
+    "es": {
+      "common_name": "Helecho estrella azul",
+      "description": "Phlebodium aureum es un helecho tropical conocido por sus frondas onduladas de color azul-verde. Crece en entornos sombreados y húmedos."
+    },
+    "pt": {
+      "common_name": "Samambaia estrela azul",
+      "description": "Phlebodium aureum é uma samambaia tropical conhecida por suas frondes onduladas azul-esverdeadas. Ela cresce em ambientes sombreados e úmidos."
+    },
+    "ar": {
+      "common_name": "سرخس النجمة الزرقاء",
+      "description": "Phlebodium aureum هو سرخس استوائي معروف بسعفه المتموجة باللون الأزرق والأخضر. ينمو في بيئات مظللة ورطبة."
+    },
+    "hi": {
+      "common_name": "ब्लू स्टार फर्न",
+      "description": "Phlebodium aureum एक उष्णकटिबंधीय फर्न है जो अपनी विशिष्ट नीली-हरे, लहराती पत्तियों के लिए जाना जाता है। यह छायादार, आर्द्र वातावरण में उगता है।"
+    },
+    "zh": {
+      "common_name": "蓝星蕨",
+      "description": "Phlebodium aureum 是一种热带蕨类植物，以其独特的蓝绿色波状叶子而闻名。它在阴湿的环境中生长。"
+    },
+    "ja": {
+      "common_name": "ブルースターファーン",
+      "description": "Phlebodium aureum は、特徴的な青緑色の波状の葉で知られる熱帯性のシダです。日陰で湿った環境で成長します。"
+    },
+    "ko": {
+      "common_name": "블루 스타 고사리",
+      "description": "Phlebodium aureum는 파란색-녹색의 물결 모양 잎으로 알려진 열대 식물입니다. 그늘지고 습한 환경에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/phlebodium-aureum",
+      "https://www.gardenia.net/plant/phlebodium-aureum-blue-star-fern"
+    ]
+  }
+}

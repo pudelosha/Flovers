@@ -1,0 +1,237 @@
+{
+  "external_id": "pilea_spruceana",
+  "name": "Pilea spruceana",
+  "latin": "Pilea spruceana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pilea_spruceana.jpg",
+  "image_thumb": "pilea_spruceana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange d'aroïdes",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "خلطة آرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "箭头植物混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe temperatury",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖的温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact growth",
+          "pl": "Kompaktowy wzrost",
+          "de": "Kompakte Wuchsform",
+          "fr": "Croissance compacte",
+          "it": "Crescita compatta",
+          "es": "Crecimiento compacto",
+          "pt": "Crescimento compacto",
+          "ar": "نمو مدمج",
+          "hi": "सघन वृद्धि",
+          "zh": "紧凑生长",
+          "ja": "コンパクトな成長",
+          "ko": "콤팩트한 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Trailed Pilea",
+      "description": "Pilea spruceana, or the Trailed Pilea, is a compact, low-maintenance tropical plant. Its unique, iridescent foliage adds a decorative touch to any indoor space."
+    },
+    "pl": {
+      "common_name": "Pilea wisząca",
+      "description": "Pilea spruceana, czyli Pilea wisząca, to kompaktowa, łatwa w pielęgnacji roślina tropikalna. Jej unikalne, iryzujące liście dodają dekoracyjnego charakteru każdemu wnętrzu."
+    },
+    "de": {
+      "common_name": "Hängende Pilea",
+      "description": "Pilea spruceana, auch als Hängende Pilea bekannt, ist eine kompakte, pflegeleichte tropische Pflanze. Ihre einzigartigen, schillernden Blätter verleihen jedem Raum eine dekorative Note."
+    },
+    "fr": {
+      "common_name": "Pilea suspendue",
+      "description": "Pilea spruceana, ou la Pilea suspendue, est une plante tropicale compacte et facile à entretenir. Son feuillage irisé unique apporte une touche décorative à tout espace intérieur."
+    },
+    "it": {
+      "common_name": "Pilea sospesa",
+      "description": "Pilea spruceana, o Pilea sospesa, è una pianta tropicale compatta e facile da curare. Il suo fogliame iridescente unico aggiunge un tocco decorativo a qualsiasi ambiente."
+    },
+    "es": {
+      "common_name": "Pilea colgante",
+      "description": "Pilea spruceana, o Pilea colgante, es una planta tropical compacta y de fácil cuidado. Su follaje iridiscente único aporta un toque decorativo a cualquier espacio interior."
+    },
+    "pt": {
+      "common_name": "Pilea pendente",
+      "description": "Pilea spruceana, ou Pilea pendente, é uma planta tropical compacta e de fácil manutenção. Sua folhagem iridescente única traz um toque decorativo a qualquer ambiente."
+    },
+    "ar": {
+      "common_name": "بيلية متدلية",
+      "description": "Pilea spruceana، أو البيلية المتدلية، هي نبتة استوائية مدمجة وسهلة العناية. تضيف أوراقها اللامعة الفريدة لمسة ديكورية لأي مساحة داخلية."
+    },
+    "hi": {
+      "common_name": "पाइलिया लटकी हुई",
+      "description": "Pilea spruceana, या पाइलिया लटकी हुई, एक संकुचित, कम-देखभाल वाली उष्णकटिबंधीय पौधा है। इसका अद्वितीय, इंद्रधनुषी पत्तियाँ किसी भी कमरे में सजावटी स्पर्श जोड़ती हैं।"
+    },
+    "zh": {
+      "common_name": "悬挂堇菜",
+      "description": "Pilea spruceana，或称悬挂堇菜，是一种紧凑、易于护理的热带植物。其独特的彩虹色叶子为任何室内空间增添装饰效果。"
+    },
+    "ja": {
+      "common_name": "吊るされたピレア",
+      "description": "Pilea spruceana、または吊るされたピレアは、コンパクトで手入れが簡単な熱帯植物です。その独特の虹色の葉が、どんな室内空間にも装飾的なタッチを加えます。"
+    },
+    "ko": {
+      "common_name": "매달린 피레아",
+      "description": "Pilea spruceana 또는 매달린 피레아는 컴팩트하고 손쉬운 관리가 가능한 열대 식물입니다. 독특한 무지갯빛 잎은 모든 실내 공간에 장식적인 터치를 더합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/pilea-spruceana",
+      "https://www.gardenia.net/plant/pilea-spruceana"
+    ]
+  }
+}

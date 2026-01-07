@@ -1,0 +1,237 @@
+{
+  "external_id": "liriope_muscari",
+  "name": "Lilyturf",
+  "latin": "Liriope muscari",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "liriope_muscari.jpg",
+  "image_thumb": "liriope_muscari.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial shade",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sombra parcial",
+          "pt": "Meia-sombra",
+          "ar": "ظل جزئي",
+          "hi": "आंशिक छाया",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Umiarkowane",
+          "de": "Regelmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Irrigazione regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 관수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य",
+          "zh": "普通",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Horstig",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespitosa",
+          "es": "Perenne en mata",
+          "pt": "Perene entouceirada",
+          "ar": "نمو كتل",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "포기형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lilyturf",
+      "description": "Liriope muscari is an evergreen perennial with grass-like leaves and purple flower spikes. It tolerates partial shade and is commonly used as a groundcover. It adapts well to containers indoors with adequate light."
+    },
+    "pl": {
+      "common_name": "Liriope",
+      "description": "Liriope muscari to zimozielona bylina o trawiastych liściach i fioletowych kwiatach. Dobrze rośnie w półcieniu i bywa stosowana jako roślina okrywowa. Może być uprawiana w pojemnikach w jasnych wnętrzach."
+    },
+    "de": {
+      "common_name": "Lilientraube",
+      "description": "Liriope muscari ist eine immergrüne Staude mit grasartigen Blättern und violetten Blütenständen. Sie bevorzugt Halbschatten und wird oft als Bodendecker genutzt. Bei ausreichend Licht eignet sie sich auch für Kübel."
+    },
+    "fr": {
+      "common_name": "Muguet du Japon",
+      "description": "Liriope muscari est une vivace persistante aux feuilles rubanées et aux fleurs violettes. Elle apprécie la mi-ombre et sert souvent de couvre-sol. Elle peut aussi être cultivée en pot lumineux."
+    },
+    "it": {
+      "common_name": "Liriope",
+      "description": "Liriope muscari è una perenne sempreverde con foglie simili all'erba e fiori viola. Cresce bene in mezz'ombra ed è usata come tappezzante. Può adattarsi alla coltivazione in vaso in ambienti luminosi."
+    },
+    "es": {
+      "common_name": "Liriope",
+      "description": "Liriope muscari es una planta perenne perenne con hojas tipo césped y flores púrpuras. Prefiere la sombra parcial y se usa como cubresuelos. Puede cultivarse en macetas con buena luz."
+    },
+    "pt": {
+      "common_name": "Líriope",
+      "description": "Liriope muscari é uma planta perene e perene com folhas semelhantes a grama e flores roxas. Desenvolve-se bem em meia-sombra e é usada como forração. Pode ser cultivada em vasos bem iluminados."
+    },
+    "ar": {
+      "common_name": "ليوريوبي",
+      "description": "نبات Liriope muscari معمر دائم الخضرة بأوراق تشبه العشب وأزهار بنفسجية. يفضل الظل الجزئي ويستخدم كنبات غطاء أرضي. يمكن زراعته في أوعية مع إضاءة كافية."
+    },
+    "hi": {
+      "common_name": "लिरिओपे",
+      "description": "Liriope muscari एक सदाबहार बहुवर्षीय पौधा है जिसमें घास जैसी पत्तियाँ और बैंगनी फूल होते हैं। यह आंशिक छाया में अच्छी तरह बढ़ता है। पर्याप्त रोशनी में गमलों में भी उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "沿阶草",
+      "description": "Liriope muscari 是一种常绿多年生植物，具有草状叶片和紫色花序。适合半阴环境，常作地被植物。光照充足时也可盆栽。"
+    },
+    "ja": {
+      "common_name": "ヤブラン",
+      "description": "ヤブラン（Liriope muscari）は常緑多年草で、細長い葉と紫色の花穂を持ちます。半日陰を好み、グラウンドカバーとして利用されます。明るい場所なら鉢植えも可能です。"
+    },
+    "ko": {
+      "common_name": "맥문동",
+      "description": "Liriope muscari는 상록성 다년초로 잔디 같은 잎과 보라색 꽃을 가집니다. 반그늘에서 잘 자라며 지피식물로 사용됩니다. 밝은 실내에서는 화분 재배도 가능합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450",
+      "https://www.rhs.org.uk/plants/10363/liriope-muscari/details"
+    ]
+  }
+}

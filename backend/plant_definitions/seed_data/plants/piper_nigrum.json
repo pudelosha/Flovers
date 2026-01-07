@@ -1,0 +1,237 @@
+{
+  "external_id": "piper_nigrum",
+  "name": "Black Pepper",
+  "latin": "Piper nigrum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "piper_nigrum.jpg",
+  "image_thumb": "piper_nigrum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質の土",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "25-30°C",
+          "pl": "25-30°C",
+          "de": "25-30°C",
+          "fr": "25-30°C",
+          "it": "25-30°C",
+          "es": "25-30°C",
+          "pt": "25-30°C",
+          "ar": "25-30°C",
+          "hi": "25-30°C",
+          "zh": "25-30°C",
+          "ja": "25-30°C",
+          "ko": "25-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vining",
+          "pl": "Pnący",
+          "de": "Rankend",
+          "fr": "Grimpant",
+          "it": "Rampicante",
+          "es": "Enredadera",
+          "pt": "Enroscado",
+          "ar": "متسلق",
+          "hi": "लताओं जैसा",
+          "zh": "藤生",
+          "ja": "ツル性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Black Pepper",
+      "description": "Piper nigrum is a tropical vine grown for its peppercorns. It thrives in high humidity and warm temperatures, requiring moderate watering."
+    },
+    "pl": {
+      "common_name": "Pieprz czarny",
+      "description": "Piper nigrum to tropikalna winorośl uprawiana dla swoich ziaren pieprzu. Rośnie w wysokiej wilgotności i ciepłych temperaturach, wymagając umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Schwarzer Pfeffer",
+      "description": "Piper nigrum ist eine tropische Kletterpflanze, die für ihre Pfefferkörner angebaut wird. Sie gedeiht bei hoher Luftfeuchtigkeit und warmen Temperaturen, mit mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Poivre noir",
+      "description": "Piper nigrum est une plante grimpante tropicale cultivée pour ses grains de poivre. Elle prospère dans des conditions d'humidité élevée et des températures chaudes, nécessitant un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Pepe nero",
+      "description": "Piper nigrum è una pianta rampicante tropicale coltivata per i suoi grani di pepe. Cresce in alta umidità e temperature calde, richiedendo annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Pimienta negra",
+      "description": "Piper nigrum es una planta trepadora tropical cultivada por sus granos de pimienta. Crece en alta humedad y temperaturas cálidas, con riego moderado."
+    },
+    "pt": {
+      "common_name": "Pimenta preta",
+      "description": "Piper nigrum é uma planta trepadeira tropical cultivada por seus grãos de pimenta. Ela prospera em alta umidade e temperaturas quentes, necessitando de rega moderada."
+    },
+    "ar": {
+      "common_name": "الفلفل الأسود",
+      "description": "Piper nigrum هو نبات متسلق استوائي يُزرع من أجل بذوره. ينمو في الرطوبة العالية ودرجات الحرارة الدافئة، ويتطلب سقاية معتدلة."
+    },
+    "hi": {
+      "common_name": "काली मिर्च",
+      "description": "Piper nigrum एक उष्णकटिबंधीय बेल है जिसे इसके काली मिर्च के दानों के लिए उगाया जाता है। यह उच्च आर्द्रता और गर्म तापमान में उगता है, और इसे मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "黑胡椒",
+      "description": "Piper nigrum 是一种热带藤本植物，种植用于其胡椒粒。它在高湿度和温暖的温度下生长，需要适度浇水。"
+    },
+    "ja": {
+      "common_name": "ブラックペッパー",
+      "description": "Piper nigrum は、胡椒の実を収穫するために栽培される熱帯のつる植物です。高湿度と暖かい温度で繁殖し、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "흑후추",
+      "description": "Piper nigrum은 그 열매인 후추를 위해 재배되는 열대성 덩굴 식물입니다. 고온 다습한 환경에서 자라며 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/piper-nigrum",
+      "https://www.rhs.org.uk/plants/piper-nigrum"
+    ]
+  }
+}

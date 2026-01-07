@@ -1,0 +1,237 @@
+{
+  "external_id": "radermachera_sinica",
+  "name": "China doll plant",
+  "latin": "Radermachera sinica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "radermachera_sinica.jpg",
+  "image_thumb": "radermachera_sinica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "कीचड़ वाली मिट्टी",
+          "zh": "黏土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Água moderada",
+          "ar": "ماء معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Soins moyens",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Umidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "China doll plant",
+      "description": "The Radermachera sinica, also known as the China doll plant, is a tropical shrub with glossy, green leaves and delicate white flowers. It thrives in medium light and requires moderate care."
+    },
+    "pl": {
+      "common_name": "Roślina chińska lalka",
+      "description": "Radermachera sinica, znana również jako roślina chińska lalka, to tropikalny krzew o błyszczących, zielonych liściach i delikatnych białych kwiatach. Rośnie w średnim świetle i wymaga umiarkowanej opieki."
+    },
+    "de": {
+      "common_name": "China-Puppe Pflanze",
+      "description": "Die Radermachera sinica, auch bekannt als China-Puppe Pflanze, ist ein tropischer Strauch mit glänzenden, grünen Blättern und zarten weißen Blumen. Sie gedeiht bei mittlerem Licht und benötigt mäßige Pflege."
+    },
+    "fr": {
+      "common_name": "Plante poupée chinoise",
+      "description": "La Radermachera sinica, également connue sous le nom de plante poupée chinoise, est un arbuste tropical aux feuilles vertes brillantes et aux fleurs blanches délicates. Elle prospère sous une lumière modérée et nécessite des soins modérés."
+    },
+    "it": {
+      "common_name": "Pianta bambola cinese",
+      "description": "La Radermachera sinica, conosciuta anche come pianta bambola cinese, è un arbusto tropicale con foglie verdi lucide e fiori bianchi delicati. Cresce in luce media e richiede cure moderate."
+    },
+    "es": {
+      "common_name": "Planta muñeca china",
+      "description": "La Radermachera sinica, también conocida como la planta muñeca china, es un arbusto tropical con hojas verdes brillantes y flores blancas delicadas. Crece con luz moderada y requiere cuidados moderados."
+    },
+    "pt": {
+      "common_name": "Planta boneca chinesa",
+      "description": "A Radermachera sinica, também conhecida como planta boneca chinesa, é um arbusto tropical com folhas verdes brilhantes e flores brancas delicadas. Cresce em luz moderada e requer cuidados moderados."
+    },
+    "ar": {
+      "common_name": "نبات الدمية الصينية",
+      "description": "راديرماكيراسينكا، المعروفة أيضًا بنبات الدمية الصينية، هي شجيرة استوائية ذات أوراق خضراء لامعة وزهور بيضاء رقيقة. تزدهر في الضوء المتوسط وتتطلب رعاية معتدلة."
+    },
+    "hi": {
+      "common_name": "चीन गुड़िया पौधा",
+      "description": "रैडरमाचेरा सिनिका, जिसे चीन गुड़िया पौधा भी कहा जाता है, एक उष्णकटिबंधीय झाड़ी है जिसमें चमकदार हरी पत्तियां और नाजुक सफेद फूल होते हैं। यह मध्यम प्रकाश में बढ़ता है और मध्यम देखभाल की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "中国娃娃植物",
+      "description": "Radermachera sinica，也被称为中国娃娃植物，是一种热带灌木，具有光滑的绿色叶子和精致的白色花朵。它在中等光照下生长，需要适度的护理。"
+    },
+    "ja": {
+      "common_name": "チャイナドールプラント",
+      "description": "Radermachera sinica（チャイナドールプラント）は、光沢のある緑の葉と繊細な白い花を持つ熱帯性の低木です。中程度の光の下で育ち、適度なケアが必要です。"
+    },
+    "ko": {
+      "common_name": "중국 인형 식물",
+      "description": "Radermachera sinica, 또는 중국 인형 식물은 광택 있는 초록색 잎과 섬세한 흰 꽃을 가진 열대 관목입니다. 중간 정도의 빛에서 자라며 적당한 관리가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/radermachera-sinica",
+      "https://www.rhs.org.uk/plants/details?plantid=33532"
+    ]
+  }
+}

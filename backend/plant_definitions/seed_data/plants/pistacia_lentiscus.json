@@ -1,0 +1,237 @@
+{
+  "external_id": "pistacia_lentiscus",
+  "name": "Mastic Tree",
+  "latin": "Pistacia lentiscus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pistacia_lentiscus.jpg",
+  "image_thumb": "pistacia_lentiscus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittleres Sonnenlicht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, loamy",
+          "pl": "Piaszczysta, próchniczna",
+          "de": "Sandig, lehmig",
+          "fr": "Sableux, argileux",
+          "it": "Sabbioso, argilloso",
+          "es": "Arenoso, arcilloso",
+          "pt": "Arenoso, argiloso",
+          "ar": "رملية وطينية",
+          "hi": "रेतदार, बलुई",
+          "zh": "沙质, 壤土",
+          "ja": "砂質、粘土質",
+          "ko": "모래, 점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适中",
+          "ja": "適度な水やり",
+          "ko": "중간 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "नम",
+          "zh": "低",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mastic Tree",
+      "description": "Pistacia lentiscus is a shrub native to the Mediterranean. It is commonly known for its aromatic resin used in mastic production."
+    },
+    "pl": {
+      "common_name": "Drzewo Mastyksowe",
+      "description": "Pistacia lentiscus to krzew rodzime do rejonu Morza Śródziemnego. Znane jest z aromatycznej żywicy, wykorzystywanej do produkcji mastyksu."
+    },
+    "de": {
+      "common_name": "Mastixbaum",
+      "description": "Pistacia lentiscus ist ein Strauch aus dem Mittelmeerraum. Es ist bekannt für seinen aromatischen Harz, das zur Herstellung von Mastix verwendet wird."
+    },
+    "fr": {
+      "common_name": "Arbre à Mastic",
+      "description": "Pistacia lentiscus est un arbuste originaire de la Méditerranée. Il est connu pour sa résine aromatique utilisée dans la production de mastic."
+    },
+    "it": {
+      "common_name": "Albero del Mastice",
+      "description": "Pistacia lentiscus è un arbusto originario del Mediterraneo. È noto per la sua resina aromatica utilizzata nella produzione di mastice."
+    },
+    "es": {
+      "common_name": "Árbol de Mástique",
+      "description": "Pistacia lentiscus es un arbusto nativo del Mediterráneo. Es conocido por su resina aromática utilizada en la producción de mástique."
+    },
+    "pt": {
+      "common_name": "Árvore do Mástique",
+      "description": "Pistacia lentiscus é um arbusto nativo da região do Mediterrâneo. É conhecido pela sua resina aromática usada na produção de mastique."
+    },
+    "ar": {
+      "common_name": "شجرة المستكة",
+      "description": "Pistacia lentiscus هي شجيرة موطنها منطقة البحر الأبيض المتوسط. تشتهر بصلصتها العطرية المستخدمة في إنتاج المستكة."
+    },
+    "hi": {
+      "common_name": "मास्टिक वृक्ष",
+      "description": "Pistacia lentiscus एक झाड़ी है जो भूमध्य सागर क्षेत्र का मूल निवासी है। यह अपनी सुगंधित रेजिन के लिए जाना जाता है, जिसका उपयोग मस्टिक उत्पादन में होता है।"
+    },
+    "zh": {
+      "common_name": "乳香树",
+      "description": "Pistacia lentiscus 是一种原产于地中海的灌木。它以其芳香的树脂而闻名，用于生产乳香。"
+    },
+    "ja": {
+      "common_name": "マスティックツリー",
+      "description": "Pistacia lentiscus は地中海原産の低木です。マスティック生産に使われる芳香性樹脂で知られています。"
+    },
+    "ko": {
+      "common_name": "마스틱 나무",
+      "description": "Pistacia lentiscus는 지중해 지역이 원산지인 관목입니다. 향이 나는 수지가 마스틱 생산에 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.britannica.com/plant/Pistacia-lentiscus",
+      "https://www.gardenia.net/plant/pistacia-lentiscus",
+      "https://www.rhs.org.uk/Plants/64891/Pistacia-lentiscus"
+    ]
+  }
+}

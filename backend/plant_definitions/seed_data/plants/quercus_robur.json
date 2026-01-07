@@ -1,0 +1,237 @@
+{
+  "external_id": "quercus_robur",
+  "name": "English Oak",
+  "latin": "Quercus robur",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "quercus_robur.jpg",
+  "image_thumb": "quercus_robur.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "bas",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "नम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "English Oak",
+      "description": "Quercus robur, or English Oak, is a large deciduous tree native to Europe. It is known for its sturdy wood and iconic lobed leaves."
+    },
+    "pl": {
+      "common_name": "Dąb Angielski",
+      "description": "Quercus robur, czyli dąb angielski, to duże drzewo liściaste pochodzące z Europy. Znane jest z twardego drewna i charakterystycznych liści z klapami."
+    },
+    "de": {
+      "common_name": "Englische Eiche",
+      "description": "Die Quercus robur, oder Englische Eiche, ist ein großes Laubbaum, das in Europa heimisch ist. Sie ist bekannt für ihr robustes Holz und ihre ikonischen, gelappten Blätter."
+    },
+    "fr": {
+      "common_name": "Chêne commun",
+      "description": "Le Quercus robur, ou chêne commun, est un grand arbre à feuilles caduques originaire d'Europe. Il est connu pour son bois robuste et ses feuilles lobées emblématiques."
+    },
+    "it": {
+      "common_name": "Quercia comune",
+      "description": "Il Quercus robur, o quercia comune, è un grande albero deciduo originario dell'Europa. È noto per il suo legno robusto e le sue foglie lobate iconiche."
+    },
+    "es": {
+      "common_name": "Roble común",
+      "description": "El Quercus robur, o roble común, es un gran árbol caducifolio originario de Europa. Es conocido por su madera resistente y sus hojas lobuladas características."
+    },
+    "pt": {
+      "common_name": "Carvalho comum",
+      "description": "O Quercus robur, ou carvalho comum, é uma grande árvore decídua nativa da Europa. É conhecido pela sua madeira robusta e suas folhas lobadas características."
+    },
+    "ar": {
+      "common_name": "بلوط إنجليزي",
+      "description": "Quercus robur، أو البلوط الإنجليزي، هو شجرة نفضية كبيرة موطنها الأصلي أوروبا. تشتهر بأخشابها القوية وأوراقها المميزة المشقوقة."
+    },
+    "hi": {
+      "common_name": "इंग्लिश ओक",
+      "description": "Quercus robur, या इंग्लिश ओक, एक बड़ी पर्णपाती वृक्ष है जो यूरोप का मूल निवासी है। यह अपने मजबूत लकड़ी और पारंपरिक पत्तियों के लिए प्रसिद्ध है।"
+    },
+    "zh": {
+      "common_name": "英格兰橡树",
+      "description": "Quercus robur，或英格兰橡树，是一种原产于欧洲的大型落叶树。以其坚固的木材和标志性的深裂叶子而闻名。"
+    },
+    "ja": {
+      "common_name": "イングリッシュオーク",
+      "description": "Quercus robur、またはイングリッシュオークは、ヨーロッパ原産の大きな落葉樹です。その堅牢な木材と特徴的な深裂葉で知られています。"
+    },
+    "ko": {
+      "common_name": "잉글리시 오크",
+      "description": "Quercus robur, 또는 잉글리시 오크는 유럽 원산의 큰 낙엽수입니다. 튼튼한 나무와 상징적인 깊은 갈라진 잎으로 잘 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/quercus-robur",
+      "https://www.botanicalgarden.ubc.ca"
+    ]
+  }
+}

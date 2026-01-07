@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_italica",
+  "name": "Italian Man Orchid",
+  "latin": "Orchis italica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_italica.jpg",
+  "image_thumb": "orchis_italica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid",
+          "pl": "orchidowy",
+          "de": "Orchideen",
+          "fr": "orchidée",
+          "it": "orchidea",
+          "es": "orquídea",
+          "pt": "orquídea",
+          "ar": "أوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "蘭",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Italian Man Orchid",
+      "description": "Orchis italica, commonly known as the Italian Man Orchid, is a species of orchid native to the Mediterranean region. It is known for its unique, human-shaped flowers."
+    },
+    "pl": {
+      "common_name": "Włoskie orchidee mężczyzny",
+      "description": "Orchis italica, znana również jako włoska orchidea mężczyzny, to gatunek orchidei występujący w regionie Morza Śródziemnego. Charakteryzuje się unikalnymi, ludzkimi kwiatami."
+    },
+    "de": {
+      "common_name": "Italienische Mannorchidee",
+      "description": "Orchis italica, auch bekannt als die italienische Mannorchidee, ist eine Orchideenart aus dem Mittelmeerraum. Sie ist bekannt für ihre einzigartigen, menschenähnlichen Blüten."
+    },
+    "fr": {
+      "common_name": "Orchidée Homme d'Italie",
+      "description": "Orchis italica, communément appelée Orchidée Homme d'Italie, est une espèce d'orchidée originaire de la région méditerranéenne. Elle est connue pour ses fleurs uniques en forme humaine."
+    },
+    "it": {
+      "common_name": "Orchidea Uomo Italiana",
+      "description": "Orchis italica, conosciuta come Orchidea Uomo Italiana, è una specie di orchidea originaria della regione mediterranea. È famosa per i suoi fiori unici a forma di uomo."
+    },
+    "es": {
+      "common_name": "Orquídea Hombre Italiana",
+      "description": "Orchis italica, conocida como la Orquídea Hombre Italiana, es una especie de orquídea originaria de la región mediterránea. Es famosa por sus flores únicas con forma humana."
+    },
+    "pt": {
+      "common_name": "Orquídea Homem Italiana",
+      "description": "Orchis italica, conhecida como Orquídea Homem Italiana, é uma espécie de orquídea originária da região mediterrânica. É conhecida pelas suas flores únicas com forma humana."
+    },
+    "ar": {
+      "common_name": "زهرة الرجل الإيطالي",
+      "description": "Orchis italica، المعروفة باسم زهرة الرجل الإيطالي، هي نوع من الأوركيد ينتمي إلى منطقة البحر الأبيض المتوسط. تشتهر بأزهارها الفريدة ذات الشكل البشري."
+    },
+    "hi": {
+      "common_name": "इतालवी मानव ऑर्किड",
+      "description": "Orchis italica, जिसे इतालवी मानव ऑर्किड के नाम से जाना जाता है, भूमध्यसागरीय क्षेत्र का एक ऑर्किड है। यह अपनी अद्वितीय, मानव-आकृति वाली कलियों के लिए प्रसिद्ध है।"
+    },
+    "zh": {
+      "common_name": "意大利人形兰",
+      "description": "Orchis italica，常称为意大利人形兰，是一种原产于地中海地区的兰花。以其独特的人形花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "イタリアン・マン・オーキッド",
+      "description": "Orchis italica、通称イタリアン・マン・オーキッドは、地中海地域に自生するラン科の一種です。人間の形をした花で知られています。"
+    },
+    "ko": {
+      "common_name": "이탈리안 맨 오키드",
+      "description": "Orchis italica, 이탈리안 맨 오키드는 지중해 지역에 자생하는 난초입니다. 인간 형상을 한 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/orchis-italica",
+      "https://www.horticulture.com/orchid-care"
+    ]
+  }
+}

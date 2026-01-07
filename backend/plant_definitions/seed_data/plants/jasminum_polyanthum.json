@@ -1,0 +1,238 @@
+{
+  "external_id": "jasminum_polyanthum",
+  "name": "Pink jasmine",
+  "latin": "Jasminum polyanthum",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "jasminum_polyanthum.jpg",
+  "image_thumb": "jasminum_polyanthum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期的",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–24°C",
+          "pl": "10–24°C",
+          "de": "10–24°C",
+          "fr": "10–24°C",
+          "it": "10–24°C",
+          "es": "10–24°C",
+          "pt": "10–24°C",
+          "ar": "10–24°م",
+          "hi": "10–24°C",
+          "zh": "10–24°C",
+          "ja": "10–24°C",
+          "ko": "10–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "औसत",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast climber",
+          "pl": "Szybki pnącz",
+          "de": "Schnell wachsend",
+          "fr": "Grimpant rapide",
+          "it": "Rampicante veloce",
+          "es": "Trepadora rápida",
+          "pt": "Trepadeira rápida",
+          "ar": "متسلق سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "快速攀援",
+          "ja": "成長早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pink jasmine",
+      "description": "Jasminum polyanthum is a fast-growing evergreen climber known for fragrant pink buds and white flowers. It prefers bright light and evenly moist soil during active growth."
+    },
+    "pl": {
+      "common_name": "Jaśmin różowy",
+      "description": "Jasminum polyanthum to szybko rosnące pnącze o pachnących różowych pąkach i białych kwiatach. Lubi jasne stanowiska i umiarkowanie wilgotną glebę."
+    },
+    "de": {
+      "common_name": "Rosa Jasmin",
+      "description": "Jasminum polyanthum ist eine schnell wachsende Kletterpflanze mit duftenden Blüten. Sie benötigt viel Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Jasmin rose",
+      "description": "Jasminum polyanthum est une plante grimpante vigoureuse aux fleurs très parfumées. Elle apprécie une lumière vive et un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Gelsomino rosa",
+      "description": "Jasminum polyanthum è un rampicante sempreverde dai fiori profumati. Cresce bene con molta luce e terreno mantenuto umido."
+    },
+    "es": {
+      "common_name": "Jazmín rosa",
+      "description": "Jasminum polyanthum es una trepadora de rápido crecimiento con flores fragantes. Requiere buena luz y riego regular en crecimiento."
+    },
+    "pt": {
+      "common_name": "Jasmim-rosa",
+      "description": "Jasminum polyanthum é uma trepadeira vigorosa com flores perfumadas. Prefere luz intensa e solo levemente úmido."
+    },
+    "ar": {
+      "common_name": "الياسمين الوردي",
+      "description": "الياسمين الوردي نبات متسلق سريع النمو ذو أزهار عطرية. يحتاج إلى ضوء جيد وري منتظم."
+    },
+    "hi": {
+      "common_name": "पिंक जैस्मिन",
+      "description": "Jasminum polyanthum एक तेज़ी से बढ़ने वाली बेल है जिसमें सुगंधित फूल होते हैं। इसे तेज़ रोशनी और नियमित पानी पसंद है।"
+    },
+    "zh": {
+      "common_name": "粉红茉莉",
+      "description": "Jasminum polyanthum 是生长迅速的攀援植物，花香浓郁。需要充足光照和均匀浇水。"
+    },
+    "ja": {
+      "common_name": "ピンクジャスミン",
+      "description": "Jasminum polyanthum は香りの強い花を咲かせるつる性植物です。明るい場所と適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "핑크 자스민",
+      "description": "Jasminum polyanthum은 향기로운 꽃을 가진 빠르게 자라는 덩굴식물입니다. 밝은 빛과 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9090/jasminum-polyanthum/details",
+      "https://plants.ces.ncsu.edu/plants/jasminum-polyanthum/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-jasmine/"
+    ]
+  }
+}

@@ -769,7 +769,7 @@ export default function HomeScreen() {
           <FAB
             icon="plus"
             actions={fabActions}
-            position={settings.fabPosition} // 👈 NEW: left/right from settings
+            position={settings.fabPosition} // left/right from settings
           />
         </View>
       )}

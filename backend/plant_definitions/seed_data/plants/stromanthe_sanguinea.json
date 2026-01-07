@@ -1,0 +1,237 @@
+{
+  "external_id": "stromanthe_sanguinea",
+  "name": "Strawberry Beads",
+  "latin": "Stromanthe sanguinea",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stromanthe_sanguinea.jpg",
+  "image_thumb": "stromanthe_sanguinea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universell",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "유니버설"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-27°C",
+          "pl": "22-27°C",
+          "de": "22-27°C",
+          "fr": "22-27°C",
+          "it": "22-27°C",
+          "es": "22-27°C",
+          "pt": "22-27°C",
+          "ar": "22-27°C",
+          "hi": "22-27°C",
+          "zh": "22-27°C",
+          "ja": "22-27°C",
+          "ko": "22-27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "moderat",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Strawberry Beads",
+      "description": "Stromanthe sanguinea is a vibrant tropical plant known for its striking pink and green foliage. It thrives in warm, humid environments and requires frequent watering and high humidity."
+    },
+    "pl": {
+      "common_name": "Koralik truskawkowy",
+      "description": "Stromanthe sanguinea to tropikalna roślina o wyrazistych różowo-zielonych liściach. Wymaga ciepłych i wilgotnych warunków, częstego podlewania i wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Erdbeerperlen",
+      "description": "Stromanthe sanguinea ist eine lebendige tropische Pflanze mit auffälligem rosa und grünen Laub. Sie gedeiht in warmen, feuchten Umgebungen und benötigt regelmäßige Bewässerung und hohe Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Perles de fraise",
+      "description": "Stromanthe sanguinea est une plante tropicale vibrante, connue pour son feuillage vert et rose frappant. Elle prospère dans des environnements chauds et humides et nécessite un arrosage fréquent et une forte humidité."
+    },
+    "it": {
+      "common_name": "Perle di fragola",
+      "description": "Stromanthe sanguinea è una pianta tropicale vivace, nota per il suo fogliame verde e rosa. Cresce bene in ambienti caldi e umidi e richiede annaffiature frequenti e alta umidità."
+    },
+    "es": {
+      "common_name": "Perlas de fresa",
+      "description": "Stromanthe sanguinea es una planta tropical vibrante conocida por su llamativo follaje verde y rosa. Crece bien en ambientes cálidos y húmedos, y requiere riego frecuente y alta humedad."
+    },
+    "pt": {
+      "common_name": "Perolas de morango",
+      "description": "Stromanthe sanguinea é uma planta tropical vibrante conhecida por sua folhagem verde e rosa impressionante. Ela prospera em ambientes quentes e úmidos e requer rega frequente e alta umidade."
+    },
+    "ar": {
+      "common_name": "خرز الفراولة",
+      "description": "Stromanthe sanguinea هي نبتة استوائية حيوية تشتهر بأوراقها الخضراء والوردية المميزة. إنها تنمو بشكل جيد في البيئات الدافئة والرطبة وتتطلب سقيًا متكررًا ورطوبة عالية."
+    },
+    "hi": {
+      "common_name": "स्ट्रॉबेरी बीड्स",
+      "description": "Stromanthe sanguinea एक जीवंत उष्णकटिबंधीय पौधा है जो अपनी आकर्षक गुलाबी और हरे पत्तियों के लिए जाना जाता है। यह गर्म, आर्द्र वातावरण में अच्छी तरह से बढ़ता है और नियमित पानी और उच्च आर्द्रता की आवश्यकता होती है."
+    },
+    "zh": {
+      "common_name": "草莓珠",
+      "description": "Stromanthe sanguinea 是一种充满活力的热带植物，以其引人注目的粉红色和绿色叶子而闻名。它在温暖潮湿的环境中生长良好，需要频繁浇水和高湿度。"
+    },
+    "ja": {
+      "common_name": "ストロベリービーズ",
+      "description": "Stromanthe sanguineaは、その印象的なピンクと緑の葉で知られる活気に満ちた熱帯植物です。暖かく湿度の高い環境でよく育ち、頻繁な水やりと高い湿度を必要とします。"
+    },
+    "ko": {
+      "common_name": "딸기 비즈",
+      "description": "Stromanthe sanguinea는 눈에 띄는 분홍색과 녹색 잎으로 알려진 활기찬 열대 식물입니다. 따뜻하고 습한 환경에서 잘 자라며, 자주 물을 주고 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/stromanthe-sanguinea",
+      "https://www.abc-gardening.com/stromanthe-care"
+    ]
+  }
+}

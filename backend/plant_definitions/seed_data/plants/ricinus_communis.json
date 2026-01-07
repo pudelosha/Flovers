@@ -1,0 +1,237 @@
+{
+  "external_id": "ricinus_communis",
+  "name": "Castor bean",
+  "latin": "Ricinus communis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ricinus_communis.jpg",
+  "image_thumb": "ricinus_communis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "完全な太陽",
+          "ko": "완전한 태양"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy",
+          "pl": "Gliniasty",
+          "de": "Lehmig",
+          "fr": "Argileux",
+          "it": "Argilloso",
+          "es": "Arenoso",
+          "pt": "Argiloso",
+          "ar": "طيني",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Castor bean",
+      "description": "Ricinus communis, also known as the castor bean plant, is a large shrub or small tree native to tropical regions. It is known for its attractive, large, palmate leaves and distinctive seed pods."
+    },
+    "pl": {
+      "common_name": "Rącznik pospolity",
+      "description": "Rącznik pospolity to duży krzew lub małe drzewo, pochodzące z tropikalnych rejonów. Charakteryzuje się dużymi, palmowymi liśćmi oraz charakterystycznymi nasionami."
+    },
+    "de": {
+      "common_name": "Rizinus",
+      "description": "Rizinus, auch bekannt als Wunderbaum, ist ein großer Strauch oder kleiner Baum aus tropischen Regionen. Er ist für seine auffälligen, großen, handförmigen Blätter und markanten Samenkapseln bekannt."
+    },
+    "fr": {
+      "common_name": "Ricin",
+      "description": "Le ricin est un grand arbuste ou un petit arbre originaire des régions tropicales. Il est connu pour ses grandes feuilles palmées et ses capsules de graines distinctives."
+    },
+    "it": {
+      "common_name": "Ricinus",
+      "description": "Il ricino è un grande arbusto o piccolo albero originario delle regioni tropicali. È noto per le sue grandi foglie palmate e per i caratteristici baccelli di semi."
+    },
+    "es": {
+      "common_name": "Ricinus",
+      "description": "El ricino es un arbusto grande o un árbol pequeño originario de las regiones tropicales. Es conocido por sus grandes hojas palmeadas y sus cápsulas de semillas distintivas."
+    },
+    "pt": {
+      "common_name": "Rícino",
+      "description": "O rícino é um grande arbusto ou pequena árvore nativa das regiões tropicais. É conhecido pelas suas grandes folhas palmeadas e pelas cápsulas de sementes distintivas."
+    },
+    "ar": {
+      "common_name": "الخروع",
+      "description": "الخروع هو شجيرة كبيرة أو شجرة صغيرة موطنها المناطق الاستوائية. يُعرف بأوراقه الكبيرة ذات الشكل اليدوي وبذوره المميزة."
+    },
+    "hi": {
+      "common_name": "रिसिन",
+      "description": "रिसिन, जिसे कास्टोर बीन्स के नाम से भी जाना जाता है, एक बड़ा झाड़ या छोटा पेड़ है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। यह अपनी बड़ी, हथेली के आकार की पत्तियों और विशिष्ट बीजों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "蓖麻",
+      "description": "蓖麻是一种大灌木或小树，原产于热带地区。它以其大的掌状叶子和独特的种子荚而闻名。"
+    },
+    "ja": {
+      "common_name": "ヒマシ油の木",
+      "description": "ヒマシ油の木は熱帯地方に自生する大きな低木または小さな木です。大きな掌状の葉と特徴的な種子カプセルで知られています。"
+    },
+    "ko": {
+      "common_name": "피마자",
+      "description": "피마자는 열대 지역이 원산지인 큰 관목 또는 작은 나무입니다. 큰 손바닥 모양의 잎과 독특한 씨앗 캡슐로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ricinus-communis",
+      "https://www.bhg.com/gardening/pests-insects-diseases/castor-bean-plant-guide/"
+    ]
+  }
+}

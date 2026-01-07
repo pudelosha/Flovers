@@ -1,0 +1,238 @@
+{
+  "external_id": "nemesia_strumosa",
+  "name": "Nemesia",
+  "latin": "Nemesia strumosa",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "nemesia_strumosa.jpg",
+  "image_thumb": "nemesia_strumosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent watering",
+          "pl": "Częste podlewanie",
+          "de": "Häufig gießen",
+          "fr": "Arrosage fréquent",
+          "it": "Annaffiature frequenti",
+          "es": "Riego frecuente",
+          "pt": "Rega frequente",
+          "ar": "ري متكرر",
+          "hi": "बार-बार पानी",
+          "zh": "经常浇水",
+          "ja": "頻繁な水やり",
+          "ko": "잦은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiark.",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा-मध्यम",
+          "zh": "凉爽到温和",
+          "ja": "涼しい気候",
+          "ko": "서늘한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Normalna wilg.",
+          "de": "Normale Feuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact annual",
+          "pl": "Zwarta roślina",
+          "de": "Kompakte Einjährige",
+          "fr": "Annuelle compacte",
+          "it": "Annuale compatta",
+          "es": "Anual compacta",
+          "pt": "Anual compacta",
+          "ar": "نبات حولي صغير",
+          "hi": "सघन वार्षिक",
+          "zh": "紧凑一年生",
+          "ja": "コンパクト一年草",
+          "ko": "콤팩트 1년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cape jewel flower",
+      "description": "Nemesia strumosa is a flowering annual native to South Africa. It produces colorful blooms in cool seasons and prefers full sun with regular watering."
+    },
+    "pl": {
+      "common_name": "Nemezja",
+      "description": "Nemesia strumosa to jednoroczna roślina kwitnąca z Afryki Południowej. Lubi słońce, chłodniejsze temperatury i regularne podlewanie."
+    },
+    "de": {
+      "common_name": "Nemesia",
+      "description": "Nemesia strumosa ist eine einjährige Blühpflanze aus Südafrika. Sie gedeiht in voller Sonne und benötigt gleichmäßige Wassergaben."
+    },
+    "fr": {
+      "common_name": "Némésie",
+      "description": "Nemesia strumosa est une plante annuelle originaire d’Afrique du Sud. Elle fleurit abondamment au soleil avec un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Nemesia",
+      "description": "Nemesia strumosa è una pianta annuale ornamentale sudafricana. Predilige pieno sole e irrigazioni costanti."
+    },
+    "es": {
+      "common_name": "Nemesia",
+      "description": "Nemesia strumosa es una planta anual originaria de Sudáfrica. Florece mejor a pleno sol con riego frecuente."
+    },
+    "pt": {
+      "common_name": "Nemésia",
+      "description": "Nemesia strumosa é uma planta anual da África do Sul. Necessita sol pleno e regas regulares para florescer bem."
+    },
+    "ar": {
+      "common_name": "نيميسيا",
+      "description": "نبات Nemesia strumosa سنوي مزهر من جنوب أفريقيا. ينمو جيدًا في الشمس الكاملة مع ري منتظم."
+    },
+    "hi": {
+      "common_name": "नेमेसिया",
+      "description": "Nemesia strumosa दक्षिण अफ्रीका की एक वार्षिक फूलदार पौधा है। इसे तेज धूप और नियमित पानी पसंद है।"
+    },
+    "zh": {
+      "common_name": "彩花香堇",
+      "description": "Nemesia strumosa 原产于南非，是一年生开花植物。喜全日照并需定期浇水。"
+    },
+    "ja": {
+      "common_name": "ネメシア",
+      "description": "ネメシア・ストルモサは南アフリカ原産の一年草です。日当たりと定期的な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "네메시아",
+      "description": "Nemesia strumosa는 남아프리카 원산의 한해살이 꽃식물입니다. 햇빛과 규칙적인 물주기를 좋아합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/nemesia",
+      "https://garden.org/plants/view/120871/Nemesia-strumosa/",
+      "https://www.britannica.com/plant/Nemesia"
+    ]
+  }
+}

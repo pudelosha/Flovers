@@ -1,0 +1,238 @@
+{
+  "external_id": "nephrolepis_exaltata",
+  "name": "Boston Fern",
+  "latin": "Nephrolepis exaltata",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "nephrolepis_exaltata.jpg",
+  "image_thumb": "nephrolepis_exaltata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotna",
+          "de": "Stets feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Arching fronds",
+          "pl": "Łukowate liście",
+          "de": "Bogenförmig",
+          "fr": "Frondes arquées",
+          "it": "Fronde arcuate",
+          "es": "Frondas arqueadas",
+          "pt": "Frondes arqueadas",
+          "ar": "سعف مقوس",
+          "hi": "झुकी पत्तियाँ",
+          "zh": "拱形叶",
+          "ja": "弓状の葉",
+          "ko": "아치형 잎"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Boston Fern",
+      "description": "Nephrolepis exaltata is a tropical fern valued for its arching green fronds. It thrives indoors with bright indirect light and consistently moist soil. High humidity helps keep foliage healthy."
+    },
+    "pl": {
+      "common_name": "Nefrolepis wyniosły",
+      "description": "Nephrolepis exaltata to paproć tropikalna o łukowatych liściach. Dobrze rośnie w jasnym, pośrednim świetle i stale wilgotnej glebie. Wysoka wilgotność powietrza poprawia kondycję rośliny."
+    },
+    "de": {
+      "common_name": "Schwertfarn",
+      "description": "Nephrolepis exaltata ist ein tropischer Farn mit bogigen Wedeln. Er bevorzugt helles indirektes Licht und gleichmäßig feuchte Erde. Hohe Luftfeuchtigkeit ist förderlich."
+    },
+    "fr": {
+      "common_name": "Fougère de Boston",
+      "description": "Nephrolepis exaltata est une fougère tropicale aux frondes arquées. Elle pousse bien en lumière indirecte avec un sol constamment humide. Une forte humidité est recommandée."
+    },
+    "it": {
+      "common_name": "Felce di Boston",
+      "description": "Nephrolepis exaltata è una felce tropicale dalle fronde arcuate. Preferisce luce indiretta e terreno sempre umido. L'umidità elevata favorisce una crescita sana."
+    },
+    "es": {
+      "common_name": "Helecho de Boston",
+      "description": "Nephrolepis exaltata es un helecho tropical con frondas arqueadas. Requiere luz indirecta brillante y suelo constantemente húmedo. La humedad alta es beneficiosa."
+    },
+    "pt": {
+      "common_name": "Samambaia-americana",
+      "description": "Nephrolepis exaltata é uma samambaia tropical de frondes arqueadas. Desenvolve-se bem com luz indireta e solo sempre úmido. Alta umidade ajuda a manter a planta saudável."
+    },
+    "ar": {
+      "common_name": "سرخس بوسطن",
+      "description": "Nephrolepis exaltata نبات سرخسي استوائي ذو أوراق مقوسة. ينمو جيدًا في ضوء غير مباشر وتربة رطبة باستمرار. الرطوبة العالية مهمة لصحة النبات."
+    },
+    "hi": {
+      "common_name": "बोस्टन फर्न",
+      "description": "Nephrolepis exaltata एक उष्णकटिबंधीय फर्न है जिसकी पत्तियाँ झुकी होती हैं। यह अप्रत्यक्ष रोशनी और लगातार नम मिट्टी में अच्छी तरह बढ़ता है। अधिक नमी इसके लिए लाभकारी है।"
+    },
+    "zh": {
+      "common_name": "波士顿蕨",
+      "description": "Nephrolepis exaltata 是一种热带蕨类植物，具有拱形叶片。适合明亮的散射光和持续湿润的土壤。较高的湿度有助于生长。"
+    },
+    "ja": {
+      "common_name": "ボストンファーン",
+      "description": "Nephrolepis exaltata は弓状の葉を持つ熱帯性シダです。明るい間接光と常に湿った土壌を好みます。高い湿度が健康維持に役立ちます。"
+    },
+    "ko": {
+      "common_name": "보스턴고사리",
+      "description": "Nephrolepis exaltata는 아치형 잎을 가진 열대 고사리입니다. 밝은 간접광과 항상 촉촉한 토양에서 잘 자랍니다. 높은 습도가 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11673/nephrolepis-exaltata/details",
+      "https://edis.ifas.ufl.edu/publication/EP339",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b740"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "stephanotis_floribunda",
+  "name": "Madagascar Jasmine",
+  "latin": "Stephanotis floribunda",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stephanotis_floribunda.jpg",
+  "image_thumb": "stephanotis_floribunda.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy",
+          "pl": "Gliniasty",
+          "de": "Lehmig",
+          "fr": "Argileux",
+          "it": "Limoso",
+          "es": "Arcilloso",
+          "pt": "Argiloso",
+          "ar": "طيني",
+          "hi": "मिट्टी",
+          "zh": "粘土",
+          "ja": "粘土質",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20–25°C",
+          "pl": "20–25°C",
+          "de": "20–25°C",
+          "fr": "20–25°C",
+          "it": "20–25°C",
+          "es": "20–25°C",
+          "pt": "20–25°C",
+          "ar": "20–25°C",
+          "hi": "20–25°C",
+          "zh": "20–25°C",
+          "ja": "20–25°C",
+          "ko": "20–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Vining",
+          "pl": "Pnącze",
+          "de": "Kletternd",
+          "fr": "Grimpant",
+          "it": "Rampicante",
+          "es": "Trepador",
+          "pt": "Crescimento em trepadeira",
+          "ar": "متسلق",
+          "hi": "लताएँ",
+          "zh": "攀爬",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Madagascar Jasmine",
+      "description": "Stephanotis floribunda, commonly known as Madagascar Jasmine, is a flowering vine native to Madagascar. It thrives in tropical climates with bright but indirect sunlight."
+    },
+    "pl": {
+      "common_name": "Jaśmin Madagaskarski",
+      "description": "Stephanotis floribunda, znany jako jaśmin Madagaskarski, to pnącze kwitnące pochodzące z Madagaskaru. Rośnie w tropikalnym klimacie w jasnym, ale pośrednim świetle."
+    },
+    "de": {
+      "common_name": "Madagaskar-Jasmin",
+      "description": "Stephanotis floribunda, auch Madagaskar-Jasmin genannt, ist eine blühende Kletterpflanze aus Madagaskar. Sie gedeiht in tropischen Klimazonen mit hellem, aber indirektem Licht."
+    },
+    "fr": {
+      "common_name": "Jasmin de Madagascar",
+      "description": "Le Stephanotis floribunda, également connu sous le nom de jasmin de Madagascar, est une plante grimpante originaire de Madagascar. Elle prospère dans les climats tropicaux avec une lumière vive mais indirecte."
+    },
+    "it": {
+      "common_name": "Gelsomino del Madagascar",
+      "description": "Stephanotis floribunda, noto come gelsomino del Madagascar, è una pianta rampicante che cresce originariamente nel Madagascar. Cresce in climi tropicali con luce intensa ma indiretta."
+    },
+    "es": {
+      "common_name": "Jazmín de Madagascar",
+      "description": "Stephanotis floribunda, conocido como jazmín de Madagascar, es una planta trepadora originaria de Madagascar. Prosperan en climas tropicales con luz brillante pero indirecta."
+    },
+    "pt": {
+      "common_name": "Jasmim de Madagascar",
+      "description": "Stephanotis floribunda, conhecido como jasmim de Madagascar, é uma planta trepadeira nativa de Madagascar. Cresce em climas tropicais com luz brilhante, mas indireta."
+    },
+    "ar": {
+      "common_name": "ياسمين مدغشقر",
+      "description": "Stephanotis floribunda، المعروف باسم ياسمين مدغشقر، هو نبات متسلق موطنه الأصلي مدغشقر. يزدهر في المناخات الاستوائية مع ضوء ساطع ولكن غير مباشر."
+    },
+    "hi": {
+      "common_name": "मेडागास्कर चमेली",
+      "description": "Stephanotis floribunda, जिसे मेडागास्कर चमेली के नाम से जाना जाता है, एक लता है जो मेडागास्कर से उत्पन्न हुई है। यह उष्णकटिबंधीय जलवायु में चमकदार लेकिन अप्रत्यक्ष सूर्यप्रकाश में उगती है।"
+    },
+    "zh": {
+      "common_name": "马达加斯加茉莉",
+      "description": "Stephanotis floribunda，常称为马达加斯加茉莉，是一种来自马达加斯加的攀爬植物。它在热带气候中茁壮成长，适合明亮但间接的阳光。"
+    },
+    "ja": {
+      "common_name": "マダガスカルジャスミン",
+      "description": "Stephanotis floribunda、一般にマダガスカルジャスミンとして知られるこの植物は、マダガスカル原産のツル植物です。熱帯気候で明るいが間接的な光で成長します。"
+    },
+    "ko": {
+      "common_name": "마다가스카르 재스민",
+      "description": "Stephanotis floribunda, 일반적으로 마다가스카르 재스민이라고 알려진 이 식물은 마다가스카르에서 자생하는 덩굴 식물입니다. 열대 기후에서 밝지만 간접적인 빛을 받아 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/stephanotis-floribunda",
+      "https://www.gardenia.net/plant/stephanotis-floribunda"
+    ]
+  }
+}

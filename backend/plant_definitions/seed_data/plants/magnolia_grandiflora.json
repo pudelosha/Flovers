@@ -1,0 +1,237 @@
+{
+  "external_id": "magnolia_grandiflora",
+  "name": "Southern Magnolia",
+  "latin": "Magnolia grandiflora",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "magnolia_grandiflora.jpg",
+  "image_thumb": "magnolia_grandiflora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic loam",
+          "pl": "Kwaśna gleba",
+          "de": "Saure Erde",
+          "fr": "Sol acide",
+          "it": "Suolo acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular water",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiatura regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperate",
+          "pl": "Ciepły klimat",
+          "de": "Warm gemäßigt",
+          "fr": "Tempéré chaud",
+          "it": "Temperato caldo",
+          "es": "Templado cálido",
+          "pt": "Clima ameno",
+          "ar": "معتدل دافئ",
+          "hi": "गरम समशीतोष्ण",
+          "zh": "温暖气候",
+          "ja": "温暖な気候",
+          "ko": "온난 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Large tree",
+          "pl": "Duże drzewo",
+          "de": "Großer Baum",
+          "fr": "Grand arbre",
+          "it": "Grande albero",
+          "es": "Árbol grande",
+          "pt": "Árvore grande",
+          "ar": "شجرة كبيرة",
+          "hi": "बड़ा पेड़",
+          "zh": "大型乔木",
+          "ja": "高木",
+          "ko": "큰 나무"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Southern Magnolia",
+      "description": "Magnolia grandiflora is a large evergreen tree native to the southeastern United States. It is known for its glossy leaves and large, fragrant white flowers. It thrives outdoors in warm, sunny climates."
+    },
+    "pl": {
+      "common_name": "Magnolia wielkokwiatowa",
+      "description": "Magnolia grandiflora to duże, zimozielone drzewo pochodzące z południowo-wschodnich Stanów Zjednoczonych. Ma błyszczące liście i duże, pachnące białe kwiaty. Najlepiej rośnie na zewnątrz w ciepłym klimacie."
+    },
+    "de": {
+      "common_name": "Großblütige Magnolie",
+      "description": "Magnolia grandiflora ist ein großer immergrüner Baum aus dem Südosten der USA. Er hat glänzende Blätter und große, duftende weiße Blüten. Die Pflanze wächst am besten im Freien an sonnigen Standorten."
+    },
+    "fr": {
+      "common_name": "Magnolia à grandes fleurs",
+      "description": "Magnolia grandiflora est un grand arbre persistant originaire du sud-est des États-Unis. Il possède des feuilles brillantes et de grandes fleurs blanches parfumées. Il se développe mieux en extérieur dans un climat chaud."
+    },
+    "it": {
+      "common_name": "Magnolia sempreverde",
+      "description": "Magnolia grandiflora è un grande albero sempreverde originario del sud-est degli Stati Uniti. È apprezzato per le foglie lucide e i grandi fiori bianchi profumati. Cresce bene all'aperto in zone soleggiate."
+    },
+    "es": {
+      "common_name": "Magnolio del sur",
+      "description": "Magnolia grandiflora es un árbol grande y perenne originario del sureste de Estados Unidos. Destaca por sus hojas brillantes y flores blancas fragantes. Se cultiva principalmente en exteriores cálidos y soleados."
+    },
+    "pt": {
+      "common_name": "Magnólia-do-sul",
+      "description": "Magnolia grandiflora é uma grande árvore perene nativa do sudeste dos Estados Unidos. Possui folhas brilhantes e flores brancas muito perfumadas. Desenvolve-se melhor ao ar livre em climas quentes."
+    },
+    "ar": {
+      "common_name": "ماغنوليا كبرى",
+      "description": "ماغنوليا غرانديفلورا شجرة دائمة الخضرة موطنها جنوب شرق الولايات المتحدة. تتميز بأوراق لامعة وأزهار بيضاء كبيرة وعطرة. تنمو بشكل أفضل في الهواء الطلق والمناخ الدافئ."
+    },
+    "hi": {
+      "common_name": "सदर्न मैगनोलिया",
+      "description": "मैगनोलिया ग्रैंडिफ्लोरा दक्षिणपूर्वी अमेरिका का एक बड़ा सदाबहार पेड़ है। इसमें चमकदार पत्तियाँ और बड़ी सुगंधित सफेद फूल होते हैं। यह गर्म और धूप वाले बाहरी क्षेत्रों में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "大花木兰",
+      "description": "大花木兰是一种原产于美国东南部的常绿乔木。它具有光亮的叶子和芳香的大型白色花朵。适合在温暖、阳光充足的户外环境中生长。"
+    },
+    "ja": {
+      "common_name": "タイサンボク",
+      "description": "マグノリア・グランディフローラは米国南東部原産の常緑高木です。光沢のある葉と大きな白い芳香花が特徴です。温暖で日当たりの良い屋外でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "큰꽃목련",
+      "description": "Magnolia grandiflora는 미국 남동부 원산의 상록 대형 수목입니다. 윤기 나는 잎과 향기로운 흰 꽃이 특징입니다. 따뜻하고 햇볕이 좋은 야외 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a331",
+      "https://plants.ces.ncsu.edu/plants/magnolia-grandiflora/",
+      "https://www.rhs.org.uk/plants/10660/magnolia-grandiflora/details"
+    ]
+  }
+}

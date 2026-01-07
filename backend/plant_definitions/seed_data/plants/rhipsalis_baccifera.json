@@ -1,0 +1,237 @@
+{
+  "external_id": "rhipsalis_baccifera",
+  "name": "Mistletoe Cactus",
+  "latin": "Rhipsalis baccifera",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "rhipsalis_baccifera.jpg",
+  "image_thumb": "rhipsalis_baccifera.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczająca",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Moderate Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقاية معتدلة",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium difficulty",
+          "pl": "Średnia trudność",
+          "de": "Mittlere Schwierigkeit",
+          "fr": "Difficulté moyenne",
+          "it": "Difficoltà media",
+          "es": "Dificultad media",
+          "pt": "Dificuldade média",
+          "ar": "صعوبة متوسطة",
+          "hi": "मध्यम कठिनाई",
+          "zh": "中等难度",
+          "ja": "中程度の難易度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe temperatury",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖的温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mistletoe Cactus",
+      "description": "Rhipsalis baccifera is an epiphytic cactus native to tropical regions. It has slender, pendulous stems and small white berries."
+    },
+    "pl": {
+      "common_name": "Kaktus jemiołowy",
+      "description": "Rhipsalis baccifera to epifitowy kaktus występujący w tropikach. Ma cienkie, zwisające łodygi i małe białe jagody."
+    },
+    "de": {
+      "common_name": "Mistelnkaktus",
+      "description": "Rhipsalis baccifera ist ein epiphytischer Kaktus aus tropischen Regionen. Er hat dünne, hängende Stängel und kleine weiße Beeren."
+    },
+    "fr": {
+      "common_name": "Cactus de gui",
+      "description": "Rhipsalis baccifera est un cactus épiphyte originaire des régions tropicales. Il possède des tiges fines et pendantes avec de petites baies blanches."
+    },
+    "it": {
+      "common_name": "Cactus vischio",
+      "description": "Rhipsalis baccifera è un cactus epifita originario delle regioni tropicali. Ha fusti sottili e penduli con piccole bacche bianche."
+    },
+    "es": {
+      "common_name": "Cactus muérdago",
+      "description": "Rhipsalis baccifera es un cactus epífito originario de las regiones tropicales. Tiene tallos delgados y colgantes con pequeñas bayas blancas."
+    },
+    "pt": {
+      "common_name": "Cacto visco",
+      "description": "Rhipsalis baccifera é um cacto epífito nativo das regiões tropicais. Possui caules finos e pendentes, com pequenas frutas brancas."
+    },
+    "ar": {
+      "common_name": "صبار الدبق",
+      "description": "Rhipsalis baccifera هو صبار نباتي نشأ في المناطق الاستوائية. له سيقان رقيقة ومتدلية وثمار بيضاء صغيرة."
+    },
+    "hi": {
+      "common_name": "मिस्टलेटो कैक्टस",
+      "description": "Rhipsalis baccifera एक एपिफाइटिक कैक्टस है जो उष्णकटिबंधीय क्षेत्रों का मूल निवासी है। इसके पतले, लटकते हुए तने होते हैं और छोटे सफेद बेरी होते हैं।"
+    },
+    "zh": {
+      "common_name": "槲寄生仙人掌",
+      "description": "Rhipsalis baccifera 是一种原产于热带地区的附生仙人掌。它有细长的悬挂茎和小白色浆果。"
+    },
+    "ja": {
+      "common_name": "ミスルトウサボテン",
+      "description": "Rhipsalis baccifera は熱帯地方に自生する着生サボテンです。細く垂れ下がる茎と小さな白い実を持っています。"
+    },
+    "ko": {
+      "common_name": "겨우살이 선인장",
+      "description": "Rhipsalis baccifera는 열대 지역 원산지의 착생 선인장입니다. 가늘고 처진 줄기와 작은 흰색 열매를 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=875",
+      "https://www.abc-gardening.com/rhipsalis-baccifera-care"
+    ]
+  }
+}

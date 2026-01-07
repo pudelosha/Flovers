@@ -1,0 +1,237 @@
+{
+  "external_id": "scindapsus_pictus",
+  "name": "Satin Pothos",
+  "latin": "Scindapsus pictus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "scindapsus_pictus.jpg",
+  "image_thumb": "scindapsus_pictus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid-Mix",
+          "fr": "Mélange aroides",
+          "it": "Miscela aroida",
+          "es": "Mezcla de aroides",
+          "pt": "Mistura de aroides",
+          "ar": "خليط الأرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "Aroid混合土",
+          "ja": "アロイド混合土",
+          "ko": "아로이드 혼합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-30°C",
+          "pl": "22-30°C",
+          "de": "22-30°C",
+          "fr": "22-30°C",
+          "it": "22-30°C",
+          "es": "22-30°C",
+          "pt": "22-30°C",
+          "ar": "22-30°C",
+          "hi": "22-30°C",
+          "zh": "22-30°C",
+          "ja": "22-30°C",
+          "ko": "22-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais de estimação",
+          "ar": "سام للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "適度な成長",
+          "ko": "적당한 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, known as Satin Pothos, is a popular houseplant with heart-shaped leaves, marbled in silver. It thrives in medium light and is moderately easy to care for."
+    },
+    "pl": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, znany jako Satin Pothos, to popularna roślina doniczkowa o sercowatych liściach z marmurkowym srebrnym wzorem. Wymaga średniego światła i jest średnio łatwy w pielęgnacji."
+    },
+    "de": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, auch Satin Pothos genannt, ist eine beliebte Zimmerpflanze mit herzförmigen Blättern, die silberne Marmorierung aufweisen. Sie gedeiht bei mittlerem Licht und ist mäßig pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, connu sous le nom de Satin Pothos, est une plante d'intérieur populaire avec des feuilles en forme de cœur et un motif marbré argenté. Elle prospère dans une lumière moyenne et est modérément facile à entretenir."
+    },
+    "it": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, noto come Satin Pothos, è una pianta d'appartamento popolare con foglie a forma di cuore marmorizzate in argento. Cresce in luce media ed è moderatamente facile da curare."
+    },
+    "es": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, conocido como Satin Pothos, es una planta de interior popular con hojas en forma de corazón y un patrón marmoleado plateado. Crece con luz media y es moderadamente fácil de cuidar."
+    },
+    "pt": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, conhecido como Satin Pothos, é uma planta de interior popular com folhas em forma de coração e um padrão marmorizado prateado. Cresce em luz média e é moderadamente fácil de cuidar."
+    },
+    "ar": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus، المعروف باسم ساتين بوثوس، هو نبات داخلي شائع بأوراق على شكل قلب مع نمط رخامي فضي. ينمو في الضوء المتوسط ويعتبر سهل العناية إلى حد ما."
+    },
+    "hi": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, जिसे Satin Pothos के नाम से जाना जाता है, एक लोकप्रिय हाउसप्लांट है जिसकी दिल के आकार की पत्तियाँ चांदी के रगों से जड़ी होती हैं। यह मध्यम प्रकाश में बढ़ता है और इसे देखभाल में मध्यम कठिनाई होती है।"
+    },
+    "zh": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus，通常被称为Satin Pothos，是一种流行的室内植物，具有心形的叶子，上面有银色的纹理。它在中等光照下生长，且相对容易照顾。"
+    },
+    "ja": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus（サテンポトス）は、銀色の斑点があるハート型の葉を持つ人気のある室内植物です。中程度の光で育ち、手入れが比較的簡単です。"
+    },
+    "ko": {
+      "common_name": "Satin Pothos",
+      "description": "Scindapsus pictus, 또는 Satin Pothos는 은색 마블 무늬가 있는 하트 모양의 잎을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며, 관리가 적당히 쉬운 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/scindapsus-pictus",
+      "https://www.gardenia.net/plant/scindapsus-pictus"
+    ]
+  }
+}

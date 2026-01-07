@@ -1,0 +1,237 @@
+{
+  "external_id": "satureja_hortensis",
+  "name": "Summer Savory",
+  "latin": "Satureja hortensis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "satureja_hortensis.jpg",
+  "image_thumb": "satureja_hortensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "ري أوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepły",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "컴팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Summer Savory",
+      "description": "Summer savory is an aromatic herb, commonly used in culinary dishes. It thrives in sunny, well-drained soils."
+    },
+    "pl": {
+      "common_name": "Majeranek letni",
+      "description": "Majeranek letni to aromatyczna roślina stosowana w kuchni. Wymaga słonecznych, dobrze przepuszczalnych gleb."
+    },
+    "de": {
+      "common_name": "Sommerbohnenkraut",
+      "description": "Sommerbohnenkraut ist ein aromatisches Kraut, das häufig in der Küche verwendet wird. Es gedeiht in sonnigen, gut durchlässigen Böden."
+    },
+    "fr": {
+      "common_name": "Sarriette d'été",
+      "description": "La sarriette d'été est une herbe aromatique, utilisée en cuisine. Elle prospère dans des sols bien drainés et ensoleillés."
+    },
+    "it": {
+      "common_name": "Santoreggia",
+      "description": "La santoreggia è un'erba aromatica utilizzata in cucina. Cresce in terreni ben drenati e soleggiati."
+    },
+    "es": {
+      "common_name": "Satureja",
+      "description": "La satureja es una hierba aromática utilizada en la cocina. Crece en suelos bien drenados y soleados."
+    },
+    "pt": {
+      "common_name": "Satureia",
+      "description": "A satureia é uma erva aromática usada na culinária. Desenvolve-se em solos bem drenados e ensolarados."
+    },
+    "ar": {
+      "common_name": "زعتر صيفي",
+      "description": "الزعتر الصيفي هو عشب عطري يُستخدم في الطهي. يزدهر في التربة جيدة التصريف والمشمسة."
+    },
+    "hi": {
+      "common_name": "गर्मी का सैवोरी",
+      "description": "गर्मी का सैवोरी एक खुशबूदार जड़ी-बूटी है, जिसका उपयोग रसोई में किया जाता है। यह धूप वाली, अच्छी जल निकासी वाली मिट्टी में उगती है।"
+    },
+    "zh": {
+      "common_name": "夏季香草",
+      "description": "夏季香草是一种芳香的草本植物，常用于烹饪。它在阳光充足、排水良好的土壤中生长良好。"
+    },
+    "ja": {
+      "common_name": "夏のサバリー",
+      "description": "夏のサバリーは香り高いハーブで、料理に使われます。日当たりが良く、排水の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "여름 세이보리",
+      "description": "여름 세이보리는 요리에 자주 사용되는 향기로운 허브입니다. 햇볕이 잘 드는 배수가 좋은 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/edible/herbs/summer-savory-growing.htm",
+      "https://www.bhg.com/gardening/pests-insects-diseases/summer-savory/"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "lactuca_sativa",
+  "name": "Lettuce",
+  "latin": "Lactuca sativa",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 2,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "lactuca_sativa.jpg",
+  "image_thumb": "lactuca_sativa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "부분 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Żyzna gleba",
+          "de": "Nährboden",
+          "fr": "Sol riche",
+          "it": "Terreno ricco",
+          "es": "Suelo fértil",
+          "pt": "Solo fértil",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent",
+          "pl": "Częste",
+          "de": "Häufig",
+          "fr": "Fréquent",
+          "it": "Frequente",
+          "es": "Frecuente",
+          "pt": "Frequente",
+          "ar": "متكرر",
+          "hi": "बार-बार",
+          "zh": "频繁",
+          "ja": "頻繁",
+          "ko": "자주"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool",
+          "pl": "Chłodno",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "معتدل",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "早い",
+          "ko": "빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lettuce",
+      "description": "Lettuce is a fast-growing leafy vegetable commonly grown for salads. It prefers cool temperatures, consistent moisture, and partial sun. It is well suited to containers and indoor growing with adequate light."
+    },
+    "pl": {
+      "common_name": "Sałata",
+      "description": "Sałata to szybko rosnące warzywo liściowe uprawiane na sałatki. Lubi chłodne warunki, wilgotną glebę i półcień. Może być uprawiana w pojemnikach w domu."
+    },
+    "de": {
+      "common_name": "Kopfsalat",
+      "description": "Salat ist ein schnell wachsendes Blattgemüse für den Frischverzehr. Er bevorzugt kühle Temperaturen, gleichmäßige Feuchtigkeit und halbschattige Lagen. Auch für den Anbau in Töpfen geeignet."
+    },
+    "fr": {
+      "common_name": "Laitue",
+      "description": "La laitue est un légume-feuille à croissance rapide, cultivé pour les salades. Elle apprécie la fraîcheur, un sol humide et une lumière modérée. Elle peut être cultivée en pot."
+    },
+    "it": {
+      "common_name": "Lattuga",
+      "description": "La lattuga è un ortaggio a foglia a crescita rapida usato nelle insalate. Preferisce temperature fresche, terreno umido e luce parziale. Adatta anche alla coltivazione in vaso."
+    },
+    "es": {
+      "common_name": "Lechuga",
+      "description": "La lechuga es una hortaliza de hoja de crecimiento rápido. Requiere temperaturas frescas, riego regular y sol parcial. Se adapta bien al cultivo en macetas."
+    },
+    "pt": {
+      "common_name": "Alface",
+      "description": "A alface é uma hortaliça folhosa de crescimento rápido. Prefere clima fresco, solo úmido e luz parcial. Pode ser cultivada facilmente em vasos."
+    },
+    "ar": {
+      "common_name": "خس",
+      "description": "الخس نبات ورقي سريع النمو يُزرع للأكل الطازج. يفضل الطقس المعتدل والتربة الرطبة وضوء الشمس الجزئي. يمكن زراعته في أوعية."
+    },
+    "hi": {
+      "common_name": "सलाद पत्ता",
+      "description": "सलाद पत्ता एक तेज़ी से बढ़ने वाली पत्तेदार सब्ज़ी है। इसे ठंडा मौसम, नियमित पानी और आंशिक धूप पसंद है। गमलों में भी उगाया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "生菜",
+      "description": "生菜是一种生长迅速的叶菜类植物。它喜欢凉爽的环境、湿润的土壤和半日照。适合在容器中种植。"
+    },
+    "ja": {
+      "common_name": "レタス",
+      "description": "レタスは成長の早い葉物野菜です。涼しい気候と適度な水分、半日陰を好みます。鉢植えでも育てられます。"
+    },
+    "ko": {
+      "common_name": "상추",
+      "description": "상추는 빠르게 자라는 잎채소입니다. 서늘한 온도와 꾸준한 물주기, 부분적인 햇빛을 선호합니다. 화분 재배도 가능합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://extension.umn.edu/vegetables/growing-lettuce",
+      "https://www.rhs.org.uk/vegetables/lettuce/grow-your-own"
+    ]
+  }
+}

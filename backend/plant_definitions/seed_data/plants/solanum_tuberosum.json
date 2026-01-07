@@ -1,0 +1,237 @@
+{
+  "external_id": "solanum_tuberosum",
+  "name": "Potato",
+  "latin": "Solanum tuberosum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "solanum_tuberosum.jpg",
+  "image_thumb": "solanum_tuberosum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßiges Gießen",
+          "fr": "Arrosage régulier",
+          "it": "Irrigazione regolare",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "الري المنتظم",
+          "hi": "नियमित पानी देना",
+          "zh": "定期浇水",
+          "ja": "定期の水やり",
+          "ko": "정기적인 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-20°C",
+          "pl": "15-20°C",
+          "de": "15-20°C",
+          "fr": "15-20°C",
+          "it": "15-20°C",
+          "es": "15-20°C",
+          "pt": "15-20°C",
+          "ar": "15-20°C",
+          "hi": "15-20°C",
+          "zh": "15-20°C",
+          "ja": "15-20°C",
+          "ko": "15-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम विकास",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Potato",
+      "description": "The potato is a root vegetable known for its edible tubers. It thrives in cool, temperate climates and is widely grown for food."
+    },
+    "pl": {
+      "common_name": "Ziemniak",
+      "description": "Ziemniak to roślina okopowa znana z jadalnych bulw. Rośnie w chłodnym, umiarkowanym klimacie i jest szeroko uprawiana jako żywność."
+    },
+    "de": {
+      "common_name": "Kartoffel",
+      "description": "Die Kartoffel ist ein Wurzelgemüse, das für seine essbaren Knollen bekannt ist. Sie gedeiht in kühlen, gemäßigten Klimazonen und wird weltweit als Nahrungsmittel angebaut."
+    },
+    "fr": {
+      "common_name": "Pomme de terre",
+      "description": "La pomme de terre est un légume racine connu pour ses tubercules comestibles. Elle prospère dans les climats frais et tempérés et est largement cultivée pour l'alimentation."
+    },
+    "it": {
+      "common_name": "Patata",
+      "description": "La patata è un ortaggio a radice noto per i suoi tuberi commestibili. Cresce in climi freschi e temperati ed è ampiamente coltivata come cibo."
+    },
+    "es": {
+      "common_name": "Patata",
+      "description": "La patata es un vegetal de raíz conocido por sus tubérculos comestibles. Crece en climas frescos y templados y se cultiva ampliamente como alimento."
+    },
+    "pt": {
+      "common_name": "Batata",
+      "description": "A batata é um vegetal de raiz conhecido pelos seus tubérculos comestíveis. Cresce em climas frescos e temperados e é amplamente cultivada como alimento."
+    },
+    "ar": {
+      "common_name": "بطاطس",
+      "description": "البطاطس هي خضروات جذرية معروفة بثمارها الصالحة للأكل. تنمو في المناخات المعتدلة والباردة وتزرع على نطاق واسع كغذاء."
+    },
+    "hi": {
+      "common_name": "आलू",
+      "description": "आलू एक जड़ वाली सब्जी है जो अपनी खाने योग्य कंदों के लिए जानी जाती है। यह ठंडे, समशीतोष्ण जलवायु में उगती है और खाद्य के रूप में व्यापक रूप से उगाई जाती है।"
+    },
+    "zh": {
+      "common_name": "土豆",
+      "description": "土豆是一种以可食用块茎闻名的根茎类蔬菜。它在寒冷、温带气候中生长，并广泛种植作为食物。"
+    },
+    "ja": {
+      "common_name": "ジャガイモ",
+      "description": "ジャガイモは食用の塊茎で知られる根菜です。冷涼な温帯気候で育ち、広く食料として栽培されています。"
+    },
+    "ko": {
+      "common_name": "감자",
+      "description": "감자는 먹을 수 있는 덩이줄기로 알려진 뿌리채소입니다. 시원한 온대 기후에서 자라며, 식량으로 널리 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pests-insects-diseases/potato-growing-tips/",
+      "https://www.rhs.org.uk/advice/profile?pid=229"
+    ]
+  }
+}

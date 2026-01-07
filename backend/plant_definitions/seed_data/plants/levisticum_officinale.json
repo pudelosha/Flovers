@@ -1,0 +1,236 @@
+{
+  "external_id": "levisticum_officinale",
+  "name": "Lovage",
+  "latin": "Levisticum officinale",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "levisticum_officinale.jpg",
+  "image_thumb": "levisticum_officinale.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial to full sun",
+          "pl": "Półcień do słońca",
+          "de": "Halb- bis Vollsonne",
+          "fr": "Mi-ombre à soleil",
+          "it": "Mezz'ombra o sole",
+          "es": "Sol o semisombra",
+          "pt": "Sol a meia-sombra",
+          "ar": "شمس إلى نصف ظل",
+          "hi": "आंशिक से पूर्ण धूप",
+          "zh": "半日照到全日照",
+          "ja": "半日向から日向",
+          "ko": "반양지~양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة غنية وجيدة",
+          "hi": "उपजाऊ, जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で水はけ良",
+          "ko": "비옥하고 배수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित सिंचाई",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to moderate",
+          "pl": "Chłodno do umiark.",
+          "de": "Kühl bis mäßig",
+          "fr": "Frais à tempéré",
+          "it": "Fresco-moderato",
+          "es": "Fresco a templado",
+          "pt": "Fresco a moderado",
+          "ar": "معتدل إلى بارد",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽至温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘~온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Tall, vigorous",
+          "pl": "Wysoki, silny",
+          "de": "Hoch, kräftig",
+          "fr": "Grand et vigoureux",
+          "it": "Alto e vigoroso",
+          "es": "Alto y vigoroso",
+          "pt": "Alto e vigoroso",
+          "ar": "نمو قوي وطويل",
+          "hi": "लंबी तेज़ वृद्धि",
+          "zh": "高大旺盛",
+          "ja": "背が高く旺盛",
+          "ko": "키 크고 왕성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lovage",
+      "description": "Lovage is a hardy perennial herb native to southern Europe. It has celery-like leaves and is commonly grown for culinary use. The plant prefers rich soil and regular watering."
+    },
+    "pl": {
+      "common_name": "Lubczyk ogrodowy",
+      "description": "Lubczyk to wieloletnie zioło pochodzące z południowej Europy. Ma aromatyczne liście podobne do selera i jest używany w kuchni. Najlepiej rośnie w żyznej glebie i przy regularnym podlewaniu."
+    },
+    "de": {
+      "common_name": "Liebstöckel",
+      "description": "Liebstöckel ist ein mehrjähriges Küchenkraut aus Südeuropa. Er hat sellerieähnliche Blätter und wird häufig zum Würzen verwendet. Die Pflanze mag nährstoffreichen Boden und regelmäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Livèche",
+      "description": "La livèche est une herbe vivace originaire du sud de l’Europe. Ses feuilles rappellent le céleri et sont utilisées en cuisine. Elle préfère un sol riche et des arrosages réguliers."
+    },
+    "it": {
+      "common_name": "Levistico",
+      "description": "Il levistico è un’erba perenne originaria dell’Europa meridionale. Ha foglie simili al sedano ed è usato in cucina. Cresce bene in terreni ricchi con annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Levístico",
+      "description": "El levístico es una hierba perenne originaria del sur de Europa. Sus hojas recuerdan al apio y se usan en la cocina. Prefiere suelos fértiles y riego regular."
+    },
+    "pt": {
+      "common_name": "Levístico",
+      "description": "O levístico é uma erva perene nativa do sul da Europa. Possui folhas semelhantes ao aipo e é usado na culinária. Gosta de solo rico e rega regular."
+    },
+    "ar": {
+      "common_name": "عشبة اللوفاج",
+      "description": "اللوفاج نبات عشبي معمر موطنه جنوب أوروبا. أوراقه تشبه الكرفس ويستخدم في الطهي. يفضل تربة غنية وريًا منتظمًا."
+    },
+    "hi": {
+      "common_name": "लवेज",
+      "description": "लवेज दक्षिणी यूरोप का बहुवर्षीय जड़ी-बूटी पौधा है। इसकी पत्तियाँ अजवाइन जैसी होती हैं और इसे खाना पकाने में उपयोग किया जाता है। इसे उपजाऊ मिट्टी और नियमित पानी पसंद है।"
+    },
+    "zh": {
+      "common_name": "欧当归",
+      "description": "欧当归是一种原产于南欧的多年生香草植物。叶片类似芹菜，常用于烹饪。适合生长在肥沃且定期浇水的土壤中。"
+    },
+    "ja": {
+      "common_name": "ラベージ",
+      "description": "ラベージは南ヨーロッパ原産の多年草ハーブです。セロリに似た葉を持ち、料理に使われます。肥沃な土と定期的な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "러비지",
+      "description": "러비지는 남유럽 원산의 다년생 허브입니다. 셀러리와 비슷한 잎을 가지고 요리에 사용됩니다. 비옥한 토양과 규칙적인 물주기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/herbs/lovage",
+      "https://extension.umn.edu/herbs/lovage",
+      "https://plants.ces.ncsu.edu/plants/levisticum-officinale/"
+    ]
+  }
+}

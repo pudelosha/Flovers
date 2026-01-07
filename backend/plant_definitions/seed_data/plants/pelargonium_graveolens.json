@@ -1,0 +1,237 @@
+{
+  "external_id": "pelargonium_graveolens",
+  "name": "Rose-scented Geranium",
+  "latin": "Pelargonium graveolens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pelargonium_graveolens.jpg",
+  "image_thumb": "pelargonium_graveolens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchniczna",
+          "de": "Lehmiger Boden",
+          "fr": "Sol limoneux",
+          "it": "Suolo limoso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मृदा बलुआ",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "점토성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyen",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rose-scented Geranium",
+      "description": "Pelargonium graveolens is a fragrant plant, known for its rose-like scent. It is commonly grown for ornamental and aromatic uses."
+    },
+    "pl": {
+      "common_name": "Geranium o zapachu róży",
+      "description": "Pelargonium graveolens to roślina o przyjemnym zapachu przypominającym różę. Często uprawiana jako roślina ozdobna i aromatyczna."
+    },
+    "de": {
+      "common_name": "Rosenduft-Geranie",
+      "description": "Pelargonium graveolens ist eine duftende Pflanze, bekannt für ihren rosigen Duft. Sie wird häufig als Zier- und Aromapflanze angebaut."
+    },
+    "fr": {
+      "common_name": "Géranium parfumé à la rose",
+      "description": "Pelargonium graveolens est une plante parfumée, connue pour son odeur de rose. Elle est souvent cultivée à des fins ornementales et aromatiques."
+    },
+    "it": {
+      "common_name": "Geranio profumato alla rosa",
+      "description": "Pelargonium graveolens è una pianta profumata, conosciuta per il suo odore di rosa. Viene comunemente coltivata per usi ornamentali e aromatici."
+    },
+    "es": {
+      "common_name": "Geranio perfumado a rosa",
+      "description": "Pelargonium graveolens es una planta fragante, conocida por su aroma a rosa. Se cultiva comúnmente con fines ornamentales y aromáticos."
+    },
+    "pt": {
+      "common_name": "Gerânio perfumado a rosa",
+      "description": "Pelargonium graveolens é uma planta perfumada, conhecida pelo seu aroma a rosa. Frequentemente cultivada para fins ornamentais e aromáticos."
+    },
+    "ar": {
+      "common_name": "الجيرانيوم المعطر بالورود",
+      "description": "يعد Pelargonium graveolens من النباتات العطرية المعروفة برائحتها المشابهة للورد. غالبًا ما يتم زراعتها لأغراض الزينة والعطور."
+    },
+    "hi": {
+      "common_name": "गुलाब-सुगंधित गेरियम",
+      "description": "Pelargonium graveolens एक सुगंधित पौधा है, जिसे गुलाब जैसी खुशबू के लिए जाना जाता है। इसे आमतौर पर सजावटी और सुगंधित उपयोग के लिए उगाया जाता है."
+    },
+    "zh": {
+      "common_name": "玫瑰香天竺葵",
+      "description": "Pelargonium graveolens 是一种芳香植物，以玫瑰般的香气闻名。它通常用于观赏和香料用途。"
+    },
+    "ja": {
+      "common_name": "ローズの香りのゼラニウム",
+      "description": "Pelargonium graveolens は、バラのような香りで知られる芳香植物です。観賞用および香料用に栽培されることが多いです。"
+    },
+    "ko": {
+      "common_name": "장미향 제라늄",
+      "description": "Pelargonium graveolens는 장미와 같은 향기로 알려진 향기로운 식물입니다. 일반적으로 장식용 및 향료용으로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/pelargonium-graveolens",
+      "https://www.botanicalgarden.ubc.ca/pelargonium-graveolens/"
+    ]
+  }
+}

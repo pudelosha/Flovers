@@ -1,0 +1,237 @@
+{
+  "external_id": "streptocarpus_inconspicuus",
+  "name": "African Violet (Uluguru)",
+  "latin": "Streptocarpus inconspicuus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "streptocarpus_inconspicuus.jpg",
+  "image_thumb": "streptocarpus_inconspicuus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium light",
+          "pl": "średnie światło",
+          "de": "mittleres Licht",
+          "fr": "lumière moyenne",
+          "it": "luce media",
+          "es": "luz media",
+          "pt": "luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well draining",
+          "pl": "drenażowa",
+          "de": "durchlässig",
+          "fr": "bien drainé",
+          "it": "drenante",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जलनिकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수가 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "when top dry",
+          "pl": "gdy wierzch suchy",
+          "de": "wenn oben trocken",
+          "fr": "quand sec dessus",
+          "it": "quando asciutto",
+          "es": "cuando seco arriba",
+          "pt": "quando seco acima",
+          "ar": "عند الجفاف السطحي",
+          "hi": "ऊपर सूखने पर",
+          "zh": "表层干时",
+          "ja": "表面乾いたら",
+          "ko": "표면이 마르면"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "16-24°C",
+          "pl": "16-24°C",
+          "de": "16-24°C",
+          "fr": "16-24°C",
+          "it": "16-24°C",
+          "es": "16-24°C",
+          "pt": "16-24°C",
+          "ar": "16-24°C",
+          "hi": "16-24°C",
+          "zh": "16-24°C",
+          "ja": "16-24°C",
+          "ko": "16-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "moderate-high",
+          "pl": "umiark. wysoka",
+          "de": "mittel-hoch",
+          "fr": "moyenne-haute",
+          "it": "medio-alta",
+          "es": "media-alta",
+          "pt": "médio-alta",
+          "ar": "رطوبة متوسطة-عالية",
+          "hi": "मध्यम-उच्च",
+          "zh": "中高湿度",
+          "ja": "中〜高湿度",
+          "ko": "중~높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non toxic",
+          "pl": "nietoksyczny",
+          "de": "nicht giftig",
+          "fr": "non toxique",
+          "it": "non tossico",
+          "es": "no tóxico",
+          "pt": "não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "small rosette",
+          "pl": "mała rozetka",
+          "de": "kleine Rosette",
+          "fr": "petite rosette",
+          "it": "piccola rosetta",
+          "es": "pequeña roseta",
+          "pt": "pequena roseta",
+          "ar": "عروة صغيرة",
+          "hi": "छोटी रोसेटा",
+          "zh": "小丛生",
+          "ja": "小さいロゼット",
+          "ko": "작은 로제트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Uluguru African Violet",
+      "description": "A rare African violet species native to the Uluguru Mountains of Tanzania. It prefers bright, indirect light and moderate watering, avoiding waterlogged soil."
+    },
+    "pl": {
+      "common_name": "Fiołek afrykański Uluguru",
+      "description": "Rzadki fiołek afrykański z gór Uluguru w Tanzanii. Woli jasne, pośrednie światło i umiarkowane podlewanie."
+    },
+    "de": {
+      "common_name": "Uluguru Afrikanisches Veilchen",
+      "description": "Seltene afrikanische Veilchenart aus den Uluguru-Bergen in Tansania. Bevorzugt indirektes Licht und mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Violette d'Afrique d'Uluguru",
+      "description": "Espèce rare de violette d'Afrique des montagnes Uluguru en Tanzanie. Elle aime la lumière indirecte et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Violetta Africana di Uluguru",
+      "description": "Specie rara di violetta africana delle montagne Uluguru in Tanzania. Preferisce luce indiretta e annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Violeta Africana Uluguru",
+      "description": "Especie rara de violeta africana de los Montes Uluguru en Tanzania. Prefiere luz indirecta y riego moderado."
+    },
+    "pt": {
+      "common_name": "Violeta Africana de Uluguru",
+      "description": "Espécie rara de violeta africana das Montanhas Uluguru na Tanzânia. Prefere luz indireta e rega moderada."
+    },
+    "ar": {
+      "common_name": "بنفسج أفريقي أولوجورو",
+      "description": "نوع نادر من البنفسج الأفريقي من جبال أولوجورو في تنزانيا. يفضل ضوء غير مباشر وري معتدل."
+    },
+    "hi": {
+      "common_name": "उलुगुरू अफ्रीकी वायलेट",
+      "description": "तंज़ानिया के उलुगुरू पहाड़ों का दुर्लभ अफ़्रीकी वायलेट. अप्रत्यक्ष प्रकाश और मध्यम पानी पसंद करता है."
+    },
+    "zh": {
+      "common_name": "乌卢古鲁非洲紫罗兰",
+      "description": "坦桑尼亚乌卢古鲁山脉的稀有非洲紫罗兰。喜欢明亮散射光和适量浇水。"
+    },
+    "ja": {
+      "common_name": "ウルグル非洲スミレ",
+      "description": "タンザニアのウルグル山地に自生する希少なアフリカスミレ。明るい間接光と適度な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "울루구루 아프리카 제비꽃",
+      "description": "탄자니아 울루구루산의 희귀 아프리카 제비꽃. 밝은 간접광과 적당한 물주기를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/streptocarpus/growing-guide",
+      "https://www.gardenersworld.com/house-plants/how-to-grow-streptocarpus/",
+      "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77117374-1/general-information"
+    ]
+  }
+}

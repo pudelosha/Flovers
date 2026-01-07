@@ -1,0 +1,237 @@
+{
+  "external_id": "sansevieria_trifasciata",
+  "name": "Snake Plant",
+  "latin": "Sansevieria trifasciata",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sansevieria_trifasciata.jpg",
+  "image_thumb": "sansevieria_trifasciata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी तरह से जल निकासी",
+          "zh": "排水良好",
+          "ja": "良く排水される土壌",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Niska ilość wody",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ماء قليل",
+          "hi": "कम पानी",
+          "zh": "少量水",
+          "ja": "少量の水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "नमीयत कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Snake Plant",
+      "description": "Sansevieria trifasciata, also known as the Snake Plant, is an easy-to-care-for houseplant. It thrives in medium light and is drought-tolerant, requiring little watering."
+    },
+    "pl": {
+      "common_name": "Wężownica",
+      "description": "Sansevieria trifasciata, znana jako wężownica, to łatwa w pielęgnacji roślina doniczkowa. Rośnie w średnim świetle i jest odporna na suszę, wymagając minimalnego podlewania."
+    },
+    "de": {
+      "common_name": "Schwiegermutterzunge",
+      "description": "Sansevieria trifasciata, auch als Schwiegermutterzunge bekannt, ist eine pflegeleichte Zimmerpflanze. Sie gedeiht bei mittlerem Licht und ist trockenheitsresistent, benötigt wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Plante serpent",
+      "description": "Sansevieria trifasciata, également connue sous le nom de plante serpent, est une plante d'intérieur facile à entretenir. Elle se développe à la lumière moyenne et est résistante à la sécheresse, nécessitant peu d'eau."
+    },
+    "it": {
+      "common_name": "Pianta serpente",
+      "description": "Sansevieria trifasciata, conosciuta anche come pianta serpente, è una pianta d'appartamento facile da curare. Cresce in luce media ed è resistente alla siccità, richiedendo poca acqua."
+    },
+    "es": {
+      "common_name": "Planta serpiente",
+      "description": "Sansevieria trifasciata, también conocida como planta serpiente, es una planta de interior fácil de cuidar. Crece con luz media y es resistente a la sequía, requiriendo poco riego."
+    },
+    "pt": {
+      "common_name": "Planta cobra",
+      "description": "Sansevieria trifasciata, também conhecida como planta cobra, é uma planta de interior fácil de cuidar. Ela cresce com luz média e é resistente à seca, necessitando de pouca água."
+    },
+    "ar": {
+      "common_name": "نبات الأفعى",
+      "description": "Sansevieria trifasciata، المعروفة أيضًا بنبات الأفعى، هي نبتة منزلية سهلة العناية. تنمو في الضوء المتوسط ومقاومة للجفاف، وتحتاج إلى القليل من الماء."
+    },
+    "hi": {
+      "common_name": "सांसेवियेरिया त्रिफ़ासियाटा",
+      "description": "Sansevieria trifasciata, जिसे साँप पौधा भी कहा जाता है, एक आसान देखभाल वाला पौधा है। यह मध्यम प्रकाश में उगता है और सूखा सहनशील है, बहुत कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "蛇植物",
+      "description": "Sansevieria trifasciata，亦称蛇植物，是一种易于护理的室内植物。它在中等光照下生长，并且耐干旱，所需水量较少。"
+    },
+    "ja": {
+      "common_name": "サンスベリア",
+      "description": "サンスベリア・トリファスキアータは、サンスベリアとも呼ばれる手入れが簡単な室内植物です。中程度の光で育ち、乾燥に強く、ほとんど水を必要としません。"
+    },
+    "ko": {
+      "common_name": "뱀식물",
+      "description": "Sansevieria trifasciata, 뱀식물로도 알려진 이 식물은 관리가 쉬운 실내 식물입니다. 중간 정도의 빛에서 자라며, 건조한 환경에 강하고 물을 적게 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=828",
+      "https://www.gardeningknowhow.com/houseplants/sansevieria/sansevieria-care.htm"
+    ]
+  }
+}

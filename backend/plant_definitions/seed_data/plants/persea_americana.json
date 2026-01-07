@@ -1,0 +1,237 @@
+{
+  "external_id": "persea_americana",
+  "name": "Avocado",
+  "latin": "Persea americana",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "persea_americana.jpg",
+  "image_thumb": "persea_americana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "terriccio",
+          "es": "arcilla",
+          "pt": "terra",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "土壌",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Avocado",
+      "description": "The avocado is a tropical tree, native to southern Mexico. It produces nutrient-rich fruits that are popular in many cuisines."
+    },
+    "pl": {
+      "common_name": "Awokado",
+      "description": "Awokado to tropikalne drzewo, pochodzące z południowego Meksyku. Produkuje owoce bogate w składniki odżywcze, popularne w wielu kuchniach."
+    },
+    "de": {
+      "common_name": "Avocado",
+      "description": "Die Avocado ist ein tropischer Baum, der aus Südmexiko stammt. Sie produziert nährstoffreiche Früchte, die in vielen Küchen beliebt sind."
+    },
+    "fr": {
+      "common_name": "Avocat",
+      "description": "L'avocat est un arbre tropical, originaire du sud du Mexique. Il produit des fruits riches en nutriments, populaires dans de nombreuses cuisines."
+    },
+    "it": {
+      "common_name": "Avocado",
+      "description": "L'avocado è un albero tropicale, originario del sud del Messico. Produce frutti ricchi di nutrienti, popolari in molte cucine."
+    },
+    "es": {
+      "common_name": "Aguacate",
+      "description": "El aguacate es un árbol tropical, originario del sur de México. Produce frutas ricas en nutrientes que son populares en muchas cocinas."
+    },
+    "pt": {
+      "common_name": "Abacate",
+      "description": "O abacate é uma árvore tropical, originária do sul do México. Produz frutos ricos em nutrientes, populares em muitas culinárias."
+    },
+    "ar": {
+      "common_name": "أفوكادو",
+      "description": "الأفوكادو هو شجرة استوائية، موطنها جنوب المكسيك. تنتج فواكه غنية بالعناصر الغذائية، وهي شائعة في العديد من المأكولات."
+    },
+    "hi": {
+      "common_name": "एवोकाडो",
+      "description": "एवोकाडो एक उष्णकटिबंधीय पेड़ है, जो दक्षिणी मेक्सिको का मूल निवासी है। यह पोषक तत्वों से भरपूर फल उत्पन्न करता है जो कई प्रकार के व्यंजनों में लोकप्रिय हैं।"
+    },
+    "zh": {
+      "common_name": "鳄梨",
+      "description": "鳄梨是一种热带树木，原产于墨西哥南部。它产生富含营养的水果，在许多菜肴中都很受欢迎。"
+    },
+    "ja": {
+      "common_name": "アボカド",
+      "description": "アボカドは南メキシコ原産の熱帯の木です。栄養価の高い果実を生産し、さまざまな料理で人気です。"
+    },
+    "ko": {
+      "common_name": "아보카도",
+      "description": "아보카도는 남멕시코가 원산지인 열대 나무입니다. 많은 요리에서 인기 있는 영양이 풍부한 과일을 생산합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/edible/fruits/avocado/avocado-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=448"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_quadripunctata",
+  "name": "Orchis quadripunctata",
+  "latin": "Orchis quadripunctata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_quadripunctata.jpg",
+  "image_thumb": "orchis_quadripunctata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittleres Sonnenlicht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम सूर्य",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, orchid mix",
+          "pl": "Kwaśna, mieszanka orchidei",
+          "de": "Saurer, Orchideenmix",
+          "fr": "Sol acide, mélange d'orchidées",
+          "it": "Terreno acido, mix per orchidee",
+          "es": "Suelo ácido, mezcla para orquídeas",
+          "pt": "Solo ácido, mistura para orquídeas",
+          "ar": "تربة حمضية، خليط لل Orchids",
+          "hi": "तीव्र, ऑर्किड मिश्रण",
+          "zh": "酸性，兰花混合",
+          "ja": "酸性、ランのミックス",
+          "ko": "산성, 난초 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري ، معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-20°C",
+          "pl": "15-20°C",
+          "de": "15-20°C",
+          "fr": "15-20°C",
+          "it": "15-20°C",
+          "es": "15-20°C",
+          "pt": "15-20°C",
+          "ar": "15-20 درجة مئوية",
+          "hi": "15-20 डिग्री सेल्सियस",
+          "zh": "15-20°C",
+          "ja": "15-20°C",
+          "ko": "15-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do umiarkowanego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "缓慢到中等",
+          "ja": "遅いから中程度",
+          "ko": "느림에서 중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Four-Spotted Orchid",
+      "description": "Orchis quadripunctata is a beautiful orchid native to the Mediterranean region. It produces striking pink flowers with distinct spots."
+    },
+    "pl": {
+      "common_name": "Orchidea czteroplamista",
+      "description": "Orchis quadripunctata to piękna orchidea pochodząca z regionu Morza Śródziemnego. Wytwarza uderzające różowe kwiaty z wyraźnymi plamkami."
+    },
+    "de": {
+      "common_name": "Vierfleck-Orchidee",
+      "description": "Die Orchis quadripunctata ist eine wunderschöne Orchidee aus dem Mittelmeerraum. Sie produziert auffällige rosa Blüten mit markanten Flecken."
+    },
+    "fr": {
+      "common_name": "Orchidée à quatre taches",
+      "description": "Orchis quadripunctata est une magnifique orchidée originaire de la région méditerranéenne. Elle produit des fleurs roses frappantes avec des taches distinctes."
+    },
+    "it": {
+      "common_name": "Orchidea a quattro macchie",
+      "description": "Orchis quadripunctata è una bellissima orchidea originaria della regione mediterranea. Produce fiori rosa evidenti con macchie distintive."
+    },
+    "es": {
+      "common_name": "Orquídea de cuatro manchas",
+      "description": "Orchis quadripunctata es una hermosa orquídea originaria de la región mediterránea. Produce flores rosadas llamativas con manchas distintivas."
+    },
+    "pt": {
+      "common_name": "Orquídea de quatro manchas",
+      "description": "Orchis quadripunctata é uma linda orquídea nativa da região mediterrânea. Produz flores rosadas impressionantes com manchas distintas."
+    },
+    "ar": {
+      "common_name": "أوركيد أربع بقع",
+      "description": "Orchis quadripunctata هي أوركيد جميلة موطنها منطقة البحر الأبيض المتوسط. تنتج أزهارًا وردية لافتة للنظر مع بقع مميزة."
+    },
+    "hi": {
+      "common_name": "चार धब्बेदार ऑर्किड",
+      "description": "Orchis quadripunctata एक सुंदर ऑर्किड है जो भूमध्यसागरीय क्षेत्र का मूल निवासी है। यह विशेष धब्बों के साथ आकर्षक गुलाबी फूल उत्पन्न करता है."
+    },
+    "zh": {
+      "common_name": "四点兰花",
+      "description": "Orchis quadripunctata 是一种美丽的兰花，原产于地中海地区。它开出具有明显斑点的粉色花朵。"
+    },
+    "ja": {
+      "common_name": "四斑蘭",
+      "description": "Orchis quadripunctata は地中海地域原産の美しいランです。特徴的な斑点のあるピンクの花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "네 점 난초",
+      "description": "Orchis quadripunctata는 지중해 지역 원산지의 아름다운 난초입니다. 눈에 띄는 반점이 있는 분홍색 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/orchis-quadripunctata",
+      "https://www.universitybotanicals.com/quadripunctata"
+    ]
+  }
+}

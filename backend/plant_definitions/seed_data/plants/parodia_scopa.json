@@ -1,0 +1,237 @@
+{
+  "external_id": "parodia_scopa",
+  "name": "Parodia scopa",
+  "latin": "Parodia scopa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "parodia_scopa.jpg",
+  "image_thumb": "parodia_scopa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy",
+          "pl": "Piaszczysta",
+          "de": "Sandig",
+          "fr": "Sableux",
+          "it": "Sabbioso",
+          "es": "Arenosa",
+          "pt": "Arenoso",
+          "ar": "رملية",
+          "hi": "रेतदार",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ball Cactus",
+      "description": "Parodia scopa is a small cactus species native to South America. It is known for its spherical shape and yellow flowers that bloom in the spring."
+    },
+    "pl": {
+      "common_name": "Kaktus kulisty",
+      "description": "Parodia scopa to mały gatunek kaktusa pochodzący z Ameryki Południowej. Jest znany z kulistego kształtu i żółtych kwiatów, które kwitną wiosną."
+    },
+    "de": {
+      "common_name": "Kugel-Kaktus",
+      "description": "Parodia scopa ist eine kleine Kaktusart aus Südamerika. Sie ist bekannt für ihre kugelige Form und die gelben Blüten, die im Frühling blühen."
+    },
+    "fr": {
+      "common_name": "Cactus boule",
+      "description": "Parodia scopa est une petite espèce de cactus originaire d'Amérique du Sud. Elle est connue pour sa forme sphérique et ses fleurs jaunes qui fleurissent au printemps."
+    },
+    "it": {
+      "common_name": "Cactus a palla",
+      "description": "Parodia scopa è una piccola specie di cactus originaria del Sud America. È nota per la sua forma sferica e i fiori gialli che sbocciano in primavera."
+    },
+    "es": {
+      "common_name": "Cactus bola",
+      "description": "Parodia scopa es una pequeña especie de cactus originaria de América del Sur. Es conocida por su forma esférica y sus flores amarillas que florecen en primavera."
+    },
+    "pt": {
+      "common_name": "Cacto bola",
+      "description": "Parodia scopa é uma pequena espécie de cacto nativa da América do Sul. É conhecida por sua forma esférica e flores amarelas que florescem na primavera."
+    },
+    "ar": {
+      "common_name": "صبار كرة",
+      "description": "Parodia scopa هو نوع صغير من الصبار موطنه أمريكا الجنوبية. إنه معروف بشكله الكروي وزهوره الصفراء التي تتفتح في الربيع."
+    },
+    "hi": {
+      "common_name": "गोल कैक्टस",
+      "description": "Parodia scopa एक छोटा कैक्टस प्रजाति है जो दक्षिण अमेरिका का मूल निवासी है। यह अपनी गोल आकार और वसंत में खिलने वाले पीले फूलों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "球形仙人掌",
+      "description": "Parodia scopa是一种小型仙人掌，原产于南美洲。以其球形的外观和春天开放的黄色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "ボールサボテン",
+      "description": "Parodia scopaは南アメリカ原産の小さなサボテンの種類です。球形の形と春に咲く黄色い花で知られています。"
+    },
+    "ko": {
+      "common_name": "공 모양 선인장",
+      "description": "Parodia scopa는 남미 원산의 작은 선인장 종류입니다. 구형의 형태와 봄에 피는 노란 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgarden.ox.ac.uk",
+      "https://www.succulentguide.com"
+    ]
+  }
+}

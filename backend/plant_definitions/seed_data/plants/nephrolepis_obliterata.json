@@ -1,0 +1,238 @@
+{
+  "external_id": "nephrolepis_obliterata",
+  "name": "Kimberly Queen Fern",
+  "latin": "Nephrolepis obliterata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "nephrolepis_obliterata.jpg",
+  "image_thumb": "nephrolepis_obliterata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich well-drained",
+          "pl": "Żyzna przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenante",
+          "es": "Rico drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ जलनिकासी",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa pielęgnacja",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright fast grower",
+          "pl": "Szybko rosnąca",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Kimberly Queen Fern",
+      "description": "Nephrolepis obliterata is a tropical fern native to Australia. It has upright arching fronds and adapts well to indoor conditions. It prefers consistent moisture and bright indirect light."
+    },
+    "pl": {
+      "common_name": "Paproć Kimberly",
+      "description": "Nephrolepis obliterata to tropikalna paproć z Australii. Ma wzniesione, łukowate liście i dobrze rośnie w domu. Wymaga stałej wilgoci i jasnego, rozproszonego światła."
+    },
+    "de": {
+      "common_name": "Kimberly-Farn",
+      "description": "Nephrolepis obliterata ist ein tropischer Farn aus Australien. Er wächst aufrecht und eignet sich gut für Innenräume. Bevorzugt gleichmäßige Feuchte und indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Fougère Kimberly",
+      "description": "Nephrolepis obliterata est une fougère tropicale originaire d’Australie. Elle possède des frondes dressées et s’adapte bien à l’intérieur. Elle aime une humidité constante et une lumière indirecte."
+    },
+    "it": {
+      "common_name": "Felce Kimberly",
+      "description": "Nephrolepis obliterata è una felce tropicale australiana. Ha fronde erette ed è adatta alla coltivazione in casa. Richiede umidità costante e luce indiretta."
+    },
+    "es": {
+      "common_name": "Helecho Kimberly",
+      "description": "Nephrolepis obliterata es un helecho tropical de Australia. Presenta frondes erguidas y crece bien en interiores. Necesita humedad constante y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Samambaia Kimberly",
+      "description": "Nephrolepis obliterata é uma samambaia tropical da Austrália. Tem frondes eretas e adapta-se bem a interiores. Prefere umidade constante e luz indireta."
+    },
+    "ar": {
+      "common_name": "سرخس كيمبرلي",
+      "description": "نبات Nephrolepis obliterata سرخس استوائي موطنه أستراليا. يتميز بأوراق قائمة وينمو جيدًا داخل المنازل. يحتاج إلى رطوبة منتظمة وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "किम्बरली फर्न",
+      "description": "Nephrolepis obliterata ऑस्ट्रेलिया का उष्णकटिबंधीय फर्न है। इसकी पत्तियाँ सीधी होती हैं और यह घर के अंदर अच्छी तरह बढ़ता है। इसे नियमित नमी और अप्रत्यक्ष रोशनी चाहिए।"
+    },
+    "zh": {
+      "common_name": "金伯利蕨",
+      "description": "Nephrolepis obliterata 原产于澳大利亚的热带蕨类植物。叶片直立，适合室内栽培。喜欢稳定湿度和明亮散射光。"
+    },
+    "ja": {
+      "common_name": "キンバリーシダ",
+      "description": "Nephrolepis obliterata はオーストラリア原産の熱帯性シダです。直立した葉を持ち、室内で育てやすいです。一定の湿度と間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "킴벌리 고사리",
+      "description": "Nephrolepis obliterata는 호주 원산의 열대 양치식물입니다. 잎이 곧게 자라며 실내 재배에 적합합니다. 일정한 수분과 간접광을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11167/nephrolepis-obliterata/details",
+      "https://edis.ifas.ufl.edu/publication/FP398",
+      "https://www.gardenia.net/plant/nephrolepis-obliterata-kimberly-queen-fern"
+    ]
+  }
+}

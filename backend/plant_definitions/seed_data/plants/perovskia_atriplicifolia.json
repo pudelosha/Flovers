@@ -1,0 +1,237 @@
+{
+  "external_id": "perovskia_atriplicifolia",
+  "name": "Russian Sage",
+  "latin": "Perovskia atriplicifolia",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "perovskia_atriplicifolia.jpg",
+  "image_thumb": "perovskia_atriplicifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Sol completo",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "풀 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "適度",
+          "ko": "적당"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Russian Sage",
+      "description": "Perovskia atriplicifolia, also known as Russian sage, is a woody shrub native to Central Asia. It is prized for its aromatic silvery foliage and tall spikes of lavender-blue flowers."
+    },
+    "pl": {
+      "common_name": "Szałwia rosyjska",
+      "description": "Perovskia atriplicifolia, znana jako szałwia rosyjska, to krzew liściasty pochodzący z Azji Centralnej. Jest ceniona za aromatyczne, srebrzyste liście oraz wysokie kwiatostany lawendowo-niebieskich kwiatów."
+    },
+    "de": {
+      "common_name": "Russischer Salbei",
+      "description": "Perovskia atriplicifolia, auch russischer Salbei genannt, ist ein Strauch, der in Zentralasien beheimatet ist. Er wird für sein aromatisches silbernes Laub und die hohen Lavendelblütenstände geschätzt."
+    },
+    "fr": {
+      "common_name": "Sauge russe",
+      "description": "Perovskia atriplicifolia, également appelée sauge russe, est un arbuste ligneux originaire d'Asie centrale. Il est prisé pour son feuillage argenté aromatique et ses longues grappes de fleurs lavande-bleu."
+    },
+    "it": {
+      "common_name": "Salvia russa",
+      "description": "Perovskia atriplicifolia, conosciuta anche come salvia russa, è un arbusto legnoso originario dell'Asia centrale. È apprezzato per il suo fogliame argentato aromatico e le alte spighe di fiori lavanda-blu."
+    },
+    "es": {
+      "common_name": "Salvia rusa",
+      "description": "Perovskia atriplicifolia, también conocida como salvia rusa, es un arbusto leñoso originario de Asia Central. Es apreciada por su follaje plateado aromático y sus altas espigas de flores lavanda-azul."
+    },
+    "pt": {
+      "common_name": "Sálvia russa",
+      "description": "Perovskia atriplicifolia, também conhecida como sálvia russa, é um arbusto lenhoso nativo da Ásia Central. É valorizada por sua folhagem prateada aromática e suas altas espigas de flores lavanda-azul."
+    },
+    "ar": {
+      "common_name": "مريمية روسية",
+      "description": "Perovskia atriplicifolia، والمعروفة أيضًا باسم المريمية الروسية، هي شجيرة خشبية موطنها آسيا الوسطى. وتشتهر بأوراقها الفضية العطرية وارتفاعاتها من الزهور اللافندر الزرقاء."
+    },
+    "hi": {
+      "common_name": "रूसी सेज",
+      "description": "Perovskia atriplicifolia, जिसे रूसी सेज भी कहा जाता है, मध्य एशिया का एक लकड़ी का झाड़ी है। इसे अपनी खुशबूदार चांदी जैसी पत्तियों और ऊँचे लैवेंडर-नीले फूलों के लिए सराहा जाता है।"
+    },
+    "zh": {
+      "common_name": "俄罗斯鼠尾草",
+      "description": "Perovskia atriplicifolia，也叫俄罗斯鼠尾草，是一种原产于中亚的木本灌木。它因其芳香的银色叶片和高高的薰衣草蓝色花朵而受到喜爱。"
+    },
+    "ja": {
+      "common_name": "ロシアセージ",
+      "description": "Perovskia atriplicifolia、別名ロシアセージは、中央アジア原産の木本植物です。香り高い銀色の葉と、ラベンダーブルーの高い花穂で評価されています。"
+    },
+    "ko": {
+      "common_name": "러시아 세이지",
+      "description": "Perovskia atriplicifolia, 또는 러시아 세이지는 중앙 아시아가 원산지인 목본 식물입니다. 향긋한 은색 잎과 높은 라벤더 블루 꽃이 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgarden.com/perovskia-atroplicifolia",
+      "https://www.gardenersworld.com/perovskia-care"
+    ]
+  }
+}

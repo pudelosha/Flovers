@@ -1,0 +1,238 @@
+{
+  "external_id": "impatiens_balsamina",
+  "name": "Garden Balsam",
+  "latin": "Impatiens balsamina",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "impatiens_balsamina.jpg",
+  "image_thumb": "impatiens_balsamina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright partial sun",
+          "pl": "Jasne półsłońce",
+          "de": "Helles Halbschatten",
+          "fr": "Lumière tamisée",
+          "it": "Luce parziale",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
+          "ar": "ضوء متوسط",
+          "hi": "आंशिक धूप",
+          "zh": "明亮散射光",
+          "ja": "明るい半日陰",
+          "ko": "밝은 반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco e drenante",
+          "es": "Fértil y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة خصبة",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水土",
+          "ja": "肥沃で排水性",
+          "ko": "비옥한 배수토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "ري منتظم",
+          "hi": "नमी बनाए रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm 18–25°C",
+          "pl": "Ciepło 18–25°C",
+          "de": "Warm 18–25°C",
+          "fr": "Chaud 18–25°C",
+          "it": "Caldo 18–25°C",
+          "es": "Cálido 18–25°C",
+          "pt": "Quente 18–25°C",
+          "ar": "دافئ 18–25°م",
+          "hi": "18–25°C गर्म",
+          "zh": "温暖18–25°C",
+          "ja": "18～25℃",
+          "ko": "18–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Garden balsam",
+      "description": "Impatiens balsamina is a fast-growing annual known for its colorful flowers. It prefers warm conditions, evenly moist soil, and partial sun. Often grown outdoors but can be kept indoors with sufficient light."
+    },
+    "pl": {
+      "common_name": "Niecierpek balsamina",
+      "description": "Impatiens balsamina to szybko rosnąca roślina jednoroczna o barwnych kwiatach. Lubi ciepło, stale wilgotne podłoże i półsłońce. Najczęściej uprawiana na zewnątrz."
+    },
+    "de": {
+      "common_name": "Garten-Balsamine",
+      "description": "Impatiens balsamina ist eine einjährige Pflanze mit auffälligen Blüten. Sie benötigt gleichmäßige Feuchtigkeit, Wärme und helles, gefiltertes Licht. Meist wird sie im Freien kultiviert."
+    },
+    "fr": {
+      "common_name": "Balsamine des jardins",
+      "description": "Impatiens balsamina est une annuelle à floraison colorée. Elle apprécie la chaleur, un sol humide et une lumière tamisée. Elle est surtout cultivée en extérieur."
+    },
+    "it": {
+      "common_name": "Balsamina",
+      "description": "Impatiens balsamina è una pianta annuale dai fiori vistosi. Cresce bene con caldo, terreno umido e luce parziale. Viene coltivata principalmente all'aperto."
+    },
+    "es": {
+      "common_name": "Bálsamo de jardín",
+      "description": "Impatiens balsamina es una planta anual de rápido crecimiento y flores coloridas. Requiere calor, suelo húmedo y sol parcial. Se cultiva principalmente en exterior."
+    },
+    "pt": {
+      "common_name": "Bálsamo-do-jardim",
+      "description": "Impatiens balsamina é uma planta anual de flores vistosas. Prefere clima quente, solo úmido e luz parcial. Normalmente cultivada ao ar livre."
+    },
+    "ar": {
+      "common_name": "بلسم الحديقة",
+      "description": "نبات Impatiens balsamina نبات سنوي سريع النمو ذو أزهار ملونة. يفضل الدفء والتربة الرطبة والضوء المتوسط. يزرع غالبًا في الهواء الطلق."
+    },
+    "hi": {
+      "common_name": "गार्डन बाल्सम",
+      "description": "Impatiens balsamina एक तेज़ी से बढ़ने वाला वार्षिक पौधा है। इसे गर्मी, नम मिट्टी और आंशिक धूप पसंद है। आमतौर पर बाहर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "凤仙花",
+      "description": "Impatiens balsamina 是一种生长迅速的一年生植物，花色丰富。喜欢温暖环境、湿润土壤和半日照。多用于户外种植。"
+    },
+    "ja": {
+      "common_name": "ホウセンカ",
+      "description": "インパチェンス・バルサミナは成長の早い一年草です。温暖な気候と湿った土、半日陰を好みます。主に屋外で育てられます。"
+    },
+    "ko": {
+      "common_name": "봉선화",
+      "description": "Impatiens balsamina는 빠르게 자라는 한해살이 식물입니다. 따뜻한 온도와 촉촉한 토양, 반그늘을 선호합니다. 주로 야외에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/impatiens/balsamina",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a471",
+      "https://extension.umn.edu/flowers/impatiens"
+    ]
+  }
+}

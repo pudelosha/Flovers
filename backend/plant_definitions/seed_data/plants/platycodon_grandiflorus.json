@@ -1,0 +1,237 @@
+{
+  "external_id": "platycodon_grandiflorus",
+  "name": "Balloon Flower",
+  "latin": "Platycodon grandiflorus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "platycodon_grandiflorus.jpg",
+  "image_thumb": "platycodon_grandiflorus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "बलुआ",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Balloon Flower",
+      "description": "Platycodon grandiflorus is known for its striking balloon-shaped buds that open into star-like blue flowers. It's a hardy perennial that thrives in moderate sunlight and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Kwiat balonowy",
+      "description": "Platycodon grandiflorus to trwała roślina wieloletnia o charakterystycznych pąkach w kształcie balonu, które otwierają się w gwiaździste niebieskie kwiaty. Rośnie najlepiej w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Ballonblume",
+      "description": "Platycodon grandiflorus ist bekannt für seine auffälligen, ballonartigen Knospen, die sich zu sternförmigen blauen Blumen öffnen. Es ist eine robuste Staude, die in gemäßigtem Sonnenlicht und gut durchlässigem Boden gedeiht."
+    },
+    "fr": {
+      "common_name": "Fleur ballon",
+      "description": "Platycodon grandiflorus est connu pour ses boutons en forme de ballon qui s'ouvrent en fleurs bleues en forme d'étoile. C'est une plante vivace résistante qui prospère sous un ensoleillement modéré et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Fiore a palloncino",
+      "description": "Platycodon grandiflorus è noto per i suoi boccioli a forma di palloncino che si aprono in fiori blu a forma di stella. È una pianta perenne resistente che cresce al meglio alla luce solare moderata e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Flor globo",
+      "description": "Platycodon grandiflorus es conocida por sus botones en forma de globo que se abren en flores azules en forma de estrella. Es una planta perenne resistente que prospera bajo luz solar moderada y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Flor de balão",
+      "description": "Platycodon grandiflorus é conhecida por seus botões em forma de balão que se abrem em flores azuis em forma de estrela. É uma planta perene resistente que cresce bem sob luz solar moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "زهرة البالون",
+      "description": "Platycodon grandiflorus معروفة براعمها التي تشبه البالون والتي تتفتح إلى أزهار زرقاء على شكل نجمة. إنها نبات معمر قوي ينمو بشكل أفضل تحت ضوء الشمس المعتدل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "बलून फूल",
+      "description": "Platycodon grandiflorus अपनी गुब्बारे के आकार की कलियों के लिए जाना जाता है, जो तारे के आकार के नीले फूलों में खुलती हैं। यह एक कठोर परिपक्व पौधा है जो मध्यम सूर्यप्रकाश और अच्छी जल निकासी वाली मिट्टी में अच्छी तरह से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "气球花",
+      "description": "Platycodon grandiflorus 以其气球形状的花蕾而闻名，开花后呈现星形蓝色花朵。它是一种耐寒的多年生植物，适应中等阳光和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "風船草",
+      "description": "Platycodon grandiflorusは、風船の形をしたつぼみが星形の青い花に開くことで知られています。中程度の日光と排水性の良い土壌で成長する丈夫な多年草です。"
+    },
+    "ko": {
+      "common_name": "풍선꽃",
+      "description": "Platycodon grandiflorus는 풍선 모양의 꽃봉오리가 별 모양의 파란 꽃으로 피는 것으로 유명합니다. 이 식물은 중간 정도의 햇빛과 배수가 좋은 토양에서 잘 자라는 강한 다년생 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/platycodon-grandiflorus/",
+      "https://www.bhg.com/gardening/pests-injuries-diseases/balloon-flower/"
+    ]
+  }
+}

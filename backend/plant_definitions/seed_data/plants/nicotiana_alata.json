@@ -1,0 +1,237 @@
+{
+  "external_id": "nicotiana_alata",
+  "name": "Flowering Tobacco",
+  "latin": "Nicotiana alata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "nicotiana_alata.jpg",
+  "image_thumb": "nicotiana_alata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy, well-drained",
+          "pl": "Żyzna, dobrze przepuszczalna",
+          "de": "Lehmig, gut durchlässig",
+          "fr": "Argileux, bien drainé",
+          "it": "Limoso, ben drenato",
+          "es": "Arcilloso, bien drenado",
+          "pt": "Argiloso, bem drenado",
+          "ar": "طيني، جيد التصريف",
+          "hi": "मृदुल, अच्छा जल निकासी",
+          "zh": "壤土，良好排水",
+          "ja": "ローム質、良好な排水性",
+          "ko": "점토질, 배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny po spożyciu",
+          "de": "Giftig bei Aufnahme",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سمي إذا تم تناوله",
+          "hi": "खाया जाने पर विषैला",
+          "zh": "食用时有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth rate",
+          "pl": "Średni tempo wzrostu",
+          "de": "Mittlere Wachstumsrate",
+          "fr": "Vitesse de croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Tasa de crecimiento moderada",
+          "pt": "Taxa de crescimento moderada",
+          "ar": "معدل نمو معتدل",
+          "hi": "मध्यम वृद्धि दर",
+          "zh": "中等生长速度",
+          "ja": "中程度の成長速度",
+          "ko": "중간 성장 속도"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Flowering Tobacco",
+      "description": "Nicotiana alata is a flowering plant native to South America, commonly known for its tubular flowers. It thrives in moderate sunlight and requires well-drained, loamy soil."
+    },
+    "pl": {
+      "common_name": "Tytoń kwitnący",
+      "description": "Nicotiana alata to roślina kwitnąca pochodząca z Ameryki Południowej, znana z rurkowatych kwiatów. Rośnie w średnim świetle i wymaga dobrze przepuszczalnej, żyznej gleby."
+    },
+    "de": {
+      "common_name": "Blühender Tabak",
+      "description": "Nicotiana alata ist eine blühende Pflanze aus Südamerika, bekannt für ihre röhrenförmigen Blüten. Sie gedeiht bei mittlerem Sonnenlicht und benötigt gut durchlässigen, lehmigen Boden."
+    },
+    "fr": {
+      "common_name": "Tabac à fleurs",
+      "description": "Nicotiana alata est une plante à fleurs originaire d'Amérique du Sud, connue pour ses fleurs en forme de tube. Elle prospère sous un éclairage modéré et nécessite un sol bien drainé et argileux."
+    },
+    "it": {
+      "common_name": "Tabacco fiorito",
+      "description": "Nicotiana alata è una pianta fiorita originaria del Sud America, conosciuta per i suoi fiori tubolari. Cresce alla luce media e necessita di un terreno ben drenato e limoso."
+    },
+    "es": {
+      "common_name": "Tabaco floreciente",
+      "description": "Nicotiana alata es una planta con flores originaria de América del Sur, conocida por sus flores tubulares. Crece bajo luz moderada y necesita un suelo bien drenado y arcilloso."
+    },
+    "pt": {
+      "common_name": "Tabaco florido",
+      "description": "Nicotiana alata é uma planta com flores originária da América do Sul, conhecida por suas flores tubulares. Ela cresce sob luz moderada e precisa de solo bem drenado e argiloso."
+    },
+    "ar": {
+      "common_name": "تَبَغٌ مَزْهَرِيٌّ",
+      "description": "نبات نيكوتيانا ألاتا هو نبات مزهر من أمريكا الجنوبية، ويعرف بزهوره الأنبوبية. ينمو في ضوء معتدل ويحتاج إلى تربة طينية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "फूलों वाला तंबाकू",
+      "description": "निकोटियाना अलाटा एक फूलों वाला पौधा है जो दक्षिण अमेरिका का मूल निवासी है, जिसे अपनी नलिका जैसी फूलों के लिए जाना जाता है। यह मध्यम प्रकाश में उगता है और अच्छे जल निकासी वाली चिकनी मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "开花烟草",
+      "description": "Nicotiana alata是一种原产于南美的开花植物，因其管状花朵而闻名。它在中等光照下生长，需要排水良好的壤土。"
+    },
+    "ja": {
+      "common_name": "花煙草",
+      "description": "Nicotiana alataは南アメリカ原産の開花植物で、その管状の花で知られています。中程度の光で育ち、排水性の良いローム土を必要とします。"
+    },
+    "ko": {
+      "common_name": "꽃 담배",
+      "description": "Nicotiana alata는 남미 원산의 꽃 식물로, 튜브 모양의 꽃으로 유명합니다. 중간 정도의 햇빛에서 자라며 잘 배수되는 점토질 토양이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10094/nicotiana-alata/details",
+      "https://www.gardenia.net/plant/nicotiana-alata-flowering-tobacco"
+    ]
+  }
+}

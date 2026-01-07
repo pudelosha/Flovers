@@ -1,0 +1,237 @@
+{
+  "external_id": "pelargonium_citrosum",
+  "name": "Citronella Geranium",
+  "latin": "Pelargonium citrosum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pelargonium_citrosum.jpg",
+  "image_thumb": "pelargonium_citrosum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "유니버설"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "خطأ",
+          "hi": "झूठा",
+          "zh": "假",
+          "ja": "偽",
+          "ko": "거짓"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Citronella Geranium",
+      "description": "Pelargonium citrosum, also known as citronella geranium, is a fragrant plant native to South Africa. It is popular for its citronella-like scent and its ability to repel insects."
+    },
+    "pl": {
+      "common_name": "Pelargonia cytrynowa",
+      "description": "Pelargonium citrosum, znana również jako pelargonia cytrynowa, to roślina o przyjemnym zapachu pochodząca z Południowej Afryki. Jest popularna ze względu na zapach cytronelli i zdolność odstraszania owadów."
+    },
+    "de": {
+      "common_name": "Citronella-Geranie",
+      "description": "Pelargonium citrosum, auch als Citronella-Geranie bekannt, ist eine duftende Pflanze aus Südafrika. Sie ist bekannt für ihren Citronella-ähnlichen Geruch und ihre Fähigkeit, Insekten abzuschrecken."
+    },
+    "fr": {
+      "common_name": "Géranium Citronnelle",
+      "description": "Le Pelargonium citrosum, également connu sous le nom de géranium citronnelle, est une plante parfumée originaire d'Afrique du Sud. Elle est populaire pour son odeur de citronnelle et sa capacité à repousser les insectes."
+    },
+    "it": {
+      "common_name": "Geranio Citronella",
+      "description": "Pelargonium citrosum, noto anche come geranio citronella, è una pianta profumata originaria del Sud Africa. È popolare per il suo odore simile alla citronella e per la sua capacità di respingere gli insetti."
+    },
+    "es": {
+      "common_name": "Geranio Citronella",
+      "description": "El Pelargonium citrosum, también conocido como geranio citronella, es una planta aromática originaria de Sudáfrica. Es popular por su olor a citronela y su capacidad para repeler insectos."
+    },
+    "pt": {
+      "common_name": "Gerânio Citronela",
+      "description": "O Pelargonium citrosum, também conhecido como gerânio citronela, é uma planta aromática nativa da África do Sul. É popular pelo seu cheiro de citronela e sua capacidade de repelir insetos."
+    },
+    "ar": {
+      "common_name": "إبرة الراعي العطرية",
+      "description": "البلارجونيوم سيتروسوم، المعروف أيضًا باسم إبرة الراعي العطرية، هو نبات عطر من جنوب إفريقيا. يشتهر برائحته المشابهة للسترونيلا وقدرته على طرد الحشرات."
+    },
+    "hi": {
+      "common_name": "सिट्रोनेला गेरानियम",
+      "description": "पेलार्गोनियम सिट्रोसुम, जिसे सिट्रोनेला गेरानियम के नाम से भी जाना जाता है, दक्षिण अफ्रीका का एक सुगंधित पौधा है। यह अपनी सिट्रोनेला जैसी खुशबू और कीटों को दूर करने की क्षमता के लिए लोकप्रिय है।"
+    },
+    "zh": {
+      "common_name": "香茅天竺葵",
+      "description": "Pelargonium citrosum，也称为香茅天竺葵，是一种来自南非的芳香植物。它因其类似香茅的气味和驱虫的能力而受到欢迎。"
+    },
+    "ja": {
+      "common_name": "シトロネラゼラニウム",
+      "description": "Pelargonium citrosum、別名シトロネラゼラニウムは、南アフリカ原産の芳香植物です。そのシトロネラに似た香りと虫除け効果で人気があります。"
+    },
+    "ko": {
+      "common_name": "시트로넬라 제라늄",
+      "description": "Pelargonium citrosum, 또는 시트로넬라 제라늄은 남아프리카 원산의 향기로운 식물입니다. 이 식물은 시트로넬라와 같은 향기와 곤충을 쫓는 능력으로 인기가 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/157151/pelargonium-citrosum/details",
+      "https://www.gardenia.net/plant/pelargonium-citrosum"
+    ]
+  }
+}

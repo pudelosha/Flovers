@@ -1,0 +1,237 @@
+{
+  "external_id": "paeonia_lactiflora",
+  "name": "Chinese Peony",
+  "latin": "Paeonia lactiflora",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "paeonia_lactiflora.jpg",
+  "image_thumb": "paeonia_lactiflora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loamy",
+          "pl": "gliniasty",
+          "de": "lehmig",
+          "fr": "argileux",
+          "it": "argilloso",
+          "es": "arcilloso",
+          "pt": "argiloso",
+          "ar": "طيني",
+          "hi": "मिट्टी",
+          "zh": "粘土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-24°C",
+          "pl": "10-24°C",
+          "de": "10-24°C",
+          "fr": "10-24°C",
+          "it": "10-24°C",
+          "es": "10-24°C",
+          "pt": "10-24°C",
+          "ar": "10-24°C",
+          "hi": "10-24°C",
+          "zh": "10-24°C",
+          "ja": "10-24°C",
+          "ko": "10-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średnie",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese Peony",
+      "description": "Paeonia lactiflora, known as the Chinese peony, is a popular ornamental plant with large, fragrant flowers. It is commonly found in gardens and is prized for its striking blooms in spring and summer."
+    },
+    "pl": {
+      "common_name": "Piwonia chińska",
+      "description": "Paeonia lactiflora, znana jako piwonia chińska, to popularna roślina ozdobna o dużych, pachnących kwiatach. Jest często spotykana w ogrodach i ceniona za swoje uderzające kwiaty wiosną i latem."
+    },
+    "de": {
+      "common_name": "Chinesische Pfingstrose",
+      "description": "Paeonia lactiflora, bekannt als chinesische Pfingstrose, ist eine beliebte Zierpflanze mit großen, duftenden Blumen. Sie ist häufig in Gärten zu finden und wird für ihre auffälligen Blüten im Frühling und Sommer geschätzt."
+    },
+    "fr": {
+      "common_name": "Pivoine chinoise",
+      "description": "Paeonia lactiflora, connue sous le nom de pivoine chinoise, est une plante ornementale populaire avec de grandes fleurs parfumées. Elle est couramment trouvée dans les jardins et est appréciée pour ses fleurs frappantes au printemps et en été."
+    },
+    "it": {
+      "common_name": "Peonia cinese",
+      "description": "Paeonia lactiflora, conosciuta come peonia cinese, è una pianta ornamentale popolare con grandi fiori profumati. È comunemente trovata nei giardini ed è apprezzata per i suoi fiori spettacolari in primavera e estate."
+    },
+    "es": {
+      "common_name": "Peonía china",
+      "description": "Paeonia lactiflora, conocida como peonía china, es una planta ornamental popular con grandes flores fragantes. Se encuentra comúnmente en jardines y es apreciada por sus impresionantes flores en primavera y verano."
+    },
+    "pt": {
+      "common_name": "Peônia chinesa",
+      "description": "Paeonia lactiflora, conhecida como peônia chinesa, é uma planta ornamental popular com grandes flores perfumadas. É comumente encontrada em jardins e é valorizada por suas flores impressionantes na primavera e no verão."
+    },
+    "ar": {
+      "common_name": "زهرة الفاوانيا الصينية",
+      "description": "Paeonia lactiflora، المعروفة باسم زهرة الفاوانيا الصينية، هي نبتة زينة شعبية تتميز بزهورها الكبيرة والعطرية. توجد عادة في الحدائق وتعتبر محبوبة بسبب زهورها المدهشة في الربيع والصيف."
+    },
+    "hi": {
+      "common_name": "चीनी पीओनिया",
+      "description": "Paeonia lactiflora, जिसे चीनी पीओनिया कहा जाता है, एक लोकप्रिय सजावटी पौधा है जिसकी बड़ी, खुशबूदार फूल होते हैं। यह आमतौर पर बग़ीचों में पाया जाता है और अपनी आकर्षक फूलों के लिए वसंत और ग्रीष्मकाल में पसंद किया जाता है।"
+    },
+    "zh": {
+      "common_name": "中国牡丹",
+      "description": "Paeonia lactiflora, 被称为中国牡丹，是一种受欢迎的观赏植物，拥有大而芳香的花朵。它通常出现在花园中，并因其春夏季节的鲜艳花朵而受到喜爱。"
+    },
+    "ja": {
+      "common_name": "中国牡丹",
+      "description": "Paeonia lactiflora、中国牡丹は大きな香りの良い花を持つ人気の観賞植物です。春と夏にその美しい花を楽しむため、よく庭園で見られます。"
+    },
+    "ko": {
+      "common_name": "중국모란",
+      "description": "Paeonia lactiflora, 중국모란은 큰 향기 나는 꽃을 가진 인기 있는 장식용 식물입니다. 봄과 여름에 그 화려한 꽃을 즐기기 위해 정원에서 자주 볼 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/paeonia-lactiflora",
+      "https://www.bhg.com/gardening/pests-diseases-pollinators/gardening-101-peonies/"
+    ]
+  }
+}

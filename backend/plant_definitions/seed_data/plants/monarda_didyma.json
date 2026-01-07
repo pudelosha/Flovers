@@ -1,0 +1,235 @@
+{
+  "external_id": "monarda_didyma",
+  "name": "Bee Balm",
+  "latin": "Monarda didyma",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "monarda_didyma.jpg",
+  "image_thumb": "monarda_didyma.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist loam",
+          "pl": "Wilgotna glina",
+          "de": "Feuchter Lehm",
+          "fr": "Terre humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润壤土",
+          "ja": "湿った土",
+          "ko": "습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent",
+          "pl": "Częste",
+          "de": "Häufig",
+          "fr": "Fréquent",
+          "it": "Frequente",
+          "es": "Frecuente",
+          "pt": "Frequente",
+          "ar": "متكرر",
+          "hi": "बार-बार",
+          "zh": "频繁",
+          "ja": "頻繁",
+          "ko": "잦음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool–warm",
+          "pl": "Chłodno–ciepło",
+          "de": "Kühl–warm",
+          "fr": "Frais–chaud",
+          "it": "Fresco–caldo",
+          "es": "Fresco–cálido",
+          "pt": "Fresco–quente",
+          "ar": "معتدل",
+          "hi": "हल्का गरम",
+          "zh": "凉至暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping",
+          "pl": "Kępowa",
+          "de": "Horstbildend",
+          "fr": "En touffe",
+          "it": "A cespi",
+          "es": "En matas",
+          "pt": "Em touceiras",
+          "ar": "كتلي",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bee balm",
+      "description": "Monarda didyma is a perennial flowering plant native to eastern North America. It produces bright red, tubular flowers that attract bees and hummingbirds. The plant prefers moist soil and full sun for best flowering."
+    },
+    "pl": {
+      "common_name": "Pysznogłówka",
+      "description": "Monarda didyma to bylina pochodząca ze wschodniej Ameryki Północnej. Wytwarza intensywnie czerwone kwiaty przyciągające pszczoły i kolibry. Najlepiej rośnie w wilgotnej glebie i pełnym słońcu."
+    },
+    "de": {
+      "common_name": "Goldmelisse",
+      "description": "Monarda didyma ist eine mehrjährige Pflanze aus dem östlichen Nordamerika. Sie bildet leuchtend rote Blüten, die Bestäuber anziehen. Sie bevorzugt feuchte Böden und sonnige Standorte."
+    },
+    "fr": {
+      "common_name": "Monarde écarlate",
+      "description": "Monarda didyma est une plante vivace originaire de l’est de l’Amérique du Nord. Elle porte des fleurs rouges très décoratives appréciées des pollinisateurs. Elle aime les sols humides et le plein soleil."
+    },
+    "it": {
+      "common_name": "Monarda scarlatta",
+      "description": "Monarda didyma è una pianta perenne originaria del Nord America orientale. Produce fiori rossi vistosi che attirano gli impollinatori. Cresce meglio in terreni umidi e in pieno sole."
+    },
+    "es": {
+      "common_name": "Bergamota",
+      "description": "Monarda didyma es una planta perenne nativa del este de América del Norte. Destaca por sus flores rojas que atraen abejas y colibríes. Prefiere suelos húmedos y exposición soleada."
+    },
+    "pt": {
+      "common_name": "Bálsamo-de-abelha",
+      "description": "Monarda didyma é uma planta perene nativa do leste da América do Norte. Suas flores vermelhas atraem polinizadores. Desenvolve-se melhor em solo úmido e sol pleno."
+    },
+    "ar": {
+      "common_name": "بلسم النحل",
+      "description": "Monarda didyma نبات معمر موطنه أمريكا الشمالية الشرقية. يتميز بأزهاره الحمراء التي تجذب الملقحات. يفضل التربة الرطبة وأشعة الشمس الكاملة."
+    },
+    "hi": {
+      "common_name": "बी बाम",
+      "description": "Monarda didyma उत्तरी अमेरिका का एक बहुवर्षीय पौधा है। इसके लाल फूल मधुमक्खियों और पक्षियों को आकर्षित करते हैं। यह नम मिट्टी और धूप में अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "红花薄荷",
+      "description": "Monarda didyma 原产于北美东部，是多年生开花植物。其鲜红色花朵能吸引传粉昆虫。适合生长在湿润土壤和充足阳光下。"
+    },
+    "ja": {
+      "common_name": "モナルダ",
+      "description": "モナルダ・ディディマは北米東部原産の多年草です。赤い花はミツバチなどを引き寄せます。湿った土と日当たりを好みます。"
+    },
+    "ko": {
+      "common_name": "비밤",
+      "description": "Monarda didyma는 북미 동부 원산의 다년생 식물입니다. 붉은 꽃이 수분곤충을 끌어들입니다. 촉촉한 토양과 햇빛을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b450"
+    ]
+  }
+}

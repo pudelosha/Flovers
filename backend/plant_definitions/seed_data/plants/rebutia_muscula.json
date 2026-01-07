@@ -1,0 +1,237 @@
+{
+  "external_id": "rebutia_muscula",
+  "name": "Rebutia muscula",
+  "latin": "Rebutia muscula",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rebutia_muscula.jpg",
+  "image_thumb": "rebutia_muscula.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaskowy",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेत",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Golden Torch Cactus",
+      "description": "Rebutia muscula is a small cactus native to Bolivia. It features bright orange flowers and is well-suited to sunny, dry environments."
+    },
+    "pl": {
+      "common_name": "Kaktus Złoty Płomień",
+      "description": "Rebutia muscula to mały kaktus pochodzący z Boliwii. Charakteryzuje się jasnymi pomarańczowymi kwiatami i dobrze rośnie w słonecznych, suchych warunkach."
+    },
+    "de": {
+      "common_name": "Goldene Fackel Kaktus",
+      "description": "Rebutia muscula ist ein kleiner Kaktus aus Bolivien. Er hat leuchtend orangefarbene Blüten und wächst gut in sonnigen, trockenen Umgebungen."
+    },
+    "fr": {
+      "common_name": "Cactus Torche Dorée",
+      "description": "Rebutia muscula est un petit cactus originaire de Bolivie. Il possède des fleurs orange vives et se développe bien dans des environnements ensoleillés et secs."
+    },
+    "it": {
+      "common_name": "Cactus Torcia Dorata",
+      "description": "Rebutia muscula è un piccolo cactus originario della Bolivia. Ha fiori arancioni brillanti e cresce bene in ambienti soleggiati e asciutti."
+    },
+    "es": {
+      "common_name": "Cactus Antorcha Dorada",
+      "description": "Rebutia muscula es un pequeño cactus originario de Bolivia. Tiene flores naranjas brillantes y crece bien en ambientes soleados y secos."
+    },
+    "pt": {
+      "common_name": "Cacto Tocha Dourada",
+      "description": "Rebutia muscula é um pequeno cacto nativo da Bolívia. Apresenta flores laranjas brilhantes e cresce bem em ambientes ensolarados e secos."
+    },
+    "ar": {
+      "common_name": "صبار الشعلة الذهبية",
+      "description": "Rebutia muscula هو صبار صغير موطنه بوليفيا. يتميز بزهور برتقالية زاهية وينمو بشكل جيد في البيئات المشمسة والجافة."
+    },
+    "hi": {
+      "common_name": "गोल्डन टॉर्च कैक्टस",
+      "description": "Rebutia muscula एक छोटा कैक्टस है जो बोलीविया का मूल निवासी है। इसमें चमकीले नारंगी फूल होते हैं और यह धूप और शुष्क वातावरण में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "金色火炬仙人掌",
+      "description": "Rebutia muscula 是一种原产于玻利维亚的小型仙人掌。它有明亮的橙色花朵，并且在阳光明媚、干燥的环境中生长良好。"
+    },
+    "ja": {
+      "common_name": "ゴールデントーチサボテン",
+      "description": "Rebutia musculaはボリビア原産の小さなサボテンです。鮮やかなオレンジ色の花を持ち、日当たりの良い乾燥した環境でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "골든 토치 선인장",
+      "description": "Rebutia muscula는 볼리비아 원산의 작은 선인장입니다. 밝은 오렌지색 꽃을 가지고 있으며 햇볕이 잘 드는 건조한 환경에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/rebutia-muscula",
+      "https://www.cactusinfo.org/rebutia-muscula-care"
+    ]
+  }
+}

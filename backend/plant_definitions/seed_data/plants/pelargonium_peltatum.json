@@ -1,0 +1,237 @@
+{
+  "external_id": "pelargonium_peltatum",
+  "name": "Ivy-leaved Geranium",
+  "latin": "Pelargonium peltatum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pelargonium_peltatum.jpg",
+  "image_thumb": "pelargonium_peltatum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Ivy-leaved Geranium",
+      "description": "Pelargonium peltatum, known as the Ivy-leaved Geranium, is a low-growing, evergreen plant. It is favored for its attractive flowers and trailing growth habit."
+    },
+    "pl": {
+      "common_name": "Pelargonia bluszczolistna",
+      "description": "Pelargonium peltatum, znane jako Pelargonia bluszczolistna, to niska, wiecznie zielona roślina. Jest ceniona za atrakcyjne kwiaty i zwisający pokrój."
+    },
+    "de": {
+      "common_name": "Efeu-Blatt-Geranie",
+      "description": "Pelargonium peltatum, bekannt als Efeu-Blatt-Geranie, ist eine niedrig wachsende, immergrüne Pflanze. Sie ist für ihre attraktiven Blumen und hängenden Wuchs bekannt."
+    },
+    "fr": {
+      "common_name": "Géranium à feuilles de lierre",
+      "description": "Pelargonium peltatum, connu sous le nom de Géranium à feuilles de lierre, est une plante basse et persistante. Elle est appréciée pour ses fleurs attrayantes et sa croissance traînante."
+    },
+    "it": {
+      "common_name": "Geranio a foglia di edera",
+      "description": "Pelargonium peltatum, conosciuto come Geranio a foglia di edera, è una pianta perenne bassa. È apprezzata per i suoi fiori attraenti e la sua crescita strisciante."
+    },
+    "es": {
+      "common_name": "Geranio de hojas de hiedra",
+      "description": "Pelargonium peltatum, conocido como Geranio de hojas de hiedra, es una planta de bajo crecimiento y siempre verde. Es valorada por sus flores atractivas y su hábito de crecimiento rastrero."
+    },
+    "pt": {
+      "common_name": "Gerânio de folhas de hera",
+      "description": "Pelargonium peltatum, conhecido como Gerânio de folhas de hera, é uma planta perene de baixo crescimento. É valorizada por suas flores atraentes e seu crescimento rastejante."
+    },
+    "ar": {
+      "common_name": "جيرانيوم أوراق اللبلاب",
+      "description": "Pelargonium peltatum، المعروف باسم جيرانيوم أوراق اللبلاب، هو نبات منخفض النمو ودائم الخضرة. إنه مفضل لزهوره الجذابة وعادته في النمو المتسلق."
+    },
+    "hi": {
+      "common_name": "आइवी पत्तियों वाला जेरेनियम",
+      "description": "Pelargonium peltatum, जिसे आइवी पत्तियों वाला जेरेनियम कहा जाता है, एक निम्न वृद्धि वाला, सदाबहार पौधा है। यह अपने आकर्षक फूलों और लटकते हुए विकास के लिए प्रिय है।"
+    },
+    "zh": {
+      "common_name": "常春藤叶天竺葵",
+      "description": "Pelargonium peltatum，常春藤叶天竺葵，生长低矮，常绿。因其迷人的花朵和蔓延的生长方式而受到青睐。"
+    },
+    "ja": {
+      "common_name": "アイビー葉ゼラニウム",
+      "description": "Pelargonium peltatum、アイビー葉ゼラニウムは低木で常緑の植物です。魅力的な花と垂れ下がる成長習性で知られています。"
+    },
+    "ko": {
+      "common_name": "아이비 잎 제라늄",
+      "description": "Pelargonium peltatum, 아이비 잎 제라늄은 낮게 자라는 상록 식물입니다. 매력적인 꽃과 기는 성장 방식으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/22999/pelargonium-peltatum/details",
+      "https://www.gardenia.net/plant/pelargonium-peltatum-ivy-geranium"
+    ]
+  }
+}

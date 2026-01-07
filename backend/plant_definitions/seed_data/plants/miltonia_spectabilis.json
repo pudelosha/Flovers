@@ -1,0 +1,237 @@
+{
+  "external_id": "miltonia_spectabilis",
+  "name": "Miltonia spectabilis",
+  "latin": "Miltonia spectabilis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "miltonia_spectabilis.jpg",
+  "image_thumb": "miltonia_spectabilis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid",
+          "pl": "orchidea",
+          "de": "Orchidee",
+          "fr": "orchidée",
+          "it": "orchidea",
+          "es": "orquídea",
+          "pt": "orquídea",
+          "ar": "أوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "ラン",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Spectacular Miltonia",
+      "description": "Miltonia spectabilis is a species of orchid native to Brazil. It is known for its beautiful, colorful flowers and moderate care requirements."
+    },
+    "pl": {
+      "common_name": "Miltonia spektakularna",
+      "description": "Miltonia spectabilis to gatunek storczyka pochodzący z Brazylii. Znany jest z pięknych, kolorowych kwiatów i umiarkowanych wymagań pielęgnacyjnych."
+    },
+    "de": {
+      "common_name": "Spektakuläre Miltonia",
+      "description": "Miltonia spectabilis ist eine Orchideenart aus Brasilien. Sie ist bekannt für ihre schönen, farbenfrohen Blüten und mäßige Pflegeanforderungen."
+    },
+    "fr": {
+      "common_name": "Miltonia spectaculaire",
+      "description": "Miltonia spectabilis est une espèce d'orchidée originaire du Brésil. Elle est connue pour ses belles fleurs colorées et ses besoins modérés en soins."
+    },
+    "it": {
+      "common_name": "Miltonia spettacolare",
+      "description": "Miltonia spectabilis è una specie di orchidea originaria del Brasile. È conosciuta per i suoi fiori colorati e per le esigenze di cura moderate."
+    },
+    "es": {
+      "common_name": "Miltonia espectacular",
+      "description": "Miltonia spectabilis es una especie de orquídea originaria de Brasil. Es conocida por sus hermosas flores coloridas y sus requisitos moderados de cuidado."
+    },
+    "pt": {
+      "common_name": "Miltonia espetacular",
+      "description": "Miltonia spectabilis é uma espécie de orquídea nativa do Brasil. É conhecida por suas belas flores coloridas e necessidades moderadas de cuidados."
+    },
+    "ar": {
+      "common_name": "ميلتونيا المدهشة",
+      "description": "ميلتونيا سبكتابيليس هي نوع من الأوركيد موطنها البرازيل. تشتهر بأزهارها الجميلة الملونة ومتطلبات العناية المعتدلة."
+    },
+    "hi": {
+      "common_name": "विचित्र मिल्टोनिया",
+      "description": "मिल्टोनिया स्पेक्टैबिलिस एक प्रकार का ऑर्किड है जो ब्राजील का मूल निवासी है। यह अपनी सुंदर, रंगीन फूलों और मध्यम देखभाल आवश्यकताओं के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "壮丽的米尔托尼亚",
+      "description": "米尔托尼亚·斯佩克塔比利斯是一种原产于巴西的兰花。它以美丽、多彩的花朵和适中的护理要求而闻名。"
+    },
+    "ja": {
+      "common_name": "スペクタキュラー・ミルトニア",
+      "description": "ミルトニア・スペクタビリスはブラジル原産のランの一種です。美しい色とりどりの花と、適度な世話の必要性で知られています。"
+    },
+    "ko": {
+      "common_name": "스펙타큘러 밀토니아",
+      "description": "밀토니아 스펙타빌리스는 브라질 원산의 난초입니다. 아름다운 다채로운 꽃과 적당한 관리 요구사항으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10395/miltonia-spectabilis/details",
+      "https://www.gardenia.net/plant/miltonia-spectabilis"
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "external_id": "oroya_peruviana",
+  "name": "Oroya peruviana",
+  "latin": "Oroya peruviana",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "oroya_peruviana.jpg",
+  "image_thumb": "oroya_peruviana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "مصفى جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudne",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعب",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15-25 درجة مئوية",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peruvian Cactus",
+      "description": "Oroya peruviana is a slow-growing cactus native to the Peruvian Andes. It thrives in high altitudes and requires well-drained soil and moderate watering."
+    },
+    "pl": {
+      "common_name": "Kaktus peruwiański",
+      "description": "Oroya peruviana to wolno rosnący kaktus pochodzący z Andów w Peru. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Peruanische Kaktus",
+      "description": "Oroya peruviana ist ein langsam wachsender Kaktus, der in den peruanischen Anden beheimatet ist. Er benötigt gut durchlässigen Boden und mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Cactus péruvien",
+      "description": "Oroya peruviana est un cactus à croissance lente originaire des Andes péruviennes. Il nécessite un sol bien drainé et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Cactus peruviano",
+      "description": "Oroya peruviana è un cactus a crescita lenta originario delle Ande peruviane. Richiede un terreno ben drenato e annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Cactus peruano",
+      "description": "Oroya peruviana es un cactus de crecimiento lento originario de los Andes peruanos. Requiere suelo bien drenado y riego moderado."
+    },
+    "pt": {
+      "common_name": "Cacto peruano",
+      "description": "Oroya peruviana é um cacto de crescimento lento nativo dos Andes peruanos. Exige solo bem drenado e rega moderada."
+    },
+    "ar": {
+      "common_name": "صبار بيروفي",
+      "description": "Oroya peruviana هو صبار بطيء النمو موطنه جبال الأنديز في بيرو. يحتاج إلى تربة جيدة التصريف وري معتدل."
+    },
+    "hi": {
+      "common_name": "पेरूवियन कैक्टस",
+      "description": "Oroya peruviana एक धीमी गति से बढ़ने वाला कैक्टस है जो पेरू के एंडीज पर्वत से उत्पन्न होता है। इसे अच्छी जल निकासी वाली मिट्टी और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "秘鲁仙人掌",
+      "description": "Oroya peruviana 是一种生长缓慢的仙人掌，原产于秘鲁的安第斯山脉。它需要良好的排水土壤和适度的浇水。"
+    },
+    "ja": {
+      "common_name": "ペルーサボテン",
+      "description": "Oroya peruviana はペルーのアンデス山脈原産の遅い成長をするサボテンです。良好な排水性土壌と適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "페루 선인장",
+      "description": "Oroya peruviana는 페루 안데스 산맥 원산지의 느리게 자라는 선인장입니다. 배수가 좋은 토양과 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/18460/Oroya-peruviana/Details",
+      "https://www.cactus-art.biz/schede/OROYA/Oroya_peruviana/Oroya_peruviana/Oroya_peruviana.htm"
+    ]
+  }
+}

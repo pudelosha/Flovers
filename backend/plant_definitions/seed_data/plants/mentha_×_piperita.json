@@ -1,0 +1,238 @@
+{
+  "external_id": "mentha_piperita",
+  "name": "Peppermint",
+  "latin": "Mentha × piperita",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "mentha_piperita.jpg",
+  "image_thumb": "mentha_piperita.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で排水良",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep soil moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Sol toujours humide",
+          "it": "Terreno umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "मिट्टी नम रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr einfach",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جدًا",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "아주 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average room",
+          "pl": "Średnia pokojowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité normale",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य आर्द्रता",
+          "zh": "普通湿度",
+          "ja": "通常の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषरहित",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast spreading",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peppermint",
+      "description": "Peppermint is a fast-growing aromatic herb widely used for culinary and medicinal purposes. It prefers bright light, consistently moist soil, and regular harvesting to stay compact."
+    },
+    "pl": {
+      "common_name": "Mięta pieprzowa",
+      "description": "Mięta pieprzowa to szybko rosnące zioło o intensywnym aromacie. Najlepiej rośnie w jasnym miejscu i w stale wilgotnym podłożu."
+    },
+    "de": {
+      "common_name": "Pfefferminze",
+      "description": "Pfefferminze ist ein schnell wachsendes, aromatisches Kraut. Sie benötigt helles Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Menthe poivrée",
+      "description": "La menthe poivrée est une herbe aromatique vigoureuse. Elle apprécie une lumière vive et un sol maintenu humide."
+    },
+    "it": {
+      "common_name": "Menta piperita",
+      "description": "La menta piperita è un’erba aromatica a crescita rapida. Richiede luce intensa e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Menta piperita",
+      "description": "La menta piperita es una hierba aromática de rápido crecimiento. Prefiere buena luz y riego frecuente."
+    },
+    "pt": {
+      "common_name": "Hortelã-pimenta",
+      "description": "A hortelã-pimenta é uma erva aromática vigorosa. Desenvolve-se melhor com boa luz e solo sempre úmido."
+    },
+    "ar": {
+      "common_name": "النعناع الفلفلي",
+      "description": "النعناع الفلفلي نبات عطري سريع النمو. يحتاج إلى ضوء جيد وتربة رطبة باستمرار."
+    },
+    "hi": {
+      "common_name": "पिपरमिंट",
+      "description": "पिपरमिंट एक तेज़ी से बढ़ने वाली सुगंधित जड़ी-बूटी है। इसे अच्छी रोशनी और नम मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "胡椒薄荷",
+      "description": "胡椒薄荷是一种生长迅速的芳香草本植物。适合明亮环境并保持土壤湿润。"
+    },
+    "ja": {
+      "common_name": "ペパーミント",
+      "description": "ペパーミントは成長が早い香りの良いハーブです。明るい場所と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "페퍼민트",
+      "description": "페퍼민트는 생장이 빠른 향기로운 허브입니다. 밝은 빛과 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/herbs/mentha-piperita",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c764",
+      "https://extension.umn.edu/herbs/growing-mint"
+    ]
+  }
+}

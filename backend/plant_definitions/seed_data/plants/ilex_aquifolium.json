@@ -1,0 +1,237 @@
+{
+  "external_id": "ilex_aquifolium",
+  "name": "English Holly",
+  "latin": "Ilex aquifolium",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ilex_aquifolium.jpg",
+  "image_thumb": "ilex_aquifolium.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezzombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半阴",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Gleba kwaśna",
+          "de": "Saurer Boden",
+          "fr": "Sol acide",
+          "it": "Suolo acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowane",
+          "de": "Mäßig feucht",
+          "fr": "Humidité modérée",
+          "it": "Umidità media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool tolerant",
+          "pl": "Odporna na chłód",
+          "de": "Kältetolerant",
+          "fr": "Tolère le froid",
+          "it": "Resiste al freddo",
+          "es": "Tolera el frío",
+          "pt": "Tolera frio",
+          "ar": "يتحمل البرودة",
+          "hi": "ठंड सहनशील",
+          "zh": "耐寒",
+          "ja": "耐寒性",
+          "ko": "내한성"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic berries",
+          "pl": "Toksyczne owoce",
+          "de": "Giftige Beeren",
+          "fr": "Baies toxiques",
+          "it": "Bacche tossiche",
+          "es": "Bayas tóxicas",
+          "pt": "Bagas tóxicas",
+          "ar": "ثمار سامة",
+          "hi": "विषैले फल",
+          "zh": "果实有毒",
+          "ja": "果実有毒",
+          "ko": "열매 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "English Holly",
+      "description": "Ilex aquifolium is an evergreen shrub or small tree native to Europe. It has glossy spiny leaves and red berries on female plants. It prefers partial sun and acidic, well-drained soil."
+    },
+    "pl": {
+      "common_name": "Ostrokrzew kolczasty",
+      "description": "Ilex aquifolium to zimozielony krzew lub małe drzewo pochodzące z Europy. Charakteryzuje się błyszczącymi liśćmi i czerwonymi owocami na roślinach żeńskich. Najlepiej rośnie w półcieniu i kwaśnej glebie."
+    },
+    "de": {
+      "common_name": "Stechpalme",
+      "description": "Ilex aquifolium ist ein immergrüner Strauch oder kleiner Baum aus Europa. Er besitzt glänzende, stachelige Blätter und rote Beeren an weiblichen Pflanzen. Bevorzugt halbschattige Lagen und sauren Boden."
+    },
+    "fr": {
+      "common_name": "Houx commun",
+      "description": "Ilex aquifolium est un arbuste ou petit arbre persistant originaire d’Europe. Il présente des feuilles brillantes et des baies rouges sur les plants femelles. Il préfère la mi-ombre et un sol acide bien drainé."
+    },
+    "it": {
+      "common_name": "Agrifoglio",
+      "description": "Ilex aquifolium è un arbusto o piccolo albero sempreverde originario dell’Europa. Ha foglie lucide e bacche rosse sulle piante femminili. Cresce meglio in mezzombra e terreno acido drenante."
+    },
+    "es": {
+      "common_name": "Acebo",
+      "description": "Ilex aquifolium es un arbusto o árbol pequeño perenne originario de Europa. Presenta hojas brillantes y bayas rojas en plantas femeninas. Prefiere semisombra y suelos ácidos bien drenados."
+    },
+    "pt": {
+      "common_name": "Azevinho",
+      "description": "Ilex aquifolium é um arbusto ou pequena árvore perene nativa da Europa. Possui folhas brilhantes e bagas vermelhas nas plantas femininas. Prefere meia-sombra e solo ácido bem drenado."
+    },
+    "ar": {
+      "common_name": "الهولي الأوروبي",
+      "description": "Ilex aquifolium شجيرة أو شجرة صغيرة دائمة الخضرة موطنها أوروبا. تتميز بأوراق لامعة وثمار حمراء على النباتات الأنثوية. تفضل الشمس الجزئية والتربة الحمضية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "इंग्लिश होली",
+      "description": "Ilex aquifolium यूरोप का मूल सदाबहार झाड़ी या छोटा पेड़ है। इसमें चमकदार कांटेदार पत्तियाँ और मादा पौधों पर लाल फल होते हैं। यह आंशिक धूप और अम्लीय मिट्टी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "欧洲冬青",
+      "description": "Ilex aquifolium 是原产于欧洲的常绿灌木或小乔木。其叶片光亮，雌株会结红色果实。适合半阴环境和排水良好的酸性土壤。"
+    },
+    "ja": {
+      "common_name": "セイヨウヒイラギ",
+      "description": "Ilex aquifolium はヨーロッパ原産の常緑低木または小高木です。光沢のある葉と雌株の赤い実が特徴です。半日陰と酸性土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "서양호랑가시나무",
+      "description": "Ilex aquifolium은 유럽 원산의 상록 관목 또는 작은 나무입니다. 윤기 있는 잎과 암그루의 붉은 열매가 특징입니다. 반그늘과 산성 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ilex/aquifolium/details",
+      "https://plants.ces.ncsu.edu/plants/ilex-aquifolium/",
+      "https://www.kew.org/plants/ilex-aquifolium"
+    ]
+  }
+}

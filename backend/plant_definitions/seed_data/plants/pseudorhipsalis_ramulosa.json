@@ -1,0 +1,237 @@
+{
+  "external_id": "pseudorhipsalis_ramulosa",
+  "name": "Red Rhipsalis",
+  "latin": "Pseudorhipsalis ramulosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pseudorhipsalis_ramulosa.jpg",
+  "image_thumb": "pseudorhipsalis_ramulosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Orchid mix",
+          "pl": "Mieszanka orchidei",
+          "de": "Orchideenmix",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "خليط للزهور الأوركيد",
+          "hi": "ऑर्किड मिश्रण",
+          "zh": "兰花混合土",
+          "ja": "オーキッドミックス",
+          "ko": "난초 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간급 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Red Rhipsalis",
+      "description": "Pseudorhipsalis ramulosa is an epiphytic cactus with red, succulent stems. It thrives in tropical forests with medium light and high humidity."
+    },
+    "pl": {
+      "common_name": "Czerwony Rhipsalis",
+      "description": "Pseudorhipsalis ramulosa to epifityczny kaktus o czerwonych, mięsistych łodygach. Rośnie w tropikalnych lasach, preferując średnie światło i wysoką wilgotność."
+    },
+    "de": {
+      "common_name": "Rote Rhipsalis",
+      "description": "Pseudorhipsalis ramulosa ist ein epiphytischer Kaktus mit roten, fleischigen Stängeln. Er wächst in tropischen Wäldern bei mittlerem Licht und hoher Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Rhipsalis rouge",
+      "description": "Pseudorhipsalis ramulosa est un cactus épiphyte aux tiges succulentes rouges. Il pousse dans les forêts tropicales avec une lumière moyenne et une humidité élevée."
+    },
+    "it": {
+      "common_name": "Rhipsalis rosso",
+      "description": "Pseudorhipsalis ramulosa è un cactus epifita con fusti succulenti rossi. Cresce nelle foreste tropicali con luce media e alta umidità."
+    },
+    "es": {
+      "common_name": "Rhipsalis roja",
+      "description": "Pseudorhipsalis ramulosa es un cactus epifítico con tallos suculentos rojos. Crece en bosques tropicales con luz media y alta humedad."
+    },
+    "pt": {
+      "common_name": "Rhipsalis vermelha",
+      "description": "Pseudorhipsalis ramulosa é um cacto epifítico com caules suculentos vermelhos. Cresce em florestas tropicais com luz média e alta umidade."
+    },
+    "ar": {
+      "common_name": "رايبساليس الأحمر",
+      "description": "Pseudorhipsalis ramulosa هو صبار شبه هوائي ذو سيقان سمينة حمراء. ينمو في الغابات الاستوائية حيث الإضاءة المتوسطة والرطوبة العالية."
+    },
+    "hi": {
+      "common_name": "लाल राइप्सालिस",
+      "description": "Pseudorhipsalis ramulosa एक एपिफाइटिक कैक्टस है जिसमें लाल, मांसल तने होते हैं। यह उष्णकटिबंधीय जंगलों में मध्यम प्रकाश और उच्च आर्द्रता के साथ बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "红色链锯叶仙人掌",
+      "description": "Pseudorhipsalis ramulosa 是一种具有红色多肉茎的附生仙人掌。它在热带森林中生长，适应中等光照和高湿度环境。"
+    },
+    "ja": {
+      "common_name": "赤いリプサリス",
+      "description": "Pseudorhipsalis ramulosa は赤い多肉質の茎を持つ着生性のサボテンです。熱帯雨林で中程度の光と高い湿度の中で育ちます。"
+    },
+    "ko": {
+      "common_name": "빨간 리프살리스",
+      "description": "Pseudorhipsalis ramulosa는 빨간 다육질 줄기를 가진 착생성 선인장입니다. 열대 숲에서 중간 정도의 빛과 높은 습도를 좋아합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/pseudorhipsalis-ramulosa",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a405"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_australis",
+  "name": "Hoya australis",
+  "latin": "Hoya australis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_australis.jpg",
+  "image_thumb": "hoya_australis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well draining mix",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Water when top dry",
+          "pl": "Podlewaj po przeschnięciu",
+          "de": "Gießen bei Trockenheit",
+          "fr": "Arroser sol sec",
+          "it": "Annaffia a secco",
+          "es": "Regar suelo seco",
+          "pt": "Regar solo seco",
+          "ar": "اسق عند الجفاف",
+          "hi": "सूखने पर पानी",
+          "zh": "干后浇水",
+          "ja": "乾いたら水やり",
+          "ko": "마르면 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27 °C",
+          "ja": "18–27 °C",
+          "ko": "18–27 °C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia domowa",
+          "de": "Normale Raumluft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletterpflanze",
+          "fr": "Plante grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "लता",
+          "zh": "攀援生长",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wax Plant",
+      "description": "Hoya australis is a vining epiphytic plant native to Australia. It has thick glossy leaves and produces fragrant star-shaped flowers. It is commonly grown indoors in bright indirect light."
+    },
+    "pl": {
+      "common_name": "Hoja australijska",
+      "description": "Hoya australis to pnąca roślina epifityczna pochodząca z Australii. Ma grube błyszczące liście i pachnące kwiaty. Dobrze rośnie w jasnym rozproszonym świetle."
+    },
+    "de": {
+      "common_name": "Wachsblume",
+      "description": "Hoya australis ist eine kletternde epiphytische Pflanze aus Australien. Sie besitzt dicke glänzende Blätter und duftende Blüten. Sie eignet sich gut als Zimmerpflanze."
+    },
+    "fr": {
+      "common_name": "Plante de cire",
+      "description": "Hoya australis est une plante grimpante originaire d’Australie. Elle produit des feuilles épaisses et des fleurs parfumées. Elle se cultive bien en intérieur lumineux."
+    },
+    "it": {
+      "common_name": "Pianta di cera",
+      "description": "Hoya australis è una pianta rampicante originaria dell’Australia. Ha foglie spesse e fiori profumati. È adatta alla coltivazione in casa."
+    },
+    "es": {
+      "common_name": "Planta de cera",
+      "description": "Hoya australis es una planta trepadora nativa de Australia. Presenta hojas carnosas y flores fragantes. Se adapta bien al cultivo interior."
+    },
+    "pt": {
+      "common_name": "Planta de cera",
+      "description": "Hoya australis é uma planta trepadeira nativa da Austrália. Possui folhas grossas e flores perfumadas. É comum como planta de interior."
+    },
+    "ar": {
+      "common_name": "نبات الشمع",
+      "description": "هويا أستراليس نبات متسلق موطنه أستراليا. يتميز بأوراق سميكة وأزهار عطرية. يناسب الزراعة داخل المنازل."
+    },
+    "hi": {
+      "common_name": "वैक्स प्लांट",
+      "description": "होया ऑस्ट्रेलिस ऑस्ट्रेलिया का एक लता पौधा है। इसमें मोटी पत्तियाँ और सुगंधित फूल होते हैं। इसे घर के अंदर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "球兰",
+      "description": "Hoya australis 原产于澳大利亚，是一种藤本植物。它有厚实的叶片和芳香的花朵。常作为室内观叶植物栽培。"
+    },
+    "ja": {
+      "common_name": "ホヤ・オーストラリス",
+      "description": "ホヤ・オーストラリスはオーストラリア原産のつる性植物です。厚い葉と香りのある花を持ちます。室内栽培に適しています。"
+    },
+    "ko": {
+      "common_name": "호야 오스트랄리스",
+      "description": "호야 오스트랄리스는 호주 원산의 덩굴식물입니다. 두꺼운 잎과 향기로운 꽃이 특징입니다. 실내에서 키우기 좋습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/8971/hoya-australis/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/"
+    ]
+  }
+}

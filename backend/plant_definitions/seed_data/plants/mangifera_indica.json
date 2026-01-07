@@ -1,0 +1,237 @@
+{
+  "external_id": "mangifera_indica",
+  "name": "Mango Tree",
+  "latin": "Mangifera indica",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "mangifera_indica.jpg",
+  "image_thumb": "mangifera_indica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Hard",
+          "pl": "Trudna",
+          "de": "Schwierig",
+          "fr": "Difficile",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "困难",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गरम मौसम",
+          "zh": "温暖气候",
+          "ja": "暖かい気候",
+          "ko": "따뜻한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Feuchte",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "適度な湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic sap",
+          "pl": "Lekko toksyczny sok",
+          "de": "Leicht giftig",
+          "fr": "Sève toxique",
+          "it": "Linfa tossica",
+          "es": "Savia tóxica",
+          "pt": "Seiva tóxica",
+          "ar": "عصارة سامة",
+          "hi": "हल्का विषाक्त",
+          "zh": "轻微毒性",
+          "ja": "樹液に毒性",
+          "ko": "수액 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Large tree",
+          "pl": "Duże drzewo",
+          "de": "Großer Baum",
+          "fr": "Grand arbre",
+          "it": "Albero grande",
+          "es": "Árbol grande",
+          "pt": "Árvore grande",
+          "ar": "شجرة كبيرة",
+          "hi": "बड़ा पेड़",
+          "zh": "大型乔木",
+          "ja": "大型の木",
+          "ko": "큰 나무"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mango Tree",
+      "description": "Mangifera indica is a tropical fruit tree native to South Asia. It requires strong sunlight, warmth, and space to grow, making indoor cultivation challenging. The tree is best suited to greenhouses or warm outdoor climates."
+    },
+    "pl": {
+      "common_name": "Drzewo mango",
+      "description": "Mangifera indica to tropikalne drzewo owocowe pochodzące z Azji Południowej. Wymaga silnego słońca, ciepła i przestrzeni, dlatego uprawa w domu jest trudna. Najlepiej rośnie w szklarniach lub ciepłym klimacie."
+    },
+    "de": {
+      "common_name": "Mangobaum",
+      "description": "Mangifera indica ist ein tropischer Obstbaum aus Südasien. Er benötigt viel Sonne, Wärme und Platz, was die Zimmerkultur erschwert. Geeignet ist er vor allem für Gewächshäuser oder warme Regionen."
+    },
+    "fr": {
+      "common_name": "Manguier",
+      "description": "Mangifera indica est un arbre fruitier tropical originaire d’Asie du Sud. Il demande beaucoup de soleil, de chaleur et d’espace, ce qui rend la culture intérieure difficile. Il est surtout adapté aux serres ou climats chauds."
+    },
+    "it": {
+      "common_name": "Albero di mango",
+      "description": "Mangifera indica è un albero da frutto tropicale originario dell’Asia meridionale. Richiede molto sole, calore e spazio, rendendo difficile la coltivazione in casa. È più adatto a serre o climi caldi."
+    },
+    "es": {
+      "common_name": "Árbol de mango",
+      "description": "Mangifera indica es un árbol frutal tropical originario del sur de Asia. Necesita mucho sol, calor y espacio, por lo que su cultivo en interior es complicado. Es más adecuado para invernaderos o climas cálidos."
+    },
+    "pt": {
+      "common_name": "Mangueira",
+      "description": "Mangifera indica é uma árvore frutífera tropical originária do sul da Ásia. Precisa de muito sol, calor e espaço, o que dificulta o cultivo interno. É mais indicada para estufas ou climas quentes."
+    },
+    "ar": {
+      "common_name": "شجرة المانجو",
+      "description": "Mangifera indica شجرة فاكهة استوائية موطنها جنوب آسيا. تحتاج إلى شمس قوية وحرارة ومساحة، مما يجعل زراعتها داخل المنزل صعبة. تناسب البيوت الزجاجية أو المناخات الدافئة."
+    },
+    "hi": {
+      "common_name": "आम का पेड़",
+      "description": "Mangifera indica एक उष्णकटिबंधीय फलदार वृक्ष है जो दक्षिण एशिया का मूल निवासी है। इसे तेज धूप, गर्मी और जगह की आवश्यकता होती है, इसलिए घर के अंदर उगाना कठिन है। यह ग्रीनहाउस या गर्म जलवायु के लिए उपयुक्त है।"
+    },
+    "zh": {
+      "common_name": "芒果树",
+      "description": "Mangifera indica 是原产于南亚的热带果树。它需要充足阳光、温暖环境和较大空间，室内种植较为困难。更适合温室或温暖地区。"
+    },
+    "ja": {
+      "common_name": "マンゴーの木",
+      "description": "Mangifera indica は南アジア原産の熱帯果樹です。強い日光と暖かさ、十分な空間が必要で、室内栽培は困難です。温室や暖かい地域に適しています。"
+    },
+    "ko": {
+      "common_name": "망고나무",
+      "description": "Mangifera indica는 남아시아 원산의 열대 과일나무입니다. 강한 햇빛과 따뜻한 환경, 넓은 공간이 필요해 실내 재배는 어렵습니다. 온실이나 따뜻한 기후에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/mangifera-indica",
+      "https://edis.ifas.ufl.edu/publication/MG216",
+      "https://www.britannica.com/plant/mango-plant"
+    ]
+  }
+}

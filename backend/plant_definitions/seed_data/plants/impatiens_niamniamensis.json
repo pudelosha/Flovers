@@ -1,0 +1,238 @@
+{
+  "external_id": "impatiens_niamniamensis",
+  "name": "Parrot Plant",
+  "latin": "Impatiens niamniamensis",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "impatiens_niamniamensis.jpg",
+  "image_thumb": "impatiens_niamniamensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stale wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulière",
+          "it": "Umido costante",
+          "es": "Humedad constante",
+          "pt": "Úmido constante",
+          "ar": "رطبة باستمرار",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°م",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers humid air",
+          "pl": "Lubi wilgoć",
+          "de": "Mag hohe Luftfeuchte",
+          "fr": "Aime l’humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜高湿度",
+          "ja": "高湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright shrub",
+          "pl": "Wzniesiony krzew",
+          "de": "Aufrecht wachsend",
+          "fr": "Port dressé",
+          "it": "Crescita eretta",
+          "es": "Crecimiento erguido",
+          "pt": "Crescimento ereto",
+          "ar": "نمو قائم",
+          "hi": "सीधी बढ़त",
+          "zh": "直立生长",
+          "ja": "直立成長",
+          "ko": "직립 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Parrot Plant",
+      "description": "Impatiens niamniamensis is a tropical plant known for its parrot-shaped red and yellow flowers. It grows best indoors in bright, indirect light and consistently moist soil. Warm temperatures and stable care support healthy flowering."
+    },
+    "pl": {
+      "common_name": "Niecierpek papuzi",
+      "description": "Impatiens niamniamensis to tropikalna roślina o kwiatach przypominających papugi. Najlepiej rośnie w jasnym, rozproszonym świetle i stale wilgotnym podłożu. Wymaga ciepła i regularnej pielęgnacji."
+    },
+    "de": {
+      "common_name": "Papageien-Impatiens",
+      "description": "Impatiens niamniamensis ist eine tropische Pflanze mit papageienförmigen Blüten. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Warme Temperaturen fördern gesundes Wachstum."
+    },
+    "fr": {
+      "common_name": "Plante perroquet",
+      "description": "Impatiens niamniamensis est une plante tropicale aux fleurs en forme de perroquet. Elle aime une lumière vive sans soleil direct et un sol constamment humide. La chaleur favorise sa floraison."
+    },
+    "it": {
+      "common_name": "Pianta pappagallo",
+      "description": "Impatiens niamniamensis è una pianta tropicale dai fiori simili a pappagalli. Cresce bene con luce indiretta e terreno sempre umido. Predilige temperature calde e stabili."
+    },
+    "es": {
+      "common_name": "Planta loro",
+      "description": "Impatiens niamniamensis es una planta tropical con flores que parecen loros. Necesita luz indirecta brillante y sustrato húmedo de forma constante. El calor favorece su desarrollo."
+    },
+    "pt": {
+      "common_name": "Planta papagaio",
+      "description": "Impatiens niamniamensis é uma planta tropical com flores em forma de papagaio. Prefere luz indireta intensa e solo sempre úmido. Temperaturas quentes ajudam no florescimento."
+    },
+    "ar": {
+      "common_name": "نبات الببغاء",
+      "description": "Impatiens niamniamensis نبات استوائي يتميز بأزهار تشبه الببغاء. ينمو جيدًا في ضوء ساطع غير مباشر وتربة رطبة باستمرار. يحتاج إلى درجات حرارة دافئة."
+    },
+    "hi": {
+      "common_name": "पैरट प्लांट",
+      "description": "Impatiens niamniamensis एक उष्णकटिबंधीय पौधा है जिसके फूल तोते जैसे दिखते हैं। यह तेज़ अप्रत्यक्ष रोशनी और नम मिट्टी में अच्छा बढ़ता है। गर्म तापमान इसके लिए उपयुक्त हैं।"
+    },
+    "zh": {
+      "common_name": "鹦鹉凤仙花",
+      "description": "Impatiens niamniamensis 是一种热带植物，花朵形似鹦鹉。适合在明亮的散射光和持续湿润的土壤中生长。温暖环境有助于开花。"
+    },
+    "ja": {
+      "common_name": "オウムホウセンカ",
+      "description": "Impatiens niamniamensis はオウムの形をした花が特徴の熱帯植物です。明るい間接光と湿った土壌を好みます。暖かい環境でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "앵무 임파첸스",
+      "description": "Impatiens niamniamensis는 앵무새 모양의 꽃을 가진 열대 식물입니다. 밝은 간접광과 항상 촉촉한 흙에서 잘 자랍니다. 따뜻한 온도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/impatiens/niamniamensis/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-impatiens-niamniamensis/",
+      "https://plants.ces.ncsu.edu/plants/impatiens-niamniamensis/"
+    ]
+  }
+}

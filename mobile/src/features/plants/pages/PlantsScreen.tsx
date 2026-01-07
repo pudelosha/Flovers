@@ -21,6 +21,7 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -60,7 +61,10 @@ type LightLevel5 =
   | "bright-direct";
 
 /** Map API list item -> UI Plant shape used by PlantTile */
-function mapApiToPlant(item: ApiPlantInstanceListItem, unnamedFallback: string): Plant {
+function mapApiToPlant(
+  item: ApiPlantInstanceListItem,
+  unnamedFallback: string
+): Plant {
   const name =
     item.display_name?.trim() ||
     item.plant_definition?.name?.trim() ||
@@ -87,6 +91,7 @@ export default function PlantsScreen() {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage(); // ensure rerender on language change
+  const { settings } = useSettings(); // 👈 NEW
 
   const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
@@ -170,7 +175,10 @@ export default function PlantsScreen() {
       setPlants(data.map((it) => mapApiToPlant(it, unnamedFallback)));
     } catch (e: any) {
       showToast(
-        e?.message || t("plants.toast.loadFailed", { defaultValue: "Failed to load plants" }),
+        e?.message ||
+          t("plants.toast.loadFailed", {
+            defaultValue: "Failed to load plants",
+          }),
         "error"
       );
       setPlants([]);
@@ -242,9 +250,7 @@ export default function PlantsScreen() {
       setFSoilMix(detail.soil_mix ?? undefined);
 
       setFLatinQuery(detail.plant_definition?.name || p.latin || "");
-      setFLatinSelected(
-        detail.plant_definition?.name || p.latin || undefined
-      );
+      setFLatinSelected(detail.plant_definition?.name || p.latin || undefined);
       setFLocation(detail.location?.name || p.location);
 
       setEditOpen(true);
@@ -252,7 +258,9 @@ export default function PlantsScreen() {
       Alert.alert(
         t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
         e?.message ||
-          t("plants.alert.loadFailedMsg", { defaultValue: "Could not load plant details." })
+          t("plants.alert.loadFailedMsg", {
+            defaultValue: "Could not load plant details.",
+          })
       );
     } finally {
       setEditLoading(false);
@@ -291,12 +299,17 @@ export default function PlantsScreen() {
       );
 
       closeEdit();
-      showToast(t("plants.toast.updated", { defaultValue: "Plant updated" }), "success");
+      showToast(
+        t("plants.toast.updated", { defaultValue: "Plant updated" }),
+        "success"
+      );
     } catch (e: any) {
       Alert.alert(
         t("plants.alert.updateFailedTitle", { defaultValue: "Update failed" }),
         e?.message ||
-          t("plants.alert.updateFailedMsg", { defaultValue: "Could not update this plant." })
+          t("plants.alert.updateFailedMsg", {
+            defaultValue: "Could not update this plant.",
+          })
       );
     } finally {
       setSaving(false);
@@ -318,12 +331,17 @@ export default function PlantsScreen() {
     try {
       await deletePlantInstance(Number(confirmDeleteId), { auth: true });
       setPlants((prev) => prev.filter((p) => p.id !== confirmDeleteId));
-      showToast(t("plants.toast.deleted", { defaultValue: "Plant deleted" }), "success");
+      showToast(
+        t("plants.toast.deleted", { defaultValue: "Plant deleted" }),
+        "success"
+      );
     } catch (e: any) {
       Alert.alert(
         t("plants.alert.deleteFailedTitle", { defaultValue: "Delete failed" }),
         e?.message ||
-          t("plants.alert.deleteFailedMsg", { defaultValue: "Could not delete this plant." })
+          t("plants.alert.deleteFailedMsg", {
+            defaultValue: "Could not delete this plant.",
+          })
       );
     } finally {
       setConfirmDeleteId(null);
@@ -514,9 +532,7 @@ export default function PlantsScreen() {
               <PlantTile
                 plant={item}
                 isMenuOpen={isOpen}
-                onPressBody={() =>
-                  nav.navigate("PlantDetails", { id: item.id })
-                }
+                onPressBody={() => nav.navigate("PlantDetails", { id: item.id })}
                 onPressMenu={() =>
                   setMenuOpenId((curr) => (curr === item.id ? null : item.id))
                 }
@@ -549,7 +565,10 @@ export default function PlantsScreen() {
               s.emptyWrap,
               {
                 opacity: emptyOpacity,
-                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
+                transform: [
+                  { translateY: emptyTranslateY },
+                  { scale: emptyScale },
+                ],
               },
             ]}
           >
@@ -595,50 +614,58 @@ export default function PlantsScreen() {
 
       {/* FAB */}
       {showFAB && (
-        <FAB
-          bottomOffset={92}
-          actions={[
-            {
-              key: "create",
-              icon: "plus",
-              label: t("plants.fab.create", { defaultValue: "Create plant" }),
-              onPress: openCreatePlantWizard,
-            },
-            {
-              key: "sort",
-              icon: "sort",
-              label: t("plants.fab.sort", { defaultValue: "Sort" }),
-              onPress: () => setSortOpen(true),
-            },
-            {
-              key: "filter",
-              icon: "filter-variant",
-              label: t("plants.fab.filter", { defaultValue: "Filter" }),
-              onPress: () => setFilterOpen(true),
-            },
-            ...(isFilterActive
-              ? [
-                  {
-                    key: "clearFilter",
-                    label: t("plants.fab.clearFilter", {
-                      defaultValue: "Clear filter",
-                    }),
-                    icon: "filter-remove",
-                    onPress: () => setFilters({}),
-                  } as const,
-                ]
-              : []),
-            {
-              key: "locations",
-              icon: "map-marker-outline",
-              label: t("plants.fab.locations", { defaultValue: "Locations" }),
-              onPress: () => {
-                setMenuOpenId(null);
-                nav.navigate("PlantLocations");
+        <View
+          onStartShouldSetResponderCapture={() => {
+            setMenuOpenId(null);
+            return false;
+          }}
+        >
+          <FAB
+            bottomOffset={92}
+            position={settings.fabPosition} // 👈 NEW: left/right from settings
+            actions={[
+              {
+                key: "create",
+                icon: "plus",
+                label: t("plants.fab.create", { defaultValue: "Create plant" }),
+                onPress: openCreatePlantWizard,
               },
-            },
-          ]}
-        />
+              {
+                key: "sort",
+                icon: "sort",
+                label: t("plants.fab.sort", { defaultValue: "Sort" }),
+                onPress: () => setSortOpen(true),
+              },
+              {
+                key: "filter",
+                icon: "filter-variant",
+                label: t("plants.fab.filter", { defaultValue: "Filter" }),
+                onPress: () => setFilterOpen(true),
+              },
+              ...(isFilterActive
+                ? [
+                    {
+                      key: "clearFilter",
+                      label: t("plants.fab.clearFilter", {
+                        defaultValue: "Clear filter",
+                      }),
+                      icon: "filter-remove",
+                      onPress: () => setFilters({}),
+                    } as const,
+                  ]
+                : []),
+              {
+                key: "locations",
+                icon: "map-marker-outline",
+                label: t("plants.fab.locations", { defaultValue: "Locations" }),
+                onPress: () => {
+                  setMenuOpenId(null);
+                  nav.navigate("PlantLocations");
+                },
+              },
+            ]}
+          />
+        </View>
       )}
 
       {/* Modals (translate later) */}
@@ -727,14 +754,17 @@ export default function PlantsScreen() {
         onClose={() => setQrVisible(false)}
         onPressSave={() => {
           showToast(
-            t("plants.toast.qrSaved", { defaultValue: "QR code saved to your gallery." }),
+            t("plants.toast.qrSaved", {
+              defaultValue: "QR code saved to your gallery.",
+            }),
             "default"
           );
         }}
         onPressEmail={() => {
           showToast(
             t("plants.toast.qrEmailed", {
-              defaultValue: "An email with this QR code will be sent to your account address.",
+              defaultValue:
+                "An email with this QR code will be sent to your account address.",
             }),
             "default"
           );

@@ -1,0 +1,237 @@
+{
+  "external_id": "ranunculus_asiaticus",
+  "name": "Persian Buttercup",
+  "latin": "Ranunculus asiaticus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "ranunculus_asiaticus.jpg",
+  "image_thumb": "ranunculus_asiaticus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "Lehm",
+          "fr": "argileux",
+          "it": "limoso",
+          "es": "arcilloso",
+          "pt": "argiloso",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "壌土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Persian Buttercup",
+      "description": "Ranunculus asiaticus, known as the Persian buttercup, is a popular ornamental flower with vibrant blooms in various colors. It thrives in moderate sunlight and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Jaskier perski",
+      "description": "Ranunculus asiaticus, znany jako jaskier perski, to popularna roślina ozdobna o żywych kwiatach w różnych kolorach. Rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie."
+    },
+    "de": {
+      "common_name": "Persischer Hahnenfuß",
+      "description": "Ranunculus asiaticus, auch als persischer Hahnenfuß bekannt, ist eine beliebte Zierpflanze mit lebendigen Blüten in verschiedenen Farben. Sie gedeiht bei mäßigem Sonnenlicht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Renoncule asiatique",
+      "description": "Ranunculus asiaticus, connu sous le nom de renoncule asiatique, est une plante ornementale populaire avec des fleurs vibrantes de différentes couleurs. Elle pousse sous une lumière modérée et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Ranuncolo asiatico",
+      "description": "Ranunculus asiaticus, noto come ranuncolo asiatico, è una pianta ornamentale popolare con fiori vivaci di vari colori. Cresce in luce moderata e in terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Ranúnculo asiático",
+      "description": "Ranunculus asiaticus, conocido como ranúnculo asiático, es una planta ornamental popular con flores vibrantes en varios colores. Crece bajo luz moderada y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Ranúnculo asiático",
+      "description": "Ranunculus asiaticus, conhecido como ranúnculo asiático, é uma planta ornamental popular com flores vibrantes de várias cores. Cresce sob luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "حشيشة الفرس الآسيوية",
+      "description": "رانونكولوس آسياتيكس، المعروف باسم حشيشة الفرس الآسيوية، هو نبات زينة شهير بأزهار حية بألوان مختلفة. ينمو في ضوء معتدل وتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "पर्शियन बटरकप",
+      "description": "रनुनकुलस एशियाटिकस, जिसे पर्शियन बटरकप कहा जाता है, एक लोकप्रिय सजावटी फूल है जो विभिन्न रंगों में खिलता है। यह मध्यम धूप और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "波斯毛茛",
+      "description": "Ranunculus asiaticus，波斯毛茛，是一种流行的观赏花卉，具有各种颜色的鲜艳花朵。它在适度的阳光下和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ペルシャキンポウゲ",
+      "description": "Ranunculus asiaticus、ペルシャキンポウゲは、さまざまな色の鮮やかな花を持つ人気の観賞植物です。適度な日光と良好な排水性の土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "페르시아 버터컵",
+      "description": "Ranunculus asiaticus, 페르시아 버터컵으로 알려진 이 식물은 다양한 색상의 생동감 있는 꽃을 가진 인기 있는 장식용 식물입니다. 적당한 햇빛과 잘 배수되는 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/ranunculus-asiaticus",
+      "https://www.gardenia.net/plant/ranunculus-asiaticus"
+    ]
+  }
+}

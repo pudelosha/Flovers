@@ -1,0 +1,237 @@
+{
+  "external_id": "orchis_pallens",
+  "name": "Pale Orchid",
+  "latin": "Orchis pallens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "orchis_pallens.jpg",
+  "image_thumb": "orchis_pallens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, orchid mix",
+          "pl": "Kwaśna, mieszanka orchidei",
+          "de": "Saurer Boden, Orchideenmischung",
+          "fr": "Sol acide, mélange pour orchidées",
+          "it": "Terreno acido, miscela per orchidee",
+          "es": "Suelo ácido, mezcla para orquídeas",
+          "pt": "Solo ácido, mistura para orquídeas",
+          "ar": "تربة حمضية، خليط للزهور الأوركيدية",
+          "hi": "अम्लीय, ऑर्किड मिश्रण",
+          "zh": "酸性土壤，兰花混合土",
+          "ja": "酸性土壌、ラン科植物用混合土",
+          "ko": "산성 토양, 난초 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "ري سقي معتدل",
+          "hi": "मध्यम जलिंग",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Umiarkowany wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pale Orchid",
+      "description": "Orchis pallens is a delicate, pale yellow orchid native to temperate regions. It thrives in shaded forest environments."
+    },
+    "pl": {
+      "common_name": "Orchidea blada",
+      "description": "Orchis pallens to delikatna, jasnożółta orchidea, występująca w strefach umiarkowanych. Rośnie w zacienionych lasach."
+    },
+    "de": {
+      "common_name": "Blasse Orchidee",
+      "description": "Orchis pallens ist eine zarte, blassgelbe Orchidee, die in gemäßigten Regionen heimisch ist. Sie gedeiht in schattigen Wäldern."
+    },
+    "fr": {
+      "common_name": "Orchidée pâle",
+      "description": "Orchis pallens est une orchidée délicate, jaune pâle, originaire des régions tempérées. Elle prospère dans des forêts ombragées."
+    },
+    "it": {
+      "common_name": "Orchidea pallida",
+      "description": "Orchis pallens è un'orchidea delicata di colore giallo pallido, originaria delle regioni temperate. Cresce in ambienti forestali ombreggiati."
+    },
+    "es": {
+      "common_name": "Orquídea pálida",
+      "description": "Orchis pallens es una orquídea delicada de color amarillo pálido originaria de regiones templadas. Crece en bosques sombreados."
+    },
+    "pt": {
+      "common_name": "Orquídea pálida",
+      "description": "Orchis pallens é uma orquídea delicada de cor amarela pálida, nativa de regiões temperadas. Cresce em florestas sombreadas."
+    },
+    "ar": {
+      "common_name": "أوركيد باهت",
+      "description": "Orchis pallens هي أوركيد رقيقة ذات أزهار صفراء باهتة، تنمو في المناطق المعتدلة. تزدهر في الغابات المظللة."
+    },
+    "hi": {
+      "common_name": "पीला ऑर्किड",
+      "description": "Orchis pallens एक नाजुक, पीले रंग की ऑर्किड है जो समशीतोष्ण क्षेत्रों में पाई जाती है। यह छायादार जंगलों में उगती है।"
+    },
+    "zh": {
+      "common_name": "淡黄兰",
+      "description": "Orchis pallens 是一种细腻的淡黄色兰花，原产于温带地区。它在阴凉的森林环境中茁壮成长。"
+    },
+    "ja": {
+      "common_name": "淡いラン",
+      "description": "Orchis pallens は、温帯地域に自生する繊細な淡黄色のランです。日陰の森林環境で繁茂します。"
+    },
+    "ko": {
+      "common_name": "옅은 난초",
+      "description": "Orchis pallens는 온대 지역에 자생하는 섬세한 연노란색 난초입니다. 그늘진 숲 환경에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=102",
+      "https://www.botanicalgarden.wisc.edu"
+    ]
+  }
+}

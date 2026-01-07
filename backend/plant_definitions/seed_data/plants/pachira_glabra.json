@@ -1,0 +1,237 @@
+{
+  "external_id": "pachira_glabra",
+  "name": "Malabar Chestnut",
+  "latin": "Pachira glabra",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pachira_glabra.jpg",
+  "image_thumb": "pachira_glabra.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Malabar Chestnut",
+      "description": "Pachira glabra, also known as Malabar Chestnut, is a tropical plant native to Central and South America. It is commonly grown for its attractive, palm-like leaves and its edible seeds."
+    },
+    "pl": {
+      "common_name": "Kasztan Malabarski",
+      "description": "Pachira glabra, znana również jako kasztan malabarski, to roślina tropikalna pochodząca z Ameryki Środkowej i Południowej. Jest często uprawiana ze względu na atrakcyjne, palmopodobne liście i jadalne nasiona."
+    },
+    "de": {
+      "common_name": "Malabar Kastanie",
+      "description": "Pachira glabra, auch bekannt als Malabar-Kastanie, ist eine tropische Pflanze, die in Zentral- und Südamerika beheimatet ist. Sie wird oft wegen ihrer attraktiven, palmartigen Blätter und essbaren Samen kultiviert."
+    },
+    "fr": {
+      "common_name": "Châtaignier du Malabar",
+      "description": "Pachira glabra, également connue sous le nom de châtaignier du Malabar, est une plante tropicale originaire d'Amérique centrale et du Sud. Elle est cultivée pour ses feuilles attrayantes en forme de palmier et ses graines comestibles."
+    },
+    "it": {
+      "common_name": "Castagno del Malabar",
+      "description": "Pachira glabra, conosciuta anche come castagno del Malabar, è una pianta tropicale originaria dell'America Centrale e Meridionale. Viene coltivata per le sue foglie attraenti a forma di palma e per i suoi semi commestibili."
+    },
+    "es": {
+      "common_name": "Castaño de Malabar",
+      "description": "Pachira glabra, también conocida como castaño de Malabar, es una planta tropical originaria de Centro y Sudamérica. Se cultiva por sus atractivas hojas en forma de palma y sus semillas comestibles."
+    },
+    "pt": {
+      "common_name": "Castanheiro do Malabar",
+      "description": "Pachira glabra, também conhecida como castanheiro do Malabar, é uma planta tropical nativa da América Central e do Sul. É cultivada por suas folhas atraentes em forma de palmeira e suas sementes comestíveis."
+    },
+    "ar": {
+      "common_name": "كستناء مالابار",
+      "description": "Pachira glabra، المعروفة أيضًا باسم كستناء مالابار، هي نبات استوائي موطنه أمريكا الوسطى والجنوبية. يتم زراعته بشكل شائع بسبب أوراقه الجذابة على شكل نخلة وبذوره الصالحة للأكل."
+    },
+    "hi": {
+      "common_name": "मलाबार चेस्टनट",
+      "description": "Pachira glabra, जिसे मलाबार चेस्टनट के नाम से भी जाना जाता है, एक उष्णकटिबंधीय पौधा है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसे इसके आकर्षक, ताड़ जैसी पत्तियों और खाद्य बीजों के लिए उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "马拉巴尔栗",
+      "description": "Pachira glabra，也称为马拉巴尔栗，是一种原产于中美洲和南美洲的热带植物。由于其吸引人的棕榈状叶子和可食用的种子，常被种植。"
+    },
+    "ja": {
+      "common_name": "マラバール栗",
+      "description": "Pachira glabra、またはマラバール栗は、中南米原産の熱帯植物です。魅力的なヤシのような葉と食用の種子でよく栽培されます。"
+    },
+    "ko": {
+      "common_name": "말라바르 밤",
+      "description": "Pachira glabra, 또는 말라바르 밤은 중남미 원산의 열대 식물입니다. 매력적인 야자수 모양의 잎과 식용 가능한 씨앗으로 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgardens.com/pachira-glabra",
+      "https://www.hort.cornell.edu/pachira-glabra-care"
+    ]
+  }
+}

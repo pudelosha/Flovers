@@ -1,0 +1,237 @@
+{
+  "external_id": "soleirolia_soleirolii",
+  "name": "Baby's Tears",
+  "latin": "Soleirolia soleirolii",
+  "sun": "low",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "soleirolia_soleirolii.jpg",
+  "image_thumb": "soleirolia_soleirolii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Słabe światło",
+          "de": "Geringes Licht",
+          "fr": "Lumière faible",
+          "it": "Poca luce",
+          "es": "Luz baja",
+          "pt": "Luz baixa",
+          "ar": "ضوء منخفض",
+          "hi": "कम रोशनी",
+          "zh": "低光",
+          "ja": "低光",
+          "ko": "낮은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "黏土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "الري المتوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Caliente",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Haute humidité",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Ground cover",
+          "pl": "Pokrywa ziemi",
+          "de": "Bodenbedeckung",
+          "fr": "Couverture du sol",
+          "it": "Copertura del suolo",
+          "es": "Cobertura del suelo",
+          "pt": "Cobertura do solo",
+          "ar": "غطاء أرضي",
+          "hi": "भूमि आवरण",
+          "zh": "地被植物",
+          "ja": "地面覆い",
+          "ko": "지면 덮개"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Baby's Tears",
+      "description": "Soleirolia soleirolii, commonly known as Baby's Tears, is a low-growing, mat-forming perennial. It thrives in high humidity and low light, often used as ground cover."
+    },
+    "pl": {
+      "common_name": "Łzy dziecka",
+      "description": "Soleirolia soleirolii, znana jako Łzy dziecka, to nisko rosnąca roślina wieloletnia, tworząca dywan. Rośnie w wysokiej wilgotności i słabym świetle, często stosowana jako okrywowa roślina."
+    },
+    "de": {
+      "common_name": "Babys Tränen",
+      "description": "Soleirolia soleirolii, auch als Babys Tränen bekannt, ist eine niedrig wachsende, mattenbildende Pflanze. Sie gedeiht in hoher Luftfeuchtigkeit und schwachem Licht und wird oft als Bodendecker verwendet."
+    },
+    "fr": {
+      "common_name": "Larmes de bébé",
+      "description": "Soleirolia soleirolii, communément appelée Larmes de bébé, est une plante vivace à faible croissance formant un tapis. Elle prospère dans une humidité élevée et une faible lumière, souvent utilisée comme couvre-sol."
+    },
+    "it": {
+      "common_name": "Lacrime di bambino",
+      "description": "Soleirolia soleirolii, comunemente nota come Lacrime di bambino, è una pianta perenne a crescita bassa che forma un tappeto. Cresce in alta umidità e bassa luminosità, spesso usata come copertura del terreno."
+    },
+    "es": {
+      "common_name": "Lágrimas de bebé",
+      "description": "Soleirolia soleirolii, conocida como Lágrimas de bebé, es una planta perenne de bajo crecimiento que forma una alfombra. Prosperan en alta humedad y baja luz, a menudo utilizada como cobertura del suelo."
+    },
+    "pt": {
+      "common_name": "Lágrimas de bebê",
+      "description": "Soleirolia soleirolii, conhecida como Lágrimas de bebê, é uma planta perene de baixo crescimento que forma um tapete. Ela cresce em alta umidade e pouca luz, muitas vezes usada como cobertura do solo."
+    },
+    "ar": {
+      "common_name": "دموع الأطفال",
+      "description": "Soleirolia soleirolii، والمعروفة باسم دموع الأطفال، هي نبات معمر منخفض النمو يشكل حصيرة. ينمو في الرطوبة العالية والضوء المنخفض وغالباً ما يستخدم كغطاء أرضي."
+    },
+    "hi": {
+      "common_name": "बेबी के आंसू",
+      "description": "Soleirolia soleirolii, जिसे बेबी के आंसू के नाम से जाना जाता है, एक निम्न वृद्धि वाली, चटाई बनाने वाली बारहमासी है। यह उच्च आर्द्रता और कम प्रकाश में बढ़ता है, अक्सर भूमि आवरण के रूप में उपयोग किया जाता है।"
+    },
+    "zh": {
+      "common_name": "宝宝的眼泪",
+      "description": "Soleirolia soleirolii，通常称为宝宝的眼泪，是一种低生长、形成地毯的多年生植物。它在高湿度和低光条件下生长，常用作地被植物。"
+    },
+    "ja": {
+      "common_name": "ベビーズティアーズ",
+      "description": "Soleirolia soleirolii、一般にベビーズティアーズとして知られる、この低成長でマット状に広がる多年草は、高湿度と低光の環境でよく育ち、地被植物としてよく使用されます。"
+    },
+    "ko": {
+      "common_name": "아기 눈물",
+      "description": "Soleirolia soleirolii, 일반적으로 아기 눈물로 알려진 이 식물은 낮은 성장을 하고 덮개처럼 퍼지는 다년생 식물입니다. 높은 습도와 낮은 빛에서 자라며 종종 지면 덮개로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/houseplants/babys-tears.htm",
+      "https://www.botanicgardens.org/learn/plant-care"
+    ]
+  }
+}

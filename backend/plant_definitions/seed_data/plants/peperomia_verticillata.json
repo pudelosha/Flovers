@@ -1,0 +1,237 @@
+{
+  "external_id": "peperomia_verticillata",
+  "name": "Peperomia verticillata",
+  "latin": "Peperomia verticillata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "peperomia_verticillata.jpg",
+  "image_thumb": "peperomia_verticillata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "यूनिवर्सल",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "보편적"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwa",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata is a tropical plant known for its distinctive whorled leaves. It thrives in indirect sunlight and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata to roślina tropikalna znana z charakterystycznych liści w okółkach. Rośnie najlepiej w średnim świetle i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata ist eine tropische Pflanze, die für ihre charakteristischen wirbelartigen Blätter bekannt ist. Sie gedeiht bei indirekter Sonneneinstrahlung und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata est une plante tropicale connue pour ses feuilles disposées en verticilles. Elle préfère la lumière indirecte et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata è una pianta tropicale nota per le sue foglie disposte a verticillo. Cresce bene in luce indiretta e richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata es una planta tropical conocida por sus hojas dispuestas en verticilos. Crece bien con luz indirecta y requiere riego moderado."
+    },
+    "pt": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata é uma planta tropical conhecida por suas folhas dispostas em verticilos. Prefere luz indireta e precisa de rega moderada."
+    },
+    "ar": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata هي نبات استوائي معروف بأوراقه الملتفة بشكل دائري. يزدهر في الضوء غير المباشر ويتطلب سقي معتدل."
+    },
+    "hi": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata एक उष्णकटिबंधीय पौधा है जिसे इसकी विशिष्ट चक्करदार पत्तियों के लिए जाना जाता है। यह अप्रत्यक्ष प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata 是一种热带植物，以其独特的轮生叶而闻名。它在间接阳光下生长，需要适量的浇水。"
+    },
+    "ja": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata は、特徴的な輪生葉で知られる熱帯植物です。間接光で育ち、中程度の水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "Peperomia verticillata",
+      "description": "Peperomia verticillata는 독특한 원형 배열의 잎으로 유명한 열대 식물입니다. 간접광에서 잘 자라며 중간 정도의 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/peperomia-verticillata",
+      "https://www.gardenia.net/plant/peperomia-verticillata"
+    ]
+  }
+}

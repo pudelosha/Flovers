@@ -1,0 +1,237 @@
+{
+  "external_id": "zamia_furfuracea",
+  "name": "Cardboard Palm",
+  "latin": "Zamia furfuracea",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "zamia_furfuracea.jpg",
+  "image_thumb": "zamia_furfuracea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광량"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierter Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Selten gießen",
+          "fr": "Arrosage léger",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega moderada",
+          "ar": "ري خفيف",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "水やり控えめ",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana pielęgnacja",
+          "de": "Mäßige Pflege",
+          "fr": "Entretien modéré",
+          "it": "Cura moderata",
+          "es": "Cuidado moderado",
+          "pt": "Cuidado moderado",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "管理は普通",
+          "ko": "보통 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm indoors",
+          "pl": "Ciepłe wnętrza",
+          "de": "Warm halten",
+          "fr": "Température chaude",
+          "it": "Temperatura calda",
+          "es": "Temperatura cálida",
+          "pt": "Ambiente quente",
+          "ar": "حرارة دافئة",
+          "hi": "गरम तापमान",
+          "zh": "温暖环境",
+          "ja": "暖かい環境",
+          "ko": "따뜻한 환경"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal air",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luft",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica per animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica pets",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsames Wachstum",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cardboard Palm",
+      "description": "Zamia furfuracea is a cycad native to Mexico, often grown as a houseplant. It prefers bright, indirect light and infrequent watering. All parts are toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Zamia kartonowa",
+      "description": "Zamia furfuracea to sagowiec pochodzący z Meksyku, często uprawiany w domu. Lubi jasne, rozproszone światło i rzadkie podlewanie. Roślina jest toksyczna."
+    },
+    "de": {
+      "common_name": "Kartonpalme",
+      "description": "Zamia furfuracea ist ein Palmfarn aus Mexiko, beliebt als Zimmerpflanze. Sie mag helles, indirektes Licht und wenig Wasser. Die Pflanze ist giftig."
+    },
+    "fr": {
+      "common_name": "Palmier carton",
+      "description": "Zamia furfuracea est un cycadé originaire du Mexique, cultivé en intérieur. Il préfère une lumière vive indirecte et peu d’arrosage. La plante est toxique."
+    },
+    "it": {
+      "common_name": "Palma di cartone",
+      "description": "Zamia furfuracea è una cicade originaria del Messico, coltivata come pianta da interno. Richiede luce indiretta e annaffiature limitate. È una pianta tossica."
+    },
+    "es": {
+      "common_name": "Palma de cartón",
+      "description": "Zamia furfuracea es una cícada originaria de México, usada como planta de interior. Necesita luz indirecta brillante y poco riego. Es tóxica."
+    },
+    "pt": {
+      "common_name": "Palmeira-de-cartão",
+      "description": "Zamia furfuracea é uma cicadácea do México, comum em interiores. Prefere luz indireta e rega espaçada. A planta é tóxica."
+    },
+    "ar": {
+      "common_name": "نخيل الكرتون",
+      "description": "زاميا فورفوراسيا نبات سيكاد من المكسيك ويزرع داخل المنازل. يحتاج إلى ضوء ساطع غير مباشر وري قليل. النبات سام."
+    },
+    "hi": {
+      "common_name": "कार्डबोर्ड पाम",
+      "description": "ज़ामिया फरफुरासिया मेक्सिको का एक साइकैड पौधा है। इसे तेज अप्रत्यक्ष रोशनी और कम पानी चाहिए। यह पौधा विषैला है।"
+    },
+    "zh": {
+      "common_name": "纸板苏铁",
+      "description": "Zamia furfuracea 原产于墨西哥，常作为室内植物栽培。喜明亮散射光，耐旱。全株有毒。"
+    },
+    "ja": {
+      "common_name": "ダンボールパーム",
+      "description": "ザミア・フルフラセアはメキシコ原産のソテツ植物です。明るい間接光と控えめな水やりを好みます。有毒です。"
+    },
+    "ko": {
+      "common_name": "카드보드 야자",
+      "description": "자미아 퍼푸라세아는 멕시코 원산의 소철 식물입니다. 밝은 간접광과 적은 물을 선호합니다. 독성이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b567",
+      "https://edis.ifas.ufl.edu/publication/FP695",
+      "https://www.rhs.org.uk/plants/19495/zamia-furfuracea/details"
+    ]
+  }
+}

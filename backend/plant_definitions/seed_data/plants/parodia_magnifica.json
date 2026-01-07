@@ -1,0 +1,237 @@
+{
+  "external_id": "parodia_magnifica",
+  "name": "Parodia magnifica",
+  "latin": "Parodia magnifica",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "parodia_magnifica.jpg",
+  "image_thumb": "parodia_magnifica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "完全な太陽",
+          "ko": "완전한 태양"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-draining",
+          "pl": "Piaszczysta",
+          "de": "Sandy, gut durchlässig",
+          "fr": "Sableux, bien drainé",
+          "it": "Sabbioso, ben drenato",
+          "es": "Arenoso, bien drenado",
+          "pt": "Arenoso, bem drenado",
+          "ar": "رمال، جيد التصريف",
+          "hi": "रेतीला, अच्छे जल निकासी वाला",
+          "zh": "沙质，良好排水",
+          "ja": "砂質、良好な排水性",
+          "ko": "모래, 배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm, 20-30°C",
+          "pl": "Ciepło, 20-30°C",
+          "de": "Warm, 20-30°C",
+          "fr": "Chaud, 20-30°C",
+          "it": "Caldo, 20-30°C",
+          "es": "Cálido, 20-30°C",
+          "pt": "Quente, 20-30°C",
+          "ar": "دافئ، 20-30°C",
+          "hi": "गर्म, 20-30°C",
+          "zh": "温暖，20-30°C",
+          "ja": "暖かい、20-30°C",
+          "ko": "따뜻한, 20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Magnificent Cactus",
+      "description": "Parodia magnifica, also known as the magnificent cactus, is a striking cactus native to South America. It is known for its large, spherical shape and vibrant yellow flowers."
+    },
+    "pl": {
+      "common_name": "Kaktus Magnificzny",
+      "description": "Parodia magnifica, znana jako kaktus magnificzny, to efektowny kaktus pochodzący z Ameryki Południowej. Charakteryzuje się dużym, kulistym kształtem i jaskrawożółtymi kwiatami."
+    },
+    "de": {
+      "common_name": "Prächtige Kaktus",
+      "description": "Parodia magnifica, auch als prächtiger Kaktus bekannt, ist ein auffälliger Kaktus aus Südamerika. Er zeichnet sich durch seine große, kugelförmige Form und leuchtend gelbe Blüten aus."
+    },
+    "fr": {
+      "common_name": "Cactus Magnifique",
+      "description": "Parodia magnifica, également connu sous le nom de cactus magnifique, est un cactus frappant originaire d'Amérique du Sud. Il se distingue par sa grande forme sphérique et ses fleurs jaunes vives."
+    },
+    "it": {
+      "common_name": "Cactus Magnifico",
+      "description": "Parodia magnifica, noto anche come cactus magnifico, è un cactus impressionante originario del Sud America. È noto per la sua forma sferica e i suoi fiori gialli vivaci."
+    },
+    "es": {
+      "common_name": "Cactus Magnífico",
+      "description": "Parodia magnifica, también conocido como el cactus magnífico, es un cactus llamativo originario de Sudamérica. Se caracteriza por su gran forma esférica y sus flores amarillas brillantes."
+    },
+    "pt": {
+      "common_name": "Cacto Magnífico",
+      "description": "Parodia magnifica, também conhecido como cacto magnífico, é um cacto impressionante nativo da América do Sul. É conhecido por sua grande forma esférica e flores amarelas vibrantes."
+    },
+    "ar": {
+      "common_name": "صبار رائع",
+      "description": "باروديا ماجنفيكا، والمعروف أيضًا بالصبار الرائع، هو صبار لافت للنظر من أمريكا الجنوبية. يعرف بشكله الكروي الكبير وزهورها الصفراء الزاهية."
+    },
+    "hi": {
+      "common_name": "magnificent कैक्टस",
+      "description": "Parodia magnifica, जिसे शानदार कैक्टस भी कहा जाता है, दक्षिण अमेरिका का एक आकर्षक कैक्टस है। यह अपनी बड़ी, गोल आकृति और चमकीले पीले फूलों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "壮丽仙人掌",
+      "description": "Parodia magnifica，也称为壮丽仙人掌，是一种来自南美的引人注目的仙人掌。以其大的球形和明亮的黄色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "豪華なサボテン",
+      "description": "Parodia magnifica、または豪華なサボテンは、南アメリカ原産の目を引くサボテンです。その大きな球形と鮮やかな黄色の花で知られています。"
+    },
+    "ko": {
+      "common_name": "장엄한 선인장",
+      "description": "Parodia magnifica, 또는 장엄한 선인장은 남미에서 유래한 인상적인 선인장입니다. 그것은 크고 구형이며 밝은 노란 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/Parodia-magnifica",
+      "https://www.botanicgardens.org/plant-care"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "rhododendron_simsii",
+  "name": "Rhododendron",
+  "latin": "Rhododendron simsii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "acidic",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rhododendron_simsii.jpg",
+  "image_thumb": "rhododendron_simsii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic, loamy",
+          "pl": "Kwaśna, próchnicza",
+          "de": "Sauer, lehmig",
+          "fr": "Acide, argileuse",
+          "it": "Acido, limosa",
+          "es": "Ácida, arcillosa",
+          "pt": "Ácida, argilosa",
+          "ar": "حمضية وطينية",
+          "hi": "खट्टा, दोमट",
+          "zh": "酸性, 壤土",
+          "ja": "酸性、ローム土",
+          "ko": "산성, 양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Indian Azalea",
+      "description": "Rhododendron simsii is a flowering shrub native to China. Known for its vibrant pink flowers, it thrives in well-drained acidic soil with moderate watering."
+    },
+    "pl": {
+      "common_name": "Azalia Indyjska",
+      "description": "Rhododendron simsii to krzew kwitnący, pochodzący z Chin. Znany z żywych różowych kwiatów, preferuje dobrze przepuszczalną kwaśną glebę i umiarkowane podlewanie."
+    },
+    "de": {
+      "common_name": "Indische Azalee",
+      "description": "Rhododendron simsii ist ein blühender Strauch, der in China heimisch ist. Er ist bekannt für seine lebhaften rosa Blumen und gedeiht in gut durchlässigem, saurem Boden mit mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Azalée indienne",
+      "description": "Rhododendron simsii est un arbuste à fleurs originaire de Chine. Connu pour ses fleurs roses vives, il préfère un sol acide bien drainé avec un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Azalea Indiana",
+      "description": "Rhododendron simsii è un arbusto fiorito originario della Cina. Conosciuto per i suoi fiori rosa vivaci, cresce bene in terreni acidi e ben drenati con irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Azalea india",
+      "description": "Rhododendron simsii es un arbusto de flores originario de China. Conocido por sus flores rosadas, prospera en suelos ácidos bien drenados con riego moderado."
+    },
+    "pt": {
+      "common_name": "Azáleia Indiana",
+      "description": "Rhododendron simsii é um arbusto florido nativo da China. Conhecido por suas flores cor-de-rosa vibrantes, cresce bem em solo ácido e bem drenado com irrigação moderada."
+    },
+    "ar": {
+      "common_name": "أزاليا هندية",
+      "description": "Rhododendron simsii هو شجيرة مزهرة موطنها الصين. معروف بأزهاره الوردية الزاهية، يزدهر في التربة الحمضية جيدة التصريف مع الري المعتدل."
+    },
+    "hi": {
+      "common_name": "भारतीय अजालिया",
+      "description": "Rhododendron simsii एक फूलों वाली झाड़ी है जो चीन की मूल निवासी है। इसके चमकीले गुलाबी फूलों के लिए जाना जाता है, यह हल्के रूप से सिक्त, अम्लीय मिट्टी में अच्छी तरह से बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "印度杜鹃",
+      "description": "Rhododendron simsii 是一种原产于中国的开花灌木。以其鲜艳的粉色花朵而闻名，它在排水良好的酸性土壤中茁壮成长，浇水适中。"
+    },
+    "ja": {
+      "common_name": "インディアンアザレア",
+      "description": "Rhododendron simsii は中国原産の花木です。鮮やかなピンクの花で知られ、適度に水やりを行い、排水性の良い酸性土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "인디언 진달래",
+      "description": "Rhododendron simsii는 중국 원산의 꽃이 피는 관목입니다. 생생한 분홍색 꽃으로 알려져 있으며, 잘 배수되는 산성 토양에서 적당한 물을 주어 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/rhododendron-simsii",
+      "https://www.rhs.org.uk/plants/64345/rhododendron-simsii"
+    ]
+  }
+}

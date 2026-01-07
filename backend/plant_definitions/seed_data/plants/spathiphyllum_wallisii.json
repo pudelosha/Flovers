@@ -1,0 +1,237 @@
+{
+  "external_id": "spathiphyllum_wallisii",
+  "name": "Peace Lily",
+  "latin": "Spathiphyllum wallisii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "spathiphyllum_wallisii.jpg",
+  "image_thumb": "spathiphyllum_wallisii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid",
+          "pl": "Aroid",
+          "de": "Aroid",
+          "fr": "Aroid",
+          "it": "Aroid",
+          "es": "Aroid",
+          "pt": "Aroid",
+          "ar": "Aroid",
+          "hi": "Aroid",
+          "zh": "Aroid",
+          "ja": "Aroid",
+          "ko": "Aroid"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-28°C",
+          "pl": "22-28°C",
+          "de": "22-28°C",
+          "fr": "22-28°C",
+          "it": "22-28°C",
+          "es": "22-28°C",
+          "pt": "22-28°C",
+          "ar": "22-28°C",
+          "hi": "22-28°C",
+          "zh": "22-28°C",
+          "ja": "22-28°C",
+          "ko": "22-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Trujący",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Peace Lily",
+      "description": "Peace Lily is a popular houseplant known for its attractive white blooms and glossy green foliage. It thrives in moderate light and requires regular watering."
+    },
+    "pl": {
+      "common_name": "Lilia Pokoju",
+      "description": "Lilia Pokoju to popularna roślina doniczkowa, znana z atrakcyjnych białych kwiatów i błyszczących, zielonych liści. Wymaga umiarkowanego światła i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Einblatt",
+      "description": "Das Einblatt ist eine beliebte Zimmerpflanze, bekannt für ihre attraktiven weißen Blüten und glänzendes, grünes Laub. Sie gedeiht bei mittlerem Licht und benötigt regelmäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Lys de la paix",
+      "description": "Le Lys de la paix est une plante d'intérieur populaire, connue pour ses belles fleurs blanches et son feuillage vert brillant. Il prospère dans une lumière modérée et nécessite un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Giglio della pace",
+      "description": "Il Giglio della pace è una pianta d'appartamento molto popolare, nota per i suoi fiori bianchi attraenti e il fogliame verde lucido. Cresce bene con luce moderata e richiede annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Lirio de la paz",
+      "description": "El Lirio de la paz es una planta de interior popular, conocida por sus atractivas flores blancas y su follaje verde brillante. Crece bien con luz moderada y requiere riego regular."
+    },
+    "pt": {
+      "common_name": "Lírio da paz",
+      "description": "O Lírio da paz é uma planta de interior popular, conhecida por suas flores brancas atraentes e folhagem verde brilhante. Cresce bem com luz moderada e necessita de rega regular."
+    },
+    "ar": {
+      "common_name": "زنبق السلام",
+      "description": "زنبق السلام هو نبات منزلي شائع، معروف بأزهاره البيضاء الجذابة وأوراقه الخضراء اللامعة. يزدهر في الضوء المعتدل ويتطلب سقيًا منتظمًا."
+    },
+    "hi": {
+      "common_name": "शांति लिली",
+      "description": "शांति लिली एक लोकप्रिय हाउसप्लांट है, जो अपनी आकर्षक सफेद कलियों और चमकदार हरी पत्तियों के लिए जानी जाती है। यह मध्यम प्रकाश में अच्छी तरह से बढ़ती है और नियमित रूप से पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "和平百合",
+      "description": "和平百合是一种受欢迎的室内植物，以其迷人的白色花朵和光亮的绿色叶子而闻名。它在中等光照下生长良好，需要定期浇水。"
+    },
+    "ja": {
+      "common_name": "ピースリリー",
+      "description": "ピースリリーは、魅力的な白い花と光沢のある緑の葉で知られる人気の室内植物です。中程度の光でよく育ち、定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "평화 백합",
+      "description": "평화 백합은 매력적인 흰색 꽃과 반짝이는 녹색 잎으로 잘 알려진 인기 있는 실내 식물입니다. 중간 정도의 빛에서 잘 자라며 정기적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/speace-lily",
+      "https://www.bhg.com/gardening/pests-diseases-conditions-caring-for-peace-lily/"
+    ]
+  }
+}

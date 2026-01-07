@@ -1,0 +1,236 @@
+{
+  "external_id": "phoenix_roebelenii",
+  "name": "Pygmy Date Palm",
+  "latin": "Phoenix roebelenii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "phoenix_roebelenii.jpg",
+  "image_thumb": "phoenix_roebelenii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sableux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेत की मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂質土壌",
+          "ko": "모래 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-30°C",
+          "pl": "20-30°C",
+          "de": "20-30°C",
+          "fr": "20-30°C",
+          "it": "20-30°C",
+          "es": "20-30°C",
+          "pt": "20-30°C",
+          "ar": "20-30°C",
+          "hi": "20-30°C",
+          "zh": "20-30°C",
+          "ja": "20-30°C",
+          "ko": "20-30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "没有",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pygmy Date Palm",
+      "description": "The Phoenix roebelenii, or pygmy date palm, is a small palm native to Southeast Asia. It thrives in bright, indirect light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Palma karłowata",
+      "description": "Phoenix roebelenii, czyli palma karłowata, to mała palma pochodząca z Azji Południowo-Wschodniej. Rośnie w jasnym, pośrednim świetle i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Zwerg-Dattelpalme",
+      "description": "Die Phoenix roebelenii, oder Zwerg-Dattelpalme, ist eine kleine Palme aus Südostasien. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Palmier nain",
+      "description": "Le Phoenix roebelenii, ou palmier nain, est une petite palmier originaire du sud-est asiatique. Il prospère sous une lumière indirecte brillante et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Palma nana",
+      "description": "Il Phoenix roebelenii, o palma nana, è una piccola palma originaria del sud-est asiatico. Cresce sotto luce indiretta brillante e richiede annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Palma enana",
+      "description": "El Phoenix roebelenii, o palma enana, es una pequeña palma originaria del sudeste asiático. Se desarrolla con luz brillante e indirecta y requiere riego moderado."
+    },
+    "pt": {
+      "common_name": "Palmeira anã",
+      "description": "O Phoenix roebelenii, ou palmeira anã, é uma pequena palma nativa do sudeste asiático. Ela prospera em luz indireta brilhante e requer rega moderada."
+    },
+    "ar": {
+      "common_name": "نخلة قزمية",
+      "description": "Phoenix roebelenii، أو نخلة قزمية، هي نخلة صغيرة من جنوب شرق آسيا. تنمو في الضوء غير المباشر الساطع وتحتاج إلى ري معتدل."
+    },
+    "hi": {
+      "common_name": "बौना ता date डेट पाम",
+      "description": "Phoenix roebelenii, या बौना ता date डेट पाम, दक्षिण-पूर्वी एशिया से एक छोटी ताड़ का पेड़ है। यह उज्ज्वल, अप्रत्यक्ष प्रकाश में उगता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "侏儒枣椰树",
+      "description": "Phoenix roebelenii，或侏儒枣椰树，是一种来自东南亚的小型棕榈树。它在明亮的间接光下生长，需要适量浇水。"
+    },
+    "ja": {
+      "common_name": "ピグミーデーツヤシ",
+      "description": "Phoenix roebelenii、またはピグミーデーツヤシは、東南アジア原産の小さなヤシの木です。明るい間接光で育ち、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "피그미 데이트 팜",
+      "description": "Phoenix roebelenii, 또는 피그미 데이트 팜은 동남아시아 출신의 작은 야자수입니다. 밝은 간접광에서 자라며 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/phoenixed"
+    ]
+  }
+}

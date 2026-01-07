@@ -1,0 +1,237 @@
+{
+  "external_id": "tillandsia_ionantha",
+  "name": "Tillandsia ionantha",
+  "latin": "Tillandsia ionantha",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tillandsia_ionantha.jpg",
+  "image_thumb": "tillandsia_ionantha.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaskowa",
+          "de": "sandig",
+          "fr": "sableuse",
+          "it": "sabbiosa",
+          "es": "arenosa",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेतीला",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "false",
+          "pl": "fałsz",
+          "de": "falsch",
+          "fr": "faux",
+          "it": "falso",
+          "es": "falso",
+          "pt": "falso",
+          "ar": "خطأ",
+          "hi": "झूठ",
+          "zh": "假",
+          "ja": "偽",
+          "ko": "잘못"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느림"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Air Plant",
+      "description": "Tillandsia ionantha is a small, epiphytic plant native to Central America. It has rosettes of narrow, green leaves that turn bright red when flowering, with purple blooms."
+    },
+    "pl": {
+      "common_name": "Rośliny powietrzne",
+      "description": "Tillandsia ionantha to mała roślina epifityczna pochodząca z Ameryki Środkowej. Ma rozetki wąskich zielonych liści, które stają się jaskrawo czerwone podczas kwitnienia, z fioletowymi kwiatami."
+    },
+    "de": {
+      "common_name": "Luftpflanze",
+      "description": "Tillandsia ionantha ist eine kleine, epiphytische Pflanze aus Mittelamerika. Sie hat Rosetten aus schmalen grünen Blättern, die beim Blühen leuchtend rot werden, mit lila Blüten."
+    },
+    "fr": {
+      "common_name": "Plante aérienne",
+      "description": "Tillandsia ionantha est une petite plante épiphyte originaire d'Amérique centrale. Elle a des rosettes de feuilles étroites et vertes qui deviennent rouges vives lors de la floraison, avec des fleurs violettes."
+    },
+    "it": {
+      "common_name": "Pianta aerea",
+      "description": "Tillandsia ionantha è una piccola pianta epifita originaria dell'America centrale. Ha rosette di foglie strette e verdi che diventano rosse brillanti quando fiorisce, con fiori viola."
+    },
+    "es": {
+      "common_name": "Planta aérea",
+      "description": "Tillandsia ionantha es una pequeña planta epífita originaria de América Central. Tiene rosetas de hojas estrechas y verdes que se vuelven rojas brillantes cuando florece, con flores moradas."
+    },
+    "pt": {
+      "common_name": "Planta aérea",
+      "description": "Tillandsia ionantha é uma pequena planta epífita originária da América Central. Possui rosetas de folhas estreitas e verdes que ficam vermelhas brilhantes durante a floração, com flores roxas."
+    },
+    "ar": {
+      "common_name": "نبات هوائي",
+      "description": "Tillandsia ionantha هو نبات صغير يفضل النمو على الأشجار في أمريكا الوسطى. يتميز بأوراق ضيقة خضراء تتحول إلى الأحمر الزاهي أثناء الإزهار، مع أزهار أرجوانية."
+    },
+    "hi": {
+      "common_name": "वायु संयंत्र",
+      "description": "Tillandsia ionantha एक छोटा, एपिफाइटिक पौधा है जो मध्य अमेरिका का मूल निवासी है। इसमें संकीर्ण हरी पत्तियाँ होती हैं जो फूलने पर चमकीले लाल हो जाती हैं, और बैंगनी फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "空气植物",
+      "description": "Tillandsia ionantha 是一种小型附生植物，原产于中美洲。它具有狭窄的绿色叶子，在开花时变成鲜艳的红色，开出紫色的花朵。"
+    },
+    "ja": {
+      "common_name": "エアプラント",
+      "description": "Tillandsia ionantha は中米原産の小型の着生植物です。細長い緑の葉を持ち、花が咲くと鮮やかな赤色に変わり、紫色の花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "공기 식물",
+      "description": "Tillandsia ionantha는 중미가 원산지인 작은 착생 식물입니다. 좁은 녹색 잎을 가지고 있으며 꽃이 피면 선명한 빨간색으로 변하고, 보라색 꽃이 피납니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/air-plant-tillandsia-ionantha",
+      "https://www.rhs.org.uk/plants/tillandsia-ionantha"
+    ]
+  }
+}

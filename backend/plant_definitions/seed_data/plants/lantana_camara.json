@@ -1,0 +1,238 @@
+{
+  "external_id": "lantana_camara",
+  "name": "Lantana",
+  "latin": "Lantana camara",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "lantana_camara.jpg",
+  "image_thumb": "lantana_camara.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainiert",
+          "fr": "Sol drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepły klimat",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖环境",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia",
+          "de": "Normal",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等湿度",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if eaten",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing shrub",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "سريع النمو",
+          "hi": "तेजी से बढ़ता",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common lantana",
+      "description": "Lantana camara is a sun-loving flowering shrub known for its colorful clustered blooms. It thrives in warm climates and tolerates drought once established."
+    },
+    "pl": {
+      "common_name": "Lantana pospolita",
+      "description": "Lantana camara to kwitnący krzew lubiący słońce. Dobrze rośnie w ciepłym klimacie i znosi okresową suszę."
+    },
+    "de": {
+      "common_name": "Wandelröschen",
+      "description": "Lantana camara ist ein sonnenliebender Blütenstrauch mit bunten Blüten. Er ist hitzetolerant und pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Lantanier",
+      "description": "Lantana camara est un arbuste à fleurs aimant le soleil. Il pousse bien en climat chaud et supporte la sécheresse."
+    },
+    "it": {
+      "common_name": "Lantana",
+      "description": "Lantana camara è un arbusto ornamentale amante del sole. Fiorisce abbondantemente nei climi caldi."
+    },
+    "es": {
+      "common_name": "Lantana",
+      "description": "Lantana camara es un arbusto florido que prefiere pleno sol. Es resistente y tolera la sequía."
+    },
+    "pt": {
+      "common_name": "Lantana",
+      "description": "Lantana camara é um arbusto florífero que gosta de sol pleno. Adapta-se bem a climas quentes."
+    },
+    "ar": {
+      "common_name": "لانتانا",
+      "description": "لانتانا كامارا شجيرة مزهرة تحب الشمس. تنمو جيدًا في المناخات الدافئة وتتحمل الجفاف."
+    },
+    "hi": {
+      "common_name": "लैंटाना",
+      "description": "लैंटाना कैमारा एक फूलदार झाड़ी है जिसे धूप पसंद है। यह गर्म जलवायु में अच्छी तरह बढ़ती है।"
+    },
+    "zh": {
+      "common_name": "马缨丹",
+      "description": "马缨丹是一种喜阳的开花灌木。适合温暖气候并具有耐旱性。"
+    },
+    "ja": {
+      "common_name": "ランタナ",
+      "description": "ランタナは日当たりを好む花木です。暖かい環境でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "란타나",
+      "description": "란타나는 햇빛을 좋아하는 꽃관목입니다. 따뜻한 기후에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://edis.ifas.ufl.edu/publication/FP348",
+      "https://www.rhs.org.uk/plants/10221/lantana-camara/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b570"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "schlumbergera_truncata",
+  "name": "Christmas Cactus",
+  "latin": "Schlumbergera truncata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "schlumbergera_truncata.jpg",
+  "image_thumb": "schlumbergera_truncata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "排水性の良い土",
+          "ko": "배수성이 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适中湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Christmas Cactus",
+      "description": "Schlumbergera truncata, or Christmas Cactus, is a popular houseplant known for its vibrant pink flowers. It thrives in moderate light and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Kaktus Bożonarodzeniowy",
+      "description": "Schlumbergera truncata, znany jako kaktus bożonarodzeniowy, to popularna roślina doniczkowa z żywymi różowymi kwiatami. Preferuje średnie światło i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Weihnachtskaktus",
+      "description": "Schlumbergera truncata, auch Weihnachtskaktus genannt, ist eine beliebte Zimmerpflanze mit lebendigen rosa Blüten. Sie gedeiht bei mittlerem Licht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Cactus de Noël",
+      "description": "Schlumbergera truncata, ou Cactus de Noël, est une plante d'intérieur populaire avec des fleurs roses vives. Elle prospère à la lumière modérée et dans un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Cactus di Natale",
+      "description": "Schlumbergera truncata, o Cactus di Natale, è una pianta da appartamento popolare con fiori rosa vivaci. Cresce in luce media e in terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Cactus de Navidad",
+      "description": "Schlumbergera truncata, o Cactus de Navidad, es una planta popular de interior con flores rosas brillantes. Crece en luz moderada y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Cacto de Natal",
+      "description": "Schlumbergera truncata, ou Cacto de Natal, é uma planta de interior popular com flores rosas vibrantes. Cresce em luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "صبار عيد الميلاد",
+      "description": "Schlumbergera truncata، أو صبار عيد الميلاد، هو نبات داخلي شائع مع أزهار وردية زاهية. ينمو في الضوء المعتدل والتربة جيدة الصرف."
+    },
+    "hi": {
+      "common_name": "क्रिसमस कैक्टस",
+      "description": "Schlumbergera truncata, या क्रिसमस कैक्टस, एक लोकप्रिय इनडोर पौधा है जिसकी जीवंत गुलाबी फूल होते हैं। यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में पनपता है।"
+    },
+    "zh": {
+      "common_name": "圣诞仙人掌",
+      "description": "Schlumbergera truncata，或圣诞仙人掌，是一种常见的室内植物，具有鲜艳的粉色花朵。它在中等光照和良好的排水土壤中生长。"
+    },
+    "ja": {
+      "common_name": "クリスマスカクタス",
+      "description": "Schlumbergera truncata、またはクリスマスカクタスは、鮮やかなピンクの花を持つ人気の室内植物です。中程度の光と排水性の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "크리스마스 선인장",
+      "description": "Schlumbergera truncata, 또는 크리스마스 선인장은 선명한 분홍색 꽃을 가진 인기 있는 실내 식물입니다. 중간 정도의 빛과 잘 배수되는 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/ornamental/cacti/schlumbergera-truncata-care.htm",
+      "https://www.bhg.com/gardening/pests-diseases-treatments/christmas-cactus-care/"
+    ]
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "external_id": "hibiscus_rosa_sinensis",
+  "name": "Chinese hibiscus",
+  "latin": "Hibiscus rosa-sinensis",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hibiscus_rosa_sinensis.jpg",
+  "image_thumb": "hibiscus_rosa_sinensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Helles Sonnenlicht",
+          "fr": "Soleil lumineux",
+          "it": "Sole luminoso",
+          "es": "Sol brillante",
+          "pt": "Sol brilhante",
+          "ar": "شمس ساطعة",
+          "hi": "तेज़ धूप",
+          "zh": "明亮阳光",
+          "ja": "明るい日光",
+          "ko": "밝은 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszcz.",
+          "de": "Nährreich, drainiert",
+          "fr": "Riche, drainant",
+          "it": "Ricco e drenante",
+          "es": "Fértil y drenante",
+          "pt": "Fértil e drenante",
+          "ar": "غنية وجيدة الصرف",
+          "hi": "उपजाऊ, जल-निकास",
+          "zh": "肥沃且排水好",
+          "ja": "肥沃で水はけ良",
+          "ko": "비옥·배수 좋게"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Stale lekko wilg.",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide, sans excès",
+          "it": "Umido, non fradicio",
+          "es": "Húmedo, sin encharc.",
+          "pt": "Úmido, sem encharc.",
+          "ar": "رطبة دون إغراق",
+          "hi": "नम, पर जलभराव नहीं",
+          "zh": "保持均匀湿润",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–29°C",
+          "pl": "18–29°C",
+          "de": "18–29°C",
+          "fr": "18–29°C",
+          "it": "18–29°C",
+          "es": "18–29°C",
+          "pt": "18–29°C",
+          "ar": "18–29°م",
+          "hi": "18–29°C",
+          "zh": "18–29°C",
+          "ja": "18–29°C",
+          "ko": "18–29°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Forte humidité",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高い湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Not known toxic",
+          "pl": "Brak znanej toks.",
+          "de": "Nicht giftig bekannt",
+          "fr": "Non toxique connu",
+          "it": "Non nota tossica",
+          "es": "No tóxica conocida",
+          "pt": "Não tóxica conhecida",
+          "ar": "غير معروفة السمية",
+          "hi": "विषैली नहीं मानी",
+          "zh": "未见明显毒性",
+          "ja": "毒性は報告少",
+          "ko": "독성 보고 적음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrubby, fast",
+          "pl": "Krzewiasty, szybki",
+          "de": "Strauchig, schnell",
+          "fr": "Arbustif, rapide",
+          "it": "Arbustivo, rapido",
+          "es": "Arbustivo, rápido",
+          "pt": "Arbustivo, rápido",
+          "ar": "شجيري وسريع",
+          "hi": "झाड़ी, तेज़ बढ़त",
+          "zh": "灌木状，快长",
+          "ja": "低木状・生長早い",
+          "ko": "관목형, 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Chinese hibiscus",
+      "description": "A tropical evergreen shrub often grown as a container plant or warm-room houseplant. Provide very bright light and keep the potting mix evenly moist but not waterlogged. Feed regularly during active growth and maintain higher humidity for best flowering."
+    },
+    "pl": {
+      "common_name": "Hibiskus chiński",
+      "description": "Tropikalny, zimozielony krzew uprawiany często w donicy jako roślina pokojowa. Wymaga bardzo jasnego stanowiska oraz podłoża stale lekko wilgotnego, bez zastoin wody. W okresie wzrostu dokarmiaj regularnie i zapewnij wyższą wilgotność powietrza."
+    },
+    "de": {
+      "common_name": "Chinesischer Hibiskus",
+      "description": "Ein tropischer, immergrüner Strauch, der häufig im Topf als Zimmerpflanze gehalten wird. Er braucht sehr helles Licht und ein gleichmäßig feuchtes, aber nicht nasses Substrat. Während des Wachstums regelmäßig düngen und für höhere Luftfeuchte sorgen."
+    },
+    "fr": {
+      "common_name": "Hibiscus de Chine",
+      "description": "Arbuste tropical persistants souvent cultivé en pot en intérieur chaud. Il demande une lumière très vive et un substrat maintenu humide sans excès d’eau. Fertilisez en période de croissance et augmentez l’humidité de l’air pour favoriser la floraison."
+    },
+    "it": {
+      "common_name": "Ibisco cinese",
+      "description": "Arbusto tropicale sempreverde spesso coltivato in vaso come pianta da interno caldo. Richiede luce molto intensa e un terriccio mantenuto uniformemente umido senza ristagni. Concima durante la crescita e aumenta l’umidità per una migliore fioritura."
+    },
+    "es": {
+      "common_name": "Hibisco chino",
+      "description": "Arbusto tropical perenne que suele cultivarse en maceta en interiores cálidos. Necesita luz muy intensa y un sustrato uniformemente húmedo sin encharcar. Abona durante el crecimiento y mantén una humedad ambiental más alta para favorecer las flores."
+    },
+    "pt": {
+      "common_name": "Hibisco-da-China",
+      "description": "Arbusto tropical perene frequentemente cultivado em vaso como planta de interior em ambiente quente. Precisa de luz muito forte e de substrato uniformemente húmido, sem encharcamento. Fertilize no período de crescimento e mantenha maior humidade do ar para melhor floração."
+    },
+    "ar": {
+      "common_name": "الكركديه الصيني",
+      "description": "شجيرة استوائية دائمة الخضرة تُزرع كثيرًا في الأصص داخل الأماكن الدافئة. تحتاج إلى إضاءة قوية جدًا وتربة رطبة بالتساوي دون تشبع بالماء. سمّد خلال فترة النمو وحافظ على رطوبة هواء أعلى لتحسين الإزهار."
+    },
+    "hi": {
+      "common_name": "चाइनीज़ गुड़हल",
+      "description": "यह एक उष्णकटिबंधीय सदाबहार झाड़ी है जिसे अक्सर गमले में घर के अंदर उगाया जाता है। इसे बहुत तेज़ रोशनी चाहिए और मिट्टी को समान रूप से नम रखें, पर जलभराव न हो। बढ़वार के मौसम में नियमित खाद दें और बेहतर फूलों के लिए नमी बढ़ाएँ।"
+    },
+    "zh": {
+      "common_name": "扶桑花",
+      "description": "热带常绿灌木，常作盆栽在温暖室内栽培。需要非常明亮的光照，并让基质保持均匀湿润但不积水。生长期规律施肥，并提高空气湿度有助于开花。"
+    },
+    "ja": {
+      "common_name": "ブッソウゲ",
+      "description": "熱帯性の常緑低木で、鉢植えで暖かい室内に置かれることが多いです。とても明るい光を好み、用土は水はけを保ちつつ均一に湿らせます。生育期は定期的に施肥し、湿度を高めると開花しやすくなります。"
+    },
+    "ko": {
+      "common_name": "차이니즈 히비스커스",
+      "description": "따뜻한 실내에서 화분으로 키우는 열대 상록 관목입니다. 매우 밝은 빛이 필요하며 배수는 유지하되 흙을 고르게 촉촉하게 관리합니다. 생장기에는 규칙적으로 비료를 주고 습도를 높이면 개화에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b557",
+      "https://www.rhs.org.uk/plants/hibiscus/growing-guide",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hibiscus/",
+      "https://www.lovethegarden.com/uk-en/article/hibiscus-hibiscus",
+      "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=1009",
+      "https://www.gardenersworld.com/plants/hibiscus-rosa-sinensis/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "rumex_acetosa",
+  "name": "Common Sorrel",
+  "latin": "Rumex acetosa",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rumex_acetosa.jpg",
+  "image_thumb": "rumex_acetosa.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光线",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy, acidic",
+          "pl": "Gliniaste, kwaśne",
+          "de": "Lehmig, sauer",
+          "fr": "Argileux, acide",
+          "it": "Limoso, acido",
+          "es": "Arcilloso, ácido",
+          "pt": "Argiloso, ácido",
+          "ar": "طيني، حامضي",
+          "hi": "मिट्टी, अम्लीय",
+          "zh": "壤土，酸性",
+          "ja": "壌土、酸性",
+          "ko": "양토, 산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool",
+          "pl": "Chłodny",
+          "de": "Kühl",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "시원한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Sorrel",
+      "description": "Rumex acetosa, or common sorrel, is a perennial herb with tangy, green leaves. It is often used in salads or soups."
+    },
+    "pl": {
+      "common_name": "Szczaw zwyczajny",
+      "description": "Rumex acetosa, czyli szczaw zwyczajny, to roślina wieloletnia o kwaśnych, zielonych liściach. Często używana w sałatkach lub zupach."
+    },
+    "de": {
+      "common_name": "Sauerampfer",
+      "description": "Rumex acetosa, oder Sauerampfer, ist ein mehrjähriges Kraut mit säuerlichen, grünen Blättern. Häufig in Salaten oder Suppen verwendet."
+    },
+    "fr": {
+      "common_name": "Oseille commune",
+      "description": "Rumex acetosa, ou oseille commune, est une plante vivace à feuilles vertes et acides. Utilisée fréquemment dans les salades ou soupes."
+    },
+    "it": {
+      "common_name": "Acetosa comune",
+      "description": "Rumex acetosa, o acetosa comune, è una pianta perenne con foglie verdi e acidule. Usata frequentemente in insalate o zuppe."
+    },
+    "es": {
+      "common_name": "Acedera común",
+      "description": "Rumex acetosa, o acedera común, es una planta perenne con hojas verdes y ácidas. Se usa comúnmente en ensaladas o sopas."
+    },
+    "pt": {
+      "common_name": "Azedinha",
+      "description": "Rumex acetosa, ou azedinha, é uma planta perene com folhas verdes e ácidas. Usada frequentemente em saladas ou sopas."
+    },
+    "ar": {
+      "common_name": "الحنظل المشترك",
+      "description": "Rumex acetosa، أو الحنظل المشترك، هو نبات معمر ذو أوراق خضراء وحمضية. يستخدم عادة في السلطات أو الحساء."
+    },
+    "hi": {
+      "common_name": "आम ख़ट्टा",
+      "description": "Rumex acetosa, या आम ख़ट्टा, एक बारहमासी पौधा है जिसमें खट्टे, हरे पत्ते होते हैं। इसका उपयोग आमतौर पर सलाद या सूप में किया जाता है."
+    },
+    "zh": {
+      "common_name": "常见酸模",
+      "description": "Rumex acetosa，或常见酸模，是一种多年生草本植物，具有酸味的绿色叶子。常用于沙拉或汤中。"
+    },
+    "ja": {
+      "common_name": "ノコギリソウ",
+      "description": "Rumex acetosa、またはノコギリソウは、酸味のある緑色の葉を持つ多年草です。サラダやスープに使われることがよくあります。"
+    },
+    "ko": {
+      "common_name": "일반 쑥",
+      "description": "Rumex acetosa, 또는 일반 쑥은 신맛이 나는 초록색 잎을 가진 다년생 허브입니다. 일반적으로 샐러드나 수프에 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/rumex-acetosa",
+      "https://www.bhg.com/gardening/pests-insects-diseases/common-sorrel/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "phalaenopsis_schilleriana",
+  "name": "Schiller's Phalaenopsis",
+  "latin": "Phalaenopsis schilleriana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "phalaenopsis_schilleriana.jpg",
+  "image_thumb": "phalaenopsis_schilleriana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "orchid",
+          "pl": "orchidowy",
+          "de": "orchidee",
+          "fr": "orchidée",
+          "it": "orchidea",
+          "es": "orquídea",
+          "pt": "orquídea",
+          "ar": "أوركيد",
+          "hi": "ऑर्किड",
+          "zh": "兰花",
+          "ja": "蘭",
+          "ko": "난초"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-28°C",
+          "pl": "22-28°C",
+          "de": "22-28°C",
+          "fr": "22-28°C",
+          "it": "22-28°C",
+          "es": "22-28°C",
+          "pt": "22-28°C",
+          "ar": "22-28°C",
+          "hi": "22-28°C",
+          "zh": "22-28°C",
+          "ja": "22-28°C",
+          "ko": "22-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średni",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Schiller's Phalaenopsis",
+      "description": "Phalaenopsis schilleriana is a tropical orchid native to the Philippines. It features beautiful pink to purple flowers with a white center and is commonly found growing epiphytically in humid, tropical forests."
+    },
+    "pl": {
+      "common_name": "Phalaenopsis Schillera",
+      "description": "Phalaenopsis schilleriana to tropikalna orchidea pochodząca z Filipin. Charakteryzuje się pięknymi kwiatami w odcieniach różu i fioletu z białym środkiem, rośnie epifitycznie w wilgotnych lasach tropikalnych."
+    },
+    "de": {
+      "common_name": "Schillers Phalaenopsis",
+      "description": "Phalaenopsis schilleriana ist eine tropische Orchidee aus den Philippinen. Sie hat schöne rosa bis violette Blüten mit einem weißen Zentrum und wächst epiphytisch in feuchten tropischen Wäldern."
+    },
+    "fr": {
+      "common_name": "Phalaenopsis de Schiller",
+      "description": "Phalaenopsis schilleriana est une orchidée tropicale originaire des Philippines. Elle présente de magnifiques fleurs roses à violettes avec un centre blanc et pousse généralement épiphyte dans les forêts tropicales humides."
+    },
+    "it": {
+      "common_name": "Phalaenopsis di Schiller",
+      "description": "Phalaenopsis schilleriana è un'orchidea tropicale originaria delle Filippine. Presenta bellissimi fiori rosa-viola con un centro bianco ed è comunemente trovata crescere epifitica nelle foreste tropicali umide."
+    },
+    "es": {
+      "common_name": "Phalaenopsis de Schiller",
+      "description": "Phalaenopsis schilleriana es una orquídea tropical originaria de Filipinas. Presenta hermosas flores de rosa a violeta con un centro blanco y se encuentra comúnmente creciendo epifíticamente en bosques tropicales húmedos."
+    },
+    "pt": {
+      "common_name": "Phalaenopsis de Schiller",
+      "description": "Phalaenopsis schilleriana é uma orquídea tropical nativa das Filipinas. Apresenta flores rosa a roxas com um centro branco e cresce epifiticamente em florestas tropicais úmidas."
+    },
+    "ar": {
+      "common_name": "فالاينوبسيس شيللر",
+      "description": "فالاينوبسيس شيللر هي زهرة أوركيدية استوائية من الفلبين. تتميز بأزهار جميلة باللون الوردي إلى الأرجواني مع مركز أبيض وغالبًا ما تنمو بشكل إيبفيتي في الغابات الاستوائية الرطبة."
+    },
+    "hi": {
+      "common_name": "फैलाॅनोप्सिस शिलेरियाना",
+      "description": "फैलाॅनोप्सिस शिलेरियाना एक उष्णकटिबंधीय ऑर्किड है जो फिलीपींस का मूल निवासी है। इसमें सुंदर गुलाबी से बैंगनी रंग के फूल होते हैं जिनके बीच सफेद केंद्र होता है, और यह सामान्यत: आद्र, उष्णकटिबंधीय जंगलों में एपिफाइटिक रूप से उगता है।"
+    },
+    "zh": {
+      "common_name": "施莱尔兰花",
+      "description": "Phalaenopsis schilleriana 是一种来自菲律宾的热带兰花。它拥有美丽的粉红色到紫色的花朵，中央为白色，通常在湿润的热带森林中以附生植物形式生长。"
+    },
+    "ja": {
+      "common_name": "シュイラー・ファレノプシス",
+      "description": "Phalaenopsis schillerianaはフィリピン原産の熱帯蘭です。美しいピンクから紫色の花を持ち、白い中心が特徴で、湿った熱帯林で着生植物としてよく見られます。"
+    },
+    "ko": {
+      "common_name": "실러의 팔레노프시스",
+      "description": "Phalaenopsis schilleriana는 필리핀 원산지의 열대 난초입니다. 아름다운 분홍색에서 자주색 꽃이 특징이며 흰색 중심이 있습니다. 습한 열대 우림에서 착생식물로 자주 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.orchidspecies.com/phalschilleriana.htm",
+      "https://www.rhs.org.uk/plants/phalaenopsis-schilleriana"
+    ]
+  }
+}

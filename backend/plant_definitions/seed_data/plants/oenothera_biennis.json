@@ -1,0 +1,235 @@
+{
+  "external_id": "oenothera_biennis",
+  "name": "Evening Primrose",
+  "latin": "Oenothera biennis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "oenothera_biennis.jpg",
+  "image_thumb": "oenothera_biennis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy",
+          "pl": "Ziemia próchnicza",
+          "de": "Lößig",
+          "fr": "Argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "नम कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Evening Primrose",
+      "description": "Oenothera biennis is a perennial plant with bright yellow flowers that bloom in the evening. It thrives in full sunlight and prefers well-drained loamy soil."
+    },
+    "pl": {
+      "common_name": "Wieczorny pierwiosnek",
+      "description": "Oenothera biennis to roślina wieloletnia z jasnymi żółtymi kwiatami, które kwitną wieczorem. Wymaga pełnego nasłonecznienia i dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Abend-Primel",
+      "description": "Oenothera biennis ist eine mehrjährige Pflanze mit leuchtend gelben Blüten, die abends blühen. Sie gedeiht in voller Sonne und bevorzugt gut durchlässigen, lehmigen Boden."
+    },
+    "fr": {
+      "common_name": "Onagre",
+      "description": "Oenothera biennis est une plante vivace avec des fleurs jaunes vives qui fleurissent le soir. Elle prospère en plein soleil et préfère un sol limoneux bien drainé."
+    },
+    "it": {
+      "common_name": "Onagra",
+      "description": "Oenothera biennis è una pianta perenne con fiori gialli che sbocciano alla sera. Cresce al sole pieno e predilige un terreno argilloso ben drenato."
+    },
+    "es": {
+      "common_name": "Onagra",
+      "description": "Oenothera biennis es una planta perenne con flores amarillas brillantes que florecen por la tarde. Se desarrolla con plena luz solar y prefiere suelos arcillosos bien drenados."
+    },
+    "pt": {
+      "common_name": "Onagra",
+      "description": "Oenothera biennis é uma planta perene com flores amarelas brilhantes que florescem à noite. Cresce em plena luz solar e prefere solos argilosos bem drenados."
+    },
+    "ar": {
+      "common_name": "البريمروز المسائي",
+      "description": "Oenothera biennis هي نبات معمر بأزهار صفراء زاهية تتفتح في المساء. يزدهر في ضوء الشمس الكامل ويفضل التربة الطينية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "शाम प्राइमरोस",
+      "description": "Oenothera biennis एक बारहमासी पौधा है जिसमें चमकीले पीले फूल होते हैं जो शाम को खिलते हैं। यह पूर्ण सूर्य के प्रकाश में बढ़ता है और अच्छी तरह से जल निकासी वाली मिट्टी को पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "夜间报春花",
+      "description": "Oenothera biennis 是一种多年生植物，拥有明亮的黄色花朵，傍晚开放。它在充足的阳光下茁壮成长，喜欢排水良好的壤土。"
+    },
+    "ja": {
+      "common_name": "イブニングプリムローズ",
+      "description": "Oenothera biennisは明るい黄色の花を持つ多年生植物で、夕方に開花します。完全な日光の下で育ち、排水の良いローム質の土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "이브닝 프림로즈",
+      "description": "Oenothera biennis는 저녁에 꽃이 피는 밝은 노란색 꽃을 가진 다년생 식물입니다. 완전한 햇볕 아래에서 자라며 배수가 좋은 양토를 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/details?plantid=3717",
+      "https://www.gardenia.net/plant/oenothera-biennis-evening-primrose"
+    ]
+  }
+}

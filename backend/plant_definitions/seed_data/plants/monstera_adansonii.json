@@ -1,0 +1,238 @@
+{
+  "external_id": "monstera_adansonii",
+  "name": "Swiss Cheese Vine",
+  "latin": "Monstera adansonii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "monstera_adansonii.jpg",
+  "image_thumb": "monstera_adansonii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy rich mix",
+          "pl": "Przepuszczalna",
+          "de": "Luftiges Substrat",
+          "fr": "Substrat aéré",
+          "it": "Terriccio arioso",
+          "es": "Sustrato aireado",
+          "pt": "Substrato leve",
+          "ar": "تربة جيدة التهوية",
+          "hi": "हवादार मिट्टी",
+          "zh": "疏松基质",
+          "ja": "通気性の土",
+          "ko": "통기성 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers humid",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Feuchte",
+          "fr": "Aime humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast climbing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Swiss Cheese Vine",
+      "description": "Monstera adansonii is a tropical climbing aroid native to Central and South America. It has distinctive perforated leaves and is commonly grown indoors. It prefers bright indirect light and evenly moist soil."
+    },
+    "pl": {
+      "common_name": "Monstera dziurawa",
+      "description": "Monstera adansonii to tropikalne pnącze pochodzące z Ameryki Środkowej i Południowej. Ma charakterystyczne dziurawe liście i dobrze rośnie w domu. Lubi jasne, rozproszone światło."
+    },
+    "de": {
+      "common_name": "Fensterblatt",
+      "description": "Monstera adansonii ist eine tropische Kletterpflanze aus Mittel- und Südamerika. Sie besitzt durchlöcherte Blätter und eignet sich gut für Innenräume. Helles, indirektes Licht ist ideal."
+    },
+    "fr": {
+      "common_name": "Monstera adansonii",
+      "description": "Monstera adansonii est une plante tropicale grimpante originaire d’Amérique centrale et du Sud. Ses feuilles perforées sont très décoratives. Elle apprécie une lumière vive sans soleil direct."
+    },
+    "it": {
+      "common_name": "Monstera adansonii",
+      "description": "La Monstera adansonii è una pianta tropicale rampicante dell’America centrale e meridionale. È nota per le foglie traforate. Cresce bene in casa con luce indiretta."
+    },
+    "es": {
+      "common_name": "Costilla de Adán pequeña",
+      "description": "Monstera adansonii es una planta tropical trepadora de América Central y del Sur. Sus hojas con perforaciones son muy distintivas. Prefiere luz brillante indirecta."
+    },
+    "pt": {
+      "common_name": "Costela-de-adão-miúda",
+      "description": "Monstera adansonii é uma planta tropical trepadeira da América Central e do Sul. Possui folhas perfuradas decorativas. Desenvolve-se bem em ambientes internos."
+    },
+    "ar": {
+      "common_name": "مونستيرا أدانسوني",
+      "description": "نبات مونستيرا أدانسوني نبات استوائي متسلق موطنه أمريكا الوسطى والجنوبية. يتميز بأوراق مثقوبة. يفضل الضوء الساطع غير المباشر."
+    },
+    "hi": {
+      "common_name": "स्विस चीज़ बेल",
+      "description": "मॉन्स्टेरा एडैनसोनी एक उष्णकटिबंधीय चढ़ने वाला पौधा है जो मध्य और दक्षिण अमेरिका का मूल निवासी है। इसकी पत्तियाँ छिद्रित होती हैं। यह घर के अंदर अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "孔洞龟背竹",
+      "description": "孔洞龟背竹原产于中美洲和南美洲的热带地区。叶片具有明显孔洞，常作为室内观叶植物。喜明亮散射光。"
+    },
+    "ja": {
+      "common_name": "マドカズラ",
+      "description": "モンステラ・アダンソニーは中南米原産の熱帯性つる植物です。穴あきの葉が特徴です。明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "몬스테라 아단소니",
+      "description": "몬스테라 아단소니는 중남미 원산의 열대 덩굴식물입니다. 구멍 난 잎이 특징입니다. 밝은 간접광에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/monstera/adansonii",
+      "https://edis.ifas.ufl.edu/publication/EP477",
+      "https://www.kew.org/plants/monstera-adansonii"
+    ]
+  }
+}

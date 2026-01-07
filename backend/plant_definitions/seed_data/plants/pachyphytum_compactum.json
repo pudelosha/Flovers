@@ -1,0 +1,237 @@
+{
+  "external_id": "pachyphytum_compactum",
+  "name": "Pachyphytum compactum",
+  "latin": "Pachyphytum compactum",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pachyphytum_compactum.jpg",
+  "image_thumb": "pachyphytum_compactum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysta",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेतीली",
+          "zh": "沙质",
+          "ja": "砂地",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "قليل",
+          "hi": "कम",
+          "zh": "少",
+          "ja": "低い",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "powolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Compact Pachyphytum",
+      "description": "Pachyphytum compactum is a slow-growing succulent native to Mexico. It thrives in well-draining soil and requires minimal watering."
+    },
+    "pl": {
+      "common_name": "Kompaktne Pachyphytum",
+      "description": "Pachyphytum compactum to wolno rosnący sukulent pochodzący z Meksyku. Rośnie najlepiej w glebie dobrze przepuszczającej wodę i wymaga minimalnego podlewania."
+    },
+    "de": {
+      "common_name": "Kompaktes Pachyphytum",
+      "description": "Pachyphytum compactum ist eine langsam wachsende Sukkulente aus Mexiko. Es gedeiht in gut durchlässigem Boden und benötigt nur wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Pachyphytum compactum",
+      "description": "Le Pachyphytum compactum est une plante succulente à croissance lente originaire du Mexique. Elle préfère un sol bien drainé et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Pachyphytum compatto",
+      "description": "Il Pachyphytum compactum è una succulenta a crescita lenta originaria del Messico. Preferisce un terreno ben drenato e necessita di poca acqua."
+    },
+    "es": {
+      "common_name": "Pachyphytum compacto",
+      "description": "Pachyphytum compactum es una suculenta de crecimiento lento originaria de México. Crece mejor en suelos bien drenados y requiere poca agua."
+    },
+    "pt": {
+      "common_name": "Pachyphytum compacto",
+      "description": "Pachyphytum compactum é uma suculenta de crescimento lento originária do México. Prefere solos bem drenados e necessita de pouca água."
+    },
+    "ar": {
+      "common_name": "Pachyphytum compactum",
+      "description": "Pachyphytum compactum هو نبات عصاري ينمو ببطء من المكسيك. يزدهر في التربة ذات الصرف الجيد ويتطلب سقاية قليلة."
+    },
+    "hi": {
+      "common_name": "Pachyphytum compactum",
+      "description": "Pachyphytum compactum एक धीमी वृद्धि वाला मांसल पौधा है जो मेक्सिको का मूल निवासी है। यह अच्छी जल निकासी वाली मिट्टी में उगता है और कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "紧凑 Pachyphytum",
+      "description": "Pachyphytum compactum 是一种生长缓慢的多肉植物，原产于墨西哥。它喜欢排水良好的土壤，并需要较少的水。"
+    },
+    "ja": {
+      "common_name": "コンパクトパキフィツム",
+      "description": "Pachyphytum compactumはメキシコ原産の成長の遅い多肉植物です。排水性の良い土壌でよく育ち、少量の水分を必要とします。"
+    },
+    "ko": {
+      "common_name": "컴팩트 파키피툼",
+      "description": "Pachyphytum compactum은 멕시코 원산지의 성장 속도가 느린 다육 식물입니다. 배수가 좋은 토양에서 자라며 물은 적게 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/26780/Pachyphytum-compactum/Details",
+      "https://www.bhg.com/gardening/pachyphytum-care/"
+    ]
+  }
+}

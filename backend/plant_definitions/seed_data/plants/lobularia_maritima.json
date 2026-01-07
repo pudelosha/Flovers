@@ -1,0 +1,236 @@
+{
+  "external_id": "lobularia_maritima",
+  "name": "Sweet alyssum",
+  "latin": "Lobularia maritima",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "lobularia_maritima.jpg",
+  "image_thumb": "lobularia_maritima.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlew.",
+          "de": "Regelmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Annaffi regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期水やり",
+          "ko": "규칙적 관수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno–ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "हल्का गर्म",
+          "zh": "凉爽到温暖",
+          "ja": "涼〜暖",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "सामान्य",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low, spreading",
+          "pl": "Niska, płożąca",
+          "de": "Niedrig, breit",
+          "fr": "Bas, étalé",
+          "it": "Bassa, espansa",
+          "es": "Baja, rastrera",
+          "pt": "Baixa, espalha",
+          "ar": "منخفض ممتد",
+          "hi": "नीची फैलाव",
+          "zh": "低矮蔓生",
+          "ja": "低く広がる",
+          "ko": "낮게 퍼짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweet alyssum",
+      "description": "Lobularia maritima is a low-growing annual known for its small fragrant flowers. It prefers full sun and well-drained soil. Commonly used as a ground cover or edging plant."
+    },
+    "pl": {
+      "common_name": "Smagliczka nadmorska",
+      "description": "Lobularia maritima to niska roślina jednoroczna o drobnych, pachnących kwiatach. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Często sadzona jako roślina okrywowa."
+    },
+    "de": {
+      "common_name": "Strand-Steinkraut",
+      "description": "Lobularia maritima ist eine niedrig wachsende einjährige Pflanze mit duftenden Blüten. Sie bevorzugt volle Sonne und gut durchlässigen Boden. Beliebt als Bodendecker."
+    },
+    "fr": {
+      "common_name": "Alysse maritime",
+      "description": "Lobularia maritima est une annuelle basse aux petites fleurs parfumées. Elle aime le plein soleil et les sols bien drainés. Utilisée en bordure ou couvre-sol."
+    },
+    "it": {
+      "common_name": "Alisso odoroso",
+      "description": "Lobularia maritima è una pianta annuale tappezzante dai fiori profumati. Predilige pieno sole e terreno ben drenato. Ideale per bordure e aiuole."
+    },
+    "es": {
+      "common_name": "Aliso marítimo",
+      "description": "Lobularia maritima es una anual de bajo crecimiento con flores fragantes. Requiere sol pleno y suelo bien drenado. Se usa como cubresuelos."
+    },
+    "pt": {
+      "common_name": "Alisso-marítimo",
+      "description": "Lobularia maritima é uma planta anual baixa com flores perfumadas. Prefere sol pleno e solo bem drenado. Muito usada como forração."
+    },
+    "ar": {
+      "common_name": "أليسوم بحري",
+      "description": "Lobularia maritima نبات حولي منخفض بأزهار صغيرة عطرة. يفضل الشمس الكاملة وتربة جيدة التصريف. يستخدم كغطاء أرضي."
+    },
+    "hi": {
+      "common_name": "स्वीट एलिसम",
+      "description": "Lobularia maritima एक नीचा उगने वाला वार्षिक पौधा है। इसे पूरी धूप और अच्छी जलनिकास वाली मिट्टी पसंद है। इसे ग्राउंड कवर के रूप में उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "香雪球",
+      "description": "Lobularia maritima 是一种低矮的一年生植物，花朵芳香。喜全日照和良好排水的土壤。常作地被植物。"
+    },
+    "ja": {
+      "common_name": "スイートアリッサム",
+      "description": "Lobularia maritima は香りのある小花を持つ一年草です。日当たりと水はけの良い土を好みます。グランドカバーに利用されます。"
+    },
+    "ko": {
+      "common_name": "스위트 알리섬",
+      "description": "Lobularia maritima는 향기로운 꽃을 가진 낮은 한해살이 식물입니다. 햇볕과 배수 좋은 토양을 선호합니다. 지피식물로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10886/lobularia-maritima/details",
+      "https://extension.umn.edu/flowers/sweet-alyssum"
+    ]
+  }
+}

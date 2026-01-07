@@ -1,0 +1,237 @@
+{
+  "external_id": "pittosporum_tobira",
+  "name": "Pittosporum tobira",
+  "latin": "Pittosporum tobira",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pittosporum_tobira.jpg",
+  "image_thumb": "pittosporum_tobira.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जल देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Caliente",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "निम्न",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Shrub",
+          "pl": "Krzew",
+          "de": "Strauch",
+          "fr": "Arbuste",
+          "it": "Arbusto",
+          "es": "Arbusto",
+          "pt": "Arbusto",
+          "ar": "شجيرة",
+          "hi": "झाड़ी",
+          "zh": "灌木",
+          "ja": "低木",
+          "ko": "덤불"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira is an evergreen shrub known for its glossy green leaves and fragrant white flowers. It thrives in well-drained soil and moderate sunlight."
+    },
+    "pl": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira to krzew zimozielony, znany z błyszczących zielonych liści i pachnących białych kwiatów. Wymaga dobrze przepuszczalnej gleby i umiarkowanego światła."
+    },
+    "de": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira ist ein immergrüner Strauch, der für seine glänzenden grünen Blätter und duftenden weißen Blüten bekannt ist. Es gedeiht in gut durchlässigem Boden und bei mäßigem Sonnenlicht."
+    },
+    "fr": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira est un arbuste à feuilles persistantes, connu pour ses feuilles vertes brillantes et ses fleurs blanches parfumées. Il prospère dans un sol bien drainé et une lumière modérée."
+    },
+    "it": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira è un arbusto sempreverde noto per le sue foglie verdi lucide e i suoi fiori bianchi profumati. Cresce bene in terreni ben drenati e con luce moderata."
+    },
+    "es": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira es un arbusto perenne conocido por sus hojas verdes brillantes y sus flores blancas fragantes. Crece bien en suelos bien drenados y con luz moderada."
+    },
+    "pt": {
+      "common_name": "Tobira",
+      "description": "Pittosporum tobira é um arbusto perene conhecido por suas folhas verdes brilhantes e flores brancas perfumadas. Cresce bem em solo bem drenado e luz moderada."
+    },
+    "ar": {
+      "common_name": "توبيرا",
+      "description": "Pittosporum tobira هو شجيرة دائمة الخضرة معروفة بأوراقها الخضراء اللامعة وزهورها البيضاء العطرة. ينمو في التربة جيدة التصريف وضوء الشمس المعتدل."
+    },
+    "hi": {
+      "common_name": "टोबिरा",
+      "description": "Pittosporum tobira एक सदाबहार झाड़ी है जो अपनी हरी चमकदार पत्तियों और सुगंधित सफेद फूलों के लिए जानी जाती है। यह अच्छे जल निकासी वाली मिट्टी और मध्यम धूप में पनपती है।"
+    },
+    "zh": {
+      "common_name": "托比拉",
+      "description": "Pittosporum tobira 是一种常绿灌木，以其光亮的绿色叶子和芬芳的白色花朵而闻名。它在排水良好的土壤和适中的阳光下生长良好。"
+    },
+    "ja": {
+      "common_name": "トビラ",
+      "description": "Pittosporum tobiraは光沢のある緑色の葉と香りの良い白い花で知られている常緑の低木です。良好な排水性土壌と適度な日光の中で育ちます。"
+    },
+    "ko": {
+      "common_name": "토비라",
+      "description": "Pittosporum tobira는 윤기 나는 녹색 잎과 향기로운 흰 꽃으로 알려진 상록 관목입니다. 배수가 좋은 토양과 적당한 햇빛에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pittosporum-tobira",
+      "https://www.rhs.org.uk/plants/104089/i-pittosporum-tobira-i/details"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "hoya_multiflora",
+  "name": "Shooting Star Hoya",
+  "latin": "Hoya multiflora",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "hoya_multiflora.jpg",
+  "image_thumb": "hoya_multiflora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "bright indirect light",
+          "pl": "jasne rozproszone",
+          "de": "hell indirekt",
+          "fr": "lumière indirecte",
+          "it": "luce indiretta",
+          "es": "luz indirecta",
+          "pt": "luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "airy orchid mix",
+          "pl": "przepuszczalne",
+          "de": "luftig",
+          "fr": "substrat aéré",
+          "it": "substrato arioso",
+          "es": "sustrato aireado",
+          "pt": "substrato arejado",
+          "ar": "تربة جيدة",
+          "hi": "हवादार मिट्टी",
+          "zh": "透气基质",
+          "ja": "通気性用土",
+          "ko": "통기성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "even moisture",
+          "pl": "umiarkowane",
+          "de": "mäßig gießen",
+          "fr": "arrosage modéré",
+          "it": "annaffiare medio",
+          "es": "riego moderado",
+          "pt": "rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "moderate care",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26 °C",
+          "pl": "18–26 °C",
+          "de": "18–26 °C",
+          "fr": "18–26 °C",
+          "it": "18–26 °C",
+          "es": "18–26 °C",
+          "pt": "18–26 °C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26℃",
+          "ko": "18–26℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "prefers humid air",
+          "pl": "lubi wilgoć",
+          "de": "mag Feuchte",
+          "fr": "aime l'humidité",
+          "it": "ama umidità",
+          "es": "prefiere humedad",
+          "pt": "gosta de umidade",
+          "ar": "يحب الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润空气",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "non-toxic",
+          "pl": "nietrująca",
+          "de": "ungiftig",
+          "fr": "non toxique",
+          "it": "non tossica",
+          "es": "no tóxica",
+          "pt": "não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "upright shrub",
+          "pl": "krzewiasty",
+          "de": "aufrecht",
+          "fr": "port dressé",
+          "it": "eretta",
+          "es": "erecta",
+          "pt": "ereta",
+          "ar": "نمو قائم",
+          "hi": "सीधा बढ़ाव",
+          "zh": "直立生长",
+          "ja": "直立型",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Shooting Star Hoya",
+      "description": "Hoya multiflora is a tropical evergreen known for its star-shaped white and yellow flowers. It prefers bright, indirect light and evenly moist, well-draining soil. Regular feeding supports flowering indoors."
+    },
+    "pl": {
+      "common_name": "Hoja gwiaździsta",
+      "description": "Hoya multiflora to tropikalna roślina o gwiaździstych kwiatach. Lubi jasne, rozproszone światło i umiarkowane podlewanie. Dobrze rośnie w przewiewnym podłożu."
+    },
+    "de": {
+      "common_name": "Stern-Hoya",
+      "description": "Hoya multiflora ist eine tropische Pflanze mit sternförmigen Blüten. Sie mag helles, indirektes Licht und gleichmäßige Feuchte. Ein luftiges Substrat ist wichtig."
+    },
+    "fr": {
+      "common_name": "Hoya étoilé",
+      "description": "Hoya multiflora est une plante tropicale aux fleurs en forme d’étoile. Elle apprécie une lumière vive indirecte et un arrosage régulier. Un substrat bien drainé est essentiel."
+    },
+    "it": {
+      "common_name": "Hoya stella",
+      "description": "Hoya multiflora è una pianta tropicale con fiori a stella. Preferisce luce indiretta luminosa e terreno leggermente umido. Concimazioni regolari favoriscono la fioritura."
+    },
+    "es": {
+      "common_name": "Hoya estrella",
+      "description": "Hoya multiflora es una planta tropical con flores estrelladas. Necesita luz indirecta brillante y riego moderado. El sustrato debe drenar bien."
+    },
+    "pt": {
+      "common_name": "Hoya estrela",
+      "description": "Hoya multiflora é uma planta tropical de flores estreladas. Gosta de luz indireta intensa e regas regulares. Solo bem drenado é fundamental."
+    },
+    "ar": {
+      "common_name": "هويا نجمة",
+      "description": "هويا مولتيفلورا نبات استوائي بزهور نجمية. يفضل الضوء الساطع غير المباشر وريًا معتدلاً. يحتاج تربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "शूटिंग स्टार होया",
+      "description": "होया मल्टीफ्लोरा एक उष्णकटिबंधीय पौधा है जिसमें तारे जैसे फूल होते हैं। इसे तेज अप्रत्यक्ष रोशनी और मध्यम पानी पसंद है। अच्छी जल निकासी वाली मिट्टी आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "多花球兰",
+      "description": "多花球兰是一种热带常绿植物，花朵呈星形。适合明亮的散射光和均匀浇水。需使用排水良好的基质。"
+    },
+    "ja": {
+      "common_name": "ホヤ・ムルチフローラ",
+      "description": "ホヤ・ムルチフローラは星形の花を咲かせる熱帯植物です。明るい間接光と適度な水やりを好みます。水はけの良い用土が必要です。"
+    },
+    "ko": {
+      "common_name": "호야 멀티플로라",
+      "description": "호야 멀티플로라는 별 모양 꽃을 피우는 열대 식물입니다. 밝은 간접광과 적당한 물주기를 선호합니다. 배수가 좋은 토양이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/hoya/growing-guide",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-hoya/",
+      "https://www.botanicgardens.org.au/hoya-multiflora"
+    ]
+  }
+}

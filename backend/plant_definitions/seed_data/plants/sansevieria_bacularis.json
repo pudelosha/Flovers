@@ -1,0 +1,238 @@
+{
+  "external_id": "sansevieria_bacularis",
+  "name": "Snake Plant",
+  "latin": "Sansevieria bacularis",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sansevieria_bacularis.jpg",
+  "image_thumb": "sansevieria_bacularis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "universal",
+          "pl": "uniwersalna",
+          "de": "universal",
+          "fr": "universel",
+          "it": "universale",
+          "es": "universal",
+          "pt": "universal",
+          "ar": "عالمي",
+          "hi": "सार्वभौमिक",
+          "zh": "通用",
+          "ja": "ユニバーサル",
+          "ko": "보편적인"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niski",
+          "de": "niedrig",
+          "fr": "bas",
+          "it": "basso",
+          "es": "bajo",
+          "pt": "baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "niedrig",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "slow",
+          "pl": "wolny",
+          "de": "langsam",
+          "fr": "lent",
+          "it": "lento",
+          "es": "lento",
+          "pt": "lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Snake Plant",
+      "description": "Sansevieria bacularis, known as Snake Plant, is a hardy, slow-growing succulent. It thrives in medium light and requires infrequent watering."
+    },
+    "pl": {
+      "common_name": "Sansewieria bacularis",
+      "description": "Sansevieria bacularis, znana jako wężowy kwiat, to wytrzymała, wolno rosnąca roślina sukulentowa. Rośnie w średnim świetle i wymaga rzadkiego podlewania."
+    },
+    "de": {
+      "common_name": "Schwiegermutterzunge",
+      "description": "Sansevieria bacularis, auch Schwiegermutterzunge genannt, ist eine robuste, langsam wachsende Sukkulente. Sie gedeiht bei mittlerem Licht und benötigt nur wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Sansevière",
+      "description": "Sansevieria bacularis, connue sous le nom de Sansevière, est une plante succulente résistante et à croissance lente. Elle préfère la lumière moyenne et nécessite peu d'eau."
+    },
+    "it": {
+      "common_name": "Sansevieria",
+      "description": "Sansevieria bacularis, conosciuta come Sansevieria, è una pianta succulenta resistente e a crescita lenta. Cresce con luce media e richiede poca acqua."
+    },
+    "es": {
+      "common_name": "Sansevieria",
+      "description": "Sansevieria bacularis, conocida como Sansevieria, es una suculenta resistente de crecimiento lento. Prefiere luz media y requiere poca agua."
+    },
+    "pt": {
+      "common_name": "Sansevieria",
+      "description": "Sansevieria bacularis, conhecida como Sansevieria, é uma planta suculenta resistente e de crescimento lento. Prefere luz média e necessita de pouca água."
+    },
+    "ar": {
+      "common_name": "سانسيفيريا باكالاريس",
+      "description": "سانسيفيريا باكالاريس، المعروفة باسم سانسيفيريا، هي نبات عصاري مقاوم ينمو ببطء. يفضل الضوء المتوسط ويتطلب القليل من الماء."
+    },
+    "hi": {
+      "common_name": "सांसेवियरिया बक्लारिस",
+      "description": "सांसेवियरिया बक्लारिस, जिसे सांसेवियरिया कहा जाता है, एक कठोर, धीमी गति से बढ़ने वाला सूक्ष्मतम है। यह मध्यम प्रकाश में अच्छी तरह बढ़ता है और कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "虎尾兰",
+      "description": "Sansevieria bacularis，俗称虎尾兰，是一种耐寒的慢生长多肉植物。它适应中等光照，且需要较少的水。"
+    },
+    "ja": {
+      "common_name": "サンセベリア",
+      "description": "Sansevieria bacularis、別名サンセベリアは、丈夫で成長の遅い多肉植物です。中程度の光を好み、水やりは少なめで十分です。"
+    },
+    "ko": {
+      "common_name": "산세베리아 바칼라리스",
+      "description": "Sansevieria bacularis, 또는 산세베리아는 내구성이 강하고 느리게 자라는 다육 식물입니다. 중간 정도의 빛을 선호하고 물은 적게 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/sansevieria-care",
+      "https://www.universityextension.com/sansevieria-growing",
+      "https://www.horticultureplants.com/sansevieria"
+    ]
+  }
+}

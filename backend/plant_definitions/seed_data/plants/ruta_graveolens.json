@@ -1,0 +1,237 @@
+{
+  "external_id": "ruta_graveolens",
+  "name": "Rue",
+  "latin": "Ruta graveolens",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ruta_graveolens.jpg",
+  "image_thumb": "ruta_graveolens.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie światło",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の日光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी तरह से जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "良好な排水性土壌",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Froid à chaud",
+          "it": "Freddo a caldo",
+          "es": "Frío a cálido",
+          "pt": "Frio a quente",
+          "ar": "بارد إلى دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽到温暖",
+          "ja": "涼しいから暖かい",
+          "ko": "시원한 기온에서 따뜻한 기온"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Trujący",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سامة",
+          "hi": "विषाक्त",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमे बढ़ने वाला",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rue",
+      "description": "Rue is a hardy, aromatic herb often grown for its medicinal properties. It prefers moderate sunlight and well-drained soil, making it ideal for dry, rocky environments."
+    },
+    "pl": {
+      "common_name": "Ruta",
+      "description": "Ruta to roślina o silnym zapachu, często uprawiana ze względu na swoje właściwości lecznicze. Wymaga umiarkowanego nasłonecznienia i dobrze przepuszczalnej gleby."
+    },
+    "de": {
+      "common_name": "Wegruch",
+      "description": "Wegruch ist ein hartnäckiges, aromatisches Kraut, das oft wegen seiner medizinischen Eigenschaften angebaut wird. Es bevorzugt mäßiges Sonnenlicht und gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Rue",
+      "description": "La rue est une herbe aromatique robuste souvent cultivée pour ses propriétés médicinales. Elle préfère une lumière modérée et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Ruta",
+      "description": "La ruta è un'erba aromatica resistente, spesso coltivata per le sue proprietà medicinali. Preferisce la luce moderata e un terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Ruda",
+      "description": "La ruda es una hierba aromática resistente que a menudo se cultiva por sus propiedades medicinales. Prefiere luz moderada y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Ruta",
+      "description": "A ruta é uma planta aromática resistente, muitas vezes cultivada por suas propriedades medicinais. Prefere luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "روده",
+      "description": "الروده هي عشبة عطرية صلبة تُزرع غالبًا لخصائصها الطبية. تفضل الضوء المعتدل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "रू",
+      "description": "रू एक कठोर, सुगंधित औषधीय पौधा है। यह मध्यम धूप और अच्छे जल निकासी वाली मिट्टी में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "芸香",
+      "description": "芸香是一种坚韧的芳香草本植物，常因其药用价值而栽培。它喜欢适中的阳光和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "ルタ",
+      "description": "ルタは薬用効果があるためよく栽培される耐久性のある香草です。中程度の日光と排水性の良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "루타",
+      "description": "루타는 약용 특성으로 재배되는 내구성이 있는 향기로운 허브입니다. 중간 정도의 햇빛과 배수가 좋은 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/ruta-graveolens",
+      "https://www.permaculture.co.uk/plants/ruta-graveolens-rue"
+    ]
+  }
+}

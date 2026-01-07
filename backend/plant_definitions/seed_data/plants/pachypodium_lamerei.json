@@ -1,0 +1,236 @@
+{
+  "external_id": "pachypodium_lamerei",
+  "name": "Madagascar Palm",
+  "latin": "Pachypodium lamerei",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pachypodium_lamerei.jpg",
+  "image_thumb": "pachypodium_lamerei.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी तरह से निकासी",
+          "zh": "良好排水",
+          "ja": "排水良好",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Calor",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "नम कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Powolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "缓慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Madagascar Palm",
+      "description": "Pachypodium lamerei, also known as Madagascar Palm, is a spiny, slow-growing succulent native to Madagascar. It thrives in well-drained soil and needs moderate watering."
+    },
+    "pl": {
+      "common_name": "Palma z Madagaskaru",
+      "description": "Pachypodium lamerei, znana jako palma z Madagaskaru, to kolczasta, wolno rosnąca sukulentka pochodząca z Madagaskaru. Wymaga dobrze przepuszczalnej gleby i umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Madagaskarpalme",
+      "description": "Pachypodium lamerei, auch Madagaskarpalme genannt, ist eine stachelige, langsam wachsende Sukkulente, die auf Madagaskar beheimatet ist. Sie benötigt gut durchlässigen Boden und mäßige Bewässerung."
+    },
+    "fr": {
+      "common_name": "Palmier de Madagascar",
+      "description": "Pachypodium lamerei, également appelé palmier de Madagascar, est une plante succulente épineuse à croissance lente originaire de Madagascar. Il a besoin d'un sol bien drainé et d'un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Palma di Madagascar",
+      "description": "Pachypodium lamerei, conosciuta anche come palma di Madagascar, è una pianta succulenta spinosa a crescita lenta originaria del Madagascar. Ha bisogno di un terreno ben drenato e di annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Palma de Madagascar",
+      "description": "Pachypodium lamerei, también conocida como palma de Madagascar, es una suculenta espinosa de crecimiento lento originaria de Madagascar. Necesita un suelo bien drenado y un riego moderado."
+    },
+    "pt": {
+      "common_name": "Palmeira de Madagascar",
+      "description": "Pachypodium lamerei, também conhecida como palmeira de Madagascar, é uma suculenta espinhosa de crescimento lento originária de Madagascar. Ela precisa de solo bem drenado e rega moderada."
+    },
+    "ar": {
+      "common_name": "نخلة مدغشقر",
+      "description": "Pachypodium lamerei، المعروف أيضًا بنخلة مدغشقر، هو نبات عصاري شوكي ينمو ببطء من مدغشقر. يحتاج إلى تربة جيدة التصريف وري معتدل."
+    },
+    "hi": {
+      "common_name": "मदागास्कर पाम",
+      "description": "Pachypodium lamerei, जिसे मदागास्कर पाम के नाम से भी जाना जाता है, एक कांटेदार, धीमी गति से बढ़ने वाली मांसल पौधा है जो मदागास्कर का मूल निवासी है। इसे अच्छी जल निकासी वाली मिट्टी और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "马达加斯加棕榈",
+      "description": "Pachypodium lamerei，亦称马达加斯加棕榈，是一种生长缓慢的多肉植物，原产于马达加斯加。它需要良好排水的土壤和适度的浇水。"
+    },
+    "ja": {
+      "common_name": "マダガスカル・パーム",
+      "description": "Pachypodium lamerei、別名マダガスカル・パームは、マダガスカル原産の棘のある成長の遅い多肉植物です。良好な排水性の土壌と適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "마다가스카르 팜",
+      "description": "Pachypodium lamerei, 마다가스카르 팜이라고도 알려진 이 식물은 마다가스카르가 원산지인 가시가 있는 느리게 자라는 다육식물입니다. 배수가 좋은 토양과 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=318",
+      "https://www.gardenia.net/plant/pachypodium-lamerei"
+    ]
+  }
+}

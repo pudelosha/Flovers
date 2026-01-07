@@ -1,0 +1,237 @@
+{
+  "external_id": "trifolium_pratense",
+  "name": "Red Clover",
+  "latin": "Trifolium pratense",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "trifolium_pratense.jpg",
+  "image_thumb": "trifolium_pratense.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy, well drained",
+          "pl": "Gliniasta, zdren.",
+          "de": "Lehmig, drainiert",
+          "fr": "Limoneux drainé",
+          "it": "Terreno drenato",
+          "es": "Franco drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool temperate",
+          "pl": "Umiarkowany",
+          "de": "Gemäßigt",
+          "fr": "Tempéré",
+          "it": "Temperato",
+          "es": "Templado",
+          "pt": "Temperado",
+          "ar": "معتدل",
+          "hi": "समशीतोष्ण",
+          "zh": "温带",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal",
+          "pl": "Normalna",
+          "de": "Normal",
+          "fr": "Normale",
+          "it": "Normale",
+          "es": "Normal",
+          "pt": "Normal",
+          "ar": "عادية",
+          "hi": "सामान्य",
+          "zh": "正常",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low perennial",
+          "pl": "Niska bylina",
+          "de": "Niedrig mehrjähr.",
+          "fr": "Vivace basse",
+          "it": "Perenne bassa",
+          "es": "Perenne baja",
+          "pt": "Perene baixa",
+          "ar": "معمرة منخفضة",
+          "hi": "नीची बहुवर्षीय",
+          "zh": "低矮多年生",
+          "ja": "低い多年草",
+          "ko": "낮은 다년초"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Red Clover",
+      "description": "Trifolium pratense is a short-lived perennial legume native to Europe and Western Asia. It is commonly found in meadows and pastures and improves soil by fixing nitrogen."
+    },
+    "pl": {
+      "common_name": "Koniczyna łąkowa",
+      "description": "Trifolium pratense to wieloletnia roślina motylkowa pochodząca z Europy. Występuje na łąkach i poprawia żyzność gleby dzięki wiązaniu azotu."
+    },
+    "de": {
+      "common_name": "Rotklee",
+      "description": "Trifolium pratense ist eine mehrjährige Leguminose aus Europa. Sie wächst auf Wiesen und bindet Stickstoff im Boden."
+    },
+    "fr": {
+      "common_name": "Trèfle des prés",
+      "description": "Trifolium pratense est une plante vivace originaire d’Europe. Elle pousse dans les prairies et enrichit le sol en azote."
+    },
+    "it": {
+      "common_name": "Trifoglio rosso",
+      "description": "Trifolium pratense è una pianta perenne originaria dell’Europa. Cresce nei prati e migliora il suolo fissando l’azoto."
+    },
+    "es": {
+      "common_name": "Trébol rojo",
+      "description": "Trifolium pratense es una planta perenne originaria de Europa. Se encuentra en praderas y enriquece el suelo con nitrógeno."
+    },
+    "pt": {
+      "common_name": "Trevo-vermelho",
+      "description": "Trifolium pratense é uma planta perene nativa da Europa. Cresce em pastagens e melhora o solo ao fixar nitrogênio."
+    },
+    "ar": {
+      "common_name": "النفل الأحمر",
+      "description": "Trifolium pratense نبات معمر موطنه أوروبا. ينمو في المروج ويساهم في تحسين التربة بتثبيت النيتروجين."
+    },
+    "hi": {
+      "common_name": "लाल तिपतिया",
+      "description": "Trifolium pratense यूरोप की बहुवर्षीय पौधा है। यह घास के मैदानों में उगता है और मिट्टी में नाइट्रोजन जोड़ता है।"
+    },
+    "zh": {
+      "common_name": "红三叶草",
+      "description": "Trifolium pratense 原产于欧洲，是一种多年生豆科植物。常见于草地，可通过固氮改善土壤。"
+    },
+    "ja": {
+      "common_name": "アカツメクサ",
+      "description": "Trifolium pratense はヨーロッパ原産の多年草です。牧草地に生育し、土壌を改良します。"
+    },
+    "ko": {
+      "common_name": "붉은토끼풀",
+      "description": "Trifolium pratense는 유럽 원산의 다년생 식물입니다. 초지에서 자라며 질소를 고정합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/18460/trifolium-pratense/details",
+      "https://www.kew.org/plants/trifolium-pratense",
+      "https://plants.usda.gov/home/plantProfile?symbol=TRPR2"
+    ]
+  }
+}

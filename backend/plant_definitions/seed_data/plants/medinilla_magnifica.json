@@ -1,0 +1,238 @@
+{
+  "external_id": "medinilla_magnifica",
+  "name": "Rose Grape",
+  "latin": "Medinilla magnifica",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "medinilla_magnifica.jpg",
+  "image_thumb": "medinilla_magnifica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loose acidic mix",
+          "pl": "Kwaśne luźne",
+          "de": "Locker sauer",
+          "fr": "Acide drainant",
+          "it": "Acido drenante",
+          "es": "Ácido suelto",
+          "pt": "Ácido solto",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "疏松酸性土",
+          "ja": "酸性で疎水",
+          "ko": "산성 배수토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Evenly moist",
+          "pl": "Stale wilgotne",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide constant",
+          "it": "Umido costante",
+          "es": "Húmedo constante",
+          "pt": "Úmido constante",
+          "ar": "رطب دائمًا",
+          "hi": "समान नमी",
+          "zh": "保持湿润",
+          "ja": "均一な湿り",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Demanding",
+          "pl": "Wymagająca",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Esigente",
+          "es": "Exigente",
+          "pt": "Exigente",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "高要求",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgoć",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright shrub",
+          "pl": "Krzew wzniesiony",
+          "de": "Aufrechter Strauch",
+          "fr": "Arbuste dressé",
+          "it": "Arbusto eretto",
+          "es": "Arbusto erguido",
+          "pt": "Arbusto ereto",
+          "ar": "شجيرة قائمة",
+          "hi": "सीधी झाड़ी",
+          "zh": "直立灌木",
+          "ja": "直立低木",
+          "ko": "직립 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rose Grape",
+      "description": "Medinilla magnifica is a tropical ornamental shrub native to the Philippines. It is prized for its large pink flower clusters and glossy leaves. The plant requires warm temperatures, high humidity, and bright indirect light indoors."
+    },
+    "pl": {
+      "common_name": "Medinilla wspaniała",
+      "description": "Medinilla magnifica to tropikalny krzew ozdobny pochodzący z Filipin. Ceniona jest za okazałe różowe kwiatostany i błyszczące liście. Wymaga ciepła, wysokiej wilgotności i jasnego, rozproszonego światła."
+    },
+    "de": {
+      "common_name": "Prachtmedinille",
+      "description": "Medinilla magnifica ist ein tropischer Zierstrauch aus den Philippinen. Sie ist bekannt für ihre großen rosa Blütenstände und glänzenden Blätter. Die Pflanze benötigt Wärme, hohe Luftfeuchte und helles indirektes Licht."
+    },
+    "fr": {
+      "common_name": "Médinille magnifique",
+      "description": "Medinilla magnifica est un arbuste tropical ornemental originaire des Philippines. Elle est appréciée pour ses grandes grappes de fleurs roses et son feuillage brillant. Elle demande chaleur, humidité élevée et lumière indirecte."
+    },
+    "it": {
+      "common_name": "Medinilla magnifica",
+      "description": "Medinilla magnifica è un arbusto ornamentale tropicale originario delle Filippine. È apprezzata per le sue infiorescenze rosa e le foglie lucide. Richiede caldo, alta umidità e luce indiretta."
+    },
+    "es": {
+      "common_name": "Medinilla magnífica",
+      "description": "Medinilla magnifica es un arbusto tropical ornamental originario de Filipinas. Destaca por sus grandes flores rosadas y hojas brillantes. Necesita calor, alta humedad y luz indirecta."
+    },
+    "pt": {
+      "common_name": "Medinila-magnífica",
+      "description": "Medinilla magnifica é um arbusto ornamental tropical nativo das Filipinas. É valorizada por suas flores rosadas pendentes e folhas brilhantes. Precisa de calor, alta umidade e luz indireta."
+    },
+    "ar": {
+      "common_name": "ميدينيلا رائعة",
+      "description": "نبات Medinilla magnifica شجيرة زينة استوائية موطنها الفلبين. تشتهر بعناقيد أزهار وردية كبيرة وأوراق لامعة. تحتاج إلى الدفء ورطوبة عالية وضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "मेडिनिला",
+      "description": "Medinilla magnifica फिलीपींस की एक उष्णकटिबंधीय सजावटी झाड़ी है। यह अपने गुलाबी फूलों और चमकदार पत्तियों के लिए जानी जाती है। इसे गर्म तापमान, अधिक नमी और अप्रत्यक्ष रोशनी चाहिए।"
+    },
+    "zh": {
+      "common_name": "美丁花",
+      "description": "Medinilla magnifica 原产于菲律宾，是一种热带观赏灌木。它以大型粉色花序和光亮叶片著称。室内养护需要温暖、高湿度和明亮散射光。"
+    },
+    "ja": {
+      "common_name": "メディニラ",
+      "description": "メディニラ・マグニフィカはフィリピン原産の熱帯観賞低木です。大きなピンク色の花房と光沢のある葉が特徴です。暖かさと高湿度、明るい間接光を好みます。"
+    },
+    "ko": {
+      "common_name": "메디닐라",
+      "description": "Medinilla magnifica는 필리핀 원산의 열대 관상 관목입니다. 분홍색 꽃송이와 윤기 있는 잎이 특징입니다. 따뜻한 온도와 높은 습도, 밝은 간접광이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/medinilla/magnifica/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281497",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:543993-1"
+    ]
+  }
+}

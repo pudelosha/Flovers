@@ -1,0 +1,237 @@
+{
+  "external_id": "pelargonium_zonale",
+  "name": "Zonal Geranium",
+  "latin": "Pelargonium zonale",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pelargonium_zonale.jpg",
+  "image_thumb": "pelargonium_zonale.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Zonal Geranium",
+      "description": "Pelargonium zonale, commonly known as the zonal geranium, is a popular ornamental plant known for its colorful blooms and vibrant foliage. It thrives in moderate sunlight and requires regular watering."
+    },
+    "pl": {
+      "common_name": "Pelargonia strefowa",
+      "description": "Pelargonium zonale, znana jako pelargonia strefowa, to popularna roślina ozdobna, znana z kolorowych kwiatów i bujnych liści. Wymaga umiarkowanego nasłonecznienia i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Zonale Geranie",
+      "description": "Pelargonium zonale, auch bekannt als zonales Geranien, ist eine beliebte Zierpflanze, die für ihre farbenfrohen Blüten und kräftigen Blätter bekannt ist. Sie gedeiht bei mäßigem Sonnenlicht und benötigt regelmäßige Bewässerung."
+    },
+    "fr": {
+      "common_name": "Géranium zonal",
+      "description": "Pelargonium zonale, également connu sous le nom de géranium zonal, est une plante ornementale populaire, connue pour ses fleurs colorées et son feuillage vibrant. Elle préfère une lumière modérée et nécessite un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Geranio zonale",
+      "description": "Pelargonium zonale, conosciuto come geranio zonale, è una pianta ornamentale molto popolare, nota per i suoi fiori colorati e il fogliame vibrante. Cresce bene alla luce solare moderata e richiede annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Geranio zonal",
+      "description": "Pelargonium zonale, también conocido como geranio zonal, es una planta ornamental muy popular, conocida por sus coloridas flores y su follaje vibrante. Se desarrolla bien con luz solar moderada y requiere riego regular."
+    },
+    "pt": {
+      "common_name": "Gerânio zonal",
+      "description": "Pelargonium zonale, também conhecido como gerânio zonal, é uma planta ornamental popular, conhecida pelas suas flores coloridas e folhagem vibrante. Prefere luz solar moderada e necessita de rega regular."
+    },
+    "ar": {
+      "common_name": "الجرانيوما المنطقي",
+      "description": "Pelargonium zonale، المعروف بالجرانيوما المنطقي، هو نبات زينة شائع معروف بزهوره الملونة وأوراقه الخضراء الزاهية. ينمو بشكل جيد تحت ضوء الشمس المعتدل ويحتاج إلى الري المنتظم."
+    },
+    "hi": {
+      "common_name": "जोनल गेरानियम",
+      "description": "Pelargonium zonale, जिसे जोनल गेरानियम के नाम से जाना जाता है, एक लोकप्रिय सजावटी पौधा है जो अपने रंगीन फूलों और हरे पत्तों के लिए जाना जाता है। यह मध्यम सूर्य प्रकाश में अच्छा बढ़ता है और नियमित रूप से पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "带状天竺葵",
+      "description": "Pelargonium zonale，也称为带状天竺葵，是一种常见的观赏植物，以其色彩鲜艳的花朵和充满活力的叶子而闻名。它在适度阳光下生长良好，且需要定期浇水。"
+    },
+    "ja": {
+      "common_name": "ゾナルゼラニウム",
+      "description": "Pelargonium zonale、一般にゾナルゼラニウムとして知られるこの植物は、鮮やかな花と生き生きとした葉が特徴の人気のある観賞植物です。適度な日光でよく育ち、定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "존럴 제라늄",
+      "description": "Pelargonium zonale, 일반적으로 존럴 제라늄으로 알려진 이 식물은 화려한 꽃과 활기찬 잎사귀로 유명한 인기 있는 관상용 식물입니다. 적당한 햇빛에서 잘 자라며 정기적인 물 주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/75674/pelargonium-zonale/details",
+      "https://www.gardenia.net/plant/pelargonium-zonale"
+    ]
+  }
+}

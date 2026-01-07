@@ -1,0 +1,237 @@
+{
+  "external_id": "impatiens_hawkeri",
+  "name": "New Guinea Impatiens",
+  "latin": "Impatiens hawkeri",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "impatiens_hawkeri.jpg",
+  "image_thumb": "impatiens_hawkeri.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche drainé",
+          "it": "Ricco drenante",
+          "es": "Rico drenado",
+          "pt": "Rico drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃排水好",
+          "ja": "肥沃で排水良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Stała wilgotność",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulier",
+          "it": "Sempre umido",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة منتظمة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "均一に湿らす",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnittlich",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact bushy",
+          "pl": "Zwarta",
+          "de": "Kompakt",
+          "fr": "Compacte",
+          "it": "Compatta",
+          "es": "Compacta",
+          "pt": "Compacta",
+          "ar": "نمو كثيف",
+          "hi": "घना विकास",
+          "zh": "紧凑生长",
+          "ja": "コンパクト",
+          "ko": "컴팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "New Guinea Impatiens",
+      "description": "Impatiens hawkeri is a flowering plant native to New Guinea. It is valued for its colorful blooms and glossy leaves. It grows well indoors with bright indirect light."
+    },
+    "pl": {
+      "common_name": "Niecierpek nowogwinejski",
+      "description": "Impatiens hawkeri pochodzi z Nowej Gwinei. Ceniony jest za barwne kwiaty i błyszczące liście. Dobrze rośnie w jasnych wnętrzach."
+    },
+    "de": {
+      "common_name": "Neuguinea-Fleißiges Lieschen",
+      "description": "Impatiens hawkeri stammt aus Neuguinea. Die Pflanze hat auffällige Blüten und glänzende Blätter. Sie eignet sich gut für helle Innenräume."
+    },
+    "fr": {
+      "common_name": "Impatiens de Nouvelle-Guinée",
+      "description": "Impatiens hawkeri est originaire de Nouvelle-Guinée. Il est apprécié pour ses fleurs colorées. Il pousse bien en intérieur lumineux."
+    },
+    "it": {
+      "common_name": "Impatiens della Nuova Guinea",
+      "description": "Impatiens hawkeri proviene dalla Nuova Guinea. È apprezzata per i suoi fiori vivaci. Si adatta bene agli ambienti interni luminosi."
+    },
+    "es": {
+      "common_name": "Impatiens de Nueva Guinea",
+      "description": "Impatiens hawkeri es originaria de Nueva Guinea. Destaca por sus flores coloridas. Crece bien en interiores luminosos."
+    },
+    "pt": {
+      "common_name": "Impatiens-da-Nova-Guiné",
+      "description": "Impatiens hawkeri é nativa da Nova Guiné. É valorizada pelas flores vistosas. Desenvolve-se bem em interiores claros."
+    },
+    "ar": {
+      "common_name": "إمباتينس غينيا الجديدة",
+      "description": "نبات Impatiens hawkeri موطنه غينيا الجديدة. يتميز بأزهاره الملونة. مناسب للزراعة داخل المنزل."
+    },
+    "hi": {
+      "common_name": "न्यू गिनी इम्पेशंस",
+      "description": "Impatiens hawkeri न्यू गिनी का पौधा है। इसके फूल रंगीन होते हैं। यह घर के अंदर अच्छी तरह बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "新几内亚凤仙花",
+      "description": "Impatiens hawkeri 原产于新几内亚。以鲜艳花朵著称。适合明亮的室内环境。"
+    },
+    "ja": {
+      "common_name": "ニューギニアインパチェンス",
+      "description": "Impatiens hawkeri はニューギニア原産です。鮮やかな花が特徴です。明るい室内で育ちます。"
+    },
+    "ko": {
+      "common_name": "뉴기니아 임파첸스",
+      "description": "Impatiens hawkeri는 뉴기니아 원산입니다. 화려한 꽃이 특징입니다. 실내 재배에 적합합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/impatiens-hawkeri",
+      "https://extension.wisc.edu/articles/new-guinea-impatiens/"
+    ]
+  }
+}

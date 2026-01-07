@@ -1,0 +1,237 @@
+{
+  "external_id": "streptocarpus_saxorum",
+  "name": "Cape Primrose",
+  "latin": "Streptocarpus saxorum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "streptocarpus_saxorum.jpg",
+  "image_thumb": "streptocarpus_saxorum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmboden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "التربة الطينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "कॉम्पैक्ट",
+          "zh": "紧凑型",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cape Primrose",
+      "description": "Streptocarpus saxorum is a compact perennial native to southern Africa. Known for its delicate, lavender-colored flowers, it thrives in moderate light and well-drained loamy soil."
+    },
+    "pl": {
+      "common_name": "Streptocarpus",
+      "description": "Streptocarpus saxorum to kompaktowa roślina wieloletnia pochodząca z południowej Afryki. Znana z delikatnych, lawendowych kwiatów, rośnie w umiarkowanym świetle i dobrze przepuszczalnej glebie próchnicznej."
+    },
+    "de": {
+      "common_name": "Kap-Primel",
+      "description": "Streptocarpus saxorum ist eine kompakte mehrjährige Pflanze aus Südafrika. Bekannt für ihre zarten, lavendelfarbenen Blüten gedeiht sie bei mäßigem Licht und gut durchlässigem, lehmigem Boden."
+    },
+    "fr": {
+      "common_name": "Primevère du Cap",
+      "description": "Streptocarpus saxorum est une plante vivace compacte originaire d'Afrique du Sud. Connue pour ses fleurs délicates de couleur lavande, elle prospère dans une lumière modérée et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Primula del Capo",
+      "description": "Streptocarpus saxorum è una pianta perenne compatta originaria del Sud Africa. Conosciuta per i suoi fiori delicati di colore lavanda, cresce in luce moderata e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Primula del Cabo",
+      "description": "Streptocarpus saxorum es una planta perenne compacta originaria de Sudáfrica. Conocida por sus delicadas flores de color lavanda, prospera en luz moderada y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Primula do Cabo",
+      "description": "Streptocarpus saxorum é uma planta perene compacta originária da África do Sul. Conhecida por suas flores delicadas de cor lavanda, cresce em luz moderada e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "زهرة الكيب",
+      "description": "Streptocarpus saxorum هو نبات معمر مضغوط أصلي من جنوب أفريقيا. معروف بزهوره الرقيقة ذات اللون اللافندر، ينمو في الضوء المعتدل والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "केप प्रिमरोज़",
+      "description": "Streptocarpus saxorum एक संकुचित बारहमासी पौधा है जो दक्षिणी अफ्रीका का मूल निवासी है। इसके नाजुक लैवेंडर रंग के फूलों के लिए जाना जाता है, यह मध्यम प्रकाश और अच्छी जल निकासी वाली मिट्टी में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "开普紫罗兰",
+      "description": "Streptocarpus saxorum 是一种紧凑型多年生植物，原产于南非。以其精致的薰衣草色花朵而闻名，适合在适度光照和排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ケーププリムローズ",
+      "description": "Streptocarpus saxorum は南アフリカ原産のコンパクトな多年草です。繊細なラベンダー色の花で知られ、適度な光と排水性の良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "케이프 프림로즈",
+      "description": "Streptocarpus saxorum은 남아프리카 원산지의 콤팩트한 다년생 식물입니다. 섬세한 라벤더색 꽃으로 알려져 있으며, 중간 정도의 빛과 배수가 좋은 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/ornamental/flowers/streptocarpus/streptocarpus-plant-care.htm",
+      "https://www.rhs.org.uk/advice/profile?pid=376"
+    ]
+  }
+}

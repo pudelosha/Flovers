@@ -1,0 +1,237 @@
+{
+  "external_id": "senecio_macroglossus",
+  "name": "Cape Ivy",
+  "latin": "Senecio macroglossus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "senecio_macroglossus.jpg",
+  "image_thumb": "senecio_macroglossus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cape Ivy",
+      "description": "Senecio macroglossus, also known as Cape Ivy, is a fast-growing evergreen vine. It features green, heart-shaped leaves with white edges and bright yellow daisy-like flowers."
+    },
+    "pl": {
+      "common_name": "Bluszczyk afrykański",
+      "description": "Senecio macroglossus, znany jako bluszczyk afrykański, to szybko rosnąca roślina pnąca. Posiada zielone liście w kształcie serca z białymi brzegami i jasne żółte kwiaty przypominające stokrotki."
+    },
+    "de": {
+      "common_name": "Kap Ivy",
+      "description": "Senecio macroglossus, auch als Kap-Efeu bekannt, ist eine schnell wachsende immergrüne Kletterpflanze. Sie hat grüne, herzförmige Blätter mit weißen Rändern und leuchtend gelbe, daisyartige Blumen."
+    },
+    "fr": {
+      "common_name": "Lierre du Cap",
+      "description": "Senecio macroglossus, également connu sous le nom de Lierre du Cap, est une plante grimpante à croissance rapide. Elle possède des feuilles vertes en forme de cœur avec des bords blancs et de petites fleurs jaunes semblables à des marguerites."
+    },
+    "it": {
+      "common_name": "Edera del Capo",
+      "description": "Senecio macroglossus, conosciuto anche come Edera del Capo, è una vite sempreverde a crescita rapida. Ha foglie verdi a forma di cuore con bordi bianchi e fiori gialli simili a margherite."
+    },
+    "es": {
+      "common_name": "Hiedra del Cabo",
+      "description": "Senecio macroglossus, también conocida como Hiedra del Cabo, es una planta trepadora de rápido crecimiento. Tiene hojas verdes en forma de corazón con bordes blancos y flores amarillas similares a margaritas."
+    },
+    "pt": {
+      "common_name": "Hera do Cabo",
+      "description": "Senecio macroglossus, também conhecida como Hera do Cabo, é uma planta trepadeira de crescimento rápido. Possui folhas verdes em forma de coração com bordas brancas e flores amarelas parecidas com margaridas."
+    },
+    "ar": {
+      "common_name": "اللبلاب الكابي",
+      "description": "Senecio macroglossus، المعروف أيضًا باسم اللبلاب الكابي، هو نبات متسلق سريع النمو. يتميز بأوراق خضراء على شكل قلب مع حواف بيضاء وزهور صفراء تشبه الأقحوان."
+    },
+    "hi": {
+      "common_name": "केप आइवी",
+      "description": "Senecio macroglossus, जिसे केप आइवी के नाम से भी जाना जाता है, एक तेज़ी से बढ़ने वाली चढ़ाई करने वाली पौधा है। इसमें हरे, दिल के आकार के पत्ते होते हैं जिनके किनारे सफेद होते हैं और पीले रंग के डेज़ी जैसे फूल होते हैं।"
+    },
+    "zh": {
+      "common_name": "开普常春藤",
+      "description": "Senecio macroglossus，也叫做开普常春藤，是一种快速生长的常绿藤本植物。它有绿色的心形叶子，边缘呈白色，黄色的菊花般的花朵。"
+    },
+    "ja": {
+      "common_name": "ケープアイビー",
+      "description": "Senecio macroglossus、別名ケープアイビーは、速く成長する常緑のつる植物です。緑色のハート型の葉と白い縁があり、明るい黄色のデイジーのような花を持っています。"
+    },
+    "ko": {
+      "common_name": "케이프 아이비",
+      "description": "Senecio macroglossus, 또는 케이프 아이비는 빠르게 자라는 상록 덩굴식물입니다. 심장 모양의 초록색 잎과 흰색 가장자리가 있으며, 밝은 노란색의 데이지와 같은 꽃을 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/18075/Senecio-macroglossus/Details",
+      "https://www.botanicgardens.org/plant-care/senecio-macroglossus"
+    ]
+  }
+}

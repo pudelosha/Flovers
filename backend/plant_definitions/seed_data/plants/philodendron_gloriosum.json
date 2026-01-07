@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_gloriosum",
+  "name": "Philodendron gloriosum",
+  "latin": "Philodendron gloriosum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "philodendron_gloriosum.jpg",
+  "image_thumb": "philodendron_gloriosum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla roślin aroidowych",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla aroid",
+          "pt": "Mistura aroid",
+          "ar": "خليط أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "箭叶植物混合土",
+          "ja": "アロイド混合土",
+          "ko": "아로이드 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowany",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Glorious Philodendron",
+      "description": "Philodendron gloriosum is a tropical plant native to Colombia. It features large, heart-shaped leaves with prominent white veins."
+    },
+    "pl": {
+      "common_name": "Philodendron wspaniały",
+      "description": "Philodendron gloriosum to roślina tropikalna pochodząca z Kolumbii. Charakteryzuje się dużymi, sercowatymi liśćmi z wyraźnymi białymi żyłkami."
+    },
+    "de": {
+      "common_name": "Herrlicher Philodendron",
+      "description": "Philodendron gloriosum ist eine tropische Pflanze aus Kolumbien. Sie hat große, herzförmige Blätter mit auffälligen weißen Adern."
+    },
+    "fr": {
+      "common_name": "Philodendron glorieux",
+      "description": "Le Philodendron gloriosum est une plante tropicale originaire de Colombie. Il présente de grandes feuilles en forme de cœur avec des veines blanches bien marquées."
+    },
+    "it": {
+      "common_name": "Philodendron glorioso",
+      "description": "Il Philodendron gloriosum è una pianta tropicale originaria della Colombia. Ha grandi foglie a forma di cuore con vene bianche ben visibili."
+    },
+    "es": {
+      "common_name": "Philodendron glorioso",
+      "description": "El Philodendron gloriosum es una planta tropical originaria de Colombia. Presenta grandes hojas en forma de corazón con venas blancas prominentes."
+    },
+    "pt": {
+      "common_name": "Philodendron glorioso",
+      "description": "O Philodendron gloriosum é uma planta tropical nativa da Colômbia. Possui grandes folhas em forma de coração com veias brancas pronunciadas."
+    },
+    "ar": {
+      "common_name": "فيلوديندرون رائع",
+      "description": "الفيلوديندرون غلوريوسوم هو نبات استوائي موطنه كولومبيا. يتميز بأوراق كبيرة على شكل قلب مع عروق بيضاء بارزة."
+    },
+    "hi": {
+      "common_name": "भव्य फिलोडेंड्रोन",
+      "description": "फिलोडेंड्रोन ग्लोरियोसुम एक उष्णकटिबंधीय पौधा है जो कोलंबिया का मूल निवासी है। इसके पास बड़े, दिल के आकार के पत्ते हैं जिनमें प्रमुख सफेद नसें हैं।"
+    },
+    "zh": {
+      "common_name": "辉煌的泰诺兰",
+      "description": "辉煌泰诺兰（Philodendron gloriosum）是一种原产于哥伦比亚的热带植物。它具有大而心形的叶子，上面有显眼的白色脉络。"
+    },
+    "ja": {
+      "common_name": "グロリアスフィロデンドロン",
+      "description": "フィロデンドロン・グロリオスムはコロンビア原産の熱帯植物です。大きなハート型の葉に目立つ白い脈があります。"
+    },
+    "ko": {
+      "common_name": "화려한 필로덴드론",
+      "description": "필로덴드론 글로리오숨은 콜롬비아가 원산지인 열대 식물입니다. 크고 하트 모양의 잎에 뚜렷한 흰색 줄기가 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicgardens.com/philodendron-gloriosum",
+      "https://www.rareplantcare.com/philodendron-gloriosum-care"
+    ]
+  }
+}

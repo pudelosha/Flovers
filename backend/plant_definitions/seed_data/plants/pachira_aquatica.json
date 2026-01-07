@@ -1,0 +1,237 @@
+{
+  "external_id": "pachira_aquatica",
+  "name": "Money Tree",
+  "latin": "Pachira aquatica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "pachira_aquatica.jpg",
+  "image_thumb": "pachira_aquatica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 정도의 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好的排水土壤",
+          "ja": "良好な排水性の土",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम जलवायु",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24 درجة مئوية",
+          "hi": "18–24 डिग्री सेल्सियस",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैले",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to moderate",
+          "pl": "Wolny do średniego",
+          "de": "Langsam bis mäßig",
+          "fr": "Lent à modéré",
+          "it": "Lento a moderato",
+          "es": "Lento a moderado",
+          "pt": "Lento a moderado",
+          "ar": "بطيء إلى معتدل",
+          "hi": "धीमा से मध्यम",
+          "zh": "慢到中等",
+          "ja": "遅いから中程度",
+          "ko": "느림에서 보통"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Money Tree",
+      "description": "Pachira aquatica, or Money Tree, is native to Central and South America. It is known for its braided trunk and lush green leaves."
+    },
+    "pl": {
+      "common_name": "Drzewo pieniędzy",
+      "description": "Pachira aquatica, znana jako Drzewo Pieniędzy, pochodzi z Ameryki Środkowej i Południowej. Charakteryzuje się splatanym pniem i bujnymi zielonymi liśćmi."
+    },
+    "de": {
+      "common_name": "Geldbaum",
+      "description": "Pachira aquatica, auch bekannt als Geldbaum, ist in Mittel- und Südamerika beheimatet. Er zeichnet sich durch einen geflochtenen Stamm und üppige grüne Blätter aus."
+    },
+    "fr": {
+      "common_name": "Arbre à monnaie",
+      "description": "Pachira aquatica, ou Arbre à Monnaie, est originaire d'Amérique centrale et du Sud. Il est connu pour son tronc tressé et ses feuilles vertes luxuriantes."
+    },
+    "it": {
+      "common_name": "Albero della moneta",
+      "description": "Pachira aquatica, noto come Albero della Moneta, è originario dell'America Centrale e Meridionale. È famoso per il tronco intrecciato e le foglie verdi lussureggianti."
+    },
+    "es": {
+      "common_name": "Árbol del dinero",
+      "description": "Pachira aquatica, o Árbol del Dinero, es originario de América Central y del Sur. Es conocido por su tronco trenzado y sus hojas verdes y exuberantes."
+    },
+    "pt": {
+      "common_name": "Árvore da fortuna",
+      "description": "Pachira aquatica, conhecida como Árvore da Fortuna, é nativa da América Central e do Sul. É famosa pelo tronco trançado e pelas folhas verdes exuberantes."
+    },
+    "ar": {
+      "common_name": "شجرة المال",
+      "description": "Pachira aquatica، أو شجرة المال، هي نبتة من أمريكا الوسطى والجنوبية. تشتهر بجذعها المضفر وأوراقها الخضراء الكثيفة."
+    },
+    "hi": {
+      "common_name": "पैचिरा ऑक्वेटिका",
+      "description": "पैचिरा ऑक्वेटिका, जिसे मनी ट्री के नाम से जाना जाता है, मध्य और दक्षिणी अमेरिका का मूल निवासी है। इसका तना बिंधारा हुआ होता है और इसके पत्ते हरे और घने होते हैं।"
+    },
+    "zh": {
+      "common_name": "发财树",
+      "description": "发财树（Pachira aquatica）原产于中美洲和南美洲。以其编织的树干和郁郁葱葱的绿色叶子而闻名。"
+    },
+    "ja": {
+      "common_name": "マネーツリー",
+      "description": "パキラ・アクアティカ（Pachira aquatica）は中央アメリカおよび南アメリカ原産です。編み込まれた幹と豊かな緑の葉で知られています。"
+    },
+    "ko": {
+      "common_name": "머니 트리",
+      "description": "Pachira aquatica, 또는 머니 트리는 중미와 남미가 원산지입니다. 땋은 줄기와 풍성한 초록색 잎으로 잘 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/pachira-aquatica-money-tree",
+      "https://www.rhs.org.uk/plants/pachira-aquatica"
+    ]
+  }
+}

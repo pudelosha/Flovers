@@ -1,0 +1,238 @@
+{
+  "external_id": "justicia_brandegeeana",
+  "name": "Shrimp Plant",
+  "latin": "Justicia brandegeeana",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "justicia_brandegeeana.jpg",
+  "image_thumb": "justicia_brandegeeana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Hell indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Sempre leggermente umida",
+          "es": "Humedad constante",
+          "pt": "Umidade constante",
+          "ar": "رطوبة منتظمة",
+          "hi": "समान नमी",
+          "zh": "保持微湿",
+          "ja": "均一に湿らせる",
+          "ko": "고르게 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل العناية",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "키우기 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27 °C",
+          "pl": "18–27 °C",
+          "de": "18–27 °C",
+          "fr": "18–27 °C",
+          "it": "18–27 °C",
+          "es": "18–27 °C",
+          "pt": "18–27 °C",
+          "ar": "18–27°م",
+          "hi": "18–27 °C",
+          "zh": "18–27°C",
+          "ja": "18–27℃",
+          "ko": "18–27℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均的湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing shrub",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Shrimp Plant",
+      "description": "Justicia brandegeeana is a tropical shrub known for its colorful shrimp-like bracts. It grows best in bright, indirect light with evenly moist soil. Regular pruning encourages compact growth and flowering."
+    },
+    "pl": {
+      "common_name": "Justicja krewetkowa",
+      "description": "Justicia brandegeeana to tropikalny krzew o dekoracyjnych, krewetkowatych przykwiatkach. Najlepiej rośnie w jasnym, pośrednim świetle i stale lekko wilgotnej glebie. Przycinanie sprzyja zagęszczeniu i kwitnieniu."
+    },
+    "de": {
+      "common_name": "Garnelenpflanze",
+      "description": "Justicia brandegeeana ist ein tropischer Strauch mit auffälligen, garnelenartigen Hochblättern. Sie bevorzugt helles, indirektes Licht und gleichmäßig feuchte Erde. Regelmäßiger Rückschnitt fördert buschigen Wuchs."
+    },
+    "fr": {
+      "common_name": "Plante crevette",
+      "description": "Justicia brandegeeana est un arbuste tropical aux bractées colorées en forme de crevette. Elle préfère une lumière vive indirecte et un sol légèrement humide. La taille régulière stimule la floraison."
+    },
+    "it": {
+      "common_name": "Pianta gambero",
+      "description": "Justicia brandegeeana è un arbusto tropicale con brattee ornamentali simili a gamberi. Predilige luce intensa indiretta e terreno costantemente umido. La potatura favorisce una crescita compatta."
+    },
+    "es": {
+      "common_name": "Planta camarón",
+      "description": "Justicia brandegeeana es un arbusto tropical con brácteas coloridas en forma de camarón. Crece mejor con luz indirecta brillante y suelo ligeramente húmedo. La poda regular mejora su forma y floración."
+    },
+    "pt": {
+      "common_name": "Planta camarão",
+      "description": "Justicia brandegeeana é um arbusto tropical com brácteas decorativas semelhantes a camarões. Prefere luz indireta intensa e solo sempre levemente úmido. Podas regulares ajudam no crescimento."
+    },
+    "ar": {
+      "common_name": "نبات الروبيان",
+      "description": "نبات Justicia brandegeeana شجيرة استوائية مع قنابات تشبه الروبيان. يفضل الضوء الساطع غير المباشر وتربة رطبة قليلاً. التقليم المنتظم يساعد على تحسين النمو."
+    },
+    "hi": {
+      "common_name": "श्रिम्प प्लांट",
+      "description": "Justicia brandegeeana एक उष्णकटिबंधीय झाड़ी है जिसमें झींगा जैसे रंगीन ब्रैक्ट होते हैं। इसे तेज़ अप्रत्यक्ष रोशनी और हल्की नम मिट्टी पसंद है। नियमित छंटाई से बेहतर वृद्धि होती है।"
+    },
+    "zh": {
+      "common_name": "虾花",
+      "description": "Justicia brandegeeana 是一种热带灌木，以虾状彩色苞片著称。适合明亮的散射光和保持微湿的土壤。定期修剪有助于保持株型。"
+    },
+    "ja": {
+      "common_name": "シュリンププラント",
+      "description": "Justicia brandegeeana はエビのような苞が特徴の熱帯低木です。明るい間接光と適度に湿った土を好みます。剪定すると形よく育ちます。"
+    },
+    "ko": {
+      "common_name": "쉬림프 플랜트",
+      "description": "Justicia brandegeeana는 새우 모양의 화려한 포엽이 특징인 열대 관목입니다. 밝은 간접광과 약간 촉촉한 토양을 선호합니다. 정기적인 가지치기가 성장에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a316",
+      "https://edis.ifas.ufl.edu/publication/FP315",
+      "https://www.rhs.org.uk/plants/justicia/brandegeeana/details"
+    ]
+  }
+}

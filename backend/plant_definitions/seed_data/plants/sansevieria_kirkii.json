@@ -1,0 +1,236 @@
+{
+  "external_id": "sansevieria_kirkii",
+  "name": "Kirk's Sansevieria",
+  "latin": "Sansevieria kirkii",
+  "sun": "medium",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sansevieria_kirkii.jpg",
+  "image_thumb": "sansevieria_kirkii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 조명"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy soil",
+          "pl": "Piaszczysta gleba",
+          "de": "Sandiger Boden",
+          "fr": "Sol sablonneux",
+          "it": "Terreno sabbioso",
+          "es": "Suelo arenoso",
+          "pt": "Solo arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙土",
+          "ja": "砂質土壌",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low watering",
+          "pl": "Niskie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage faible",
+          "it": "Annaffiatura bassa",
+          "es": "Riego bajo",
+          "pt": "Rega baixa",
+          "ar": "سقي قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "少量水やり",
+          "ko": "물 적게 주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe temperatury",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "독성 없음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growth",
+          "pl": "Wolny wzrost",
+          "de": "Langsame Wachstumsrate",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "缓慢生长",
+          "ja": "遅い成長",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Kirk's Sansevieria",
+      "description": "Sansevieria kirkii is a slow-growing, non-toxic plant. It thrives in warm temperatures and requires minimal watering."
+    },
+    "pl": {
+      "common_name": "Sansewieria Kirk'a",
+      "description": "Sansevieria kirkii to roślina wolno rosnąca, nietoksyczna. Rośnie w ciepłych temperaturach i wymaga minimalnego podlewania."
+    },
+    "de": {
+      "common_name": "Kirk's Sansevieria",
+      "description": "Sansevieria kirkii ist eine langsam wachsende, ungiftige Pflanze. Sie gedeiht bei warmen Temperaturen und benötigt wenig Wasser."
+    },
+    "fr": {
+      "common_name": "Sansevieria de Kirk",
+      "description": "Sansevieria kirkii est une plante à croissance lente et non toxique. Elle se développe dans des températures chaudes et nécessite peu d'arrosage."
+    },
+    "it": {
+      "common_name": "Sansevieria di Kirk",
+      "description": "Sansevieria kirkii è una pianta a crescita lenta e non tossica. Cresce in temperature calde e richiede poca acqua."
+    },
+    "es": {
+      "common_name": "Sansevieria de Kirk",
+      "description": "Sansevieria kirkii es una planta de crecimiento lento y no tóxica. Crece en temperaturas cálidas y requiere poca agua."
+    },
+    "pt": {
+      "common_name": "Sansevieria de Kirk",
+      "description": "Sansevieria kirkii é uma planta de crescimento lento e não tóxica. Cresce em temperaturas quentes e precisa de pouca água."
+    },
+    "ar": {
+      "common_name": "سانسيفيريا كيرك",
+      "description": "Sansevieria kirkii هي نبات بطيء النمو وغير سام. ينمو في درجات حرارة دافئة ويحتاج إلى الحد الأدنى من الري."
+    },
+    "hi": {
+      "common_name": "सैनसिवीरिया किर्की",
+      "description": "Sansevieria kirkii एक धीमी गति से बढ़ने वाला, गैर विषैले पौधा है। यह गर्म तापमान में पनपता है और बहुत कम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "基尔克虎尾兰",
+      "description": "Sansevieria kirkii 是一种生长缓慢的无毒植物。它在温暖的温度下生长，并且需要很少的水分。"
+    },
+    "ja": {
+      "common_name": "カークサンセベリア",
+      "description": "Sansevieria kirkii は遅い成長の無毒な植物です。温暖な気温で育ち、あまり水を必要としません。"
+    },
+    "ko": {
+      "common_name": "커크 산세베리아",
+      "description": "Sansevieria kirkii는 느리게 성장하는 비독성 식물입니다. 따뜻한 온도에서 자라며 물을 적게 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/Plants/1203/Sansevieria-kirkii/Details",
+      "https://www.gardeningknowhow.com/houseplants/sansevieria/sansevieria-kirkii-care.htm"
+    ]
+  }
+}

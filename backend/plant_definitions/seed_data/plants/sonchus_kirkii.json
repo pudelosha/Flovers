@@ -1,0 +1,237 @@
+{
+  "external_id": "sonchus_kirkii",
+  "name": "Kirk's Sowthistle",
+  "latin": "Sonchus kirkii",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "sonchus_kirkii.jpg",
+  "image_thumb": "sonchus_kirkii.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "próchnica",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "नम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Kirk's Sowthistle",
+      "description": "Sonchus kirkii is a perennial herb native to New Zealand. It thrives in coastal environments and produces bright yellow flowers."
+    },
+    "pl": {
+      "common_name": "Słonecznik Kirk'a",
+      "description": "Sonchus kirkii to roślina wieloletnia pochodząca z Nowej Zelandii. Rośnie w środowiskach przybrzeżnych i wytwarza jasne żółte kwiaty."
+    },
+    "de": {
+      "common_name": "Kirk's Faltblatt",
+      "description": "Sonchus kirkii ist ein mehrjähriges Kraut aus Neuseeland. Es wächst in Küstengebieten und produziert leuchtend gelbe Blumen."
+    },
+    "fr": {
+      "common_name": "Chardon de Kirk",
+      "description": "Sonchus kirkii est une herbe vivace originaire de Nouvelle-Zélande. Elle pousse dans des environnements côtiers et produit des fleurs jaunes éclatantes."
+    },
+    "it": {
+      "common_name": "Sonchus di Kirk",
+      "description": "Sonchus kirkii è un'erba perenne originaria della Nuova Zelanda. Cresce in ambienti costieri e produce fiori gialli brillanti."
+    },
+    "es": {
+      "common_name": "Cardo de Kirk",
+      "description": "Sonchus kirkii es una planta perenne originaria de Nueva Zelanda. Crece en ambientes costeros y produce flores amarillas brillantes."
+    },
+    "pt": {
+      "common_name": "Cardo de Kirk",
+      "description": "Sonchus kirkii é uma planta perene originária da Nova Zelândia. Cresce em ambientes costeiros e produz flores amarelas brilhantes."
+    },
+    "ar": {
+      "common_name": "شوك كيرك",
+      "description": "Sonchus kirkii هو نبات معمر من نيوزيلندا. ينمو في البيئات الساحلية ويعطي زهورًا صفراء زاهية."
+    },
+    "hi": {
+      "common_name": "किर्क का सोनचुस",
+      "description": "Sonchus kirkii एक वार्षिक जड़ी-बूटी है जो न्यूज़ीलैंड की है। यह तटीय वातावरण में पनपता है और उज्जवल पीले फूल उत्पन्न करता है।"
+    },
+    "zh": {
+      "common_name": "柯克的蓬蒿",
+      "description": "Sonchus kirkii 是一种原产于新西兰的多年生草本植物。它生长在沿海环境中，开出明亮的黄色花朵。"
+    },
+    "ja": {
+      "common_name": "カークのソウスィスル",
+      "description": "Sonchus kirkii はニュージーランド原産の多年草です。沿岸の環境に生育し、明るい黄色の花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "커크 소우시슬",
+      "description": "Sonchus kirkii는 뉴질랜드 원산의 다년생 풀입니다. 해안 환경에서 자라며 밝은 노란색 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/sonchus-kirkii",
+      "https://www.nzpcn.org.nz/flora/species/sonchus-kirkii/"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "mimosa_pudica",
+  "name": "Sensitive Plant",
+  "latin": "Mimosa pudica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 5,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "mimosa_pudica.jpg",
+  "image_thumb": "mimosa_pudica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Hell indirekt",
+          "fr": "Lumière vive",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Even moisture",
+          "pl": "Umiarkowana",
+          "de": "Gleichmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "ري معتدل",
+          "hi": "नियमित",
+          "zh": "保持湿润",
+          "ja": "適度な水分",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30°C",
+          "pl": "18–30°C",
+          "de": "18–30°C",
+          "fr": "18–30°C",
+          "it": "18–30°C",
+          "es": "18–30°C",
+          "pt": "18–30°C",
+          "ar": "18–30°م",
+          "hi": "18–30°C",
+          "zh": "18–30°C",
+          "ja": "18–30℃",
+          "ko": "18–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "औसत",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Leve toxicidad",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع النمو",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "生长快",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sensitive Plant",
+      "description": "Mimosa pudica is known for its leaves that fold when touched. It prefers bright indirect light and consistently moist soil. Warm temperatures support healthy growth."
+    },
+    "pl": {
+      "common_name": "Wstydliwa mimoza",
+      "description": "Mimosa pudica słynie z liści reagujących na dotyk. Wymaga jasnego światła i umiarkowanie wilgotnej gleby. Najlepiej rośnie w ciepłych warunkach."
+    },
+    "de": {
+      "common_name": "Sinnpflanze",
+      "description": "Mimosa pudica schließt ihre Blätter bei Berührung. Sie mag helles, indirektes Licht und gleichmäßige Feuchte. Warme Temperaturen fördern das Wachstum."
+    },
+    "fr": {
+      "common_name": "Plante sensitive",
+      "description": "Mimosa pudica replie ses feuilles au toucher. Elle aime une lumière vive indirecte et un sol légèrement humide. La chaleur favorise sa croissance."
+    },
+    "it": {
+      "common_name": "Pianta sensitiva",
+      "description": "La Mimosa pudica chiude le foglie se toccata. Predilige luce indiretta e terreno umido. Cresce bene con temperature calde."
+    },
+    "es": {
+      "common_name": "Planta sensitiva",
+      "description": "Mimosa pudica pliega sus hojas al contacto. Necesita luz indirecta brillante y riego regular. Prefiere climas cálidos."
+    },
+    "pt": {
+      "common_name": "Dormideira",
+      "description": "Mimosa pudica fecha as folhas ao toque. Gosta de luz indireta e solo levemente úmido. Desenvolve-se melhor com calor."
+    },
+    "ar": {
+      "common_name": "نبات المستحية",
+      "description": "تغلق Mimosa pudica أوراقها عند اللمس. تحتاج إلى ضوء ساطع غير مباشر وتربة رطبة. تنمو جيدًا في الدفء."
+    },
+    "hi": {
+      "common_name": "छुईमुई",
+      "description": "Mimosa pudica की पत्तियाँ छूने पर मुड़ जाती हैं। इसे अप्रत्यक्ष रोशनी और नम मिट्टी चाहिए। गर्म तापमान में अच्छी बढ़त होती है।"
+    },
+    "zh": {
+      "common_name": "含羞草",
+      "description": "含羞草在触碰时会合拢叶片。它需要明亮散射光和保持湿润的土壤。温暖环境有利生长。"
+    },
+    "ja": {
+      "common_name": "オジギソウ",
+      "description": "オジギソウは触れると葉を閉じます。明るい間接光と湿った土を好みます。暖かい環境でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "미모사",
+      "description": "미모사는 만지면 잎이 접힙니다. 밝은 간접광과 촉촉한 토양을 좋아합니다. 따뜻한 온도에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=281424",
+      "https://www.rhs.org.uk/plants/10811/mimosa-pudica/details",
+      "https://plants.ces.ncsu.edu/plants/mimosa-pudica/"
+    ]
+  }
+}

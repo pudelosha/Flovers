@@ -1,0 +1,236 @@
+{
+  "external_id": "vigna_caracalla",
+  "name": "Corkscrew vine",
+  "latin": "Vigna caracalla",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "vigna_caracalla.jpg",
+  "image_thumb": "vigna_caracalla.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋음"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlew.",
+          "de": "Regelmäßig",
+          "fr": "Arrosage rég.",
+          "it": "Annaffiature",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的給水",
+          "ko": "정기적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climate",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئة",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moy.",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletterpflanze",
+          "fr": "Grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "लता",
+          "zh": "攀援植物",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Corkscrew vine",
+      "description": "Vigna caracalla is a fast-growing climbing vine known for its fragrant, spiraled flowers. It prefers full sun, warm temperatures, and regular watering during active growth."
+    },
+    "pl": {
+      "common_name": "Ślimakowiec pachnący",
+      "description": "Vigna caracalla to szybko rosnące pnącze o charakterystycznych, skręconych kwiatach. Wymaga pełnego słońca, ciepła i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Schneckenbohne",
+      "description": "Vigna caracalla ist eine schnell wachsende Kletterpflanze mit duftenden, spiraligen Blüten. Sie benötigt viel Sonne, Wärme und regelmäßige Wassergaben."
+    },
+    "fr": {
+      "common_name": "Pois escargot",
+      "description": "Vigna caracalla est une plante grimpante vigoureuse aux fleurs parfumées en spirale. Elle aime le plein soleil, la chaleur et un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Fagiolo a chiocciola",
+      "description": "Vigna caracalla è una pianta rampicante a crescita rapida con fiori profumati e spiralati. Preferisce sole pieno, clima caldo e annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Vid caracol",
+      "description": "Vigna caracalla es una enredadera de rápido crecimiento con flores fragantes en espiral. Requiere pleno sol, temperaturas cálidas y riego regular."
+    },
+    "pt": {
+      "common_name": "Feijão-caracol",
+      "description": "Vigna caracalla é uma trepadeira de crescimento rápido com flores perfumadas em espiral. Gosta de sol pleno, calor e rega regular."
+    },
+    "ar": {
+      "common_name": "نبات الحلزون",
+      "description": "Vigna caracalla نبات متسلق سريع النمو يتميز بأزهاره الحلزونية العطرية. يحتاج إلى شمس كاملة وحرارة وري منتظم."
+    },
+    "hi": {
+      "common_name": "कॉर्कस्क्रू बेल",
+      "description": "Vigna caracalla एक तेजी से बढ़ने वाली लता है जिसमें सुगंधित घुमावदार फूल होते हैं। इसे पूरी धूप, गर्मी और नियमित पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "螺旋豆藤",
+      "description": "Vigna caracalla 是一种快速生长的攀援植物，花朵呈螺旋状并带香味。适合全日照、温暖环境和定期浇水。"
+    },
+    "ja": {
+      "common_name": "スネイルバイン",
+      "description": "Vigna caracalla は香りのある螺旋状の花をつける成長の早いつる植物です。日当たりと暖かさ、定期的な水やりを好みます。"
+    },
+    "ko": {
+      "common_name": "코르크스크루 덩굴",
+      "description": "Vigna caracalla는 향기로운 나선형 꽃을 가진 빠르게 자라는 덩굴식물입니다. 충분한 햇빛과 따뜻한 환경, 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/20331/vigna-caracalla/details",
+      "https://edis.ifas.ufl.edu/publication/FP640",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b570"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "senecio_vulgaris",
+  "name": "Common Groundsel",
+  "latin": "Senecio vulgaris",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "senecio_vulgaris.jpg",
+  "image_thumb": "senecio_vulgaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchniczna",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Suolo argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मृदायुक्त मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Slightly toxic",
+          "pl": "Lekko toksyczny",
+          "de": "Leicht toxisch",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Ligeramente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "سامة قليلاً",
+          "hi": "थोड़ा विषैला",
+          "zh": "轻微有毒",
+          "ja": "やや有毒",
+          "ko": "약간 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Groundsel",
+      "description": "Common Groundsel is a fast-growing herb found in disturbed soils. It has yellow daisy-like flowers and deeply lobed leaves."
+    },
+    "pl": {
+      "common_name": "Zwykły senecjo",
+      "description": "Zwykły senecjo to szybko rosnąca roślina zielna występująca na zniszczonych glebach. Ma żółte kwiaty przypominające stokrotki i głęboko wcięte liście."
+    },
+    "de": {
+      "common_name": "Gewöhnlicher Greiskraut",
+      "description": "Das gewöhnliche Greiskraut ist eine schnell wachsende Pflanze, die in gestörten Böden vorkommt. Es hat gelbe blumenartige Blüten und tief eingeschnittene Blätter."
+    },
+    "fr": {
+      "common_name": "Senecio vulgaris",
+      "description": "Le senecio vulgaris est une plante à croissance rapide que l'on trouve dans les sols perturbés. Il a des fleurs jaunes en forme de marguerites et des feuilles profondément découpées."
+    },
+    "it": {
+      "common_name": "Senecio comune",
+      "description": "Il senecio comune è una pianta a crescita rapida che cresce nei terreni disturbati. Ha fiori gialli simili a margherite e foglie profondamente lobate."
+    },
+    "es": {
+      "common_name": "Senecio vulgaris",
+      "description": "El Senecio vulgaris es una planta de rápido crecimiento que se encuentra en suelos perturbados. Tiene flores amarillas similares a las margaritas y hojas profundamente lobuladas."
+    },
+    "pt": {
+      "common_name": "Senecio vulgaris",
+      "description": "O Senecio vulgaris é uma planta de crescimento rápido encontrada em solos perturbados. Possui flores amarelas semelhantes a margaridas e folhas profundamente lobadas."
+    },
+    "ar": {
+      "common_name": "سنيسيولوس فولغاريس",
+      "description": "السنيسيولوس فولغاريس هو نبات سريع النمو يوجد في التربة المتضررة. يحتوي على زهور صفراء تشبه الأقحوان وأوراق مفصصة بعمق."
+    },
+    "hi": {
+      "common_name": "कॉमन ग्राउंडसेल",
+      "description": "कॉमन ग्राउंडसेल एक तेज़ी से बढ़ने वाला पौधा है जो विकृत मृदाओं में पाया जाता है। इसमें पीली डेज़ी जैसी फूलें और गहरी कटिंग वाली पत्तियाँ होती हैं।"
+    },
+    "zh": {
+      "common_name": "普通地桑",
+      "description": "普通地桑是一种快速生长的草本植物，生长在被破坏的土壤中。它具有黄色的菊花状花朵和深裂的叶子。"
+    },
+    "ja": {
+      "common_name": "コモングラウンドセル",
+      "description": "コモングラウンドセルは、荒れた土壌で見られる急速に成長する草本植物です。黄色のデイジーのような花と深く切れ込んだ葉を持っています。"
+    },
+    "ko": {
+      "common_name": "일반 땅비름",
+      "description": "일반 땅비름은 교란된 토양에서 자라는 빠르게 자라는 풀입니다. 노란색 데이지 같은 꽃과 깊게 갈라진 잎을 가지고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/4138/senecio-vulgaris/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=278462"
+    ]
+  }
+}

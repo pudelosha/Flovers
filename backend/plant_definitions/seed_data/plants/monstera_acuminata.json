@@ -1,0 +1,238 @@
+{
+  "external_id": "monstera_acuminata",
+  "name": "Monstera Acuminata",
+  "latin": "Monstera acuminata",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "monstera_acuminata.jpg",
+  "image_thumb": "monstera_acuminata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne pośrednie",
+          "de": "Helles indirekt",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining mix",
+          "pl": "Przepuszczalna",
+          "de": "Gut drainierend",
+          "fr": "Drainant",
+          "it": "Ben drenante",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderata",
+          "es": "Moderado",
+          "pt": "Moderada",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average indoor",
+          "pl": "Średnia",
+          "de": "Durchschnitt",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य",
+          "zh": "一般湿度",
+          "ja": "通常",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैला",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing",
+          "pl": "Pnąca",
+          "de": "Kletternd",
+          "fr": "Grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "متسلقة",
+          "hi": "चढ़ने वाली",
+          "zh": "攀援生长",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata is a tropical climbing aroid native to Central America. It has elongated, fenestrated leaves and grows well indoors with support."
+    },
+    "pl": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata to tropikalne pnącze z Ameryki Środkowej. Ma wydłużone liście z otworami i dobrze rośnie w domu."
+    },
+    "de": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata ist eine tropische Kletterpflanze aus Mittelamerika. Sie bildet längliche, durchbrochene Blätter und wächst gut im Innenraum."
+    },
+    "fr": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata est une plante tropicale grimpante d’Amérique centrale. Elle possède des feuilles allongées et ajourées."
+    },
+    "it": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata è una pianta tropicale rampicante dell’America Centrale. Presenta foglie allungate con fenestrazioni."
+    },
+    "es": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata es una planta tropical trepadora de Centroamérica. Tiene hojas alargadas con perforaciones decorativas."
+    },
+    "pt": {
+      "common_name": "Monstera",
+      "description": "Monstera acuminata é uma planta tropical trepadeira da América Central. Suas folhas são alongadas e perfuradas."
+    },
+    "ar": {
+      "common_name": "مونستيرا",
+      "description": "مونستيرا أكوميناتـا نبات استوائي متسلق من أمريكا الوسطى. يتميز بأوراق ممدودة ذات فتحات."
+    },
+    "hi": {
+      "common_name": "मॉन्स्टेरा",
+      "description": "मॉन्स्टेरा एक्यूमिनाटा मध्य अमेरिका का उष्णकटिबंधीय पौधा है। इसकी पत्तियाँ लंबी और छिद्रदार होती हैं।"
+    },
+    "zh": {
+      "common_name": "龟背竹",
+      "description": "Monstera acuminata 原产于中美洲，是热带攀援植物。叶片细长并带有裂孔。"
+    },
+    "ja": {
+      "common_name": "モンステラ",
+      "description": "モンステラ・アクミナータは中米原産の熱帯植物です。細長い切れ込みのある葉を持ちます。"
+    },
+    "ko": {
+      "common_name": "몬스테라",
+      "description": "몬스테라 아쿠미나타는 중앙아메리카 원산의 열대 식물입니다. 길고 구멍이 있는 잎이 특징입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/monstera-acuminata",
+      "https://www.aroid.org/genera/monstera/monstera.php",
+      "https://plants.ces.ncsu.edu/plants/monstera/"
+    ]
+  }
+}

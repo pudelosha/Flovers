@@ -1,0 +1,237 @@
+{
+  "external_id": "peperomia_obtusifolia",
+  "name": "Baby Rubber Plant",
+  "latin": "Peperomia obtusifolia",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "aroid"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "peperomia_obtusifolia.jpg",
+  "image_thumb": "peperomia_obtusifolia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "排水良好",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht toxisch",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "콤팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Baby Rubber Plant",
+      "description": "Peperomia obtusifolia is a popular houseplant with attractive, glossy green leaves. It thrives in bright, indirect light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Roślina gumowa",
+      "description": "Peperomia obtusifolia to popularna roślina doniczkowa o atrakcyjnych, błyszczących zielonych liściach. Wymaga umiarkowanego podlewania i jasnego, pośredniego światła."
+    },
+    "de": {
+      "common_name": "Baby-Gummipflanze",
+      "description": "Peperomia obtusifolia ist eine beliebte Zimmerpflanze mit attraktiven, glänzenden grünen Blättern. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Plante Caoutchouc",
+      "description": "Peperomia obtusifolia est une plante d'intérieur populaire avec des feuilles vertes brillantes. Elle préfère une lumière indirecte et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Pianta Gomma",
+      "description": "Peperomia obtusifolia è una pianta da interno popolare con foglie verdi lucide. Cresce meglio in luce indiretta e richiede un'irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Planta de goma",
+      "description": "Peperomia obtusifolia es una planta de interior popular con hojas verdes brillantes. Prefiere luz indirecta y riego moderado."
+    },
+    "pt": {
+      "common_name": "Planta de borracha",
+      "description": "Peperomia obtusifolia é uma planta de interior popular com folhas verdes brilhantes. Prefere luz indireta e rega moderada."
+    },
+    "ar": {
+      "common_name": "نبات مطاطي",
+      "description": "Peperomia obtusifolia هو نبات داخلي شائع ذو أوراق خضراء لامعة. يفضل الضوء غير المباشر والري المعتدل."
+    },
+    "hi": {
+      "common_name": "बेबी रबर प्लांट",
+      "description": "Peperomia obtusifolia एक लोकप्रिय घरेलू पौधा है, जिसके आकर्षक, चमकदार हरे पत्ते होते हैं। यह हल्की, अप्रत्यक्ष रोशनी में बढ़ता है और मध्यम सिंचाई की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "橡胶植物",
+      "description": "Peperomia obtusifolia是一种受欢迎的室内植物，具有光滑的绿色叶子。它在明亮的间接光下生长，并需要适度的浇水。"
+    },
+    "ja": {
+      "common_name": "ベビールーバープラント",
+      "description": "Peperomia obtusifoliaは、光沢のある緑の葉を持つ人気の室内植物です。明るい間接光で成長し、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "베이비 고무 식물",
+      "description": "Peperomia obtusifolia는 매력적인 반짝이는 녹색 잎을 가진 인기 있는 실내 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/peperomia-obtusifolia",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/peperomia-obtusifolia-care/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "primula_obconica",
+  "name": "Primula obconica",
+  "latin": "Primula obconica",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "primula_obconica.jpg",
+  "image_thumb": "primula_obconica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "gleba",
+          "de": "lehm",
+          "fr": "argile",
+          "it": "terriccio",
+          "es": "arcilla",
+          "pt": "terra",
+          "ar": "تربة",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnio",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-20°C",
+          "pl": "15-20°C",
+          "de": "15-20°C",
+          "fr": "15-20°C",
+          "it": "15-20°C",
+          "es": "15-20°C",
+          "pt": "15-20°C",
+          "ar": "15-20°C",
+          "hi": "15-20°C",
+          "zh": "15-20°C",
+          "ja": "15-20°C",
+          "ko": "15-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不是",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bashful Primrose",
+      "description": "Primula obconica is a perennial flowering plant native to China. It thrives in cool, moist conditions with medium sunlight."
+    },
+    "pl": {
+      "common_name": "Przypołudnik wstydliwy",
+      "description": "Primula obconica to roślina wieloletnia pochodząca z Chin. Wymaga chłodnych, wilgotnych warunków oraz średniego nasłonecznienia."
+    },
+    "de": {
+      "common_name": "Schüchterne Primel",
+      "description": "Primula obconica ist eine mehrjährige Blume aus China. Sie gedeiht in kühlen, feuchten Bedingungen bei mittlerer Sonneneinstrahlung."
+    },
+    "fr": {
+      "common_name": "Primevère timide",
+      "description": "Primula obconica est une plante vivace originaire de Chine. Elle prospère dans des conditions fraîches et humides avec une lumière moyenne."
+    },
+    "it": {
+      "common_name": "Primula timida",
+      "description": "Primula obconica è una pianta perenne originaria della Cina. Cresce in condizioni fresche e umide con luce solare media."
+    },
+    "es": {
+      "common_name": "Primavera tímida",
+      "description": "Primula obconica es una planta perenne originaria de China. Crece en condiciones frescas y húmedas con luz media."
+    },
+    "pt": {
+      "common_name": "Primula tímida",
+      "description": "Primula obconica é uma planta perene originária da China. Ela cresce em condições frescas e úmidas com luz média."
+    },
+    "ar": {
+      "common_name": "زهرة الربيع الخجولة",
+      "description": "Primula obconica هي نبات معمّر موطنه الصين. ينمو في ظروف باردة ورطبة مع ضوء متوسط."
+    },
+    "hi": {
+      "common_name": "संकोची प्राइमुला",
+      "description": "Primula obconica एक बारहमासी फूल वाला पौधा है जो चीन का मूल निवासी है। यह ठंडे और नम वातावरण में और मध्यम धूप में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "腼腆的报春花",
+      "description": "Primula obconica 是一种多年生开花植物，原产于中国。它在凉爽、潮湿的环境中生长，光照适中。"
+    },
+    "ja": {
+      "common_name": "恥ずかしがり屋のサクラソウ",
+      "description": "Primula obconicaは中国原産の多年草です。涼しく湿った環境で中程度の光を好んで成長します。"
+    },
+    "ko": {
+      "common_name": "수줍은 제비꽃",
+      "description": "Primula obconica는 중국 원산의 다년생 꽃 식물입니다. 차갑고 습한 환경에서 중간 정도의 햇빛을 받으며 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/primula-obconica",
+      "https://www.gardenia.net/plant/primula-obconica"
+    ]
+  }
+}

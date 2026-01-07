@@ -1,0 +1,237 @@
+{
+  "external_id": "vanda_coerulea",
+  "name": "Blue Vanda Orchid",
+  "latin": "Vanda coerulea",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid"
+  ],
+  "water_required": true,
+  "water_interval_days": 4,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 7,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "vanda_coerulea.jpg",
+  "image_thumb": "vanda_coerulea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光照",
+          "ja": "強い光",
+          "ko": "강한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Orchid bark mix",
+          "pl": "Podłoże storczykowe",
+          "de": "Orchideensubstrat",
+          "fr": "Substrat orchidée",
+          "it": "Substrato orchidee",
+          "es": "Sustrato orquídea",
+          "pt": "Substrato orquídea",
+          "ar": "وسط أوركيد",
+          "hi": "ऑर्किड माध्यम",
+          "zh": "兰花基质",
+          "ja": "ラン用培地",
+          "ko": "난 전용 배지"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent watering",
+          "pl": "Częste podlewanie",
+          "de": "Häufig gießen",
+          "fr": "Arrosage fréquent",
+          "it": "Annaffiature frequenti",
+          "es": "Riego frecuente",
+          "pt": "Rega frequente",
+          "ar": "ري متكرر",
+          "hi": "बार-बार पानी",
+          "zh": "频繁浇水",
+          "ja": "頻繁な水やり",
+          "ko": "잦은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Expert level",
+          "pl": "Dla zaawansowanych",
+          "de": "Für Experten",
+          "fr": "Niveau expert",
+          "it": "Livello esperto",
+          "es": "Nivel experto",
+          "pt": "Nível expert",
+          "ar": "مستوى خبير",
+          "hi": "उच्च कठिनाई",
+          "zh": "高难度",
+          "ja": "上級者向け",
+          "ko": "고급자용"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm year-round",
+          "pl": "Ciepło cały rok",
+          "de": "Ganzjährig warm",
+          "fr": "Chaud constant",
+          "it": "Caldo costante",
+          "es": "Calor constante",
+          "pt": "Calor constante",
+          "ar": "دافئ دائمًا",
+          "hi": "सालभर गर्म",
+          "zh": "全年温暖",
+          "ja": "通年高温",
+          "ko": "연중 따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Very high humidity",
+          "pl": "Bardzo wysoka wilg.",
+          "de": "Sehr hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Umidade alta",
+          "ar": "رطوبة عالية",
+          "hi": "अधिक नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright epiphyte",
+          "pl": "Epifit pionowy",
+          "de": "Aufrecht epiphytisch",
+          "fr": "Épiphyte dressé",
+          "it": "Epifita eretta",
+          "es": "Epífita erecta",
+          "pt": "Epífita ereta",
+          "ar": "نبات هوائي قائم",
+          "hi": "एपिफाइट पौधा",
+          "zh": "直立附生",
+          "ja": "直立性着生",
+          "ko": "직립 착생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Vanda Orchid",
+      "description": "Vanda coerulea is an epiphytic orchid native to Southeast Asia, known for its blue to violet flowers. It requires very bright light, high humidity, and frequent watering indoors. This species is considered challenging and suited to experienced growers."
+    },
+    "pl": {
+      "common_name": "Niebieska wanda",
+      "description": "Vanda coerulea to epifityczny storczyk pochodzący z Azji Południowo-Wschodniej, ceniony za niebieskie kwiaty. Wymaga bardzo jasnego światła, wysokiej wilgotności i częstego podlewania. Jest to roślina trudna w uprawie domowej."
+    },
+    "de": {
+      "common_name": "Blaue Vanda",
+      "description": "Vanda coerulea ist eine epiphytische Orchidee aus Südostasien mit auffälligen blauen Blüten. Sie benötigt viel Licht, hohe Luftfeuchtigkeit und regelmäßiges Gießen. Die Art gilt als anspruchsvoll in der Pflege."
+    },
+    "fr": {
+      "common_name": "Vanda bleue",
+      "description": "Vanda coerulea est une orchidée épiphyte originaire d’Asie du Sud-Est, célèbre pour ses fleurs bleues. Elle demande une lumière intense, une forte humidité et des arrosages fréquents. Sa culture est réservée aux amateurs expérimentés."
+    },
+    "it": {
+      "common_name": "Vanda blu",
+      "description": "Vanda coerulea è un’orchidea epifita del Sud-Est asiatico, nota per i suoi fiori blu violacei. Necessita di luce intensa, elevata umidità e annaffiature frequenti. È considerata difficile da coltivare in casa."
+    },
+    "es": {
+      "common_name": "Vanda azul",
+      "description": "Vanda coerulea es una orquídea epífita del sudeste asiático, apreciada por sus flores azules. Requiere mucha luz, alta humedad y riego frecuente. Es una especie exigente para cultivo interior."
+    },
+    "pt": {
+      "common_name": "Vanda azul",
+      "description": "Vanda coerulea é uma orquídea epífita do Sudeste Asiático, conhecida por suas flores azuis. Precisa de luz intensa, alta umidade e regas frequentes. É considerada difícil para cultivo doméstico."
+    },
+    "ar": {
+      "common_name": "فاندا زرقاء",
+      "description": "فاندا كوروليا نبات أوركيد هوائي موطنه جنوب شرق آسيا ويشتهر بأزهاره الزرقاء. يحتاج إلى ضوء قوي ورطوبة عالية وري متكرر. يُعد من النباتات الصعبة العناية."
+    },
+    "hi": {
+      "common_name": "नीली वांडा ऑर्किड",
+      "description": "Vanda coerulea दक्षिण पूर्व एशिया की एक एपिफाइट ऑर्किड है, जो नीले फूलों के लिए जानी जाती है। इसे तेज़ रोशनी, अधिक नमी और बार-बार पानी की आवश्यकता होती है। यह उगाने में कठिन मानी जाती है।"
+    },
+    "zh": {
+      "common_name": "蓝万代兰",
+      "description": "Vanda coerulea 原产于东南亚，是一种附生兰花，以蓝色花朵闻名。室内养护需要强光、高湿度和频繁浇水。该物种养护难度较高。"
+    },
+    "ja": {
+      "common_name": "ブルーバンダ",
+      "description": "Vanda coerulea は東南アジア原産の着生ランで、青い花で知られています。強い光、高い湿度、頻繁な水やりが必要です。栽培難易度は高めです。"
+    },
+    "ko": {
+      "common_name": "블루 반다 난",
+      "description": "Vanda coerulea는 동남아시아 원산의 착생 난으로 푸른 꽃이 특징입니다. 강한 빛과 높은 습도, 잦은 물주기가 필요합니다. 관리 난이도가 높은 식물입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/vanda-coerulea",
+      "https://www.aos.org/orchids/orchid-care/vanda-culture.aspx",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b660"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "ribes_nigrum",
+  "name": "Blackcurrant",
+  "latin": "Ribes nigrum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ribes_nigrum.jpg",
+  "image_thumb": "ribes_nigrum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "acidic",
+          "pl": "kwaśna",
+          "de": "sauer",
+          "fr": "acide",
+          "it": "acido",
+          "es": "ácida",
+          "pt": "ácida",
+          "ar": "حمضي",
+          "hi": "अम्लीय",
+          "zh": "酸性",
+          "ja": "酸性",
+          "ko": "산성"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "cool to moderate",
+          "pl": "chłodne do umiarkowane",
+          "de": "kühl bis mäßig",
+          "fr": "frais à modéré",
+          "it": "fresco a moderato",
+          "es": "fresco a moderado",
+          "pt": "fresco a moderado",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽到适中",
+          "ja": "涼しいから中程度",
+          "ko": "차가운에서 보통"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blackcurrant",
+      "description": "Blackcurrant is a deciduous shrub known for its tart, dark purple-black berries. It grows in cool to moderate climates and requires well-draining, acidic soil."
+    },
+    "pl": {
+      "common_name": "Czarna porzeczka",
+      "description": "Czarna porzeczka to krzew liściasty znany ze swoich kwaśnych, ciemno-fioletowo-czarnych jagód. Rośnie w chłodnych do umiarkowanych klimatach i wymaga dobrze przepuszczalnej, kwaśnej gleby."
+    },
+    "de": {
+      "common_name": "Schwarze Johannisbeere",
+      "description": "Die schwarze Johannisbeere ist ein Laubstrauch, der für seine säuerlichen, dunkelviolett-schwarzen Beeren bekannt ist. Sie wächst in kühlen bis gemäßigten Klimazonen und benötigt gut durchlässigen, sauren Boden."
+    },
+    "fr": {
+      "common_name": "Cassis",
+      "description": "Le cassis est un arbuste caduc connu pour ses baies acides et de couleur noir-violet foncé. Il pousse dans des climats frais à modérés et nécessite un sol acide bien drainé."
+    },
+    "it": {
+      "common_name": "Ribes nero",
+      "description": "Il ribes nero è un arbusto deciduo noto per le sue bacche acide di colore nero-viola scuro. Cresce in climi freschi o moderati e necessita di un terreno acido e ben drenato."
+    },
+    "es": {
+      "common_name": "Grosella negra",
+      "description": "La grosella negra es un arbusto caducifolio conocido por sus bayas ácidas de color negro-oscuro. Crece en climas frescos a moderados y necesita un suelo ácido bien drenado."
+    },
+    "pt": {
+      "common_name": "Groselha negra",
+      "description": "A groselha negra é um arbusto caducifólio conhecido pelas suas bagas ácidas de cor negro-roxo. Cresce em climas frescos a moderados e necessita de solo ácido bem drenado."
+    },
+    "ar": {
+      "common_name": "الكشمش الأسود",
+      "description": "الكشمش الأسود هو شجيرة نفضية معروفة بتوتها الحامض ذو اللون الأسود الداكن. ينمو في المناخات الباردة إلى المعتدلة ويحتاج إلى تربة حامضية جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "काले करंट",
+      "description": "काले करंट एक पर्णपाती झाड़ी है, जो अपने खट्टे, गहरे बैंगनी-काले जामुनों के लिए जानी जाती है। यह ठंडे से लेकर मध्यम जलवायु में उगता है और इसे अच्छी तरह से जल निकासी वाली, अम्लीय मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "黑加仑",
+      "description": "黑加仑是一种落叶灌木，以其酸涩的深紫黑色浆果而闻名。它生长在凉爽到适中的气候中，需要排水良好的酸性土壤。"
+    },
+    "ja": {
+      "common_name": "ブラックカラント",
+      "description": "ブラックカラントは、その酸味のある暗紫色の黒いベリーで知られる落葉灌木です。冷涼から温暖な気候で育ち、排水性の良い酸性土壌が必要です。"
+    },
+    "ko": {
+      "common_name": "블랙커런트",
+      "description": "블랙커런트는 신맛이 나는 짙은 자주색-검은색 열매로 알려진 낙엽 덤불입니다. 차가운 기후에서 자주 자라며, 배수가 좋은 산성 토양을 필요로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9562/Ribes-nigrum/Details",
+      "https://www.gardenia.net/plant/ribes-nigrum-black-currant"
+    ]
+  }
+}

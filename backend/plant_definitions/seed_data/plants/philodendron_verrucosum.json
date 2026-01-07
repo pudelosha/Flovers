@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_verrucosum",
+  "name": "Philodendron verrucosum",
+  "latin": "Philodendron verrucosum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "philodendron_verrucosum.jpg",
+  "image_thumb": "philodendron_verrucosum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium light",
+          "pl": "średnie światło",
+          "de": "mittleres Licht",
+          "fr": "lumière moyenne",
+          "it": "luce media",
+          "es": "luz media",
+          "pt": "luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained",
+          "pl": "dobrze przepuszczalna",
+          "de": "gut durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "جيد الصرف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "양호한 배수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowane",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Creeping Philodendron",
+      "description": "Philodendron verrucosum is a tropical vine with velvety, heart-shaped leaves. Known for its striking veins, it thrives in humid conditions."
+    },
+    "pl": {
+      "common_name": "Filodendron brodawkowaty",
+      "description": "Filodendron verrucosum to tropikalna roślina pnąca o aksamitnych, sercowatych liściach. Charakteryzuje się wyraźnymi żyłkami i wymaga wilgotnych warunków."
+    },
+    "de": {
+      "common_name": "Warziger Philodendron",
+      "description": "Philodendron verrucosum ist eine tropische Kletterpflanze mit samtigen, herzförmigen Blättern. Es liebt feuchte Bedingungen und hat markante Adern."
+    },
+    "fr": {
+      "common_name": "Philodendron verruqueux",
+      "description": "Le Philodendron verrucosum est une plante grimpante tropicale aux feuilles en forme de cœur, veloutées et aux nervures frappantes."
+    },
+    "it": {
+      "common_name": "Philodendron verrucoso",
+      "description": "Il Philodendron verrucosum è una pianta rampicante tropicale con foglie vellutate a forma di cuore, caratterizzate da venature evidenti."
+    },
+    "es": {
+      "common_name": "Philodendron verrucoso",
+      "description": "El Philodendron verrucosum es una planta trepadora tropical con hojas aterciopeladas en forma de corazón y venas prominentes."
+    },
+    "pt": {
+      "common_name": "Philodendron verrucoso",
+      "description": "Philodendron verrucosum é uma planta trepadeira tropical com folhas aveludadas em forma de coração e veias proeminentes."
+    },
+    "ar": {
+      "common_name": "فلودندرون فوروكوسوم",
+      "description": "الفلودندرون فوروكوسوم هو نبات تسلق استوائي بأوراق مخملية على شكل قلب وعروق بارزة."
+    },
+    "hi": {
+      "common_name": "फिलोडेंड्रोन वेरीकोसुम",
+      "description": "फिलोडेंड्रोन वेरीकोसुम एक उष्णकटिबंधीय लताओं वाली पौधा है, जिसके मखमली, दिल के आकार के पत्ते होते हैं और इसकी नसें स्पष्ट होती हैं।"
+    },
+    "zh": {
+      "common_name": "毛茸毛爬山虎",
+      "description": "Philodendron verrucosum 是一种热带藤本植物，具有天鹅绒般的心形叶子，显著的脉络。"
+    },
+    "ja": {
+      "common_name": "フィロデンドロン・ヴェルルコスム",
+      "description": "フィロデンドロン・ヴェルルコスムは、ベルベットのような心形の葉と特徴的な静脈を持つ熱帯性のつる植物です。"
+    },
+    "ko": {
+      "common_name": "필로덴드론 베루코숨",
+      "description": "필로덴드론 베루코숨은 벨벳 같은 심장 모양의 잎을 가진 열대성 덩굴 식물로 뚜렷한 맥이 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/philodendron-verrucosum",
+      "https://www.gardenia.net/plant/philodendron-verrucosum"
+    ]
+  }
+}

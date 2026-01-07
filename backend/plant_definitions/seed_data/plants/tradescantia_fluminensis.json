@@ -1,0 +1,237 @@
+{
+  "external_id": "tradescantia_fluminensis",
+  "name": "Wandering Jew",
+  "latin": "Tradescantia fluminensis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tradescantia_fluminensis.jpg",
+  "image_thumb": "tradescantia_fluminensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी की मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "점토질 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe temperatury",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖的温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Moderate humidity",
+          "pl": "Umiarkowana wilgotność",
+          "de": "Mäßige Luftfeuchtigkeit",
+          "fr": "Humidité modérée",
+          "it": "Umidità moderata",
+          "es": "Humedad moderada",
+          "pt": "Humidade moderada",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "適度な湿度",
+          "ko": "적당한 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Łagodnie toksyczne",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossico",
+          "es": "Levemente tóxico",
+          "pt": "Levemente tóxico",
+          "ar": "قليلاً سام",
+          "hi": "हल्के रूप से विषाक्त",
+          "zh": "轻微有毒",
+          "ja": "軽度の毒性",
+          "ko": "약간 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita veloce",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज वृद्धि",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Wandering Jew",
+      "description": "Tradescantia fluminensis, commonly known as Wandering Jew, is a fast-growing, ground-covering plant. It thrives in warm, humid environments and is easy to care for indoors."
+    },
+    "pl": {
+      "common_name": "Wędrujący Żyd",
+      "description": "Tradescantia fluminensis, znana jako Wędrujący Żyd, to szybko rosnąca roślina okrywowa. Rośnie w ciepłych, wilgotnych warunkach i łatwo się ją pielęgnuje w domu."
+    },
+    "de": {
+      "common_name": "Wandernde Judenpflanze",
+      "description": "Tradescantia fluminensis, auch bekannt als Wandernde Judenpflanze, ist eine schnell wachsende, bodendeckende Pflanze. Sie gedeiht in warmen, feuchten Umgebungen und ist pflegeleicht."
+    },
+    "fr": {
+      "common_name": "Tradescantia du Brésil",
+      "description": "Tradescantia fluminensis, connue sous le nom de Tradescantia du Brésil, est une plante couvre-sol à croissance rapide. Elle prospère dans des environnements chauds et humides et est facile à entretenir en intérieur."
+    },
+    "it": {
+      "common_name": "Tradescantia del Brasile",
+      "description": "Tradescantia fluminensis, conosciuta come Tradescantia del Brasile, è una pianta da copertura a crescita rapida. Cresce in ambienti caldi e umidi ed è facile da curare in casa."
+    },
+    "es": {
+      "common_name": "Tradescantia del Brasil",
+      "description": "Tradescantia fluminensis, conocida como Tradescantia del Brasil, es una planta de rápido crecimiento que cubre el suelo. Crece en ambientes cálidos y húmedos y es fácil de cuidar en interiores."
+    },
+    "pt": {
+      "common_name": "Tradescantia do Brasil",
+      "description": "Tradescantia fluminensis, conhecida como Tradescantia do Brasil, é uma planta rasteira de rápido crescimento. Ela prospera em ambientes quentes e úmidos, sendo fácil de cuidar dentro de casa."
+    },
+    "ar": {
+      "common_name": "تريدسكانتيا البرازيلية",
+      "description": "تعتبر تريدسكانتيا الفلومينينسيس المعروفة بتريدسكانتيا البرازيلية نباتًا سريع النمو. تنمو في البيئات الدافئة والرطبة وسهلة العناية في الداخل."
+    },
+    "hi": {
+      "common_name": "वैंडरिंग यहूदी",
+      "description": "ट्रेडेसकेंटिया फ्लुमिनेंसिस, जिसे वैंडरिंग यहूदी के नाम से जाना जाता है, एक तेजी से बढ़ने वाला, ज़मीन को ढकने वाला पौधा है। यह गर्म, आर्द्र वातावरण में अच्छा बढ़ता है और इसे अंदर रखना आसान है।"
+    },
+    "zh": {
+      "common_name": "流浪的犹太人",
+      "description": "Tradescantia fluminensis，通常称为流浪的犹太人，是一种快速生长的地被植物。它在温暖、潮湿的环境中生长良好，且易于室内护理。"
+    },
+    "ja": {
+      "common_name": "ワンダリング・ジュー",
+      "description": "Tradescantia fluminensis、一般にワンダリング・ジューとして知られるこの植物は、急速に成長するグラウンドカバー植物です。温暖で湿度の高い環境で育ち、屋内での管理も簡単です。"
+    },
+    "ko": {
+      "common_name": "방황하는 유대인",
+      "description": "트레데스칸티아 플루미넨시스, 흔히 방황하는 유대인으로 알려진 이 식물은 빠르게 자라는 지면 덮개 식물입니다. 따뜻하고 습한 환경에서 잘 자라며 실내에서 돌보기가 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/tradescantia-fluminensis",
+      "https://www.rhs.org.uk/plants/21270/tradescantia-fluminensis"
+    ]
+  }
+}

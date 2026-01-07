@@ -1,0 +1,236 @@
+{
+  "external_id": "washingtonia_filifera",
+  "name": "California Fan Palm",
+  "latin": "Washingtonia filifera",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "washingtonia_filifera.jpg",
+  "image_thumb": "washingtonia_filifera.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, well-drained",
+          "pl": "Piaszczysta",
+          "de": "Sandig",
+          "fr": "Sableux",
+          "it": "Sabbioso",
+          "es": "Arenoso",
+          "pt": "Arenoso",
+          "ar": "تربة رملية",
+          "hi": "रेतीली मिट्टी",
+          "zh": "沙质土壤",
+          "ja": "砂質土",
+          "ko": "모래 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Mało wody",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめな水",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm tolerant",
+          "pl": "Ciepłolubna",
+          "de": "Wärmeliebend",
+          "fr": "Aime la chaleur",
+          "it": "Ama il caldo",
+          "es": "Amante del calor",
+          "pt": "Gosta de calor",
+          "ar": "محبة للدفء",
+          "hi": "गर्म पसंद",
+          "zh": "喜温暖",
+          "ja": "暖かさ好む",
+          "ko": "따뜻함 선호"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrig",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "سريع النمو",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "California Fan Palm",
+      "description": "Washingtonia filifera is a large palm native to desert oases of the southwestern United States. It thrives in full sun and well-drained sandy soil. The species is drought tolerant once established."
+    },
+    "pl": {
+      "common_name": "Waszyngtonia kalifornijska",
+      "description": "Washingtonia filifera to duża palma pochodząca z pustynnych oaz południowo-zachodnich Stanów Zjednoczonych. Wymaga pełnego słońca i dobrze przepuszczalnej gleby. Jest odporna na suszę."
+    },
+    "de": {
+      "common_name": "Kalifornische Fächerpalme",
+      "description": "Washingtonia filifera ist eine große Palme aus Wüstenoasen im Südwesten der USA. Sie bevorzugt volle Sonne und sandigen, gut drainierten Boden. Etablierte Pflanzen sind trockenheitsresistent."
+    },
+    "fr": {
+      "common_name": "Palmier de Californie",
+      "description": "Washingtonia filifera est un grand palmier originaire des oasis désertiques du sud-ouest des États-Unis. Il pousse en plein soleil dans un sol bien drainé. Il tolère bien la sécheresse."
+    },
+    "it": {
+      "common_name": "Palma della California",
+      "description": "Washingtonia filifera è una grande palma originaria delle oasi desertiche del sud-ovest degli Stati Uniti. Predilige pieno sole e terreni sabbiosi drenanti. È resistente alla siccità."
+    },
+    "es": {
+      "common_name": "Palmera de abanico de California",
+      "description": "Washingtonia filifera es una palmera grande originaria de oasis desérticos del suroeste de Estados Unidos. Requiere pleno sol y suelo bien drenado. Tolera bien la sequía."
+    },
+    "pt": {
+      "common_name": "Palmeira-da-Califórnia",
+      "description": "Washingtonia filifera é uma palmeira grande nativa de oásis desérticos do sudoeste dos Estados Unidos. Prefere sol pleno e solo arenoso drenado. É tolerante à seca."
+    },
+    "ar": {
+      "common_name": "نخيل كاليفورنيا",
+      "description": "نبات Washingtonia filifera نخيل كبير موطنه واحات صحراوية في جنوب غرب الولايات المتحدة. يحتاج إلى شمس كاملة وتربة جيدة التصريف. يتحمل الجفاف بشكل جيد."
+    },
+    "hi": {
+      "common_name": "कैलिफ़ोर्निया फैन पाम",
+      "description": "Washingtonia filifera एक बड़ा ताड़ है जो अमेरिका के दक्षिण-पश्चिमी रेगिस्तानी क्षेत्रों का मूल निवासी है। इसे पूरी धूप और अच्छी जल निकासी वाली मिट्टी चाहिए। यह सूखा सहनशील है।"
+    },
+    "zh": {
+      "common_name": "加州蒲葵",
+      "description": "Washingtonia filifera 原产于美国西南部沙漠绿洲，是一种高大的棕榈。适合全日照和排水良好的沙质土壤。成株具有较强耐旱性。"
+    },
+    "ja": {
+      "common_name": "カリフォルニアファンパーム",
+      "description": "Washingtonia filifera は米国南西部の砂漠オアシス原産の大型ヤシです。直射日光と水はけの良い土壌を好みます。乾燥に強い種です。"
+    },
+    "ko": {
+      "common_name": "캘리포니아 팬야자",
+      "description": "Washingtonia filifera는 미국 남서부 사막 오아시스가 원산지인 큰 야자입니다. 강한 햇빛과 배수가 좋은 토양을 선호합니다. 건조에 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=c575",
+      "https://edis.ifas.ufl.edu/publication/ST657",
+      "https://www.rhs.org.uk/plants/18799/washingtonia-filifera/details"
+    ]
+  }
+}

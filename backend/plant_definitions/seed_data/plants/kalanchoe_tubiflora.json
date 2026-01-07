@@ -1,0 +1,235 @@
+{
+  "external_id": "kalanchoe_tubiflora",
+  "name": "Mother of Thousands",
+  "latin": "Kalanchoe tubiflora",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_tubiflora.jpg",
+  "image_thumb": "kalanchoe_tubiflora.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Sol intenso",
+          "pt": "Sol intenso",
+          "ar": "ضوء قوي",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光照",
+          "ja": "強い光",
+          "ko": "강한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut drainierend",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenável",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlewanie",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rade",
+          "es": "Riego escaso",
+          "pt": "Rega escassa",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Very easy",
+          "pl": "Bardzo łatwa",
+          "de": "Sehr leicht",
+          "fr": "Très facile",
+          "it": "Molto facile",
+          "es": "Muy fácil",
+          "pt": "Muito fácil",
+          "ar": "سهل جداً",
+          "hi": "बहुत आसान",
+          "zh": "非常容易",
+          "ja": "とても簡単",
+          "ko": "매우 쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–26°C",
+          "pl": "18–26°C",
+          "de": "18–26°C",
+          "fr": "18–26°C",
+          "it": "18–26°C",
+          "es": "18–26°C",
+          "pt": "18–26°C",
+          "ar": "18–26°م",
+          "hi": "18–26°C",
+          "zh": "18–26°C",
+          "ja": "18–26°C",
+          "ko": "18–26°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchte",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Humedad baja",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna dla zwierząt",
+          "de": "Giftig für Tiere",
+          "fr": "Toxique animaux",
+          "it": "Tossica animali",
+          "es": "Tóxica mascotas",
+          "pt": "Tóxica animais",
+          "ar": "سامة للحيوانات",
+          "hi": "पालतू के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペット有毒",
+          "ko": "반려동물 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Mother of Thousands",
+      "description": "Kalanchoe tubiflora is a succulent known for producing many plantlets along its leaf edges. It thrives in bright light and dry conditions. Overwatering can easily cause root rot."
+    },
+    "pl": {
+      "common_name": "Żyworódka pierzasta",
+      "description": "Kalanchoe tubiflora to sukulent wytwarzający liczne rozmnóżki na liściach. Lubi jasne stanowiska i suche podłoże. Nadmiar wody może prowadzić do gnicia korzeni."
+    },
+    "de": {
+      "common_name": "Brutblatt",
+      "description": "Kalanchoe tubiflora ist eine sukkulente Pflanze mit vielen Kindel an den Blättern. Sie bevorzugt viel Licht und wenig Wasser. Staunässe sollte vermieden werden."
+    },
+    "fr": {
+      "common_name": "Mère de milliers",
+      "description": "Kalanchoe tubiflora est une plante succulente qui produit de nombreux rejets. Elle aime la lumière vive et les sols secs. Un arrosage excessif peut être nocif."
+    },
+    "it": {
+      "common_name": "Madre di migliaia",
+      "description": "Kalanchoe tubiflora è una succulenta che produce molte piantine sui margini fogliari. Preferisce luce intensa e poca acqua. L'eccesso d'acqua causa marciume."
+    },
+    "es": {
+      "common_name": "Madre de miles",
+      "description": "Kalanchoe tubiflora es una suculenta que forma numerosas plántulas. Necesita mucha luz y riego limitado. El exceso de agua es perjudicial."
+    },
+    "pt": {
+      "common_name": "Mãe de milhares",
+      "description": "Kalanchoe tubiflora é uma suculenta que produz muitas mudas nas folhas. Gosta de luz intensa e pouca rega. O excesso de água pode causar apodrecimento."
+    },
+    "ar": {
+      "common_name": "أم الآلاف",
+      "description": "كالانشو توبفلورا نبات عصاري ينتج شتلات كثيرة على الأوراق. يفضل الضوء القوي والري القليل. الإفراط في الري يسبب تعفن الجذور."
+    },
+    "hi": {
+      "common_name": "मदर ऑफ थाउज़ेंड्स",
+      "description": "Kalanchoe tubiflora एक रसीला पौधा है जो पत्तियों पर कई नए पौधे बनाता है। इसे तेज़ रोशनी और कम पानी पसंद है। ज़्यादा पानी नुकसानदायक है।"
+    },
+    "zh": {
+      "common_name": "落地生根",
+      "description": "Kalanchoe tubiflora 是一种多肉植物，会在叶缘产生大量小植株。它适合强光和干燥环境。浇水过多容易烂根。"
+    },
+    "ja": {
+      "common_name": "子宝草",
+      "description": "カランコエ・ツビフローラは葉の縁に多数の子株を作る多肉植物です。強い光と乾燥した環境を好みます。水の与えすぎに注意が必要です。"
+    },
+    "ko": {
+      "common_name": "마더 오브 사우전즈",
+      "description": "Kalanchoe tubiflora는 잎 가장자리에 많은 새끼 식물을 만드는 다육식물입니다. 밝은 빛과 건조한 환경을 선호합니다. 과습은 피해야 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9400/kalanchoe-tubiflora/details",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-kalanchoe/"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "thymus_vulgaris",
+  "name": "Thyme",
+  "latin": "Thymus vulgaris",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "thymus_vulgaris.jpg",
+  "image_thumb": "thymus_vulgaris.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "日当たり良好",
+          "ko": "햇볕 잘 드는 곳"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy, loamy",
+          "pl": "Piaszczysta, gliniasta",
+          "de": "Sandig, lehmig",
+          "fr": "Sableux, argileux",
+          "it": "Sabbioso, argilloso",
+          "es": "Arenoso, arcilloso",
+          "pt": "Arenoso, argiloso",
+          "ar": "رملي، طيني",
+          "hi": "रेत, दोमट",
+          "zh": "沙质, 黏土",
+          "ja": "砂質、粘土",
+          "ko": "모래, 점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Bas",
+          "it": "Basso",
+          "es": "Bajo",
+          "pt": "Baixo",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact shrub",
+          "pl": "Kompaktowy krzew",
+          "de": "Kompakter Strauch",
+          "fr": "Arbuste compact",
+          "it": "Arbusto compatto",
+          "es": "Arbusto compacto",
+          "pt": "Arbusto compacto",
+          "ar": "شجيرة مدمجة",
+          "hi": "संकुचित झाड़ी",
+          "zh": "紧凑灌木",
+          "ja": "コンパクトな低木",
+          "ko": "콤팩트한 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Thyme",
+      "description": "Thymus vulgaris, commonly known as thyme, is a fragrant herb native to the Mediterranean region. It is often used in cooking and has medicinal properties."
+    },
+    "pl": {
+      "common_name": "Tymianek",
+      "description": "Thymus vulgaris, znany jako tymianek, to aromatyczne zioło pochodzące z regionu Morza Śródziemnego. Często wykorzystywane w kuchni, ma również właściwości lecznicze."
+    },
+    "de": {
+      "common_name": "Thymian",
+      "description": "Thymus vulgaris, allgemein bekannt als Thymian, ist ein duftendes Kraut, das aus dem Mittelmeerraum stammt. Es wird oft in der Küche verwendet und hat medizinische Eigenschaften."
+    },
+    "fr": {
+      "common_name": "Thym",
+      "description": "Thymus vulgaris, communément appelé thym, est une herbe aromatique originaire de la région méditerranéenne. Elle est souvent utilisée en cuisine et possède des propriétés médicinales."
+    },
+    "it": {
+      "common_name": "Timo",
+      "description": "Thymus vulgaris, noto come timo, è un'erba profumata originaria della regione mediterranea. Viene spesso utilizzato in cucina e ha proprietà medicinali."
+    },
+    "es": {
+      "common_name": "Tomillo",
+      "description": "Thymus vulgaris, conocido como tomillo, es una hierba aromática originaria de la región mediterránea. Se usa comúnmente en la cocina y tiene propiedades medicinales."
+    },
+    "pt": {
+      "common_name": "Tomilho",
+      "description": "Thymus vulgaris, conhecido como tomilho, é uma erva aromática originária da região mediterrânea. É frequentemente usado na culinária e possui propriedades medicinais."
+    },
+    "ar": {
+      "common_name": "الزعتر",
+      "description": "ثيموس فولغاريس، المعروف بالزعتر، هو عشبة عطرية موطنها منطقة البحر الأبيض المتوسط. يُستخدم في الطهي وله خصائص طبية."
+    },
+    "hi": {
+      "common_name": "तैयम",
+      "description": "थाइमस वल्गारिस, जिसे थाइम कहा जाता है, एक खुशबूदार जड़ी-बूटी है जो भूमध्य क्षेत्र का मूल निवासी है। इसे अक्सर खाना पकाने में इस्तेमाल किया जाता है और इसमें औषधीय गुण होते हैं।"
+    },
+    "zh": {
+      "common_name": "百里香",
+      "description": "百里香（Thymus vulgaris）是一种芳香草本植物，原产于地中海地区。它常用于烹饪，并具有药用价值。"
+    },
+    "ja": {
+      "common_name": "タイム",
+      "description": "タイム（Thymus vulgaris）は地中海地方原産の香り高いハーブです。料理に使われることが多く、薬効成分もあります。"
+    },
+    "ko": {
+      "common_name": "타임",
+      "description": "타임(Thymus vulgaris)은 지중해 지역 원산지의 향기로운 허브입니다. 주로 요리에 사용되며 약용 효과가 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=158",
+      "https://www.gardeningknowhow.com/edible/herbs/thyme/thyme-care.htm",
+      "https://www.bhg.com/gardening/pests/insects-diseases/thyme/"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "mandevilla_sanderi",
+  "name": "Mandevilla",
+  "latin": "Mandevilla sanderi",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "mandevilla_sanderi.jpg",
+  "image_thumb": "mandevilla_sanderi.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright sun",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Soleil vif",
+          "it": "Sole pieno",
+          "es": "Sol brillante",
+          "pt": "Sol intenso",
+          "ar": "شمس ساطعة",
+          "hi": "तेज धूप",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Drenante",
+          "es": "Drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Régulier",
+          "it": "Regolare",
+          "es": "Regular",
+          "pt": "Regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期浇水",
+          "ja": "定期給水",
+          "ko": "규칙적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko trująca",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Levemente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微有毒",
+          "ja": "軽い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletternd",
+          "fr": "Grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "लता",
+          "zh": "藤本",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Brazilian jasmine",
+      "description": "Mandevilla sanderi is a tropical climbing plant known for its glossy leaves and trumpet-shaped flowers. It thrives in bright sunlight and warm indoor conditions. Regular watering during growth supports continuous blooming."
+    },
+    "pl": {
+      "common_name": "Mandevilla",
+      "description": "Mandevilla sanderi to tropikalne pnącze o błyszczących liściach i dużych kwiatach. Najlepiej rośnie w jasnym miejscu i ciepłym wnętrzu. Wymaga regularnego podlewania w okresie wzrostu."
+    },
+    "de": {
+      "common_name": "Dipladenie",
+      "description": "Mandevilla sanderi ist eine tropische Kletterpflanze mit glänzenden Blättern. Sie benötigt viel Licht und warme Temperaturen. Gleichmäßiges Gießen fördert die Blütenbildung."
+    },
+    "fr": {
+      "common_name": "Dipladénia",
+      "description": "Mandevilla sanderi est une plante grimpante tropicale aux feuilles brillantes. Elle préfère une lumière vive et la chaleur. Un arrosage régulier favorise une floraison abondante."
+    },
+    "it": {
+      "common_name": "Mandevilla",
+      "description": "Mandevilla sanderi è una pianta tropicale rampicante con foglie lucide. Cresce bene in piena luce e temperature calde. L'annaffiatura regolare sostiene la fioritura."
+    },
+    "es": {
+      "common_name": "Dipladenia",
+      "description": "Mandevilla sanderi es una planta trepadora tropical de hojas brillantes. Necesita mucha luz y clima cálido. El riego regular ayuda a mantener sus flores."
+    },
+    "pt": {
+      "common_name": "Dipladênia",
+      "description": "Mandevilla sanderi é uma trepadeira tropical de folhas brilhantes. Prefere sol intenso e calor. Regas regulares favorecem a floração."
+    },
+    "ar": {
+      "common_name": "مانديفيلا",
+      "description": "مانديفيلا سانديري نبات متسلق استوائي بأوراق لامعة. يحتاج إلى ضوء قوي ودرجات حرارة دافئة. الري المنتظم يساعد على الإزهار."
+    },
+    "hi": {
+      "common_name": "मैंडविला",
+      "description": "मैंडविला सैंडरी एक उष्णकटिबंधीय लता है जिसकी पत्तियाँ चमकदार होती हैं। इसे तेज रोशनी और गर्म वातावरण पसंद है। नियमित सिंचाई से फूल अच्छे आते हैं।"
+    },
+    "zh": {
+      "common_name": "曼德维拉",
+      "description": "Mandevilla sanderi 是一种热带藤本植物，叶片有光泽。它喜欢强光和温暖环境。生长期需定期浇水以促进开花。"
+    },
+    "ja": {
+      "common_name": "マンデビラ",
+      "description": "マンデビラは光沢のある葉を持つ熱帯性のつる植物です。明るい日光と暖かさを好みます。成長期には定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "만데빌라",
+      "description": "만데빌라 산데리는 광택 있는 잎을 가진 열대 덩굴식물입니다. 밝은 햇빛과 따뜻한 환경을 선호합니다. 성장기에는 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/mandevilla/growing-guide",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b131",
+      "https://edis.ifas.ufl.edu/publication/FP375"
+    ]
+  }
+}

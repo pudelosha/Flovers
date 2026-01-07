@@ -1,0 +1,238 @@
+{
+  "external_id": "melissa_officinalis",
+  "name": "Lemon Balm",
+  "latin": "Melissa officinalis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "melissa_officinalis.jpg",
+  "image_thumb": "melissa_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect sun",
+          "pl": "Jasne półsłońce",
+          "de": "Helles Halblicht",
+          "fr": "Lumière vive",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい日陰",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainant",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne podlewanie",
+          "de": "Regelmäßig gießen",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的な水やり",
+          "ko": "규칙적 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa w uprawie",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "育てやすい",
+          "ko": "쉬운 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°م",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25℃",
+          "ko": "15–25℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة معتدلة",
+          "hi": "मध्यम नमी",
+          "zh": "中等湿度",
+          "ja": "普通の湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing herb",
+          "pl": "Szybki wzrost",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "سريع النمو",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长迅速",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lemon Balm",
+      "description": "Melissa officinalis is a fragrant perennial herb in the mint family. It prefers bright light and evenly moist soil. Leaves are commonly harvested for culinary and herbal uses."
+    },
+    "pl": {
+      "common_name": "Melisa lekarska",
+      "description": "Melissa officinalis to aromatyczna bylina z rodziny jasnotowatych. Najlepiej rośnie w jasnym miejscu i wilgotnej glebie. Liście są używane kulinarnie i leczniczo."
+    },
+    "de": {
+      "common_name": "Zitronenmelisse",
+      "description": "Melissa officinalis ist ein mehrjähriges Kraut aus der Lippenblütlerfamilie. Sie mag helles Licht und gleichmäßig feuchte Erde. Die Blätter werden vielseitig genutzt."
+    },
+    "fr": {
+      "common_name": "Mélisse officinale",
+      "description": "Melissa officinalis est une plante vivace aromatique de la famille des lamiacées. Elle apprécie la lumière vive et un sol humide. Les feuilles sont utilisées en cuisine et en tisane."
+    },
+    "it": {
+      "common_name": "Melissa",
+      "description": "Melissa officinalis è un'erba perenne aromatica della famiglia delle Lamiaceae. Preferisce luce intensa e terreno umido. Le foglie sono usate a scopo culinario."
+    },
+    "es": {
+      "common_name": "Toronjil",
+      "description": "Melissa officinalis es una hierba perenne aromática de la familia de las mentas. Requiere buena luz y riego regular. Sus hojas se usan en cocina y infusiones."
+    },
+    "pt": {
+      "common_name": "Erva-cidreira",
+      "description": "Melissa officinalis é uma erva perene aromática da família da hortelã. Prefere luz brilhante e solo úmido. As folhas são usadas em chás e culinária."
+    },
+    "ar": {
+      "common_name": "بلسم الليمون",
+      "description": "Melissa officinalis نبات عشبي معمر عطري من فصيلة النعناع. يفضل الضوء الجيد والتربة الرطبة. تُستخدم أوراقه في الطهي والمشروبات."
+    },
+    "hi": {
+      "common_name": "लेमन बाम",
+      "description": "Melissa officinalis पुदीना परिवार की एक सुगंधित बहुवर्षीय जड़ी है। इसे तेज़ रोशनी और नम मिट्टी पसंद है। पत्तियाँ खाने और औषधि में उपयोग होती हैं।"
+    },
+    "zh": {
+      "common_name": "柠檬香蜂草",
+      "description": "Melissa officinalis 是唇形科的多年生芳香草本植物。喜欢明亮光照和湿润土壤。叶片常用于烹饪和草本用途。"
+    },
+    "ja": {
+      "common_name": "レモンバーム",
+      "description": "Melissa officinalis はシソ科の多年生ハーブです。明るい場所と湿った土を好みます。葉は料理やハーブティーに使われます。"
+    },
+    "ko": {
+      "common_name": "레몬밤",
+      "description": "Melissa officinalis 는 민트과의 향기로운 다년생 허브입니다. 밝은 빛과 촉촉한 토양을 선호합니다. 잎은 요리와 차에 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11171/melissa-officinalis/details",
+      "https://plants.ces.ncsu.edu/plants/melissa-officinalis/",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b830"
+    ]
+  }
+}

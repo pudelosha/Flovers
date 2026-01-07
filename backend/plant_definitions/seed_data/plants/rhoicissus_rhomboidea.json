@@ -1,0 +1,237 @@
+{
+  "external_id": "rhoicissus_rhomboidea",
+  "name": "Rhoicissus rhomboidea",
+  "latin": "Rhoicissus rhomboidea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "rhoicissus_rhomboidea.jpg",
+  "image_thumb": "rhoicissus_rhomboidea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中くらいの光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchniczna",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी वाली मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土質の土",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري ماء معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to moderate",
+          "pl": "Niskie do średniego",
+          "de": "Niedrig bis mittel",
+          "fr": "Bas à modéré",
+          "it": "Basso a moderato",
+          "es": "Bajo a moderado",
+          "pt": "Baixo a moderado",
+          "ar": "منخفض إلى معتدل",
+          "hi": "निम्न से मध्यम",
+          "zh": "低至中等",
+          "ja": "低から中程度",
+          "ko": "낮음에서 보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing",
+          "pl": "Pnącze",
+          "de": "Kletternd",
+          "fr": "Grimpant",
+          "it": "Rampicante",
+          "es": "Trepa",
+          "pt": "Trepar",
+          "ar": "تسلق",
+          "hi": "चढ़ाई करने वाला",
+          "zh": "攀爬",
+          "ja": "登る",
+          "ko": "기어오르는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "A vigorous climbing plant with glossy, rhomboid leaves. It thrives in warm, humid environments and can be used as a decorative climber in gardens or indoors."
+    },
+    "pl": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Roślinna pnąca o błyszczących, romboidalnych liściach. Dobrze rośnie w ciepłych, wilgotnych warunkach i może być używana jako ozdobna roślina pnąca w ogrodach lub wewnątrz."
+    },
+    "de": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Eine kräftige Kletterpflanze mit glänzenden, rhombischen Blättern. Sie gedeiht in warmen, feuchten Umgebungen und eignet sich als dekorative Kletterpflanze in Gärten oder drinnen."
+    },
+    "fr": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Plante grimpante vigoureuse avec des feuilles rhomboïdes brillantes. Elle prospère dans des environnements chauds et humides et peut être utilisée comme plante grimpante décorative dans les jardins ou à l'intérieur."
+    },
+    "it": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Una pianta rampicante vigorosa con foglie romboidali lucide. Cresce bene in ambienti caldi e umidi ed è utilizzabile come pianta rampicante decorativa nei giardini o in casa."
+    },
+    "es": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Planta trepadora vigorosa con hojas romboides brillantes. Prospera en entornos cálidos y húmedos y puede utilizarse como planta trepadora decorativa en jardines o en interiores."
+    },
+    "pt": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "Planta trepadeira vigorosa com folhas romboides brilhantes. Ela prospera em ambientes quentes e úmidos e pode ser usada como uma trepadeira decorativa em jardins ou dentro de casa."
+    },
+    "ar": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "نبات متسلق قوي ذو أوراق ماسية لامعة. يزدهر في البيئات الدافئة والرطبة ويمكن استخدامه كنبات زينة متسلق في الحدائق أو في الداخل."
+    },
+    "hi": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "चमकदार, हीरे के आकार के पत्तों वाली एक मजबूत चढ़ाई करने वाली पौध। यह गर्म, आर्द्र वातावरण में अच्छा बढ़ता है और बगीचों या घरों में सजावटी चढ़ाई पौधे के रूप में उपयोग किया जा सकता है।"
+    },
+    "zh": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "一种具有光滑菱形叶子的强健攀缘植物。它在温暖、潮湿的环境中茁壮成长，可以用作花园或室内的装饰性攀缘植物。"
+    },
+    "ja": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "光沢のある菱形の葉を持つ丈夫なつる植物。暖かく湿度の高い環境でよく成長し、庭や屋内で装飾的なつる植物として使用できます。"
+    },
+    "ko": {
+      "common_name": "Rhoicissus rhomboidea",
+      "description": "광택이 나는 마름모 모양의 잎을 가진 강한 덩굴 식물. 따뜻하고 습한 환경에서 잘 자라며 정원이나 실내에서 장식용 덩굴 식물로 사용할 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/229242/rhoicissus-rhomboidea",
+      "https://www.botanicalgarden.ubc.ca"
+    ]
+  }
+}

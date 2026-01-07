@@ -1,0 +1,236 @@
+{
+  "external_id": "narcissus_poeticus",
+  "name": "Poet's daffodil",
+  "latin": "Narcissus poeticus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "narcissus_poeticus.jpg",
+  "image_thumb": "narcissus_poeticus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun to part sun",
+          "pl": "Słońce do półcienia",
+          "de": "Sonne bis Halbschatten",
+          "fr": "Soleil à mi-ombre",
+          "it": "Sole a mezzombra",
+          "es": "Sol a semisombra",
+          "pt": "Sol a meia-sombra",
+          "ar": "شمس إلى ظل جزئي",
+          "hi": "पूरी से आंशिक धूप",
+          "zh": "全日照至半阴",
+          "ja": "日向から半日陰",
+          "ko": "양지에서 반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained loam",
+          "pl": "Przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno drenante",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "排水良好的土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno do umiarkowanie",
+          "de": "Kühl bis mild",
+          "fr": "Frais à doux",
+          "it": "Fresco a mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "بارد إلى معتدل",
+          "hi": "ठंडा से मध्यम",
+          "zh": "凉爽到温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘함에서 온화"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "平均的な湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczna po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossica se ingerita",
+          "es": "Tóxica si se ingiere",
+          "pt": "Tóxica se ingerida",
+          "ar": "سام عند الابتلاع",
+          "hi": "खाने पर विषाक्त",
+          "zh": "误食有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Spring flowering bulb",
+          "pl": "Wiosenna roślina cebulowa",
+          "de": "Frühjahrsblüher",
+          "fr": "Bulbe à floraison printanière",
+          "it": "Bulbosa primaverile",
+          "es": "Bulbo de primavera",
+          "pt": "Bulbo primaveril",
+          "ar": "بصلة مزهرة ربيعية",
+          "hi": "वसंत में फूलने वाला बल्ब",
+          "zh": "春季开花球根",
+          "ja": "春咲き球根",
+          "ko": "봄에 피는 구근"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Poet's daffodil",
+      "description": "Narcissus poeticus is a spring-flowering bulb known for its white petals and small red-edged cup. It prefers well-drained soil and full sun to partial shade. After flowering, foliage should be left to die back naturally."
+    },
+    "pl": {
+      "common_name": "Narcyz wonny",
+      "description": "Narcissus poeticus to wiosenna roślina cebulowa o białych płatkach i czerwono obrzeżonym przykoronku. Najlepiej rośnie w przepuszczalnej glebie i na stanowiskach słonecznych lub półcienistych. Liście należy pozostawić po kwitnieniu aż zaschną."
+    },
+    "de": {
+      "common_name": "Dichternarzisse",
+      "description": "Narcissus poeticus ist eine Frühlingszwiebel mit weißen Blüten und rotem Rand am Blütenbecher. Sie gedeiht in gut durchlässigem Boden bei Sonne bis Halbschatten. Das Laub sollte nach der Blüte einziehen dürfen."
+    },
+    "fr": {
+      "common_name": "Narcisse des poètes",
+      "description": "Narcissus poeticus est un bulbe printanier aux pétales blancs et à la petite couronne bordée de rouge. Il apprécie un sol bien drainé et une exposition ensoleillée à mi-ombragée. Le feuillage doit sécher naturellement après la floraison."
+    },
+    "it": {
+      "common_name": "Narciso dei poeti",
+      "description": "Narcissus poeticus è una bulbosa primaverile con petali bianchi e una corona con bordo rosso. Cresce bene in terreno drenante e in pieno sole o mezzombra. Dopo la fioritura il fogliame va lasciato seccare."
+    },
+    "es": {
+      "common_name": "Narciso de los poetas",
+      "description": "Narcissus poeticus es un bulbo primaveral con pétalos blancos y una pequeña corona con borde rojo. Prefiere suelos bien drenados y sol o semisombra. El follaje debe dejarse hasta que se seque tras la floración."
+    },
+    "pt": {
+      "common_name": "Narciso-dos-poetas",
+      "description": "Narcissus poeticus é um bolbo de primavera com pétalas brancas e uma pequena coroa com margem vermelha. Desenvolve-se melhor em solo bem drenado e sol a meia-sombra. As folhas devem secar naturalmente após a floração."
+    },
+    "ar": {
+      "common_name": "نرجس الشعراء",
+      "description": "نبات Narcissus poeticus بصلي يزهر في الربيع بأزهار بيضاء وحافة حمراء صغيرة. يفضل التربة جيدة التصريف والمواقع المشمسة أو شبه المظللة. يجب ترك الأوراق حتى تذبل بعد الإزهار."
+    },
+    "hi": {
+      "common_name": "कवि डैफोडिल",
+      "description": "Narcissus poeticus एक वसंत में फूलने वाला बल्ब है जिसमें सफेद पंखुड़ियाँ और लाल किनारे वाला छोटा कप होता है। यह अच्छी जल निकासी वाली मिट्टी और पूरी या आंशिक धूप पसंद करता है। फूल आने के बाद पत्तियों को सूखने देना चाहिए।"
+    },
+    "zh": {
+      "common_name": "诗人水仙",
+      "description": "Narcissus poeticus 是一种春季开花的球根植物，具有白色花瓣和红边小副冠。它喜欢排水良好的土壤和全日照或半阴环境。花后应让叶片自然枯萎。"
+    },
+    "ja": {
+      "common_name": "ポエットスイセン",
+      "description": "Narcissus poeticus は白い花弁と赤縁の小さな副花冠を持つ春咲き球根植物です。水はけの良い土と日向から半日陰を好みます。開花後は葉を自然に枯らします。"
+    },
+    "ko": {
+      "common_name": "시인 수선화",
+      "description": "Narcissus poeticus는 흰 꽃잎과 붉은 가장자리의 작은 관을 가진 봄 개화 구근입니다. 배수가 잘되는 토양과 양지 또는 반그늘을 선호합니다. 개화 후 잎은 자연스럽게 마르도록 둡니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/narcissus",
+      "https://plants.ces.ncsu.edu/plants/narcissus-poeticus/",
+      "https://www.gardenersworld.com/how-to/grow-plants/how-to-grow-narcissi/"
+    ]
+  }
+}

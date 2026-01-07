@@ -1,0 +1,237 @@
+{
+  "external_id": "oxalis_triangularis",
+  "name": "Purple Shamrock",
+  "latin": "Oxalis triangularis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "oxalis_triangularis.jpg",
+  "image_thumb": "oxalis_triangularis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광도"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水性が良い",
+          "ko": "배수 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to Medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyenne",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低〜中",
+          "ko": "낮음에서 중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping",
+          "pl": "Kępiasty",
+          "de": "Buschig",
+          "fr": "Tufte",
+          "it": "A ciuffo",
+          "es": "En racimo",
+          "pt": "Em touceiras",
+          "ar": "كتلة",
+          "hi": "झुंड",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "덩어리"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Purple Shamrock",
+      "description": "A striking plant with purple, heart-shaped leaves and small white flowers. Known for its easy care and vibrant foliage."
+    },
+    "pl": {
+      "common_name": "Fiołek Trójkątny",
+      "description": "Roślina o purpurowych, sercowatych liściach i drobnych białych kwiatach. Łatwa w pielęgnacji."
+    },
+    "de": {
+      "common_name": "Lila Glücksklee",
+      "description": "Eine Pflanze mit lila, herzförmigen Blättern und kleinen weißen Blumen. Einfach zu pflegen."
+    },
+    "fr": {
+      "common_name": "Trèfle pourpre",
+      "description": "Plante à feuilles en forme de cœur de couleur pourpre et petites fleurs blanches. Facile à entretenir."
+    },
+    "it": {
+      "common_name": "Trifoglio Viola",
+      "description": "Una pianta con foglie a forma di cuore di colore viola e piccoli fiori bianchi. Facile da curare."
+    },
+    "es": {
+      "common_name": "Trébol Púrpura",
+      "description": "Planta con hojas en forma de corazón de color púrpura y pequeñas flores blancas. Fácil de cuidar."
+    },
+    "pt": {
+      "common_name": "Trevo Roxo",
+      "description": "Planta com folhas roxas em forma de coração e pequenas flores brancas. Fácil de cuidar."
+    },
+    "ar": {
+      "common_name": "الكلأ الأرجواني",
+      "description": "نبات بأوراق على شكل قلب بلون أرجواني وزهور بيضاء صغيرة. سهل العناية."
+    },
+    "hi": {
+      "common_name": "बैंगनी शेमरॉक",
+      "description": "बैंगनी, दिल के आकार की पत्तियों और छोटे सफेद फूलों वाला पौधा। देखभाल में आसान।"
+    },
+    "zh": {
+      "common_name": "紫色三叶草",
+      "description": "一种具有紫色心形叶子和小白色花朵的植物。易于照料。"
+    },
+    "ja": {
+      "common_name": "パープルシャムロック",
+      "description": "紫色のハート型の葉と小さな白い花を持つ植物。お手入れが簡単です。"
+    },
+    "ko": {
+      "common_name": "보라색 클로버",
+      "description": "보라색 하트 모양의 잎과 작은 흰색 꽃을 가진 식물. 관리가 쉽습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardeningknowhow.com/ornamental/flowers/oxalis/oxalis-triangularis-purple-shamrock.htm",
+      "https://www.rhs.org.uk/plants/oxalis-triangularis"
+    ]
+  }
+}

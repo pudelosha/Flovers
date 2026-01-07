@@ -1,0 +1,237 @@
+{
+  "external_id": "salix_babylonica",
+  "name": "Weeping Willow",
+  "latin": "Salix babylonica",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "salix_babylonica.jpg",
+  "image_thumb": "salix_babylonica.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "Vollsonne",
+          "fr": "ensoleillé",
+          "it": "pieno sole",
+          "es": "sol directo",
+          "pt": "sol pleno",
+          "ar": "الشمس الكاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "日当たりの良い",
+          "ko": "완전한 태양"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained",
+          "pl": "dobrze przepuszczalna",
+          "de": "gut durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "مياه جيدة التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好な排水",
+          "ko": "배수가 좋은"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "regular",
+          "pl": "regularnie",
+          "de": "regelmäßig",
+          "fr": "régulier",
+          "it": "regolare",
+          "es": "regular",
+          "pt": "regular",
+          "ar": "منتظم",
+          "hi": "नियमित",
+          "zh": "定期",
+          "ja": "定期的",
+          "ko": "정기적"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "temperate",
+          "pl": "umiarkowany",
+          "de": "gemäßigt",
+          "fr": "tempéré",
+          "it": "temperato",
+          "es": "templado",
+          "pt": "temperado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "温带",
+          "ja": "温帯",
+          "ko": "온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "fast",
+          "pl": "szybki",
+          "de": "schnell",
+          "fr": "rapide",
+          "it": "veloce",
+          "es": "rápido",
+          "pt": "rápido",
+          "ar": "سريع",
+          "hi": "तेज",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Weeping Willow",
+      "description": "Salix babylonica, also known as the Weeping Willow, is a fast-growing tree with long, drooping branches. It thrives in moist, well-drained soils and requires regular watering."
+    },
+    "pl": {
+      "common_name": "Wierzba płacząca",
+      "description": "Salix babylonica, znana jako wierzba płacząca, to szybko rosnące drzewo z długimi, opadającymi gałęziami. Wymaga wilgotnej, dobrze przepuszczalnej gleby i regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Weidenbaum",
+      "description": "Salix babylonica, auch als Weidenbaum bekannt, ist ein schnell wachsender Baum mit langen, herabhängenden Zweigen. Er gedeiht in feuchten, gut durchlässigen Böden und benötigt regelmäßige Bewässerung."
+    },
+    "fr": {
+      "common_name": "Saule pleureur",
+      "description": "Salix babylonica, également appelé saule pleureur, est un arbre à croissance rapide avec de longues branches tombantes. Il pousse dans des sols bien drainés et nécessite un arrosage régulier."
+    },
+    "it": {
+      "common_name": "Salice piangente",
+      "description": "Salix babylonica, noto come salice piangente, è un albero a crescita rapida con rami lunghi e pendenti. Cresce in terreni ben drenati e richiede annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Sauce llorón",
+      "description": "Salix babylonica, también conocido como sauce llorón, es un árbol de rápido crecimiento con ramas largas y caídas. Crece en suelos bien drenados y requiere riego regular."
+    },
+    "pt": {
+      "common_name": "Salgueiro chorão",
+      "description": "Salix babylonica, também conhecido como salgueiro chorão, é uma árvore de rápido crescimento com longos galhos caídos. Cresce em solos bem drenados e necessita de rega regular."
+    },
+    "ar": {
+      "common_name": "صفصاف باكستاني",
+      "description": "Salix babylonica، المعروف أيضًا بالصفصاف الباكي، هو شجرة سريعة النمو مع فروع طويلة ومتدلية. تنمو في التربة جيدة التصريف وتحتاج إلى الري المنتظم."
+    },
+    "hi": {
+      "common_name": "विलपाटी विलो",
+      "description": "Salix babylonica, जिसे विलपाटी विलो के नाम से भी जाना जाता है, एक तेज़ी से बढ़ने वाला पेड़ है जिसमें लम्बी, लटकती शाखाएँ होती हैं। इसे नम, अच्छी जल निकासी वाली मिट्टी में बढ़ने की आवश्यकता होती है और नियमित पानी की जरूरत होती है।"
+    },
+    "zh": {
+      "common_name": "垂柳",
+      "description": "Salix babylonica，又名垂柳，是一种生长迅速的树木，具有长而下垂的枝条。它适应湿润、排水良好的土壤，需要定期浇水。"
+    },
+    "ja": {
+      "common_name": "しだれ柳",
+      "description": "Salix babylonica、別名しだれ柳は、成長が早い樹木で、長く垂れ下がる枝を持っています。湿った排水性の良い土壌で育ち、定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "울음버드나무",
+      "description": "Salix babylonica, 울음버드나무로도 알려진 이 나무는 빠르게 자라며 긴 가지가 아래로 처져 있습니다. 습기 있는 잘 배수되는 토양에서 자라며 정기적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/salix-babylonica",
+      "https://www.bhg.com/gardening/pests-insects-diseases/weeping-willow-tree-care/"
+    ]
+  }
+}

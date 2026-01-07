@@ -1,0 +1,237 @@
+{
+  "external_id": "picea_abies",
+  "name": "Norway Spruce",
+  "latin": "Picea abies",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "picea_abies.jpg",
+  "image_thumb": "picea_abies.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "En plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "完全な日光",
+          "ko": "완전한 태양"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Gleba kwaśna",
+          "de": "Saurer Boden",
+          "fr": "Sol acide",
+          "it": "Terreno acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "क्षारीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土壌",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당한"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cold",
+          "pl": "Zimno",
+          "de": "Kalt",
+          "fr": "Froid",
+          "it": "Freddo",
+          "es": "Frío",
+          "pt": "Frio",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "寒冷",
+          "ja": "寒い",
+          "ko": "차가운"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "不",
+          "ja": "いいえ",
+          "ko": "아니요"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow",
+          "pl": "Wolny",
+          "de": "Langsam",
+          "fr": "Lent",
+          "it": "Lento",
+          "es": "Lento",
+          "pt": "Lento",
+          "ar": "بطيء",
+          "hi": "धीमा",
+          "zh": "慢",
+          "ja": "遅い",
+          "ko": "느린"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Norway Spruce",
+      "description": "Picea abies, known as the Norway Spruce, is a large conifer native to Europe. It thrives in cool climates and prefers acidic soils."
+    },
+    "pl": {
+      "common_name": "Świerk pospolity",
+      "description": "Picea abies, znany jako świerk pospolity, to duża roślina iglasta, pochodząca z Europy. Woli chłodny klimat i kwaśną glebę."
+    },
+    "de": {
+      "common_name": "Gewöhnliche Fichte",
+      "description": "Picea abies, auch als gewöhnliche Fichte bekannt, ist ein großer Nadelbaum aus Europa. Er bevorzugt kühle Klimazonen und sauren Boden."
+    },
+    "fr": {
+      "common_name": "Epicéa commun",
+      "description": "Picea abies, également connu sous le nom d'épicéa commun, est un grand conifère originaire d'Europe. Il préfère les climats frais et les sols acides."
+    },
+    "it": {
+      "common_name": "Abete rosso",
+      "description": "Picea abies, conosciuto come abete rosso, è un grande albero di conifere originario dell'Europa. Predilige climi freschi e terreni acidi."
+    },
+    "es": {
+      "common_name": "Abeto común",
+      "description": "Picea abies, conocido como abeto común, es un gran árbol de hoja perenne originario de Europa. Prefiere climas fríos y suelos ácidos."
+    },
+    "pt": {
+      "common_name": "Abeto comum",
+      "description": "Picea abies, conhecido como abeto comum, é uma grande árvore conífera nativa da Europa. Prefere climas frios e solos ácidos."
+    },
+    "ar": {
+      "common_name": "شجرة التنوب النرويجية",
+      "description": "Picea abies، والمعروفة بشجرة التنوب النرويجية، هي شجرة صنوبر كبيرة تنمو في أوروبا. تفضل المناخات الباردة والتربة الحمضية."
+    },
+    "hi": {
+      "common_name": "नॉर्वे स्प्रूस",
+      "description": "Picea abies, जिसे नॉर्वे स्प्रूस के नाम से जाना जाता है, यूरोप का एक बड़ा शंकुधारी पेड़ है। यह ठंडे जलवायु में पनपता है और अम्लीय मिट्टी पसंद करता है।"
+    },
+    "zh": {
+      "common_name": "挪威云杉",
+      "description": "Picea abies，又名挪威云杉，是一种来自欧洲的大型松树。它喜欢寒冷的气候和酸性的土壤。"
+    },
+    "ja": {
+      "common_name": "ノルウェースプルース",
+      "description": "Picea abies、別名ノルウェースプルースは、ヨーロッパ原産の大型の針葉樹です。冷涼な気候と酸性土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "노르웨이 전나무",
+      "description": "Picea abies, 노르웨이 전나무로 알려진 이 나무는 유럽 원산지의 큰 침엽수입니다. 차가운 기후와 산성 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/picea-abies/",
+      "https://www.rhs.org.uk/plants/picea-abies"
+    ]
+  }
+}

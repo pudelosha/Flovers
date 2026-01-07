@@ -1,0 +1,237 @@
+{
+  "external_id": "sedum_spectabile",
+  "name": "Showy Stonecrop",
+  "latin": "Sedum spectabile",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sedum_spectabile.jpg",
+  "image_thumb": "sedum_spectabile.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full Sun",
+          "pl": "Pełne Słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein Soleil",
+          "it": "Sole Pieno",
+          "es": "Pleno Sol",
+          "pt": "Sol Pleno",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "完全な太陽",
+          "ko": "완전한 햇볕"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "良好な排水",
+          "ko": "잘 배수된"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niskie",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Basso",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "컴팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Showy Stonecrop",
+      "description": "Sedum spectabile is a drought-tolerant perennial with succulent leaves and pink star-shaped flowers. It thrives in full sun and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Rozchodnik ozdobny",
+      "description": "Sedum spectabile to roślina wieloletnia odporna na suszę, o mięsistych liściach i różowych gwiazdkowych kwiatach. Preferuje pełne słońce i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Fetthenne",
+      "description": "Sedum spectabile ist eine trockenresistente Staude mit fleischigen Blättern und rosa sternförmigen Blüten. Sie gedeiht in voller Sonne und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Orpin de Salon",
+      "description": "Sedum spectabile est une plante vivace tolérante à la sécheresse avec des feuilles succulentes et des fleurs roses en forme d'étoile. Elle préfère le plein soleil et un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Sedum Spettacolare",
+      "description": "Sedum spectabile è una pianta perenne resistente alla siccità con foglie succulente e fiori rosa a forma di stella. Preferisce il pieno sole e un terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Sedum Espectacular",
+      "description": "Sedum spectabile es una planta perenne resistente a la sequía, con hojas suculentas y flores rosadas en forma de estrella. Crece mejor a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Sedum Espectacular",
+      "description": "Sedum spectabile é uma planta perene resistente à seca, com folhas suculentas e flores rosas em forma de estrela. Prefere pleno sol e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "شجرة الزينة الراقية",
+      "description": "Sedum spectabile هو نبات معمّر مقاوم للجفاف بأوراق عصارية وزهور وردية على شكل نجمة. يفضل الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "शानदार पत्थर क्रॉप",
+      "description": "Sedum spectabile एक सूखा सहिष्णु बारहमासी पौधा है जिसमें मांसल पत्तियाँ और गुलाबी स्टार के आकार के फूल होते हैं। यह पूरी धूप और अच्छी तरह से जल निकासी वाली मिट्टी में पनपता है।"
+    },
+    "zh": {
+      "common_name": "华丽景天",
+      "description": "Sedum spectabile是一种耐旱的多年生植物，具有多肉叶和粉红色的星形花朵。它喜欢全日照和排水良好的土壤。"
+    },
+    "ja": {
+      "common_name": "華麗なセダム",
+      "description": "Sedum spectabileは耐乾性の多年草で、多肉質の葉とピンクの星形の花を持っています。完全な日光と排水の良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "화려한 돌나물",
+      "description": "Sedum spectabile은 다육성 잎과 분홍색 별 모양의 꽃을 가진 내건성 다년생 식물입니다. 완전한 햇빛과 잘 배수되는 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/sedum-spectabile-showy-stonecrop",
+      "https://www.rhs.org.uk/plants/14562/sedum-spectabile"
+    ]
+  }
+}

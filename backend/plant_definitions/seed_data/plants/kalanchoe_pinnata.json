@@ -1,0 +1,236 @@
+{
+  "external_id": "kalanchoe_pinnata",
+  "name": "Kalanchoe pinnata",
+  "latin": "Kalanchoe pinnata",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kalanchoe_pinnata.jpg",
+  "image_thumb": "kalanchoe_pinnata.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Drainant",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 우수"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadkie podlew.",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Annaffiature rare",
+          "es": "Riego escaso",
+          "pt": "Rega pouca",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ水やり",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temps",
+          "pl": "Ciepło",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilg.",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczna",
+          "de": "Giftig",
+          "fr": "Toxique",
+          "it": "Tossica",
+          "es": "Tóxica",
+          "pt": "Tóxica",
+          "ar": "سامة",
+          "hi": "विषैली",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright growth",
+          "pl": "Wzniesiony",
+          "de": "Aufrecht",
+          "fr": "Dressée",
+          "it": "Eretto",
+          "es": "Erecto",
+          "pt": "Ereto",
+          "ar": "قائم",
+          "hi": "सीधी वृद्धि",
+          "zh": "直立生长",
+          "ja": "直立型",
+          "ko": "직립형"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Air plant",
+      "description": "Kalanchoe pinnata is a succulent perennial native to Madagascar. It stores water in its fleshy leaves and prefers bright light with infrequent watering. The plant is known for producing plantlets along leaf edges."
+    },
+    "pl": {
+      "common_name": "Rozchodnik pierzasty",
+      "description": "Kalanchoe pinnata to sukulent pochodzący z Madagaskaru. Gromadzi wodę w mięsistych liściach i wymaga jasnego stanowiska oraz rzadkiego podlewania. Na brzegach liści tworzy młode rośliny."
+    },
+    "de": {
+      "common_name": "Brutblatt",
+      "description": "Kalanchoe pinnata ist eine sukkulente Pflanze aus Madagaskar. Sie speichert Wasser in dicken Blättern und benötigt viel Licht bei sparsamer Bewässerung. Charakteristisch sind Kindel an den Blatträndern."
+    },
+    "fr": {
+      "common_name": "Plante de vie",
+      "description": "Kalanchoe pinnata est une plante succulente originaire de Madagascar. Elle emmagasine l’eau dans ses feuilles et préfère une lumière vive avec peu d’arrosage. Elle produit de jeunes plantules sur les feuilles."
+    },
+    "it": {
+      "common_name": "Pianta dell’aria",
+      "description": "Kalanchoe pinnata è una succulenta originaria del Madagascar. Accumula acqua nelle foglie carnose e richiede molta luce con annaffiature limitate. Forma piccole piantine sui margini fogliari."
+    },
+    "es": {
+      "common_name": "Hoja del aire",
+      "description": "Kalanchoe pinnata es una suculenta nativa de Madagascar. Almacena agua en sus hojas gruesas y necesita luz intensa con riego escaso. Se reproduce formando hijuelos en las hojas."
+    },
+    "pt": {
+      "common_name": "Folha-da-fortuna",
+      "description": "Kalanchoe pinnata é uma planta suculenta de Madagascar. Armazena água nas folhas e prefere luz intensa com pouca rega. Produz mudas ao longo das bordas das folhas."
+    },
+    "ar": {
+      "common_name": "نبات الحياة",
+      "description": "كالانشو بيناتا نبات عصاري موطنه مدغشقر. يخزن الماء في أوراقه السميكة ويحتاج إلى ضوء ساطع وري قليل. يتميز بتكوين نباتات صغيرة على حواف الأوراق."
+    },
+    "hi": {
+      "common_name": "पाथरचट्टा",
+      "description": "Kalanchoe pinnata एक रसीला पौधा है जो मेडागास्कर का मूल निवासी है। यह अपनी मोटी पत्तियों में पानी जमा करता है और तेज रोशनी तथा कम पानी पसंद करता है। पत्तियों के किनारों पर नए पौधे बनते हैं।"
+    },
+    "zh": {
+      "common_name": "落地生根",
+      "description": "Kalanchoe pinnata 是原产于马达加斯加的多肉植物。它在肥厚的叶片中储存水分，喜明亮光照并需少量浇水。叶缘会长出小植株。"
+    },
+    "ja": {
+      "common_name": "セイロンベンケイ",
+      "description": "Kalanchoe pinnata はマダガスカル原産の多肉植物です。厚い葉に水を蓄え、明るい光と控えめな水やりを好みます。葉の縁に子株を形成します。"
+    },
+    "ko": {
+      "common_name": "에어플랜트",
+      "description": "Kalanchoe pinnata는 마다가스카르 원산의 다육식물입니다. 두꺼운 잎에 수분을 저장하며 밝은 빛과 적은 물을 선호합니다. 잎 가장자리에 새 개체가 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/kalanchoe-pinnata",
+      "https://www.rhs.org.uk/plants/9592/kalanchoe-pinnata/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a570"
+    ]
+  }
+}

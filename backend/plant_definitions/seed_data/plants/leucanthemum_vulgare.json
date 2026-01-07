@@ -1,0 +1,237 @@
+{
+  "external_id": "leucanthemum_vulgare",
+  "name": "Oxeye Daisy",
+  "latin": "Leucanthemum vulgare",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "leucanthemum_vulgare.jpg",
+  "image_thumb": "leucanthemum_vulgare.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Gleba przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Suolo drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura media",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Leicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to temperate",
+          "pl": "Chłodna umiarkowana",
+          "de": "Kühl gemäßigt",
+          "fr": "Tempéré frais",
+          "it": "Temperato fresco",
+          "es": "Templado fresco",
+          "pt": "Temperado fresco",
+          "ar": "معتدل بارد",
+          "hi": "शीतोष्ण",
+          "zh": "凉爽温带",
+          "ja": "冷涼",
+          "ko": "서늘한 온대"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Normal humidity",
+          "pl": "Zwykła wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité normale",
+          "it": "Umidità normale",
+          "es": "Humedad normal",
+          "pt": "Umidade normal",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "正常湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping perennial",
+          "pl": "Bylina kępowa",
+          "de": "Horstige Staude",
+          "fr": "Vivace en touffe",
+          "it": "Perenne cespitosa",
+          "es": "Perenne en mata",
+          "pt": "Perene em touceira",
+          "ar": "معمرة متكتلة",
+          "hi": "गुच्छेदार बारहमासी",
+          "zh": "丛生多年生",
+          "ja": "叢生多年草",
+          "ko": "군생 다년생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Oxeye Daisy",
+      "description": "Leucanthemum vulgare is a hardy perennial daisy native to Europe. It grows in meadows and grasslands and produces white flowers with yellow centers in summer."
+    },
+    "pl": {
+      "common_name": "Złocień właściwy",
+      "description": "Leucanthemum vulgare to wytrzymała bylina pochodząca z Europy. Rośnie na łąkach i pastwiskach, kwitnąc latem białymi kwiatami."
+    },
+    "de": {
+      "common_name": "Margerite",
+      "description": "Leucanthemum vulgare ist eine robuste Staude aus Europa. Sie wächst auf Wiesen und bildet im Sommer weiße Blüten."
+    },
+    "fr": {
+      "common_name": "Marguerite commune",
+      "description": "Leucanthemum vulgare est une vivace rustique originaire d’Europe. Elle pousse dans les prairies et fleurit en été."
+    },
+    "it": {
+      "common_name": "Margherita comune",
+      "description": "Leucanthemum vulgare è una perenne rustica europea. Cresce in prati e fiorisce in estate con fiori bianchi."
+    },
+    "es": {
+      "common_name": "Margarita común",
+      "description": "Leucanthemum vulgare es una planta perenne resistente de Europa. Habita praderas y florece en verano."
+    },
+    "pt": {
+      "common_name": "Margarida-dos-prados",
+      "description": "Leucanthemum vulgare é uma planta perene resistente da Europa. Cresce em prados e floresce no verão."
+    },
+    "ar": {
+      "common_name": "الأقحوان البري",
+      "description": "Leucanthemum vulgare نبات معمر قوي موطنه أوروبا. ينمو في المروج ويزهر صيفًا بأزهار بيضاء."
+    },
+    "hi": {
+      "common_name": "जंगली डेज़ी",
+      "description": "Leucanthemum vulgare यूरोप की एक मजबूत बारहमासी पौधा है। यह घास के मैदानों में उगता है और गर्मियों में फूल देता है।"
+    },
+    "zh": {
+      "common_name": "牛眼菊",
+      "description": "Leucanthemum vulgare 是原产欧洲的多年生植物。常见于草地，夏季开白色花。"
+    },
+    "ja": {
+      "common_name": "フランスギク",
+      "description": "Leucanthemum vulgare はヨーロッパ原産の多年草です。草原に生え、夏に白い花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "불란서국화",
+      "description": "Leucanthemum vulgare는 유럽 원산의 다년생 식물입니다. 초원에서 자라며 여름에 흰 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:201104-1",
+      "https://www.rhs.org.uk/plants/10628/leucanthemum-vulgare/details",
+      "https://plants.usda.gov/home/plantProfile?symbol=LEVU"
+    ]
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "external_id": "impatiens_glandulifera",
+  "name": "Himalayan balsam",
+  "latin": "Impatiens glandulifera",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "impatiens_glandulifera.jpg",
+  "image_thumb": "impatiens_glandulifera.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezz'ombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist loam",
+          "pl": "Wilgotna gleba",
+          "de": "Feuchter Lehm",
+          "fr": "Sol humide",
+          "it": "Suolo umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润壤土",
+          "ja": "湿った土",
+          "ko": "습한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent",
+          "pl": "Częste",
+          "de": "Häufig",
+          "fr": "Fréquent",
+          "it": "Frequente",
+          "es": "Frecuente",
+          "pt": "Frequente",
+          "ar": "متكرر",
+          "hi": "बार-बार",
+          "zh": "频繁",
+          "ja": "頻繁",
+          "ko": "자주"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool–mild",
+          "pl": "Chłodna",
+          "de": "Kühl-mild",
+          "fr": "Frais",
+          "it": "Fresco",
+          "es": "Fresco",
+          "pt": "Fresco",
+          "ar": "معتدل",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "مرتفعة",
+          "hi": "अधिक",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast annual",
+          "pl": "Szybki roczny",
+          "de": "Schnell wachsend",
+          "fr": "Annuelle rapide",
+          "it": "Annuale rapida",
+          "es": "Anual rápida",
+          "pt": "Anual rápida",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "快速一年生",
+          "ja": "成長が早い",
+          "ko": "빠른 생장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Himalayan balsam",
+      "description": "Impatiens glandulifera is a tall annual native to the western Himalayas. It grows along rivers and damp ground. The plant is invasive in many parts of Europe."
+    },
+    "pl": {
+      "common_name": "Niecierpek gruczołowaty",
+      "description": "Impatiens glandulifera to wysoka roślina jednoroczna z Himalajów. Rośnie nad rzekami i na wilgotnych terenach. W Europie jest gatunkiem inwazyjnym."
+    },
+    "de": {
+      "common_name": "Drüsiges Springkraut",
+      "description": "Impatiens glandulifera ist eine einjährige Pflanze aus dem Himalaya. Sie wächst an feuchten Standorten und Flussufern. In Europa gilt sie als invasiv."
+    },
+    "fr": {
+      "common_name": "Balsamine de l’Himalaya",
+      "description": "Impatiens glandulifera est une annuelle originaire de l’Himalaya. Elle pousse dans les sols humides et le long des cours d’eau. Elle est invasive en Europe."
+    },
+    "it": {
+      "common_name": "Balsamina dell’Himalaya",
+      "description": "Impatiens glandulifera è una pianta annuale dell’Himalaya. Cresce in ambienti umidi e lungo i fiumi. In molte regioni europee è invasiva."
+    },
+    "es": {
+      "common_name": "Bálsamo del Himalaya",
+      "description": "Impatiens glandulifera es una planta anual del Himalaya. Prefiere suelos húmedos y riberas. En Europa se considera invasora."
+    },
+    "pt": {
+      "common_name": "Bálsamo-do-Himalaia",
+      "description": "Impatiens glandulifera é uma planta anual do Himalaia. Desenvolve-se em solos húmidos e margens de rios. É invasora na Europa."
+    },
+    "ar": {
+      "common_name": "بلسم الهيمالايا",
+      "description": "نبات Impatiens glandulifera حولي موطنه الهيمالايا. ينمو في المناطق الرطبة وعلى ضفاف الأنهار. يعد نباتًا غازيًا في أوروبا."
+    },
+    "hi": {
+      "common_name": "हिमालयन बालसम",
+      "description": "Impatiens glandulifera हिमालय की वार्षिक वनस्पति है। यह नमी वाली भूमि और नदियों के किनारे उगती है। यूरोप में यह आक्रामक मानी जाती है।"
+    },
+    "zh": {
+      "common_name": "喜马拉雅凤仙花",
+      "description": "Impatiens glandulifera 原产喜马拉雅山。常生于湿地和河岸。该植物在欧洲具有入侵性。"
+    },
+    "ja": {
+      "common_name": "ヒマラヤツリフネソウ",
+      "description": "Impatiens glandulifera はヒマラヤ原産の一年草です。湿った土地や川沿いに生育します。ヨーロッパでは外来種です。"
+    },
+    "ko": {
+      "common_name": "히말라야 봉선화",
+      "description": "Impatiens glandulifera는 히말라야 원산의 한해살이풀입니다. 습한 토양과 강가에서 자랍니다. 유럽에서는 침입종입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/read-and-watch/himalayan-balsam",
+      "https://www.rhs.org.uk/weeds/himalayan-balsam",
+      "https://plants.usda.gov/home/plantProfile?symbol=IMGL"
+    ]
+  }
+}

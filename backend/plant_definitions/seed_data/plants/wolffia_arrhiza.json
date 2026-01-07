@@ -1,0 +1,236 @@
+{
+  "external_id": "wolffia_arrhiza",
+  "name": "Rootless duckweed",
+  "latin": "Wolffia arrhiza",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 1,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "wolffia_arrhiza.jpg",
+  "image_thumb": "wolffia_arrhiza.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Licht",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz brillante",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज़ रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Free floating aquatic",
+          "pl": "Roślina pływająca",
+          "de": "Frei schwimmend",
+          "fr": "Plante flottante",
+          "it": "Pianta galleggiante",
+          "es": "Planta flotante",
+          "pt": "Planta flutuante",
+          "ar": "نبات طافٍ",
+          "hi": "तैरता पौधा",
+          "zh": "漂浮水生",
+          "ja": "浮遊水生",
+          "ko": "부유 수생"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Always in water",
+          "pl": "Zawsze w wodzie",
+          "de": "Ständig im Wasser",
+          "fr": "Toujours dans l’eau",
+          "it": "Sempre in acqua",
+          "es": "Siempre en agua",
+          "pt": "Sempre na água",
+          "ar": "دائمًا في الماء",
+          "hi": "हमेशा पानी में",
+          "zh": "始终在水中",
+          "ja": "常に水中",
+          "ko": "항상 물속"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Umiarkowana",
+          "de": "Mittel",
+          "fr": "Modérée",
+          "it": "Moderata",
+          "es": "Moderada",
+          "pt": "Moderada",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–30 °C",
+          "pl": "15–30 °C",
+          "de": "15–30 °C",
+          "fr": "15–30 °C",
+          "it": "15–30 °C",
+          "es": "15–30 °C",
+          "pt": "15–30 °C",
+          "ar": "15–30°م",
+          "hi": "15–30 °C",
+          "zh": "15–30℃",
+          "ja": "15–30℃",
+          "ko": "15–30℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Aquatic humidity",
+          "pl": "Wysoka wilgoć",
+          "de": "Hohe Feuchte",
+          "fr": "Humidité élevée",
+          "it": "Umidità alta",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Very fast",
+          "pl": "Bardzo szybki",
+          "de": "Sehr schnell",
+          "fr": "Très rapide",
+          "it": "Molto rapida",
+          "es": "Muy rápido",
+          "pt": "Muito rápido",
+          "ar": "سريع جدًا",
+          "hi": "बहुत तेज़",
+          "zh": "生长迅速",
+          "ja": "非常に速い",
+          "ko": "매우 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rootless duckweed",
+      "description": "Wolffia arrhiza is the smallest flowering plant, floating freely on still freshwater. It lacks roots and absorbs nutrients directly from water. It is commonly found in ponds and slow-moving lakes."
+    },
+    "pl": {
+      "common_name": "Wolffia bezkorzeniowa",
+      "description": "Wolffia arrhiza to najmniejsza roślina kwiatowa, swobodnie unosząca się na wodzie. Nie wytwarza korzeni i pobiera składniki bezpośrednio z wody. Występuje w stawach i jeziorach."
+    },
+    "de": {
+      "common_name": "Wurzellose Wasserlinse",
+      "description": "Wolffia arrhiza ist die kleinste Blütenpflanze und schwimmt frei auf Süßwasser. Sie besitzt keine Wurzeln und nimmt Nährstoffe direkt aus dem Wasser auf. Sie lebt in ruhigen Gewässern."
+    },
+    "fr": {
+      "common_name": "Wolffie sans racines",
+      "description": "Wolffia arrhiza est la plus petite plante à fleurs, flottant librement à la surface de l’eau douce. Elle ne possède pas de racines et absorbe les nutriments directement. On la trouve dans les étangs calmes."
+    },
+    "it": {
+      "common_name": "Wolffia senza radici",
+      "description": "Wolffia arrhiza è la più piccola pianta da fiore e galleggia liberamente in acqua dolce. È priva di radici e assorbe i nutrienti dall’acqua. Vive in stagni e laghi tranquilli."
+    },
+    "es": {
+      "common_name": "Lenteja de agua sin raíces",
+      "description": "Wolffia arrhiza es la planta con flores más pequeña y flota libremente en agua dulce. No tiene raíces y absorbe nutrientes directamente del agua. Habita en estanques y aguas tranquilas."
+    },
+    "pt": {
+      "common_name": "Lentilha-d’água sem raiz",
+      "description": "Wolffia arrhiza é a menor planta com flor, flutuando livremente em água doce. Não possui raízes e absorve nutrientes diretamente da água. Ocorre em lagoas calmas."
+    },
+    "ar": {
+      "common_name": "عدس الماء عديم الجذور",
+      "description": "Wolffia arrhiza هي أصغر نبات مزهر وتطفو بحرية على المياه العذبة. لا تمتلك جذورًا وتمتص العناصر الغذائية مباشرة من الماء. تعيش في البرك الهادئة."
+    },
+    "hi": {
+      "common_name": "जड़हीन डकवीड",
+      "description": "Wolffia arrhiza सबसे छोटा पुष्पीय पौधा है जो मीठे पानी पर तैरता है। इसमें जड़ें नहीं होतीं और यह पोषक तत्व सीधे पानी से लेता है। यह शांत जलाशयों में पाया जाता है।"
+    },
+    "zh": {
+      "common_name": "无根萍",
+      "description": "Wolffia arrhiza 是世界上最小的开花植物，漂浮在淡水水面。它没有根，直接从水中吸收养分。常见于静水池塘。"
+    },
+    "ja": {
+      "common_name": "ムジナモモドキ",
+      "description": "Wolffia arrhiza は最小の被子植物で、淡水に浮かんで生育します。根を持たず、水中から直接養分を吸収します。池や静かな湖に見られます。"
+    },
+    "ko": {
+      "common_name": "뿌리없는 개구리밥",
+      "description": "Wolffia arrhiza는 가장 작은 꽃식물로 담수 표면에 떠서 자랍니다. 뿌리가 없고 물에서 직접 영양분을 흡수합니다. 연못과 잔잔한 호수에 분포합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.kew.org/plants/wolffia-arrhiza",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=a623",
+      "https://en.wikipedia.org/wiki/Wolffia_arrhiza"
+    ]
+  }
+}

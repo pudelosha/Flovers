@@ -1,0 +1,238 @@
+{
+  "external_id": "lobelia_erinus",
+  "name": "Lobelia",
+  "latin": "Lobelia erinus",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": false,
+  "repot_interval_months": null,
+  "image_hero": "lobelia_erinus.jpg",
+  "image_thumb": "lobelia_erinus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full to part sun",
+          "pl": "Słońce półcień",
+          "de": "Sonne Halbschatten",
+          "fr": "Soleil mi-ombre",
+          "it": "Sole pieno",
+          "es": "Sol parcial",
+          "pt": "Sol parcial",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "全日照或半日照",
+          "ja": "日向 半日陰",
+          "ko": "부분적 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist well-drained",
+          "pl": "Wilgotna gleba",
+          "de": "Feucht durchlässig",
+          "fr": "Sol humide",
+          "it": "Suolo umido",
+          "es": "Suelo húmedo",
+          "pt": "Solo úmido",
+          "ar": "تربة رطبة",
+          "hi": "नम मिट्टी",
+          "zh": "湿润排水好",
+          "ja": "湿った土",
+          "ko": "촉촉한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Frequent watering",
+          "pl": "Częste podlewanie",
+          "de": "Häufig gießen",
+          "fr": "Arrosage fréquent",
+          "it": "Annaffiature frequenti",
+          "es": "Riego frecuente",
+          "pt": "Rega frequente",
+          "ar": "ري متكرر",
+          "hi": "बार-बार पानी",
+          "zh": "经常浇水",
+          "ja": "頻繁な水やり",
+          "ko": "잦은 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno umiark.",
+          "de": "Kühl mild",
+          "fr": "Frais doux",
+          "it": "Fresco mite",
+          "es": "Fresco templado",
+          "pt": "Fresco ameno",
+          "ar": "معتدل بارد",
+          "hi": "हल्का ठंडा",
+          "zh": "凉爽温和",
+          "ja": "涼しい気候",
+          "ko": "서늘한 기온"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Feuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Leve toxicidad",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्की विषैली",
+          "zh": "轻微毒性",
+          "ja": "軽い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low trailing",
+          "pl": "Niski płożący",
+          "de": "Niedrig hängend",
+          "fr": "Port retombant",
+          "it": "Crescita ricadente",
+          "es": "Crecimiento rastrero",
+          "pt": "Crescimento pendente",
+          "ar": "نمو زاحف",
+          "hi": "लटकती वृद्धि",
+          "zh": "低矮蔓生",
+          "ja": "低く広がる",
+          "ko": "낮게 퍼짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Trailing lobelia",
+      "description": "Lobelia erinus is a compact flowering plant grown as an annual. It produces masses of small blue flowers and prefers cool conditions. Regular watering supports continuous blooming."
+    },
+    "pl": {
+      "common_name": "Lobelia przylądkowa",
+      "description": "Lobelia erinus to niska roślina jednoroczna o drobnych kwiatach. Najlepiej rośnie w chłodniejszym klimacie. Wymaga regularnego podlewania."
+    },
+    "de": {
+      "common_name": "Männertreu",
+      "description": "Lobelia erinus ist eine einjährige Zierpflanze mit vielen kleinen Blüten. Sie bevorzugt kühle Temperaturen. Gleichmäßige Wasserversorgung ist wichtig."
+    },
+    "fr": {
+      "common_name": "Lobélie",
+      "description": "Lobelia erinus est une plante annuelle basse et florifère. Elle aime les climats frais et lumineux. Un arrosage régulier favorise la floraison."
+    },
+    "it": {
+      "common_name": "Lobelia",
+      "description": "Lobelia erinus è una pianta annuale ornamentale a crescita bassa. Fiorisce abbondantemente in clima fresco. Richiede annaffiature regolari."
+    },
+    "es": {
+      "common_name": "Lobelia",
+      "description": "Lobelia erinus es una planta anual de floración abundante. Prefiere temperaturas suaves y suelo húmedo. El riego regular mantiene la floración."
+    },
+    "pt": {
+      "common_name": "Lobélia",
+      "description": "Lobelia erinus é uma planta anual ornamental. Desenvolve-se melhor em clima fresco. Precisa de regas frequentes."
+    },
+    "ar": {
+      "common_name": "لوبيليا",
+      "description": "Lobelia erinus نبات حولي مزهر ومنخفض. يفضل الطقس المعتدل والبارد. يحتاج إلى ري منتظم."
+    },
+    "hi": {
+      "common_name": "लोबेलिया",
+      "description": "Lobelia erinus एक वार्षिक फूल वाला पौधा है। यह ठंडे मौसम में अच्छी तरह बढ़ता है। नियमित पानी देना आवश्यक है।"
+    },
+    "zh": {
+      "common_name": "半边莲",
+      "description": "Lobelia erinus 是一种一年生开花植物。适合凉爽环境生长。需要保持土壤湿润。"
+    },
+    "ja": {
+      "common_name": "ロベリア",
+      "description": "ロベリアは一年草の花植物です。涼しい気候を好みます。定期的な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "로벨리아",
+      "description": "로벨리아는 한해살이 꽃식물입니다. 서늘한 환경을 선호합니다. 규칙적인 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10452/lobelia-erinus/details",
+      "https://extension.umn.edu/flowers/lobelia",
+      "https://www.gardenersworld.com/plants/lobelia-erinus/"
+    ]
+  }
+}

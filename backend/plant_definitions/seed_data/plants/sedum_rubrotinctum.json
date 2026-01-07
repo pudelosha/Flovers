@@ -1,0 +1,237 @@
+{
+  "external_id": "sedum_rubrotinctum",
+  "name": "Jelly Bean Plant",
+  "latin": "Sedum rubrotinctum",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "sedum_rubrotinctum.jpg",
+  "image_thumb": "sedum_rubrotinctum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Ensoleillé",
+          "it": "Sole pieno",
+          "es": "Sol pleno",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "جيد التصريف",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好排水",
+          "ja": "良好排水",
+          "ko": "잘 배수된"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Low water",
+          "pl": "Mało wody",
+          "de": "Wenig Wasser",
+          "fr": "Peu d'eau",
+          "it": "Poca acqua",
+          "es": "Poca agua",
+          "pt": "Pouca água",
+          "ar": "قليل من الماء",
+          "hi": "कम पानी",
+          "zh": "少量水",
+          "ja": "少ない水",
+          "ko": "적은 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संक्षिप्त",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "컴팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jelly Bean Plant",
+      "description": "Sedum rubrotinctum, also known as Jelly Bean Plant, is a drought-tolerant succulent. It thrives in full sun with low watering needs and requires well-drained soil."
+    },
+    "pl": {
+      "common_name": "Roślinka fasolki",
+      "description": "Sedum rubrotinctum, znana jako roślinka fasolki, jest sukulentem odpornym na suszę. Preferuje pełne nasłonecznienie, mało wody i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Jelly Bean Pflanze",
+      "description": "Sedum rubrotinctum, auch bekannt als Jelly Bean Pflanze, ist eine trockentolerante Sukkulente. Es gedeiht in voller Sonne mit geringem Wasserbedarf und benötigt gut durchlässigen Boden."
+    },
+    "fr": {
+      "common_name": "Plante Jelly Bean",
+      "description": "Sedum rubrotinctum, aussi appelé plante Jelly Bean, est une succulente tolérante à la sécheresse. Elle prospère au soleil et nécessite peu d'eau, avec un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Pianta Jelly Bean",
+      "description": "Sedum rubrotinctum, conosciuta come pianta Jelly Bean, è una succulenta resistente alla siccità. Cresce al sole e richiede poca acqua e un terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Planta Jelly Bean",
+      "description": "Sedum rubrotinctum, también conocida como planta Jelly Bean, es una suculenta tolerante a la sequía. Se desarrolla a pleno sol con necesidades de riego bajas y suelo bien drenado."
+    },
+    "pt": {
+      "common_name": "Planta Jelly Bean",
+      "description": "Sedum rubrotinctum, também conhecida como planta Jelly Bean, é uma suculenta tolerante à seca. Cresce sob sol pleno com baixa necessidade de água e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "نبات حبة الجيلي",
+      "description": "Sedum rubrotinctum، المعروف أيضًا باسم نبات حبة الجيلي، هو نبات عصاري يتحمل الجفاف. ينمو في الشمس الكاملة مع احتياجات منخفضة من الماء ويتطلب تربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "जेली बीन पौधा",
+      "description": "Sedum rubrotinctum, जिसे जेली बीन पौधा भी कहा जाता है, एक सूखा सहनशील रसीला पौधा है। यह पूर्ण सूर्य में बढ़ता है और इसमें कम पानी की आवश्यकता होती है और अच्छी जल निकासी वाली मिट्टी चाहिए।"
+    },
+    "zh": {
+      "common_name": "果冻豆植物",
+      "description": "Sedum rubrotinctum，也叫果冻豆植物，是一种耐旱的多肉植物。它在全日照下生长，需水量低，且需要良好的排水土壤。"
+    },
+    "ja": {
+      "common_name": "ジェリービーンプラント",
+      "description": "Sedum rubrotinctum、ジェリービーンプラントとしても知られるこの植物は、乾燥に強い多肉植物です。完全な日光の下で育ち、水やりの必要が少なく、排水の良い土壌を好みます。"
+    },
+    "ko": {
+      "common_name": "젤리빈 식물",
+      "description": "Sedum rubrotinctum, 또한 젤리빈 식물로 알려진 이 식물은 건조에 강한 다육 식물입니다. 완전한 햇빛에서 자라며, 물을 적게 필요로 하고, 잘 배수되는 토양을 요구합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/sedum-rubrotinctum",
+      "https://www.thespruce.com/sedum-rubrotinctum-jelly-bean-plant-5095613"
+    ]
+  }
+}

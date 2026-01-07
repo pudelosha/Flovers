@@ -1,0 +1,238 @@
+{
+  "external_id": "justicia_carnea",
+  "name": "Brazilian Plume",
+  "latin": "Justicia carnea",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "justicia_carnea.jpg",
+  "image_thumb": "justicia_carnea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne, rozproszone",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich, well-drained",
+          "pl": "Żyzna, przepuszczalna",
+          "de": "Nährstoffreich",
+          "fr": "Riche et drainé",
+          "it": "Ricco e drenante",
+          "es": "Rico y drenado",
+          "pt": "Rico e drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "उपजाऊ, जलनिकास",
+          "zh": "肥沃排水好",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Umiarkowanie wilgotna",
+          "de": "Gleichmäßig feucht",
+          "fr": "Humide régulièrement",
+          "it": "Umido costante",
+          "es": "Húmedo regular",
+          "pt": "Úmido regular",
+          "ar": "رطوبة معتدلة",
+          "hi": "नियमित नमी",
+          "zh": "保持湿润",
+          "ja": "適度に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–27°C",
+          "pl": "18–27°C",
+          "de": "18–27°C",
+          "fr": "18–27°C",
+          "it": "18–27°C",
+          "es": "18–27°C",
+          "pt": "18–27°C",
+          "ar": "18–27°م",
+          "hi": "18–27°C",
+          "zh": "18–27°C",
+          "ja": "18–27°C",
+          "ko": "18–27°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Upright shrub",
+          "pl": "Wzniesiony krzew",
+          "de": "Aufrechter Strauch",
+          "fr": "Arbuste dressé",
+          "it": "Arbusto eretto",
+          "es": "Arbusto erguido",
+          "pt": "Arbusto ereto",
+          "ar": "شجيرة قائمة",
+          "hi": "सीधा झाड़ी",
+          "zh": "直立灌木",
+          "ja": "直立低木",
+          "ko": "직립 관목"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Brazilian Plume",
+      "description": "Justicia carnea is a tropical ornamental plant known for its bright pink flower plumes. It prefers warm temperatures, bright indirect light, and consistently moist soil. High humidity supports healthy growth and flowering indoors."
+    },
+    "pl": {
+      "common_name": "Justycja różowa",
+      "description": "Justicia carnea to tropikalna roślina ozdobna o różowych, pióropuszowych kwiatach. Najlepiej rośnie w ciepłych warunkach i jasnym, rozproszonym świetle. Wymaga regularnego podlewania i podwyższonej wilgotności."
+    },
+    "de": {
+      "common_name": "Brasilianische Federblume",
+      "description": "Justicia carnea ist eine tropische Zierpflanze mit auffälligen rosa Blütenständen. Sie gedeiht bei warmen Temperaturen und hellem, indirektem Licht. Gleichmäßige Feuchtigkeit und hohe Luftfeuchte sind wichtig."
+    },
+    "fr": {
+      "common_name": "Plume brésilienne",
+      "description": "Justicia carnea est une plante tropicale appréciée pour ses fleurs roses décoratives. Elle préfère une lumière vive sans soleil direct et un sol constamment humide. Une forte humidité favorise sa croissance."
+    },
+    "it": {
+      "common_name": "Piuma brasiliana",
+      "description": "Justicia carnea è una pianta tropicale ornamentale con vistose infiorescenze rosa. Cresce bene con luce indiretta intensa e terreno umido. L’umidità elevata aiuta a mantenere la pianta sana."
+    },
+    "es": {
+      "common_name": "Pluma brasileña",
+      "description": "Justicia carnea es una planta tropical ornamental famosa por sus flores rosadas. Prefiere luz indirecta brillante y riego regular. La humedad ambiental alta es beneficiosa."
+    },
+    "pt": {
+      "common_name": "Pluma brasileira",
+      "description": "Justicia carnea é uma planta tropical ornamental com flores rosa vistosas. Desenvolve-se melhor com luz indireta intensa e solo sempre úmido. A umidade elevada favorece seu crescimento."
+    },
+    "ar": {
+      "common_name": "الريشة البرازيلية",
+      "description": "Justicia carnea نبات زينة استوائي يتميز بأزهاره الوردية الزاهية. يفضل الضوء الساطع غير المباشر ودرجة حرارة دافئة. الرطوبة العالية والري المنتظم ضروريان لنموه."
+    },
+    "hi": {
+      "common_name": "ब्राज़ीलियन प्लूम",
+      "description": "Justicia carnea एक उष्णकटिबंधीय सजावटी पौधा है जिसमें गुलाबी फूल होते हैं। इसे तेज लेकिन अप्रत्यक्ष रोशनी और नम मिट्टी पसंद है। अधिक आर्द्रता इसके विकास में सहायक होती है।"
+    },
+    "zh": {
+      "common_name": "巴西羽花",
+      "description": "Justicia carnea 是一种热带观赏植物，以粉色羽状花序著称。它喜欢明亮的散射光和湿润的土壤。较高的空气湿度有助于健康生长。"
+    },
+    "ja": {
+      "common_name": "ブラジリアンプルーム",
+      "description": "Justicia carnea は鮮やかなピンク色の花を持つ熱帯性観葉植物です。明るい間接光と適度に湿った土壌を好みます。高い湿度が生育を助けます。"
+    },
+    "ko": {
+      "common_name": "브라질리언 플룸",
+      "description": "Justicia carnea는 분홍색 꽃이 특징인 열대 관상식물입니다. 밝은 간접광과 꾸준히 촉촉한 토양을 선호합니다. 높은 습도가 건강한 생장에 도움이 됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b332",
+      "https://edis.ifas.ufl.edu/publication/FP330",
+      "https://www.rhs.org.uk/plants/justicia"
+    ]
+  }
+}

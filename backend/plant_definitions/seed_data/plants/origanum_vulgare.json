@@ -1,0 +1,237 @@
+{
+  "external_id": "origanum_vulgare",
+  "name": "Oregano",
+  "latin": "Origanum vulgare",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "origanum_vulgare.jpg",
+  "image_thumb": "origanum_vulgare.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sunlight",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Pleno sol",
+          "ar": "أشعة الشمس المباشرة",
+          "hi": "पूरा सूर्य",
+          "zh": "完全阳光",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba gliniasta",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "التربة الطينية",
+          "hi": "मिट्टी मिश्रित",
+          "zh": "壤土",
+          "ja": "粘土質土壌",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regar moderadamente",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy to grow",
+          "pl": "Łatwy do uprawy",
+          "de": "Leicht zu züchten",
+          "fr": "Facile à cultiver",
+          "it": "Facile da coltivare",
+          "es": "Fácil de cultivar",
+          "pt": "Fácil de cultivar",
+          "ar": "سهل الزراعة",
+          "hi": "उगाने में आसान",
+          "zh": "容易种植",
+          "ja": "育てやすい",
+          "ko": "기르기 쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमीयुक्ति कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Up to 60 cm",
+          "pl": "Do 60 cm",
+          "de": "Bis zu 60 cm",
+          "fr": "Jusqu'à 60 cm",
+          "it": "Fino a 60 cm",
+          "es": "Hasta 60 cm",
+          "pt": "Até 60 cm",
+          "ar": "حتى 60 سم",
+          "hi": "60 सेमी तक",
+          "zh": "最高60厘米",
+          "ja": "最大60 cm",
+          "ko": "최대 60 cm"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Oregano",
+      "description": "Origanum vulgare, known as oregano, is a herb commonly used in cooking. It thrives in sunny, well-drained soils and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Oregano",
+      "description": "Origanum vulgare, znane jako oregano, to zioło powszechnie używane w kuchni. Rośnie w słonecznych, dobrze przepuszczalnych glebach i wymaga umiarkowanego podlewania."
+    },
+    "de": {
+      "common_name": "Oregano",
+      "description": "Origanum vulgare, bekannt als Oregano, ist ein Kraut, das häufig in der Küche verwendet wird. Es gedeiht in sonnigen, gut durchlässigen Böden und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Origan",
+      "description": "Origanum vulgare, connu sous le nom d'origan, est une herbe couramment utilisée en cuisine. Elle prospère dans des sols ensoleillés et bien drainés et nécessite un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Origano",
+      "description": "Origanum vulgare, conosciuto come origano, è un'erba comunemente usata in cucina. Cresce in terreni soleggiati e ben drenati e necessita di un'irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Orégano",
+      "description": "Origanum vulgare, conocido como orégano, es una hierba comúnmente utilizada en la cocina. Crece en suelos soleados y bien drenados y requiere riego moderado."
+    },
+    "pt": {
+      "common_name": "Orégano",
+      "description": "Origanum vulgare, conhecido como orégano, é uma erva comumente usada na culinária. Cresce em solos ensolarados e bem drenados e necessita de rega moderada."
+    },
+    "ar": {
+      "common_name": "الأوريجانو",
+      "description": "أوريغانوم فولغاري، المعروف بالأوريجانو، هو عشب يستخدم عادة في الطهي. يزدهر في التربة المشمسة جيدة التصريف ويتطلب سقاية معتدلة."
+    },
+    "hi": {
+      "common_name": "ओरेगैनो",
+      "description": "ऑरिगैनम वुल्गारे, जिसे ओरेगैनो के नाम से जाना जाता है, एक हर्ब है जिसका आमतौर पर खाना पकाने में उपयोग किया जाता है। यह धूप वाली, अच्छी तरह से जल निकासी वाली मिट्टी में उगता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "牛至",
+      "description": "牛至（Origanum vulgare）是一种常用于烹饪的草本植物。它在阳光充足、排水良好的土壤中生长，需要适度的浇水。"
+    },
+    "ja": {
+      "common_name": "オレガノ",
+      "description": "オリガヌム・ヴルガーレ（オレガノ）は、料理に一般的に使用されるハーブです。日当たりが良く、排水の良い土壌で成長し、適度な水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "오레가노",
+      "description": "오리간움 울가레(오레가노)는 요리에 일반적으로 사용되는 허브입니다. 햇볕이 잘 드는 배수가 좋은 토양에서 자라며 적당한 급수가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/oregano-origanum-vulgare/",
+      "https://www.rhs.org.uk/plants/oregano-origanum-vulgare"
+    ]
+  }
+}

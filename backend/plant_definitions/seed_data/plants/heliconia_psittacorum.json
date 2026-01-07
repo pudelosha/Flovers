@@ -1,0 +1,238 @@
+{
+  "external_id": "heliconia_psittacorum",
+  "name": "Parrot Heliconia",
+  "latin": "Heliconia psittacorum",
+  "sun": "high",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 14,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "heliconia_psittacorum.jpg",
+  "image_thumb": "heliconia_psittacorum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright light",
+          "pl": "Jasne swiatlo",
+          "de": "Helles Licht",
+          "fr": "Lumiere vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء ساطع",
+          "hi": "तेज रोशनी",
+          "zh": "明亮光照",
+          "ja": "明るい光",
+          "ko": "밝은 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Rich loam",
+          "pl": "Zyzna ziemia",
+          "de": "Nahrhafter Boden",
+          "fr": "Sol riche",
+          "it": "Terreno ricco",
+          "es": "Suelo rico",
+          "pt": "Solo rico",
+          "ar": "تربة غنية",
+          "hi": "उपजाऊ मिट्टी",
+          "zh": "肥沃土壤",
+          "ja": "肥沃な土",
+          "ko": "비옥한 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotna",
+          "de": "Feucht halten",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre humedo",
+          "pt": "Sempre umido",
+          "ar": "رطبة دائمًا",
+          "hi": "नम रखें",
+          "zh": "保持湿润",
+          "ja": "湿り気維持",
+          "ko": "촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Srednia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Media",
+          "ar": "متوسطة",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–30 C",
+          "pl": "18–30 C",
+          "de": "18–30 C",
+          "fr": "18–30 C",
+          "it": "18–30 C",
+          "es": "18–30 C",
+          "pt": "18–30 C",
+          "ar": "18–30 م",
+          "hi": "18–30 C",
+          "zh": "18–30°C",
+          "ja": "18–30度",
+          "ko": "18–30도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilg.",
+          "de": "Hohe Feuchte",
+          "fr": "Humidite elevee",
+          "it": "Alta umidita",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No toxica",
+          "pt": "Nao toxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Clumping",
+          "pl": "Kepowa",
+          "de": "Horstbildend",
+          "fr": "Touffue",
+          "it": "A cespi",
+          "es": "En matas",
+          "pt": "Em touceiras",
+          "ar": "نمو كتلي",
+          "hi": "गुच्छेदार",
+          "zh": "丛生",
+          "ja": "株立ち",
+          "ko": "군생"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Parrot Heliconia",
+      "description": "Heliconia psittacorum is a tropical flowering plant native to Central and South America. It is known for its colorful upright bracts and clumping growth. Indoors it needs bright light, warmth, and consistently moist soil."
+    },
+    "pl": {
+      "common_name": "Helikonia papuzia",
+      "description": "Heliconia psittacorum to tropikalna roslina kwitnaca z Ameryki Srodkowej i Poludniowej. Tworzy kepy i ozdobne kwiatostany. W domu wymaga jasnego swiatla i wilgotnej gleby."
+    },
+    "de": {
+      "common_name": "Papageien-Helikonie",
+      "description": "Heliconia psittacorum ist eine tropische Bluhpflanze aus Mittel- und Sudamerika. Sie wachst horstig und bildet auffallende Blutenstande. In Innenraumen braucht sie viel Licht und gleichmassige Feuchte."
+    },
+    "fr": {
+      "common_name": "Heliconie perroquet",
+      "description": "Heliconia psittacorum est une plante tropicale originaire d Amerique centrale et du Sud. Elle pousse en touffes avec des fleurs decoratives. Elle demande chaleur, lumiere vive et sol humide."
+    },
+    "it": {
+      "common_name": "Eliconia pappagallo",
+      "description": "Heliconia psittacorum e una pianta tropicale dell America centrale e meridionale. Cresce a cespi con infiorescenze vistose. In casa necessita di luce intensa e terreno costantemente umido."
+    },
+    "es": {
+      "common_name": "Heliconia loro",
+      "description": "Heliconia psittacorum es una planta tropical de America Central y del Sur. Tiene crecimiento en matas y flores llamativas. Requiere luz brillante y riego frecuente en interior."
+    },
+    "pt": {
+      "common_name": "Heliconia papagaio",
+      "description": "Heliconia psittacorum e uma planta tropical da America Central e do Sul. Forma touceiras com bracteas coloridas. Precisa de luz forte e solo sempre levemente umido."
+    },
+    "ar": {
+      "common_name": "هيليكونيا الببغاء",
+      "description": "هيليكونيا بسيتاكوروم نبات استوائي موطنه امريكا الوسطى والجنوبية. ينمو في كتل وله ازهار ملونة. يحتاج الى ضوء قوي وتربة رطبة باستمرار داخل المنزل."
+    },
+    "hi": {
+      "common_name": "पैरट हेलिकोनिया",
+      "description": "हेलिकोनिया सिटाकोरोम मध्य और दक्षिण अमेरिका का उष्णकटिबंधीय पौधा है। यह गुच्छों में बढ़ता है और रंगीन पुष्पक्रम बनाता है। इसे तेज रोशनी और नम मिट्टी की जरूरत होती है।"
+    },
+    "zh": {
+      "common_name": "鹦鹉蕉",
+      "description": "Heliconia psittacorum 原产于中南美洲的热带植物。植株丛生，花序鲜艳。室内养护需要明亮光照和持续湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "オウムヘリコニア",
+      "description": "ヘリコニア・プシッタコルムは中南米原産の熱帯植物です。株立ちで鮮やかな花を咲かせます。室内では明るい光と湿った土が必要です。"
+    },
+    "ko": {
+      "common_name": "앵무 헬리코니아",
+      "description": "Heliconia psittacorum은 중남미 원산의 열대 식물입니다. 군생하며 화려한 꽃을 피웁니다. 실내에서는 밝은 빛과 꾸준한 수분이 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b562",
+      "https://edis.ifas.ufl.edu/publication/FP285",
+      "https://www.rhs.org.uk/plants/8807/heliconia-psittacorum/details"
+    ]
+  }
+}

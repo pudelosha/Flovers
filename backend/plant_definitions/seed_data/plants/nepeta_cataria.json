@@ -1,0 +1,237 @@
+{
+  "external_id": "nepeta_cataria",
+  "name": "Catnip",
+  "latin": "Nepeta cataria",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "nepeta_cataria.jpg",
+  "image_thumb": "nepeta_cataria.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "日向",
+          "ko": "양지"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Gleba przepuszczalna",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenato",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwa",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to warm",
+          "pl": "Chłodno do ciepło",
+          "de": "Kühl bis warm",
+          "fr": "Frais à chaud",
+          "it": "Fresco-caldo",
+          "es": "Fresco a cálido",
+          "pt": "Fresco a quente",
+          "ar": "معتدل دافئ",
+          "hi": "ठंडा से गर्म",
+          "zh": "凉爽至温暖",
+          "ja": "涼しい〜暖かい",
+          "ko": "서늘~따뜻"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average air",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luft",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة عادية",
+          "hi": "सामान्य नमी",
+          "zh": "普通湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growing herb",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ बढ़त",
+          "zh": "生长快",
+          "ja": "生長が早い",
+          "ko": "성장 빠름"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Catnip",
+      "description": "Nepeta cataria is a hardy perennial herb native to Europe and Asia. It prefers full sun and well-drained soil, and is easy to grow in pots or gardens. The aromatic leaves are well known for their effect on cats."
+    },
+    "pl": {
+      "common_name": "Kocimiętka",
+      "description": "Nepeta cataria to bylina pochodząca z Europy i Azji. Lubi pełne słońce i przepuszczalną glebę, jest łatwa w uprawie. Jej liście są aromatyczne i znane z działania na koty."
+    },
+    "de": {
+      "common_name": "Katzenminze",
+      "description": "Nepeta cataria ist eine robuste mehrjährige Pflanze aus Europa und Asien. Sie wächst gut in voller Sonne und durchlässigem Boden. Die duftenden Blätter sind für ihre Wirkung auf Katzen bekannt."
+    },
+    "fr": {
+      "common_name": "Cataire",
+      "description": "Nepeta cataria est une plante vivace rustique originaire d’Europe et d’Asie. Elle préfère le plein soleil et un sol bien drainé. Ses feuilles aromatiques attirent fortement les chats."
+    },
+    "it": {
+      "common_name": "Erba gatta",
+      "description": "Nepeta cataria è una pianta perenne resistente originaria di Europa e Asia. Cresce bene in pieno sole e terreno drenato. Le foglie profumate sono note per attirare i gatti."
+    },
+    "es": {
+      "common_name": "Hierba gatera",
+      "description": "Nepeta cataria es una hierba perenne originaria de Europa y Asia. Prefiere sol pleno y suelos bien drenados. Sus hojas aromáticas son conocidas por atraer a los gatos."
+    },
+    "pt": {
+      "common_name": "Erva-dos-gatos",
+      "description": "Nepeta cataria é uma planta perene originária da Europa e da Ásia. Desenvolve-se bem ao sol pleno e em solo drenado. As folhas aromáticas são conhecidas por atrair gatos."
+    },
+    "ar": {
+      "common_name": "نعناع القطط",
+      "description": "نبات Nepeta cataria عشبي معمر موطنه أوروبا وآسيا. يفضل الشمس الكاملة والتربة جيدة الصرف. أوراقه العطرية معروفة بتأثيرها على القطط."
+    },
+    "hi": {
+      "common_name": "कैटनिप",
+      "description": "Nepeta cataria यूरोप और एशिया की एक बहुवर्षीय जड़ी बूटी है। यह पूरी धूप और अच्छी जल निकासी वाली मिट्टी पसंद करती है। इसकी सुगंधित पत्तियाँ बिल्लियों को आकर्षित करती हैं।"
+    },
+    "zh": {
+      "common_name": "猫薄荷",
+      "description": "Nepeta cataria 是原产于欧洲和亚洲的多年生草本植物。它喜全日照和排水良好的土壤。芳香的叶子对猫有吸引作用。"
+    },
+    "ja": {
+      "common_name": "キャットニップ",
+      "description": "Nepeta cataria はヨーロッパとアジア原産の多年草です。日当たりと水はけの良い土を好みます。香りのある葉は猫に好まれます。"
+    },
+    "ko": {
+      "common_name": "캣닢",
+      "description": "Nepeta cataria는 유럽과 아시아 원산의 다년생 허브입니다. 햇빛과 배수가 좋은 토양을 선호합니다. 향기로운 잎은 고양이를 끌어들입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/11823/nepeta-cataria/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b815",
+      "https://extension.cornell.edu/podcasts/gardening/plant-of-the-week/catnip/"
+    ]
+  }
+}

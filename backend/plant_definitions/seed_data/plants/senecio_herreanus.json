@@ -1,0 +1,237 @@
+{
+  "external_id": "senecio_herreanus",
+  "name": "String of Beans",
+  "latin": "Senecio herreanus",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "senecio_herreanus.jpg",
+  "image_thumb": "senecio_herreanus.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Sandy",
+          "pl": "Piaszczysta",
+          "de": "Sandig",
+          "fr": "Sableux",
+          "it": "Sabbiosa",
+          "es": "Arenosa",
+          "pt": "Arenoso",
+          "ar": "رملي",
+          "hi": "रेतीली",
+          "zh": "沙质",
+          "ja": "砂質",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24°C",
+          "pl": "18–24°C",
+          "de": "18–24°C",
+          "fr": "18–24°C",
+          "it": "18–24°C",
+          "es": "18–24°C",
+          "pt": "18–24°C",
+          "ar": "18–24°C",
+          "hi": "18–24°C",
+          "zh": "18–24°C",
+          "ja": "18–24°C",
+          "ko": "18–24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Basse",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "No",
+          "pl": "Nie",
+          "de": "Nein",
+          "fr": "Non",
+          "it": "No",
+          "es": "No",
+          "pt": "Não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "String of Beans",
+      "description": "Senecio herreanus is a succulent plant known for its unique bead-like leaves. It thrives in bright, indirect light and well-drained soil."
+    },
+    "pl": {
+      "common_name": "Sznur Fasoli",
+      "description": "Senecio herreanus to roślina sukulentna o charakterystycznych, koralikowatych liściach. Preferuje jasne, pośrednie światło i dobrze przepuszczalną glebę."
+    },
+    "de": {
+      "common_name": "Bohnen-Senecio",
+      "description": "Senecio herreanus ist eine sukkulente Pflanze, bekannt für ihre einzigartigen, perlenartigen Blätter. Sie gedeiht in hellem, indirektem Licht und gut durchlässigem Boden."
+    },
+    "fr": {
+      "common_name": "Senecio des haricots",
+      "description": "Senecio herreanus est une plante succulente connue pour ses feuilles en forme de perles. Elle préfère une lumière vive et indirecte ainsi qu'un sol bien drainé."
+    },
+    "it": {
+      "common_name": "Senecio dei fagioli",
+      "description": "Senecio herreanus è una pianta succulenta nota per le sue foglie a forma di perla. Cresce bene in luce indiretta e in terreno ben drenato."
+    },
+    "es": {
+      "common_name": "Senecio de frijoles",
+      "description": "Senecio herreanus es una planta suculenta conocida por sus hojas en forma de perlas. Prefiere luz indirecta y suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Senecio dos feijões",
+      "description": "Senecio herreanus é uma planta suculenta conhecida por suas folhas em forma de contas. Prefere luz indireta e solo bem drenado."
+    },
+    "ar": {
+      "common_name": "سينيشيو الحبوب",
+      "description": "سينيشيو هيريانوس هو نبات عصاري معروف بأوراقه ذات الشكل الكروي. يفضل الضوء الساطع وغير المباشر والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "सिनीशियो बीन",
+      "description": "सिनीशियो हेरियनस एक सूखा-सहेजने वाला पौधा है, जिसे इसके मोती जैसे पत्तों के लिए जाना जाता है। यह उज्जवल, अप्रत्यक्ष प्रकाश और अच्छी जल निकासी वाली मिट्टी में अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "豆类千年健",
+      "description": "千年健（Senecio herreanus）是一种多肉植物，以其珍珠般的叶片而闻名。它在明亮的间接光和排水良好的土壤中生长良好。"
+    },
+    "ja": {
+      "common_name": "ビーンセネシオ",
+      "description": "セネシオ・ヘレアヌスは、ビーズのような葉を持つ多肉植物です。明るい間接光と排水性の良い土壌でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "콩세네시오",
+      "description": "세네시오 헤레아누스는 독특한 구슬 모양의 잎을 가진 다육 식물입니다. 밝고 간접적인 빛과 배수가 좋은 토양에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/105876/senecio-herreanus/details",
+      "https://www.gardenia.net/plant/senecio-herreanus-string-of-beans"
+    ]
+  }
+}

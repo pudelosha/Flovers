@@ -1,0 +1,237 @@
+{
+  "external_id": "taraxacum_officinale",
+  "name": "Dandelion",
+  "latin": "Taraxacum officinale",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "taraxacum_officinale.jpg",
+  "image_thumb": "taraxacum_officinale.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy",
+          "pl": "Glinisty",
+          "de": "Lehmig",
+          "fr": "Argileux",
+          "it": "Argilloso",
+          "es": "Arcilloso",
+          "pt": "Argiloso",
+          "ar": "طيني",
+          "hi": "काली मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土質",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwy",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool",
+          "pl": "Chłodny",
+          "de": "Kühl",
+          "fr": "Froid",
+          "it": "Fresco",
+          "es": "Frío",
+          "pt": "Frio",
+          "ar": "بارد",
+          "hi": "ठंडा",
+          "zh": "凉爽",
+          "ja": "涼しい",
+          "ko": "시원한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是的",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Dandelion",
+      "description": "A hardy and widely recognized wildflower, known for its bright yellow flowers and fluffy seed heads. Commonly found in temperate regions."
+    },
+    "pl": {
+      "common_name": "Mniszek lekarski",
+      "description": "Trwała i powszechnie rozpoznawana roślina dzika, znana z jaskrawożółtych kwiatów i puszystych główek nasiennych. Powszechna w umiarkowanych regionach."
+    },
+    "de": {
+      "common_name": "Löwenzahn",
+      "description": "Eine robuste und weithin bekannte Wildblume, bekannt für ihre leuchtend gelben Blüten und flauschigen Samenköpfe. Häufig in gemäßigten Regionen anzutreffen."
+    },
+    "fr": {
+      "common_name": "Pissenlit",
+      "description": "Une plante sauvage robuste et largement reconnue, connue pour ses fleurs jaunes vives et ses têtes de graines duveteuses. Commune dans les régions tempérées."
+    },
+    "it": {
+      "common_name": "Dente di leone",
+      "description": "Un fiore selvatico resistente e ampiamente riconosciuto, noto per i suoi fiori gialli brillanti e le teste di semi soffici. Comune nelle regioni temperate."
+    },
+    "es": {
+      "common_name": "Diente de león",
+      "description": "Una planta silvestre resistente y ampliamente reconocida, conocida por sus flores amarillas brillantes y cabezas de semillas esponjosas. Común en regiones templadas."
+    },
+    "pt": {
+      "common_name": "Dente-de-leão",
+      "description": "Uma planta selvagem resistente e amplamente reconhecida, conhecida pelas suas flores amarelas brilhantes e cabeças de sementes fofas. Comum em regiões temperadas."
+    },
+    "ar": {
+      "common_name": "الهندباء",
+      "description": "نبات بري قوي ومعروف على نطاق واسع، يعرف بأزهاره الصفراء الزاهية ورؤوس بذوره الفاتحة. شائع في المناطق المعتدلة."
+    },
+    "hi": {
+      "common_name": "डैंडलियन",
+      "description": "एक कठोर और व्यापक रूप से पहचाना जाने वाला जंगली फूल, जो अपने चमकीले पीले फूलों और मुलायम बीज सिरों के लिए जाना जाता है। सामान्यतः समशीतोष्ण क्षेत्रों में पाया जाता है।"
+    },
+    "zh": {
+      "common_name": "蒲公英",
+      "description": "一种耐寒且广为人知的野花，以其明亮的黄色花朵和蓬松的种子头而闻名。通常生长在温带地区。"
+    },
+    "ja": {
+      "common_name": "タンポポ",
+      "description": "明るい黄色の花とふわふわした種の頭で知られる、頑丈で広く認識された野生の花です。温帯地域に一般的に見られます。"
+    },
+    "ko": {
+      "common_name": "민들레",
+      "description": "밝은 노란색 꽃과 솜털 같은 씨앗 머리로 잘 알려진 튼튼한 야생화입니다. 온대 지역에서 흔히 볼 수 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bgci.org/garden_search.php?id=2139",
+      "https://www.rhs.org.uk/plants/popular/dandelions"
+    ]
+  }
+}

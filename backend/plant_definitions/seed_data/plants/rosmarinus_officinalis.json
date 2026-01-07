@@ -1,0 +1,237 @@
+{
+  "external_id": "rosmarinus_officinalis",
+  "name": "Rosemary",
+  "latin": "Rosmarinus officinalis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "sandy",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rosmarinus_officinalis.jpg",
+  "image_thumb": "rosmarinus_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "sandy",
+          "pl": "piaszczysty",
+          "de": "sandig",
+          "fr": "sableux",
+          "it": "sabbioso",
+          "es": "arenoso",
+          "pt": "arenoso",
+          "ar": "رملي",
+          "hi": "रेत",
+          "zh": "沙质",
+          "ja": "砂地",
+          "ko": "모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "low",
+          "pl": "niska",
+          "de": "gering",
+          "fr": "faible",
+          "it": "bassa",
+          "es": "baja",
+          "pt": "baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowany",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Rosemary",
+      "description": "Rosmarinus officinalis is a fragrant herb native to the Mediterranean. It's commonly used in cooking and has medicinal properties."
+    },
+    "pl": {
+      "common_name": "Rozmaryn",
+      "description": "Rosmarinus officinalis to aromatyczne zioło pochodzące z basenu Morza Śródziemnego. Jest szeroko stosowane w kuchni i ma właściwości lecznicze."
+    },
+    "de": {
+      "common_name": "Rosmarin",
+      "description": "Rosmarinus officinalis ist ein duftendes Kraut, das ursprünglich aus dem Mittelmeerraum stammt. Es wird häufig in der Küche verwendet und hat heilende Eigenschaften."
+    },
+    "fr": {
+      "common_name": "Romarin",
+      "description": "Rosmarinus officinalis est une herbe aromatique originaire de la Méditerranée. Il est couramment utilisé en cuisine et possède des propriétés médicinales."
+    },
+    "it": {
+      "common_name": "Rosmarino",
+      "description": "Rosmarinus officinalis è un'erba aromatica originaria del Mediterraneo. È comunemente usato in cucina e ha proprietà medicinali."
+    },
+    "es": {
+      "common_name": "Romero",
+      "description": "Rosmarinus officinalis es una hierba aromática originaria de la cuenca mediterránea. Se usa comúnmente en la cocina y tiene propiedades medicinales."
+    },
+    "pt": {
+      "common_name": "Alecrim",
+      "description": "Rosmarinus officinalis é uma erva aromática nativa da região mediterrânea. É amplamente usado na culinária e possui propriedades medicinais."
+    },
+    "ar": {
+      "common_name": "إكليل الجبل",
+      "description": "Rosmarinus officinalis هو عشب عطري موطنه منطقة البحر الأبيض المتوسط. يستخدم بشكل شائع في الطهي وله خصائص طبية."
+    },
+    "hi": {
+      "common_name": "रोजमैरी",
+      "description": "Rosmarinus officinalis एक सुगंधित पौधा है जो भूमध्यसागरीय क्षेत्र का मूल निवासी है। इसका उपयोग रसोई में सामान्य है और इसमें औषधीय गुण होते हैं।"
+    },
+    "zh": {
+      "common_name": "迷迭香",
+      "description": "Rosmarinus officinalis 是一种芳香草本植物，原产于地中海地区。它在烹饪中广泛使用，且具有药用特性。"
+    },
+    "ja": {
+      "common_name": "ローズマリー",
+      "description": "Rosmarinus officinalisは地中海地方原産の芳香性のハーブです。料理に広く使われ、薬用効果もあります。"
+    },
+    "ko": {
+      "common_name": "로즈마리",
+      "description": "Rosmarinus officinalis는 지중해 지역이 원산지인 향긋한 허브입니다. 주로 요리에 사용되며 약용 효과가 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=346",
+      "https://www.gardeningknowhow.com/edible/herbs/rosemary/rosemary-plant-care.htm",
+      "https://www.bhg.com/gardening/pests-insects-diseases/rosemary-plant-care/"
+    ]
+  }
+}

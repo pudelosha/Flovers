@@ -1,0 +1,237 @@
+{
+  "external_id": "stachys_byzantina",
+  "name": "Lamb's Ear",
+  "latin": "Stachys byzantina",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "stachys_byzantina.jpg",
+  "image_thumb": "stachys_byzantina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Światło średnie",
+          "de": "Mittlere Sonne",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम धूप",
+          "zh": "中等阳光",
+          "ja": "中程度の光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loam soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Suolo argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "बलुआ मिट्टी",
+          "zh": "壤土",
+          "ja": "ローム土",
+          "ko": "로암 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Água média",
+          "ar": "ري مياه متوسطة",
+          "hi": "मध्यम पानी",
+          "zh": "中等水分",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "简单",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-25°C",
+          "pl": "10-25°C",
+          "de": "10-25°C",
+          "fr": "10-25°C",
+          "it": "10-25°C",
+          "es": "10-25°C",
+          "pt": "10-25°C",
+          "ar": "10-25°C",
+          "hi": "10-25°C",
+          "zh": "10-25°C",
+          "ja": "10-25°C",
+          "ko": "10-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "असामयिक",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Ground cover",
+          "pl": "Pokrywa ziemi",
+          "de": "Bodenbedeckung",
+          "fr": "Couverture du sol",
+          "it": "Copertura del suolo",
+          "es": "Cobertura del suelo",
+          "pt": "Cobertura do solo",
+          "ar": "تغطية الأرض",
+          "hi": "भूमि आवरण",
+          "zh": "地面覆盖",
+          "ja": "地面カバー",
+          "ko": "지면 덮개"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Lamb's Ear",
+      "description": "Stachys byzantina is a hardy perennial, known for its silvery-green, velvety foliage. It is often used in ground cover or borders."
+    },
+    "pl": {
+      "common_name": "Uszy baranka",
+      "description": "Stachys byzantina to odporna roślina wieloletnia, znana z srebrno-zielonych, aksamitnych liści. Często wykorzystywana jako roślina okrywowa."
+    },
+    "de": {
+      "common_name": "Lammohren",
+      "description": "Stachys byzantina ist eine robuste Staude mit silbrig-grünen, samtigen Blättern. Sie wird oft als Bodendecker verwendet."
+    },
+    "fr": {
+      "common_name": "Oreilles de mouton",
+      "description": "Stachys byzantina est une plante vivace résistante, connue pour son feuillage vert argenté et velouté. Elle est souvent utilisée en couvre-sol."
+    },
+    "it": {
+      "common_name": "Orecchie di agnello",
+      "description": "Stachys byzantina è una pianta perenne resistente, conosciuta per il suo fogliame vellutato verde argentato. Spesso usata come copertura del terreno."
+    },
+    "es": {
+      "common_name": "Orejas de cordero",
+      "description": "Stachys byzantina es una planta perenne resistente, conocida por su follaje verde plateado y aterciopelado. A menudo se utiliza como cubresuelo."
+    },
+    "pt": {
+      "common_name": "Orelhas de cordeiro",
+      "description": "Stachys byzantina é uma planta perene resistente, conhecida por suas folhas verde prateadas e aveludadas. Frequentemente usada como cobertura de solo."
+    },
+    "ar": {
+      "common_name": "أذن الحمل",
+      "description": "Stachys byzantina هي نبتة معمرة مقاومة، معروفة بأوراقها الفضية الخضراء والمخملية. وغالبًا ما تستخدم في تغطية الأرض."
+    },
+    "hi": {
+      "common_name": "भेड़ के कान",
+      "description": "Stachys byzantina एक कठोर बारहमासी पौधा है, जो अपनी चांदी-हरी, मखमली पत्तियों के लिए जाना जाता है। इसे अक्सर जमीन पर ढकने के लिए उपयोग किया जाता है।"
+    },
+    "zh": {
+      "common_name": "羊耳草",
+      "description": "Stachys byzantina 是一种耐寒的多年生植物，以其银绿色、天鹅绒般的叶片而闻名。通常用于地面覆盖。"
+    },
+    "ja": {
+      "common_name": "ヒツジの耳",
+      "description": "Stachys byzantina は、銀緑色のベルベットのような葉を持つ耐寒性の多年草です。主にグラウンドカバーやボーダーに使用されます。"
+    },
+    "ko": {
+      "common_name": "양 귀",
+      "description": "Stachys byzantina는 은색 녹색의 벨벳 같은 잎을 가진 내한성 다년초입니다. 주로 지면 덮개나 경계 식물로 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenersworld.com/plants/stachys-byzantina/",
+      "https://www.rhs.org.uk/plants/133199/stachys-byzantina/details"
+    ]
+  }
+}

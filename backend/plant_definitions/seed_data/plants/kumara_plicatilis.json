@@ -1,0 +1,236 @@
+{
+  "external_id": "kumara_plicatilis",
+  "name": "Fan Aloe",
+  "latin": "Kumara plicatilis",
+  "sun": "high",
+  "water": "low",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "cactus"
+  ],
+  "water_required": true,
+  "water_interval_days": 21,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 60,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "kumara_plicatilis.jpg",
+  "image_thumb": "kumara_plicatilis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright direct light",
+          "pl": "Jasne słońce",
+          "de": "Viel Sonne",
+          "fr": "Lumière vive",
+          "it": "Luce intensa",
+          "es": "Luz intensa",
+          "pt": "Luz intensa",
+          "ar": "ضوء قوي",
+          "hi": "तेज़ रोशनी",
+          "zh": "强光照",
+          "ja": "強い日光",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Buen drenaje",
+          "pt": "Boa drenagem",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良い",
+          "ko": "배수 잘됨"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Sparse watering",
+          "pl": "Rzadko podlewać",
+          "de": "Wenig gießen",
+          "fr": "Arrosage rare",
+          "it": "Poca acqua",
+          "es": "Riego escaso",
+          "pt": "Pouca rega",
+          "ar": "ري قليل",
+          "hi": "कम पानी",
+          "zh": "少量浇水",
+          "ja": "控えめ給水",
+          "ko": "물 적게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy care",
+          "pl": "Łatwa",
+          "de": "Pflegeleicht",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易养护",
+          "ja": "簡単",
+          "ko": "쉬움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10–30°C",
+          "pl": "10–30°C",
+          "de": "10–30°C",
+          "fr": "10–30°C",
+          "it": "10–30°C",
+          "es": "10–30°C",
+          "pt": "10–30°C",
+          "ar": "10–30°م",
+          "hi": "10–30°C",
+          "zh": "10–30°C",
+          "ja": "10–30°C",
+          "ko": "10–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgoć",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفضة",
+          "hi": "कम नमी",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Leve toxicidad",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微毒性",
+          "ja": "軽度有毒",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolny wzrost",
+          "de": "Langsam",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Fan Aloe",
+      "description": "Kumara plicatilis is a South African succulent known for its distinctive fan-shaped leaves. It prefers bright sunlight and infrequent watering. The plant is slow growing and well suited to containers indoors."
+    },
+    "pl": {
+      "common_name": "Aloes wachlarzowy",
+      "description": "Kumara plicatilis to południowoafrykański sukulent o wachlarzowatych liściach. Wymaga jasnego światła i rzadkiego podlewania. Rośnie wolno i nadaje się do uprawy w donicach."
+    },
+    "de": {
+      "common_name": "Fächer-Aloe",
+      "description": "Kumara plicatilis ist eine sukkulente Pflanze aus Südafrika mit fächerförmigen Blättern. Sie benötigt viel Licht und wenig Wasser. Das Wachstum ist langsam und gut für Töpfe geeignet."
+    },
+    "fr": {
+      "common_name": "Aloès éventail",
+      "description": "Kumara plicatilis est une plante succulente d’Afrique du Sud aux feuilles en éventail. Elle aime la lumière vive et peu d’arrosage. Sa croissance lente convient bien à la culture en pot."
+    },
+    "it": {
+      "common_name": "Aloe a ventaglio",
+      "description": "Kumara plicatilis è una succulenta sudafricana con foglie a ventaglio. Richiede molta luce e poca acqua. Cresce lentamente ed è adatta ai vasi."
+    },
+    "es": {
+      "common_name": "Aloe abanico",
+      "description": "Kumara plicatilis es una suculenta sudafricana con hojas en forma de abanico. Prefiere luz intensa y riego escaso. Su crecimiento es lento y funciona bien en maceta."
+    },
+    "pt": {
+      "common_name": "Aloe-leque",
+      "description": "Kumara plicatilis é uma suculenta da África do Sul com folhas em leque. Gosta de luz forte e pouca rega. Tem crescimento lento e adapta-se bem a vasos."
+    },
+    "ar": {
+      "common_name": "ألوة المروحة",
+      "description": "Kumara plicatilis نبات عصاري من جنوب أفريقيا بأوراق مروحية. يحتاج إلى ضوء قوي وري قليل. نموه بطيء ومناسب للزراعة في الأصص."
+    },
+    "hi": {
+      "common_name": "फैन एलो",
+      "description": "Kumara plicatilis दक्षिण अफ्रीका का एक रसीला पौधा है जिसकी पत्तियाँ पंखे जैसी होती हैं। इसे तेज़ रोशनी और कम पानी चाहिए। इसकी वृद्धि धीमी होती है और गमलों में अच्छा रहता है।"
+    },
+    "zh": {
+      "common_name": "扇叶芦荟",
+      "description": "Kumara plicatilis 是原产南非的多肉植物，叶片呈扇形。它需要充足光照和少量浇水。生长缓慢，适合盆栽养护。"
+    },
+    "ja": {
+      "common_name": "ファンアロエ",
+      "description": "Kumara plicatilis は南アフリカ原産の多肉植物で、扇状の葉が特徴です。強い光と控えめな水やりを好みます。成長はゆっくりで鉢植え向きです。"
+    },
+    "ko": {
+      "common_name": "부채알로에",
+      "description": "Kumara plicatilis는 남아프리카 원산의 다육식물로 부채 모양의 잎이 특징입니다. 강한 빛과 적은 물을 좋아하며 성장 속도는 느립니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/16202/kumara-plicatilis/details",
+      "https://www.kew.org/plants/kumara-plicatilis",
+      "https://worldofsucculents.com/kumara-plicatilis-fan-aloe/"
+    ]
+  }
+}

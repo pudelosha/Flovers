@@ -1,0 +1,236 @@
+{
+  "external_id": "rhus_typhina",
+  "name": "Staghorn Sumac",
+  "latin": "Rhus typhina",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rhus_typhina.jpg",
+  "image_thumb": "rhus_typhina.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium sunlight",
+          "pl": "Średnie nasłonecznienie",
+          "de": "Mittlere Sonneneinstrahlung",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम सूर्यप्रकाश",
+          "zh": "中等阳光",
+          "ja": "中程度の光",
+          "ko": "중간 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Acidic soil",
+          "pl": "Gleba kwaśna",
+          "de": "Saure Erde",
+          "fr": "Sol acide",
+          "it": "Terreno acido",
+          "es": "Suelo ácido",
+          "pt": "Solo ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय मिट्टी",
+          "zh": "酸性土壤",
+          "ja": "酸性土壌",
+          "ko": "산성 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Regagem moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Tolerates moderate cold",
+          "pl": "Toleruje umiarkowane zimno",
+          "de": "Verträgt mäßige Kälte",
+          "fr": "Tolère le froid modéré",
+          "it": "Tollera freddo moderato",
+          "es": "Soporta frío moderado",
+          "pt": "Tolera frio moderado",
+          "ar": "يتحمل البرودة المعتدلة",
+          "hi": "मध्यम ठंड सहन करता है",
+          "zh": "能耐受适度寒冷",
+          "ja": "中程度の寒さに耐える",
+          "ko": "중간 추위에 강함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Geringe Luftfeuchtigkeit",
+          "fr": "Humidité faible",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "नमीयत कम",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Toksyczny przy spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique s'il est ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سام إذا تم تناوله",
+          "hi": "खाने पर विषाक्त",
+          "zh": "如果摄入有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "De rápido crecimiento",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "速く成長する",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Staghorn Sumac",
+      "description": "Rhus typhina, known as Staghorn Sumac, is a fast-growing shrub with pinnate leaves and striking red fruit clusters. It thrives in full sun to partial shade."
+    },
+    "pl": {
+      "common_name": "Sumak rogatkowy",
+      "description": "Rhus typhina, znany jako sumak rogatkowy, to szybko rosnący krzew o pierzastych liściach i efektownych czerwonych owocach. Wymaga pełnego słońca do półcienia."
+    },
+    "de": {
+      "common_name": "Hirschgeweih-Sumach",
+      "description": "Rhus typhina, auch Hirschgeweih-Sumach genannt, ist ein schnell wachsender Strauch mit gefiederten Blättern und auffälligen roten Fruchtständen. Er gedeiht bei voller Sonne bis Halbschatten."
+    },
+    "fr": {
+      "common_name": "Sumac de Virginie",
+      "description": "Rhus typhina, appelé Sumac de Virginie, est un arbuste à croissance rapide avec des feuilles composées et des grappes de fruits rouges frappantes. Il prospère en plein soleil ou à l'ombre partielle."
+    },
+    "it": {
+      "common_name": "Sumac cervo",
+      "description": "Rhus typhina, noto come Sumac cervo, è un arbusto a crescita rapida con foglie pennate e grappoli di frutti rossi. Cresce bene in pieno sole o ombra parziale."
+    },
+    "es": {
+      "common_name": "Sumac ciervo",
+      "description": "Rhus typhina, conocido como sumac ciervo, es un arbusto de rápido crecimiento con hojas compuestas y racimos de frutos rojos. Crece bien a pleno sol o a sombra parcial."
+    },
+    "pt": {
+      "common_name": "Sumac-de-cervo",
+      "description": "Rhus typhina, conhecido como sumac-de-cervo, é um arbusto de crescimento rápido com folhas compostas e cachos de frutos vermelhos. Desenvolve-se bem ao sol pleno ou à sombra parcial."
+    },
+    "ar": {
+      "common_name": "السماق القرني",
+      "description": "Rhus typhina، المعروف باسم السماق القرني، هو شجيرة سريعة النمو ذات أوراق مركبة وكتل من الفواكه الحمراء. ينمو بشكل جيد في الشمس الكاملة أو الظل الجزئي."
+    },
+    "hi": {
+      "common_name": "हिरण सींग समक",
+      "description": "Rhus typhina, जिसे हिरण सींग समक कहा जाता है, एक तेजी से बढ़ने वाली झाड़ी है जिसमें पत्तियां और लाल फल के गुच्छे होते हैं। यह पूर्ण सूर्य या आंशिक छायाँ में अच्छा उगता है।"
+    },
+    "zh": {
+      "common_name": "鹿角 sumac",
+      "description": "Rhus typhina，鹿角 sumac，也叫作速生灌木，具有羽状叶和鲜艳的红色果实。它在全日照或部分阴凉下茁壮成长。"
+    },
+    "ja": {
+      "common_name": "シカの角のウルシ",
+      "description": "Rhus typhina、シカの角のウルシは、速く成長する低木で、羽状の葉と赤い果実が特徴です。直射日光または部分的な日陰でよく育ちます。"
+    },
+    "ko": {
+      "common_name": "사슴뿔 수막",
+      "description": "Rhus typhina, 사슴뿔 수막은 빠르게 자라는 관목으로, 깃털 모양의 잎과 붉은 과일이 특징입니다. 완전한 햇빛이나 부분적인 그늘에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.bhg.com/gardening/pests/insects-diseases-and-pests/staghorn-sumac/",
+      "https://www.americanforests.org/trees/staghorn-sumac/"
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "external_id": "rudbeckia_hirta",
+  "name": "Black-eyed Susan",
+  "latin": "Rudbeckia hirta",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "rudbeckia_hirta.jpg",
+  "image_thumb": "rudbeckia_hirta.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Sole pieno",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "직사광선"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchnicza",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "التربة الطينية",
+          "hi": "मृदुरूप मृदा",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature moderate",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ वृद्धि",
+          "zh": "生长快速",
+          "ja": "速く成長",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Black-eyed Susan",
+      "description": "Rudbeckia hirta, also known as Black-eyed Susan, is a perennial plant native to North America. It is popular for its bright yellow flowers with dark centers."
+    },
+    "pl": {
+      "common_name": "Rudbekia Hirta",
+      "description": "Rudbekia hirta, znana jako Rudbekia, to roślina wieloletnia pochodząca z Ameryki Północnej. Jest popularna z powodu swoich jasnych żółtych kwiatów z ciemnymi środkami."
+    },
+    "de": {
+      "common_name": "Schwarzaugige Susan",
+      "description": "Rudbeckia hirta, auch bekannt als Schwarzaugige Susan, ist eine mehrjährige Pflanze, die in Nordamerika heimisch ist. Sie ist beliebt für ihre leuchtend gelben Blüten mit dunklen Mittelpunkten."
+    },
+    "fr": {
+      "common_name": "Susan à yeux noirs",
+      "description": "Rudbeckia hirta, également connue sous le nom de Susan à yeux noirs, est une plante vivace originaire d'Amérique du Nord. Elle est populaire pour ses fleurs jaunes éclatantes avec des centres sombres."
+    },
+    "it": {
+      "common_name": "Susanna dagli occhi neri",
+      "description": "Rudbeckia hirta, conosciuta anche come Susanna dagli occhi neri, è una pianta perenne originaria del Nord America. È popolare per i suoi fiori gialli brillanti con centri scuri."
+    },
+    "es": {
+      "common_name": "Susa de ojos negros",
+      "description": "Rudbeckia hirta, también conocida como Susa de ojos negros, es una planta perenne originaria de América del Norte. Es popular por sus brillantes flores amarillas con centros oscuros."
+    },
+    "pt": {
+      "common_name": "Susan de olhos negros",
+      "description": "Rudbeckia hirta, também conhecida como Susan de olhos negros, é uma planta perene nativa da América do Norte. É popular por suas flores amarelas brilhantes com centros escuros."
+    },
+    "ar": {
+      "common_name": "سوزان ذات العيون السوداء",
+      "description": "رودبيكيا هيرتا، والمعروفة أيضًا باسم سوزان ذات العيون السوداء، هي نبات معمر موطنه أمريكا الشمالية. إنها مشهورة بأزهارها الصفراء الزاهية مع مراكز داكنة."
+    },
+    "hi": {
+      "common_name": "ब्लैक-आइड सुसान",
+      "description": "रुडबेकिया हिर्टा, जिसे ब्लैक-आइड सुसान भी कहा जाता है, उत्तरी अमेरिका का एक स्थायी पौधा है। यह इसके उज्जवल पीले फूलों और गहरे केंद्रों के लिए प्रसिद्ध है।"
+    },
+    "zh": {
+      "common_name": "黑眼苏珊",
+      "description": "Rudbeckia hirta，或称黑眼苏珊，是一种原产于北美的多年生植物。它因其明亮的黄色花朵和深色的中心而受到喜爱。"
+    },
+    "ja": {
+      "common_name": "ブラックアイドスーザン",
+      "description": "Rudbeckia hirta、別名ブラックアイドスーザンは、北アメリカ原産の多年草です。明るい黄色の花と暗い中心で人気があります。"
+    },
+    "ko": {
+      "common_name": "블랙아이드 수잔",
+      "description": "Rudbeckia hirta, 또는 블랙아이드 수잔은 북미 원산의 다년생 식물입니다. 그것은 밝은 노란 꽃과 어두운 중심으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/rudbeckia-hirta-black-eyed-susan",
+      "https://www.almanac.com/plant/black-eyed-susan"
+    ]
+  }
+}

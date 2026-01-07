@@ -1,0 +1,237 @@
+{
+  "external_id": "symphytum_officinale",
+  "name": "Comfrey",
+  "latin": "Symphytum officinale",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "symphytum_officinale.jpg",
+  "image_thumb": "symphytum_officinale.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loam soil",
+          "pl": "Gleba",
+          "de": "Lehm",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "किट्टू की मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate water",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "10-20°C",
+          "pl": "10-20°C",
+          "de": "10-20°C",
+          "fr": "10-20°C",
+          "it": "10-20°C",
+          "es": "10-20°C",
+          "pt": "10-20°C",
+          "ar": "10-20°C",
+          "hi": "10-20°C",
+          "zh": "10-20°C",
+          "ja": "10-20°C",
+          "ko": "10-20°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low humidity",
+          "pl": "Niska wilgotność",
+          "de": "Niedrige Luftfeuchtigkeit",
+          "fr": "Faible humidité",
+          "it": "Bassa umidità",
+          "es": "Baja humedad",
+          "pt": "Baixa umidade",
+          "ar": "رطوبة منخفضة",
+          "hi": "कम आर्द्रता",
+          "zh": "低湿度",
+          "ja": "低湿度",
+          "ko": "낮은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic if ingested",
+          "pl": "Trująca po spożyciu",
+          "de": "Giftig bei Verzehr",
+          "fr": "Toxique si ingéré",
+          "it": "Tossico se ingerito",
+          "es": "Tóxico si se ingiere",
+          "pt": "Tóxico se ingerido",
+          "ar": "سامة إذا تم ابتلاعها",
+          "hi": "यदि निगला जाए तो विषैला",
+          "zh": "摄入后有毒",
+          "ja": "摂取すると有毒",
+          "ko": "섭취 시 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnąca",
+          "de": "Schnell wachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "生长迅速",
+          "ja": "速い成長",
+          "ko": "빠르게 자라는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Comfrey",
+      "description": "Comfrey is a hardy perennial with large leaves and bell-shaped flowers. It thrives in moist, well-drained soils and is known for its medicinal properties."
+    },
+    "pl": {
+      "common_name": "Kruszyna",
+      "description": "Kruszyna to roślina wieloletnia o dużych liściach i dzwonkowatych kwiatach. Rośnie w wilgotnych, dobrze przepuszczalnych glebach i ma właściwości lecznicze."
+    },
+    "de": {
+      "common_name": "Beinwell",
+      "description": "Beinwell ist eine robuste Staude mit großen Blättern und glockenförmigen Blüten. Er wächst gut in feuchten, gut durchlässigen Böden und ist für seine heilenden Eigenschaften bekannt."
+    },
+    "fr": {
+      "common_name": "Consoude",
+      "description": "La consoude est une plante vivace robuste avec de grandes feuilles et des fleurs en forme de cloche. Elle pousse dans des sols humides et bien drainés et est connue pour ses propriétés médicinales."
+    },
+    "it": {
+      "common_name": "Comfrey",
+      "description": "La comfrey è una pianta perenne resistente con grandi foglie e fiori a forma di campana. Cresce in terreni umidi e ben drenati ed è conosciuta per le sue proprietà medicinali."
+    },
+    "es": {
+      "common_name": "Consuelda",
+      "description": "La consuelda es una planta perenne resistente con grandes hojas y flores en forma de campana. Crece en suelos húmedos y bien drenados y es conocida por sus propiedades medicinales."
+    },
+    "pt": {
+      "common_name": "Confrei",
+      "description": "O confrei é uma planta perene resistente com grandes folhas e flores em forma de sino. Cresce em solos úmidos e bem drenados e é conhecido por suas propriedades medicinais."
+    },
+    "ar": {
+      "common_name": "نبات الكومفري",
+      "description": "نبات الكومفري هو نبات معمّر ذو أوراق كبيرة وزهور على شكل جرس. ينمو في التربة الرطبة جيدة التصريف ويعرف بخصائصه العلاجية."
+    },
+    "hi": {
+      "common_name": "कॉम्फ्रे",
+      "description": "कॉम्फ्रे एक मजबूत पौधा है जिसमें बड़े पत्ते और घंटी के आकार के फूल होते हैं। यह नमीदार, अच्छी तरह से जल निकासी वाली मिट्टी में उगता है और इसके चिकित्सीय गुणों के लिए जाना जाता है."
+    },
+    "zh": {
+      "common_name": "大叶紫草",
+      "description": "大叶紫草是一种坚韧的多年生植物，具有大叶子和钟形花。它生长在湿润、排水良好的土壤中，以其药用特性而闻名。"
+    },
+    "ja": {
+      "common_name": "コンフリー",
+      "description": "コンフリーは大きな葉と鐘形の花を持つ丈夫な多年草です。湿った排水の良い土壌で成長し、薬用特性で知られています。"
+    },
+    "ko": {
+      "common_name": "컴프리",
+      "description": "컴프리는 큰 잎과 종 모양의 꽃을 가진 강한 다년생 식물입니다. 습기 있는 배수가 좋은 토양에서 자라며 약용 특성으로 잘 알려져 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/9904/symphytum-officinale/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=284699"
+    ]
+  }
+}

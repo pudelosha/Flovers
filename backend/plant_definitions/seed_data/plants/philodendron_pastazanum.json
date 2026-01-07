@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_pastazanum",
+  "name": "Philodendron pastazanum",
+  "latin": "Philodendron pastazanum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 18,
+  "image_hero": "philodendron_pastazanum.jpg",
+  "image_thumb": "philodendron_pastazanum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 광도"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka aroidów",
+          "de": "Aroid Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela aroid",
+          "es": "Mezcla de aroides",
+          "pt": "Mistura aroid",
+          "ar": "خليط أرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 급수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-28°C",
+          "pl": "22-28°C",
+          "de": "22-28°C",
+          "fr": "22-28°C",
+          "it": "22-28°C",
+          "es": "22-28°C",
+          "pt": "22-28°C",
+          "ar": "22-28°C",
+          "hi": "22-28°C",
+          "zh": "22-28°C",
+          "ja": "22-28°C",
+          "ko": "22-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysoka",
+          "de": "Hoch",
+          "fr": "Élevée",
+          "it": "Alta",
+          "es": "Alta",
+          "pt": "Alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高湿",
+          "ja": "高湿",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Pastaza Philodendron",
+      "description": "Philodendron pastazanum is a tropical plant native to the rainforests of South America. Known for its heart-shaped, glossy leaves and striking white veins, it thrives in moderate to high humidity."
+    },
+    "pl": {
+      "common_name": "Filodendron Pastaza",
+      "description": "Filodendron pastazanum to roślina tropikalna pochodząca z lasów deszczowych Ameryki Południowej. Charakteryzuje się sercowatymi, błyszczącymi liśćmi z wyraźnymi białymi żyłkami, najlepiej rośnie w wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Pastaza-Philodendron",
+      "description": "Der Philodendron pastazanum ist eine tropische Pflanze aus den Regenwäldern Südamerikas. Er zeichnet sich durch herzförmige, glänzende Blätter mit auffälligen weißen Adern aus und gedeiht bei moderater bis hoher Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Philodendron Pastaza",
+      "description": "Le Philodendron pastazanum est une plante tropicale originaire des forêts tropicales d'Amérique du Sud. Il se distingue par ses feuilles en forme de cœur, brillantes, avec des nervures blanches frappantes et préfère une humidité modérée à élevée."
+    },
+    "it": {
+      "common_name": "Philodendron Pastaza",
+      "description": "Il Philodendron pastazanum è una pianta tropicale originaria delle foreste pluviali del Sud America. Riconoscibile per le sue foglie a forma di cuore, lucide, con venature bianche evidenti, cresce bene in ambienti umidi."
+    },
+    "es": {
+      "common_name": "Philodendron Pastaza",
+      "description": "El Philodendron pastazanum es una planta tropical originaria de las selvas de América del Sur. Se caracteriza por sus hojas en forma de corazón y brillantes, con venas blancas prominentes, y prospera en condiciones de alta humedad."
+    },
+    "pt": {
+      "common_name": "Philodendron Pastaza",
+      "description": "O Philodendron pastazanum é uma planta tropical nativa das florestas tropicais da América do Sul. Conhecido por suas folhas em forma de coração e brilhantes, com veias brancas marcantes, prospera em alta umidade."
+    },
+    "ar": {
+      "common_name": "فيلودندرون باستازا",
+      "description": "فيلودندرون باستازا هو نبات استوائي موطنه غابات أمريكا الجنوبية المطيرة. يتميز بأوراقه القلبية اللامعة والأوردة البيضاء البارزة وينمو بشكل أفضل في الرطوبة المعتدلة إلى العالية."
+    },
+    "hi": {
+      "common_name": "फिलोडेंड्रॉन पास्टाज़ा",
+      "description": "फिलोडेंड्रॉन पास्टाज़ा एक उष्णकटिबंधीय पौधा है जो दक्षिण अमेरिका के वर्षावनों का मूल निवासी है। यह इसके दिल के आकार के चमकदार पत्तों और विशिष्ट सफेद नसों के लिए जाना जाता है, और यह उच्च आर्द्रता में अच्छा उगता है।"
+    },
+    "zh": {
+      "common_name": "帕斯塔扎朱槿",
+      "description": "Philodendron pastazanum 是一种热带植物，原产于南美的雨林。以其心形的光泽叶片和突出的白色脉络为特点，适合在高湿度环境中生长。"
+    },
+    "ja": {
+      "common_name": "パスタザフィロデンドロン",
+      "description": "フィロデンドロン・パスタザヌムは、南アメリカの熱帯雨林に自生する植物です。ハート型で光沢のある葉と目立つ白い脈が特徴で、高湿度環境でよく成長します。"
+    },
+    "ko": {
+      "common_name": "파스타자 필로덴드론",
+      "description": "필로덴드론 파스타자눔은 남미의 열대 우림이 원산지인 식물입니다. 하트 모양의 광택이 나는 잎과 뚜렷한 흰색 줄무늬가 특징이며, 높은 습도에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/philodendron-pastazanum",
+      "https://www.gardenia.net/plant/philodendron-pastazanum"
+    ]
+  }
+}

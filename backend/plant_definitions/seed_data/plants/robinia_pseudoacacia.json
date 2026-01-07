@@ -1,0 +1,237 @@
+{
+  "external_id": "robinia_pseudoacacia",
+  "name": "Black Locust",
+  "latin": "Robinia pseudoacacia",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "robinia_pseudoacacia.jpg",
+  "image_thumb": "robinia_pseudoacacia.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "أشعة الشمس الكاملة",
+          "hi": "पूरा सूरज",
+          "zh": "完全阳光",
+          "ja": "完全日光",
+          "ko": "완전한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy, sandy",
+          "pl": "Glinka, piaszczysta",
+          "de": "Lehmig, sandig",
+          "fr": "Argileuse, sableuse",
+          "it": "Argillosa, sabbiosa",
+          "es": "Arcillosa, arenosa",
+          "pt": "Argilosa, arenosa",
+          "ar": "طينية، رملية",
+          "hi": "कीलम, रेतीली",
+          "zh": "壤土, 沙土",
+          "ja": "粘土質、砂質",
+          "ko": "점토, 모래"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "適度",
+          "ko": "적당히"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climates",
+          "pl": "Ciepły klimat",
+          "de": "Warme Klimazonen",
+          "fr": "Climats chauds",
+          "it": "Climi caldi",
+          "es": "Climas cálidos",
+          "pt": "Climas quentes",
+          "ar": "المناخات الدافئة",
+          "hi": "गर्म जलवायु",
+          "zh": "温暖气候",
+          "ja": "暖かい気候",
+          "ko": "따뜻한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low to medium",
+          "pl": "Niska do średniej",
+          "de": "Niedrig bis mittel",
+          "fr": "Faible à moyen",
+          "it": "Bassa a media",
+          "es": "Baja a media",
+          "pt": "Baixa a média",
+          "ar": "منخفض إلى متوسط",
+          "hi": "कम से मध्यम",
+          "zh": "低至中等",
+          "ja": "低いから中くらい",
+          "ko": "낮음에서 중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Yes",
+          "pl": "Tak",
+          "de": "Ja",
+          "fr": "Oui",
+          "it": "Sì",
+          "es": "Sí",
+          "pt": "Sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "예"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing",
+          "pl": "Szybko rosnący",
+          "de": "Schnellwachsend",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "快速生长",
+          "ja": "速成",
+          "ko": "빠르게 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Black Locust",
+      "description": "The Black Locust is a fast-growing, deciduous tree native to eastern North America. Known for its fragrant white flowers and durable wood, it thrives in full sun and well-drained soils."
+    },
+    "pl": {
+      "common_name": "Robinia akacjowa",
+      "description": "Robinia akacjowa to szybko rosnące drzewo liściaste, pochodzi ze wschodniej Ameryki Północnej. Znana z pachnących białych kwiatów i trwałego drewna, rośnie w pełnym słońcu i dobrze przepuszczalnych glebach."
+    },
+    "de": {
+      "common_name": "Schwarz-Locust",
+      "description": "Die Schwarz-Locust ist ein schnell wachsender Laubbaum, der in den östlichen USA heimisch ist. Bekannt für ihre duftenden weißen Blumen und robustes Holz, gedeiht sie in voller Sonne und gut durchlässigen Böden."
+    },
+    "fr": {
+      "common_name": "Robinier faux-acacia",
+      "description": "Le robinier faux-acacia est un arbre à croissance rapide, originaire de l'est de l'Amérique du Nord. Connu pour ses fleurs blanches parfumées et son bois durable, il prospère en plein soleil et dans des sols bien drainés."
+    },
+    "it": {
+      "common_name": "Robinia pseudoacacia",
+      "description": "La Robinia pseudoacacia è un albero a crescita rapida originario dell'America settentrionale. Conosciuto per i suoi fiori bianchi profumati e il legno resistente, cresce al sole e in terreni ben drenati."
+    },
+    "es": {
+      "common_name": "Robinia pseudoacacia",
+      "description": "La Robinia pseudoacacia es un árbol de rápido crecimiento originario del este de América del Norte. Conocido por sus flores blancas fragantes y su madera duradera, prospera a pleno sol y en suelos bien drenados."
+    },
+    "pt": {
+      "common_name": "Robinier falso-acácia",
+      "description": "O Robinier falso-acácia é uma árvore de rápido crescimento, originária do leste da América do Norte. Conhecida pelas suas flores brancas perfumadas e madeira durável, cresce ao sol pleno em solos bem drenados."
+    },
+    "ar": {
+      "common_name": "الروبينياء",
+      "description": "الروبينياء هي شجرة سريعة النمو موطنها الأصلي شرق أمريكا الشمالية. تعرف بزهورها البيضاء العطرة وخشبها المتين، تنمو في الشمس الكاملة والتربة جيدة التصريف."
+    },
+    "hi": {
+      "common_name": "ब्लैक लोकेस्ट",
+      "description": "ब्लैक लोकेस्ट एक तेज़ी से बढ़ने वाली पर्णपाती पेड़ है जो पूर्वी उत्तरी अमेरिका का मूल निवासी है। इसकी खुशबूदार सफेद फूलों और मजबूत लकड़ी के लिए प्रसिद्ध है, यह पूर्ण सूर्य और अच्छी तरह से जल निकासी वाली मिट्टी में पनपता है।"
+    },
+    "zh": {
+      "common_name": "黑刺槐",
+      "description": "黑刺槐是一种快速生长的落叶树，原产于北美东部。因其芳香的白色花朵和耐用的木材而闻名，喜欢在阳光充足、排水良好的土壤中生长。"
+    },
+    "ja": {
+      "common_name": "ブラックロカスト",
+      "description": "ブラックロカストは、北アメリカ東部原産の速く成長する落葉樹です。香り高い白い花と丈夫な木材で知られ、日光が十分に当たる水はけの良い土壌で育ちます。"
+    },
+    "ko": {
+      "common_name": "블랙 로커스트",
+      "description": "블랙 로커스트는 북미 동부가 원산지인 빠르게 자라는 낙엽수입니다. 향기로운 흰 꽃과 내구성이 강한 나무로 유명하며, 햇볕이 잘 드는 배수가 좋은 토양에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.botanicalgarden.com/robinia_pseudoacacia",
+      "https://www.gardeningknowhow.com/robinia-care"
+    ]
+  }
+}

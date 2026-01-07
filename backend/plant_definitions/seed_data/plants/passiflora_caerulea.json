@@ -1,0 +1,237 @@
+{
+  "external_id": "passiflora_caerulea",
+  "name": "Blue Passionflower",
+  "latin": "Passiflora caerulea",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "passiflora_caerulea.jpg",
+  "image_thumb": "passiflora_caerulea.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "full sun",
+          "pl": "pełne słońce",
+          "de": "Vollsonne",
+          "fr": "plein soleil",
+          "it": "pieno sole",
+          "es": "pleno sol",
+          "pt": "sol pleno",
+          "ar": "شمس ساطعة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "充足阳光",
+          "ja": "日光が十分",
+          "ko": "완전한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "well-drained",
+          "pl": "dobrze przepuszczalna",
+          "de": "gut durchlässig",
+          "fr": "bien drainé",
+          "it": "ben drenato",
+          "es": "bien drenado",
+          "pt": "bem drenado",
+          "ar": "مصفى جيدًا",
+          "hi": "अच्छी तरह से निथरी हुई",
+          "zh": "排水良好",
+          "ja": "良好な排水",
+          "ko": "배수가 잘되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "umiarkowane",
+          "de": "mäßig",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适度",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyen",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "toxic",
+          "pl": "trujący",
+          "de": "giftig",
+          "fr": "toxique",
+          "it": "tossico",
+          "es": "tóxico",
+          "pt": "tóxico",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "vigorous",
+          "pl": "żywotny",
+          "de": "kräftig",
+          "fr": "vigoureux",
+          "it": "vigoroso",
+          "es": "vigoroso",
+          "pt": "vigoroso",
+          "ar": "قوي",
+          "hi": "तेज़ी से बढ़ने वाला",
+          "zh": "茂盛",
+          "ja": "力強い",
+          "ko": "강력한"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Blue Passionflower",
+      "description": "Passiflora caerulea, also known as the blue passionflower, is a climbing vine native to South America. It features large, striking blue and purple flowers that attract pollinators."
+    },
+    "pl": {
+      "common_name": "Błękitny Pasiflor",
+      "description": "Passiflora caerulea, znana również jako błękitny pasiflor, to pnącze pochodzące z Ameryki Południowej. Charakteryzuje się dużymi, uderzającymi niebieskimi i fioletowymi kwiatami przyciągającymi zapylacze."
+    },
+    "de": {
+      "common_name": "Blaue Passionsblume",
+      "description": "Passiflora caerulea, auch als blaue Passionsblume bekannt, ist eine Kletterpflanze aus Südamerika. Sie zeichnet sich durch große, auffällige blaue und lila Blüten aus, die Bestäuber anziehen."
+    },
+    "fr": {
+      "common_name": "Passiflore bleue",
+      "description": "Passiflora caerulea, aussi connue sous le nom de passiflore bleue, est une plante grimpante originaire d'Amérique du Sud. Elle possède de grandes fleurs bleues et violettes qui attirent les pollinisateurs."
+    },
+    "it": {
+      "common_name": "Passiflora blu",
+      "description": "Passiflora caerulea, conosciuta anche come passiflora blu, è una pianta rampicante originaria del Sud America. Presenta fiori grandi e vistosi di colore blu e viola che attirano gli impollinatori."
+    },
+    "es": {
+      "common_name": "Pasiflora azul",
+      "description": "Passiflora caerulea, también conocida como pasiflora azul, es una planta trepadora originaria de América del Sur. Sus grandes flores azules y moradas atraen a los polinizadores."
+    },
+    "pt": {
+      "common_name": "Passiflora azul",
+      "description": "Passiflora caerulea, também conhecida como passiflora azul, é uma planta trepadeira nativa da América do Sul. Possui grandes flores azuis e roxas que atraem polinizadores."
+    },
+    "ar": {
+      "common_name": "زهرة العاطفة الزرقاء",
+      "description": "Passiflora caerulea، المعروفة أيضًا باسم زهرة العاطفة الزرقاء، هي نبات متسلق موطنه أمريكا الجنوبية. يتميز بأزهار زرقاء وبنفسجية كبيرة تجذب الملقحات."
+    },
+    "hi": {
+      "common_name": "नीली पैशनफ्लावर",
+      "description": "Passiflora caerulea, जिसे नीली पैशनफ्लावर भी कहा जाता है, दक्षिण अमेरिका का एक लता पौधा है। इसमें बड़ी, आकर्षक नीली और बैंगनी रंग की फूल होती हैं जो परागणकों को आकर्षित करती हैं।"
+    },
+    "zh": {
+      "common_name": "蓝色西番莲",
+      "description": "Passiflora caerulea，亦称蓝色西番莲，是一种原产于南美的藤本植物。它具有大型、引人注目的蓝色和紫色花朵，吸引了传粉者。"
+    },
+    "ja": {
+      "common_name": "青いパッションフラワー",
+      "description": "Passiflora caerulea、青いパッションフラワーとしても知られるこの植物は、南アメリカ原産のつる植物です。大きな青紫の花を咲かせ、花粉を運ぶ動物を引き寄せます。"
+    },
+    "ko": {
+      "common_name": "블루 패션플라워",
+      "description": "Passiflora caerulea, 또는 블루 패션플라워는 남미 원산의 덩굴식물입니다. 크고 눈에 띄는 파란색과 보라색 꽃을 피워 꽃가루를 운반하는 곤충들을 끌어들입니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/passiflora-caerulea",
+      "https://www.bhg.com/gardening/pests-diseases-insects-diseases/how-to-grow-passionflowers/"
+    ]
+  }
+}

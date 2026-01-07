@@ -1,0 +1,237 @@
+{
+  "external_id": "tradescantia_pallida",
+  "name": "Purple Heart",
+  "latin": "Tradescantia pallida",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "tradescantia_pallida.jpg",
+  "image_thumb": "tradescantia_pallida.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy",
+          "pl": "Gliniaste",
+          "de": "Lehmig",
+          "fr": "Argileux",
+          "it": "Argilloso",
+          "es": "Arcilloso",
+          "pt": "Arenoso",
+          "ar": "طيني",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Easy",
+          "pl": "Łatwe",
+          "de": "Einfach",
+          "fr": "Facile",
+          "it": "Facile",
+          "es": "Fácil",
+          "pt": "Fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm",
+          "pl": "Ciepłe",
+          "de": "Warm",
+          "fr": "Chaud",
+          "it": "Caldo",
+          "es": "Cálido",
+          "pt": "Quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średnie",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast",
+          "pl": "Szybki",
+          "de": "Schnell",
+          "fr": "Rapide",
+          "it": "Veloce",
+          "es": "Rápido",
+          "pt": "Rápido",
+          "ar": "سريع",
+          "hi": "तेज़",
+          "zh": "快速",
+          "ja": "速い",
+          "ko": "빠른"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Purple Heart",
+      "description": "Tradescantia pallida, also known as Purple Heart, is a perennial plant known for its striking purple leaves and small pink flowers. It thrives in bright, indirect light and requires moderate watering."
+    },
+    "pl": {
+      "common_name": "Fioletowe Serce",
+      "description": "Tradescantia pallida, znana również jako Fioletowe Serce, to roślina wieloletnia o charakterystycznych fioletowych liściach i małych różowych kwiatach. Preferuje jasne, pośrednie światło i umiarkowane podlewanie."
+    },
+    "de": {
+      "common_name": "Purpur Herz",
+      "description": "Tradescantia pallida, auch Purpur Herz genannt, ist eine Staude, die für ihre auffälligen lila Blätter und kleinen rosa Blumen bekannt ist. Sie gedeiht bei hellem, indirektem Licht und benötigt mäßiges Gießen."
+    },
+    "fr": {
+      "common_name": "Cœur Pourpre",
+      "description": "Tradescantia pallida, également appelée Cœur Pourpre, est une plante vivace reconnue pour ses feuilles violettes frappantes et ses petites fleurs roses. Elle préfère une lumière indirecte vive et un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Cuore Viola",
+      "description": "Tradescantia pallida, conosciuta anche come Cuore Viola, è una pianta perenne nota per le sue foglie viola e i piccoli fiori rosa. Cresce meglio in luce indiretta e necessita di annaffiature moderate."
+    },
+    "es": {
+      "common_name": "Corazón Púrpura",
+      "description": "Tradescantia pallida, también conocida como Corazón Púrpura, es una planta perenne conocida por sus hojas moradas y pequeñas flores rosadas. Prefiere luz indirecta brillante y necesita riego moderado."
+    },
+    "pt": {
+      "common_name": "Coração Roxo",
+      "description": "Tradescantia pallida, também conhecida como Coração Roxo, é uma planta perene famosa por suas folhas roxas e pequenas flores cor-de-rosa. Prefere luz indireta e requer rega moderada."
+    },
+    "ar": {
+      "common_name": "القلب البنفسجي",
+      "description": "Tradescantia pallida، المعروفة أيضًا بالقلب البنفسجي، هي نبات معمر معروف بأوراقه البنفسجية المذهلة وأزهاره الوردية الصغيرة. تنمو بشكل جيد في الضوء غير المباشر وتحتاج إلى ري معتدل."
+    },
+    "hi": {
+      "common_name": "बैंगनी दिल",
+      "description": "Tradescantia pallida, जिसे बैंगनी दिल भी कहा जाता है, एक बारहमासी पौधा है जो अपनी आकर्षक बैंगनी पत्तियों और छोटी गुलाबी फूलों के लिए प्रसिद्ध है। यह हल्की, अप्रत्यक्ष रोशनी में बढ़ता है और मध्यम पानी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "紫心花",
+      "description": "Tradescantia pallida，也叫紫心花，是一种多年生植物，以其醒目的紫色叶子和小巧的粉红色花朵而闻名。它喜欢明亮的间接光照，需要适量的浇水。"
+    },
+    "ja": {
+      "common_name": "紫のハート",
+      "description": "Tradescantia pallida、別名紫のハートは、その印象的な紫色の葉と小さなピンク色の花で知られる多年草です。明るい間接光で育ち、中程度の水やりが必要です。"
+    },
+    "ko": {
+      "common_name": "보라색 심장",
+      "description": "Tradescantia pallida, 보라색 심장이라고도 알려진 이 식물은 눈에 띄는 보라색 잎과 작은 분홍색 꽃으로 유명한 다년생 식물입니다. 밝은 간접광에서 잘 자라며 적당한 물주기가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/tradescantia-pallida-purple-heart",
+      "https://www.rhs.org.uk/plants/392303/tradescantia-pallida"
+    ]
+  }
+}

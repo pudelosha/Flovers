@@ -1,0 +1,238 @@
+{
+  "external_id": "nertera_granadensis",
+  "name": "Coral bead plant",
+  "latin": "Nertera granadensis",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "nertera_granadensis.jpg",
+  "image_thumb": "nertera_granadensis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect light",
+          "pl": "Jasne światło",
+          "de": "Helles Streulicht",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज़ अप्रत्यक्ष रोशनी",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Moist well-drained soil",
+          "pl": "Wilgotna gleba",
+          "de": "Durchlässige Erde",
+          "fr": "Sol drainant",
+          "it": "Terreno drenante",
+          "es": "Suelo drenante",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة الصرف",
+          "hi": "अच्छी जल निकासी मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけの良い土",
+          "ko": "배수 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep evenly moist",
+          "pl": "Utrzymuj wilgoć",
+          "de": "Gleichmäßig feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطوبة منتظمة",
+          "hi": "समान नमी रखें",
+          "zh": "保持湿润",
+          "ja": "常に湿り気",
+          "ko": "항상 촉촉하게"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia trudność",
+          "de": "Mittlerer Anspruch",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–22°C",
+          "pl": "15–22°C",
+          "de": "15–22°C",
+          "fr": "15–22°C",
+          "it": "15–22°C",
+          "es": "15–22°C",
+          "pt": "15–22°C",
+          "ar": "15–22°م",
+          "hi": "15–22°C",
+          "zh": "15–22°C",
+          "ja": "15–22°C",
+          "ko": "15–22°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Prefers humid air",
+          "pl": "Lubi wilgoć",
+          "de": "Mag Luftfeuchte",
+          "fr": "Aime l'humidité",
+          "it": "Ama umidità",
+          "es": "Prefiere humedad",
+          "pt": "Gosta de umidade",
+          "ar": "يفضل الرطوبة",
+          "hi": "नमी पसंद",
+          "zh": "喜湿润空气",
+          "ja": "湿度を好む",
+          "ko": "습도 선호"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Low spreading",
+          "pl": "Niska, płożąca",
+          "de": "Niedrig wachsend",
+          "fr": "Couvre-sol bas",
+          "it": "Crescita bassa",
+          "es": "Crecimiento bajo",
+          "pt": "Crescimento baixo",
+          "ar": "نمو منخفض",
+          "hi": "नीची फैलावदार",
+          "zh": "低矮蔓生",
+          "ja": "低く広がる",
+          "ko": "낮게 퍼짐"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Coral bead plant",
+      "description": "Nertera granadensis is a low-growing ornamental plant known for its bright orange berries. It prefers cool temperatures, bright indirect light, and consistently moist soil indoors."
+    },
+    "pl": {
+      "common_name": "Nertera",
+      "description": "Nertera granadensis to niska roślina ozdobna znana z pomarańczowych owoców. Wymaga jasnego światła rozproszonego i stale wilgotnej gleby."
+    },
+    "de": {
+      "common_name": "Korallenbeere",
+      "description": "Nertera granadensis ist eine niedrig wachsende Zierpflanze mit auffälligen Beeren. Sie mag helles, indirektes Licht und gleichmäßig feuchte Erde."
+    },
+    "fr": {
+      "common_name": "Plante aux perles",
+      "description": "Nertera granadensis est une plante tapissante décorative aux baies orange. Elle préfère une lumière indirecte et un sol constamment humide."
+    },
+    "it": {
+      "common_name": "Nertera",
+      "description": "La Nertera granadensis è una pianta ornamentale bassa con bacche arancioni. Cresce bene con luce indiretta e terreno sempre leggermente umido."
+    },
+    "es": {
+      "common_name": "Nertera",
+      "description": "Nertera granadensis es una planta ornamental rastrera con bayas naranjas. Necesita luz indirecta brillante y suelo húmedo."
+    },
+    "pt": {
+      "common_name": "Nertera",
+      "description": "A Nertera granadensis é uma planta ornamental baixa com frutos alaranjados. Prefere luz indireta e solo constantemente úmido."
+    },
+    "ar": {
+      "common_name": "نيرتيرا",
+      "description": "نيرتيرا غراندينسيس نبات زينة منخفض يتميز بثماره البرتقالية. ينمو جيدًا في ضوء غير مباشر وتربة رطبة باستمرار."
+    },
+    "hi": {
+      "common_name": "कोरल बीड पौधा",
+      "description": "Nertera granadensis एक छोटा सजावटी पौधा है जिसमें नारंगी फल लगते हैं। इसे अप्रत्यक्ष रोशनी और लगातार नम मिट्टी की आवश्यकता होती है।"
+    },
+    "zh": {
+      "common_name": "珊瑚珠植物",
+      "description": "Nertera granadensis 是一种低矮观赏植物，以橙色浆果著称。适合明亮散射光和保持湿润的土壤。"
+    },
+    "ja": {
+      "common_name": "ネルテラ",
+      "description": "ネルテラ・グラナデンシスはオレンジ色の実をつける低成長の観葉植物です。明るい間接光と湿った土を好みます。"
+    },
+    "ko": {
+      "common_name": "네르테라",
+      "description": "Nertera granadensis는 주황색 열매가 특징인 낮게 자라는 식물입니다. 밝은 간접광과 촉촉한 토양을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/nertera/granadensis/details",
+      "https://www.gardenersworld.com/plants/nertera-granadensis/",
+      "https://www.botanicalgarden.ubc.ca/nertera-granadensis"
+    ]
+  }
+}

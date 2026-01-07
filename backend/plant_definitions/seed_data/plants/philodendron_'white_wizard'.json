@@ -1,0 +1,237 @@
+{
+  "external_id": "philodendron_white_wizard",
+  "name": "Philodendron 'White Wizard'",
+  "latin": "Philodendron 'White Wizard'",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "philodendron_white_wizard.jpg",
+  "image_thumb": "philodendron_white_wizard.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange aroid",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla de aroides",
+          "pt": "Mistura de aroides",
+          "ar": "خليط آرويد",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊土壤混合",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ري متوسطة",
+          "hi": "मध्यम पानी",
+          "zh": "中等浇水",
+          "ja": "中くらいの水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度のケア",
+          "ko": "중간 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm temperatures",
+          "pl": "Ciepłe temperatury",
+          "de": "Warme Temperaturen",
+          "fr": "Températures chaudes",
+          "it": "Temperature calde",
+          "es": "Temperaturas cálidas",
+          "pt": "Temperaturas quentes",
+          "ar": "درجات حرارة دافئة",
+          "hi": "गर्म तापमान",
+          "zh": "温暖温度",
+          "ja": "暖かい温度",
+          "ko": "따뜻한 온도"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyczny dla zwierząt",
+          "de": "Toxisch für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para las mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए विषाक्त",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "애완 동물에게 독성 있음"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate growth",
+          "pl": "Średni wzrost",
+          "de": "Mäßiges Wachstum",
+          "fr": "Croissance modérée",
+          "it": "Crescita moderata",
+          "es": "Crecimiento moderado",
+          "pt": "Crescimento moderado",
+          "ar": "نمو معتدل",
+          "hi": "मध्यम वृद्धि",
+          "zh": "适度生长",
+          "ja": "中程度の成長",
+          "ko": "보통 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "Philodendron 'White Wizard' is a striking houseplant with variegated green and white leaves. It thrives in warm, humid environments with indirect light."
+    },
+    "pl": {
+      "common_name": "Filodendron 'White Wizard'",
+      "description": "Filodendron 'White Wizard' to efektowna roślina domowa o zielonych i białych liściach. Dobrze rośnie w ciepłych, wilgotnych warunkach z pośrednim światłem."
+    },
+    "de": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "Philodendron 'White Wizard' ist eine auffällige Zimmerpflanze mit grün-weißen Blättern. Sie gedeiht bei warmem, feuchtem Klima und indirektem Licht."
+    },
+    "fr": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "Le Philodendron 'White Wizard' est une plante d'intérieur remarquable avec des feuilles vertes et blanches. Elle préfère les environnements chauds et humides avec de la lumière indirecte."
+    },
+    "it": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "Il Philodendron 'White Wizard' è una pianta da appartamento straordinaria con foglie verdi e bianche. Cresce meglio in ambienti caldi e umidi con luce indiretta."
+    },
+    "es": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "El Philodendron 'White Wizard' es una planta de interior impresionante con hojas verdes y blancas. Se desarrolla mejor en ambientes cálidos y húmedos con luz indirecta."
+    },
+    "pt": {
+      "common_name": "Philodendron 'White Wizard'",
+      "description": "O Philodendron 'White Wizard' é uma planta de interior marcante com folhas verdes e brancas. Prefere ambientes quentes e úmidos com luz indireta."
+    },
+    "ar": {
+      "common_name": "فلوديندرون 'وايت ويزارد'",
+      "description": "الفلوديندرون 'وايت ويزارد' هو نبات منزلي لافت مع أوراق خضراء وبيضاء. يزدهر في بيئات دافئة ورطبة مع ضوء غير مباشر."
+    },
+    "hi": {
+      "common_name": "फिलोडेंड्रोन 'व्हाइट विजार्ड'",
+      "description": "फिलोडेंड्रोन 'व्हाइट विजार्ड' एक प्रभावशाली घरेलू पौधा है जिसमें हरी और सफेद पत्तियाँ होती हैं। यह गर्म, आर्द्र वातावरण में अप्रत्यक्ष प्रकाश में सबसे अच्छा बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "白巫师蔓绿绒",
+      "description": "白巫师蔓绿绒是一种引人注目的室内植物，具有绿色和白色的叶子。它在温暖、潮湿的环境中，间接光照下生长最好。"
+    },
+    "ja": {
+      "common_name": "フィロデンドロン 'ホワイト・ウィザード'",
+      "description": "フィロデンドロン 'ホワイト・ウィザード' は、緑と白の葉を持つ印象的な室内植物です。温暖で湿度の高い環境で間接光のもとで最適に成長します。"
+    },
+    "ko": {
+      "common_name": "필로덴드론 '화이트 위자드'",
+      "description": "필로덴드론 '화이트 위자드'는 녹색과 흰색의 잎을 가진 인상적인 실내 식물입니다. 따뜻하고 습한 환경에서 간접광 아래에서 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.abc-plantcare.com/philodendron-white-wizard",
+      "https://www.plantcare.com/philodendron-varieties"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "platycerium_superbum",
+  "name": "Elk Horn Fern",
+  "latin": "Platycerium superbum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 7,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "platycerium_superbum.jpg",
+  "image_thumb": "platycerium_superbum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Orchid mix",
+          "pl": "Mieszanka dla storczyków",
+          "de": "Orchideenmischung",
+          "fr": "Mélange pour orchidées",
+          "it": "Miscela per orchidee",
+          "es": "Mezcla para orquídeas",
+          "pt": "Mistura para orquídeas",
+          "ar": "مزيج لأorchيد",
+          "hi": "ऑर्किड मिश्रण",
+          "zh": "兰花混合土",
+          "ja": "ランの土混合",
+          "ko": "난초 혼합 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium water",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "ماء متوسط",
+          "hi": "मध्यम पानी",
+          "zh": "中等水量",
+          "ja": "中程度の水やり",
+          "ko": "중간 물"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中級",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22–28°C",
+          "pl": "22–28°C",
+          "de": "22–28°C",
+          "fr": "22–28°C",
+          "it": "22–28°C",
+          "es": "22–28°C",
+          "pt": "22–28°C",
+          "ar": "22–28°C",
+          "hi": "22–28°C",
+          "zh": "22–28°C",
+          "ja": "22–28°C",
+          "ko": "22–28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchtigkeit",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Humedad alta",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च आर्द्रता",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow growing",
+          "pl": "Wolno rosnący",
+          "de": "Langsam wachsend",
+          "fr": "Croissance lente",
+          "it": "Crescita lenta",
+          "es": "Crecimiento lento",
+          "pt": "Crescimento lento",
+          "ar": "نمو بطيء",
+          "hi": "धीमा विकास",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느리게 자라는"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Elk Horn Fern",
+      "description": "Platycerium superbum is an epiphytic fern native to tropical rainforests. It features large, shield-shaped fronds and long, hanging, antler-like fronds."
+    },
+    "pl": {
+      "common_name": "Paprotka Elka",
+      "description": "Platycerium superbum to epifityczna paproć występująca w tropikalnych lasach deszczowych. Posiada duże, tarczowate frondy i długie, zwisające frondy przypominające poroże."
+    },
+    "de": {
+      "common_name": "Elchhornfarn",
+      "description": "Platycerium superbum ist ein epiphytischer Farn, der in tropischen Regenwäldern beheimatet ist. Er zeichnet sich durch große, schildartige Blätter und lange, herabhängende, geweihartige Blätter aus."
+    },
+    "fr": {
+      "common_name": "Fougère à cornes d'élan",
+      "description": "Platycerium superbum est une fougère épiphyte originaire des forêts tropicales. Elle possède de grandes frondes en forme de bouclier et des frondes pendantes ressemblant à des bois."
+    },
+    "it": {
+      "common_name": "Felce con corna di alce",
+      "description": "Platycerium superbum è una felce epifita originaria delle foreste pluviali tropicali. Ha grandi fronde a forma di scudo e lunghe fronde pendenti simili a corna."
+    },
+    "es": {
+      "common_name": "Helecho cuerno de alce",
+      "description": "Platycerium superbum es un helecho epifito originario de los bosques tropicales. Presenta grandes frondas en forma de escudo y frondas largas y colgantes similares a cuernos."
+    },
+    "pt": {
+      "common_name": "Samambaia com chifres de alce",
+      "description": "Platycerium superbum é uma samambaia epífita nativa das florestas tropicais. Possui grandes frondes em forma de escudo e frondes longas e pendentes semelhantes a chifres."
+    },
+    "ar": {
+      "common_name": "سرخس قرن الأيل",
+      "description": "Platycerium superbum هو سرخس نباتي يعيش في الغابات الاستوائية. يتميز بأوراق كبيرة على شكل درع وأوراق طويلة معلقة تشبه القرون."
+    },
+    "hi": {
+      "common_name": "हिरण सींग फर्न",
+      "description": "Platycerium superbum एक एपिफाइटिक फर्न है जो उष्णकटिबंधीय वर्षावनों में पाया जाता है। इसमें बड़ी, ढाल जैसी पत्तियाँ और लंबी, लटकी हुई, हिरण सींग जैसी पत्तियाँ होती हैं।"
+    },
+    "zh": {
+      "common_name": "驯鹿角蕨",
+      "description": "Platycerium superbum是一种生长在热带雨林中的附生蕨类植物。它具有大型盾形的叶片和长而下垂的类似鹿角的叶片。"
+    },
+    "ja": {
+      "common_name": "エルクホーンシダ",
+      "description": "Platycerium superbumは熱帯雨林に生息する着生シダです。大きな盾形の葉と、下垂した鹿の角のような葉を持っています。"
+    },
+    "ko": {
+      "common_name": "엘크혼 고사리",
+      "description": "Platycerium superbum은 열대 우림에서 자생하는 착생 고사리입니다. 큰 방패 모양의 잎과 길게 늘어지는 사슴 뿔 모양의 잎을 특징으로 합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/Platycerium-superbum",
+      "https://www.abc.net.au/gardening/plants/platycerium-superbum-elk-horn-fern/14204096"
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "external_id": "thaumatophyllum_adamantinum",
+  "name": "Thaumatophyllum adamantinum",
+  "latin": "Thaumatophyllum adamantinum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "thaumatophyllum_adamantinum.jpg",
+  "image_thumb": "thaumatophyllum_adamantinum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Światło średnie",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Aroid mix",
+          "pl": "Mieszanka dla aroidów",
+          "de": "Aroid-Mischung",
+          "fr": "Mélange pour aroides",
+          "it": "Miscela per aroidi",
+          "es": "Mezcla para aroides",
+          "pt": "Mistura para aroides",
+          "ar": "خليط لأريود",
+          "hi": "एरोइड मिश्रण",
+          "zh": "阿罗伊德混合土",
+          "ja": "アロイドミックス",
+          "ko": "아로이드 혼합"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "적당"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-28°C",
+          "pl": "22-28°C",
+          "de": "22-28°C",
+          "fr": "22-28°C",
+          "it": "22-28°C",
+          "es": "22-28°C",
+          "pt": "22-28°C",
+          "ar": "22-28°C",
+          "hi": "22-28°C",
+          "zh": "22-28°C",
+          "ja": "22-28°C",
+          "ko": "22-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High",
+          "pl": "Wysokie",
+          "de": "Hoch",
+          "fr": "Élevé",
+          "it": "Alto",
+          "es": "Alto",
+          "pt": "Alto",
+          "ar": "مرتفع",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic",
+          "pl": "Toksyczny",
+          "de": "Toxisch",
+          "fr": "Toxique",
+          "it": "Tossico",
+          "es": "Tóxico",
+          "pt": "Tóxico",
+          "ar": "سام",
+          "hi": "विषैला",
+          "zh": "有毒",
+          "ja": "有毒",
+          "ko": "독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Medium growth",
+          "pl": "Średni wzrost",
+          "de": "Mittleres Wachstum",
+          "fr": "Croissance moyenne",
+          "it": "Crescita media",
+          "es": "Crecimiento medio",
+          "pt": "Crescimento médio",
+          "ar": "نمو متوسط",
+          "hi": "मध्यम वृद्धि",
+          "zh": "中等生长",
+          "ja": "中程度の成長",
+          "ko": "중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Crystal Philodendron",
+      "description": "A striking plant with large, glossy leaves. It thrives in medium light and warm, humid environments."
+    },
+    "pl": {
+      "common_name": "Filodendron Kryształowy",
+      "description": "Roślina o dużych, błyszczących liściach. Rośnie w średnim świetle i ciepłym, wilgotnym otoczeniu."
+    },
+    "de": {
+      "common_name": "Kristall-Philodendron",
+      "description": "Eine auffällige Pflanze mit großen, glänzenden Blättern. Sie gedeiht bei mittlerem Licht und in warmen, feuchten Umgebungen."
+    },
+    "fr": {
+      "common_name": "Philodendron Cristal",
+      "description": "Une plante saisissante avec de grandes feuilles brillantes. Elle prospère sous une lumière moyenne et dans des environnements chauds et humides."
+    },
+    "it": {
+      "common_name": "Philodendron Cristallo",
+      "description": "Una pianta sorprendente con grandi foglie lucide. Cresce in luce media e in ambienti caldi e umidi."
+    },
+    "es": {
+      "common_name": "Filodendro Cristal",
+      "description": "Una planta llamativa con grandes hojas brillantes. Prosperan con luz media y en ambientes cálidos y húmedos."
+    },
+    "pt": {
+      "common_name": "Filodendro Cristal",
+      "description": "Uma planta impressionante com grandes folhas brilhantes. Cresce em luz média e em ambientes quentes e úmidos."
+    },
+    "ar": {
+      "common_name": "فيلوديندرون الكريستال",
+      "description": "نبتة لافتة للنظر ذات أوراق لامعة وكبيرة. تنمو في الضوء المتوسط وفي بيئات دافئة ورطبة."
+    },
+    "hi": {
+      "common_name": "क्रिस्टल फिलोडेंड्रोन",
+      "description": "यह एक आकर्षक पौधा है जिसकी बड़ी, चमकदार पत्तियां होती हैं। यह मध्यम रोशनी और गर्म, नम वातावरण में बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "水晶蔓绿绳",
+      "description": "这是一种引人注目的植物，具有大而光亮的叶子。它在中等光照和温暖潮湿的环境中茁壮成长。"
+    },
+    "ja": {
+      "common_name": "クリスタルフィロデンドロン",
+      "description": "大きくて光沢のある葉を持つ印象的な植物です。中程度の光と暖かく湿った環境で育ちます。"
+    },
+    "ko": {
+      "common_name": "크리스탈 필로덴드론",
+      "description": "크고 광택 있는 잎을 가진 인상적인 식물입니다. 중간 정도의 빛과 따뜻하고 습한 환경에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/thaumatophyllum-adamantinum",
+      "https://www.bhg.com/gardening/plant-dictionary/philodendron-crystal"
+    ]
+  }
+}

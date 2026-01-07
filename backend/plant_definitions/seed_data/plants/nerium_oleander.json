@@ -1,0 +1,238 @@
+{
+  "external_id": "nerium_oleander",
+  "name": "Oleander",
+  "latin": "Nerium oleander",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "sandy"
+  ],
+  "water_required": true,
+  "water_interval_days": 14,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "nerium_oleander.jpg",
+  "image_thumb": "nerium_oleander.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Volle Sonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूरी धूप",
+          "zh": "全日照",
+          "ja": "日なた",
+          "ko": "강한 햇빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna gleba",
+          "de": "Durchlässiger Boden",
+          "fr": "Sol drainé",
+          "it": "Terreno drenante",
+          "es": "Suelo drenado",
+          "pt": "Solo drenado",
+          "ar": "تربة جيدة",
+          "hi": "जलनिकास मिट्टी",
+          "zh": "排水良好土壤",
+          "ja": "水はけ良好",
+          "ko": "배수 좋은 흙"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßig gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiature medie",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "ري معتدل",
+          "hi": "मध्यम सिंचाई",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "보통 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Pflegeaufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Warm climates",
+          "pl": "Ciepły klimat",
+          "de": "Warmes Klima",
+          "fr": "Climat chaud",
+          "it": "Clima caldo",
+          "es": "Clima cálido",
+          "pt": "Clima quente",
+          "ar": "مناخ دافئ",
+          "hi": "गर्म जलवायु",
+          "zh": "温暖气候",
+          "ja": "温暖な気候",
+          "ko": "따뜻한 기후"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Normale Luftfeuchte",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "सामान्य नमी",
+          "zh": "中等湿度",
+          "ja": "通常湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Highly toxic",
+          "pl": "Silnie trująca",
+          "de": "Stark giftig",
+          "fr": "Très toxique",
+          "it": "Molto tossica",
+          "es": "Muy tóxica",
+          "pt": "Muito tóxica",
+          "ar": "سامة جدًا",
+          "hi": "अत्यंत विषैला",
+          "zh": "高度有毒",
+          "ja": "強い毒性",
+          "ko": "강한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast-growing shrub",
+          "pl": "Szybko rosnący krzew",
+          "de": "Schnell wachsend",
+          "fr": "Arbuste rapide",
+          "it": "Crescita rapida",
+          "es": "Arbusto rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ता",
+          "zh": "快速生长",
+          "ja": "成長が早い",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Oleander",
+      "description": "Nerium oleander is an evergreen flowering shrub native to the Mediterranean region. It thrives in full sun and well-drained soil. All parts of the plant are highly toxic if ingested."
+    },
+    "pl": {
+      "common_name": "Oleander",
+      "description": "Nerium oleander to zimozielony krzew kwitnący pochodzący z regionu śródziemnomorskiego. Najlepiej rośnie w pełnym słońcu i przepuszczalnej glebie. Cała roślina jest silnie trująca."
+    },
+    "de": {
+      "common_name": "Oleander",
+      "description": "Nerium oleander ist ein immergrüner Blütenstrauch aus dem Mittelmeerraum. Er bevorzugt volle Sonne und gut durchlässigen Boden. Alle Pflanzenteile sind stark giftig."
+    },
+    "fr": {
+      "common_name": "Laurier-rose",
+      "description": "Nerium oleander est un arbuste à fleurs persistant originaire du bassin méditerranéen. Il aime le plein soleil et un sol bien drainé. Toute la plante est très toxique."
+    },
+    "it": {
+      "common_name": "Oleandro",
+      "description": "Nerium oleander è un arbusto sempreverde originario della regione mediterranea. Cresce bene in pieno sole e terreno drenante. Tutte le parti della pianta sono molto tossiche."
+    },
+    "es": {
+      "common_name": "Adelfa",
+      "description": "Nerium oleander es un arbusto perenne originario del Mediterráneo. Prefiere pleno sol y suelos bien drenados. Toda la planta es altamente tóxica."
+    },
+    "pt": {
+      "common_name": "Espirradeira",
+      "description": "Nerium oleander é um arbusto perene originário do Mediterrâneo. Desenvolve-se melhor sob sol pleno e solo bem drenado. Todas as partes da planta são muito tóxicas."
+    },
+    "ar": {
+      "common_name": "دفلى",
+      "description": "الدفلى نبات شجيري دائم الخضرة موطنه منطقة البحر المتوسط. يفضل الشمس الكاملة والتربة جيدة التصريف. جميع أجزاء النبات سامة جدًا."
+    },
+    "hi": {
+      "common_name": "कनेर",
+      "description": "नेरियम ओलियंडर भूमध्यसागरीय क्षेत्र का एक सदाबहार झाड़ीदार पौधा है। यह पूरी धूप और अच्छी जलनिकास वाली मिट्टी में अच्छा बढ़ता है। पौधे के सभी भाग विषैले होते हैं।"
+    },
+    "zh": {
+      "common_name": "夹竹桃",
+      "description": "夹竹桃是一种原产于地中海地区的常绿开花灌木。它适合在全日照和排水良好的土壤中生长。植物所有部分都有毒。"
+    },
+    "ja": {
+      "common_name": "キョウチクトウ",
+      "description": "キョウチクトウは地中海原産の常緑低木です。日当たりと水はけの良い土壌を好みます。全草に強い毒性があります。"
+    },
+    "ko": {
+      "common_name": "협죽도",
+      "description": "협죽도는 지중해 지역이 원산지인 상록 관목입니다. 강한 햇빛과 배수가 좋은 토양에서 잘 자랍니다. 식물의 모든 부분은 독성이 강합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/nerium-oleander",
+      "https://edis.ifas.ufl.edu/publication/FP416",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?kempercode=b500"
+    ]
+  }
+}

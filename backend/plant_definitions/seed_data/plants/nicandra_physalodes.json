@@ -1,0 +1,237 @@
+{
+  "external_id": "nicandra_physalodes",
+  "name": "Shoofly Plant",
+  "latin": "Nicandra physalodes",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "easy",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "nicandra_physalodes.jpg",
+  "image_thumb": "nicandra_physalodes.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "argila",
+          "ar": "طين",
+          "hi": "किट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "easy",
+          "pl": "łatwy",
+          "de": "einfach",
+          "fr": "facile",
+          "it": "facile",
+          "es": "fácil",
+          "pt": "fácil",
+          "ar": "سهل",
+          "hi": "आसान",
+          "zh": "容易",
+          "ja": "簡単",
+          "ko": "쉬운"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "no",
+          "pl": "nie",
+          "de": "nein",
+          "fr": "non",
+          "it": "no",
+          "es": "no",
+          "pt": "não",
+          "ar": "لا",
+          "hi": "नहीं",
+          "zh": "否",
+          "ja": "いいえ",
+          "ko": "아니오"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Shoofly Plant",
+      "description": "Nicandra physalodes is a fast-growing herbaceous annual with attractive bell-shaped flowers. It is often used in gardens for its unique appearance and easy care."
+    },
+    "pl": {
+      "common_name": "Roślina szuflowa",
+      "description": "Nicandra physalodes to szybko rosnąca roślina jednoroczna z atrakcyjnymi dzwonkowatymi kwiatami. Jest często używana w ogrodach ze względu na swój unikalny wygląd i łatwą pielęgnację."
+    },
+    "de": {
+      "common_name": "Schuhaus Pflanze",
+      "description": "Nicandra physalodes ist eine schnell wachsende einjährige Pflanze mit attraktiven glockenförmigen Blüten. Sie wird oft in Gärten für ihr einzigartiges Aussehen und ihre einfache Pflege verwendet."
+    },
+    "fr": {
+      "common_name": "Plante Shoofly",
+      "description": "Nicandra physalodes est une plante annuelle à croissance rapide avec des fleurs en forme de cloche attrayantes. Elle est souvent utilisée dans les jardins pour son apparence unique et sa facilité d'entretien."
+    },
+    "it": {
+      "common_name": "Pianta Shoofly",
+      "description": "Nicandra physalodes è una pianta annuale a crescita rapida con fiori a forma di campana attraenti. Viene spesso utilizzata nei giardini per il suo aspetto unico e la cura facile."
+    },
+    "es": {
+      "common_name": "Planta Shoofly",
+      "description": "Nicandra physalodes es una planta anual de rápido crecimiento con flores atractivas en forma de campana. A menudo se usa en jardines debido a su apariencia única y fácil cuidado."
+    },
+    "pt": {
+      "common_name": "Planta Shoofly",
+      "description": "Nicandra physalodes é uma planta anual de crescimento rápido com flores em forma de sino atraentes. Muitas vezes é usada em jardins por sua aparência única e fácil cuidado."
+    },
+    "ar": {
+      "common_name": "نبات شو فلاي",
+      "description": "نبات Nicandra physalodes هو نبات سنوي سريع النمو يتميز بزهور على شكل جرس جذابة. غالبًا ما يستخدم في الحدائق بسبب مظهره الفريد وسهولة العناية به."
+    },
+    "hi": {
+      "common_name": "शूफ्लाय पौधा",
+      "description": "निकांद्रा फिजालोड्स एक तेजी से बढ़ने वाला वार्षिक पौधा है जिसमें आकर्षक घंटी के आकार के फूल होते हैं। इसे बगीचों में अपनी अद्वितीय उपस्थिति और आसान देखभाल के लिए उपयोग किया जाता है।"
+    },
+    "zh": {
+      "common_name": "Shoofly植物",
+      "description": "Nicandra physalodes是一种生长迅速的年生植物，具有吸引人的钟形花朵。它因其独特的外观和易于护理而常用于花园中。"
+    },
+    "ja": {
+      "common_name": "シューフライプラント",
+      "description": "Nicandra physalodesは、魅力的な鐘形の花を持つ速く成長する一年生植物です。その独特な外観と簡単な手入れで、庭園でよく使用されます。"
+    },
+    "ko": {
+      "common_name": "슈플라이 식물",
+      "description": "Nicandra physalodes는 매력적인 종 모양의 꽃을 가진 빠르게 자라는 일년생 식물입니다. 독특한 외관과 쉬운 관리로 정원에서 자주 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/nicandra-physalodes",
+      "https://www.gardenia.net/plant/nicandra-physalodes"
+    ]
+  }
+}

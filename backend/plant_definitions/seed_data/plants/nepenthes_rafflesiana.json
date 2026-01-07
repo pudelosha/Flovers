@@ -1,0 +1,236 @@
+{
+  "external_id": "nepenthes_rafflesiana",
+  "name": "Raffles' Pitcher Plant",
+  "latin": "Nepenthes rafflesiana",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "hard",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "acidic"
+  ],
+  "water_required": true,
+  "water_interval_days": 3,
+  "moisture_required": true,
+  "moisture_interval_days": 2,
+  "fertilize_required": false,
+  "fertilize_interval_days": null,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "nepenthes_rafflesiana.jpg",
+  "image_thumb": "nepenthes_rafflesiana.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Bright indirect",
+          "pl": "Jasne rozproszone",
+          "de": "Helles indirektes",
+          "fr": "Lumière indirecte",
+          "it": "Luce indiretta",
+          "es": "Luz indirecta",
+          "pt": "Luz indireta",
+          "ar": "ضوء غير مباشر",
+          "hi": "तेज अप्रत्यक्ष",
+          "zh": "明亮散射光",
+          "ja": "明るい間接光",
+          "ko": "밝은 간접광"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Airy acidic mix",
+          "pl": "Lekka kwaśna",
+          "de": "Luftig sauer",
+          "fr": "Substrat acide",
+          "it": "Substrato acido",
+          "es": "Sustrato ácido",
+          "pt": "Substrato ácido",
+          "ar": "تربة حمضية",
+          "hi": "अम्लीय माध्यम",
+          "zh": "酸性基质",
+          "ja": "酸性用土",
+          "ko": "산성 배지"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep moist",
+          "pl": "Stale wilgotna",
+          "de": "Stets feucht",
+          "fr": "Toujours humide",
+          "it": "Sempre umido",
+          "es": "Siempre húmedo",
+          "pt": "Sempre úmido",
+          "ar": "رطبة دائمًا",
+          "hi": "लगातार नम",
+          "zh": "保持湿润",
+          "ja": "常に湿潤",
+          "ko": "항상 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Advanced",
+          "pl": "Zaawansowana",
+          "de": "Anspruchsvoll",
+          "fr": "Exigeante",
+          "it": "Difficile",
+          "es": "Difícil",
+          "pt": "Difícil",
+          "ar": "صعبة",
+          "hi": "कठिन",
+          "zh": "高难度",
+          "ja": "難しい",
+          "ko": "어려움"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22–30°C",
+          "pl": "22–30°C",
+          "de": "22–30°C",
+          "fr": "22–30°C",
+          "it": "22–30°C",
+          "es": "22–30°C",
+          "pt": "22–30°C",
+          "ar": "22–30°م",
+          "hi": "22–30°C",
+          "zh": "22–30°C",
+          "ja": "22–30℃",
+          "ko": "22–30°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Very high",
+          "pl": "Bardzo wysoka",
+          "de": "Sehr hoch",
+          "fr": "Très élevée",
+          "it": "Molto alta",
+          "es": "Muy alta",
+          "pt": "Muito alta",
+          "ar": "مرتفعة جدًا",
+          "hi": "बहुत अधिक",
+          "zh": "非常高",
+          "ja": "非常に高い",
+          "ko": "매우 높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietrująca",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "विषहीन",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletternd",
+          "fr": "Grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "متسلقة",
+          "hi": "लता",
+          "zh": "藤本",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Raffles' Pitcher Plant",
+      "description": "Nepenthes rafflesiana is a tropical carnivorous plant native to Southeast Asian rainforests. It forms large pitcher traps to capture insects and requires warm temperatures and very high humidity indoors."
+    },
+    "pl": {
+      "common_name": "Dzbanecznik Rafflesa",
+      "description": "Nepenthes rafflesiana to tropikalna roślina owadożerna z lasów Azji Południowo-Wschodniej. Wytwarza duże dzbanki i wymaga ciepła oraz bardzo wysokiej wilgotności."
+    },
+    "de": {
+      "common_name": "Raffles-Kannenpflanze",
+      "description": "Nepenthes rafflesiana ist eine tropische fleischfressende Pflanze aus Südostasien. Sie bildet große Kannen und benötigt Wärme sowie sehr hohe Luftfeuchtigkeit."
+    },
+    "fr": {
+      "common_name": "Népenthès de Raffles",
+      "description": "Nepenthes rafflesiana est une plante carnivore tropicale originaire d’Asie du Sud-Est. Elle produit de grandes urnes et demande chaleur et humidité élevée."
+    },
+    "it": {
+      "common_name": "Nepente di Raffles",
+      "description": "Nepenthes rafflesiana è una pianta carnivora tropicale del Sud-Est asiatico. Produce grandi ascidi e necessita di caldo e umidità molto alta."
+    },
+    "es": {
+      "common_name": "Planta jarra de Raffles",
+      "description": "Nepenthes rafflesiana es una planta carnívora tropical del sudeste asiático. Forma grandes jarras y requiere calor y humedad muy elevada."
+    },
+    "pt": {
+      "common_name": "Planta-jarro de Raffles",
+      "description": "Nepenthes rafflesiana é uma planta carnívora tropical do Sudeste Asiático. Produz jarros grandes e precisa de calor e alta umidade."
+    },
+    "ar": {
+      "common_name": "نبات إبريق رافلز",
+      "description": "نيبينثس رافليزيانا نبات لاحم استوائي موطنه جنوب شرق آسيا. يشكل أباريق كبيرة ويحتاج إلى حرارة ورطوبة عاليتين."
+    },
+    "hi": {
+      "common_name": "रैफल्स पिचर प्लांट",
+      "description": "Nepenthes rafflesiana दक्षिण-पूर्व एशिया का उष्णकटिबंधीय मांसाहारी पौधा है। यह बड़े पिचर बनाता है और इसे गर्मी व उच्च आर्द्रता चाहिए।"
+    },
+    "zh": {
+      "common_name": "莱佛士猪笼草",
+      "description": "Nepenthes rafflesiana 原产于东南亚的热带食虫植物。它具有大型捕虫囊，在室内需要温暖和极高湿度。"
+    },
+    "ja": {
+      "common_name": "ラッフルズウツボカズラ",
+      "description": "Nepenthes rafflesiana は東南アジア原産の熱帯性食虫植物です。大きな捕虫袋を形成し、高温多湿を必要とします。"
+    },
+    "ko": {
+      "common_name": "라플레시네펜데스",
+      "description": "Nepenthes rafflesiana는 동남아시아 원산의 열대 식충식물입니다. 큰 포충낭을 만들며 따뜻한 온도와 높은 습도가 필요합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rbgkew.org/plants/nepenthes-rafflesiana",
+      "https://www.carnivorousplants.org/grow/guides/Nepenthes"
+    ]
+  }
+}

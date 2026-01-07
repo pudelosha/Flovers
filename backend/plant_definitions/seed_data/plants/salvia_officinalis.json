@@ -1,0 +1,237 @@
+{
+  "external_id": "salvia_officinalis",
+  "name": "Common Sage",
+  "latin": "Salvia officinalis",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "loam",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "salvia_officinalis.jpg",
+  "image_thumb": "salvia_officinalis.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Full sun",
+          "pl": "Pełne słońce",
+          "de": "Vollsonne",
+          "fr": "Plein soleil",
+          "it": "Pieno sole",
+          "es": "Pleno sol",
+          "pt": "Sol pleno",
+          "ar": "شمس كاملة",
+          "hi": "पूर्ण सूर्य",
+          "zh": "全日照",
+          "ja": "直射日光",
+          "ko": "완전한 햇볕"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained",
+          "pl": "Dobrze przepuszczalna",
+          "de": "Gut durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تصريف جيد",
+          "hi": "अच्छी जल निकासी",
+          "zh": "良好的排水",
+          "ja": "排水良好",
+          "ko": "배수가 잘 되는"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Umiarkowane",
+          "de": "Mäßig",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适量",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低",
+          "ko": "낮음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "गैर विषैला",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "비독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Compact",
+          "pl": "Kompaktowy",
+          "de": "Kompakt",
+          "fr": "Compact",
+          "it": "Compatto",
+          "es": "Compacto",
+          "pt": "Compacto",
+          "ar": "مضغوط",
+          "hi": "संकुचित",
+          "zh": "紧凑",
+          "ja": "コンパクト",
+          "ko": "컴팩트"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common Sage",
+      "description": "Common sage is a versatile herb with aromatic leaves and purple flowers. It thrives in well-drained soil and full sun."
+    },
+    "pl": {
+      "common_name": "Szałwia lekarska",
+      "description": "Szałwia lekarska to wielofunkcyjna roślina o aromatycznych liściach i fioletowych kwiatach. Rośnie w dobrze przepuszczalnej glebie i pełnym słońcu."
+    },
+    "de": {
+      "common_name": "Echte Salbei",
+      "description": "Echter Salbei ist ein vielseitiges Kraut mit aromatischen Blättern und lila Blüten. Es gedeiht in gut durchlässigem Boden und voller Sonne."
+    },
+    "fr": {
+      "common_name": "Sauge officinale",
+      "description": "La sauge officinale est une herbe polyvalente aux feuilles aromatiques et aux fleurs violettes. Elle prospère dans un sol bien drainé et au plein soleil."
+    },
+    "it": {
+      "common_name": "Salvia officinale",
+      "description": "La salvia officinale è un'erba versatile con foglie aromatiche e fiori viola. Cresce in terreni ben drenati e in pieno sole."
+    },
+    "es": {
+      "common_name": "Salvia oficial",
+      "description": "La salvia oficial es una hierba versátil con hojas aromáticas y flores moradas. Crece en suelos bien drenados y bajo pleno sol."
+    },
+    "pt": {
+      "common_name": "Sálvia comum",
+      "description": "A sálvia comum é uma erva versátil com folhas aromáticas e flores roxas. Cresce em solo bem drenado e sob sol pleno."
+    },
+    "ar": {
+      "common_name": "المريمية",
+      "description": "المريمية هي عشبة متعددة الاستخدامات ذات أوراق عطرية وزهور بنفسجية. تنمو في التربة جيدة التصريف وأشعة الشمس الكاملة."
+    },
+    "hi": {
+      "common_name": "साधारण शैलविया",
+      "description": "साधारण शैलविया एक बहुपरकारी हर्ब है जिसमें सुगंधित पत्तियाँ और बैंगनी फूल होते हैं। यह अच्छे जल निकासी वाली मिट्टी और पूर्ण सूर्य में उगता है।"
+    },
+    "zh": {
+      "common_name": "普通鼠尾草",
+      "description": "普通鼠尾草是一种多用途的草本植物，具有芳香的叶子和紫色的花朵。它在排水良好的土壤和充足的阳光下生长。"
+    },
+    "ja": {
+      "common_name": "セージ",
+      "description": "セージは香りのある葉と紫色の花を持つ多目的なハーブです。排水性の良い土壌と日光の下で育ちます。"
+    },
+    "ko": {
+      "common_name": "일반 세이지",
+      "description": "일반 세이지는 향긋한 잎과 보라색 꽃을 가진 다목적 허브입니다. 배수가 좋은 토양과 햇볕이 잘 드는 곳에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.gardenia.net/plant/salvia-officinalis",
+      "https://www.bhg.com/gardening/pests-diseases-conditions/how-to-grow-sage/"
+    ]
+  }
+}

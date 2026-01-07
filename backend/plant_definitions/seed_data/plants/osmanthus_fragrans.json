@@ -1,0 +1,237 @@
+{
+  "external_id": "osmanthus_fragrans",
+  "name": "Sweet Olive",
+  "latin": "Osmanthus fragrans",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 10,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "osmanthus_fragrans.jpg",
+  "image_thumb": "osmanthus_fragrans.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba próchniczna",
+          "de": "Lößboden",
+          "fr": "Sol limoneux",
+          "it": "Terreno limoso",
+          "es": "Suelo limoso",
+          "pt": "Solo argiloso",
+          "ar": "التربة الطينية",
+          "hi": "मिट्टी में मिश्रण",
+          "zh": "壤土",
+          "ja": "粘土土壌",
+          "ko": "양토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßige Bewässerung",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "الري المعتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适量浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15-25°C",
+          "pl": "15-25°C",
+          "de": "15-25°C",
+          "fr": "15-25°C",
+          "it": "15-25°C",
+          "es": "15-25°C",
+          "pt": "15-25°C",
+          "ar": "15-25°C",
+          "hi": "15-25°C",
+          "zh": "15-25°C",
+          "ja": "15-25°C",
+          "ko": "15-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "中等湿度",
+          "ja": "中くらいの湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषेकी नहीं",
+          "zh": "无毒",
+          "ja": "非毒性",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow to medium growth",
+          "pl": "Wolny do średniego wzrostu",
+          "de": "Langsame bis mittlere Wachstum",
+          "fr": "Croissance lente à moyenne",
+          "it": "Crescita lenta a media",
+          "es": "Crecimiento lento a medio",
+          "pt": "Crescimento lento a médio",
+          "ar": "نمو بطيء إلى متوسط",
+          "hi": "धीमी से मध्यम वृद्धि",
+          "zh": "生长缓慢至中等",
+          "ja": "遅いから中くらいの成長",
+          "ko": "느린 성장에서 중간 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Sweet Olive",
+      "description": "Osmanthus fragrans is a fragrant shrub known for its small, yellow to white flowers. It thrives in temperate climates and is often used in gardens for its pleasant fragrance."
+    },
+    "pl": {
+      "common_name": "Osmantus pachnący",
+      "description": "Osmanthus fragrans to pachnący krzew znany ze swoich małych, żółtych lub białych kwiatów. Rośnie w klimacie umiarkowanym i często jest wykorzystywany w ogrodach ze względu na swój przyjemny zapach."
+    },
+    "de": {
+      "common_name": "Duft-Osmanthus",
+      "description": "Osmanthus fragrans ist ein duftender Strauch, der für seine kleinen, gelben bis weißen Blüten bekannt ist. Er gedeiht in gemäßigten Klimazonen und wird oft in Gärten wegen seines angenehmen Duftes verwendet."
+    },
+    "fr": {
+      "common_name": "Osmanthe parfumé",
+      "description": "L'Osmanthus fragrans est un arbuste parfumé connu pour ses petites fleurs jaunes à blanches. Il prospère dans les climats tempérés et est souvent utilisé dans les jardins pour son agréable fragrance."
+    },
+    "it": {
+      "common_name": "Osmanto profumato",
+      "description": "Osmanthus fragrans è un arbusto profumato noto per i suoi piccoli fiori gialli o bianchi. Cresce nei climi temperati ed è spesso utilizzato nei giardini per il suo piacevole profumo."
+    },
+    "es": {
+      "common_name": "Osmanto fragante",
+      "description": "Osmanthus fragrans es un arbusto fragante conocido por sus pequeñas flores amarillas a blancas. Crece en climas templados y se usa a menudo en jardines por su agradable fragancia."
+    },
+    "pt": {
+      "common_name": "Osmanthus fragrans",
+      "description": "Osmanthus fragrans é um arbusto perfumado conhecido pelas suas pequenas flores amarelas a brancas. Cresce em climas temperados e é frequentemente utilizado em jardins devido ao seu aroma agradável."
+    },
+    "ar": {
+      "common_name": "الزيتون العطري",
+      "description": "Osmanthus fragrans هو شجيرة عطرية معروفة بأزهارها الصغيرة التي تتراوح بين الأصفر إلى الأبيض. يزدهر في المناخات المعتدلة وغالبًا ما يستخدم في الحدائق بسبب رائحته العطرة."
+    },
+    "hi": {
+      "common_name": "सुगंधित ऑस्मैंथस",
+      "description": "Osmanthus fragrans एक सुगंधित झाड़ी है जो छोटे, पीले से सफेद फूलों के लिए जानी जाती है। यह समशीतोष्ण जलवायु में उगती है और इसके सुखद सुगंध के कारण बगीचों में उपयोग की जाती है।"
+    },
+    "zh": {
+      "common_name": "桂花",
+      "description": "Osmanthus fragrans 是一种芳香的灌木，以其小而黄白色的花朵而闻名。它在温带气候中生长，常因其宜人的香气而被用于花园中。"
+    },
+    "ja": {
+      "common_name": "金木犀",
+      "description": "Osmanthus fragransは小さな黄色から白い花を持つ香り高い低木です。温帯気候で育ち、その快適な香りで庭園に使われることが多いです。"
+    },
+    "ko": {
+      "common_name": "구기자나무",
+      "description": "Osmanthus fragrans는 작은 노란색에서 흰색의 꽃으로 알려진 향기로운 관목입니다. 온대 기후에서 자라며, 그 기분 좋은 향기로 인해 정원에서 자주 사용됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=803",
+      "https://www.gardenia.net/plant/osmanthus-fragrans-sweet-olive"
+    ]
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "external_id": "ludisia_discolor",
+  "name": "Jewel Orchid",
+  "latin": "Ludisia discolor",
+  "sun": "low",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "plastic",
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "orchid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "ludisia_discolor.jpg",
+  "image_thumb": "ludisia_discolor.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Low light",
+          "pl": "Mało światła",
+          "de": "Wenig Licht",
+          "fr": "Faible lumière",
+          "it": "Poca luce",
+          "es": "Poca luz",
+          "pt": "Pouca luz",
+          "ar": "إضاءة منخفضة",
+          "hi": "कम रोशनी",
+          "zh": "低光照",
+          "ja": "弱い光",
+          "ko": "약한 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained mix",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जलनिकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Keep slightly moist",
+          "pl": "Lekko wilgotna",
+          "de": "Leicht feucht",
+          "fr": "Légèrement humide",
+          "it": "Leggermente umido",
+          "es": "Ligeramente húmedo",
+          "pt": "Levemente úmido",
+          "ar": "رطوبة خفيفة",
+          "hi": "हल्की नमी",
+          "zh": "保持微湿",
+          "ja": "やや湿潤",
+          "ko": "약간 촉촉"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia pielęgnacja",
+          "de": "Mittlerer Aufwand",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidado médio",
+          "ar": "عناية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等养护",
+          "ja": "中程度",
+          "ko": "중간 난이도"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18–24 °C",
+          "pl": "18–24 °C",
+          "de": "18–24 °C",
+          "fr": "18–24 °C",
+          "it": "18–24 °C",
+          "es": "18–24 °C",
+          "pt": "18–24 °C",
+          "ar": "18–24°م",
+          "hi": "18–24 °C",
+          "zh": "18–24°C",
+          "ja": "18–24℃",
+          "ko": "18–24℃"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "High humidity",
+          "pl": "Wysoka wilgotność",
+          "de": "Hohe Luftfeuchte",
+          "fr": "Humidité élevée",
+          "it": "Alta umidità",
+          "es": "Alta humedad",
+          "pt": "Alta umidade",
+          "ar": "رطوبة عالية",
+          "hi": "उच्च नमी",
+          "zh": "高湿度",
+          "ja": "高湿度",
+          "ko": "높은 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczna",
+          "de": "Ungiftig",
+          "fr": "Non toxique",
+          "it": "Non tossica",
+          "es": "No tóxica",
+          "pt": "Não tóxica",
+          "ar": "غير سامة",
+          "hi": "गैर विषैली",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Slow, creeping",
+          "pl": "Wolny, płożący",
+          "de": "Langsam kriechend",
+          "fr": "Lente, rampante",
+          "it": "Lenta, strisciante",
+          "es": "Lento, rastrero",
+          "pt": "Lento, rasteiro",
+          "ar": "نمو بطيء",
+          "hi": "धीमी वृद्धि",
+          "zh": "生长缓慢",
+          "ja": "成長が遅い",
+          "ko": "느린 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Jewel Orchid",
+      "description": "Ludisia discolor is a terrestrial orchid grown for its dark, velvety leaves with contrasting veins. It prefers low light, steady moisture, and warm indoor temperatures."
+    },
+    "pl": {
+      "common_name": "Storczyk klejnot",
+      "description": "Ludisia discolor to naziemny storczyk uprawiany głównie dla ozdobnych liści. Wymaga małego światła, umiarkowanego podlewania i ciepła."
+    },
+    "de": {
+      "common_name": "Juwelenorchidee",
+      "description": "Ludisia discolor ist eine terrestrische Orchidee mit dekorativen Blättern. Sie gedeiht bei wenig Licht, gleichmäßiger Feuchte und Wärme."
+    },
+    "fr": {
+      "common_name": "Orchidée bijou",
+      "description": "Ludisia discolor est une orchidée terrestre appréciée pour son feuillage. Elle aime une lumière faible et un sol légèrement humide."
+    },
+    "it": {
+      "common_name": "Orchidea gioiello",
+      "description": "Ludisia discolor è un'orchidea terrestre coltivata per le foglie decorative. Preferisce poca luce e umidità costante."
+    },
+    "es": {
+      "common_name": "Orquídea joya",
+      "description": "Ludisia discolor es una orquídea terrestre valorada por su follaje. Requiere poca luz y riego moderado."
+    },
+    "pt": {
+      "common_name": "Orquídea joia",
+      "description": "Ludisia discolor é uma orquídea terrestre cultivada pelas folhas ornamentais. Cresce bem com pouca luz e solo úmido."
+    },
+    "ar": {
+      "common_name": "أوركيد الجوهرة",
+      "description": "لوديسيا ديسكلور أوركيد أرضي يزرع لأوراقه المزخرفة. يفضل الإضاءة المنخفضة ورطوبة معتدلة."
+    },
+    "hi": {
+      "common_name": "ज्वेल ऑर्किड",
+      "description": "लुडिसिया डिस्कलर एक स्थलीय ऑर्किड है जो अपनी सजावटी पत्तियों के लिए उगाया जाता है। इसे कम रोशनी और नियमित नमी पसंद है।"
+    },
+    "zh": {
+      "common_name": "宝石兰",
+      "description": "Ludisia discolor 是一种以观叶著称的地生兰花。适合低光环境并保持基质微湿。"
+    },
+    "ja": {
+      "common_name": "ジュエルオーキッド",
+      "description": "ルディシア・ディスカラーは葉を観賞する地生ランです。弱い光と安定した湿度を好みます。"
+    },
+    "ko": {
+      "common_name": "보석란",
+      "description": "Ludisia discolor는 잎이 아름다운 지생 난초입니다. 약한 빛과 일정한 수분을 선호합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/101438/ludisia-discolor/details",
+      "https://www.missouribotanicalgarden.org/PlantFinder/PlantFinderDetails.aspx?taxonid=242404",
+      "https://www.aos.org/orchids/orchid-care.aspx"
+    ]
+  }
+}

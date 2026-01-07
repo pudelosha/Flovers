@@ -1,0 +1,237 @@
+{
+  "external_id": "tacca_chantrieri",
+  "name": "Black Bat Flower",
+  "latin": "Tacca chantrieri",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "tacca_chantrieri.jpg",
+  "image_thumb": "tacca_chantrieri.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroidowy",
+          "de": "Aroid",
+          "fr": "Aroid",
+          "it": "Aroid",
+          "es": "Aroid",
+          "pt": "Aroid",
+          "ar": "أرويد",
+          "hi": "अरोइड",
+          "zh": "阿罗伊德",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "warm",
+          "pl": "ciepło",
+          "de": "warm",
+          "fr": "chaud",
+          "it": "caldo",
+          "es": "caliente",
+          "pt": "quente",
+          "ar": "دافئ",
+          "hi": "गर्म",
+          "zh": "温暖",
+          "ja": "暖かい",
+          "ko": "따뜻한"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Black Bat Flower",
+      "description": "The Black Bat Flower, Tacca chantrieri, is known for its unique bat-like flowers. Native to Southeast Asia, it thrives in humid environments with warm temperatures."
+    },
+    "pl": {
+      "common_name": "Czarny Kwiat Nietoperza",
+      "description": "Czarny Kwiat Nietoperza, Tacca chantrieri, jest znany z unikalnych kwiatów przypominających nietoperze. Pochodzi z Azji Południowo-Wschodniej i rośnie w wilgotnych warunkach w ciepłym klimacie."
+    },
+    "de": {
+      "common_name": "Schwarze Fledermausblume",
+      "description": "Die Schwarze Fledermausblume, Tacca chantrieri, ist bekannt für ihre einzigartigen, fledermausartigen Blüten. Sie ist in Südostasien beheimatet und gedeiht in feuchten, warmen Umgebungen."
+    },
+    "fr": {
+      "common_name": "Fleur Chauve-Souris Noire",
+      "description": "La Fleur Chauve-Souris Noire, Tacca chantrieri, est connue pour ses fleurs uniques en forme de chauve-souris. Originaire d'Asie du Sud-Est, elle pousse dans des environnements humides à température chaude."
+    },
+    "it": {
+      "common_name": "Fiore del Pipistrello Nero",
+      "description": "Il Fiore del Pipistrello Nero, Tacca chantrieri, è noto per i suoi fiori unici simili a pipistrelli. Originario del Sud-est asiatico, cresce in ambienti umidi con temperature calde."
+    },
+    "es": {
+      "common_name": "Flor Murciélago Negra",
+      "description": "La Flor Murciélago Negra, Tacca chantrieri, es conocida por sus flores únicas en forma de murciélago. Originaria del sudeste asiático, prospera en ambientes húmedos con temperaturas cálidas."
+    },
+    "pt": {
+      "common_name": "Flor Morcego Negra",
+      "description": "A Flor Morcego Negra, Tacca chantrieri, é conhecida por suas flores únicas em forma de morcego. Nativa do Sudeste Asiático, cresce em ambientes úmidos com temperaturas quentes."
+    },
+    "ar": {
+      "common_name": "زهرة خفاش سوداء",
+      "description": "زهرة خفاش سوداء، Tacca chantrieri، معروفة بزهورها الفريدة على شكل خفافيش. موطنها الأصلي جنوب شرق آسيا، تنمو في بيئات رطبة ذات درجات حرارة دافئة."
+    },
+    "hi": {
+      "common_name": "ब्लैक बैट फ्लावर",
+      "description": "ब्लैक बैट फ्लावर, Tacca chantrieri, अपनी अद्वितीय बैट जैसे फूलों के लिए प्रसिद्ध है। यह दक्षिण-पूर्व एशिया का मूल पौधा है और गीले वातावरण में गर्म तापमान पर बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "黑蝙蝠花",
+      "description": "黑蝙蝠花，Tacca chantrieri，以其独特的蝙蝠状花朵而闻名。它原产于东南亚，在潮湿的环境中生长，适应温暖的气温。"
+    },
+    "ja": {
+      "common_name": "ブラックバットフラワー",
+      "description": "ブラックバットフラワー、Tacca chantrieriはそのユニークなコウモリ型の花で知られています。東南アジア原産で、湿った環境で暖かい温度で成長します。"
+    },
+    "ko": {
+      "common_name": "검은박쥐꽃",
+      "description": "검은박쥐꽃, Tacca chantrieri,는 독특한 박쥐 모양의 꽃으로 유명합니다. 동남아시아가 원산지이며, 습한 환경에서 따뜻한 온도에서 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/tacca-chantrieri",
+      "https://www.gardenia.net/plant/tacca-chantrieri-black-bat-flower"
+    ]
+  }
+}

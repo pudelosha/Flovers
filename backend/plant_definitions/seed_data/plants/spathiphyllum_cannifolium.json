@@ -1,0 +1,237 @@
+{
+  "external_id": "spathiphyllum_cannifolium",
+  "name": "Cannifolium Peace Lily",
+  "latin": "Spathiphyllum cannifolium",
+  "sun": "medium",
+  "water": "high",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "plastic"
+  ],
+  "recommended_soil_mixes": [
+    "aroid",
+    "universal"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": true,
+  "moisture_interval_days": 3,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "spathiphyllum_cannifolium.jpg",
+  "image_thumb": "spathiphyllum_cannifolium.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "aroid",
+          "pl": "aroidowy",
+          "de": "aroid",
+          "fr": "aroïde",
+          "it": "aroide",
+          "es": "aroide",
+          "pt": "aroide",
+          "ar": "أرود",
+          "hi": "अरोइड",
+          "zh": "阿罗伊",
+          "ja": "アロイド",
+          "ko": "아로이드"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "20-25°C",
+          "pl": "20-25°C",
+          "de": "20-25°C",
+          "fr": "20-25°C",
+          "it": "20-25°C",
+          "es": "20-25°C",
+          "pt": "20-25°C",
+          "ar": "20-25°C",
+          "hi": "20-25°C",
+          "zh": "20-25°C",
+          "ja": "20-25°C",
+          "ko": "20-25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysoka",
+          "de": "hoch",
+          "fr": "élevée",
+          "it": "alta",
+          "es": "alta",
+          "pt": "alta",
+          "ar": "عالية",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높음"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हां",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "moderate",
+          "pl": "średni",
+          "de": "moderat",
+          "fr": "modéré",
+          "it": "moderato",
+          "es": "moderado",
+          "pt": "moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Cannifolium Peace Lily",
+      "description": "Spathiphyllum cannifolium, also known as Cannifolium Peace Lily, thrives in tropical environments. It is popular for its elegant white spathes and lush green foliage."
+    },
+    "pl": {
+      "common_name": "Lilia Pokoju Cannifolium",
+      "description": "Spathiphyllum cannifolium, znana również jako Lilia Pokoju Cannifolium, rośnie w tropikalnych środowiskach. Jest popularna dzięki eleganckim białym pochwom i bujnej zielonej roślinności."
+    },
+    "de": {
+      "common_name": "Cannifolium Friedenslilie",
+      "description": "Spathiphyllum cannifolium, auch bekannt als Cannifolium Friedenslilie, wächst in tropischen Umgebungen. Sie ist beliebt wegen ihrer eleganten weißen Spathen und üppigem grünen Laub."
+    },
+    "fr": {
+      "common_name": "Lys de la Paix Cannifolium",
+      "description": "Spathiphyllum cannifolium, aussi appelé Lys de la Paix Cannifolium, pousse dans des environnements tropicaux. Il est apprécié pour ses spathes blanches élégantes et son feuillage vert luxuriant."
+    },
+    "it": {
+      "common_name": "Lilium della Pace Cannifolium",
+      "description": "Spathiphyllum cannifolium, noto anche come Lilium della Pace Cannifolium, cresce in ambienti tropicali. È popolare per le sue eleganti spathe bianche e il fogliame verde lussureggiante."
+    },
+    "es": {
+      "common_name": "Lirio de la Paz Cannifolium",
+      "description": "Spathiphyllum cannifolium, también conocido como Lirio de la Paz Cannifolium, crece en entornos tropicales. Es popular por sus elegantes espatas blancas y su exuberante follaje verde."
+    },
+    "pt": {
+      "common_name": "Lírio da Paz Cannifolium",
+      "description": "Spathiphyllum cannifolium, também conhecido como Lírio da Paz Cannifolium, cresce em ambientes tropicais. É popular por suas elegantes espatas brancas e folhagem verde exuberante."
+    },
+    "ar": {
+      "common_name": "زنبق السلام كانيفوليوم",
+      "description": "Spathiphyllum cannifolium، المعروف أيضًا باسم زنبق السلام كانيفوليوم، ينمو في البيئات الاستوائية. يحظى بشعبية بسبب أكواخه البيضاء الأنيقة وأوراقه الخضراء الكثيفة."
+    },
+    "hi": {
+      "common_name": "कैनिफोलियम पीस लिली",
+      "description": "Spathiphyllum cannifolium, जिसे कैनिफोलियम पीस लिली के नाम से भी जाना जाता है, उष्णकटिबंधीय वातावरण में उगता है। यह अपनी सुंदर सफेद स्पाथेस और हरे-भरे पत्तों के लिए लोकप्रिय है।"
+    },
+    "zh": {
+      "common_name": "和平百合卡尼佛利姆",
+      "description": "Spathiphyllum cannifolium，也称为和平百合卡尼佛利姆，生长在热带环境中。它因其优雅的白色花苞和丰盛的绿色叶片而受到欢迎。"
+    },
+    "ja": {
+      "common_name": "カンニフォリウム・ピースリリー",
+      "description": "Spathiphyllum cannifolium、別名カンニフォリウム・ピースリリーは、熱帯の環境で育ちます。その優雅な白いスポーツと豊かな緑の葉が人気です。"
+    },
+    "ko": {
+      "common_name": "캔니폴리움 평화 백합",
+      "description": "Spathiphyllum cannifolium, 즉 캔니폴리움 평화 백합은 열대 환경에서 자라며, 우아한 흰색 꽃잎과 무성한 녹색 잎으로 인기를 얻고 있습니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/spathiphyllum-cannifolium",
+      "https://www.botanicgardens.com/spathiphyllum-cannifolium"
+    ]
+  }
+}

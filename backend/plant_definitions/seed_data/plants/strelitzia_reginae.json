@@ -1,0 +1,238 @@
+{
+  "external_id": "strelitzia_reginae",
+  "name": "Bird of Paradise",
+  "latin": "Strelitzia reginae",
+  "sun": "high",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "strelitzia_reginae.jpg",
+  "image_thumb": "strelitzia_reginae.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "high",
+          "pl": "wysokie",
+          "de": "hoch",
+          "fr": "élevé",
+          "it": "alto",
+          "es": "alto",
+          "pt": "alto",
+          "ar": "عالي",
+          "hi": "उच्च",
+          "zh": "高",
+          "ja": "高い",
+          "ko": "높은"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "loam",
+          "pl": "glina",
+          "de": "Lehm",
+          "fr": "argile",
+          "it": "argilla",
+          "es": "arcilla",
+          "pt": "barro",
+          "ar": "طين",
+          "hi": "मिट्टी",
+          "zh": "壤土",
+          "ja": "粘土",
+          "ko": "점토"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnie",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "22-28°C",
+          "pl": "22-28°C",
+          "de": "22-28°C",
+          "fr": "22-28°C",
+          "it": "22-28°C",
+          "es": "22-28°C",
+          "pt": "22-28°C",
+          "ar": "22-28°C",
+          "hi": "22-28°C",
+          "zh": "22-28°C",
+          "ja": "22-28°C",
+          "ko": "22-28°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średnia",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "media",
+          "es": "media",
+          "pt": "média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "yes",
+          "pl": "tak",
+          "de": "ja",
+          "fr": "oui",
+          "it": "sì",
+          "es": "sí",
+          "pt": "sim",
+          "ar": "نعم",
+          "hi": "हाँ",
+          "zh": "是",
+          "ja": "はい",
+          "ko": "네"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "medium",
+          "pl": "średni",
+          "de": "mittel",
+          "fr": "moyenne",
+          "it": "medio",
+          "es": "medio",
+          "pt": "médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Bird of Paradise",
+      "description": "Strelitzia reginae, also known as Bird of Paradise, is a striking tropical plant. It produces large, colorful flowers resembling birds in flight."
+    },
+    "pl": {
+      "common_name": "Rajski Ptak",
+      "description": "Strelitzia reginae, znana również jako Rajski Ptak, to niezwykła roślina tropikalna. Wytwarza duże, kolorowe kwiaty przypominające ptaki w locie."
+    },
+    "de": {
+      "common_name": "Paradiesvogelblume",
+      "description": "Strelitzia reginae, auch Paradiesvogelblume genannt, ist eine auffällige tropische Pflanze. Sie produziert große, bunte Blumen, die Vögeln im Flug ähneln."
+    },
+    "fr": {
+      "common_name": "Oiseau de paradis",
+      "description": "Strelitzia reginae, également appelé Oiseau de paradis, est une plante tropicale remarquable. Elle produit de grandes fleurs colorées ressemblant à des oiseaux en vol."
+    },
+    "it": {
+      "common_name": "Uccello del paradiso",
+      "description": "Strelitzia reginae, noto anche come Uccello del paradiso, è una pianta tropicale straordinaria. Produce fiori grandi e colorati che somigliano a uccelli in volo."
+    },
+    "es": {
+      "common_name": "Ave del Paraíso",
+      "description": "Strelitzia reginae, también conocida como Ave del Paraíso, es una planta tropical llamativa. Produce grandes flores coloridas que se asemejan a aves en vuelo."
+    },
+    "pt": {
+      "common_name": "Ave do Paraíso",
+      "description": "Strelitzia reginae, também conhecida como Ave do Paraíso, é uma planta tropical impressionante. Produz flores grandes e coloridas que se assemelham a aves em voo."
+    },
+    "ar": {
+      "common_name": "طائر الجنة",
+      "description": "Strelitzia reginae، والمعروفة أيضًا باسم طائر الجنة، هي نبات استوائي لافت. تنتج أزهارًا كبيرة وملونة تشبه الطيور أثناء الطيران."
+    },
+    "hi": {
+      "common_name": "स्वर्ग का पक्षी",
+      "description": "Strelitzia reginae, जिसे स्वर्ग का पक्षी भी कहा जाता है, एक अद्भुत उष्णकटिबंधीय पौधा है। यह बड़ी, रंगीन फूलों का उत्पादन करता है जो उड़ते हुए पक्षियों की तरह दिखते हैं।"
+    },
+    "zh": {
+      "common_name": "天堂鸟",
+      "description": "Strelitzia reginae，也叫天堂鸟，是一种引人注目的热带植物。它开出大而多彩的花朵，像飞翔的鸟类。"
+    },
+    "ja": {
+      "common_name": "極楽鳥花",
+      "description": "Strelitzia reginae、別名極楽鳥花は、目を引く熱帯植物です。飛んでいる鳥のような大きなカラフルな花を咲かせます。"
+    },
+    "ko": {
+      "common_name": "천국의 새",
+      "description": "Strelitzia reginae, 또는 천국의 새는 눈에 띄는 열대 식물입니다. 비행하는 새처럼 생긴 크고 화려한 꽃을 피웁니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/1759/strelitzia-reginae/details",
+      "https://www.gardeningknowhow.com/ornamental/flowers/bird-of-paradise/bird-of-paradise-care.htm",
+      "https://www.bhg.com/gardening/pests-diseases-injuries/bird-of-paradise-care/"
+    ]
+  }
+}

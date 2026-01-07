@@ -1,0 +1,237 @@
+{
+  "external_id": "trachelospermum_jasminoides",
+  "name": "Star Jasmine",
+  "latin": "Trachelospermum jasminoides",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic",
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "trachelospermum_jasminoides.jpg",
+  "image_thumb": "trachelospermum_jasminoides.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière modérée",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम रोशनी",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-draining soil",
+          "pl": "Dobrze przepuszczalna gleba",
+          "de": "Gut durchlässiger Boden",
+          "fr": "Sol bien drainé",
+          "it": "Terreno ben drenato",
+          "es": "Suelo bien drenado",
+          "pt": "Solo bem drenado",
+          "ar": "تربة جيدة التصريف",
+          "hi": "अच्छी जल निकासी वाली मिट्टी",
+          "zh": "良好排水的土壤",
+          "ja": "排水の良い土壌",
+          "ko": "배수가 좋은 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Moderate watering",
+          "pl": "Umiarkowane podlewanie",
+          "de": "Mäßiges Gießen",
+          "fr": "Arrosage modéré",
+          "it": "Annaffiatura moderata",
+          "es": "Riego moderado",
+          "pt": "Rega moderada",
+          "ar": "سقي معتدل",
+          "hi": "मध्यम पानी देना",
+          "zh": "适度浇水",
+          "ja": "適度な水やり",
+          "ko": "적당한 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium care",
+          "pl": "Średnia opieka",
+          "de": "Mittlere Pflege",
+          "fr": "Entretien moyen",
+          "it": "Cura media",
+          "es": "Cuidado medio",
+          "pt": "Cuidados médios",
+          "ar": "رعاية متوسطة",
+          "hi": "मध्यम देखभाल",
+          "zh": "中等护理",
+          "ja": "中程度の手入れ",
+          "ko": "중간 난이도 관리"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "18-24°C",
+          "pl": "18-24°C",
+          "de": "18-24°C",
+          "fr": "18-24°C",
+          "it": "18-24°C",
+          "es": "18-24°C",
+          "pt": "18-24°C",
+          "ar": "18-24°C",
+          "hi": "18-24°C",
+          "zh": "18-24°C",
+          "ja": "18-24°C",
+          "ko": "18-24°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Medium humidity",
+          "pl": "Średnia wilgotność",
+          "de": "Mittlere Luftfeuchtigkeit",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Humidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "मध्यम आर्द्रता",
+          "zh": "适度湿度",
+          "ja": "中程度の湿度",
+          "ko": "중간 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Toxic to pets",
+          "pl": "Toksyna dla zwierząt",
+          "de": "Giftig für Haustiere",
+          "fr": "Toxique pour les animaux",
+          "it": "Tossico per gli animali",
+          "es": "Tóxico para mascotas",
+          "pt": "Tóxico para animais",
+          "ar": "سامة للحيوانات الأليفة",
+          "hi": "पालतू जानवरों के लिए जहरीला",
+          "zh": "对宠物有毒",
+          "ja": "ペットに有毒",
+          "ko": "반려동물에 유독"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Fast growth",
+          "pl": "Szybki wzrost",
+          "de": "Schnelles Wachstum",
+          "fr": "Croissance rapide",
+          "it": "Crescita rapida",
+          "es": "Crecimiento rápido",
+          "pt": "Crescimento rápido",
+          "ar": "نمو سريع",
+          "hi": "तेजी से बढ़ना",
+          "zh": "快速生长",
+          "ja": "速い成長",
+          "ko": "빠른 성장"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Star Jasmine",
+      "description": "Trachelospermum jasminoides, or Star Jasmine, is a fragrant, fast-growing vine native to East Asia. It is known for its glossy green leaves and clusters of star-like white flowers."
+    },
+    "pl": {
+      "common_name": "Jasmin gwiaździsty",
+      "description": "Trachelospermum jasminoides, czyli Jasmin gwiaździsty, to pachnąca, szybko rosnąca winorośl pochodząca z Azji Wschodniej. Charakteryzuje się błyszczącymi, zielonymi liśćmi oraz kwiatami w kształcie gwiazd."
+    },
+    "de": {
+      "common_name": "Sterngesellen",
+      "description": "Trachelospermum jasminoides, auch Sterngesellen genannt, ist eine duftende, schnell wachsende Kletterpflanze aus Ostasien. Sie ist bekannt für ihre glänzenden grünen Blätter und sternförmigen weißen Blüten."
+    },
+    "fr": {
+      "common_name": "Jasmin étoilé",
+      "description": "Le Trachelospermum jasminoides, ou Jasmin étoilé, est une plante grimpante à croissance rapide originaire de l'Asie de l'Est. Il est reconnu pour ses feuilles vertes brillantes et ses fleurs blanches en forme d'étoiles."
+    },
+    "it": {
+      "common_name": "Gelsomino stellato",
+      "description": "Il Trachelospermum jasminoides, noto come Gelsomino stellato, è una pianta rampicante a crescita rapida originaria dell'Asia orientale. È noto per le sue foglie verdi lucide e i fiori bianchi a forma di stella."
+    },
+    "es": {
+      "common_name": "Jazmín estrellado",
+      "description": "El Trachelospermum jasminoides, conocido como Jazmín estrellado, es una planta trepadora de rápido crecimiento originaria del este de Asia. Se caracteriza por sus hojas verdes brillantes y sus flores blancas en forma de estrella."
+    },
+    "pt": {
+      "common_name": "Jasmim estrelado",
+      "description": "Trachelospermum jasminoides, ou Jasmim estrelado, é uma planta trepadeira de crescimento rápido originária do Leste Asiático. É conhecida por suas folhas verdes brilhantes e flores brancas em forma de estrela."
+    },
+    "ar": {
+      "common_name": "ياسمين نجمي",
+      "description": "Trachelospermum jasminoides، أو الياسمين النجمي، هو نبات متسلق ينمو بسرعة ويعود أصله إلى شرق آسيا. يعرف بأوراقه الخضراء اللامعة وزهورها البيضاء التي تشبه النجوم."
+    },
+    "hi": {
+      "common_name": "स्टार जैस्मिन",
+      "description": "Trachelospermum jasminoides, या स्टार जैस्मिन, एक सुगंधित, तेजी से बढ़ने वाली बेल है जो पूर्वी एशिया की मूल निवासी है। यह अपनी चमकदार हरी पत्तियों और सितारे जैसी सफेद फूलों के लिए जाना जाता है।"
+    },
+    "zh": {
+      "common_name": "星形茉莉",
+      "description": "Trachelospermum jasminoides，或星形茉莉，是一种快速生长的藤本植物，原产于东亚。它以其光亮的绿叶和星形的白色花朵而闻名。"
+    },
+    "ja": {
+      "common_name": "スタージャスミン",
+      "description": "Trachelospermum jasminoides、またはスタージャスミンは、東アジア原産の速く成長するつる植物です。光沢のある緑の葉と星のような白い花で知られています。"
+    },
+    "ko": {
+      "common_name": "별자스민",
+      "description": "Trachelospermum jasminoides, 또는 별자스민은 동아시아 원산지의 빠르게 자라는 덩굴식물입니다. 광택 있는 녹색 잎과 별 모양의 흰 꽃으로 유명합니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/2885/trachelospermum-jasminoides",
+      "https://www.gardenia.net/plant/trachelospermum-jasminoides-star-jasmine"
+    ]
+  }
+}

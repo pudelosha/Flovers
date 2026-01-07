@@ -1,0 +1,236 @@
+{
+  "external_id": "lonicera_periclymenum",
+  "name": "Common honeysuckle",
+  "latin": "Lonicera periclymenum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "terracotta"
+  ],
+  "recommended_soil_mixes": [
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 24,
+  "image_hero": "lonicera_periclymenum.jpg",
+  "image_thumb": "lonicera_periclymenum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Partial sun",
+          "pl": "Półcień",
+          "de": "Halbschatten",
+          "fr": "Mi-ombre",
+          "it": "Mezzombra",
+          "es": "Semisombra",
+          "pt": "Meia-sombra",
+          "ar": "شمس جزئية",
+          "hi": "आंशिक धूप",
+          "zh": "半日照",
+          "ja": "半日陰",
+          "ko": "반그늘"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Well-drained soil",
+          "pl": "Przepuszczalna",
+          "de": "Durchlässig",
+          "fr": "Bien drainé",
+          "it": "Ben drenato",
+          "es": "Bien drenado",
+          "pt": "Bem drenado",
+          "ar": "تربة جيدة",
+          "hi": "अच्छी जल निकास",
+          "zh": "排水良好",
+          "ja": "水はけ良好",
+          "ko": "배수 양호"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Regular watering",
+          "pl": "Regularne",
+          "de": "Regelmäßig",
+          "fr": "Arrosage régulier",
+          "it": "Annaffiature regolari",
+          "es": "Riego regular",
+          "pt": "Rega regular",
+          "ar": "ري منتظم",
+          "hi": "नियमित पानी",
+          "zh": "定期浇水",
+          "ja": "定期的に水",
+          "ko": "규칙적 관수"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Moderate care",
+          "pl": "Średnia",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Media",
+          "es": "Media",
+          "pt": "Média",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "普通",
+          "ko": "보통"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "Cool to mild",
+          "pl": "Chłodno-umiark.",
+          "de": "Kühl-mild",
+          "fr": "Frais à doux",
+          "it": "Fresco-mite",
+          "es": "Fresco a templado",
+          "pt": "Fresco a ameno",
+          "ar": "معتدل بارد",
+          "hi": "ठंडा-हल्का",
+          "zh": "凉爽至温和",
+          "ja": "涼しい〜温和",
+          "ko": "서늘함"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Average humidity",
+          "pl": "Średnia wilg.",
+          "de": "Mittel",
+          "fr": "Humidité moyenne",
+          "it": "Umidità media",
+          "es": "Humedad media",
+          "pt": "Umidade média",
+          "ar": "رطوبة متوسطة",
+          "hi": "औसत नमी",
+          "zh": "中等湿度",
+          "ja": "平均湿度",
+          "ko": "보통 습도"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Mildly toxic",
+          "pl": "Lekko toksyczna",
+          "de": "Leicht giftig",
+          "fr": "Légèrement toxique",
+          "it": "Leggermente tossica",
+          "es": "Ligeramente tóxica",
+          "pt": "Levemente tóxica",
+          "ar": "سامة قليلاً",
+          "hi": "हल्का विषैला",
+          "zh": "轻微有毒",
+          "ja": "弱い毒性",
+          "ko": "약한 독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Climbing vine",
+          "pl": "Pnącze",
+          "de": "Kletterpflanze",
+          "fr": "Plante grimpante",
+          "it": "Rampicante",
+          "es": "Trepadora",
+          "pt": "Trepadeira",
+          "ar": "نبات متسلق",
+          "hi": "चढ़ने वाली बेल",
+          "zh": "攀援藤本",
+          "ja": "つる性",
+          "ko": "덩굴성"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Common honeysuckle",
+      "description": "Lonicera periclymenum is a fragrant climbing shrub native to Europe. It produces tubular flowers that attract pollinators. It is commonly grown outdoors but can be trained in large containers."
+    },
+    "pl": {
+      "common_name": "Wiciokrzew pomorski",
+      "description": "Lonicera periclymenum to pachnące pnącze pochodzące z Europy. Wytwarza rurkowate kwiaty atrakcyjne dla zapylaczy. Najlepiej rośnie na zewnątrz w ogrodach."
+    },
+    "de": {
+      "common_name": "Wald-Geißblatt",
+      "description": "Lonicera periclymenum ist eine duftende Kletterpflanze aus Europa. Sie bildet röhrenförmige Blüten. Sie eignet sich für Gärten und große Kübel."
+    },
+    "fr": {
+      "common_name": "Chèvrefeuille des bois",
+      "description": "Lonicera periclymenum est une plante grimpante parfumée originaire d’Europe. Ses fleurs tubulaires attirent les pollinisateurs. Elle est surtout cultivée en extérieur."
+    },
+    "it": {
+      "common_name": "Caprifoglio comune",
+      "description": "Lonicera periclymenum è un rampicante profumato europeo. Produce fiori tubolari molto ornamentali. È adatto a giardini e grandi vasi."
+    },
+    "es": {
+      "common_name": "Madreselva común",
+      "description": "Lonicera periclymenum es una trepadora fragante originaria de Europa. Sus flores tubulares atraen polinizadores. Se cultiva principalmente en exterior."
+    },
+    "pt": {
+      "common_name": "Madressilva-brava",
+      "description": "Lonicera periclymenum é uma planta trepadeira perfumada da Europa. Produz flores tubulares decorativas. É mais adequada para cultivo externo."
+    },
+    "ar": {
+      "common_name": "زهر العسل الأوروبي",
+      "description": "Lonicera periclymenum نبات متسلق عطري موطنه أوروبا. أزهاره الأنبوبية تجذب الملقحات. يزرع غالباً في الحدائق الخارجية."
+    },
+    "hi": {
+      "common_name": "हनीसकल",
+      "description": "Lonicera periclymenum यूरोप का सुगंधित बेलदार पौधा है। इसके फूल परागणकर्ताओं को आकर्षित करते हैं। यह आमतौर पर बाहर उगाया जाता है।"
+    },
+    "zh": {
+      "common_name": "欧洲忍冬",
+      "description": "Lonicera periclymenum 是原产欧洲的芳香藤本植物。其管状花吸引传粉者。多用于户外栽培。"
+    },
+    "ja": {
+      "common_name": "セイヨウスイカズラ",
+      "description": "Lonicera periclymenum はヨーロッパ原産の芳香のあるつる植物です。筒状の花を咲かせます。主に屋外で育てられます。"
+    },
+    "ko": {
+      "common_name": "서양인동",
+      "description": "Lonicera periclymenum은 유럽 원산의 향기로운 덩굴식물입니다. 관 모양의 꽃을 피웁니다. 주로 야외에서 재배됩니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/plants/10244/lonicera-periclymenum/details",
+      "https://plants.ces.ncsu.edu/plants/lonicera-periclymenum/",
+      "https://www.gardenersworld.com/plants/lonicera-periclymenum/"
+    ]
+  }
+}

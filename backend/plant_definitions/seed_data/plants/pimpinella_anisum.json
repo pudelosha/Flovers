@@ -1,0 +1,236 @@
+{
+  "external_id": "pimpinella_anisum",
+  "name": "Anise",
+  "latin": "Pimpinella anisum",
+  "sun": "medium",
+  "water": "medium",
+  "difficulty": "medium",
+  "popular": false,
+  "recommended_pot_materials": [
+    "ceramic"
+  ],
+  "recommended_soil_mixes": [
+    "universal",
+    "loam"
+  ],
+  "water_required": true,
+  "water_interval_days": 7,
+  "moisture_required": false,
+  "moisture_interval_days": null,
+  "fertilize_required": true,
+  "fertilize_interval_days": 30,
+  "repot_required": true,
+  "repot_interval_months": 12,
+  "image_hero": "pimpinella_anisum.jpg",
+  "image_thumb": "pimpinella_anisum.jpg",
+  "traits": [
+    {
+      "key": "sun",
+      "value": {
+        "text": {
+          "en": "Medium light",
+          "pl": "Średnie światło",
+          "de": "Mittleres Licht",
+          "fr": "Lumière moyenne",
+          "it": "Luce media",
+          "es": "Luz media",
+          "pt": "Luz média",
+          "ar": "ضوء متوسط",
+          "hi": "मध्यम प्रकाश",
+          "zh": "中等光照",
+          "ja": "中程度の光",
+          "ko": "중간 빛"
+        }
+      }
+    },
+    {
+      "key": "soil",
+      "value": {
+        "text": {
+          "en": "Loamy soil",
+          "pl": "Gleba",
+          "de": "Lehmiger Boden",
+          "fr": "Sol argileux",
+          "it": "Terreno argilloso",
+          "es": "Suelo arcilloso",
+          "pt": "Solo argiloso",
+          "ar": "تربة طينية",
+          "hi": "मिट्टी",
+          "zh": "粘土土壤",
+          "ja": "粘土土壌",
+          "ko": "점토 토양"
+        }
+      }
+    },
+    {
+      "key": "watering",
+      "value": {
+        "text": {
+          "en": "Medium watering",
+          "pl": "Średnie podlewanie",
+          "de": "Mittlere Bewässerung",
+          "fr": "Arrosage moyen",
+          "it": "Annaffiatura media",
+          "es": "Riego medio",
+          "pt": "Rega média",
+          "ar": "سقي متوسط",
+          "hi": "मध्यम पानी देना",
+          "zh": "中等浇水",
+          "ja": "中程度の水やり",
+          "ko": "중간 물주기"
+        }
+      }
+    },
+    {
+      "key": "difficulty",
+      "value": {
+        "text": {
+          "en": "Medium",
+          "pl": "Średni",
+          "de": "Mittel",
+          "fr": "Moyenne",
+          "it": "Medio",
+          "es": "Medio",
+          "pt": "Médio",
+          "ar": "متوسط",
+          "hi": "मध्यम",
+          "zh": "中等",
+          "ja": "中程度",
+          "ko": "중간"
+        }
+      }
+    },
+    {
+      "key": "temperature",
+      "value": {
+        "text": {
+          "en": "15–25°C",
+          "pl": "15–25°C",
+          "de": "15–25°C",
+          "fr": "15–25°C",
+          "it": "15–25°C",
+          "es": "15–25°C",
+          "pt": "15–25°C",
+          "ar": "15–25°C",
+          "hi": "15–25°C",
+          "zh": "15–25°C",
+          "ja": "15–25°C",
+          "ko": "15–25°C"
+        }
+      }
+    },
+    {
+      "key": "humidity",
+      "value": {
+        "text": {
+          "en": "Low",
+          "pl": "Niska",
+          "de": "Niedrig",
+          "fr": "Faible",
+          "it": "Bassa",
+          "es": "Baja",
+          "pt": "Baixa",
+          "ar": "منخفض",
+          "hi": "कम",
+          "zh": "低",
+          "ja": "低い",
+          "ko": "낮은"
+        }
+      }
+    },
+    {
+      "key": "toxic",
+      "value": {
+        "text": {
+          "en": "Non-toxic",
+          "pl": "Nietoksyczny",
+          "de": "Nicht giftig",
+          "fr": "Non toxique",
+          "it": "Non tossico",
+          "es": "No tóxico",
+          "pt": "Não tóxico",
+          "ar": "غير سام",
+          "hi": "अविषाक्त",
+          "zh": "无毒",
+          "ja": "無毒",
+          "ko": "무독성"
+        }
+      }
+    },
+    {
+      "key": "growth",
+      "value": {
+        "text": {
+          "en": "Moderate",
+          "pl": "Średni",
+          "de": "Moderat",
+          "fr": "Modéré",
+          "it": "Moderato",
+          "es": "Moderado",
+          "pt": "Moderado",
+          "ar": "معتدل",
+          "hi": "मध्यम",
+          "zh": "适中",
+          "ja": "適度",
+          "ko": "중간"
+        }
+      }
+    }
+  ],
+  "translations": {
+    "en": {
+      "common_name": "Anise",
+      "description": "Anise is an herb known for its aromatic seeds, used in cooking and herbal remedies. It thrives in sunny to partially sunny areas with moderate watering."
+    },
+    "pl": {
+      "common_name": "Anyż",
+      "description": "Anyż to zioło znane ze swoich aromatycznych nasion, używanych w gotowaniu i medycynie naturalnej. Rośnie najlepiej w nasłonecznionych miejscach z umiarkowanym podlewaniem."
+    },
+    "de": {
+      "common_name": "Anis",
+      "description": "Anis ist ein Kraut, das für seine aromatischen Samen bekannt ist, die in der Küche und in der Kräutermedizin verwendet werden. Es gedeiht in sonnigen bis halbschattigen Bereichen mit mäßiger Bewässerung."
+    },
+    "fr": {
+      "common_name": "Anis",
+      "description": "L'anis est une plante aromatique connue pour ses graines utilisées en cuisine et en médecine. Elle pousse dans des zones ensoleillées à partiellement ombragées avec un arrosage modéré."
+    },
+    "it": {
+      "common_name": "Anice",
+      "description": "L'anice è un'erba conosciuta per i suoi semi aromatici, usati in cucina e nella medicina. Cresce bene in zone soleggiate o parzialmente ombreggiate con irrigazione moderata."
+    },
+    "es": {
+      "common_name": "Anís",
+      "description": "El anís es una planta conocida por sus semillas aromáticas, utilizadas en la cocina y remedios herbales. Crece en áreas soleadas a parcialmente soleadas con riego moderado."
+    },
+    "pt": {
+      "common_name": "Anis",
+      "description": "O anis é uma planta conhecida por suas sementes aromáticas, utilizadas na culinária e em remédios naturais. Cresce em áreas ensolaradas a parcialmente sombreadas, com rega moderada."
+    },
+    "ar": {
+      "common_name": "اليانسون",
+      "description": "اليانسون هو عشب معروف ببذوره العطرية، التي تستخدم في الطهي والعلاجات العشبية. ينمو في المناطق المشمسة إلى شبه الظليلة مع الري المعتدل."
+    },
+    "hi": {
+      "common_name": "सौंफ",
+      "description": "सौंफ एक औषधीय पौधा है जो अपने सुगंधित बीजों के लिए जाना जाता है, जिसका उपयोग खाना पकाने और हर्बल उपचार में किया जाता है। यह धूप वाले या आंशिक रूप से छायादार क्षेत्रों में मध्यम पानी देने के साथ बढ़ता है।"
+    },
+    "zh": {
+      "common_name": "八角茴香",
+      "description": "八角茴香是一种以其芳香的种子闻名的草本植物，用于烹饪和草药治疗。它在阳光充足或部分阴凉的地方生长，适量浇水。"
+    },
+    "ja": {
+      "common_name": "アニス",
+      "description": "アニスはその香り高い種子で知られるハーブで、料理や薬草療法に使用されます。日当たりの良い場所または部分的に日陰の場所で、適度な水やりで育ちます。"
+    },
+    "ko": {
+      "common_name": "애니즈",
+      "description": "애니즈는 요리와 약용으로 사용되는 향기로운 씨앗으로 알려진 허브입니다. 햇볕이 잘 드는 곳이나 부분적인 그늘에서 적당히 물을 주면 잘 자랍니다."
+    }
+  },
+  "sources": {
+    "urls": [
+      "https://www.rhs.org.uk/advice/profile?pid=149",
+      "https://www.gardeningknowhow.com/edible/herbs/anise/anise-herb-care.htm"
+    ]
+  }
+}
