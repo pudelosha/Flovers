@@ -25,3 +25,10 @@ class ReminderTaskSerializer(serializers.ModelSerializer):
             "created_at", "updated_at",
         ]
         read_only_fields = ["id", "status", "completed_at", "created_at", "updated_at"]
+
+class ReminderTaskJournalSerializer(serializers.ModelSerializer):
+    type = serializers.CharField(source="reminder.type", read_only=True)
+
+    class Meta:
+        model = ReminderTask
+        fields = ["id", "type", "completed_at", "note"]

@@ -9,6 +9,9 @@ import type {
   ApiPlantInstanceUpdatePayload,
 } from "../../features/plants/types/plants.types";
 
+// ✅ FIX: re-export so other modules can import it from this service module
+export type { ApiPlantInstanceListItem } from "../../features/plants/types/plants.types";
+
 import type { WizardState } from "../../features/create-plant/types/create-plant.types";
 import type { PlantEditForm } from "../../features/plants/types/plants.types";
 
@@ -200,4 +203,39 @@ export async function fetchPlantInstanceDetail(
     undefined,
     { auth: opts.auth ?? true }
   );
+}
+
+/* ---------------------- JOURNAL (completed tasks) ---------------------- */
+
+/**
+ * Backend endpoint:
+ *   GET /api/plant-instances/<plant_id>/journal/
+ *
+ * Returns items like:
+ *   { id, type, completed_at, note }
+ *
+ * type is backend reminder.type: "water" | "moisture" | "fertilize" | "care" | "repot"
+ */
+export type ApiPlantJournalItem = {
+  id: number;
+  type: "water" | "moisture" | "fertilize" | "care" | "repot";
+  completed_at: string | null;
+  note: string | null;
+};
+
+export async function fetchPlantJournal(
+  plantId: number,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<ApiPlantJournalItem[]> {
+  const resp = await request<any>(
+    `/api/plant-instances/${plantId}/journal/`,
+    "GET",
+    undefined,
+    { auth: opts.auth ?? true }
+  );
+
+  // Safety: tolerate DRF pagination
+  if (Array.isArray(resp)) return resp as ApiPlantJournalItem[];
+  if (resp && Array.isArray(resp.results)) return resp.results as ApiPlantJournalItem[];
+  return [];
 }

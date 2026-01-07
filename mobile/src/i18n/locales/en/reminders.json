@@ -14,7 +14,7 @@
 
     "types": {
       "watering": "Watering",
-      "moisture": "Moisture",
+      "moisture": "Misting",
       "fertilising": "Fertilising",
       "care": "Care",
       "repot": "Repot"
@@ -31,7 +31,7 @@
 
     "empty": {
       "title": "No reminders yet",
-      "description": "Reminders are associated with specific plants. Please make sure you have at least one plant created first.\n\nTap the “+” button to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, moisture, fertilising, care, or repot), set the first due date, and define how often it should repeat."
+      "description": "Reminders are associated with specific plants. Please make sure you have at least one plant created first.\n\nTap the “+” button to add a reminder. You’ll use a simple modal to pick the plant, choose the type (watering, misting, fertilising, care, or repot), set the first due date, and define how often it should repeat."
     },
 
     "menu": {

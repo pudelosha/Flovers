@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
 from .models import Reminder, ReminderTask
-from .serializers import ReminderSerializer, ReminderTaskSerializer
+from .serializers import ReminderSerializer, ReminderTaskSerializer, ReminderTaskJournalSerializer
 
 from datetime import timedelta
 
@@ -210,3 +210,21 @@ class ReminderTaskBulkDeleteView(APIView):
             {"deleted": deleted_count},
             status=status.HTTP_200_OK,
         )
+    
+class PlantJournalView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, plant_id: int):
+        qs = (
+            ReminderTask.objects
+            .filter(
+                user=request.user,
+                status="completed",
+                reminder__plant_id=plant_id,
+            )
+            .select_related("reminder")
+            .order_by("-completed_at", "-id")
+        )
+
+        data = ReminderTaskJournalSerializer(qs, many=True).data
+        return Response(data)

@@ -19,7 +19,7 @@ export const ACCENT_BY_TYPE: Record<TaskType, string> = {
 // Icons by task type
 export const ICON_BY_TYPE: Record<TaskType, string> = {
   watering:   "water",
-  moisture:   "water-percent",
+  moisture:   "spray",
   fertilising:"leaf",
   care:       "flower",
   repot:      "pot",

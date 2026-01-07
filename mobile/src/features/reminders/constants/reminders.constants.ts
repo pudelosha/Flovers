@@ -19,7 +19,7 @@ export const ACCENT_BY_TYPE: Record<ReminderType, string> = {
 // Icons by type (MaterialCommunityIcons)
 export const ICON_BY_TYPE: Record<ReminderType, string> = {
   watering:   "water",
-  moisture:   "water-percent",
+  moisture:   "spray",
   fertilising:"leaf",
   care:       "flower",
   repot:      "pot",

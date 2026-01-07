@@ -154,6 +154,7 @@ export default function PlantsScreen() {
   // JOURNAL MODAL
   const [journalVisible, setJournalVisible] = useState(false);
   const [journalPlantName, setJournalPlantName] = useState("");
+  const [journalPlantId, setJournalPlantId] = useState<string>("");
 
   // Hide modals/menus on focus
   useFocusEffect(
@@ -166,6 +167,7 @@ export default function PlantsScreen() {
       // also reset journal
       setJournalVisible(false);
       setJournalPlantName("");
+      setJournalPlantId("");
 
       return undefined;
     }, [])
@@ -228,6 +230,7 @@ export default function PlantsScreen() {
   // Journal open
   const openJournal = (p: Plant) => {
     setMenuOpenId(null);
+    setJournalPlantId(p.id);
     setJournalPlantName(p.name);
     setJournalVisible(true);
   };
@@ -416,7 +419,12 @@ export default function PlantsScreen() {
   );
 
   const showFAB =
-    !editOpen && !confirmDeleteId && !sortOpen && !filterOpen && !qrVisible && !journalVisible;
+    !editOpen &&
+    !confirmDeleteId &&
+    !sortOpen &&
+    !filterOpen &&
+    !qrVisible &&
+    !journalVisible;
 
   // animations for tiles
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -580,10 +588,7 @@ export default function PlantsScreen() {
               s.emptyWrap,
               {
                 opacity: emptyOpacity,
-                transform: [
-                  { translateY: emptyTranslateY },
-                  { scale: emptyScale },
-                ],
+                transform: [{ translateY: emptyTranslateY }, { scale: emptyScale }],
               },
             ]}
           >
@@ -672,7 +677,9 @@ export default function PlantsScreen() {
               {
                 key: "locations",
                 icon: "map-marker-outline",
-                label: t("plants.fab.locations", { defaultValue: "Locations" }),
+                label: t("plants.fab.locations", {
+                  defaultValue: "Locations",
+                }),
                 onPress: () => {
                   setMenuOpenId(null);
                   nav.navigate("PlantLocations");
@@ -789,10 +796,12 @@ export default function PlantsScreen() {
       {/* Journal modal render */}
       <PlantJournalModal
         visible={journalVisible}
+        plantId={journalPlantId}
         plantName={journalPlantName}
         onClose={() => {
           setJournalVisible(false);
           setJournalPlantName("");
+          setJournalPlantId("");
         }}
       />
 

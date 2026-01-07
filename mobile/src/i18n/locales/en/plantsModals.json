@@ -67,6 +67,19 @@
       "containerMaterialLabel": "Container material",
       "soilMixLabel": "Soil / potting mix",
       "update": "Update"
+    },
+    "journal": {
+      "title": "Plant Journal",
+      "loading": "Loading...",
+      "error": "Something went wrong.",
+      "empty": "No journal entries yet.",
+      "taskTypes": {
+        "watering": "WATERING",
+        "moisture": "MISTING",
+        "fertilising": "FERTILISING",
+        "care": "CARE",
+        "repot": "REPOT"
+      }
     }
   }
 }

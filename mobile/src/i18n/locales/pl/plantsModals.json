@@ -67,6 +67,19 @@
       "containerMaterialLabel": "Materiał doniczki",
       "soilMixLabel": "Podłoże / mieszanka",
       "update": "Zapisz"
+    },
+    "journal": {
+      "title": "Dziennik rośliny",
+      "loading": "Wczytywanie...",
+      "error": "Coś poszło nie tak.",
+      "empty": "Brak wpisów w dzienniku.",
+      "taskTypes": {
+        "watering": "PODLEWANIE",
+        "moisture": "ZRASZANIE",
+        "fertilising": "NAWOŻENIE",
+        "care": "PIELĘGNACJA",
+        "repot": "PRZESADZANIE"
+      }
     }
   }
 }
