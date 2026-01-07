@@ -1,13 +1,27 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { View, Text, Pressable, TextInput, Keyboard, Platform } from "react-native";
+// C:\Projekty\Python\Flovers\mobile\src\features\reminders\components\modals\EditReminderModal.tsx
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import {
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  Keyboard,
+  Platform,
+} from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { s } from "../../styles/reminders.styles";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { useSettings } from "../../../../app/providers/SettingsProvider"; // 👈 NEW
 
-export type ReminderType = "watering" | "moisture" | "fertilising" | "care" | "repot";
+export type ReminderType =
+  | "watering"
+  | "moisture"
+  | "fertilising"
+  | "care"
+  | "repot";
 
 // Optional datetime picker (same pattern you mentioned)
 let DateTimePicker: any = null;
@@ -46,7 +60,13 @@ type Props = {
   onSave: () => void;
 };
 
-const TYPE_OPTIONS: ReminderType[] = ["watering", "moisture", "fertilising", "care", "repot"];
+const TYPE_OPTIONS: ReminderType[] = [
+  "watering",
+  "moisture",
+  "fertilising",
+  "care",
+  "repot",
+];
 
 function unitForType(t: ReminderType): "days" | "months" {
   return t === "repot" ? "months" : "days";
@@ -60,13 +80,46 @@ function isValidDateYYYYMMDD(v: string) {
   const d = new Date(v);
   if (isNaN(+d)) return false;
   const [Y, M, D] = v.split("-").map(Number);
-  return d.getUTCFullYear() === Y && d.getUTCMonth() + 1 === M && d.getUTCDate() === D;
+  return (
+    d.getUTCFullYear() === Y &&
+    d.getUTCMonth() + 1 === M &&
+    d.getUTCDate() === D
+  );
 }
 function toYYYYMMDD(d: Date) {
   const Y = d.getFullYear();
   const M = String(d.getMonth() + 1).padStart(2, "0");
   const D = String(d.getDate()).padStart(2, "0");
   return `${Y}-${M}-${D}`;
+}
+
+function formatISOForDisplay(iso: string, settings?: any) {
+  // iso is always YYYY-MM-DD internally
+  if (!isValidDateYYYYMMDD(iso)) return iso;
+
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) return iso;
+  const yyyy = m[1];
+  const mm = m[2];
+  const dd = m[3];
+
+  const fmt = settings?.dateFormat;
+
+  // Support common "DMY/MDY/YMD" + common format strings.
+  if (fmt === "mdy" || fmt === "MM/DD/YYYY" || fmt === "MM-DD-YYYY") {
+    const sep = fmt === "MM-DD-YYYY" ? "-" : "/";
+    return `${mm}${sep}${dd}${sep}${yyyy}`;
+  }
+  if (fmt === "ymd" || fmt === "YYYY-MM-DD" || fmt === "YYYY/MM/DD") {
+    const sep = fmt === "YYYY/MM/DD" ? "/" : "-";
+    return `${yyyy}${sep}${mm}${sep}${dd}`;
+  }
+
+  // default: dmy
+  if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
+
+  return `${dd}.${mm}.${yyyy}`;
 }
 
 export default function EditReminderModal(props: Props) {
@@ -90,6 +143,7 @@ export default function EditReminderModal(props: Props) {
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const { settings } = useSettings(); // 👈 NEW
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -122,10 +176,23 @@ export default function EditReminderModal(props: Props) {
     !!fIntervalValue &&
     fIntervalValue > 0;
 
+  const dateDisplay = useMemo(
+    () =>
+      fDueDate && isValidDateYYYYMMDD(fDueDate)
+        ? formatISOForDisplay(fDueDate, settings)
+        : "",
+    [fDueDate, settings]
+  );
+
   if (!visible) return null;
 
   const typeLabel = (rt: ReminderType) =>
-    tr(`reminders.types.${rt}`, rt === "fertilising" ? "Fertilising" : rt.charAt(0).toUpperCase() + rt.slice(1));
+    tr(
+      `reminders.types.${rt}`,
+      rt === "fertilising"
+        ? "Fertilising"
+        : rt.charAt(0).toUpperCase() + rt.slice(1)
+    );
 
   const unitLabel = (u: "days" | "months") => tr(`reminders.units.${u}`, u);
 
@@ -150,7 +217,11 @@ export default function EditReminderModal(props: Props) {
           <View
             pointerEvents="none"
             // @ts-ignore
-            style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0,0,0,0.35)",
+            }}
           />
         </View>
 
@@ -162,9 +233,7 @@ export default function EditReminderModal(props: Props) {
           </Text>
 
           {/* Type */}
-          <Text style={s.inputLabel}>
-            {tr("remindersModals.edit.typeLabel", "Type")}
-          </Text>
+          <Text style={s.inputLabel}>{tr("remindersModals.edit.typeLabel", "Type")}</Text>
           <View style={s.dropdown}>
             <Pressable
               style={s.dropdownHeader}
@@ -193,7 +262,9 @@ export default function EditReminderModal(props: Props) {
                     }}
                   >
                     <Text style={s.dropdownItemText}>{typeLabel(opt)}</Text>
-                    {fType === opt && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {fType === opt && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -236,7 +307,9 @@ export default function EditReminderModal(props: Props) {
                     }}
                   >
                     <Text style={s.dropdownItemText}>{p.name}</Text>
-                    {fPlantId === p.id && <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />}
+                    {fPlantId === p.id && (
+                      <MaterialCommunityIcons name="check" size={18} color="#FFFFFF" />
+                    )}
                   </Pressable>
                 ))}
               </View>
@@ -259,12 +332,18 @@ export default function EditReminderModal(props: Props) {
           <Text style={s.inputLabel}>
             {tr("remindersModals.edit.dueDateLabel", "Due date")}
           </Text>
-          <Pressable onPress={() => setShowDatePicker(true)} android_ripple={{ color: "rgba(255,255,255,0.12)" }}>
+          <Pressable
+            onPress={() => setShowDatePicker(true)}
+            android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+          >
             <TextInput
               style={s.input}
-              placeholder={tr("remindersModals.edit.datePlaceholder", "YYYY-MM-DD")}
+              placeholder={tr(
+                "remindersModals.edit.datePlaceholder",
+                "YYYY-MM-DD"
+              )}
               placeholderTextColor="rgba(255,255,255,0.7)"
-              value={fDueDate}
+              value={dateDisplay || fDueDate}
               editable={false}
               pointerEvents="none"
             />
@@ -280,7 +359,7 @@ export default function EditReminderModal(props: Props) {
               display={Platform.OS === "ios" ? "inline" : "default"}
               onChange={(event: any, date?: Date) => {
                 if (Platform.OS === "android") setShowDatePicker(false);
-                if (date) setFDueDate(toYYYYMMDD(date));
+                if (date) setFDueDate(toYYYYMMDD(date)); // keep ISO in state
               }}
             />
           )}
@@ -293,7 +372,10 @@ export default function EditReminderModal(props: Props) {
             <View style={s.inlineHalfLeft}>
               <TextInput
                 style={[s.input, s.inputInline]}
-                placeholder={tr("remindersModals.edit.intervalValuePlaceholder", "Value")}
+                placeholder={tr(
+                  "remindersModals.edit.intervalValuePlaceholder",
+                  "Value"
+                )}
                 placeholderTextColor="rgba(255,255,255,0.7)"
                 value={String(typeof fIntervalValue === "number" ? fIntervalValue : "")}
                 onChangeText={(txt) => {
