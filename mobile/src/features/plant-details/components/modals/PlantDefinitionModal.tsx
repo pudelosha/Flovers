@@ -11,10 +11,14 @@ import {
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
+
+// ✅ reuse the same trait icon map as Step02 (adjust path if needed)
+import { TRAIT_ICON_BY_KEY } from "../../../create-plant/constants/create-plant.constants";
 
 type Props = {
   visible: boolean;
@@ -41,6 +45,19 @@ function pickText(value: any): string {
   } catch {
     return String(value);
   }
+}
+
+function normalizeTraitKey(raw: string): string {
+  const k = (raw || "").trim().toLowerCase();
+  if (!k) return "";
+
+  const map: Record<string, string> = {
+    watering: "water",
+    temp: "temperature",
+    light: "sun",
+  };
+
+  return map[k] ?? k;
 }
 
 function titleCaseKey(key: string): string {
@@ -81,6 +98,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
       if (!plantDefinitionId || !Number.isFinite(plantDefinitionId)) {
         setProfile(null);
+        setLoading(false);
         setError(tr("plantDetailsModals.definition.noId", "No plant definition id found."));
         return;
       }
@@ -110,25 +128,49 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     };
   }, [visible, plantDefinitionId, tr]);
 
+  // ---- derived values (must be computed regardless of visible) ----
   const name = (profile?.name ? String(profile.name) : "").trim();
   const latin = (profile?.latin ? String(profile.latin) : "").trim();
   const description = pickText(profile?.description);
-  const traits: any[] = Array.isArray(profile?.traits) ? profile.traits : [];
 
-  if (!visible) return null;
+  const preferences = React.useMemo(() => {
+    const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
+    const p: any = profile;
+    const seen = new Set<string>();
 
-  // Button + safe-area math
+    const traits = Array.isArray(p?.traits) ? p.traits : [];
+    for (const trt of traits) {
+      const rawKey = String(trt?.key ?? "").trim();
+      const key = normalizeTraitKey(rawKey);
+      const value = pickText(trt?.value);
+      if (!key || !value) continue;
+      if (seen.has(key)) continue;
+      seen.add(key);
+
+      out.push({
+        key,
+        label: tr(`createPlant.step02.traits.${key}`, titleCaseKey(key) || key),
+        icon: (TRAIT_ICON_BY_KEY as any)[key] ?? "leaf",
+        value,
+      });
+    }
+
+    return out;
+  }, [profile, tr]);
+
+  // button + safe area
   const bottomButtonHeight = 52;
-  const bottomGap = Math.max(insets.bottom, 0) + 12; // keep tab bar visible, lift button above it
+  const bottomGap = Math.max(insets.bottom, 0) + 12;
   const scrollPadBottom = bottomButtonHeight + bottomGap + 24;
+
+  // ✅ return null ONLY after hooks have run
+  if (!visible) return null;
 
   return (
     <>
-      {/* ✅ lighter backdrop (was too dark) */}
       <Pressable style={styles.backdrop} onPress={close} />
 
       <View style={[styles.wrap, { paddingTop: Math.max(insets.top, 12) }]}>
-        {/* Glass background */}
         <View style={styles.glass} pointerEvents="none">
           <BlurView
             style={StyleSheet.absoluteFill}
@@ -137,15 +179,10 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
             overlayColor="transparent"
             reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
           />
-
-          {/* ✅ lighter tint (was too dark) */}
           <View pointerEvents="none" style={styles.glassTint} />
-
-          {/* ✅ optional white haze to match your Home prompt feel */}
           <View pointerEvents="none" style={styles.glassHaze} />
         </View>
 
-        {/* Card */}
         <View style={styles.inner}>
           <ScrollView
             keyboardShouldPersistTaps="handled"
@@ -169,9 +206,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
               </View>
             ) : error ? (
               <View style={styles.stateBox}>
-                <Text style={styles.stateText}>
-                  {tr("plantDetailsModals.definition.error", "Something went wrong.")}
-                </Text>
+                <Text style={styles.stateText}>{tr("plantDetailsModals.definition.error", "Something went wrong.")}</Text>
                 <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
               </View>
             ) : !profile ? (
@@ -182,48 +217,29 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
               </View>
             ) : (
               <>
-                {!!description && (
-                  <View style={styles.block}>
-                    <Text style={styles.blockTitle}>
-                      {tr("plantDetailsModals.definition.description", "Description")}
+                {!!description && <Text style={styles.desc}>{description}</Text>}
+
+                {!!preferences.length && (
+                  <>
+                    <Text style={styles.sectionTitle}>
+                      {tr("plantDetailsModals.definition.traits", "Traits")}
                     </Text>
-                    <Text style={styles.blockText}>{description}</Text>
-                  </View>
-                )}
 
-                <View style={styles.block}>
-                  <Text style={styles.blockTitle}>
-                    {tr("plantDetailsModals.definition.traits", "Traits")}
-                  </Text>
-
-                  {traits.length === 0 ? (
-                    <Text style={styles.blockText}>
-                      {tr("plantDetailsModals.definition.noTraits", "No traits provided.")}
-                    </Text>
-                  ) : (
-                    <View style={{ gap: 10 }}>
-                      {traits.map((x, idx) => {
-                        const rawKey = String(x?.key ?? "").trim();
-                        const val = pickText(x?.value);
-                        if (!rawKey && !val) return null;
-
-                        return (
-                          <View key={`${rawKey}-${idx}`} style={styles.traitRow}>
-                            <Text style={styles.traitKey} numberOfLines={1}>
-                              {titleCaseKey(rawKey) || tr("common.unknown", "Unknown")}
-                            </Text>
-                            <Text style={styles.traitValue}>{val || "—"}</Text>
-                          </View>
-                        );
-                      })}
+                    <View style={styles.prefsGrid}>
+                      {preferences.map((row) => (
+                        <View key={row.key} style={styles.prefRow}>
+                          <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
+                          <Text style={styles.prefLabel}>{row.label}</Text>
+                          <Text style={styles.prefValue}>{row.value}</Text>
+                        </View>
+                      ))}
                     </View>
-                  )}
-                </View>
+                  </>
+                )}
               </>
             )}
           </ScrollView>
 
-          {/* ✅ ensure it’s ALWAYS on top + visible */}
           <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
             <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
               <Text style={[styles.btnText, styles.btnPrimaryText]}>
@@ -238,13 +254,11 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 }
 
 const styles = StyleSheet.create({
-  // ✅ lighter (Home-like)
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.42)", // was 0.60
+    backgroundColor: "rgba(0,0,0,0.42)",
     zIndex: 80,
   },
-
   wrap: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
@@ -252,20 +266,15 @@ const styles = StyleSheet.create({
     zIndex: 81,
     paddingHorizontal: 24,
   },
-
   glass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 18,
     overflow: "hidden",
   },
-
-  // ✅ lighter tint (lets blur “shine” more)
   glassTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.22)", // was ~0.35
+    backgroundColor: "rgba(0,0,0,0.22)",
   },
-
-  // ✅ subtle white haze for jelly feel
   glassHaze: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(255,255,255,0.06)",
@@ -284,14 +293,12 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "800",
     fontSize: 18,
-    marginBottom: 12,
+    marginBottom: 6,
     paddingHorizontal: 16,
     paddingTop: 16,
   },
-
   latin: {
-    marginTop: -6,
-    marginBottom: 6,
+    marginBottom: 10,
     marginHorizontal: 16,
     color: "rgba(255,255,255,0.90)",
     fontWeight: "700",
@@ -315,72 +322,51 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  block: {
+  desc: {
+    marginHorizontal: 16,
+    marginBottom: 6,
+    color: "rgba(255,255,255,0.95)",
+    fontSize: 13,
+    fontWeight: "300",
+    lineHeight: 18,
+    textAlign: "justify",
+  },
+
+  sectionTitle: {
     marginHorizontal: 16,
     marginTop: 10,
-    borderRadius: 18,
-    backgroundColor: "rgba(255,255,255,0.10)",
-    paddingVertical: 12,
-    paddingHorizontal: 12,
-  },
-  blockTitle: {
-    color: "#FFFFFF",
-    fontWeight: "900",
-    letterSpacing: 0.4,
-    fontSize: 13,
     marginBottom: 8,
-  },
-  blockText: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "500",
-    lineHeight: 18,
-  },
-
-  traitRow: {
-    borderRadius: 16,
-    backgroundColor: "rgba(0,0,0,0.18)",
-    paddingVertical: 12,
-    paddingHorizontal: 12,
-  },
-  traitKey: {
     color: "#FFFFFF",
-    fontWeight: "900",
-    fontSize: 12,
-    letterSpacing: 0.4,
-    textTransform: "uppercase",
-  },
-  traitValue: {
-    marginTop: 6,
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "500",
-    lineHeight: 18,
+    fontWeight: "800",
   },
 
-  // ✅ critical: zIndex/elevation so it doesn’t get covered by ScrollView content
+  prefsGrid: { marginHorizontal: 16, marginTop: 4, gap: 8 },
+  prefRow: { flexDirection: "row", alignItems: "center", gap: 10 },
+  prefLabel: { color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: "700", flex: 1 },
+  prefValue: { color: "#FFFFFF", fontSize: 12, fontWeight: "800" },
+
   bottomBar: {
     position: "absolute",
     left: 0,
     right: 0,
     bottom: 0,
-
-    paddingHorizontal: 16,
-    paddingTop: 10,
-
+    paddingHorizontal: 24,
     zIndex: 999,
     elevation: 999,
-
-    // ✅ gives the button area a readable base (still glassy)
-    backgroundColor: "rgba(0,0,0,0.10)",
+    backgroundColor: "transparent",
   },
 
   btn: {
-    height: 52,
-    borderRadius: 16,
+    alignSelf: "stretch",
+    height: 44,
+    borderRadius: 14,
     backgroundColor: "rgba(255,255,255,0.12)",
     alignItems: "center",
     justifyContent: "center",
   },
+
   btnText: { color: "#FFFFFF", fontWeight: "800" },
+
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
 });
