@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\PlantReminderMenu.tsx
 import React, { useCallback } from "react";
 import { View, Pressable, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";

@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\screens\PlantDetailsScreen.tsx
 import React, { useMemo, useState, useRef, useCallback } from "react";
 import {
   View,
@@ -160,8 +159,15 @@ export default function PlantDetailsScreen() {
 
       const run = async () => {
         try {
+          // FIX #1: hide any open menus every time we enter this screen
+          setDismissMenusTick((t) => t + 1);
+
+          // FIX #2: clear previous plant details so only spinner is shown while loading
+          setDetails(null);
+
           setLoading(true);
           setError("");
+
           await loadDetails();
           if (isActive) {
             setRefreshCounter((c) => c + 1);
@@ -196,6 +202,9 @@ export default function PlantDetailsScreen() {
           easing: Easing.in(Easing.cubic),
           useNativeDriver: true,
         }).start();
+
+        // Also collapse menus on leaving (extra safety)
+        setDismissMenusTick((t) => t + 1);
 
         setToastVisible(false);
         setCompleteModalVisible(false);
@@ -352,7 +361,10 @@ export default function PlantDetailsScreen() {
                       showToast(tr("plantDetails.toasts.qrSaved", "QR code saved to your gallery."), "success");
                     } catch (err: any) {
                       console.warn("[PlantDetails] save QR failed:", err);
-                      showToast(err?.message || tr("plantDetails.toasts.qrSaveFailed", "Failed to save QR code."), "error");
+                      showToast(
+                        err?.message || tr("plantDetails.toasts.qrSaveFailed", "Failed to save QR code."),
+                        "error"
+                      );
                     }
                   }}
                   onPressEmail={() => {
