@@ -1,10 +1,6 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\PlantInfoTile.tsx
 import React, { useCallback, useMemo } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
-} from "react-native";
+import { View, Text, StyleSheet, ImageBackground } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
@@ -14,7 +10,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
 type Props = {
-  plant: ApiPlantInstanceDetailFull;
+  plant?: ApiPlantInstanceDetailFull | null;
 };
 
 function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
@@ -29,11 +25,7 @@ function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
 
 function ImageMasked({ uri }: { uri: string }) {
   return (
-    <ImageBackground
-      source={{ uri }}
-      resizeMode="cover"
-      style={StyleSheet.absoluteFillObject}
-    />
+    <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />
   );
 }
 
@@ -51,6 +43,15 @@ export default function PlantInfoTile({ plant }: Props) {
     [t, currentLanguage]
   );
 
+  // ✅ HARD GUARD (prevents "display_name of undefined")
+  if (!plant) {
+    return (
+      <View>
+        <Text style={styles.h1}>{tr("plantDetails.info.loading", "Loading…")}</Text>
+      </View>
+    );
+  }
+
   const title =
     plant.display_name ||
     plant.plant_definition?.name ||
@@ -66,32 +67,20 @@ export default function PlantInfoTile({ plant }: Props) {
   }, [plant.plant_definition]);
 
   const lightValue = plant.light_level
-    ? tr(
-        `createPlant.step04.lightLevels.${String(plant.light_level)}.label`,
-        String(plant.light_level)
-      )
+    ? tr(`createPlant.step04.lightLevels.${String(plant.light_level)}.label`, String(plant.light_level))
     : tr("plantDetails.common.dash", "—");
 
   const oKey = normalizeOrientationKey(plant.orientation);
   const orientationValue = oKey
-    ? tr(
-        `plantDetails.info.orientations.${oKey}`,
-        tr(`createPlant.step04.orientations.${oKey}.label`, oKey)
-      )
+    ? tr(`plantDetails.info.orientations.${oKey}`, tr(`createPlant.step04.orientations.${oKey}.label`, oKey))
     : tr("plantDetails.common.dash", "—");
 
   const potValue = plant.pot_material
-    ? tr(
-        `createPlant.step05.potMaterials.${String(plant.pot_material)}.label`,
-        String(plant.pot_material)
-      )
+    ? tr(`createPlant.step05.potMaterials.${String(plant.pot_material)}.label`, String(plant.pot_material))
     : tr("plantDetails.common.dash", "—");
 
   const soilValue = plant.soil_mix
-    ? tr(
-        `createPlant.step05.soilMixes.${String(plant.soil_mix)}.label`,
-        String(plant.soil_mix)
-      )
+    ? tr(`createPlant.step05.soilMixes.${String(plant.soil_mix)}.label`, String(plant.soil_mix))
     : tr("plantDetails.common.dash", "—");
 
   const purchaseValue = plant.purchase_date || tr("plantDetails.common.dash", "—");
@@ -103,7 +92,7 @@ export default function PlantInfoTile({ plant }: Props) {
 
   return (
     <View>
-      {/* HERO IMAGE that aggressively fades out (background "consumes" it early) */}
+      {/* HERO IMAGE that fades out into transparent (reveals glass behind) */}
       <View style={styles.heroWrap}>
         {imageUrl ? (
           <View style={styles.heroImage}>
@@ -111,18 +100,15 @@ export default function PlantInfoTile({ plant }: Props) {
               style={StyleSheet.absoluteFill}
               maskElement={
                 <LinearGradient
-                  // More aggressive alpha ramp:
-                  // - by ~6–10% you already see some transparency
-                  // - by ~35% it's clearly fading
-                  // - by ~60–70% it's mostly gone
+                  // Your aggressive mask
                   colors={[
                     "rgba(0,0,0,1.00)", // 0%  fully visible
                     "rgba(0,0,0,0.88)", // ~8% already slightly transparent
-                    "rgba(0,0,0,0.60)", // ~30% noticeable fade
-                    "rgba(0,0,0,0.22)", // ~58% heavy fade
+                    "rgba(0,0,0,0.60)", // ~60% noticeable fade
+                    "rgba(0,0,0,0.22)", // ~80% heavy fade
                     "rgba(0,0,0,0.00)", // 100% fully transparent
                   ]}
-                  locations={[0, 0.08, 0.60, 0.8, 1]}
+                  locations={[0, 0.08, 0.6, 0.8, 1]}
                   style={StyleSheet.absoluteFill}
                 />
               }
@@ -130,7 +116,7 @@ export default function PlantInfoTile({ plant }: Props) {
               <ImageMasked uri={imageUrl} />
             </MaskedView>
 
-            {/* Keep this subtle; too dark makes fade look like a dark band */}
+            {/* Keep subtle; heavy shade creates a band */}
             <View pointerEvents="none" style={styles.heroShade} />
 
             {/* Title block stays in image area */}
@@ -148,7 +134,7 @@ export default function PlantInfoTile({ plant }: Props) {
               {!!locationName && (
                 <View style={styles.locRow}>
                   <MaterialCommunityIcons
-                    name="home-variant-outline"
+                    name="map-marker-outline"
                     size={16}
                     color="#FFFFFF"
                     style={{ marginRight: 8, opacity: 0.95 }}
@@ -162,14 +148,8 @@ export default function PlantInfoTile({ plant }: Props) {
           </View>
         ) : (
           <View style={[styles.heroImage, styles.heroPlaceholder]}>
-            <MaterialCommunityIcons
-              name="image-off-outline"
-              size={24}
-              color="rgba(255,255,255,0.9)"
-            />
-            <Text style={styles.noImageText}>
-              {tr("plantDetails.info.noImage", "No image")}
-            </Text>
+            <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
+            <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
           </View>
         )}
       </View>
@@ -178,49 +158,16 @@ export default function PlantInfoTile({ plant }: Props) {
       <View style={{ marginTop: 10 }}>
         <View style={styles.infoGrid}>
           {[
-            {
-              icon: "calendar",
-              label: tr("plantDetails.info.purchased", "Purchased"),
-              value: purchaseValue,
-            },
-            {
-              icon: "note-edit-outline",
-              label: tr("plantDetails.info.notes", "Notes"),
-              value: notesValue,
-            },
-            {
-              icon: "white-balance-sunny",
-              label: tr("plantDetails.info.light", "Light"),
-              value: lightValue,
-            },
-            {
-              icon: "compass-outline",
-              label: tr("plantDetails.info.orientation", "Orientation"),
-              value: orientationValue,
-            },
-            {
-              icon: "tape-measure",
-              label: tr("plantDetails.info.distance", "Distance"),
-              value: distanceValue,
-            },
-            {
-              icon: "pot-outline",
-              label: tr("plantDetails.info.pot", "Pot"),
-              value: potValue,
-            },
-            {
-              icon: "shovel",
-              label: tr("plantDetails.info.soil", "Soil"),
-              value: soilValue,
-            },
+            { icon: "calendar", label: tr("plantDetails.info.purchased", "Purchased"), value: purchaseValue },
+            { icon: "note-edit-outline", label: tr("plantDetails.info.notes", "Notes"), value: notesValue },
+            { icon: "white-balance-sunny", label: tr("plantDetails.info.light", "Light"), value: lightValue },
+            { icon: "compass-outline", label: tr("plantDetails.info.orientation", "Orientation"), value: orientationValue },
+            { icon: "tape-measure", label: tr("plantDetails.info.distance", "Distance"), value: distanceValue },
+            { icon: "pot-outline", label: tr("plantDetails.info.pot", "Pot"), value: potValue },
+            { icon: "shovel", label: tr("plantDetails.info.soil", "Soil"), value: soilValue },
           ].map((it, i) => (
             <View key={i} style={styles.infoRow}>
-              <MaterialCommunityIcons
-                name={it.icon as any}
-                size={16}
-                color="#FFFFFF"
-                style={{ marginRight: 8 }}
-              />
+              <MaterialCommunityIcons name={it.icon as any} size={16} color="#FFFFFF" style={{ marginRight: 8 }} />
               <Text style={styles.infoLabel}>{it.label}:</Text>
               <Text style={styles.infoValue} numberOfLines={2}>
                 {it.value}
@@ -257,7 +204,7 @@ const styles = StyleSheet.create({
     paddingBottom: 14,
   },
 
-  // Title texts (inside image)
+  // Title texts
   h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 22, marginBottom: 6 },
   latin: {
     color: "rgba(255,255,255,0.92)",

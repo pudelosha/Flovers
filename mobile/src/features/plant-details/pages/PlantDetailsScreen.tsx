@@ -307,7 +307,15 @@ export default function PlantDetailsScreen() {
             onScrollBeginDrag={() => setDismissMenusTick((t) => t + 1)}
           >
             <GlassFrame>
-              <PlantInfoTile plant={details.plant} />
+              {details?.plant ? (
+                <PlantInfoTile plant={details.plant} />
+              ) : (
+                <View>
+                  <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
+                    {tr("plantDetails.info.loading", "Loading…")}
+                  </Text>
+                </View>
+              )}
             </GlassFrame>
 
             {reminders.length > 0 && (
