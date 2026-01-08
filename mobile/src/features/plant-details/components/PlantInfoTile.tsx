@@ -5,6 +5,7 @@ import LinearGradient from "react-native-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import { useNavigation } from "@react-navigation/native";
 
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
@@ -34,6 +35,7 @@ function ImageMasked({ uri }: { uri: string }) {
 export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
+  const nav = useNavigation<any>();
 
   const tr = useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -199,10 +201,7 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
                 }}
                 onShowReminders={() => {
                   closeMenu();
-                  Alert.alert(
-                    tr("plantDetails.infoMenu.showReminders.title", "Show reminders"),
-                    tr("plantDetails.infoMenu.showReminders.msg", "Linking to reminders will be implemented later.")
-                  );
+                  nav.navigate("Reminders" as never, { plantId: String(plant.id) } as never);
                 }}
               />
             </View>
