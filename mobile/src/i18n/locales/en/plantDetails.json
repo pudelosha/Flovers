@@ -53,6 +53,22 @@
         "W": "West"
       }
     },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Plant definition",
+        "editPlant": "Edit plant",
+        "changeImage": "Change image",
+        "showReminders": "Show reminders"
+      },
+      "editPlant": {
+        "title": "Edit plant",
+        "msg": "Editing this plant will be implemented later."
+      },
+      "showReminders": {
+        "title": "Show reminders",
+        "msg": "Linking to reminders will be implemented later."
+      }
+    },
     "latestReadings": {
       "title": "Latest readings",
       "lastRead": {

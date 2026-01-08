@@ -41,7 +41,7 @@ import plNavigation from "./locales/pl/navigation.json";
 import enResetPassword from "./locales/en/resetPassword.json";
 import plResetPassword from "./locales/pl/resetPassword.json";
 
-// ✅ NEW: Languages bundle
+// Languages bundle
 import enLanguages from "./locales/en/languages.json";
 import plLanguages from "./locales/pl/languages.json";
 
@@ -68,6 +68,8 @@ import plLocationsModals from "./locales/pl/locationsModals.json";
 // Plant Details bundles
 import enPlantDetails from "./locales/en/plantDetails.json";
 import plPlantDetails from "./locales/pl/plantDetails.json";
+import enPlantDetailsModals from "./locales/en/plantDetailsModals.json";
+import plPlantDetailsModals from "./locales/pl/plantDetailsModals.json";
 
 // Reminders bundles
 import enReminders from "./locales/en/reminders.json";
@@ -217,13 +219,14 @@ const resources = {
         enForgotPassword,
         enNavigation,
         enResetPassword,
-        enLanguages, // ✅ NEW
+        enLanguages,
         enScanner,
         enPlants,
         enPlantsModals,
         enLocations,
         enLocationsModals,
         enPlantDetails,
+        enPlantDetailsModals,
         enReminders,
         enRemindersModals,
         enReadings,
@@ -231,7 +234,7 @@ const resources = {
         enReadingsHistory,
         enProfile,
         enHome,
-        enHomeModals, // NEW
+        enHomeModals,
         enTaskHistory,
         enTaskHistoryModals,
       ] as AnyObj[]
@@ -257,13 +260,14 @@ const resources = {
         plForgotPassword,
         plNavigation,
         plResetPassword,
-        plLanguages, // ✅ NEW
+        plLanguages,
         plScanner,
         plPlants,
         plPlantsModals,
         plLocations,
         plLocationsModals,
         plPlantDetails,
+        plPlantDetailsModals,
         plReminders,
         plRemindersModals,
         plReadings,
@@ -271,7 +275,7 @@ const resources = {
         plReadingsHistory,
         plProfile,
         plHome,
-        plHomeModals, // NEW
+        plHomeModals,
         plTaskHistory,
         plTaskHistoryModals,
       ] as AnyObj[]

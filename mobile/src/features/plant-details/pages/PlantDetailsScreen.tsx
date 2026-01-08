@@ -308,7 +308,7 @@ export default function PlantDetailsScreen() {
           >
             <GlassFrame>
               {details?.plant ? (
-                <PlantInfoTile plant={details.plant} />
+                <PlantInfoTile plant={details.plant} collapseMenusSignal={dismissMenusTick} />
               ) : (
                 <View>
                   <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>

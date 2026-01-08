@@ -15,33 +15,33 @@
     },
     "alerts": {
       "completeFailed": {
-        "title": "Nie udało się zakończyć",
-        "msg": "Nie udało się oznaczyć przypomnienia jako wykonane."
+        "title": "Nie udało się ukończyć",
+        "msg": "Nie udało się ukończyć tego przypomnienia."
       }
     },
     "toasts": {
-      "reminderCompleted": "Przypomnienie oznaczono jako wykonane.",
+      "reminderCompleted": "Przypomnienie oznaczone jako ukończone.",
       "qrSaved": "Kod QR zapisano w galerii.",
       "qrSaveFailed": "Nie udało się zapisać kodu QR.",
       "qrEmailPlaceholder": "E-mail z tym kodem QR zostanie wysłany na adres Twojego konta."
     },
     "permissions": {
       "storage": {
-        "title": "Uprawnienia do pamięci",
+        "title": "Uprawnienie do pamięci",
         "message": "Potrzebujemy dostępu, aby zapisać kod QR w galerii.",
         "ok": "OK",
-        "denied": "Odmówiono uprawnień do pamięci."
+        "denied": "Odmówiono uprawnienia do pamięci."
       }
     },
     "qrErrors": {
-      "rendererNotReady": "Generator QR nie jest gotowy."
+      "rendererNotReady": "Renderer kodu QR nie jest gotowy."
     },
     "info": {
       "fallbackTitle": "Roślina #{{id}}",
       "purchased": "Zakup",
       "notes": "Notatki",
       "light": "Światło",
-      "orientation": "Kierunek",
+      "orientation": "Orientacja",
       "distance": "Odległość",
       "pot": "Doniczka",
       "soil": "Podłoże",
@@ -51,6 +51,22 @@
         "E": "Wschód",
         "S": "Południe",
         "W": "Zachód"
+      }
+    },
+    "infoMenu": {
+      "items": {
+        "plantDefinition": "Definicja rośliny",
+        "editPlant": "Edytuj roślinę",
+        "changeImage": "Zmień zdjęcie",
+        "showReminders": "Pokaż przypomnienia"
+      },
+      "editPlant": {
+        "title": "Edytuj roślinę",
+        "msg": "Edycja tej rośliny zostanie zaimplementowana później."
+      },
+      "showReminders": {
+        "title": "Pokaż przypomnienia",
+        "msg": "Przejście do przypomnień zostanie zaimplementowane później."
       }
     },
     "latestReadings": {
@@ -63,22 +79,22 @@
     "qr": {
       "title": "Kod QR",
       "scanner": "Skaner",
-      "saveWord": "zapisać",
-      "emailWord": "wysłać e-mailem",
+      "saveWord": "zapisz",
+      "emailWord": "wyślij",
       "desc": {
         "part1": "Każda roślina ma swój unikalny kod QR. Gdy zeskanujesz ten kod w widoku",
         "part2": "aplikacja od razu otworzy szczegóły tej rośliny.",
         "part3a": "Możesz",
         "part3b": "obraz kodu QR na telefonie albo",
-        "part3c": "go do siebie, wydrukować i przymocować do doniczki. Następnym razem po prostu zeskanuj etykietę zamiast szukać rośliny ręcznie."
+        "part3c": "go do siebie, a potem wydrukować i przymocować do doniczki. Następnym razem wystarczy zeskanować etykietę zamiast szukać ręcznie."
       },
       "saveBtn": "Zapisz kod QR",
-      "emailBtn": "Wyślij kod QR"
+      "emailBtn": "Wyślij kod QR e-mailem"
     },
     "reminders": {
       "title": "Przypomnienia",
       "menu": {
-        "markComplete": "Oznacz jako wykonane",
+        "markComplete": "Oznacz jako ukończone",
         "editReminder": "Edytuj przypomnienie",
         "showHistory": "Pokaż historię"
       },

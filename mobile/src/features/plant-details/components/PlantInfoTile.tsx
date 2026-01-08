@@ -1,6 +1,5 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\PlantInfoTile.tsx
-import React, { useCallback, useMemo } from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
+import React, { useCallback, useMemo, useState, useEffect } from "react";
+import { View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
@@ -9,8 +8,13 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
+import PlantInfoMenu from "./PlantInfoMenu";
+import PlantDefinitionModal from "./modals/PlantDefinitionModal";
+import ChangePlantImageModal from "./modals/ChangePlantImageModal";
+
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
+  collapseMenusSignal?: number;
 };
 
 function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
@@ -24,12 +28,10 @@ function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
 }
 
 function ImageMasked({ uri }: { uri: string }) {
-  return (
-    <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />
-  );
+  return <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
 }
 
-export default function PlantInfoTile({ plant }: Props) {
+export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
@@ -43,7 +45,18 @@ export default function PlantInfoTile({ plant }: Props) {
     [t, currentLanguage]
   );
 
-  // ✅ HARD GUARD (prevents "display_name of undefined")
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [defModalVisible, setDefModalVisible] = useState(false);
+  const [changeImgModalVisible, setChangeImgModalVisible] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((v) => !v);
+  const closeMenu = () => setMenuOpen(false);
+
+  // close on scroll / dismiss signal (same as reminders tile)
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [collapseMenusSignal]);
+
   if (!plant) {
     return (
       <View>
@@ -60,7 +73,6 @@ export default function PlantInfoTile({ plant }: Props) {
   const latin = plant.plant_definition?.latin || "";
   const locationName = plant.location?.name || "";
 
-  // Prefer hero image, fallback to thumb (backend returns absolute URLs)
   const imageUrl = useMemo(() => {
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
@@ -90,16 +102,22 @@ export default function PlantInfoTile({ plant }: Props) {
     (plant.distance_cm ?? tr("plantDetails.common.dash", "—")) +
     (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
 
+  const DOTS_TOP = 10;
+  const DOTS_RIGHT = 10;
+
+  // Lift sheet a bit so it visually "covers" the dots area (no extra header inside menu)
+  const MENU_LIFT = 10;
+
   return (
-    <View>
-      {/* HERO IMAGE that fades out into transparent (reveals glass behind) */}
-      <View style={styles.heroWrap}>
-        {imageUrl ? (
-          <View style={styles.heroImage}>
-            <MaskedView
-              style={StyleSheet.absoluteFill}
-              maskElement={
-                <LinearGradient
+    <View style={[styles.root, menuOpen && styles.rootRaised]}>
+      <View style={styles.heroOuter}>
+        <View style={styles.heroClip}>
+          {imageUrl ? (
+            <View style={styles.heroImage}>
+              <MaskedView
+                style={StyleSheet.absoluteFill}
+                maskElement={
+                  <LinearGradient
                     colors={[
                       "rgba(0,0,0,1.00)",
                       "rgba(0,0,0,0.88)",
@@ -107,48 +125,101 @@ export default function PlantInfoTile({ plant }: Props) {
                       "rgba(0,0,0,0.42)",
                       "rgba(0,0,0,0.00)",
                     ]}
-                    locations={[0, 0.10, 0.55, 0.80, 1]}
-                  style={StyleSheet.absoluteFill}
-                />
-              }
-            >
-              <ImageMasked uri={imageUrl} />
-            </MaskedView>
-
-            {/* Keep subtle; heavy shade creates a band */}
-            <View pointerEvents="none" style={styles.heroShade} />
-
-            {/* Title block stays in image area */}
-            <View style={styles.heroText}>
-              <Text style={styles.h1} numberOfLines={1}>
-                {title}
-              </Text>
-
-              {!!latin && (
-                <Text style={styles.latin} numberOfLines={1}>
-                  {latin}
-                </Text>
-              )}
-
-              {!!locationName && (
-                <View style={styles.locRow}>
-                  <MaterialCommunityIcons
-                    name="map-marker-outline"
-                    size={16}
-                    color="#FFFFFF"
-                    style={{ marginRight: 8, opacity: 0.95 }}
+                    locations={[0, 0.1, 0.55, 0.8, 1]}
+                    style={StyleSheet.absoluteFill}
                   />
-                  <Text style={styles.sub} numberOfLines={1}>
-                    {locationName}
+                }
+              >
+                <ImageMasked uri={imageUrl} />
+              </MaskedView>
+
+              <View pointerEvents="none" style={styles.heroShade} />
+
+              <View style={styles.heroText}>
+                <Text style={styles.h1} numberOfLines={1}>
+                  {title}
+                </Text>
+
+                {!!latin && (
+                  <Text style={styles.latin} numberOfLines={1}>
+                    {latin}
                   </Text>
-                </View>
-              )}
+                )}
+
+                {!!locationName && (
+                  <View style={styles.locRow}>
+                    <MaterialCommunityIcons
+                      name="map-marker-outline"
+                      size={16}
+                      color="#FFFFFF"
+                      style={{ marginRight: 8, opacity: 0.95 }}
+                    />
+                    <Text style={styles.sub} numberOfLines={1}>
+                      {locationName}
+                    </Text>
+                  </View>
+                )}
+              </View>
+            </View>
+          ) : (
+            <View style={[styles.heroImage, styles.heroPlaceholder]}>
+              <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
+              <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
+            </View>
+          )}
+        </View>
+
+        {/* MENU OVERLAY (tap-away closes) */}
+        {menuOpen && (
+          <View style={styles.menuOverlay} pointerEvents="box-none">
+            <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
+
+            <View
+              style={[
+                styles.menuSheetPos,
+                { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT },
+              ]}
+              pointerEvents="box-none"
+            >
+              <PlantInfoMenu
+                onPlantDefinition={() => {
+                  closeMenu();
+                  setDefModalVisible(true);
+                }}
+                onEditPlant={() => {
+                  closeMenu();
+                  Alert.alert(
+                    tr("plantDetails.infoMenu.editPlant.title", "Edit plant"),
+                    tr("plantDetails.infoMenu.editPlant.msg", "Editing this plant will be implemented later.")
+                  );
+                }}
+                onChangeImage={() => {
+                  closeMenu();
+                  setChangeImgModalVisible(true);
+                }}
+                onShowReminders={() => {
+                  closeMenu();
+                  Alert.alert(
+                    tr("plantDetails.infoMenu.showReminders.title", "Show reminders"),
+                    tr("plantDetails.infoMenu.showReminders.msg", "Linking to reminders will be implemented later.")
+                  );
+                }}
+              />
             </View>
           </View>
-        ) : (
-          <View style={[styles.heroImage, styles.heroPlaceholder]}>
-            <MaterialCommunityIcons name="image-off-outline" size={24} color="rgba(255,255,255,0.9)" />
-            <Text style={styles.noImageText}>{tr("plantDetails.info.noImage", "No image")}</Text>
+        )}
+
+        {/* Dots button only when CLOSED (same pattern as reminders) */}
+        {!menuOpen && (
+          <View style={[styles.dotsAnchor, { top: DOTS_TOP, right: DOTS_RIGHT }]} pointerEvents="box-none">
+            <Pressable
+              onPress={toggleMenu}
+              style={styles.menuBtn}
+              android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+              hitSlop={10}
+            >
+              <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+            </Pressable>
           </View>
         )}
       </View>
@@ -175,35 +246,65 @@ export default function PlantInfoTile({ plant }: Props) {
           ))}
         </View>
       </View>
+
+      {/* Dummy modals */}
+      <PlantDefinitionModal visible={defModalVisible} onClose={() => setDefModalVisible(false)} />
+      <ChangePlantImageModal visible={changeImgModalVisible} onClose={() => setChangeImgModalVisible(false)} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  // HERO
-  heroWrap: {
+  root: { position: "relative", zIndex: 1, elevation: 1 },
+  rootRaised: { zIndex: 60, elevation: 60 },
+
+  heroOuter: {
     marginLeft: -16,
     marginRight: -16,
     marginTop: -16,
+    position: "relative",
+    overflow: "visible",
+  },
+
+  heroClip: {
     borderTopLeftRadius: 28,
     borderTopRightRadius: 28,
     overflow: "hidden",
   },
-  heroImage: {
-    width: "100%",
-    aspectRatio: 1.6,
-    justifyContent: "flex-end",
+
+  heroImage: { width: "100%", aspectRatio: 1.6, justifyContent: "flex-end" },
+  heroShade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.10)" },
+  heroText: { paddingHorizontal: 16, paddingBottom: 14 },
+
+  dotsAnchor: {
+    position: "absolute",
+    zIndex: 220,
+    elevation: 220,
+    overflow: "visible",
   },
-  heroShade: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.10)",
-  },
-  heroText: {
-    paddingHorizontal: 16,
-    paddingBottom: 14,
+  menuBtn: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(0,0,0,0.20)",
   },
 
-  // Title texts
+  menuOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 200,
+    elevation: 200,
+    overflow: "visible",
+  },
+  menuSheetPos: {
+    position: "absolute",
+    alignItems: "flex-end",
+    overflow: "visible",
+    zIndex: 210,
+    elevation: 210,
+  },
+
   h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 22, marginBottom: 6 },
   latin: {
     color: "rgba(255,255,255,0.92)",
@@ -213,11 +314,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   locRow: { flexDirection: "row", alignItems: "center" },
-  sub: {
-    color: "rgba(255,255,255,0.92)",
-    fontWeight: "700",
-    fontSize: 13,
-  },
+  sub: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 13 },
 
   heroPlaceholder: {
     alignItems: "center",
@@ -225,13 +322,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     backgroundColor: "rgba(255,255,255,0.10)",
   },
-  noImageText: {
-    color: "rgba(255,255,255,0.9)",
-    fontWeight: "700",
-    marginTop: 8,
-  },
+  noImageText: { color: "rgba(255,255,255,0.9)", fontWeight: "700", marginTop: 8 },
 
-  // DETAILS
   infoGrid: { gap: 8, marginTop: 6 },
   infoRow: { flexDirection: "row", alignItems: "center" },
   infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
