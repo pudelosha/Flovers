@@ -1,6 +1,6 @@
+// PlantDefinitionModal.tsx
 import React from "react";
 import {
-  Modal,
   View,
   Text,
   Pressable,
@@ -8,7 +8,6 @@ import {
   StyleSheet,
   ActivityIndicator,
   Keyboard,
-  Platform,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -16,9 +15,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
 
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
-
-// Match Profile prompts look
-import { prompts as pr } from "../../../profile/styles/profile.styles";
 
 type Props = {
   visible: boolean;
@@ -91,6 +87,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
 
       setLoading(true);
       setError(null);
+      setProfile(null);
 
       try {
         const p = await fetchPlantProfile(Number(plantDefinitionId), { auth: true });
@@ -99,8 +96,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
         if (!cancelled) {
           setProfile(null);
           setError(
-            e?.message ||
-              tr("plantDetailsModals.definition.loadFailed", "Failed to load plant definition.")
+            e?.message || tr("plantDetailsModals.definition.loadFailed", "Failed to load plant definition.")
           );
         }
       } finally {
@@ -114,185 +110,183 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     };
   }, [visible, plantDefinitionId, tr]);
 
-  // Keep state-derived values outside render blocks
   const name = (profile?.name ? String(profile.name) : "").trim();
   const latin = (profile?.latin ? String(profile.latin) : "").trim();
   const description = pickText(profile?.description);
   const traits: any[] = Array.isArray(profile?.traits) ? profile.traits : [];
 
+  if (!visible) return null;
+
+  // Button + safe-area math
+  const bottomButtonHeight = 52;
+  const bottomGap = Math.max(insets.bottom, 0) + 12; // keep tab bar visible, lift button above it
+  const scrollPadBottom = bottomButtonHeight + bottomGap + 24;
+
   return (
-    <Modal
-      visible={visible}
-      transparent
-      animationType="fade"
-      presentationStyle="overFullScreen"
-      statusBarTranslucent
-      hardwareAccelerated
-      onRequestClose={close}
-    >
-      <View style={styles.fullscreen} pointerEvents="box-none">
-        {/* Fullscreen backdrop */}
-        <Pressable style={styles.backdrop} onPress={close} />
+    <>
+      {/* ✅ lighter backdrop (was too dark) */}
+      <Pressable style={styles.backdrop} onPress={close} />
 
-        {/* Fullscreen content host */}
-        <View style={styles.screen} pointerEvents="box-none">
-          {/* Host with safe-area padding; sheet fills available height */}
-          <View
-            style={[
-              styles.sheetHost,
-              {
-                paddingTop: Math.max(insets.top, 12),
-                paddingBottom: Math.max(insets.bottom, 12),
-              },
-            ]}
+      <View style={[styles.wrap, { paddingTop: Math.max(insets.top, 12) }]}>
+        {/* Glass background */}
+        <View style={styles.glass} pointerEvents="none">
+          <BlurView
+            style={StyleSheet.absoluteFill}
+            blurType="light"
+            blurAmount={14}
+            overlayColor="transparent"
+            reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
+          />
+
+          {/* ✅ lighter tint (was too dark) */}
+          <View pointerEvents="none" style={styles.glassTint} />
+
+          {/* ✅ optional white haze to match your Home prompt feel */}
+          <View pointerEvents="none" style={styles.glassHaze} />
+        </View>
+
+        {/* Card */}
+        <View style={styles.inner}>
+          <ScrollView
+            keyboardShouldPersistTaps="handled"
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{ paddingBottom: scrollPadBottom }}
           >
-            {/* Glass background layer (same as your prompts) */}
-            <View style={pr.promptGlass} pointerEvents="none">
-              <BlurView
-                style={StyleSheet.absoluteFill}
-                blurType="light"
-                blurAmount={14}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="rgba(255,255,255,0.25)"
-              />
-              <View pointerEvents="none" style={styles.glassTint} />
-            </View>
+            <Text style={styles.title} numberOfLines={2}>
+              {name || tr("plantDetailsModals.definition.title", "Plant definition")}
+            </Text>
 
-            {/* Full-height sheet */}
-            <View style={[pr.promptInner, styles.fullSheet]}>
-              <ScrollView
-                keyboardShouldPersistTaps="handled"
-                showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 92 }}
-              >
-                {/* Header */}
-                <Text style={pr.promptTitle} numberOfLines={2}>
-                  {name || tr("plantDetailsModals.definition.title", "Plant definition")}
-                </Text>
+            {!!latin && (
+              <Text style={styles.latin} numberOfLines={2}>
+                {latin}
+              </Text>
+            )}
 
-                {!!latin && (
-                  <Text style={styles.latin} numberOfLines={2}>
-                    {latin}
-                  </Text>
-                )}
-
-                {loading ? (
-                  <View style={styles.stateBox}>
-                    <ActivityIndicator />
-                    <Text style={styles.stateText}>
-                      {tr("plantDetailsModals.definition.loading", "Loading...")}
-                    </Text>
-                  </View>
-                ) : error ? (
-                  <View style={styles.stateBox}>
-                    <Text style={styles.stateText}>
-                      {tr("plantDetailsModals.definition.error", "Something went wrong.")}
-                    </Text>
-                    <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
-                  </View>
-                ) : !profile ? (
-                  <View style={styles.stateBox}>
-                    <Text style={styles.stateText}>
-                      {tr("plantDetailsModals.definition.empty", "No definition data available.")}
-                    </Text>
-                  </View>
-                ) : (
-                  <>
-                    {!!description && (
-                      <View style={styles.block}>
-                        <Text style={styles.blockTitle}>
-                          {tr("plantDetailsModals.definition.description", "Description")}
-                        </Text>
-                        <Text style={styles.blockText}>{description}</Text>
-                      </View>
-                    )}
-
-                    <View style={styles.block}>
-                      <Text style={styles.blockTitle}>
-                        {tr("plantDetailsModals.definition.traits", "Traits")}
-                      </Text>
-
-                      {traits.length === 0 ? (
-                        <Text style={styles.blockText}>
-                          {tr("plantDetailsModals.definition.noTraits", "No traits provided.")}
-                        </Text>
-                      ) : (
-                        <View style={{ gap: 10 }}>
-                          {traits.map((x, idx) => {
-                            const rawKey = String(x?.key ?? "").trim();
-                            const val = pickText(x?.value);
-                            if (!rawKey && !val) return null;
-
-                            return (
-                              <View key={`${rawKey}-${idx}`} style={styles.traitRow}>
-                                <Text style={styles.traitKey} numberOfLines={1}>
-                                  {titleCaseKey(rawKey) || tr("common.unknown", "Unknown")}
-                                </Text>
-                                <Text style={styles.traitValue}>{val || "—"}</Text>
-                              </View>
-                            );
-                          })}
-                        </View>
-                      )}
-                    </View>
-                  </>
-                )}
-              </ScrollView>
-
-              {/* Bottom Close button */}
-              <View style={styles.bottomBar}>
-                <Pressable
-                  style={[pr.promptBtn, pr.promptPrimary, { flex: 1, alignItems: "center" }]}
-                  onPress={close}
-                >
-                  <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
-                    {tr("plantDetailsModals.common.close", "Close")}
-                  </Text>
-                </Pressable>
+            {loading ? (
+              <View style={styles.stateBox}>
+                <ActivityIndicator />
+                <Text style={styles.stateText}>{tr("plantDetailsModals.definition.loading", "Loading...")}</Text>
               </View>
-            </View>
+            ) : error ? (
+              <View style={styles.stateBox}>
+                <Text style={styles.stateText}>
+                  {tr("plantDetailsModals.definition.error", "Something went wrong.")}
+                </Text>
+                <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
+              </View>
+            ) : !profile ? (
+              <View style={styles.stateBox}>
+                <Text style={styles.stateText}>
+                  {tr("plantDetailsModals.definition.empty", "No definition data available.")}
+                </Text>
+              </View>
+            ) : (
+              <>
+                {!!description && (
+                  <View style={styles.block}>
+                    <Text style={styles.blockTitle}>
+                      {tr("plantDetailsModals.definition.description", "Description")}
+                    </Text>
+                    <Text style={styles.blockText}>{description}</Text>
+                  </View>
+                )}
+
+                <View style={styles.block}>
+                  <Text style={styles.blockTitle}>
+                    {tr("plantDetailsModals.definition.traits", "Traits")}
+                  </Text>
+
+                  {traits.length === 0 ? (
+                    <Text style={styles.blockText}>
+                      {tr("plantDetailsModals.definition.noTraits", "No traits provided.")}
+                    </Text>
+                  ) : (
+                    <View style={{ gap: 10 }}>
+                      {traits.map((x, idx) => {
+                        const rawKey = String(x?.key ?? "").trim();
+                        const val = pickText(x?.value);
+                        if (!rawKey && !val) return null;
+
+                        return (
+                          <View key={`${rawKey}-${idx}`} style={styles.traitRow}>
+                            <Text style={styles.traitKey} numberOfLines={1}>
+                              {titleCaseKey(rawKey) || tr("common.unknown", "Unknown")}
+                            </Text>
+                            <Text style={styles.traitValue}>{val || "—"}</Text>
+                          </View>
+                        );
+                      })}
+                    </View>
+                  )}
+                </View>
+              </>
+            )}
+          </ScrollView>
+
+          {/* ✅ ensure it’s ALWAYS on top + visible */}
+          <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
+            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
+              <Text style={[styles.btnText, styles.btnPrimaryText]}>
+                {tr("plantDetailsModals.common.close", "Close")}
+              </Text>
+            </Pressable>
           </View>
         </View>
       </View>
-    </Modal>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  fullscreen: {
-    flex: 1,
-    ...(Platform.OS === "android" ? { paddingTop: 0 } : null),
-  },
-
+  // ✅ lighter (Home-like)
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.60)",
+    backgroundColor: "rgba(0,0,0,0.42)", // was 0.60
+    zIndex: 80,
   },
 
-  // Absolute fill host for the sheet
-  screen: {
+  wrap: {
     ...StyleSheet.absoluteFillObject,
-  },
-
-  // Centered with margins like prompts, but allows full height
-  sheetHost: {
-    flex: 1,
-    paddingHorizontal: 24,
     alignItems: "center",
     justifyContent: "center",
+    zIndex: 81,
+    paddingHorizontal: 24,
   },
 
-  // Tint over BlurView for glass
+  glass: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 18,
+    overflow: "hidden",
+  },
+
+  // ✅ lighter tint (lets blur “shine” more)
   glassTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.35)",
+    backgroundColor: "rgba(0,0,0,0.22)", // was ~0.35
   },
 
-  // Key fix: flex: 1 so it fills the available vertical space
-  fullSheet: {
+  // ✅ subtle white haze for jelly feel
+  glassHaze: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.06)",
+  },
+
+  inner: {
     width: "100%",
     maxWidth: 520,
-    flex: 1,
+    borderRadius: 18,
+    overflow: "hidden",
+    position: "relative",
+    backgroundColor: "transparent",
+  },
+
+  title: {
+    color: "#FFFFFF",
+    fontWeight: "800",
+    fontSize: 18,
+    marginBottom: 12,
+    paddingHorizontal: 16,
+    paddingTop: 16,
   },
 
   latin: {
@@ -362,10 +356,31 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
 
+  // ✅ critical: zIndex/elevation so it doesn’t get covered by ScrollView content
   bottomBar: {
     position: "absolute",
-    left: 16,
-    right: 16,
-    bottom: 16,
+    left: 0,
+    right: 0,
+    bottom: 0,
+
+    paddingHorizontal: 16,
+    paddingTop: 10,
+
+    zIndex: 999,
+    elevation: 999,
+
+    // ✅ gives the button area a readable base (still glassy)
+    backgroundColor: "rgba(0,0,0,0.10)",
   },
+
+  btn: {
+    height: 52,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.12)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  btnText: { color: "#FFFFFF", fontWeight: "800" },
+  btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
 });

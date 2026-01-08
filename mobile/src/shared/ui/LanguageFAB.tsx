@@ -261,7 +261,7 @@ const s = StyleSheet.create({
     paddingHorizontal: 14,
     borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 1,
+    borderWidth: 0,
     borderColor: "rgba(255,255,255,0.16)",
   },
   langRowSelected: {

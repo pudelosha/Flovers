@@ -11,7 +11,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../../app/providers/LanguageProvider"; // ✅ ensure rerender on language change
+import { useLanguage } from "../../../../app/providers/LanguageProvider"; // ensure rerender on language change
 
 import { wiz } from "../../styles/wizard.styles";
 import type { LocationCategory } from "../../types/create-plant.types";

@@ -1,3 +1,4 @@
+// PlantInfoTile.tsx
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -10,12 +11,12 @@ import { useNavigation } from "@react-navigation/native";
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
 import PlantInfoMenu from "./PlantInfoMenu";
-import PlantDefinitionModal from "./modals/PlantDefinitionModal";
 import ChangePlantImageModal from "./modals/ChangePlantImageModal";
 
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
   collapseMenusSignal?: number;
+  onOpenDefinition?: (plantDefinitionId: number) => void;
 };
 
 function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
@@ -32,7 +33,7 @@ function ImageMasked({ uri }: { uri: string }) {
   return <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
 }
 
-export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
+export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefinition }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const nav = useNavigation<any>();
@@ -48,13 +49,11 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
   );
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [defModalVisible, setDefModalVisible] = useState(false);
   const [changeImgModalVisible, setChangeImgModalVisible] = useState(false);
 
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
 
-  // close on scroll / dismiss signal (same as reminders tile)
   useEffect(() => {
     setMenuOpen(false);
   }, [collapseMenusSignal]);
@@ -104,18 +103,16 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
     (plant.distance_cm ?? tr("plantDetails.common.dash", "—")) +
     (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
 
-  // ✅ NEW: plant definition pk to pass into modal (prefer nested object, fallback to *_id)
   const plantDefinitionId =
     (plant.plant_definition?.id ?? plant.plant_definition_id) != null
       ? Number(plant.plant_definition?.id ?? plant.plant_definition_id)
       : null;
 
-  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
+  const plantDefinitionIdSafe =
+    Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
 
   const DOTS_TOP = 10;
   const DOTS_RIGHT = 10;
-
-  // Lift sheet a bit so it visually "covers" the dots area (no extra header inside menu)
   const MENU_LIFT = 10;
 
   return (
@@ -179,16 +176,22 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
           )}
         </View>
 
-        {/* MENU OVERLAY (tap-away closes) */}
         {menuOpen && (
           <View style={styles.menuOverlay} pointerEvents="box-none">
             <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
 
-            <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
+            <View
+              style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]}
+              pointerEvents="box-none"
+            >
               <PlantInfoMenu
                 onPlantDefinition={() => {
                   closeMenu();
-                  setDefModalVisible(true);
+                  if (plantDefinitionIdSafe != null) {
+                    onOpenDefinition?.(plantDefinitionIdSafe);
+                  } else {
+                    Alert.alert(tr("plantDetailsModals.definition.noId", "No plant definition id found."));
+                  }
                 }}
                 onEditPlant={() => {
                   closeMenu();
@@ -210,7 +213,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
           </View>
         )}
 
-        {/* Dots button only when CLOSED (same pattern as reminders) */}
         {!menuOpen && (
           <View style={[styles.dotsAnchor, { top: DOTS_TOP, right: DOTS_RIGHT }]} pointerEvents="box-none">
             <Pressable
@@ -225,7 +227,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
         )}
       </View>
 
-      {/* DETAILS BELOW IMAGE */}
       <View style={{ marginTop: 10 }}>
         <View style={styles.infoGrid}>
           {[
@@ -248,12 +249,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
         </View>
       </View>
 
-      {/* Dummy modals */}
-      <PlantDefinitionModal
-        visible={defModalVisible}
-        onClose={() => setDefModalVisible(false)}
-        plantDefinitionId={plantDefinitionIdSafe} // ✅ NEW PROP
-      />
       <ChangePlantImageModal visible={changeImgModalVisible} onClose={() => setChangeImgModalVisible(false)} />
     </View>
   );

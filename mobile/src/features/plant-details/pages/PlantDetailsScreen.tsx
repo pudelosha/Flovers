@@ -1,3 +1,4 @@
+// PlantDetailsScreen.tsx
 import React, { useMemo, useState, useRef, useCallback } from "react";
 import {
   View,
@@ -17,7 +18,11 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 
-import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK, TILE_BLUR } from "../constants/plant-details.constants";
+import {
+  HEADER_GRADIENT_TINT,
+  HEADER_SOLID_FALLBACK,
+  TILE_BLUR,
+} from "../constants/plant-details.constants";
 import { s } from "../styles/plant-details.styles";
 
 import { fetchPlantDetailsById, fetchPlantDetailsByQr } from "../../../api/services/plant-details.service";
@@ -37,6 +42,8 @@ import CameraRoll from "@react-native-camera-roll/camera-roll";
 
 import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
+
+import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
 
 export default function PlantDetailsScreen() {
   const { t } = useTranslation();
@@ -74,6 +81,20 @@ export default function PlantDetailsScreen() {
   const [dismissMenusTick, setDismissMenusTick] = useState(0);
 
   const scrollRef = useRef<ScrollView | null>(null);
+
+  // ✅ Plant Definition modal state (screen root)
+  const [defModalVisible, setDefModalVisible] = useState(false);
+  const [defPlantDefinitionId, setDefPlantDefinitionId] = useState<number | null>(null);
+
+  const openDefinition = useCallback((plantDefinitionId: number) => {
+    setDefPlantDefinitionId(plantDefinitionId);
+    setDefModalVisible(true);
+  }, []);
+
+  const closeDefinition = useCallback(() => {
+    setDefModalVisible(false);
+    setDefPlantDefinitionId(null);
+  }, []);
 
   const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
     setToastMsg(message);
@@ -159,10 +180,7 @@ export default function PlantDetailsScreen() {
 
       const run = async () => {
         try {
-          // FIX #1: hide any open menus every time we enter this screen
           setDismissMenusTick((t) => t + 1);
-
-          // FIX #2: clear previous plant details so only spinner is shown while loading
           setDetails(null);
 
           setLoading(true);
@@ -203,15 +221,16 @@ export default function PlantDetailsScreen() {
           useNativeDriver: true,
         }).start();
 
-        // Also collapse menus on leaving (extra safety)
         setDismissMenusTick((t) => t + 1);
 
         setToastVisible(false);
         setCompleteModalVisible(false);
         setCompleteReminderId(null);
         setCompleteNote("");
+
+        closeDefinition();
       };
-    }, [entry, loadDetails, tr])
+    }, [entry, loadDetails, tr, closeDefinition])
   );
 
   const latestRead = details?.latestReadings ?? null;
@@ -251,8 +270,6 @@ export default function PlantDetailsScreen() {
       const r = details.reminders.find((x) => x.id === completeReminderId);
       if (r?.taskId) {
         await markHomeTaskComplete(r.taskId, completeNote);
-      } else {
-        // placeholder
       }
 
       closeCompleteModal();
@@ -265,7 +282,9 @@ export default function PlantDetailsScreen() {
       closeCompleteModal();
       Alert.alert(
         tr("plantDetails.alerts.completeFailed.title", "Complete failed"),
-        e?.message ? String(e.message) : tr("plantDetails.alerts.completeFailed.msg", "Could not complete this reminder.")
+        e?.message
+          ? String(e.message)
+          : tr("plantDetails.alerts.completeFailed.msg", "Could not complete this reminder.")
       );
     } finally {
       setLoading(false);
@@ -300,9 +319,7 @@ export default function PlantDetailsScreen() {
         ) : !details ? (
           <View style={styles.centerBox}>
             <Text style={styles.title}>{tr("plantDetails.states.notFound.title", "Not found")}</Text>
-            <Text style={styles.dim}>
-              {tr("plantDetails.states.notFound.msg", "We couldn’t load this plant.")}
-            </Text>
+            <Text style={styles.dim}>{tr("plantDetails.states.notFound.msg", "We couldn’t load this plant.")}</Text>
           </View>
         ) : (
           <ScrollView
@@ -317,7 +334,14 @@ export default function PlantDetailsScreen() {
           >
             <GlassFrame>
               {details?.plant ? (
-                <PlantInfoTile plant={details.plant} collapseMenusSignal={dismissMenusTick} />
+                <PlantInfoTile
+                  plant={details.plant}
+                  collapseMenusSignal={dismissMenusTick}
+                  onOpenDefinition={(plantDefinitionId) => {
+                    setDismissMenusTick((t) => t + 1);
+                    openDefinition(plantDefinitionId);
+                  }}
+                />
               ) : (
                 <View>
                   <Text style={{ color: "#FFFFFF", fontWeight: "800" }}>
@@ -387,6 +411,12 @@ export default function PlantDetailsScreen() {
 
       {loading && details && !error && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
+      <PlantDefinitionModal
+        visible={defModalVisible}
+        onClose={closeDefinition}
+        plantDefinitionId={defPlantDefinitionId}
+      />
+
       <CompleteTaskModal
         visible={completeModalVisible}
         note={completeNote}
@@ -441,46 +471,5 @@ const styles = StyleSheet.create({
   },
   frameInner: { padding: 16 },
 
-  h1: { color: "#FFFFFF", fontWeight: "800", fontSize: 20, marginBottom: 6 },
-  h2: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 8 },
-
-  latin: {
-    color: "rgba(255,255,255,0.9)",
-    fontStyle: "italic",
-    fontWeight: "600",
-    fontSize: 12,
-    marginBottom: 4,
-  },
-  sub: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12, marginBottom: 10 },
   dim: { color: "rgba(255,255,255,0.92)", fontWeight: "600" },
-
-  infoGrid: { gap: 8, marginTop: 6 },
-  infoRow: { flexDirection: "row", alignItems: "center" },
-  infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
-  infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
-
-  rowBetween: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
-  linkBtn: { paddingVertical: 4, paddingHorizontal: 6 },
-  linkText: { color: "#FFFFFF", fontWeight: "800", textDecorationLine: "underline" },
-
-  lastRead: { color: "rgba(255,255,255,0.85)", fontWeight: "600", fontSize: 12, marginTop: 6 },
-
-  remRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingVertical: 10,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.15)",
-  },
-  remIcon: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    alignItems: "center",
-    justifyContent: "center",
-    marginRight: 12,
-    backgroundColor: "rgba(255,255,255,0.14)",
-  },
-  remTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 14 },
-  remWhen: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12 },
 });
