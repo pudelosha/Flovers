@@ -104,6 +104,14 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
     (plant.distance_cm ?? tr("plantDetails.common.dash", "—")) +
     (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
 
+  // ✅ NEW: plant definition pk to pass into modal (prefer nested object, fallback to *_id)
+  const plantDefinitionId =
+    (plant.plant_definition?.id ?? plant.plant_definition_id) != null
+      ? Number(plant.plant_definition?.id ?? plant.plant_definition_id)
+      : null;
+
+  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
+
   const DOTS_TOP = 10;
   const DOTS_RIGHT = 10;
 
@@ -176,13 +184,7 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
           <View style={styles.menuOverlay} pointerEvents="box-none">
             <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
 
-            <View
-              style={[
-                styles.menuSheetPos,
-                { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT },
-              ]}
-              pointerEvents="box-none"
-            >
+            <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
               <PlantInfoMenu
                 onPlantDefinition={() => {
                   closeMenu();
@@ -197,7 +199,7 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
                 }}
                 onChangeImage={() => {
                   closeMenu();
-                  setChangeImgModalVisible(true);
+                  requestAnimationFrame(() => setChangeImgModalVisible(true));
                 }}
                 onShowReminders={() => {
                   closeMenu();
@@ -247,7 +249,11 @@ export default function PlantInfoTile({ plant, collapseMenusSignal }: Props) {
       </View>
 
       {/* Dummy modals */}
-      <PlantDefinitionModal visible={defModalVisible} onClose={() => setDefModalVisible(false)} />
+      <PlantDefinitionModal
+        visible={defModalVisible}
+        onClose={() => setDefModalVisible(false)}
+        plantDefinitionId={plantDefinitionIdSafe} // ✅ NEW PROP
+      />
       <ChangePlantImageModal visible={changeImgModalVisible} onClose={() => setChangeImgModalVisible(false)} />
     </View>
   );

@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\components\modals\PlantScannerModal.tsx
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import {
   View,
