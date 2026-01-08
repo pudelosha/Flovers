@@ -310,15 +310,6 @@ export default function PlantDetailsScreen() {
               <PlantInfoTile plant={details.plant} />
             </GlassFrame>
 
-            {showLatestReadingsTile && (
-              <PlantLatestReadingsTile
-                latestReadings={latestReadSafe}
-                sensors={details.sensors}
-                onTilePress={() => goHistory()}
-                onMetricPress={(metric) => goHistory(metric)}
-              />
-            )}
-
             {reminders.length > 0 && (
               <PlantRemindersTile
                 key={refreshCounter}
@@ -331,6 +322,15 @@ export default function PlantDetailsScreen() {
                 onShowHistory={() => {
                   nav.navigate("TaskHistory" as never, { plantId: String(details.plant.id) } as never);
                 }}
+              />
+            )}
+
+            {showLatestReadingsTile && (
+              <PlantLatestReadingsTile
+                latestReadings={latestReadSafe}
+                sensors={details.sensors}
+                onTilePress={() => goHistory()}
+                onMetricPress={(metric) => goHistory(metric)}
               />
             )}
 
