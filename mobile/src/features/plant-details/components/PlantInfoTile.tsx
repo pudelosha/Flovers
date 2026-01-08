@@ -100,15 +100,14 @@ export default function PlantInfoTile({ plant }: Props) {
               style={StyleSheet.absoluteFill}
               maskElement={
                 <LinearGradient
-                  // Your aggressive mask
-                  colors={[
-                    "rgba(0,0,0,1.00)", // 0%  fully visible
-                    "rgba(0,0,0,0.88)", // ~8% already slightly transparent
-                    "rgba(0,0,0,0.60)", // ~60% noticeable fade
-                    "rgba(0,0,0,0.22)", // ~80% heavy fade
-                    "rgba(0,0,0,0.00)", // 100% fully transparent
-                  ]}
-                  locations={[0, 0.08, 0.6, 0.8, 1]}
+                    colors={[
+                      "rgba(0,0,0,1.00)",
+                      "rgba(0,0,0,0.88)",
+                      "rgba(0,0,0,0.70)",
+                      "rgba(0,0,0,0.42)",
+                      "rgba(0,0,0,0.00)",
+                    ]}
+                    locations={[0, 0.10, 0.55, 0.80, 1]}
                   style={StyleSheet.absoluteFill}
                 />
               }
