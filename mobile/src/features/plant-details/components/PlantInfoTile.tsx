@@ -121,18 +121,20 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
         <View style={styles.heroClip}>
           {imageUrl ? (
             <View style={styles.heroImage}>
+              {/* ✅ Less pronounced fade (still disappears into glass, but later/softer) */}
               <MaskedView
                 style={StyleSheet.absoluteFill}
                 maskElement={
                   <LinearGradient
                     colors={[
                       "rgba(0,0,0,1.00)",
-                      "rgba(0,0,0,0.88)",
-                      "rgba(0,0,0,0.70)",
-                      "rgba(0,0,0,0.42)",
+                      "rgba(0,0,0,0.92)",
+                      "rgba(0,0,0,0.75)",
+                      "rgba(0,0,0,0.50)",
+                      "rgba(0,0,0,0.22)",
                       "rgba(0,0,0,0.00)",
                     ]}
-                    locations={[0, 0.1, 0.55, 0.8, 1]}
+                    locations={[0, 0.10, 0.45, 0.68, 0.88, 1]}
                     style={StyleSheet.absoluteFill}
                   />
                 }
@@ -140,7 +142,13 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
                 <ImageMasked uri={imageUrl} />
               </MaskedView>
 
-              <View pointerEvents="none" style={styles.heroShade} />
+              {/* ✅ OPTIONAL top-only scrim for readability (does not affect bottom fade) */}
+              <LinearGradient
+                pointerEvents="none"
+                colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
+                locations={[0, 1]}
+                style={styles.heroTopScrim}
+              />
 
               <View style={styles.heroText}>
                 <Text style={styles.h1} numberOfLines={1}>
@@ -272,8 +280,17 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
+  // Keep transparent: do NOT set backgroundColor, do NOT add heroShade (image must "disappear")
   heroImage: { width: "100%", aspectRatio: 1.6, justifyContent: "flex-end" },
-  heroShade: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.10)" },
+
+  heroTopScrim: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 70,
+  },
+
   heroText: { paddingHorizontal: 16, paddingBottom: 14 },
 
   dotsAnchor: {
