@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\reminders\styles\reminders.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -48,7 +47,7 @@ export const s = StyleSheet.create({
   cardRow: { flex: 1, flexDirection: "row", alignItems: "center", paddingHorizontal: 14 },
 
   // Left column
-  leftCol: { width: 64, alignItems: "center", justifyContent: "center" },
+  leftCol: { width: 75, alignItems: "center", justifyContent: "center" },
   leftIconBubble: {
     width: 32,
     height: 32,

@@ -56,7 +56,7 @@ export const s = StyleSheet.create({
   },
 
   // Left column
-  leftCol: { width: 64, alignItems: "center", justifyContent: "center" },
+  leftCol: { width: 75, alignItems: "center", justifyContent: "center" },
   leftIconBubble: {
     width: 32,
     height: 32,

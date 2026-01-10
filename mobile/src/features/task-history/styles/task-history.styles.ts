@@ -59,7 +59,7 @@ export const s = StyleSheet.create({
 
   // Left column
   leftCol: {
-    width: 64,
+    width: 75,
     alignItems: "center",
     justifyContent: "flex-start",
     paddingTop: 2,
