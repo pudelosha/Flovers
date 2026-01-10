@@ -1,24 +1,14 @@
-// PlantDefinitionModal.tsx
 import React from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  ActivityIndicator,
-  Keyboard,
-} from "react-native";
+import { View, Text, Pressable, ScrollView, StyleSheet, Keyboard } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
-
 import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
-
-// ✅ reuse the same trait icon map as Step02 (adjust path if needed)
 import { TRAIT_ICON_BY_KEY } from "../../../create-plant/constants/create-plant.constants";
+
+import CenteredSpinner from "../../../../shared/ui/CenteredSpinner";
 
 type Props = {
   visible: boolean;
@@ -26,17 +16,23 @@ type Props = {
   plantDefinitionId: number | null;
 };
 
-function pickText(value: any): string {
+function normalizeLang(input: any): string {
+  const raw = typeof input === "string" ? input.trim().toLowerCase() : "";
+  if (!raw) return "en";
+  return raw.split("-")[0] || "en";
+}
+
+function pickText(value: any, lang: string): string {
   if (value == null) return "";
   if (typeof value === "string") return value.trim();
 
   if (typeof value === "object" && value.text && typeof value.text === "object") {
-    const v = value.text.en ?? value.text.pl ?? value.text.de;
+    const v = value.text[lang] ?? value.text.en ?? value.text.pl ?? value.text.de;
     if (typeof v === "string") return v.trim();
   }
 
   if (typeof value === "object") {
-    const v = value.en ?? value.pl ?? value.de;
+    const v = value[lang] ?? value.en ?? value.pl ?? value.de;
     if (typeof v === "string") return v.trim();
   }
 
@@ -71,6 +67,8 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
   const { currentLanguage } = useLanguage();
   const insets = useSafeAreaInsets();
 
+  const preferredLang = normalizeLang(currentLanguage);
+
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [profile, setProfile] = React.useState<any | null>(null);
@@ -96,19 +94,20 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     async function run() {
       if (!visible) return;
 
+      setProfile(null);
+      setError(null);
+
       if (!plantDefinitionId || !Number.isFinite(plantDefinitionId)) {
-        setProfile(null);
         setLoading(false);
         setError(tr("plantDetailsModals.definition.noId", "No plant definition id found."));
         return;
       }
 
       setLoading(true);
-      setError(null);
-      setProfile(null);
 
       try {
-        const p = await fetchPlantProfile(Number(plantDefinitionId), { auth: true });
+        // ✅ IMPORTANT: request localized content from backend
+        const p = await fetchPlantProfile(Number(plantDefinitionId), { auth: true, lang: preferredLang });
         if (!cancelled) setProfile(p);
       } catch (e: any) {
         if (!cancelled) {
@@ -126,12 +125,11 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     return () => {
       cancelled = true;
     };
-  }, [visible, plantDefinitionId, tr]);
+  }, [visible, plantDefinitionId, tr, preferredLang]);
 
-  // ---- derived values (must be computed regardless of visible) ----
   const name = (profile?.name ? String(profile.name) : "").trim();
   const latin = (profile?.latin ? String(profile.latin) : "").trim();
-  const description = pickText(profile?.description);
+  const description = pickText(profile?.description, preferredLang);
 
   const preferences = React.useMemo(() => {
     const out: Array<{ key: string; label: string; icon: string; value: string }> = [];
@@ -142,7 +140,7 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     for (const trt of traits) {
       const rawKey = String(trt?.key ?? "").trim();
       const key = normalizeTraitKey(rawKey);
-      const value = pickText(trt?.value);
+      const value = pickText(trt?.value, preferredLang);
       if (!key || !value) continue;
       if (seen.has(key)) continue;
       seen.add(key);
@@ -156,15 +154,15 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
     }
 
     return out;
-  }, [profile, tr]);
+  }, [profile, tr, preferredLang]);
 
-  // button + safe area
   const bottomButtonHeight = 52;
   const bottomGap = Math.max(insets.bottom, 0) + 12;
   const scrollPadBottom = bottomButtonHeight + bottomGap + 24;
 
-  // ✅ return null ONLY after hooks have run
   if (!visible) return null;
+
+  const showOnlySpinner = loading && !profile && !error;
 
   return (
     <>
@@ -184,61 +182,72 @@ export default function PlantDefinitionModal({ visible, onClose, plantDefinition
         </View>
 
         <View style={styles.inner}>
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: scrollPadBottom }}
-          >
-            <Text style={styles.title} numberOfLines={2}>
-              {name || tr("plantDetailsModals.definition.title", "Plant definition")}
-            </Text>
-
-            {!!latin && (
-              <Text style={styles.latin} numberOfLines={2}>
-                {latin}
-              </Text>
-            )}
-
-            {loading ? (
+          {showOnlySpinner ? (
+            <View style={[styles.spinnerBox, { paddingBottom: scrollPadBottom }]}>
+              <CenteredSpinner size={42} />
+            </View>
+          ) : error ? (
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+            >
               <View style={styles.stateBox}>
-                <ActivityIndicator />
-                <Text style={styles.stateText}>{tr("plantDetailsModals.definition.loading", "Loading...")}</Text>
-              </View>
-            ) : error ? (
-              <View style={styles.stateBox}>
-                <Text style={styles.stateText}>{tr("plantDetailsModals.definition.error", "Something went wrong.")}</Text>
+                <Text style={styles.stateText}>
+                  {tr("plantDetailsModals.definition.error", "Something went wrong.")}
+                </Text>
                 <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
               </View>
-            ) : !profile ? (
+            </ScrollView>
+          ) : !profile ? (
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+            >
               <View style={styles.stateBox}>
                 <Text style={styles.stateText}>
                   {tr("plantDetailsModals.definition.empty", "No definition data available.")}
                 </Text>
               </View>
-            ) : (
-              <>
-                {!!description && <Text style={styles.desc}>{description}</Text>}
+            </ScrollView>
+          ) : (
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+            >
+              <Text style={styles.title} numberOfLines={2}>
+                {name || tr("plantDetailsModals.definition.title", "Plant definition")}
+              </Text>
 
-                {!!preferences.length && (
-                  <>
-                    <Text style={styles.sectionTitle}>
-                      {tr("plantDetailsModals.definition.traits", "Traits")}
-                    </Text>
+              {!!latin && (
+                <Text style={styles.latin} numberOfLines={2}>
+                  {latin}
+                </Text>
+              )}
 
-                    <View style={styles.prefsGrid}>
-                      {preferences.map((row) => (
-                        <View key={row.key} style={styles.prefRow}>
-                          <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
-                          <Text style={styles.prefLabel}>{row.label}</Text>
-                          <Text style={styles.prefValue}>{row.value}</Text>
-                        </View>
-                      ))}
-                    </View>
-                  </>
-                )}
-              </>
-            )}
-          </ScrollView>
+              {!!description && <Text style={styles.desc}>{description}</Text>}
+
+              {!!preferences.length && (
+                <>
+                  <Text style={styles.sectionTitle}>
+                    {tr("plantDetailsModals.definition.traits", "Traits")}
+                  </Text>
+
+                  <View style={styles.prefsGrid}>
+                    {preferences.map((row) => (
+                      <View key={row.key} style={styles.prefRow}>
+                        <MaterialCommunityIcons name={row.icon as any} size={18} color="#FFFFFF" />
+                        <Text style={styles.prefLabel}>{row.label}</Text>
+                        <Text style={styles.prefValue}>{row.value}</Text>
+                      </View>
+                    ))}
+                  </View>
+                </>
+              )}
+            </ScrollView>
+          )}
 
           <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
             <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close}>
@@ -287,6 +296,15 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     position: "relative",
     backgroundColor: "transparent",
+    minHeight: 220,
+  },
+
+  spinnerBox: {
+    minHeight: 220,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 22,
   },
 
   title: {
@@ -307,7 +325,8 @@ const styles = StyleSheet.create({
 
   stateBox: {
     marginHorizontal: 16,
-    marginTop: 6,
+    marginTop: 16,
+    marginBottom: 16,
     paddingVertical: 14,
     paddingHorizontal: 12,
     borderRadius: 16,

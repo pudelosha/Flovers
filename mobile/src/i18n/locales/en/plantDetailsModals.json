@@ -5,6 +5,11 @@
     },
     "definition": {
       "title": "Plant definition",
+      "traits": "Traits",
+      "noId": "No plant definition id found.",
+      "loadFailed": "Failed to load plant definition.",
+      "error": "Something went wrong.",
+      "empty": "No definition data available.",
       "body": "This is a placeholder modal. Plant definition details will be implemented later."
     },
     "changeImage": {

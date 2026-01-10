@@ -1,3 +1,4 @@
+// plant-definitions.service.ts
 import { request, ApiError } from "../client";
 import type { PlantDefinition } from "../../features/create-plant/types/create-plant.types";
 import {
@@ -19,6 +20,13 @@ const ENDPOINTS = {
       ? `/api/plant-definitions/${idOrKey}/profile/`
       : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
 };
+
+function withLang(url: string, lang?: string) {
+  const l = (lang ?? "").trim();
+  if (!l) return url;
+  const join = url.includes("?") ? "&" : "?";
+  return `${url}${join}lang=${encodeURIComponent(l)}`;
+}
 
 /** Popular cards */
 export async function fetchPopularPlants(
@@ -67,13 +75,16 @@ export async function fetchPlantSearchIndex(
 /** Full plant profile */
 export async function fetchPlantProfile(
   idOrExternalId: string | number,
-  opts: { auth?: boolean } = { auth: true }
+  opts: { auth?: boolean; lang?: string } = { auth: true }
 ) {
+  const url = withLang(ENDPOINTS.profile(idOrExternalId), opts.lang);
+
   const data = await request<ApiPlantProfile>(
-    ENDPOINTS.profile(idOrExternalId),
+    url,
     "GET",
     undefined,
     { auth: opts.auth ?? true }
   );
+
   return serializePlantProfile(data);
 }

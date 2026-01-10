@@ -5,6 +5,11 @@
     },
     "definition": {
       "title": "Definicja rośliny",
+      "traits": "Cechy",
+      "noId": "Nie znaleziono identyfikatora definicji rośliny.",
+      "loadFailed": "Nie udało się wczytać definicji rośliny.",
+      "error": "Coś poszło nie tak.",
+      "empty": "Brak danych definicji.",
       "body": "To jest modal-zastępnik. Szczegóły definicji rośliny zostaną zaimplementowane później."
     },
     "changeImage": {
