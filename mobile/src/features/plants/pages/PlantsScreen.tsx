@@ -15,7 +15,7 @@ import {
   Animated,
   Easing,
 } from "react-native";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
+import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -94,6 +94,7 @@ function norm(v?: string) {
 
 export default function PlantsScreen() {
   const nav = useNavigation<any>();
+  const route = useRoute<any>();
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -202,24 +203,6 @@ export default function PlantsScreen() {
     }
   }, [t, currentLanguage, unnamedFallback]);
 
-  useFocusEffect(
-    useCallback(() => {
-      let mounted = true;
-      (async () => {
-        setLoading(true);
-        setPlants([]); // avoid stale flash
-        try {
-          await load();
-        } finally {
-          if (mounted) setLoading(false);
-        }
-      })();
-      return () => {
-        mounted = false;
-      };
-    }, [load])
-  );
-
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -242,55 +225,122 @@ export default function PlantsScreen() {
     setJournalVisible(true);
   };
 
-  // EDIT MODAL open
-  const openEditModal = async (p: Plant) => {
-    setMenuOpenId(null);
-    setEditingId(p.id);
-    setEditLoading(true);
+  // ✅ EDIT MODAL open (stabilized to avoid focus-effect loop)
+  const openEditModal = useCallback(
+    async (p: Plant) => {
+      setMenuOpenId(null);
+      setEditingId(p.id);
+      setEditLoading(true);
 
-    try {
-      setFName(p.name);
-      setFLatinQuery(p.latin || "");
-      setFLatinSelected(p.latin);
-      setFLocation(p.location);
-      setFNotes(p.notes || "");
+      try {
+        setFName(p.name);
+        setFLatinQuery(p.latin || "");
+        setFLatinSelected(p.latin);
+        setFLocation(p.location);
+        setFNotes(p.notes || "");
 
-      const detail = await fetchPlantInstanceForEdit(Number(p.id), {
-        auth: true,
-      });
+        const detail = await fetchPlantInstanceForEdit(Number(p.id), {
+          auth: true,
+        });
 
-      if (detail.display_name !== undefined && detail.display_name !== null)
-        setFName(detail.display_name || "");
-      if (detail.notes !== undefined && detail.notes !== null)
-        setFNotes(detail.notes || "");
-      setFPurchaseDateISO(
-        detail.purchase_date === undefined ? null : detail.purchase_date
-      );
+        if (detail.display_name !== undefined && detail.display_name !== null)
+          setFName(detail.display_name || "");
+        if (detail.notes !== undefined && detail.notes !== null)
+          setFNotes(detail.notes || "");
+        setFPurchaseDateISO(
+          detail.purchase_date === undefined ? null : detail.purchase_date
+        );
 
-      setFLightLevel((detail.light_level as LightLevel5) || "medium");
-      setFOrientation((detail.orientation as any) || "S");
-      setFDistanceCm(detail.distance_cm ?? 0);
+        setFLightLevel((detail.light_level as LightLevel5) || "medium");
+        setFOrientation((detail.orientation as any) || "S");
+        setFDistanceCm(detail.distance_cm ?? 0);
 
-      setFPotMaterial(detail.pot_material ?? undefined);
-      setFSoilMix(detail.soil_mix ?? undefined);
+        setFPotMaterial(detail.pot_material ?? undefined);
+        setFSoilMix(detail.soil_mix ?? undefined);
 
-      setFLatinQuery(detail.plant_definition?.name || p.latin || "");
-      setFLatinSelected(detail.plant_definition?.name || p.latin || undefined);
-      setFLocation(detail.location?.name || p.location);
+        setFLatinQuery(detail.plant_definition?.name || p.latin || "");
+        setFLatinSelected(detail.plant_definition?.name || p.latin || undefined);
+        setFLocation(detail.location?.name || p.location);
 
-      setEditOpen(true);
-    } catch (e: any) {
-      Alert.alert(
-        t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
-        e?.message ||
-          t("plants.alert.loadFailedMsg", {
-            defaultValue: "Could not load plant details.",
-          })
-      );
-    } finally {
-      setEditLoading(false);
-    }
-  };
+        setEditOpen(true);
+      } catch (e: any) {
+        Alert.alert(
+          t("plants.alert.loadFailedTitle", { defaultValue: "Load failed" }),
+          e?.message ||
+            t("plants.alert.loadFailedMsg", {
+              defaultValue: "Could not load plant details.",
+            })
+        );
+      } finally {
+        setEditLoading(false);
+      }
+    },
+    [t]
+  );
+
+  // ✅ helper: open edit modal by id without loading tiles
+  const openEditModalById = useCallback(
+    async (id: string) => {
+      const stub: Plant = {
+        id: String(id),
+        name: "",
+        latin: undefined,
+        location: undefined,
+        notes: "",
+        imageUrl: undefined,
+        qrCode: undefined,
+      };
+      await openEditModal(stub);
+    },
+    [openEditModal]
+  );
+
+  // ✅ Focus load: if editPlantId is provided => show spinner only + open modal, skip tiles load
+  useFocusEffect(
+    useCallback(() => {
+      let mounted = true;
+
+      (async () => {
+        const params = (route as any)?.params;
+        const incomingEditId =
+          params?.editPlantId ?? params?.plantId ?? params?.id;
+
+        if (incomingEditId) {
+          (nav as any).setParams?.({
+            editPlantId: undefined,
+            plantId: undefined,
+            id: undefined,
+          });
+
+          if (!mounted) return;
+
+          setLoading(true);
+          setPlants([]); // ensure no tiles flash
+
+          try {
+            await openEditModalById(String(incomingEditId));
+          } finally {
+            if (mounted) setLoading(false);
+          }
+
+          return;
+        }
+
+        // Original behavior
+        setLoading(true);
+        setPlants([]); // avoid stale flash
+        try {
+          await load();
+        } finally {
+          if (mounted) setLoading(false);
+        }
+      })();
+
+      return () => {
+        mounted = false;
+      };
+    }, [load, route, nav, openEditModalById])
+  );
 
   const closeEdit = () => setEditOpen(false);
 

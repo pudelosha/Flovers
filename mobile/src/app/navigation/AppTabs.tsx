@@ -35,7 +35,16 @@ const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
 
 export type AppTabParamList = {
   Home: undefined;
-  Plants: undefined;
+
+  // ✅ UPDATED: allow navigation params for auto-opening edit modal
+  Plants:
+    | {
+        editPlantId?: string;
+        plantId?: string;
+        id?: string;
+      }
+    | undefined;
+
   Reminders: undefined;
   Readings: undefined;
   Profile: undefined;

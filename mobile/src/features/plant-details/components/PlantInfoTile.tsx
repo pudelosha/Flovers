@@ -203,10 +203,8 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
                 }}
                 onEditPlant={() => {
                   closeMenu();
-                  Alert.alert(
-                    tr("plantDetails.infoMenu.editPlant.title", "Edit plant"),
-                    tr("plantDetails.infoMenu.editPlant.msg", "Editing this plant will be implemented later.")
-                  );
+                  // ✅ NEW: open EditPlantModal on Plants tab for this plant id
+                  nav.navigate("Plants", { editPlantId: String(plant.id) });
                 }}
                 onChangeImage={() => {
                   closeMenu();
