@@ -102,6 +102,14 @@
           "label": "All-purpose potting mix",
           "description": "A good default for most houseplants."
         },
+        "green-plants": {
+          "label": "Green plants / houseplants mix",
+          "description": "General mix for leafy houseplants (often also marketed for palms)."
+        },
+        "balcony-flowers": {
+          "label": "Balcony & flowering plants mix",
+          "description": "Richer mix for flowering plants grown in pots and balcony planters."
+        },
         "cactus-succulent": {
           "label": "Cactus / succulent mix",
           "description": "Fast-draining; ideal for succulents and cacti."
@@ -125,6 +133,22 @@
         "herbs-vegetables": {
           "label": "Herbs & vegetables mix",
           "description": "Nutrient-rich mix suitable for edibles."
+        },
+        "citrus": {
+          "label": "Citrus mix",
+          "description": "Well-draining mix suited for citrus and other Mediterranean plants."
+        },
+        "fern": {
+          "label": "Fern mix",
+          "description": "Moisture-retentive mix for ferns; typically higher in organic matter."
+        },
+        "conifers": {
+          "label": "Conifers mix",
+          "description": "Mix intended for conifers; often slightly acidic and well-draining."
+        },
+        "acid-loving": {
+          "label": "Acid-loving plants mix",
+          "description": "Acidic mix for blueberries, heathers, rhododendrons, azaleas, etc."
         },
         "peat-free": {
           "label": "Peat-free mix",

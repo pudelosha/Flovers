@@ -205,15 +205,25 @@ type SoilMixOption = Readonly<{
   description?: string;
 }>;
 
-// Keys you translate in createPlantStep05.json
 export const SOIL_MIXES: readonly SoilMixOption[] = [
   { key: "all-purpose" },
+  { key: "green-plants" },
+  { key: "balcony-flowers" },
+
   { key: "cactus-succulent" },
   { key: "orchid" },
-  { key: "aroid" },
-  { key: "seed-starting" },
   { key: "bonsai" },
+
   { key: "herbs-vegetables" },
+  { key: "seed-starting" },
+
+  { key: "citrus" },
+  { key: "fern" },
+  { key: "conifers" },
+  { key: "acid-loving" },
+
+  { key: "aroid" },
+
   { key: "peat-free" },
 ] as const;
 

@@ -12,10 +12,10 @@ import { fetchProfileSettings, type ApiProfileSettings } from "../../api/service
 import { DEFAULT_SETTINGS } from "../settings/settings.defaults";
 import type { AppSettings } from "../settings/settings.types";
 
-// ✅ We use i18n ONLY to listen to language changes
+// We use i18n ONLY to listen to language changes
 import i18n from "../../i18n";
 
-// ✅ Primary source of truth for changing language
+// Primary source of truth for changing language
 import { useLanguage } from "./LanguageProvider";
 
 const SETTINGS_STORAGE_KEY = "app:settings:v1";

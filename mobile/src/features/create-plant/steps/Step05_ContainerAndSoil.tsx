@@ -1,6 +1,7 @@
-﻿// steps/Step05_ContainerAndSoil.tsx
+﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\steps\Step05_ContainerAndSoil.tsx
+
 import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
+import { View, Text, Pressable, ScrollView, Image } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -14,6 +15,9 @@ import {
   type PotMaterialKey,
   type SoilMixKey,
 } from "../constants/create-plant.constants";
+
+// Use your API base (same one you showed)
+import { API_BASE } from "../../../config";
 
 export default function Step05_ContainerAndSoil() {
   const { t } = useTranslation();
@@ -91,6 +95,18 @@ export default function Step05_ContainerAndSoil() {
     setOpenWhich((curr) => (curr === which ? null : which));
 
   const closeMenu = () => setOpenWhich(null);
+
+  // ---------------------------------------------------------------------------
+  // Soil thumbs
+  // Images live under: backend/media/soil/thumb/<key>.jpg
+  // Build an absolute URL using API_BASE so <Image/> can load it on device.
+  // NOTE: this only changes UI rendering; no other logic is touched.
+  // ---------------------------------------------------------------------------
+  const SOIL_THUMB_SIZE = 36; // was 26 (larger)
+
+  const getSoilThumbUri = useCallback((soilKey: string) => {
+    return `${API_BASE}/media/soil/thumb/${encodeURIComponent(soilKey)}.jpg`;
+  }, []);
 
   return (
     <View style={wiz.cardWrap}>
@@ -219,12 +235,34 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                <Text style={wiz.dropdownItemText}>
-                  {getTranslation("createPlant.step05.notSpecified", "Not specified")}
-                </Text>
-                <Text style={wiz.dropdownItemDesc}>
-                  {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
-                </Text>
+                {/* Align with rows that have thumbnails */}
+                <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                  <View
+                    style={{
+                      width: SOIL_THUMB_SIZE,
+                      height: SOIL_THUMB_SIZE,
+                      borderRadius: SOIL_THUMB_SIZE / 2,
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "rgba(255,255,255,0.10)",
+                    }}
+                  >
+                    <MaterialCommunityIcons
+                      name="minus-circle-outline"
+                      size={20}
+                      color="rgba(255,255,255,0.85)"
+                    />
+                  </View>
+
+                  <View style={{ flex: 1 }}>
+                    <Text style={wiz.dropdownItemText}>
+                      {getTranslation("createPlant.step05.notSpecified", "Not specified")}
+                    </Text>
+                    <Text style={wiz.dropdownItemDesc}>
+                      {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
+                    </Text>
+                  </View>
+                </View>
               </Pressable>
 
               {SOIL_MIXES.map((opt) => (
@@ -236,18 +274,41 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  <Text style={wiz.dropdownItemText}>
-                    {getTranslation(
-                      `createPlant.step05.soilMixes.${opt.key}.label`,
-                      (opt as any).label || String(opt.key)
-                    )}
-                  </Text>
-                  <Text style={wiz.dropdownItemDesc}>
-                    {getTranslation(
-                      `createPlant.step05.soilMixes.${opt.key}.description`,
-                      (opt as any).description || ""
-                    )}
-                  </Text>
+                  {/* Row with left thumb + text */}
+                  <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                    <Image
+                      source={{ uri: getSoilThumbUri(String(opt.key)) }}
+                      style={{
+                        width: SOIL_THUMB_SIZE,
+                        height: SOIL_THUMB_SIZE,
+                        borderRadius: SOIL_THUMB_SIZE / 2,
+                      }}
+                      resizeMode="cover"
+                    />
+
+                    <View style={{ flex: 1 }}>
+                      <Text style={wiz.dropdownItemText}>
+                        {getTranslation(
+                          `createPlant.step05.soilMixes.${opt.key}.label`,
+                          (opt as any).label || String(opt.key)
+                        )}
+                      </Text>
+                      <Text
+                        style={[
+                          wiz.dropdownItemDesc,
+                          {
+                            fontSize: 13,
+                            fontWeight: "300",
+                          },
+                        ]}
+                      >
+                        {getTranslation(
+                          `createPlant.step05.soilMixes.${opt.key}.description`,
+                          (opt as any).description || ""
+                        )}
+                      </Text>
+                    </View>
+                  </View>
                 </Pressable>
               ))}
             </ScrollView>
