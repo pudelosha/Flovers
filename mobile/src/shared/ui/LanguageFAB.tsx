@@ -1,9 +1,12 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
+import { View, Text, Pressable, StyleSheet, Platform, ScrollView } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../app/providers/LanguageProvider";
+
+// single source of truth for supported language codes
+import { LANGS } from "../../i18n/locales";
 
 type LangOption = { code: string; label: string; flag: string };
 
@@ -14,10 +17,27 @@ type Props = {
   position?: "left" | "right";
 };
 
-const DEFAULT_OPTIONS: LangOption[] = [
-  { code: "en", label: "English", flag: "🇬🇧" },
-  { code: "pl", label: "Polski", flag: "🇵🇱" },
-];
+// Labels/flags (EN/PL are translated; others just appear as selectable options)
+const LANG_META: Record<string, { label: string; flag: string }> = {
+  en: { label: "English", flag: "🇬🇧" },
+  pl: { label: "Polski", flag: "🇵🇱" },
+  de: { label: "Deutsch", flag: "🇩🇪" },
+  it: { label: "Italiano", flag: "🇮🇹" },
+  fr: { label: "Français", flag: "🇫🇷" },
+  es: { label: "Español", flag: "🇪🇸" },
+  pt: { label: "Português", flag: "🇵🇹" },
+  ar: { label: "العربية", flag: "🇸🇦" },
+  hi: { label: "हिन्दी", flag: "🇮🇳" },
+  zh: { label: "中文", flag: "🇨🇳" },
+  ja: { label: "日本語", flag: "🇯🇵" },
+  ko: { label: "한국어", flag: "🇰🇷" },
+};
+
+// Default options are derived from LANGS (no duplication)
+const DEFAULT_OPTIONS: LangOption[] = (LANGS as readonly string[]).map((code) => {
+  const meta = LANG_META[code] ?? { label: code, flag: "🌐" };
+  return { code, label: meta.label, flag: meta.flag };
+});
 
 export default function LanguageFAB({
   options,
@@ -44,12 +64,12 @@ export default function LanguageFAB({
 
   const [open, setOpen] = useState(false);
 
-  const LANGS = options?.length ? options : DEFAULT_OPTIONS;
+  const LANGS_LOCAL = options?.length ? options : DEFAULT_OPTIONS;
 
   const current = useMemo(() => {
     const found =
-      LANGS.find((l) => l.code === currentLanguage) ??
-      LANGS.find((l) => l.code === currentLanguage?.split("-")?.[0]);
+      LANGS_LOCAL.find((l) => l.code === currentLanguage) ??
+      LANGS_LOCAL.find((l) => l.code === currentLanguage?.split("-")?.[0]);
     return (
       found ?? {
         code: currentLanguage || "en",
@@ -57,7 +77,7 @@ export default function LanguageFAB({
         flag: "🌐",
       }
     );
-  }, [LANGS, currentLanguage]);
+  }, [LANGS_LOCAL, currentLanguage]);
 
   const horizontalStyle =
     position === "left" ? { left: rightOffset } : { right: rightOffset };
@@ -143,29 +163,38 @@ export default function LanguageFAB({
             {tr("languages.modal.subtitle", "Select your preferred language")}
           </Text>
 
-          <View style={s.langList}>
-            {LANGS.map((opt) => {
-              const selected =
-                opt.code === current.code ||
-                opt.code === currentLanguage ||
-                opt.code === currentLanguage?.split("-")?.[0];
+          {/* Scrollable list area (keeps header + cancel visible) */}
+          <View style={s.langScrollWrap}>
+            <ScrollView
+              style={s.langScroll}
+              contentContainerStyle={s.langList}
+              showsVerticalScrollIndicator={false}
+              bounces={false}
+              keyboardShouldPersistTaps="handled"
+            >
+              {LANGS_LOCAL.map((opt) => {
+                const selected =
+                  opt.code === current.code ||
+                  opt.code === currentLanguage ||
+                  opt.code === currentLanguage?.split("-")?.[0];
 
-              return (
-                <Pressable
-                  key={opt.code}
-                  onPress={() => onPickLanguage(opt.code)}
-                  style={[s.langRow, selected && s.langRowSelected]}
-                  android_ripple={{ color: "rgba(255,255,255,0.12)" }}
-                  accessibilityRole="button"
-                >
-                  <Text style={s.langFlag}>{opt.flag}</Text>
-                  <Text style={s.langLabel}>
-                    {opt.label} <Text style={s.langCode}>({opt.code})</Text>
-                  </Text>
-                  {selected && <Text style={s.langSelectedMark}>✓</Text>}
-                </Pressable>
-              );
-            })}
+                return (
+                  <Pressable
+                    key={opt.code}
+                    onPress={() => onPickLanguage(opt.code)}
+                    style={[s.langRow, selected && s.langRowSelected]}
+                    android_ripple={{ color: "rgba(255,255,255,0.12)" }}
+                    accessibilityRole="button"
+                  >
+                    <Text style={s.langFlag}>{opt.flag}</Text>
+                    <Text style={s.langLabel}>
+                      {opt.label} <Text style={s.langCode}>({opt.code})</Text>
+                    </Text>
+                    {selected && <Text style={s.langSelectedMark}>✓</Text>}
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
           </View>
 
           <View style={s.promptButtonsRow}>
@@ -249,8 +278,16 @@ const s = StyleSheet.create({
     fontWeight: "600",
   },
 
-  langList: {
+  langScrollWrap: {
     paddingHorizontal: 16,
+    paddingBottom: 6,
+    maxHeight: 380, // adjust if needed
+  },
+  langScroll: {
+    borderRadius: 16,
+  },
+
+  langList: {
     gap: 10,
     paddingBottom: 6,
   },

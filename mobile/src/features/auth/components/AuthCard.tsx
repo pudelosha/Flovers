@@ -12,8 +12,8 @@ const drops = require("../../../../assets/drops.png");
 
 type Props = PropsWithChildren<{ showDrops?: boolean }>;
 
-const MAX_DRIFT = 20;   // max px drift
-const ACTIVATE = 6;     // drag threshold before panning starts
+const MAX_DRIFT = 20; // max px drift
+const ACTIVATE = 6; // drag threshold before panning starts
 
 export default function AuthCard({ children, showDrops = false }: Props) {
   const insets = useSafeAreaInsets();
@@ -23,12 +23,12 @@ export default function AuthCard({ children, showDrops = false }: Props) {
 
   // mount-in effect
   const opacity = useRef(new Animated.Value(0)).current;
-  const enterY  = useRef(new Animated.Value(12)).current;
+  const enterY = useRef(new Animated.Value(12)).current;
 
   useEffect(() => {
     Animated.parallel([
       Animated.timing(opacity, { toValue: 1, duration: 220, useNativeDriver: true }),
-      Animated.timing(enterY,  { toValue: 0, duration: 220, useNativeDriver: true }),
+      Animated.timing(enterY, { toValue: 0, duration: 220, useNativeDriver: true }),
     ]).start();
   }, [opacity, enterY]);
 
@@ -82,10 +82,8 @@ export default function AuthCard({ children, showDrops = false }: Props) {
         position="right"
         // Let LanguageFAB defaults match FAB.tsx:
         // rightOffset=16, bottomOffset=92 (safe for Android navbar/gesture)
-        options={[
-          { code: "en", label: "English", flag: "🇬🇧" },
-          { code: "pl", label: "Polski", flag: "🇵🇱" },
-        ]}
+
+        // ✅ IMPORTANT: do NOT pass `options` here, otherwise it will limit the list to only those languages.
       />
 
       {/* Pan handler wraps the card; pan activates only after small drag */}
@@ -101,10 +99,7 @@ export default function AuthCard({ children, showDrops = false }: Props) {
             s.cardShadow,
             {
               opacity,
-              transform: [
-                { translateX: clampX },
-                { translateY: Animated.add(enterY, clampY) },
-              ],
+              transform: [{ translateX: clampX }, { translateY: Animated.add(enterY, clampY) }],
             },
           ]}
         >
