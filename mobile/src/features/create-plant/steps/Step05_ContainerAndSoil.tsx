@@ -97,15 +97,21 @@ export default function Step05_ContainerAndSoil() {
   const closeMenu = () => setOpenWhich(null);
 
   // ---------------------------------------------------------------------------
-  // Soil thumbs
-  // Images live under: backend/media/soil/thumb/<key>.jpg
-  // Build an absolute URL using API_BASE so <Image/> can load it on device.
-  // NOTE: this only changes UI rendering; no other logic is touched.
+  // Thumbs
+  // Images live under:
+  // - backend/media/soil/thumb/<key>.jpg
+  // - backend/media/pots/thumb/<key>.jpg
+  // Build absolute URLs using API_BASE so <Image/> can load them on device.
+  // NOTE: UI rendering only; no other logic is touched.
   // ---------------------------------------------------------------------------
-  const SOIL_THUMB_SIZE = 36; // was 26 (larger)
+  const THUMB_SIZE = 36;
 
   const getSoilThumbUri = useCallback((soilKey: string) => {
     return `${API_BASE}/media/soil/thumb/${encodeURIComponent(soilKey)}.jpg`;
+  }, []);
+
+  const getPotThumbUri = useCallback((potKey: string) => {
+    return `${API_BASE}/media/pots/thumb/${encodeURIComponent(potKey)}.jpg`;
   }, []);
 
   return (
@@ -166,12 +172,34 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                <Text style={wiz.dropdownItemText}>
-                  {getTranslation("createPlant.step05.notSpecified", "Not specified")}
-                </Text>
-                <Text style={wiz.dropdownItemDesc}>
-                  {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
-                </Text>
+                {/* Align with rows that have thumbnails */}
+                <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                  <View
+                    style={{
+                      width: THUMB_SIZE,
+                      height: THUMB_SIZE,
+                      borderRadius: THUMB_SIZE / 2,
+                      alignItems: "center",
+                      justifyContent: "center",
+                      backgroundColor: "rgba(255,255,255,0.10)",
+                    }}
+                  >
+                    <MaterialCommunityIcons
+                      name="minus-circle-outline"
+                      size={20}
+                      color="rgba(255,255,255,0.85)"
+                    />
+                  </View>
+
+                  <View style={{ flex: 1 }}>
+                    <Text style={wiz.dropdownItemText}>
+                      {getTranslation("createPlant.step05.notSpecified", "Not specified")}
+                    </Text>
+                    <Text style={wiz.dropdownItemDesc}>
+                      {getTranslation("createPlant.step05.notSpecifiedDesc", "Skip this if you’re not sure.")}
+                    </Text>
+                  </View>
+                </View>
               </Pressable>
 
               {POT_MATERIALS.map((opt) => (
@@ -183,18 +211,41 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  <Text style={wiz.dropdownItemText}>
-                    {getTranslation(
-                      `createPlant.step05.potMaterials.${opt.key}.label`,
-                      (opt as any).label || String(opt.key)
-                    )}
-                  </Text>
-                  <Text style={wiz.dropdownItemDesc}>
-                    {getTranslation(
-                      `createPlant.step05.potMaterials.${opt.key}.description`,
-                      (opt as any).description || ""
-                    )}
-                  </Text>
+                  {/* Row with left thumb + text */}
+                  <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+                    <Image
+                      source={{ uri: getPotThumbUri(String(opt.key)) }}
+                      style={{
+                        width: THUMB_SIZE,
+                        height: THUMB_SIZE,
+                        borderRadius: THUMB_SIZE / 2,
+                      }}
+                      resizeMode="cover"
+                    />
+
+                    <View style={{ flex: 1 }}>
+                      <Text style={wiz.dropdownItemText}>
+                        {getTranslation(
+                          `createPlant.step05.potMaterials.${opt.key}.label`,
+                          (opt as any).label || String(opt.key)
+                        )}
+                      </Text>
+                      <Text
+                        style={[
+                          wiz.dropdownItemDesc,
+                          {
+                            fontSize: 13,
+                            fontWeight: "300",
+                          },
+                        ]}
+                      >
+                        {getTranslation(
+                          `createPlant.step05.potMaterials.${opt.key}.description`,
+                          (opt as any).description || ""
+                        )}
+                      </Text>
+                    </View>
+                  </View>
                 </Pressable>
               ))}
             </ScrollView>
@@ -239,9 +290,9 @@ export default function Step05_ContainerAndSoil() {
                 <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                   <View
                     style={{
-                      width: SOIL_THUMB_SIZE,
-                      height: SOIL_THUMB_SIZE,
-                      borderRadius: SOIL_THUMB_SIZE / 2,
+                      width: THUMB_SIZE,
+                      height: THUMB_SIZE,
+                      borderRadius: THUMB_SIZE / 2,
                       alignItems: "center",
                       justifyContent: "center",
                       backgroundColor: "rgba(255,255,255,0.10)",
@@ -279,9 +330,9 @@ export default function Step05_ContainerAndSoil() {
                     <Image
                       source={{ uri: getSoilThumbUri(String(opt.key)) }}
                       style={{
-                        width: SOIL_THUMB_SIZE,
-                        height: SOIL_THUMB_SIZE,
-                        borderRadius: SOIL_THUMB_SIZE / 2,
+                        width: THUMB_SIZE,
+                        height: THUMB_SIZE,
+                        borderRadius: THUMB_SIZE / 2,
                       }}
                       resizeMode="cover"
                     />

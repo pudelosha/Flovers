@@ -209,21 +209,16 @@ export const SOIL_MIXES: readonly SoilMixOption[] = [
   { key: "all-purpose" },
   { key: "green-plants" },
   { key: "balcony-flowers" },
-
   { key: "cactus-succulent" },
   { key: "orchid" },
   { key: "bonsai" },
-
   { key: "herbs-vegetables" },
   { key: "seed-starting" },
-
   { key: "citrus" },
   { key: "fern" },
   { key: "conifers" },
   { key: "acid-loving" },
-
   { key: "aroid" },
-
   { key: "peat-free" },
 ] as const;
 
