@@ -8,12 +8,16 @@ import {
   Easing,
 } from "react-native";
 import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";
 import type { TaskHistoryItem } from "../types/task-history.types";
-import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../home/constants/home.constants";
+import {
+  ACCENT_BY_TYPE,
+  ICON_BY_TYPE,
+} from "../../home/constants/home.constants";
 import type { TaskType } from "../../home/types/home.types";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
@@ -55,10 +59,7 @@ function formatDateWithPattern(d: Date | string, pattern: string): string {
 
   const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
 
-  return fmt
-    .replace("YYYY", String(yyyy))
-    .replace("MM", mm)
-    .replace("DD", dd);
+  return fmt.replace("YYYY", String(yyyy)).replace("MM", mm).replace("DD", dd);
 }
 
 type Props = {
@@ -123,11 +124,8 @@ export default function TaskHistoryTile({
 
   const onToggleBody = () => {
     if (!hasNote) return;
-    if (expanded) {
-      collapse();
-    } else {
-      expand();
-    }
+    if (expanded) collapse();
+    else expand();
   };
 
   const animatedHeight =
@@ -146,9 +144,7 @@ export default function TaskHistoryTile({
 
   const handleDelete = () => {
     onToggleMenu();
-    if (onDelete) {
-      onDelete(item);
-    }
+    if (onDelete) onDelete(item);
   };
 
   const handleExpandFromMenu = () => {
@@ -171,11 +167,13 @@ export default function TaskHistoryTile({
     if (onGoToPlant) onGoToPlant(item);
   };
 
-  const typeLabel = t(`taskHistory.types.${displayType}`, { defaultValue: displayType });
+  const typeLabel = t(`taskHistory.types.${displayType}`, {
+    defaultValue: displayType,
+  });
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass stack: identical to Reminders tiles */}
+      {/* Glass stack: Blur + tint + border + accent gradient (left -> transparent) */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -186,12 +184,19 @@ export default function TaskHistoryTile({
         />
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
-        <View
+
+        {/* Accent gradient: left (accent) -> right (transparent) */}
+        <LinearGradient
           pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            { backgroundColor: hexToRgba(accent, 0.1), zIndex: 1 },
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          colors={[
+            hexToRgba(accent, 0.18),
+            hexToRgba(accent, 0.1),
+            "rgba(0,0,0,0)",
           ]}
+          locations={[0, 0.35, 1]}
+          style={StyleSheet.absoluteFill}
         />
       </View>
 
@@ -222,11 +227,13 @@ export default function TaskHistoryTile({
             <Text style={s.plantName} numberOfLines={1}>
               {item.plant}
             </Text>
+
             {!!item.location && (
               <Text style={s.location} numberOfLines={1}>
                 {item.location}
               </Text>
             )}
+
             {!!completedLabel && (
               <Text style={s.metaCompact} numberOfLines={1}>
                 {t("taskHistory.tile.completedOn", { date: completedLabel })}
@@ -241,13 +248,13 @@ export default function TaskHistoryTile({
                   pointerEvents="none"
                   onLayout={(e) => {
                     const h = e.nativeEvent.layout.height;
-                    if (h > 0 && h !== noteHeight) {
-                      setNoteHeight(h);
-                    }
+                    if (h > 0 && h !== noteHeight) setNoteHeight(h);
                   }}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
+                    <Text style={s.noteLabel}>
+                      {t("taskHistory.tile.noteLabel")}
+                    </Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </View>
@@ -264,7 +271,9 @@ export default function TaskHistoryTile({
                   ]}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
+                    <Text style={s.noteLabel}>
+                      {t("taskHistory.tile.noteLabel")}
+                    </Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </Animated.View>
@@ -273,12 +282,15 @@ export default function TaskHistoryTile({
           </View>
         </Pressable>
 
-        {/* Right: 3-dot menu (same position as Reminders) */}
+        {/* Right: 3-dot menu */}
         <View style={s.rightCol}>
           <Pressable
             onPress={onToggleMenu}
             style={s.menuBtn}
-            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+            android_ripple={{
+              color: "rgba(255,255,255,0.16)",
+              borderless: true,
+            }}
             hitSlop={8}
           >
             <MaterialCommunityIcons
@@ -290,7 +302,7 @@ export default function TaskHistoryTile({
         </View>
       </View>
 
-      {/* Inline menu – same positioning as ReminderMenu */}
+      {/* Inline menu */}
       {isMenuOpen && (
         <View style={s.menuSheet}>
           {/* Expand / Collapse (first, only if there is a note) */}
@@ -326,7 +338,9 @@ export default function TaskHistoryTile({
               color="#FFFFFF"
               style={{ marginRight: 8 }}
             />
-            <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
+            <Text style={s.menuItemText}>
+              {t("taskHistory.menu.editReminder")}
+            </Text>
           </Pressable>
 
           {/* Go to plant */}
@@ -340,7 +354,7 @@ export default function TaskHistoryTile({
             <Text style={s.menuItemText}>{t("taskHistory.menu.goToPlant")}</Text>
           </Pressable>
 
-          {/* Delete – last & red (like Reminders) */}
+          {/* Delete – last & red */}
           <Pressable style={s.menuItem} onPress={handleDelete}>
             <MaterialCommunityIcons
               name="delete-outline"
@@ -349,10 +363,7 @@ export default function TaskHistoryTile({
               style={{ marginRight: 8 }}
             />
             <Text
-              style={[
-                s.menuItemText,
-                { color: "#FF6B6B", fontWeight: "800" },
-              ]}
+              style={[s.menuItemText, { color: "#FF6B6B", fontWeight: "800" }]}
             >
               {t("taskHistory.menu.deleteTask")}
             </Text>

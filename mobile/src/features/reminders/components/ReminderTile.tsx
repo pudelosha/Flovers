@@ -2,6 +2,8 @@ import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
+
 import { s } from "../styles/reminders.styles";
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../constants/reminders.constants";
 import type { Reminder } from "../types/reminders.types";
@@ -21,6 +23,7 @@ function toDisplayType(t?: string) {
   if (x === "repot" || x === "repotting") return "repot";
   return "care";
 }
+
 function hexToRgba(hex?: string, alpha = 1) {
   const fallback = `rgba(0,0,0,${alpha})`;
   if (!hex || typeof hex !== "string") return fallback;
@@ -160,12 +163,19 @@ export default function ReminderTile({
         />
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
-        <View
+
+        {/* Accent gradient: left (accent) -> right (transparent) */}
+        <LinearGradient
           pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            { backgroundColor: hexToRgba(accent, 0.10), zIndex: 1 },
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          colors={[
+            hexToRgba(accent, 0.18),
+            hexToRgba(accent, 0.10),
+            "rgba(0,0,0,0)",
           ]}
+          locations={[0, 0.35, 1]}
+          style={StyleSheet.absoluteFill}
         />
       </View>
 
