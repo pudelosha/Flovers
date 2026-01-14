@@ -1,5 +1,5 @@
-import React from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import React, { useEffect, useRef } from "react";
+import { Pressable, Text, View, StyleSheet, Animated, Easing } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { BlurView } from "@react-native-community/blur";
 import LinearGradient from "react-native-linear-gradient";
@@ -19,7 +19,6 @@ type Props = {
   onEdit: () => void;
   onGoToPlant: () => void;
   onShowHistory?: () => void;
-  // Intentionally omit onDelete to remove the Delete action from the menu on Home
 };
 
 export default function TaskTile({
@@ -37,18 +36,50 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
-  // Detect overdue by label text (e.g. "Overdue", "Overdue by 2 days")
   const isOverdue =
     typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
 
-  const formattedDate = formatDateWithPattern(
-    task.dueDate,
-    settings.dateFormat
-  );
+  const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat);
+
+  // --- overdue pulse ---
+  const pulse = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (!isOverdue) {
+      pulse.stopAnimation();
+      pulse.setValue(0);
+      return;
+    }
+
+    const anim = Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulse, {
+          toValue: 1,
+          duration: 1400,
+          easing: Easing.inOut(Easing.cubic),
+          useNativeDriver: true,
+        }),
+        Animated.timing(pulse, {
+          toValue: 0,
+          duration: 1400,
+          easing: Easing.inOut(Easing.cubic),
+          useNativeDriver: true,
+        }),
+      ])
+    );
+
+    anim.start();
+    return () => anim.stop();
+  }, [isOverdue, pulse]);
+
+  // ⬆️ slightly stronger than before
+  const overdueOverlayOpacity = pulse.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0, 0.35], // was 0.28
+  });
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass stack: Blur + white tint + hairline border + accent gradient */}
       <View style={s.cardGlass}>
         <BlurView
           style={StyleSheet.absoluteFill}
@@ -61,7 +92,7 @@ export default function TaskTile({
         <View style={s.cardTint} />
         <View style={s.cardBorder} />
 
-        {/* Accent gradient: left (color) → right (transparent) */}
+        {/* Base accent gradient */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
@@ -74,18 +105,32 @@ export default function TaskTile({
           locations={[0, 0.35, 1]}
           style={StyleSheet.absoluteFill}
         />
+
+        {/* Overdue red pulse (slightly stronger) */}
+        {isOverdue && (
+          <Animated.View
+            pointerEvents="none"
+            style={[StyleSheet.absoluteFill, { opacity: overdueOverlayOpacity }]}
+          >
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              colors={[
+                "rgba(255, 59, 48, 0.65)", // was 0.55
+                "rgba(255, 59, 48, 0.30)", // was 0.20
+                "rgba(0,0,0,0)",
+              ]}
+              locations={[0, 0.4, 1]}
+              style={StyleSheet.absoluteFill}
+            />
+          </Animated.View>
+        )}
       </View>
 
-      {/* Content row */}
+      {/* Content */}
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
-        {/* Left: icon + caption */}
         <View style={s.leftCol}>
-          <View
-            style={[
-              s.leftIconBubble,
-              { backgroundColor: hexToRgba("#000", 0.15) },
-            ]}
-          >
+          <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
           <Text style={[s.leftCaption, { color: accent }]}>
@@ -93,47 +138,32 @@ export default function TaskTile({
           </Text>
         </View>
 
-        {/* Center: title, location, due */}
         <View style={s.centerCol}>
           <Text style={s.plantName} numberOfLines={1}>
             {task.plant}
           </Text>
 
-          {task.location ? (
+          {task.location && (
             <Text style={s.location} numberOfLines={1}>
               {task.location}
             </Text>
-          ) : null}
+          )}
 
           <View style={s.dueRow}>
-            <Text
-              style={[
-                s.dueWhen,
-                isOverdue && s.dueOverdue,
-              ]}
-            >
+            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>
               {task.due}
             </Text>
-            <Text
-              style={[
-                s.dueDateText,
-                isOverdue && s.dueOverdue,
-              ]}
-            >
+            <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>
               {formattedDate}
             </Text>
           </View>
         </View>
 
-        {/* Right: menu button */}
         <View style={s.rightCol}>
           <Pressable
             onPress={onToggleMenu}
             style={s.menuBtn}
-            android_ripple={{
-              color: "rgba(255,255,255,0.16)",
-              borderless: true,
-            }}
+            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
             hitSlop={8}
           >
             <MaterialCommunityIcons
@@ -145,7 +175,6 @@ export default function TaskTile({
         </View>
       </View>
 
-      {/* Floating menu — explicitly hide Delete on Home */}
       {isMenuOpen && (
         <TaskMenu
           onMarkComplete={onMarkComplete}
@@ -168,13 +197,7 @@ function hexToRgba(hex?: string, alpha = 1) {
   if (!h.startsWith("#")) h = `#${h}`;
   h = h.replace("#", "");
 
-  if (h.length === 3) {
-    h = h
-      .split("")
-      .map((c) => c + c)
-      .join("");
-  }
-
+  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
   if (h.length !== 6) return fallback;
 
   const bigint = parseInt(h, 16);
@@ -195,8 +218,7 @@ function formatDateWithPattern(d: Date | string, pattern: string): string {
   const mm = String(dt.getMonth() + 1).padStart(2, "0");
   const yyyy = dt.getFullYear();
 
-  const fmt =
-    pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
+  const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
 
   return fmt
     .replace("YYYY", String(yyyy))
