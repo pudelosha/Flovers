@@ -1,15 +1,17 @@
+// src/features/readings/components/ReadingTile.tsx
 import React, { useMemo } from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
+
 import { s } from "../styles/readings.styles";
 import { ReadingTileModel } from "../types/readings.types";
-import { ICON_BG, METRIC_UNITS, TILE_BLUR } from "../constants/readings.constants";
+import { ICON_BG, METRIC_UNITS } from "../constants/readings.constants";
 import ReadingMenu from "./ReadingMenu";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 type MetricKey = "temperature" | "humidity" | "light" | "moisture";
 
@@ -19,16 +21,13 @@ type Props = {
   onPressBody: () => void;
   onPressMenu: () => void;
 
-  // menu actions
   onHistory: () => void;
   onEdit: () => void;
   onDelete: () => void;
   onPlantDetails: () => void;
 
-  // NEW: deep-link to History for a specific metric
   onMetricPress: (metric: MetricKey) => void;
 
-  // NEW: explicitly pass device name and selected sensors
   deviceName?: string;
   sensors?: {
     temperature?: boolean;
@@ -57,7 +56,6 @@ function formatDateBySettings(d: Date, settings?: any) {
   if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
   if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
 
-  // default: DMY with dots (matches your current UI style)
   return `${dd}.${mm}.${yyyy}`;
 }
 
@@ -75,14 +73,23 @@ function MetricColPressable({
   onPress: () => void;
 }) {
   return (
-    <Pressable style={s.col} onPress={onPress} android_ripple={{ color: "rgba(255,255,255,0.10)" }}>
+    <Pressable
+      style={s.col}
+      onPress={onPress}
+      android_ripple={{ color: "rgba(255,255,255,0.10)" }}
+    >
       <View style={[s.iconCircle, { backgroundColor: color }]}>
         <MaterialCommunityIcons name={icon as any} size={22} color="#FFFFFF" />
       </View>
-      <Text style={s.metricValue}>{value === null || value === undefined ? "—" : `${value}${unit}`}</Text>
+      <Text style={s.metricValue}>
+        {value === null || value === undefined ? "—" : `${value}${unit}`}
+      </Text>
     </Pressable>
   );
 }
+
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingTile({
   data,
@@ -99,7 +106,7 @@ export default function ReadingTile({
 }: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   const tr = React.useCallback(
     (key: string, fallback?: string, values?: any) => {
@@ -120,9 +127,6 @@ export default function ReadingTile({
     return `${tr("readings.tile.lastReadPrefix", "Last read")}: ${date} ${time}`;
   }, [dt, tr, settings]);
 
-  // Decide which metrics to show:
-  // - If sensors not provided → keep existing behavior (show all).
-  // - If provided → show only enabled ones, in the same order.
   const showTemp = sensors ? !!sensors.temperature : true;
   const showHum = sensors ? !!sensors.humidity : true;
   const showLight = sensors ? !!sensors.light : true;
@@ -130,26 +134,44 @@ export default function ReadingTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass background */}
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={TILE_BLUR}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
-      {/* Top row: name + dots */}
       <View style={s.topRow}>
-        <Pressable style={{ flex: 1, paddingRight: 8 }} onPress={onPressBody} android_ripple={{ color: "rgba(255,255,255,0.08)" }}>
+        <Pressable
+          style={{ flex: 1, paddingRight: 8 }}
+          onPress={onPressBody}
+          android_ripple={{ color: "rgba(255,255,255,0.08)" }}
+        >
           <Text style={s.name} numberOfLines={1}>
             {deviceName ?? data.name}
           </Text>
         </Pressable>
+
         <Pressable
           onPress={onPressMenu}
           style={s.dotsBtn}
@@ -160,7 +182,6 @@ export default function ReadingTile({
         </Pressable>
       </View>
 
-      {/* Metrics row — up to 4 columns (icon + value only) */}
       <View style={s.metricsRow}>
         {showTemp && (
           <MetricColPressable
@@ -200,13 +221,18 @@ export default function ReadingTile({
         )}
       </View>
 
-      {/* Last read */}
       <View style={s.lastRow}>
         <Text style={s.lastText}>{lastText}</Text>
       </View>
 
-      {/* Menu */}
-      {isMenuOpen && <ReadingMenu onHistory={onHistory} onEdit={onEdit} onDelete={onDelete} onPlantDetails={onPlantDetails} />}
+      {isMenuOpen && (
+        <ReadingMenu
+          onHistory={onHistory}
+          onEdit={onEdit}
+          onDelete={onDelete}
+          onPlantDetails={onPlantDetails}
+        />
+      )}
     </View>
   );
 }
