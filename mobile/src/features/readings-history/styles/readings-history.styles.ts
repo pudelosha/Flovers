@@ -8,20 +8,24 @@ export const s = StyleSheet.create({
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // Keep ONLY Android elevation (iOS shadow off to avoid inner-rect shade with overlays)
     elevation: 8,
+
     minHeight: 360,
   },
   frameGlass: { ...StyleSheet.absoluteFillObject, borderRadius: 28, overflow: "hidden" },
-  frameTint: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(255,255,255,0.20)" },
+
+  // Match AuthCard/PlantTile tint (lower opacity)
+  frameTint: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(255,255,255,0.14)", zIndex: 1 },
+
+  // Keep border on top
   frameBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.20)",
+    zIndex: 2,
   },
 
   inner: { paddingHorizontal: 16, paddingTop: 14, paddingBottom: 16 },

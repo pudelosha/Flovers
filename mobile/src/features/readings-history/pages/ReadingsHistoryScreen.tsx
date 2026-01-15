@@ -7,8 +7,9 @@ import {
   useWindowDimensions,
   Animated,
   Easing,
+  StyleSheet,
 } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
@@ -96,6 +97,10 @@ function isUnauthorizedError(e: any): boolean {
 /* -------------------------------------------------------------------- */
 
 type RouteParams = Partial<{ metric: MetricKey; range: HistoryRange; id: string; name?: string }>;
+
+// Same green tones as PlantTile / AuthCard
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsHistoryScreen() {
   const { t } = useTranslation();
@@ -477,13 +482,30 @@ export default function ReadingsHistoryScreen() {
           {/* Glass frame */}
           <View style={s.frameWrap}>
             <View style={s.frameGlass}>
-              <BlurView
-                style={{ position: "absolute", inset: 0 } as any}
-                blurType="light"
-                blurAmount={TILE_BLUR}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
+              {/* Base green gradient: light -> dark */}
+              <LinearGradient
+                pointerEvents="none"
+                start={{ x: 0, y: 0.5 }}
+                end={{ x: 1, y: 0.5 }}
+                colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                locations={[0, 1]}
+                style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
               />
+
+              {/* Fog highlight */}
+              <LinearGradient
+                pointerEvents="none"
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                colors={[
+                  "rgba(255, 255, 255, 0.06)",
+                  "rgba(255, 255, 255, 0.02)",
+                  "rgba(255, 255, 255, 0.08)",
+                ]}
+                locations={[0, 0.5, 1]}
+                style={StyleSheet.absoluteFill}
+              />
+
               <View pointerEvents="none" style={s.frameTint} />
               <View pointerEvents="none" style={s.frameBorder} />
             </View>
