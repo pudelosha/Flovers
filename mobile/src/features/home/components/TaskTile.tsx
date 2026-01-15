@@ -1,12 +1,6 @@
+// C:\Projekty\Python\Flovers\mobile\src\features\home\components\TaskTile.tsx
 import React, { useEffect, useMemo, useRef } from "react";
-import {
-  Pressable,
-  Text,
-  View,
-  StyleSheet,
-  Animated,
-  Easing,
-} from "react-native";
+import { Pressable, Text, View, StyleSheet, Animated, Easing } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -30,9 +24,9 @@ type Props = {
 
 const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
-// Tile should end in the SAME dark-green tone as the tab bar's LEFT color,
-// but slightly transparent to let the wallpaper/blur breathe through.
-const TAB_BAR_DARK_LEFT_A09 = "rgba(5, 31, 24, 0.9)";
+// EXACT SAME green tones as AuthCard / Reminders / Plants
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function TaskTile({
   task,
@@ -60,7 +54,6 @@ export default function TaskTile({
   const pulseLoopRef = useRef<Animated.CompositeAnimation | null>(null);
 
   useEffect(() => {
-    // stop any existing loop
     pulseLoopRef.current?.stop();
     pulseLoopRef.current = null;
 
@@ -69,14 +62,13 @@ export default function TaskTile({
       return;
     }
 
-    // slow, subtle breathing pulse
     const loop = Animated.loop(
       Animated.sequence([
         Animated.timing(pulse, {
           toValue: 1,
           duration: 1400,
           easing: Easing.inOut(Easing.quad),
-          useNativeDriver: true, // animating opacity only
+          useNativeDriver: true,
         }),
         Animated.timing(pulse, {
           toValue: 0,
@@ -90,67 +82,63 @@ export default function TaskTile({
     pulseLoopRef.current = loop;
     loop.start();
 
-    return () => {
-      loop.stop();
-    };
+    return () => loop.stop();
   }, [isOverdue, pulse]);
 
   // Red overlay gradient (left -> transparent), opacity animated by `pulse`.
-  // This makes the left side visually shift from task accent toward red while keeping the right side unchanged.
   const overdueOverlayColors = useMemo(
     () => [
-      "rgba(255, 59, 48, 0.55)", // iOS-like red; strong on the left
-      "rgba(255, 59, 48, 0.18)", // fade
-      "rgba(255, 59, 48, 0.00)", // transparent toward the right
+      "rgba(255, 59, 48, 0.55)",
+      "rgba(255, 59, 48, 0.18)",
+      "rgba(255, 59, 48, 0.00)",
     ],
     []
   );
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass stack with gradient fog background */}
+      {/* Glass stack with AuthCard-matching gradients */}
       <View style={s.cardGlass}>
-        {/* Base background: dark green with ~0.9 opacity */}
-        <View
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              backgroundColor: TAB_BAR_DARK_LEFT_A09,
-              borderRadius: 28,
-            },
-          ]}
+        {/* Base green gradient: EXACT match to AuthCard */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Foggy glass effect overlay - very subtle */}
+        {/* Fog highlight: EXACT match to AuthCard */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)", // Top-left subtle highlight
-            "rgba(255, 255, 255, 0.02)", // Center
-            "rgba(255, 255, 255, 0.08)", // Bottom-right subtle highlight
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Accent gradient: task-type color (left) -> tab dark green (right) */}
+        {/* Accent wash: task-type color (left) -> AuthCard dark green (right) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           colors={[
-            hexToRgba(accent, 0.34), // Left: stronger task-type tint
-            hexToRgba(accent, 0.18), // Mid-left
-            hexToRgba(accent, 0.06), // Mid-right
-            TAB_BAR_DARK_LEFT_A09, // Right: END at dark green (no light greens)
+            hexToRgba(accent, 0.34),
+            hexToRgba(accent, 0.18),
+            hexToRgba(accent, 0.06),
+            TAB_GREEN_DARK,
           ]}
           locations={[0, 0.28, 0.55, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Overdue pulse overlay: red -> transparent, animated opacity */}
+        {/* Overdue pulse overlay: keep as-is (red -> transparent), animated opacity */}
         {isOverdue && (
           <AnimatedLinearGradient
             pointerEvents="none"
@@ -161,35 +149,22 @@ export default function TaskTile({
             style={[
               StyleSheet.absoluteFill,
               {
-                opacity: pulse, // 0..1
+                opacity: pulse,
               },
             ]}
           />
         )}
 
-        {/* Subtle border */}
-        <View
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              borderRadius: 28,
-              borderWidth: 1,
-              borderColor: "rgba(255, 255, 255, 0.08)",
-            },
-          ]}
-        />
+        {/* Match Reminders/Plants: tint + thin border */}
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
       {/* Content row */}
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
         {/* Left: icon + caption */}
         <View style={s.leftCol}>
-          <View
-            style={[
-              s.leftIconBubble,
-              { backgroundColor: hexToRgba("#000", 0.15) },
-            ]}
-          >
+          <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
           <Text style={[s.leftCaption, { color: accent }]}>
@@ -228,11 +203,7 @@ export default function TaskTile({
             }}
             hitSlop={8}
           >
-            <MaterialCommunityIcons
-              name="dots-horizontal"
-              size={20}
-              color="#FFFFFF"
-            />
+            <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
           </Pressable>
         </View>
       </View>

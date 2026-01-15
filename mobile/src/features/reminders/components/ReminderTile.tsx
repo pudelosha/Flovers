@@ -1,3 +1,4 @@
+// src/features/reminders/components/ReminderTile.tsx
 import React, { useCallback, useMemo } from "react";
 import { Pressable, Text, View, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -55,7 +56,6 @@ function formatDateWithSettings(d: Date, settings: any) {
     return `${yyyy}${sep}${mm}${sep}${dd}`;
   }
 
-  // default: dmy / DD.MM.YYYY
   if (fmt === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
   if (fmt === "DD-MM-YYYY") return `${dd}-${mm}-${yyyy}`;
   return `${dd}.${mm}.${yyyy}`;
@@ -89,8 +89,9 @@ type Props = {
   onDelete: () => void;
 };
 
-// Same base tone as the TaskTile (tab bar dark-left), slightly transparent
-const TAB_BAR_DARK_LEFT_A09 = "rgba(5, 31, 24, 0.9)";
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReminderTile({
   reminder,
@@ -130,7 +131,6 @@ export default function ReminderTile({
 
   const everyStr = useMemo(() => {
     if (!reminder.intervalValue || !reminder.intervalUnit) return "";
-    // “Repeats every N …” (localized)
     return tr("reminders.tile.repeatsEvery", "Repeats every {{count}} {{unit}}", {
       count: reminder.intervalValue,
       unit: unitLabel,
@@ -144,8 +144,7 @@ export default function ReminderTile({
 
     let prefix = "";
     if (dueDays === 0) prefix = tr("reminders.tile.dueToday", "Due today");
-    else if (dueDays === 1)
-      prefix = tr("reminders.tile.dueInOneDay", "Due in 1 day");
+    else if (dueDays === 1) prefix = tr("reminders.tile.dueInOneDay", "Due in 1 day");
     else
       prefix = tr("reminders.tile.dueInDays", "Due in {{count}} days", {
         count: dueDays,
@@ -159,34 +158,33 @@ export default function ReminderTile({
 
   return (
     <View style={s.cardWrap}>
+      {/* Glass card (clipped surface; shadow moved to style below via elevation-only wrapper fix) */}
       <View style={s.cardGlass}>
-        {/* Base background (replaces BlurView): dark green @ 0.9 */}
-        <View
+        {/* Base green gradient: EXACT match to AuthCard */}
+        <LinearGradient
           pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              backgroundColor: TAB_BAR_DARK_LEFT_A09,
-              borderRadius: 28,
-            },
-          ]}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Subtle fog highlight (same as TaskTile) */}
+        {/* Fog highlight: EXACT match to AuthCard */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)", // Top-left highlight
-            "rgba(255, 255, 255, 0.02)", // Center
-            "rgba(255, 255, 255, 0.08)", // Bottom-right highlight
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Accent gradient: task-type color (left) -> tab dark green (right) */}
+        {/* Accent wash: task-type color (left) -> AuthCard dark (right) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
@@ -195,85 +193,64 @@ export default function ReminderTile({
             hexToRgba(accent, 0.34),
             hexToRgba(accent, 0.18),
             hexToRgba(accent, 0.06),
-            TAB_BAR_DARK_LEFT_A09,
+            TAB_GREEN_DARK,
           ]}
           locations={[0, 0.28, 0.55, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Subtle border (instead of s.cardBorder tuned for BlurView) */}
-        <View
-          pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              borderRadius: 28,
-              borderWidth: 1,
-              borderColor: "rgba(255, 255, 255, 0.08)",
-            },
-          ]}
-        />
-      </View>
+        {/* MATCH Plant/Auth tint + thinner border (prevents inner shade) */}
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
 
-      <View style={[s.cardRow, { paddingVertical: 4 }]}>
-        <View style={s.leftCol}>
-          <View
-            style={[
-              s.leftIconBubble,
-              { backgroundColor: hexToRgba("#000", 0.15) },
-            ]}
-          >
-            <MaterialCommunityIcons name={icon} size={20} color={accent} />
+        {/* Content */}
+        <View style={[s.cardRow, { paddingVertical: 4 }]}>
+          <View style={s.leftCol}>
+            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+              <MaterialCommunityIcons name={icon} size={20} color={accent} />
+            </View>
+            <Text style={[s.leftCaption, { color: accent }]}>{typeLabel.toUpperCase()}</Text>
           </View>
-          <Text style={[s.leftCaption, { color: accent }]}>
-            {typeLabel.toUpperCase()}
-          </Text>
-        </View>
 
-        <Pressable style={s.centerCol} onPress={onPressBody}>
-          <Text style={s.plantName} numberOfLines={1}>
-            {reminder.plant}
-          </Text>
-          <Text style={s.location} numberOfLines={1}>
-            {reminder.location}
-          </Text>
-          {!!everyStr && (
-            <Text style={styles.metaCompact} numberOfLines={1}>
-              {everyStr}
+          <Pressable style={s.centerCol} onPress={onPressBody}>
+            <Text style={s.plantName} numberOfLines={1}>
+              {reminder.plant}
             </Text>
-          )}
-          {!!dueLine && (
-            <Text style={styles.metaCompact} numberOfLines={1}>
-              {dueLine}
+            <Text style={s.location} numberOfLines={1}>
+              {reminder.location}
             </Text>
-          )}
-        </Pressable>
 
-        <View style={s.rightCol}>
-          <Pressable
-            onPress={onToggleMenu}
-            style={s.menuBtn}
-            android_ripple={{
-              color: "rgba(255,255,255,0.16)",
-              borderless: true,
-            }}
-            hitSlop={8}
-          >
-            <MaterialCommunityIcons
-              name="dots-horizontal"
-              size={20}
-              color="#FFFFFF"
-            />
+            {!!everyStr && (
+              <Text style={local.metaCompact} numberOfLines={1}>
+                {everyStr}
+              </Text>
+            )}
+            {!!dueLine && (
+              <Text style={local.metaCompact} numberOfLines={1}>
+                {dueLine}
+              </Text>
+            )}
           </Pressable>
-        </View>
-      </View>
 
-      {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
+          <View style={s.rightCol}>
+            <Pressable
+              onPress={onToggleMenu}
+              style={s.menuBtn}
+              android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+              hitSlop={8}
+            >
+              <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
+            </Pressable>
+          </View>
+        </View>
+
+        {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
+      </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const local = StyleSheet.create({
   metaCompact: {
     fontSize: 11,
     lineHeight: 14,

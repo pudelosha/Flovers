@@ -14,37 +14,46 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // ===== TILES (full-size) =====
   cardWrap: {
     height: 100,
-    borderRadius: 28, // match AuthCard/GlassCard
+    borderRadius: 28,
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // If you still want elevation, use ONLY elevation (Android) and keep iOS shadow off.
+    // iOS shadow with overlay layers is the main source of the inner-rect shade.
     elevation: 8,
   },
+
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     overflow: "hidden",
   },
+
+  // MATCH AuthCard/Plant: lower tint opacity (prevents inner-rectangle artifact)
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
+
+  // MATCH PlantTile: thinner-looking border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.08)",
     zIndex: 2,
   },
-  cardRow: { flex: 1, flexDirection: "row", alignItems: "center", paddingHorizontal: 14 },
+
+  cardRow: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 14,
+  },
 
   // Left column
   leftCol: { width: 75, alignItems: "center", justifyContent: "center" },
@@ -61,7 +70,12 @@ export const s = StyleSheet.create({
   // Center
   centerCol: { flex: 1, paddingHorizontal: 6 },
   plantName: { color: "#FFFFFF", fontWeight: "800", fontSize: 17 },
-  location: { color: "rgba(255,255,255,0.9)", fontWeight: "600", fontSize: 12, marginTop: 2 },
+  location: {
+    color: "rgba(255,255,255,0.9)",
+    fontWeight: "600",
+    fontSize: 12,
+    marginTop: 2,
+  },
 
   // Right column (menu)
   rightCol: { width: 56, alignItems: "flex-end", justifyContent: "center" },
@@ -90,8 +104,18 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.18)",
     gap: 6,
   },
-  menuItem: { flexDirection: "row", alignItems: "center", paddingVertical: 6, paddingHorizontal: 2 },
-  menuItemText: { color: "#FFFFFF", fontWeight: "700", letterSpacing: 0.2, fontSize: 12 },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+  },
+  menuItemText: {
+    color: "#FFFFFF",
+    fontWeight: "700",
+    letterSpacing: 0.2,
+    fontSize: 12,
+  },
 
   // ===== CALENDAR =====
   calendarWrap: { flex: 1, paddingHorizontal: 16, paddingTop: 21 },
@@ -150,7 +174,11 @@ export const s = StyleSheet.create({
   },
   legendItem: { flexDirection: "row", alignItems: "center" },
   legendDotSmall: { width: 6, height: 6, borderRadius: 3, marginRight: 6 },
-  legendLabelSmall: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11 },
+  legendLabelSmall: {
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "700",
+    fontSize: 11,
+  },
 
   // Subheading + empty state
   calendarSubheading: {
@@ -194,7 +222,12 @@ export const s = StyleSheet.create({
   },
   miniContent: { flex: 1 },
   miniTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 15 },
-  miniSub: { color: "rgba(255,255,255,0.92)", fontWeight: "600", fontSize: 12, marginTop: 2 },
+  miniSub: {
+    color: "rgba(255,255,255,0.92)",
+    fontWeight: "600",
+    fontSize: 12,
+    marginTop: 2,
+  },
   miniTag: { color: "rgba(255,255,255,0.92)", fontWeight: "700", fontSize: 11, marginTop: 4 },
   miniActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
   miniActionBtn: {
@@ -260,8 +293,8 @@ export const s = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 16,
     color: "#FFFFFF",
-    backgroundColor: "rgba(255,255,255,0.14)", // <-- flat glaze
-    borderWidth: 0,                             // <-- no border
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderWidth: 0,
   },
   inputInline: { marginHorizontal: 0, marginBottom: 0 },
 
@@ -274,16 +307,16 @@ export const s = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 14,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)", // like Profile
-    borderWidth: 0,                              // <-- no border
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0,
   },
   dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
   dropdownList: {
     marginTop: 6,
     borderRadius: 16,
     overflow: "hidden",
-    backgroundColor: "rgba(255,255,255,0.10)",  // like Profile
-    borderWidth: 0,                              // <-- no border
+    backgroundColor: "rgba(255,255,255,0.10)",
+    borderWidth: 0,
   },
   dropdownItem: {
     paddingHorizontal: 14,
@@ -292,7 +325,7 @@ export const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(255,255,255,0.16)",      // subtle divider like Profile
+    borderColor: "rgba(255,255,255,0.16)",
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
 
@@ -320,8 +353,8 @@ export const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.12)", // flat
-    borderWidth: 0,                             // <-- no border
+    backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0,
   },
   promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
   promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
@@ -379,9 +412,7 @@ export const s = StyleSheet.create({
   chipText: { color: "#FFFFFF", fontWeight: "800", fontSize: 12 },
 
   /* ---------- EMPTY STATE ---------- */
-  emptyWrap: {
-    marginTop: 0,
-  },
+  emptyWrap: { marginTop: 0 },
   emptyGlass: {
     borderRadius: 18,
     overflow: "hidden",
@@ -391,7 +422,13 @@ export const s = StyleSheet.create({
     minHeight: 140,
   },
   emptyInner: { padding: 16, alignItems: "center" },
-  emptyTitle: { color: "#FFFFFF", fontSize: 18, fontWeight: "800", marginBottom: 8, textAlign: "center" },
+  emptyTitle: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    marginBottom: 8,
+    textAlign: "center",
+  },
   emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
   emptyText: {
     color: "rgba(255,255,255,0.95)",

@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\home\styles\home.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -15,39 +14,43 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  /* ---------- TASK TILES (match Plants layering so menu floats above) ---------- */
+  /* ---------- TASK TILES (match Reminders/Plants tones + NO shadow artifacts) ---------- */
   cardWrap: {
     height: 100,
     borderRadius: 28,
     overflow: "visible", // allow dropdown to escape
     position: "relative",
     marginBottom: 0,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
-    elevation: 8,
   },
+
   // Raised state to keep an open menu above siblings
   cardWrapRaised: {
     zIndex: 30,
     elevation: 30,
   },
+
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     overflow: "hidden",
   },
+
+  // Match AuthCard/Plants: lower tint opacity
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
   },
+
+  // Match Plants: thinner-looking border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.08)",
+    zIndex: 2,
   },
+
   cardRow: {
     flex: 1,
     flexDirection: "row",
@@ -129,7 +132,7 @@ export const s = StyleSheet.create({
     fontSize: 12,
   },
 
-  /* ---------- EMPTY STATE (blurry card, like Plants) ---------- */
+  /* ---------- EMPTY STATE (match Plants/Reminders tint & border) ---------- */
   emptyWrap: {
     marginTop: 0,
   },
@@ -140,13 +143,15 @@ export const s = StyleSheet.create({
   },
   emptyTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
   },
   emptyBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.08)",
+    zIndex: 2,
   },
   emptyInner: { padding: 16, alignItems: "center" },
   emptyTitle: {
@@ -170,8 +175,7 @@ export const s = StyleSheet.create({
     fontWeight: "800",
   },
 
-  /* ---------- MODALS / FORMS (copied from Reminders for consistent UI) ---------- */
-  // 🔼 bumped zIndex so modal always sits above task tiles and menus
+  /* ---------- MODALS / FORMS (unchanged; already matches Reminders) ---------- */
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -218,7 +222,7 @@ export const s = StyleSheet.create({
   },
   inputHint: {
     color: "rgba(255,255,255,0.92)",
-    fontSize: 13, 
+    fontSize: 13,
     fontWeight: "300",
     marginTop: 0,
     marginBottom: 16,
