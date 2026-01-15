@@ -94,8 +94,11 @@ export const s = StyleSheet.create({
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 20,
-    elevation: 20,
+
+    // Keep it above siblings
+    zIndex: 999,
+    elevation: 999,
+
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,
@@ -104,6 +107,7 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.18)",
     gap: 6,
   },
+
   menuItem: {
     flexDirection: "row",
     alignItems: "center",
@@ -135,7 +139,7 @@ export const s = StyleSheet.create({
   },
   calendarTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
   calendarBorder: {

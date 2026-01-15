@@ -158,7 +158,7 @@ export default function ReminderTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass card (clipped surface; shadow moved to style below via elevation-only wrapper fix) */}
+      {/* CLIPPED SURFACE: gradients/tint/border/content */}
       <View style={s.cardGlass}>
         {/* Base green gradient: EXACT match to AuthCard */}
         <LinearGradient
@@ -243,9 +243,10 @@ export default function ReminderTile({
             </Pressable>
           </View>
         </View>
-
-        {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
       </View>
+
+      {/* NOT CLIPPED: menu must be outside cardGlass (overflow: hidden) */}
+      {isMenuOpen && <ReminderMenu onEdit={onEdit} onDelete={onDelete} />}
     </View>
   );
 }

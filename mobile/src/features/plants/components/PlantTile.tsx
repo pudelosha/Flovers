@@ -143,17 +143,18 @@ export default function PlantTile({
             />
           </Pressable>
         </View>
-
-        {isMenuOpen && (
-          <PlantMenu
-            onEdit={onEdit}
-            onReminders={onReminders}
-            onJournal={onJournal}
-            onDelete={onDelete}
-            onShowQr={onShowQr}
-          />
-        )}
       </View>
+
+      {/* NOT CLIPPED: menu must be outside cardGlass (overflow: hidden) */}
+      {isMenuOpen && (
+        <PlantMenu
+          onEdit={onEdit}
+          onReminders={onReminders}
+          onJournal={onJournal}
+          onDelete={onDelete}
+          onShowQr={onShowQr}
+        />
+      )}
     </View>
   );
 }
