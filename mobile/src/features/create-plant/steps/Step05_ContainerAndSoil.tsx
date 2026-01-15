@@ -1,11 +1,11 @@
 ﻿// C:\Projekty\Python\Flovers\mobile\src\features\create-plant\steps\Step05_ContainerAndSoil.tsx
 
 import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { View, Text, Pressable, ScrollView, Image } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import { View, Text, Pressable, ScrollView, Image, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import LinearGradient from "react-native-linear-gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -19,6 +19,10 @@ import {
 // Use your API base (same one you showed)
 import { API_BASE } from "../../../config";
 
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 export default function Step05_ContainerAndSoil() {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -31,8 +35,8 @@ export default function Step05_ContainerAndSoil() {
   const getTranslation = useCallback(
     (key: string, fallback?: string): string => {
       try {
-        // force rerender dependency
         const _lang = currentLanguage;
+        void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
         return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
@@ -70,7 +74,8 @@ export default function Step05_ContainerAndSoil() {
   }, [state, actions]);
 
   const materialLabel = useMemo(() => {
-    if (!state.potMaterial) return getTranslation("createPlant.step05.notSpecified", "Not specified");
+    if (!state.potMaterial)
+      return getTranslation("createPlant.step05.notSpecified", "Not specified");
     const f = POT_MATERIALS.find((p) => p.key === state.potMaterial);
     if (!f) return getTranslation("createPlant.step05.notSpecified", "Not specified");
 
@@ -81,7 +86,8 @@ export default function Step05_ContainerAndSoil() {
   }, [state.potMaterial, getTranslation]);
 
   const soilLabel = useMemo(() => {
-    if (!state.soilMix) return getTranslation("createPlant.step05.notSpecified", "Not specified");
+    if (!state.soilMix)
+      return getTranslation("createPlant.step05.notSpecified", "Not specified");
     const f = SOIL_MIXES.find((s) => s.key === state.soilMix);
     if (!f) return getTranslation("createPlant.step05.notSpecified", "Not specified");
 
@@ -98,11 +104,6 @@ export default function Step05_ContainerAndSoil() {
 
   // ---------------------------------------------------------------------------
   // Thumbs
-  // Images live under:
-  // - backend/media/soil/thumb/<key>.jpg
-  // - backend/media/pots/thumb/<key>.jpg
-  // Build absolute URLs using API_BASE so <Image/> can load them on device.
-  // NOTE: UI rendering only; no other logic is touched.
   // ---------------------------------------------------------------------------
   const THUMB_SIZE = 36;
 
@@ -117,20 +118,39 @@ export default function Step05_ContainerAndSoil() {
   return (
     <View style={wiz.cardWrap}>
       {/* glass frame */}
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+      <View style={wiz.cardGlass} pointerEvents="none">
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>{getTranslation("createPlant.step05.title", "Container & soil")}</Text>
+        <Text style={wiz.title}>
+          {getTranslation("createPlant.step05.title", "Container & soil")}
+        </Text>
         <Text style={wiz.subtitle}>
           {getTranslation(
             "createPlant.step05.subtitle",
@@ -172,7 +192,6 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                {/* Align with rows that have thumbnails */}
                 <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                   <View
                     style={{
@@ -211,7 +230,6 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  {/* Row with left thumb + text */}
                   <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                     <Image
                       source={{ uri: getPotThumbUri(String(opt.key)) }}
@@ -286,7 +304,6 @@ export default function Step05_ContainerAndSoil() {
                   closeMenu();
                 }}
               >
-                {/* Align with rows that have thumbnails */}
                 <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                   <View
                     style={{
@@ -325,7 +342,6 @@ export default function Step05_ContainerAndSoil() {
                     closeMenu();
                   }}
                 >
-                  {/* Row with left thumb + text */}
                   <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
                     <Image
                       source={{ uri: getSoilThumbUri(String(opt.key)) }}

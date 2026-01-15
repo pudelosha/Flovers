@@ -1,8 +1,9 @@
 ﻿import React, { useEffect, useRef, useState, useCallback } from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
+
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { useTranslation } from "react-i18next";
@@ -20,6 +21,10 @@ try {
 
 const PLANTS_ROUTE_NAME = "Plants"; // <-- Tab route name
 
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 export default function Step09_Creating() {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
@@ -33,6 +38,7 @@ export default function Step09_Creating() {
     (key: string, fallback?: string): string => {
       try {
         const _lang = currentLanguage; // force dependency
+        void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
         return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
@@ -82,15 +88,32 @@ export default function Step09_Creating() {
     <View style={wiz.cardWrap}>
       {/* Clipped rounded card that wraps glass + content */}
       <View style={{ position: "relative", borderRadius: 28, overflow: "hidden", height: CARD_HEIGHT }}>
-        {/* glass frame — same as other steps */}
-        <View style={wiz.cardGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={20}
-            overlayColor="transparent"
-            reducedTransparencyFallbackColor="transparent"
+        {/* glass frame — gradient instead of blur */}
+        <View style={wiz.cardGlass} pointerEvents="none">
+          {/* Base green gradient (AuthCard match) */}
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+            locations={[0, 1]}
+            style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
           />
+
+          {/* Fog highlight (AuthCard match) */}
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            colors={[
+              "rgba(255, 255, 255, 0.06)",
+              "rgba(255, 255, 255, 0.02)",
+              "rgba(255, 255, 255, 0.08)",
+            ]}
+            locations={[0, 0.5, 1]}
+            style={StyleSheet.absoluteFill}
+          />
+
           <View pointerEvents="none" style={wiz.cardTint} />
           <View pointerEvents="none" style={wiz.cardBorder} />
         </View>

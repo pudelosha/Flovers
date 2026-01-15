@@ -1,10 +1,10 @@
 ﻿// steps/Step06_AutoTasks.tsx
 import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { View, Text, Pressable, ScrollView } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import { View, Text, Pressable, ScrollView, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import LinearGradient from "react-native-linear-gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -22,6 +22,10 @@ try {
 } catch {}
 
 const PRIMARY = "#0B7285";
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 /* ------------------------------------------------------------------ */
 /* UI helpers (unchanged)                                              */
@@ -263,6 +267,7 @@ export default function Step06_AutoTasks() {
     (key: string, fallback?: string): string => {
       try {
         const _lang = currentLanguage; // force dependency for rerender
+        void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
         return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
@@ -348,14 +353,31 @@ export default function Step06_AutoTasks() {
 
   return (
     <View style={wiz.cardWrap}>
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+      <View style={wiz.cardGlass} pointerEvents="none">
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>

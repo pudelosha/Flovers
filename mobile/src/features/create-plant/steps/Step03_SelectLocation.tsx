@@ -1,14 +1,18 @@
 ﻿import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "@react-native-community/blur";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import LinearGradient from "react-native-linear-gradient";
 
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import type { LocationCategory } from "../types/create-plant.types";
 import { fetchUserLocations, createLocation } from "../../../api/services/locations.service";
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 // Create a wrapper component that ensures translations are ready
 const TranslatedText = ({
@@ -27,13 +31,12 @@ const TranslatedText = ({
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
 
-  // Use currentLanguage to force re-render when language changes
   React.useMemo(() => {}, [currentLanguage]);
 
   try {
     const text = values ? t(tKey, values) : t(tKey);
     return <Text style={style}>{text}</Text>;
-  } catch (error) {
+  } catch {
     const fallbackText = tKey.split(".").pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
@@ -52,47 +55,34 @@ export default function Step03_SelectLocation({
   const { currentLanguage } = useLanguage();
   const { state, actions } = useCreatePlantWizard();
 
-  // ✅ guard: locations may be undefined during initial boot
   const locations = (state as any)?.locations ?? [];
 
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // Keep a ref of the latest locations so we can reliably find the new one after add
   const locationsRef = useRef(locations);
   useEffect(() => {
     locationsRef.current = locations;
   }, [locations]);
 
-  // Safe translation function that uses both hooks
   const getTranslation = useCallback(
     (key: string, fallback?: string, values?: any): string => {
       try {
-        // Force dependency on currentLanguage to ensure updates
-        const lang = currentLanguage;
-
+        void currentLanguage;
         const translation = values ? t(key, values) : t(key);
         return translation || fallback || key.split(".").pop() || key;
-      } catch (error) {
-        console.warn("Translation error for key:", key, error);
+      } catch {
         return fallback || key.split(".").pop() || key;
       }
     },
     [t, currentLanguage]
   );
 
-  // Debug: Log when component renders with current language
-  useEffect(() => {
-    console.log("Step03_SelectLocation rendering with language:", currentLanguage);
-  }, [currentLanguage]);
-
-  // Ensure nothing is pre-selected when arriving at Step 3
   useEffect(() => {
     actions.selectLocation("");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Load user locations from backend when this page is shown
   useEffect(() => {
     let mounted = true;
 
@@ -103,7 +93,6 @@ export default function Step03_SelectLocation({
 
         const remote = await fetchUserLocations({ auth: true });
 
-        // ✅ use guarded locations, not state.locations directly
         const existing = new Map(locations.map((l: any) => [l.name.trim().toLowerCase(), l]));
 
         remote.forEach((r: any) => {
@@ -131,7 +120,7 @@ export default function Step03_SelectLocation({
       mounted = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // keep as-is
+  }, []);
 
   const grouped = useMemo(() => {
     return {
@@ -147,7 +136,6 @@ export default function Step03_SelectLocation({
     onScrollTop?.();
   };
 
-  // Create on backend first, then mirror into wizard state (avoids duplicates)
   const onCreate = useCallback(
     async (name: string, cat: LocationCategory) => {
       const trimmed = name.trim();
@@ -155,7 +143,6 @@ export default function Step03_SelectLocation({
 
       if (!trimmed) return;
 
-      // local duplicate guard (case-insensitive)
       if (locations.some((l: any) => l.name.trim().toLowerCase() === norm)) {
         setErrorMsg(getTranslation("createPlant.step03.locationExists", "Location already exists"));
         return;
@@ -165,10 +152,8 @@ export default function Step03_SelectLocation({
         setErrorMsg(null);
         const created: any = await createLocation({ name: trimmed, category: cat }, { auth: true });
 
-        // Add into wizard state
         actions.addLocation(created.name, created.category as LocationCategory, String(created.id));
 
-        // Robust auto-select
         setTimeout(() => {
           const match = locationsRef.current.find(
             (l: any) =>
@@ -189,7 +174,6 @@ export default function Step03_SelectLocation({
     [actions, onScrollTop, locations, getTranslation]
   );
 
-  // register create handler with parent (WizardBody)
   useEffect(() => {
     onRegisterCreateHandler(onCreate);
   }, [onRegisterCreateHandler, onCreate]);
@@ -201,14 +185,31 @@ export default function Step03_SelectLocation({
 
   return (
     <View style={wiz.cardWrap}>
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+      <View style={wiz.cardGlass} pointerEvents="none">
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
@@ -272,10 +273,7 @@ export default function Step03_SelectLocation({
                 <Text style={{ color: "rgba(255,255,255,0.7)", marginTop: 6 }}>
                   {loading
                     ? getTranslation("createPlant.step03.loading", "Loading...")
-                    : getTranslation(
-                        `createPlant.step03.noLocations.${cat}`,
-                        `No ${cat} locations`
-                      )}
+                    : getTranslation(`createPlant.step03.noLocations.${cat}`, `No ${cat} locations`)}
                 </Text>
               ) : (
                 arr.map((l: any) => {

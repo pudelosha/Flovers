@@ -1,7 +1,6 @@
 ﻿// Step02_PlantTraits.tsx
 import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { ActivityIndicator, Text, View, StyleSheet, ImageBackground } from "react-native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -33,6 +32,10 @@ const ENDPOINTS = {
       ? `/api/plant-definitions/${idOrKey}/profile/`
       : `/api/plant-definitions/by-key/${idOrKey}/profile/`,
 };
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 function toNumericIdOrNull(id: unknown): number | null {
   if (typeof id === "number" && Number.isFinite(id)) return id;
@@ -389,14 +392,31 @@ export default function Step02_PlantTraits() {
     <View style={wiz.cardWrap}>
       {/* glass */}
       <View style={wiz.cardGlass} pointerEvents="none">
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
           pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
+        {/* Keep your existing tint + border (Profile/Wizard consistency) */}
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
@@ -410,7 +430,6 @@ export default function Step02_PlantTraits() {
                 style={StyleSheet.absoluteFill}
                 maskElement={
                   <LinearGradient
-                    // strong fade: by ~8-10% slight transparency, and bottom part nearly gone
                     colors={[
                       "rgba(0,0,0,1.00)",
                       "rgba(0,0,0,0.88)",
@@ -483,7 +502,6 @@ export default function Step02_PlantTraits() {
 
 const heroStyles = StyleSheet.create({
   heroWrap: {
-    // make it stick to the card’s top edges (inside cardInner padding)
     marginLeft: -16,
     marginRight: -16,
     marginTop: -16,
@@ -494,7 +512,7 @@ const heroStyles = StyleSheet.create({
   },
   heroImage: {
     width: "100%",
-    height: 200, // increase/decrease to control visible image height
+    height: 200,
     justifyContent: "flex-start",
   },
   topScrim: {
@@ -513,6 +531,6 @@ const heroStyles = StyleSheet.create({
   heroTitle: {
     color: "#FFFFFF",
     fontWeight: "800",
-    fontSize: 18, // matches wiz.title scale
+    fontSize: 18,
   },
 });

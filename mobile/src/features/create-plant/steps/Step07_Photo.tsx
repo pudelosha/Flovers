@@ -7,8 +7,8 @@ import {
   Alert,
   PermissionsAndroid,
   Platform,
+  StyleSheet,
 } from "react-native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
@@ -20,6 +20,11 @@ import {
 } from "react-native-image-picker";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
+import LinearGradient from "react-native-linear-gradient";
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   if (Platform.OS !== "android") return true;
@@ -33,9 +38,7 @@ async function ensureAndroidPermissionCameraAndRead(): Promise<boolean> {
   ].filter(Boolean) as string[];
 
   const results = await PermissionsAndroid.requestMultiple(perms);
-  const allGranted = perms.every(
-    (p) => results[p] === PermissionsAndroid.RESULTS.GRANTED
-  );
+  const allGranted = perms.every((p) => results[p] === PermissionsAndroid.RESULTS.GRANTED);
   return allGranted;
 }
 
@@ -50,6 +53,7 @@ export default function Step07_Photo() {
     (key: string, fallback?: string): string => {
       try {
         const _lang = currentLanguage; // force dependency for rerender
+        void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
         return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
@@ -129,22 +133,37 @@ export default function Step07_Photo() {
   return (
     <View style={wiz.cardWrap}>
       {/* glass frame — match other steps */}
-      <View style={wiz.cardGlass}>
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+      <View style={wiz.cardGlass} pointerEvents="none">
+        {/* Base green gradient (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
-        <Text style={wiz.title}>
-          {getTranslation("createPlant.step07.title", "Add a photo")}
-        </Text>
+        <Text style={wiz.title}>{getTranslation("createPlant.step07.title", "Add a photo")}</Text>
 
         <Text style={wiz.subtitle}>
           {getTranslation(

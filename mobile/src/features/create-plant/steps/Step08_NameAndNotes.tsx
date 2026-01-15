@@ -1,7 +1,8 @@
 ﻿import React, { useMemo, useState, useCallback } from "react";
-import { View, Text, Pressable, TextInput, Platform, Alert } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import { View, Text, Pressable, TextInput, Platform, Alert, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
+
 import { wiz } from "../styles/wizard.styles";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
 import { useTranslation } from "react-i18next";
@@ -11,6 +12,10 @@ let DateTimePicker: any = null;
 try {
   DateTimePicker = require("@react-native-community/datetimepicker").default;
 } catch {}
+
+// EXACT SAME green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 function toISODate(d: Date) {
   const y = d.getFullYear();
@@ -40,6 +45,7 @@ export default function Step08_NameAndNotes() {
     (key: string, fallback?: string): string => {
       try {
         const _lang = currentLanguage; // force dependency
+        void _lang;
         const txt = t(key);
         const isMissing = !txt || txt === key;
         return (isMissing ? undefined : txt) || fallback || key.split(".").pop() || key;
@@ -95,15 +101,32 @@ export default function Step08_NameAndNotes() {
     <View style={wiz.cardWrap}>
       {/* CLIPPED CARD wraps glass + content so frame grows with content */}
       <View style={{ position: "relative", borderRadius: 28, overflow: "hidden" }}>
-        {/* glass frame — same as other steps */}
-        <View style={wiz.cardGlass}>
-          <BlurView
-            style={{ position: "absolute", inset: 0 } as any}
-            blurType="light"
-            blurAmount={20}
-            overlayColor="transparent"
-            reducedTransparencyFallbackColor="transparent"
+        {/* glass frame — gradient instead of blur */}
+        <View style={wiz.cardGlass} pointerEvents="none">
+          {/* Base green gradient (AuthCard match) */}
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+            locations={[0, 1]}
+            style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
           />
+
+          {/* Fog highlight (AuthCard match) */}
+          <LinearGradient
+            pointerEvents="none"
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            colors={[
+              "rgba(255, 255, 255, 0.06)",
+              "rgba(255, 255, 255, 0.02)",
+              "rgba(255, 255, 255, 0.08)",
+            ]}
+            locations={[0, 0.5, 1]}
+            style={StyleSheet.absoluteFill}
+          />
+
           <View pointerEvents="none" style={wiz.cardTint} />
           <View pointerEvents="none" style={wiz.cardBorder} />
         </View>
@@ -177,21 +200,12 @@ export default function Step08_NameAndNotes() {
                 maximumDate={new Date()}
               />
               {Platform.OS === "ios" && (
-                <View
-                  style={{
-                    marginTop: 8,
-                    flexDirection: "row",
-                    justifyContent: "flex-end",
-                  }}
-                >
+                <View style={{ marginTop: 8, flexDirection: "row", justifyContent: "flex-end" }}>
                   <Pressable
                     onPress={() => setShowPicker(false)}
                     style={({ pressed }) => [
                       wiz.nextBtnWide,
-                      {
-                        backgroundColor: "rgba(11,114,133,0.9)",
-                        opacity: pressed ? 0.92 : 1,
-                      },
+                      { backgroundColor: "rgba(11,114,133,0.9)", opacity: pressed ? 0.92 : 1 },
                     ]}
                     android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                   >
@@ -209,14 +223,29 @@ export default function Step08_NameAndNotes() {
               <View style={wiz.backdrop} />
               <View style={wiz.promptWrap}>
                 <View style={wiz.promptInnerFull}>
-                  <View style={wiz.promptGlass}>
-                    <BlurView
-                      style={{ position: "absolute", inset: 0 } as any}
-                      blurType="light"
-                      blurAmount={20}
-                      overlayColor="transparent"
-                      reducedTransparencyFallbackColor="transparent"
+                  <View style={wiz.promptGlass} pointerEvents="none">
+                    {/* modal glass — same gradient system */}
+                    <LinearGradient
+                      pointerEvents="none"
+                      start={{ x: 0, y: 0.5 }}
+                      end={{ x: 1, y: 0.5 }}
+                      colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                      locations={[0, 1]}
+                      style={StyleSheet.absoluteFill}
                     />
+                    <LinearGradient
+                      pointerEvents="none"
+                      start={{ x: 0, y: 0 }}
+                      end={{ x: 1, y: 1 }}
+                      colors={[
+                        "rgba(255, 255, 255, 0.06)",
+                        "rgba(255, 255, 255, 0.02)",
+                        "rgba(255, 255, 255, 0.08)",
+                      ]}
+                      locations={[0, 0.5, 1]}
+                      style={StyleSheet.absoluteFill}
+                    />
+
                     <View pointerEvents="none" style={wiz.cardTint} />
                     <View pointerEvents="none" style={wiz.cardBorder} />
                   </View>

@@ -1,15 +1,16 @@
 ﻿import React, { useEffect, useMemo, useState, useCallback } from "react";
-import { 
-  View, 
-  Pressable, 
+import {
+  View,
+  Pressable,
   ActivityIndicator,
-  Text
+  Text,
+  StyleSheet,
 } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
@@ -42,24 +43,30 @@ function pickName(item: any): string {
   return typeof v === "string" ? v : String(v);
 }
 
+// Same green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 // Create a wrapper component that ensures translations are ready
-const TranslatedText = ({ tKey, children, style }: { 
-  tKey: string, 
-  children?: any, 
-  style?: any 
+const TranslatedText = ({
+  tKey,
+  children,
+  style,
+}: {
+  tKey: string;
+  children?: any;
+  style?: any;
 }) => {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  
-  // Use currentLanguage to force re-render when language changes
+
   React.useMemo(() => {}, [currentLanguage]);
-  
+
   try {
     const text = t(tKey);
     return <Text style={style}>{text}</Text>;
   } catch (error) {
-    // Fallback to key if translation fails
-    const fallbackText = tKey.split('.').pop() || tKey;
+    const fallbackText = tKey.split(".").pop() || tKey;
     return <Text style={style}>{fallbackText}</Text>;
   }
 };
@@ -69,8 +76,8 @@ export default function Step01_SelectPlant({
   onOpenScanner,
   onRegisterScanResultHandler,
 }: Props) {
-  const { t, i18n } = useTranslation();
-  const { currentLanguage, changeLanguage } = useLanguage(); // Use LanguageProvider
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const navigation = useNavigation<any>();
   const { state, actions } = useCreatePlantWizard();
 
@@ -94,22 +101,19 @@ export default function Step01_SelectPlant({
   const [errorSearch, setErrorSearch] = useState<string | null>(null);
 
   // Safe translation function that uses both hooks
-  const getTranslation = useCallback((key: string, fallback?: string): string => {
-    try {
-      // Force dependency on currentLanguage to ensure updates
-      const lang = currentLanguage;
-      const translation = t(key);
-      return translation || fallback || key.split('.').pop() || key;
-    } catch (error) {
-      console.warn('Translation error for key:', key, error);
-      return fallback || key.split('.').pop() || key;
-    }
-  }, [t, currentLanguage]);
-
-  // Debug: Log when component renders with current language
-  React.useEffect(() => {
-    console.log('Step01_SelectPlant rendering with language:', currentLanguage);
-  }, [currentLanguage]);
+  const getTranslation = useCallback(
+    (key: string, fallback?: string): string => {
+      try {
+        void currentLanguage;
+        const translation = t(key);
+        return translation || fallback || key.split(".").pop() || key;
+      } catch (error) {
+        console.warn("Translation error for key:", key, error);
+        return fallback || key.split(".").pop() || key;
+      }
+    },
+    [t, currentLanguage]
+  );
 
   useEffect(() => {
     let mounted = true;
@@ -131,8 +135,20 @@ export default function Step01_SelectPlant({
         setErrorSearch(null);
       } catch (e: any) {
         if (!mounted) return;
-        setErrorPopular(e?.message ?? getTranslation('createPlant.step01.errorPopular', 'Failed to load popular plants'));
-        setErrorSearch(e?.message ?? getTranslation('createPlant.step01.errorSearch', 'Failed to load plant search'));
+        setErrorPopular(
+          e?.message ??
+            getTranslation(
+              "createPlant.step01.errorPopular",
+              "Failed to load popular plants"
+            )
+        );
+        setErrorSearch(
+          e?.message ??
+            getTranslation(
+              "createPlant.step01.errorSearch",
+              "Failed to load plant search"
+            )
+        );
       } finally {
         if (mounted) {
           setLoadingPopular(false);
@@ -193,38 +209,41 @@ export default function Step01_SelectPlant({
     onRegisterScanResultHandler(onScanPlantDetected);
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
 
-  useEffect(() => {
-  }, [query]);
-
-  useEffect(() => {
-  }, [(state as any)?.selectedPlant]);
-
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass} pointerEvents="none">
-        <BlurView
-          style={{ position: "absolute", inset: 0 } as any}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base green gradient (AuthCard-style) */}
+        <LinearGradient
           pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard-style) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={wiz.cardTint} />
         <View pointerEvents="none" style={wiz.cardBorder} />
       </View>
 
       <View style={wiz.cardInner}>
-        {/* Use TranslatedText component for static text */}
-        <TranslatedText 
-          tKey="createPlant.step01.title" 
-          style={wiz.title} 
-        />
-        
-        <TranslatedText 
-          tKey="createPlant.step01.subtitle" 
-          style={wiz.subtitle} 
-        />
+        <TranslatedText tKey="createPlant.step01.title" style={wiz.title} />
+
+        <TranslatedText tKey="createPlant.step01.subtitle" style={wiz.subtitle} />
 
         <View
           style={{
@@ -248,7 +267,7 @@ export default function Step01_SelectPlant({
             }}
             android_ripple={{ color: "rgba(255,255,255,0.15)", borderless: false }}
             accessibilityRole="button"
-            accessibilityLabel={getTranslation('createPlant.step01.scanButton', 'Scan plant')}
+            accessibilityLabel={getTranslation("createPlant.step01.scanButton", "Scan plant")}
           >
             <MaterialCommunityIcons name="image-search-outline" size={22} color="#FFFFFF" />
           </Pressable>
@@ -266,17 +285,16 @@ export default function Step01_SelectPlant({
               setShowSuggestions={setShowSuggestions}
               onSelectSuggestion={onSelectFromSearch}
               suggestions={searchIndex}
-              placeholder={getTranslation('createPlant.step01.searchPlaceholder', 'Search for a plant...')}
+              placeholder={getTranslation(
+                "createPlant.step01.searchPlaceholder",
+                "Search for a plant..."
+              )}
             />
           </View>
         </View>
 
-        {/* Use TranslatedText component for section title */}
-        <TranslatedText 
-          tKey="createPlant.step01.popularPlants" 
-          style={wiz.sectionTitle} 
-        />
-        
+        <TranslatedText tKey="createPlant.step01.popularPlants" style={wiz.sectionTitle} />
+
         {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
             <ActivityIndicator />
@@ -362,14 +380,12 @@ export default function Step01_SelectPlant({
           </View>
         ) : (
           <Text style={[wiz.subtitle, { color: "rgba(255,255,255,0.7)" }]}>
-            {getTranslation('createPlant.step01.noPlantsAvailable', 'No plants available')}
+            {getTranslation("createPlant.step01.noPlantsAvailable", "No plants available")}
           </Text>
         )}
 
         {errorSearch ? (
-          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>
-            {errorSearch}
-          </Text>
+          <Text style={[wiz.subtitle, { color: "#ffdddd", marginTop: 6 }]}>{errorSearch}</Text>
         ) : null}
       </View>
     </View>

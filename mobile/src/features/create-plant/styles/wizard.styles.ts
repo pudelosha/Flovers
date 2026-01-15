@@ -4,43 +4,45 @@ export const wiz = StyleSheet.create({
   /** page spacing */
   pageContent: { paddingHorizontal: 16, paddingTop: 21 },
 
-  /** glass card – AuthCard-style: big radius + shadow; blur/tint/border are layered in component */
+  /** glass card – AuthCard-style: big radius + shadow; gradient/tint/border are layered in component */
   cardWrap: {
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
     marginBottom: 18,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // Use elevation-only to avoid iOS inner-rectangle artifacts with layered glass.
     elevation: 8,
   },
+
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     overflow: "hidden",
   },
-  /** White tint + thin border layers (match Login/AuthCard) */
+
+  /** White tint + border layers (match Profile/AuthCard) */
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
+
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1, // the ONLY visible border
-    borderColor: "rgba(255,255,255,0.2)",
+    borderWidth: 1, // thicker like Profile
+    borderColor: "rgba(255,255,255,0.20)",
     zIndex: 2,
   },
+
   cardInner: { padding: 16, zIndex: 3 },
 
   /** headings */
   title: { color: "#FFFFFF", fontWeight: "800", fontSize: 18 },
   subtitle: {
     color: "rgba(255,255,255,0.92)",
-    fontSize: 13, 
+    fontSize: 13,
     fontWeight: "300",
     textAlign: "justify",
     marginTop: 6,
@@ -130,15 +132,15 @@ export const wiz = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 12,
     borderRadius: 14,
-    borderWidth: 0,              // ← remove frame
+    borderWidth: 0,
     alignItems: "center",
     justifyContent: "center",
   },
   splitBtnSecondary: {
-    backgroundColor: "rgba(255,255,255,0.12)", // no border
+    backgroundColor: "rgba(255,255,255,0.12)",
   },
   splitBtnPrimary: {
-    backgroundColor: "rgba(11,114,133,0.9)",   // no border
+    backgroundColor: "rgba(11,114,133,0.9)",
   },
   splitBtnText: { color: "#FFFFFF", fontWeight: "800" },
 
@@ -149,7 +151,7 @@ export const wiz = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 0, // ← remove frame
+    borderWidth: 0,
   },
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.9)" },
   btnText: { color: "#FFFFFF", fontWeight: "800" },
@@ -173,7 +175,7 @@ export const wiz = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 14,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 0,  // flat
+    borderWidth: 0,
   },
   actionText: { color: "#FFFFFF", fontWeight: "800" },
   smallMuted: { color: "rgba(255,255,255,0.92)", fontWeight: "300", fontSize: 13, marginTop: 8, marginBottom: 16, lineHeight: 18, textAlign: "justify" },
@@ -217,7 +219,7 @@ export const wiz = StyleSheet.create({
     marginBottom: 10,
     paddingHorizontal: 12,
     borderRadius: 14,
-    borderWidth: 0, // flat input
+    borderWidth: 0,
     color: "#FFFFFF",
     backgroundColor: "rgba(255,255,255,0.12)",
     fontWeight: "700",
@@ -229,7 +231,7 @@ export const wiz = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 0, // ← remove frame
+    borderWidth: 0,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -257,7 +259,7 @@ export const wiz = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.12)",
-    borderWidth: 0,        // ← remove frame
+    borderWidth: 0,
   },
   chipText: { color: "#FFFFFF", fontWeight: "800" },
 
@@ -269,7 +271,7 @@ export const wiz = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 14,
     borderRadius: 12,
-    borderWidth: 0,        // ← remove frame
+    borderWidth: 0,
     backgroundColor: "rgba(255,255,255,0.12)",
     marginBottom: 6,
   },
@@ -280,7 +282,7 @@ export const wiz = StyleSheet.create({
   dropdownList: {
     borderRadius: 12,
     overflow: "hidden",
-    borderWidth: 0,        // ← remove frame
+    borderWidth: 0,
     backgroundColor: "rgba(255,255,255,0.12)",
     marginBottom: 10,
   },
