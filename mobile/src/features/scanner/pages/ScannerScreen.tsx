@@ -11,8 +11,8 @@ import {
 } from "react-native";
 import { useIsFocused, useNavigation, useFocusEffect } from "@react-navigation/native";
 import { Text } from "react-native-paper";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
 
 import {
   Camera,
@@ -48,6 +48,10 @@ function extractToken(raw: string): string {
   if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
   return "";
 }
+
+// Same green tones as PlantTile / AuthCard
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ScannerScreen() {
   const { t } = useTranslation();
@@ -174,13 +178,30 @@ export default function ScannerScreen() {
           onLayout={(e) => setInfoHeight(e.nativeEvent.layout.height)}
         >
           <View style={styles.infoGlass}>
-            <BlurView
-              style={StyleSheet.absoluteFill}
-              blurType="light"
-              blurAmount={20}
-              overlayColor="transparent"
-              reducedTransparencyFallbackColor="transparent"
+            {/* Base green gradient */}
+            <LinearGradient
+              pointerEvents="none"
+              start={{ x: 0, y: 0.5 }}
+              end={{ x: 1, y: 0.5 }}
+              colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+              locations={[0, 1]}
+              style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
             />
+
+            {/* Fog highlight */}
+            <LinearGradient
+              pointerEvents="none"
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              colors={[
+                "rgba(255, 255, 255, 0.06)",
+                "rgba(255, 255, 255, 0.02)",
+                "rgba(255, 255, 255, 0.08)",
+              ]}
+              locations={[0, 0.5, 1]}
+              style={StyleSheet.absoluteFill}
+            />
+
             <View pointerEvents="none" style={styles.frostTint} />
             <View pointerEvents="none" style={styles.frameBorder} />
 
@@ -191,14 +212,38 @@ export default function ScannerScreen() {
 
               <Text style={styles.infoText}>{instructionText}</Text>
 
-              <Text style={[styles.infoHint, { marginTop: 8, color: "#FFFFFF", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" }]}>
+              <Text
+                style={[
+                  styles.infoHint,
+                  {
+                    marginTop: 8,
+                    color: "#FFFFFF",
+                    fontWeight: "300",
+                    fontSize: 13,
+                    lineHeight: 18,
+                    textAlign: "justify",
+                  },
+                ]}
+              >
                 {t("scanner.hint1", {
                   defaultValue:
                     "Each plant has its own QR code. You can save it, print it as a small label, attach it to the pot, and scan it here to open the plant instantly.",
                 })}
               </Text>
 
-              <Text style={[styles.infoHint, { marginTop: 8, color: "#FFFFFF", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" }]}>
+              <Text
+                style={[
+                  styles.infoHint,
+                  {
+                    marginTop: 8,
+                    color: "#FFFFFF",
+                    fontWeight: "300",
+                    fontSize: 13,
+                    lineHeight: 18,
+                    textAlign: "justify",
+                  },
+                ]}
+              >
                 {t("scanner.qrAvailableIn", { defaultValue: "QR codes are available in:" })}
                 {"\n"}•{" "}
                 <Text style={{ fontWeight: "800", color: "#FFFFFF" }}>
@@ -220,13 +265,30 @@ export default function ScannerScreen() {
         {/* Camera frame */}
         <View style={styles.camWrap}>
           <View style={[styles.camGlass, { height: cameraHeight }]}>
-            <BlurView
-              style={StyleSheet.absoluteFill}
-              blurType="light"
-              blurAmount={20}
-              overlayColor="transparent"
-              reducedTransparencyFallbackColor="transparent"
+            {/* Base green gradient */}
+            <LinearGradient
+              pointerEvents="none"
+              start={{ x: 0, y: 0.5 }}
+              end={{ x: 1, y: 0.5 }}
+              colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+              locations={[0, 1]}
+              style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
             />
+
+            {/* Fog highlight */}
+            <LinearGradient
+              pointerEvents="none"
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              colors={[
+                "rgba(255, 255, 255, 0.06)",
+                "rgba(255, 255, 255, 0.02)",
+                "rgba(255, 255, 255, 0.08)",
+              ]}
+              locations={[0, 0.5, 1]}
+              style={StyleSheet.absoluteFill}
+            />
+
             <View pointerEvents="none" style={styles.frostTint} />
 
             <View style={styles.camInner}>

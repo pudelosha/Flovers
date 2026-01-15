@@ -7,28 +7,32 @@ export const scannerStyles = StyleSheet.create({
     borderRadius: 28,
     overflow: "hidden",
     minHeight: 100,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // elevation only to avoid inner-rectangle artifacts
     elevation: 8,
   },
   frostTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
   frameBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
+    borderWidth: 1, // thicker like Profile
+    borderColor: "rgba(255,255,255,0.20)", // Profile-style border tone
     zIndex: 2,
   },
 
   infoInner: { padding: 16, zIndex: 3 },
   infoTitle: { color: "#FFFFFF", fontWeight: "800", fontSize: 16, marginBottom: 6 },
-  infoText: { color: "rgba(255,255,255,0.95)", fontWeight: "300", fontSize: 13, lineHeight: 18, textAlign: "justify" },
+  infoText: {
+    color: "rgba(255,255,255,0.95)",
+    fontWeight: "300",
+    fontSize: 13,
+    lineHeight: 18,
+    textAlign: "justify",
+  },
   exampleRow: { flexDirection: "row", alignItems: "center", gap: 8, marginTop: 10 },
   exampleUrl: { color: "#FFFFFF", fontWeight: "800", flexShrink: 1 },
   infoHint: { color: "rgba(255,255,255,0.9)", fontWeight: "200", marginTop: 8 },
@@ -38,11 +42,9 @@ export const scannerStyles = StyleSheet.create({
   camGlass: {
     borderRadius: 28,
     overflow: "hidden",
-    minHeight: 200,     // lower bound; actual height comes from ScannerScreen
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+    minHeight: 200, // lower bound; actual height comes from ScannerScreen
+
+    // elevation only to avoid inner-rectangle artifacts
     elevation: 8,
   },
 
@@ -51,10 +53,13 @@ export const scannerStyles = StyleSheet.create({
 
   roundedMask: {
     position: "absolute",
-    top: 0, right: 0, bottom: 0, left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
+    borderColor: "rgba(255,255,255,0.20)",
     backgroundColor: "rgba(255,255,255,0.12)",
     pointerEvents: "none",
     zIndex: 3,
@@ -75,22 +80,20 @@ export const scannerStyles = StyleSheet.create({
     overflow: "hidden",
     maxWidth: 520,
     width: "100%",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // elevation only to avoid inner-rectangle artifacts
     elevation: 8,
   },
   overlayTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
   overlayBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
+    borderWidth: 1, // thicker like Profile
+    borderColor: "rgba(255,255,255,0.20)", // Profile-style border tone
     zIndex: 2,
   },
   overlayInner: {
