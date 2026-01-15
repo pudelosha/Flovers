@@ -1,7 +1,6 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\locations\components\LocationTile.tsx
 import React, { useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -17,6 +16,10 @@ type Props = {
   onEdit: () => void;
   onDelete: () => void;
 };
+
+// EXACT SAME green tones as AuthCard / Plants / Reminders / Home
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function LocationTile({
   location,
@@ -58,15 +61,33 @@ export default function LocationTile({
 
   return (
     <View style={s.cardWrap}>
-      {/* Glass background */}
+      {/* Glass background (BlurView -> gradients like Plants) */}
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base green gradient: light -> dark (AuthCard match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight (AuthCard/Plants match) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
+        {/* Unified tint + border (keeps your existing look but avoids inner shade) */}
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
@@ -111,9 +132,7 @@ export default function LocationTile({
                 color="#FFFFFF"
                 style={{ marginRight: 6 }}
               />
-              <Text style={s.menuItemText}>
-                {tr("locations.menu.edit", "Edit location")}
-              </Text>
+              <Text style={s.menuItemText}>{tr("locations.menu.edit", "Edit location")}</Text>
             </Pressable>
 
             <Pressable

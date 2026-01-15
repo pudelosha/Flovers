@@ -1,4 +1,3 @@
-// src/features/locations/styles/locations.styles.ts
 import { StyleSheet } from "react-native";
 
 export const locStyles = StyleSheet.create({
@@ -21,27 +20,30 @@ export const locStyles = StyleSheet.create({
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
-    elevation: 8,
   },
+
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     overflow: "hidden",
   },
+
+  // Match AuthCard/Plants: lower tint opacity
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
   },
+
+  // Match Plants: thinner-looking border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.08)",
+    zIndex: 2,
   },
+
   cardRow: {
     flex: 1,
     flexDirection: "row",
@@ -55,6 +57,8 @@ export const locStyles = StyleSheet.create({
     width: 32,
     height: 32,
     borderRadius: 16,
+
+    // keep your look, but align with other screens
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.6)",
     alignItems: "center",
@@ -173,6 +177,7 @@ export const locStyles = StyleSheet.create({
     borderRadius: 16,
     color: "#FFFFFF",
     backgroundColor: "rgba(255,255,255,0.14)",
+    borderWidth: 0,
   },
 
   dropdown: { marginHorizontal: 16, marginBottom: 10 },
@@ -184,6 +189,7 @@ export const locStyles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0,
   },
   dropdownValue: { color: "#FFFFFF", fontWeight: "800" },
   dropdownList: {
@@ -191,6 +197,7 @@ export const locStyles = StyleSheet.create({
     borderRadius: 16,
     overflow: "hidden",
     backgroundColor: "rgba(255,255,255,0.10)",
+    borderWidth: 0,
   },
   dropdownItem: {
     paddingHorizontal: 14,
@@ -216,6 +223,7 @@ export const locStyles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 16,
     backgroundColor: "rgba(255,255,255,0.12)",
+    borderWidth: 0,
   },
   promptBtnText: { color: "#FFFFFF", fontWeight: "800" },
   promptPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
@@ -229,7 +237,6 @@ export const locStyles = StyleSheet.create({
     marginHorizontal: 16,
     marginBottom: 6,
   },
-  // base shape only
   segBtn: {
     flex: 1,
     paddingVertical: 10,
@@ -237,13 +244,11 @@ export const locStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  // inactive: soft neutral background
   segInactive: {
     backgroundColor: "rgba(255,255,255,0.12)",
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.12)",
   },
-  // active: strong blue highlight
   segActive: {
     backgroundColor: "rgba(11,114,133,0.92)",
     borderWidth: 1,
@@ -271,7 +276,6 @@ export const locStyles = StyleSheet.create({
     marginBottom: 4,
   },
 
-  // 2-column grid chips (2x4 when using 8 items)
   chipRow: {
     flexDirection: "row",
     flexWrap: "wrap",
