@@ -1,3 +1,4 @@
+// src/features/task-history/styles/task-history.styles.ts
 import { StyleSheet } from "react-native";
 
 export const s = StyleSheet.create({
@@ -14,45 +15,54 @@ export const s = StyleSheet.create({
     backgroundColor: "transparent",
   },
 
-  // ===== HISTORY TILES (glass, similar to Reminders) =====
+  // ===== HISTORY TILES (unified with Reminders/Home/Plants; NO inner shadow) =====
   cardWrap: {
-    borderRadius: 28,          // match Reminders glass cards
+    borderRadius: 28,
     overflow: "visible",
     position: "relative",
     marginBottom: 0,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
-    elevation: 8,
     minHeight: 72,
+
+    // ✅ REMOVE shadows/elevation that caused inner shade artifacts
+    // shadowColor: "#000",
+    // shadowOpacity: 0.25,
+    // shadowRadius: 16,
+    // shadowOffset: { width: 0, height: 8 },
+    // elevation: 8,
   },
+
   // raised state when menu is open (so it floats above neighbours)
   cardWrapRaised: {
     zIndex: 50,
     elevation: 50,
   },
+
   cardGlass: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     overflow: "hidden",
   },
+
+  // ✅ Match AuthCard/Plants: lower tint opacity to avoid inner-rectangle artifact
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
     zIndex: 1,
   },
+
+  // ✅ Match Plants: thinner border
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.08)",
     zIndex: 2,
   },
+
   cardRow: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "flex-start",  // pin content to top, no centering jump
+    alignItems: "flex-start", // pin content to top, no centering jump
     paddingHorizontal: 14,
     paddingVertical: 8,
   },
@@ -150,7 +160,7 @@ export const s = StyleSheet.create({
   // Note animation container (outer)
   noteContainer: {
     overflow: "hidden", // ensures animated height clips contents cleanly
-    marginTop: 6,       // fixed margin so expansion doesn't shift other controls
+    marginTop: 6, // fixed margin so expansion doesn't shift other controls
   },
 
   // Note area (inner content)
@@ -216,7 +226,6 @@ export const s = StyleSheet.create({
   },
 
   /* ---------- MODALS / FORMS (match Home) ---------- */
-  // bumped zIndex so modal always sits above tiles/FAB
   promptBackdrop: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: "rgba(0,0,0,0.6)",

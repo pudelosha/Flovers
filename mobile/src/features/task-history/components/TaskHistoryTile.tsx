@@ -1,22 +1,13 @@
+// src/features/task-history/components/TaskHistoryTile.tsx
 import React, { useState, useMemo, useRef } from "react";
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  Animated,
-  Easing,
-} from "react-native";
+import { View, Text, Pressable, StyleSheet, Animated, Easing } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 
 import { s } from "../styles/task-history.styles";
 import type { TaskHistoryItem } from "../types/task-history.types";
-import {
-  ACCENT_BY_TYPE,
-  ICON_BY_TYPE,
-} from "../../home/constants/home.constants";
+import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../home/constants/home.constants";
 import type { TaskType } from "../../home/types/home.types";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
@@ -61,6 +52,10 @@ function formatDateWithPattern(d: Date | string, pattern: string): string {
   return fmt.replace("YYYY", String(yyyy)).replace("MM", mm).replace("DD", dd);
 }
 
+// EXACT SAME green tones as AuthCard / Reminders / Plants
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 type Props = {
   item: TaskHistoryItem;
   isMenuOpen: boolean;
@@ -70,9 +65,6 @@ type Props = {
   onEditReminder?: (item: TaskHistoryItem) => void;
   onGoToPlant?: (item: TaskHistoryItem) => void;
 };
-
-// ✅ Use the same "tile" base tone as TaskTile (tab bar dark-left), slightly transparent
-const TAB_BAR_DARK_LEFT_A09 = "rgba(5, 31, 24, 0.9)";
 
 export default function TaskHistoryTile({
   item,
@@ -141,7 +133,7 @@ export default function TaskHistoryTile({
   const animatedOpacity = anim;
   const animatedMarginTop = anim.interpolate({
     inputRange: [0, 1],
-    outputRange: [0, 6], // subtle extra spacing when expanded
+    outputRange: [0, 6],
   });
 
   const handleDelete = () => {
@@ -175,61 +167,50 @@ export default function TaskHistoryTile({
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass stack: gradient base + fog highlight + border + accent gradient */}
+      {/* Glass stack: AuthCard-matching gradients + tint + border */}
       <View style={s.cardGlass}>
-        {/* Base background (replaces BlurView): dark green @ 0.9 */}
-        <View
+        {/* Base green gradient: EXACT match to AuthCard */}
+        <LinearGradient
           pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              backgroundColor: TAB_BAR_DARK_LEFT_A09,
-              borderRadius: 28,
-            },
-          ]}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Subtle "fog" highlight layer (similar to TaskTile) */}
+        {/* Fog highlight: EXACT match to AuthCard */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            "rgba(255, 255, 255, 0.06)", // Top-left highlight
-            "rgba(255, 255, 255, 0.02)", // Center
-            "rgba(255, 255, 255, 0.08)", // Bottom-right highlight
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
           ]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Accent gradient: left (accent) -> right (tab dark green) */}
+        {/* Accent wash: left (accent) -> right (AuthCard dark) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           colors={[
-            hexToRgba(accent, 0.30),
-            hexToRgba(accent, 0.15),
+            hexToRgba(accent, 0.34),
+            hexToRgba(accent, 0.18),
             hexToRgba(accent, 0.06),
-            TAB_BAR_DARK_LEFT_A09,
+            TAB_GREEN_DARK,
           ]}
           locations={[0, 0.28, 0.55, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Subtle border (replaces s.cardBorder which was tuned for blur) */}
-        <View
-          pointerEvents="none"
-          style={[
-            StyleSheet.absoluteFill,
-            {
-              borderRadius: 28,
-              borderWidth: 1,
-              borderColor: "rgba(255, 255, 255, 0.08)",
-            },
-          ]}
-        />
+        {/* Unified tint/border (same as other screens) */}
+        <View pointerEvents="none" style={s.cardTint} />
+        <View pointerEvents="none" style={s.cardBorder} />
       </View>
 
       <View style={[s.cardRow, !expanded && hasNote && styles.compactRow]}>
@@ -241,12 +222,7 @@ export default function TaskHistoryTile({
         >
           {/* Left: icon + type label */}
           <View style={s.leftCol}>
-            <View
-              style={[
-                s.leftIconBubble,
-                { backgroundColor: hexToRgba("#000000", 0.15) },
-              ]}
-            >
+            <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000000", 0.15) }]}>
               <MaterialCommunityIcons name={icon} size={20} color={accent} />
             </View>
             <Text style={[s.leftCaption, { color: accent }]}>
@@ -274,7 +250,7 @@ export default function TaskHistoryTile({
 
             {hasNote && (
               <>
-                {/* Invisible measurement copy: same styles, off-layout visually */}
+                {/* Invisible measurement copy */}
                 <View
                   style={styles.noteMeasureWrapper}
                   pointerEvents="none"
@@ -284,9 +260,7 @@ export default function TaskHistoryTile({
                   }}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>
-                      {t("taskHistory.tile.noteLabel")}
-                    </Text>
+                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </View>
@@ -303,9 +277,7 @@ export default function TaskHistoryTile({
                   ]}
                 >
                   <View style={s.noteBox}>
-                    <Text style={s.noteLabel}>
-                      {t("taskHistory.tile.noteLabel")}
-                    </Text>
+                    <Text style={s.noteLabel}>{t("taskHistory.tile.noteLabel")}</Text>
                     <Text style={s.noteText}>{item.note}</Text>
                   </View>
                 </Animated.View>
@@ -319,17 +291,10 @@ export default function TaskHistoryTile({
           <Pressable
             onPress={onToggleMenu}
             style={s.menuBtn}
-            android_ripple={{
-              color: "rgba(255,255,255,0.16)",
-              borderless: true,
-            }}
+            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
             hitSlop={8}
           >
-            <MaterialCommunityIcons
-              name="dots-horizontal"
-              size={20}
-              color="#FFFFFF"
-            />
+            <MaterialCommunityIcons name="dots-horizontal" size={20} color="#FFFFFF" />
           </Pressable>
         </View>
       </View>
@@ -370,9 +335,7 @@ export default function TaskHistoryTile({
               color="#FFFFFF"
               style={{ marginRight: 8 }}
             />
-            <Text style={s.menuItemText}>
-              {t("taskHistory.menu.editReminder")}
-            </Text>
+            <Text style={s.menuItemText}>{t("taskHistory.menu.editReminder")}</Text>
           </Pressable>
 
           {/* Go to plant */}
@@ -394,9 +357,7 @@ export default function TaskHistoryTile({
               color="#FF6B6B"
               style={{ marginRight: 8 }}
             />
-            <Text
-              style={[s.menuItemText, { color: "#FF6B6B", fontWeight: "800" }]}
-            >
+            <Text style={[s.menuItemText, { color: "#FF6B6B", fontWeight: "800" }]}>
               {t("taskHistory.menu.deleteTask")}
             </Text>
           </Pressable>
@@ -419,7 +380,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   compactRow: {
-    paddingTop: 8, // keep same as base
-    paddingBottom: 4, // only tighten bottom padding a bit
+    paddingTop: 8,
+    paddingBottom: 4,
   },
 });
