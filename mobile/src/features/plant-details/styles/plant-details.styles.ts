@@ -6,15 +6,21 @@ export const s = StyleSheet.create({
     borderRadius: 28,
     overflow: "hidden",
   },
+
+  // slightly lower tint to avoid inner-rect artifacts
   cardTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
   },
+
+  // Profile-style border (slightly “stronger” look)
   cardBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.20)",
+    zIndex: 2,
   },
 
   // Floating menu (aligned with Home styles)
@@ -22,8 +28,8 @@ export const s = StyleSheet.create({
     position: "absolute",
     right: 6,
     top: -6,
-    zIndex: 40,      // ⬅ bumped from 10
-    elevation: 40,   // ⬅ bumped from 10
+    zIndex: 40,
+    elevation: 40,
     paddingVertical: 6,
     paddingHorizontal: 10,
     borderRadius: 12,

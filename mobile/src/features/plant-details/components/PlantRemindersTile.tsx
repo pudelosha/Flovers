@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import { s } from "../styles/plant-details.styles";
-import { TILE_BLUR } from "../constants/plant-details.constants";
 import type { PlantReminderSummary } from "../types/plant-details.types";
 
 import { ACCENT_BY_TYPE, ICON_BY_TYPE } from "../../reminders/constants/reminders.constants";
@@ -59,6 +58,10 @@ type Props = {
   collapseMenusSignal?: number;
 };
 
+// Same green tones as AuthCard / PlantTile
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 export default function PlantRemindersTile({
   reminders,
   onMarkComplete,
@@ -98,13 +101,30 @@ export default function PlantRemindersTile({
   return (
     <View style={[styles.cardWrap, anyMenuOpen && styles.cardWrapRaised]}>
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={TILE_BLUR}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base green gradient */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+          locations={[0, 1]}
+          style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
+
+        {/* Fog highlight */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
         <View pointerEvents="none" style={s.cardTint} />
         <View pointerEvents="none" style={s.cardBorder} />
       </View>
@@ -179,11 +199,10 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 8 },
+
+    // elevation only (prevents iOS inner shadow artifacts with layered glass)
     elevation: 8,
+
     marginBottom: 14,
   },
   cardWrapRaised: { zIndex: 40, elevation: 40 },
