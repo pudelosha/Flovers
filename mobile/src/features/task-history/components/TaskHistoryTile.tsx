@@ -7,7 +7,6 @@ import {
   Animated,
   Easing,
 } from "react-native";
-import { BlurView } from "@react-native-community/blur";
 import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -71,6 +70,9 @@ type Props = {
   onEditReminder?: (item: TaskHistoryItem) => void;
   onGoToPlant?: (item: TaskHistoryItem) => void;
 };
+
+// ✅ Use the same "tile" base tone as TaskTile (tab bar dark-left), slightly transparent
+const TAB_BAR_DARK_LEFT_A09 = "rgba(5, 31, 24, 0.9)";
 
 export default function TaskHistoryTile({
   item,
@@ -173,30 +175,60 @@ export default function TaskHistoryTile({
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
-      {/* Glass stack: Blur + tint + border + accent gradient (left -> transparent) */}
+      {/* Glass stack: gradient base + fog highlight + border + accent gradient */}
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base background (replaces BlurView): dark green @ 0.9 */}
+        <View
+          pointerEvents="none"
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              backgroundColor: TAB_BAR_DARK_LEFT_A09,
+              borderRadius: 28,
+            },
+          ]}
         />
-        <View pointerEvents="none" style={s.cardTint} />
-        <View pointerEvents="none" style={s.cardBorder} />
 
-        {/* Accent gradient: left (accent) -> right (transparent) */}
+        {/* Subtle "fog" highlight layer (similar to TaskTile) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)", // Top-left highlight
+            "rgba(255, 255, 255, 0.02)", // Center
+            "rgba(255, 255, 255, 0.08)", // Bottom-right highlight
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
+        {/* Accent gradient: left (accent) -> right (tab dark green) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           colors={[
-            hexToRgba(accent, 0.18),
-            hexToRgba(accent, 0.1),
-            "rgba(0,0,0,0)",
+            hexToRgba(accent, 0.30),
+            hexToRgba(accent, 0.15),
+            hexToRgba(accent, 0.06),
+            TAB_BAR_DARK_LEFT_A09,
           ]}
-          locations={[0, 0.35, 1]}
+          locations={[0, 0.28, 0.55, 1]}
           style={StyleSheet.absoluteFill}
+        />
+
+        {/* Subtle border (replaces s.cardBorder which was tuned for blur) */}
+        <View
+          pointerEvents="none"
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              borderRadius: 28,
+              borderWidth: 1,
+              borderColor: "rgba(255, 255, 255, 0.08)",
+            },
+          ]}
         />
       </View>
 

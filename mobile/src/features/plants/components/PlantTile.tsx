@@ -1,12 +1,11 @@
 import React from "react";
 import { View, Pressable, Text, StyleSheet, Image } from "react-native";
-import { BlurView } from "@react-native-community/blur";
+import LinearGradient from "react-native-linear-gradient";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { s } from "../styles/plants.styles";
 import { Plant } from "../types/plants.types";
 import PlantMenu from "./PlantMenu";
-import { TILE_BLUR } from "../constants/plants.constants";
 
 type Props = {
   plant: Plant;
@@ -19,6 +18,10 @@ type Props = {
   onDelete: () => void;
   onShowQr: () => void;
 };
+
+// Bottom tab bar colors (solid, slightly transparent)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function PlantTile({
   plant,
@@ -35,16 +38,50 @@ export default function PlantTile({
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
+      {/* Glass stack: reversed tab-bar gradient + fog + border */}
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={TILE_BLUR}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Reversed tab bar gradient: light -> dark */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          colors={[
+            TAB_GREEN_LIGHT, // left (lighter)
+            TAB_GREEN_DARK,  // right (darker)
+          ]}
+          locations={[0, 1]}
+          style={[
+            StyleSheet.absoluteFill,
+            { borderRadius: 28 },
+          ]}
         />
-        <View pointerEvents="none" style={s.cardTint} />
-        <View pointerEvents="none" style={s.cardBorder} />
+
+        {/* Subtle fog highlight (same system-wide glass effect) */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)",
+            "rgba(255, 255, 255, 0.02)",
+            "rgba(255, 255, 255, 0.08)",
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+
+        {/* Subtle border */}
+        <View
+          pointerEvents="none"
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              borderRadius: 28,
+              borderWidth: 1,
+              borderColor: "rgba(255,255,255,0.08)",
+            },
+          ]}
+        />
       </View>
 
       <View style={s.cardRow}>

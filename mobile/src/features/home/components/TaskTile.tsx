@@ -1,7 +1,13 @@
-import React, { useEffect, useRef } from "react";
-import { Pressable, Text, View, StyleSheet, Animated, Easing } from "react-native";
+import React, { useEffect, useMemo, useRef } from "react";
+import {
+  Pressable,
+  Text,
+  View,
+  StyleSheet,
+  Animated,
+  Easing,
+} from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { BlurView } from "@react-native-community/blur";
 import LinearGradient from "react-native-linear-gradient";
 
 import { s } from "../styles/home.styles";
@@ -19,7 +25,14 @@ type Props = {
   onEdit: () => void;
   onGoToPlant: () => void;
   onShowHistory?: () => void;
+  // Intentionally omit onDelete to remove the Delete action from the menu on Home
 };
+
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
+
+// Tile should end in the SAME dark-green tone as the tab bar's LEFT color,
+// but slightly transparent to let the wallpaper/blur breathe through.
+const TAB_BAR_DARK_LEFT_A09 = "rgba(5, 31, 24, 0.9)";
 
 export default function TaskTile({
   task,
@@ -36,101 +49,147 @@ export default function TaskTile({
   const accent = ACCENT_BY_TYPE[task.type];
   const icon = ICON_BY_TYPE[task.type];
 
+  // Detect overdue by label text (e.g. "Overdue", "Overdue by 2 days")
   const isOverdue =
     typeof task.due === "string" && task.due.toLowerCase().includes("overdue");
 
   const formattedDate = formatDateWithPattern(task.dueDate, settings.dateFormat);
 
-  // --- overdue pulse ---
+  // Pulse controller for overdue state: fades a red overlay in/out on the LEFT side only
   const pulse = useRef(new Animated.Value(0)).current;
+  const pulseLoopRef = useRef<Animated.CompositeAnimation | null>(null);
 
   useEffect(() => {
+    // stop any existing loop
+    pulseLoopRef.current?.stop();
+    pulseLoopRef.current = null;
+
     if (!isOverdue) {
-      pulse.stopAnimation();
       pulse.setValue(0);
       return;
     }
 
-    const anim = Animated.loop(
+    // slow, subtle breathing pulse
+    const loop = Animated.loop(
       Animated.sequence([
         Animated.timing(pulse, {
           toValue: 1,
           duration: 1400,
-          easing: Easing.inOut(Easing.cubic),
-          useNativeDriver: true,
+          easing: Easing.inOut(Easing.quad),
+          useNativeDriver: true, // animating opacity only
         }),
         Animated.timing(pulse, {
           toValue: 0,
           duration: 1400,
-          easing: Easing.inOut(Easing.cubic),
+          easing: Easing.inOut(Easing.quad),
           useNativeDriver: true,
         }),
       ])
     );
 
-    anim.start();
-    return () => anim.stop();
+    pulseLoopRef.current = loop;
+    loop.start();
+
+    return () => {
+      loop.stop();
+    };
   }, [isOverdue, pulse]);
 
-  // ⬆️ slightly stronger than before
-  const overdueOverlayOpacity = pulse.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 0.35], // was 0.28
-  });
+  // Red overlay gradient (left -> transparent), opacity animated by `pulse`.
+  // This makes the left side visually shift from task accent toward red while keeping the right side unchanged.
+  const overdueOverlayColors = useMemo(
+    () => [
+      "rgba(255, 59, 48, 0.55)", // iOS-like red; strong on the left
+      "rgba(255, 59, 48, 0.18)", // fade
+      "rgba(255, 59, 48, 0.00)", // transparent toward the right
+    ],
+    []
+  );
 
   return (
     <View style={[s.cardWrap, isMenuOpen && s.cardWrapRaised]}>
+      {/* Glass stack with gradient fog background */}
       <View style={s.cardGlass}>
-        <BlurView
-          style={StyleSheet.absoluteFill}
-          blurType="light"
-          blurAmount={20}
-          overlayColor="transparent"
-          reducedTransparencyFallbackColor="transparent"
+        {/* Base background: dark green with ~0.9 opacity */}
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              backgroundColor: TAB_BAR_DARK_LEFT_A09,
+              borderRadius: 28,
+            },
+          ]}
         />
 
-        <View style={s.cardTint} />
-        <View style={s.cardBorder} />
+        {/* Foggy glass effect overlay - very subtle */}
+        <LinearGradient
+          pointerEvents="none"
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          colors={[
+            "rgba(255, 255, 255, 0.06)", // Top-left subtle highlight
+            "rgba(255, 255, 255, 0.02)", // Center
+            "rgba(255, 255, 255, 0.08)", // Bottom-right subtle highlight
+          ]}
+          locations={[0, 0.5, 1]}
+          style={StyleSheet.absoluteFill}
+        />
 
-        {/* Base accent gradient */}
+        {/* Accent gradient: task-type color (left) -> tab dark green (right) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           colors={[
-            hexToRgba(accent, 0.18),
-            hexToRgba(accent, 0.1),
-            "rgba(0,0,0,0)",
+            hexToRgba(accent, 0.34), // Left: stronger task-type tint
+            hexToRgba(accent, 0.18), // Mid-left
+            hexToRgba(accent, 0.06), // Mid-right
+            TAB_BAR_DARK_LEFT_A09, // Right: END at dark green (no light greens)
           ]}
-          locations={[0, 0.35, 1]}
+          locations={[0, 0.28, 0.55, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* Overdue red pulse (slightly stronger) */}
+        {/* Overdue pulse overlay: red -> transparent, animated opacity */}
         {isOverdue && (
-          <Animated.View
+          <AnimatedLinearGradient
             pointerEvents="none"
-            style={[StyleSheet.absoluteFill, { opacity: overdueOverlayOpacity }]}
-          >
-            <LinearGradient
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 0 }}
-              colors={[
-                "rgba(255, 59, 48, 0.65)", // was 0.55
-                "rgba(255, 59, 48, 0.30)", // was 0.20
-                "rgba(0,0,0,0)",
-              ]}
-              locations={[0, 0.4, 1]}
-              style={StyleSheet.absoluteFill}
-            />
-          </Animated.View>
+            start={{ x: 0, y: 0.5 }}
+            end={{ x: 1, y: 0.5 }}
+            colors={overdueOverlayColors}
+            locations={[0, 0.28, 0.7]}
+            style={[
+              StyleSheet.absoluteFill,
+              {
+                opacity: pulse, // 0..1
+              },
+            ]}
+          />
         )}
+
+        {/* Subtle border */}
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              borderRadius: 28,
+              borderWidth: 1,
+              borderColor: "rgba(255, 255, 255, 0.08)",
+            },
+          ]}
+        />
       </View>
 
-      {/* Content */}
+      {/* Content row */}
       <View style={[s.cardRow, { paddingVertical: 4 }]}>
+        {/* Left: icon + caption */}
         <View style={s.leftCol}>
-          <View style={[s.leftIconBubble, { backgroundColor: hexToRgba("#000", 0.15) }]}>
+          <View
+            style={[
+              s.leftIconBubble,
+              { backgroundColor: hexToRgba("#000", 0.15) },
+            ]}
+          >
             <MaterialCommunityIcons name={icon} size={20} color={accent} />
           </View>
           <Text style={[s.leftCaption, { color: accent }]}>
@@ -138,32 +197,35 @@ export default function TaskTile({
           </Text>
         </View>
 
+        {/* Center: title, location, due */}
         <View style={s.centerCol}>
           <Text style={s.plantName} numberOfLines={1}>
             {task.plant}
           </Text>
 
-          {task.location && (
+          {task.location ? (
             <Text style={s.location} numberOfLines={1}>
               {task.location}
             </Text>
-          )}
+          ) : null}
 
           <View style={s.dueRow}>
-            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>
-              {task.due}
-            </Text>
+            <Text style={[s.dueWhen, isOverdue && s.dueOverdue]}>{task.due}</Text>
             <Text style={[s.dueDateText, isOverdue && s.dueOverdue]}>
               {formattedDate}
             </Text>
           </View>
         </View>
 
+        {/* Right: menu button */}
         <View style={s.rightCol}>
           <Pressable
             onPress={onToggleMenu}
             style={s.menuBtn}
-            android_ripple={{ color: "rgba(255,255,255,0.16)", borderless: true }}
+            android_ripple={{
+              color: "rgba(255,255,255,0.16)",
+              borderless: true,
+            }}
             hitSlop={8}
           >
             <MaterialCommunityIcons
@@ -175,6 +237,7 @@ export default function TaskTile({
         </View>
       </View>
 
+      {/* Floating menu — explicitly hide Delete on Home */}
       {isMenuOpen && (
         <TaskMenu
           onMarkComplete={onMarkComplete}
@@ -197,7 +260,13 @@ function hexToRgba(hex?: string, alpha = 1) {
   if (!h.startsWith("#")) h = `#${h}`;
   h = h.replace("#", "");
 
-  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  if (h.length === 3) {
+    h = h
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+
   if (h.length !== 6) return fallback;
 
   const bigint = parseInt(h, 16);
@@ -220,8 +289,5 @@ function formatDateWithPattern(d: Date | string, pattern: string): string {
 
   const fmt = pattern && typeof pattern === "string" ? pattern : "DD.MM.YYYY";
 
-  return fmt
-    .replace("YYYY", String(yyyy))
-    .replace("MM", mm)
-    .replace("DD", dd);
+  return fmt.replace("YYYY", String(yyyy)).replace("MM", mm).replace("DD", dd);
 }
