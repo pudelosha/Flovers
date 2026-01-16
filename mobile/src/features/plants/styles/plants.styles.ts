@@ -258,23 +258,33 @@ export const s = StyleSheet.create({
   },
 
   /* ---------- EMPTY STATE ---------- */
+  /* ---------- EMPTY STATE (match Home / TaskHistory) ---------- */
   emptyWrap: { marginTop: 0 },
+
   emptyGlass: {
     borderRadius: 28,
     overflow: "hidden",
     minHeight: 140,
   },
+
+  // Match AuthCard/Plants-home glass: lower tint opacity
   emptyTint: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(255,255,255,0.20)",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
   },
+
+  // Match Plants/Home border
   emptyBorder: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.20)",
+    borderColor: "rgba(255,255,255,0.18)",
+    zIndex: 2,
   },
+
   emptyInner: { padding: 16, alignItems: "center" },
+
   emptyTitle: {
     color: "#FFFFFF",
     fontSize: 18,
@@ -282,11 +292,14 @@ export const s = StyleSheet.create({
     marginBottom: 8,
     textAlign: "center",
   },
+
   emptyDescBox: { alignSelf: "stretch", marginTop: 20 },
+
   emptyText: {
     color: "rgba(255,255,255,0.95)",
     fontWeight: "600",
     lineHeight: 18,
   },
+
   inlineBold: { color: "#FFFFFF", fontWeight: "800" },
 });

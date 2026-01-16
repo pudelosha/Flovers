@@ -11,11 +11,12 @@ import {
   Alert,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import LinearGradient from "react-native-linear-gradient";
+
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-import { useSettings } from "../../../app/providers/SettingsProvider"; // 👈 NEW
+import { useSettings } from "../../../app/providers/SettingsProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -30,7 +31,10 @@ import {
 import { locStyles as s } from "../styles/locations.styles";
 import LocationTile from "../components/LocationTile";
 import ConfirmDeleteLocationModal from "../components/modals/ConfirmDeleteLocationModal";
-import SortLocationsModal, { SortDir, SortKey } from "../components/modals/SortLocationsModal";
+import SortLocationsModal, {
+  SortDir,
+  SortKey,
+} from "../components/modals/SortLocationsModal";
 import EditLocationModal from "../components/modals/EditLocationModal";
 
 import type { PlantLocation } from "../types/locations.types";
@@ -58,12 +62,16 @@ function mapApiToLocation(api: ApiLocation): PlantLocation {
   };
 }
 
+// Empty-state gradient (match Home / Plants / TaskHistory)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 export default function LocationsScreen() {
   const nav = useNavigation();
 
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
-  const { settings } = useSettings(); // 👈 NEW
+  const { settings } = useSettings();
 
   // Safe t() (treat key-echo as missing)
   const tr = useCallback(
@@ -83,7 +91,8 @@ export default function LocationsScreen() {
       if (currentLanguage === "pl") {
         const mod10 = count % 10;
         const mod100 = count % 100;
-        if (count === 1) return tr("locations.plantCount.one", "1 roślina", { count });
+        if (count === 1)
+          return tr("locations.plantCount.one", "1 roślina", { count });
         if (mod10 >= 2 && mod10 <= 4 && !(mod100 >= 12 && mod100 <= 14)) {
           return tr("locations.plantCount.few", "{{count}} rośliny", { count });
         }
@@ -143,7 +152,8 @@ export default function LocationsScreen() {
       setLocations(data.map(mapApiToLocation));
     } catch (e: any) {
       showToast(
-        e?.message || tr("locations.toast.loadFailed", "Failed to load locations"),
+        e?.message ||
+          tr("locations.toast.loadFailed", "Failed to load locations"),
         "error"
       );
       setLocations([]);
@@ -312,7 +322,9 @@ export default function LocationsScreen() {
       setLocations((prev) => prev.filter((l) => l.id !== confirmDeleteId));
       showToast(tr("locations.toast.deleted", "Location deleted"), "success");
     } catch (e: any) {
-      const msg = e?.message || tr("locations.toast.deleteFailed", "Could not delete this location.");
+      const msg =
+        e?.message ||
+        tr("locations.toast.deleteFailed", "Could not delete this location.");
       Alert.alert(tr("locations.alert.deleteFailedTitle", "Delete failed"), msg);
     } finally {
       setConfirmDeleteId(null);
@@ -338,7 +350,10 @@ export default function LocationsScreen() {
         );
       }
     } catch (e: any) {
-      showToast(e?.message || tr("locations.toast.saveFailed", "Could not save location"), "error");
+      showToast(
+        e?.message || tr("locations.toast.saveFailed", "Could not save location"),
+        "error"
+      );
     } finally {
       setEditOpen(false);
       setEditingId(null);
@@ -392,8 +407,14 @@ export default function LocationsScreen() {
         keyExtractor={(l) => l.id}
         renderItem={({ item }) => {
           const v = getAnimForId(item.id);
-          const translateY = v.interpolate({ inputRange: [0, 1], outputRange: [14, 0] });
-          const scale = v.interpolate({ inputRange: [0, 1], outputRange: [0.98, 1] });
+          const translateY = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [14, 0],
+          });
+          const scale = v.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0.98, 1],
+          });
           const opacity = v;
 
           return (
@@ -417,7 +438,9 @@ export default function LocationsScreen() {
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={() => setMenuOpenId(null)}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
         ListEmptyComponent={() => (
           <Animated.View
             style={[
@@ -428,25 +451,31 @@ export default function LocationsScreen() {
               },
             ]}
           >
+            {/* ✅ Empty-state now matches Home: gradient glass, no BlurView */}
             <View style={s.emptyGlass}>
-              <BlurView
+              <LinearGradient
+                pointerEvents="none"
+                start={{ x: 0, y: 0.5 }}
+                end={{ x: 1, y: 0.5 }}
+                colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                locations={[0, 1]}
                 style={StyleSheet.absoluteFill}
-                blurType="light"
-                blurAmount={20}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
               />
-              <View
+              <LinearGradient
                 pointerEvents="none"
-                style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]}
-              />
-              <View
-                pointerEvents="none"
-                style={[
-                  StyleSheet.absoluteFill,
-                  { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                colors={[
+                  "rgba(255, 255, 255, 0.06)",
+                  "rgba(255, 255, 255, 0.02)",
+                  "rgba(255, 255, 255, 0.08)",
                 ]}
+                locations={[0, 0.5, 1]}
+                style={StyleSheet.absoluteFill}
               />
+
+              <View pointerEvents="none" style={s.emptyTint} />
+              <View pointerEvents="none" style={s.emptyBorder} />
 
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
@@ -481,7 +510,7 @@ export default function LocationsScreen() {
         >
           <FAB
             bottomOffset={92}
-            position={settings.fabPosition} // 👈 NEW
+            position={settings.fabPosition}
             actions={[
               {
                 key: "add",

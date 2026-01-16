@@ -16,8 +16,8 @@ import {
   useFocusEffect,
   useRoute,
 } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
 
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
@@ -68,6 +68,10 @@ type Filters = {
   dueTo?: string; // ISO yyyy-mm-dd
 };
 
+// Empty-state gradient (match Home-style green)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
+
 // small helper
 function todayISO() {
   const d = new Date();
@@ -77,7 +81,10 @@ function todayISO() {
   return `${Y}-${M}-${D}`;
 }
 
-function mapPlantOptions(apiPlants: any[], unnamedFallback: string): PlantOption[] {
+function mapPlantOptions(
+  apiPlants: any[],
+  unnamedFallback: string
+): PlantOption[] {
   return (apiPlants || []).map((p) => ({
     id: String(p.id),
     name:
@@ -215,7 +222,8 @@ export default function RemindersScreen() {
       setHasLoadedOnce(true);
     } catch (e: any) {
       const msg =
-        e?.message || tr("reminders.toast.loadFailed", "Failed to load reminders");
+        e?.message ||
+        tr("reminders.toast.loadFailed", "Failed to load reminders");
       setError(msg);
       setUiReminders([]);
       setPlantOptions([]);
@@ -398,9 +406,13 @@ export default function RemindersScreen() {
       setConfirmDeleteName("");
       showToast(
         e?.message
-          ? tr("reminders.toast.deleteFailedWithReason", "Delete failed: {{reason}}", {
-              reason: e.message,
-            })
+          ? tr(
+              "reminders.toast.deleteFailedWithReason",
+              "Delete failed: {{reason}}",
+              {
+                reason: e.message,
+              }
+            )
           : tr("reminders.toast.deleteFailed", "Delete failed"),
         "error"
       );
@@ -520,10 +532,7 @@ export default function RemindersScreen() {
           if (r.plantId !== filters.plantId) return false;
         } else {
           const plant = plantOptions.find((p) => p.id === filters.plantId);
-          if (
-            plant &&
-            normalizeStr(r.plant) !== normalizeStr(plant.name)
-          )
+          if (plant && normalizeStr(r.plant) !== normalizeStr(plant.name))
             return false;
         }
       }
@@ -580,7 +589,8 @@ export default function RemindersScreen() {
     );
   }, [filters]);
 
-  const showFAB = !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
+  const showFAB =
+    !editOpen && !confirmDeleteReminderId && !sortOpen && !filterOpen;
 
   // ---------- ENTRANCE ANIMATION ----------
   const animMapRef = useRef<Map<string, Animated.Value>>(new Map());
@@ -755,7 +765,9 @@ export default function RemindersScreen() {
             const opacity = v;
 
             return (
-              <Animated.View style={{ opacity, transform: [{ translateY }, { scale }] }}>
+              <Animated.View
+                style={{ opacity, transform: [{ translateY }, { scale }] }}
+              >
                 <ReminderTile
                   reminder={item}
                   isMenuOpen={menuOpenId === item.id}
@@ -790,32 +802,34 @@ export default function RemindersScreen() {
                   },
                 ]}
               >
-                <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
-                  <BlurView
+                <View style={s.emptyGlass}>
+                  {/* Base green gradient */}
+                  <LinearGradient
+                    pointerEvents="none"
+                    start={{ x: 0, y: 0.5 }}
+                    end={{ x: 1, y: 0.5 }}
+                    colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                    locations={[0, 1]}
                     style={StyleSheet.absoluteFill}
-                    blurType="light"
-                    blurAmount={20}
-                    overlayColor="transparent"
-                    reducedTransparencyFallbackColor="transparent"
                   />
-                  <View
+
+                  {/* Soft white sheen */}
+                  <LinearGradient
                     pointerEvents="none"
-                    style={[
-                      StyleSheet.absoluteFill,
-                      { backgroundColor: "rgba(255,255,255,0.20)" },
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 1 }}
+                    colors={[
+                      "rgba(255, 255, 255, 0.06)",
+                      "rgba(255, 255, 255, 0.02)",
+                      "rgba(255, 255, 255, 0.08)",
                     ]}
+                    locations={[0, 0.5, 1]}
+                    style={StyleSheet.absoluteFill}
                   />
-                  <View
-                    pointerEvents="none"
-                    style={[
-                      StyleSheet.absoluteFill,
-                      {
-                        borderRadius: 28,
-                        borderWidth: 1,
-                        borderColor: "rgba(255,255,255,0.20)",
-                      },
-                    ]}
-                  />
+
+                  {/* Tint + border overlays */}
+                  <View pointerEvents="none" style={s.emptyTint} />
+                  <View pointerEvents="none" style={s.emptyBorder} />
 
                   <View style={s.emptyInner}>
                     <MaterialCommunityIcons

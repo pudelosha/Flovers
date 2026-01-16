@@ -114,6 +114,24 @@ export const s = StyleSheet.create({
     paddingHorizontal: 0,
     paddingTop: 0,
   },
+
+  // ADDED (styles are in this separate file, as requested)
+  emptyGlass: {
+    borderRadius: 28,
+    overflow: "hidden",
+    minHeight: 140,
+  },
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.14)",
+  },
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+  },
+
   emptyInner: { padding: 16, alignItems: "center" },
   emptyTitle: {
     color: "#FFFFFF",

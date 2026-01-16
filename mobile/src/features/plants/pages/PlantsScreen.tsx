@@ -16,9 +16,10 @@ import {
   Easing,
 } from "react-native";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import LinearGradient from "react-native-linear-gradient";
+
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import { useSettings } from "../../../app/providers/SettingsProvider";
 
@@ -91,6 +92,10 @@ function mapApiToPlant(
 function norm(v?: string) {
   return (v || "").toLowerCase().trim();
 }
+
+// Empty-state gradient (match Home / TaskHistory)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function PlantsScreen() {
   const nav = useNavigation<any>();
@@ -225,7 +230,7 @@ export default function PlantsScreen() {
     setJournalVisible(true);
   };
 
-  // ✅ EDIT MODAL open (stabilized to avoid focus-effect loop)
+  // EDIT MODAL open
   const openEditModal = useCallback(
     async (p: Plant) => {
       setMenuOpenId(null);
@@ -278,7 +283,7 @@ export default function PlantsScreen() {
     [t]
   );
 
-  // ✅ helper: open edit modal by id without loading tiles
+  // helper: open edit modal by id without loading tiles
   const openEditModalById = useCallback(
     async (id: string) => {
       const stub: Plant = {
@@ -295,7 +300,7 @@ export default function PlantsScreen() {
     [openEditModal]
   );
 
-  // ✅ Focus load: if editPlantId is provided => show spinner only + open modal, skip tiles load
+  // Focus load: if editPlantId is provided => show spinner only + open modal, skip tiles load
   useFocusEffect(
     useCallback(() => {
       let mounted = true;
@@ -652,20 +657,35 @@ export default function PlantsScreen() {
               },
             ]}
           >
+            {/* Empty-state now matches Home: gradient glass, no BlurView */}
             <View style={s.emptyGlass}>
-              <BlurView
+              <LinearGradient
+                pointerEvents="none"
+                start={{ x: 0, y: 0.5 }}
+                end={{ x: 1, y: 0.5 }}
+                colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                locations={[0, 1]}
                 style={StyleSheet.absoluteFill}
-                blurType="light"
-                blurAmount={20}
-                overlayColor="transparent"
-                reducedTransparencyFallbackColor="transparent"
               />
+              <LinearGradient
+                pointerEvents="none"
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                colors={[
+                  "rgba(255, 255, 255, 0.06)",
+                  "rgba(255, 255, 255, 0.02)",
+                  "rgba(255, 255, 255, 0.08)",
+                ]}
+                locations={[0, 0.5, 1]}
+                style={StyleSheet.absoluteFill}
+              />
+
               <View pointerEvents="none" style={s.emptyTint} />
               <View pointerEvents="none" style={s.emptyBorder} />
 
               <View style={s.emptyInner}>
                 <MaterialCommunityIcons
-                  name="sprout-outline"
+                  name="flower-tulip-outline"
                   size={26}
                   color="#FFFFFF"
                   style={{ marginBottom: 10 }}
@@ -853,7 +873,6 @@ export default function PlantsScreen() {
         }}
       />
 
-      {/* Journal modal render */}
       <PlantJournalModal
         visible={journalVisible}
         plantId={journalPlantId}

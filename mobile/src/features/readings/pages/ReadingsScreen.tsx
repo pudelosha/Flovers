@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo, useState, useRef, useEffect } from "react";
 import { View, RefreshControl, Pressable, Animated, Easing, StyleSheet, Text } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import LinearGradient from "react-native-linear-gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -56,6 +56,10 @@ type Filters = {
   location?: string; // exact
   status?: Status; // exact
 };
+
+// Empty-state gradient colors (keep local, do not change logic elsewhere)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function ReadingsScreen() {
   const nav = useNavigation();
@@ -529,8 +533,6 @@ export default function ReadingsScreen() {
     );
   }
 
-  const isEmpty = derivedItems.length === 0;
-
   return (
     <View style={{ flex: 1 }}>
       <GlassHeader
@@ -613,22 +615,32 @@ export default function ReadingsScreen() {
                 },
               ]}
             >
-              <View style={{ borderRadius: 28, overflow: "hidden", minHeight: 140 }}>
-                <BlurView
-                  style={StyleSheet.absoluteFill}
-                  blurType="light"
-                  blurAmount={20}
-                  overlayColor="transparent"
-                  reducedTransparencyFallbackColor="transparent"
-                />
-                <View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: "rgba(255,255,255,0.20)" }]} />
-                <View
+              {/* CHANGED: BlurView block replaced by gradient-based glass frame (logic unchanged) */}
+              <View style={s.emptyGlass}>
+                <LinearGradient
                   pointerEvents="none"
-                  style={[
-                    StyleSheet.absoluteFill,
-                    { borderRadius: 28, borderWidth: 1, borderColor: "rgba(255,255,255,0.20)" },
-                  ]}
+                  start={{ x: 0, y: 0.5 }}
+                  end={{ x: 1, y: 0.5 }}
+                  colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                  locations={[0, 1]}
+                  style={StyleSheet.absoluteFill}
                 />
+
+                <LinearGradient
+                  pointerEvents="none"
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  colors={[
+                    "rgba(255,255,255,0.06)",
+                    "rgba(255,255,255,0.02)",
+                    "rgba(255,255,255,0.08)",
+                  ]}
+                  locations={[0, 0.5, 1]}
+                  style={StyleSheet.absoluteFill}
+                />
+
+                <View pointerEvents="none" style={s.emptyTint} />
+                <View pointerEvents="none" style={s.emptyBorder} />
 
                 <View style={s.emptyInner}>
                   <MaterialCommunityIcons name="access-point" size={26} color="#FFFFFF" style={{ marginBottom: 10 }} />

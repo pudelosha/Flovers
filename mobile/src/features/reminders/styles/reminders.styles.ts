@@ -418,12 +418,21 @@ export const s = StyleSheet.create({
   /* ---------- EMPTY STATE ---------- */
   emptyWrap: { marginTop: 0 },
   emptyGlass: {
-    borderRadius: 18,
+    borderRadius: 28,
     overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.28)",
-    backgroundColor: "rgba(255,255,255,0.12)",
     minHeight: 140,
+  },
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
+  },
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    zIndex: 2,
   },
   emptyInner: { padding: 16, alignItems: "center" },
   emptyTitle: {
