@@ -10,6 +10,10 @@ type Props = {
   onChangeNote: (v: string) => void;
   onCancel: () => void;
   onConfirm: () => void;
+
+  // NEW: allow single + bulk modes
+  mode?: "single" | "bulk";
+  count?: number;
 };
 
 export default function CompleteTaskModal({
@@ -18,10 +22,14 @@ export default function CompleteTaskModal({
   onChangeNote,
   onCancel,
   onConfirm,
+  mode = "single",
+  count,
 }: Props) {
   const { t } = useTranslation();
 
   if (!visible) return null;
+
+  const isBulk = mode === "bulk";
 
   return (
     <>
@@ -56,13 +64,21 @@ export default function CompleteTaskModal({
         </View>
 
         <View style={s.promptInner}>
-          <Text style={s.promptTitle}>{t("homeModals.complete.title")}</Text>
+          <Text style={s.promptTitle}>
+            {isBulk
+              ? t("homeModals.completeBulk.title", { count: count ?? 0 })
+              : t("homeModals.complete.title")}
+          </Text>
 
           {/* Note input */}
           <Text style={s.inputLabel}>{t("homeModals.complete.noteLabel")}</Text>
 
-          {/* NEW: helper text */}
-          <Text style={s.inputHint}>{t("homeModals.complete.noteHint")}</Text>
+          {/* helper text */}
+          <Text style={s.inputHint}>
+            {isBulk
+              ? t("homeModals.completeBulk.noteHint")
+              : t("homeModals.complete.noteHint")}
+          </Text>
 
           <TextInput
             style={[
@@ -105,7 +121,9 @@ export default function CompleteTaskModal({
               }}
             >
               <Text style={[s.promptBtnText, s.promptPrimaryText]}>
-                {t("homeModals.complete.confirm")}
+                {isBulk
+                  ? t("homeModals.completeBulk.confirm")
+                  : t("homeModals.complete.confirm")}
               </Text>
             </Pressable>
           </View>

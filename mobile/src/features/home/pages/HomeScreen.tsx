@@ -113,9 +113,11 @@ export default function HomeScreen() {
     setToastVisible(true);
   };
 
-  // NEW: "mark complete" modal state
+  // NEW: "mark complete" modal state (single + bulk)
+  type CompleteMode = "single" | "bulk";
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
-  const [completeTaskId, setCompleteTaskId] = useState<string | null>(null);
+  const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
+  const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
   const [completeNote, setCompleteNote] = useState("");
 
   const load = useCallback(async () => {
@@ -383,40 +385,64 @@ export default function HomeScreen() {
 
   const showFAB = !sortOpen && !filterOpen;
 
-  // NEW: open / close / confirm handlers for complete-with-note
-  const openCompleteModal = (taskId: string) => {
-    setCompleteTaskId(taskId);
+  // NEW: open / close / confirm handlers for complete-with-note (single + bulk)
+  const openCompleteModal = (taskIds: string[], mode: CompleteMode) => {
+    setCompleteMode(mode);
+    setCompleteTaskIds(taskIds);
     setCompleteNote("");
     setCompleteModalVisible(true);
   };
 
   const closeCompleteModal = () => {
     setCompleteModalVisible(false);
-    setCompleteTaskId(null);
+    setCompleteMode("single");
+    setCompleteTaskIds([]);
     setCompleteNote("");
   };
 
   const handleConfirmComplete = async () => {
-    if (!completeTaskId) {
+    if (!completeTaskIds || completeTaskIds.length === 0) {
       closeCompleteModal();
       return;
     }
 
-    const finishedTaskId = completeTaskId; // capture before we clear state
+    const ids = [...completeTaskIds]; // capture before we clear state
 
     try {
       // Show spinner + avoid broken intermediate list
       setLoading(true);
       setTasks([]);
 
-      await markHomeTaskComplete(finishedTaskId, completeNote);
+      const results = await Promise.allSettled(
+        ids.map((id) => markHomeTaskComplete(id, completeNote))
+      );
 
       closeCompleteModal();
 
       // Reload from backend so cloned/next task appears
       await load(); // load() will setLoading(false) in its finally
 
-      showToast(t("home.toasts.taskCompleted"), "success");
+      const okCount = results.filter((r) => r.status === "fulfilled").length;
+      const failCount = results.length - okCount;
+
+      if (failCount === 0) {
+        showToast(
+          completeMode === "bulk"
+            ? t("home.toasts.tasksCompleted")
+            : t("home.toasts.taskCompleted"),
+          "success"
+        );
+      } else if (okCount > 0) {
+        showToast(
+          t("home.toasts.completeSomeFailed", {
+            ok: okCount,
+            total: results.length,
+          }),
+          "error"
+        );
+      } else {
+        showToast(t("home.toasts.completeFailed"), "error");
+      }
     } catch (e: any) {
       closeCompleteModal();
       setLoading(false); // in case load() was not reached
@@ -503,6 +529,23 @@ export default function HomeScreen() {
           ...baseFabActions,
         ]
       : [
+          // Put "Mark visible as complete" at the top when a view filter is active
+          ...(derivedTasks.length > 0
+            ? [
+                {
+                  key: "completeVisible",
+                  label: t("home.fab.markVisibleAsComplete"),
+                  icon: "check-circle-outline",
+                  onPress: () => {
+                    setMenuOpenId(null);
+                    openCompleteModal(
+                      derivedTasks.map((x) => x.id),
+                      "bulk"
+                    );
+                  },
+                } as const,
+              ]
+            : []),
           // Put "Show all tasks" at the top when a view filter is active
           {
             key: "clearViewFilter",
@@ -571,7 +614,7 @@ export default function HomeScreen() {
                 onToggleMenu={() => onToggleMenu(item.id)}
                 onMarkComplete={() => {
                   setMenuOpenId(null);
-                  openCompleteModal(item.id);
+                  openCompleteModal([item.id], "single");
                 }}
                 onEdit={() => {
                   setMenuOpenId(null);
@@ -840,13 +883,15 @@ export default function HomeScreen() {
         }}
       />
 
-      {/* NEW: Complete-with-note modal */}
+      {/* Complete-with-note modal (single + bulk) */}
       <CompleteTaskModal
         visible={completeModalVisible}
         note={completeNote}
         onChangeNote={setCompleteNote}
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
+        mode={completeMode}
+        count={completeMode === "bulk" ? completeTaskIds.length : undefined}
       />
 
       {/* Top Snackbar (toast) */}
