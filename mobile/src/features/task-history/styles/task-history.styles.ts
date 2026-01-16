@@ -421,4 +421,21 @@ export const s = StyleSheet.create({
   promptInner28: {
     borderRadius: 28,
   },
+    emptyGlass: {
+    borderRadius: 28,
+    overflow: "hidden",
+    minHeight: 140,
+  },
+  emptyTint: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    zIndex: 1,
+  },
+  emptyBorder: {
+    ...StyleSheet.absoluteFillObject,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+    zIndex: 2,
+  },
 });

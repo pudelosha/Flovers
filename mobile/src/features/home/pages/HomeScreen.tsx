@@ -9,9 +9,9 @@ import {
   Text,
 } from "react-native";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import LinearGradient from "react-native-linear-gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import FAB from "../../../shared/ui/FAB";
@@ -66,6 +66,10 @@ function parseISODate(d?: string): Date | null {
   dt.setHours(0, 0, 0, 0);
   return dt;
 }
+
+// Empty-state gradient (matches the wizard gradient style)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function HomeScreen() {
   const { t } = useTranslation();
@@ -640,13 +644,28 @@ export default function HomeScreen() {
                 ]}
               >
                 <View style={s.emptyGlass}>
-                  <BlurView
+                  {/* Gradient instead of Blur */}
+                  <LinearGradient
+                    pointerEvents="none"
+                    start={{ x: 0, y: 0.5 }}
+                    end={{ x: 1, y: 0.5 }}
+                    colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                    locations={[0, 1]}
                     style={StyleSheet.absoluteFill}
-                    blurType="light"
-                    blurAmount={20}
-                    overlayColor="transparent"
-                    reducedTransparencyFallbackColor="transparent"
                   />
+                  <LinearGradient
+                    pointerEvents="none"
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 1 }}
+                    colors={[
+                      "rgba(255, 255, 255, 0.06)",
+                      "rgba(255, 255, 255, 0.02)",
+                      "rgba(255, 255, 255, 0.08)",
+                    ]}
+                    locations={[0, 0.5, 1]}
+                    style={StyleSheet.absoluteFill}
+                  />
+
                   {/* White tint for readability */}
                   <View pointerEvents="none" style={s.emptyTint} />
                   {/* Thin border */}
@@ -729,13 +748,28 @@ export default function HomeScreen() {
               ]}
             >
               <View style={s.emptyGlass}>
-                <BlurView
+                {/* Gradient instead of Blur */}
+                <LinearGradient
+                  pointerEvents="none"
+                  start={{ x: 0, y: 0.5 }}
+                  end={{ x: 1, y: 0.5 }}
+                  colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                  locations={[0, 1]}
                   style={StyleSheet.absoluteFill}
-                  blurType="light"
-                  blurAmount={20}
-                  overlayColor="transparent"
-                  reducedTransparencyFallbackColor="transparent"
                 />
+                <LinearGradient
+                  pointerEvents="none"
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  colors={[
+                    "rgba(255, 255, 255, 0.06)",
+                    "rgba(255, 255, 255, 0.02)",
+                    "rgba(255, 255, 255, 0.08)",
+                  ]}
+                  locations={[0, 0.5, 1]}
+                  style={StyleSheet.absoluteFill}
+                />
+
                 <View pointerEvents="none" style={s.emptyTint} />
                 <View pointerEvents="none" style={s.emptyBorder} />
 

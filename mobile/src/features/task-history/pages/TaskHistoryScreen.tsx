@@ -13,9 +13,9 @@ import {
   StyleSheet,
 } from "react-native";
 import { useNavigation, useRoute, useFocusEffect } from "@react-navigation/native";
-import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
+import LinearGradient from "react-native-linear-gradient";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
@@ -60,6 +60,10 @@ const INITIAL_FILTERS: HistoryFilters = {
   completedFrom: undefined,
   completedTo: undefined,
 };
+
+// Empty-state gradient (match Home)
+const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
+const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 
 export default function TaskHistoryScreen() {
   const { t } = useTranslation();
@@ -158,6 +162,7 @@ export default function TaskHistoryScreen() {
           if (!mounted) return;
         }
       })();
+
       return () => {
         mounted = false;
       };
@@ -198,9 +203,7 @@ export default function TaskHistoryScreen() {
   const derivedItems = useMemo(() => {
     const typeSet = new Set(filters.types || []);
 
-    const fromDate = filters.completedFrom
-      ? new Date(filters.completedFrom)
-      : null;
+    const fromDate = filters.completedFrom ? new Date(filters.completedFrom) : null;
     const toDate = filters.completedTo ? new Date(filters.completedTo) : null;
     const hasFrom = fromDate && !isNaN(+fromDate);
     const hasTo = toDate && !isNaN(+toDate);
@@ -286,7 +289,7 @@ export default function TaskHistoryScreen() {
     Animated.stagger(50, seq).start();
   }, [loading, derivedItems.length]);
 
-  // ---------- ✨ EMPTY-STATE FRAME ANIMATION ----------
+  // ---------- EMPTY-STATE FRAME ANIMATION ----------
   const emptyAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -378,13 +381,15 @@ export default function TaskHistoryScreen() {
     try {
       setLoading(true);
       setItems([]);
-      // Shape matches the expected union in bulkDeleteHistoryEntries
       await bulkDeleteHistoryEntries(payload as any);
       await load();
       showToast(t("taskHistory.toasts.historyDeleted"), "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(e?.message || t("taskHistory.toasts.failedToDeleteHistory"), "error");
+      showToast(
+        e?.message || t("taskHistory.toasts.failedToDeleteHistory"),
+        "error"
+      );
     }
   };
 
@@ -399,7 +404,10 @@ export default function TaskHistoryScreen() {
       showToast(t("taskHistory.toasts.historyTaskDeleted"), "success");
     } catch (e: any) {
       setLoading(false);
-      showToast(e?.message || t("taskHistory.toasts.failedToDeleteHistoryTask"), "error");
+      showToast(
+        e?.message || t("taskHistory.toasts.failedToDeleteHistoryTask"),
+        "error"
+      );
     }
   };
 
@@ -426,10 +434,7 @@ export default function TaskHistoryScreen() {
       return;
     }
 
-    nav.navigate(
-      "PlantDetails" as never,
-      { id: String(plantId) } as never
-    );
+    nav.navigate("PlantDetails" as never, { id: String(plantId) } as never);
   };
 
   // Early return while loading (match other screens)
@@ -465,7 +470,6 @@ export default function TaskHistoryScreen() {
         <View
           style={s.backdrop}
           pointerEvents="auto"
-          // When pressed, close any open menu
           onStartShouldSetResponder={() => {
             setOpenMenuId(null);
             return true;
@@ -496,7 +500,7 @@ export default function TaskHistoryScreen() {
             <Animated.View
               style={[
                 { opacity, transform: [{ translateY }, { scale }] },
-                isOpen && { zIndex: 50, elevation: 50 }, // ⬅ like Home: keep open row above others
+                isOpen && { zIndex: 50, elevation: 50 },
               ]}
             >
               <TaskHistoryTile
@@ -537,38 +541,32 @@ export default function TaskHistoryScreen() {
                 },
               ]}
             >
-              <View
-                style={{
-                  borderRadius: 28,
-                  overflow: "hidden",
-                  minHeight: 140,
-                }}
-              >
-                <BlurView
+              {/* ✅ Empty-state frame now matches Home (gradient glass) */}
+              <View style={s.emptyGlass}>
+                <LinearGradient
+                  pointerEvents="none"
+                  start={{ x: 0, y: 0.5 }}
+                  end={{ x: 1, y: 0.5 }}
+                  colors={[TAB_GREEN_LIGHT, TAB_GREEN_DARK]}
+                  locations={[0, 1]}
                   style={StyleSheet.absoluteFill}
-                  blurType="light"
-                  blurAmount={20}
-                  overlayColor="transparent"
-                  reducedTransparencyFallbackColor="transparent"
                 />
-                <View
+                <LinearGradient
                   pointerEvents="none"
-                  style={[
-                    StyleSheet.absoluteFill,
-                    { backgroundColor: "rgba(255,255,255,0.20)" },
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 1 }}
+                  colors={[
+                    "rgba(255, 255, 255, 0.06)",
+                    "rgba(255, 255, 255, 0.02)",
+                    "rgba(255, 255, 255, 0.08)",
                   ]}
+                  locations={[0, 0.5, 1]}
+                  style={StyleSheet.absoluteFill}
                 />
-                <View
-                  pointerEvents="none"
-                  style={[
-                    StyleSheet.absoluteFill,
-                    {
-                      borderRadius: 28,
-                      borderWidth: 1,
-                      borderColor: "rgba(255,255,255,0.20)",
-                    },
-                  ]}
-                />
+
+                <View pointerEvents="none" style={s.emptyTint} />
+                <View pointerEvents="none" style={s.emptyBorder} />
+
                 <View style={s.emptyInner}>
                   <MaterialCommunityIcons
                     name="history"
@@ -576,9 +574,7 @@ export default function TaskHistoryScreen() {
                     color="#FFFFFF"
                     style={{ marginBottom: 10 }}
                   />
-                  <Text style={s.emptyTitle}>
-                    {t("taskHistory.empty.title")}
-                  </Text>
+                  <Text style={s.emptyTitle}>{t("taskHistory.empty.title")}</Text>
                   <View style={s.emptyDescBox}>
                     <Text style={s.emptyText}>
                       {t("taskHistory.empty.descBeforeBold")}{" "}

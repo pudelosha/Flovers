@@ -150,7 +150,7 @@ export const s = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     borderRadius: 28,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(255,255,255,0.18)",
     zIndex: 2,
   },
   emptyInner: { padding: 16, alignItems: "center" },
