@@ -2,6 +2,7 @@
   "plantDetailsModals": {
     "common": {
       "close": "Zamknij",
+      "save": "Zapisz",
       "cancel": "Anuluj",
       "remove": "Usuń"
     },
@@ -21,6 +22,8 @@
       "loadFailed": "Nie udało się wczytać lokalnego zdjęcia.",
       "error": "Coś poszło nie tak.",
       "noPhoto": "Nie wybrano zdjęcia",
+      "removedPreview": "Zdjęcie zostanie usunięte",
+      "unsaved": "Niezapisane zmiany",
       "takePhoto": "Zrób zdjęcie",
       "chooseGallery": "Wybierz z galerii",
       "remove": "Usuń zdjęcie",
@@ -32,7 +35,10 @@
       "saveFailedTitle": "Nie udało się zapisać",
       "saveFailedMsg": "Nie udało się zapisać tego zdjęcia lokalnie.",
       "confirmRemoveTitle": "Usunąć zdjęcie?",
-      "confirmRemoveMsg": "Spowoduje to usunięcie lokalnie zapisanego zdjęcia.",
+      "confirmRemoveMsg": "Zdjęcie zostanie usunięte po naciśnięciu „Zapisz”.",
+      "confirmDiscardTitle": "Odrzucić zmiany?",
+      "confirmDiscardMsg": "Zmiany nie zostaną zapisane.",
+      "discard": "Odrzuć",
       "removeFailedTitle": "Nie udało się usunąć",
       "removeFailedMsg": "Nie udało się usunąć lokalnego zdjęcia."
     }

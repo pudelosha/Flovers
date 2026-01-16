@@ -1,6 +1,6 @@
 // ChangePlantImageModal.tsx
 // C:\Projekty\Python\Flovers\mobile\src\features\plant-details\components\modals\ChangePlantImageModal.tsx
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
   Text,
@@ -8,7 +8,6 @@ import {
   ScrollView,
   StyleSheet,
   Keyboard,
-  Alert,
   PermissionsAndroid,
   Platform,
   Image,
@@ -37,6 +36,8 @@ type Props = {
   visible: boolean;
   onClose: () => void;
   plantId: string | number | null;
+
+  /** Called ONLY after user presses Save. */
   onChanged?: (newLocalUri: string | null) => void;
 };
 
@@ -58,17 +59,22 @@ function genTempKey() {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-/** ✅ RN Image cache-buster for local file URIs */
+/** RN Image cache-buster for local file URIs */
 function withCacheBuster(uri: string | null | undefined): string | null {
   if (!uri) return null;
   const sep = uri.includes("?") ? "&" : "?";
   return `${uri}${sep}t=${Date.now()}`;
 }
 
-/** ✅ deleteLocalPhoto must receive the real file uri/path (no query params) */
+/** deleteLocalPhoto must receive the real file uri/path (no query params) */
 function stripQuery(uri: string): string {
   return uri.split("?")[0];
 }
+
+type PendingAction =
+  | { kind: "none" }
+  | { kind: "set"; uri: string } // set/replace with this local uri
+  | { kind: "remove" }; // remove local photo
 
 export default function ChangePlantImageModal({ visible, onClose, plantId, onChanged }: Props) {
   const { t } = useTranslation();
@@ -86,13 +92,34 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
   );
 
   const [loading, setLoading] = useState(false);
-  const [localUri, setLocalUri] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // currently stored on disk
+  const [persistedUri, setPersistedUri] = useState<string | null>(null);
+
+  // preview state (may differ from persisted)
+  const [previewUri, setPreviewUri] = useState<string | null>(null);
+
+  // pending action (applied only on Save)
+  const [pending, setPending] = useState<PendingAction>({ kind: "none" });
+
+  // in-app confirms (instead of native Alert)
+  const [confirmRemoveVisible, setConfirmRemoveVisible] = useState(false);
+  const [confirmDiscardVisible, setConfirmDiscardVisible] = useState(false);
+
+  const initialPersistedUriRef = useRef<string | null>(null);
 
   const close = useCallback(() => {
     Keyboard.dismiss();
+
+    const hasUnsaved = pending.kind !== "none";
+    if (hasUnsaved) {
+      setConfirmDiscardVisible(true);
+      return;
+    }
+
     onClose();
-  }, [onClose]);
+  }, [onClose, pending.kind]);
 
   // load existing local photo when opened
   useEffect(() => {
@@ -100,20 +127,39 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
     const run = async () => {
       if (!visible) return;
+
+      // reset transient UI
+      setConfirmRemoveVisible(false);
+      setConfirmDiscardVisible(false);
+
       setError(null);
       setLoading(true);
 
       try {
         if (!plantId) {
-          setLocalUri(null);
+          setPersistedUri(null);
+          setPreviewUri(null);
+          initialPersistedUriRef.current = null;
+          setPending({ kind: "none" });
           setError(tr("plantDetailsModals.changeImage.noPlantId", "No plant id found."));
           return;
         }
+
         const existing = await getPlantPhotoUri(String(plantId));
-        if (!cancelled) setLocalUri(withCacheBuster(existing || null));
+        const busted = withCacheBuster(existing || null);
+
+        if (!cancelled) {
+          setPersistedUri(busted);
+          setPreviewUri(busted);
+          initialPersistedUriRef.current = busted;
+          setPending({ kind: "none" });
+        }
       } catch (e: any) {
         if (!cancelled) {
-          setLocalUri(null);
+          setPersistedUri(null);
+          setPreviewUri(null);
+          initialPersistedUriRef.current = null;
+          setPending({ kind: "none" });
           setError(e?.message || tr("plantDetailsModals.changeImage.loadFailed", "Could not load local image."));
         }
       } finally {
@@ -132,23 +178,22 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
   const showOnlySpinner = loading && !error;
 
+  const setPendingSet = useCallback((uri: string) => {
+    const busted = withCacheBuster(uri);
+    setPreviewUri(busted);
+    setPending({ kind: "set", uri });
+  }, []);
+
+  const setPendingRemove = useCallback(() => {
+    setPreviewUri(null);
+    setPending({ kind: "remove" });
+  }, []);
+
   const doPickFromCamera = useCallback(async () => {
-    if (!plantId) {
-      Alert.alert(tr("plantDetailsModals.changeImage.noPlantId", "No plant id found."));
-      return;
-    }
+    if (!plantId) return;
 
     const ok = await ensureAndroidPermissionCameraAndRead();
-    if (!ok) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.permissionTitle", "Permission required"),
-        tr(
-          "plantDetailsModals.changeImage.permissionCamera",
-          "Please grant camera and media permissions to take a photo."
-        )
-      );
-      return;
-    }
+    if (!ok) return;
 
     const opts: CameraOptions = {
       mediaType: "photo",
@@ -159,63 +204,20 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
     const res = await launchCamera(opts);
     if (res.didCancel) return;
-    if (res.errorCode) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.cameraErrorTitle", "Camera error"),
-        String(res.errorMessage || res.errorCode)
-      );
-      return;
-    }
+    if (res.errorCode) return;
 
     const asset = res.assets?.[0];
     const uri = asset?.uri;
     if (!uri) return;
 
-    setLoading(true);
-    setError(null);
-
-    try {
-      const existing = await getPlantPhotoUri(String(plantId));
-      if (existing) await deleteLocalPhoto(stripQuery(existing));
-
-      const tmp = await persistTempPlantPhoto({
-        sourceUri: uri,
-        fileNameHint: asset?.fileName,
-        tempKey: genTempKey(),
-      });
-
-      const finalUri = await promoteTempPhotoToPlant({
-        tempPhotoUri: tmp,
-        plantId: String(plantId),
-      });
-
-      const busted = withCacheBuster(finalUri);
-      setLocalUri(busted);
-      onChanged?.(busted);
-    } catch (e: any) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.saveFailedTitle", "Save failed"),
-        e?.message || tr("plantDetailsModals.changeImage.saveFailedMsg", "Could not save this photo locally.")
-      );
-    } finally {
-      setLoading(false);
-    }
-  }, [plantId, tr, onChanged]);
+    setPendingSet(uri);
+  }, [plantId, setPendingSet]);
 
   const doPickFromGallery = useCallback(async () => {
-    if (!plantId) {
-      Alert.alert(tr("plantDetailsModals.changeImage.noPlantId", "No plant id found."));
-      return;
-    }
+    if (!plantId) return;
 
     const ok = await ensureAndroidPermissionCameraAndRead();
-    if (!ok) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.permissionTitle", "Permission required"),
-        tr("plantDetailsModals.changeImage.permissionGallery", "Please grant media permission to pick a photo.")
-      );
-      return;
-    }
+    if (!ok) return;
 
     const opts: ImageLibraryOptions = {
       mediaType: "photo",
@@ -226,17 +228,27 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
 
     const res = await launchImageLibrary(opts);
     if (res.didCancel) return;
-    if (res.errorCode) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.pickerErrorTitle", "Picker error"),
-        String(res.errorMessage || res.errorCode)
-      );
-      return;
-    }
+    if (res.errorCode) return;
 
     const asset = res.assets?.[0];
     const uri = asset?.uri;
     if (!uri) return;
+
+    setPendingSet(uri);
+  }, [plantId, setPendingSet]);
+
+  const requestRemove = useCallback(() => {
+    if (!plantId) return;
+    setConfirmRemoveVisible(true);
+  }, [plantId]);
+
+  const applyChanges = useCallback(async () => {
+    if (!plantId) return;
+
+    if (pending.kind === "none") {
+      onClose();
+      return;
+    }
 
     setLoading(true);
     setError(null);
@@ -245,9 +257,21 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
       const existing = await getPlantPhotoUri(String(plantId));
       if (existing) await deleteLocalPhoto(stripQuery(existing));
 
+      if (pending.kind === "remove") {
+        setPersistedUri(null);
+        setPreviewUri(null);
+        setPending({ kind: "none" });
+        initialPersistedUriRef.current = null;
+
+        onChanged?.(null);
+        onClose();
+        return;
+      }
+
+      // set
       const tmp = await persistTempPlantPhoto({
-        sourceUri: uri,
-        fileNameHint: asset?.fileName,
+        sourceUri: pending.uri,
+        fileNameHint: undefined,
         tempKey: genTempKey(),
       });
 
@@ -256,55 +280,39 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
         plantId: String(plantId),
       });
 
-      const busted = withCacheBuster(finalUri);
-      setLocalUri(busted);
-      onChanged?.(busted);
+      const bustedFinal = withCacheBuster(finalUri);
+
+      setPersistedUri(bustedFinal);
+      setPreviewUri(bustedFinal);
+      setPending({ kind: "none" });
+      initialPersistedUriRef.current = bustedFinal;
+
+      onChanged?.(bustedFinal);
+      onClose();
     } catch (e: any) {
-      Alert.alert(
-        tr("plantDetailsModals.changeImage.saveFailedTitle", "Save failed"),
-        e?.message || tr("plantDetailsModals.changeImage.saveFailedMsg", "Could not save this photo locally.")
-      );
+      setError(e?.message || tr("plantDetailsModals.changeImage.saveFailedMsg", "Could not save this photo locally."));
     } finally {
       setLoading(false);
     }
-  }, [plantId, tr, onChanged]);
+  }, [plantId, pending, onChanged, onClose, tr]);
 
-  const doRemove = useCallback(async () => {
-    if (!plantId) return;
+  const discardChanges = useCallback(() => {
+    const orig = initialPersistedUriRef.current;
+    setPersistedUri(orig);
+    setPreviewUri(orig);
+    setPending({ kind: "none" });
+    setConfirmDiscardVisible(false);
+    onClose();
+  }, [onClose]);
 
-    Alert.alert(
-      tr("plantDetailsModals.changeImage.confirmRemoveTitle", "Remove photo?"),
-      tr("plantDetailsModals.changeImage.confirmRemoveMsg", "This will remove the locally stored photo."),
-      [
-        { text: tr("plantDetailsModals.common.cancel", "Cancel"), style: "cancel" },
-        {
-          text: tr("plantDetailsModals.common.remove", "Remove"),
-          style: "destructive",
-          onPress: async () => {
-            try {
-              setLoading(true);
-              setError(null);
+  // Hide "Remove" once removal is initiated
+  const canRemove = useMemo(() => {
+    if (loading) return false;
+    if (pending.kind === "remove") return false;
+    return !!previewUri || !!persistedUri;
+  }, [previewUri, persistedUri, loading, pending.kind]);
 
-              const existing = await getPlantPhotoUri(String(plantId));
-              if (existing) await deleteLocalPhoto(stripQuery(existing));
-
-              setLocalUri(null);
-              onChanged?.(null);
-            } catch (e: any) {
-              Alert.alert(
-                tr("plantDetailsModals.changeImage.removeFailedTitle", "Remove failed"),
-                e?.message || tr("plantDetailsModals.changeImage.removeFailedMsg", "Could not remove this local photo.")
-              );
-            } finally {
-              setLoading(false);
-            }
-          },
-        },
-      ]
-    );
-  }, [plantId, tr, onChanged]);
-
-  const canRemove = useMemo(() => !!localUri && !loading, [localUri, loading]);
+  const canSave = useMemo(() => pending.kind !== "none" && !loading, [pending.kind, loading]);
 
   if (!visible) return null;
 
@@ -312,7 +320,15 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
     <>
       <Pressable style={styles.backdrop} onPress={close} />
 
-      <View style={[styles.wrap, { paddingTop: Math.max(insets.top, 12), paddingBottom: Math.max(insets.bottom, 12) }]}>
+      <View
+        style={[
+          styles.wrap,
+          {
+            paddingTop: Math.max(insets.top, 12),
+            paddingBottom: Math.max(insets.bottom, 12),
+          },
+        ]}
+      >
         <View style={styles.glass} pointerEvents="none">
           <BlurView
             style={StyleSheet.absoluteFill}
@@ -331,14 +347,22 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
               <CenteredSpinner size={42} />
             </View>
           ) : error ? (
-            <ScrollView keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: scrollPadBottom }}>
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+            >
               <View style={styles.stateBox}>
                 <Text style={styles.stateText}>{tr("plantDetailsModals.changeImage.error", "Something went wrong.")}</Text>
                 <Text style={[styles.stateText, { opacity: 0.9 }]}>{error}</Text>
               </View>
             </ScrollView>
           ) : (
-            <ScrollView keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: scrollPadBottom }}>
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={{ paddingBottom: scrollPadBottom }}
+            >
               <View style={styles.headerRow}>
                 <MaterialCommunityIcons name="image-edit-outline" size={22} color="#FFFFFF" style={{ marginRight: 10 }} />
                 <Text style={styles.title} numberOfLines={2}>
@@ -351,15 +375,26 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
               </Text>
 
               <View style={styles.previewFrame}>
-                {localUri ? (
-                  <Image source={{ uri: localUri }} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
+                {previewUri ? (
+                  <Image source={{ uri: previewUri }} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
                 ) : (
                   <View style={styles.previewEmpty}>
                     <MaterialCommunityIcons name="image-plus" size={28} color="#FFFFFF" />
-                    <Text style={styles.previewEmptyText}>{tr("plantDetailsModals.changeImage.noPhoto", "No photo selected")}</Text>
+                    <Text style={styles.previewEmptyText}>
+                      {pending.kind === "remove"
+                        ? tr("plantDetailsModals.changeImage.removedPreview", "Photo will be removed")
+                        : tr("plantDetailsModals.changeImage.noPhoto", "No photo selected")}
+                    </Text>
                   </View>
                 )}
               </View>
+
+              {pending.kind !== "none" && (
+                <View style={styles.unsavedPill}>
+                  <MaterialCommunityIcons name="alert-circle-outline" size={16} color="#FFFFFF" />
+                  <Text style={styles.unsavedText}>{tr("plantDetailsModals.changeImage.unsaved", "Unsaved changes")}</Text>
+                </View>
+              )}
 
               <View style={styles.actions}>
                 <Pressable
@@ -385,7 +420,7 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
                 {canRemove && (
                   <Pressable
                     style={styles.actionFull}
-                    onPress={doRemove}
+                    onPress={requestRemove}
                     android_ripple={{ color: "rgba(255,255,255,0.12)" }}
                     disabled={loading}
                   >
@@ -398,10 +433,74 @@ export default function ChangePlantImageModal({ visible, onClose, plantId, onCha
           )}
 
           <View style={[styles.bottomBar, { paddingBottom: bottomGap }]}>
-            <Pressable style={[styles.btn, styles.btnPrimary]} onPress={close} disabled={loading}>
-              <Text style={[styles.btnText, styles.btnPrimaryText]}>{tr("plantDetailsModals.common.close", "Close")}</Text>
-            </Pressable>
+            <View style={styles.bottomRow}>
+              <Pressable style={[styles.btn, styles.btnGhost]} onPress={close} disabled={loading}>
+                <Text style={styles.btnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
+              </Pressable>
+
+              <Pressable style={[styles.btn, styles.btnPrimary, !canSave && { opacity: 0.55 }]} onPress={applyChanges} disabled={!canSave}>
+                <Text style={[styles.btnText, styles.btnPrimaryText]}>{tr("plantDetailsModals.common.save", "Save")}</Text>
+              </Pressable>
+            </View>
           </View>
+
+          {/* In-app confirm sheet: Remove (NO dimming backdrop) */}
+          {confirmRemoveVisible && (
+            <View style={styles.confirmOverlay} pointerEvents="box-none">
+              <View style={styles.confirmCard}>
+                <View style={styles.confirmHeader}>
+                  <MaterialCommunityIcons name="trash-can-outline" size={20} color="#FFFFFF" />
+                  <Text style={styles.confirmTitle}>{tr("plantDetailsModals.changeImage.confirmRemoveTitle", "Remove photo?")}</Text>
+                </View>
+
+                <Text style={styles.confirmBody}>
+                  {tr("plantDetailsModals.changeImage.confirmRemoveMsg", "The photo will be removed after you press Save.")}
+                </Text>
+
+                <View style={styles.confirmRow}>
+                  <Pressable style={[styles.confirmBtn, styles.confirmBtnGhost]} onPress={() => setConfirmRemoveVisible(false)}>
+                    <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.common.cancel", "Cancel")}</Text>
+                  </Pressable>
+
+                  <Pressable
+                    style={[styles.confirmBtn, styles.confirmBtnDanger]}
+                    onPress={() => {
+                      setConfirmRemoveVisible(false);
+                      setPendingRemove();
+                    }}
+                  >
+                    <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.common.remove", "Remove")}</Text>
+                  </Pressable>
+                </View>
+              </View>
+            </View>
+          )}
+
+          {/* In-app confirm sheet: Discard (NO dimming backdrop) */}
+          {confirmDiscardVisible && (
+            <View style={styles.confirmOverlay} pointerEvents="box-none">
+              <View style={styles.confirmCard}>
+                <View style={styles.confirmHeader}>
+                  <MaterialCommunityIcons name="alert-circle-outline" size={20} color="#FFFFFF" />
+                  <Text style={styles.confirmTitle}>{tr("plantDetailsModals.changeImage.confirmDiscardTitle", "Discard changes?")}</Text>
+                </View>
+
+                <Text style={styles.confirmBody}>
+                  {tr("plantDetailsModals.changeImage.confirmDiscardMsg", "Your changes will not be saved.")}
+                </Text>
+
+                <View style={styles.confirmRow}>
+                  <Pressable style={[styles.confirmBtn, styles.confirmBtnGhost]} onPress={() => setConfirmDiscardVisible(false)}>
+                    <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.common.cancel", "Cancel")}</Text>
+                  </Pressable>
+
+                  <Pressable style={[styles.confirmBtn, styles.confirmBtnDanger]} onPress={discardChanges}>
+                    <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.changeImage.discard", "Discard")}</Text>
+                  </Pressable>
+                </View>
+              </View>
+            </View>
+          )}
         </View>
       </View>
     </>
@@ -482,6 +581,20 @@ const styles = StyleSheet.create({
   previewEmpty: { alignItems: "center", justifyContent: "center" },
   previewEmptyText: { color: "rgba(255,255,255,0.92)", fontWeight: "700", marginTop: 8 },
 
+  unsavedPill: {
+    marginTop: 10,
+    marginHorizontal: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 999,
+    backgroundColor: "rgba(255,255,255,0.10)",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    alignSelf: "flex-start",
+  },
+  unsavedText: { color: "rgba(255,255,255,0.92)", fontWeight: "800", fontSize: 12 },
+
   actions: { marginTop: 10, gap: 10, paddingHorizontal: 16 },
 
   actionFull: {
@@ -501,22 +614,57 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingHorizontal: 24,
+    paddingHorizontal: 16,
     zIndex: 999,
     elevation: 999,
     backgroundColor: "transparent",
   },
+  bottomRow: { flexDirection: "row", gap: 10 },
 
   btn: {
-    alignSelf: "stretch",
+    flex: 1,
     height: 44,
     borderRadius: 14,
     backgroundColor: "rgba(255,255,255,0.12)",
     alignItems: "center",
     justifyContent: "center",
   },
-
   btnText: { color: "#FFFFFF", fontWeight: "800" },
+
   btnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
   btnPrimaryText: { color: "#FFFFFF", fontWeight: "800" },
+  btnGhost: { backgroundColor: "rgba(255,255,255,0.12)" },
+
+  // custom confirm sheet (NO dimming backdrop)
+  confirmOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 1200,
+    elevation: 1200,
+    justifyContent: "flex-end",
+  },
+  confirmCard: {
+    margin: 12,
+    borderRadius: 18,
+    padding: 14,
+    backgroundColor: "rgba(0,0,0,1)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.16)",
+    overflow: "hidden",
+  },
+  confirmHeader: { flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 8 },
+  confirmTitle: { color: "#FFFFFF", fontWeight: "900", fontSize: 14, flex: 1 },
+  confirmBody: { color: "rgba(255,255,255,0.92)", fontWeight: "500", lineHeight: 18, marginBottom: 12 },
+  confirmRow: { flexDirection: "row", gap: 10 },
+
+  confirmBtn: {
+    flex: 1,
+    height: 42,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  confirmBtnGhost: { backgroundColor: "rgba(255,255,255,0.10)" },
+  confirmBtnDanger: { backgroundColor: "rgba(160, 34, 34, 0.85)" },
+  confirmBtnText: { color: "#FFFFFF", fontWeight: "900" },
 });

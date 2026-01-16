@@ -2,6 +2,7 @@
   "plantDetailsModals": {
     "common": {
       "close": "Close",
+      "save": "Save",
       "cancel": "Cancel",
       "remove": "Remove"
     },
@@ -21,6 +22,8 @@
       "loadFailed": "Could not load local image.",
       "error": "Something went wrong.",
       "noPhoto": "No photo selected",
+      "removedPreview": "Photo will be removed",
+      "unsaved": "Unsaved changes",
       "takePhoto": "Take a photo",
       "chooseGallery": "Choose from gallery",
       "remove": "Remove photo",
@@ -32,7 +35,10 @@
       "saveFailedTitle": "Save failed",
       "saveFailedMsg": "Could not save this photo locally.",
       "confirmRemoveTitle": "Remove photo?",
-      "confirmRemoveMsg": "This will remove the locally stored photo.",
+      "confirmRemoveMsg": "The photo will be removed after you press Save.",
+      "confirmDiscardTitle": "Discard changes?",
+      "confirmDiscardMsg": "Your changes will not be saved.",
+      "discard": "Discard",
       "removeFailedTitle": "Remove failed",
       "removeFailedMsg": "Could not remove this local photo."
     }

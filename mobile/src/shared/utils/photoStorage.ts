@@ -71,7 +71,7 @@ export async function deleteLocalPhoto(localUri?: string) {
 }
 
 /**
- * ✅ NEW (shared): resolve plant photo stored locally
+ * (shared): resolve plant photo stored locally
  *
  * Returns:
  * - `file://.../Flovers/plants/<plantId>.<ext>` if present
