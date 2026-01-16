@@ -22,7 +22,7 @@ class ReadingDevice(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="reading_devices"
     )
     plant = models.ForeignKey(
-        "plant_instances.PlantInstance", on_delete=models.PROTECT, related_name="reading_devices"
+        "plant_instances.PlantInstance", on_delete=models.CASCADE, related_name="reading_devices"
     )
 
     # cached display fields for fast tiles
