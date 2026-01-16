@@ -1,6 +1,6 @@
 // PlantInfoTile.tsx
 import React, { useCallback, useMemo, useState, useEffect } from "react";
-import { View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
+import { View, Text, StyleSheet, ImageBackground, Pressable } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import LinearGradient from "react-native-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
@@ -77,6 +77,9 @@ export default function PlantInfoTile({
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // ✅ in-app prompt when plant has no definition link (matches ChangePlantImageModal confirm style)
+  const [noDefinitionPromptVisible, setNoDefinitionPromptVisible] = useState(false);
+
   // local photo uri for THIS plant id
   const [localPlantPhotoUri, setLocalPlantPhotoUri] = useState<string | null>(null);
 
@@ -85,6 +88,7 @@ export default function PlantInfoTile({
 
   useEffect(() => {
     setMenuOpen(false);
+    setNoDefinitionPromptVisible(false);
   }, [collapseMenusSignal]);
 
   // load/reload local image when plant changes OR parent tells us to reload
@@ -247,7 +251,8 @@ export default function PlantInfoTile({
                   if (plantDefinitionIdSafe != null) {
                     onOpenDefinition?.(plantDefinitionIdSafe);
                   } else {
-                    Alert.alert(tr("plantDetailsModals.definition.noId", "No plant definition id found."));
+                    // ✅ Replace native Alert with in-app sheet (no dimming backdrop)
+                    setNoDefinitionPromptVisible(true);
                   }
                 }}
                 onEditPlant={() => {
@@ -302,6 +307,30 @@ export default function PlantInfoTile({
           ))}
         </View>
       </View>
+
+      {/* In-app prompt: No plant definition (NO dimming backdrop, full black card) */}
+      {noDefinitionPromptVisible && (
+        <View style={styles.confirmOverlay} pointerEvents="box-none">
+          <View style={styles.confirmCard}>
+            <View style={styles.confirmHeader}>
+              <MaterialCommunityIcons name="book-open-variant" size={20} color="#FFFFFF" />
+              <Text style={styles.confirmTitle}>
+                {tr("plantDetails.infoMenu.noDefinitionTitle", "Plant definition unavailable")}
+              </Text>
+            </View>
+
+            <Text style={styles.confirmBody}>
+              {tr("plantDetails.infoMenu.noDefinitionBody", "This plant is not linked to a plant definition yet.")}
+            </Text>
+
+            <View style={styles.confirmRow}>
+              <Pressable style={[styles.confirmBtn, styles.confirmBtnPrimary]} onPress={() => setNoDefinitionPromptVisible(false)}>
+                <Text style={styles.confirmBtnText}>{tr("plantDetailsModals.common.close", "Close")}</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      )}
     </View>
   );
 }
@@ -388,4 +417,36 @@ const styles = StyleSheet.create({
   infoRow: { flexDirection: "row", alignItems: "center" },
   infoLabel: { color: "#FFFFFF", fontWeight: "800", marginRight: 6 },
   infoValue: { color: "rgba(255,255,255,0.95)", fontWeight: "600", flex: 1 },
+
+  // ✅ prompt sheet styles (copied from your ChangePlantImageModal approach)
+  confirmOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 1200,
+    elevation: 1200,
+    justifyContent: "flex-end",
+  },
+  confirmCard: {
+    margin: 12,
+    borderRadius: 18,
+    padding: 14,
+    backgroundColor: "rgba(0,0,0,1)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.16)",
+    overflow: "hidden",
+  },
+  confirmHeader: { flexDirection: "row", alignItems: "center", gap: 10, marginBottom: 8 },
+  confirmTitle: { color: "#FFFFFF", fontWeight: "900", fontSize: 14, flex: 1 },
+  confirmBody: { color: "rgba(255,255,255,0.92)", fontWeight: "500", lineHeight: 18, marginBottom: 12 },
+  confirmRow: { flexDirection: "row", gap: 10 },
+
+  confirmBtn: {
+    flex: 1,
+    height: 42,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.12)",
+  },
+  confirmBtnPrimary: { backgroundColor: "rgba(11,114,133,0.92)" },
+  confirmBtnText: { color: "#FFFFFF", fontWeight: "900" },
 });
