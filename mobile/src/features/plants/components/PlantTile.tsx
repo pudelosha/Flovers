@@ -34,15 +34,12 @@ export default function PlantTile({
   onDelete,
   onShowQr,
 }: Props) {
-  const imgUri = plant.imageUrl || "https://picsum.photos/seed/plant/120/120";
+  const imgUri = plant.imageUrl; // ✅ no random picsum
 
   return (
     <View style={s.cardWrap}>
-      {/* Shadow wrapper REMOVED to avoid visible rectangle-like shadow artifacts */}
-
       {/* Glass card (overflow hidden so layers don’t “shade” inside the frame) */}
       <View style={s.cardGlass}>
-        {/* Base green gradient: light -> dark (same as AuthCard) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0.5 }}
@@ -52,7 +49,6 @@ export default function PlantTile({
           style={[StyleSheet.absoluteFill, { borderRadius: 28 }]}
         />
 
-        {/* Fog highlight (same as AuthCard / Plants) */}
         <LinearGradient
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
@@ -66,7 +62,6 @@ export default function PlantTile({
           style={StyleSheet.absoluteFill}
         />
 
-        {/* OPTIONAL: Tint layer (lower opacity to prevent inner-rectangle artifact) */}
         <View
           pointerEvents="none"
           style={[
@@ -79,7 +74,6 @@ export default function PlantTile({
           ]}
         />
 
-        {/* Border on top */}
         <View
           pointerEvents="none"
           style={[
@@ -93,7 +87,6 @@ export default function PlantTile({
           ]}
         />
 
-        {/* Content */}
         <View style={s.cardRow}>
           <Pressable
             style={{
@@ -106,10 +99,31 @@ export default function PlantTile({
             onPress={onPressBody}
             android_ripple={{ color: "rgba(255,255,255,0.08)" }}
           >
-            <Image
-              source={{ uri: imgUri }}
-              style={{ width: 60, height: 60, borderRadius: 15 }}
-            />
+            {imgUri ? (
+              <Image
+                source={{ uri: imgUri }}
+                style={{ width: 60, height: 60, borderRadius: 15 }}
+              />
+            ) : (
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 15,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "rgba(255,255,255,0.10)",
+                  borderWidth: 1,
+                  borderColor: "rgba(255,255,255,0.14)",
+                }}
+              >
+                <MaterialCommunityIcons
+                  name="image-off-outline"
+                  size={20}
+                  color="rgba(255,255,255,0.92)"
+                />
+              </View>
+            )}
 
             <View style={{ flex: 1 }}>
               <Text style={s.plantName} numberOfLines={1}>
@@ -145,7 +159,6 @@ export default function PlantTile({
         </View>
       </View>
 
-      {/* NOT CLIPPED: menu must be outside cardGlass (overflow: hidden) */}
       {isMenuOpen && (
         <PlantMenu
           onEdit={onEdit}

@@ -131,6 +131,7 @@ class PlantInstanceListSerializer(serializers.ModelSerializer):
             "id",
             "display_name",
             "notes",
+            "photo_uri",
             "location",
             "plant_definition",
             "qr_code",

@@ -34,10 +34,7 @@ import ConfirmDeleteModal from "../components/modals/ConfirmDeleteModal";
 import PlantQrModal from "../components/modals/PlantQrModal";
 import PlantJournalModal from "../components/modals/PlantJournalModal";
 
-import SortPlantsModal, {
-  SortDir,
-  SortKey,
-} from "../components/modals/SortPlantsModal";
+import SortPlantsModal, { SortDir, SortKey } from "../components/modals/SortPlantsModal";
 import FilterPlantsModal from "../components/modals/FilterPlantsModal";
 
 import {
@@ -53,6 +50,8 @@ import {
   fetchPlantInstanceForEdit,
   updatePlantInstanceFromForm,
 } from "../../../api/services/plant-instances.service";
+
+import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 
 type LightLevel5 =
   | "very-low"
@@ -155,7 +154,9 @@ export default function PlantsScreen() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
-  const [filters, setFilters] = useState<{ location?: string; latin?: string }>(
+
+  // ✅ rename from `filters` -> `activeFilters` to avoid Hermes/runtime symbol issues
+  const [activeFilters, setActiveFilters] = useState<{ location?: string; latin?: string }>(
     {}
   );
 
@@ -191,11 +192,33 @@ export default function PlantsScreen() {
     [t, currentLanguage]
   );
 
+  // helper: overlay local photos onto mapped list items
+  const attachLocalPhotos = useCallback(async (list: Plant[]) => {
+    const results = await Promise.all(
+      list.map(async (p) => {
+        try {
+          const local = await getPlantPhotoUri(p.id);
+          if (local) {
+            return { ...p, imageUrl: local }; // local overrides definition image
+          }
+        } catch {
+          // ignore
+        }
+        return p;
+      })
+    );
+    return results;
+  }, []);
+
   // MAIN LOAD
   const load = useCallback(async () => {
     try {
       const data = await fetchPlantInstances({ auth: true });
-      setPlants(data.map((it) => mapApiToPlant(it, unnamedFallback)));
+
+      const mapped = data.map((it) => mapApiToPlant(it, unnamedFallback));
+      const withLocal = await attachLocalPhotos(mapped);
+
+      setPlants(withLocal);
     } catch (e: any) {
       showToast(
         e?.message ||
@@ -206,7 +229,7 @@ export default function PlantsScreen() {
       );
       setPlants([]);
     }
-  }, [t, currentLanguage, unnamedFallback]);
+  }, [t, currentLanguage, unnamedFallback, attachLocalPhotos]);
 
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -372,10 +395,12 @@ export default function PlantsScreen() {
         { auth: true }
       );
 
+      // keep local photo override after update
+      const mapped = mapApiToPlant(updatedListItem, unnamedFallback);
+      const withLocal = await attachLocalPhotos([mapped]);
+
       setPlants((prev) =>
-        prev.map((p) =>
-          p.id === editingId ? mapApiToPlant(updatedListItem, unnamedFallback) : p
-        )
+        prev.map((p) => (p.id === editingId ? withLocal[0] : p))
       );
 
       closeEdit();
@@ -459,9 +484,9 @@ export default function PlantsScreen() {
   // filters + sort
   const derivedPlants = useMemo(() => {
     const filtered = plants.filter((p) => {
-      if (filters.location && norm(p.location) !== norm(filters.location))
+      if (activeFilters.location && norm(p.location) !== norm(activeFilters.location))
         return false;
-      if (filters.latin && norm(p.latin) !== norm(filters.latin)) return false;
+      if (activeFilters.latin && norm(p.latin) !== norm(activeFilters.latin)) return false;
       return true;
     });
 
@@ -476,11 +501,11 @@ export default function PlantsScreen() {
     });
 
     return sorted;
-  }, [plants, filters, sortKey, sortDir]);
+  }, [plants, activeFilters, sortKey, sortDir]);
 
   const isFilterActive = useMemo(
-    () => Boolean(filters.location || filters.latin),
-    [filters.location, filters.latin]
+    () => Boolean(activeFilters.location || activeFilters.latin),
+    [activeFilters.location, activeFilters.latin]
   );
 
   const showFAB =
@@ -750,7 +775,7 @@ export default function PlantsScreen() {
                         defaultValue: "Clear filter",
                       }),
                       icon: "filter-remove",
-                      onPress: () => setFilters({}),
+                      onPress: () => setActiveFilters({}),
                     } as const,
                   ]
                 : []),
@@ -829,13 +854,13 @@ export default function PlantsScreen() {
         visible={filterOpen}
         locations={locationOptions}
         latinOptions={latinOptions}
-        filters={filters}
+        filters={activeFilters}
         onCancel={() => setFilterOpen(false)}
         onApply={(f) => {
-          setFilters(f);
+          setActiveFilters(f);
           setFilterOpen(false);
         }}
-        onClearAll={() => setFilters({})}
+        onClearAll={() => setActiveFilters({})}
       />
 
       {(editLoading || saving) && (
