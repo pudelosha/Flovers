@@ -12,7 +12,7 @@
     "confirmDelete": {
       "title": "Usuń roślinę",
       "messagePrefix": "Czy na pewno chcesz usunąć",
-      "messageSuffix": "? Tej operacji nie można cofnąć."
+      "messageSuffix": "? Zostaną również usunięte wszystkie powiązane dane: przypomnienia, urządzenia i odczyty, zadania oraz historia zadań. Tej operacji nie można cofnąć."
     },
     "filter": {
       "title": "Filtruj rośliny",

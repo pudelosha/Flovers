@@ -12,7 +12,7 @@
     "confirmDelete": {
       "title": "Delete plant",
       "messagePrefix": "Are you sure you want to delete",
-      "messageSuffix": "? This action cannot be undone."
+      "messageSuffix": "? All associated data will also be deleted: reminders, devices and readings, tasks, and task history. This action cannot be undone."
     },
     "filter": {
       "title": "Filter plants",
