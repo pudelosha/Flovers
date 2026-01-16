@@ -1,7 +1,9 @@
 {
   "plantDetailsModals": {
     "common": {
-      "close": "Zamknij"
+      "close": "Zamknij",
+      "cancel": "Anuluj",
+      "remove": "Usuń"
     },
     "definition": {
       "title": "Definicja rośliny",
@@ -14,7 +16,25 @@
     },
     "changeImage": {
       "title": "Zmień zdjęcie",
-      "body": "To jest modal-zastępnik. Zmiana zdjęcia zostanie zaimplementowana później."
+      "subtitle": "To zdjęcie jest zapisane lokalnie na Twoim urządzeniu i nie jest wysyłane.",
+      "noPlantId": "Nie znaleziono identyfikatora rośliny.",
+      "loadFailed": "Nie udało się wczytać lokalnego zdjęcia.",
+      "error": "Coś poszło nie tak.",
+      "noPhoto": "Nie wybrano zdjęcia",
+      "takePhoto": "Zrób zdjęcie",
+      "chooseGallery": "Wybierz z galerii",
+      "remove": "Usuń zdjęcie",
+      "permissionTitle": "Wymagane uprawnienia",
+      "permissionCamera": "Nadaj uprawnienia do aparatu i multimediów, aby zrobić zdjęcie.",
+      "permissionGallery": "Nadaj uprawnienia do multimediów, aby wybrać zdjęcie.",
+      "cameraErrorTitle": "Błąd aparatu",
+      "pickerErrorTitle": "Błąd wyboru zdjęcia",
+      "saveFailedTitle": "Nie udało się zapisać",
+      "saveFailedMsg": "Nie udało się zapisać tego zdjęcia lokalnie.",
+      "confirmRemoveTitle": "Usunąć zdjęcie?",
+      "confirmRemoveMsg": "Spowoduje to usunięcie lokalnie zapisanego zdjęcia.",
+      "removeFailedTitle": "Nie udało się usunąć",
+      "removeFailedMsg": "Nie udało się usunąć lokalnego zdjęcia."
     }
   }
 }

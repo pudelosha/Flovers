@@ -1,3 +1,4 @@
+// PlantInfoTile.tsx
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -10,15 +11,26 @@ import { useNavigation } from "@react-navigation/native";
 import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types";
 
 import PlantInfoMenu from "./PlantInfoMenu";
-import ChangePlantImageModal from "./modals/ChangePlantImageModal";
 
-// local photo resolver (adjust path to where photoStorage lives)
 import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
   collapseMenusSignal?: number;
+
   onOpenDefinition?: (plantDefinitionId: number) => void;
+
+  /**
+   * open Change Image modal at SCREEN level (parent renders modal).
+   * Pass plantId as string.
+   */
+  onOpenChangeImage?: (plantId: string) => void;
+
+  /**
+   * when this changes, tile reloads local image from storage.
+   * Parent should bump this after image change/removal.
+   */
+  photoReloadSignal?: number;
 };
 
 function normalizeOrientationKey(v: any): "N" | "E" | "S" | "W" | null {
@@ -35,7 +47,20 @@ function ImageMasked({ uri }: { uri: string }) {
   return <ImageBackground source={{ uri }} resizeMode="cover" style={StyleSheet.absoluteFillObject} />;
 }
 
-export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefinition }: Props) {
+/** ✅ RN Image cache-buster for local file URIs */
+function withCacheBuster(uri: string | null | undefined): string | null {
+  if (!uri) return null;
+  const sep = uri.includes("?") ? "&" : "?";
+  return `${uri}${sep}t=${Date.now()}`;
+}
+
+export default function PlantInfoTile({
+  plant,
+  collapseMenusSignal,
+  onOpenDefinition,
+  onOpenChangeImage,
+  photoReloadSignal,
+}: Props) {
   const { t } = useTranslation();
   const { currentLanguage } = useLanguage();
   const nav = useNavigation<any>();
@@ -51,10 +76,9 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
   );
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [changeImgModalVisible, setChangeImgModalVisible] = useState(false);
 
-  // ✅ NEW: local photo (Option A)
-  const [localPhotoUri, setLocalPhotoUri] = useState<string | null>(null);
+  // local photo uri for THIS plant id
+  const [localPlantPhotoUri, setLocalPlantPhotoUri] = useState<string | null>(null);
 
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
@@ -63,28 +87,28 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
     setMenuOpen(false);
   }, [collapseMenusSignal]);
 
-  // ✅ NEW: resolve local photo for this plant id
+  // load/reload local image when plant changes OR parent tells us to reload
   useEffect(() => {
-    let alive = true;
+    let cancelled = false;
 
     const run = async () => {
       if (!plant?.id) {
-        if (alive) setLocalPhotoUri(null);
+        setLocalPlantPhotoUri(null);
         return;
       }
       try {
         const uri = await getPlantPhotoUri(String(plant.id));
-        if (alive) setLocalPhotoUri(uri);
+        if (!cancelled) setLocalPlantPhotoUri(withCacheBuster(uri || null));
       } catch {
-        if (alive) setLocalPhotoUri(null);
+        if (!cancelled) setLocalPlantPhotoUri(null);
       }
     };
 
     run();
     return () => {
-      alive = false;
+      cancelled = true;
     };
-  }, [plant?.id]);
+  }, [plant?.id, photoReloadSignal]);
 
   if (!plant) {
     return (
@@ -102,12 +126,13 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
   const latin = plant.plant_definition?.latin || "";
   const locationName = plant.location?.name || "";
 
-  // ✅ UPDATED: prioritize local photo, then plant definition image
+  // prefer local user photo; fallback to plant definition images
   const imageUrl = useMemo(() => {
-    if (localPhotoUri) return localPhotoUri;
+    if (localPlantPhotoUri) return localPlantPhotoUri;
+
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [localPhotoUri, plant.plant_definition]);
+  }, [localPlantPhotoUri, plant.plant_definition]);
 
   const lightValue = plant.light_level
     ? tr(`createPlant.step04.lightLevels.${String(plant.light_level)}.label`, String(plant.light_level))
@@ -134,12 +159,11 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
     (plant.distance_cm != null ? ` ${tr("plantDetails.info.cm", "cm")}` : "");
 
   const plantDefinitionId =
-    (plant.plant_definition?.id ?? plant.plant_definition_id) != null
-      ? Number(plant.plant_definition?.id ?? plant.plant_definition_id)
+    (plant.plant_definition?.id ?? (plant as any).plant_definition_id) != null
+      ? Number(plant.plant_definition?.id ?? (plant as any).plant_definition_id)
       : null;
 
-  const plantDefinitionIdSafe =
-    Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
+  const plantDefinitionIdSafe = Number.isFinite(plantDefinitionId as any) ? (plantDefinitionId as number) : null;
 
   const DOTS_TOP = 10;
   const DOTS_RIGHT = 10;
@@ -151,7 +175,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
         <View style={styles.heroClip}>
           {imageUrl ? (
             <View style={styles.heroImage}>
-              {/* ✅ Less pronounced fade (still disappears into glass, but later/softer) */}
               <MaskedView
                 style={StyleSheet.absoluteFill}
                 maskElement={
@@ -164,7 +187,7 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
                       "rgba(0,0,0,0.22)",
                       "rgba(0,0,0,0.00)",
                     ]}
-                    locations={[0, 0.10, 0.45, 0.68, 0.88, 1]}
+                    locations={[0, 0.1, 0.45, 0.68, 0.88, 1]}
                     style={StyleSheet.absoluteFill}
                   />
                 }
@@ -172,7 +195,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
                 <ImageMasked uri={imageUrl} />
               </MaskedView>
 
-              {/* ✅ OPTIONAL top-only scrim for readability (does not affect bottom fade) */}
               <LinearGradient
                 pointerEvents="none"
                 colors={["rgba(0,0,0,0.22)", "rgba(0,0,0,0.00)"]}
@@ -218,10 +240,7 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
           <View style={styles.menuOverlay} pointerEvents="box-none">
             <Pressable style={StyleSheet.absoluteFill} onPress={closeMenu} />
 
-            <View
-              style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]}
-              pointerEvents="box-none"
-            >
+            <View style={[styles.menuSheetPos, { top: DOTS_TOP - MENU_LIFT, right: DOTS_RIGHT }]} pointerEvents="box-none">
               <PlantInfoMenu
                 onPlantDefinition={() => {
                   closeMenu();
@@ -233,12 +252,11 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
                 }}
                 onEditPlant={() => {
                   closeMenu();
-                  // ✅ NEW: open EditPlantModal on Plants tab for this plant id
                   nav.navigate("Plants", { editPlantId: String(plant.id) });
                 }}
                 onChangeImage={() => {
                   closeMenu();
-                  requestAnimationFrame(() => setChangeImgModalVisible(true));
+                  onOpenChangeImage?.(String(plant.id));
                 }}
                 onShowReminders={() => {
                   closeMenu();
@@ -284,8 +302,6 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
           ))}
         </View>
       </View>
-
-      <ChangePlantImageModal visible={changeImgModalVisible} onClose={() => setChangeImgModalVisible(false)} />
     </View>
   );
 }
@@ -308,7 +324,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
-  // Keep transparent: do NOT set backgroundColor, do NOT add heroShade (image must "disappear")
   heroImage: { width: "100%", aspectRatio: 1.6, justifyContent: "flex-end" },
 
   heroTopScrim: {

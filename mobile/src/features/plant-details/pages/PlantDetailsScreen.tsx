@@ -18,10 +18,7 @@ import { useLanguage } from "../../../app/providers/LanguageProvider";
 
 import GlassHeader from "../../../shared/ui/GlassHeader";
 
-import {
-  HEADER_GRADIENT_TINT,
-  HEADER_SOLID_FALLBACK,
-} from "../constants/plant-details.constants";
+import { HEADER_GRADIENT_TINT, HEADER_SOLID_FALLBACK } from "../constants/plant-details.constants";
 import { s } from "../styles/plant-details.styles";
 
 import { fetchPlantDetailsById, fetchPlantDetailsByQr } from "../../../api/services/plant-details.service";
@@ -43,6 +40,7 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
+import ChangePlantImageModal from "../components/modals/ChangePlantImageModal"; // ✅ NEW
 
 // Same green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -99,6 +97,23 @@ export default function PlantDetailsScreen() {
     setDefPlantDefinitionId(null);
   }, []);
 
+  // ✅ Change Image modal state (screen root) — NEW
+  const [changeImgVisible, setChangeImgVisible] = useState(false);
+  const [changeImgPlantId, setChangeImgPlantId] = useState<string | null>(null);
+
+  // ✅ signal for PlantInfoTile to reload local photo from storage — NEW
+  const [photoReloadSignal, setPhotoReloadSignal] = useState(0);
+
+  const openChangeImage = useCallback((plantId: string) => {
+    setChangeImgPlantId(plantId);
+    setChangeImgVisible(true);
+  }, []);
+
+  const closeChangeImage = useCallback(() => {
+    setChangeImgVisible(false);
+    setChangeImgPlantId(null);
+  }, []);
+
   const showToast = (message: string, variant: "default" | "success" | "error" = "default") => {
     setToastMsg(message);
     setToastVariant(variant);
@@ -139,17 +154,14 @@ export default function PlantDetailsScreen() {
     await RNFS.writeFile(filePath, base64, "base64");
 
     if (Platform.OS === "android") {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-        {
-          title: tr("plantDetails.permissions.storage.title", "Storage permission"),
-          message: tr(
-            "plantDetails.permissions.storage.message",
-            "We need access to save the QR code to your gallery."
-          ),
-          buttonPositive: tr("plantDetails.permissions.storage.ok", "OK"),
-        }
-      );
+      const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE, {
+        title: tr("plantDetails.permissions.storage.title", "Storage permission"),
+        message: tr(
+          "plantDetails.permissions.storage.message",
+          "We need access to save the QR code to your gallery."
+        ),
+        buttonPositive: tr("plantDetails.permissions.storage.ok", "OK"),
+      });
       if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
         throw new Error(tr("plantDetails.permissions.storage.denied", "Storage permission denied."));
       }
@@ -232,8 +244,9 @@ export default function PlantDetailsScreen() {
         setCompleteNote("");
 
         closeDefinition();
+        closeChangeImage(); // ✅ NEW (close on blur/unmount)
       };
-    }, [entry, loadDetails, tr, closeDefinition])
+    }, [entry, loadDetails, tr, closeDefinition, closeChangeImage])
   );
 
   const latestRead = details?.latestReadings ?? null;
@@ -285,9 +298,7 @@ export default function PlantDetailsScreen() {
       closeCompleteModal();
       Alert.alert(
         tr("plantDetails.alerts.completeFailed.title", "Complete failed"),
-        e?.message
-          ? String(e.message)
-          : tr("plantDetails.alerts.completeFailed.msg", "Could not complete this reminder.")
+        e?.message ? String(e.message) : tr("plantDetails.alerts.completeFailed.msg", "Could not complete this reminder.")
       );
     } finally {
       setLoading(false);
@@ -340,10 +351,15 @@ export default function PlantDetailsScreen() {
                 <PlantInfoTile
                   plant={details.plant}
                   collapseMenusSignal={dismissMenusTick}
+                  photoReloadSignal={photoReloadSignal} // ✅ NEW
                   onOpenDefinition={(plantDefinitionId) => {
                     setDismissMenusTick((t) => t + 1);
                     openDefinition(plantDefinitionId);
                   }}
+                  onOpenChangeImage={(plantId) => {
+                    setDismissMenusTick((t) => t + 1);
+                    openChangeImage(plantId);
+                  }} // ✅ NEW
                 />
               ) : (
                 <View>
@@ -414,10 +430,17 @@ export default function PlantDetailsScreen() {
 
       {loading && details && !error && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
-      <PlantDefinitionModal
-        visible={defModalVisible}
-        onClose={closeDefinition}
-        plantDefinitionId={defPlantDefinitionId}
+      {/* ✅ screen-level modals (full screen overlays) */}
+      <PlantDefinitionModal visible={defModalVisible} onClose={closeDefinition} plantDefinitionId={defPlantDefinitionId} />
+
+      <ChangePlantImageModal
+        visible={changeImgVisible}
+        onClose={closeChangeImage}
+        plantId={changeImgPlantId}
+        onChanged={() => {
+          // ✅ force PlantInfoTile to reload local uri (since the modal is no longer inside it)
+          setPhotoReloadSignal((v) => v + 1);
+        }}
       />
 
       <CompleteTaskModal
@@ -428,12 +451,7 @@ export default function PlantDetailsScreen() {
         onConfirm={handleConfirmComplete}
       />
 
-      <TopSnackbar
-        visible={toastVisible}
-        message={toastMsg}
-        variant={toastVariant}
-        onDismiss={() => setToastVisible(false)}
-      />
+      <TopSnackbar visible={toastVisible} message={toastMsg} variant={toastVariant} onDismiss={() => setToastVisible(false)} />
     </View>
   );
 }
@@ -457,11 +475,7 @@ function GlassFrame({ children, center }: { children: React.ReactNode; center?: 
           pointerEvents="none"
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
-          colors={[
-            "rgba(255, 255, 255, 0.06)",
-            "rgba(255, 255, 255, 0.02)",
-            "rgba(255, 255, 255, 0.08)",
-          ]}
+          colors={["rgba(255, 255, 255, 0.06)", "rgba(255, 255, 255, 0.02)", "rgba(255, 255, 255, 0.08)"]}
           locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
@@ -483,10 +497,7 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     overflow: "visible",
     position: "relative",
-
-    // Avoid iOS shadow props (these + layered glass are what create “inner rectangle”)
     elevation: 8,
-
     marginBottom: 14,
   },
   frameInner: { padding: 16 },

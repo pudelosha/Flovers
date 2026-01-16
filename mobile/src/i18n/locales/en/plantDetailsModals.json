@@ -1,7 +1,9 @@
 {
   "plantDetailsModals": {
     "common": {
-      "close": "Close"
+      "close": "Close",
+      "cancel": "Cancel",
+      "remove": "Remove"
     },
     "definition": {
       "title": "Plant definition",
@@ -14,7 +16,25 @@
     },
     "changeImage": {
       "title": "Change image",
-      "body": "This is a placeholder modal. Image changing will be implemented later."
+      "subtitle": "This photo is stored locally on your device and is not uploaded.",
+      "noPlantId": "No plant id found.",
+      "loadFailed": "Could not load local image.",
+      "error": "Something went wrong.",
+      "noPhoto": "No photo selected",
+      "takePhoto": "Take a photo",
+      "chooseGallery": "Choose from gallery",
+      "remove": "Remove photo",
+      "permissionTitle": "Permission required",
+      "permissionCamera": "Please grant camera and media permissions to take a photo.",
+      "permissionGallery": "Please grant media permission to pick a photo.",
+      "cameraErrorTitle": "Camera error",
+      "pickerErrorTitle": "Picker error",
+      "saveFailedTitle": "Save failed",
+      "saveFailedMsg": "Could not save this photo locally.",
+      "confirmRemoveTitle": "Remove photo?",
+      "confirmRemoveMsg": "This will remove the locally stored photo.",
+      "removeFailedTitle": "Remove failed",
+      "removeFailedMsg": "Could not remove this local photo."
     }
   }
 }
