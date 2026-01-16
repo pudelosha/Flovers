@@ -97,18 +97,14 @@ export default function LocationTile({
           <MaterialCommunityIcons name="map-marker-outline" size={18} color="#FFFFFF" />
         </View>
 
-        <Pressable
-          style={{ flex: 1, paddingRight: 8 }}
-          onPress={onPressBody}
-          android_ripple={{ color: "rgba(255,255,255,0.08)" }}
-        >
+        <View style={{ flex: 1, paddingRight: 8 }}>
           <Text style={s.locationName} numberOfLines={1}>
             {location.name}
           </Text>
           <Text style={s.plantCount} numberOfLines={1}>
             {plantLabel}
           </Text>
-        </Pressable>
+        </View>
 
         <Pressable
           onPress={onPressMenu}

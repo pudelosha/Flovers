@@ -98,15 +98,7 @@ export default function AuthCard({ children, showDrops = false }: Props) {
       ]}
     >
       {/* NEW: fixed FAB (outside the pan handler so it doesn't drift with the card) */}
-      <LanguageFAB
-        currentLanguage={currentLanguage}
-        changeLanguage={changeLanguage}
-        position="right"
-        options={[
-          { code: "en", label: "English", flag: "🇬🇧" },
-          { code: "pl", label: "Polski", flag: "🇵🇱" },
-        ]}
-      />
+      <LanguageFAB position="right" />
 
       {/* Pan handler wraps the card; pan activates only after small drag */}
       <PanGestureHandler
