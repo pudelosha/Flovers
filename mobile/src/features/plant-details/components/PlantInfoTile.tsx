@@ -1,4 +1,3 @@
-// PlantInfoTile.tsx
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { View, Text, StyleSheet, ImageBackground, Pressable, Alert } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -12,6 +11,9 @@ import type { ApiPlantInstanceDetailFull } from "../../plants/types/plants.types
 
 import PlantInfoMenu from "./PlantInfoMenu";
 import ChangePlantImageModal from "./modals/ChangePlantImageModal";
+
+// local photo resolver (adjust path to where photoStorage lives)
+import { getPlantPhotoUri } from "../../../shared/utils/photoStorage";
 
 type Props = {
   plant?: ApiPlantInstanceDetailFull | null;
@@ -51,12 +53,38 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
   const [menuOpen, setMenuOpen] = useState(false);
   const [changeImgModalVisible, setChangeImgModalVisible] = useState(false);
 
+  // ✅ NEW: local photo (Option A)
+  const [localPhotoUri, setLocalPhotoUri] = useState<string | null>(null);
+
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [collapseMenusSignal]);
+
+  // ✅ NEW: resolve local photo for this plant id
+  useEffect(() => {
+    let alive = true;
+
+    const run = async () => {
+      if (!plant?.id) {
+        if (alive) setLocalPhotoUri(null);
+        return;
+      }
+      try {
+        const uri = await getPlantPhotoUri(String(plant.id));
+        if (alive) setLocalPhotoUri(uri);
+      } catch {
+        if (alive) setLocalPhotoUri(null);
+      }
+    };
+
+    run();
+    return () => {
+      alive = false;
+    };
+  }, [plant?.id]);
 
   if (!plant) {
     return (
@@ -74,10 +102,12 @@ export default function PlantInfoTile({ plant, collapseMenusSignal, onOpenDefini
   const latin = plant.plant_definition?.latin || "";
   const locationName = plant.location?.name || "";
 
+  // ✅ UPDATED: prioritize local photo, then plant definition image
   const imageUrl = useMemo(() => {
+    if (localPhotoUri) return localPhotoUri;
     const pd: any = plant.plant_definition;
     return pd?.image || pd?.image_thumb || null;
-  }, [plant.plant_definition]);
+  }, [localPhotoUri, plant.plant_definition]);
 
   const lightValue = plant.light_level
     ? tr(`createPlant.step04.lightLevels.${String(plant.light_level)}.label`, String(plant.light_level))

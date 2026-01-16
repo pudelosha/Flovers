@@ -23,7 +23,8 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
-            "photo_uri",
+            # ✅ IMPORTANT: do not accept/store photo from the client
+            # "photo_uri",
             # exposure
             "light_level",
             "orientation",
@@ -120,7 +121,6 @@ class PlantInstanceSerializer(serializers.ModelSerializer):
 
         return obj
 
-
 class PlantInstanceListSerializer(serializers.ModelSerializer):
     location = serializers.SerializerMethodField()
     plant_definition = serializers.SerializerMethodField()
@@ -192,7 +192,8 @@ class PlantInstanceDetailSerializer(serializers.ModelSerializer):
             "display_name",
             "notes",
             "purchase_date",
-            "photo_uri",
+            # ✅ IMPORTANT: do not return backend photo_uri (local-only on device)
+            # "photo_uri",
             # exposure
             "light_level",
             "orientation",

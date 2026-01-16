@@ -1,4 +1,4 @@
-﻿import React, { useCallback } from "react";
+﻿import React, { useCallback, useRef } from "react";
 import {
   View,
   Text,
@@ -21,6 +21,12 @@ import {
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
 import LinearGradient from "react-native-linear-gradient";
+
+// local storage helpers (adjust relative path to where you placed it)
+import {
+  persistTempPlantPhoto,
+  deleteLocalPhoto,
+} from "../../../shared/utils/photoStorage";
 
 // EXACT SAME green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -48,6 +54,11 @@ export default function Step07_Photo() {
 
   const { state, actions } = useCreatePlantWizard();
 
+  // stable temp key for this wizard session (used for tmp filename)
+  const tempKeyRef = useRef(
+    `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
+  );
+
   // Safe translation (treat key-echo as missing)
   const getTranslation = useCallback(
     (key: string, fallback?: string): string => {
@@ -62,6 +73,39 @@ export default function Step07_Photo() {
       }
     },
     [t, currentLanguage]
+  );
+
+  // central handler to persist image into Flovers/tmp and store persisted URI in state
+  const onPickedAsset = useCallback(
+    async (asset?: { uri?: string; fileName?: string }) => {
+      const uri = asset?.uri;
+      if (!uri) return;
+
+      // If we already have a photo in wizard state, delete it (avoid orphaned files)
+      if (state.photoUri) {
+        try {
+          await deleteLocalPhoto(state.photoUri);
+        } catch {
+          // ignore: don't block user flow if cleanup fails
+        }
+      }
+
+      try {
+        const persistedUri = await persistTempPlantPhoto({
+          sourceUri: uri,
+          fileNameHint: asset?.fileName,
+          tempKey: tempKeyRef.current,
+        });
+
+        actions.setPhotoUri(persistedUri);
+      } catch (e: any) {
+        Alert.alert(
+          getTranslation("createPlant.step07.saveErrorTitle", "Save error"),
+          String(e?.message || e || "Failed to save photo locally.")
+        );
+      }
+    },
+    [actions, getTranslation, state.photoUri]
   );
 
   const doLaunchCamera = useCallback(async () => {
@@ -92,9 +136,9 @@ export default function Step07_Photo() {
       );
       return;
     }
-    const uri = res.assets?.[0]?.uri;
-    if (uri) actions.setPhotoUri(uri);
-  }, [actions, getTranslation]);
+
+    await onPickedAsset(res.assets?.[0]);
+  }, [getTranslation, onPickedAsset]);
 
   const doLaunchLibrary = useCallback(async () => {
     const ok = await ensureAndroidPermissionCameraAndRead();
@@ -124,11 +168,21 @@ export default function Step07_Photo() {
       );
       return;
     }
-    const uri = res.assets?.[0]?.uri;
-    if (uri) actions.setPhotoUri(uri);
-  }, [actions, getTranslation]);
 
-  const removePhoto = () => actions.clearPhoto();
+    await onPickedAsset(res.assets?.[0]);
+  }, [getTranslation, onPickedAsset]);
+
+  // delete local file too
+  const removePhoto = useCallback(async () => {
+    if (state.photoUri) {
+      try {
+        await deleteLocalPhoto(state.photoUri);
+      } catch {
+        // ignore
+      }
+    }
+    actions.clearPhoto();
+  }, [actions, state.photoUri]);
 
   return (
     <View style={wiz.cardWrap}>

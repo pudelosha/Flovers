@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\api\services\plant-instances.service.ts
 import { request } from "../client";
 
 import type {
@@ -9,7 +8,7 @@ import type {
   ApiPlantInstanceUpdatePayload,
 } from "../../features/plants/types/plants.types";
 
-// ✅ FIX: re-export so other modules can import it from this service module
+// re-export so other modules can import it from this service module
 export type { ApiPlantInstanceListItem } from "../../features/plants/types/plants.types";
 
 import type { WizardState } from "../../features/create-plant/types/create-plant.types";
@@ -24,7 +23,9 @@ function buildPayload(state: WizardState): ApiPlantInstanceCreatePayload {
     display_name: state.displayName?.trim() || "",
     notes: state.notes?.trim() || "",
     purchase_date: state.purchaseDateISO ?? null,
-    photo_uri: state.photoUri || "",
+
+    // never upload local photo paths / images
+    // photo_uri: state.photoUri || "",
 
     light_level: state.lightLevel,
     orientation: state.orientation,
@@ -137,7 +138,9 @@ export function buildUpdatePayloadFromForm(
   if ("display_name" in form) out.display_name = form.display_name ?? "";
   if ("notes" in form) out.notes = form.notes ?? "";
   if ("purchase_date" in form) out.purchase_date = form.purchase_date ?? null;
-  if ("photo_uri" in form) out.photo_uri = form.photo_uri ?? "";
+
+  // do not PATCH photo_uri to backend
+  // if ("photo_uri" in form) out.photo_uri = form.photo_uri ?? "";
 
   if ("light_level" in form) out.light_level = form.light_level!;
   if ("orientation" in form) out.orientation = form.orientation!;

@@ -23,6 +23,9 @@ import type {
 } from "../types/create-plant.types";
 import { createPlantInstance } from "../../../api/services/plant-instances.service";
 
+// NEW: promote temp local photo into plants/<plantId>.* after create
+import { promoteTempPhotoToPlant } from "../../../shared/utils/photoStorage"; // adjust path
+
 type Action =
   | { type: "SET_QUERY"; query: string }
   | { type: "SET_SELECTED_PLANT"; plant?: SelectedPlant }
@@ -65,7 +68,7 @@ const initial: WizardState = {
   selectedPlant: undefined,
 
   locations: [],
-  selectedLocationId: null, // ✅ must be null (not undefined) per type
+  selectedLocationId: null, // must be null (not undefined) per type
 
   // Step 4 defaults
   lightLevel: "bright-indirect",
@@ -269,7 +272,7 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
     stateRef.current = state;
   }, [state]);
 
-  // ✅ Stable function: no deps; reads latest state from ref.
+  // Stable function: no deps; reads latest state from ref.
   const createPlant = useCallback(async (): Promise<string> => {
     const s = stateRef.current;
 
@@ -279,7 +282,27 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
 
     const created = await createPlantInstance(s, { auth: true });
     const newId = String(created.id);
-    dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
+
+    // Option A: if we have a temp local photo, promote it to Flovers/plants/<id>.ext
+    if (s.photoUri) {
+      try {
+        const finalUri = await promoteTempPhotoToPlant({
+          tempPhotoUri: s.photoUri,
+          plantId: newId,
+        });
+
+        dispatch({
+          type: "PATCH",
+          patch: { createdPlantId: newId, photoUri: finalUri },
+        });
+      } catch {
+        // If move fails, still create plant; keep existing temp uri so user doesn't lose it
+        dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
+      }
+    } else {
+      dispatch({ type: "PATCH", patch: { createdPlantId: newId } });
+    }
+
     return newId;
   }, []);
 
@@ -313,10 +336,12 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
       setMoistureRequired: (v: boolean) => dispatch({ type: "SET_MOISTURE_REQUIRED", val: v }),
       setMoistureInterval: (d: number) => dispatch({ type: "SET_MOISTURE_INTERVAL", val: d }),
       setFertilizeRequired: (v: boolean) => dispatch({ type: "SET_FERTILIZE_REQUIRED", val: v }),
-      setFertilizeInterval: (d: number) => dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
+      setFertilizeInterval: (d: number) =>
+        dispatch({ type: "SET_FERTILIZE_INTERVAL", val: d }),
       setCareRequired: (v: boolean) => dispatch({ type: "SET_CARE_REQUIRED", val: v }),
       setCareInterval: (d: number) => dispatch({ type: "SET_CARE_INTERVAL", val: d }),
-      setRepotIntervalMonths: (m: number) => dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
+      setRepotIntervalMonths: (m: number) =>
+        dispatch({ type: "SET_REPOT_INTERVAL_MONTHS", val: m }),
 
       setPhotoUri: (uri?: string) => dispatch({ type: "SET_PHOTO_URI", uri }),
       clearPhoto: () => dispatch({ type: "CLEAR_PHOTO" }),
