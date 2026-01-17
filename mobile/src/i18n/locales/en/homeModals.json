@@ -12,6 +12,11 @@
       "notePlaceholder": "You can add a short note about what you did, observations, etc.",
       "confirm": "Mark as complete"
     },
+    "completeBulk": {
+      "title": "Mark {{count}} tasks as complete",
+      "noteHint": "This note will be saved for each completed task and can be viewed later per plant in Plants Journal.",
+      "confirm": "Mark all as complete"
+    },
     "filter": {
       "title": "Filter tasks",
       "plantLabel": "Plant",

@@ -7,6 +7,7 @@
       "showOverdue": "Pokaż zaległe",
       "showDueToday": "Pokaż na dziś",
       "showAllTasks": "Pokaż wszystkie",
+      "markVisibleAsComplete": "Oznacz widoczne jako wykonane",
       "sort": "Sortuj",
       "filter": "Filtruj",
       "clearFilter": "Wyczyść filtr",
@@ -29,7 +30,9 @@
     "toasts": {
       "failedToLoadTasks": "Nie udało się wczytać zadań",
       "taskCompleted": "Zadanie ukończone",
+      "tasksCompleted": "Zadania ukończone",
       "completeFailed": "Nie udało się ukończyć",
+      "completeSomeFailed": "Ukończono {{ok}} z {{total}} zadań",
       "taskNotLinkedToPlant": "To zadanie nie jest powiązane z rośliną."
     },
     "empty": {

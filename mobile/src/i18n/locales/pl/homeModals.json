@@ -12,6 +12,11 @@
       "notePlaceholder": "Możesz dodać krótką notatkę o tym co zrobiłeś/aś, obserwacje itp.",
       "confirm": "Oznacz jako wykonane"
     },
+    "completeBulk": {
+      "title": "Oznacz {{count}} zadań jako wykonane",
+      "noteHint": "Ta notatka zostanie zapisana dla każdego ukończonego zadania i będzie widoczna później dla danej rośliny w Dzienniku roślin.",
+      "confirm": "Oznacz wszystkie jako wykonane"
+    },
     "filter": {
       "title": "Filtruj zadania",
       "plantLabel": "Roślina",

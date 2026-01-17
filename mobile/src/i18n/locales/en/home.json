@@ -7,6 +7,7 @@
       "showOverdue": "Show overdue",
       "showDueToday": "Show due today",
       "showAllTasks": "Show all tasks",
+      "markVisibleAsComplete": "Mark visible as complete",
       "sort": "Sort",
       "filter": "Filter",
       "clearFilter": "Clear filter",
@@ -29,7 +30,9 @@
     "toasts": {
       "failedToLoadTasks": "Failed to load tasks",
       "taskCompleted": "Task completed",
+      "tasksCompleted": "Tasks completed",
       "completeFailed": "Complete failed",
+      "completeSomeFailed": "Completed {{ok}} of {{total}} tasks",
       "taskNotLinkedToPlant": "This task is not linked to a plant."
     },
     "empty": {
