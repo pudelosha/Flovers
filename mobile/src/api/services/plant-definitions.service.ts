@@ -73,18 +73,31 @@ export async function fetchPlantSearchIndex(
 }
 
 /** Full plant profile */
-export async function fetchPlantProfile(
-  idOrExternalId: string | number,
-  opts: { auth?: boolean; lang?: string } = { auth: true }
-) {
+export async function fetchPlantProfile(idOrExternalId: string | number, opts: { auth?: boolean; lang?: string } = { auth: true }) {
   const url = withLang(ENDPOINTS.profile(idOrExternalId), opts.lang);
 
-  const data = await request<ApiPlantProfile>(
-    url,
-    "GET",
-    undefined,
-    { auth: opts.auth ?? true }
-  );
+  console.log(`Fetching plant profile from URL: ${url}`); // Log the URL
 
-  return serializePlantProfile(data);
+  try {
+    const response = await request<ApiPlantProfile>(url, "GET", undefined, { auth: opts.auth ?? true });
+
+    // Log the response object to inspect it
+    console.log('Received plant profile response:', response);
+
+    if (!response) {
+      throw new Error('Received undefined response');
+    }
+
+    // The response should already be a parsed object. Ensure it's valid.
+    if (!response.latin) {
+      throw new Error('Invalid plant profile response, missing "latin" field');
+    }
+
+    return response;
+
+  } catch (error) {
+    console.error("Error while fetching plant profile:", error); // Enhanced error logging
+    throw new Error(`Failed to fetch plant profile: ${error.message || 'Unknown error'}`);
+  }
 }
+

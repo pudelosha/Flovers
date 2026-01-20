@@ -16,6 +16,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../../app/providers/LanguageProvider";
+import { fetchPlantProfile } from "../../../../api/services/plant-definitions.service";
 
 import { wiz } from "../../styles/wizard.styles";
 import { s as remindersStyles } from "../../../reminders/styles/reminders.styles";
@@ -165,10 +166,38 @@ export default function PlantScannerModal({
 
   if (!visible) return null;
 
-  const handleSelectCandidate = (item: ApiRecognitionResult) => {
-    onPlantDetected?.(toSuggestion(item));
-    onClose();
-  };
+  const handleSelectCandidate = async (item: ApiRecognitionResult) => {
+  const plant = toSuggestion(item);  // Convert to suggestion object
+  const formattedLatin = plant.latin.replace(/_/g, ' ');  // Format Latin name for display (with spaces)
+
+  // Convert the Latin name to lowercase for the request (backend expects lowercase)
+  const latinForRequest = formattedLatin.toLowerCase().replace(/ /g, '_');  // Revert spaces to underscores for the request
+
+  console.log('Fetching plant profile for:', latinForRequest);  // Log the request being sent
+
+  try {
+    const plantProfile = await fetchPlantProfile(latinForRequest); // Send the request with the correct Latin name format
+
+    // Now, update the provider with the full plant data
+    onPlantDetected?.({
+      ...plant,
+      latin: formattedLatin,  // Ensure Latin name is formatted (for display)
+      ...plantProfile,  // Add the full plant profile details
+    });
+
+    onClose();  // Close the modal after selecting the plant
+  } catch (error) {
+    // Enhanced error logging for better debugging
+    console.error('Error while fetching plant profile for:', latinForRequest, error);
+    
+    // Optionally handle the error (e.g., show an alert)
+    Alert.alert(
+      "Plant Recognition Error",
+      `Failed to fetch plant details for ${latinForRequest}. ${error.message || 'Please try again.'}`
+    );
+  }
+};
+
 
   const doLaunchCamera = async () => {
     try {
@@ -455,7 +484,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Close button (✅ no common) */}
+                {/* Close button */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}
@@ -549,7 +578,7 @@ export default function PlantScannerModal({
                   </Text>
                 )}
 
-                {/* Bottom buttons: Back + Close (✅ no common) */}
+                {/* Bottom buttons: Back + Close */}
                 <View style={styles.bottomRowFull}>
                   <Pressable
                     style={[styles.bottomBtn, { flex: 1 }]}

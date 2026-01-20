@@ -1,5 +1,4 @@
-﻿// context/CreatePlantProvider.tsx
-import React, {
+﻿import React, {
   createContext,
   useContext,
   useMemo,
@@ -66,20 +65,13 @@ const initial: WizardState = {
   step: "selectPlant",
   plantQuery: "",
   selectedPlant: undefined,
-
   locations: [],
   selectedLocationId: null, // must be null (not undefined) per type
-
-  // Step 4 defaults
   lightLevel: "bright-indirect",
   orientation: "E",
   distanceCm: 20,
-
-  // Step 5 (optional)
   potMaterial: undefined,
   soilMix: undefined,
-
-  // Step 6 defaults
   createAutoTasks: false,
   waterTaskEnabled: false,
   repotTaskEnabled: false,
@@ -92,16 +84,10 @@ const initial: WizardState = {
   fertilizeIntervalDays: 30,
   careIntervalDays: 30,
   repotIntervalMonths: 12,
-
-  // Step 7
   photoUri: undefined,
-
-  // Step 8
   displayName: "",
   notes: "",
   purchaseDateISO: undefined,
-
-  // Step 9
   createdPlantId: undefined,
 };
 
@@ -125,7 +111,13 @@ function reducer(state: WizardState, action: Action): WizardState {
     case "SET_QUERY":
       return { ...state, plantQuery: action.query };
     case "SET_SELECTED_PLANT":
-      return { ...state, selectedPlant: action.plant };
+      return {
+        ...state,
+        selectedPlant: action.plant ? {
+          ...action.plant,
+          latin: action.plant.latin.replace(/_/g, ' ') // Replace underscores with spaces
+        } : undefined,
+      };
 
     case "NEXT": {
       const idx = ORDER.indexOf(state.step);
@@ -309,8 +301,12 @@ export function CreatePlantProvider({ children }: { children: React.ReactNode })
   // All other actions are dispatch-only and can be stable
   const actions = useMemo(
     () => ({
-      setPlantQuery: (q: string) => dispatch({ type: "SET_QUERY", query: q }),
-      setSelectedPlant: (p?: SelectedPlant) => dispatch({ type: "SET_SELECTED_PLANT", plant: p }),
+      setSelectedPlant: (p?: SelectedPlant) => {
+        if (p && p.latin) {
+          p.latin = p.latin.replace(/_/g, ' '); // Replace underscores with spaces
+        }
+        dispatch({ type: "SET_SELECTED_PLANT", plant: p });
+      },
       goNext: () => dispatch({ type: "NEXT" }),
       goPrev: () => dispatch({ type: "PREV" }),
       goTo: (s: WizardStep) => dispatch({ type: "GOTO", step: s }),

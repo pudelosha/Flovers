@@ -108,34 +108,16 @@ class PlantDefinitionSuggestionSerializer(serializers.ModelSerializer):
 class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
     display_name = serializers.SerializerMethodField()
     description = serializers.SerializerMethodField()
-
     image = serializers.SerializerMethodField()
     image_thumb = serializers.SerializerMethodField()
 
     class Meta:
         model = PlantDefinition
         fields = [
-            "id",
-            "external_id",
-            "display_name",
-            "latin",
-            "image",
-            "image_thumb",
-            "description",
-            "traits",
-            "sun",
-            "water",
-            "difficulty",
-            "recommended_pot_materials",
-            "recommended_soil_mixes",
-            "water_required",
-            "water_interval_days",
-            "moisture_required",
-            "moisture_interval_days",
-            "fertilize_required",
-            "fertilize_interval_days",
-            "repot_required",
-            "repot_interval_months",
+            "id", "external_id", "display_name", "latin", "image", "image_thumb", "description",
+            "traits", "sun", "water", "difficulty", "recommended_pot_materials", "recommended_soil_mixes",
+            "water_required", "water_interval_days", "moisture_required", "moisture_interval_days",
+            "fertilize_required", "fertilize_interval_days", "repot_required", "repot_interval_months",
         ]
 
     def get_image(self, obj: PlantDefinition):
@@ -158,7 +140,9 @@ class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
         tr = _get_translation(obj, lang)
         if tr and tr.common_name.strip():
             return tr.common_name.strip()
-        return obj.name.strip() or obj.latin
+        else:
+            print(f"Warning: Missing translation for {obj.id} in {lang}, using fallback.")
+            return obj.name.strip() or obj.latin
 
     def get_description(self, obj: PlantDefinition):
         request = self.context.get("request")
@@ -166,4 +150,6 @@ class PlantDefinitionProfileSerializer(serializers.ModelSerializer):
         tr = _get_translation(obj, lang)
         if tr and tr.description.strip():
             return tr.description.strip()
-        return ""
+        else:
+            print(f"Warning: Missing description translation for {obj.id} in {lang}, using fallback.")
+            return ""

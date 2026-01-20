@@ -71,8 +71,9 @@ export default function PlantSearchBox({
         : (suggestions ?? []).filter((s) => {
             const name = (s?.name ?? "").toLowerCase();
             const latin = (s?.latin ?? "").toLowerCase();
+            const formattedLatin = latin.replace(/_/g, ' '); // Replace underscores with spaces
             const q = safeValue.toLowerCase();
-            return name.includes(q) || latin.includes(q);
+            return name.includes(q) || formattedLatin.includes(q); // Compare with formatted Latin name
           }),
     [safeValue, suggestions]
   );

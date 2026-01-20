@@ -99,9 +99,10 @@ export function serializePlantDefinition(p: ApiPlantDefinition): PlantDefinition
 }
 
 export function serializePlantSuggestion(p: ApiPlantSuggestion): Suggestion {
+  const latinName = p.latin.replace(/_/g, ' '); // Replace underscores with spaces
   return {
     id: toIdString(p?.id),
     name: pickDisplayName(p),
-    latin: typeof p?.latin === "string" ? p.latin : "",
-  } as any;
+    latin: latinName, // Use formatted Latin name
+  };
 }

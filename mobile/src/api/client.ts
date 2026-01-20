@@ -45,52 +45,62 @@ export async function request<T>(
 
   let fetchBody: any = undefined;
 
-  // IMPORTANT: handle FormData separately (for uploads)
+  // Handle FormData separately (for uploads)
   if (body instanceof FormData) {
-    // Let fetch/React Native set multipart/form-data; boundary=...
     fetchBody = body;
   } else if (body !== undefined && body !== null) {
-    // Normal JSON request
     headers["Content-Type"] = "application/json";
     fetchBody = JSON.stringify(body);
   }
 
-  const res = await fetch(`${API_BASE}${path}`, {
-    method,
-    headers,
-    body: fetchBody,
-  });
+  try {
+    const res = await fetch(`${API_BASE}${path}`, {
+      method,
+      headers,
+      body: fetchBody,
+    });
 
-  // Try to parse JSON only if content-type says JSON.
-  let data: any = null;
-  const raw = await res.text();
+    // Log the response for debugging
+    console.log("Response received: ", res);
 
-  if (raw) {
+    // Check for an invalid response (null or no headers)
+    if (!res || !res.headers) {
+      console.error("Response object is missing headers or is malformed", res);
+      throw new ApiError(res?.status ?? 500, "Invalid response object", "Response object is missing headers");
+    }
+
+    // Ensure the response is okay before processing it
+    if (!res.ok) {
+      const rawError = await res.text();
+      console.error("Error response received: ", rawError);
+      throw new ApiError(res.status, rawError, `Request failed with status ${res.status}`);
+    }
+
+    // Get the response body and check if it's empty
+    const raw = await res.text();
+    if (!raw) {
+      console.error("Empty response body received");
+      throw new ApiError(res.status, raw, "Received empty response body");
+    }
+
+    // Check if the content type is JSON
     if (isJsonContent(res)) {
       try {
-        data = JSON.parse(raw);
-      } catch (e: any) {
-        // Server said JSON but sent something else (e.g., HTML error page)
-        if (!res.ok) {
-          throw new ApiError(res.status, raw, data?.message || "Invalid JSON error response");
-        }
+        const data = JSON.parse(raw);
+        return data as T;
+      } catch (e) {
+        console.error("Invalid JSON response: ", raw);
         throw new ApiError(res.status, raw, "Invalid JSON response");
       }
     } else {
-      // Not JSON (likely HTML). For errors, surface the raw snippet; for success this is unexpected.
-      if (!res.ok) {
-        throw new ApiError(res.status, raw, "Non-JSON error response");
-      }
-      throw new ApiError(res.status, raw, "Unexpected non-JSON response");
+      console.error("Non-JSON error response: ", raw);
+      throw new ApiError(res.status, raw, "Non-JSON error response");
     }
-  }
 
-  if (!res.ok) {
-    if (res.status === 401) {
-      throw new ApiError(401, data, data?.message || "Unauthorized");
-    }
-    throw new ApiError(res.status, data, data?.message || "Request failed");
+  } catch (error) {
+    console.error("API request failed: ", error);
+    throw error;  // Rethrow to propagate error
   }
-
-  return data as T;
 }
+
+
