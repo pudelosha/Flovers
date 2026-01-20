@@ -4,19 +4,32 @@ from .models import PlantDefinition, PlantDefinitionTranslation
 
 
 def _pick_language(request) -> str:
+    """
+    Pick the language from the request, either from query parameters or the Accept-Language header.
+    Defaults to 'en' if no language is provided.
+    """
     if request is None:
         return "en"
+    
+    # Check query parameters for 'lang'
     lang = (request.query_params.get("lang") or "").strip().lower()
     if lang:
         return lang
+    
+    # Otherwise, check the 'Accept-Language' header
     accept = (request.headers.get("Accept-Language") or "").strip().lower()
     if accept:
         first = accept.split(",")[0].strip()
         return first.split("-")[0] if first else "en"
-    return "en"
+    
+    return "en"  # Default to 'en' if nothing is found
 
 
 def _get_translation(obj: PlantDefinition, lang: str) -> PlantDefinitionTranslation | None:
+    """
+    Retrieve the translation for a given plant in the specified language.
+    If not found, returns the English translation.
+    """
     tr = obj.translations.filter(language_code=lang).first()
     if tr:
         return tr
@@ -82,7 +95,7 @@ class PopularPlantDefinitionSerializer(serializers.ModelSerializer):
 
     def get_display_name(self, obj: PlantDefinition):
         request = self.context.get("request")
-        lang = _pick_language(request)
+        lang = self.context.get("lang", "en")  # Ensure we get the language context
         tr = _get_translation(obj, lang)
         if tr and tr.common_name.strip():
             return tr.common_name.strip()

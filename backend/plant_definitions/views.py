@@ -10,10 +10,32 @@ from .serializers import (
     PlantDefinitionProfileSerializer,
 )
 
+def _pick_language(request) -> str:
+    """
+    Pick the language from the request, either from query parameters or the Accept-Language header.
+    Defaults to 'en' if no language is provided.
+    """
+    if request is None:
+        return "en"
+    
+    # Check query parameters for 'lang'
+    lang = (request.query_params.get("lang") or "").strip().lower()
+    if lang:
+        return lang
+    
+    # Otherwise, check the 'Accept-Language' header
+    accept = (request.headers.get("Accept-Language") or "").strip().lower()
+    if accept:
+        first = accept.split(",")[0].strip()
+        return first.split("-")[0] if first else "en"
+    
+    return "en"  # Default to 'en' if nothing is found
+
 class PopularPlantDefinitionsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        lang = _pick_language(request)  # Retrieve the language from the query params
         qs = (
             PlantDefinition.objects.filter(popular=True)
             .prefetch_related("translations")
@@ -30,7 +52,7 @@ class PopularPlantDefinitionsView(APIView):
                 "popular",
             )
         )
-        data = PopularPlantDefinitionSerializer(qs, many=True, context={"request": request}).data
+        data = PopularPlantDefinitionSerializer(qs, many=True, context={"request": request, "lang": lang}).data
         return Response(data)
 
 class PlantDefinitionSearchIndexView(APIView):
@@ -93,5 +115,3 @@ class PlantDefinitionProfileByKeyView(RetrieveAPIView):
         except Exception as e:
             print(f"Error fetching plant profile: {str(e)}")  # Log the error for debugging
             return Response({"error": str(e)}, status=500)
-
-

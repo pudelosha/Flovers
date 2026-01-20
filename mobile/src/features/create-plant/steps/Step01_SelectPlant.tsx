@@ -9,15 +9,12 @@ import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../../../app/providers/LanguageProvider"; // Add LanguageProvider import
+import { useLanguage } from "../../../app/providers/LanguageProvider"; // Import LanguageProvider
+import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
 
 import { wiz } from "../styles/wizard.styles";
 import PlantSearchBox from "../components/PlantSearchBox";
 import { useCreatePlantWizard } from "../hooks/useCreatePlantWizard";
-import {
-  fetchPopularPlants,
-  fetchPlantSearchIndex,
-} from "../../../api/services/plant-definitions.service";
 import type { PopularPlant, Suggestion } from "../types/create-plant.types";
 import SafeImage from "../../../shared/ui/SafeImage";
 
@@ -123,8 +120,8 @@ export default function Step01_SelectPlant({
         setLoadingSearch(true);
 
         const [popularRes, searchRes] = await Promise.all([
-          fetchPopularPlants({ auth: true }),
-          fetchPlantSearchIndex({ auth: true }),
+          fetchPopularPlants({ lang: currentLanguage, auth: true }),
+          fetchPlantSearchIndex({ lang: currentLanguage, auth: true }),
         ]);
         if (!mounted) return;
 
@@ -147,7 +144,7 @@ export default function Step01_SelectPlant({
     return () => {
       mounted = false;
     };
-  }, [getTranslation]);
+  }, [getTranslation, currentLanguage]);
 
   const onSelectFromSearch = (item: Suggestion) => {
     const latinName = item.latin;  // Use the Latin name here
@@ -193,12 +190,6 @@ export default function Step01_SelectPlant({
     onRegisterScanResultHandler(onScanPlantDetected);
   }, [onRegisterScanResultHandler, onScanPlantDetected]);
 
-  useEffect(() => {
-  }, [query]);
-
-  useEffect(() => {
-  }, [(state as any)?.selectedPlant]);
-
   return (
     <View style={wiz.cardWrap}>
       <View style={wiz.cardGlass} pointerEvents="none">
@@ -215,7 +206,6 @@ export default function Step01_SelectPlant({
       </View>
 
       <View style={wiz.cardInner}>
-        {/* Use TranslatedText component for static text */}
         <TranslatedText 
           tKey="createPlant.step01.title" 
           style={wiz.title} 
@@ -271,12 +261,11 @@ export default function Step01_SelectPlant({
           </View>
         </View>
 
-        {/* Use TranslatedText component for section title */}
         <TranslatedText 
           tKey="createPlant.step01.popularPlants" 
           style={wiz.sectionTitle} 
         />
-        
+
         {loadingPopular ? (
           <View style={{ paddingVertical: 8 }}>
             <ActivityIndicator />

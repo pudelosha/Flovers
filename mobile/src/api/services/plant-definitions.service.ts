@@ -1,4 +1,3 @@
-// plant-definitions.service.ts
 import { request, ApiError } from "../client";
 import type { PlantDefinition } from "../../features/create-plant/types/create-plant.types";
 import {
@@ -28,16 +27,19 @@ function withLang(url: string, lang?: string) {
   return `${url}${join}lang=${encodeURIComponent(l)}`;
 }
 
-/** Popular cards */
+// Function to fetch popular plants
 export async function fetchPopularPlants(
-  opts: { auth?: boolean; useFallbackOnError?: boolean } = {
+  opts: { auth?: boolean; useFallbackOnError?: boolean; lang?: string } = {
     auth: true,
     useFallbackOnError: true,
   }
 ): Promise<PlantDefinition[]> {
+  const lang = opts.lang || 'en';  // Use the language passed from the component
+
   try {
+    const url = withLang(ENDPOINTS.popular, lang);  // Append language to the URL
     const data = await request<ApiPlantDefinition[]>(
-      ENDPOINTS.popular,
+      url,
       "GET",
       undefined,
       { auth: opts.auth ?? true }
@@ -50,16 +52,18 @@ export async function fetchPopularPlants(
   }
 }
 
-/** Search index */
 export async function fetchPlantSearchIndex(
-  opts: { auth?: boolean; useFallbackOnError?: boolean } = {
+  opts: { auth?: boolean; useFallbackOnError?: boolean; lang?: string } = {
     auth: true,
     useFallbackOnError: true,
   }
 ) {
+  const lang = opts.lang || 'en';  // Use the language passed from the component
+
   try {
+    const url = withLang(ENDPOINTS.searchIndex, lang);  // Append language to the URL
     const data = await request<ApiPlantSuggestion[]>(
-      ENDPOINTS.searchIndex,
+      url,
       "GET",
       undefined,
       { auth: opts.auth ?? true }
@@ -100,4 +104,3 @@ export async function fetchPlantProfile(idOrExternalId: string | number, opts: {
     throw new Error(`Failed to fetch plant profile: ${error.message || 'Unknown error'}`);
   }
 }
-
