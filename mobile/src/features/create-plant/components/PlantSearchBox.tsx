@@ -73,7 +73,7 @@ export default function PlantSearchBox({
             const latin = (s?.latin ?? "").toLowerCase();
             const formattedLatin = latin.replace(/_/g, ' '); // Replace underscores with spaces
             const q = safeValue.toLowerCase();
-            return name.includes(q) || formattedLatin.includes(q); // Compare with formatted Latin name
+            return formattedLatin.includes(q) || name.includes(q); // Compare with Latin first
           }),
     [safeValue, suggestions]
   );
@@ -129,7 +129,7 @@ export default function PlantSearchBox({
   const handleChangeText = (t: string) => {
     const next = typeof t === "string" ? t : "";
     if (!isFocused && next) animateLabel(1);
-    onChange(next);
+    onChange(next);  // The value passed to onChange should always be in Latin format
   };
 
   const labelTop = animatedLabel.interpolate({
@@ -237,7 +237,7 @@ export default function PlantSearchBox({
               key={item.id}
               style={wiz.suggestItem}
               onPress={() => {
-                onSelectSuggestion(item);
+                onSelectSuggestion(item);  // Pass the selected suggestion, which will always have the Latin name
                 setShowSuggestions(false);
               }}
             >

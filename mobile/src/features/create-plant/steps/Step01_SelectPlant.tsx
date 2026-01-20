@@ -150,40 +150,40 @@ export default function Step01_SelectPlant({
   }, [getTranslation]);
 
   const onSelectFromSearch = (item: Suggestion) => {
-    const latinName = item.latin;  // Ensure to use the latin name here
-    setQuery(latinName);           // Update the query with the latin name
+    const latinName = item.latin;  // Use the Latin name here
+    setQuery(latinName);           // Update the query with the Latin name
     setShowSuggestions(false);
     actions.setSelectedPlant({
       id: item.id,
-      name: latinName,             // Store latin name
-      latin: latinName,            // Store latin name
+      name: latinName,             // Store the Latin name
+      latin: latinName,            // Store the Latin name
       predefined: true,
     });
   };
 
   const onPickPopular = (item: PopularPlant) => {
-    const name = pickName(item);
+    const latinName = (item as any).latin;
 
-    setQuery(name);
+    setQuery(latinName);  // Set the query to Latin name
     setShowSuggestions(false);
     actions.setSelectedPlant({
       id: (item as any).id,
-      name,
-      latin: (item as any).latin,
+      name: latinName,     // Store the Latin name
+      latin: latinName,    // Store the Latin name
       predefined: true,
     });
     onScrollToTop();
   };
 
   const onScanPlantDetected = useCallback((plant: Suggestion) => {
-    const formattedLatin = plant.latin.replace(/_/g, ' ');  // Ensure the Latin name is properly formatted
+    const formattedLatin = plant.latin.replace(/_/g, ' ');  // Format the Latin name
     setQuery(formattedLatin);  // Set the search query to the formatted Latin name
     setShowSuggestions(false);
 
     actions.setSelectedPlant({
       id: plant.id,
-      name: formattedLatin,  // Store the Latin name here, not the common name
-      latin: plant.latin,     // Store the Latin name here
+      name: formattedLatin,  // Store the Latin name
+      latin: plant.latin,    // Store the Latin name
       predefined: false,
     });
     onScrollToTop(); // If you need to scroll to the top after selection
