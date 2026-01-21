@@ -8,6 +8,7 @@ import {
 import { BlurView } from "@react-native-community/blur";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
+import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../app/providers/LanguageProvider"; // Import LanguageProvider
 import { fetchPopularPlants, fetchPlantSearchIndex } from "../../../api/services/plant-definitions.service";
@@ -117,6 +118,15 @@ export default function Step01_SelectPlant({
   React.useEffect(() => {
     console.log('Step01_SelectPlant rendering with language:', currentLanguage);
   }, [currentLanguage]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      // if provider is reset, initialQuery will be ""
+      setQuery(initialQuery);
+      setShowSuggestions(false);
+      return () => {};
+    }, [initialQuery])
+  );
 
   useEffect(() => {
     let mounted = true;
