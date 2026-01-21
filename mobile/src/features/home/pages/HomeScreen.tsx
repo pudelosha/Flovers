@@ -113,16 +113,26 @@ export default function HomeScreen() {
     setToastVisible(true);
   };
 
-  // NEW: "mark complete" modal state (single + bulk)
+  // "mark complete" modal state (single + bulk)
   type CompleteMode = "single" | "bulk";
   const [completeModalVisible, setCompleteModalVisible] = useState(false);
   const [completeMode, setCompleteMode] = useState<CompleteMode>("single");
   const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
   const [completeNote, setCompleteNote] = useState("");
 
-  // NEW: overdue info for modal
+  // overdue info for modal
   const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
   const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
+
+  // ✅ Define closeCompleteModal BEFORE using it in useFocusEffect/load handlers
+  const closeCompleteModal = useCallback(() => {
+    setCompleteModalVisible(false);
+    setCompleteMode("single");
+    setCompleteTaskIds([]);
+    setCompleteNote("");
+    setCompleteIsOverdue(false);
+    setCompleteIntervalText("");
+  }, []);
 
   const load = useCallback(async () => {
     try {
@@ -159,17 +169,19 @@ export default function HomeScreen() {
     }, [load])
   );
 
-  // On every focus — close any open menu and scroll list to top
+  // On every focus — close any open menu/modals and scroll list to top
   useFocusEffect(
     useCallback(() => {
       setMenuOpenId(null);
       setSortOpen(false);
       setFilterOpen(false);
+      closeCompleteModal(); // ✅ ensures complete modal won't remain open
+
       requestAnimationFrame(() => {
         listRef.current?.scrollToOffset?.({ offset: 0, animated: false });
       });
       return undefined;
-    }, [])
+    }, [closeCompleteModal])
   );
 
   const onRefresh = useCallback(async () => {
@@ -201,35 +213,39 @@ export default function HomeScreen() {
     return d.getTime();
   };
 
-  // NEW: overdue helper for tasks
+  // overdue helper for tasks
   const isTaskOverdue = useCallback(
     (tsk: HomeTask) => {
       const start = startOfToday();
       const ms = normDateMs((tsk as any).dueDate);
       return Number.isFinite(ms) && ms < start;
     },
-    // startOfToday/normDateMs are stable in practice; keep deps empty for simplicity
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
-  // NEW: interval helper (best-effort; requires intervalValue/intervalUnit on task)
+  // interval helper (best-effort; requires intervalValue/intervalUnit on task)
   const buildIntervalText = useCallback(
     (tsk: any) => {
       const v = tsk?.intervalValue;
       const u = tsk?.intervalUnit;
-
       if (!v || !u) return "";
 
-      // Use translation-driven pluralization if you add homeModals.interval.*
-      // Fallback: simple English-like string if keys are missing.
-      try {
-        return t(`homeModals.interval.${u}`, { count: v });
-      } catch {
+      // If homeModals.interval.days/months keys exist, this will be localized.
+      // Otherwise it will just return the key string; we guard against that below.
+      const maybe = t(`homeModals.interval.${u}`, { count: v });
+      if (typeof maybe === "string" && maybe.startsWith("homeModals.interval.")) {
         const unitLabel =
-          u === "days" ? (v === 1 ? "day" : "days") : v === 1 ? "month" : "months";
+          u === "days"
+            ? v === 1
+              ? "day"
+              : "days"
+            : v === 1
+              ? "month"
+              : "months";
         return `+${v} ${unitLabel}`;
       }
+      return maybe;
     },
     [t]
   );
@@ -422,7 +438,7 @@ export default function HomeScreen() {
 
   const showFAB = !sortOpen && !filterOpen;
 
-  // NEW: open / close / confirm handlers for complete-with-note (single + bulk)
+  // open / close / confirm handlers for complete-with-note (single + bulk)
   const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
     setCompleteMode(mode);
     setCompleteTaskIds(selectedTasks.map((x) => x.id));
@@ -434,7 +450,8 @@ export default function HomeScreen() {
     if (mode === "single") {
       setCompleteIntervalText(buildIntervalText(selectedTasks[0]));
     } else {
-      const first = selectedTasks.length > 0 ? buildIntervalText(selectedTasks[0]) : "";
+      const first =
+        selectedTasks.length > 0 ? buildIntervalText(selectedTasks[0]) : "";
       const allSame =
         selectedTasks.length > 0 &&
         selectedTasks.every((x) => buildIntervalText(x) === first);
@@ -442,17 +459,6 @@ export default function HomeScreen() {
     }
 
     setCompleteModalVisible(true);
-  };
-
-  const closeCompleteModal = () => {
-    setCompleteModalVisible(false);
-    setCompleteMode("single");
-    setCompleteTaskIds([]);
-    setCompleteNote("");
-
-    // NEW: reset modal info
-    setCompleteIsOverdue(false);
-    setCompleteIntervalText("");
   };
 
   const handleConfirmComplete = async () => {
