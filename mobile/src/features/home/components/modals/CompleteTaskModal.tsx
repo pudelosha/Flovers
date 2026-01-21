@@ -11,9 +11,13 @@ type Props = {
   onCancel: () => void;
   onConfirm: () => void;
 
-  // NEW: allow single + bulk modes
+  // allow single + bulk modes
   mode?: "single" | "bulk";
   count?: number;
+
+  // NEW
+  isOverdue?: boolean;
+  intervalText?: string;
 };
 
 export default function CompleteTaskModal({
@@ -24,6 +28,8 @@ export default function CompleteTaskModal({
   onConfirm,
   mode = "single",
   count,
+  isOverdue = false,
+  intervalText = "",
 }: Props) {
   const { t } = useTranslation();
 
@@ -69,6 +75,18 @@ export default function CompleteTaskModal({
               ? t("homeModals.completeBulk.title", { count: count ?? 0 })
               : t("homeModals.complete.title")}
           </Text>
+
+          {/* NEW: overdue info line */}
+          {isOverdue ? (
+            <Text style={s.inputHint}>
+              {t(
+                isBulk
+                  ? "homeModals.completeBulk.overdueInfo"
+                  : "homeModals.complete.overdueInfo",
+                { intervalText }
+              )}
+            </Text>
+          ) : null}
 
           {/* Note input */}
           <Text style={s.inputLabel}>{t("homeModals.complete.noteLabel")}</Text>

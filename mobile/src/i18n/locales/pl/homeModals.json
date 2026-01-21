@@ -7,6 +7,7 @@
     },
     "complete": {
       "title": "Oznacz zadanie jako wykonane",
+      "overdueInfo": "To zadanie jest zaległe. Następna data zostanie wyliczona od dziś {{intervalText}}.",
       "noteLabel": "Notatka (opcjonalnie)",
       "noteHint": "Ta notatka zostanie zapisana i będzie widoczna później dla danej rośliny w Dzienniku roślin.",
       "notePlaceholder": "Możesz dodać krótką notatkę o tym co zrobiłeś/aś, obserwacje itp.",
@@ -14,8 +15,9 @@
     },
     "completeBulk": {
       "title": "Oznacz {{count}} zadań jako wykonane",
+      "overdueInfo": "Niektóre zadania są zaległe. Dla zaległych zadań następna data zostanie wyliczona od dziś {{intervalText}}.",
       "noteHint": "Ta notatka zostanie zapisana dla każdego ukończonego zadania i będzie widoczna później dla danej rośliny w Dzienniku roślin.",
-      "confirm": "Oznacz wszystkie jako wykonane"
+      "confirm": "Oznacz jako wykonane"
     },
     "filter": {
       "title": "Filtruj zadania",

@@ -120,6 +120,10 @@ export default function HomeScreen() {
   const [completeTaskIds, setCompleteTaskIds] = useState<string[]>([]);
   const [completeNote, setCompleteNote] = useState("");
 
+  // NEW: overdue info for modal
+  const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
+  const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
+
   const load = useCallback(async () => {
     try {
       const data = await fetchHomeTasks();
@@ -196,6 +200,39 @@ export default function HomeScreen() {
     const d = val instanceof Date ? val : new Date(val);
     return d.getTime();
   };
+
+  // NEW: overdue helper for tasks
+  const isTaskOverdue = useCallback(
+    (tsk: HomeTask) => {
+      const start = startOfToday();
+      const ms = normDateMs((tsk as any).dueDate);
+      return Number.isFinite(ms) && ms < start;
+    },
+    // startOfToday/normDateMs are stable in practice; keep deps empty for simplicity
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
+
+  // NEW: interval helper (best-effort; requires intervalValue/intervalUnit on task)
+  const buildIntervalText = useCallback(
+    (tsk: any) => {
+      const v = tsk?.intervalValue;
+      const u = tsk?.intervalUnit;
+
+      if (!v || !u) return "";
+
+      // Use translation-driven pluralization if you add homeModals.interval.*
+      // Fallback: simple English-like string if keys are missing.
+      try {
+        return t(`homeModals.interval.${u}`, { count: v });
+      } catch {
+        const unitLabel =
+          u === "days" ? (v === 1 ? "day" : "days") : v === 1 ? "month" : "months";
+        return `+${v} ${unitLabel}`;
+      }
+    },
+    [t]
+  );
 
   // Derive plant + location options from current tasks
   const plantOptions: PlantOption[] = useMemo(() => {
@@ -386,10 +423,24 @@ export default function HomeScreen() {
   const showFAB = !sortOpen && !filterOpen;
 
   // NEW: open / close / confirm handlers for complete-with-note (single + bulk)
-  const openCompleteModal = (taskIds: string[], mode: CompleteMode) => {
+  const openCompleteModal = (selectedTasks: HomeTask[], mode: CompleteMode) => {
     setCompleteMode(mode);
-    setCompleteTaskIds(taskIds);
+    setCompleteTaskIds(selectedTasks.map((x) => x.id));
     setCompleteNote("");
+
+    const anyOverdue = selectedTasks.some(isTaskOverdue);
+    setCompleteIsOverdue(anyOverdue);
+
+    if (mode === "single") {
+      setCompleteIntervalText(buildIntervalText(selectedTasks[0]));
+    } else {
+      const first = selectedTasks.length > 0 ? buildIntervalText(selectedTasks[0]) : "";
+      const allSame =
+        selectedTasks.length > 0 &&
+        selectedTasks.every((x) => buildIntervalText(x) === first);
+      setCompleteIntervalText(allSame ? first : "");
+    }
+
     setCompleteModalVisible(true);
   };
 
@@ -398,6 +449,10 @@ export default function HomeScreen() {
     setCompleteMode("single");
     setCompleteTaskIds([]);
     setCompleteNote("");
+
+    // NEW: reset modal info
+    setCompleteIsOverdue(false);
+    setCompleteIntervalText("");
   };
 
   const handleConfirmComplete = async () => {
@@ -538,10 +593,7 @@ export default function HomeScreen() {
                   icon: "check-circle-outline",
                   onPress: () => {
                     setMenuOpenId(null);
-                    openCompleteModal(
-                      derivedTasks.map((x) => x.id),
-                      "bulk"
-                    );
+                    openCompleteModal(derivedTasks as HomeTask[], "bulk");
                   },
                 } as const,
               ]
@@ -614,7 +666,7 @@ export default function HomeScreen() {
                 onToggleMenu={() => onToggleMenu(item.id)}
                 onMarkComplete={() => {
                   setMenuOpenId(null);
-                  openCompleteModal([item.id], "single");
+                  openCompleteModal([item as HomeTask], "single");
                 }}
                 onEdit={() => {
                   setMenuOpenId(null);
@@ -892,6 +944,8 @@ export default function HomeScreen() {
         onConfirm={handleConfirmComplete}
         mode={completeMode}
         count={completeMode === "bulk" ? completeTaskIds.length : undefined}
+        isOverdue={completeIsOverdue}
+        intervalText={completeIntervalText}
       />
 
       {/* Top Snackbar (toast) */}

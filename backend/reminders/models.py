@@ -143,10 +143,12 @@ class ReminderTask(models.Model):
     @transaction.atomic
     def mark_complete_and_spawn_next(self, note=None):
         """
-        Complete this task and create the next one based on the reminder’s interval.
-        Creates exactly one new pending task due_date = current_due + interval.
+        Complete this task and create the next pending one.
 
-        If `note` is provided, store it on this completed task.
+        Rules:
+        - If task is overdue, anchor on today's date.
+        - Otherwise, anchor on this task's due_date.
+        - Ensure at most ONE pending task exists per reminder.
         """
         if self.status == "completed":
             return None  # idempotent
@@ -159,13 +161,23 @@ class ReminderTask(models.Model):
         self.save(update_fields=["status", "completed_at", "updated_at", "note"])
 
         rem = self.reminder
-        # compute next due from *this* task's due_date forward
+
+        # Guard: do not create duplicates
+        existing = rem.tasks.filter(status="pending").first()
+        if existing:
+            return existing
+
+        # Choose anchor date
+        today = timezone.localdate()
+        anchor = today if self.due_date < today else self.due_date
+
+        # Compute next due date
         if rem.interval_unit == "days":
             from datetime import timedelta
-            next_due = self.due_date + timedelta(days=rem.interval_value)
+            next_due = anchor + timedelta(days=rem.interval_value)
         else:
             from dateutil.relativedelta import relativedelta
-            next_due = self.due_date + relativedelta(months=rem.interval_value)
+            next_due = anchor + relativedelta(months=rem.interval_value)
 
         return ReminderTask.objects.create(
             reminder=rem,
