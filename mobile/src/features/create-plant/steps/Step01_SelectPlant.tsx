@@ -76,11 +76,17 @@ export default function Step01_SelectPlant({
   const { state, actions } = useCreatePlantWizard();
 
   const initialQuery = useMemo(() => {
-    const fromState =
-      (state as any).plantQuery?.trim?.() ||
-      pickName((state as any).selectedPlant).trim() ||
-      "";
-    return fromState;
+    const fromState = (state as any).plantQuery?.trim?.() || "";
+
+    // Prefer latin (formatted for display) so we don't show localized/common name when coming back
+    const latinRaw = String((state as any).selectedPlant?.latin ?? "").trim();
+    const latinDisplay = latinRaw ? latinRaw.replace(/_/g, " ") : "";
+
+    if (fromState) return fromState;
+    if (latinDisplay) return latinDisplay;
+
+    const fallbackName = pickName((state as any).selectedPlant).trim() || "";
+    return fallbackName;
   }, [state]);
 
   const [query, setQuery] = useState<string>(initialQuery);

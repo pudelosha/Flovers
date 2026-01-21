@@ -179,9 +179,12 @@ export default function Step02_PlantTraits() {
       a.setSelectedPlant({
         ...(selected ?? {}),
         id: (p as any)?.id ?? selected?.id,
-        name: (p as any)?.name ?? selected?.name,
-        latin: (p as any)?.latin ?? selected?.latin,
-        predefined: selected?.predefined ?? true,
+
+        // IMPORTANT: do not overwrite selectedPlant.name (Step01 wants to show latin-display there)
+        name: (selected as any)?.name,
+
+        latin: (p as any)?.latin ?? (selected as any)?.latin,
+        predefined: (selected as any)?.predefined ?? true,
       });
     }
   };
