@@ -173,17 +173,21 @@ export default function Step01_SelectPlant({
   };
 
   const onScanPlantDetected = useCallback((plant: Suggestion) => {
-    const formattedLatin = plant.latin.replace(/_/g, ' ');  // Format the Latin name
-    setQuery(formattedLatin);  // Set the search query to the formatted Latin name
+    const formattedLatin = plant.latin.replace(/_/g, " "); // display
+    setQuery(formattedLatin);
     setShowSuggestions(false);
 
     actions.setSelectedPlant({
       id: plant.id,
-      name: formattedLatin,  // Store the Latin name
-      latin: plant.latin,    // Store the Latin name
+      name: formattedLatin,   // display
+      latin: plant.latin,     // keep underscores for internal/backend if that’s what you want
       predefined: false,
     });
-    onScrollToTop(); // If you need to scroll to the top after selection
+
+    onScrollToTop();
+
+    // jump to Step02 after scan selection
+    actions.goTo("traits");
   }, [actions, onScrollToTop]);
 
   useEffect(() => {
