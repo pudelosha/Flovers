@@ -1,6 +1,7 @@
 from pathlib import Path
 import environ
 from datetime import timedelta
+from celery.schedules import crontab
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -169,3 +170,13 @@ DEEP_LINK_ENABLED = env.bool("DEEP_LINK_ENABLED", default=True)
 PUBLIC_WEB_BASE = env("PUBLIC_WEB_BASE", default=SITE_URL)  # where /open/* is served
 
 ANDROID_PACKAGE_NAME = "com.flovers"  # <-- set your actual appId
+
+# --- Celery ---
+CELERY_BEAT_SCHEDULE = {
+    "check-and-send-daily-task-notifications-every-minute": {
+        "task": "profiles.tasks.check_and_send_daily_task_notifications",
+        "schedule": crontab(),  # every minute
+    },
+}
+
+CELERY_TIMEZONE = "UTC"

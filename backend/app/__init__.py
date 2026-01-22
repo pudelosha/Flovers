@@ -1,9 +1,3 @@
-"""
-Make Celery optional for environments where Celery isn't installed
-(e.g. local dev running only Django management commands).
-"""
+from .celery import celery_app as app
 
-try:
-    from .celery import celery_app  # noqa: F401
-except ModuleNotFoundError:
-    celery_app = None  # type: ignore
+__all__ = ("app",)

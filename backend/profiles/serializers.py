@@ -74,25 +74,42 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
         # round to 2 dp
         return d.quantize(Decimal("0.01"))
 
-
 class ProfileNotificationsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProfileNotifications
         fields = [
+            "timezone",
             "email_daily",
             "email_hour",
+            "email_minute",
             "email_24h",
             "push_daily",
             "push_hour",
+            "push_minute",
             "push_24h",
         ]
+
+    def validate_timezone(self, v: str):
+        if not isinstance(v, str) or not v.strip():
+            raise serializers.ValidationError("timezone must be a non-empty string.")
+        return v.strip()
 
     def validate_email_hour(self, v):
         if not isinstance(v, int) or v < 0 or v > 23:
             raise serializers.ValidationError("email_hour must be an integer between 0 and 23.")
         return v
 
+    def validate_email_minute(self, v):
+        if not isinstance(v, int) or v < 0 or v > 59:
+            raise serializers.ValidationError("email_minute must be an integer between 0 and 59.")
+        return v
+
     def validate_push_hour(self, v):
         if not isinstance(v, int) or v < 0 or v > 23:
             raise serializers.ValidationError("push_hour must be an integer between 0 and 23.")
+        return v
+
+    def validate_push_minute(self, v):
+        if not isinstance(v, int) or v < 0 or v > 59:
+            raise serializers.ValidationError("push_minute must be an integer between 0 and 59.")
         return v

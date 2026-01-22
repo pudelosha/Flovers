@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.utils import timezone
 
 User = settings.AUTH_USER_MODEL
 
@@ -15,7 +16,7 @@ MEASURE_CHOICES = [("metric", "Metric"), ("imperial", "Imperial")]
 BACKGROUND_CHOICES = [("bg1", "Background 1"), ("bg2", "Background 2"), ("bg3", "Background 3"), ("bg4", "Background 4")]
 FAB_CHOICES = [("left", "Left"), ("right", "Right")]
 
-# NEW: Tile motive choices (light / dark tiles)
+# Tile motive choices (light / dark tiles)
 TILE_MOTIVE_CHOICES = [
     ("light", "Light"),
     ("dark", "Dark"),
@@ -46,7 +47,7 @@ class ProfileSettings(TimeStampedModel):
         help_text="UI overlay transparency (0.00 – 0.60).",
     )
 
-    # NEW: Light / dark tile motive
+    # Light / dark tile motive
     tile_motive = models.CharField(
         max_length=5,
         choices=TILE_MOTIVE_CHOICES,
@@ -64,13 +65,57 @@ class ProfileSettings(TimeStampedModel):
 class ProfileNotifications(TimeStampedModel):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile_notifications")
 
+    timezone = models.CharField(max_length=64, default="Europe/Warsaw")
+
     email_daily = models.BooleanField(default=True)
     email_hour = models.IntegerField(default=12, validators=[MinValueValidator(0), MaxValueValidator(23)])
+    email_minute = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(59)])
     email_24h = models.BooleanField(default=False)
 
     push_daily = models.BooleanField(default=True)
     push_hour = models.IntegerField(default=12, validators=[MinValueValidator(0), MaxValueValidator(23)])
+    push_minute = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(59)])
     push_24h = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"ProfileNotifications<{self.user}>"
+
+
+class NotificationDeliveryLog(models.Model):
+    CHANNEL_EMAIL = "email"
+    CHANNEL_PUSH = "push"
+
+    KIND_DUE_TODAY = "due_today"
+    KIND_OVERDUE_1D = "overdue_1d"
+
+    CHANNEL_CHOICES = [
+        (CHANNEL_EMAIL, "Email"),
+        (CHANNEL_PUSH, "Push"),
+    ]
+
+    KIND_CHOICES = [
+        (KIND_DUE_TODAY, "Due today"),
+        (KIND_OVERDUE_1D, "Overdue 1 day"),
+    ]
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="notification_delivery_logs")
+    channel = models.CharField(max_length=16, choices=CHANNEL_CHOICES)
+    kind = models.CharField(max_length=32, choices=KIND_CHOICES, default=KIND_DUE_TODAY)
+    local_date = models.DateField()  # date in user's timezone (send date)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["user", "channel", "kind", "local_date"],
+                name="uniq_delivery_user_channel_kind_date",
+            ),
+        ]
+        indexes = [
+            models.Index(fields=["local_date", "channel"]),
+            models.Index(fields=["user", "local_date"]),
+            models.Index(fields=["user", "channel", "kind", "local_date"]),
+        ]
+
+    def __str__(self):
+        return f"{self.user_id}:{self.channel}:{self.kind}:{self.local_date}"
