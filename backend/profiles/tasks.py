@@ -16,7 +16,8 @@ except Exception:  # pragma: no cover
     ZoneInfo = None  # fallback handled below
 
 from reminders.models import ReminderTask
-from .models import ProfileNotifications, NotificationDeliveryLog
+from .models import ProfileNotifications, NotificationDeliveryLog, PushDevice
+from .push import send_fcm_multicast
 from django.core.mail import send_mail
 from django.conf import settings
 
@@ -88,6 +89,38 @@ def _send_email_overdue_1d(user, overdue_count: int):
     send_mail(subject, body, from_email, [user.email], fail_silently=False)
 
 
+def _get_android_tokens(user_id: int) -> list[str]:
+    return list(
+        PushDevice.objects.filter(
+            user_id=user_id,
+            is_active=True,
+            platform=PushDevice.PLATFORM_ANDROID,
+        ).values_list("token", flat=True)
+    )
+
+
+def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: str, data: dict[str, str]):
+    if not tokens:
+        return
+
+    try:
+        resp = send_fcm_multicast(tokens=tokens, title=title, body=body, data=data)
+    except Exception:
+        # Keep the periodic job resilient; optionally add logging later.
+        return
+
+    if resp is None:
+        return
+
+    bad_tokens: list[str] = []
+    for idx, r in enumerate(resp.responses):
+        if not r.success:
+            bad_tokens.append(tokens[idx])
+
+    if bad_tokens:
+        PushDevice.objects.filter(token__in=bad_tokens).update(is_active=False)
+
+
 @shared_task(bind=True, ignore_result=True)
 def check_and_send_daily_task_notifications(self):
     """
@@ -103,7 +136,6 @@ def check_and_send_daily_task_notifications(self):
     """
     now_utc = timezone.now()
 
-    # Fetch users who have at least one relevant setting enabled
     notif_qs = (
         ProfileNotifications.objects
         .select_related("user")
@@ -121,7 +153,6 @@ def check_and_send_daily_task_notifications(self):
         )
     )
 
-    # Group by timezone to avoid converting "now" for each user
     tz_map: dict[str, list[ProfileNotifications]] = {}
     for pn in notif_qs:
         tz_name = pn.timezone or DEFAULT_TZ
@@ -136,7 +167,6 @@ def check_and_send_daily_task_notifications(self):
         for pn in group:
             user = pn.user
 
-            # Time match is per-channel time (as in your schema)
             email_time_match = _matches_minute(now_local, pn.email_hour, pn.email_minute)
             push_time_match = _matches_minute(now_local, pn.push_hour, pn.push_minute)
 
@@ -164,7 +194,7 @@ def check_and_send_daily_task_notifications(self):
                     ):
                         _send_email_overdue_1d(user, overdue_count)
 
-            # --- PUSH: due today (stubbed send) ---
+            # --- PUSH: due today ---
             if pn.push_daily and push_time_match:
                 due_count = _count_due_on_date(user.id, local_date)
                 if due_count > 0:
@@ -174,10 +204,15 @@ def check_and_send_daily_task_notifications(self):
                         NotificationDeliveryLog.KIND_DUE_TODAY,
                         local_date,
                     ):
-                        # TODO: call your push provider here once tokens/FCM is implemented
-                        pass
+                        tokens = _get_android_tokens(user.id)
+                        _send_push_and_deactivate_bad_tokens(
+                            tokens=tokens,
+                            title="Plant tasks",
+                            body=f"You have {due_count} task(s) due today.",
+                            data={"kind": "due_today"},
+                        )
 
-            # --- PUSH: overdue 1 day (stubbed send) ---
+            # --- PUSH: overdue 1 day ---
             if pn.push_24h and push_time_match:
                 overdue_count = _count_due_on_date(user.id, yesterday)
                 if overdue_count > 0:
@@ -187,5 +222,10 @@ def check_and_send_daily_task_notifications(self):
                         NotificationDeliveryLog.KIND_OVERDUE_1D,
                         local_date,
                     ):
-                        # TODO: call your push provider here once tokens/FCM is implemented
-                        pass
+                        tokens = _get_android_tokens(user.id)
+                        _send_push_and_deactivate_bad_tokens(
+                            tokens=tokens,
+                            title="Plant tasks",
+                            body=f"You have {overdue_count} task(s) overdue since yesterday.",
+                            data={"kind": "overdue_1d"},
+                        )

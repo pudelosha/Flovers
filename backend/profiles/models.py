@@ -119,3 +119,29 @@ class NotificationDeliveryLog(models.Model):
 
     def __str__(self):
         return f"{self.user_id}:{self.channel}:{self.kind}:{self.local_date}"
+
+class PushDevice(TimeStampedModel):
+    PLATFORM_ANDROID = "android"
+    PLATFORM_IOS = "ios"
+
+    PLATFORM_CHOICES = [
+        (PLATFORM_ANDROID, "Android"),
+        (PLATFORM_IOS, "iOS"),
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="push_devices")
+
+    token = models.CharField(max_length=512, unique=True)
+    platform = models.CharField(max_length=16, choices=PLATFORM_CHOICES, default=PLATFORM_ANDROID)
+
+    is_active = models.BooleanField(default=True)
+    last_seen_at = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["user", "is_active"]),
+            models.Index(fields=["platform", "is_active"]),
+        ]
+
+    def __str__(self) -> str:
+        return f"PushDevice<{self.user_id}:{self.platform}:{'active' if self.is_active else 'inactive'}>"

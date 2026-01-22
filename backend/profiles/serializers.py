@@ -3,12 +3,13 @@ from rest_framework import serializers
 from .models import (
     ProfileSettings,
     ProfileNotifications,
+    PushDevice,
     LANG_CHOICES,
     TEMP_CHOICES,
     MEASURE_CHOICES,
     BACKGROUND_CHOICES,
     FAB_CHOICES,
-    TILE_MOTIVE_CHOICES,  # NEW
+    TILE_MOTIVE_CHOICES,
 )
 
 
@@ -21,7 +22,7 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
             "temperature_unit",
             "measure_unit",
             "tile_transparency",
-            "tile_motive",      # NEW
+            "tile_motive",
             "background",
             "fab_position",
         ]
@@ -112,4 +113,20 @@ class ProfileNotificationsSerializer(serializers.ModelSerializer):
     def validate_push_minute(self, v):
         if not isinstance(v, int) or v < 0 or v > 59:
             raise serializers.ValidationError("push_minute must be an integer between 0 and 59.")
+        return v
+
+class PushDeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PushDevice
+        fields = ["token", "platform", "is_active", "last_seen_at"]
+        read_only_fields = ["is_active", "last_seen_at"]
+
+    def validate_token(self, v: str):
+        if not isinstance(v, str) or not v.strip():
+            raise serializers.ValidationError("token must be a non-empty string.")
+        return v.strip()
+
+    def validate_platform(self, v: str):
+        if v not in {PushDevice.PLATFORM_ANDROID, PushDevice.PLATFORM_IOS}:
+            raise serializers.ValidationError("platform must be 'android' or 'ios'.")
         return v

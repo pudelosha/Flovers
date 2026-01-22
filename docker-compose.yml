@@ -4,11 +4,14 @@ services:
       context: ./backend
     command: bash -lc "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     env_file: ./backend/.env
+    environment:
+      - FCM_SERVICE_ACCOUNT_PATH=/run/secrets/firebase.json
     working_dir: /app
     volumes:
       - ./backend:/app
       - static_volume:/app/staticfiles
       - ./backend/media:/app/media
+      - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     ports:
       - "8000:8000"
     depends_on:
@@ -21,9 +24,12 @@ services:
       context: ./backend
     command: celery -A app worker -l info
     env_file: ./backend/.env
+    environment:
+      - FCM_SERVICE_ACCOUNT_PATH=/run/secrets/firebase.json
     working_dir: /app
     volumes:
       - ./backend:/app
+      - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     depends_on:
       - redis
       - db
@@ -33,9 +39,12 @@ services:
       context: ./backend
     command: celery -A app beat -l info
     env_file: ./backend/.env
+    environment:
+      - FCM_SERVICE_ACCOUNT_PATH=/run/secrets/firebase.json
     working_dir: /app
     volumes:
       - ./backend:/app
+      - ./backend/secrets/firebase.json:/run/secrets/firebase.json:ro
     depends_on:
       - redis
       - db

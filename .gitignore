@@ -54,3 +54,7 @@ mobile/.DS_Store
 
 # Translation scripts
 /translations/
+
+# Secrets
+backend/secrets/firebase.json
+backend/secrets/*.json
