@@ -1,4 +1,3 @@
-// PlantDetailsScreen.tsx
 import React, { useMemo, useState, useRef, useCallback } from "react";
 import {
   View,
@@ -40,7 +39,10 @@ import TopSnackbar from "../../../shared/ui/TopSnackbar";
 import CenteredSpinner from "../../../shared/ui/CenteredSpinner";
 
 import PlantDefinitionModal from "../components/modals/PlantDefinitionModal";
-import ChangePlantImageModal from "../components/modals/ChangePlantImageModal"; // ✅ NEW
+import ChangePlantImageModal from "../components/modals/ChangePlantImageModal";
+
+// ✅ use env-driven public base URL (dev/prod aware)
+import { PUBLIC_BASE_URL_NORM } from "../../../config";
 
 // Same green tones as AuthCard / PlantTile
 const TAB_GREEN_DARK = "rgba(5, 31, 24, 0.9)";
@@ -74,6 +76,10 @@ export default function PlantDetailsScreen() {
   const [completeReminderId, setCompleteReminderId] = useState<string | null>(null);
   const [completeNote, setCompleteNote] = useState("");
 
+  // Overdue info for modal (single-task)
+  const [completeIsOverdue, setCompleteIsOverdue] = useState(false);
+  const [completeIntervalText, setCompleteIntervalText] = useState<string>("");
+
   const [toastVisible, setToastVisible] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
   const [toastVariant, setToastVariant] = useState<"default" | "success" | "error">("default");
@@ -83,7 +89,7 @@ export default function PlantDetailsScreen() {
 
   const scrollRef = useRef<ScrollView | null>(null);
 
-  // ✅ Plant Definition modal state (screen root)
+  // Plant Definition modal state (screen root)
   const [defModalVisible, setDefModalVisible] = useState(false);
   const [defPlantDefinitionId, setDefPlantDefinitionId] = useState<number | null>(null);
 
@@ -97,11 +103,11 @@ export default function PlantDetailsScreen() {
     setDefPlantDefinitionId(null);
   }, []);
 
-  // ✅ Change Image modal state (screen root) — NEW
+  // Change Image modal state (screen root) — NEW
   const [changeImgVisible, setChangeImgVisible] = useState(false);
   const [changeImgPlantId, setChangeImgPlantId] = useState<string | null>(null);
 
-  // ✅ signal for PlantInfoTile to reload local photo from storage — NEW
+  // Signal for PlantInfoTile to reload local photo from storage — NEW
   const [photoReloadSignal, setPhotoReloadSignal] = useState(0);
 
   const openChangeImage = useCallback((plantId: string) => {
@@ -120,6 +126,54 @@ export default function PlantDetailsScreen() {
     setToastVisible(true);
   };
 
+  // Date helpers (local time)
+  const startOfTodayMs = useCallback(() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    return d.getTime();
+  }, []);
+
+  const normDateMs = useCallback((val: any) => {
+    const d = val instanceof Date ? val : new Date(val);
+    return d.getTime();
+  }, []);
+
+  // Overdue test for a reminder row (uses reminder.dueDate)
+  const isReminderOverdue = useCallback(
+    (r: any) => {
+      const due = r?.dueDate;
+      if (!due) return false;
+      const ms = normDateMs(due);
+      return Number.isFinite(ms) && ms < startOfTodayMs();
+    },
+    [normDateMs, startOfTodayMs]
+  );
+
+  // Interval helper (best-effort; requires intervalValue/intervalUnit on reminder)
+  const buildIntervalText = useCallback(
+    (r: any) => {
+      const v = r?.intervalValue;
+      const u = r?.intervalUnit;
+      if (!v || !u) return "";
+
+      // If you add homeModals.interval.days/months in i18n, this becomes localized.
+      const maybe = t(`homeModals.interval.${u}`, { count: v });
+      if (typeof maybe === "string" && maybe.startsWith("homeModals.interval.")) {
+        const unitLabel =
+          u === "days"
+            ? v === 1
+              ? "day"
+              : "days"
+            : v === 1
+              ? "month"
+              : "months";
+        return `+${v} ${unitLabel}`;
+      }
+      return maybe;
+    },
+    [t]
+  );
+
   const loadDetails = useCallback(async () => {
     if (!qrFromNav && !idFromNav) {
       throw new Error(tr("plantDetails.errors.noId", "No plant id or QR code provided."));
@@ -134,10 +188,11 @@ export default function PlantDetailsScreen() {
     }
   }, [qrFromNav, idFromNav, tr]);
 
+  // ✅ FIX: no hardcoded flovers.app; use PUBLIC_BASE_URL_NORM
   const qrCodeValue = useMemo(() => {
     const code = details?.plant.qr_code || qrFromNav || "";
     if (!code) return "";
-    return `https://flovers.app/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`;
+    return `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(code)}`;
   }, [details, qrFromNav]);
 
   const onSaveQr = async (svgRef: any) => {
@@ -243,8 +298,12 @@ export default function PlantDetailsScreen() {
         setCompleteReminderId(null);
         setCompleteNote("");
 
+        // Reset overdue info
+        setCompleteIsOverdue(false);
+        setCompleteIntervalText("");
+
         closeDefinition();
-        closeChangeImage(); // ✅ NEW (close on blur/unmount)
+        closeChangeImage(); // (close on blur/unmount)
       };
     }, [entry, loadDetails, tr, closeDefinition, closeChangeImage])
   );
@@ -265,6 +324,13 @@ export default function PlantDetailsScreen() {
   const openCompleteModal = (reminderId: string) => {
     setCompleteReminderId(reminderId);
     setCompleteNote("");
+
+    // Compute overdue + interval for this reminder (single)
+    const r = details?.reminders?.find((x) => x.id === reminderId);
+    const overdue = r ? isReminderOverdue(r) : false;
+    setCompleteIsOverdue(overdue);
+    setCompleteIntervalText(r ? buildIntervalText(r) : "");
+
     setCompleteModalVisible(true);
   };
 
@@ -272,6 +338,10 @@ export default function PlantDetailsScreen() {
     setCompleteModalVisible(false);
     setCompleteReminderId(null);
     setCompleteNote("");
+
+    // Reset overdue info
+    setCompleteIsOverdue(false);
+    setCompleteIntervalText("");
   };
 
   const handleConfirmComplete = async () => {
@@ -351,7 +421,7 @@ export default function PlantDetailsScreen() {
                 <PlantInfoTile
                   plant={details.plant}
                   collapseMenusSignal={dismissMenusTick}
-                  photoReloadSignal={photoReloadSignal} // ✅ NEW
+                  photoReloadSignal={photoReloadSignal}
                   onOpenDefinition={(plantDefinitionId) => {
                     setDismissMenusTick((t) => t + 1);
                     openDefinition(plantDefinitionId);
@@ -359,7 +429,7 @@ export default function PlantDetailsScreen() {
                   onOpenChangeImage={(plantId) => {
                     setDismissMenusTick((t) => t + 1);
                     openChangeImage(plantId);
-                  }} // ✅ NEW
+                  }}
                 />
               ) : (
                 <View>
@@ -430,7 +500,7 @@ export default function PlantDetailsScreen() {
 
       {loading && details && !error && <CenteredSpinner overlay size={36} color="#FFFFFF" />}
 
-      {/* ✅ screen-level modals (full screen overlays) */}
+      {/* Screen-level modals (full screen overlays) */}
       <PlantDefinitionModal visible={defModalVisible} onClose={closeDefinition} plantDefinitionId={defPlantDefinitionId} />
 
       <ChangePlantImageModal
@@ -438,7 +508,7 @@ export default function PlantDetailsScreen() {
         onClose={closeChangeImage}
         plantId={changeImgPlantId}
         onChanged={() => {
-          // ✅ force PlantInfoTile to reload local uri (since the modal is no longer inside it)
+          // Force PlantInfoTile to reload local uri (since the modal is no longer inside it)
           setPhotoReloadSignal((v) => v + 1);
         }}
       />
@@ -449,6 +519,9 @@ export default function PlantDetailsScreen() {
         onChangeNote={setCompleteNote}
         onCancel={closeCompleteModal}
         onConfirm={handleConfirmComplete}
+        mode="single"
+        isOverdue={completeIsOverdue}
+        intervalText={completeIntervalText}
       />
 
       <TopSnackbar visible={toastVisible} message={toastMsg} variant={toastVariant} onDismiss={() => setToastVisible(false)} />

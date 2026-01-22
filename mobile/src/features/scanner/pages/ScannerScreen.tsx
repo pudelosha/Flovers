@@ -34,18 +34,50 @@ import { scannerStyles as styles } from "../styles/scanner.styles";
 import { SCANNER_INSTRUCTION } from "../constants/scanner.constants";
 import ScannerOverlay from "../components/ScannerOverlay";
 
+// dev/prod aware public URL
+import { PUBLIC_BASE_URL_NORM } from "../../../config";
+
+function getHostnameSafe(maybeUrl: string): string {
+  if (!maybeUrl) return "";
+  try {
+    const url = new URL(maybeUrl);
+    return url.hostname || "";
+  } catch {
+    return "";
+  }
+}
+
 function extractToken(raw: string): string {
   if (!raw) return "";
+
+  // Accept raw tokens as-is
+  if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
+
+  // Build allowed hosts list: prod + whatever PUBLIC_BASE_URL_NORM points to in this build
+  const devHost = getHostnameSafe(PUBLIC_BASE_URL_NORM);
+  const allowedHosts = new Set<string>([
+    "flovers.app",
+    ...(devHost ? [devHost] : []),
+  ]);
+
   try {
+    // If QR contains URL, parse it
     const maybeUrl = raw.startsWith("http") ? raw : `https://${raw}`;
     const url = new URL(maybeUrl);
-    const hostOk = url.hostname === "flovers.app" || url.hostname.endsWith(".flovers.app");
+
+    const host = url.hostname;
+    const hostOk =
+      allowedHosts.has(host) ||
+      host.endsWith(".flovers.app"); // keep prod subdomain support
+
     if (hostOk) {
       const token = url.searchParams.get("code") || url.searchParams.get("qr") || "";
       if (token) return token;
     }
-  } catch {}
-  if (/^[A-Za-z0-9\-_]{8,64}$/.test(raw)) return raw;
+  } catch {
+    // ignore parsing errors
+  }
+
   return "";
 }
 

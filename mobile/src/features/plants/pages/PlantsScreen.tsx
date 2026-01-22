@@ -15,6 +15,7 @@ import {
   Animated,
   Easing,
 } from "react-native";
+import { PUBLIC_BASE_URL_NORM } from "../../../config";
 import { useNavigation, useFocusEffect, useRoute } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTranslation } from "react-i18next";
@@ -155,7 +156,7 @@ export default function PlantsScreen() {
   const [sortKey, setSortKey] = useState<SortKey>("plant");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
 
-  // ✅ rename from `filters` -> `activeFilters` to avoid Hermes/runtime symbol issues
+  // Rename from `filters` -> `activeFilters` to avoid Hermes/runtime symbol issues
   const [activeFilters, setActiveFilters] = useState<{ location?: string; latin?: string }>(
     {}
   );
@@ -459,7 +460,7 @@ export default function PlantsScreen() {
     setMenuOpenId(null);
 
     const code = p.qrCode || p.id; // fallback if missing
-    const value = `https://flovers.app/api/plant-instances/by-qr/?code=${encodeURIComponent(
+    const value = `${PUBLIC_BASE_URL_NORM}/api/plant-instances/by-qr/?code=${encodeURIComponent(
       code
     )}`;
 

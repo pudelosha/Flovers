@@ -17,6 +17,7 @@ async function getToken() {
 export class ApiError extends Error {
   status: number;
   body: any;
+
   constructor(status: number, body: any, message?: string) {
     super(message || `API ${status}`);
     this.status = status;
@@ -36,8 +37,8 @@ export async function request<T>(
   opts: { auth?: boolean } = { auth: false }
 ): Promise<T> {
   const headers: Record<string, string> = {};
+  const url = `${API_BASE}${path}`;
 
-  // Attach auth header if requested
   if (opts.auth) {
     const token = await getToken();
     if (token) headers.Authorization = `Bearer ${token}`;
@@ -45,7 +46,6 @@ export async function request<T>(
 
   let fetchBody: any = undefined;
 
-  // Handle FormData separately (for uploads)
   if (body instanceof FormData) {
     fetchBody = body;
   } else if (body !== undefined && body !== null) {
@@ -53,54 +53,59 @@ export async function request<T>(
     fetchBody = JSON.stringify(body);
   }
 
+  let res: Response;
   try {
-    const res = await fetch(`${API_BASE}${path}`, {
+    res = await fetch(url, {
       method,
       headers,
       body: fetchBody,
     });
-
-    // Log the response for debugging
-    console.log("Response received: ", res);
-
-    // Check for an invalid response (null or no headers)
-    if (!res || !res.headers) {
-      console.error("Response object is missing headers or is malformed", res);
-      throw new ApiError(res?.status ?? 500, "Invalid response object", "Response object is missing headers");
-    }
-
-    // Ensure the response is okay before processing it
-    if (!res.ok) {
-      const rawError = await res.text();
-      console.error("Error response received: ", rawError);
-      throw new ApiError(res.status, rawError, `Request failed with status ${res.status}`);
-    }
-
-    // Get the response body and check if it's empty
-    const raw = await res.text();
-    if (!raw) {
-      console.error("Empty response body received");
-      throw new ApiError(res.status, raw, "Received empty response body");
-    }
-
-    // Check if the content type is JSON
-    if (isJsonContent(res)) {
-      try {
-        const data = JSON.parse(raw);
-        return data as T;
-      } catch (e) {
-        console.error("Invalid JSON response: ", raw);
-        throw new ApiError(res.status, raw, "Invalid JSON response");
-      }
-    } else {
-      console.error("Non-JSON error response: ", raw);
-      throw new ApiError(res.status, raw, "Non-JSON error response");
-    }
-
-  } catch (error) {
-    console.error("API request failed: ", error);
-    throw error;  // Rethrow to propagate error
+  } catch (e) {
+    // Network / DNS / connection-level error
+    console.error("[api] fetch failed", { url, method, error: e });
+    throw e;
   }
+
+  const raw = await res.text().catch(() => "");
+
+  // Handle non-2xx
+  if (!res.ok) {
+    // Try to parse JSON error bodies if possible
+    const bodyParsed = isJsonContent(res)
+      ? (() => {
+          try {
+            return raw ? JSON.parse(raw) : raw;
+          } catch {
+            return raw;
+          }
+        })()
+      : raw;
+
+    console.error("[api] error", {
+      url,
+      method,
+      status: res.status,
+      body: bodyParsed,
+    });
+
+    throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
+  }
+
+  // Handle empty responses (valid for 204, DELETE, etc.)
+  if (!raw) {
+    return undefined as unknown as T;
+  }
+
+  // JSON response
+  if (isJsonContent(res)) {
+    try {
+      return JSON.parse(raw) as T;
+    } catch {
+      console.error("[api] invalid JSON", { url, method, status: res.status, raw });
+      throw new ApiError(res.status, raw, "Invalid JSON response");
+    }
+  }
+
+  // Non-JSON successful response -> return text
+  return raw as unknown as T;
 }
-
-
