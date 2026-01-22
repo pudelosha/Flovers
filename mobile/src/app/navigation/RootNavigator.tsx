@@ -1,9 +1,14 @@
-// C:\Projekty\Python\Flovers\mobile\src\app\navigation\RootNavigator.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
+
+// NEW: push registration lifecycle (starts after login)
+import {
+  startPushNotifications,
+  stopPushNotifications,
+} from "../../api/services/push.service";
 
 // logged-in shell
 import AppTabs from "./AppTabs";
@@ -52,17 +57,17 @@ const linking = {
       Profile: "profile",
       Scanner: "scanner",
 
-      // NEW: deep links for readings history flow
+      // readings flow
       ReadingsHistory: "readings-history",
       ReadingDetails: "reading-details",
       EditSensors: "edit-sensors",
       SortHistory: "sort-history",
       FilterHistory: "filter-history",
 
-      // NEW: deep link for task/reminders history
+      // task/reminders history
       TaskHistory: "task-history",
 
-      // NEW: deep link for locations screen (under Plants)
+      // locations screen (under Plants)
       PlantLocations: "locations",
     },
   },
@@ -101,7 +106,6 @@ function AuthNavigator() {
 
 function AppNavigator() {
   return (
-    // Static leaves background behind the whole logged-in area
     <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
       <AppTabs />
     </ImageBackground>
@@ -110,7 +114,20 @@ function AppNavigator() {
 
 export default function RootNavigator() {
   const { loading, token } = useAuth();
+
+  // NEW: start/stop push registration based on auth token
+  useEffect(() => {
+    if (loading) return;
+
+    if (token) {
+      startPushNotifications().catch(() => {});
+    } else {
+      stopPushNotifications();
+    }
+  }, [loading, token]);
+
   if (loading) return null;
+
   return (
     <NavigationContainer linking={linking}>
       {token ? <AppNavigator /> : <AuthNavigator />}

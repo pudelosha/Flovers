@@ -1,5 +1,9 @@
+from __future__ import annotations
+
 from decimal import Decimal, InvalidOperation
+
 from rest_framework import serializers
+
 from .models import (
     ProfileSettings,
     ProfileNotifications,
@@ -57,7 +61,6 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Invalid FAB position.")
         return v
 
-    # NEW: validate tile motive
     def validate_tile_motive(self, v):
         valid = {c for c, _ in TILE_MOTIVE_CHOICES}
         if v not in valid:
@@ -72,8 +75,8 @@ class ProfileSettingsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Invalid transparency value.")
         if d < Decimal("0.00") or d > Decimal("0.60"):
             raise serializers.ValidationError("Transparency must be between 0.00 and 0.60.")
-        # round to 2 dp
         return d.quantize(Decimal("0.01"))
+
 
 class ProfileNotificationsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -115,6 +118,7 @@ class ProfileNotificationsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("push_minute must be an integer between 0 and 59.")
         return v
 
+
 class PushDeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PushDevice
@@ -127,6 +131,9 @@ class PushDeviceSerializer(serializers.ModelSerializer):
         return v.strip()
 
     def validate_platform(self, v: str):
+        if not isinstance(v, str):
+            raise serializers.ValidationError("platform must be a string.")
+        v = v.strip().lower()
         if v not in {PushDevice.PLATFORM_ANDROID, PushDevice.PLATFORM_IOS}:
             raise serializers.ValidationError("platform must be 'android' or 'ios'.")
         return v

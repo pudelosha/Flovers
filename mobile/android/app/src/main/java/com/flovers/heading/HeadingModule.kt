@@ -1,4 +1,4 @@
-package com.mobile.heading
+package com.flovers.heading
 
 import android.content.Context
 import android.hardware.Sensor

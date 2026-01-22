@@ -1,4 +1,4 @@
-package com.mobile.sensors
+package com.flovers.sensors
 
 import android.hardware.Sensor
 import android.hardware.SensorEvent
