@@ -1,5 +1,7 @@
+# views.py
 from __future__ import annotations
 
+from django.db import IntegrityError, transaction
 from django.utils import timezone
 
 from rest_framework.permissions import IsAuthenticated
@@ -7,16 +9,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from .models import (
-    PushDevice,
-    ProfileSettings,
-    ProfileNotifications,
-)
-from .serializers import (
-    PushDeviceSerializer,
-    ProfileSettingsSerializer,
-    ProfileNotificationsSerializer,
-)
+from .models import PushDevice, ProfileSettings, ProfileNotifications
+from .serializers import PushDeviceSerializer, ProfileSettingsSerializer, ProfileNotificationsSerializer
 
 
 def ok(message: str, data: dict | None = None, code=status.HTTP_200_OK):
@@ -80,16 +74,29 @@ class PushDeviceRegisterView(APIView):
         platform = ser.validated_data["platform"]
         now = timezone.now()
 
-        # Idempotent upsert by token (token should be globally unique)
-        obj, created = PushDevice.objects.update_or_create(
-            token=token,
-            defaults={
-                "user": request.user,   # reassign if token was tied to another user
-                "platform": platform,
-                "is_active": True,
-                "last_seen_at": now,
-            },
-        )
+        try:
+            with transaction.atomic():
+                obj, created = PushDevice.objects.update_or_create(
+                    token=token,
+                    defaults={
+                        "user": request.user,
+                        "platform": platform,
+                        "is_active": True,
+                        "last_seen_at": now,
+                    },
+                )
+        except IntegrityError:
+            # If two requests race, unique(token) can raise.
+            # Recover by fetching and updating.
+            obj = PushDevice.objects.get(token=token)
+            created = False
+            PushDevice.objects.filter(pk=obj.pk).update(
+                user=request.user,
+                platform=platform,
+                is_active=True,
+                last_seen_at=now,
+            )
+            obj.refresh_from_db()
 
         payload = PushDeviceSerializer(obj).data
         return ok(
@@ -97,13 +104,3 @@ class PushDeviceRegisterView(APIView):
             payload,
             code=status.HTTP_201_CREATED if created else status.HTTP_200_OK,
         )
-
-# Optional: for logout
-# class PushDeviceDeactivateView(APIView):
-#     permission_classes = [IsAuthenticated याद]
-#     def post(self, request):
-#         token = request.data.get("token", "").strip()
-#         if not token:
-#             return err("Validation failed.", {"token": ["token must be provided."]})
-#         PushDevice.objects.filter(user=request.user, token=token).update(is_active=False)
-#         return ok("Push device deactivated.")

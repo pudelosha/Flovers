@@ -2,6 +2,9 @@
  * @format
  */
 
+// Silence RNFirebase modular migration warnings (no behavior change)
+globalThis.RNFB_SILENCE_MODULAR_DEPRECATION_WARNINGS = true;
+
 // must be first import for React Navigation gestures
 import 'react-native-gesture-handler';
 
@@ -9,7 +12,7 @@ import 'react-native-gesture-handler';
 import { enableScreens } from 'react-native-screens';
 enableScreens(true);
 
-// NEW: FCM background handler (must be registered in the entry file)
+// FCM background handler (must be registered in the entry file)
 import messaging from '@react-native-firebase/messaging';
 
 messaging().setBackgroundMessageHandler(async remoteMessage => {
