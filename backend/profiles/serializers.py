@@ -118,12 +118,15 @@ class ProfileNotificationsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("push_minute must be an integer between 0 and 59.")
         return v
 
-
 class PushDeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PushDevice
         fields = ["token", "platform", "is_active", "last_seen_at"]
         read_only_fields = ["is_active", "last_seen_at"]
+        extra_kwargs = {
+            # IMPORTANT: allow re-posting same token (upsert in the view)
+            "token": {"validators": []},
+        }
 
     def validate_token(self, v: str):
         if not isinstance(v, str) or not v.strip():
@@ -137,3 +140,4 @@ class PushDeviceSerializer(serializers.ModelSerializer):
         if v not in {PushDevice.PLATFORM_ANDROID, PushDevice.PLATFORM_IOS}:
             raise serializers.ValidationError("platform must be 'android' or 'ios'.")
         return v
+

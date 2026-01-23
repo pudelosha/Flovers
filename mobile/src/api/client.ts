@@ -88,7 +88,18 @@ export async function request<T>(
       body: bodyParsed,
     });
 
-    throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
+    // NEW: force-print full JSON, Metro otherwise collapses nested objects
+    try {
+      console.error("[api] error JSON", JSON.stringify(bodyParsed, null, 2));
+    } catch {
+      // ignore stringify errors
+    }
+
+    throw new ApiError(
+      res.status,
+      bodyParsed,
+      `Request failed with status ${res.status}`
+    );
   }
 
   // Handle empty responses (valid for 204, DELETE, etc.)
