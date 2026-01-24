@@ -8,7 +8,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.utils.html import strip_tags
 
-from .i18n import merge_base, t
+from .i18n import load_email_scope, merge_base, t
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +18,7 @@ def _render_template(path: str, context: dict[str, Any]) -> str:
     return tpl.render(context)
 
 
-def _render_optional_template(path: str, context: dict[str, Any]) -> str:
+def _render_optional(path: str, context: dict[str, Any]) -> str:
     try:
         return _render_template(path, context)
     except Exception:
@@ -29,45 +29,35 @@ def _render_optional_template(path: str, context: dict[str, Any]) -> str:
 def send_templated_email(
     *,
     to_email: str,
-    subject_key: str,
     template_name: str,
+    subject_key: str,
     context: Optional[dict[str, Any]] = None,
     lang: Optional[str] = None,
     from_email: Optional[str] = None,
     reply_to: Optional[list[str]] = None,
 ) -> bool:
     """
-    Shared email service.
+    Renders:
+      templates/email/<template_name>.html (fragment)
+      templates/email/<template_name>.txt  (fragment)
+    Wraps with:
+      templates/email/base.html
+      templates/email/base.txt
 
     template_name examples:
       - "accounts/activation"
       - "accounts/password_reset"
       - "profiles/due_today"
       - "profiles/overdue_1d"
-
-    Renders:
-      templates/email/<template_name>.html  (BODY fragment)
-      templates/email/<template_name>.txt   (BODY fragment)
-    Wraps with:
-      templates/email/base.html
-      templates/email/base.txt
-
-    subject_key examples:
-      - "accounts.activation.subject"
-      - "accounts.password_reset.subject"
-      - "profiles.due_today.subject"
-      - "profiles.overdue_1d.subject"
     """
     if not to_email:
         return False
 
     lang = (lang or getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en").strip().lower()
 
-    base_from = from_email or getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
-    subject_prefix = getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or ""
-
-    ctx = merge_base(
-        context or {},
+    # Base context (base.json + global fields)
+    base_ctx = merge_base(
+        {},
         lang=lang,
         extra_base={
             "site_url": getattr(settings, "SITE_URL", ""),
@@ -76,25 +66,49 @@ def send_templated_email(
         },
     )
 
-    subject = subject_prefix + t(subject_key, lang=lang, default="Flovers")
+    # Scope context from JSON (accounts.activation, profiles.due_today, ...)
+    scope = template_name.replace("/", ".")
+    scope_ctx = load_email_scope(scope, lang=lang)
 
-    # Body fragments
-    body_html_fragment = _render_optional_template(f"email/{template_name}.html", ctx)
-    body_txt_fragment = _render_optional_template(f"email/{template_name}.txt", ctx)
+    # Caller context (highest precedence)
+    caller_ctx = dict(context or {})
+
+    # Convenience mapping: tasks often pass activation_link/reset_link, templates expect "link"
+    if "link" not in caller_ctx:
+        if "activation_link" in caller_ctx:
+            caller_ctx["link"] = caller_ctx["activation_link"]
+        elif "reset_link" in caller_ctx:
+            caller_ctx["link"] = caller_ctx["reset_link"]
+
+    # Final context:
+    # base.json < scope.json < caller_ctx
+    ctx: dict[str, Any] = {**base_ctx, **scope_ctx, **caller_ctx}
+
+    # Subject (with optional prefix)
+    subject = t(subject_key, lang=lang, default="Flovers")
+    prefix = getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or ""
+    subject = f"{prefix}{subject}"
+
+    base_from = from_email or getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
+
+    # Render fragments
+    html_fragment = _render_optional(f"email/{template_name}.html", ctx)
+    txt_fragment = _render_optional(f"email/{template_name}.txt", ctx)
 
     # Wrap with base templates
     html = ""
     txt = ""
 
-    if body_html_fragment:
-        html = _render_optional_template("email/base.html", {**ctx, "content_html": body_html_fragment})
-
-    if body_txt_fragment:
-        txt = _render_optional_template("email/base.txt", {**ctx, "content_txt": body_txt_fragment})
+    if html_fragment:
+        html = _render_optional("email/base.html", {**ctx, "content_html": html_fragment})
+    if txt_fragment:
+        txt = _render_optional("email/base.txt", {**ctx, "content_txt": txt_fragment})
 
     # Fallbacks
     if not txt and html:
         txt = strip_tags(html)
+    if not html and txt:
+        html = ""
 
     msg = EmailMultiAlternatives(
         subject=subject,

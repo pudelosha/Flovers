@@ -5,6 +5,8 @@ import logging
 from datetime import timedelta
 from typing import Optional
 
+from core.i18n import t
+
 from celery import shared_task
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -98,6 +100,9 @@ def _send_email_due_today(user, due_count: int) -> bool:
 
     lang = _get_user_lang(user)
 
+    # JSON: profiles.due_today.line1 contains "{count}"
+    line1 = t("profiles.due_today.line1", lang=lang, default="").format(count=due_count)
+
     send_templated_email(
         to_email=user.email,
         subject_key="profiles.due_today.subject",
@@ -105,17 +110,21 @@ def _send_email_due_today(user, due_count: int) -> bool:
         lang=lang,
         context={
             "user": user,
-            "due_count": due_count,
+            "count": due_count,
+            "line1": line1,
+            # Optional: provide a link so CTA can be clickable in template
+            # "link": "<your deep link or web url>",
         },
     )
     return True
-
 
 def _send_email_overdue_1d(user, overdue_count: int) -> bool:
     if not user.email:
         return False
 
     lang = _get_user_lang(user)
+
+    line1 = t("profiles.overdue_1d.line1", lang=lang, default="").format(count=overdue_count)
 
     send_templated_email(
         to_email=user.email,
@@ -124,7 +133,9 @@ def _send_email_overdue_1d(user, overdue_count: int) -> bool:
         lang=lang,
         context={
             "user": user,
-            "overdue_count": overdue_count,
+            "count": overdue_count,
+            "line1": line1,
+            # "link": "<your deep link or web url>",
         },
     )
     return True

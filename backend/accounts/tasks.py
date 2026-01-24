@@ -38,16 +38,16 @@ def send_activation_email_task(user_id: int, lang: str | None = None):
     if not user.email:
         return
 
-    activation_link = build_activation_link(user)
+    link = build_activation_link(user)
 
     send_templated_email(
         to_email=user.email,
-        subject_key="accounts.activation.subject",
         template_name="accounts/activation",
+        subject_key="accounts.activation.subject",
         lang=lang,
         context={
             "user": user,
-            "activation_link": activation_link,
+            "link": link,  # template expects {{ link }}
         },
     )
 
@@ -60,15 +60,15 @@ def send_password_reset_email_task(user_id: int, lang: str | None = None):
     if not user.email:
         return
 
-    reset_link = build_password_reset_link(user)
+    link = build_password_reset_link(user)
 
     send_templated_email(
         to_email=user.email,
-        subject_key="accounts.password_reset.subject",
         template_name="accounts/password_reset",
+        subject_key="accounts.password_reset.subject",
         lang=lang,
         context={
             "user": user,
-            "reset_link": reset_link,
+            "link": link,  # template expects {{ link }}
         },
     )
