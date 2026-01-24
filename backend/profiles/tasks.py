@@ -1,3 +1,4 @@
+# profiles/tasks.py
 from __future__ import annotations
 
 import logging
@@ -7,35 +8,29 @@ from typing import Optional
 from celery import shared_task
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import send_mail
 from django.db import IntegrityError, models, transaction
 from django.utils import timezone
 
 try:
-    # Python 3.9+ stdlib
     from zoneinfo import ZoneInfo
 except Exception:  # pragma: no cover
-    ZoneInfo = None  # fallback handled below
+    ZoneInfo = None
 
 from reminders.models import ReminderTask
+from core.emailing import send_templated_email
 from .models import ProfileNotifications, NotificationDeliveryLog, PushDevice
 from .push import send_fcm_multicast
 
 logger = logging.getLogger(__name__)
-
 User = get_user_model()
 
 DEFAULT_TZ = "Europe/Warsaw"
 
 
 def _safe_zoneinfo(tz_name: Optional[str]):
-    """
-    Returns a tzinfo for tz_name. Falls back to DEFAULT_TZ, then Django TIME_ZONE.
-    """
     tz_name = tz_name or DEFAULT_TZ
 
     if ZoneInfo is None:
-        # Django tz (settings.TIME_ZONE) as last resort
         return timezone.get_current_timezone()
 
     try:
@@ -63,9 +58,6 @@ def _count_due_on_date(user_id: int, due_date) -> int:
 
 
 def _should_send(user_id: int, channel: str, kind: str, local_date) -> bool:
-    """
-    Idempotency check: send only if no delivery log exists yet for this (user, channel, kind, local_date).
-    """
     return not NotificationDeliveryLog.objects.filter(
         user_id=user_id,
         channel=channel,
@@ -75,9 +67,6 @@ def _should_send(user_id: int, channel: str, kind: str, local_date) -> bool:
 
 
 def _log_sent(user_id: int, channel: str, kind: str, local_date) -> None:
-    """
-    Best-effort insert. Unique constraint should exist on (user, channel, kind, local_date).
-    """
     try:
         with transaction.atomic():
             NotificationDeliveryLog.objects.create(
@@ -87,32 +76,58 @@ def _log_sent(user_id: int, channel: str, kind: str, local_date) -> None:
                 local_date=local_date,
             )
     except IntegrityError:
-        # Another worker/process logged it first; ignore.
         pass
 
 
+def _get_user_lang(user) -> str:
+    # Prefer ProfileSettings.language if present, else fallback to settings default.
+    default = getattr(settings, "EMAIL_DEFAULT_LANG", "en") or "en"
+    try:
+        ps = getattr(user, "profile_settings", None)
+        if ps and getattr(ps, "language", None):
+            lang = str(ps.language).strip().lower()
+            supported = set(getattr(settings, "SUPPORTED_LANGS", [])) or {default}
+            return lang if lang in supported else default
+    except Exception:
+        pass
+    return default
+
 def _send_email_due_today(user, due_count: int) -> bool:
-    subject = "You have tasks due today"
-    body = f"You have {due_count} pending plant task(s) due today. Open the app to review."
-    from_email = getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
     if not user.email:
         return False
-    send_mail(subject, body, from_email, [user.email], fail_silently=False)
+
+    lang = _get_user_lang(user)
+
+    send_templated_email(
+        to_email=user.email,
+        subject_key="profiles.due_today.subject",
+        template_name="profiles/due_today",
+        lang=lang,
+        context={
+            "user": user,
+            "due_count": due_count,
+        },
+    )
     return True
 
 
 def _send_email_overdue_1d(user, overdue_count: int) -> bool:
-    subject = "You still have overdue tasks"
-    body = (
-        f"You have {overdue_count} pending plant task(s) that were due yesterday and are still not completed. "
-        "Open the app to review."
-    )
-    from_email = getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
     if not user.email:
         return False
-    send_mail(subject, body, from_email, [user.email], fail_silently=False)
-    return True
 
+    lang = _get_user_lang(user)
+
+    send_templated_email(
+        to_email=user.email,
+        subject_key="profiles.overdue_1d.subject",
+        template_name="profiles/overdue_1d",
+        lang=lang,
+        context={
+            "user": user,
+            "overdue_count": overdue_count,
+        },
+    )
+    return True
 
 def _get_android_tokens(user_id: int) -> list[str]:
     return list(
@@ -125,9 +140,6 @@ def _get_android_tokens(user_id: int) -> list[str]:
 
 
 def _looks_unregistered(exc: Exception) -> bool:
-    """
-    Conservative heuristic: only deactivate tokens when FCM indicates the token is invalid/unregistered.
-    """
     msg = str(exc).lower()
     return (
         "not registered" in msg
@@ -138,10 +150,6 @@ def _looks_unregistered(exc: Exception) -> bool:
 
 
 def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: str, data: dict[str, str]) -> int:
-    """
-    Sends push and deactivates tokens that are clearly invalid.
-    Returns success_count (how many tokens were successfully sent to).
-    """
     tokens = [t for t in tokens if t]
     if not tokens:
         return 0
@@ -149,7 +157,6 @@ def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: st
     try:
         resp = send_fcm_multicast(tokens=tokens, title=title, body=body, data=data)
     except Exception:
-        # Keep periodic job resilient; ideally log this.
         logger.exception("FCM multicast send raised")
         return 0
 
@@ -175,16 +182,6 @@ def _send_push_and_deactivate_bad_tokens(tokens: list[str], title: str, body: st
 
 @shared_task(bind=True, ignore_result=True)
 def check_and_send_daily_task_notifications(self):
-    """
-    Runs every minute.
-
-    Per-user local time:
-      - now_local is computed from timezone.now() (UTC) converted to pn.timezone
-      - local_date is derived from now_local.date()
-
-    Uses NotificationDeliveryLog(kind=...) to guarantee "once per day per type per channel".
-    Logs ONLY after successful send (at least one delivery attempt succeeded).
-    """
     now_utc = timezone.now()
 
     notif_qs = (
@@ -220,24 +217,14 @@ def check_and_send_daily_task_notifications(self):
             if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date):
                 due_count = _count_due_on_date(user.id, local_date)
                 if due_count > 0 and _send_email_due_today(user, due_count):
-                    _log_sent(
-                        user.id,
-                        NotificationDeliveryLog.CHANNEL_EMAIL,
-                        NotificationDeliveryLog.KIND_DUE_TODAY,
-                        local_date,
-                    )
+                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
 
         # --- EMAIL: overdue 1 day ---
         if pn.email_24h and email_time_match:
             if _should_send(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date):
                 overdue_count = _count_due_on_date(user.id, yesterday)
                 if overdue_count > 0 and _send_email_overdue_1d(user, overdue_count):
-                    _log_sent(
-                        user.id,
-                        NotificationDeliveryLog.CHANNEL_EMAIL,
-                        NotificationDeliveryLog.KIND_OVERDUE_1D,
-                        local_date,
-                    )
+                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_EMAIL, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)
 
         # --- PUSH: due today ---
         if pn.push_daily and push_time_match:
@@ -267,12 +254,7 @@ def check_and_send_daily_task_notifications(self):
                 logger.info("push_due_today result user=%s sent=%s", user.id, sent)
 
                 if sent > 0:
-                    _log_sent(
-                        user.id,
-                        NotificationDeliveryLog.CHANNEL_PUSH,
-                        NotificationDeliveryLog.KIND_DUE_TODAY,
-                        local_date,
-                    )
+                    _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_DUE_TODAY, local_date)
 
         # --- PUSH: overdue 1 day ---
         if pn.push_24h and push_time_match:
@@ -287,9 +269,4 @@ def check_and_send_daily_task_notifications(self):
                         data={"kind": "overdue_1d"},
                     )
                     if sent > 0:
-                        _log_sent(
-                            user.id,
-                            NotificationDeliveryLog.CHANNEL_PUSH,
-                            NotificationDeliveryLog.KIND_OVERDUE_1D,
-                            local_date,
-                        )
+                        _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)

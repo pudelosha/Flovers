@@ -53,17 +53,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "app.urls"
 
-TEMPLATES = [{
-    "BACKEND": "django.template.backends.django.DjangoTemplates",
-    "DIRS": [],
-    "APP_DIRS": True,
-    "OPTIONS": {"context_processors": [
-        "django.template.context_processors.request",
-        "django.contrib.auth.context_processors.auth",
-        "django.contrib.messages.context_processors.messages",
-    ]},
-}]
-
 WSGI_APPLICATION = "app.wsgi.application"
 
 # --- Database ---
@@ -180,3 +169,32 @@ CELERY_BEAT_SCHEDULE = {
 }
 
 CELERY_TIMEZONE = "UTC"
+
+TEMPLATES = [{
+    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    # CHANGE: add BASE_DIR/templates
+    "DIRS": [BASE_DIR / "templates"],
+    "APP_DIRS": True,
+    "OPTIONS": {"context_processors": [
+        "django.template.context_processors.request",
+        "django.contrib.auth.context_processors.auth",
+        "django.contrib.messages.context_processors.messages",
+    ]},
+}]
+
+# --- Email (MailHog in Docker by default) ---
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
+EMAIL_PORT = env.int("EMAIL_PORT", default=1025)
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@flovers.local")
+
+# NEW: email + i18n helpers
+EMAIL_SUBJECT_PREFIX = env("EMAIL_SUBJECT_PREFIX", default="[Flovers] ").strip()
+EMAIL_DEFAULT_LANG = env("EMAIL_DEFAULT_LANG", default="en").strip()
+
+# Where JSON translations live (core/i18n.py reads this)
+I18N_LOCALES_DIR = BASE_DIR / "i18n" / "locales"
+
+# Optional safety: supported langs list (used by helpers)
+SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
