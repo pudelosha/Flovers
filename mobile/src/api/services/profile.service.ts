@@ -125,3 +125,47 @@ export async function changeMyEmail(
     { auth: opts.auth ?? true }
   );
 }
+
+/** ---- Support: Contact + Bug report ----
+ *  - POST /api/profile/support/contact/
+ *  - POST /api/profile/support/bug/
+ */
+
+export type ApiSupportContactPayload = {
+  subject: string;
+  message: string;
+  copy_to_user?: boolean; // "send me a copy" flag
+};
+
+export type ApiSupportBugPayload = {
+  subject: string;
+  description: string;
+  copy_to_user?: boolean; // "send me a copy" flag
+};
+
+export async function sendSupportContact(
+  payload: ApiSupportContactPayload,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ message: string }> {
+  const res = await request<ApiEnvelope<null>>(
+    "/api/profile/support/contact/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+  return { message: res.message };
+}
+
+export async function sendSupportBug(
+  payload: ApiSupportBugPayload,
+  opts: { auth?: boolean } = { auth: true }
+): Promise<{ message: string }> {
+  const res = await request<ApiEnvelope<null>>(
+    "/api/profile/support/bug/",
+    "POST",
+    payload,
+    { auth: opts.auth ?? true }
+  );
+  return { message: res.message };
+}
+

@@ -78,35 +78,6 @@
       "releaseDateLabel": "Data wydania",
       "contactLabel": "Kontakt"
     },
-    "prompts": {
-      "changeEmail": {
-        "title": "Zmień email",
-        "newEmailPlaceholder": "Nowy email",
-        "currentPasswordPlaceholder": "Aktualne hasło"
-      },
-      "changePassword": {
-        "title": "Zmień hasło",
-        "currentPasswordPlaceholder": "Aktualne hasło",
-        "newPasswordPlaceholder": "Nowe hasło",
-        "confirmNewPasswordPlaceholder": "Potwierdź nowe hasło",
-        "update": "Aktualizuj"
-      },
-      "deleteAccount": {
-        "title": "Usuń konto",
-        "warning": "To działanie jest nieodwracalne. Jeśli kontynuujesz, Twoje konto i dane zostaną trwale usunięte.",
-        "passwordPlaceholder": "Wpisz hasło, aby potwierdzić"
-      },
-      "reportBug": {
-        "title": "Zgłoś błąd",
-        "subjectPlaceholder": "Temat",
-        "descriptionPlaceholder": "Opisz problem…"
-      },
-      "contactUs": {
-        "title": "Skontaktuj się z nami",
-        "subjectPlaceholder": "Temat",
-        "messagePlaceholder": "Jak możemy pomóc?"
-      }
-    },
     "toasts": {
       "unauthorized": "Brak autoryzacji",
       "unauthorizedLoginAgain": "Brak autoryzacji. Zaloguj się ponownie.",
@@ -114,15 +85,7 @@
       "notificationsUpdated": "Zaktualizowano ustawienia powiadomień.",
       "couldNotSaveNotifications": "Nie udało się zapisać ustawień powiadomień.",
       "settingsUpdated": "Zaktualizowano ustawienia.",
-      "couldNotSaveSettings": "Nie udało się zapisać ustawień.",
-      "enterNewEmail": "Wpisz nowy adres email.",
-      "enterCurrentPassword": "Wpisz aktualne hasło.",
-      "emailUpdated": "Email został zaktualizowany.",
-      "couldNotChangeEmail": "Nie udało się zmienić emaila. Sprawdź hasło i spróbuj ponownie.",
-      "enterNewPassword": "Wpisz nowe hasło.",
-      "passwordsDoNotMatch": "Nowe hasła nie są zgodne.",
-      "passwordUpdated": "Hasło zostało zaktualizowane.",
-      "couldNotChangePassword": "Nie udało się zmienić hasła. Sprawdź aktualne hasło i spróbuj ponownie."
+      "couldNotSaveSettings": "Nie udało się zapisać ustawień."
     }
   }
 }

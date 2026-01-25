@@ -96,6 +96,8 @@ import plReadingsHistory from "./locales/pl/readingsHistory.json";
 // Profile bundles
 import enProfile from "./locales/en/profile.json";
 import plProfile from "./locales/pl/profile.json";
+import enProfileModals from "./locales/en/profileModals.json";
+import plProfileModals from "./locales/pl/profileModals.json";
 
 // Home bundles
 import enHome from "./locales/en/home.json";
@@ -236,6 +238,7 @@ const resources = {
         enReadingsModals,
         enReadingsHistory,
         enProfile,
+        enProfileModals,
         enHome,
         enHomeModals,
         enTaskHistory,
@@ -278,6 +281,7 @@ const resources = {
         plReadingsModals,
         plReadingsHistory,
         plProfile,
+        plProfileModals,
         plHome,
         plHomeModals,
         plTaskHistory,

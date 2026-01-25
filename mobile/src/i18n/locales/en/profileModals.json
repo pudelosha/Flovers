@@ -1,0 +1,58 @@
+{
+  "profileModals": {
+    "support": {
+      "copyToMe": "Also email me a copy"
+    },
+    "prompts": {
+      "changeEmail": {
+        "title": "Change email",
+        "newEmailPlaceholder": "New email",
+        "currentPasswordPlaceholder": "Current password"
+      },
+      "changePassword": {
+        "title": "Change password",
+        "currentPasswordPlaceholder": "Current password",
+        "newPasswordPlaceholder": "New password",
+        "confirmNewPasswordPlaceholder": "Confirm new password",
+        "update": "Update"
+      },
+      "deleteAccount": {
+        "title": "Delete account",
+        "warning": "This action is irreversible. If you proceed, your account and data will be permanently deleted.",
+        "passwordPlaceholder": "Enter password to confirm"
+      },
+      "reportBug": {
+        "title": "Report a bug",
+        "subjectPlaceholder": "Subject",
+        "descriptionPlaceholder": "Describe the issue…"
+      },
+      "contactUs": {
+        "title": "Contact us",
+        "subjectPlaceholder": "Subject",
+        "messagePlaceholder": "How can we help?"
+      }
+    },
+    "toasts": {
+      "enterNewEmail": "Please enter the new email.",
+      "enterCurrentPassword": "Please enter your current password.",
+      "emailUpdated": "Email updated successfully.",
+      "couldNotChangeEmail": "Could not change email. Check your password and try again.",
+
+      "enterNewPassword": "Please enter a new password.",
+      "passwordsDoNotMatch": "New passwords do not match.",
+      "passwordUpdated": "Password updated successfully.",
+      "couldNotChangePassword": "Could not change password. Check your current password and try again.",
+
+      "enterSubject": "Please enter a subject.",
+      "enterMessage": "Please enter a message.",
+      "enterDescription": "Please describe the issue.",
+
+      "contactSent": "Message sent. We’ll get back to you soon.",
+      "bugSent": "Bug report sent. Thank you.",
+      "couldNotSendContact": "Could not send your message. Please try again.",
+      "couldNotSendBug": "Could not send your bug report. Please try again.",
+
+      "deleteNotImplemented": "Delete account is not available yet."
+    }
+  }
+}
