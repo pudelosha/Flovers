@@ -30,6 +30,8 @@ import enLogin from "./locales/en/login.json";
 import plLogin from "./locales/pl/login.json";
 import enRegister from "./locales/en/register.json";
 import plRegister from "./locales/pl/register.json";
+import enRegisterSuccess from "./locales/en/registerSuccess.json";
+import plRegisterSuccess from "./locales/pl/registerSuccess.json";
 import enResendActivation from "./locales/en/resendActivation.json";
 import plResendActivation from "./locales/pl/resendActivation.json";
 import enConfirmEmail from "./locales/en/confirmEmail.json";
@@ -214,6 +216,7 @@ const resources = {
       [
         enLogin,
         enRegister,
+        enRegisterSuccess,
         enResendActivation,
         enConfirmEmail,
         enForgotPassword,
@@ -255,6 +258,7 @@ const resources = {
       [
         plLogin,
         plRegister,
+        plRegisterSuccess,
         plResendActivation,
         plConfirmEmail,
         plForgotPassword,

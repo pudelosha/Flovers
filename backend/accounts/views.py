@@ -54,25 +54,26 @@ class RegisterView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
-        ser = RegisterSerializer(data=request.data)
+        # inject lang into serializer data (so it can persist ProfileSettings.language)
+        data = dict(request.data or {})
+        data["lang"] = data.get("lang") or _request_lang(request)
+
+        ser = RegisterSerializer(data=data)
         if not ser.is_valid():
             return fail("Registration failed.", ser.errors)
 
         user = ser.save()
         lang = _request_lang(request)
 
-        # Queue async; if worker is down, don't break registration response
         try:
             send_activation_email_task.delay(user.id, lang=lang)
         except Exception:
-            # no sync fallback; rely on worker/redis being up
             pass
 
         return ok(
             "Account created. Please check your email to activate your account.",
             code=status.HTTP_201_CREATED,
         )
-
 
 class LoginView(APIView):
     permission_classes = [AllowAny]

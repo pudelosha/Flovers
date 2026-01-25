@@ -20,6 +20,7 @@ import ForgotPasswordScreen from "../../features/auth/pages/ForgotPasswordScreen
 import ResendActivationScreen from "../../features/auth/pages/ResendActivationScreen";
 import ConfirmEmailScreen from "../../features/auth/pages/ConfirmEmailScreen";
 import ResetPasswordScreen from "../../features/auth/pages/ResetPasswordScreen";
+import RegisterSuccessScreen from "../../features/auth/pages/RegisterSuccessScreen";
 
 import AuthCard from "../../features/auth/components/AuthCard";
 
@@ -28,6 +29,7 @@ const bg = require("../../../assets/bg-leaves.jpg");
 export type AuthStackParamList = {
   Login: undefined;
   Register: undefined;
+  RegisterSuccess: { email?: string } | undefined;
   ForgotPassword: undefined;
   ResendActivation: { email?: string } | undefined;
   ConfirmEmail: { token?: string; uid?: string; email?: string; url?: string } | undefined;
@@ -95,6 +97,7 @@ function AuthNavigator() {
       >
         <AuthStack.Screen name="Login" component={withAuthCard(LoginScreen)} />
         <AuthStack.Screen name="Register" component={withAuthCard(RegisterScreen)} />
+        <AuthStack.Screen name="RegisterSuccess" component={withAuthCard(RegisterSuccessScreen)} />
         <AuthStack.Screen name="ForgotPassword" component={withAuthCard(ForgotPasswordScreen)} />
         <AuthStack.Screen name="ResendActivation" component={withAuthCard(ResendActivationScreen)} />
         <AuthStack.Screen name="ConfirmEmail" component={withAuthCard(ConfirmEmailScreen)} />

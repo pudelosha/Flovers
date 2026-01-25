@@ -195,11 +195,11 @@ export default function RegisterScreen({ navigation }: any) {
 
   async function onSubmit() {
     if (!formValid) {
-      let msg = getTranslation('register.errors.incompleteForm');
-      if (!emailValid) msg = getTranslation('register.errors.invalidEmail');
-      else if (!passwordValid) msg = getTranslation('register.errors.shortPassword');
-      else if (!passwordsMatch) msg = getTranslation('register.errors.passwordsMismatch');
-      else if (!agree) msg = getTranslation('register.errors.termsRequired');
+      let msg = getTranslation("register.errors.incompleteForm");
+      if (!emailValid) msg = getTranslation("register.errors.invalidEmail");
+      else if (!passwordValid) msg = getTranslation("register.errors.shortPassword");
+      else if (!passwordsMatch) msg = getTranslation("register.errors.passwordsMismatch");
+      else if (!agree) msg = getTranslation("register.errors.termsRequired");
       setToast({ visible: true, msg });
       return;
     }
@@ -207,15 +207,32 @@ export default function RegisterScreen({ navigation }: any) {
     setLoading(true);
     try {
       if (typeof register === "function") {
-        await register({ email, password: pwd });
+        await register({ email, password: pwd, lang: currentLanguage });
+        navigation.replace("RegisterSuccess", { email });
+        return;
       }
-      setToast({ visible: true, msg: getTranslation('register.success.accountCreated') });
+
+      // Clear form (optional) and navigate to success screen
+      setEmail("");
+      setPwd("");
+      setPwd2("");
+      setAgree(false);
+
+      navigation.replace("RegisterSuccess", { email });
     } catch (e: any) {
-      const msg =
-        e instanceof ApiError
-          ? e.body?.message || e.message
-          : getTranslation('register.errors.registrationFailed');
-      setToast({ visible: true, msg });
+      // Prefer field-level backend errors
+      if (e instanceof ApiError) {
+        const emailErr = e.body?.errors?.email;
+        if (emailErr && Array.isArray(emailErr) && emailErr.length) {
+          setToast({ visible: true, msg: getTranslation("register.errors.emailTaken") });
+          return;
+        }
+        const msg = e.body?.message || e.message || getTranslation("register.errors.registrationFailed");
+        setToast({ visible: true, msg });
+        return;
+      }
+
+      setToast({ visible: true, msg: getTranslation("register.errors.registrationFailed") });
     } finally {
       setLoading(false);
     }

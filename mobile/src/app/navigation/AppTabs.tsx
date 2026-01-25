@@ -22,13 +22,13 @@ import ScannerScreen from "../../features/scanner/pages/ScannerScreen"; // hidde
 import PlantDetailsScreen from "../../features/plant-details/pages/PlantDetailsScreen"; // hidden tab
 import CreatePlantWizardScreen from "../../features/create-plant/pages/CreatePlantWizardScreen"; // hidden tab
 
-// NEW: readings history page (hidden)
+// readings history page (hidden)
 import ReadingsHistoryScreen from "../../features/readings-history/pages/ReadingsHistoryScreen";
 
-// NEW: task/reminders history page (hidden)
+// task/reminders history page (hidden)
 import TaskHistoryScreen from "../../features/task-history/pages/TaskHistoryScreen";
 
-// NEW: locations screen (hidden, under Plants)
+// locations screen (hidden, under Plants)
 import LocationsScreen from "../../features/locations/pages/LocationsScreen";
 
 const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
@@ -36,7 +36,7 @@ const Placeholder: React.FC = () => <View style={{ flex: 1 }} />;
 export type AppTabParamList = {
   Home: undefined;
 
-  // ✅ UPDATED: allow navigation params for auto-opening edit modal
+  // allow navigation params for auto-opening edit modal
   Plants:
     | {
         editPlantId?: string;
@@ -55,10 +55,10 @@ export type AppTabParamList = {
   CreatePlantWizard: undefined;
   AddReminder: undefined;
 
-  // NEW: Locations (under Plants, hidden tab)
+  // Locations (under Plants, hidden tab)
   PlantLocations: undefined;
 
-  // NEW hidden routes for Readings flow
+  // hidden routes for Readings flow
   ReadingsHistory:
     | {
         metric?: "temperature" | "humidity" | "light" | "moisture";
@@ -72,13 +72,13 @@ export type AppTabParamList = {
   SortHistory: undefined;
   FilterHistory: undefined;
 
-  // NEW: Task / Reminders history (from Home)
+  // Task / Reminders history (from Home)
   TaskHistory: { plantId?: string } | undefined;
 };
 
 const Tab = createBottomTabNavigator<AppTabParamList>();
 
-// 🔹 Map hidden child routes to the tab that should appear active
+// Map hidden child routes to the tab that should appear active
 const PARENT_FOR_ROUTE: Record<string, keyof AppTabParamList> = {
   CreatePlantWizard: "Plants",
   PlantDetails: "Plants",
@@ -137,9 +137,9 @@ function GlassTabBar({ state, descriptors, navigation }: any) {
     "DeleteReadingConfirm",
     "SortHistory",
     "FilterHistory",
-    // NEW: hide TaskHistory tab
+    // hide TaskHistory tab
     "TaskHistory",
-    // NEW: hide Locations route (under Plants)
+    // hide Locations route (under Plants)
     "PlantLocations",
   ]);
 
