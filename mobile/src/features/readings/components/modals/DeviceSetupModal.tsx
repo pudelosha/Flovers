@@ -36,7 +36,7 @@ export default function DeviceSetupModal({
   const [showConfirmRotate, setShowConfirmRotate] = React.useState(false);
   const [revealSecret, setRevealSecret] = React.useState(false);
 
-  // ✅ Move the hook ABOVE the conditional return
+  // Move the hook ABOVE the conditional return
   const masked = React.useMemo(() => {
     const len = Math.max(10, (authSecret || "").replace(/\s/g, "").length || 12);
     return "•".repeat(len);
@@ -247,7 +247,7 @@ function InfoRow({ icon, label, value }: { icon: string; label: string; value: s
         <Text style={s.dropdownValue}>{label}</Text>
       </View>
       <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.10)" }}>
-        <Text style={[s.dropdownValue, { fontVariant: ["tabular-nums"] }]} selectable>
+        <Text style={[s.codeBlockText, { fontVariant: ["tabular-nums"] }]} selectable>
           {value}
         </Text>
       </View>
@@ -269,7 +269,7 @@ function CodeBlock({ text }: { text: string }) {
     <View style={{ padding: 12, borderRadius: 12, backgroundColor: "rgba(0,0,0,0.35)" }}>
       <Text
         style={[
-          s.dropdownItemText,
+          s.codeBlockText,
           { fontFamily: Platform.select({ ios: "Menlo", android: "monospace" }) as any },
         ]}
         selectable

@@ -332,6 +332,7 @@ export const s = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.16)",
   },
   dropdownItemText: { color: "#FFFFFF", fontWeight: "700" },
+  codeBlockText: { fontSize: 12, color: "#FFFFFF", fontWeight: "700" },
 
   // 50:50 rows that fill the width
   inlineRow: {
