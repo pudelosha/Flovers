@@ -1,8 +1,24 @@
-<h2 style="margin:0 0 12px 0;">{{ title }}</h2>
-<p style="margin:0 0 16px 0;">{{ line1 }}</p>
+<h2 style="margin:0 0 12px 0;font-size:20px;line-height:1.25;">
+  {{ title }}
+</h2>
 
-<p style="margin:0;">
-  <a href="{{ deep_link }}" style="display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;">
-    {{ cta }}
-  </a>
+<p style="margin:0 0 16px 0;font-size:15px;color:rgba(233,243,239,0.92);">
+  {{ line1 }}
 </p>
+
+<a
+  href="{{ link }}"
+  style="
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:999px;
+    background:#0e6f7b;
+    color:#ffffff !important;
+    font-weight:800;
+    font-size:14px;
+    text-decoration:none;
+    letter-spacing:0.2px;
+  "
+>
+  {{ cta }}
+</a>

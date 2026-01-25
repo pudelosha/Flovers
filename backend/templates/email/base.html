@@ -5,23 +5,57 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{ brand }}</title>
   </head>
-  <body style="margin:0;padding:0;background:#f5f5f5;">
-    <div style="max-width:640px;margin:0 auto;padding:24px;">
-      <div style="background:#ffffff;border-radius:12px;padding:24px;font-family:Arial,Helvetica,sans-serif;">
-        <div style="font-size:18px;font-weight:700;margin-bottom:16px;">
-          {{ brand }}
+
+  <body style="margin:0;padding:0;background:#0b241e;">
+    <!-- Background -->
+    <div style="width:100%;padding:28px 14px;background:#0b241e;">
+      <div style="max-width:680px;margin:0 auto;">
+
+        <!-- Glass Card -->
+        <div
+          style="
+            border-radius:28px;
+            overflow:hidden;
+            border:1px solid rgba(255,255,255,0.18);
+            background: linear-gradient(90deg, rgba(16,80,63,0.92) 0%, rgba(5,31,24,0.92) 100%);
+            box-shadow: 0 14px 34px rgba(0,0,0,0.38);
+          "
+        >
+          <!-- Fog highlight overlay -->
+          <div
+            style="
+              background: linear-gradient(135deg,
+                rgba(255,255,255,0.07) 0%,
+                rgba(255,255,255,0.03) 50%,
+                rgba(255,255,255,0.09) 100%
+              );
+            "
+          >
+            <!-- Content padding -->
+            <div style="padding:26px 22px;font-family:Arial,Helvetica,sans-serif;color:#e9f3ef;">
+              <!-- Brand -->
+              <div style="font-size:22px;font-weight:800;letter-spacing:0.2px;margin:0 0 18px 0;">
+                {{ brand }}
+              </div>
+
+              <!-- Inner body -->
+              <div style="color:#e9f3ef;line-height:1.55;font-size:15px;">
+                {{ content_html|safe }}
+              </div>
+
+              <!-- Divider -->
+              <div style="height:1px;background:rgba(255,255,255,0.14);margin:22px 0;"></div>
+
+              <!-- Footer -->
+              <div style="font-size:12.5px;line-height:1.5;color:rgba(233,243,239,0.78);">
+                <div>{{ footer }}</div>
+                <div style="margin-top:10px;color:rgba(233,243,239,0.65);">{{ signature }}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div>
-          {{ content_html|safe }}
-        </div>
-
-        <hr style="border:none;border-top:1px solid #eee;margin:24px 0;" />
-
-        <div style="font-size:12px;color:#666;line-height:1.4;">
-          <div>{{ footer }}</div>
-          <div style="margin-top:8px;">{{ signature }}</div>
-        </div>
+        <div style="height:10px;"></div>
       </div>
     </div>
   </body>
