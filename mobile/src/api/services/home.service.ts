@@ -1,6 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\api\services\home.service.ts
-// Thin wrapper that composes the Reminders + Plants endpoints for Home.
-
 import {
   listReminderTasks,
   listReminders,
