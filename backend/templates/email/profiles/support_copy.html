@@ -1,0 +1,32 @@
+{% comment %}
+Context:
+- kind: "contact" | "bug"
+- subject
+- message OR description
+- intro_contact / intro_bug (from JSON)
+- footer_note (from JSON)
+{% endcomment %}
+
+<p>
+  {% if kind == "bug" %}
+    {{ intro_bug }}
+  {% else %}
+    {{ intro_contact }}
+  {% endif %}
+</p>
+
+<hr />
+
+<p><strong>{{ labels.subject }}</strong> {{ subject }}</p>
+
+{% if kind == "bug" %}
+  <p>{{ description|linebreaksbr }}</p>
+{% else %}
+  <p>{{ message|linebreaksbr }}</p>
+{% endif %}
+
+<hr />
+
+<p style="font-size: 12px; opacity: 0.8;">
+  {{ footer_note }}
+</p>

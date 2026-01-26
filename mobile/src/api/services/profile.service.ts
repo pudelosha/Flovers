@@ -151,7 +151,7 @@ export async function sendSupportContact(
     "/api/profile/support/contact/",
     "POST",
     payload,
-    { auth: opts.auth ?? true }
+    { auth: opts.auth ?? true, timeoutMs: 30000 }
   );
   return { message: res.message };
 }
@@ -164,8 +164,7 @@ export async function sendSupportBug(
     "/api/profile/support/bug/",
     "POST",
     payload,
-    { auth: opts.auth ?? true }
+    { auth: opts.auth ?? true, timeoutMs: 30000 }
   );
   return { message: res.message };
 }
-

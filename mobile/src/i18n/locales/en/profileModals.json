@@ -1,5 +1,8 @@
 {
   "profileModals": {
+    "common": {
+      "sending": "Sending…"
+    },
     "support": {
       "copyToMe": "Also email me a copy"
     },
@@ -52,7 +55,9 @@
       "couldNotSendContact": "Could not send your message. Please try again.",
       "couldNotSendBug": "Could not send your bug report. Please try again.",
 
-      "deleteNotImplemented": "Delete account is not available yet."
+      "deleteNotImplemented": "Delete account is not available yet.",
+
+      "requestTimedOut": "Request timed out. Please try again."
     }
   }
 }

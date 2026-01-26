@@ -47,11 +47,30 @@ function isExpectedStatus(status: number) {
   return status === 400 || status === 401 || status === 403;
 }
 
+type RequestOpts = {
+  auth?: boolean;
+  timeoutMs?: number;
+};
+
+function isAbortError(e: any) {
+  const name = String(e?.name ?? "");
+  const msg = String(e?.message ?? "").toLowerCase();
+  return name === "AbortError" || msg.includes("aborted") || msg.includes("abort");
+}
+
+function safeJsonParse(raw: string) {
+  try {
+    return raw ? JSON.parse(raw) : raw;
+  } catch {
+    return raw;
+  }
+}
+
 export async function request<T>(
   path: string,
   method: HttpMethod = "GET",
   body?: any,
-  opts: { auth?: boolean } = { auth: false }
+  opts: RequestOpts = { auth: false, timeoutMs: 15000 }
 ): Promise<T> {
   const headers: Record<string, string> = {};
   const url = `${API_BASE}${path}`;
@@ -70,35 +89,67 @@ export async function request<T>(
     fetchBody = JSON.stringify(body);
   }
 
+  const timeoutMs = typeof opts.timeoutMs === "number" ? opts.timeoutMs : 15000;
+
+  /**
+   * IMPORTANT:
+   * AbortController is not consistently reliable across RN environments.
+   * If abort doesn't actually cancel fetch, the promise may stay pending forever.
+   *
+   * So we enforce a hard timeout with Promise.race() and *optionally* abort.
+   */
+  const controller =
+    typeof AbortController !== "undefined" ? new AbortController() : null;
+
+  let timeoutId: any = null;
+
+  const fetchPromise = fetch(url, {
+    method,
+    headers,
+    body: fetchBody,
+    signal: controller?.signal as any,
+  });
+
+  const timeoutPromise = new Promise<Response>((_, reject) => {
+    timeoutId = setTimeout(() => {
+      try {
+        controller?.abort();
+      } catch {
+        // ignore abort failures
+      }
+
+      // Normalize timeout as ApiError(408) so UI can handle it.
+      reject(new ApiError(408, { message: "Request timed out" }, "Request timed out"));
+    }, timeoutMs);
+  });
+
   let res: Response;
   try {
-    res = await fetch(url, {
-      method,
-      headers,
-      body: fetchBody,
-    });
-  } catch (e) {
-    // Network / DNS / connection-level error (worth an error log)
-    console.error("[api] fetch failed", { url, method, error: e });
+    res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;
+  } catch (e: any) {
+    // Network / DNS / connection-level error OR AbortError (timeout) OR ApiError(408)
+    if (__DEV__) {
+      if (e instanceof ApiError && e.status === 408) {
+        console.warn("[api] request timed out", { url, method, timeoutMs });
+      } else if (isAbortError(e)) {
+        console.warn("[api] request aborted", { url, method, timeoutMs });
+      } else {
+        console.error("[api] fetch failed", { url, method, error: e });
+      }
+    }
     throw e;
+  } finally {
+    // critical: always clear timer to avoid later firing + leaks
+    if (timeoutId) clearTimeout(timeoutId);
   }
 
   const raw = await res.text().catch(() => "");
 
   // Handle non-2xx
   if (!res.ok) {
-    const bodyParsed = isJsonContent(res)
-      ? (() => {
-          try {
-            return raw ? JSON.parse(raw) : raw;
-          } catch {
-            return raw;
-          }
-        })()
-      : raw;
+    const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
 
     // Avoid RN redbox for expected 400/401/403 during normal flows
-    // RN dev treats console.error specially; console.warn is much less intrusive.
     if (__DEV__) {
       const payload = { url, method, status: res.status, body: bodyParsed };
 
@@ -116,7 +167,11 @@ export async function request<T>(
       }
     }
 
-    throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
+    throw new ApiError(
+      res.status,
+      bodyParsed,
+      `Request failed with status ${res.status}`
+    );
   }
 
   // Handle empty responses (valid for 204, DELETE, etc.)

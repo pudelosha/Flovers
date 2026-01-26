@@ -1,16 +1,34 @@
+// src/features/profile/components/modals/ContactUsModal.tsx
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable, ActivityIndicator } from "react-native";
 import { BlurView } from "@react-native-community/blur";
 import { Checkbox } from "react-native-paper";
 import { useTranslation } from "react-i18next";
 import { sendSupportContact } from "../../../../api/services/profile.service";
 import { prompts as pr } from "../../styles/profile.styles";
+import { ApiError } from "../../../../api/client";
 
 type Props = {
   visible: boolean;
   onClose: () => void;
   showToast: (msg: string, variant?: "default" | "success" | "error") => void;
 };
+
+function isTimedOut(e: any) {
+  // ApiError(408) from client.ts Promise.race timeout
+  if (e instanceof ApiError && e.status === 408) return true;
+
+  // AbortController fallback cases
+  const name = String(e?.name ?? "");
+  const msg = String(e?.message ?? "").toLowerCase();
+  return name === "AbortError" || msg.includes("abort") || msg.includes("aborted") || msg.includes("timeout");
+}
+
+function isUnauthorized(e: any) {
+  const status = (e instanceof ApiError ? e.status : (e?.response?.status ?? e?.status)) as number | undefined;
+  const msg = String(e?.message ?? "").toLowerCase();
+  return status === 401 || msg.includes("unauthorized") || msg.includes("unauthorised");
+}
 
 export default function ContactUsModal({ visible, onClose, showToast }: Props) {
   const { t } = useTranslation();
@@ -29,6 +47,8 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
   }, [visible]);
 
   const handleSubmit = async () => {
+    if (saving) return;
+
     const s = subject.trim();
     const m = message.trim();
 
@@ -43,18 +63,25 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
 
     try {
       setSaving(true);
-      const res = await sendSupportContact({ subject: s, message: m, copy_to_user: copyToMe }, { auth: true });
+
+      const res = await sendSupportContact(
+        { subject: s, message: m, copy_to_user: copyToMe },
+        { auth: true }
+      );
+
       showToast(res?.message || t("profileModals.toasts.contactSent"), "success");
       onClose();
     } catch (e: any) {
       console.warn("Contact support failed", e);
-      const unauthorized =
-        (e?.response?.status ?? e?.status) === 401 ||
-        String(e?.message ?? "").toLowerCase().includes("unauthorized");
-      showToast(
-        unauthorized ? t("profile.toasts.unauthorizedLoginAgain") : t("profileModals.toasts.couldNotSendContact"),
-        "error"
-      );
+
+      if (isUnauthorized(e)) {
+        showToast(t("profile.toasts.unauthorizedLoginAgain"), "error");
+      } else if (isTimedOut(e)) {
+        // requires profileModals.toasts.requestTimedOut
+        showToast(t("profileModals.toasts.requestTimedOut"), "error");
+      } else {
+        showToast(t("profileModals.toasts.couldNotSendContact"), "error");
+      }
     } finally {
       setSaving(false);
     }
@@ -65,6 +92,7 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
   return (
     <>
       <Pressable style={pr.backdrop} onPress={onClose} />
+
       <View style={pr.promptWrap}>
         <View style={pr.promptGlass}>
           <BlurView
@@ -92,6 +120,7 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
             placeholderTextColor="rgba(255,255,255,0.7)"
             value={subject}
             onChangeText={setSubject}
+            editable={!saving}
           />
 
           <TextInput
@@ -101,15 +130,18 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
             multiline
             value={message}
             onChangeText={setMessage}
+            editable={!saving}
           />
 
+          {/* Checkbox row - single toggle source (wrapper only) */}
           <Pressable
             onPress={() => setCopyToMe((v) => !v)}
             style={{ flexDirection: "row", alignItems: "center", marginTop: 6 }}
+            disabled={saving}
           >
             <Checkbox
               status={copyToMe ? "checked" : "unchecked"}
-              onPress={() => setCopyToMe((v) => !v)}
+              onPress={undefined} // prevent double toggle (Pressable handles it)
               color="#FFFFFF"
               uncheckedColor="#FFFFFF"
             />
@@ -117,7 +149,8 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
           </Pressable>
 
           <View style={pr.promptButtonsRow}>
-            <Pressable style={pr.promptBtn} onPress={onClose} disabled={saving}>
+            {/* Cancel should NEVER be disabled */}
+            <Pressable style={pr.promptBtn} onPress={onClose}>
               <Text style={pr.promptBtnText}>{t("profile.common.cancel")}</Text>
             </Pressable>
 
@@ -126,9 +159,12 @@ export default function ContactUsModal({ visible, onClose, showToast }: Props) {
               onPress={handleSubmit}
               disabled={saving}
             >
-              <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
-                {t("profile.common.send")}
-              </Text>
+              <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
+                {saving ? <ActivityIndicator /> : null}
+                <Text style={[pr.promptBtnText, pr.promptPrimaryText]}>
+                  {saving ? t("profileModals.common.sending") : t("profile.common.send")}
+                </Text>
+              </View>
             </Pressable>
           </View>
         </View>

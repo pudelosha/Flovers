@@ -1,0 +1,10 @@
+<p><strong>{{ labels.from }}</strong> {{ user.email }}</p>
+<p><strong>{{ labels.subject }}</strong> {{ subject }}</p>
+<hr />
+<p style="white-space: pre-wrap;">{{ body }}</p>
+
+{% if meta %}
+<hr />
+<p><strong>{{ labels.meta }}</strong></p>
+<pre style="white-space: pre-wrap;">{{ meta }}</pre>
+{% endif %}

@@ -1,0 +1,19 @@
+{% if kind == "bug" %}
+{{ intro_bug }}
+{% else %}
+{{ intro_contact }}
+{% endif %}
+
+----------------------------
+
+{{ labels.subject }} {{ subject }}
+
+{% if kind == "bug" %}
+{{ description }}
+{% else %}
+{{ message }}
+{% endif %}
+
+----------------------------
+
+{{ footer_note }}

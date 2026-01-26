@@ -198,3 +198,7 @@ I18N_LOCALES_DIR = BASE_DIR / "i18n" / "locales"
 
 # Optional safety: supported langs list (used by helpers)
 SUPPORTED_LANGS = ["en", "pl", "de", "it", "fr", "es", "pt", "ar", "hi", "zh", "ja", "ko"]
+
+# Contact (Support/Report Bug) inbox
+SUPPORT_INBOX_EMAIL = "hello@flovers.app"  # or your admin inbox
+

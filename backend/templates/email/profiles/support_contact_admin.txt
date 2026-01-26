@@ -1,0 +1,6 @@
+{{ labels.from }} {{ user.email }}
+{{ labels.subject }} {{ subject }}
+
+----------------------------------------
+
+{{ body }}

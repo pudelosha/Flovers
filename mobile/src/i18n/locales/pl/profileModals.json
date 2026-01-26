@@ -1,5 +1,8 @@
 {
   "profileModals": {
+    "common": {
+      "sending": "Wysyłanie…"
+    },
     "support": {
       "copyToMe": "Wyślij mi też kopię na email"
     },
@@ -52,7 +55,9 @@
       "couldNotSendContact": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
       "couldNotSendBug": "Nie udało się wysłać zgłoszenia błędu. Spróbuj ponownie.",
 
-      "deleteNotImplemented": "Usuwanie konta nie jest jeszcze dostępne."
+      "deleteNotImplemented": "Usuwanie konta nie jest jeszcze dostępne.",
+
+      "requestTimedOut": "Przekroczono limit czasu. Spróbuj ponownie."
     }
   }
 }

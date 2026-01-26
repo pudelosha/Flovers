@@ -145,3 +145,36 @@ class PushDevice(TimeStampedModel):
 
     def __str__(self) -> str:
         return f"PushDevice<{self.user_id}:{self.platform}:{'active' if self.is_active else 'inactive'}>"
+
+class SupportMessage(models.Model):
+    KIND_CONTACT = "contact"
+    KIND_BUG = "bug"
+    KIND_CHOICES = [
+        (KIND_CONTACT, "Contact"),
+        (KIND_BUG, "Bug report"),
+    ]
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="support_messages",
+    )
+
+    kind = models.CharField(max_length=16, choices=KIND_CHOICES)
+    subject = models.CharField(max_length=200)
+
+    # contact uses "message", bug uses "description" — we store both normalized in "body"
+    body = models.TextField()
+
+    copy_to_user = models.BooleanField(default=True)
+
+    # optional diagnostics (can be expanded later)
+    user_email = models.EmailField(blank=True, default="")
+    user_agent = models.CharField(max_length=255, blank=True, default="")
+    app_version = models.CharField(max_length=64, blank=True, default="")
+    platform = models.CharField(max_length=32, blank=True, default="")
+
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+
+    def __str__(self):
+        return f"SupportMessage<{self.kind}:{self.user_id}:{self.subject[:30]}>"
