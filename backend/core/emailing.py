@@ -86,7 +86,9 @@ def send_templated_email(
 
     # Subject (with optional prefix)
     subject = t(subject_key, lang=lang, default="Flovers")
-    prefix = getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or ""
+    prefix = (getattr(settings, "EMAIL_SUBJECT_PREFIX", "") or "")
+    if prefix and not prefix.endswith(" "):
+        prefix = prefix + " "
     subject = f"{prefix}{subject}"
 
     base_from = from_email or getattr(settings, "DEFAULT_FROM_EMAIL", None) or "no-reply@example.com"
