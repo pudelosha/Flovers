@@ -4,13 +4,10 @@ import os
 from dataclasses import dataclass
 from typing import Any
 
-
 import firebase_admin
 from firebase_admin import credentials, messaging
 
-
 _app = None
-
 
 def _get_firebase_app():
     """
@@ -75,7 +72,7 @@ def send_fcm_multicast(
 
     _get_firebase_app()
 
-    payload_data = data or {}
+    payload_data = {str(k): str(v) for k, v in (data or {}).items() if v is not None}
 
     # Newer SDK path
     if hasattr(messaging, "send_each_for_multicast"):

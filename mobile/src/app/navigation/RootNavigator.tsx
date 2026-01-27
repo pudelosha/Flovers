@@ -3,8 +3,9 @@ import { ImageBackground } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
+import { navigationRef } from "./navigationRef";
 
-// NEW: push registration lifecycle (starts after login)
+// push registration lifecycle
 import {
   startPushNotifications,
   stopPushNotifications,
@@ -13,7 +14,7 @@ import {
 // logged-in shell
 import AppTabs from "./AppTabs";
 
-// auth screens (logged-out)
+// auth screens
 import LoginScreen from "../../features/auth/pages/LoginScreen";
 import RegisterScreen from "../../features/auth/pages/RegisterScreen";
 import ForgotPasswordScreen from "../../features/auth/pages/ForgotPasswordScreen";
@@ -32,13 +33,16 @@ export type AuthStackParamList = {
   RegisterSuccess: { email?: string } | undefined;
   ForgotPassword: undefined;
   ResendActivation: { email?: string } | undefined;
-  ConfirmEmail: { token?: string; uid?: string; email?: string; url?: string } | undefined;
-  ResetPassword: { token?: string; uid?: string; email?: string; url?: string } | undefined;
+  ConfirmEmail:
+    | { token?: string; uid?: string; email?: string; url?: string }
+    | undefined;
+  ResetPassword:
+    | { token?: string; uid?: string; email?: string; url?: string }
+    | undefined;
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 
-// deep linking (auth + tab screens, incl. hidden screens for direct links)
 const linking = {
   prefixes: ["flovers://"],
   config: {
@@ -51,7 +55,7 @@ const linking = {
       ConfirmEmail: "confirm-email",
       ResetPassword: "reset-password",
 
-      // app tabs (and selected hidden routes)
+      // app tabs
       Home: "home",
       Plants: "plants",
       Reminders: "reminders",
@@ -66,10 +70,10 @@ const linking = {
       SortHistory: "sort-history",
       FilterHistory: "filter-history",
 
-      // task/reminders history
+      // task history
       TaskHistory: "task-history",
 
-      // locations screen (under Plants)
+      // locations
       PlantLocations: "locations",
     },
   },
@@ -96,12 +100,30 @@ function AuthNavigator() {
         }}
       >
         <AuthStack.Screen name="Login" component={withAuthCard(LoginScreen)} />
-        <AuthStack.Screen name="Register" component={withAuthCard(RegisterScreen)} />
-        <AuthStack.Screen name="RegisterSuccess" component={withAuthCard(RegisterSuccessScreen)} />
-        <AuthStack.Screen name="ForgotPassword" component={withAuthCard(ForgotPasswordScreen)} />
-        <AuthStack.Screen name="ResendActivation" component={withAuthCard(ResendActivationScreen)} />
-        <AuthStack.Screen name="ConfirmEmail" component={withAuthCard(ConfirmEmailScreen)} />
-        <AuthStack.Screen name="ResetPassword" component={withAuthCard(ResetPasswordScreen)} />
+        <AuthStack.Screen
+          name="Register"
+          component={withAuthCard(RegisterScreen)}
+        />
+        <AuthStack.Screen
+          name="RegisterSuccess"
+          component={withAuthCard(RegisterSuccessScreen)}
+        />
+        <AuthStack.Screen
+          name="ForgotPassword"
+          component={withAuthCard(ForgotPasswordScreen)}
+        />
+        <AuthStack.Screen
+          name="ResendActivation"
+          component={withAuthCard(ResendActivationScreen)}
+        />
+        <AuthStack.Screen
+          name="ConfirmEmail"
+          component={withAuthCard(ConfirmEmailScreen)}
+        />
+        <AuthStack.Screen
+          name="ResetPassword"
+          component={withAuthCard(ResetPasswordScreen)}
+        />
       </AuthStack.Navigator>
     </ImageBackground>
   );
@@ -118,7 +140,6 @@ function AppNavigator() {
 export default function RootNavigator() {
   const { loading, token } = useAuth();
 
-  // NEW: start/stop push registration based on auth token
   useEffect(() => {
     if (loading) return;
 
@@ -132,7 +153,7 @@ export default function RootNavigator() {
   if (loading) return null;
 
   return (
-    <NavigationContainer linking={linking}>
+    <NavigationContainer linking={linking} ref={navigationRef}>
       {token ? <AppNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );

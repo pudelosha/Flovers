@@ -260,7 +260,7 @@ def check_and_send_daily_task_notifications(self):
                     tokens=tokens,
                     title="Plant tasks",
                     body=f"You have {due_count} task(s) due today.",
-                    data={"kind": "due_today"},
+                    data={"kind": "due_today", "route": "Home"},
                 )
                 logger.info("push_due_today result user=%s sent=%s", user.id, sent)
 
@@ -277,7 +277,7 @@ def check_and_send_daily_task_notifications(self):
                         tokens=tokens,
                         title="Plant tasks",
                         body=f"You have {overdue_count} task(s) overdue since yesterday.",
-                        data={"kind": "overdue_1d"},
+                        data={"kind": "overdue_1d", "route": "Home"},
                     )
                     if sent > 0:
                         _log_sent(user.id, NotificationDeliveryLog.CHANNEL_PUSH, NotificationDeliveryLog.KIND_OVERDUE_1D, local_date)
