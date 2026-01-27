@@ -30,6 +30,7 @@ export const BACKGROUND_OPTIONS: readonly { key: BackgroundKey; label: string }[
   { key: "bg2", label: "Background 2" },
   { key: "bg3", label: "Background 3" },
   { key: "bg4", label: "Background 4" },
+  { key: "bg5", label: "Background 5" },
 ];
 
 /** FAB position dropdown options (Right default) */

@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import { ImageBackground } from "react-native";
+import React, { useEffect, useMemo } from "react";
+import { ImageBackground, StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../providers/useAuth";
 import { navigationRef } from "./navigationRef";
+import { useSettings } from "../providers/SettingsProvider";
+import { resolveBackground } from "../settings/backgrounds";
 
 // push registration lifecycle
 import {
@@ -24,8 +26,6 @@ import ResetPasswordScreen from "../../features/auth/pages/ResetPasswordScreen";
 import RegisterSuccessScreen from "../../features/auth/pages/RegisterSuccessScreen";
 
 import AuthCard from "../../features/auth/components/AuthCard";
-
-const bg = require("../../../assets/bg-leaves.jpg");
 
 export type AuthStackParamList = {
   Login: undefined;
@@ -89,56 +89,56 @@ function withAuthCard(Component: React.ComponentType<any>) {
 
 function AuthNavigator() {
   return (
-    <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
-      <AuthStack.Navigator
-        initialRouteName="Login"
-        screenOptions={{
-          headerShown: false,
-          animation: "none",
-          detachPreviousScreen: true,
-          contentStyle: { backgroundColor: "transparent" },
-        }}
-      >
-        <AuthStack.Screen name="Login" component={withAuthCard(LoginScreen)} />
-        <AuthStack.Screen
-          name="Register"
-          component={withAuthCard(RegisterScreen)}
-        />
-        <AuthStack.Screen
-          name="RegisterSuccess"
-          component={withAuthCard(RegisterSuccessScreen)}
-        />
-        <AuthStack.Screen
-          name="ForgotPassword"
-          component={withAuthCard(ForgotPasswordScreen)}
-        />
-        <AuthStack.Screen
-          name="ResendActivation"
-          component={withAuthCard(ResendActivationScreen)}
-        />
-        <AuthStack.Screen
-          name="ConfirmEmail"
-          component={withAuthCard(ConfirmEmailScreen)}
-        />
-        <AuthStack.Screen
-          name="ResetPassword"
-          component={withAuthCard(ResetPasswordScreen)}
-        />
-      </AuthStack.Navigator>
-    </ImageBackground>
+    <AuthStack.Navigator
+      initialRouteName="Login"
+      screenOptions={{
+        headerShown: false,
+        animation: "none",
+        detachPreviousScreen: true,
+        contentStyle: { backgroundColor: "transparent" },
+      }}
+    >
+      <AuthStack.Screen name="Login" component={withAuthCard(LoginScreen)} />
+      <AuthStack.Screen
+        name="Register"
+        component={withAuthCard(RegisterScreen)}
+      />
+      <AuthStack.Screen
+        name="RegisterSuccess"
+        component={withAuthCard(RegisterSuccessScreen)}
+      />
+      <AuthStack.Screen
+        name="ForgotPassword"
+        component={withAuthCard(ForgotPasswordScreen)}
+      />
+      <AuthStack.Screen
+        name="ResendActivation"
+        component={withAuthCard(ResendActivationScreen)}
+      />
+      <AuthStack.Screen
+        name="ConfirmEmail"
+        component={withAuthCard(ConfirmEmailScreen)}
+      />
+      <AuthStack.Screen
+        name="ResetPassword"
+        component={withAuthCard(ResetPasswordScreen)}
+      />
+    </AuthStack.Navigator>
   );
 }
 
 function AppNavigator() {
-  return (
-    <ImageBackground source={bg} style={{ flex: 1 }} resizeMode="cover">
-      <AppTabs />
-    </ImageBackground>
-  );
+  return <AppTabs />;
 }
 
 export default function RootNavigator() {
   const { loading, token } = useAuth();
+  const { settings, loading: settingsLoading } = useSettings();
+
+  const bgSource = useMemo(
+    () => resolveBackground(settings?.background),
+    [settings?.background]
+  );
 
   useEffect(() => {
     if (loading) return;
@@ -150,11 +150,26 @@ export default function RootNavigator() {
     }
   }, [loading, token]);
 
-  if (loading) return null;
+  if (loading) {
+    return (
+      <ImageBackground
+        source={bgSource}
+        style={{ flex: 1 }}
+        resizeMode="cover"
+      />
+    );
+  }
 
   return (
     <NavigationContainer linking={linking} ref={navigationRef}>
-      {token ? <AppNavigator /> : <AuthNavigator />}
+      <ImageBackground source={bgSource} style={{ flex: 1 }} resizeMode="cover">
+        {token ? <AppNavigator /> : <AuthNavigator />}
+
+        {/* block interaction while settings refresh (no visual change) */}
+        {settingsLoading ? (
+          <View pointerEvents="auto" style={StyleSheet.absoluteFillObject} />
+        ) : null}
+      </ImageBackground>
     </NavigationContainer>
   );
 }

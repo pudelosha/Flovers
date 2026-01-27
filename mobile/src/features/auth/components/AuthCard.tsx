@@ -4,11 +4,9 @@ import LinearGradient from "react-native-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { PanGestureHandler, State as GHState } from "react-native-gesture-handler";
 
-// NEW: language FAB shown on all auth screens
+// language FAB shown on all auth screens
 import LanguageFAB from "../../../shared/ui/LanguageFAB";
 import { useLanguage } from "../../../app/providers/LanguageProvider";
-
-const drops = require("../../../../assets/drops.png");
 
 type Props = PropsWithChildren<{ showDrops?: boolean }>;
 
@@ -22,7 +20,7 @@ const TAB_GREEN_LIGHT = "rgba(16, 80, 63, 0.9)";
 export default function AuthCard({ children, showDrops = false }: Props) {
   const insets = useSafeAreaInsets();
 
-  // NEW: language state (available on all auth screens)
+  // language state (available on all auth screens)
   const { currentLanguage, changeLanguage } = useLanguage();
 
   // mount-in effect

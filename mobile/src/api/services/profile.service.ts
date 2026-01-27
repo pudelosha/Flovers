@@ -63,7 +63,7 @@ export type ApiProfileSettings = {
   tile_transparency: number; // 0..0.6 in UI
   tile_motive: TileMotive;   // "light" | "dark" - tiles gloom mode
 
-  background: BackgroundKey; // "bg1" | "bg2" | "bg3" | "bg4"
+  background: BackgroundKey; // "bg1" | "bg2" | "bg3" | "bg4" | "bg5"
   fab_position: FabPosition; // "left" | "right"
 };
 

@@ -77,7 +77,8 @@ export default function SettingsCard({
     if (k === "bg1") return t("profile.settings.backgroundOptions.bg1");
     if (k === "bg2") return t("profile.settings.backgroundOptions.bg2");
     if (k === "bg3") return t("profile.settings.backgroundOptions.bg3");
-    return t("profile.settings.backgroundOptions.bg4");
+    if (k === "bg4") return t("profile.settings.backgroundOptions.bg4");
+    return t("profile.settings.backgroundOptions.bg5");
   };
 
   const fabLabel = (k: "left" | "right") => {
