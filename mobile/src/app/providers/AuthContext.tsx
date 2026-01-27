@@ -1,5 +1,6 @@
+// C:\Projekty\Python\Flovers\mobile\src\app\providers\AuthContext.tsx
 import React, { createContext, useCallback, useEffect, useMemo, useState } from "react";
-import { setAuthToken } from "../../api/client";
+import { setAuthToken, onUnauthorized } from "../../api/client";
 import {
   AuthUserInfo,
   RegisterPayload,
@@ -36,6 +37,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setAuthToken(t);
       setLoading(false);
     })();
+  }, []);
+
+  // NEW: auto-logout when api client emits 401
+  useEffect(() => {
+    const unsubscribe = onUnauthorized(() => {
+      // If already logged out, do nothing
+      setToken((prev) => {
+        if (!prev) return prev;
+
+        // Perform the same logout side-effects (async) without changing your logout() logic
+        (async () => {
+          await clearToken();
+          setAuthToken(null);
+          setUser(null);
+        })().catch(() => {});
+
+        // switch UI to auth stack immediately
+        return null;
+      });
+    });
+
+    return unsubscribe;
   }, []);
 
   const register = useCallback(async (p: RegisterPayload) => {

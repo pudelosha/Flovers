@@ -1,3 +1,4 @@
+// C:\Projekty\Python\Flovers\mobile\src\api\client.ts
 // A tiny HTTP helper + error class to talk to your Django API.
 // - Automatically prefixes requests with API_BASE
 // - Optionally attaches JWT Authorization header (when opts.auth === true)
@@ -66,6 +67,29 @@ function safeJsonParse(raw: string) {
   }
 }
 
+/**
+ * Global unauthorized event (to auto-logout on 401).
+ * Avoids circular imports between api client and AuthProvider.
+ */
+type UnauthorizedListener = () => void;
+
+const unauthorizedListeners = new Set<UnauthorizedListener>();
+
+export function onUnauthorized(cb: UnauthorizedListener) {
+  unauthorizedListeners.add(cb);
+  return () => unauthorizedListeners.delete(cb);
+}
+
+function emitUnauthorized() {
+  unauthorizedListeners.forEach((cb) => {
+    try {
+      cb();
+    } catch {
+      // ignore listener errors
+    }
+  });
+}
+
 export async function request<T>(
   path: string,
   method: HttpMethod = "GET",
@@ -98,8 +122,7 @@ export async function request<T>(
    *
    * So we enforce a hard timeout with Promise.race() and *optionally* abort.
    */
-  const controller =
-    typeof AbortController !== "undefined" ? new AbortController() : null;
+  const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
 
   let timeoutId: any = null;
 
@@ -130,9 +153,9 @@ export async function request<T>(
     // Network / DNS / connection-level error OR AbortError (timeout) OR ApiError(408)
     if (__DEV__) {
       if (e instanceof ApiError && e.status === 408) {
-        console.warn("[api] request timed out", { url, method, timeoutMs });
+        console.debug("[api] request timed out", { url, method, timeoutMs });
       } else if (isAbortError(e)) {
-        console.warn("[api] request aborted", { url, method, timeoutMs });
+        console.debug("[api] request aborted", { url, method, timeoutMs });
       } else {
         console.error("[api] fetch failed", { url, method, error: e });
       }
@@ -149,12 +172,17 @@ export async function request<T>(
   if (!res.ok) {
     const bodyParsed = isJsonContent(res) ? safeJsonParse(raw) : raw;
 
+    // emit global 401 only for authenticated requests
+    if (res.status === 401 && opts.auth) {
+      emitUnauthorized();
+    }
+
     // Avoid RN redbox for expected 400/401/403 during normal flows
     if (__DEV__) {
       const payload = { url, method, status: res.status, body: bodyParsed };
 
       if (isExpectedStatus(res.status)) {
-        console.warn("[api] expected error", payload);
+        console.debug("[api] expected error", payload);
       } else {
         console.error("[api] error", payload);
 
@@ -167,11 +195,7 @@ export async function request<T>(
       }
     }
 
-    throw new ApiError(
-      res.status,
-      bodyParsed,
-      `Request failed with status ${res.status}`
-    );
+    throw new ApiError(res.status, bodyParsed, `Request failed with status ${res.status}`);
   }
 
   // Handle empty responses (valid for 204, DELETE, etc.)

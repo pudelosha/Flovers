@@ -1,4 +1,5 @@
-﻿import React, { useEffect } from "react";
+﻿// C:\Projekty\Python\Flovers\mobile\App.tsx
+import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider as PaperProvider, MD3LightTheme } from "react-native-paper";
 import { AuthProvider } from "./src/app/providers/AuthContext";
@@ -8,7 +9,7 @@ import RootNavigator from "./src/app/navigation/RootNavigator";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./src/i18n";
 
-import Config from "react-native-config";
+import { API_BASE_NORM } from "./src/config";
 
 const theme = {
   ...MD3LightTheme,
@@ -23,7 +24,7 @@ const theme = {
 export default function App() {
   // One-time log to verify env wiring
   useEffect(() => {
-    console.log("[App] API_BASE =", Config.API_BASE);
+    console.log("[App] API_BASE =", API_BASE_NORM);
   }, []);
 
   return (
