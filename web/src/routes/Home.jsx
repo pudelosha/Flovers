@@ -1,45 +1,49 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation("home");
+
   return (
     <div className="stack">
       <section className="hero card">
-        <h1 className="h1">Flovers</h1>
-        <p className="muted">
-          Prosta wizytówka aplikacji + linki do dokumentów: regulamin, polityka
-          prywatności, kontakt.
-        </p>
+        <h1 className="h1">{t("hero.title")}</h1>
+        <p className="muted">{t("hero.subtitle")}</p>
 
         <div className="row">
-          <a className="btn" href="#" target="_blank" rel="noreferrer">
-            Google Play (wkrótce)
+          <a
+            className="btn"
+            href={t("hero.cta.googlePlayUrl")}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("hero.cta.googlePlay")}
           </a>
-          <a className="btn secondary" href="#" target="_blank" rel="noreferrer">
-            iOS (wkrótce)
+          <a
+            className="btn secondary"
+            href={t("hero.cta.appStoreUrl")}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("hero.cta.appStore")}
           </a>
         </div>
       </section>
 
       <section className="grid">
         <div className="card">
-          <h2 className="h2">Dlaczego Flovers?</h2>
-          <p className="muted">
-            Wstawisz tu zwięzły opis wartości aplikacji i główne funkcje.
-          </p>
+          <h2 className="h2">{t("tiles.value.title")}</h2>
+          <p className="muted">{t("tiles.value.text")}</p>
         </div>
 
         <div className="card">
-          <h2 className="h2">Bezpieczeństwo</h2>
-          <p className="muted">
-            Linki do polityki prywatności i zasad przetwarzania danych.
-          </p>
+          <h2 className="h2">{t("tiles.security.title")}</h2>
+          <p className="muted">{t("tiles.security.text")}</p>
         </div>
 
         <div className="card">
-          <h2 className="h2">Wsparcie</h2>
-          <p className="muted">
-            Kontakt, FAQ, dokumentacja i odnośniki do sklepów.
-          </p>
+          <h2 className="h2">{t("tiles.support.title")}</h2>
+          <p className="muted">{t("tiles.support.text")}</p>
         </div>
       </section>
     </div>

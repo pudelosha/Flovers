@@ -1,19 +1,18 @@
 import React from "react";
-
-const items = [
-  { q: "Gdzie znajdę regulamin?", a: "W stopce strony lub pod /terms." },
-  { q: "Gdzie jest polityka prywatności?", a: "W stopce strony lub pod /privacy-policy." },
-  { q: "Jak skontaktować się ze wsparciem?", a: "Wejdź w /contact." },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Faq() {
+  const { t } = useTranslation("faq");
+  const items = t("items", { returnObjects: true });
+
   return (
     <section className="card prose">
-      <h1 className="h1">FAQ</h1>
-      {items.map((x, idx) => (
+      <h1 className="h1">{t("title")}</h1>
+
+      {items.map((item, idx) => (
         <div key={idx} className="faq-item">
-          <h2 className="h2">{x.q}</h2>
-          <p className="muted">{x.a}</p>
+          <h2 className="h2">{item.q}</h2>
+          <p className="muted">{item.a}</p>
         </div>
       ))}
     </section>

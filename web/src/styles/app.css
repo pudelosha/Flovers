@@ -1,12 +1,13 @@
 :root {
   /* App palette */
-  --bg0: #041a18; /* najciemniejsze */
-  --bg1: #062824; /* ciemny teal */
-  --bg2: #0b3a30; /* header green */
+  --bg0: #041a18;
+  --bg1: #062824;
+  --bg2: #0b3a30;
+
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.68);
 
-  --accent: #0a7184; /* primary button */
+  --accent: #0a7184;
   --accent-2: #1aa6a0;
 
   --border: rgba(255, 255, 255, 0.10);
@@ -21,19 +22,42 @@
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+
+html, body {
+  height: 100%;
+}
 
 body {
+  min-height: 100vh;
   margin: 0;
   font-family: var(--font);
   color: var(--text);
 
-  /* App-like background gradient */
   background:
     radial-gradient(900px 600px at 20% 15%, rgba(26,166,160,0.18), transparent 55%),
     radial-gradient(900px 700px at 80% 20%, rgba(10,113,132,0.20), transparent 55%),
     radial-gradient(1100px 800px at 50% 80%, rgba(11,58,48,0.35), transparent 60%),
     linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 35%, var(--bg0) 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.app {
+  min-height: 100vh;
+  background: transparent;
+}
+
+/* Modern mobile viewport fix */
+@supports (height: 100dvh) {
+  body, #root, .app {
+    min-height: 100dvh;
+  }
 }
 
 a { color: inherit; text-decoration: none; }
@@ -54,8 +78,8 @@ a { color: inherit; text-decoration: none; }
 
 .main {
   flex: 1;
-  padding-top: 36px;     /* spacing under topbar */
-  padding-bottom: 110px; /* spacing for sticky footer / mobile */
+  padding-top: 36px;
+  padding-bottom: 110px;
 }
 
 /* Typography */
@@ -78,7 +102,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.6;
 }
 
-/* Cards (glass tile) */
+/* Cards */
 .card {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
@@ -95,14 +119,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero {
-  padding: 28px 30px;
-  border-radius: 38px;
+  padding: 22px;
+  border-radius: var(--radius-xl);
   background:
     linear-gradient(
       180deg,
-      rgba(255,255,255,0.14) 0%,
-      rgba(255,255,255,0.08) 55%,
-      rgba(255,255,255,0.05) 100%
+      rgba(255,255,255,0.10) 0%,
+      rgba(255,255,255,0.06) 55%,
+      rgba(255,255,255,0.04) 100%
     );
 }
 
@@ -162,20 +186,27 @@ a { color: inherit; text-decoration: none; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 }
 
-.brand-mark {
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, rgba(10,113,132,1), rgba(26,166,160,1));
-  box-shadow: 0 8px 18px rgba(10,113,132,0.20);
+.brand-icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
 }
 
 .brand-name {
-  font-weight: 700;
-  letter-spacing: 0.2px;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+
+  color: rgba(235, 245, 242, 0.96); /* softer than pure white */
+
+  text-shadow:
+    0 1px 0 rgba(0,0,0,0.25),
+    0 6px 16px rgba(0,0,0,0.35);
 }
 
 /* Top navigation */
@@ -214,7 +245,7 @@ a { color: inherit; text-decoration: none; }
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 22px; /* more breathing room */
+  gap: 22px;
 }
 
 .grid {
@@ -227,7 +258,7 @@ a { color: inherit; text-decoration: none; }
   .grid { grid-template-columns: 1fr; }
 }
 
-/* Footer (bottom bar style) */
+/* Footer */
 .footer {
   position: sticky;
   bottom: 0;
@@ -268,7 +299,7 @@ a { color: inherit; text-decoration: none; }
   color: rgba(255,255,255,0.95);
 }
 
-/* Contact list styling (for Contact page) */
+/* Contact list styling */
 .list {
   display: flex;
   flex-direction: column;
@@ -289,18 +320,202 @@ a { color: inherit; text-decoration: none; }
 .key { color: rgba(255,255,255,0.65); }
 .val { color: rgba(255,255,255,0.92); }
 
-/* Mobile adjustments */
+/* Utility: screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* Topbar actions (language + burger) */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Custom language dropdown (Option B) ===== */
+.lang-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-trigger {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+  font-weight: 750;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-trigger:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+.lang-trigger.active {
+  border-color: rgba(10,113,132,0.35);
+  background: rgba(10,113,132,0.20);
+}
+
+.lang-caret {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255,255,255,0.70);
+  border-bottom: 2px solid rgba(255,255,255,0.70);
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+.lang-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 210px;
+
+  display: none;
+  padding: 10px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  /* OPAQUE background */
+  background: #0b3a30;
+
+  /* Optional: you can keep blur, but it’s pointless if opaque */
+  backdrop-filter: none;
+
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+}
+
+.lang-panel.open {
+  display: grid;
+  gap: 8px;
+}
+
+.lang-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+
+  color: rgba(255,255,255,0.86);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.lang-item:hover {
+  background: rgba(255,255,255,0.09);
+}
+
+.lang-item.active {
+  border-color: rgba(10,113,132,0.35);
+  background: rgba(10,113,132,0.22);
+  color: rgba(255,255,255,0.95);
+}
+
+/* Burger button (mobile) */
+.burger-btn {
+  display: none;
+  height: 38px;
+  width: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.90);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-btn:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+.burger-btn.active {
+  border-color: rgba(10,113,132,0.35);
+  background: rgba(10,113,132,0.22);
+}
+
+.burger-lines {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-lines span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  background: rgba(13, 63, 49, 0.45);
+  backdrop-filter: blur(18px);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu-inner {
+  padding: 12px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Make mobile menu links larger/touch-friendly */
+.mobile-menu .nav-link {
+  padding: 12px 14px;
+  border-radius: 18px;
+}
+
+/* ===== Responsive (merged) ===== */
 @media (max-width: 720px) {
   .main {
     padding-top: 28px;
     padding-bottom: 120px;
   }
 
+  .nav-desktop {
+    display: none;
+  }
+
+  .burger-btn {
+    display: inline-flex;
+  }
+
   .footer-left {
-    display: none; /* bardziej jak w apce */
+    display: none;
   }
 
   .footer-inner {
     justify-content: center;
+  }
+}
+
+/* Optional: tighten header on very small screens */
+@media (max-width: 420px) {
+  .brand-name {
+    display: none;
   }
 }
