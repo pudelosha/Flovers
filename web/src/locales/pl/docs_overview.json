@@ -1,8 +1,97 @@
 ﻿{
-    "docs_overview":  {
-                          "sections":  [
-
-                                       ],
-                          "title":  ""
-                      }
+  "docs_overview": {
+    "title": "Przegląd",
+    "sections": [
+      {
+        "heading": "Czym jest Flovers?",
+        "body": [
+          "Flovers to asystent pielęgnacji roślin, który pomaga organizować codzienne czynności, śledzić historię pielęgnacji oraz monitorować odczyty z własnych urządzeń IoT.",
+          "Aplikacja łączy przypomnienia i zadania z profilami roślin (Twoje rośliny) oraz definicjami roślin (wbudowane profile gatunków z rekomendacjami).",
+          "Flovers wspiera Twoje decyzje, ale ich nie zastępuje—efekty pielęgnacji zależą od warunków i sposobu stosowania wskazówek.",
+          "Usługa obejmuje aplikację mobilną (Android; w przyszłości iOS), backend API oraz stronę WWW z dokumentacją i informacjami prawnymi."
+        ]
+      },
+      {
+        "heading": "Kluczowe pojęcia (jak działa struktura aplikacji)",
+        "body": [
+          "Definicja rośliny: wbudowany profil gatunku zawierający ogólne cechy i zalecenia (światło, podlewanie/zraszanie, nawożenie itp.).",
+          "Instancja rośliny: Twoja własna roślina (Twój egzemplarz), opcjonalnie powiązana z Definicją rośliny, aby uzyskać lepsze domyślne wskazówki.",
+          "Przypomnienie: cykliczna reguła (np. podlewanie co X dni), na podstawie której automatycznie tworzone są Zadania.",
+          "Zadanie: konkretna czynność wygenerowana z Przypomnienia; możesz ją oznaczyć jako wykonaną i dodać notatkę, budując historię pielęgnacji."
+        ]
+      },
+      {
+        "heading": "Najważniejsze funkcje w skrócie",
+        "body": [
+          "Konto użytkownika: rejestracja, logowanie, potwierdzenie e-mail, reset hasła oraz zarządzanie ustawieniami profilu.",
+          "Zarządzanie roślinami: dodawanie roślin, grupowanie przez Lokalizacje, notatki oraz podgląd historii czynności.",
+          "Przypomnienia i zadania: tworzenie cyklicznych rutyn (podlewanie, zraszanie, nawożenie, przesadzanie, pielęgnacja) i ich realizacja.",
+          "Odczyty IoT: połączenie własnych urządzeń i zapisywanie danych takich jak temperatura, wilgotność powietrza, wilgotność gleby i natężenie światła."
+        ]
+      },
+      {
+        "heading": "Rozpoznawanie roślin (na podstawie zdjęcia)",
+        "body": [
+          "Flovers umożliwia rozpoznawanie roślin ze zdjęcia, aby łatwiej dopasować Definicję rośliny i rozpocząć z lepszymi ustawieniami domyślnymi.",
+          "Rozpoznawanie odbywa się po stronie serwera z użyciem własnego systemu ML Usługodawcy, wytrenowanego na 700+ gatunkach.",
+          "Zdjęcia przekazane do rozpoznawania są wykorzystywane wyłącznie do wykonania procesu rozpoznania i nie są przeznaczone do trwałego przechowywania.",
+          "Wyniki zależą od jakości zdjęcia, oświetlenia, ostrości, widoczności rośliny i podobieństwa do innych gatunków."
+        ]
+      },
+      {
+        "heading": "Urządzenia IoT i dane z czujników",
+        "body": [
+          "Flovers wspiera urządzenia własne lub zewnętrzne (np. Arduino) wysyłające odczyty powiązane z Twoim kontem.",
+          "Obsługiwane odczyty: temperatura powietrza, wilgotność powietrza, wilgotność gleby oraz poziom światła.",
+          "Odczyty są przechowywane w backendzie i prezentowane w aplikacji jako bieżące wartości oraz historia (podsumowania dzienne/tygodniowe/miesięczne).",
+          "Masz kontrolę nad parowaniem i użyciem—stabilność, kalibracja i montaż urządzeń pozostają po Twojej stronie."
+        ]
+      },
+      {
+        "heading": "Kody QR i szybki dostęp",
+        "body": [
+          "Możesz generować kody QR zawierające link do konkretnej Instancji rośliny w Twoim koncie.",
+          "Typowy scenariusz to wydruk i przyklejenie kodu na doniczce, a następnie skanowanie w celu szybkiego przejścia do szczegółów rośliny.",
+          "Kody QR służą wygodzie; traktuj je jak wskaźniki dostępu i nie udostępniaj publicznie, jeśli mogłyby ujawnić metadane.",
+          "Obecnie szczegóły roślin są przeznaczone do wglądu głównie dla zalogowanego właściciela."
+        ]
+      },
+      {
+        "heading": "Powiadomienia i przypomnienia",
+        "body": [
+          "Flovers może wysyłać powiadomienia push (przez Firebase) o zadaniach na dziś lub zaległych—zależnie od ustawień.",
+          "Ustawienia powiadomień znajdziesz w Profilu; nawet po wyłączeniu push, przypomnienia i zadania pozostają w aplikacji.",
+          "Wiadomości e-mail są obecnie używane głównie do działań związanych z kontem (aktywacja i reset hasła).",
+          "Powiadomienia mają charakter wspierający—Flovers nie gwarantuje zdrowia roślin ani tego, że przypomnienia zapobiegną stratom."
+        ]
+      },
+      {
+        "heading": "Prywatność, bezpieczeństwo i Twoje dane",
+        "body": [
+          "Flovers przechowuje dane konta oraz dane potrzebne do świadczenia Usługi (rośliny, przypomnienia, zadania, notatki i odczyty).",
+          "Hasła są przechowywane w postaci zahaszowanej; aktywacja konta wymaga weryfikacji e-mail.",
+          "Założeniem jest przetwarzanie danych w UE; hosting planowany jest na Hetzner (UE), a powiadomienia push realizuje Firebase.",
+          "Szczegóły znajdują się w Polityce Prywatności i Regulaminie dostępnych na stronie WWW oraz w aplikacji."
+        ]
+      },
+      {
+        "heading": "Ograniczenia i ważne zastrzeżenia",
+        "body": [
+          "Flovers to narzędzie do planowania i monitorowania; nie jest profesjonalnym systemem doradczym i nie zastępuje wiedzy ogrodniczej.",
+          "Odczyty czujników mogą być niedokładne (kalibracja, montaż, warunki); w ważnych sytuacjach weryfikuj je samodzielnie.",
+          "Zalecenia pielęgnacyjne mają charakter ogólny i mogą nie pasować do Twoich warunków (podłoże, doniczka, światło, wilgotność, sezon).",
+          "Jeśli coś wygląda nieprawidłowo, kieruj się własną oceną—dostosuj rutyny i korzystaj z wiarygodnych źródeł."
+        ]
+      },
+      {
+        "heading": "Co dalej?",
+        "body": [
+          "Jeśli zaczynasz, przejdź do Login & Register, a następnie utwórz pierwszą Instancję rośliny w kreatorze Create Plant Wizard.",
+          "Następnie ustaw Przypomnienia i realizuj Zadania, aby utrzymać rutynę i budować historię pielęgnacji.",
+          "Jeśli masz urządzenie, otwórz Readings, skonfiguruj je i używaj Readings History do obserwowania trendów.",
+          "Skorzystaj z FAQ po szybkie odpowiedzi oraz z dokumentów Regulamin/Polityka Prywatności w sprawach formalnych."
+        ]
+      }
+    ]
+  }
 }

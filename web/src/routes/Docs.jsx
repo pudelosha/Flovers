@@ -2,19 +2,19 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const DOC_SCREENS = [
-  { key: "overview" },
-  { key: "auth" },
-  { key: "home" },
-  { key: "taskHistory" },
-  { key: "plants" },
-  { key: "plantDetails" },
-  { key: "createPlantWizard" },
-  { key: "locations" },
-  { key: "reminders" },
-  { key: "readings" },
-  { key: "readingsHistory" },
-  { key: "scanner" },
-  { key: "profile" },
+  { key: "overview", ns: "docs_overview" },
+  { key: "auth", ns: "docs_auth" },
+  { key: "home", ns: "docs_home" },
+  { key: "taskHistory", ns: "docs_task_history" },
+  { key: "plants", ns: "docs_plants" },
+  { key: "plantDetails", ns: "docs_plant_details" },
+  { key: "createPlantWizard", ns: "docs_create_plant_wizard" },
+  { key: "locations", ns: "docs_locations" },
+  { key: "reminders", ns: "docs_reminders" },
+  { key: "readings", ns: "docs_readings" },
+  { key: "readingsHistory", ns: "docs_readings_history" },
+  { key: "scanner", ns: "docs_scanner" },
+  { key: "profile", ns: "docs_profile" },
 ];
 
 function DocSection({ heading, body }) {
@@ -33,27 +33,51 @@ function DocSection({ heading, body }) {
 }
 
 export default function Docs() {
+  // Menu translations live in docs.json
   const { t } = useTranslation("docs");
 
   const [activeKey, setActiveKey] = useState("overview");
 
-  // Mobile "lang-like" dropdown state
+  // Mobile dropdown state
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
 
   const active = useMemo(() => {
-    const found = DOC_SCREENS.find((x) => x.key === activeKey) || DOC_SCREENS[0];
-    return found;
+    return DOC_SCREENS.find((x) => x.key === activeKey) || DOC_SCREENS[0];
   }, [activeKey]);
+
+  const docNs = active.ns;
+
+  // IMPORTANT:
+  // This returns a "t" that can translate from both "docs" (menu) and docNs (content).
+  // But we will call tDoc with explicit namespace via { ns: docNs } to avoid ambiguity.
+  const { t: tDoc } = useTranslation(["docs", docNs]);
 
   const activeTitle = t(`screens.${active.key}.title`);
 
+  // Your JSON is wrapped like:
+  // { "docs_overview": { "title": "...", "sections": [...] } }
+  // so we must read "docs_overview.title" INSIDE the docs_overview namespace.
+  const docTitle = tDoc(`${docNs}.title`, { ns: docNs, defaultValue: "" });
+  const docSections = tDoc(`${docNs}.sections`, {
+    ns: docNs,
+    returnObjects: true,
+    defaultValue: [],
+  });
+
+  const hasDocContent =
+    typeof docTitle === "string" &&
+    docTitle.trim().length > 0 &&
+    Array.isArray(docSections) &&
+    docSections.length > 0;
+
+  // Scroll to top on docs subpage switch
   useEffect(() => {
     const el = document.scrollingElement || document.documentElement;
     el.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [activeKey]);
 
-  // close on outside click / escape
+  // Close dropdown on outside click / escape
   useEffect(() => {
     function onDown(e) {
       if (!menuRef.current) return;
@@ -81,7 +105,6 @@ export default function Docs() {
       <aside className="docs-nav" aria-label="Documentation navigation">
         <div className="docs-nav-title h2">{t("title")}</div>
 
-        {/* NOTE: keep the list itself as a nav; don't add h2 class here */}
         <nav className="docs-nav-list h2">
           {DOC_SCREENS.map((item) => {
             const isActive = item.key === activeKey;
@@ -101,7 +124,7 @@ export default function Docs() {
 
       {/* Content */}
       <main className="docs-content">
-        {/* Mobile selector (language-dropdown style) */}
+        {/* Mobile selector */}
         <div className="docs-mobile-picker" ref={menuRef}>
           <div className="label"></div>
 
@@ -123,9 +146,7 @@ export default function Docs() {
                   key={item.key}
                   type="button"
                   role="menuitem"
-                  className={
-                    "docs-item" + (item.key === activeKey ? " active" : "")
-                  }
+                  className={"docs-item" + (item.key === activeKey ? " active" : "")}
                   onClick={() => pick(item.key)}
                 >
                   {t(`screens.${item.key}.title`)}
@@ -136,11 +157,18 @@ export default function Docs() {
         </div>
 
         <article className="card prose docs-card">
-          {/* MATCH OTHER PAGES */}
-          <h1 className="h1 h1-auth">{activeTitle}</h1>
+          <h1 className="h1 h1-auth">{hasDocContent ? docTitle : activeTitle}</h1>
 
-          {/* Placeholder body for now (you'll move content to docs_<key>.json later) */}
-          <DocSection heading={t("placeholder.heading")} body={[t("placeholder.body")]} />
+          {hasDocContent ? (
+            docSections.map((s, idx) => (
+              <DocSection key={idx} heading={s.heading} body={s.body} />
+            ))
+          ) : (
+            <DocSection
+              heading={t("placeholder.heading")}
+              body={[t("placeholder.body")]}
+            />
+          )}
         </article>
       </main>
     </div>

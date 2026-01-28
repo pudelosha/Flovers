@@ -102,9 +102,7 @@ function getInitialLanguage() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "pl" || saved === "en") return saved;
-  } catch (_) {
-    // ignore
-  }
+  } catch (_) {}
   return "pl";
 }
 
@@ -145,9 +143,7 @@ i18n.use(initReactI18next).init({
 i18n.on("languageChanged", (lng) => {
   try {
     localStorage.setItem(STORAGE_KEY, lng);
-  } catch (_) {
-    // ignore
-  }
+  } catch (_) {}
 });
 
 export default i18n;

@@ -1,8 +1,97 @@
 ﻿{
-    "docs_overview":  {
-                          "sections":  [
-
-                                       ],
-                          "title":  ""
-                      }
+  "docs_overview": {
+    "title": "Overview",
+    "sections": [
+      {
+        "heading": "What is Flovers?",
+        "body": [
+          "Flovers is a plant-care companion that helps you organize daily care, track plant history, and monitor live sensor readings from your own IoT devices.",
+          "The app combines reminders and tasks with plant profiles (your plants) and plant definitions (built-in species profiles with recommendations).",
+          "Flovers is designed to support your decisions, not replace them—plant care outcomes depend on your environment and how you apply recommendations.",
+          "The Service includes a mobile app (Android; iOS planned), a backend API, and a web landing page that hosts documentation and legal information."
+        ]
+      },
+      {
+        "heading": "Key concepts (how the app is structured)",
+        "body": [
+          "Plant Definition: a built-in species profile containing general traits and care recommendations (light, watering/misting intervals, fertilizing, etc.).",
+          "Plant Instance: your personal plant entry (your own specimen), optionally linked to a Plant Definition to receive guidance and suggested defaults.",
+          "Reminder: a recurring rule (e.g., water every X days) that generates Tasks automatically over time.",
+          "Task: a concrete actionable item created from a Reminder; you can complete it and optionally add notes to build a care history."
+        ]
+      },
+      {
+        "heading": "Main features at a glance",
+        "body": [
+          "Account system: register, log in, confirm e-mail, reset password, and manage profile settings.",
+          "Plant management: create plants, group them with Locations, keep notes, and review history to see what was done and when.",
+          "Reminders & tasks: define recurring care routines (watering, misting, fertilising, repotting, care) and complete tasks as you go.",
+          "IoT readings: connect your own device(s) and store readings such as air temperature, air humidity, soil moisture, and light level."
+        ]
+      },
+      {
+        "heading": "Plant recognition (photo-based)",
+        "body": [
+          "Flovers can recognize plants from a photo to help you find the closest matching Plant Definition and start with better defaults.",
+          "Recognition is performed server-side using the Provider’s own machine learning system trained on 700+ plant species.",
+          "Photos provided for recognition are used only to perform the recognition step and are not intended to be stored permanently.",
+          "Results depend on lighting, focus, plant visibility, and the plant’s similarity to other species in the dataset."
+        ]
+      },
+      {
+        "heading": "IoT devices and sensor data",
+        "body": [
+          "Flovers supports user-built or third-party devices (e.g., Arduino-based) that send sensor readings to your account.",
+          "Supported readings include: air temperature, air humidity, soil moisture, and light level.",
+          "Readings are stored in the backend and presented in the app as a current status view and as historical summaries (daily/weekly/monthly).",
+          "You control pairing and usage—device stability, calibration, and physical setup remain your responsibility."
+        ]
+      },
+      {
+        "heading": "QR codes and quick access",
+        "body": [
+          "You can generate QR codes that contain a link to a specific Plant Instance in your account.",
+          "A typical workflow is to print and attach the QR code to a pot, then scan it to jump directly to plant details and readings.",
+          "QR codes are meant for convenience; treat them like access pointers and don’t share them publicly if they expose sensitive metadata.",
+          "At the moment, plant details are intended to be visible only to the logged-in owner of the plant."
+        ]
+      },
+      {
+        "heading": "Notifications and reminders",
+        "body": [
+          "Flovers can send push notifications (via Firebase) for tasks that are due or overdue, depending on your settings.",
+          "You can configure notifications in Profile & Settings; reminders remain inside the app even if notifications are disabled.",
+          "Email messages are currently used mainly for account-related actions (activation and password reset).",
+          "Notifications are supportive—Flovers does not guarantee that your plants will stay healthy or that reminders prevent losses."
+        ]
+      },
+      {
+        "heading": "Privacy, security, and your data",
+        "body": [
+          "Flovers stores account data and plant-related data needed to provide the Service (plants, reminders, tasks, notes, and sensor readings).",
+          "Passwords are stored in hashed form; account activation is confirmed via email verification.",
+          "Flovers aims to keep data within the EU; hosting is planned on Hetzner (EU) and push notifications use Firebase.",
+          "For details, always refer to the Privacy Policy and the Terms of Service available on the website and in the app."
+        ]
+      },
+      {
+        "heading": "Limits and important disclaimers",
+        "body": [
+          "Flovers is a tool for planning and monitoring; it is not a professional advisory system and does not replace expertise.",
+          "Sensor readings may be inaccurate due to calibration, placement, or device issues; verify critical decisions manually.",
+          "Plant care guidance is general and may not match your specific conditions (substrate, pot size, light, humidity, season).",
+          "If something looks wrong, use your judgment—adjust routines and consult reliable horticultural sources when needed."
+        ]
+      },
+      {
+        "heading": "Where to go next",
+        "body": [
+          "If you’re new, start with Login & Register, then create your first Plant Instance using the Create Plant Wizard.",
+          "Next, set up Reminders and complete Tasks to build a consistent routine and a useful task history.",
+          "If you have a device, open Readings to pair it and then use Readings History to spot trends.",
+          "Use the FAQ for quick answers and the Terms/Privacy documents for legal and data-processing details."
+        ]
+      }
+    ]
+  }
 }
