@@ -40,37 +40,37 @@
 
 * { box-sizing: border-box; }
 
+html, body { height: 100%; }
+
 /* ===== Scrollbar: prevent layout shift without ugly gutters ===== */
 
-/* Always allocate scrollbar space on the scrollbar side only */
+/* Allocate scrollbar space (single side), not both edges */
 html {
   scrollbar-gutter: stable; /* NOT both-edges */
 }
 
-/* Force consistent scrollbar presence on desktop to prevent “shake” */
+/* Reserve scrollbar width on desktop to prevent “shake” */
 @media (hover: hover) and (pointer: fine) {
   html {
     overflow-y: scroll;
   }
 }
 
-/* Hide scrollbar visuals but keep scrolling */
+/* Keep scrolling, hide scrollbar visuals */
 html, body {
   overflow-x: hidden;
 }
 
-/* Firefox */
+/* Firefox: hide scrollbar */
 * {
   scrollbar-width: none;
 }
 
-/* Chrome/Safari/Edge */
+/* Chrome/Safari/Edge: hide scrollbar */
 *::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-
-html, body { height: 100%; }
 
 body {
   min-height: 100vh;
@@ -697,6 +697,7 @@ input, textarea, button, select {
   background: rgba(255,255,255,0.10);
 }
 
+/* Policy */
 .policy-section {
   margin-top: 16px;
 }
@@ -711,9 +712,172 @@ input, textarea, button, select {
   color: rgba(255,255,255,0.88);
 }
 
+/* ===== Docs layout (sidebar + content) ===== */
+
+.docs-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.docs-nav {
+  position: sticky;
+  top: 92px; /* below topbar */
+  align-self: start;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.06);
+
+  padding: 14px;
+}
+
+.docs-nav-title.h2 {
+  margin: 10px 6px 10px;
+  color: rgba(255,255,255,0.92);
+}
+
+.docs-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docs-nav-item {
+  width: 100%;
+  text-align: left;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+
+  color: rgba(255,255,255,0.86);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.docs-nav-item:hover { background: rgba(255,255,255,0.09); }
+
+.docs-nav-item.active {
+  border-color: rgba(10,113,132,0.35);
+  background: rgba(10,113,132,0.22);
+  color: rgba(255,255,255,0.95);
+}
+
+.docs-content {
+  min-width: 0;
+}
+
+.docs-card .doc-section + .doc-section {
+  margin-top: 14px;
+}
+
+/* ===== Mobile picker container ===== */
+.docs-mobile-picker {
+  display: none;
+  margin-bottom: 12px;
+}
+
+/* ===== Docs: mobile dropdown styled like language selector ===== */
+.docs-menu {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+}
+
+.docs-trigger {
+  height: var(--input-height);          /* 64 */
+  width: 100%;
+  padding: 0 16px;
+  border-radius: var(--control-radius); /* 14 */
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.95);
+  font-size: var(--input-size);         /* 16 */
+  font-weight: 650;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.docs-trigger:hover { background: rgba(255,255,255,0.14); }
+
+.docs-trigger.active {
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.14);
+}
+
+/* Panel mirrors .lang-panel but full width on mobile */
+.docs-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 10px);
+
+  display: none;
+  padding: 10px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: #0b3a30;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+  z-index: 50;
+}
+
+.docs-panel.open {
+  display: grid;
+  gap: 8px;
+}
+
+.docs-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+
+  color: rgba(255,255,255,0.86);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.docs-item:hover { background: rgba(255,255,255,0.09); }
+
+.docs-item.active {
+  border-color: rgba(10,113,132,0.35);
+  background: rgba(10,113,132,0.22);
+  color: rgba(255,255,255,0.95);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide sidebar; use dropdown */
+  .docs-nav {
+    display: none;
+  }
+
+  .docs-mobile-picker {
+    display: block;
+  }
+}
+
 /* Optional: tighten header on very small screens */
 @media (max-width: 420px) {
   .brand-name { display: none; }
 }
-
-
