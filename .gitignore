@@ -1,4 +1,6 @@
+############################
 # Python / Django
+############################
 __pycache__/
 *.pyc
 *.pyo
@@ -10,23 +12,38 @@ __pycache__/
 staticfiles/
 media/
 
-# Virtual env
+############################
+# Virtual envs
+############################
 .venv/
+venv/
+env/
 
-# IDE/OS
+############################
+# Environment files
+############################
+.env
+*.env
+backend/.env
+
+############################
+# IDE / OS
+############################
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
-# Env files (defense in depth)
-.env
-*.env
-backend/.env
-
-# Docker
+############################
+# Docker / testing
+############################
 **/.pytest_cache/
-# --- React Native mobile ---
+**/.coverage
+**/.coverage.*
+
+############################
+# React Native (mobile)
+############################
 mobile/node_modules/
 mobile/android/.gradle/
 mobile/android/local.properties
@@ -39,7 +56,20 @@ mobile/.expo/
 mobile/.expo-shared/
 mobile/.DS_Store
 
+############################
+# Web (React + Vite)
+############################
+web/node_modules/
+web/dist/
+web/.env
+web/.DS_Store
+
+# Vite cache (just in case)
+web/node_modules/.vite/
+
+############################
 # ML / training
+############################
 /ml/data/
 /ml/checkpoints/
 /ml/logs/
@@ -49,13 +79,15 @@ mobile/.DS_Store
 /ml/venv/
 /ml/**/*.log
 
-# Plant images
+############################
+# Assets / generated data
+############################
 /plants/
-
-# Translation scripts
 /translations/
 
+############################
 # Secrets
+############################
 backend/secrets/firebase.json
 backend/secrets/*.json
 mobile/android/app/google-services.json
