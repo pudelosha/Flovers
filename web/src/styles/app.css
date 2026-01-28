@@ -40,6 +40,36 @@
 
 * { box-sizing: border-box; }
 
+/* ===== Scrollbar: prevent layout shift without ugly gutters ===== */
+
+/* Always allocate scrollbar space on the scrollbar side only */
+html {
+  scrollbar-gutter: stable; /* NOT both-edges */
+}
+
+/* Force consistent scrollbar presence on desktop to prevent “shake” */
+@media (hover: hover) and (pointer: fine) {
+  html {
+    overflow-y: scroll;
+  }
+}
+
+/* Hide scrollbar visuals but keep scrolling */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Chrome/Safari/Edge */
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 html, body { height: 100%; }
 
 body {
