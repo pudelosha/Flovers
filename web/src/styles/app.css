@@ -667,8 +667,23 @@ input, textarea, button, select {
   background: rgba(255,255,255,0.10);
 }
 
+.policy-section {
+  margin-top: 16px;
+}
+
+.policy-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.policy-list li {
+  margin: 8px 0;
+  color: rgba(255,255,255,0.88);
+}
+
 /* Optional: tighten header on very small screens */
 @media (max-width: 420px) {
   .brand-name { display: none; }
 }
+
 

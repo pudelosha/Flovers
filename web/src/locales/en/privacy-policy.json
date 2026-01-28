@@ -1,15 +1,101 @@
 {
-  "title": "Privacy Policy",
-  "meta": "Version: 1.0 • Effective date: 2026-01-28",
-  "intro": "This Privacy Policy describes how personal data is processed within the Flovers mobile application and its associated backend services.",
-  "sections": {
-    "admin": {
-      "title": "1. Data Controller",
-      "text": "The controller of personal data is the owner of the Flovers application. For matters related to personal data protection, please contact us via the email address provided in the Contact section."
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {{date}}",
+
+    "section1": {
+      "title": "§ 1. General provisions",
+      "p1": "The controller of personal data processed in connection with the use of the Flovers website and the Flovers mobile application is Marcin Janowski Copy Paste IT Solutions Kraków, with its registered address at ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Poland, e-mail address: info@flovers.app, hereinafter referred to as the “Controller”.",
+      "p2": "The Controller processes personal data in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR).",
+      "p3": "This Privacy Policy applies to the Flovers website, the Flovers mobile application (Android and, in the future, iOS), and the backend infrastructure associated with their operation."
     },
-    "scope": {
-      "title": "2. Scope of processed data",
-      "text": "We process only the data necessary for the proper operation of the application, delivery of its features, and ensuring user security."
+
+    "section2": {
+      "title": "§ 2. Scope and purposes of personal data processing",
+      "intro": "The Controller processes personal data for the following purposes:",
+      "list": [
+        "creation and management of a user account within the application",
+        "user authentication and login process",
+        "sending system messages, including account verification and password reset e-mails",
+        "handling messages sent via the contact form",
+        "ensuring proper operation of the application and the website",
+        "providing reminders, tasks, and notifications related to plant care",
+        "ensuring system security and maintaining technical logs"
+      ],
+      "legalBasis": "The legal basis for data processing is Article 6(1)(b) GDPR (performance of a contract), Article 6(1)(c) GDPR (legal obligation), and Article 6(1)(f) GDPR (legitimate interest of the Controller)."
+    },
+
+    "section3": {
+      "title": "§ 3. Types of personal data processed",
+      "intro": "Depending on how the application or website is used, the Controller may process the following data:",
+      "list": [
+        "user e-mail address",
+        "hashed user password",
+        "profile information and user preferences",
+        "technical device data (device type, operating system, application version)",
+        "IP address",
+        "device orientation data (e.g. to optimise plant light exposure)",
+        "data entered by the user relating to plants, measurements, and IoT sensor readings"
+      ],
+      "note": "Photos taken by the user are generally processed locally on the user’s device unless the user chooses to use features that require server-side processing."
+    },
+
+    "section4": {
+      "title": "§ 4. User accounts and security",
+      "p1": "Users of the Flovers application create individual accounts secured with a password.",
+      "p2": "Passwords are stored in encrypted (hashed) form.",
+      "p3": "A user account requires verification of the provided e-mail address.",
+      "p4": "The user may change their password at any time or use the password reset procedure."
+    },
+
+    "section5": {
+      "title": "§ 5. Notifications and communication",
+      "p1": "The Controller sends only transactional messages, in particular those related to login, account verification, and password reset.",
+      "p2": "The application may use push notifications (e.g. via Firebase) to remind users about plant care tasks.",
+      "p3": "The Controller reserves the right to introduce a newsletter in the future; marketing communications will be sent only after obtaining the user’s separate consent."
+    },
+
+    "section6": {
+      "title": "§ 6. Cookies and similar technologies",
+      "p1": "The Flovers website may use cookies necessary for the proper functioning of the website.",
+      "p2": "Cookies are used solely for technical and functional purposes.",
+      "p3": "The website does not use third-party analytics or marketing tools."
+    },
+
+    "section7": {
+      "title": "§ 7. Data recipients and place of processing",
+      "p1": "Personal data are processed on servers located within the European Union.",
+      "p2": "The server infrastructure is provided by Hetzner Online GmbH.",
+      "p3": "The Controller may use Firebase services for the purpose of handling push notifications.",
+      "p4": "Personal data are not transferred to third countries outside the European Union."
+    },
+
+    "section8": {
+      "title": "§ 8. Data retention period",
+      "p1": "Personal data are stored for the duration of the user account.",
+      "p2": "After account deletion, data are permanently deleted or anonymised, unless retention is required by applicable law."
+    },
+
+    "section9": {
+      "title": "§ 9. Rights of data subjects",
+      "intro": "Each data subject has the right to:",
+      "list": [
+        "access their personal data",
+        "rectify personal data",
+        "delete personal data",
+        "restrict processing",
+        "object to processing",
+        "withdraw consent at any time"
+      ],
+      "p2": "To exercise the above rights, please contact the Controller at: info@flovers.app.",
+      "p3": "Data subjects also have the right to lodge a complaint with the President of the Polish Personal Data Protection Office (UODO) or another competent supervisory authority."
+    },
+
+    "section10": {
+      "title": "§ 10. Final provisions",
+      "p1": "The Controller applies appropriate technical and organisational measures to protect personal data.",
+      "p2": "The Controller reserves the right to update this Privacy Policy.",
+      "p3": "The current version of the Privacy Policy is always available on the Flovers website and within the mobile application."
     }
   }
 }

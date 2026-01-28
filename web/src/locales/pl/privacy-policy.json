@@ -1,15 +1,101 @@
 {
-  "title": "Polityka prywatności",
-  "meta": "Wersja: 1.0 • Data obowiązywania: 2026-01-28",
-  "intro": "Niniejsza polityka prywatności opisuje zasady przetwarzania danych osobowych w aplikacji mobilnej Flovers oraz powiązanym backendzie.",
-  "sections": {
-    "admin": {
-      "title": "1. Administrator danych",
-      "text": "Administratorem danych osobowych jest właściciel aplikacji Flovers. W sprawach związanych z ochroną danych osobowych można skontaktować się poprzez adres e-mail wskazany w sekcji Kontakt."
+  "privacy": {
+    "title": "Polityka Prywatności",
+    "lastUpdated": "Ostatnia aktualizacja: {{date}}",
+
+    "section1": {
+      "title": "§ 1. Postanowienia ogólne",
+      "p1": "Administratorem danych osobowych przetwarzanych w związku z korzystaniem z serwisu internetowego Flovers oraz aplikacji mobilnej Flovers jest Marcin Janowski Copy Paste IT Solutions Kraków, z siedzibą przy ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polska, adres e-mail: info@flovers.app, zwany dalej „Administratorem”.",
+      "p2": "Administrator przetwarza dane osobowe zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO).",
+      "p3": "Niniejsza Polityka Prywatności dotyczy serwisu internetowego Flovers, aplikacji mobilnej Flovers (Android, a w przyszłości iOS) oraz infrastruktury backendowej powiązanej z ich działaniem."
     },
-    "scope": {
-      "title": "2. Zakres przetwarzanych danych",
-      "text": "Przetwarzamy wyłącznie dane niezbędne do prawidłowego działania aplikacji, realizacji jej funkcji oraz zapewnienia bezpieczeństwa użytkowników."
+
+    "section2": {
+      "title": "§ 2. Zakres i cele przetwarzania danych osobowych",
+      "intro": "Administrator przetwarza dane osobowe w następujących celach:",
+      "list": [
+        "założenia i prowadzenia konta użytkownika w aplikacji",
+        "uwierzytelniania użytkownika oraz realizacji procesu logowania",
+        "wysyłki wiadomości systemowych, w tym e-maili weryfikacyjnych oraz resetu hasła",
+        "obsługi zgłoszeń wysyłanych za pośrednictwem formularza kontaktowego",
+        "zapewnienia prawidłowego działania aplikacji i serwisu",
+        "realizacji przypomnień, zadań oraz powiadomień związanych z pielęgnacją roślin",
+        "zapewnienia bezpieczeństwa systemu oraz prowadzenia logów technicznych"
+      ],
+      "legalBasis": "Podstawą prawną przetwarzania danych jest art. 6 ust. 1 lit. b RODO (wykonanie umowy), art. 6 ust. 1 lit. c RODO (obowiązek prawny) oraz art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes Administratora)."
+    },
+
+    "section3": {
+      "title": "§ 3. Rodzaj przetwarzanych danych",
+      "intro": "W zależności od sposobu korzystania z aplikacji lub serwisu Administrator może przetwarzać następujące dane:",
+      "list": [
+        "adres e-mail użytkownika",
+        "zaszyfrowane hasło użytkownika",
+        "informacje o profilu i preferencjach użytkownika",
+        "dane techniczne urządzenia (typ urządzenia, system operacyjny, wersja aplikacji)",
+        "adres IP",
+        "dane dotyczące orientacji urządzenia (np. w celu optymalizacji ekspozycji roślin na światło)",
+        "dane wprowadzane przez użytkownika dotyczące roślin, pomiarów i czujników IoT"
+      ],
+      "note": "Zdjęcia wykonywane przez użytkownika są co do zasady przetwarzane lokalnie na urządzeniu, chyba że użytkownik zdecyduje się na ich użycie w funkcjach wymagających przetwarzania po stronie serwera."
+    },
+
+    "section4": {
+      "title": "§ 4. Konta użytkowników i bezpieczeństwo",
+      "p1": "Użytkownicy aplikacji Flovers zakładają indywidualne konta zabezpieczone hasłem.",
+      "p2": "Hasła przechowywane są w postaci zaszyfrowanej (hashowanej).",
+      "p3": "Konto użytkownika wymaga weryfikacji adresu e-mail.",
+      "p4": "Użytkownik może w dowolnym momencie zmienić hasło lub skorzystać z procedury jego resetu."
+    },
+
+    "section5": {
+      "title": "§ 5. Powiadomienia i komunikacja",
+      "p1": "Administrator wysyła wyłącznie wiadomości o charakterze transakcyjnym, w szczególności dotyczące logowania, weryfikacji konta oraz resetu hasła.",
+      "p2": "Aplikacja może wykorzystywać powiadomienia push (np. za pośrednictwem Firebase) w celu przypominania o zadaniach związanych z pielęgnacją roślin.",
+      "p3": "Administrator zastrzega możliwość wprowadzenia newslettera w przyszłości, przy czym wysyłka informacji marketingowych będzie realizowana wyłącznie po uzyskaniu odrębnej zgody użytkownika."
+    },
+
+    "section6": {
+      "title": "§ 6. Pliki cookies i technologie podobne",
+      "p1": "Serwis internetowy Flovers może wykorzystywać pliki cookies niezbędne do prawidłowego działania strony.",
+      "p2": "Pliki cookies wykorzystywane są wyłącznie w celach technicznych i funkcjonalnych.",
+      "p3": "Serwis nie wykorzystuje narzędzi analitycznych ani marketingowych stron trzecich."
+    },
+
+    "section7": {
+      "title": "§ 7. Odbiorcy danych i miejsce przetwarzania",
+      "p1": "Dane osobowe przetwarzane są na serwerach zlokalizowanych na terenie Unii Europejskiej.",
+      "p2": "Infrastruktura serwerowa utrzymywana jest przez Hetzner Online GmbH.",
+      "p3": "Administrator może korzystać z usług Firebase w zakresie obsługi powiadomień push.",
+      "p4": "Administrator nie przekazuje danych osobowych do państw trzecich poza UE."
+    },
+
+    "section8": {
+      "title": "§ 8. Okres przechowywania danych",
+      "p1": "Dane osobowe przechowywane są przez okres istnienia konta użytkownika.",
+      "p2": "Po usunięciu konta dane są trwale usuwane lub anonimizowane, o ile przepisy prawa nie stanowią inaczej."
+    },
+
+    "section9": {
+      "title": "§ 9. Prawa osób, których dane dotyczą",
+      "intro": "Każdej osobie, której dane dotyczą, przysługuje prawo do:",
+      "list": [
+        "dostępu do swoich danych",
+        "ich sprostowania",
+        "usunięcia danych",
+        "ograniczenia przetwarzania",
+        "wniesienia sprzeciwu",
+        "cofnięcia zgody w dowolnym momencie"
+      ],
+      "p2": "W celu realizacji powyższych praw należy skontaktować się z Administratorem pod adresem e-mail: info@flovers.app.",
+      "p3": "Osobie, której dane dotyczą, przysługuje również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych."
+    },
+
+    "section10": {
+      "title": "§ 10. Postanowienia końcowe",
+      "p1": "Administrator stosuje odpowiednie środki techniczne i organizacyjne w celu ochrony danych osobowych.",
+      "p2": "Administrator zastrzega sobie prawo do aktualizacji niniejszej Polityki Prywatności.",
+      "p3": "Aktualna wersja Polityki Prywatności jest zawsze dostępna na stronie internetowej Flovers oraz w aplikacji mobilnej."
     }
   }
 }
