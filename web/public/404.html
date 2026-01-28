@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      const base = "/Flovers/";
+      const path = location.pathname + location.search + location.hash;
+      location.replace(base + "?p=" + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>

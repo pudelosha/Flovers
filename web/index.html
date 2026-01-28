@@ -9,7 +9,29 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flovers</title>
+
+    <!-- GitHub Pages SPA deep-link restore -->
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const p = params.get("p");
+        if (p) {
+          params.delete("p");
+
+          const decoded = decodeURIComponent(p);
+          const search = params.toString();
+          const next =
+            decoded +
+            (search
+              ? (decoded.includes("?") ? "&" : "?") + search
+              : "");
+
+          window.history.replaceState(null, "", next);
+        }
+      })();
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
 
