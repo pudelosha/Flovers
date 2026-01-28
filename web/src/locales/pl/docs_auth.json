@@ -1,8 +1,56 @@
 ﻿{
-    "docs_auth":  {
-                      "sections":  [
-
-                                   ],
-                      "title":  ""
-                  }
+  "docs_auth": {
+    "title": "Logowanie i rejestracja",
+    "sections": [
+      {
+        "heading": "Tworzenie nowego konta (Rejestracja)",
+        "body": [
+          "Aby korzystać z Flovers, należy utworzyć indywidualne konto użytkownika. Rejestracja odbywa się bezpośrednio w aplikacji mobilnej.",
+          "Podczas rejestracji wymagany jest jedynie adres e-mail oraz hasło. Na tym etapie nie są wymagane żadne dodatkowe dane osobowe.",
+          "Hasło musi mieć co najmniej 8 znaków oraz zawierać przynajmniej jedną cyfrę i jeden znak specjalny, aby zapewnić podstawowy poziom bezpieczeństwa.",
+          "Przed zakończeniem rejestracji użytkownik musi zaakceptować Regulamin oraz Politykę Prywatności."
+        ]
+      },
+      {
+        "heading": "Aktywacja konta przez e-mail",
+        "body": [
+          "Po wysłaniu formularza rejestracyjnego na podany adres e-mail wysyłana jest wiadomość aktywacyjna.",
+          "Aby aktywować konto, należy kliknąć link potwierdzający znajdujący się w otrzymanej wiadomości.",
+          "Do momentu aktywacji konta logowanie do aplikacji nie jest możliwe."
+        ]
+      },
+      {
+        "heading": "Ponowne wysłanie e-maila aktywacyjnego",
+        "body": [
+          "Jeżeli e-mail aktywacyjny nie dotarł, użytkownik może zażądać jego ponownego wysłania z poziomu aplikacji.",
+          "Opcja ta jest dostępna na ekranie logowania lub rejestracji i może być użyta, jeśli wiadomość została zgubiona, opóźniona lub trafiła do spamu.",
+          "Przed ponownym wysłaniem warto sprawdzić folder spam lub inne filtry poczty."
+        ]
+      },
+      {
+        "heading": "Logowanie do istniejącego konta",
+        "body": [
+          "Do zalogowania się wymagany jest jedynie adres e-mail oraz hasło przypisane do konta.",
+          "Jeżeli konto nie zostało jeszcze aktywowane, aplikacja poinformuje o konieczności potwierdzenia adresu e-mail.",
+          "Dane logowania są weryfikowane bezpiecznie po stronie serwera; hasła nie są przechowywane w postaci jawnej."
+        ]
+      },
+      {
+        "heading": "Resetowanie zapomnianego hasła",
+        "body": [
+          "Jeżeli użytkownik nie może się zalogować z powodu zapomnianego hasła, może zażądać wysłania e-maila do resetu hasła.",
+          "Wiadomość zawiera instrukcje oraz bezpieczny link umożliwiający ustawienie nowego hasła.",
+          "Po ustawieniu nowego hasła możliwe jest natychmiastowe zalogowanie się do aplikacji."
+        ]
+      },
+      {
+        "heading": "Uwagi dotyczące bezpieczeństwa",
+        "body": [
+          "Każde konto użytkownika jest chronione indywidualnym hasłem ustawionym podczas rejestracji.",
+          "Ze względów bezpieczeństwa nie należy udostępniać danych logowania osobom trzecim.",
+          "W przypadku podejrzenia nieautoryzowanego dostępu do konta zaleca się niezwłoczną zmianę hasła."
+        ]
+      }
+    ]
+  }
 }

@@ -1,8 +1,56 @@
 ﻿{
-    "docs_auth":  {
-                      "sections":  [
-
-                                   ],
-                      "title":  ""
-                  }
+  "docs_auth": {
+    "title": "Login & Register",
+    "sections": [
+      {
+        "heading": "Creating a new account (Register)",
+        "body": [
+          "To use Flovers, you need to create a personal user account. Registration is performed directly in the mobile application.",
+          "During registration, only an e-mail address and a password are required. No additional personal details are requested at this stage.",
+          "The password must be at least 8 characters long and include at least one number and one special character to ensure basic security.",
+          "Before completing registration, you must accept the Terms of Service and the Privacy Policy."
+        ]
+      },
+      {
+        "heading": "Account activation by e-mail",
+        "body": [
+          "After submitting the registration form, an activation e-mail is sent to the provided e-mail address.",
+          "To activate your account, you must click the confirmation link contained in the e-mail.",
+          "Until the account is activated, logging in to the application is not possible."
+        ]
+      },
+      {
+        "heading": "Resending the activation e-mail",
+        "body": [
+          "If you did not receive the activation e-mail, you can request it to be resent from within the application.",
+          "This option is available on the login or registration screen and can be used if the original message was lost, delayed, or filtered as spam.",
+          "Always make sure to check your spam or junk mail folder before requesting another activation message."
+        ]
+      },
+      {
+        "heading": "Logging in to an existing account",
+        "body": [
+          "To log in, you only need the e-mail address and password associated with your account.",
+          "If your account has not yet been activated, the application will prompt you to confirm your e-mail address first.",
+          "Login credentials are verified securely on the backend; passwords are never stored in plain text."
+        ]
+      },
+      {
+        "heading": "Resetting a forgotten password",
+        "body": [
+          "If you are unable to log in because you forgot your password, you can request a password reset e-mail.",
+          "The reset e-mail contains instructions and a secure link that allows you to set a new password.",
+          "After setting a new password, you can immediately log in using the updated credentials."
+        ]
+      },
+      {
+        "heading": "Security notes",
+        "body": [
+          "Each user account is protected by a unique password chosen during registration.",
+          "For security reasons, you should not share your login credentials with other people.",
+          "If you suspect unauthorized access to your account, change your password as soon as possible."
+        ]
+      }
+    ]
+  }
 }
