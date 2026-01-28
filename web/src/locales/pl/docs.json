@@ -1,11 +1,22 @@
 {
   "title": "Dokumentacja",
-  "intro": "Tutaj możesz dodać krótką dokumentację użytkownika lub przydatne linki.",
-  "links": {
-    "title": "Linki",
-    "googlePlay": "Google Play",
-    "appStore": "App Store (w przyszłości)",
-    "privacy": "Polityka prywatności",
-    "terms": "Regulamin"
+  "placeholder": {
+    "heading": "Wkrótce",
+    "body": "Szczegółowa dokumentacja dla tego ekranu pojawi się wkrótce."
+  },
+  "screens": {
+    "overview": { "title": "Przegląd" },
+    "auth": { "title": "Logowanie i rejestracja" },
+    "home": { "title": "Ekran główny" },
+    "taskHistory": { "title": "Historia zadań" },
+    "plants": { "title": "Rośliny" },
+    "plantDetails": { "title": "Szczegóły rośliny" },
+    "createPlantWizard": { "title": "Kreator dodawania rośliny" },
+    "locations": { "title": "Lokalizacje" },
+    "reminders": { "title": "Przypomnienia" },
+    "readings": { "title": "Odczyty" },
+    "readingsHistory": { "title": "Historia odczytów" },
+    "scanner": { "title": "Skaner (QR)" },
+    "profile": { "title": "Profil i ustawienia" }
   }
 }

@@ -1,14 +1,20 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const DOC_SCREENS = [
-  { key: "overview", title: "Overview", sections: [{ heading: "What is Flovers?", body: ["..."] }] },
-  { key: "auth", title: "Login & Register", sections: [{ heading: "Login", body: ["..."] }] },
-  { key: "plants", title: "Plants", sections: [{ heading: "Plant list", body: ["..."] }] },
-  { key: "reminders", title: "Reminders & Tasks", sections: [{ heading: "Reminders", body: ["..."] }] },
-  { key: "recognition", title: "Plant recognition", sections: [{ heading: "How it works", body: ["..."] }] },
-  { key: "iot", title: "IoT & sensors", sections: [{ heading: "Supported readings", body: ["..."] }] },
-  { key: "qr", title: "QR codes", sections: [{ heading: "What QR codes do", body: ["..."] }] },
-  { key: "profile", title: "Profile & Settings", sections: [{ heading: "Notifications", body: ["..."] }] },
+  { key: "overview" },
+  { key: "auth" },
+  { key: "home" },
+  { key: "taskHistory" },
+  { key: "plants" },
+  { key: "plantDetails" },
+  { key: "createPlantWizard" },
+  { key: "locations" },
+  { key: "reminders" },
+  { key: "readings" },
+  { key: "readingsHistory" },
+  { key: "scanner" },
+  { key: "profile" },
 ];
 
 function DocSection({ heading, body }) {
@@ -27,16 +33,25 @@ function DocSection({ heading, body }) {
 }
 
 export default function Docs() {
+  const { t } = useTranslation("docs");
+
   const [activeKey, setActiveKey] = useState("overview");
 
   // Mobile "lang-like" dropdown state
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const active = useMemo(
-    () => DOC_SCREENS.find((x) => x.key === activeKey) || DOC_SCREENS[0],
-    [activeKey]
-  );
+  const active = useMemo(() => {
+    const found = DOC_SCREENS.find((x) => x.key === activeKey) || DOC_SCREENS[0];
+    return found;
+  }, [activeKey]);
+
+  const activeTitle = t(`screens.${active.key}.title`);
+
+  useEffect(() => {
+    const el = document.scrollingElement || document.documentElement;
+    el.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [activeKey]);
 
   // close on outside click / escape
   useEffect(() => {
@@ -64,9 +79,9 @@ export default function Docs() {
     <div className="docs-layout">
       {/* Desktop/tablet sidebar */}
       <aside className="docs-nav" aria-label="Documentation navigation">
-        {/* MATCH OTHER PAGES: use h2 sizing */}
-        <div className="docs-nav-title h2">Documentation</div>
+        <div className="docs-nav-title h2">{t("title")}</div>
 
+        {/* NOTE: keep the list itself as a nav; don't add h2 class here */}
         <nav className="docs-nav-list h2">
           {DOC_SCREENS.map((item) => {
             const isActive = item.key === activeKey;
@@ -77,7 +92,7 @@ export default function Docs() {
                 className={"docs-nav-item" + (isActive ? " active" : "")}
                 onClick={() => setActiveKey(item.key)}
               >
-                {item.title}
+                {t(`screens.${item.key}.title`)}
               </button>
             );
           })}
@@ -98,7 +113,7 @@ export default function Docs() {
               aria-haspopup="menu"
               aria-expanded={open}
             >
-              <span>{active.title}</span>
+              <span>{activeTitle}</span>
               <span className="lang-caret" aria-hidden="true" />
             </button>
 
@@ -108,10 +123,12 @@ export default function Docs() {
                   key={item.key}
                   type="button"
                   role="menuitem"
-                  className={"docs-item" + (item.key === activeKey ? " active" : "")}
+                  className={
+                    "docs-item" + (item.key === activeKey ? " active" : "")
+                  }
                   onClick={() => pick(item.key)}
                 >
-                  {item.title}
+                  {t(`screens.${item.key}.title`)}
                 </button>
               ))}
             </div>
@@ -119,12 +136,11 @@ export default function Docs() {
         </div>
 
         <article className="card prose docs-card">
-          {/* MATCH OTHER PAGES: same title class */}
-          <h1 className="h1 h1-auth">{active.title}</h1>
+          {/* MATCH OTHER PAGES */}
+          <h1 className="h1 h1-auth">{activeTitle}</h1>
 
-          {active.sections?.map((s, idx) => (
-            <DocSection key={idx} heading={s.heading} body={s.body} />
-          ))}
+          {/* Placeholder body for now (you'll move content to docs_<key>.json later) */}
+          <DocSection heading={t("placeholder.heading")} body={[t("placeholder.body")]} />
         </article>
       </main>
     </div>

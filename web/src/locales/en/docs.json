@@ -1,11 +1,22 @@
 {
   "title": "Documentation",
-  "intro": "Here you can add short user documentation or useful links.",
-  "links": {
-    "title": "Links",
-    "googlePlay": "Google Play",
-    "appStore": "App Store (coming soon)",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+  "placeholder": {
+    "heading": "Coming soon",
+    "body": "Detailed documentation for this screen will be added soon."
+  },
+  "screens": {
+    "overview": { "title": "Overview" },
+    "auth": { "title": "Login & Register" },
+    "home": { "title": "Home" },
+    "taskHistory": { "title": "Task history" },
+    "plants": { "title": "Plants" },
+    "plantDetails": { "title": "Plant details" },
+    "createPlantWizard": { "title": "Create Plant Wizard" },
+    "locations": { "title": "Locations" },
+    "reminders": { "title": "Reminders" },
+    "readings": { "title": "Readings" },
+    "readingsHistory": { "title": "Readings history" },
+    "scanner": { "title": "Scanner (QR)" },
+    "profile": { "title": "Profile & Settings" }
   }
 }
