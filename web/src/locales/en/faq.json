@@ -1,17 +1,131 @@
 {
-  "title": "FAQ",
+  "title": "Frequently Asked Questions",
   "items": [
     {
-      "q": "Where can I find the Terms of Service?",
-      "a": "You can find them in the footer or at /terms."
+      "q": "What is Flovers and what can I use it for?",
+      "a": "Flovers is an application designed to support plant care by helping you organise plant-related tasks and monitor plant conditions using live sensor data. It provides reminders, guidance, and insights to assist with everyday plant cultivation."
     },
     {
-      "q": "Where is the Privacy Policy?",
-      "a": "It is available in the footer or at /privacy-policy."
+      "q": "Is Flovers free to use?",
+      "a": "Yes. Flovers is currently available free of charge."
     },
     {
-      "q": "How can I contact support?",
-      "a": "Please visit the /contact page."
+      "q": "Which platforms does Flovers support?",
+      "a": "Flovers is currently available on Android. Support for iOS is planned for the future."
+    },
+    {
+      "q": "Do I need an account to use Flovers?",
+      "a": "Yes. Creating an account is required to use Flovers and access its features."
+    },
+    {
+      "q": "Is Flovers available in multiple languages?",
+      "a": "Yes. Flovers supports multiple languages, including English, Polish, German, Italian, French, Spanish, Portuguese, Arabic, Hindi, Chinese, Japanese, and Korean."
+    },
+
+    {
+      "q": "How do I create an account?",
+      "a": "You can register directly in the app. After registration, you need to confirm your account via an e-mail message. If needed, you can request the activation e-mail to be resent."
+    },
+    {
+      "q": "I didn’t receive the account activation e-mail — what should I do?",
+      "a": "You can request a new activation e-mail directly from within the application."
+    },
+    {
+      "q": "How can I reset my password?",
+      "a": "You can request a password reset e-mail from the app. If you are already logged in, you can also change your password directly in the application settings."
+    },
+    {
+      "q": "Can I change the e-mail address linked to my account?",
+      "a": "Yes. You can update your e-mail address while logged in, using the Profile screen in the app."
+    },
+    {
+      "q": "How can I delete my account and data?",
+      "a": "You can permanently delete your account from the Profile screen while logged in. This action is irreversible and removes all associated data."
+    },
+
+    {
+      "q": "What is the difference between a plant definition and my own plant?",
+      "a": "A plant definition is a built-in record in the Flovers database that contains general information about a plant species, such as preferences, traits, images, light requirements, soil type, and recommended watering or misting intervals. Your own plant represents a specific instance that you manage."
+    },
+    {
+      "q": "How accurate is the plant recognition feature?",
+      "a": "Accuracy depends on image quality and plant positioning. The recognition system is trained on a database containing over 700 plant species."
+    },
+    {
+      "q": "Are photos I upload for plant recognition stored?",
+      "a": "No. Photos are processed by the backend solely for recognition purposes and are not stored permanently."
+    },
+    {
+      "q": "Can I track multiple plants at the same time?",
+      "a": "Yes. Currently, there is no limit on the number of plants or measuring devices you can add. Each plant can be linked to a single measuring device."
+    },
+    {
+      "q": "Can I add notes or a diary for my plants?",
+      "a": "Yes. You can add notes to your plants and also attach notes to completed tasks as part of your plant diary."
+    },
+
+    {
+      "q": "How do reminders and tasks work?",
+      "a": "You create a reminder with a recurring interval. Based on this definition, tasks are generated automatically. When you complete a task, a new one is scheduled according to the defined interval. You may receive e-mail or push notifications for tasks due today or overdue by one day, depending on your settings."
+    },
+    {
+      "q": "What types of plant care tasks are supported?",
+      "a": "Supported task types include watering, misting, fertilising, repotting, and general plant care."
+    },
+    {
+      "q": "What happens if I forget to complete a task?",
+      "a": "If a task is not completed, the app may send a reminder after 24 hours. Otherwise, the task remains marked as overdue until you take action."
+    },
+    {
+      "q": "Can I disable or edit reminders?",
+      "a": "You can edit or delete reminders at any time. Currently, there is no option to temporarily pause reminders."
+    },
+    {
+      "q": "Do reminders guarantee that my plants will stay healthy?",
+      "a": "No. Flovers provides reminders and guidance, but plant care decisions and outcomes ultimately depend on the user."
+    },
+
+    {
+      "q": "What sensors and devices can I connect to Flovers?",
+      "a": "Flovers supports sensors measuring air temperature, air humidity, light level, and soil moisture. Recommended device setups can be found in the application documentation."
+    },
+    {
+      "q": "How often is sensor data updated?",
+      "a": "Sensor readings can be sent as frequently as every 5 minutes. For storage purposes, data is currently saved at one-hour intervals."
+    },
+    {
+      "q": "What happens if my sensor device goes offline?",
+      "a": "The app does not notify users about missing readings. However, notifications may be triggered if soil moisture levels fall below a defined threshold."
+    },
+    {
+      "q": "Is sensor data stored in the cloud?",
+      "a": "Yes. Sensor data is stored on a VPS cloud server."
+    },
+    {
+      "q": "Can other people see my sensor readings?",
+      "a": "Currently, sensor readings are private. In the future, sharing options may be introduced. Users may also query sensor data via the API to integrate with other devices, such as automatic watering systems."
+    },
+
+    {
+      "q": "What are QR codes used for in Flovers?",
+      "a": "Users can generate and print QR codes and attach them to plant pots. Each QR code links to a specific plant instance. Scanning the code in the mobile app opens the plant details instantly."
+    },
+    {
+      "q": "Is it safe to share a QR code or plant link?",
+      "a": "Generally yes. Only logged-in users who own the plant can view its details."
+    },
+    {
+      "q": "Can I make my plants public or share them with friends?",
+      "a": "Not at the moment. Public sharing features may be introduced in the future."
+    },
+
+    {
+      "q": "Why am I not receiving notifications?",
+      "a": "Make sure push notifications are enabled on your device and in the app settings, which can be found in the Profile screen."
+    },
+    {
+      "q": "How can I contact support or report a problem?",
+      "a": "You can use the contact form on the Flovers website or the contact form available in the app under the Profile screen."
     }
   ]
 }

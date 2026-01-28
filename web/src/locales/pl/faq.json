@@ -1,17 +1,131 @@
 {
-  "title": "FAQ",
+  "title": "Najczęściej zadawane pytania",
   "items": [
     {
-      "q": "Gdzie znajdę regulamin?",
-      "a": "W stopce strony lub pod adresem /terms."
+      "q": "Czym jest Flovers i do czego mogę go używać?",
+      "a": "Flovers to aplikacja wspierająca pielęgnację roślin poprzez organizowanie zadań oraz monitorowanie parametrów roślin na podstawie danych z czujników. Dostarcza przypomnień, wskazówek i informacji pomocnych w codziennej uprawie."
     },
     {
-      "q": "Gdzie jest polityka prywatności?",
-      "a": "W stopce strony lub pod adresem /privacy-policy."
+      "q": "Czy Flovers jest darmowy?",
+      "a": "Tak. Obecnie Flovers jest dostępny bezpłatnie."
     },
     {
-      "q": "Jak skontaktować się ze wsparciem?",
-      "a": "Wejdź na stronę /contact."
+      "q": "Jakie platformy obsługuje Flovers?",
+      "a": "Flovers jest obecnie dostępny na Androida. W przyszłości planowane jest wsparcie dla iOS."
+    },
+    {
+      "q": "Czy do korzystania z Flovers potrzebne jest konto?",
+      "a": "Tak. Utworzenie konta jest wymagane do korzystania z aplikacji i jej funkcji."
+    },
+    {
+      "q": "Czy Flovers jest dostępny w wielu językach?",
+      "a": "Tak. Flovers obsługuje wiele języków, w tym m.in. angielski, polski, niemiecki, włoski, francuski, hiszpański, portugalski, arabski, hindi, chiński, japoński oraz koreański."
+    },
+
+    {
+      "q": "Jak mogę utworzyć konto?",
+      "a": "Rejestracji można dokonać bezpośrednio w aplikacji. Po rejestracji wymagane jest potwierdzenie konta za pomocą wiadomości e-mail. W razie potrzeby można ponownie wysłać e-mail aktywacyjny."
+    },
+    {
+      "q": "Nie otrzymałem(-am) e-maila aktywacyjnego — co zrobić?",
+      "a": "Możesz zażądać ponownego wysłania e-maila aktywacyjnego bezpośrednio w aplikacji."
+    },
+    {
+      "q": "Jak mogę zresetować hasło?",
+      "a": "Możesz poprosić o e-mail do resetu hasła w aplikacji. Jeśli jesteś zalogowany(-a), możesz także zmienić hasło bezpośrednio w ustawieniach konta."
+    },
+    {
+      "q": "Czy mogę zmienić adres e-mail przypisany do konta?",
+      "a": "Tak. Po zalogowaniu możesz zmienić adres e-mail na ekranie Profil w aplikacji."
+    },
+    {
+      "q": "Jak mogę usunąć konto i dane?",
+      "a": "Konto można trwale usunąć z poziomu ekranu Profil po zalogowaniu. Operacja ta jest nieodwracalna i powoduje usunięcie wszystkich powiązanych danych."
+    },
+
+    {
+      "q": "Jaka jest różnica między definicją rośliny a moją rośliną?",
+      "a": "Definicja rośliny to wbudowany rekord w bazie Flovers zawierający ogólne informacje o danym gatunku, takie jak preferencje, cechy, obrazy, wymagania dotyczące światła, gleby oraz zalecane interwały podlewania lub zraszania. Twoja roślina to konkretna instancja, którą samodzielnie zarządzasz."
+    },
+    {
+      "q": "Jak dokładna jest funkcja rozpoznawania roślin?",
+      "a": "Dokładność zależy od jakości zdjęcia i sposobu ujęcia rośliny. System rozpoznawania jest trenowany na bazie obejmującej ponad 700 gatunków roślin."
+    },
+    {
+      "q": "Czy zdjęcia przesyłane do rozpoznawania roślin są zapisywane?",
+      "a": "Nie. Zdjęcia są przetwarzane przez backend wyłącznie na potrzeby rozpoznania i nie są trwale przechowywane."
+    },
+    {
+      "q": "Czy mogę śledzić wiele roślin jednocześnie?",
+      "a": "Tak. Obecnie nie ma limitu liczby roślin ani urządzeń pomiarowych, które można dodać. Każda roślina może być powiązana z jednym urządzeniem pomiarowym."
+    },
+    {
+      "q": "Czy mogę dodawać notatki lub prowadzić dziennik roślin?",
+      "a": "Tak. Możesz dodawać notatki do roślin oraz do zakończonych zadań, tworząc dziennik pielęgnacji."
+    },
+
+    {
+      "q": "Jak działają przypomnienia i zadania?",
+      "a": "Użytkownik tworzy przypomnienie z określonym interwałem cyklicznym. Na jego podstawie automatycznie tworzone są zadania. Po oznaczeniu zadania jako wykonane, kolejne zadanie zostaje zaplanowane zgodnie z interwałem. W zależności od ustawień możesz otrzymywać powiadomienia e-mail lub push o zadaniach na dziś lub zaległych o jeden dzień."
+    },
+    {
+      "q": "Jakie typy zadań pielęgnacyjnych są obsługiwane?",
+      "a": "Obsługiwane typy zadań to m.in. podlewanie, zraszanie, nawożenie, przesadzanie oraz ogólna pielęgnacja."
+    },
+    {
+      "q": "Co się stanie, jeśli zapomnę wykonać zadanie?",
+      "a": "Jeśli zadanie nie zostanie wykonane, aplikacja może wysłać przypomnienie po 24 godzinach. W przeciwnym razie zadanie pozostanie oznaczone jako zaległe do momentu wykonania."
+    },
+    {
+      "q": "Czy mogę wyłączyć lub edytować przypomnienia?",
+      "a": "Możesz edytować lub usuwać przypomnienia w dowolnym momencie. Obecnie nie ma możliwości ich tymczasowego wstrzymania."
+    },
+    {
+      "q": "Czy przypomnienia gwarantują, że moje rośliny będą zdrowe?",
+      "a": "Nie. Flovers dostarcza przypomnienia i wskazówki, jednak decyzje dotyczące pielęgnacji i ich efekty zależą od użytkownika."
+    },
+
+    {
+      "q": "Jakie czujniki i urządzenia mogę podłączyć do Flovers?",
+      "a": "Flovers obsługuje czujniki mierzące temperaturę powietrza, wilgotność powietrza, poziom światła oraz wilgotność gleby. Proponowane konfiguracje urządzeń znajdują się w dokumentacji aplikacji."
+    },
+    {
+      "q": "Jak często aktualizowane są dane z czujników?",
+      "a": "Odczyty mogą być wysyłane nawet co 5 minut. Na potrzeby zapisu dane są obecnie utrwalane w interwałach godzinnych."
+    },
+    {
+      "q": "Co się stanie, jeśli moje urządzenie pomiarowe przestanie działać?",
+      "a": "Aplikacja nie informuje o braku odczytów. Może jednak wysłać powiadomienie, jeśli poziom wilgotności gleby spadnie poniżej określonego progu."
+    },
+    {
+      "q": "Czy dane z czujników są przechowywane w chmurze?",
+      "a": "Tak. Dane z czujników są przechowywane na serwerze VPS w chmurze."
+    },
+    {
+      "q": "Czy inne osoby mogą zobaczyć moje odczyty z czujników?",
+      "a": "Obecnie nie. W przyszłości mogą zostać wprowadzone opcje udostępniania. Użytkownik może także pobierać dane z API w celu integracji z innymi urządzeniami, np. automatycznym podlewaniem."
+    },
+
+    {
+      "q": "Do czego służą kody QR w Flovers?",
+      "a": "Użytkownik może generować i drukować kody QR oraz umieszczać je na doniczkach. Każdy kod prowadzi do konkretnej instancji rośliny. Po zeskanowaniu kodu w aplikacji użytkownik zostaje natychmiast przeniesiony do szczegółów rośliny."
+    },
+    {
+      "q": "Czy udostępnianie kodu QR lub linku do rośliny jest bezpieczne?",
+      "a": "Zasadniczo tak. Szczegóły rośliny są widoczne wyłącznie dla zalogowanego użytkownika będącego jej właścicielem."
+    },
+    {
+      "q": "Czy mogę upublicznić swoje rośliny lub udostępnić je znajomym?",
+      "a": "Nie w tej chwili. Funkcje publicznego udostępniania mogą pojawić się w przyszłości."
+    },
+
+    {
+      "q": "Dlaczego nie otrzymuję powiadomień?",
+      "a": "Upewnij się, że powiadomienia push są włączone zarówno w ustawieniach systemowych urządzenia, jak i w ustawieniach aplikacji dostępnych na ekranie Profil."
+    },
+    {
+      "q": "Jak mogę skontaktować się z pomocą techniczną lub zgłosić problem?",
+      "a": "Możesz skorzystać z formularza kontaktowego na stronie Flovers lub z formularza kontaktowego dostępnego w aplikacji na ekranie Profil."
     }
   ]
 }

@@ -6,15 +6,17 @@ export default function Faq() {
   const items = t("items", { returnObjects: true });
 
   return (
-    <section className="card prose">
-      <h1 className="h1">{t("title")}</h1>
+    <article className="card prose">
+      <h1 className="h1 h1-auth">{t("title")}</h1>
 
-      {items.map((item, idx) => (
-        <div key={idx} className="faq-item">
-          <h2 className="h2">{item.q}</h2>
-          <p className="muted">{item.a}</p>
-        </div>
-      ))}
-    </section>
+      <div className="stack">
+        {items.map((item, idx) => (
+          <section key={idx} className="policy-section">
+            <h2 className="h2">{item.q}</h2>
+            <p className="muted">{item.a}</p>
+          </section>
+        ))}
+      </div>
+    </article>
   );
 }
