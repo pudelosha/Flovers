@@ -1,15 +1,161 @@
 {
-  "title": "Regulamin",
-  "meta": "Wersja: 1.0 • Data obowiązywania: 2026-01-28",
-  "intro": "Niniejszy regulamin określa zasady korzystania z aplikacji Flovers oraz usług powiązanych, w tym w szczególności warunki utworzenia i utrzymania konta użytkownika.",
-  "sections": {
-    "general": {
-      "title": "1. Postanowienia ogólne",
-      "text": "Korzystając z aplikacji Flovers, użytkownik akceptuje niniejszy regulamin. Regulamin może być aktualizowany, a informacje o zmianach będą publikowane na tej stronie."
+  "terms": {
+    "title": "Regulamin",
+    "lastUpdated": "Ostatnia aktualizacja: {{date}}",
+
+    "section1": {
+      "title": "§ 1. Postanowienia ogólne",
+      "p1": "Niniejszy Regulamin określa zasady korzystania z serwisu internetowego Flovers oraz aplikacji mobilnej Flovers (Android, a w przyszłości iOS), a także warunki świadczenia usług drogą elektroniczną przez Usługodawcę.",
+      "p2": "Usługodawcą jest Marcin Janowski Copy Paste IT Solutions Kraków, ul. płk. Francesco Nullo 30/115, 31-543 Kraków, Polska, e-mail: info@flovers.app (dalej: „Usługodawca”).",
+      "p3": "Korzystając z Usługi (w tym poprzez rejestrację Konta, logowanie, używanie funkcji aplikacji lub serwisu), Użytkownik akceptuje Regulamin i zobowiązuje się go przestrzegać.",
+      "p4": "W sprawach nieuregulowanych Regulaminem zastosowanie mają w szczególności: ustawa o świadczeniu usług drogą elektroniczną, Kodeks cywilny, ustawa o prawach konsumenta oraz inne właściwe przepisy prawa polskiego i prawa UE."
     },
-    "account": {
-      "title": "2. Konto i rejestracja",
-      "text": "W celu korzystania z wybranych funkcji aplikacji może być wymagane utworzenie konta. Użytkownik zobowiązuje się do podania prawdziwych i aktualnych danych oraz do zachowania poufności danych logowania."
+
+    "section2": {
+      "title": "§ 2. Definicje",
+      "items": [
+        "„Usługa” – usługi świadczone drogą elektroniczną przez Usługodawcę w ramach Flovers, obejmujące aplikację mobilną, serwis internetowy oraz powiązaną infrastrukturę backend.",
+        "„Aplikacja” – aplikacja mobilna Flovers udostępniana na urządzenia mobilne (Android; w przyszłości iOS).",
+        "„Serwis” – strona internetowa Flovers wraz z dokumentacją i informacjami.",
+        "„Użytkownik” – osoba korzystająca z Usługi; w przypadku rejestracji – osoba, która utworzyła Konto.",
+        "„Konto” – indywidualny profil Użytkownika w systemie Usługodawcy, zabezpieczony hasłem.",
+        "„Urządzenie” – urządzenie, z którego Użytkownik korzysta z Usługi (np. telefon, tablet) oraz – jeśli dotyczy – urządzenie pomiarowe (np. Arduino) wysyłające odczyty do Usługi.",
+        "„Definicja rośliny” – opracowana przez Usługodawcę karta/rekord rośliny zawierający m.in. cechy, preferencje i zalecenia (np. podlewanie, zraszanie, nawożenie), mogący zawierać elementy generowane automatycznie (np. treści AI).",
+        "„Instancja rośliny” – roślina zdefiniowana przez Użytkownika w Koncie (jego własny egzemplarz), mogąca być powiązana z Definicją rośliny.",
+        "„Odczyty / Dane pomiarowe” – dane z czujników (np. temperatura powietrza, wilgotność powietrza, wilgotność gleby, poziom światła) przypisane do Instancji rośliny.",
+        "„Przypomnienie” – definicja cyklicznej czynności (np. podlewanie, zraszanie, przesadzanie, pielęgnacja, nawożenie), na podstawie której tworzone są Zadania.",
+        "„Zadanie” – element listy czynności do wykonania tworzony na podstawie Przypomnienia; Użytkownik może je oznaczać jako wykonane oraz dodawać notatki.",
+        "„Treści Użytkownika” – dane, które Użytkownik wprowadza lub utrzymuje w Usłudze (np. Instancje roślin, notatki, historia zadań, dziennik rośliny, powiązania z urządzeniami, dane pomiarowe).",
+        "„Rozpoznawanie roślin” – funkcja polegająca na analizie zdjęcia dostarczonego przez Użytkownika i zwróceniu wyniku rozpoznania przez system Usługodawcy.",
+        "„Regulamin” – niniejsze warunki korzystania z Flovers."
+      ]
+    },
+
+    "section3": {
+      "title": "§ 3. Zakres Usługi i funkcjonalności",
+      "intro": "Usługa może obejmować w szczególności:",
+      "list": [
+        "rejestrację i obsługę Konta (logowanie, potwierdzenie e-mail, reset hasła, ponowne wysłanie linku aktywacyjnego)",
+        "bibliotekę Definicji roślin oraz powiązane wskazówki",
+        "tworzenie Instancji roślin oraz prowadzenie dziennika/historii (notatki, historia zadań)",
+        "Przypomnienia i Zadania dotyczące pielęgnacji roślin (np. podlewanie, zraszanie, nawożenie, przesadzanie)",
+        "Rozpoznawanie roślin na podstawie zdjęcia przesłanego przez Użytkownika",
+        "integrację z urządzeniami pomiarowymi oraz zapisywanie i prezentowanie Danych pomiarowych",
+        "generowanie i skanowanie kodów QR prowadzących do zasobów Użytkownika (np. do Instancji rośliny)",
+        "dokumentację oraz sekcję FAQ"
+      ],
+      "p1": "Usługa jest obecnie udostępniana jako wersja bezpłatna (beta). Usługodawca może w przyszłości wprowadzić plany płatne, ograniczenia dla planu bezpłatnego, reklamy lub subskrypcje – o czym poinformuje Użytkowników w Usłudze i/lub w Serwisie.",
+      "p2": "Usługodawca może zmieniać funkcjonalności, interfejs oraz sposób działania Usługi, w tym usuwać lub dodawać funkcje, o ile nie narusza to bezwzględnie obowiązujących przepisów prawa."
+    },
+
+    "section4": {
+      "title": "§ 4. Wymagania techniczne",
+      "items": [
+        "Urządzenie z dostępem do Internetu.",
+        "Aktualna przeglądarka internetowa (dla Serwisu) lub kompatybilny system Android (dla Aplikacji).",
+        "Aktywny adres e-mail (dla rejestracji i obsługi Konta).",
+        "Włączona obsługa JavaScript i plików cookies w przeglądarce (dla Serwisu), jeśli jest to wymagane do prawidłowego działania."
+      ]
+    },
+
+    "section5": {
+      "title": "§ 5. Konto i bezpieczeństwo",
+      "p1": "Do korzystania z większości funkcji Usługi wymagane jest utworzenie Konta.",
+      "p2": "Użytkownik jest zobowiązany do podawania prawdziwych danych oraz do zachowania poufności danych logowania.",
+      "p3": "Użytkownik ponosi odpowiedzialność za działania wykonane przy użyciu jego Konta, chyba że wynikają one z przyczyn leżących po stronie Usługodawcy.",
+      "p4": "Usługodawca może czasowo zablokować dostęp do Konta lub Usługi w razie wykrycia nadużyć, naruszeń bezpieczeństwa lub naruszeń Regulaminu."
+    },
+
+    "section6": {
+      "title": "§ 6. Treści Użytkownika i licencja",
+      "p1": "Użytkownik zachowuje prawa do swoich Treści Użytkownika w zakresie, w jakim przysługują mu one na podstawie prawa.",
+      "p2": "Użytkownik udziela Usługodawcy niewyłącznej, nieodpłatnej, odwołalnej (poprzez usunięcie Konta lub Treści), przenoszalnej w zakresie niezbędnym do świadczenia Usługi, licencji na przechowywanie, utrwalanie, zwielokrotnianie, wyświetlanie oraz przetwarzanie Treści Użytkownika wyłącznie w celu realizacji i utrzymania Usługi.",
+      "p3": "W ramach Rozpoznawania roślin Użytkownik może przesłać zdjęcie do systemu Usługodawcy. Usługodawca deklaruje, że zdjęcia wykorzystywane do rozpoznawania nie są przechowywane dłużej niż to konieczne do realizacji procesu rozpoznania, chyba że Użytkownik wyraźnie skorzysta z funkcji wymagającej ich zapisu.",
+      "p4": "Użytkownik oświadcza, że posiada prawa do treści, które dostarcza do Usługi, oraz że nie naruszają one praw osób trzecich."
+    },
+
+    "section7": {
+      "title": "§ 7. Zasady korzystania i zakazy",
+      "intro": "Użytkownik zobowiązuje się korzystać z Usługi zgodnie z prawem, dobrymi obyczajami oraz z poszanowaniem praw innych osób. Zabronione jest w szczególności:",
+      "list": [
+        "podejmowanie prób obejścia uwierzytelniania, zabezpieczeń lub ograniczeń technicznych",
+        "nadużywanie API, endpointów lub mechanizmów integracji (w tym związanych z urządzeniami pomiarowymi) w sposób mogący zakłócić działanie Usługi",
+        "wprowadzanie do Usługi treści bezprawnych, obraźliwych, naruszających dobra osobiste, prawa autorskie lub prawa własności intelektualnej",
+        "przesyłanie spamu lub treści o charakterze promocyjnym/masowym poprzez funkcje kontaktu lub wsparcia",
+        "działania prowadzące do nieuprawnionego dostępu do danych innych Użytkowników"
+      ],
+      "p1": "Usługodawca może ograniczyć dostęp do Usługi lub Konta w razie naruszeń powyższych zasad."
+    },
+
+    "section8": {
+      "title": "§ 8. Kody QR, linki i „sekretne klucze”",
+      "p1": "Usługa może umożliwiać generowanie kodów QR lub linków (np. do Instancji rośliny). Użytkownik jest odpowiedzialny za ich przechowywanie i udostępnianie.",
+      "p2": "Jeżeli Użytkownik udostępni osobom trzecim linki, identyfikatory lub klucze dostępu (np. do odczytu danych pomiarowych), osoby te mogą uzyskać dostęp do wskazanych informacji zgodnie z udostępnionymi uprawnieniami. Użytkownik ponosi ryzyko związane z takim udostępnieniem."
+    },
+
+    "section9": {
+      "title": "§ 9. Płatności i plany (informacja na przyszłość)",
+      "p1": "Na dzień publikacji niniejszego Regulaminu Usługa jest udostępniana bezpłatnie w modelu beta.",
+      "p2": "Usługodawca może w przyszłości wprowadzić plany płatne, subskrypcje odnawialne, reklamy lub limity (np. liczby roślin). Wprowadzenie planów płatnych może nastąpić m.in. poprzez Google Play lub Apple App Store.",
+      "p3": "Jeżeli zostaną wprowadzone subskrypcje, mogą one mieć charakter automatycznie odnawialny. Warunki płatności, rozliczeń i ewentualnych zwrotów mogą wynikać z zasad sklepu (Google/Apple) oraz z informacji przedstawionych w Usłudze w momencie zakupu."
+    },
+
+    "section10": {
+      "title": "§ 10. Odpowiedzialność i zastrzeżenia",
+      "p1": "Usługa ma charakter informacyjno-użytkowy i służy wsparciu w pielęgnacji roślin. Usługodawca nie gwarantuje osiągnięcia określonych rezultatów (np. wzrostu roślin, uniknięcia chorób roślin, uniknięcia błędów pielęgnacji). Decyzje dotyczące pielęgnacji roślin podejmowane są przez Użytkownika na własną odpowiedzialność.",
+      "p2": "Usługodawca świadczy Usługę w modelu „as is” (według najlepszych starań). Mogą wystąpić przerwy techniczne lub ograniczenia dostępności związane z konserwacją, rozwojem lub awariami.",
+      "p3": "Usługodawca nie ponosi odpowiedzialności za szkody wynikające z: nieprawidłowego użycia Usługi, błędnych danych wprowadzonych przez Użytkownika, wadliwego działania Urządzeń pomiarowych po stronie Użytkownika, przerw w dostępie do Internetu lub innych okoliczności niezależnych od Usługodawcy, w zakresie dopuszczalnym przez prawo.",
+      "p4": "Postanowienia niniejszego paragrafu nie wyłączają ani nie ograniczają praw konsumenta wynikających z bezwzględnie obowiązujących przepisów prawa."
+    },
+
+    "section11": {
+      "title": "§ 11. Reklamacje i kontakt",
+      "p1": "Użytkownik może składać reklamacje dotyczące działania Usługi drogą elektroniczną na adres: info@flovers.app.",
+      "p2": "W reklamacji należy opisać problem, wskazać datę i okoliczności wystąpienia oraz – jeśli to możliwe – dołączyć informacje ułatwiające identyfikację sprawy (np. zrzuty ekranu).",
+      "p3": "Usługodawca udzieli odpowiedzi bez zbędnej zwłoki, w miarę możliwości nie później niż w terminie 14 dni."
+    },
+
+    "section12": {
+      "title": "§ 12. Rozwiązanie umowy, usunięcie konta",
+      "p1": "Użytkownik może w każdej chwili usunąć Konto z poziomu Aplikacji, co powoduje trwałe usunięcie Konta oraz powiązanych danych w systemie Usługodawcy (bez „ukrytego” trybu).",
+      "p2": "Usługodawca może zawiesić lub zakończyć świadczenie Usługi wobec Użytkownika w przypadku naruszenia Regulaminu, działań niezgodnych z prawem lub działań zagrażających bezpieczeństwu Usługi.",
+      "p3": "Usługodawca może zakończyć świadczenie Usługi (w całości lub części) z ważnych przyczyn (np. względy techniczne, prawne), informując o tym Użytkowników z odpowiednim wyprzedzeniem, o ile jest to możliwe."
+    },
+
+    "section13": {
+      "title": "§ 13. Własność intelektualna",
+      "p1": "Oprogramowanie, wygląd, logotypy, nazwa Flovers, dokumentacja oraz treści udostępniane przez Usługodawcę w ramach Usługi podlegają ochronie prawnej, w tym prawu autorskiemu, i należą do Usługodawcy lub podmiotów uprawnionych.",
+      "p2": "Zabronione jest kopiowanie, modyfikowanie, rozpowszechnianie lub wykorzystywanie elementów Usługi bez zgody Usługodawcy, z wyjątkiem dozwolonego użytku wynikającego z przepisów prawa."
+    },
+
+    "section14": {
+      "title": "§ 14. Wiek Użytkownika",
+      "p1": "Usługa jest przeznaczona dla osób, które ukończyły 16 lat.",
+      "p2": "Jeżeli Użytkownik nie ukończył 16 lat, nie powinien zakładać Konta ani korzystać z Usługi."
+    },
+
+    "section15": {
+      "title": "§ 15. Dokumenty powiązane",
+      "intro": "Z Usługą powiązane są następujące dokumenty i informacje:",
+      "list": [
+        "Polityka Prywatności",
+        "Polityka Cookies",
+        "Dokumentacja oraz FAQ"
+      ]
+    },
+
+    "section16": {
+      "title": "§ 16. Prawo właściwe i rozstrzyganie sporów",
+      "p1": "Regulamin podlega prawu polskiemu, z zastrzeżeniem bezwzględnie obowiązujących przepisów ochrony konsumenta.",
+      "p2": "W pierwszej kolejności spory powinny być rozwiązywane polubownie (np. poprzez kontakt e-mail i próbę uzgodnienia stanowisk).",
+      "p3": "Konsument może skorzystać z pozasądowych sposobów rozstrzygania sporów oraz z platformy ODR (Online Dispute Resolution) dostępnej pod adresem: https://ec.europa.eu/consumers/odr/.",
+      "p4": "Właściwość sądu w sporach z konsumentami ustalana jest zgodnie z przepisami powszechnie obowiązującego prawa."
+    },
+
+    "section17": {
+      "title": "§ 17. Zmiany Regulaminu",
+      "p1": "Usługodawca może zmienić Regulamin z ważnych przyczyn (np. zmiany prawne, rozwój Usługi, zmiany technologiczne).",
+      "p2": "O zmianach Regulaminu Usługodawca poinformuje w Serwisie i/lub w Aplikacji. Dalsze korzystanie z Usługi po wejściu zmian w życie oznacza akceptację zaktualizowanego Regulaminu."
     }
   }
 }
