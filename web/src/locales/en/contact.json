@@ -1,13 +1,24 @@
 {
   "title": "Contact",
-  "intro": "Add your support email address and (optionally) your company details here.",
-  "fields": {
-    "email": {
-      "label": "Email"
-    },
-    "responseTime": {
-      "label": "Response time",
-      "value": "1–3 business days"
-    }
+  "subtitle": "Send a message to support. We typically reply within 1–3 business days.",
+  "form": {
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "e.g. Login issue",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question…",
+    "copyToMe": "Send me a copy",
+    "send": "Send",
+    "sending": "Sending…",
+    "mailtoFallback": "Email instead",
+    "note": "If the form fails, use the email button."
+  },
+  "toasts": {
+    "enterSubject": "Please enter a subject.",
+    "enterMessage": "Please enter a message.",
+    "contactSent": "Message sent.",
+    "couldNotSendContact": "Could not send your message. Please try again later.",
+    "requestTimedOut": "Request timed out. Please try again.",
+    "unauthorizedLoginAgain": "Session expired. Please log in again.",
+    "missingApiBase": "API base URL is not configured."
   }
 }

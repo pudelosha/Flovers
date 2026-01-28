@@ -1,13 +1,24 @@
 {
   "title": "Kontakt",
-  "intro": "Dodaj tu adres e-mail do wsparcia i ewentualnie dane firmy.",
-  "fields": {
-    "email": {
-      "label": "E-mail"
-    },
-    "responseTime": {
-      "label": "Czas odpowiedzi",
-      "value": "1–3 dni robocze"
-    }
+  "subtitle": "Wyślij wiadomość do wsparcia. Zwykle odpowiadamy w 1–3 dni robocze.",
+  "form": {
+    "subjectLabel": "Temat",
+    "subjectPlaceholder": "np. Problem z logowaniem",
+    "messageLabel": "Wiadomość",
+    "messagePlaceholder": "Opisz problem lub pytanie…",
+    "copyToMe": "Wyślij mi kopię",
+    "send": "Wyślij",
+    "sending": "Wysyłanie…",
+    "mailtoFallback": "Napisz e-mail",
+    "note": "Jeśli formularz nie zadziała, użyj przycisku e-mail."
+  },
+  "toasts": {
+    "enterSubject": "Wpisz temat.",
+    "enterMessage": "Wpisz wiadomość.",
+    "contactSent": "Wiadomość wysłana.",
+    "couldNotSendContact": "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+    "requestTimedOut": "Upłynął limit czasu. Spróbuj ponownie.",
+    "unauthorizedLoginAgain": "Sesja wygasła. Zaloguj się ponownie.",
+    "missingApiBase": "Nie skonfigurowano adresu API."
   }
 }
