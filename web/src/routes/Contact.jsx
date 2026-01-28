@@ -1,6 +1,7 @@
 // web/src/pages/Contact.jsx
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import TopToast from "../shared/ui/TopToast.jsx";
 
 function withTimeout(promise, ms = 30000) {
   const controller = new AbortController();
@@ -47,32 +48,39 @@ export default function Contact() {
   const [copyToMe, setCopyToMe] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  const [status, setStatus] = useState({ type: "idle", text: "" }); // idle | success | error
+  // Toast state (RN-like)
+  const [toast, setToast] = useState({
+    visible: false,
+    msg: "",
+    variant: "default", // default | success | error
+  });
 
-  const resetStatus = () => {
-    if (status.type !== "idle") setStatus({ type: "idle", text: "" });
+  const showToast = (msg, variant = "default") => {
+    setToast({ visible: true, msg, variant });
+  };
+
+  const hideToast = () => {
+    setToast((t0) => ({ ...t0, visible: false }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (saving) return;
 
-    resetStatus();
-
     const s = subject.trim();
     const m = message.trim();
 
     if (!s) {
-      setStatus({ type: "error", text: t("contact:toasts.enterSubject") });
+      showToast(t("contact:toasts.enterSubject"), "error");
       return;
     }
     if (!m) {
-      setStatus({ type: "error", text: t("contact:toasts.enterMessage") });
+      showToast(t("contact:toasts.enterMessage"), "error");
       return;
     }
 
     if (!API_BASE) {
-      setStatus({ type: "error", text: t("contact:toasts.missingApiBase") });
+      showToast(t("contact:toasts.missingApiBase"), "error");
       return;
     }
 
@@ -84,9 +92,7 @@ export default function Contact() {
       const res = await withTimeout(async (signal) => {
         const r = await fetch(url, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             subject: s,
             message: m,
@@ -112,10 +118,7 @@ export default function Contact() {
         return json;
       }, 30000);
 
-      setStatus({
-        type: "success",
-        text: res?.message || t("contact:toasts.contactSent"),
-      });
+      showToast(res?.message || t("contact:toasts.contactSent"), "success");
 
       setSubject("");
       setMessage("");
@@ -124,17 +127,11 @@ export default function Contact() {
       const httpStatus = err?.status;
 
       if (isUnauthorized(err, httpStatus)) {
-        setStatus({
-          type: "error",
-          text: t("contact:toasts.unauthorizedLoginAgain"),
-        });
+        showToast(t("contact:toasts.unauthorizedLoginAgain"), "error");
       } else if (isTimedOut(err)) {
-        setStatus({ type: "error", text: t("contact:toasts.requestTimedOut") });
+        showToast(t("contact:toasts.requestTimedOut"), "error");
       } else {
-        setStatus({
-          type: "error",
-          text: t("contact:toasts.couldNotSendContact"),
-        });
+        showToast(t("contact:toasts.couldNotSendContact"), "error");
       }
     } finally {
       setSaving(false);
@@ -143,23 +140,18 @@ export default function Contact() {
 
   return (
     <div className="stack">
+      {/* Top snackbar-like toast */}
+      <TopToast
+        visible={toast.visible}
+        message={toast.msg}
+        variant={toast.variant}
+        onDismiss={hideToast}
+        duration={3000}
+      />
+
       <section className="card prose">
-        {/* RN-like auth title style (24px centered) */}
         <h1 className="h1 h1-auth">{t("contact:title")}</h1>
         <p className="muted muted-center">{t("contact:subtitle")}</p>
-
-        {status.type !== "idle" ? (
-          <div
-            className={
-              "notice " +
-              (status.type === "success" ? "notice-success" : "notice-error")
-            }
-            role="status"
-            aria-live="polite"
-          >
-            {status.text}
-          </div>
-        ) : null}
 
         <form onSubmit={handleSubmit} className="form">
           <div className="field">
@@ -170,7 +162,6 @@ export default function Contact() {
               onChange={(e) => setSubject(e.target.value)}
               placeholder={t("contact:form.subjectPlaceholder")}
               disabled={saving}
-              onFocus={resetStatus}
             />
           </div>
 
@@ -182,7 +173,6 @@ export default function Contact() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder={t("contact:form.messagePlaceholder")}
               disabled={saving}
-              onFocus={resetStatus}
             />
           </div>
 
@@ -196,7 +186,6 @@ export default function Contact() {
             <span>{t("contact:form.copyToMe")}</span>
           </label>
 
-          {/* Single button, fixed/predictable width */}
           <div className="row">
             <button
               type="submit"
