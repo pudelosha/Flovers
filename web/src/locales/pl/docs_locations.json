@@ -1,8 +1,46 @@
 ﻿{
-    "docs_locations":  {
-                           "sections":  [
-
-                                        ],
-                           "title":  ""
-                       }
+  "docs_locations": {
+    "title": "Lokalizacje",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Lokalizacje służy do zarządzania miejscami, w których znajdują się Twoje rośliny, np. pomieszczeniami, balkonami lub innymi obszarami.",
+          "Lokalizacje są wykorzystywane głównie do porządkowania roślin oraz ułatwiania filtrowania, sortowania i grupowania danych w aplikacji."
+        ]
+      },
+      {
+        "heading": "Lista lokalizacji",
+        "body": [
+          "Ekran wyświetla listę wszystkich lokalizacji zdefiniowanych przez użytkownika.",
+          "Lokalizacje mogą być nazwami domyślnymi lub własnymi nazwami utworzonymi przez użytkownika.",
+          "Każda lokalizacja pokazuje liczbę roślin aktualnie z nią powiązanych."
+        ]
+      },
+      {
+        "heading": "Akcje na lokalizacji (menu 3-kropki)",
+        "body": [
+          "Każda lokalizacja posiada menu 3-kropki z dostępnymi akcjami.",
+          "Użytkownik może edytować nazwę lokalizacji, aby lepiej odzwierciedlała rzeczywiste miejsce przechowywania roślin.",
+          "Usunięcie lokalizacji jest możliwe tylko wtedy, gdy nie są do niej przypisane żadne rośliny."
+        ]
+      },
+      {
+        "heading": "Przycisk akcji (FAB)",
+        "body": [
+          "Przycisk FAB udostępnia szybkie akcje związane z zarządzaniem lokalizacjami.",
+          "Użytkownik może dodać nową lokalizację w dowolnym momencie.",
+          "Lokalizacje można sortować według nazwy lokalizacji lub liczby przypisanych roślin."
+        ]
+      },
+      {
+        "heading": "Zastosowanie lokalizacji",
+        "body": [
+          "Lokalizacje są używane w całej aplikacji do logicznego grupowania roślin.",
+          "Mogą być wykorzystywane jako kryteria filtrowania i sortowania w widokach takich jak Rośliny, Przypomnienia czy Historia zadań.",
+          "Stosowanie lokalizacji ułatwia utrzymanie porządku, szczególnie przy większej liczbie roślin."
+        ]
+      }
+    ]
+  }
 }

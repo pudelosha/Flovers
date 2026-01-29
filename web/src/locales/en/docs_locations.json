@@ -1,8 +1,46 @@
 ﻿{
-    "docs_locations":  {
-                           "sections":  [
-
-                                        ],
-                           "title":  ""
-                       }
+  "docs_locations": {
+    "title": "Locations",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Locations screen allows you to manage places where your plants are kept, such as rooms, balconies, or other areas.",
+          "Locations are used mainly to organize plants and to make filtering, sorting, and grouping easier across the app."
+        ]
+      },
+      {
+        "heading": "Location list",
+        "body": [
+          "The screen displays a list of all locations defined by the user.",
+          "Locations can be predefined suggestions or fully custom names created by the user.",
+          "Each location shows how many plants are currently associated with it."
+        ]
+      },
+      {
+        "heading": "Location actions (3-dot menu)",
+        "body": [
+          "Each location tile has a 3-dot menu with available actions.",
+          "You can edit the location name to better reflect where your plants are kept.",
+          "You can delete a location only if no plants are currently assigned to it."
+        ]
+      },
+      {
+        "heading": "Floating Action Button (FAB)",
+        "body": [
+          "The FAB provides quick actions related to location management.",
+          "You can add a new location at any time.",
+          "Locations can be sorted by location name or by the number of plants assigned to each location."
+        ]
+      },
+      {
+        "heading": "How locations are used",
+        "body": [
+          "Locations are used throughout the app to group plants logically.",
+          "They can be used as filters and sort criteria in views such as Plants, Reminders, and Task History.",
+          "Using locations helps keep plant collections organized, especially when managing a larger number of plants."
+        ]
+      }
+    ]
+  }
 }
