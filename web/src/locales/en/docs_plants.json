@@ -1,8 +1,56 @@
 ﻿{
-    "docs_plants":  {
-                        "sections":  [
-
-                                     ],
-                        "title":  ""
-                    }
+  "docs_plants": {
+    "title": "Plants",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Plants screen shows all Plant Instances created in your account.",
+          "Each tile represents one plant (your own specimen). From the tile you can open Plant Details, or use the three-dot menu shortcuts to navigate to related views (e.g., reminders, journal, QR code)."
+        ]
+      },
+      {
+        "heading": "Plant tiles (what you see on the list)",
+        "body": [
+          "Each plant tile displays the plant name and (when available) the linked plant definition name (species) and the assigned Location.",
+          "Tapping the tile body (not the three-dot menu) navigates to the Plant Details screen."
+        ]
+      },
+      {
+        "heading": "Three-dot menu (plant actions)",
+        "body": [
+          "Each tile has a three-dot menu with actions for the selected plant:",
+          "Edit plant: opens the plant editor to update plant details and parameters.",
+          "Show reminders: navigates to the Reminders screen with a filter applied to show only reminders for the selected plant.",
+          "Show Plant Journal: opens a modal that shows closed task history (including user notes). Notes are visible and not hidden.",
+          "Show QR code: opens a modal with the plant’s QR code, a short explanation, and options to save (download) or send it to your email.",
+          "Delete plant: permanently deletes the plant and associated data such as tasks, reminders, and linked device connections."
+        ]
+      },
+      {
+        "heading": "Floating Action Button (FAB) menu",
+        "body": [
+          "The FAB on the Plants screen provides quick actions:",
+          "Create plant: starts the Create Plant Wizard (a 9-step flow) where you can define a plant precisely.",
+          "Sort: sorts plant tiles by Plant Name or by Location.",
+          "Filter: filters the list by Location.",
+          "Locations: navigates to the Locations screen where you can add, edit, and manage locations used for grouping and filtering."
+        ]
+      },
+      {
+        "heading": "Delete plant (important notes)",
+        "body": [
+          "Delete plant is a permanent action and cannot be undone.",
+          "Deleting a plant removes the Plant Instance along with its related data, such as generated tasks, reminders assigned to that plant, and device links associated with that plant."
+        ]
+      },
+      {
+        "heading": "If you don’t see any plants",
+        "body": [
+          "If the list is empty, use the FAB action Create plant to add your first Plant Instance.",
+          "Once plants exist, you can group them using Locations and manage care routines through Reminders."
+        ]
+      }
+    ]
+  }
 }

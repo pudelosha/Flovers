@@ -1,8 +1,56 @@
 ﻿{
-    "docs_plants":  {
-                        "sections":  [
-
-                                     ],
-                        "title":  ""
-                    }
+  "docs_plants": {
+    "title": "Rośliny",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Rośliny wyświetla wszystkie Instancje roślin utworzone w Twoim koncie.",
+          "Każdy kafelek reprezentuje jedną roślinę (Twój egzemplarz). Z kafelka możesz przejść do Szczegółów rośliny lub skorzystać ze skrótów w menu trzech kropek (np. przypomnienia, dziennik, kod QR)."
+        ]
+      },
+      {
+        "heading": "Kafelki roślin (lista)",
+        "body": [
+          "Kafelek rośliny pokazuje nazwę rośliny oraz (jeśli dostępne) nazwę powiązanej definicji rośliny (gatunek) i przypisaną Lokalizację.",
+          "Dotknięcie treści kafelka (poza menu z trzema kropkami) przenosi do widoku Szczegóły rośliny."
+        ]
+      },
+      {
+        "heading": "Menu trzech kropek (akcje rośliny)",
+        "body": [
+          "Każdy kafelek ma menu z trzema kropkami zawierające akcje dla wybranej rośliny:",
+          "Edytuj roślinę: otwiera edycję danych i parametrów rośliny.",
+          "Pokaż przypomnienia: przechodzi do widoku Przypomnienia z filtrem ustawionym na przypomnienia powiązane z wybraną rośliną.",
+          "Pokaż dziennik rośliny: otwiera modal z historią zamkniętych zadań (wraz z notatkami użytkownika). Notatki są widoczne i nie są ukrywane.",
+          "Pokaż kod QR: otwiera modal z kodem QR dla rośliny, krótkim opisem oraz opcjami zapisania (pobrania) lub wysłania kodu na własny adres e-mail.",
+          "Usuń roślinę: trwale usuwa roślinę oraz powiązane dane, takie jak zadania, przypomnienia i połączenia z urządzeniami."
+        ]
+      },
+      {
+        "heading": "Menu przycisku FAB",
+        "body": [
+          "FAB w widoku Rośliny udostępnia szybkie akcje:",
+          "Utwórz roślinę: uruchamia Kreator tworzenia rośliny (proces 9 kroków), w którym można precyzyjnie zdefiniować roślinę.",
+          "Sortuj: sortuje kafelki roślin według Nazwy rośliny lub Lokalizacji.",
+          "Filtruj: filtruje listę według Lokalizacji.",
+          "Lokalizacje: przechodzi do widoku Lokalizacje, gdzie można dodawać, edytować i zarządzać lokalizacjami wykorzystywanymi do grupowania i filtrowania."
+        ]
+      },
+      {
+        "heading": "Usuwanie rośliny (ważne informacje)",
+        "body": [
+          "Usunięcie rośliny jest operacją trwałą i nie można jej cofnąć.",
+          "Usunięcie rośliny usuwa Instancję rośliny oraz powiązane dane, takie jak wygenerowane zadania, przypomnienia przypisane do tej rośliny oraz linki do urządzeń."
+        ]
+      },
+      {
+        "heading": "Gdy nie widać żadnych roślin",
+        "body": [
+          "Jeśli lista jest pusta, użyj akcji Utwórz roślinę z menu FAB, aby dodać pierwszą Instancję rośliny.",
+          "Po dodaniu roślin możesz je grupować za pomocą Lokalizacji oraz zarządzać rutynami pielęgnacji poprzez Przypomnienia."
+        ]
+      }
+    ]
+  }
 }
