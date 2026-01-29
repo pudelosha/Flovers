@@ -1,8 +1,81 @@
 ﻿{
-    "docs_task_history":  {
-                              "sections":  [
-
-                                           ],
-                              "title":  ""
-                          }
+  "docs_task_history": {
+    "title": "Historia zadań",
+    "sections": [
+      {
+        "heading": "Cel widoku Historia zadań",
+        "body": [
+          "Historia zadań służy do przeglądania i zarządzania zadaniami, które zostały wykonane (zamknięte).",
+          "Ułatwia analizę tego, co zostało zrobione, kiedy zostało wykonane oraz których roślin dotyczyły działania.",
+          "Widok może zostać otwarty z aktywnym filtrem (np. historia dla wybranej rośliny) albo prezentować wszystkie zamknięte zadania."
+        ]
+      },
+      {
+        "heading": "Kafelki zamkniętych zadań",
+        "body": [
+          "Każdy kafelek reprezentuje pojedyncze zamknięte zadanie i zawiera m.in. typ zadania (np. Podlewanie, Zraszanie, Nawożenie), nazwę rośliny, lokalizację oraz datę wykonania.",
+          "Zamknięte zadania mogą zawierać notatkę dodaną podczas oznaczania zadania jako wykonane.",
+          "Notatki są widoczne dopiero po rozwinięciu kafelka."
+        ]
+      },
+      {
+        "heading": "Podgląd notatek: rozwijanie i zwijanie",
+        "body": [
+          "Aby zobaczyć notatkę dla zamkniętego zadania, możesz rozwinąć kafelek poprzez stuknięcie w kafelek.",
+          "Możesz też użyć menu z trzema kropkami, aby wykonać akcję Rozwiń/Zwiń (w zależności od aktualnego stanu).",
+          "Dzięki temu lista może pozostać czytelna i kompaktowa, a szczegóły są dostępne na żądanie."
+        ]
+      },
+      {
+        "heading": "Menu kafelka (trzy kropki)",
+        "body": [
+          "Każdy kafelek zamkniętego zadania posiada menu kontekstowe z akcjami dotyczącymi tej konkretnej pozycji historii.",
+          "Rozwiń/Zwiń: pokazuje lub ukrywa sekcję notatki wewnątrz kafelka.",
+          "Edytuj przypomnienie: przenosi do Przypomnienia powiązanego z zadaniem, aby zmienić ustawienia cykliczności lub inne parametry.",
+          "Przejdź do rośliny: przenosi do widoku Szczegóły rośliny powiązanej z zadaniem.",
+          "Usuń zadanie: trwale usuwa wybrane zamknięte zadanie z konta Użytkownika."
+        ]
+      },
+      {
+        "heading": "Akcje FAB (Floating Action Button)",
+        "body": [
+          "Widok Historia zadań posiada przycisk FAB z akcjami do pracy na całej liście.",
+          "Sortuj: zmienia kolejność wyświetlania zamkniętych zadań.",
+          "Filtruj: zawęża listę historii do wybranych kryteriów.",
+          "Usuń: umożliwia zbiorcze usuwanie zadań na podstawie kryteriów (np. zadania dla wybranej rośliny, dla lokalizacji, dla typu zadania lub zadania starsze niż określona data)."
+        ]
+      },
+      {
+        "heading": "Opcje sortowania",
+        "body": [
+          "Sortowanie pomaga przeglądać historię w kolejności najlepiej pasującej do Twojego sposobu pracy.",
+          "Dostępne opcje sortowania to: Data wykonania, Nazwa rośliny oraz Lokalizacja."
+        ]
+      },
+      {
+        "heading": "Opcje filtrowania",
+        "body": [
+          "Filtry pozwalają skupić się na wybranym podzbiorze zamkniętych zadań.",
+          "Możesz filtrować według: Nazwy rośliny, Lokalizacji, Typu zadania oraz Zakresu dat wykonania.",
+          "Filtry można łączyć, np. aby wyświetlić Nawożenie wykonane w danej lokalizacji w wybranym miesiącu."
+        ]
+      },
+      {
+        "heading": "Zbiorcze usuwanie (akcja Usuń)",
+        "body": [
+          "Zbiorcze usuwanie pozwala trwale usunąć wiele zamkniętych zadań jednocześnie na podstawie wybranych kryteriów.",
+          "Typowe scenariusze to: wyczyszczenie historii jednej rośliny, usunięcie zadań dla lokalizacji, usunięcie tylko jednego typu zadań lub usunięcie zadań starszych niż wskazana data.",
+          "Usuwanie zbiorcze jest trwałe i nie można go cofnąć."
+        ]
+      },
+      {
+        "heading": "Różnice między Historią zadań a Home",
+        "body": [
+          "Home skupia się na zadaniach bieżących (na dziś i zaległych) oraz na ich wykonywaniu.",
+          "Historia zadań skupia się na zadaniach wykonanych i wspiera przegląd, sortowanie, filtrowanie oraz usuwanie wpisów historycznych.",
+          "Razem te widoki pozwalają zarówno wykonywać codzienne działania (Home), jak i analizować długoterminową historię pielęgnacji (Historia zadań)."
+        ]
+      }
+    ]
+  }
 }

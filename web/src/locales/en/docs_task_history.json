@@ -1,8 +1,81 @@
 ﻿{
-    "docs_task_history":  {
-                              "sections":  [
-
-                                           ],
-                              "title":  ""
-                          }
+  "docs_task_history": {
+    "title": "Task History",
+    "sections": [
+      {
+        "heading": "Purpose of the Task History screen",
+        "body": [
+          "Task History is used to review and manage tasks that have been completed (closed).",
+          "It helps you understand what actions were performed, when they were done, and which plants were affected.",
+          "The screen may open with a predefined filter applied (for example, showing history for a specific plant), or it may display all completed tasks."
+        ]
+      },
+      {
+        "heading": "Completed task tiles",
+        "body": [
+          "Each tile represents a single completed task, including the task type (e.g., Watering, Misting, Fertilising), plant name, location, and completion date.",
+          "Completed tasks may include an optional note added when the task was closed.",
+          "Notes are displayed only when the tile is expanded."
+        ]
+      },
+      {
+        "heading": "Viewing notes: expand and collapse",
+        "body": [
+          "To view a note for a completed task, you can expand the tile by tapping the tile itself.",
+          "You can also use the three-dots menu to Expand or Collapse notes for a task (depending on the current state).",
+          "This lets you keep the list compact while still having access to detailed history when needed."
+        ]
+      },
+      {
+        "heading": "Task tile menu (three-dots)",
+        "body": [
+          "Each completed task tile provides a context menu with actions related to that specific history entry.",
+          "Expand/Collapse: shows or hides the note section inside the tile.",
+          "Edit reminder: navigates to the Reminder associated with the task so you can adjust recurrence or settings.",
+          "Go to plant: navigates to Plant Details for the plant linked to the task.",
+          "Delete task: permanently deletes the selected completed task from your account."
+        ]
+      },
+      {
+        "heading": "Floating Action Button (FAB) actions",
+        "body": [
+          "The Task History screen includes a Floating Action Button (FAB) with actions for working with the history list.",
+          "Sort: changes the ordering of completed tasks.",
+          "Filter: narrows down the history list by selected criteria.",
+          "Delete: supports bulk deletion based on criteria (for example, tasks for a selected plant, tasks for a selected location, tasks of a specific type, or tasks older than a chosen threshold)."
+        ]
+      },
+      {
+        "heading": "Sorting options",
+        "body": [
+          "Sorting helps you review history in the order that best matches your workflow.",
+          "Available sorting options include: Completion date, Plant name, and Location."
+        ]
+      },
+      {
+        "heading": "Filtering options",
+        "body": [
+          "Filters help you focus on a specific subset of completed tasks.",
+          "You can filter by Plant name, Location, Task type, and Completed date range.",
+          "Filters can be combined to narrow the list further, for example: Fertilising tasks completed in a selected location during a given month."
+        ]
+      },
+      {
+        "heading": "Bulk deletion (Delete action)",
+        "body": [
+          "Bulk deletion allows you to permanently delete multiple completed tasks at once based on specified criteria.",
+          "Typical scenarios include clearing history for one plant, removing tasks for a location, deleting only one task type, or deleting tasks older than a selected date.",
+          "Bulk deletion is permanent and cannot be undone."
+        ]
+      },
+      {
+        "heading": "How Task History differs from Home",
+        "body": [
+          "Home focuses on tasks that are due or overdue and helps you complete current work.",
+          "Task History focuses on tasks that are already completed and supports reviewing, sorting, filtering, and deleting historical entries.",
+          "Together, these screens cover both day-to-day execution (Home) and long-term tracking (Task History)."
+        ]
+      }
+    ]
+  }
 }
