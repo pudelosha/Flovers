@@ -1,0 +1,52 @@
+/* ---------- Screens strip (phone mockups) ---------- */
+
+.home-phones {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 980px) {
+  .home-phones {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-phone {
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 16px 52px rgba(0,0,0,0.42);
+  padding: 16px;
+}
+
+.home-phone-screen {
+  height: 260px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+/* three variants so it looks "different screens" without real images */
+.home-phone-a {
+  background:
+    radial-gradient(420px 220px at 30% 15%, rgba(26,166,160,0.28), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+}
+.home-phone-b {
+  background:
+    radial-gradient(420px 220px at 70% 20%, rgba(10,113,132,0.28), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+}
+.home-phone-c {
+  background:
+    radial-gradient(420px 220px at 50% 10%, rgba(255,255,255,0.14), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+}
+
+.home-phone-label {
+  margin-top: 10px;
+  font-size: 13px;
+}

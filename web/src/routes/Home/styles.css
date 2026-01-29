@@ -1,0 +1,34 @@
+/* =========================
+   Home (landing) — rebuilt
+   ========================= */
+
+.home-wrap {
+  position: relative;
+}
+
+.home-section {
+  margin-top: 10px;
+}
+
+.home-h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+}
+
+.home-h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.home-p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.home-lead {
+  max-width: 80ch;
+}
