@@ -1,8 +1,43 @@
 ﻿{
-    "docs_readings_history":  {
-                                  "sections":  [
-
-                                               ],
-                                  "title":  ""
-                              }
+  "docs_readings_history": {
+    "title": "Readings History",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Readings History screen provides a full overview of historical sensor data for a linked device and plant.",
+          "Unlike the Readings list (which shows only the latest values), this view focuses on trends and changes over time using charts."
+        ]
+      },
+      {
+        "heading": "Time ranges: Day, Week, Month",
+        "body": [
+          "You can switch between three time ranges: Day, Week, and Month.",
+          "Day view shows readings for a single day in hourly intervals (assuming the device sends data hourly and the user accepts higher battery usage on the device side).",
+          "Week and Month views summarize readings across longer periods, allowing you to spot patterns and trends."
+        ]
+      },
+      {
+        "heading": "Measurement types",
+        "body": [
+          "Charts are available for the following parameters: air temperature, air humidity, light level, and soil moisture (depending on what the device provides).",
+          "You select the parameter using the buttons under the chart (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Navigating through past periods",
+        "body": [
+          "The arrows next to the selected period allow you to move between previous days, weeks, or months.",
+          "Navigation is limited to periods where data exists — future periods are not displayed."
+        ]
+      },
+      {
+        "heading": "Data availability and interpretation",
+        "body": [
+          "If the device has not provided readings for a selected period, the chart will appear empty or show missing values.",
+          "Sensor data is informative and should be interpreted together with real-world observation (calibration, placement, and environment can affect accuracy)."
+        ]
+      }
+    ]
+  }
 }

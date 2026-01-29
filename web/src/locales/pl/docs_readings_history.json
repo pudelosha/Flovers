@@ -1,8 +1,43 @@
 ﻿{
-    "docs_readings_history":  {
-                                  "sections":  [
-
-                                               ],
-                                  "title":  ""
-                              }
+  "docs_readings_history": {
+    "title": "Historia odczytów",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Historia odczytów zapewnia pełny wgląd w dane pomiarowe z przeszłości dla powiązanego urządzenia i rośliny.",
+          "W przeciwieństwie do listy Odczytów (gdzie widoczne są głównie ostatnie wartości), ten widok służy do analizy trendów i zmian w czasie na wykresach."
+        ]
+      },
+      {
+        "heading": "Zakresy czasu: Dzień, Tydzień, Miesiąc",
+        "body": [
+          "Użytkownik może przełączać się pomiędzy trzema zakresami: Dzień, Tydzień oraz Miesiąc.",
+          "Widok Dzień prezentuje odczyty dla jednego dnia w interwale godzinowym (zakładając, że urządzenie wysyła dane co godzinę i użytkownik akceptuje większe zużycie baterii po stronie urządzenia).",
+          "Widoki Tydzień i Miesiąc pokazują dane w dłuższej perspektywie, co ułatwia wykrywanie trendów."
+        ]
+      },
+      {
+        "heading": "Wybór parametru pomiaru",
+        "body": [
+          "Wykresy dostępne są dla parametrów: temperatura powietrza, wilgotność powietrza, poziom światła oraz wilgotność gleby (w zależności od tego, co mierzy urządzenie).",
+          "Parametr wybierany jest przyciskami pod wykresem (Temp, Hum, Light, Moist)."
+        ]
+      },
+      {
+        "heading": "Nawigacja po wcześniejszych okresach",
+        "body": [
+          "Strzałki przy wybranym okresie pozwalają przechodzić pomiędzy wcześniejszymi dniami, tygodniami lub miesiącami.",
+          "Nawigacja jest dostępna tylko dla okresów, dla których istnieją dane — przyszłe okresy nie są wyświetlane."
+        ]
+      },
+      {
+        "heading": "Dostępność danych i interpretacja",
+        "body": [
+          "Jeśli urządzenie nie dostarczyło odczytów dla wybranego okresu, wykres będzie pusty lub może zawierać braki danych.",
+          "Dane z czujników mają charakter informacyjny i powinny być interpretowane wraz z obserwacją roślin oraz świadomością wpływu kalibracji, umiejscowienia czujników i warunków otoczenia."
+        ]
+      }
+    ]
+  }
 }
