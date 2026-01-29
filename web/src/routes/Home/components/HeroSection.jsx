@@ -1,17 +1,21 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
-import Badge from "./common/Badge";
-import Stat from "./common/Stat";
-import StoreButtons from "./common/StoreButtons";
+import phoneMock from "../../../assets/phone-reminders.png";
+
+// Official store banners (static for now)
+import googlePlayBannerEn from "../../../assets/GooglePlay_en.png";
+import iosStoreBannerEn from "../../../assets/iOSStore_en.svg";
+
 import "./HeroSection.css";
 
 export default function HeroSection() {
-  const { t } = useTranslation("home");
+  const { t, i18n } = useTranslation("home");
 
   const heroTitle = t("homeNew.hero.title", { defaultValue: "Flovers" });
   const heroSubtitle = t("homeNew.hero.subtitle", {
-    defaultValue: "A plant-care system built around reminders → tasks → completion, with optional QR shortcuts and IoT readings.",
+    defaultValue:
+      "A plant-care system built around reminders → tasks → completion, with optional QR shortcuts and IoT readings.",
   });
 
   const purpose = t("homeNew.hero.purpose", {
@@ -19,74 +23,59 @@ export default function HeroSection() {
       "Keep plant context (location, exposure, pot, soil), set sensible routines, and close tasks with notes — so the next decision is easier.",
   });
 
+  const lang = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
+  const googlePlayBanner = googlePlayBannerEn;
+  const iosStoreBanner = iosStoreBannerEn;
+
+  const googlePlayUrl = t("hero.cta.googlePlayUrl", { defaultValue: "" });
+  const appStoreUrl = t("hero.cta.appStoreUrl", { defaultValue: "" });
+
+  const isGooglePlayDisabled = !googlePlayUrl;
+  const isAppStoreDisabled = !appStoreUrl;
+
   return (
-    <section className="home-hero card">
+    <section className="home-hero card home-hero2">
       <div className="home-hero-bg" aria-hidden="true" />
+
+      {/* Phone overlap */}
+      <div className="home-hero-phone" aria-hidden="true">
+        <img src={phoneMock} alt="" className="home-hero-phone-img" loading="lazy" />
+      </div>
+
       <div className="home-hero-inner">
         <Reveal className="home-hero-left" y={14}>
-          <Badge>{t("homeNew.hero.badge", { defaultValue: "Plant care • Routines • QR • IoT" })}</Badge>
-
           <h1 className="home-hero-title">{heroTitle}</h1>
           <p className="home-hero-sub muted">{heroSubtitle}</p>
           <p className="home-hero-purpose">{purpose}</p>
 
-          <StoreButtons t={t} />
+          <div className="home-hero-stores" data-lang={lang}>
+            <a
+              className="home-store-badge"
+              href={isGooglePlayDisabled ? undefined : googlePlayUrl}
+              target={isGooglePlayDisabled ? undefined : "_blank"}
+              rel={isGooglePlayDisabled ? undefined : "noreferrer"}
+              aria-disabled={isGooglePlayDisabled ? "true" : "false"}
+              tabIndex={isGooglePlayDisabled ? -1 : 0}
+              onClick={(e) => {
+                if (isGooglePlayDisabled) e.preventDefault();
+              }}
+            >
+              <img className="home-store-badge-img" src={googlePlayBanner} alt="Get it on Google Play" />
+            </a>
 
-          <div className="home-hero-meta muted">
-            <span>{t("homeNew.hero.meta.android", { defaultValue: "Android available" })}</span>
-            <span className="home-dot">•</span>
-            <span>{t("homeNew.hero.meta.ios", { defaultValue: "iOS coming soon" })}</span>
-            <span className="home-dot">•</span>
-            <span>{t("homeNew.hero.meta.docs", { defaultValue: "Docs, privacy & support on web" })}</span>
-          </div>
-        </Reveal>
-
-        <Reveal className="home-hero-right" delay={0.06} y={14}>
-          <div className="home-hero-panel">
-            <div className="home-hero-panel-title">
-              {t("homeNew.hero.panelTitle", { defaultValue: "What Flovers helps you do" })}
-            </div>
-
-            <div className="home-hero-bullets">
-              <div className="home-bullet">
-                <span className="home-bullet-dot" />
-                <span>{t("homeNew.hero.b1", { defaultValue: "Turn routines into tasks you can finish." })}</span>
-              </div>
-              <div className="home-bullet">
-                <span className="home-bullet-dot" />
-                <span>{t("homeNew.hero.b2", { defaultValue: "Use plant definitions to choose better intervals." })}</span>
-              </div>
-              <div className="home-bullet">
-                <span className="home-bullet-dot" />
-                <span>{t("homeNew.hero.b3", { defaultValue: "Scan QR to jump straight to the right plant." })}</span>
-              </div>
-              <div className="home-bullet">
-                <span className="home-bullet-dot" />
-                <span>{t("homeNew.hero.b4", { defaultValue: "Optional sensors to confirm trends, not guess." })}</span>
-              </div>
-              <div className="home-bullet">
-                <span className="home-bullet-dot" />
-                <span>
-                  {t("homeNew.hero.b5", { defaultValue: "Get email or push notifications when tasks are due." })}
-                </span>
-              </div>
-            </div>
-
-            {/* sticks to bottom of panel */}
-            <div className="home-stats">
-              <Stat
-                value={t("homeNew.hero.stat1.value", { defaultValue: "Tasks" })}
-                label={t("homeNew.hero.stat1.label", { defaultValue: "generated from routines" })}
-              />
-              <Stat
-                value={t("homeNew.hero.stat2.value", { defaultValue: "QR" })}
-                label={t("homeNew.hero.stat2.label", { defaultValue: "scan to open plant" })}
-              />
-              <Stat
-                value={t("homeNew.hero.stat3.value", { defaultValue: "IoT" })}
-                label={t("homeNew.hero.stat3.label", { defaultValue: "day/week/month charts" })}
-              />
-            </div>
+            <a
+              className="home-store-badge"
+              href={isAppStoreDisabled ? undefined : appStoreUrl}
+              target={isAppStoreDisabled ? undefined : "_blank"}
+              rel={isAppStoreDisabled ? undefined : "noreferrer"}
+              aria-disabled={isAppStoreDisabled ? "true" : "false"}
+              tabIndex={isAppStoreDisabled ? -1 : 0}
+              onClick={(e) => {
+                if (isAppStoreDisabled) e.preventDefault();
+              }}
+            >
+              <img className="home-store-badge-img" src={iosStoreBanner} alt="Download on the App Store" />
+            </a>
           </div>
         </Reveal>
       </div>
