@@ -1,8 +1,77 @@
 ﻿{
-    "docs_home":  {
-                      "sections":  [
-
-                                   ],
-                      "title":  ""
-                  }
+  "docs_home": {
+    "title": "Home",
+    "sections": [
+      {
+        "heading": "Cel widoku Home",
+        "body": [
+          "Home to główny ekran widoczny po poprawnym zalogowaniu.",
+          "Skupia się na codziennych działaniach: wyświetla Zadania generowane na podstawie Przypomnień, dzięki czemu szybko widać, co wymaga uwagi dziś lub co jest już zaległe.",
+          "Jeżeli nie ma żadnych zadań do wykonania, wyświetlana jest informacyjna kafelka z komunikatem o braku zaplanowanych zadań oraz sugestiami dalszych kroków, np. utworzenia przypomnień."
+        ]
+      },
+      {
+        "heading": "Lista zadań (kafelki generowane z przypomnień)",
+        "body": [
+          "Każdy kafelek reprezentuje pojedyncze Zadanie wygenerowane na podstawie definicji Przypomnienia (np. Podlewanie, Zraszanie, Nawożenie, Przesadzanie lub Pielęgnacja).",
+          "Zadania pojawiają się automatycznie, gdy stają się wymagane zgodnie z regułami cykliczności określonymi w Przypomnieniu.",
+          "Kafelek zwykle zawiera typ zadania, nazwę rośliny, lokalizację oraz status terminu (np. Na dziś lub Zaległe)."
+        ]
+      },
+      {
+        "heading": "Menu kafelka zadania (akcje dla pojedynczego zadania)",
+        "body": [
+          "Każde zadanie posiada menu kontekstowe (menu z trzema kropkami) zawierające akcje dotyczące konkretnego zadania.",
+          "Oznacz jako wykonane: zamyka zadanie i pozwala opcjonalnie dodać notatkę, co pomaga budować historię pielęgnacji.",
+          "Edytuj przypomnienie: otwiera Przypomnienie powiązane z zadaniem w celu zmiany ustawień cykliczności.",
+          "Przejdź do rośliny: przenosi do widoku Szczegóły rośliny przypisanej do zadania.",
+          "Pokaż historię: otwiera historię zadań pokazującą wcześniej wykonane zadania dla tej samej rośliny lub przypomnienia."
+        ]
+      },
+      {
+        "heading": "Przycisk FAB (szybkie akcje)",
+        "body": [
+          "Na ekranie Home dostępny jest przycisk FAB, który rozwija zestaw szybkich akcji do pracy z zadaniami.",
+          "Pokaż zaległe: stosuje szybki filtr wyświetlający tylko zadania zaległe.",
+          "Pokaż na dziś: stosuje szybki filtr wyświetlający zadania zaplanowane na dziś.",
+          "Sortuj: zmienia kolejność wyświetlania zadań na liście.",
+          "Filtruj: zawęża listę zadań według wybranych kryteriów.",
+          "Historia: przenosi do widoku Historia zadań, który jest dokumentowany osobno."
+        ]
+      },
+      {
+        "heading": "Opcje sortowania",
+        "body": [
+          "Sortowanie pozwala dopasować listę zadań do Twojego sposobu pracy.",
+          "Dostępne opcje sortowania to: Data wykonania (termin), Nazwa rośliny oraz Lokalizacja."
+        ]
+      },
+      {
+        "heading": "Opcje filtrowania",
+        "body": [
+          "Filtry pomagają skupić się na wybranej grupie zadań.",
+          "Zadania można filtrować według: Nazwy rośliny, Lokalizacji, Typu zadania oraz Zakresu dat wykonania.",
+          "Filtry można łączyć, np. aby wyświetlić tylko zadania Podlewania dla roślin w wybranej lokalizacji."
+        ]
+      },
+      {
+        "heading": "Zbiorcze zamykanie zadań (bulk)",
+        "body": [
+          "Zbiorcze zamykanie zadań jest dostępne podczas korzystania z widoków skrótowych: Pokaż zaległe lub Pokaż na dziś.",
+          "Gdy jeden z tych filtrów jest aktywny, przycisk FAB tymczasowo wyświetla dodatkową akcję, taką jak „Oznacz widoczne jako wykonane”.",
+          "Ta akcja zamyka wszystkie aktualnie widoczne zadania jednocześnie, bez konieczności ręcznego zaznaczania poszczególnych kafelków.",
+          "Zbiorcze zamykanie zostało zaprojektowane z myślą o sytuacjach, gdy wykonujesz tę samą czynność pielęgnacyjną dla wielu roślin w jednym czasie.",
+          "W zależności od wybranego przepływu, nadal może być możliwe dodanie notatek do zamkniętych zadań po wykonaniu akcji zbiorczej."
+        ]
+      },
+      {
+        "heading": "Nawigacja z ekranu Home",
+        "body": [
+          "Ekran Home umożliwia szybkie przechodzenie do innych części aplikacji poprzez akcje na kafelkach oraz skróty FAB.",
+          "Z poziomu pojedynczego zadania możesz przejść bezpośrednio do Szczegółów rośliny lub do historii zadań.",
+          "Z poziomu FAB możesz otworzyć Historię zadań lub zawęzić listę zadań za pomocą sortowania i filtrów."
+        ]
+      }
+    ]
+  }
 }

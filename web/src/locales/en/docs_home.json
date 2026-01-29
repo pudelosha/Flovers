@@ -1,8 +1,77 @@
 ﻿{
-    "docs_home":  {
-                      "sections":  [
-
-                                   ],
-                      "title":  ""
-                  }
+  "docs_home": {
+    "title": "Home",
+    "sections": [
+      {
+        "heading": "Purpose of the Home screen",
+        "body": [
+          "Home is the main screen you see after a successful login.",
+          "It focuses on your daily work: tasks generated from your reminders, so you can quickly see what needs attention today or what is already overdue.",
+          "If there are no due tasks, the screen displays an informational tile explaining that nothing is currently scheduled and suggesting next steps, such as creating reminders."
+        ]
+      },
+      {
+        "heading": "Task list (tiles generated from reminders)",
+        "body": [
+          "Each tile represents a single Task generated from a Reminder definition (for example: Watering, Misting, Fertilising, Repotting, or general Care).",
+          "Tasks appear automatically when they become due based on the recurrence rules defined in the Reminder.",
+          "Each tile typically shows the task type, plant name, location, and due status (such as Due today or Overdue)."
+        ]
+      },
+      {
+        "heading": "Task tile menu (per-task actions)",
+        "body": [
+          "Each task tile includes a context menu (three-dots menu) with actions related to that specific task.",
+          "Mark as complete: closes the task and allows you to optionally add a note, helping you build a detailed care history.",
+          "Edit reminder: opens the Reminder associated with the task so you can change its recurrence settings.",
+          "Go to plant: navigates directly to the Plant Details view for the related plant.",
+          "Show history: opens the task history showing previously completed tasks for the same plant or reminder."
+        ]
+      },
+      {
+        "heading": "Floating Action Button (FAB) shortcuts",
+        "body": [
+          "The Home screen includes a Floating Action Button (FAB) that opens quick actions for working with tasks.",
+          "Show overdue: applies a shortcut filter that displays only overdue tasks.",
+          "Show due today: applies a shortcut filter that displays tasks due today.",
+          "Sort: changes the ordering of tasks in the list.",
+          "Filter: narrows down the list based on selected criteria.",
+          "History: navigates to the Task History screen, which is documented separately."
+        ]
+      },
+      {
+        "heading": "Sorting options",
+        "body": [
+          "Sorting allows you to adjust the task list to match your preferred workflow.",
+          "Available sorting options include: Due date, Plant name, and Location."
+        ]
+      },
+      {
+        "heading": "Filtering options",
+        "body": [
+          "Filters help you focus on a specific subset of tasks.",
+          "You can filter tasks by Plant name, Location, Task type, and Due date range.",
+          "Multiple filters can be combined, for example to show only Watering tasks for plants in a specific location."
+        ]
+      },
+      {
+        "heading": "Bulk completion (closing multiple tasks)",
+        "body": [
+          "Bulk completion is available when using the quick shortcut views: Show overdue or Show due today.",
+          "When one of these shortcut filters is active, the Floating Action Button temporarily displays an additional action such as “Mark visible as complete”.",
+          "This action closes all currently visible tasks at once, without requiring manual selection of individual tasks.",
+          "Bulk completion is designed for situations where you perform the same care action for multiple plants in one session.",
+          "Depending on the flow you choose, you may still be able to add notes to completed tasks after the bulk action."
+        ]
+      },
+      {
+        "heading": "Navigation from Home",
+        "body": [
+          "The Home screen provides fast navigation to other parts of the app through task actions and FAB shortcuts.",
+          "From an individual task you can jump directly to Plant Details or task history.",
+          "From the FAB you can open Task History or refine the task list using sorting and filtering."
+        ]
+      }
+    ]
+  }
 }
