@@ -1,8 +1,63 @@
 ﻿{
-    "docs_scanner":  {
-                         "sections":  [
-
-                                      ],
-                         "title":  ""
-                     }
+  "docs_scanner": {
+    "title": "QR Scanner",
+    "sections": [
+      {
+        "heading": "What the Scanner is for",
+        "body": [
+          "The Scanner screen lets you scan Flovers QR codes that were generated earlier for your plants.",
+          "A typical workflow is to print the QR code and attach it to the plant pot, so you can quickly open the correct plant in the app later.",
+          "QR scanning is designed for convenience and fast navigation—no manual searching is needed."
+        ]
+      },
+      {
+        "heading": "Camera access requirement",
+        "body": [
+          "To use the QR Scanner, the Flovers app requires permission to access your device’s camera.",
+          "The camera is used only to scan QR codes in real time and is not used for recording video or taking photos outside the scanning process.",
+          "If camera permission is denied, the Scanner feature will not work until access is granted in the system settings of your device."
+        ]
+      },
+      {
+        "heading": "What a Flovers QR code contains",
+        "body": [
+          "A Flovers QR code contains a reference to Flovers and the ID of a specific Plant Instance in your account.",
+          "After the code is scanned and recognized correctly, the app performs a redirect to the corresponding plant.",
+          "The QR code is intended to work with your own plants stored in your account."
+        ]
+      },
+      {
+        "heading": "What happens after a successful scan",
+        "body": [
+          "After a successful scan in the Scanner screen, the app redirects you to Plant Details.",
+          "In Plant Details you can view the plant’s information, assigned tasks, and the latest sensor readings (if a device is linked).",
+          "This makes the Scanner a quick entry point to everything related to a specific plant."
+        ]
+      },
+      {
+        "heading": "Where to preview the QR code for a plant",
+        "body": [
+          "You can preview a plant’s QR code from the Plants list by opening the plant’s context menu (dropdown) and selecting the QR code option.",
+          "You can also view the QR code directly in Plant Details.",
+          "Both views provide quick access to the same QR code for the selected plant."
+        ]
+      },
+      {
+        "heading": "Saving or sending the QR code",
+        "body": [
+          "From both the Plants list and Plant Details, you can save the QR code to your phone.",
+          "You can also send the QR code to your e-mail address, for example to print it later or store it as a backup.",
+          "If you print QR codes, make sure they remain readable (good contrast, no wrinkles, no glare)."
+        ]
+      },
+      {
+        "heading": "Troubleshooting scan issues",
+        "body": [
+          "If a scan fails, try improving lighting and keeping the code flat and fully visible in the camera frame.",
+          "If the QR code is damaged or blurred, re-save or re-send it from the app and print a new copy.",
+          "If the code opens the wrong plant, verify that you selected the correct plant when generating or exporting the QR code."
+        ]
+      }
+    ]
+  }
 }

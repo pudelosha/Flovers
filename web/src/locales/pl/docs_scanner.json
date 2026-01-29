@@ -1,8 +1,63 @@
 ﻿{
-    "docs_scanner":  {
-                         "sections":  [
-
-                                      ],
-                         "title":  ""
-                     }
+  "docs_scanner": {
+    "title": "Skaner QR",
+    "sections": [
+      {
+        "heading": "Do czego służy Skaner",
+        "body": [
+          "Widok Skaner umożliwia skanowanie kodów QR wygenerowanych wcześniej dla roślin w Flovers.",
+          "Najczęstszy scenariusz to wydrukowanie kodu QR i umieszczenie go na doniczce, aby później szybko otwierać właściwą roślinę w aplikacji.",
+          "Skanowanie QR służy przede wszystkim wygodnej i szybkiej nawigacji — bez ręcznego wyszukiwania na liście."
+        ]
+      },
+      {
+        "heading": "Wymagany dostęp do aparatu",
+        "body": [
+          "Aby korzystać z funkcji Skanera QR, aplikacja Flovers wymaga zgody na dostęp do aparatu w telefonie.",
+          "Aparat jest wykorzystywany wyłącznie do skanowania kodów QR w czasie rzeczywistym i nie służy do nagrywania wideo ani wykonywania zdjęć poza tym procesem.",
+          "Jeżeli dostęp do aparatu zostanie odrzucony, funkcja Skanera nie będzie działać do momentu przyznania odpowiednich uprawnień w ustawieniach systemowych urządzenia."
+        ]
+      },
+      {
+        "heading": "Co zawiera kod QR w Flovers",
+        "body": [
+          "Kod QR w Flovers zawiera referencję do Flovers oraz identyfikator (ID) konkretnej Instancji rośliny w koncie użytkownika.",
+          "Po poprawnym zeskanowaniu kodu aplikacja rozpoznaje go i wykonuje przekierowanie do wskazanej rośliny.",
+          "Kody QR są przeznaczone głównie do pracy z własnymi roślinami zapisanymi w koncie."
+        ]
+      },
+      {
+        "heading": "Co dzieje się po poprawnym zeskanowaniu",
+        "body": [
+          "Po poprawnym zeskanowaniu kodu QR w widoku Skaner użytkownik jest automatycznie przekierowany do widoku Szczegóły rośliny (Plant Details).",
+          "W Szczegółach rośliny dostępne są informacje o roślinie, powiązane zadania oraz najnowsze odczyty (jeśli roślina jest połączona z urządzeniem).",
+          "Dzięki temu Skaner jest najszybszym sposobem przejścia do kompletnego widoku danej rośliny."
+        ]
+      },
+      {
+        "heading": "Gdzie podejrzeć kod QR rośliny",
+        "body": [
+          "Podgląd kodu QR jest dostępny na liście roślin w widoku Rośliny (Plants) — wystarczy otworzyć menu rozwijane dla wybranej rośliny i wybrać opcję kodu QR.",
+          "Kod QR można również wyświetlić bezpośrednio w widoku Szczegóły rośliny (Plant Details).",
+          "W obu miejscach wyświetlany jest ten sam kod QR przypisany do danej rośliny."
+        ]
+      },
+      {
+        "heading": "Zapis lub wysyłka kodu QR",
+        "body": [
+          "Zarówno z widoku Rośliny (Plants), jak i ze Szczegółów rośliny (Plant Details) można zapisać kod QR na telefonie.",
+          "Możliwe jest też wysłanie kodu QR na własny adres e-mail — np. w celu późniejszego wydruku lub zachowania kopii zapasowej.",
+          "Podczas drukowania zadbaj o czytelność kodu (dobry kontrast, brak zagięć, brak odbić światła)."
+        ]
+      },
+      {
+        "heading": "Rozwiązywanie problemów ze skanowaniem",
+        "body": [
+          "Jeśli skanowanie nie działa, spróbuj poprawić oświetlenie i upewnij się, że kod jest płaski i w całości widoczny w kadrze aparatu.",
+          "Jeżeli kod jest uszkodzony lub rozmazany, zapisz go ponownie z aplikacji lub wyślij na e-mail i wydrukuj nową kopię.",
+          "Jeśli kod otwiera niewłaściwą roślinę, upewnij się, że podczas zapisu lub eksportu wybrano właściwą roślinę."
+        ]
+      }
+    ]
+  }
 }
