@@ -1,8 +1,46 @@
 ﻿{
-    "docs_profile":  {
-                         "sections":  [
-
-                                      ],
-                         "title":  ""
-                     }
+  "docs_profile": {
+    "title": "Profil",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Profil jest centralnym miejscem do zarządzania danymi konta, ustawieniami powiadomień, konfiguracją aplikacji oraz wsparciem.",
+          "Umożliwia użytkownikowi kontrolę zarówno nad danymi osobistymi, jak i zachowaniem aplikacji Flovers."
+        ]
+      },
+      {
+        "heading": "Konto",
+        "body": [
+          "Sekcja Konto wyświetla podstawowe informacje o koncie, takie jak adres e-mail oraz data utworzenia konta.",
+          "Z tego miejsca użytkownik może zmienić adres e-mail (wymagane jest potwierdzenie hasłem), zmienić aktualne hasło, wylogować się lub trwale usunąć konto.",
+          "Usunięcie konta powoduje nieodwracalne skasowanie wszystkich danych użytkownika, w tym roślin, przypomnień, zadań, odczytów i urządzeń."
+        ]
+      },
+      {
+        "heading": "Powiadomienia",
+        "body": [
+          "Sekcja Powiadomienia umożliwia zarządzanie zgodami oraz preferencjami dla powiadomień e-mail i push.",
+          "Dla obu kanałów użytkownik może włączyć lub wyłączyć dwa typy powiadomień: dzienne podsumowanie informujące o zadaniach zaplanowanych na dziś oraz przypomnienie wysyłane 24 godziny później, jeśli zadania nadal nie zostały wykonane.",
+          "Dla każdego typu powiadomienia użytkownik określa godzinę wysyłki (pełna godzina, np. 14:00)."
+        ]
+      },
+      {
+        "heading": "Ustawienia",
+        "body": [
+          "Sekcja Ustawienia pozwala kontrolować ogólne zachowanie i wygląd aplikacji.",
+          "Dostępne opcje obejmują wybór języka, format daty i czasu, jednostki temperatury (Celsjusz, Fahrenheit, Kelvin), jednostki miary (metryczne lub imperialne) oraz pozycję przycisku FAB (lewa lub prawa strona).",
+          "Użytkownik może także dostosować wygląd aplikacji, wybierając obraz tła, motyw kafelków (jasny lub ciemny) oraz poziom przezroczystości kafelków."
+        ]
+      },
+      {
+        "heading": "Wsparcie",
+        "body": [
+          "Sekcja Wsparcie umożliwia bezpośredni kontakt z zespołem Flovers.",
+          "Użytkownik może zgłosić problem lub wysłać zapytanie do zespołu wsparcia technicznego.",
+          "Zgłaszanie błędów pomaga w dalszym rozwoju i poprawie jakości aplikacji."
+        ]
+      }
+    ]
+  }
 }

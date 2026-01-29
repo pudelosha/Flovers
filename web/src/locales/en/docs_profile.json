@@ -1,8 +1,46 @@
 ﻿{
-    "docs_profile":  {
-                         "sections":  [
-
-                                      ],
-                         "title":  ""
-                     }
+  "docs_profile": {
+    "title": "Profile",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Profile screen is the central place to manage account information, notification preferences, application settings, and support options.",
+          "It allows the user to control both personal data and how the Flovers app behaves on a daily basis."
+        ]
+      },
+      {
+        "heading": "Account",
+        "body": [
+          "The Account section displays basic account information such as the registered email address and account creation date.",
+          "From this section, the user can change the email address (confirmation with the current password is required), change the current password, log out, or permanently delete the account.",
+          "Deleting the account results in irreversible removal of all user data, including plants, reminders, tasks, readings, and devices."
+        ]
+      },
+      {
+        "heading": "Notifications",
+        "body": [
+          "The Notifications section allows the user to manage consent and preferences for email and push notifications.",
+          "For both email and push notifications, the user can enable or disable two notification types: a daily summary informing whether there are tasks due today, and a reminder notification sent if tasks remain outstanding 24 hours after the first notification.",
+          "For each notification type, the user selects the time of delivery (full-hour format, e.g. 14:00)."
+        ]
+      },
+      {
+        "heading": "Settings",
+        "body": [
+          "The Settings section controls general application behavior and appearance.",
+          "Available options include language selection, date and time format, temperature units (Celsius, Fahrenheit, Kelvin), measurement units (metric or imperial), and Floating Action Button (FAB) position (left or right).",
+          "The user can also customize the app appearance by selecting a background image, tile theme (light or dark), and tile transparency level."
+        ]
+      },
+      {
+        "heading": "Support",
+        "body": [
+          "The Support section provides direct access to assistance from the Flovers team.",
+          "The user can contact support for help or report a bug directly from this screen.",
+          "Reporting issues helps improve the stability and quality of the application."
+        ]
+      }
+    ]
+  }
 }
