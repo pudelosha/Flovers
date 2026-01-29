@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
 import phoneMock from "../../../assets/phone-reminders.png";
 
-// Official store banners (static for now)
+// Store badges (language variants)
 import googlePlayBannerEn from "../../../assets/GooglePlay_en.png";
+import googlePlayBannerPl from "../../../assets/GooglePlay_pl.png";
 import iosStoreBannerEn from "../../../assets/iOSStore_en.svg";
+import iosStoreBannerPl from "../../../assets/iOSStore_pl.svg";
 
 import "./HeroSection.css";
 
@@ -13,19 +15,22 @@ export default function HeroSection() {
   const { t, i18n } = useTranslation("home");
 
   const heroTitle = t("homeNew.hero.title", { defaultValue: "Flovers" });
+
   const heroSubtitle = t("homeNew.hero.subtitle", {
-    defaultValue:
-      "A plant-care system built around reminders → tasks → completion, with optional QR shortcuts and IoT readings.",
+    defaultValue: "Care for your plants with clarity, routines, and history.",
   });
 
   const purpose = t("homeNew.hero.purpose", {
     defaultValue:
-      "Keep plant context (location, exposure, pot, soil), set sensible routines, and close tasks with notes — so the next decision is easier.",
+      "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details.",
   });
 
-  const lang = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
-  const googlePlayBanner = googlePlayBannerEn;
-  const iosStoreBanner = iosStoreBannerEn;
+  // Language handling (supports "pl", "en", and variants like "pl-PL")
+  const lng = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
+  const isPl = lng.startsWith("pl");
+
+  const googlePlayBanner = isPl ? googlePlayBannerPl : googlePlayBannerEn;
+  const iosStoreBanner = isPl ? iosStoreBannerPl : iosStoreBannerEn;
 
   const googlePlayUrl = t("hero.cta.googlePlayUrl", { defaultValue: "" });
   const appStoreUrl = t("hero.cta.appStoreUrl", { defaultValue: "" });
@@ -37,7 +42,6 @@ export default function HeroSection() {
     <section className="home-hero card home-hero2">
       <div className="home-hero-bg" aria-hidden="true" />
 
-      {/* Phone overlap */}
       <div className="home-hero-phone" aria-hidden="true">
         <img src={phoneMock} alt="" className="home-hero-phone-img" loading="lazy" />
       </div>
@@ -48,7 +52,7 @@ export default function HeroSection() {
           <p className="home-hero-sub muted">{heroSubtitle}</p>
           <p className="home-hero-purpose">{purpose}</p>
 
-          <div className="home-hero-stores" data-lang={lang}>
+          <div className="home-hero-stores" data-lang={lng}>
             <a
               className="home-store-badge"
               href={isGooglePlayDisabled ? undefined : googlePlayUrl}
@@ -60,7 +64,7 @@ export default function HeroSection() {
                 if (isGooglePlayDisabled) e.preventDefault();
               }}
             >
-              <img className="home-store-badge-img" src={googlePlayBanner} alt="Get it on Google Play" />
+              <img className="home-store-badge-img" src={googlePlayBanner} alt={t("homeNew.store.google.alt")} />
             </a>
 
             <a
@@ -74,7 +78,7 @@ export default function HeroSection() {
                 if (isAppStoreDisabled) e.preventDefault();
               }}
             >
-              <img className="home-store-badge-img" src={iosStoreBanner} alt="Download on the App Store" />
+              <img className="home-store-badge-img" src={iosStoreBanner} alt={t("homeNew.store.apple.alt")} />
             </a>
           </div>
         </Reveal>

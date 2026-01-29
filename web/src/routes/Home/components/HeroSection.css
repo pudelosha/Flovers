@@ -1,38 +1,35 @@
-/* ---------- HERO (starting from your "ok" version, corrected) ---------- */
+/* ===== HERO (match global .card styling) ===== */
 
 .home-hero2 {
   position: relative;
 
-  /* You need space above the main tile */
+  padding: 40px !important;
+
+  /* space below sticky topbar (topbar is 72px) */
   margin-top: 80px;
 
-  /* Keep clipping for background, but allow phone to stick out above */
+  /* needed so the phone can protrude above the card */
   overflow: visible;
-
-  padding: 30px;
-
-  /* Force rounded corners for this tile (your .card doesn't define it) */
-  border-radius: 28px;
 }
 
-/* Background stays inside rounded corners */
+/* Gradient overlay INSIDE the card edge (no inset tricks) */
 .home-hero-bg {
   position: absolute;
-  inset: -2px;
+  inset: 0;
   border-radius: inherit;
 
   background:
     radial-gradient(800px 380px at 15% 10%, rgba(26,166,160,0.30), transparent 62%),
     radial-gradient(900px 420px at 85% 0%, rgba(10,113,132,0.28), transparent 60%),
-    radial-gradient(900px 520px at 50% 115%, rgba(255,255,255,0.10), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    radial-gradient(900px 520px at 50% 115%, rgba(255,255,255,0.10), transparent 55%);
+
   pointer-events: none;
 }
 
-/* Keep content above background */
 .home-hero-inner {
   position: relative;
   z-index: 1;
+
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
@@ -47,9 +44,9 @@
   }
 }
 
-/* Title/sub/purpose keep your previous values */
+/* Title/sub/purpose */
 .home-hero-title {
-  margin: 0;
+  margin: 0 0 30px; /* bottom margin */
   font-size: 56px;
   font-weight: 950;
   letter-spacing: -1.2px;
@@ -75,28 +72,19 @@
   line-height: 1.65;
 }
 
-/* ---------- Phone overlap (blue over red effect) ---------- */
-/*
-  Requirements:
-  - sticks ABOVE the tile
-  - not too high
-  - has space beneath (doesn't stick to bottom)
-*/
+/* Phone overlap */
 .home-hero-phone {
   position: absolute;
   right: 26px;
 
-  /* slightly above the tile top */
+  /* protrude above card */
   top: -100px;
 
-  /* make it large and dominant, but controlled */
-  width: 320px;
-
+  width: 370px;
   z-index: 3;
   pointer-events: none;
 }
 
-/* Add bottom breathing room by not anchoring to bottom at all */
 .home-hero-phone-img {
   width: 100%;
   height: auto;
@@ -104,26 +92,21 @@
   filter: drop-shadow(0 28px 80px rgba(0,0,0,0.55));
 }
 
-/* Hide phone on smaller screens */
 @media (max-width: 980px) {
   .home-hero-phone {
     display: none;
   }
 }
 
-/* ---------- Official store badges (NO frames, same height, even placement) ---------- */
-
+/* Store badges: no frames */
 .home-hero-stores {
   margin-top: 16px;
-
-  /* badges are typically placed side-by-side, not stretched */
   display: flex;
   gap: 18px;
   align-items: center;
   flex-wrap: wrap;
 }
 
-/* No container styling around the official artwork */
 .home-store-badge {
   display: inline-flex;
   align-items: center;
@@ -144,7 +127,6 @@
   cursor: not-allowed;
 }
 
-/* Same visible height; preserve aspect ratio; do NOT stretch to width */
 .home-store-badge-img {
   height: 60px;
   width: auto;
@@ -153,7 +135,6 @@
   max-width: none;
 }
 
-/* stack neatly on very small screens */
 @media (max-width: 520px) {
   .home-store-badge-img {
     height: 58px;

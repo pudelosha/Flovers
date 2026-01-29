@@ -1,26 +1,23 @@
 {
-  "hero": {
-    "title": "Flovers",
-    "subtitle": "A simple landing page for the mobile app with access to documents, security information, and support.",
-    "cta": {
-      "googlePlay": "Google Play (coming soon)",
-      "appStore": "iOS (coming soon)",
-      "googlePlayUrl": "#",
-      "appStoreUrl": "#"
+  "homeNew": {
+    "hero": {
+      "title": "Flovers",
+      "subtitle": "Care for your plants with clarity, routines, and history.",
+      "purpose": "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details."
+    },
+    "store": {
+      "google": {
+        "alt": "Get it on Google Play"
+      },
+      "apple": {
+        "alt": "Download on the App Store"
+      }
     }
   },
-  "tiles": {
-    "value": {
-      "title": "Why Flovers?",
-      "text": "An application designed for simplicity, clarity, and comfortable everyday use."
-    },
-    "security": {
-      "title": "Security",
-      "text": "We care about privacy and data protection. Details are available in the Privacy Policy."
-    },
-    "support": {
-      "title": "Support",
-      "text": "Need help? Check the FAQ, documentation, or contact us directly."
+  "hero": {
+    "cta": {
+      "googlePlayUrl": "",
+      "appStoreUrl": ""
     }
   }
 }

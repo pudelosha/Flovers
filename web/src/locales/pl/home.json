@@ -1,26 +1,23 @@
 {
-  "hero": {
-    "title": "Flovers",
-    "subtitle": "Prosta wizytówka aplikacji mobilnej z dostępem do dokumentów, informacji o bezpieczeństwie oraz wsparcia.",
-    "cta": {
-      "googlePlay": "Google Play (wkrótce)",
-      "appStore": "iOS (wkrótce)",
-      "googlePlayUrl": "#",
-      "appStoreUrl": "#"
+  "homeNew": {
+    "hero": {
+      "title": "Flovers",
+      "subtitle": "Dbaj o rośliny z jasnym planem, rutynami i historią.",
+      "purpose": "Dodaj swoje rośliny, powiąż definicje gatunków dla wskazówek, ustaw cykliczne przypomnienia i śledź historię pielęgnacji — opcjonalnie monitoruj odczyty czujników na żywo lub korzystaj z kodów QR do szybkiego dostępu."
+    },
+    "store": {
+      "google": {
+        "alt": "Pobierz z Google Play"
+      },
+      "apple": {
+        "alt": "Pobierz z App Store"
+      }
     }
   },
-  "tiles": {
-    "value": {
-      "title": "Dlaczego Flovers?",
-      "text": "Aplikacja zaprojektowana z myślą o prostocie, przejrzystości i codziennym komforcie użytkowania."
-    },
-    "security": {
-      "title": "Bezpieczeństwo",
-      "text": "Dbamy o prywatność i bezpieczeństwo danych. Szczegóły znajdziesz w polityce prywatności."
-    },
-    "support": {
-      "title": "Wsparcie",
-      "text": "Potrzebujesz pomocy? Skorzystaj z FAQ, dokumentacji lub skontaktuj się z nami bezpośrednio."
+  "hero": {
+    "cta": {
+      "googlePlayUrl": "",
+      "appStoreUrl": ""
     }
   }
 }
