@@ -1,8 +1,71 @@
 ﻿{
-    "docs_plant_details":  {
-                               "sections":  [
-
-                                            ],
-                               "title":  ""
-                           }
+  "docs_plant_details": {
+    "title": "Plant details",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Plant Details screen is the central place to view and manage a single plant instance created by the user.",
+          "It combines plant-specific information, reminders, task actions, sensor readings (if available), and quick navigation tools related to that plant."
+        ]
+      },
+      {
+        "heading": "Plant information",
+        "body": [
+          "At the top of the screen, the user can see the plant image, plant name, optional plant definition name, and assigned location.",
+          "Below the image, detailed parameters provided during plant creation are displayed, such as purchase date, notes, light conditions, orientation, distance from window, pot type, and soil type.",
+          "These details help contextualize reminders, readings, and plant care decisions."
+        ]
+      },
+      {
+        "heading": "Plant-level actions (3-dot menu)",
+        "body": [
+          "The 3-dot menu associated with the plant header provides additional actions related to the plant itself.",
+          "Available actions include viewing the Plant Definition (if the plant is linked to one), editing plant details, changing the plant image, and navigating to Reminders filtered for this plant.",
+          "Changing the image allows replacing a predefined image, adding a user photo from the phone, or removing the image."
+        ]
+      },
+      {
+        "heading": "Plant Definition",
+        "body": [
+          "If the plant is linked to a Plant Definition from the Flovers database, the user can open a dedicated Plant Definition view.",
+          "This view displays species-level information such as plant description, care preferences, traits, difficulty level, temperature range, humidity, toxicity, and growth characteristics.",
+          "Plant Definitions provide general guidance and should be interpreted in the context of the user’s actual environment."
+        ]
+      },
+      {
+        "heading": "Reminders and tasks",
+        "body": [
+          "The Reminders section shows all active reminders associated with this plant.",
+          "Each reminder can be accessed via its own 3-dot menu, allowing the user to complete tasks, edit the reminder, or view task history.",
+          "Completing a task may include adding a note, which becomes part of the plant’s care history."
+        ]
+      },
+      {
+        "heading": "Latest readings",
+        "body": [
+          "If the plant is linked to a reading device, the latest sensor readings are displayed directly on this screen.",
+          "Supported readings include air temperature, air humidity, light level, and soil moisture.",
+          "This section shows the most recent values along with the timestamp of the last received reading.",
+          "Tapping the readings tile redirects you to the Readings History screen, where detailed charts and summaries (daily/weekly/monthly) are shown for temperature, humidity, light, and soil moisture (as long as a device is linked to the plant)."
+        ]
+      },
+      {
+        "heading": "QR code and quick access",
+        "body": [
+          "Each plant has a unique QR code displayed at the bottom of the screen.",
+          "Scanning this code using the Scanner view redirects the user directly to this Plant Details screen.",
+          "The QR code can be saved to the device or emailed, making it easy to print and attach to a plant pot for quick access."
+        ]
+      },
+      {
+        "heading": "Important notes",
+        "body": [
+          "User-added plant images are stored only on the user’s device and are not uploaded to the Flovers backend.",
+          "Predefined plant images come from the Flovers backend and may be AI-generated.",
+          "Sensor readings and care suggestions are informative and should be combined with the user’s own judgment."
+        ]
+      }
+    ]
+  }
 }

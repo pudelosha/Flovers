@@ -1,8 +1,71 @@
 ﻿{
-    "docs_plant_details":  {
-                               "sections":  [
-
-                                            ],
-                               "title":  ""
-                           }
+  "docs_plant_details": {
+    "title": "Szczegóły rośliny",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Szczegóły rośliny jest centralnym miejscem do przeglądania i zarządzania pojedynczą rośliną utworzoną przez użytkownika.",
+          "Łączy on informacje o roślinie, przypisane przypomnienia, zadania, odczyty z czujników (jeśli są dostępne) oraz szybkie akcje związane z tą rośliną."
+        ]
+      },
+      {
+        "heading": "Informacje o roślinie",
+        "body": [
+          "W górnej części ekranu wyświetlany jest obraz rośliny, jej nazwa, opcjonalna nazwa definicji rośliny oraz przypisana lokalizacja.",
+          "Poniżej prezentowane są szczegółowe parametry podane podczas tworzenia rośliny, takie jak data zakupu, notatki, warunki oświetlenia, orientacja, odległość od okna, typ doniczki oraz rodzaj podłoża.",
+          "Informacje te pomagają lepiej interpretować przypomnienia, odczyty i decyzje dotyczące pielęgnacji."
+        ]
+      },
+      {
+        "heading": "Akcje na poziomie rośliny (menu 3-kropki)",
+        "body": [
+          "Menu 3-kropki powiązane z nagłówkiem rośliny udostępnia dodatkowe akcje dotyczące samej rośliny.",
+          "Dostępne opcje obejmują wyświetlenie Definicji rośliny (jeśli roślina jest z nią powiązana), edycję danych rośliny, zmianę obrazu oraz przejście do Przypomnień przefiltrowanych dla tej rośliny.",
+          "Zmiana obrazu umożliwia zastąpienie obrazu domyślnego, dodanie własnego zdjęcia z telefonu lub usunięcie obrazu."
+        ]
+      },
+      {
+        "heading": "Definicja rośliny",
+        "body": [
+          "Jeśli roślina jest powiązana z Definicją rośliny z bazy Flovers, użytkownik może otworzyć dedykowany widok Definicji.",
+          "Widok ten prezentuje informacje gatunkowe, takie jak opis rośliny, preferencje pielęgnacyjne, cechy, poziom trudności, zakres temperatur, wilgotność, toksyczność oraz charakter wzrostu.",
+          "Definicje roślin dostarczają ogólnych wskazówek i powinny być interpretowane w kontekście rzeczywistych warunków użytkownika."
+        ]
+      },
+      {
+        "heading": "Przypomnienia i zadania",
+        "body": [
+          "Sekcja Przypomnienia wyświetla wszystkie aktywne przypomnienia przypisane do danej rośliny.",
+          "Każde przypomnienie posiada własne menu 3-kropki, umożliwiające zamknięcie zadania, edycję przypomnienia lub wyświetlenie historii zadań.",
+          "Podczas zamykania zadania użytkownik może dodać notatkę, która staje się częścią historii pielęgnacji rośliny."
+        ]
+      },
+      {
+        "heading": "Najnowsze odczyty",
+        "body": [
+          "Jeśli roślina jest powiązana z urządzeniem pomiarowym, w tym widoku wyświetlane są najnowsze odczyty z czujników.",
+          "Obsługiwane odczyty obejmują temperaturę powietrza, wilgotność powietrza, poziom światła oraz wilgotność gleby.",
+          "Sekcja pokazuje ostatnie wartości wraz z informacją o czasie wykonania pomiaru.",
+          "Dotknięcie kafelka z odczytami przenosi użytkownika do widoku Historia odczytów, gdzie prezentowane są szczegółowe wykresy i podsumowania (dziennie/tygodniowo/miesięcznie) dla temperatury, wilgotności, światła oraz wilgotności gleby (o ile urządzenie jest powiązane z rośliną)."
+        ]
+      },
+      {
+        "heading": "Kod QR i szybki dostęp",
+        "body": [
+          "Każda roślina posiada unikalny kod QR wyświetlany na dole ekranu.",
+          "Zeskanowanie tego kodu w widoku Skanera powoduje bezpośrednie przejście do widoku Szczegóły rośliny.",
+          "Kod QR można zapisać na urządzeniu lub wysłać e-mailem, co umożliwia jego wydrukowanie i umieszczenie na doniczce."
+        ]
+      },
+      {
+        "heading": "Ważne informacje",
+        "body": [
+          "Zdjęcia dodane przez użytkownika są przechowywane wyłącznie na urządzeniu użytkownika i nie są zapisywane w backendzie Flovers.",
+          "Obrazy domyślne roślin pochodzą z backendu Flovers i mogą być generowane przy użyciu AI.",
+          "Odczyty z czujników oraz sugerowane działania mają charakter informacyjny i powinny być łączone z własną oceną użytkownika."
+        ]
+      }
+    ]
+  }
 }
