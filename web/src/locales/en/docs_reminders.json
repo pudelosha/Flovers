@@ -1,8 +1,71 @@
 ﻿{
-    "docs_reminders":  {
-                           "sections":  [
-
-                                        ],
-                           "title":  ""
-                       }
+  "docs_reminders": {
+    "title": "Reminders",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Reminders screen is where you manage recurring care schedules for your plants.",
+          "A reminder defines what should be done (task type), how often it repeats (interval), and which plant it belongs to. Based on that, Flovers generates tasks automatically over time."
+        ]
+      },
+      {
+        "heading": "Two views: Reminder list and Calendar",
+        "body": [
+          "This screen has two modes: a list of reminders and a calendar view.",
+          "You can switch between them by swiping left/right or by using the Floating Action Button (FAB) option that changes the view.",
+          "Both views show the same data, just presented differently depending on whether you want a quick list or a schedule overview."
+        ]
+      },
+      {
+        "heading": "Reminder list view",
+        "body": [
+          "In the list view, each tile represents a single reminder created by the user.",
+          "The tile shows the task type (icon and name), the plant name, the location (if assigned), how often it repeats, and when it is due next.",
+          "This view is the fastest way to review all recurring rules currently active in your account."
+        ]
+      },
+      {
+        "heading": "Reminder tile actions (Edit / Delete)",
+        "body": [
+          "Each reminder tile provides two actions: Edit and Delete.",
+          "Edit lets you change reminder parameters such as interval, task type, associated plant, and other reminder settings (depending on the reminder type).",
+          "Delete removes the reminder permanently. In practice, this also means tasks will no longer be generated from that reminder going forward."
+        ]
+      },
+      {
+        "heading": "Calendar view",
+        "body": [
+          "In calendar view, reminders are visualized as scheduled items on calendar days.",
+          "To see details for a specific date, tap a day in the calendar; scheduled items for that day will appear below the calendar.",
+          "The calendar uses visual markers to indicate which task types appear on a given day, helping you see routine distribution at a glance."
+        ]
+      },
+      {
+        "heading": "FAB actions",
+        "body": [
+          "The Floating Action Button (FAB) provides quick actions for managing reminders and navigation between the two views.",
+          "Available actions include: Add reminder, change view (List/Calendar), Sort, and Filter.",
+          "Sorting can be applied by due date, plant name, or location.",
+          "Filtering can be applied by plant name, location, task type, and due date range."
+        ]
+      },
+      {
+        "heading": "How reminders generate tasks (general logic)",
+        "body": [
+          "A reminder is a recurring rule (for example: Water every 7 days).",
+          "Flovers generates tasks from reminders and presents them on the Home screen as actionable items.",
+          "When a task is completed, the next one is scheduled according to the reminder interval (so the routine continues automatically)."
+        ]
+      },
+      {
+        "heading": "Notes and practical tips",
+        "body": [
+          "Reminders help you stay consistent, but they do not guarantee plant health—real conditions may require adjusting intervals.",
+          "If you change your environment (season, light, substrate, pot size), consider updating reminders to match the new conditions.",
+          "If you want to manage already completed tasks and notes, use the Task History screen (documented separately)."
+        ]
+      }
+    ]
+  }
 }

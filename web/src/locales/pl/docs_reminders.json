@@ -1,8 +1,71 @@
 ﻿{
-    "docs_reminders":  {
-                           "sections":  [
-
-                                        ],
-                           "title":  ""
-                       }
+  "docs_reminders": {
+    "title": "Przypomnienia",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Przypomnienia służy do zarządzania cyklicznymi harmonogramami pielęgnacji roślin.",
+          "Przypomnienie określa co ma być wykonane (typ zadania), jak często ma się powtarzać (interwał) oraz do której rośliny jest przypisane. Na tej podstawie Flovers automatycznie generuje zadania w czasie."
+        ]
+      },
+      {
+        "heading": "Dwa widoki: lista przypomnień i kalendarz",
+        "body": [
+          "Ten ekran ma dwa tryby: listę przypomnień oraz widok kalendarza.",
+          "Możesz przełączać się pomiędzy nimi przesuwając ekran w lewo/prawo lub wybierając zmianę widoku z menu FAB.",
+          "Oba widoki prezentują te same dane, ale w inny sposób — w zależności od tego, czy chcesz szybko przejrzeć reguły, czy zobaczyć plan w czasie."
+        ]
+      },
+      {
+        "heading": "Widok listy przypomnień",
+        "body": [
+          "W widoku listy każda kafelka reprezentuje jedno przypomnienie utworzone przez użytkownika.",
+          "Kafelka pokazuje typ zadania (ikona i nazwa), nazwę rośliny, lokalizację (jeśli przypisana), informację o częstotliwości oraz termin najbliższego wykonania.",
+          "To najszybszy sposób, aby przejrzeć wszystkie aktywne reguły cykliczne na koncie."
+        ]
+      },
+      {
+        "heading": "Akcje na kafelku przypomnienia (Edytuj / Usuń)",
+        "body": [
+          "Każde przypomnienie posiada dwie akcje: Edytuj oraz Usuń.",
+          "Edycja pozwala zmienić parametry przypomnienia, takie jak interwał, typ zadania, powiązana roślina i inne ustawienia (w zależności od rodzaju przypomnienia).",
+          "Usunięcie przypomnienia jest trwałe i powoduje, że zadania nie będą już generowane z tej reguły w przyszłości."
+        ]
+      },
+      {
+        "heading": "Widok kalendarza",
+        "body": [
+          "W widoku kalendarza przypomnienia są prezentowane jako zaplanowane pozycje na konkretnych dniach.",
+          "Aby zobaczyć szczegóły, kliknij dzień w kalendarzu — zaplanowane pozycje dla tego dnia pojawią się pod kalendarzem.",
+          "Kalendarz używa znaczników kolorystycznych/ikon, aby wskazać typy zadań zaplanowane na dany dzień i ułatwić ocenę rozkładu obowiązków."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "Przycisk FAB udostępnia szybkie akcje związane z przypomnieniami oraz zmianą widoku.",
+          "Dostępne opcje to: Dodaj przypomnienie, zmiana widoku (Lista/Kalendarz), Sortuj oraz Filtruj.",
+          "Sortowanie może odbywać się według terminu (due date), nazwy rośliny lub lokalizacji.",
+          "Filtrowanie może obejmować: nazwę rośliny, lokalizację, typ zadania oraz zakres dat (due date range)."
+        ]
+      },
+      {
+        "heading": "Jak przypomnienia generują zadania (ogólna logika)",
+        "body": [
+          "Przypomnienie jest cykliczną regułą (np. Podlej co 7 dni).",
+          "Na podstawie przypomnień Flovers generuje zadania i prezentuje je na ekranie Home jako elementy do wykonania.",
+          "Po zamknięciu zadania kolejne jest planowane zgodnie z interwałem przypomnienia (dzięki temu rutyna jest kontynuowana automatycznie)."
+        ]
+      },
+      {
+        "heading": "Uwagi i wskazówki praktyczne",
+        "body": [
+          "Przypomnienia pomagają utrzymać regularność, ale nie gwarantują zdrowia roślin — rzeczywiste warunki mogą wymagać korekty interwałów.",
+          "Jeśli zmienią się warunki (pora roku, światło, podłoże, wielkość doniczki), rozważ aktualizację przypomnień.",
+          "Jeśli chcesz zarządzać zamkniętymi zadaniami i notatkami, użyj widoku Historia zadań (opisanego osobno)."
+        ]
+      }
+    ]
+  }
 }
