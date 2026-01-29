@@ -1,8 +1,88 @@
 ﻿{
-    "docs_readings":  {
-                          "sections":  [
-
-                                       ],
-                          "title":  ""
-                      }
+  "docs_readings": {
+    "title": "Odczyty",
+    "sections": [
+      {
+        "heading": "Cel tego widoku",
+        "body": [
+          "Widok Odczyty umożliwia przeglądanie i zarządzanie urządzeniami IoT powiązanymi z roślinami.",
+          "Każde urządzenie może przesyłać do Flovers pomiary takie jak temperatura powietrza, wilgotność powietrza, poziom światła oraz wilgotność gleby.",
+          "Funkcjonalność ta jest przeznaczona dla użytkowników budujących własne urządzenia (np. na bazie Arduino lub ESP) w celu monitorowania warunków roślin."
+        ]
+      },
+      {
+        "heading": "Kafelki urządzeń i ostatnie odczyty",
+        "body": [
+          "Na ekranie wyświetlana jest lista kafelków, gdzie każdy kafelek reprezentuje jedno powiązane urządzenie.",
+          "Każdy kafelek pokazuje nazwę rośliny, lokalizację oraz najnowsze odczyty z czujników.",
+          "Jeśli dane nie zostały jeszcze odebrane, zamiast wartości wyświetlane są symbole zastępcze."
+        ]
+      },
+      {
+        "heading": "Interakcje z kafelkiem",
+        "body": [
+          "Kliknięcie w obszar kafelka przenosi użytkownika bezpośrednio do widoku Historia odczytów dla danego urządzenia.",
+          "Kliknięcie w ikonę konkretnego parametru (np. wilgotność lub temperatura) otwiera Historię odczytów z wybranym tym parametrem.",
+          "Umożliwia to szybki dostęp do szczegółowych wykresów."
+        ]
+      },
+      {
+        "heading": "Akcje urządzenia (menu 3-kropki)",
+        "body": [
+          "Każdy kafelek urządzenia posiada menu 3-kropki z dodatkowymi akcjami.",
+          "Dostępne opcje to: Historia odczytów, Szczegóły rośliny, Edytuj urządzenie oraz Usuń urządzenie.",
+          "Usunięcie urządzenia jest trwałe i usuwa jego powiązanie z rośliną."
+        ]
+      },
+      {
+        "heading": "Historia odczytów",
+        "body": [
+          "Widok Historia odczytów prezentuje szczegółowe wykresy zebranych danych pomiarowych.",
+          "Dane mogą być wyświetlane w ujęciu dziennym, tygodniowym oraz miesięcznym.",
+          "Wykresy dostępne są dla temperatury powietrza, wilgotności powietrza, poziomu światła oraz wilgotności gleby (w zależności od urządzenia)."
+        ]
+      },
+      {
+        "heading": "Menu FAB",
+        "body": [
+          "Przycisk FAB udostępnia akcje związane z zarządzaniem urządzeniami.",
+          "Dostępne opcje to: Połącz urządzenie, Konfiguracja urządzenia, Sortuj oraz Filtruj.",
+          "Sortowanie może odbywać się według nazwy rośliny, lokalizacji lub czasu ostatniego odczytu.",
+          "Filtrowanie obejmuje nazwę rośliny, lokalizację oraz status urządzenia (aktywne, nieaktywne)."
+        ]
+      },
+      {
+        "heading": "Łączenie urządzenia",
+        "body": [
+          "Opcja Połącz urządzenie służy do dodania nowego urządzenia pomiarowego i przypisania go do rośliny.",
+          "Podczas konfiguracji wybierane są parametry wyświetlane na kafelku oraz opcjonalne alerty (np. niski poziom wilgotności gleby).",
+          "Każde urządzenie otrzymuje unikalny identyfikator urządzenia oraz tajny klucz urządzenia."
+        ]
+      },
+      {
+        "heading": "Autoryzacja urządzenia i przepływ danych",
+        "body": [
+          "Urządzenia autoryzują się przy użyciu identyfikatora urządzenia oraz tajnego klucza.",
+          "Do zapisywania odczytów nie jest wymagana autoryzacja użytkownika — dostęp kontrolowany jest wyłącznie przez dane urządzenia.",
+          "Takie podejście upraszcza integrację i komunikację IoT."
+        ]
+      },
+      {
+        "heading": "Konfiguracja urządzenia i dokumentacja",
+        "body": [
+          "Opcja Konfiguracja urządzenia udostępnia instrukcje techniczne dotyczące integracji sprzętu.",
+          "Zawiera informacje o endpointach API (POST do wysyłania odczytów, GET do ich pobierania), przykładowe payloady oraz ustawienia.",
+          "Użytkownik może pobrać pełną dokumentację, w tym przykładowy kod, schematy połączeń (Fritzing) oraz sugerowane czujniki."
+        ]
+      },
+      {
+        "heading": "Ważne informacje",
+        "body": [
+          "Stabilność urządzenia, kalibracja czujników oraz montaż fizyczny leżą po stronie użytkownika.",
+          "Odczyty z czujników mają charakter informacyjny i powinny być interpretowane razem z obserwacją roślin.",
+          "Flovers nie gwarantuje dokładności danych pochodzących z urządzeń zewnętrznych lub własnej konstrukcji."
+        ]
+      }
+    ]
+  }
 }

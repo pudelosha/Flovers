@@ -1,8 +1,88 @@
 ﻿{
-    "docs_readings":  {
-                          "sections":  [
-
-                                       ],
-                          "title":  ""
-                      }
+  "docs_readings": {
+    "title": "Readings",
+    "sections": [
+      {
+        "heading": "Purpose of this screen",
+        "body": [
+          "The Readings screen allows you to view and manage IoT devices linked to your plants.",
+          "Each device can send environmental measurements such as air temperature, air humidity, light level, and soil moisture to Flovers.",
+          "This feature is designed for users who build or use their own devices (for example based on Arduino or ESP boards) and want to monitor plant conditions over time."
+        ]
+      },
+      {
+        "heading": "Device tiles and latest readings",
+        "body": [
+          "The screen displays a list of tiles, where each tile represents one linked device.",
+          "Each tile shows the plant name, location, and the latest readings received from the device.",
+          "If no data has been received yet, placeholders are shown instead of values."
+        ]
+      },
+      {
+        "heading": "Tile interactions",
+        "body": [
+          "Tapping the tile body navigates directly to the Readings History screen for that device.",
+          "Tapping a specific reading icon (for example humidity or temperature) opens the Readings History screen with that parameter preselected.",
+          "This allows quick access to detailed charts for a specific measurement."
+        ]
+      },
+      {
+        "heading": "Device actions (3-dot menu)",
+        "body": [
+          "Each device tile includes a 3-dot menu with additional actions.",
+          "Available options are: Readings history, Plant details, Edit device, and Delete device.",
+          "Deleting a device permanently removes it and its association with the plant."
+        ]
+      },
+      {
+        "heading": "Readings History",
+        "body": [
+          "The Readings History screen displays detailed charts for collected sensor data.",
+          "Data can be viewed with daily, weekly, and monthly aggregation.",
+          "Charts are available for air temperature, air humidity, light level, and soil moisture (depending on what the device provides)."
+        ]
+      },
+      {
+        "heading": "FAB actions",
+        "body": [
+          "The Floating Action Button (FAB) provides actions related to device management and configuration.",
+          "Available actions include: Link device, Device setup, Sort, and Filter.",
+          "Sorting can be applied by plant name, location, or last read time.",
+          "Filtering can be applied by plant name, location, and device status (enabled or disabled)."
+        ]
+      },
+      {
+        "heading": "Linking a device",
+        "body": [
+          "Link device is used to set up a new reading device and associate it with a plant.",
+          "During setup, you select which readings should be displayed on the tile and optionally configure alerts (for example for low soil moisture).",
+          "Each device is assigned a unique Device ID and a secret Device Key used for authorization."
+        ]
+      },
+      {
+        "heading": "Device authentication and data flow",
+        "body": [
+          "Devices authenticate using a Device ID and secret Device Key when sending readings to the backend.",
+          "No user authentication is required for inserting readings — authorization is handled entirely by the device credentials.",
+          "This design allows simple and lightweight IoT integrations."
+        ]
+      },
+      {
+        "heading": "Device setup and documentation",
+        "body": [
+          "The Device setup option provides technical guidance for configuring your hardware.",
+          "It includes API endpoints (POST for sending readings, GET for retrieving data), example payloads, and configuration details.",
+          "Users can download full documentation, including sample code, wiring diagrams, suggested sensors, and setup instructions for supported boards."
+        ]
+      },
+      {
+        "heading": "Important notes",
+        "body": [
+          "Device stability, calibration, and physical installation are the responsibility of the user.",
+          "Sensor readings are informative and should be interpreted together with real-world observation.",
+          "Flovers does not guarantee accuracy of third-party or self-built devices."
+        ]
+      }
+    ]
+  }
 }
