@@ -1,8 +1,94 @@
 ﻿{
-    "docs_create_plant_wizard":  {
-                                     "sections":  [
-
-                                                  ],
-                                     "title":  ""
-                                 }
+  "docs_create_plant_wizard": {
+    "title": "Kreator dodawania rośliny",
+    "sections": [
+      {
+        "heading": "Cel tego procesu",
+        "body": [
+          "Kreator dodawania rośliny to prowadzony proces w 9 krokach, który służy do utworzenia nowej Instancji rośliny na Twoim koncie.",
+          "Pomaga (opcjonalnie) powiązać roślinę z Definicją rośliny z bazy Flovers, zebrać kontekst (lokalizacja, ekspozycja) oraz opcjonalnie wygenerować przypomnienia na podstawie preferencji pielęgnacyjnych.",
+          "Kreator służy wyłącznie do tworzenia nowej rośliny. Edycja istniejącej rośliny odbywa się w innym widoku/procesie."
+        ]
+      },
+      {
+        "heading": "Krok 01 — Wybór definicji rośliny (opcjonalnie)",
+        "body": [
+          "Możesz wyszukać Definicję rośliny (wbudowany profil gatunkowy) za pomocą pola wyszukiwania.",
+          "Pod polem znajduje się lista popularnych roślin domowych, która działa jako szybki skrót.",
+          "Opcjonalnie możesz użyć Rozpoznawania roślin: uruchom skanowanie, zrób zdjęcie lub wybierz je z galerii, a system zwróci 3 najbardziej dopasowane wyniki.",
+          "Jeśli zaakceptujesz propozycję, wybrana Definicja rośliny zostanie zastosowana do tworzonej rośliny."
+        ]
+      },
+      {
+        "heading": "Krok 02 — Podgląd definicji",
+        "body": [
+          "Jeśli wybrano Definicję rośliny, w tym kroku wyświetlane są jej szczegóły: obraz oraz podstawowe cechy i preferencje.",
+          "To krok weryfikacyjny, który pozwala potwierdzić właściwy profil przed przejściem dalej."
+        ]
+      },
+      {
+        "heading": "Krok 03 — Wybór lokalizacji (wymagane)",
+        "body": [
+          "Wybierz Lokalizację, w której znajduje się roślina (np. Kuchnia, Salon, Balkon).",
+          "Na tym etapie możesz również dodać nową Lokalizację.",
+          "Aktualnie wybór Lokalizacji jest wymagany, aby przejść do kolejnych kroków."
+        ]
+      },
+      {
+        "heading": "Krok 04 — Ekspozycja (opcjonalne pomiary)",
+        "body": [
+          "Ten krok pozwala zapisać kontekst ekspozycji: kierunek, poziom światła oraz odległość od okna.",
+          "Kierunek może zostać zmierzony z użyciem kompasu telefonu, jeśli aplikacja ma przyznane uprawnienia do kompasu/czujników.",
+          "Poziom światła może zostać zmierzony, jeśli urządzenie posiada odpowiedni czujnik oraz udzielono wymaganych uprawnień.",
+          "Wartości ekspozycji są opcjonalne — możesz je uzupełnić ręcznie albo pominąć."
+        ]
+      },
+      {
+        "heading": "Krok 05 — Doniczka i podłoże (opcjonalnie)",
+        "body": [
+          "Określ rodzaj pojemnika/doniczki (np. plastik, ceramika) oraz rodzaj podłoża/substratu.",
+          "Te pola są opcjonalne, ale mogą pomóc w lepszym dopasowaniu sugerowanych interwałów, gdy włączone są automatyczne zadania."
+        ]
+      },
+      {
+        "heading": "Krok 06 — Automatyczne zadania (opcjonalnie, przy Definicji rośliny)",
+        "body": [
+          "Jeśli roślina jest powiązana z Definicją rośliny, Flovers może automatycznie utworzyć przypomnienia/zadania na podstawie preferencji z bazy.",
+          "Zaznacz główny checkbox, aby włączyć automatyczne generowanie, a następnie wybierz typy zadań, które mają zostać utworzone (np. podlewanie, zraszanie, nawożenie, przesadzanie, pielęgnacja).",
+          "Sugerowane interwały bazują na Definicji rośliny i mogą zostać dopasowane na podstawie Ekspozycji oraz Doniczki/Podłoża, jeśli te dane są dostępne.",
+          "Możesz pominąć ten krok i utworzyć przypomnienia ręcznie w późniejszym czasie."
+        ]
+      },
+      {
+        "heading": "Krok 07 — Dodanie własnego zdjęcia (opcjonalnie)",
+        "body": [
+          "Możesz dodać własne zdjęcie rośliny z telefonu.",
+          "Ten krok jest opcjonalny i w zależności od Twojego przepływu w aplikacji może być możliwy również później."
+        ]
+      },
+      {
+        "heading": "Krok 08 — Dane końcowe (wymagana nazwa)",
+        "body": [
+          "Ustaw nazwę wyświetlaną rośliny (wymagana).",
+          "Opcjonalnie dodaj notatki oraz datę zakupu.",
+          "Te informacje są widoczne w Szczegółach rośliny i pomagają prowadzić czytelną historię pielęgnacji."
+        ]
+      },
+      {
+        "heading": "Krok 09 — Podsumowanie i potwierdzenie",
+        "body": [
+          "Po poprawnym dodaniu rośliny kreator wyświetla ekran potwierdzenia/podsumowania.",
+          "Z tego miejsca możesz przejść do listy roślin lub otworzyć nowo utworzoną roślinę — zależnie od nawigacji w aplikacji."
+        ]
+      },
+      {
+        "heading": "Uwagi i uprawnienia",
+        "body": [
+          "Rozpoznawanie roślin wymaga dostępu do aparatu i/lub galerii, zależnie od sposobu dostarczenia zdjęcia.",
+          "Pomiary ekspozycji mogą wymagać uprawnień do czujników (np. kompas) oraz zależą od dostępności sprzętu w urządzeniu.",
+          "Powiązanie z Definicją rośliny jest opcjonalne — możesz pominąć ten etap i nadal utworzyć roślinę, a przypomnienia dodać ręcznie."
+        ]
+      }
+    ]
+  }
 }

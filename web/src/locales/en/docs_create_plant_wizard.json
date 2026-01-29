@@ -1,8 +1,94 @@
 ﻿{
-    "docs_create_plant_wizard":  {
-                                     "sections":  [
-
-                                                  ],
-                                     "title":  ""
-                                 }
+  "docs_create_plant_wizard": {
+    "title": "Create Plant Wizard",
+    "sections": [
+      {
+        "heading": "Purpose of this flow",
+        "body": [
+          "The Create Plant Wizard is a guided, 9-step process used to add a new plant instance to your account.",
+          "It helps you (optionally) link the plant to a Plant Definition from the Flovers database, capture context such as location and exposure, and optionally generate reminders based on the plant’s preferences.",
+          "This wizard is used only for creating a new plant. Editing an existing plant is done in a separate flow."
+        ]
+      },
+      {
+        "heading": "Step 01 — Choose a plant definition (optional)",
+        "body": [
+          "You can search Plant Definitions (built-in species profiles) using the search field.",
+          "Below the search input you’ll find a list of popular indoor plants as a quick shortcut.",
+          "Optionally, you can use Plant Recognition: tap the scan button, take or select a photo, and the system will return the 3 best matches.",
+          "If you accept a recognition suggestion, the selected Plant Definition is applied to the new plant instance."
+        ]
+      },
+      {
+        "heading": "Step 02 — Review definition details",
+        "body": [
+          "If you selected a Plant Definition, this step displays the definition details including the image and core traits/preferences.",
+          "This is a review step so you can confirm the chosen species profile before continuing."
+        ]
+      },
+      {
+        "heading": "Step 03 — Select a location (required)",
+        "body": [
+          "Choose the Location where the plant is kept (e.g., Kitchen, Living room, Balcony).",
+          "You can also add a new Location directly from this step.",
+          "At the moment, selecting a Location is mandatory to proceed."
+        ]
+      },
+      {
+        "heading": "Step 04 — Exposure (optional measurements)",
+        "body": [
+          "This step helps you capture the plant’s exposure context: direction, light level, and distance from the window.",
+          "Direction can be measured using the phone compass if compass permissions are granted.",
+          "Light level can be measured if the required permissions are granted and the device supports a light sensor.",
+          "All exposure values are optional—you can enter them manually or skip them."
+        ]
+      },
+      {
+        "heading": "Step 05 — Container and soil (optional)",
+        "body": [
+          "Define what container the plant is in (e.g., plastic, ceramic) and what soil/substrate you use.",
+          "These fields are optional, but can improve the accuracy of suggested care intervals when automatic tasks are enabled."
+        ]
+      },
+      {
+        "heading": "Step 06 — Automatic tasks (optional, when using a Plant Definition)",
+        "body": [
+          "If your plant is linked to a Plant Definition, Flovers can generate reminders/tasks automatically based on the definition’s care preferences.",
+          "Enable the main checkbox to allow automatic task generation, then choose which task types should be created (e.g., watering, misting, fertilising, repotting, care).",
+          "Suggested intervals are based on the selected Plant Definition and may be adjusted using values from Exposure and Container/Soil when available.",
+          "You can skip this step entirely if you prefer to create reminders manually later."
+        ]
+      },
+      {
+        "heading": "Step 07 — Add your own photo (optional)",
+        "body": [
+          "You can add a custom photo of your plant from your phone.",
+          "This step is optional and can be done later via plant editing tools, depending on your app flow."
+        ]
+      },
+      {
+        "heading": "Step 08 — Final details (required name)",
+        "body": [
+          "Set the plant display name (mandatory).",
+          "Optionally add notes and the purchase date.",
+          "These details are shown in Plant Details and help you keep a meaningful history for each plant."
+        ]
+      },
+      {
+        "heading": "Step 09 — Summary and confirmation",
+        "body": [
+          "After successful creation, the wizard shows a confirmation/summary screen.",
+          "From here you can proceed to your plant list or open the newly created plant, depending on the navigation flow in your app."
+        ]
+      },
+      {
+        "heading": "Notes and permissions",
+        "body": [
+          "Plant Recognition requires access to the camera and/or media library, depending on how you provide a photo.",
+          "Exposure measurements may require permission to use device sensors (e.g., compass) and depend on hardware availability.",
+          "Linking to a Plant Definition is optional—if you skip it, you can still create a plant and define reminders manually."
+        ]
+      }
+    ]
+  }
 }
