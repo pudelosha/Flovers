@@ -17,11 +17,11 @@ export default function Home() {
       {/* JUMBOTRON HERO */}
       <HeroSection />
       
-      {/* Screens strip */}
-      <AppScreens />
+      {/* Screens strip <AppScreens /> */}
+      
       
       {/* New: dedicated emphasis rows (recognition + definition/intervals) */}
-      <CoreFeatures />
+      <CoreFeatures  />
       
       {/* Feature tiles */}
       <FeatureGrid />
