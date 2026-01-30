@@ -4,6 +4,7 @@
 
 .home-flow {
   position: relative;
+          margin-bottom: 28px;
 }
 
 .home-flow-grid {
@@ -13,13 +14,15 @@
   align-items: start;
 }
 
-@media (max-width: 980px) {
+/* Standard tablet/mobile breakpoint */
+@media (max-width: 768px) {
   .home-flow-grid {
     grid-template-columns: 1fr;
   }
 
+  /* hide phone column entirely on small screens */
   .home-flow-right {
-    order: -1;
+    display: none !important;
   }
 }
 
@@ -66,91 +69,33 @@
 
 /* ---------- Right column phone mock ---------- */
 
-/* ---------- Right column phone mock ---------- */
-
 .home-flow-right {
   position: sticky;
-  top: 72px;              /* was 18px -> makes it "land" lower */
-}
-
-@media (max-width: 980px) {
-  .home-flow-right {
-    position: relative;
-    top: auto;
-  }
+  top: 72px; /* makes it "land" lower */
 }
 
 .home-flow-phone {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
-  padding: 28px 6px 10px; /* was 10px 6px -> adds space ABOVE so it sits lower */
+  padding: 28px 6px 10px; /* adds space ABOVE so it sits lower */
 }
 
-
-/* 1) Make the image smaller:
-   - fixed cap via clamp
-   - effectively ~1/4 feeling on large screens, but still responsive */
-.home-flow-phone-swap {
-  position: relative;
-  width: clamp(180px, 24vw, 260px); /* tweak these 3 numbers if you want smaller/larger */
-  filter: drop-shadow(0 18px 44px rgba(0, 0, 0, 0.35));
-}
-
-.home-flow-phone-img {
-  width: 100%;
-  height: auto;
-  display: block;
-
-  /* 2) Smooth replace */
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 380ms ease, transform 420ms ease;
-  will-change: opacity, transform;
-}
-
-/* Make container height follow the images (since they are absolutely positioned) */
-.home-flow-phone-swap::before {
-  content: "";
-  display: block;
-  /* If your phone PNGs have a consistent aspect ratio, keep this.
-     If not, remove and instead set a fixed min-height. */
-  aspect-ratio: 9 / 19.5; /* iPhone-ish; adjust if your asset ratio differs */
-}
-
-/* Visibility states */
-.home-flow-phone-img.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.home-flow-phone-img.is-hidden {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-/* If the aspect-ratio doesn't match your assets well, use this alternative:
-.home-flow-phone-swap { min-height: 520px; }
-*/
-
-/* Phone mock sizing */
+/* Swap container */
 .home-flow-phone-swap {
   position: relative;
   width: clamp(180px, 24vw, 260px);
   filter: drop-shadow(0 18px 44px rgba(0, 0, 0, 0.35));
 }
 
-/* Ensure the absolutely-positioned images still reserve space */
+/* Reserve space for absolutely positioned images */
 .home-flow-phone-swap::before {
   content: "";
   display: block;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 19.5; /* adjust if your asset ratio differs */
 }
 
-/* Crossfade */
+/* Crossfade images */
 .home-flow-phone-img {
   width: 100%;
   height: auto;

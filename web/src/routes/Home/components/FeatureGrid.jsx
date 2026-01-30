@@ -124,6 +124,7 @@ export default function FeatureGrid() {
           </div>
         </div>
 
+        {/* Hidden via CSS below 980px */}
         <div className="home-flow-right" aria-hidden="true">
           <div className="home-flow-phone">
             <div className="home-flow-phone-swap">

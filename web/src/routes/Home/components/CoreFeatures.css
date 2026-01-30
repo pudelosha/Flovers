@@ -140,3 +140,11 @@
     margin-bottom: 14px;
   }
 }
+
+/* Tablet/phone tweaks */
+@media (max-width: 1000px) {
+  .home-rh-card {
+    margin-top: 28px !important;   /* lower than 88px */
+    margin-bottom: 28px;
+  }
+}
