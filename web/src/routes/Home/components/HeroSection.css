@@ -2,15 +2,26 @@
 
 .home-hero2 {
   position: relative;
-
   padding: 40px !important;
 
-  /* space below sticky topbar (topbar is 72px) */
-  margin-top: 80px;
+  /* mobile/tablet default: normal spacing */
+  margin-top: 0px;
 
-  /* needed so the phone can protrude above the card */
   overflow: visible;
+
 }
+
+/* desktop: extra clearance for sticky header + phone overlap */
+@media (min-width: 981px) {
+  .home-hero2 {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 720px) {
+  .main { padding-top: 28px; }   /* was 36px above 720 */
+}
+
 
 /* Gradient overlay INSIDE the card edge (no inset tricks) */
 .home-hero-bg {
