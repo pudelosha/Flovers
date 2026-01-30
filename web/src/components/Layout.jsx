@@ -34,6 +34,7 @@ export default function Layout() {
     () => [
       { to: "/", label: t("nav.start") },
       { to: "/docs", label: t("nav.docs") },
+      { to: "/schemas", label: t("nav.schemas") },
       { to: "/faq", label: t("nav.faq") }
     ],
     [t]

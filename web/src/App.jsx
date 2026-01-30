@@ -2,13 +2,13 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 
-import Home from "./routes/Home/index.jsx";  // Changed here
+import Home from "./routes/Home/index.jsx";
 import Terms from "./routes/Terms.jsx";
 import PrivacyPolicy from "./routes/PrivacyPolicy.jsx";
 import Contact from "./routes/Contact.jsx";
 import Faq from "./routes/Faq.jsx";
 import Docs from "./routes/Docs.jsx";
-
+import Schemas from "./routes/Schemas.jsx";
 
 export default function App() {
   return (
@@ -20,6 +20,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/docs" element={<Docs />} />
+        <Route path="/schemas" element={<Schemas />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

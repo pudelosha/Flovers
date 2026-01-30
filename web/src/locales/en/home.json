@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Flovers",
-    "subtitle": "Dbaj o rośliny z jasnym planem, rutynami i historią.",
-    "purpose": "Dodaj swoje rośliny, podepnij definicje gatunków dla wskazówek, ustaw cykliczne przypomnienia i śledź historię pielęgnacji — opcjonalnie monitoruj odczyty czujników lub korzystaj z kodów QR.",
+    "subtitle": "Care for your plants with clarity, routines, and history.",
+    "purpose": "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
@@ -10,83 +10,83 @@
   },
   "featureGrid": {
     "header": {
-      "title": "Jak działa ten flow",
-      "subtitle": "Dodajesz roślinę, ustawiasz przypomnienie i Flovers domyka resztę. Zadania pojawiają się z terminem, odhaczasz je po wykonaniu, a kolejne tworzą się automatycznie."
+      "title": "How the flow works",
+      "subtitle": "You add a plant, set a reminder, and Flovers keeps the loop going. Tasks show up with due dates, you close them when you’re done, and the next one gets queued automatically."
     },
     "tiles": {
       "tasks": {
-        "title": "Przypomnienia, które zamieniają się w zadania",
-        "text": "Wybierz typ przypomnienia, na przykład podlewanie, zraszanie, nawożenie, przesadzanie albo pielęgnacja. Ustaw interwał, a Flovers tworzy zadania z terminami. Gdy zamkniesz jedno, kolejne powstaje na bazie tego samego przypomnienia."
+        "title": "Reminders that turn into tasks",
+        "text": "Pick a reminder type like watering, misting, fertilising, repotting, or care. Set an interval, and Flovers creates due tasks for you. When you close one, the next task is created from the same reminder."
       },
       "intervals": {
-        "title": "Proponowane interwały z definicji roślin",
-        "text": "Gdy podepniesz roślinę do definicji, Flovers może zaproponować interwały startowe na podstawie gatunku i Twoich warunków. Możesz je przyjąć, poprawić albo trzymać swój własny rytm."
+        "title": "Suggested intervals from plant definitions",
+        "text": "When you link a plant to a definition, Flovers can suggest starter intervals based on the species and your setup. You can accept them, tweak them, or keep your own cadence."
       },
       "qr": {
-        "title": "Skanuj QR i od razu jesteś na ekranie rośliny",
-        "text": "Wydrukuj kod QR dla rośliny i przyklej go do doniczki. Skanujesz aparatem i natychmiast otwierasz szczegóły rośliny. Najszybsza droga do sprawdzenia info i ogarnięcia pielęgnacji."
+        "title": "QR scan to jump straight to the plant",
+        "text": "Print a QR code for a plant and stick it on the pot. Scan it with your phone camera to open the plant details instantly. It’s the fastest way to check info and get care done."
       },
       "iot": {
-        "title": "Odczyty IoT na żywo i trendy",
-        "text": "Podepnij własne urządzenie na ESP albo Arduino i wysyłaj odczyty takie jak temperatura, wilgotność, światło i wilgotność gleby. W aplikacji masz wykresy dzienne, tygodniowe i miesięczne, więc łatwo wyłapiesz wzorce i dopasujesz rutyny."
+        "title": "Live IoT readings with trends",
+        "text": "Connect your own ESP or Arduino device and send readings like temperature, humidity, light, and soil moisture. In the app you get charts with daily, weekly, and monthly views, so you can spot patterns and adjust with confidence."
       }
     },
     "images": {
-      "createPlantAlt": "Ekran dodawania rośliny",
-      "readingsHistoryAlt": "Ekran historii odczytów"
+      "createPlantAlt": "Create plant screen",
+      "readingsHistoryAlt": "Readings history screen"
     }
   },
   "core": {
-    "title": "Dwie rzeczy, które Flovers robi najlepiej",
-    "lead": "Solidna baza roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz sensowny punkt startowy do pielęgnacji.",
+    "title": "The two things Flovers does best",
+    "lead": "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
     "tiles": {
       "defs": {
-        "title": "700+ definicji roślin z realnymi wskazówkami",
-        "desc": "Przeglądaj definicje ze zdjęciami i kluczowymi cechami. Podepnij roślinę, a Flovers poprowadzi Cię sensownymi domyślnymi ustawieniami.",
+        "title": "700+ plant definitions with real care details",
+        "desc": "Browse definitions with photos and key traits. Link your plant to a definition and Flovers can guide you with sensible defaults.",
         "bullets": [
-          "Cechy pielęgnacyjne: światło, gleba, podlewanie, wilgotność, temperatura.",
-          "Dobry punkt startowy, który możesz dopasować do swoich warunków.",
-          "Szybkie powiązanie, żeby każda roślina miała jasną bazę."
+          "Care traits like light, soil, watering style, humidity, temperature.",
+          "Helpful starting point that you can tweak as you learn your space.",
+          "Quick linking so each plant has a clear baseline."
         ]
       },
       "recognition": {
-        "title": "Rozpoznawanie ze zdjęcia z podpowiedzią najlepszego dopasowania",
-        "desc": "Zrób zdjęcie lub dodaj je z galerii, a Flovers zaproponuje, co to może być. Wybierasz najlepsze dopasowanie i idziesz dalej.",
+        "title": "Photo recognition that suggests the closest match",
+        "desc": "Snap a photo or upload one and Flovers suggests what it looks like. Choose the best match, link it, and move on.",
         "bullets": [
-          "Najlepiej działa przy wyraźnych, dobrze oświetlonych zdjęciach.",
-          "Pokazuje kilka podobnych opcji do wyboru.",
-          "Zaprojektowane, by oszczędzać czas, a nie blokować Cię na jednej zgadywance."
+          "Works best with clear, well lit photos.",
+          "Shows a few close options so you can pick the right one.",
+          "Built to save time, not to lock you into a guess."
         ]
       }
     }
   },
   "qr": {
-    "title": "Skaner QR: fizyczny skrót",
-    "lead": "Wygeneruj kod QR dla każdej rośliny, wydrukuj go, przyklej do doniczki, a potem skanuj, żeby od razu przejść do szczegółów i zadań tej rośliny.",
+    "title": "QR scanning: the physical shortcut",
+    "lead": "Generate a QR code for each plant, print it, attach it to the pot, then scan to jump straight into that plant’s details and tasks.",
     "image": {
-      "alt": "Skanowanie kodu QR rośliny w aplikacji Flovers"
+      "alt": "Scanning a plant QR code with the Flovers app"
     },
     "blocks": {
       "create": {
-        "title": "Utwórz → wydrukuj → przyklej",
-        "text": "Każda roślina ma własne ID. W Szczegółach rośliny możesz wygenerować kod QR, zapisać go na telefonie lub wysłać mailem, żeby go wydrukować i nakleić na doniczkę."
+        "title": "Create → print → attach",
+        "text": "Each plant instance has its own ID. In Plant Details you can generate a QR code for that plant, save it to your phone, or send it by email so you can print it and stick it on the pot."
       },
       "scan": {
-        "title": "Skanuj → potwierdź → otwórz Szczegóły rośliny",
-        "text": "Użyj wbudowanego skanera QR. Po potwierdzeniu kodu przez backend zostaniesz przeniesiony prosto do tej rośliny — z zadaniami, przypomnieniami, notatkami, odczytami i pełnym kontekstem."
+        "title": "Scan → confirm → open Plant Details",
+        "text": "Use the built-in QR scanner. After the backend confirms the code, you’re redirected to that exact plant’s details—tasks, reminders, notes, readings, and full context."
       },
       "care": {
-        "title": "Pielęgnacja w momencie",
-        "text": "Podlej roślinę, zeskanuj etykietę i odhacz zadanie jako wykonane — albo po prostu zeskanuj, żeby sprawdzić, czy coś jest do zrobienia. Szybkie połączenie między fizyczną rośliną a Twoimi danymi."
+        "title": "Care in the moment",
+        "text": "Water the plant, scan the label, and mark the task as complete—or just scan to check whether anything is due. A direct link between the physical plant and your data."
       }
     }
   },
   "store": {
     "google": {
-      "alt": "Pobierz z Google Play"
+      "alt": "Get it on Google Play"
     },
     "apple": {
-      "alt": "Pobierz z App Store"
+      "alt": "Download on the App Store"
     }
   }
 }
