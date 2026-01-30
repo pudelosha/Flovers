@@ -8,7 +8,6 @@
       "appStoreUrl": ""
     }
   },
-
   "featureGrid": {
     "header": {
       "title": "Jak działa ten flow",
@@ -37,7 +36,6 @@
       "readingsHistoryAlt": "Ekran historii odczytów"
     }
   },
-
   "core": {
     "title": "Dwie rzeczy, które Flovers robi najlepiej",
     "lead": "Solidna baza roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz sensowny punkt startowy do pielęgnacji.",
@@ -62,7 +60,27 @@
       }
     }
   },
-
+  "qr": {
+    "title": "Skan QR: fizyczny skrót",
+    "lead": "Wygeneruj kod QR dla każdej rośliny, wydrukuj go, przyklej do doniczki, a potem skanuj, żeby od razu przejść do szczegółów i zadań tej rośliny.",
+    "image": {
+      "alt": "Skanowanie kodu QR rośliny w aplikacji Flovers"
+    },
+    "blocks": {
+      "create": {
+        "title": "Utwórz → wydrukuj → przyklej",
+        "text": "Każda roślina ma własne ID. W Szczegółach rośliny możesz wygenerować kod QR, zapisać go na telefonie lub wysłać mailem, żeby go wydrukować i nakleić na doniczkę."
+      },
+      "scan": {
+        "title": "Skanuj → potwierdź → otwórz Szczegóły rośliny",
+        "text": "Użyj wbudowanego skanera QR. Po potwierdzeniu kodu przez backend zostaniesz przeniesiony prosto do tej rośliny — z zadaniami, przypomnieniami, notatkami, odczytami i pełnym kontekstem."
+      },
+      "care": {
+        "title": "Pielęgnacja w momencie",
+        "text": "Podlej roślinę, zeskanuj etykietę i odhacz zadanie jako wykonane — albo po prostu zeskanuj, żeby sprawdzić, czy coś jest do zrobienia. Szybkie połączenie między fizyczną rośliną a Twoimi danymi."
+      }
+    }
+  },
   "store": {
     "google": {
       "alt": "Pobierz z Google Play"
