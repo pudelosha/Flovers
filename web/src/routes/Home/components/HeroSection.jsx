@@ -14,18 +14,17 @@ import "./HeroSection.css";
 export default function HeroSection() {
   const { t, i18n } = useTranslation("home");
 
-  const heroTitle = t("homeNew.hero.title", { defaultValue: "Flovers" });
+  const heroTitle = t("hero.title", { defaultValue: "Flovers" });
 
-  const heroSubtitle = t("homeNew.hero.subtitle", {
-    defaultValue: "Care for your plants with clarity, routines, and history.",
+  const heroSubtitle = t("hero.subtitle", {
+    defaultValue: "Care for your plants with clarity, routines, and history."
   });
 
-  const purpose = t("homeNew.hero.purpose", {
+  const purpose = t("hero.purpose", {
     defaultValue:
-      "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details.",
+      "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details."
   });
 
-  // Language handling (supports "pl", "en", and variants like "pl-PL")
   const lng = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
   const isPl = lng.startsWith("pl");
 
@@ -64,7 +63,11 @@ export default function HeroSection() {
                 if (isGooglePlayDisabled) e.preventDefault();
               }}
             >
-              <img className="home-store-badge-img" src={googlePlayBanner} alt={t("homeNew.store.google.alt")} />
+              <img
+                className="home-store-badge-img"
+                src={googlePlayBanner}
+                alt={t("store.google.alt", { defaultValue: "Get it on Google Play" })}
+              />
             </a>
 
             <a
@@ -78,7 +81,11 @@ export default function HeroSection() {
                 if (isAppStoreDisabled) e.preventDefault();
               }}
             >
-              <img className="home-store-badge-img" src={iosStoreBanner} alt={t("homeNew.store.apple.alt")} />
+              <img
+                className="home-store-badge-img"
+                src={iosStoreBanner}
+                alt={t("store.apple.alt", { defaultValue: "Download on the App Store" })}
+              />
             </a>
           </div>
         </Reveal>

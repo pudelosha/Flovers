@@ -1,47 +1,74 @@
 {
-  "homeNew": {
-    "hero": {
-      "title": "Flovers",
-      "subtitle": "Dbaj o rośliny z jasnym planem, rutynami i historią.",
-      "purpose": "Dodaj swoje rośliny, powiąż definicje gatunków dla wskazówek, ustaw cykliczne przypomnienia i śledź historię pielęgnacji — opcjonalnie monitoruj odczyty czujników na żywo lub korzystaj z kodów QR do szybkiego dostępu."
-    },
-    "core": {
-      "title": "Dwie rzeczy, które Flovers robi najlepiej",
-      "lead": "Porządna baza definicji roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz dobry punkt startowy do pielęgnacji.",
-      "tiles": {
-        "defs": {
-          "title": "Ponad 700 definicji roślin z konkretną pielęgnacją",
-          "desc": "Przeglądaj definicje ze zdjęciami i cechami. Podepnij roślinę do definicji, a Flovers podpowie sensowne ustawienia na start.",
-          "bullets": [
-            "Cechy pielęgnacji, czyli światło, podłoże, podlewanie, wilgotność i temperatura.",
-            "Dobry start, który łatwo dopasujesz do mieszkania i pory roku.",
-            "Szybkie powiązanie, żeby każda roślina miała jasną bazę."
-          ]
-        },
-        "recognition": {
-          "title": "Rozpoznawanie ze zdjęcia, które podsuwa najbliższe dopasowanie",
-          "desc": "Zrób zdjęcie albo dodaj je z galerii, a Flovers podpowie, co to może być. Wybierasz najlepszą opcję, podpinasz i gotowe.",
-          "bullets": [
-            "Najlepiej działa na wyraźnych zdjęciach w dobrym świetle.",
-            "Pokazuje kilka podobnych propozycji, żeby łatwiej trafić.",
-            "Ma oszczędzać czas, a nie wciskać jedną odpowiedź."
-          ]
-        }
-      }
-    },
-    "store": {
-      "google": {
-        "alt": "Pobierz z Google Play"
-      },
-      "apple": {
-        "alt": "Pobierz z App Store"
-      }
-    }
-  },
   "hero": {
+    "title": "Flovers",
+    "subtitle": "Dbaj o rośliny z jasnym planem, rutynami i historią.",
+    "purpose": "Dodaj swoje rośliny, podepnij definicje gatunków dla wskazówek, ustaw cykliczne przypomnienia i śledź historię pielęgnacji — opcjonalnie monitoruj odczyty czujników lub korzystaj z kodów QR.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
+    }
+  },
+
+  "featureGrid": {
+    "header": {
+      "title": "Jak działa ten flow",
+      "subtitle": "Dodajesz roślinę, ustawiasz przypomnienie i Flovers domyka resztę. Zadania pojawiają się z terminem, odhaczasz je po wykonaniu, a kolejne tworzą się automatycznie."
+    },
+    "tiles": {
+      "tasks": {
+        "title": "Przypomnienia, które zamieniają się w zadania",
+        "text": "Wybierz typ przypomnienia, na przykład podlewanie, zraszanie, nawożenie, przesadzanie albo pielęgnacja. Ustaw interwał, a Flovers tworzy zadania z terminami. Gdy zamkniesz jedno, kolejne powstaje na bazie tego samego przypomnienia."
+      },
+      "intervals": {
+        "title": "Proponowane interwały z definicji roślin",
+        "text": "Gdy podepniesz roślinę do definicji, Flovers może zaproponować interwały startowe na podstawie gatunku i Twoich warunków. Możesz je przyjąć, poprawić albo trzymać swój własny rytm."
+      },
+      "qr": {
+        "title": "Skan QR i od razu jesteś na ekranie rośliny",
+        "text": "Wydrukuj kod QR dla rośliny i przyklej go do doniczki. Skanujesz aparatem i natychmiast otwierasz szczegóły rośliny. Najszybsza droga do sprawdzenia info i ogarnięcia pielęgnacji."
+      },
+      "iot": {
+        "title": "Odczyty IoT na żywo i trendy",
+        "text": "Podepnij własne urządzenie na ESP albo Arduino i wysyłaj odczyty takie jak temperatura, wilgotność, światło i wilgotność gleby. W aplikacji masz wykresy dzienne, tygodniowe i miesięczne, więc łatwo wyłapiesz wzorce i dopasujesz rutyny."
+      }
+    },
+    "images": {
+      "createPlantAlt": "Ekran dodawania rośliny",
+      "readingsHistoryAlt": "Ekran historii odczytów"
+    }
+  },
+
+  "core": {
+    "title": "Dwie rzeczy, które Flovers robi najlepiej",
+    "lead": "Solidna baza roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz sensowny punkt startowy do pielęgnacji.",
+    "tiles": {
+      "defs": {
+        "title": "700+ definicji roślin z realnymi wskazówkami",
+        "desc": "Przeglądaj definicje ze zdjęciami i kluczowymi cechami. Podepnij roślinę, a Flovers poprowadzi Cię sensownymi domyślnymi ustawieniami.",
+        "bullets": [
+          "Cechy pielęgnacyjne: światło, gleba, podlewanie, wilgotność, temperatura.",
+          "Dobry punkt startowy, który możesz dopasować do swoich warunków.",
+          "Szybkie powiązanie, żeby każda roślina miała jasną bazę."
+        ]
+      },
+      "recognition": {
+        "title": "Rozpoznawanie ze zdjęcia z podpowiedzią najlepszego dopasowania",
+        "desc": "Zrób zdjęcie lub dodaj je z galerii, a Flovers zaproponuje, co to może być. Wybierasz najlepsze dopasowanie i idziesz dalej.",
+        "bullets": [
+          "Najlepiej działa przy wyraźnych, dobrze oświetlonych zdjęciach.",
+          "Pokazuje kilka podobnych opcji do wyboru.",
+          "Zaprojektowane, by oszczędzać czas, a nie blokować Cię na jednej zgadywance."
+        ]
+      }
+    }
+  },
+
+  "store": {
+    "google": {
+      "alt": "Pobierz z Google Play"
+    },
+    "apple": {
+      "alt": "Pobierz z App Store"
     }
   }
 }

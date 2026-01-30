@@ -28,16 +28,9 @@ function FeatureTile({ title, desc, bullets, icon }) {
   );
 }
 
-/** Simple inline camera icon (white, no frame) */
 function IconCamera({ size = 22 }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M9 6.5 10.2 5h3.6L15 6.5H18a3 3 0 0 1 3 3V17a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9.5a3 3 0 0 1 3-3h3Z"
         stroke="currentColor"
@@ -56,13 +49,11 @@ function IconCamera({ size = 22 }) {
 export default function CoreFeatures() {
   const { t } = useTranslation("home");
 
-  const title = t("homeNew.core.title", {
-    defaultValue: "The two things Flovers does best",
-  });
+  const title = t("core.title", { defaultValue: "The two things Flovers does best" });
 
-  const lead = t("homeNew.core.lead", {
+  const lead = t("core.lead", {
     defaultValue:
-      "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
+      "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants."
   });
 
   return (
@@ -79,26 +70,15 @@ export default function CoreFeatures() {
           <Reveal y={18} delay={0.02}>
             <FeatureTile
               icon={<IconLeaf />}
-              title={t("homeNew.core.tiles.defs.title", {
-                defaultValue: "700+ plant definitions with real care details",
-              })}
-              desc={t("homeNew.core.tiles.defs.desc", {
+              title={t("core.tiles.defs.title", { defaultValue: "700+ plant definitions with real care details" })}
+              desc={t("core.tiles.defs.desc", {
                 defaultValue:
-                  "Browse definitions with photos and key traits. Link your plant to a definition and Flovers can guide you with sensible defaults.",
+                  "Browse definitions with photos and key traits. Link your plant to a definition and Flovers can guide you with sensible defaults."
               })}
               bullets={[
-                t("homeNew.core.tiles.defs.bullets.0", {
-                  defaultValue:
-                    "Care traits like light, soil, watering style, humidity, temperature.",
-                }),
-                t("homeNew.core.tiles.defs.bullets.1", {
-                  defaultValue:
-                    "Helpful starting point that you can tweak as you learn your space.",
-                }),
-                t("homeNew.core.tiles.defs.bullets.2", {
-                  defaultValue:
-                    "Quick linking so each plant has a clear baseline.",
-                }),
+                t("core.tiles.defs.bullets.0", { defaultValue: "Care traits like light, soil, watering style, humidity, temperature." }),
+                t("core.tiles.defs.bullets.1", { defaultValue: "Helpful starting point that you can tweak as you learn your space." }),
+                t("core.tiles.defs.bullets.2", { defaultValue: "Quick linking so each plant has a clear baseline." })
               ]}
             />
           </Reveal>
@@ -106,24 +86,15 @@ export default function CoreFeatures() {
           <Reveal y={18} delay={0.05}>
             <FeatureTile
               icon={<IconCamera />}
-              title={t("homeNew.core.tiles.recognition.title", {
-                defaultValue: "Photo recognition that suggests the closest match",
-              })}
-              desc={t("homeNew.core.tiles.recognition.desc", {
+              title={t("core.tiles.recognition.title", { defaultValue: "Photo recognition that suggests the closest match" })}
+              desc={t("core.tiles.recognition.desc", {
                 defaultValue:
-                  "Snap a photo or upload one and Flovers suggests what it looks like. Choose the best match, link it, and move on.",
+                  "Snap a photo or upload one and Flovers suggests what it looks like. Choose the best match, link it, and move on."
               })}
               bullets={[
-                t("homeNew.core.tiles.recognition.bullets.0", {
-                  defaultValue: "Works best with clear, well lit photos.",
-                }),
-                t("homeNew.core.tiles.recognition.bullets.1", {
-                  defaultValue:
-                    "Shows a few close options so you can pick the right one.",
-                }),
-                t("homeNew.core.tiles.recognition.bullets.2", {
-                  defaultValue: "Built to save time, not to lock you into a guess.",
-                }),
+                t("core.tiles.recognition.bullets.0", { defaultValue: "Works best with clear, well lit photos." }),
+                t("core.tiles.recognition.bullets.1", { defaultValue: "Shows a few close options so you can pick the right one." }),
+                t("core.tiles.recognition.bullets.2", { defaultValue: "Built to save time, not to lock you into a guess." })
               ]}
             />
           </Reveal>

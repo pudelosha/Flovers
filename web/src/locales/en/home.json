@@ -1,47 +1,74 @@
 {
-  "homeNew": {
-    "hero": {
-      "title": "Flovers",
-      "subtitle": "Care for your plants with clarity, routines, and history.",
-      "purpose": "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details."
-    },
-    "core": {
-      "title": "The two things Flovers does best",
-      "lead": "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
-      "tiles": {
-        "defs": {
-          "title": "700+ plant definitions with real care details",
-          "desc": "Browse definitions with photos and key traits. Link your plant to a definition and Flovers can guide you with sensible defaults.",
-          "bullets": [
-            "Care traits like light, soil, watering style, humidity, temperature.",
-            "Helpful starting point that you can tweak as you learn your space.",
-            "Quick linking so each plant has a clear baseline."
-          ]
-        },
-        "recognition": {
-          "title": "Photo recognition that suggests the closest match",
-          "desc": "Snap a photo or upload one and Flovers suggests what it looks like. Choose the best match, link it, and move on.",
-          "bullets": [
-            "Works best with clear, well lit photos.",
-            "Shows a few close options so you can pick the right one.",
-            "Built to save time, not to lock you into a guess."
-          ]
-        }
-      }
-    },
-    "store": {
-      "google": {
-        "alt": "Get it on Google Play"
-      },
-      "apple": {
-        "alt": "Download on the App Store"
-      }
-    }
-  },
   "hero": {
+    "title": "Flovers",
+    "subtitle": "Care for your plants with clarity, routines, and history.",
+    "purpose": "Add your plants, link species definitions for guidance, define recurring reminders, and track care history, with optional live sensor monitoring and QR-based access to plant details.",
     "cta": {
       "googlePlayUrl": "",
       "appStoreUrl": ""
+    }
+  },
+
+  "featureGrid": {
+    "header": {
+      "title": "How the flow works",
+      "subtitle": "You add a plant, set a reminder, and Flovers keeps the loop going. Tasks show up with due dates, you close them when you’re done, and the next one gets queued automatically."
+    },
+    "tiles": {
+      "tasks": {
+        "title": "Reminders that turn into tasks",
+        "text": "Pick a reminder type like watering, misting, fertilising, repotting, or care. Set an interval, and Flovers creates due tasks for you. When you close one, the next task is created from the same reminder."
+      },
+      "intervals": {
+        "title": "Suggested intervals from plant definitions",
+        "text": "When you link a plant to a definition, Flovers can suggest starter intervals based on the species and your setup. You can accept them, tweak them, or keep your own cadence."
+      },
+      "qr": {
+        "title": "QR scan to jump straight to the plant",
+        "text": "Print a QR code for a plant and stick it on the pot. Scan it with your phone camera to open the plant details instantly. It’s the fastest way to check info and get care done."
+      },
+      "iot": {
+        "title": "Live IoT readings with trends",
+        "text": "Connect your own ESP or Arduino device and send readings like temperature, humidity, light, and soil moisture. In the app you get charts with daily, weekly, and monthly views, so you can spot patterns and adjust with confidence."
+      }
+    },
+    "images": {
+      "createPlantAlt": "Create plant screen",
+      "readingsHistoryAlt": "Readings history screen"
+    }
+  },
+
+  "core": {
+    "title": "The two things Flovers does best",
+    "lead": "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
+    "tiles": {
+      "defs": {
+        "title": "700+ plant definitions with real care details",
+        "desc": "Browse definitions with photos and key traits. Link your plant to a definition and Flovers can guide you with sensible defaults.",
+        "bullets": [
+          "Care traits like light, soil, watering style, humidity, temperature.",
+          "Helpful starting point that you can tweak as you learn your space.",
+          "Quick linking so each plant has a clear baseline."
+        ]
+      },
+      "recognition": {
+        "title": "Photo recognition that suggests the closest match",
+        "desc": "Snap a photo or upload one and Flovers suggests what it looks like. Choose the best match, link it, and move on.",
+        "bullets": [
+          "Works best with clear, well lit photos.",
+          "Shows a few close options so you can pick the right one.",
+          "Built to save time, not to lock you into a guess."
+        ]
+      }
+    }
+  },
+
+  "store": {
+    "google": {
+      "alt": "Get it on Google Play"
+    },
+    "apple": {
+      "alt": "Download on the App Store"
     }
   }
 }

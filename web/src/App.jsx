@@ -2,13 +2,13 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 
-// Import directly from the folder
 import Home from "./routes/Home/index.jsx";  // Changed here
 import Terms from "./routes/Terms.jsx";
 import PrivacyPolicy from "./routes/PrivacyPolicy.jsx";
 import Contact from "./routes/Contact.jsx";
 import Faq from "./routes/Faq.jsx";
 import Docs from "./routes/Docs.jsx";
+
 
 export default function App() {
   return (

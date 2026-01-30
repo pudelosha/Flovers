@@ -69,7 +69,7 @@ const resources = {
     docs_readings: enDocsReadings,
     docs_readings_history: enDocsReadingsHistory,
     docs_scanner: enDocsScanner,
-    docs_profile: enDocsProfile,
+    docs_profile: enDocsProfile
   },
   pl: {
     common: plCommon,
@@ -92,8 +92,8 @@ const resources = {
     docs_readings: plDocsReadings,
     docs_readings_history: plDocsReadingsHistory,
     docs_scanner: plDocsScanner,
-    docs_profile: plDocsProfile,
-  },
+    docs_profile: plDocsProfile
+  }
 };
 
 const STORAGE_KEY = "flovers_lang";
@@ -111,6 +111,10 @@ i18n.use(initReactI18next).init({
   lng: getInitialLanguage(),
   fallbackLng: "en",
 
+  // important: handle pl-PL etc.
+  load: "languageOnly",
+  supportedLngs: ["en", "pl"],
+
   ns: [
     "common",
     "home",
@@ -119,7 +123,6 @@ i18n.use(initReactI18next).init({
     "contact",
     "faq",
     "docs",
-
     "docs_overview",
     "docs_auth",
     "docs_home",
@@ -132,12 +135,12 @@ i18n.use(initReactI18next).init({
     "docs_readings",
     "docs_readings_history",
     "docs_scanner",
-    "docs_profile",
+    "docs_profile"
   ],
   defaultNS: "common",
 
   interpolation: { escapeValue: false },
-  react: { useSuspense: false },
+  react: { useSuspense: false }
 });
 
 i18n.on("languageChanged", (lng) => {
