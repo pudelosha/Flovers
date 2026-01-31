@@ -98,6 +98,9 @@ export default function Layout() {
 
   return (
     <div className="app">
+      {/* Top anchor for hard scroll-to-top */}
+      <div id="page-top" tabIndex={-1} aria-hidden="true" />
+
       <header className="topbar">
         <div className="container topbar-inner">
           <div className="brand">

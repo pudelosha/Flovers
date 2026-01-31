@@ -32,6 +32,21 @@ function DocSection({ heading, body }) {
   );
 }
 
+function hardScrollToTop() {
+  const top = document.getElementById("page-top");
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (top && typeof top.scrollIntoView === "function") {
+        top.scrollIntoView({ block: "start", behavior: "auto" });
+        if (typeof top.focus === "function") top.focus({ preventScroll: true });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      }
+    });
+  });
+}
+
 export default function Docs() {
   // Menu translations live in docs.json
   const { t } = useTranslation("docs");
@@ -73,8 +88,7 @@ export default function Docs() {
 
   // Scroll to top on docs subpage switch
   useEffect(() => {
-    const el = document.scrollingElement || document.documentElement;
-    el.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    hardScrollToTop();
   }, [activeKey]);
 
   // Close dropdown on outside click / escape
