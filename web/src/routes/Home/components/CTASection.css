@@ -1,197 +1,81 @@
-/* =========================
-   CTA (bottom tile) — rebuilt
-   ========================= */
+/* ===== CTA section (header + lead + big store banners) ===== */
 
-.home-cta2 {
-  position: relative;
-  overflow: hidden;
-  padding: 28px;
-  margin-top: 10px;
+.home-cta {
+  /* no card, no background */
 }
 
-.home-cta-bg {
-  position: absolute;
-  inset: -2px;
-  background:
-    radial-gradient(900px 480px at 20% 20%, rgba(26,166,160,0.18), transparent 62%),
-    radial-gradient(900px 480px at 85% 20%, rgba(10,113,132,0.18), transparent 62%),
-    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-  pointer-events: none;
-}
-
-.home-cta > * {
-  position: relative;
-  z-index: 1;
-}
-
-.home-cta-title {
-  margin: 0 0 10px;
-  font-size: 30px;
-  font-weight: 950;
-  letter-spacing: -0.7px;
-}
-
-.home-cta-sub {
-  max-width: 86ch;
-}
-
-.home-cta-foot {
-  margin-top: 12px;
-  font-size: 13px;
-}
-
-/* Stores row: badges + QR */
+/* Always 50/50 split */
 .home-cta-stores {
-  margin-top: 16px;
+  margin-top: 18px;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  align-items: start;
-}
+  gap: 22px;
 
-/* A store "pack" = badge + QR */
-.storepack {
-  display: grid;
-  grid-template-columns: 1fr 92px;
-  gap: 12px;
   align-items: stretch;
-}
-
-/* Badge: black pill */
-.storebadge {
   width: 100%;
-  min-height: 64px;
-  display: inline-flex;
+}
+
+/* Equal-height tiles (frame) */
+.home-cta-store {
+  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border-radius: 18px;
+  justify-content: center;
 
-  background: rgba(0,0,0,0.72);
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+  width: 100%;
+  min-height: 96px;        /* equal frame height */
+  padding: 10px 12px;
 
-  color: rgba(255,255,255,0.96);
+  line-height: 0;
+  text-decoration: none;
 }
 
-.storebadge:hover {
-  background: rgba(0,0,0,0.80);
-}
-
-.storebadge[aria-disabled="true"] {
+.home-cta-store[aria-disabled="true"] {
   opacity: 0.55;
   cursor: not-allowed;
 }
 
-.storebadge-ico {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.06);
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-}
-
-.storebadge-txt {
-  display: grid;
-  gap: 2px;
-  min-width: 0;
-}
-
-.storebadge-kicker {
-  font-size: 12px;
-  font-weight: 750;
-  color: rgba(255,255,255,0.70);
-  line-height: 1.1;
-}
-
-.storebadge-main {
-  font-size: 15px;
-  font-weight: 950;
-  letter-spacing: 0.2px;
-  line-height: 1.1;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.storebadge-sub {
-  font-size: 12px;
-  font-weight: 750;
-  color: rgba(255,255,255,0.70);
-}
-
-/* QR container */
-.storeqr {
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(0,0,0,0.35);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.storeqr-inner {
-  width: 76px;
-  height: 76px;
-  border-radius: 14px;
-  background: #fff;
-  padding: 6px;
-  display: grid;
-  place-items: center;
-}
-
-/* react-qr-code SVG sizing fix */
-.storeqr-inner svg {
+/* Image fits frame */
+.home-cta-store-img {
   width: 100%;
   height: 100%;
-}
+  max-width: 100%;
+  max-height: 100%;
 
-.storeqr-empty {
-  width: 76px;
-  height: 76px;
-  border-radius: 14px;
-  border: 1px dashed rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.55);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-}
-
-.home-cta-phone {
-  position: absolute;
-  right: 28px;
-  bottom: -26px;
-  width: 320px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.home-cta-phone-img {
-  width: 100%;
-  height: auto;
+  object-fit: contain;
   display: block;
-  filter: drop-shadow(0 28px 80px rgba(0,0,0,0.55));
+
+  /* allow per-badge tweaks */
+  transform-origin: center;
 }
 
-/* Responsive: hide phone and QRs on small screens */
-@media (max-width: 980px) {
-  .home-cta-phone {
-    display: none;
-  }
+/* ---------- Normalization (IMPORTANT) ----------
+   Apple SVG tends to look "bigger" due to different internal padding.
+   We scale it down slightly so both badges look visually equal.
+*/
+.home-cta-stores a:nth-child(2) .home-cta-store-img {
+  transform: scale(0.90); /* tweak 0.88–0.94 if needed */
 }
 
+/* Tablet */
 @media (max-width: 720px) {
   .home-cta-stores {
-    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .storepack {
-    grid-template-columns: 1fr;
+
+  .home-cta-store {
+    min-height: 82px;
+    padding: 8px 10px;
   }
-  .storeqr {
-    display: none;
+
+  .home-cta-stores a:nth-child(2) .home-cta-store-img {
+    transform: scale(0.92);
+  }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+  .home-cta-store {
+    min-height: 72px;
   }
 }

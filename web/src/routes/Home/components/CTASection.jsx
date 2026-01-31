@@ -1,57 +1,84 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
-import StoreBadge from "./common/StoreBadge";
-import phoneMock from "../../../assets/phone-reminders.png";
+
+// Store badges (same assets as Hero)
+import googlePlayBannerEn from "../../../assets/GooglePlay_en.png";
+import googlePlayBannerPl from "../../../assets/GooglePlay_pl.png";
+import iosStoreBannerEn from "../../../assets/iOSStore_en.svg";
+import iosStoreBannerPl from "../../../assets/iOSStore_pl.svg";
+
 import "./CTASection.css";
 
 export default function CTASection() {
-  const { t } = useTranslation("home");
+  const { t, i18n } = useTranslation("home");
+
+  const lng = (i18n.resolvedLanguage || i18n.language || "en").toLowerCase();
+  const isPl = lng.startsWith("pl");
+
+  const googlePlayBanner = isPl ? googlePlayBannerPl : googlePlayBannerEn;
+  const iosStoreBanner = isPl ? iosStoreBannerPl : iosStoreBannerEn;
+
+  const googlePlayUrl = t("hero.cta.googlePlayUrl", { defaultValue: "" });
+  const appStoreUrl = t("hero.cta.appStoreUrl", { defaultValue: "" });
+
+  const isGooglePlayDisabled = !googlePlayUrl;
+  const isAppStoreDisabled = !appStoreUrl;
 
   return (
-    <section className="home-cta card home-cta2">
-      <div className="home-cta-bg" aria-hidden="true" />
+    <section className="home-section home-cta">
+      <Reveal y={16}>
+        <h2 className="home-h2">
+          {t("homeNew.cta.title", { defaultValue: "Start simple. Keep the routine consistent." })}
+        </h2>
 
-      {/* Phone overlap (real image, transparent background) */}
-      <div className="home-cta-phone" aria-hidden="true">
-        <img src={phoneMock} alt="" className="home-cta-phone-img" loading="lazy" />
-      </div>
-
-      <Reveal y={16} className="home-cta-inner">
-        <div className="home-cta-left">
-          <h2 className="home-cta-title">
-            {t("homeNew.cta.title", { defaultValue: "Start with one plant. Make the routine stick." })}
-          </h2>
-
-          <p className="muted home-p home-cta-sub">
-            {t("homeNew.cta.subtitle", {
-              defaultValue:
-                "Add a plant, choose a definition, set a couple routines, and let Flovers generate tasks automatically. Adjust as you learn what works in your space.",
-            })}
-          </p>
-
-          <div className="home-cta-stores">
-            <StoreBadge
-              platform="gp"
-              kicker={t("homeNew.store.google.kicker", { defaultValue: "Get it on" })}
-              main={t("hero.cta.googlePlay", { defaultValue: "Google Play" })}
-              url={t("hero.cta.googlePlayUrl", { defaultValue: "" })}
-            />
-
-            <StoreBadge
-              platform="ios"
-              kicker={t("homeNew.store.apple.kicker", { defaultValue: "Download on the" })}
-              main={t("hero.cta.appStore", { defaultValue: "iOS (coming soon)" })}
-              url={t("hero.cta.appStoreUrl", { defaultValue: "" })}
-              disabledText={t("homeNew.store.apple.sub", { defaultValue: "Coming soon" })}
-            />
-          </div>
-
-          <div className="home-cta-foot muted">
-            {t("homeNew.cta.foot", { defaultValue: "More detail is available in Documentation on this website." })}
-          </div>
-        </div>
+        <p className="muted home-p home-lead">
+          {t("homeNew.cta.subtitle", {
+            defaultValue:
+              "Add your plants, link definitions for guidance, set recurring reminders, and let Flovers generate tasks automatically. Use daily notifications to stay on track, scan QR labels to jump straight to a plant, and optionally validate routines with live sensor readings."
+          })}
+        </p>
       </Reveal>
+
+      <div className="home-cta-stores" data-lang={lng}>
+        <a
+          className="home-cta-store"
+          href={isGooglePlayDisabled ? undefined : googlePlayUrl}
+          target={isGooglePlayDisabled ? undefined : "_blank"}
+          rel={isGooglePlayDisabled ? undefined : "noreferrer"}
+          aria-disabled={isGooglePlayDisabled ? "true" : "false"}
+          tabIndex={isGooglePlayDisabled ? -1 : 0}
+          onClick={(e) => {
+            if (isGooglePlayDisabled) e.preventDefault();
+          }}
+        >
+          <img
+            className="home-cta-store-img"
+            src={googlePlayBanner}
+            alt={t("store.google.alt", { defaultValue: "Get it on Google Play" })}
+            loading="lazy"
+          />
+        </a>
+
+        <a
+          className="home-cta-store"
+          href={isAppStoreDisabled ? undefined : appStoreUrl}
+          target={isAppStoreDisabled ? undefined : "_blank"}
+          rel={isAppStoreDisabled ? undefined : "noreferrer"}
+          aria-disabled={isAppStoreDisabled ? "true" : "false"}
+          tabIndex={isAppStoreDisabled ? -1 : 0}
+          onClick={(e) => {
+            if (isAppStoreDisabled) e.preventDefault();
+          }}
+        >
+          <img
+            className="home-cta-store-img"
+            src={iosStoreBanner}
+            alt={t("store.apple.alt", { defaultValue: "Download on the App Store" })}
+            loading="lazy"
+          />
+        </a>
+      </div>
     </section>
   );
 }
