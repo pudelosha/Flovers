@@ -8,27 +8,32 @@
       "appStoreUrl": ""
     }
   },
+
   "featureGrid": {
     "header": {
-      "title": "How the flow works",
-      "subtitle": "You add a plant, set a reminder, and Flovers keeps the loop going. Tasks show up with due dates, you close them when you’re done, and the next one gets queued automatically."
+      "title": "Features that keep care consistent",
+      "subtitle": "Flovers is built around a few practical features: smart starter intervals, tasks from reminders, daily notifications, QR shortcuts, and optional IoT readings—so you can keep plants healthy without thinking too hard about it."
     },
     "tiles": {
-      "tasks": {
-        "title": "Reminders that turn into tasks",
-        "text": "Pick a reminder type like watering, misting, fertilising, repotting, or care. Set an interval, and Flovers creates due tasks for you. When you close one, the next task is created from the same reminder."
-      },
       "intervals": {
         "title": "Suggested intervals from plant definitions",
-        "text": "When you link a plant to a definition, Flovers can suggest starter intervals based on the species and your setup. You can accept them, tweak them, or keep your own cadence."
+        "text": "Link a plant to a definition and Flovers suggests starter intervals based on the species and your setup. Accept them, tweak them, or keep your own cadence."
+      },
+      "tasks": {
+        "title": "Reminders that turn into tasks",
+        "text": "Set a recurring reminder (watering, misting, fertilising, repotting, care). Flovers turns it into due tasks. When you complete one, the next gets queued automatically."
+      },
+      "notifications": {
+        "title": "Daily notifications by push or email",
+        "text": "Choose push or email in Profile settings. Flovers can send a daily summary at your chosen time (e.g., 14:00) with today’s due tasks, and optionally follow up ~24h later if tasks are overdue."
       },
       "qr": {
         "title": "QR scan to jump straight to the plant",
-        "text": "Print a QR code for a plant and stick it on the pot. Scan it with your phone camera to open the plant details instantly. It’s the fastest way to check info and get care done."
+        "text": "Print a QR code for a plant and attach it to the pot. Scan to open Plant Details instantly—fastest way to check context and mark care done."
       },
       "iot": {
         "title": "Live IoT readings with trends",
-        "text": "Connect your own ESP or Arduino device and send readings like temperature, humidity, light, and soil moisture. In the app you get charts with daily, weekly, and monthly views, so you can spot patterns and adjust with confidence."
+        "text": "Connect your ESP/Arduino device and send readings like temperature, humidity, light, and soil moisture. The app shows daily/weekly/monthly charts so you can spot patterns and adjust routines."
       }
     },
     "images": {
@@ -36,6 +41,7 @@
       "readingsHistoryAlt": "Readings history screen"
     }
   },
+
   "core": {
     "title": "The two things Flovers does best",
     "lead": "A solid plant database and quick photo recognition. Pick a match, link it once, and you’ve got a clean starting point for caring for your plants.",
@@ -60,6 +66,7 @@
       }
     }
   },
+
   "qr": {
     "title": "QR scanning: the physical shortcut",
     "lead": "Generate a QR code for each plant, print it, attach it to the pot, then scan to jump straight into that plant’s details and tasks.",
@@ -81,6 +88,7 @@
       }
     }
   },
+
   "store": {
     "google": {
       "alt": "Get it on Google Play"

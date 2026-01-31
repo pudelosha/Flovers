@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Reveal from "./common/Reveal";
-import { IconTasks, IconCalendar, IconQR, IconSensor } from "./common/Icons";
+import { IconTasks, IconCalendar, IconQR, IconSensor, IconBell } from "./common/Icons";
 import createPlantImg from "../../../assets/create_plant.png";
 import readingsHistoryImg from "../../../assets/readings_history.png";
 import "./FeatureGrid.css";
@@ -23,51 +23,70 @@ function BigFeature({ title, text, icon, tone = "glass" }) {
 export default function FeatureGrid() {
   const { t } = useTranslation("home");
 
-  const title = t("featureGrid.header.title", { defaultValue: "How the flow works" });
+  const title = t("featureGrid.header.title", { defaultValue: "Features that keep care consistent" });
   const subtitle = t("featureGrid.header.subtitle", {
     defaultValue:
-      "You add a plant, set a reminder, and Flovers keeps the loop going. Tasks show up with due dates, you close them when you’re done, and the next one gets queued automatically."
+      "Flovers is built around a few practical features: smart starter intervals, tasks from reminders, daily notifications, QR shortcuts, and optional IoT readings—so you can keep plants healthy without thinking too hard about it."
   });
 
   const features = useMemo(
     () => [
-      {
-        key: "tasks",
-        icon: <IconTasks />,
-        title: t("featureGrid.tiles.tasks.title", { defaultValue: "Reminders that turn into tasks" }),
-        text: t("featureGrid.tiles.tasks.text", {
-          defaultValue:
-            "Pick a reminder type like watering, misting, fertilising, repotting, or care. Set an interval, and Flovers creates due tasks for you. When you close one, the next task is created from the same reminder."
-        }),
-        tone: "light"
-      },
+      // 1) Suggested intervals
       {
         key: "intervals",
         icon: <IconCalendar />,
         title: t("featureGrid.tiles.intervals.title", { defaultValue: "Suggested intervals from plant definitions" }),
         text: t("featureGrid.tiles.intervals.text", {
           defaultValue:
-            "When you link a plant to a definition, Flovers can suggest starter intervals based on the species and your setup. You can accept them, tweak them, or keep your own cadence."
+            "Link a plant to a definition and Flovers suggests starter intervals based on the species and your setup. Accept them, tweak them, or keep your own cadence."
         }),
         tone: "glass"
       },
+
+      // 2) Tasks from reminders
+      {
+        key: "tasks",
+        icon: <IconTasks />,
+        title: t("featureGrid.tiles.tasks.title", { defaultValue: "Reminders that turn into tasks" }),
+        text: t("featureGrid.tiles.tasks.text", {
+          defaultValue:
+            "Set a recurring reminder (watering, misting, fertilising, repotting, care). Flovers turns it into due tasks. When you complete one, the next gets queued automatically."
+        }),
+        tone: "light"
+      },
+
+      // 3) Notifications (new)
+      {
+        key: "notifications",
+        icon: <IconBell />,
+        title: t("featureGrid.tiles.notifications.title", { defaultValue: "Daily notifications by push or email" }),
+        text: t("featureGrid.tiles.notifications.text", {
+          defaultValue:
+            "Choose push or email in Profile settings. Flovers can send a daily summary at your chosen time (e.g., 14:00) with today’s due tasks, and optionally follow up ~24h later if tasks are overdue."
+        }),
+        tone: "glass"
+      },
+
+      // 4) QR
       {
         key: "qr",
         icon: <IconQR />,
         title: t("featureGrid.tiles.qr.title", { defaultValue: "QR scan to jump straight to the plant" }),
         text: t("featureGrid.tiles.qr.text", {
           defaultValue:
-            "Print a QR code for a plant and stick it on the pot. Scan it with your phone camera to open the plant details instantly. It’s the fastest way to check info and get care done."
+            "Print a QR code for a plant and attach it to the pot. Scan to open Plant Details instantly—fastest way to check context and mark care done."
         }),
         tone: "light"
       },
+
+      // 5) IoT
       {
         key: "iot",
         icon: <IconSensor />,
         title: t("featureGrid.tiles.iot.title", { defaultValue: "Live IoT readings with trends" }),
         text: t("featureGrid.tiles.iot.text", {
           defaultValue:
-            "Connect your own ESP or Arduino device and send readings like temperature, humidity, light, and soil moisture. In the app you get charts with daily, weekly, and monthly views, so you can spot patterns and adjust with confidence."
+            "Connect your ESP/Arduino device and send readings like temperature, humidity, light, and soil moisture. The app shows daily/weekly/monthly charts so you can spot patterns and adjust routines."
         }),
         tone: "glass"
       }

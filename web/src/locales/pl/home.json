@@ -8,23 +8,28 @@
       "appStoreUrl": ""
     }
   },
+
   "featureGrid": {
     "header": {
-      "title": "Jak działa ten flow",
-      "subtitle": "Dodajesz roślinę, ustawiasz przypomnienie i Flovers domyka resztę. Zadania pojawiają się z terminem, odhaczasz je po wykonaniu, a kolejne tworzą się automatycznie."
+      "title": "Funkcje, które utrzymują rutynę pielęgnacji",
+      "subtitle": "Flovers opiera się na kilku praktycznych rozwiązaniach: sensownych interwałach startowych, zadaniach z przypomnień, codziennych powiadomieniach, skrótach QR i opcjonalnych odczytach IoT — żeby rośliny miały się dobrze bez ciągłego zastanawiania się."
     },
     "tiles": {
-      "tasks": {
-        "title": "Przypomnienia, które zamieniają się w zadania",
-        "text": "Wybierz typ przypomnienia, na przykład podlewanie, zraszanie, nawożenie, przesadzanie albo pielęgnacja. Ustaw interwał, a Flovers tworzy zadania z terminami. Gdy zamkniesz jedno, kolejne powstaje na bazie tego samego przypomnienia."
-      },
       "intervals": {
         "title": "Proponowane interwały z definicji roślin",
-        "text": "Gdy podepniesz roślinę do definicji, Flovers może zaproponować interwały startowe na podstawie gatunku i Twoich warunków. Możesz je przyjąć, poprawić albo trzymać swój własny rytm."
+        "text": "Podepnij roślinę do definicji, a Flovers zaproponuje interwały startowe na podstawie gatunku i Twoich warunków. Możesz je przyjąć, poprawić albo trzymać swój własny rytm."
+      },
+      "tasks": {
+        "title": "Przypomnienia, które zamieniają się w zadania",
+        "text": "Ustaw cykliczne przypomnienie (podlewanie, zraszanie, nawożenie, przesadzanie, pielęgnacja). Flovers zamienia je w zadania z terminami. Gdy wykonasz jedno, kolejne tworzy się automatycznie."
+      },
+      "notifications": {
+        "title": "Codzienne powiadomienia push lub e-mail",
+        "text": "W ustawieniach profilu wybierasz push albo e-mail. Flovers może wysyłać dzienne podsumowanie o wybranej godzinie (np. 14:00) z zadaniami na dziś oraz opcjonalnie przypomnieć ~24h później, jeśli coś jest zaległe."
       },
       "qr": {
         "title": "Skanuj QR i od razu jesteś na ekranie rośliny",
-        "text": "Wydrukuj kod QR dla rośliny i przyklej go do doniczki. Skanujesz aparatem i natychmiast otwierasz szczegóły rośliny. Najszybsza droga do sprawdzenia info i ogarnięcia pielęgnacji."
+        "text": "Wydrukuj kod QR dla rośliny i przyklej go do doniczki. Skanujesz i natychmiast otwierasz Szczegóły rośliny — najszybsza droga do sprawdzenia kontekstu i odhaczenia pielęgnacji."
       },
       "iot": {
         "title": "Odczyty IoT na żywo i trendy",
@@ -36,6 +41,7 @@
       "readingsHistoryAlt": "Ekran historii odczytów"
     }
   },
+
   "core": {
     "title": "Dwie rzeczy, które Flovers robi najlepiej",
     "lead": "Solidna baza roślin i szybkie rozpoznawanie ze zdjęcia. Wybierasz dopasowanie, podpinasz raz i masz sensowny punkt startowy do pielęgnacji.",
@@ -60,6 +66,7 @@
       }
     }
   },
+
   "qr": {
     "title": "Skaner QR: fizyczny skrót",
     "lead": "Wygeneruj kod QR dla każdej rośliny, wydrukuj go, przyklej do doniczki, a potem skanuj, żeby od razu przejść do szczegółów i zadań tej rośliny.",
@@ -81,6 +88,7 @@
       }
     }
   },
+
   "store": {
     "google": {
       "alt": "Pobierz z Google Play"
