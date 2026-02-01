@@ -13,6 +13,30 @@
     "cta": {
       "title": "Start simple. Keep the routine consistent.",
       "subtitle": "Add your plants, link definitions for guidance, set recurring reminders, and let Flovers generate tasks automatically. Use daily notifications to stay on track, scan QR labels to jump straight to a plant, and optionally validate routines with live sensor readings."
+    },
+    "sections": {
+      "how": {
+        "title": "How it works",
+        "subtitle": "A simple loop: add → define → act → stay consistent. Flovers keeps the routine moving so you can focus on the plants, not the planning."
+      }
+    },
+    "steps": {
+      "s1": {
+        "title": "Add a plant by recognizing it or searching the database",
+        "text": "Create a plant in seconds. Search the 700+ plant definition database or use photo recognition to get a suggested match. Once added, care routines, tasks, and history stay linked to this single plant instance."
+      },
+      "s2": {
+        "title": "Link a definition, set context, and get sensible intervals",
+        "text": "Connect the plant to a definition to unlock care traits and defaults. Add real-world context like pot size, soil type, location, and light level. Based on this, Flovers helps calculate realistic reminder intervals that you can adjust anytime."
+      },
+      "s3": {
+        "title": "Complete tasks quickly and build a clean care history",
+        "text": "Reminders automatically generate due tasks. Home shows what’s due, while the plant page shows full context. When you complete a task, you can add notes, and Flovers queues the next one so the routine keeps running without manual planning."
+      },
+      "s4": {
+        "title": "Stay on track with daily notifications",
+        "text": "Choose push or email notifications in Profile settings and set a delivery time. You’ll get a daily summary of tasks due today, with optional follow-ups if tasks become overdue, so nothing quietly slips through."
+      }
     }
   },
 

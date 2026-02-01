@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr; /* 4 rows */
   gap: 18px;
+  margin-bottom: 28px;
 }
 
 .home-step {

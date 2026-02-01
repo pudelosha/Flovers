@@ -20,31 +20,39 @@ export default function HowItWorks() {
 
   const steps = [
     {
-      title: t("homeNew.steps.s1.title", { defaultValue: "Add a plant (recognize or search)" }),
+      title: t("homeNew.steps.s1.title", {
+        defaultValue: "Add a plant by recognizing it or searching the database",
+      }),
       text: t("homeNew.steps.s1.text", {
         defaultValue:
-          "Start by recognizing a plant or searching the catalog. Then confirm key details (location and exposure) so routines match your setup. Add notes for pot size, soil, or anything unique.",
+          "Create a plant in seconds. Search the 700+ plant definition database or use photo recognition to get a suggested match. Once added, care routines, tasks, and history stay linked to this single plant instance.",
       }),
     },
     {
-      title: t("homeNew.steps.s2.title", { defaultValue: "Pick a definition → set intervals" }),
+      title: t("homeNew.steps.s2.title", {
+        defaultValue: "Link a definition, set context, and get sensible intervals",
+      }),
       text: t("homeNew.steps.s2.text", {
         defaultValue:
-          "Plant definitions provide a sensible baseline for common care routines. Use that baseline to set watering/feeding/repot intervals, then tune them to your environment. One plant can have different routines than another of the same type.",
+          "Connect the plant to a definition to unlock care traits and defaults. Add real-world context like pot size, soil type, location, and light level. Based on this, Flovers helps calculate realistic reminder intervals that you can adjust anytime.",
       }),
     },
     {
-      title: t("homeNew.steps.s3.title", { defaultValue: "Do tasks fast (Home + plant page)" }),
+      title: t("homeNew.steps.s3.title", {
+        defaultValue: "Complete tasks quickly and build a clean care history",
+      }),
       text: t("homeNew.steps.s3.text", {
         defaultValue:
-          "Home shows what's due and what's next, without clutter. Open the plant to see context before you act, then close the task with optional notes (e.g., \"dry soil\", \"moved to brighter spot\"). Over time, your notes become your playbook.",
+          "Reminders automatically generate due tasks. Home shows what’s due, while the plant page shows full context. When you complete a task, you can add notes, and Flovers queues the next one so the routine keeps running without manual planning.",
       }),
     },
     {
-      title: t("homeNew.steps.s4.title", { defaultValue: "Optional: scan QR and/or add sensors" }),
+      title: t("homeNew.steps.s4.title", {
+        defaultValue: "Stay on track with daily notifications",
+      }),
       text: t("homeNew.steps.s4.text", {
         defaultValue:
-          "If you use QR labels, scanning takes you directly to the right plant to complete tasks immediately. If you add sensors, readings help validate routines and spot trends instead of guessing. Both are optional, but powerful together.",
+          "Choose push or email notifications in Profile settings and set a delivery time. You’ll get a daily summary of tasks due today, with optional follow-ups if tasks become overdue, so nothing quietly slips through.",
       }),
     },
   ];
@@ -52,11 +60,13 @@ export default function HowItWorks() {
   return (
     <section className="home-section">
       <Reveal y={16}>
-        <h2 className="home-h2">{t("homeNew.sections.how.title", { defaultValue: "How it works" })}</h2>
+        <h2 className="home-h2">
+          {t("homeNew.sections.how.title", { defaultValue: "How it works" })}
+        </h2>
         <p className="muted home-p home-lead">
           {t("homeNew.sections.how.subtitle", {
             defaultValue:
-              "A repeatable loop: define → generate → complete → refine. Keep it simple, then add QR or sensors if you want faster workflow and better signal.",
+              "A simple loop: add → define → act → stay consistent. Flovers keeps the routine moving so you can focus on the plants, not the planning.",
           })}
         </p>
       </Reveal>

@@ -28,16 +28,9 @@ export default function CTASection() {
   return (
     <section className="home-section home-cta">
       <Reveal y={16}>
-        <h2 className="home-h2">
-          {t("homeNew.cta.title", { defaultValue: "Start simple. Keep the routine consistent." })}
-        </h2>
+        <h2 className="home-h2">{t("homeNew.cta.title")}</h2>
 
-        <p className="muted home-p home-lead">
-          {t("homeNew.cta.subtitle", {
-            defaultValue:
-              "Add your plants, link definitions for guidance, set recurring reminders, and let Flovers generate tasks automatically. Use daily notifications to stay on track, scan QR labels to jump straight to a plant, and optionally validate routines with live sensor readings."
-          })}
-        </p>
+        <p className="muted home-p home-lead">{t("homeNew.cta.subtitle")}</p>
       </Reveal>
 
       <div className="home-cta-stores" data-lang={lng}>
