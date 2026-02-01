@@ -1,0 +1,177 @@
+/* Schema page layout */
+.schema-page {
+  padding: 22px;
+}
+
+.schema-lead {
+  margin-top: 10px;
+  max-width: 90ch;
+  line-height: 1.7;
+}
+
+/* 2-column docs layout */
+.schema-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .schema-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sections */
+.schema-section {
+  margin-top: 18px;
+}
+
+.schema-section:first-child {
+  margin-top: 0;
+}
+
+/* Endpoint rows */
+.schema-endpoints {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.schema-inforow {
+  display: grid;
+  gap: 6px;
+}
+
+.schema-inforow-label {
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.schema-inforow-value {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+}
+
+.schema-inforow-value code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.92);
+  word-break: break-all;
+}
+
+/* Code blocks */
+.schema-block {
+  margin-top: 12px;
+}
+
+.schema-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.schema-block-label {
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.schema-copy {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.schema-copy:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.schema-code {
+  margin: 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  overflow: auto;
+  max-width: 100%;
+}
+
+.schema-code code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: pre;
+}
+
+/* Notes + lists */
+.schema-note {
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.schema-footnote {
+  margin-top: 10px;
+  line-height: 1.65;
+}
+
+.schema-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+/* Wiring placeholder */
+.schema-aside {
+  position: sticky;
+  top: 92px;
+}
+
+@media (max-width: 980px) {
+  .schema-aside {
+    position: relative;
+    top: auto;
+  }
+}
+
+.schema-wiring {
+  margin-top: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.schema-wiring-inner {
+  padding: 18px;
+  min-height: 260px;
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.schema-wiring-title {
+  font-weight: 950;
+  letter-spacing: -0.3px;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.schema-wiring-sub {
+  max-width: 34ch;
+  line-height: 1.6;
+}

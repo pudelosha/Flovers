@@ -9,6 +9,7 @@ import enPrivacyPolicy from "../locales/en/privacy-policy.json";
 import enContact from "../locales/en/contact.json";
 import enFaq from "../locales/en/faq.json";
 import enDocs from "../locales/en/docs.json";
+import enSchemas from "../locales/en/schemas.json";
 
 import plCommon from "../locales/pl/common.json";
 import plHome from "../locales/pl/home.json";
@@ -17,6 +18,7 @@ import plPrivacyPolicy from "../locales/pl/privacy-policy.json";
 import plContact from "../locales/pl/contact.json";
 import plFaq from "../locales/pl/faq.json";
 import plDocs from "../locales/pl/docs.json";
+import plSchemas from "../locales/pl/schemas.json";
 
 // Locales (docs per-screen)
 import enDocsOverview from "../locales/en/docs_overview.json";
@@ -56,6 +58,7 @@ const resources = {
     contact: enContact,
     faq: enFaq,
     docs: enDocs,
+    schemas: enSchemas,
 
     docs_overview: enDocsOverview,
     docs_auth: enDocsAuth,
@@ -79,6 +82,7 @@ const resources = {
     contact: plContact,
     faq: plFaq,
     docs: plDocs,
+    schemas: plSchemas,
 
     docs_overview: plDocsOverview,
     docs_auth: plDocsAuth,
@@ -123,6 +127,7 @@ i18n.use(initReactI18next).init({
     "contact",
     "faq",
     "docs",
+    "schemas",
     "docs_overview",
     "docs_auth",
     "docs_home",

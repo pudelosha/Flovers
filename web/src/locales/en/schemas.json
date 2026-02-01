@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "title": "Device schemas & wiring",
+  "lead": "This page documents how to send IoT sensor readings to Flovers. You’ll find endpoint references, payload shape, and sample ESP32/ESP8266 Arduino code for common sensors. A wiring diagram placeholder is included and can be replaced with a Fritzing image later.",
+  "endpoints": {
+    "title": "API endpoints",
+    "note": "Endpoints shown here are examples. Replace with your production backend URL when wiring devices.",
+    "ingest": {
+      "label": "Ingest readings (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "Read readings (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "POST ingest documentation",
+    "desc": "Send one reading sample as JSON. The backend validates device_key + secret and stores metrics under the device.",
+    "schemaLabel": "Payload shape (JSON)",
+    "psLabel": "PowerShell example (POST)"
+  },
+  "read": {
+    "title": "GET / read documentation",
+    "desc": "Fetch readings for a device in a time range. If your backend supports POST-based queries, you can send a JSON body instead of query params.",
+    "exampleLabel": "Examples (GET + optional POST)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) sample code",
+    "desc": "Reference implementation: connects to Wi-Fi, reads sensors, and POSTs JSON to the ingest endpoint on a fixed interval. Calibrate your soil sensor values for wet/dry to get meaningful %.",
+    "codeLabel": "Arduino sample (Wi-Fi + POST ingest)",
+    "note": "If you need accurate timestamps, add NTP time sync (configTime) and produce ISO-8601 UTC timestamps from the device clock.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — light intensity over I2C",
+      "moisture": "Capacitive soil moisture sensor — analog read (calibrate wet/dry)",
+      "bme280": "BME280 — temperature & humidity over I2C (pressure optional)"
+    }
+  },
+  "wiring": {
+    "title": "Wiring diagram",
+    "desc": "Add a Fritzing wiring image here later. This placeholder keeps layout stable until the diagram is ready.",
+    "aria": "Wiring diagram placeholder",
+    "placeholderTitle": "Fritzing wiring placeholder",
+    "placeholderSub": "Replace this box with an image when you export the wiring diagram."
+  }
+}

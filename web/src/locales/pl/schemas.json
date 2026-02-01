@@ -1,0 +1,49 @@
+{
+  "common": {
+    "copy": "Kopiuj",
+    "copied": "Skopiowano"
+  },
+  "title": "Schematy urządzeń i okablowanie",
+  "lead": "Ta strona opisuje, jak wysyłać odczyty z czujników IoT do Flovers. Znajdziesz tu endpointy, strukturę payloadu oraz przykładowy kod Arduino dla ESP32/ESP8266 dla popularnych czujników. Jest też placeholder na obrazek z okablowaniem (Fritzing) do podmiany później.",
+  "endpoints": {
+    "title": "API endpointy",
+    "note": "Endpointy są przykładowe. Podmień je na produkcyjny adres backendu, gdy będziesz podpinać urządzenie.",
+    "ingest": {
+      "label": "Ingest odczytów (POST)",
+      "value": "http://127.0.0.1:8000/api/readings/ingest/"
+    },
+    "read": {
+      "label": "Pobieranie odczytów (GET/POST)",
+      "value": "http://127.0.0.1:8000/api/readings/"
+    }
+  },
+  "ingest": {
+    "title": "Dokumentacja POST ingest",
+    "desc": "Wyślij jedną próbkę odczytu jako JSON. Backend weryfikuje device_key + secret i zapisuje metryki pod urządzeniem.",
+    "schemaLabel": "Struktura payloadu (JSON)",
+    "psLabel": "Przykład PowerShell (POST)"
+  },
+  "read": {
+    "title": "GET / dokumentacja odczytu",
+    "desc": "Pobieraj odczyty dla urządzenia w zakresie czasu. Jeśli backend wspiera zapytania przez POST, możesz wysłać body JSON zamiast parametrów w URL.",
+    "exampleLabel": "Przykłady (GET + opcjonalny POST)"
+  },
+  "arduino": {
+    "title": "Arduino (ESP32/ESP8266) — przykładowy kod",
+    "desc": "Referencyjna implementacja: łączy się z Wi-Fi, czyta czujniki i wysyła JSON POST do endpointu ingest w ustalonym interwale. Skalibruj wartości czujnika wilgotności (mokro/sucho), żeby procenty miały sens.",
+    "codeLabel": "Arduino sample (Wi-Fi + POST ingest)",
+    "note": "Jeśli potrzebujesz poprawnych timestampów, dodaj synchronizację czasu NTP (configTime) i generuj ISO-8601 UTC na urządzeniu.",
+    "sensors": {
+      "bh1750": "BH1750 (GY-302) — natężenie światła po I2C",
+      "moisture": "Pojemnościowy czujnik wilgotności gleby — odczyt analogowy (wymaga kalibracji mokro/sucho)",
+      "bme280": "BME280 — temperatura i wilgotność po I2C (ciśnienie opcjonalnie)"
+    }
+  },
+  "wiring": {
+    "title": "Schemat okablowania",
+    "desc": "Dodaj tu później obrazek z Fritzing. Ten placeholder stabilizuje układ strony, dopóki schemat nie będzie gotowy.",
+    "aria": "Placeholder schematu okablowania",
+    "placeholderTitle": "Placeholder Fritzing",
+    "placeholderSub": "Podmień ten blok na obrazek, gdy wyeksportujesz schemat."
+  }
+}
