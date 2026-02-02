@@ -345,4 +345,19 @@ export const locStyles = StyleSheet.create({
     color: "#FFFFFF",
     fontWeight: "800",
   },
+  blockedSection: {
+    marginTop: 10,
+    marginBottom: 20,
+    paddingHorizontal: 16,
+  },
+  blockedTitle: {
+    color: "#FFD6A5",
+    fontWeight: "800",
+    marginBottom: 4,
+  },
+  blockedText: {
+    color: "rgba(255,255,255,0.85)",
+    lineHeight: 18,
+  },
+
 });

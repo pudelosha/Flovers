@@ -11,7 +11,10 @@
     "confirmDelete": {
       "title": "Delete location",
       "messagePrefix": "Are you sure you want to delete",
-      "messageSuffix": "? This action cannot be undone."
+      "messageSuffix": "? This action cannot be undone.",
+      "blockedTitle": "Can’t delete this location",
+      "blockedMessage": "This location has {{countLabel}} assigned. Delete or move those plants first, then try again.",
+      "blockedToast": "This location can’t be deleted because it has plants assigned. Remove or move those plants first."
     },
     "edit": {
       "titleCreate": "Add location",

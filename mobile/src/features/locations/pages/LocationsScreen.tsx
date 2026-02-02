@@ -1,4 +1,3 @@
-// C:\Projekty\Python\Flovers\mobile\src\features\locations\pages\LocationsScreen.tsx
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   View,
@@ -137,6 +136,7 @@ export default function LocationsScreen() {
   // Confirm delete modal
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [confirmDeleteName, setConfirmDeleteName] = useState<string>("");
+  const [confirmDeleteCount, setConfirmDeleteCount] = useState<number>(0);
 
   // Sort modal + state
   const [sortOpen, setSortOpen] = useState(false);
@@ -312,10 +312,22 @@ export default function LocationsScreen() {
     setMenuOpenId(null);
     setConfirmDeleteId(loc.id);
     setConfirmDeleteName(loc.name);
+    setConfirmDeleteCount(loc.plantCount ?? 0);
   };
 
   const confirmDelete = async () => {
     if (!confirmDeleteId) return;
+
+    if (confirmDeleteCount > 0) {
+      showToast(
+        tr(
+          "locationsModals.confirmDelete.blockedToast",
+          "This location can’t be deleted because it has plants assigned. Remove or move those plants first."
+        ),
+        "error"
+      );
+      return;
+    }
 
     try {
       await deleteLocation(confirmDeleteId, { auth: true });
@@ -329,6 +341,7 @@ export default function LocationsScreen() {
     } finally {
       setConfirmDeleteId(null);
       setConfirmDeleteName("");
+      setConfirmDeleteCount(0);
     }
   };
 
@@ -546,9 +559,11 @@ export default function LocationsScreen() {
       <ConfirmDeleteLocationModal
         visible={!!confirmDeleteId}
         name={confirmDeleteName}
+        plantCount={confirmDeleteCount}
         onCancel={() => {
           setConfirmDeleteId(null);
           setConfirmDeleteName("");
+          setConfirmDeleteCount(0);
         }}
         onConfirm={confirmDelete}
       />

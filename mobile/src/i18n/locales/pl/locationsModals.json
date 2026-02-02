@@ -11,7 +11,10 @@
     "confirmDelete": {
       "title": "Usuń lokalizację",
       "messagePrefix": "Czy na pewno chcesz usunąć",
-      "messageSuffix": "? Tej operacji nie można cofnąć."
+      "messageSuffix": "? Tej operacji nie można cofnąć.",
+      "blockedTitle": "Nie można usunąć tej lokalizacji",
+      "blockedMessage": "Ta lokalizacja ma przypisane: {{countLabel}}. Najpierw usuń rośliny lub przenieś je do innej lokalizacji, a potem spróbuj ponownie.",
+      "blockedToast": "Nie można usunąć tej lokalizacji, ponieważ ma przypisane rośliny. Usuń je lub przenieś najpierw."
     },
     "edit": {
       "titleCreate": "Dodaj lokalizację",
